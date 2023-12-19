@@ -60,7 +60,7 @@ public class CloudPcSnapshot extends Entity implements Parsable {
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("expirationDateTime", (n) -> { this.setExpirationDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("lastRestoredDateTime", (n) -> { this.setLastRestoredDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("snapshotType", (n) -> { this.setSnapshotType(n.getEnumValue(CloudPcSnapshotType::forValue)); });
+        deserializerMap.put("snapshotType", (n) -> { this.setSnapshotType(n.getEnumValue(CloudPcSnapshotSnapshotType::forValue)); });
         deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(CloudPcSnapshotStatus::forValue)); });
         return deserializerMap;
     }
@@ -74,10 +74,10 @@ public class CloudPcSnapshot extends Entity implements Parsable {
     }
     /**
      * Gets the snapshotType property value. The type of snapshot that indicates how to create the snapshot. Possible values are automatic, manual. Default value is automatic.
-     * @return a CloudPcSnapshotType
+     * @return a CloudPcSnapshotSnapshotType
      */
     @jakarta.annotation.Nullable
-    public CloudPcSnapshotType getSnapshotType() {
+    public CloudPcSnapshotSnapshotType getSnapshotType() {
         return this.backingStore.get("snapshotType");
     }
     /**
@@ -134,7 +134,7 @@ public class CloudPcSnapshot extends Entity implements Parsable {
      * Sets the snapshotType property value. The type of snapshot that indicates how to create the snapshot. Possible values are automatic, manual. Default value is automatic.
      * @param value Value to set for the snapshotType property.
      */
-    public void setSnapshotType(@jakarta.annotation.Nullable final CloudPcSnapshotType value) {
+    public void setSnapshotType(@jakarta.annotation.Nullable final CloudPcSnapshotSnapshotType value) {
         this.backingStore.set("snapshotType", value);
     }
     /**

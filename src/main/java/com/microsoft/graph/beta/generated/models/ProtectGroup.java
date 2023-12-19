@@ -50,15 +50,15 @@ public class ProtectGroup extends LabelActionBase implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("allowEmailFromGuestUsers", (n) -> { this.setAllowEmailFromGuestUsers(n.getBooleanValue()); });
         deserializerMap.put("allowGuestUsers", (n) -> { this.setAllowGuestUsers(n.getBooleanValue()); });
-        deserializerMap.put("privacy", (n) -> { this.setPrivacy(n.getEnumValue(GroupPrivacy::forValue)); });
+        deserializerMap.put("privacy", (n) -> { this.setPrivacy(n.getEnumValue(ProtectGroupPrivacy::forValue)); });
         return deserializerMap;
     }
     /**
      * Gets the privacy property value. The privacy property
-     * @return a GroupPrivacy
+     * @return a ProtectGroupPrivacy
      */
     @jakarta.annotation.Nullable
-    public GroupPrivacy getPrivacy() {
+    public ProtectGroupPrivacy getPrivacy() {
         return this.backingStore.get("privacy");
     }
     /**
@@ -90,7 +90,7 @@ public class ProtectGroup extends LabelActionBase implements Parsable {
      * Sets the privacy property value. The privacy property
      * @param value Value to set for the privacy property.
      */
-    public void setPrivacy(@jakarta.annotation.Nullable final GroupPrivacy value) {
+    public void setPrivacy(@jakarta.annotation.Nullable final ProtectGroupPrivacy value) {
         this.backingStore.set("privacy", value);
     }
 }

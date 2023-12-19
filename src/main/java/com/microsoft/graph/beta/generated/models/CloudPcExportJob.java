@@ -35,10 +35,10 @@ public class CloudPcExportJob extends Entity implements Parsable {
     }
     /**
      * Gets the exportJobStatus property value. The status of the export job. The possible values are: notStarted, inProgress, completed, unknownFutureValue. Read-only.
-     * @return a CloudPcExportJobStatus
+     * @return a CloudPcExportJobExportJobStatus
      */
     @jakarta.annotation.Nullable
-    public CloudPcExportJobStatus getExportJobStatus() {
+    public CloudPcExportJobExportJobStatus getExportJobStatus() {
         return this.backingStore.get("exportJobStatus");
     }
     /**
@@ -57,11 +57,11 @@ public class CloudPcExportJob extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("expirationDateTime", (n) -> { this.setExpirationDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("exportJobStatus", (n) -> { this.setExportJobStatus(n.getEnumValue(CloudPcExportJobStatus::forValue)); });
+        deserializerMap.put("exportJobStatus", (n) -> { this.setExportJobStatus(n.getEnumValue(CloudPcExportJobExportJobStatus::forValue)); });
         deserializerMap.put("exportUrl", (n) -> { this.setExportUrl(n.getStringValue()); });
         deserializerMap.put("filter", (n) -> { this.setFilter(n.getStringValue()); });
         deserializerMap.put("format", (n) -> { this.setFormat(n.getStringValue()); });
-        deserializerMap.put("reportName", (n) -> { this.setReportName(n.getEnumValue(CloudPcReportName::forValue)); });
+        deserializerMap.put("reportName", (n) -> { this.setReportName(n.getEnumValue(CloudPcExportJobReportName::forValue)); });
         deserializerMap.put("requestDateTime", (n) -> { this.setRequestDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("select", (n) -> { this.setSelect(n.getCollectionOfPrimitiveValues(String.class)); });
         return deserializerMap;
@@ -84,10 +84,10 @@ public class CloudPcExportJob extends Entity implements Parsable {
     }
     /**
      * Gets the reportName property value. The report name. The possible values are: remoteConnectionHistoricalReports, dailyAggregatedRemoteConnectionReports, totalAggregatedRemoteConnectionReports, sharedUseLicenseUsageReport, sharedUseLicenseUsageRealTimeReport, unknownFutureValue,  noLicenseAvailableConnectivityFailureReport, frontlineLicenseUsageReport, frontlineLicenseUsageRealTimeReport,  remoteConnectionQualityReports, inaccessibleCloudPcReports, rawRemoteConnectionReports. You must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: noLicenseAvailableConnectivityFailureReport, frontlineLicenseUsageReport, frontlineLicenseUsageRealTimeReport, remoteConnectionQualityReports, inaccessibleCloudPcReports, rawRemoteConnectionReports.
-     * @return a CloudPcReportName
+     * @return a CloudPcExportJobReportName
      */
     @jakarta.annotation.Nullable
-    public CloudPcReportName getReportName() {
+    public CloudPcExportJobReportName getReportName() {
         return this.backingStore.get("reportName");
     }
     /**
@@ -133,7 +133,7 @@ public class CloudPcExportJob extends Entity implements Parsable {
      * Sets the exportJobStatus property value. The status of the export job. The possible values are: notStarted, inProgress, completed, unknownFutureValue. Read-only.
      * @param value Value to set for the exportJobStatus property.
      */
-    public void setExportJobStatus(@jakarta.annotation.Nullable final CloudPcExportJobStatus value) {
+    public void setExportJobStatus(@jakarta.annotation.Nullable final CloudPcExportJobExportJobStatus value) {
         this.backingStore.set("exportJobStatus", value);
     }
     /**
@@ -161,7 +161,7 @@ public class CloudPcExportJob extends Entity implements Parsable {
      * Sets the reportName property value. The report name. The possible values are: remoteConnectionHistoricalReports, dailyAggregatedRemoteConnectionReports, totalAggregatedRemoteConnectionReports, sharedUseLicenseUsageReport, sharedUseLicenseUsageRealTimeReport, unknownFutureValue,  noLicenseAvailableConnectivityFailureReport, frontlineLicenseUsageReport, frontlineLicenseUsageRealTimeReport,  remoteConnectionQualityReports, inaccessibleCloudPcReports, rawRemoteConnectionReports. You must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: noLicenseAvailableConnectivityFailureReport, frontlineLicenseUsageReport, frontlineLicenseUsageRealTimeReport, remoteConnectionQualityReports, inaccessibleCloudPcReports, rawRemoteConnectionReports.
      * @param value Value to set for the reportName property.
      */
-    public void setReportName(@jakarta.annotation.Nullable final CloudPcReportName value) {
+    public void setReportName(@jakarta.annotation.Nullable final CloudPcExportJobReportName value) {
         this.backingStore.set("reportName", value);
     }
     /**

@@ -36,7 +36,7 @@ public class DeviceManagementConfigurationStringSettingValueDefinition extends D
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("fileTypes", (n) -> { this.setFileTypes(n.getCollectionOfPrimitiveValues(String.class)); });
-        deserializerMap.put("format", (n) -> { this.setFormat(n.getEnumValue(DeviceManagementConfigurationStringFormat::forValue)); });
+        deserializerMap.put("format", (n) -> { this.setFormat(n.getEnumValue(DeviceManagementConfigurationStringSettingValueDefinitionFormat::forValue)); });
         deserializerMap.put("inputValidationSchema", (n) -> { this.setInputValidationSchema(n.getStringValue()); });
         deserializerMap.put("isSecret", (n) -> { this.setIsSecret(n.getBooleanValue()); });
         deserializerMap.put("maximumLength", (n) -> { this.setMaximumLength(n.getLongValue()); });
@@ -53,10 +53,10 @@ public class DeviceManagementConfigurationStringSettingValueDefinition extends D
     }
     /**
      * Gets the format property value. Pre-defined format of the string. Possible values are: none, email, guid, ip, base64, url, version, xml, date, time, binary, regEx, json, dateTime, surfaceHub, bashScript, unknownFutureValue.
-     * @return a DeviceManagementConfigurationStringFormat
+     * @return a DeviceManagementConfigurationStringSettingValueDefinitionFormat
      */
     @jakarta.annotation.Nullable
-    public DeviceManagementConfigurationStringFormat getFormat() {
+    public DeviceManagementConfigurationStringSettingValueDefinitionFormat getFormat() {
         return this.backingStore.get("format");
     }
     /**
@@ -116,7 +116,7 @@ public class DeviceManagementConfigurationStringSettingValueDefinition extends D
      * Sets the format property value. Pre-defined format of the string. Possible values are: none, email, guid, ip, base64, url, version, xml, date, time, binary, regEx, json, dateTime, surfaceHub, bashScript, unknownFutureValue.
      * @param value Value to set for the format property.
      */
-    public void setFormat(@jakarta.annotation.Nullable final DeviceManagementConfigurationStringFormat value) {
+    public void setFormat(@jakarta.annotation.Nullable final DeviceManagementConfigurationStringSettingValueDefinitionFormat value) {
         this.backingStore.set("format", value);
     }
     /**

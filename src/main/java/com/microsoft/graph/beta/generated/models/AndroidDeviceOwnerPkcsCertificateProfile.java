@@ -30,10 +30,10 @@ public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwner
     }
     /**
      * Gets the certificateAccessType property value. Certificate access type. Possible values are: userApproval, specificApps, unknownFutureValue.
-     * @return a AndroidDeviceOwnerCertificateAccessType
+     * @return a AndroidDeviceOwnerPkcsCertificateProfileCertificateAccessType
      */
     @jakarta.annotation.Nullable
-    public AndroidDeviceOwnerCertificateAccessType getCertificateAccessType() {
+    public AndroidDeviceOwnerPkcsCertificateProfileCertificateAccessType getCertificateAccessType() {
         return this.backingStore.get("certificateAccessType");
     }
     /**
@@ -91,7 +91,7 @@ public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwner
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("certificateAccessType", (n) -> { this.setCertificateAccessType(n.getEnumValue(AndroidDeviceOwnerCertificateAccessType::forValue)); });
+        deserializerMap.put("certificateAccessType", (n) -> { this.setCertificateAccessType(n.getEnumValue(AndroidDeviceOwnerPkcsCertificateProfileCertificateAccessType::forValue)); });
         deserializerMap.put("certificateStore", (n) -> { this.setCertificateStore(n.getEnumValue(CertificateStore::forValue)); });
         deserializerMap.put("certificateTemplateName", (n) -> { this.setCertificateTemplateName(n.getStringValue()); });
         deserializerMap.put("certificationAuthority", (n) -> { this.setCertificationAuthority(n.getStringValue()); });
@@ -159,7 +159,7 @@ public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwner
      * Sets the certificateAccessType property value. Certificate access type. Possible values are: userApproval, specificApps, unknownFutureValue.
      * @param value Value to set for the certificateAccessType property.
      */
-    public void setCertificateAccessType(@jakarta.annotation.Nullable final AndroidDeviceOwnerCertificateAccessType value) {
+    public void setCertificateAccessType(@jakarta.annotation.Nullable final AndroidDeviceOwnerPkcsCertificateProfileCertificateAccessType value) {
         this.backingStore.set("certificateAccessType", value);
     }
     /**

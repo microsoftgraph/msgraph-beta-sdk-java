@@ -70,7 +70,7 @@ public class StatusBase implements AdditionalDataHolder, BackedModel, Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(ProvisioningResult::forValue)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(StatusBaseStatus::forValue)); });
         return deserializerMap;
     }
     /**
@@ -83,10 +83,10 @@ public class StatusBase implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the status property value. Possible values are: success, warning, failure, skipped, unknownFutureValue. Supports $filter (eq, contains).
-     * @return a ProvisioningResult
+     * @return a StatusBaseStatus
      */
     @jakarta.annotation.Nullable
-    public ProvisioningResult getStatus() {
+    public StatusBaseStatus getStatus() {
         return this.backingStore.get("status");
     }
     /**
@@ -125,7 +125,7 @@ public class StatusBase implements AdditionalDataHolder, BackedModel, Parsable {
      * Sets the status property value. Possible values are: success, warning, failure, skipped, unknownFutureValue. Supports $filter (eq, contains).
      * @param value Value to set for the status property.
      */
-    public void setStatus(@jakarta.annotation.Nullable final ProvisioningResult value) {
+    public void setStatus(@jakarta.annotation.Nullable final StatusBaseStatus value) {
         this.backingStore.set("status", value);
     }
 }

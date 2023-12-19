@@ -80,7 +80,7 @@ public class Post extends OutlookItem implements Parsable {
         deserializerMap.put("extensions", (n) -> { this.setExtensions(n.getCollectionOfObjectValues(Extension::createFromDiscriminatorValue)); });
         deserializerMap.put("from", (n) -> { this.setFrom(n.getObjectValue(Recipient::createFromDiscriminatorValue)); });
         deserializerMap.put("hasAttachments", (n) -> { this.setHasAttachments(n.getBooleanValue()); });
-        deserializerMap.put("importance", (n) -> { this.setImportance(n.getEnumValue(Importance::forValue)); });
+        deserializerMap.put("importance", (n) -> { this.setImportance(n.getEnumValue(PostImportance::forValue)); });
         deserializerMap.put("inReplyTo", (n) -> { this.setInReplyTo(n.getObjectValue(Post::createFromDiscriminatorValue)); });
         deserializerMap.put("mentions", (n) -> { this.setMentions(n.getCollectionOfObjectValues(Mention::createFromDiscriminatorValue)); });
         deserializerMap.put("multiValueExtendedProperties", (n) -> { this.setMultiValueExtendedProperties(n.getCollectionOfObjectValues(MultiValueLegacyExtendedProperty::createFromDiscriminatorValue)); });
@@ -108,10 +108,10 @@ public class Post extends OutlookItem implements Parsable {
     }
     /**
      * Gets the importance property value. The importance of a group post: low, normal, high.
-     * @return a Importance
+     * @return a PostImportance
      */
     @jakarta.annotation.Nullable
-    public Importance getImportance() {
+    public PostImportance getImportance() {
         return this.backingStore.get("importance");
     }
     /**
@@ -246,7 +246,7 @@ public class Post extends OutlookItem implements Parsable {
      * Sets the importance property value. The importance of a group post: low, normal, high.
      * @param value Value to set for the importance property.
      */
-    public void setImportance(@jakarta.annotation.Nullable final Importance value) {
+    public void setImportance(@jakarta.annotation.Nullable final PostImportance value) {
         this.backingStore.set("importance", value);
     }
     /**

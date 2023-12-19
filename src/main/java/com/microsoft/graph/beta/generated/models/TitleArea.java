@@ -81,14 +81,14 @@ public class TitleArea implements AdditionalDataHolder, BackedModel, Parsable {
         deserializerMap.put("alternativeText", (n) -> { this.setAlternativeText(n.getStringValue()); });
         deserializerMap.put("enableGradientEffect", (n) -> { this.setEnableGradientEffect(n.getBooleanValue()); });
         deserializerMap.put("imageWebUrl", (n) -> { this.setImageWebUrl(n.getStringValue()); });
-        deserializerMap.put("layout", (n) -> { this.setLayout(n.getEnumValue(TitleAreaLayoutType::forValue)); });
+        deserializerMap.put("layout", (n) -> { this.setLayout(n.getEnumValue(TitleAreaLayout::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("serverProcessedContent", (n) -> { this.setServerProcessedContent(n.getObjectValue(ServerProcessedContent::createFromDiscriminatorValue)); });
         deserializerMap.put("showAuthor", (n) -> { this.setShowAuthor(n.getBooleanValue()); });
         deserializerMap.put("showPublishedDate", (n) -> { this.setShowPublishedDate(n.getBooleanValue()); });
         deserializerMap.put("showTextBlockAboveTitle", (n) -> { this.setShowTextBlockAboveTitle(n.getBooleanValue()); });
         deserializerMap.put("textAboveTitle", (n) -> { this.setTextAboveTitle(n.getStringValue()); });
-        deserializerMap.put("textAlignment", (n) -> { this.setTextAlignment(n.getEnumValue(TitleAreaTextAlignmentType::forValue)); });
+        deserializerMap.put("textAlignment", (n) -> { this.setTextAlignment(n.getEnumValue(TitleAreaTextAlignment::forValue)); });
         return deserializerMap;
     }
     /**
@@ -101,10 +101,10 @@ public class TitleArea implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the layout property value. Enumeration value that indicates the layout of the title area. The possible values are: imageAndTitle, plain, colorBlock, overlap, unknownFutureValue.
-     * @return a TitleAreaLayoutType
+     * @return a TitleAreaLayout
      */
     @jakarta.annotation.Nullable
-    public TitleAreaLayoutType getLayout() {
+    public TitleAreaLayout getLayout() {
         return this.backingStore.get("layout");
     }
     /**
@@ -157,10 +157,10 @@ public class TitleArea implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the textAlignment property value. Enumeration value that indicates the text alignment of the title area. The possible values are: left, center, unknownFutureValue.
-     * @return a TitleAreaTextAlignmentType
+     * @return a TitleAreaTextAlignment
      */
     @jakarta.annotation.Nullable
-    public TitleAreaTextAlignmentType getTextAlignment() {
+    public TitleAreaTextAlignment getTextAlignment() {
         return this.backingStore.get("textAlignment");
     }
     /**
@@ -222,7 +222,7 @@ public class TitleArea implements AdditionalDataHolder, BackedModel, Parsable {
      * Sets the layout property value. Enumeration value that indicates the layout of the title area. The possible values are: imageAndTitle, plain, colorBlock, overlap, unknownFutureValue.
      * @param value Value to set for the layout property.
      */
-    public void setLayout(@jakarta.annotation.Nullable final TitleAreaLayoutType value) {
+    public void setLayout(@jakarta.annotation.Nullable final TitleAreaLayout value) {
         this.backingStore.set("layout", value);
     }
     /**
@@ -271,7 +271,7 @@ public class TitleArea implements AdditionalDataHolder, BackedModel, Parsable {
      * Sets the textAlignment property value. Enumeration value that indicates the text alignment of the title area. The possible values are: left, center, unknownFutureValue.
      * @param value Value to set for the textAlignment property.
      */
-    public void setTextAlignment(@jakarta.annotation.Nullable final TitleAreaTextAlignmentType value) {
+    public void setTextAlignment(@jakarta.annotation.Nullable final TitleAreaTextAlignment value) {
         this.backingStore.set("textAlignment", value);
     }
 }

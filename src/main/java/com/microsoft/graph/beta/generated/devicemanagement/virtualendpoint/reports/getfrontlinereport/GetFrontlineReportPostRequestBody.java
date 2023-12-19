@@ -1,6 +1,5 @@
 package com.microsoft.graph.beta.devicemanagement.virtualendpoint.reports.getfrontlinereport;
 
-import com.microsoft.graph.beta.models.CloudPcReportName;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -66,7 +65,7 @@ public class GetFrontlineReportPostRequestBody implements AdditionalDataHolder, 
         deserializerMap.put("filter", (n) -> { this.setFilter(n.getStringValue()); });
         deserializerMap.put("groupBy", (n) -> { this.setGroupBy(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("orderBy", (n) -> { this.setOrderBy(n.getCollectionOfPrimitiveValues(String.class)); });
-        deserializerMap.put("reportName", (n) -> { this.setReportName(n.getEnumValue(CloudPcReportName::forValue)); });
+        deserializerMap.put("reportName", (n) -> { this.setReportName(n.getEnumValue(GetFrontlineReportPostRequestBodyReportName::forValue)); });
         deserializerMap.put("search", (n) -> { this.setSearch(n.getStringValue()); });
         deserializerMap.put("select", (n) -> { this.setSelect(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("skip", (n) -> { this.setSkip(n.getIntegerValue()); });
@@ -99,10 +98,10 @@ public class GetFrontlineReportPostRequestBody implements AdditionalDataHolder, 
     }
     /**
      * Gets the reportName property value. The reportName property
-     * @return a CloudPcReportName
+     * @return a GetFrontlineReportPostRequestBodyReportName
      */
     @jakarta.annotation.Nullable
-    public CloudPcReportName getReportName() {
+    public GetFrontlineReportPostRequestBodyReportName getReportName() {
         return this.backingStore.get("reportName");
     }
     /**
@@ -193,7 +192,7 @@ public class GetFrontlineReportPostRequestBody implements AdditionalDataHolder, 
      * Sets the reportName property value. The reportName property
      * @param value Value to set for the reportName property.
      */
-    public void setReportName(@jakarta.annotation.Nullable final CloudPcReportName value) {
+    public void setReportName(@jakarta.annotation.Nullable final GetFrontlineReportPostRequestBodyReportName value) {
         this.backingStore.set("reportName", value);
     }
     /**

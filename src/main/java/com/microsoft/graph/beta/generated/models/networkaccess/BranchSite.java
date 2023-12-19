@@ -44,10 +44,10 @@ public class BranchSite extends Entity implements Parsable {
     }
     /**
      * Gets the connectivityState property value. Determines the branch site status. The possible values are: pending, connected, inactive, error.
-     * @return a ConnectivityState
+     * @return a BranchSiteConnectivityState
      */
     @jakarta.annotation.Nullable
-    public ConnectivityState getConnectivityState() {
+    public BranchSiteConnectivityState getConnectivityState() {
         return this.backingStore.get("connectivityState");
     }
     /**
@@ -75,7 +75,7 @@ public class BranchSite extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("bandwidthCapacity", (n) -> { this.setBandwidthCapacity(n.getLongValue()); });
         deserializerMap.put("connectivityConfiguration", (n) -> { this.setConnectivityConfiguration(n.getObjectValue(BranchConnectivityConfiguration::createFromDiscriminatorValue)); });
-        deserializerMap.put("connectivityState", (n) -> { this.setConnectivityState(n.getEnumValue(ConnectivityState::forValue)); });
+        deserializerMap.put("connectivityState", (n) -> { this.setConnectivityState(n.getEnumValue(BranchSiteConnectivityState::forValue)); });
         deserializerMap.put("country", (n) -> { this.setCountry(n.getStringValue()); });
         deserializerMap.put("deviceLinks", (n) -> { this.setDeviceLinks(n.getCollectionOfObjectValues(DeviceLink::createFromDiscriminatorValue)); });
         deserializerMap.put("forwardingProfiles", (n) -> { this.setForwardingProfiles(n.getCollectionOfObjectValues(ForwardingProfile::createFromDiscriminatorValue)); });
@@ -161,7 +161,7 @@ public class BranchSite extends Entity implements Parsable {
      * Sets the connectivityState property value. Determines the branch site status. The possible values are: pending, connected, inactive, error.
      * @param value Value to set for the connectivityState property.
      */
-    public void setConnectivityState(@jakarta.annotation.Nullable final ConnectivityState value) {
+    public void setConnectivityState(@jakarta.annotation.Nullable final BranchSiteConnectivityState value) {
         this.backingStore.set("connectivityState", value);
     }
     /**

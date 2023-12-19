@@ -49,10 +49,10 @@ public class CurrentLabel implements AdditionalDataHolder, BackedModel, Parsable
     }
     /**
      * Gets the applicationMode property value. The applicationMode property
-     * @return a ApplicationMode
+     * @return a CurrentLabelApplicationMode
      */
     @jakarta.annotation.Nullable
-    public ApplicationMode getApplicationMode() {
+    public CurrentLabelApplicationMode getApplicationMode() {
         return this.backingStore.get("applicationMode");
     }
     /**
@@ -70,7 +70,7 @@ public class CurrentLabel implements AdditionalDataHolder, BackedModel, Parsable
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
-        deserializerMap.put("applicationMode", (n) -> { this.setApplicationMode(n.getEnumValue(ApplicationMode::forValue)); });
+        deserializerMap.put("applicationMode", (n) -> { this.setApplicationMode(n.getEnumValue(CurrentLabelApplicationMode::forValue)); });
         deserializerMap.put("id", (n) -> { this.setId(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;
@@ -113,7 +113,7 @@ public class CurrentLabel implements AdditionalDataHolder, BackedModel, Parsable
      * Sets the applicationMode property value. The applicationMode property
      * @param value Value to set for the applicationMode property.
      */
-    public void setApplicationMode(@jakarta.annotation.Nullable final ApplicationMode value) {
+    public void setApplicationMode(@jakarta.annotation.Nullable final CurrentLabelApplicationMode value) {
         this.backingStore.set("applicationMode", value);
     }
     /**

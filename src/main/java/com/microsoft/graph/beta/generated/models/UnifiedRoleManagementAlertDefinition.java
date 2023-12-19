@@ -56,7 +56,7 @@ public class UnifiedRoleManagementAlertDefinition extends Entity implements Pars
         deserializerMap.put("scopeId", (n) -> { this.setScopeId(n.getStringValue()); });
         deserializerMap.put("scopeType", (n) -> { this.setScopeType(n.getStringValue()); });
         deserializerMap.put("securityImpact", (n) -> { this.setSecurityImpact(n.getStringValue()); });
-        deserializerMap.put("severityLevel", (n) -> { this.setSeverityLevel(n.getEnumValue(AlertSeverity::forValue)); });
+        deserializerMap.put("severityLevel", (n) -> { this.setSeverityLevel(n.getEnumValue(UnifiedRoleManagementAlertDefinitionSeverityLevel::forValue)); });
         return deserializerMap;
     }
     /**
@@ -117,10 +117,10 @@ public class UnifiedRoleManagementAlertDefinition extends Entity implements Pars
     }
     /**
      * Gets the severityLevel property value. Severity level of the alert. The possible values are: unknown, informational, low, medium, high, unknownFutureValue.
-     * @return a AlertSeverity
+     * @return a UnifiedRoleManagementAlertDefinitionSeverityLevel
      */
     @jakarta.annotation.Nullable
-    public AlertSeverity getSeverityLevel() {
+    public UnifiedRoleManagementAlertDefinitionSeverityLevel getSeverityLevel() {
         return this.backingStore.get("severityLevel");
     }
     /**
@@ -208,7 +208,7 @@ public class UnifiedRoleManagementAlertDefinition extends Entity implements Pars
      * Sets the severityLevel property value. Severity level of the alert. The possible values are: unknown, informational, low, medium, high, unknownFutureValue.
      * @param value Value to set for the severityLevel property.
      */
-    public void setSeverityLevel(@jakarta.annotation.Nullable final AlertSeverity value) {
+    public void setSeverityLevel(@jakarta.annotation.Nullable final UnifiedRoleManagementAlertDefinitionSeverityLevel value) {
         this.backingStore.set("severityLevel", value);
     }
 }

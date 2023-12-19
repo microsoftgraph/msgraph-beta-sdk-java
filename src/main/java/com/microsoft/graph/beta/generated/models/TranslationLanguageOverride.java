@@ -64,7 +64,7 @@ public class TranslationLanguageOverride implements AdditionalDataHolder, Backed
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("languageTag", (n) -> { this.setLanguageTag(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("translationBehavior", (n) -> { this.setTranslationBehavior(n.getEnumValue(TranslationBehavior::forValue)); });
+        deserializerMap.put("translationBehavior", (n) -> { this.setTranslationBehavior(n.getEnumValue(TranslationLanguageOverrideTranslationBehavior::forValue)); });
         return deserializerMap;
     }
     /**
@@ -85,10 +85,10 @@ public class TranslationLanguageOverride implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the translationBehavior property value. The translation override behavior for the language, if any.Returned by default. Not nullable.
-     * @return a TranslationBehavior
+     * @return a TranslationLanguageOverrideTranslationBehavior
      */
     @jakarta.annotation.Nullable
-    public TranslationBehavior getTranslationBehavior() {
+    public TranslationLanguageOverrideTranslationBehavior getTranslationBehavior() {
         return this.backingStore.get("translationBehavior");
     }
     /**
@@ -135,7 +135,7 @@ public class TranslationLanguageOverride implements AdditionalDataHolder, Backed
      * Sets the translationBehavior property value. The translation override behavior for the language, if any.Returned by default. Not nullable.
      * @param value Value to set for the translationBehavior property.
      */
-    public void setTranslationBehavior(@jakarta.annotation.Nullable final TranslationBehavior value) {
+    public void setTranslationBehavior(@jakarta.annotation.Nullable final TranslationLanguageOverrideTranslationBehavior value) {
         this.backingStore.set("translationBehavior", value);
     }
 }

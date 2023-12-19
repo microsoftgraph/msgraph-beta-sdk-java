@@ -64,8 +64,8 @@ public class X509CertificateAuthenticationModeConfiguration implements Additiona
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("rules", (n) -> { this.setRules(n.getCollectionOfObjectValues(X509CertificateRule::createFromDiscriminatorValue)); });
-        deserializerMap.put("x509CertificateAuthenticationDefaultMode", (n) -> { this.setX509CertificateAuthenticationDefaultMode(n.getEnumValue(X509CertificateAuthenticationMode::forValue)); });
-        deserializerMap.put("x509CertificateDefaultRequiredAffinityLevel", (n) -> { this.setX509CertificateDefaultRequiredAffinityLevel(n.getEnumValue(X509CertificateAffinityLevel::forValue)); });
+        deserializerMap.put("x509CertificateAuthenticationDefaultMode", (n) -> { this.setX509CertificateAuthenticationDefaultMode(n.getEnumValue(X509CertificateAuthenticationModeConfigurationX509CertificateAuthenticationDefaultMode::forValue)); });
+        deserializerMap.put("x509CertificateDefaultRequiredAffinityLevel", (n) -> { this.setX509CertificateDefaultRequiredAffinityLevel(n.getEnumValue(X509CertificateAuthenticationModeConfigurationX509CertificateDefaultRequiredAffinityLevel::forValue)); });
         return deserializerMap;
     }
     /**
@@ -86,18 +86,18 @@ public class X509CertificateAuthenticationModeConfiguration implements Additiona
     }
     /**
      * Gets the x509CertificateAuthenticationDefaultMode property value. The type of strong authentication mode. The possible values are: x509CertificateSingleFactor, x509CertificateMultiFactor, unknownFutureValue.
-     * @return a X509CertificateAuthenticationMode
+     * @return a X509CertificateAuthenticationModeConfigurationX509CertificateAuthenticationDefaultMode
      */
     @jakarta.annotation.Nullable
-    public X509CertificateAuthenticationMode getX509CertificateAuthenticationDefaultMode() {
+    public X509CertificateAuthenticationModeConfigurationX509CertificateAuthenticationDefaultMode getX509CertificateAuthenticationDefaultMode() {
         return this.backingStore.get("x509CertificateAuthenticationDefaultMode");
     }
     /**
      * Gets the x509CertificateDefaultRequiredAffinityLevel property value. Determines the default value for the tenant affinity binding level. The possible values are: low, high, unknownFutureValue.
-     * @return a X509CertificateAffinityLevel
+     * @return a X509CertificateAuthenticationModeConfigurationX509CertificateDefaultRequiredAffinityLevel
      */
     @jakarta.annotation.Nullable
-    public X509CertificateAffinityLevel getX509CertificateDefaultRequiredAffinityLevel() {
+    public X509CertificateAuthenticationModeConfigurationX509CertificateDefaultRequiredAffinityLevel getX509CertificateDefaultRequiredAffinityLevel() {
         return this.backingStore.get("x509CertificateDefaultRequiredAffinityLevel");
     }
     /**
@@ -145,14 +145,14 @@ public class X509CertificateAuthenticationModeConfiguration implements Additiona
      * Sets the x509CertificateAuthenticationDefaultMode property value. The type of strong authentication mode. The possible values are: x509CertificateSingleFactor, x509CertificateMultiFactor, unknownFutureValue.
      * @param value Value to set for the x509CertificateAuthenticationDefaultMode property.
      */
-    public void setX509CertificateAuthenticationDefaultMode(@jakarta.annotation.Nullable final X509CertificateAuthenticationMode value) {
+    public void setX509CertificateAuthenticationDefaultMode(@jakarta.annotation.Nullable final X509CertificateAuthenticationModeConfigurationX509CertificateAuthenticationDefaultMode value) {
         this.backingStore.set("x509CertificateAuthenticationDefaultMode", value);
     }
     /**
      * Sets the x509CertificateDefaultRequiredAffinityLevel property value. Determines the default value for the tenant affinity binding level. The possible values are: low, high, unknownFutureValue.
      * @param value Value to set for the x509CertificateDefaultRequiredAffinityLevel property.
      */
-    public void setX509CertificateDefaultRequiredAffinityLevel(@jakarta.annotation.Nullable final X509CertificateAffinityLevel value) {
+    public void setX509CertificateDefaultRequiredAffinityLevel(@jakarta.annotation.Nullable final X509CertificateAuthenticationModeConfigurationX509CertificateDefaultRequiredAffinityLevel value) {
         this.backingStore.set("x509CertificateDefaultRequiredAffinityLevel", value);
     }
 }

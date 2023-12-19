@@ -49,10 +49,10 @@ public class RuleThreshold implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the aggregation property value. Indicates the built-in aggregation methods. The possible values are: count, percentage, affectedCloudPcCount, affectedCloudPcPercentage, unknownFutureValue.
-     * @return a AggregationType
+     * @return a RuleThresholdAggregation
      */
     @jakarta.annotation.Nullable
-    public AggregationType getAggregation() {
+    public RuleThresholdAggregation getAggregation() {
         return this.backingStore.get("aggregation");
     }
     /**
@@ -70,9 +70,9 @@ public class RuleThreshold implements AdditionalDataHolder, BackedModel, Parsabl
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
-        deserializerMap.put("aggregation", (n) -> { this.setAggregation(n.getEnumValue(AggregationType::forValue)); });
+        deserializerMap.put("aggregation", (n) -> { this.setAggregation(n.getEnumValue(RuleThresholdAggregation::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("operator", (n) -> { this.setOperator(n.getEnumValue(OperatorType::forValue)); });
+        deserializerMap.put("operator", (n) -> { this.setOperator(n.getEnumValue(RuleThresholdOperator::forValue)); });
         deserializerMap.put("target", (n) -> { this.setTarget(n.getIntegerValue()); });
         return deserializerMap;
     }
@@ -86,10 +86,10 @@ public class RuleThreshold implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the operator property value. Indicates the built-in operator. The possible values are: greaterOrEqual, equal, greater, less, lessOrEqual, notEqual, unknownFutureValue.
-     * @return a OperatorType
+     * @return a RuleThresholdOperator
      */
     @jakarta.annotation.Nullable
-    public OperatorType getOperator() {
+    public RuleThresholdOperator getOperator() {
         return this.backingStore.get("operator");
     }
     /**
@@ -123,7 +123,7 @@ public class RuleThreshold implements AdditionalDataHolder, BackedModel, Parsabl
      * Sets the aggregation property value. Indicates the built-in aggregation methods. The possible values are: count, percentage, affectedCloudPcCount, affectedCloudPcPercentage, unknownFutureValue.
      * @param value Value to set for the aggregation property.
      */
-    public void setAggregation(@jakarta.annotation.Nullable final AggregationType value) {
+    public void setAggregation(@jakarta.annotation.Nullable final RuleThresholdAggregation value) {
         this.backingStore.set("aggregation", value);
     }
     /**
@@ -145,7 +145,7 @@ public class RuleThreshold implements AdditionalDataHolder, BackedModel, Parsabl
      * Sets the operator property value. Indicates the built-in operator. The possible values are: greaterOrEqual, equal, greater, less, lessOrEqual, notEqual, unknownFutureValue.
      * @param value Value to set for the operator property.
      */
-    public void setOperator(@jakarta.annotation.Nullable final OperatorType value) {
+    public void setOperator(@jakarta.annotation.Nullable final RuleThresholdOperator value) {
         this.backingStore.set("operator", value);
     }
     /**

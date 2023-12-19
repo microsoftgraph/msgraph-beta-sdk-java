@@ -156,7 +156,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
         deserializerMap.put("loginGroupOrDomain", (n) -> { this.setLoginGroupOrDomain(n.getStringValue()); });
         deserializerMap.put("onDemandRules", (n) -> { this.setOnDemandRules(n.getCollectionOfObjectValues(VpnOnDemandRule::createFromDiscriminatorValue)); });
         deserializerMap.put("optInToDeviceIdSharing", (n) -> { this.setOptInToDeviceIdSharing(n.getBooleanValue()); });
-        deserializerMap.put("providerType", (n) -> { this.setProviderType(n.getEnumValue(VpnProviderType::forValue)); });
+        deserializerMap.put("providerType", (n) -> { this.setProviderType(n.getEnumValue(AppleVpnConfigurationProviderType::forValue)); });
         deserializerMap.put("proxyServer", (n) -> { this.setProxyServer(n.getObjectValue(VpnProxyServer::createFromDiscriminatorValue)); });
         deserializerMap.put("realm", (n) -> { this.setRealm(n.getStringValue()); });
         deserializerMap.put("role", (n) -> { this.setRole(n.getStringValue()); });
@@ -198,10 +198,10 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
     }
     /**
      * Gets the providerType property value. Provider type for per-app VPN. Possible values are: notConfigured, appProxy, packetTunnel.
-     * @return a VpnProviderType
+     * @return a AppleVpnConfigurationProviderType
      */
     @jakarta.annotation.Nullable
-    public VpnProviderType getProviderType() {
+    public AppleVpnConfigurationProviderType getProviderType() {
         return this.backingStore.get("providerType");
     }
     /**
@@ -390,7 +390,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
      * Sets the providerType property value. Provider type for per-app VPN. Possible values are: notConfigured, appProxy, packetTunnel.
      * @param value Value to set for the providerType property.
      */
-    public void setProviderType(@jakarta.annotation.Nullable final VpnProviderType value) {
+    public void setProviderType(@jakarta.annotation.Nullable final AppleVpnConfigurationProviderType value) {
         this.backingStore.set("providerType", value);
     }
     /**

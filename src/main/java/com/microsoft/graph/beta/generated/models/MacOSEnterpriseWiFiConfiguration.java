@@ -30,18 +30,18 @@ public class MacOSEnterpriseWiFiConfiguration extends MacOSWiFiConfiguration imp
     }
     /**
      * Gets the authenticationMethod property value. Authentication Method when EAP Type is configured to PEAP or EAP-TTLS. Possible values are: certificate, usernameAndPassword, derivedCredential.
-     * @return a WiFiAuthenticationMethod
+     * @return a MacOSEnterpriseWiFiConfigurationAuthenticationMethod
      */
     @jakarta.annotation.Nullable
-    public WiFiAuthenticationMethod getAuthenticationMethod() {
+    public MacOSEnterpriseWiFiConfigurationAuthenticationMethod getAuthenticationMethod() {
         return this.backingStore.get("authenticationMethod");
     }
     /**
      * Gets the eapFastConfiguration property value. EAP-FAST Configuration Option when EAP-FAST is the selected EAP Type. Possible values are: noProtectedAccessCredential, useProtectedAccessCredential, useProtectedAccessCredentialAndProvision, useProtectedAccessCredentialAndProvisionAnonymously.
-     * @return a EapFastConfiguration
+     * @return a MacOSEnterpriseWiFiConfigurationEapFastConfiguration
      */
     @jakarta.annotation.Nullable
-    public EapFastConfiguration getEapFastConfiguration() {
+    public MacOSEnterpriseWiFiConfigurationEapFastConfiguration getEapFastConfiguration() {
         return this.backingStore.get("eapFastConfiguration");
     }
     /**
@@ -59,11 +59,11 @@ public class MacOSEnterpriseWiFiConfiguration extends MacOSWiFiConfiguration imp
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("authenticationMethod", (n) -> { this.setAuthenticationMethod(n.getEnumValue(WiFiAuthenticationMethod::forValue)); });
-        deserializerMap.put("eapFastConfiguration", (n) -> { this.setEapFastConfiguration(n.getEnumValue(EapFastConfiguration::forValue)); });
+        deserializerMap.put("authenticationMethod", (n) -> { this.setAuthenticationMethod(n.getEnumValue(MacOSEnterpriseWiFiConfigurationAuthenticationMethod::forValue)); });
+        deserializerMap.put("eapFastConfiguration", (n) -> { this.setEapFastConfiguration(n.getEnumValue(MacOSEnterpriseWiFiConfigurationEapFastConfiguration::forValue)); });
         deserializerMap.put("eapType", (n) -> { this.setEapType(n.getEnumValue(EapType::forValue)); });
         deserializerMap.put("identityCertificateForClientAuthentication", (n) -> { this.setIdentityCertificateForClientAuthentication(n.getObjectValue(MacOSCertificateProfileBase::createFromDiscriminatorValue)); });
-        deserializerMap.put("innerAuthenticationProtocolForEapTtls", (n) -> { this.setInnerAuthenticationProtocolForEapTtls(n.getEnumValue(NonEapAuthenticationMethodForEapTtlsType::forValue)); });
+        deserializerMap.put("innerAuthenticationProtocolForEapTtls", (n) -> { this.setInnerAuthenticationProtocolForEapTtls(n.getEnumValue(MacOSEnterpriseWiFiConfigurationInnerAuthenticationProtocolForEapTtls::forValue)); });
         deserializerMap.put("outerIdentityPrivacyTemporaryValue", (n) -> { this.setOuterIdentityPrivacyTemporaryValue(n.getStringValue()); });
         deserializerMap.put("rootCertificateForServerValidation", (n) -> { this.setRootCertificateForServerValidation(n.getObjectValue(MacOSTrustedRootCertificate::createFromDiscriminatorValue)); });
         deserializerMap.put("rootCertificatesForServerValidation", (n) -> { this.setRootCertificatesForServerValidation(n.getCollectionOfObjectValues(MacOSTrustedRootCertificate::createFromDiscriminatorValue)); });
@@ -80,10 +80,10 @@ public class MacOSEnterpriseWiFiConfiguration extends MacOSWiFiConfiguration imp
     }
     /**
      * Gets the innerAuthenticationProtocolForEapTtls property value. Non-EAP Method for Authentication (Inner Identity) when EAP Type is EAP-TTLS and Authenticationmethod is Username and Password. Possible values are: unencryptedPassword, challengeHandshakeAuthenticationProtocol, microsoftChap, microsoftChapVersionTwo.
-     * @return a NonEapAuthenticationMethodForEapTtlsType
+     * @return a MacOSEnterpriseWiFiConfigurationInnerAuthenticationProtocolForEapTtls
      */
     @jakarta.annotation.Nullable
-    public NonEapAuthenticationMethodForEapTtlsType getInnerAuthenticationProtocolForEapTtls() {
+    public MacOSEnterpriseWiFiConfigurationInnerAuthenticationProtocolForEapTtls getInnerAuthenticationProtocolForEapTtls() {
         return this.backingStore.get("innerAuthenticationProtocolForEapTtls");
     }
     /**
@@ -139,14 +139,14 @@ public class MacOSEnterpriseWiFiConfiguration extends MacOSWiFiConfiguration imp
      * Sets the authenticationMethod property value. Authentication Method when EAP Type is configured to PEAP or EAP-TTLS. Possible values are: certificate, usernameAndPassword, derivedCredential.
      * @param value Value to set for the authenticationMethod property.
      */
-    public void setAuthenticationMethod(@jakarta.annotation.Nullable final WiFiAuthenticationMethod value) {
+    public void setAuthenticationMethod(@jakarta.annotation.Nullable final MacOSEnterpriseWiFiConfigurationAuthenticationMethod value) {
         this.backingStore.set("authenticationMethod", value);
     }
     /**
      * Sets the eapFastConfiguration property value. EAP-FAST Configuration Option when EAP-FAST is the selected EAP Type. Possible values are: noProtectedAccessCredential, useProtectedAccessCredential, useProtectedAccessCredentialAndProvision, useProtectedAccessCredentialAndProvisionAnonymously.
      * @param value Value to set for the eapFastConfiguration property.
      */
-    public void setEapFastConfiguration(@jakarta.annotation.Nullable final EapFastConfiguration value) {
+    public void setEapFastConfiguration(@jakarta.annotation.Nullable final MacOSEnterpriseWiFiConfigurationEapFastConfiguration value) {
         this.backingStore.set("eapFastConfiguration", value);
     }
     /**
@@ -167,7 +167,7 @@ public class MacOSEnterpriseWiFiConfiguration extends MacOSWiFiConfiguration imp
      * Sets the innerAuthenticationProtocolForEapTtls property value. Non-EAP Method for Authentication (Inner Identity) when EAP Type is EAP-TTLS and Authenticationmethod is Username and Password. Possible values are: unencryptedPassword, challengeHandshakeAuthenticationProtocol, microsoftChap, microsoftChapVersionTwo.
      * @param value Value to set for the innerAuthenticationProtocolForEapTtls property.
      */
-    public void setInnerAuthenticationProtocolForEapTtls(@jakarta.annotation.Nullable final NonEapAuthenticationMethodForEapTtlsType value) {
+    public void setInnerAuthenticationProtocolForEapTtls(@jakarta.annotation.Nullable final MacOSEnterpriseWiFiConfigurationInnerAuthenticationProtocolForEapTtls value) {
         this.backingStore.set("innerAuthenticationProtocolForEapTtls", value);
     }
     /**

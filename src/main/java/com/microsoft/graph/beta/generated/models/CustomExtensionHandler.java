@@ -40,15 +40,15 @@ public class CustomExtensionHandler extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("customExtension", (n) -> { this.setCustomExtension(n.getObjectValue(CustomAccessPackageWorkflowExtension::createFromDiscriminatorValue)); });
-        deserializerMap.put("stage", (n) -> { this.setStage(n.getEnumValue(AccessPackageCustomExtensionStage::forValue)); });
+        deserializerMap.put("stage", (n) -> { this.setStage(n.getEnumValue(CustomExtensionHandlerStage::forValue)); });
         return deserializerMap;
     }
     /**
      * Gets the stage property value. Indicates the stage of the access package assignment request workflow when the access package custom extension runs. The possible values are: assignmentRequestCreated, assignmentRequestApproved, assignmentRequestGranted, assignmentRequestRemoved, assignmentFourteenDaysBeforeExpiration, assignmentOneDayBeforeExpiration, unknownFutureValue.
-     * @return a AccessPackageCustomExtensionStage
+     * @return a CustomExtensionHandlerStage
      */
     @jakarta.annotation.Nullable
-    public AccessPackageCustomExtensionStage getStage() {
+    public CustomExtensionHandlerStage getStage() {
         return this.backingStore.get("stage");
     }
     /**
@@ -72,7 +72,7 @@ public class CustomExtensionHandler extends Entity implements Parsable {
      * Sets the stage property value. Indicates the stage of the access package assignment request workflow when the access package custom extension runs. The possible values are: assignmentRequestCreated, assignmentRequestApproved, assignmentRequestGranted, assignmentRequestRemoved, assignmentFourteenDaysBeforeExpiration, assignmentOneDayBeforeExpiration, unknownFutureValue.
      * @param value Value to set for the stage property.
      */
-    public void setStage(@jakarta.annotation.Nullable final AccessPackageCustomExtensionStage value) {
+    public void setStage(@jakarta.annotation.Nullable final CustomExtensionHandlerStage value) {
         this.backingStore.set("stage", value);
     }
 }

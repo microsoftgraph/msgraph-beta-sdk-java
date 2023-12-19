@@ -3,7 +3,6 @@ package com.microsoft.graph.beta.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -32,16 +31,16 @@ public class MachineLearningDetectedSensitiveContent extends DetectedSensitiveCo
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("matchTolerance", (n) -> { this.setMatchTolerance(n.getEnumSetValue(MlClassificationMatchTolerance::forValue)); });
+        deserializerMap.put("matchTolerance", (n) -> { this.setMatchTolerance(n.getEnumValue(MachineLearningDetectedSensitiveContentMatchTolerance::forValue)); });
         deserializerMap.put("modelVersion", (n) -> { this.setModelVersion(n.getStringValue()); });
         return deserializerMap;
     }
     /**
      * Gets the matchTolerance property value. The matchTolerance property
-     * @return a EnumSet<MlClassificationMatchTolerance>
+     * @return a MachineLearningDetectedSensitiveContentMatchTolerance
      */
     @jakarta.annotation.Nullable
-    public EnumSet<MlClassificationMatchTolerance> getMatchTolerance() {
+    public MachineLearningDetectedSensitiveContentMatchTolerance getMatchTolerance() {
         return this.backingStore.get("matchTolerance");
     }
     /**
@@ -59,14 +58,14 @@ public class MachineLearningDetectedSensitiveContent extends DetectedSensitiveCo
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeEnumSetValue("matchTolerance", this.getMatchTolerance());
+        writer.writeEnumValue("matchTolerance", this.getMatchTolerance());
         writer.writeStringValue("modelVersion", this.getModelVersion());
     }
     /**
      * Sets the matchTolerance property value. The matchTolerance property
      * @param value Value to set for the matchTolerance property.
      */
-    public void setMatchTolerance(@jakarta.annotation.Nullable final EnumSet<MlClassificationMatchTolerance> value) {
+    public void setMatchTolerance(@jakarta.annotation.Nullable final MachineLearningDetectedSensitiveContentMatchTolerance value) {
         this.backingStore.set("matchTolerance", value);
     }
     /**

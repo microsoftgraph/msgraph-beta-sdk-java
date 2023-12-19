@@ -64,10 +64,10 @@ public class InvitationRedemptionIdentityProviderConfiguration implements Additi
     }
     /**
      * Gets the fallbackIdentityProvider property value. The fallback identity provider to be used in case no primary identity provider can be used for guest invitation redemption. Possible values are: defaultConfiguredIdp, emailOneTimePasscode, or microsoftAccount.
-     * @return a B2bIdentityProvidersType
+     * @return a InvitationRedemptionIdentityProviderConfigurationFallbackIdentityProvider
      */
     @jakarta.annotation.Nullable
-    public B2bIdentityProvidersType getFallbackIdentityProvider() {
+    public InvitationRedemptionIdentityProviderConfigurationFallbackIdentityProvider getFallbackIdentityProvider() {
         return this.backingStore.get("fallbackIdentityProvider");
     }
     /**
@@ -77,9 +77,9 @@ public class InvitationRedemptionIdentityProviderConfiguration implements Additi
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
-        deserializerMap.put("fallbackIdentityProvider", (n) -> { this.setFallbackIdentityProvider(n.getEnumValue(B2bIdentityProvidersType::forValue)); });
+        deserializerMap.put("fallbackIdentityProvider", (n) -> { this.setFallbackIdentityProvider(n.getEnumValue(InvitationRedemptionIdentityProviderConfigurationFallbackIdentityProvider::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("primaryIdentityProviderPrecedenceOrder", (n) -> { this.setPrimaryIdentityProviderPrecedenceOrder(n.getCollectionOfEnumValues(B2bIdentityProvidersType::forValue)); });
+        deserializerMap.put("primaryIdentityProviderPrecedenceOrder", (n) -> { this.setPrimaryIdentityProviderPrecedenceOrder(n.getCollectionOfEnumValues(InvitationRedemptionIdentityProviderConfigurationPrimaryIdentityProviderPrecedenceOrder::forValue)); });
         return deserializerMap;
     }
     /**
@@ -92,10 +92,10 @@ public class InvitationRedemptionIdentityProviderConfiguration implements Additi
     }
     /**
      * Gets the primaryIdentityProviderPrecedenceOrder property value. Collection of identity providers in priority order of preference to be used for guest invitation redemption. Possible values are: azureActiveDirectory, externalFederation, or socialIdentityProviders.
-     * @return a java.util.List<B2bIdentityProvidersType>
+     * @return a java.util.List<InvitationRedemptionIdentityProviderConfigurationPrimaryIdentityProviderPrecedenceOrder>
      */
     @jakarta.annotation.Nullable
-    public java.util.List<B2bIdentityProvidersType> getPrimaryIdentityProviderPrecedenceOrder() {
+    public java.util.List<InvitationRedemptionIdentityProviderConfigurationPrimaryIdentityProviderPrecedenceOrder> getPrimaryIdentityProviderPrecedenceOrder() {
         return this.backingStore.get("primaryIdentityProviderPrecedenceOrder");
     }
     /**
@@ -128,7 +128,7 @@ public class InvitationRedemptionIdentityProviderConfiguration implements Additi
      * Sets the fallbackIdentityProvider property value. The fallback identity provider to be used in case no primary identity provider can be used for guest invitation redemption. Possible values are: defaultConfiguredIdp, emailOneTimePasscode, or microsoftAccount.
      * @param value Value to set for the fallbackIdentityProvider property.
      */
-    public void setFallbackIdentityProvider(@jakarta.annotation.Nullable final B2bIdentityProvidersType value) {
+    public void setFallbackIdentityProvider(@jakarta.annotation.Nullable final InvitationRedemptionIdentityProviderConfigurationFallbackIdentityProvider value) {
         this.backingStore.set("fallbackIdentityProvider", value);
     }
     /**
@@ -142,7 +142,7 @@ public class InvitationRedemptionIdentityProviderConfiguration implements Additi
      * Sets the primaryIdentityProviderPrecedenceOrder property value. Collection of identity providers in priority order of preference to be used for guest invitation redemption. Possible values are: azureActiveDirectory, externalFederation, or socialIdentityProviders.
      * @param value Value to set for the primaryIdentityProviderPrecedenceOrder property.
      */
-    public void setPrimaryIdentityProviderPrecedenceOrder(@jakarta.annotation.Nullable final java.util.List<B2bIdentityProvidersType> value) {
+    public void setPrimaryIdentityProviderPrecedenceOrder(@jakarta.annotation.Nullable final java.util.List<InvitationRedemptionIdentityProviderConfigurationPrimaryIdentityProviderPrecedenceOrder> value) {
         this.backingStore.set("primaryIdentityProviderPrecedenceOrder", value);
     }
 }

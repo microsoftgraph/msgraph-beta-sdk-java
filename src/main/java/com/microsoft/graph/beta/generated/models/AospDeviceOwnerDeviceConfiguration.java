@@ -82,7 +82,7 @@ public class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration impl
         deserializerMap.put("factoryResetBlocked", (n) -> { this.setFactoryResetBlocked(n.getBooleanValue()); });
         deserializerMap.put("passwordMinimumLength", (n) -> { this.setPasswordMinimumLength(n.getIntegerValue()); });
         deserializerMap.put("passwordMinutesOfInactivityBeforeScreenTimeout", (n) -> { this.setPasswordMinutesOfInactivityBeforeScreenTimeout(n.getIntegerValue()); });
-        deserializerMap.put("passwordRequiredType", (n) -> { this.setPasswordRequiredType(n.getEnumValue(AndroidDeviceOwnerRequiredPasswordType::forValue)); });
+        deserializerMap.put("passwordRequiredType", (n) -> { this.setPasswordRequiredType(n.getEnumValue(AospDeviceOwnerDeviceConfigurationPasswordRequiredType::forValue)); });
         deserializerMap.put("passwordSignInFailureCountBeforeFactoryReset", (n) -> { this.setPasswordSignInFailureCountBeforeFactoryReset(n.getIntegerValue()); });
         deserializerMap.put("screenCaptureBlocked", (n) -> { this.setScreenCaptureBlocked(n.getBooleanValue()); });
         deserializerMap.put("securityAllowDebuggingFeatures", (n) -> { this.setSecurityAllowDebuggingFeatures(n.getBooleanValue()); });
@@ -109,10 +109,10 @@ public class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration impl
     }
     /**
      * Gets the passwordRequiredType property value. Indicates the minimum password quality required on the device. Possible values are: deviceDefault, required, numeric, numericComplex, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, customPassword.
-     * @return a AndroidDeviceOwnerRequiredPasswordType
+     * @return a AospDeviceOwnerDeviceConfigurationPasswordRequiredType
      */
     @jakarta.annotation.Nullable
-    public AndroidDeviceOwnerRequiredPasswordType getPasswordRequiredType() {
+    public AospDeviceOwnerDeviceConfigurationPasswordRequiredType getPasswordRequiredType() {
         return this.backingStore.get("passwordRequiredType");
     }
     /**
@@ -238,7 +238,7 @@ public class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration impl
      * Sets the passwordRequiredType property value. Indicates the minimum password quality required on the device. Possible values are: deviceDefault, required, numeric, numericComplex, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, customPassword.
      * @param value Value to set for the passwordRequiredType property.
      */
-    public void setPasswordRequiredType(@jakarta.annotation.Nullable final AndroidDeviceOwnerRequiredPasswordType value) {
+    public void setPasswordRequiredType(@jakarta.annotation.Nullable final AospDeviceOwnerDeviceConfigurationPasswordRequiredType value) {
         this.backingStore.set("passwordRequiredType", value);
     }
     /**

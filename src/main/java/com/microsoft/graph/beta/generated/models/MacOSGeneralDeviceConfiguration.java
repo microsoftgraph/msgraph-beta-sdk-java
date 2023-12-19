@@ -3,7 +3,6 @@ package com.microsoft.graph.beta.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -222,7 +221,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
         deserializerMap.put("softwareUpdatesEnforcedDelayInDays", (n) -> { this.setSoftwareUpdatesEnforcedDelayInDays(n.getIntegerValue()); });
         deserializerMap.put("spotlightBlockInternetResults", (n) -> { this.setSpotlightBlockInternetResults(n.getBooleanValue()); });
         deserializerMap.put("touchIdTimeoutInHours", (n) -> { this.setTouchIdTimeoutInHours(n.getIntegerValue()); });
-        deserializerMap.put("updateDelayPolicy", (n) -> { this.setUpdateDelayPolicy(n.getEnumSetValue(MacOSSoftwareUpdateDelayPolicy::forValue)); });
+        deserializerMap.put("updateDelayPolicy", (n) -> { this.setUpdateDelayPolicy(n.getEnumValue(MacOSGeneralDeviceConfigurationUpdateDelayPolicy::forValue)); });
         deserializerMap.put("wallpaperModificationBlocked", (n) -> { this.setWallpaperModificationBlocked(n.getBooleanValue()); });
         return deserializerMap;
     }
@@ -564,10 +563,10 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the updateDelayPolicy property value. Determines whether to delay OS and/or app updates for macOS. Possible values are: none, delayOSUpdateVisibility, delayAppUpdateVisibility, unknownFutureValue, delayMajorOsUpdateVisibility.
-     * @return a EnumSet<MacOSSoftwareUpdateDelayPolicy>
+     * @return a MacOSGeneralDeviceConfigurationUpdateDelayPolicy
      */
     @jakarta.annotation.Nullable
-    public EnumSet<MacOSSoftwareUpdateDelayPolicy> getUpdateDelayPolicy() {
+    public MacOSGeneralDeviceConfigurationUpdateDelayPolicy getUpdateDelayPolicy() {
         return this.backingStore.get("updateDelayPolicy");
     }
     /**
@@ -643,7 +642,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
         writer.writeIntegerValue("softwareUpdatesEnforcedDelayInDays", this.getSoftwareUpdatesEnforcedDelayInDays());
         writer.writeBooleanValue("spotlightBlockInternetResults", this.getSpotlightBlockInternetResults());
         writer.writeIntegerValue("touchIdTimeoutInHours", this.getTouchIdTimeoutInHours());
-        writer.writeEnumSetValue("updateDelayPolicy", this.getUpdateDelayPolicy());
+        writer.writeEnumValue("updateDelayPolicy", this.getUpdateDelayPolicy());
         writer.writeBooleanValue("wallpaperModificationBlocked", this.getWallpaperModificationBlocked());
     }
     /**
@@ -1056,7 +1055,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * Sets the updateDelayPolicy property value. Determines whether to delay OS and/or app updates for macOS. Possible values are: none, delayOSUpdateVisibility, delayAppUpdateVisibility, unknownFutureValue, delayMajorOsUpdateVisibility.
      * @param value Value to set for the updateDelayPolicy property.
      */
-    public void setUpdateDelayPolicy(@jakarta.annotation.Nullable final EnumSet<MacOSSoftwareUpdateDelayPolicy> value) {
+    public void setUpdateDelayPolicy(@jakarta.annotation.Nullable final MacOSGeneralDeviceConfigurationUpdateDelayPolicy value) {
         this.backingStore.set("updateDelayPolicy", value);
     }
     /**

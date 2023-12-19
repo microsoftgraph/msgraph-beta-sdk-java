@@ -38,10 +38,10 @@ public class MacOSPkcsCertificateProfile extends MacOSCertificateProfileBase imp
     }
     /**
      * Gets the certificateStore property value. Target store certificate. Possible values are: user, machine.
-     * @return a CertificateStore
+     * @return a MacOSPkcsCertificateProfileCertificateStore
      */
     @jakarta.annotation.Nullable
-    public CertificateStore getCertificateStore() {
+    public MacOSPkcsCertificateProfileCertificateStore getCertificateStore() {
         return this.backingStore.get("certificateStore");
     }
     /**
@@ -84,7 +84,7 @@ public class MacOSPkcsCertificateProfile extends MacOSCertificateProfileBase imp
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("allowAllAppsAccess", (n) -> { this.setAllowAllAppsAccess(n.getBooleanValue()); });
-        deserializerMap.put("certificateStore", (n) -> { this.setCertificateStore(n.getEnumValue(CertificateStore::forValue)); });
+        deserializerMap.put("certificateStore", (n) -> { this.setCertificateStore(n.getEnumValue(MacOSPkcsCertificateProfileCertificateStore::forValue)); });
         deserializerMap.put("certificateTemplateName", (n) -> { this.setCertificateTemplateName(n.getStringValue()); });
         deserializerMap.put("certificationAuthority", (n) -> { this.setCertificationAuthority(n.getStringValue()); });
         deserializerMap.put("certificationAuthorityName", (n) -> { this.setCertificationAuthorityName(n.getStringValue()); });
@@ -146,7 +146,7 @@ public class MacOSPkcsCertificateProfile extends MacOSCertificateProfileBase imp
      * Sets the certificateStore property value. Target store certificate. Possible values are: user, machine.
      * @param value Value to set for the certificateStore property.
      */
-    public void setCertificateStore(@jakarta.annotation.Nullable final CertificateStore value) {
+    public void setCertificateStore(@jakarta.annotation.Nullable final MacOSPkcsCertificateProfileCertificateStore value) {
         this.backingStore.set("certificateStore", value);
     }
     /**

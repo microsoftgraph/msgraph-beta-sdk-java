@@ -51,7 +51,7 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("attackSimulationInfo", (n) -> { this.setAttackSimulationInfo(n.getObjectValue(AttackSimulationInfo::createFromDiscriminatorValue)); });
         deserializerMap.put("internetMessageId", (n) -> { this.setInternetMessageId(n.getStringValue()); });
-        deserializerMap.put("originalCategory", (n) -> { this.setOriginalCategory(n.getEnumValue(SubmissionCategory::forValue)); });
+        deserializerMap.put("originalCategory", (n) -> { this.setOriginalCategory(n.getEnumValue(EmailThreatSubmissionOriginalCategory::forValue)); });
         deserializerMap.put("receivedDateTime", (n) -> { this.setReceivedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("recipientEmailAddress", (n) -> { this.setRecipientEmailAddress(n.getStringValue()); });
         deserializerMap.put("sender", (n) -> { this.setSender(n.getStringValue()); });
@@ -70,10 +70,10 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
     }
     /**
      * Gets the originalCategory property value. The original category of the submission. The possible values are: notJunk, spam, phishing, malware and unkownFutureValue.
-     * @return a SubmissionCategory
+     * @return a EmailThreatSubmissionOriginalCategory
      */
     @jakarta.annotation.Nullable
-    public SubmissionCategory getOriginalCategory() {
+    public EmailThreatSubmissionOriginalCategory getOriginalCategory() {
         return this.backingStore.get("originalCategory");
     }
     /**
@@ -159,7 +159,7 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
      * Sets the originalCategory property value. The original category of the submission. The possible values are: notJunk, spam, phishing, malware and unkownFutureValue.
      * @param value Value to set for the originalCategory property.
      */
-    public void setOriginalCategory(@jakarta.annotation.Nullable final SubmissionCategory value) {
+    public void setOriginalCategory(@jakarta.annotation.Nullable final EmailThreatSubmissionOriginalCategory value) {
         this.backingStore.set("originalCategory", value);
     }
     /**

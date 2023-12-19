@@ -50,10 +50,10 @@ public class AlertImpact implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the aggregationType property value. The aggregation type of the impact. The possible values are: count, percentage, affectedCloudPcCount, affectedCloudPcPercentage, unknownFutureValue.
-     * @return a AggregationType
+     * @return a AlertImpactAggregationType
      */
     @jakarta.annotation.Nullable
-    public AggregationType getAggregationType() {
+    public AlertImpactAggregationType getAggregationType() {
         return this.backingStore.get("aggregationType");
     }
     /**
@@ -79,7 +79,7 @@ public class AlertImpact implements AdditionalDataHolder, BackedModel, Parsable 
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
-        deserializerMap.put("aggregationType", (n) -> { this.setAggregationType(n.getEnumValue(AggregationType::forValue)); });
+        deserializerMap.put("aggregationType", (n) -> { this.setAggregationType(n.getEnumValue(AlertImpactAggregationType::forValue)); });
         deserializerMap.put("alertImpactDetails", (n) -> { this.setAlertImpactDetails(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("value", (n) -> { this.setValue(n.getIntegerValue()); });
@@ -124,7 +124,7 @@ public class AlertImpact implements AdditionalDataHolder, BackedModel, Parsable 
      * Sets the aggregationType property value. The aggregation type of the impact. The possible values are: count, percentage, affectedCloudPcCount, affectedCloudPcPercentage, unknownFutureValue.
      * @param value Value to set for the aggregationType property.
      */
-    public void setAggregationType(@jakarta.annotation.Nullable final AggregationType value) {
+    public void setAggregationType(@jakarta.annotation.Nullable final AlertImpactAggregationType value) {
         this.backingStore.set("aggregationType", value);
     }
     /**

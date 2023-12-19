@@ -36,10 +36,10 @@ public class MonitoringRule implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the action property value. The action triggered when the threshold for the given signal is reached. Possible values are: alertError, pauseDeployment, offerFallback, unknownFutureValue. The offerFallback member is only supported on feature update deployments of Windows 11 and must be paired with the ineligible signal. The fallback version offered is the version 22H2 of Windows 10.
-     * @return a MonitoringAction
+     * @return a MonitoringRuleAction
      */
     @jakarta.annotation.Nullable
-    public MonitoringAction getAction() {
+    public MonitoringRuleAction getAction() {
         return this.backingStore.get("action");
     }
     /**
@@ -70,9 +70,9 @@ public class MonitoringRule implements AdditionalDataHolder, BackedModel, Parsab
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
-        deserializerMap.put("action", (n) -> { this.setAction(n.getEnumValue(MonitoringAction::forValue)); });
+        deserializerMap.put("action", (n) -> { this.setAction(n.getEnumValue(MonitoringRuleAction::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("signal", (n) -> { this.setSignal(n.getEnumValue(MonitoringSignal::forValue)); });
+        deserializerMap.put("signal", (n) -> { this.setSignal(n.getEnumValue(MonitoringRuleSignal::forValue)); });
         deserializerMap.put("threshold", (n) -> { this.setThreshold(n.getIntegerValue()); });
         return deserializerMap;
     }
@@ -86,10 +86,10 @@ public class MonitoringRule implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the signal property value. The signal to monitor. Possible values are: rollback, ineligible, unknownFutureValue. The ineligible member is only supported on feature update deployments of Windows 11 and must be paired with the offerFallback action.
-     * @return a MonitoringSignal
+     * @return a MonitoringRuleSignal
      */
     @jakarta.annotation.Nullable
-    public MonitoringSignal getSignal() {
+    public MonitoringRuleSignal getSignal() {
         return this.backingStore.get("signal");
     }
     /**
@@ -116,7 +116,7 @@ public class MonitoringRule implements AdditionalDataHolder, BackedModel, Parsab
      * Sets the action property value. The action triggered when the threshold for the given signal is reached. Possible values are: alertError, pauseDeployment, offerFallback, unknownFutureValue. The offerFallback member is only supported on feature update deployments of Windows 11 and must be paired with the ineligible signal. The fallback version offered is the version 22H2 of Windows 10.
      * @param value Value to set for the action property.
      */
-    public void setAction(@jakarta.annotation.Nullable final MonitoringAction value) {
+    public void setAction(@jakarta.annotation.Nullable final MonitoringRuleAction value) {
         this.backingStore.set("action", value);
     }
     /**
@@ -145,7 +145,7 @@ public class MonitoringRule implements AdditionalDataHolder, BackedModel, Parsab
      * Sets the signal property value. The signal to monitor. Possible values are: rollback, ineligible, unknownFutureValue. The ineligible member is only supported on feature update deployments of Windows 11 and must be paired with the offerFallback action.
      * @param value Value to set for the signal property.
      */
-    public void setSignal(@jakarta.annotation.Nullable final MonitoringSignal value) {
+    public void setSignal(@jakarta.annotation.Nullable final MonitoringRuleSignal value) {
         this.backingStore.set("signal", value);
     }
     /**

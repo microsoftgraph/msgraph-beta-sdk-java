@@ -98,7 +98,7 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
         deserializerMap.put("syncContacts", (n) -> { this.setSyncContacts(n.getBooleanValue()); });
         deserializerMap.put("syncNotes", (n) -> { this.setSyncNotes(n.getBooleanValue()); });
         deserializerMap.put("syncTasks", (n) -> { this.setSyncTasks(n.getBooleanValue()); });
-        deserializerMap.put("userDomainNameSource", (n) -> { this.setUserDomainNameSource(n.getEnumValue(DomainNameSource::forValue)); });
+        deserializerMap.put("userDomainNameSource", (n) -> { this.setUserDomainNameSource(n.getEnumValue(AndroidEasEmailProfileConfigurationUserDomainNameSource::forValue)); });
         deserializerMap.put("usernameSource", (n) -> { this.setUsernameSource(n.getEnumValue(AndroidUsernameSource::forValue)); });
         return deserializerMap;
     }
@@ -176,10 +176,10 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
     }
     /**
      * Gets the userDomainNameSource property value. UserDomainname attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: fullDomainName, netBiosDomainName.
-     * @return a DomainNameSource
+     * @return a AndroidEasEmailProfileConfigurationUserDomainNameSource
      */
     @jakarta.annotation.Nullable
-    public DomainNameSource getUserDomainNameSource() {
+    public AndroidEasEmailProfileConfigurationUserDomainNameSource getUserDomainNameSource() {
         return this.backingStore.get("userDomainNameSource");
     }
     /**
@@ -324,7 +324,7 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
      * Sets the userDomainNameSource property value. UserDomainname attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: fullDomainName, netBiosDomainName.
      * @param value Value to set for the userDomainNameSource property.
      */
-    public void setUserDomainNameSource(@jakarta.annotation.Nullable final DomainNameSource value) {
+    public void setUserDomainNameSource(@jakarta.annotation.Nullable final AndroidEasEmailProfileConfigurationUserDomainNameSource value) {
         this.backingStore.set("userDomainNameSource", value);
     }
     /**

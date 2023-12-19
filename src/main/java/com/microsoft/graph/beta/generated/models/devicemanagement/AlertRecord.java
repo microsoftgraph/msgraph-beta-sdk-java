@@ -44,10 +44,10 @@ public class AlertRecord extends Entity implements Parsable {
     }
     /**
      * Gets the alertRuleTemplate property value. The rule template of the alert event. The possible values are: cloudPcProvisionScenario, cloudPcImageUploadScenario, cloudPcOnPremiseNetworkConnectionCheckScenario, unknownFutureValue, cloudPcInGracePeriodScenario. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: cloudPcInGracePeriodScenario.
-     * @return a AlertRuleTemplate
+     * @return a AlertRecordAlertRuleTemplate
      */
     @jakarta.annotation.Nullable
-    public AlertRuleTemplate getAlertRuleTemplate() {
+    public AlertRecordAlertRuleTemplate getAlertRuleTemplate() {
         return this.backingStore.get("alertRuleTemplate");
     }
     /**
@@ -75,13 +75,13 @@ public class AlertRecord extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("alertImpact", (n) -> { this.setAlertImpact(n.getObjectValue(AlertImpact::createFromDiscriminatorValue)); });
         deserializerMap.put("alertRuleId", (n) -> { this.setAlertRuleId(n.getStringValue()); });
-        deserializerMap.put("alertRuleTemplate", (n) -> { this.setAlertRuleTemplate(n.getEnumValue(AlertRuleTemplate::forValue)); });
+        deserializerMap.put("alertRuleTemplate", (n) -> { this.setAlertRuleTemplate(n.getEnumValue(AlertRecordAlertRuleTemplate::forValue)); });
         deserializerMap.put("detectedDateTime", (n) -> { this.setDetectedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("lastUpdatedDateTime", (n) -> { this.setLastUpdatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("resolvedDateTime", (n) -> { this.setResolvedDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("severity", (n) -> { this.setSeverity(n.getEnumValue(RuleSeverityType::forValue)); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(AlertStatusType::forValue)); });
+        deserializerMap.put("severity", (n) -> { this.setSeverity(n.getEnumValue(AlertRecordSeverity::forValue)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(AlertRecordStatus::forValue)); });
         return deserializerMap;
     }
     /**
@@ -102,18 +102,18 @@ public class AlertRecord extends Entity implements Parsable {
     }
     /**
      * Gets the severity property value. The severity of the alert event. The possible values are: unknown, informational, warning, critical, unknownFutureValue.
-     * @return a RuleSeverityType
+     * @return a AlertRecordSeverity
      */
     @jakarta.annotation.Nullable
-    public RuleSeverityType getSeverity() {
+    public AlertRecordSeverity getSeverity() {
         return this.backingStore.get("severity");
     }
     /**
      * Gets the status property value. The status of the alert record. The possible values are: active, resolved, unknownFutureValue.
-     * @return a AlertStatusType
+     * @return a AlertRecordStatus
      */
     @jakarta.annotation.Nullable
-    public AlertStatusType getStatus() {
+    public AlertRecordStatus getStatus() {
         return this.backingStore.get("status");
     }
     /**
@@ -151,7 +151,7 @@ public class AlertRecord extends Entity implements Parsable {
      * Sets the alertRuleTemplate property value. The rule template of the alert event. The possible values are: cloudPcProvisionScenario, cloudPcImageUploadScenario, cloudPcOnPremiseNetworkConnectionCheckScenario, unknownFutureValue, cloudPcInGracePeriodScenario. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: cloudPcInGracePeriodScenario.
      * @param value Value to set for the alertRuleTemplate property.
      */
-    public void setAlertRuleTemplate(@jakarta.annotation.Nullable final AlertRuleTemplate value) {
+    public void setAlertRuleTemplate(@jakarta.annotation.Nullable final AlertRecordAlertRuleTemplate value) {
         this.backingStore.set("alertRuleTemplate", value);
     }
     /**
@@ -186,14 +186,14 @@ public class AlertRecord extends Entity implements Parsable {
      * Sets the severity property value. The severity of the alert event. The possible values are: unknown, informational, warning, critical, unknownFutureValue.
      * @param value Value to set for the severity property.
      */
-    public void setSeverity(@jakarta.annotation.Nullable final RuleSeverityType value) {
+    public void setSeverity(@jakarta.annotation.Nullable final AlertRecordSeverity value) {
         this.backingStore.set("severity", value);
     }
     /**
      * Sets the status property value. The status of the alert record. The possible values are: active, resolved, unknownFutureValue.
      * @param value Value to set for the status property.
      */
-    public void setStatus(@jakarta.annotation.Nullable final AlertStatusType value) {
+    public void setStatus(@jakarta.annotation.Nullable final AlertRecordStatus value) {
         this.backingStore.set("status", value);
     }
 }

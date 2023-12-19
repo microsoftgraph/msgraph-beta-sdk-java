@@ -39,17 +39,17 @@ public class BaseSitePage extends BaseItem implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("pageLayout", (n) -> { this.setPageLayout(n.getEnumValue(PageLayoutType::forValue)); });
+        deserializerMap.put("pageLayout", (n) -> { this.setPageLayout(n.getEnumValue(BaseSitePagePageLayout::forValue)); });
         deserializerMap.put("publishingState", (n) -> { this.setPublishingState(n.getObjectValue(PublicationFacet::createFromDiscriminatorValue)); });
         deserializerMap.put("title", (n) -> { this.setTitle(n.getStringValue()); });
         return deserializerMap;
     }
     /**
      * Gets the pageLayout property value. The name of the page layout of the page. The possible values are: microsoftReserved, article, home, unknownFutureValue.
-     * @return a PageLayoutType
+     * @return a BaseSitePagePageLayout
      */
     @jakarta.annotation.Nullable
-    public PageLayoutType getPageLayout() {
+    public BaseSitePagePageLayout getPageLayout() {
         return this.backingStore.get("pageLayout");
     }
     /**
@@ -83,7 +83,7 @@ public class BaseSitePage extends BaseItem implements Parsable {
      * Sets the pageLayout property value. The name of the page layout of the page. The possible values are: microsoftReserved, article, home, unknownFutureValue.
      * @param value Value to set for the pageLayout property.
      */
-    public void setPageLayout(@jakarta.annotation.Nullable final PageLayoutType value) {
+    public void setPageLayout(@jakarta.annotation.Nullable final BaseSitePagePageLayout value) {
         this.backingStore.set("pageLayout", value);
     }
     /**

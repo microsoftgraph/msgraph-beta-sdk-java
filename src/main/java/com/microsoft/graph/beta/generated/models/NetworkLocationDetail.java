@@ -63,7 +63,7 @@ public class NetworkLocationDetail implements AdditionalDataHolder, BackedModel,
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("networkNames", (n) -> { this.setNetworkNames(n.getCollectionOfPrimitiveValues(String.class)); });
-        deserializerMap.put("networkType", (n) -> { this.setNetworkType(n.getEnumValue(NetworkType::forValue)); });
+        deserializerMap.put("networkType", (n) -> { this.setNetworkType(n.getEnumValue(NetworkLocationDetailNetworkType::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;
     }
@@ -77,10 +77,10 @@ public class NetworkLocationDetail implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the networkType property value. Provides the type of network used when signing in. Possible values are: intranet, extranet, namedNetwork, trusted, unknownFutureValue.
-     * @return a NetworkType
+     * @return a NetworkLocationDetailNetworkType
      */
     @jakarta.annotation.Nullable
-    public NetworkType getNetworkType() {
+    public NetworkLocationDetailNetworkType getNetworkType() {
         return this.backingStore.get("networkType");
     }
     /**
@@ -128,7 +128,7 @@ public class NetworkLocationDetail implements AdditionalDataHolder, BackedModel,
      * Sets the networkType property value. Provides the type of network used when signing in. Possible values are: intranet, extranet, namedNetwork, trusted, unknownFutureValue.
      * @param value Value to set for the networkType property.
      */
-    public void setNetworkType(@jakarta.annotation.Nullable final NetworkType value) {
+    public void setNetworkType(@jakarta.annotation.Nullable final NetworkLocationDetailNetworkType value) {
         this.backingStore.set("networkType", value);
     }
     /**

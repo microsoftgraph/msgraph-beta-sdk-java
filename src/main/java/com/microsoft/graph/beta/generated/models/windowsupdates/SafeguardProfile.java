@@ -57,10 +57,10 @@ public class SafeguardProfile implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the category property value. Specifies the category of safeguards. The possible values are: likelyIssues, unknownFutureValue.
-     * @return a SafeguardCategory
+     * @return a SafeguardProfileCategory
      */
     @jakarta.annotation.Nullable
-    public SafeguardCategory getCategory() {
+    public SafeguardProfileCategory getCategory() {
         return this.backingStore.get("category");
     }
     /**
@@ -70,7 +70,7 @@ public class SafeguardProfile implements AdditionalDataHolder, BackedModel, Pars
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
-        deserializerMap.put("category", (n) -> { this.setCategory(n.getEnumValue(SafeguardCategory::forValue)); });
+        deserializerMap.put("category", (n) -> { this.setCategory(n.getEnumValue(SafeguardProfileCategory::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;
     }
@@ -111,7 +111,7 @@ public class SafeguardProfile implements AdditionalDataHolder, BackedModel, Pars
      * Sets the category property value. Specifies the category of safeguards. The possible values are: likelyIssues, unknownFutureValue.
      * @param value Value to set for the category property.
      */
-    public void setCategory(@jakarta.annotation.Nullable final SafeguardCategory value) {
+    public void setCategory(@jakarta.annotation.Nullable final SafeguardProfileCategory value) {
         this.backingStore.set("category", value);
     }
     /**

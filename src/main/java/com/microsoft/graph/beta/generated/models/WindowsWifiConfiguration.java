@@ -70,15 +70,15 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
         deserializerMap.put("connectToPreferredNetwork", (n) -> { this.setConnectToPreferredNetwork(n.getBooleanValue()); });
         deserializerMap.put("connectWhenNetworkNameIsHidden", (n) -> { this.setConnectWhenNetworkNameIsHidden(n.getBooleanValue()); });
         deserializerMap.put("forceFIPSCompliance", (n) -> { this.setForceFIPSCompliance(n.getBooleanValue()); });
-        deserializerMap.put("meteredConnectionLimit", (n) -> { this.setMeteredConnectionLimit(n.getEnumValue(MeteredConnectionLimitType::forValue)); });
+        deserializerMap.put("meteredConnectionLimit", (n) -> { this.setMeteredConnectionLimit(n.getEnumValue(WindowsWifiConfigurationMeteredConnectionLimit::forValue)); });
         deserializerMap.put("networkName", (n) -> { this.setNetworkName(n.getStringValue()); });
         deserializerMap.put("preSharedKey", (n) -> { this.setPreSharedKey(n.getStringValue()); });
         deserializerMap.put("proxyAutomaticConfigurationUrl", (n) -> { this.setProxyAutomaticConfigurationUrl(n.getStringValue()); });
         deserializerMap.put("proxyManualAddress", (n) -> { this.setProxyManualAddress(n.getStringValue()); });
         deserializerMap.put("proxyManualPort", (n) -> { this.setProxyManualPort(n.getIntegerValue()); });
-        deserializerMap.put("proxySetting", (n) -> { this.setProxySetting(n.getEnumValue(WiFiProxySetting::forValue)); });
+        deserializerMap.put("proxySetting", (n) -> { this.setProxySetting(n.getEnumValue(WindowsWifiConfigurationProxySetting::forValue)); });
         deserializerMap.put("ssid", (n) -> { this.setSsid(n.getStringValue()); });
-        deserializerMap.put("wifiSecurityType", (n) -> { this.setWifiSecurityType(n.getEnumValue(WiFiSecurityType::forValue)); });
+        deserializerMap.put("wifiSecurityType", (n) -> { this.setWifiSecurityType(n.getEnumValue(WindowsWifiConfigurationWifiSecurityType::forValue)); });
         return deserializerMap;
     }
     /**
@@ -91,10 +91,10 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
     }
     /**
      * Gets the meteredConnectionLimit property value. Specify the metered connection limit type for the wifi connection. Possible values are: unrestricted, fixed, variable.
-     * @return a MeteredConnectionLimitType
+     * @return a WindowsWifiConfigurationMeteredConnectionLimit
      */
     @jakarta.annotation.Nullable
-    public MeteredConnectionLimitType getMeteredConnectionLimit() {
+    public WindowsWifiConfigurationMeteredConnectionLimit getMeteredConnectionLimit() {
         return this.backingStore.get("meteredConnectionLimit");
     }
     /**
@@ -139,10 +139,10 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
     }
     /**
      * Gets the proxySetting property value. Specify the proxy setting for Wi-Fi configuration. Possible values are: none, manual, automatic.
-     * @return a WiFiProxySetting
+     * @return a WindowsWifiConfigurationProxySetting
      */
     @jakarta.annotation.Nullable
-    public WiFiProxySetting getProxySetting() {
+    public WindowsWifiConfigurationProxySetting getProxySetting() {
         return this.backingStore.get("proxySetting");
     }
     /**
@@ -155,10 +155,10 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
     }
     /**
      * Gets the wifiSecurityType property value. Specify the Wifi Security Type. Possible values are: open, wpaPersonal, wpaEnterprise, wep, wpa2Personal, wpa2Enterprise.
-     * @return a WiFiSecurityType
+     * @return a WindowsWifiConfigurationWifiSecurityType
      */
     @jakarta.annotation.Nullable
-    public WiFiSecurityType getWifiSecurityType() {
+    public WindowsWifiConfigurationWifiSecurityType getWifiSecurityType() {
         return this.backingStore.get("wifiSecurityType");
     }
     /**
@@ -214,7 +214,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
      * Sets the meteredConnectionLimit property value. Specify the metered connection limit type for the wifi connection. Possible values are: unrestricted, fixed, variable.
      * @param value Value to set for the meteredConnectionLimit property.
      */
-    public void setMeteredConnectionLimit(@jakarta.annotation.Nullable final MeteredConnectionLimitType value) {
+    public void setMeteredConnectionLimit(@jakarta.annotation.Nullable final WindowsWifiConfigurationMeteredConnectionLimit value) {
         this.backingStore.set("meteredConnectionLimit", value);
     }
     /**
@@ -256,7 +256,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
      * Sets the proxySetting property value. Specify the proxy setting for Wi-Fi configuration. Possible values are: none, manual, automatic.
      * @param value Value to set for the proxySetting property.
      */
-    public void setProxySetting(@jakarta.annotation.Nullable final WiFiProxySetting value) {
+    public void setProxySetting(@jakarta.annotation.Nullable final WindowsWifiConfigurationProxySetting value) {
         this.backingStore.set("proxySetting", value);
     }
     /**
@@ -270,7 +270,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
      * Sets the wifiSecurityType property value. Specify the Wifi Security Type. Possible values are: open, wpaPersonal, wpaEnterprise, wep, wpa2Personal, wpa2Enterprise.
      * @param value Value to set for the wifiSecurityType property.
      */
-    public void setWifiSecurityType(@jakarta.annotation.Nullable final WiFiSecurityType value) {
+    public void setWifiSecurityType(@jakarta.annotation.Nullable final WindowsWifiConfigurationWifiSecurityType value) {
         this.backingStore.set("wifiSecurityType", value);
     }
 }

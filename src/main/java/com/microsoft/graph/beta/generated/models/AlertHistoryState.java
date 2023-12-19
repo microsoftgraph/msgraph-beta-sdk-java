@@ -82,10 +82,10 @@ public class AlertHistoryState implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the feedback property value. Analyst feedback on the alert in this update. Possible values are: unknown, truePositive, falsePositive, benignPositive.
-     * @return a AlertFeedback
+     * @return a AlertHistoryStateFeedback
      */
     @jakarta.annotation.Nullable
-    public AlertFeedback getFeedback() {
+    public AlertHistoryStateFeedback getFeedback() {
         return this.backingStore.get("feedback");
     }
     /**
@@ -98,9 +98,9 @@ public class AlertHistoryState implements AdditionalDataHolder, BackedModel, Par
         deserializerMap.put("appId", (n) -> { this.setAppId(n.getStringValue()); });
         deserializerMap.put("assignedTo", (n) -> { this.setAssignedTo(n.getStringValue()); });
         deserializerMap.put("comments", (n) -> { this.setComments(n.getCollectionOfPrimitiveValues(String.class)); });
-        deserializerMap.put("feedback", (n) -> { this.setFeedback(n.getEnumValue(AlertFeedback::forValue)); });
+        deserializerMap.put("feedback", (n) -> { this.setFeedback(n.getEnumValue(AlertHistoryStateFeedback::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(AlertStatus::forValue)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(AlertHistoryStateStatus::forValue)); });
         deserializerMap.put("updatedDateTime", (n) -> { this.setUpdatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("user", (n) -> { this.setUser(n.getStringValue()); });
         return deserializerMap;
@@ -115,10 +115,10 @@ public class AlertHistoryState implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the status property value. Alert status value (if updated). Possible values are: unknown, newAlert, inProgress, resolved, dismissed.
-     * @return a AlertStatus
+     * @return a AlertHistoryStateStatus
      */
     @jakarta.annotation.Nullable
-    public AlertStatus getStatus() {
+    public AlertHistoryStateStatus getStatus() {
         return this.backingStore.get("status");
     }
     /**
@@ -193,7 +193,7 @@ public class AlertHistoryState implements AdditionalDataHolder, BackedModel, Par
      * Sets the feedback property value. Analyst feedback on the alert in this update. Possible values are: unknown, truePositive, falsePositive, benignPositive.
      * @param value Value to set for the feedback property.
      */
-    public void setFeedback(@jakarta.annotation.Nullable final AlertFeedback value) {
+    public void setFeedback(@jakarta.annotation.Nullable final AlertHistoryStateFeedback value) {
         this.backingStore.set("feedback", value);
     }
     /**
@@ -207,7 +207,7 @@ public class AlertHistoryState implements AdditionalDataHolder, BackedModel, Par
      * Sets the status property value. Alert status value (if updated). Possible values are: unknown, newAlert, inProgress, resolved, dismissed.
      * @param value Value to set for the status property.
      */
-    public void setStatus(@jakarta.annotation.Nullable final AlertStatus value) {
+    public void setStatus(@jakarta.annotation.Nullable final AlertHistoryStateStatus value) {
         this.backingStore.set("status", value);
     }
     /**

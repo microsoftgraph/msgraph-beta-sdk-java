@@ -35,10 +35,10 @@ public class AuthorizationSystemTypeAction extends Entity implements Parsable {
     }
     /**
      * Gets the actionType property value. The type of action allowed in the authorization system's service. The possible values are: delete, read, unknownFutureValue. Supports $filter and (eq).
-     * @return a AuthorizationSystemActionType
+     * @return a AuthorizationSystemTypeActionActionType
      */
     @jakarta.annotation.Nullable
-    public AuthorizationSystemActionType getActionType() {
+    public AuthorizationSystemTypeActionActionType getActionType() {
         return this.backingStore.get("actionType");
     }
     /**
@@ -56,7 +56,7 @@ public class AuthorizationSystemTypeAction extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("actionType", (n) -> { this.setActionType(n.getEnumValue(AuthorizationSystemActionType::forValue)); });
+        deserializerMap.put("actionType", (n) -> { this.setActionType(n.getEnumValue(AuthorizationSystemTypeActionActionType::forValue)); });
         deserializerMap.put("externalId", (n) -> { this.setExternalId(n.getStringValue()); });
         deserializerMap.put("resourceTypes", (n) -> { this.setResourceTypes(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("severity", (n) -> { this.setSeverity(n.getEnumValue(AuthorizationSystemActionSeverity::forValue)); });
@@ -94,7 +94,7 @@ public class AuthorizationSystemTypeAction extends Entity implements Parsable {
      * Sets the actionType property value. The type of action allowed in the authorization system's service. The possible values are: delete, read, unknownFutureValue. Supports $filter and (eq).
      * @param value Value to set for the actionType property.
      */
-    public void setActionType(@jakarta.annotation.Nullable final AuthorizationSystemActionType value) {
+    public void setActionType(@jakarta.annotation.Nullable final AuthorizationSystemTypeActionActionType value) {
         this.backingStore.set("actionType", value);
     }
     /**

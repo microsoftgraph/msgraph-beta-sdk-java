@@ -155,7 +155,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
         deserializerMap.put("identityCertificate", (n) -> { this.setIdentityCertificate(n.getObjectValue(WindowsCertificateProfileBase::createFromDiscriminatorValue)); });
         deserializerMap.put("microsoftTunnelSiteId", (n) -> { this.setMicrosoftTunnelSiteId(n.getStringValue()); });
         deserializerMap.put("onlyAssociatedAppsCanUseConnection", (n) -> { this.setOnlyAssociatedAppsCanUseConnection(n.getBooleanValue()); });
-        deserializerMap.put("profileTarget", (n) -> { this.setProfileTarget(n.getEnumValue(Windows10VpnProfileTarget::forValue)); });
+        deserializerMap.put("profileTarget", (n) -> { this.setProfileTarget(n.getEnumValue(Windows10VpnConfigurationProfileTarget::forValue)); });
         deserializerMap.put("proxyServer", (n) -> { this.setProxyServer(n.getObjectValue(Windows10VpnProxyServer::createFromDiscriminatorValue)); });
         deserializerMap.put("rememberUserCredentials", (n) -> { this.setRememberUserCredentials(n.getBooleanValue()); });
         deserializerMap.put("routes", (n) -> { this.setRoutes(n.getCollectionOfObjectValues(VpnRoute::createFromDiscriminatorValue)); });
@@ -192,10 +192,10 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
     }
     /**
      * Gets the profileTarget property value. Profile target type. Possible values are: user, device, autoPilotDevice.
-     * @return a Windows10VpnProfileTarget
+     * @return a Windows10VpnConfigurationProfileTarget
      */
     @jakarta.annotation.Nullable
-    public Windows10VpnProfileTarget getProfileTarget() {
+    public Windows10VpnConfigurationProfileTarget getProfileTarget() {
         return this.backingStore.get("profileTarget");
     }
     /**
@@ -411,7 +411,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      * Sets the profileTarget property value. Profile target type. Possible values are: user, device, autoPilotDevice.
      * @param value Value to set for the profileTarget property.
      */
-    public void setProfileTarget(@jakarta.annotation.Nullable final Windows10VpnProfileTarget value) {
+    public void setProfileTarget(@jakarta.annotation.Nullable final Windows10VpnConfigurationProfileTarget value) {
         this.backingStore.set("profileTarget", value);
     }
     /**

@@ -26,10 +26,10 @@ public class MobilityManagementPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the appliesTo property value. Indicates the user scope of the mobility management policy. Possible values are: none, all, selected.
-     * @return a PolicyScope
+     * @return a MobilityManagementPolicyAppliesTo
      */
     @jakarta.annotation.Nullable
-    public PolicyScope getAppliesTo() {
+    public MobilityManagementPolicyAppliesTo getAppliesTo() {
         return this.backingStore.get("appliesTo");
     }
     /**
@@ -71,7 +71,7 @@ public class MobilityManagementPolicy extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("appliesTo", (n) -> { this.setAppliesTo(n.getEnumValue(PolicyScope::forValue)); });
+        deserializerMap.put("appliesTo", (n) -> { this.setAppliesTo(n.getEnumValue(MobilityManagementPolicyAppliesTo::forValue)); });
         deserializerMap.put("complianceUrl", (n) -> { this.setComplianceUrl(n.getStringValue()); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("discoveryUrl", (n) -> { this.setDiscoveryUrl(n.getStringValue()); });
@@ -125,7 +125,7 @@ public class MobilityManagementPolicy extends Entity implements Parsable {
      * Sets the appliesTo property value. Indicates the user scope of the mobility management policy. Possible values are: none, all, selected.
      * @param value Value to set for the appliesTo property.
      */
-    public void setAppliesTo(@jakarta.annotation.Nullable final PolicyScope value) {
+    public void setAppliesTo(@jakarta.annotation.Nullable final MobilityManagementPolicyAppliesTo value) {
         this.backingStore.set("appliesTo", value);
     }
     /**

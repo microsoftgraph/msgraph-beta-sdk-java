@@ -35,10 +35,10 @@ public class EncryptContent extends LabelActionBase implements Parsable {
     }
     /**
      * Gets the encryptWith property value. The encryptWith property
-     * @return a EncryptWith
+     * @return a EncryptContentEncryptWith
      */
     @jakarta.annotation.Nullable
-    public EncryptWith getEncryptWith() {
+    public EncryptContentEncryptWith getEncryptWith() {
         return this.backingStore.get("encryptWith");
     }
     /**
@@ -48,7 +48,7 @@ public class EncryptContent extends LabelActionBase implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("encryptWith", (n) -> { this.setEncryptWith(n.getEnumValue(EncryptWith::forValue)); });
+        deserializerMap.put("encryptWith", (n) -> { this.setEncryptWith(n.getEnumValue(EncryptContentEncryptWith::forValue)); });
         return deserializerMap;
     }
     /**
@@ -64,7 +64,7 @@ public class EncryptContent extends LabelActionBase implements Parsable {
      * Sets the encryptWith property value. The encryptWith property
      * @param value Value to set for the encryptWith property.
      */
-    public void setEncryptWith(@jakarta.annotation.Nullable final EncryptWith value) {
+    public void setEncryptWith(@jakarta.annotation.Nullable final EncryptContentEncryptWith value) {
         this.backingStore.set("encryptWith", value);
     }
 }

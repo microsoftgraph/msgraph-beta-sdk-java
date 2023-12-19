@@ -89,16 +89,16 @@ public class ManagedIdentity implements AdditionalDataHolder, BackedModel, Parsa
         deserializerMap.put("associatedResourceId", (n) -> { this.setAssociatedResourceId(n.getStringValue()); });
         deserializerMap.put("federatedTokenId", (n) -> { this.setFederatedTokenId(n.getStringValue()); });
         deserializerMap.put("federatedTokenIssuer", (n) -> { this.setFederatedTokenIssuer(n.getStringValue()); });
-        deserializerMap.put("msiType", (n) -> { this.setMsiType(n.getEnumValue(MsiType::forValue)); });
+        deserializerMap.put("msiType", (n) -> { this.setMsiType(n.getEnumValue(ManagedIdentityMsiType::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;
     }
     /**
      * Gets the msiType property value. The possible values are: none, userAssigned, systemAssigned, unknownFutureValue.
-     * @return a MsiType
+     * @return a ManagedIdentityMsiType
      */
     @jakarta.annotation.Nullable
-    public MsiType getMsiType() {
+    public ManagedIdentityMsiType getMsiType() {
         return this.backingStore.get("msiType");
     }
     /**
@@ -162,7 +162,7 @@ public class ManagedIdentity implements AdditionalDataHolder, BackedModel, Parsa
      * Sets the msiType property value. The possible values are: none, userAssigned, systemAssigned, unknownFutureValue.
      * @param value Value to set for the msiType property.
      */
-    public void setMsiType(@jakarta.annotation.Nullable final MsiType value) {
+    public void setMsiType(@jakarta.annotation.Nullable final ManagedIdentityMsiType value) {
         this.backingStore.set("msiType", value);
     }
     /**

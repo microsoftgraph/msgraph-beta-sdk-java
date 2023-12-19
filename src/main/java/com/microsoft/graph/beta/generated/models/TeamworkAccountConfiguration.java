@@ -64,7 +64,7 @@ public class TeamworkAccountConfiguration implements AdditionalDataHolder, Backe
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("onPremisesCalendarSyncConfiguration", (n) -> { this.setOnPremisesCalendarSyncConfiguration(n.getObjectValue(TeamworkOnPremisesCalendarSyncConfiguration::createFromDiscriminatorValue)); });
-        deserializerMap.put("supportedClient", (n) -> { this.setSupportedClient(n.getEnumValue(TeamworkSupportedClient::forValue)); });
+        deserializerMap.put("supportedClient", (n) -> { this.setSupportedClient(n.getEnumValue(TeamworkAccountConfigurationSupportedClient::forValue)); });
         return deserializerMap;
     }
     /**
@@ -85,10 +85,10 @@ public class TeamworkAccountConfiguration implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the supportedClient property value. The supported client for Teams Rooms devices. The possible values are: unknown, skypeDefaultAndTeams, teamsDefaultAndSkype, skypeOnly, teamsOnly, unknownFutureValue.
-     * @return a TeamworkSupportedClient
+     * @return a TeamworkAccountConfigurationSupportedClient
      */
     @jakarta.annotation.Nullable
-    public TeamworkSupportedClient getSupportedClient() {
+    public TeamworkAccountConfigurationSupportedClient getSupportedClient() {
         return this.backingStore.get("supportedClient");
     }
     /**
@@ -135,7 +135,7 @@ public class TeamworkAccountConfiguration implements AdditionalDataHolder, Backe
      * Sets the supportedClient property value. The supported client for Teams Rooms devices. The possible values are: unknown, skypeDefaultAndTeams, teamsDefaultAndSkype, skypeOnly, teamsOnly, unknownFutureValue.
      * @param value Value to set for the supportedClient property.
      */
-    public void setSupportedClient(@jakarta.annotation.Nullable final TeamworkSupportedClient value) {
+    public void setSupportedClient(@jakarta.annotation.Nullable final TeamworkAccountConfigurationSupportedClient value) {
         this.backingStore.set("supportedClient", value);
     }
 }

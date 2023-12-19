@@ -39,10 +39,10 @@ public class ActivityStatistics extends Entity implements Parsable {
     }
     /**
      * Gets the activity property value. The type of activity for which statistics are returned. The possible values are: call, chat, email, focus, and meeting.
-     * @return a AnalyticsActivityType
+     * @return a ActivityStatisticsActivity
      */
     @jakarta.annotation.Nullable
-    public AnalyticsActivityType getActivity() {
+    public ActivityStatisticsActivity getActivity() {
         return this.backingStore.get("activity");
     }
     /**
@@ -68,7 +68,7 @@ public class ActivityStatistics extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("activity", (n) -> { this.setActivity(n.getEnumValue(AnalyticsActivityType::forValue)); });
+        deserializerMap.put("activity", (n) -> { this.setActivity(n.getEnumValue(ActivityStatisticsActivity::forValue)); });
         deserializerMap.put("duration", (n) -> { this.setDuration(n.getPeriodAndDurationValue()); });
         deserializerMap.put("endDate", (n) -> { this.setEndDate(n.getLocalDateValue()); });
         deserializerMap.put("startDate", (n) -> { this.setStartDate(n.getLocalDateValue()); });
@@ -108,7 +108,7 @@ public class ActivityStatistics extends Entity implements Parsable {
      * Sets the activity property value. The type of activity for which statistics are returned. The possible values are: call, chat, email, focus, and meeting.
      * @param value Value to set for the activity property.
      */
-    public void setActivity(@jakarta.annotation.Nullable final AnalyticsActivityType value) {
+    public void setActivity(@jakarta.annotation.Nullable final ActivityStatisticsActivity value) {
         this.backingStore.set("activity", value);
     }
     /**

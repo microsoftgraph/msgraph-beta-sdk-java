@@ -72,7 +72,7 @@ public class CloudPcResizeValidationResult implements AdditionalDataHolder, Back
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("cloudPcId", (n) -> { this.setCloudPcId(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("validationResult", (n) -> { this.setValidationResult(n.getEnumValue(CloudPcResizeValidationCode::forValue)); });
+        deserializerMap.put("validationResult", (n) -> { this.setValidationResult(n.getEnumValue(CloudPcResizeValidationResultValidationResult::forValue)); });
         return deserializerMap;
     }
     /**
@@ -85,10 +85,10 @@ public class CloudPcResizeValidationResult implements AdditionalDataHolder, Back
     }
     /**
      * Gets the validationResult property value. Describes a list of the validation result for the Cloud PC resize action. The possible values are: success, cloudPcNotFound, operationCnflict, operationNotSupported, targetLicenseHasAssigned, internalServerError, and unknownFutureValue.
-     * @return a CloudPcResizeValidationCode
+     * @return a CloudPcResizeValidationResultValidationResult
      */
     @jakarta.annotation.Nullable
-    public CloudPcResizeValidationCode getValidationResult() {
+    public CloudPcResizeValidationResultValidationResult getValidationResult() {
         return this.backingStore.get("validationResult");
     }
     /**
@@ -135,7 +135,7 @@ public class CloudPcResizeValidationResult implements AdditionalDataHolder, Back
      * Sets the validationResult property value. Describes a list of the validation result for the Cloud PC resize action. The possible values are: success, cloudPcNotFound, operationCnflict, operationNotSupported, targetLicenseHasAssigned, internalServerError, and unknownFutureValue.
      * @param value Value to set for the validationResult property.
      */
-    public void setValidationResult(@jakarta.annotation.Nullable final CloudPcResizeValidationCode value) {
+    public void setValidationResult(@jakarta.annotation.Nullable final CloudPcResizeValidationResultValidationResult value) {
         this.backingStore.set("validationResult", value);
     }
 }

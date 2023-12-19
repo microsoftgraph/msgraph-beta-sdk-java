@@ -3,7 +3,6 @@ package com.microsoft.graph.beta.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -36,10 +35,10 @@ public class IpApplicationSegment extends ApplicationSegment implements Parsable
     }
     /**
      * Gets the destinationType property value. The destinationType property
-     * @return a PrivateNetworkDestinationType
+     * @return a IpApplicationSegmentDestinationType
      */
     @jakarta.annotation.Nullable
-    public PrivateNetworkDestinationType getDestinationType() {
+    public IpApplicationSegmentDestinationType getDestinationType() {
         return this.backingStore.get("destinationType");
     }
     /**
@@ -50,10 +49,10 @@ public class IpApplicationSegment extends ApplicationSegment implements Parsable
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("destinationHost", (n) -> { this.setDestinationHost(n.getStringValue()); });
-        deserializerMap.put("destinationType", (n) -> { this.setDestinationType(n.getEnumValue(PrivateNetworkDestinationType::forValue)); });
+        deserializerMap.put("destinationType", (n) -> { this.setDestinationType(n.getEnumValue(IpApplicationSegmentDestinationType::forValue)); });
         deserializerMap.put("port", (n) -> { this.setPort(n.getIntegerValue()); });
         deserializerMap.put("ports", (n) -> { this.setPorts(n.getCollectionOfPrimitiveValues(String.class)); });
-        deserializerMap.put("protocol", (n) -> { this.setProtocol(n.getEnumSetValue(PrivateNetworkProtocol::forValue)); });
+        deserializerMap.put("protocol", (n) -> { this.setProtocol(n.getEnumValue(IpApplicationSegmentProtocol::forValue)); });
         return deserializerMap;
     }
     /**
@@ -74,10 +73,10 @@ public class IpApplicationSegment extends ApplicationSegment implements Parsable
     }
     /**
      * Gets the protocol property value. The protocol property
-     * @return a EnumSet<PrivateNetworkProtocol>
+     * @return a IpApplicationSegmentProtocol
      */
     @jakarta.annotation.Nullable
-    public EnumSet<PrivateNetworkProtocol> getProtocol() {
+    public IpApplicationSegmentProtocol getProtocol() {
         return this.backingStore.get("protocol");
     }
     /**
@@ -91,7 +90,7 @@ public class IpApplicationSegment extends ApplicationSegment implements Parsable
         writer.writeEnumValue("destinationType", this.getDestinationType());
         writer.writeIntegerValue("port", this.getPort());
         writer.writeCollectionOfPrimitiveValues("ports", this.getPorts());
-        writer.writeEnumSetValue("protocol", this.getProtocol());
+        writer.writeEnumValue("protocol", this.getProtocol());
     }
     /**
      * Sets the destinationHost property value. The destinationHost property
@@ -104,7 +103,7 @@ public class IpApplicationSegment extends ApplicationSegment implements Parsable
      * Sets the destinationType property value. The destinationType property
      * @param value Value to set for the destinationType property.
      */
-    public void setDestinationType(@jakarta.annotation.Nullable final PrivateNetworkDestinationType value) {
+    public void setDestinationType(@jakarta.annotation.Nullable final IpApplicationSegmentDestinationType value) {
         this.backingStore.set("destinationType", value);
     }
     /**
@@ -125,7 +124,7 @@ public class IpApplicationSegment extends ApplicationSegment implements Parsable
      * Sets the protocol property value. The protocol property
      * @param value Value to set for the protocol property.
      */
-    public void setProtocol(@jakarta.annotation.Nullable final EnumSet<PrivateNetworkProtocol> value) {
+    public void setProtocol(@jakarta.annotation.Nullable final IpApplicationSegmentProtocol value) {
         this.backingStore.set("protocol", value);
     }
 }

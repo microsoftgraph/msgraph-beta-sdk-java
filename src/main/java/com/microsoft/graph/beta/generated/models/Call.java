@@ -26,10 +26,10 @@ public class Call extends Entity implements Parsable {
     }
     /**
      * Gets the activeModalities property value. The list of active modalities. Possible values are: unknown, audio, video, videoBasedScreenSharing, data. Read-only.
-     * @return a java.util.List<Modality>
+     * @return a java.util.List<CallActiveModalities>
      */
     @jakarta.annotation.Nullable
-    public java.util.List<Modality> getActiveModalities() {
+    public java.util.List<CallActiveModalities> getActiveModalities() {
         return this.backingStore.get("activeModalities");
     }
     /**
@@ -111,7 +111,7 @@ public class Call extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("activeModalities", (n) -> { this.setActiveModalities(n.getCollectionOfEnumValues(Modality::forValue)); });
+        deserializerMap.put("activeModalities", (n) -> { this.setActiveModalities(n.getCollectionOfEnumValues(CallActiveModalities::forValue)); });
         deserializerMap.put("answeredBy", (n) -> { this.setAnsweredBy(n.getObjectValue(ParticipantInfo::createFromDiscriminatorValue)); });
         deserializerMap.put("audioRoutingGroups", (n) -> { this.setAudioRoutingGroups(n.getCollectionOfObjectValues(AudioRoutingGroup::createFromDiscriminatorValue)); });
         deserializerMap.put("callbackUri", (n) -> { this.setCallbackUri(n.getStringValue()); });
@@ -129,10 +129,10 @@ public class Call extends Entity implements Parsable {
         deserializerMap.put("myParticipantId", (n) -> { this.setMyParticipantId(n.getStringValue()); });
         deserializerMap.put("operations", (n) -> { this.setOperations(n.getCollectionOfObjectValues(CommsOperation::createFromDiscriminatorValue)); });
         deserializerMap.put("participants", (n) -> { this.setParticipants(n.getCollectionOfObjectValues(Participant::createFromDiscriminatorValue)); });
-        deserializerMap.put("requestedModalities", (n) -> { this.setRequestedModalities(n.getCollectionOfEnumValues(Modality::forValue)); });
+        deserializerMap.put("requestedModalities", (n) -> { this.setRequestedModalities(n.getCollectionOfEnumValues(CallRequestedModalities::forValue)); });
         deserializerMap.put("resultInfo", (n) -> { this.setResultInfo(n.getObjectValue(ResultInfo::createFromDiscriminatorValue)); });
         deserializerMap.put("ringingTimeoutInSeconds", (n) -> { this.setRingingTimeoutInSeconds(n.getIntegerValue()); });
-        deserializerMap.put("routingPolicies", (n) -> { this.setRoutingPolicies(n.getCollectionOfEnumValues(RoutingPolicy::forValue)); });
+        deserializerMap.put("routingPolicies", (n) -> { this.setRoutingPolicies(n.getCollectionOfEnumValues(CallRoutingPolicies::forValue)); });
         deserializerMap.put("source", (n) -> { this.setSource(n.getObjectValue(ParticipantInfo::createFromDiscriminatorValue)); });
         deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(CallState::forValue)); });
         deserializerMap.put("subject", (n) -> { this.setSubject(n.getStringValue()); });
@@ -209,10 +209,10 @@ public class Call extends Entity implements Parsable {
     }
     /**
      * Gets the requestedModalities property value. The requestedModalities property
-     * @return a java.util.List<Modality>
+     * @return a java.util.List<CallRequestedModalities>
      */
     @jakarta.annotation.Nullable
-    public java.util.List<Modality> getRequestedModalities() {
+    public java.util.List<CallRequestedModalities> getRequestedModalities() {
         return this.backingStore.get("requestedModalities");
     }
     /**
@@ -233,10 +233,10 @@ public class Call extends Entity implements Parsable {
     }
     /**
      * Gets the routingPolicies property value. The routingPolicies property
-     * @return a java.util.List<RoutingPolicy>
+     * @return a java.util.List<CallRoutingPolicies>
      */
     @jakarta.annotation.Nullable
-    public java.util.List<RoutingPolicy> getRoutingPolicies() {
+    public java.util.List<CallRoutingPolicies> getRoutingPolicies() {
         return this.backingStore.get("routingPolicies");
     }
     /**
@@ -345,7 +345,7 @@ public class Call extends Entity implements Parsable {
      * Sets the activeModalities property value. The list of active modalities. Possible values are: unknown, audio, video, videoBasedScreenSharing, data. Read-only.
      * @param value Value to set for the activeModalities property.
      */
-    public void setActiveModalities(@jakarta.annotation.Nullable final java.util.List<Modality> value) {
+    public void setActiveModalities(@jakarta.annotation.Nullable final java.util.List<CallActiveModalities> value) {
         this.backingStore.set("activeModalities", value);
     }
     /**
@@ -471,7 +471,7 @@ public class Call extends Entity implements Parsable {
      * Sets the requestedModalities property value. The requestedModalities property
      * @param value Value to set for the requestedModalities property.
      */
-    public void setRequestedModalities(@jakarta.annotation.Nullable final java.util.List<Modality> value) {
+    public void setRequestedModalities(@jakarta.annotation.Nullable final java.util.List<CallRequestedModalities> value) {
         this.backingStore.set("requestedModalities", value);
     }
     /**
@@ -492,7 +492,7 @@ public class Call extends Entity implements Parsable {
      * Sets the routingPolicies property value. The routingPolicies property
      * @param value Value to set for the routingPolicies property.
      */
-    public void setRoutingPolicies(@jakarta.annotation.Nullable final java.util.List<RoutingPolicy> value) {
+    public void setRoutingPolicies(@jakarta.annotation.Nullable final java.util.List<CallRoutingPolicies> value) {
         this.backingStore.set("routingPolicies", value);
     }
     /**

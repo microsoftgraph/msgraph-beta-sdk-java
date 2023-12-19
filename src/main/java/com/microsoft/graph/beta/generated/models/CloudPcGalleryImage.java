@@ -61,11 +61,14 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
         deserializerMap.put("expirationDate", (n) -> { this.setExpirationDate(n.getLocalDateValue()); });
         deserializerMap.put("offer", (n) -> { this.setOffer(n.getStringValue()); });
         deserializerMap.put("offerDisplayName", (n) -> { this.setOfferDisplayName(n.getStringValue()); });
+        deserializerMap.put("offerName", (n) -> { this.setOfferName(n.getStringValue()); });
         deserializerMap.put("publisher", (n) -> { this.setPublisher(n.getStringValue()); });
+        deserializerMap.put("publisherName", (n) -> { this.setPublisherName(n.getStringValue()); });
         deserializerMap.put("recommendedSku", (n) -> { this.setRecommendedSku(n.getStringValue()); });
         deserializerMap.put("sizeInGB", (n) -> { this.setSizeInGB(n.getIntegerValue()); });
         deserializerMap.put("sku", (n) -> { this.setSku(n.getStringValue()); });
         deserializerMap.put("skuDisplayName", (n) -> { this.setSkuDisplayName(n.getStringValue()); });
+        deserializerMap.put("skuName", (n) -> { this.setSkuName(n.getStringValue()); });
         deserializerMap.put("startDate", (n) -> { this.setStartDate(n.getLocalDateValue()); });
         deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(CloudPcGalleryImageStatus::forValue)); });
         return deserializerMap;
@@ -87,12 +90,28 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
         return this.backingStore.get("offerDisplayName");
     }
     /**
+     * Gets the offerName property value. The offerName property
+     * @return a String
+     */
+    @jakarta.annotation.Nullable
+    public String getOfferName() {
+        return this.backingStore.get("offerName");
+    }
+    /**
      * Gets the publisher property value. The publisher name of the gallery image. This value is passed to Azure to get the image resource. Read-only.
      * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPublisher() {
         return this.backingStore.get("publisher");
+    }
+    /**
+     * Gets the publisherName property value. The publisherName property
+     * @return a String
+     */
+    @jakarta.annotation.Nullable
+    public String getPublisherName() {
+        return this.backingStore.get("publisherName");
     }
     /**
      * Gets the recommendedSku property value. Recommended Cloud PC SKU for this gallery image. Read-only.
@@ -127,6 +146,14 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
         return this.backingStore.get("skuDisplayName");
     }
     /**
+     * Gets the skuName property value. The skuName property
+     * @return a String
+     */
+    @jakarta.annotation.Nullable
+    public String getSkuName() {
+        return this.backingStore.get("skuName");
+    }
+    /**
      * Gets the startDate property value. The date when the image becomes available. Read-only.
      * @return a LocalDate
      */
@@ -154,11 +181,14 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
         writer.writeLocalDateValue("expirationDate", this.getExpirationDate());
         writer.writeStringValue("offer", this.getOffer());
         writer.writeStringValue("offerDisplayName", this.getOfferDisplayName());
+        writer.writeStringValue("offerName", this.getOfferName());
         writer.writeStringValue("publisher", this.getPublisher());
+        writer.writeStringValue("publisherName", this.getPublisherName());
         writer.writeStringValue("recommendedSku", this.getRecommendedSku());
         writer.writeIntegerValue("sizeInGB", this.getSizeInGB());
         writer.writeStringValue("sku", this.getSku());
         writer.writeStringValue("skuDisplayName", this.getSkuDisplayName());
+        writer.writeStringValue("skuName", this.getSkuName());
         writer.writeLocalDateValue("startDate", this.getStartDate());
         writer.writeEnumValue("status", this.getStatus());
     }
@@ -198,11 +228,25 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
         this.backingStore.set("offerDisplayName", value);
     }
     /**
+     * Sets the offerName property value. The offerName property
+     * @param value Value to set for the offerName property.
+     */
+    public void setOfferName(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("offerName", value);
+    }
+    /**
      * Sets the publisher property value. The publisher name of the gallery image. This value is passed to Azure to get the image resource. Read-only.
      * @param value Value to set for the publisher property.
      */
     public void setPublisher(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("publisher", value);
+    }
+    /**
+     * Sets the publisherName property value. The publisherName property
+     * @param value Value to set for the publisherName property.
+     */
+    public void setPublisherName(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("publisherName", value);
     }
     /**
      * Sets the recommendedSku property value. Recommended Cloud PC SKU for this gallery image. Read-only.
@@ -231,6 +275,13 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
      */
     public void setSkuDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("skuDisplayName", value);
+    }
+    /**
+     * Sets the skuName property value. The skuName property
+     * @param value Value to set for the skuName property.
+     */
+    public void setSkuName(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("skuName", value);
     }
     /**
      * Sets the startDate property value. The date when the image becomes available. Read-only.

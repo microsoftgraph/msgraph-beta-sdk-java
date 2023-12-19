@@ -1,8 +1,5 @@
 package com.microsoft.graph.beta.security.cases.ediscoverycases.item.searches.item.microsoftgraphsecurityexportreport;
 
-import com.microsoft.graph.beta.models.security.AdditionalOptions;
-import com.microsoft.graph.beta.models.security.ExportCriteria;
-import com.microsoft.graph.beta.models.security.ExportLocation;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -10,7 +7,6 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import com.microsoft.kiota.store.BackedModel;
 import com.microsoft.kiota.store.BackingStore;
 import com.microsoft.kiota.store.BackingStoreFactorySingleton;
-import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -53,10 +49,10 @@ public class ExportReportPostRequestBody implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the additionalOptions property value. The additionalOptions property
-     * @return a EnumSet<AdditionalOptions>
+     * @return a ExportReportPostRequestBodyAdditionalOptions
      */
     @jakarta.annotation.Nullable
-    public EnumSet<AdditionalOptions> getAdditionalOptions() {
+    public ExportReportPostRequestBodyAdditionalOptions getAdditionalOptions() {
         return this.backingStore.get("additionalOptions");
     }
     /**
@@ -85,18 +81,18 @@ public class ExportReportPostRequestBody implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the exportCriteria property value. The exportCriteria property
-     * @return a EnumSet<ExportCriteria>
+     * @return a ExportReportPostRequestBodyExportCriteria
      */
     @jakarta.annotation.Nullable
-    public EnumSet<ExportCriteria> getExportCriteria() {
+    public ExportReportPostRequestBodyExportCriteria getExportCriteria() {
         return this.backingStore.get("exportCriteria");
     }
     /**
      * Gets the exportLocation property value. The exportLocation property
-     * @return a EnumSet<ExportLocation>
+     * @return a ExportReportPostRequestBodyExportLocation
      */
     @jakarta.annotation.Nullable
-    public EnumSet<ExportLocation> getExportLocation() {
+    public ExportReportPostRequestBodyExportLocation getExportLocation() {
         return this.backingStore.get("exportLocation");
     }
     /**
@@ -106,11 +102,11 @@ public class ExportReportPostRequestBody implements AdditionalDataHolder, Backed
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
-        deserializerMap.put("additionalOptions", (n) -> { this.setAdditionalOptions(n.getEnumSetValue(AdditionalOptions::forValue)); });
+        deserializerMap.put("additionalOptions", (n) -> { this.setAdditionalOptions(n.getEnumValue(ExportReportPostRequestBodyAdditionalOptions::forValue)); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
-        deserializerMap.put("exportCriteria", (n) -> { this.setExportCriteria(n.getEnumSetValue(ExportCriteria::forValue)); });
-        deserializerMap.put("exportLocation", (n) -> { this.setExportLocation(n.getEnumSetValue(ExportLocation::forValue)); });
+        deserializerMap.put("exportCriteria", (n) -> { this.setExportCriteria(n.getEnumValue(ExportReportPostRequestBodyExportCriteria::forValue)); });
+        deserializerMap.put("exportLocation", (n) -> { this.setExportLocation(n.getEnumValue(ExportReportPostRequestBodyExportLocation::forValue)); });
         return deserializerMap;
     }
     /**
@@ -119,11 +115,11 @@ public class ExportReportPostRequestBody implements AdditionalDataHolder, Backed
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeEnumSetValue("additionalOptions", this.getAdditionalOptions());
+        writer.writeEnumValue("additionalOptions", this.getAdditionalOptions());
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
-        writer.writeEnumSetValue("exportCriteria", this.getExportCriteria());
-        writer.writeEnumSetValue("exportLocation", this.getExportLocation());
+        writer.writeEnumValue("exportCriteria", this.getExportCriteria());
+        writer.writeEnumValue("exportLocation", this.getExportLocation());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -137,7 +133,7 @@ public class ExportReportPostRequestBody implements AdditionalDataHolder, Backed
      * Sets the additionalOptions property value. The additionalOptions property
      * @param value Value to set for the additionalOptions property.
      */
-    public void setAdditionalOptions(@jakarta.annotation.Nullable final EnumSet<AdditionalOptions> value) {
+    public void setAdditionalOptions(@jakarta.annotation.Nullable final ExportReportPostRequestBodyAdditionalOptions value) {
         this.backingStore.set("additionalOptions", value);
     }
     /**
@@ -166,14 +162,14 @@ public class ExportReportPostRequestBody implements AdditionalDataHolder, Backed
      * Sets the exportCriteria property value. The exportCriteria property
      * @param value Value to set for the exportCriteria property.
      */
-    public void setExportCriteria(@jakarta.annotation.Nullable final EnumSet<ExportCriteria> value) {
+    public void setExportCriteria(@jakarta.annotation.Nullable final ExportReportPostRequestBodyExportCriteria value) {
         this.backingStore.set("exportCriteria", value);
     }
     /**
      * Sets the exportLocation property value. The exportLocation property
      * @param value Value to set for the exportLocation property.
      */
-    public void setExportLocation(@jakarta.annotation.Nullable final EnumSet<ExportLocation> value) {
+    public void setExportLocation(@jakarta.annotation.Nullable final ExportReportPostRequestBodyExportLocation value) {
         this.backingStore.set("exportLocation", value);
     }
 }

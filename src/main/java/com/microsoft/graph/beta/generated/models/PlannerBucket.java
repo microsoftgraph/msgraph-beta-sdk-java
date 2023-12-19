@@ -25,6 +25,14 @@ public class PlannerBucket extends PlannerDelta implements Parsable {
         return new PlannerBucket();
     }
     /**
+     * Gets the archivalInfo property value. The archivalInfo property
+     * @return a PlannerArchivalInfo
+     */
+    @jakarta.annotation.Nullable
+    public PlannerArchivalInfo getArchivalInfo() {
+        return this.backingStore.get("archivalInfo");
+    }
+    /**
      * Gets the creationSource property value. Contains information about the origin of the bucket.
      * @return a PlannerBucketCreation
      */
@@ -39,12 +47,22 @@ public class PlannerBucket extends PlannerDelta implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("archivalInfo", (n) -> { this.setArchivalInfo(n.getObjectValue(PlannerArchivalInfo::createFromDiscriminatorValue)); });
         deserializerMap.put("creationSource", (n) -> { this.setCreationSource(n.getObjectValue(PlannerBucketCreation::createFromDiscriminatorValue)); });
+        deserializerMap.put("isArchived", (n) -> { this.setIsArchived(n.getBooleanValue()); });
         deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
         deserializerMap.put("orderHint", (n) -> { this.setOrderHint(n.getStringValue()); });
         deserializerMap.put("planId", (n) -> { this.setPlanId(n.getStringValue()); });
         deserializerMap.put("tasks", (n) -> { this.setTasks(n.getCollectionOfObjectValues(PlannerTask::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the isArchived property value. The isArchived property
+     * @return a Boolean
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsArchived() {
+        return this.backingStore.get("isArchived");
     }
     /**
      * Gets the name property value. Name of the bucket.
@@ -85,11 +103,20 @@ public class PlannerBucket extends PlannerDelta implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeObjectValue("archivalInfo", this.getArchivalInfo());
         writer.writeObjectValue("creationSource", this.getCreationSource());
+        writer.writeBooleanValue("isArchived", this.getIsArchived());
         writer.writeStringValue("name", this.getName());
         writer.writeStringValue("orderHint", this.getOrderHint());
         writer.writeStringValue("planId", this.getPlanId());
         writer.writeCollectionOfObjectValues("tasks", this.getTasks());
+    }
+    /**
+     * Sets the archivalInfo property value. The archivalInfo property
+     * @param value Value to set for the archivalInfo property.
+     */
+    public void setArchivalInfo(@jakarta.annotation.Nullable final PlannerArchivalInfo value) {
+        this.backingStore.set("archivalInfo", value);
     }
     /**
      * Sets the creationSource property value. Contains information about the origin of the bucket.
@@ -97,6 +124,13 @@ public class PlannerBucket extends PlannerDelta implements Parsable {
      */
     public void setCreationSource(@jakarta.annotation.Nullable final PlannerBucketCreation value) {
         this.backingStore.set("creationSource", value);
+    }
+    /**
+     * Sets the isArchived property value. The isArchived property
+     * @param value Value to set for the isArchived property.
+     */
+    public void setIsArchived(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isArchived", value);
     }
     /**
      * Sets the name property value. Name of the bucket.

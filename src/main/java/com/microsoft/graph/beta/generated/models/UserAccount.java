@@ -77,7 +77,7 @@ public class UserAccount implements AdditionalDataHolder, BackedModel, Parsable 
         deserializerMap.put("riskScore", (n) -> { this.setRiskScore(n.getStringValue()); });
         deserializerMap.put("service", (n) -> { this.setService(n.getStringValue()); });
         deserializerMap.put("signinName", (n) -> { this.setSigninName(n.getStringValue()); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(AccountStatus::forValue)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(UserAccountStatus::forValue)); });
         return deserializerMap;
     }
     /**
@@ -122,10 +122,10 @@ public class UserAccount implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the status property value. The status property
-     * @return a AccountStatus
+     * @return a UserAccountStatus
      */
     @jakarta.annotation.Nullable
-    public AccountStatus getStatus() {
+    public UserAccountStatus getStatus() {
         return this.backingStore.get("status");
     }
     /**
@@ -204,7 +204,7 @@ public class UserAccount implements AdditionalDataHolder, BackedModel, Parsable 
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
      */
-    public void setStatus(@jakarta.annotation.Nullable final AccountStatus value) {
+    public void setStatus(@jakarta.annotation.Nullable final UserAccountStatus value) {
         this.backingStore.set("status", value);
     }
 }

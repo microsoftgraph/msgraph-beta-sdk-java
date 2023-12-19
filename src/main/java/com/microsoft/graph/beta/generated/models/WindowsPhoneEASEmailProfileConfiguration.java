@@ -54,10 +54,10 @@ public class WindowsPhoneEASEmailProfileConfiguration extends EasEmailProfileCon
     }
     /**
      * Gets the emailAddressSource property value. Email attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: userPrincipalName, primarySmtpAddress.
-     * @return a UserEmailSource
+     * @return a WindowsPhoneEASEmailProfileConfigurationEmailAddressSource
      */
     @jakarta.annotation.Nullable
-    public UserEmailSource getEmailAddressSource() {
+    public WindowsPhoneEASEmailProfileConfigurationEmailAddressSource getEmailAddressSource() {
         return this.backingStore.get("emailAddressSource");
     }
     /**
@@ -78,7 +78,7 @@ public class WindowsPhoneEASEmailProfileConfiguration extends EasEmailProfileCon
         deserializerMap.put("accountName", (n) -> { this.setAccountName(n.getStringValue()); });
         deserializerMap.put("applyOnlyToWindowsPhone81", (n) -> { this.setApplyOnlyToWindowsPhone81(n.getBooleanValue()); });
         deserializerMap.put("durationOfEmailToSync", (n) -> { this.setDurationOfEmailToSync(n.getEnumValue(EmailSyncDuration::forValue)); });
-        deserializerMap.put("emailAddressSource", (n) -> { this.setEmailAddressSource(n.getEnumValue(UserEmailSource::forValue)); });
+        deserializerMap.put("emailAddressSource", (n) -> { this.setEmailAddressSource(n.getEnumValue(WindowsPhoneEASEmailProfileConfigurationEmailAddressSource::forValue)); });
         deserializerMap.put("emailSyncSchedule", (n) -> { this.setEmailSyncSchedule(n.getEnumValue(EmailSyncSchedule::forValue)); });
         deserializerMap.put("hostName", (n) -> { this.setHostName(n.getStringValue()); });
         deserializerMap.put("requireSsl", (n) -> { this.setRequireSsl(n.getBooleanValue()); });
@@ -169,7 +169,7 @@ public class WindowsPhoneEASEmailProfileConfiguration extends EasEmailProfileCon
      * Sets the emailAddressSource property value. Email attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: userPrincipalName, primarySmtpAddress.
      * @param value Value to set for the emailAddressSource property.
      */
-    public void setEmailAddressSource(@jakarta.annotation.Nullable final UserEmailSource value) {
+    public void setEmailAddressSource(@jakarta.annotation.Nullable final WindowsPhoneEASEmailProfileConfigurationEmailAddressSource value) {
         this.backingStore.set("emailAddressSource", value);
     }
     /**

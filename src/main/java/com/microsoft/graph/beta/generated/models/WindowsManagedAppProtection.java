@@ -55,10 +55,10 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
     }
     /**
      * Gets the appActionIfUnableToAuthenticateUser property value. If set, it will specify what action to take in the case where the user is unable to checkin because their authentication token is invalid. This happens when the user is deleted or disabled in AAD. Some possible values are block or wipe. If this property is not set, no action will be taken. Possible values are: block, wipe, warn.
-     * @return a ManagedAppRemediationAction
+     * @return a WindowsManagedAppProtectionAppActionIfUnableToAuthenticateUser
      */
     @jakarta.annotation.Nullable
-    public ManagedAppRemediationAction getAppActionIfUnableToAuthenticateUser() {
+    public WindowsManagedAppProtectionAppActionIfUnableToAuthenticateUser getAppActionIfUnableToAuthenticateUser() {
         return this.backingStore.get("appActionIfUnableToAuthenticateUser");
     }
     /**
@@ -95,7 +95,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
         deserializerMap.put("allowedInboundDataTransferSources", (n) -> { this.setAllowedInboundDataTransferSources(n.getEnumValue(WindowsManagedAppDataTransferLevel::forValue)); });
         deserializerMap.put("allowedOutboundClipboardSharingLevel", (n) -> { this.setAllowedOutboundClipboardSharingLevel(n.getEnumValue(WindowsManagedAppClipboardSharingLevel::forValue)); });
         deserializerMap.put("allowedOutboundDataTransferDestinations", (n) -> { this.setAllowedOutboundDataTransferDestinations(n.getEnumValue(WindowsManagedAppDataTransferLevel::forValue)); });
-        deserializerMap.put("appActionIfUnableToAuthenticateUser", (n) -> { this.setAppActionIfUnableToAuthenticateUser(n.getEnumValue(ManagedAppRemediationAction::forValue)); });
+        deserializerMap.put("appActionIfUnableToAuthenticateUser", (n) -> { this.setAppActionIfUnableToAuthenticateUser(n.getEnumValue(WindowsManagedAppProtectionAppActionIfUnableToAuthenticateUser::forValue)); });
         deserializerMap.put("apps", (n) -> { this.setApps(n.getCollectionOfObjectValues(ManagedMobileApp::createFromDiscriminatorValue)); });
         deserializerMap.put("assignments", (n) -> { this.setAssignments(n.getCollectionOfObjectValues(TargetedManagedAppPolicyAssignment::createFromDiscriminatorValue)); });
         deserializerMap.put("deployedAppCount", (n) -> { this.setDeployedAppCount(n.getIntegerValue()); });
@@ -311,7 +311,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
      * Sets the appActionIfUnableToAuthenticateUser property value. If set, it will specify what action to take in the case where the user is unable to checkin because their authentication token is invalid. This happens when the user is deleted or disabled in AAD. Some possible values are block or wipe. If this property is not set, no action will be taken. Possible values are: block, wipe, warn.
      * @param value Value to set for the appActionIfUnableToAuthenticateUser property.
      */
-    public void setAppActionIfUnableToAuthenticateUser(@jakarta.annotation.Nullable final ManagedAppRemediationAction value) {
+    public void setAppActionIfUnableToAuthenticateUser(@jakarta.annotation.Nullable final WindowsManagedAppProtectionAppActionIfUnableToAuthenticateUser value) {
         this.backingStore.set("appActionIfUnableToAuthenticateUser", value);
     }
     /**

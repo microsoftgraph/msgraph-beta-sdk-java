@@ -29,10 +29,10 @@ public class ManagementTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the category property value. The management category for the management template. Possible values are: custom, devices, identity, unknownFutureValue. Required. Read-only.
-     * @return a ManagementCategory
+     * @return a ManagementTemplateCategory
      */
     @jakarta.annotation.Nullable
-    public ManagementCategory getCategory() {
+    public ManagementTemplateCategory getCategory() {
         return this.backingStore.get("category");
     }
     /**
@@ -74,7 +74,7 @@ public class ManagementTemplate extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("category", (n) -> { this.setCategory(n.getEnumValue(ManagementCategory::forValue)); });
+        deserializerMap.put("category", (n) -> { this.setCategory(n.getEnumValue(ManagementTemplateCategory::forValue)); });
         deserializerMap.put("createdByUserId", (n) -> { this.setCreatedByUserId(n.getStringValue()); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
@@ -208,7 +208,7 @@ public class ManagementTemplate extends Entity implements Parsable {
      * Sets the category property value. The management category for the management template. Possible values are: custom, devices, identity, unknownFutureValue. Required. Read-only.
      * @param value Value to set for the category property.
      */
-    public void setCategory(@jakarta.annotation.Nullable final ManagementCategory value) {
+    public void setCategory(@jakarta.annotation.Nullable final ManagementTemplateCategory value) {
         this.backingStore.set("category", value);
     }
     /**

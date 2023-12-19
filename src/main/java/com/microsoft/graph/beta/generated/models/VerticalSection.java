@@ -26,10 +26,10 @@ public class VerticalSection extends Entity implements Parsable {
     }
     /**
      * Gets the emphasis property value. Enumeration value that indicates the emphasis of the section background. The possible values are: none, netural, soft, strong, unknownFutureValue.
-     * @return a SectionEmphasisType
+     * @return a VerticalSectionEmphasis
      */
     @jakarta.annotation.Nullable
-    public SectionEmphasisType getEmphasis() {
+    public VerticalSectionEmphasis getEmphasis() {
         return this.backingStore.get("emphasis");
     }
     /**
@@ -39,7 +39,7 @@ public class VerticalSection extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("emphasis", (n) -> { this.setEmphasis(n.getEnumValue(SectionEmphasisType::forValue)); });
+        deserializerMap.put("emphasis", (n) -> { this.setEmphasis(n.getEnumValue(VerticalSectionEmphasis::forValue)); });
         deserializerMap.put("webparts", (n) -> { this.setWebparts(n.getCollectionOfObjectValues(WebPart::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -65,7 +65,7 @@ public class VerticalSection extends Entity implements Parsable {
      * Sets the emphasis property value. Enumeration value that indicates the emphasis of the section background. The possible values are: none, netural, soft, strong, unknownFutureValue.
      * @param value Value to set for the emphasis property.
      */
-    public void setEmphasis(@jakarta.annotation.Nullable final SectionEmphasisType value) {
+    public void setEmphasis(@jakarta.annotation.Nullable final VerticalSectionEmphasis value) {
         this.backingStore.set("emphasis", value);
     }
     /**

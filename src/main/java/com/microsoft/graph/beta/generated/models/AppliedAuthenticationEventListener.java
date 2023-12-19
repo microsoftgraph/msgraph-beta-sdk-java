@@ -57,10 +57,10 @@ public class AppliedAuthenticationEventListener implements AdditionalDataHolder,
     }
     /**
      * Gets the eventType property value. The type of authentication event that triggered the custom authentication extension request. The possible values are: tokenIssuanceStart, pageRenderStart, unknownFutureValue.
-     * @return a AuthenticationEventType
+     * @return a AppliedAuthenticationEventListenerEventType
      */
     @jakarta.annotation.Nullable
-    public AuthenticationEventType getEventType() {
+    public AppliedAuthenticationEventListenerEventType getEventType() {
         return this.backingStore.get("eventType");
     }
     /**
@@ -78,7 +78,7 @@ public class AppliedAuthenticationEventListener implements AdditionalDataHolder,
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
-        deserializerMap.put("eventType", (n) -> { this.setEventType(n.getEnumValue(AuthenticationEventType::forValue)); });
+        deserializerMap.put("eventType", (n) -> { this.setEventType(n.getEnumValue(AppliedAuthenticationEventListenerEventType::forValue)); });
         deserializerMap.put("executedListenerId", (n) -> { this.setExecutedListenerId(n.getStringValue()); });
         deserializerMap.put("handlerResult", (n) -> { this.setHandlerResult(n.getObjectValue(AuthenticationEventHandlerResult::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -131,7 +131,7 @@ public class AppliedAuthenticationEventListener implements AdditionalDataHolder,
      * Sets the eventType property value. The type of authentication event that triggered the custom authentication extension request. The possible values are: tokenIssuanceStart, pageRenderStart, unknownFutureValue.
      * @param value Value to set for the eventType property.
      */
-    public void setEventType(@jakarta.annotation.Nullable final AuthenticationEventType value) {
+    public void setEventType(@jakarta.annotation.Nullable final AppliedAuthenticationEventListenerEventType value) {
         this.backingStore.set("eventType", value);
     }
     /**

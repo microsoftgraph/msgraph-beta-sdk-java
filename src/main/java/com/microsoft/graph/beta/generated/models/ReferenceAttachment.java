@@ -35,7 +35,7 @@ public class ReferenceAttachment extends Attachment implements Parsable {
         deserializerMap.put("isFolder", (n) -> { this.setIsFolder(n.getBooleanValue()); });
         deserializerMap.put("permission", (n) -> { this.setPermission(n.getEnumValue(ReferenceAttachmentPermission::forValue)); });
         deserializerMap.put("previewUrl", (n) -> { this.setPreviewUrl(n.getStringValue()); });
-        deserializerMap.put("providerType", (n) -> { this.setProviderType(n.getEnumValue(ReferenceAttachmentProvider::forValue)); });
+        deserializerMap.put("providerType", (n) -> { this.setProviderType(n.getEnumValue(ReferenceAttachmentProviderType::forValue)); });
         deserializerMap.put("sourceUrl", (n) -> { this.setSourceUrl(n.getStringValue()); });
         deserializerMap.put("thumbnailUrl", (n) -> { this.setThumbnailUrl(n.getStringValue()); });
         return deserializerMap;
@@ -66,10 +66,10 @@ public class ReferenceAttachment extends Attachment implements Parsable {
     }
     /**
      * Gets the providerType property value. The type of provider that supports an attachment of this contentType. Possible values are: other, oneDriveBusiness, oneDriveConsumer, dropbox. Optional.
-     * @return a ReferenceAttachmentProvider
+     * @return a ReferenceAttachmentProviderType
      */
     @jakarta.annotation.Nullable
-    public ReferenceAttachmentProvider getProviderType() {
+    public ReferenceAttachmentProviderType getProviderType() {
         return this.backingStore.get("providerType");
     }
     /**
@@ -127,7 +127,7 @@ public class ReferenceAttachment extends Attachment implements Parsable {
      * Sets the providerType property value. The type of provider that supports an attachment of this contentType. Possible values are: other, oneDriveBusiness, oneDriveConsumer, dropbox. Optional.
      * @param value Value to set for the providerType property.
      */
-    public void setProviderType(@jakarta.annotation.Nullable final ReferenceAttachmentProvider value) {
+    public void setProviderType(@jakarta.annotation.Nullable final ReferenceAttachmentProviderType value) {
         this.backingStore.set("providerType", value);
     }
     /**

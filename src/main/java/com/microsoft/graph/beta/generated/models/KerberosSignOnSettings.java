@@ -63,7 +63,7 @@ public class KerberosSignOnSettings implements AdditionalDataHolder, BackedModel
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("kerberosServicePrincipalName", (n) -> { this.setKerberosServicePrincipalName(n.getStringValue()); });
-        deserializerMap.put("kerberosSignOnMappingAttributeType", (n) -> { this.setKerberosSignOnMappingAttributeType(n.getEnumValue(KerberosSignOnMappingAttributeType::forValue)); });
+        deserializerMap.put("kerberosSignOnMappingAttributeType", (n) -> { this.setKerberosSignOnMappingAttributeType(n.getEnumValue(KerberosSignOnSettingsKerberosSignOnMappingAttributeType::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;
     }
@@ -77,10 +77,10 @@ public class KerberosSignOnSettings implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the kerberosSignOnMappingAttributeType property value. The Delegated Login Identity for the connector to use on behalf of your users. For more information, see Working with different on-premises and cloud identities . Possible values are: userPrincipalName, onPremisesUserPrincipalName, userPrincipalUsername, onPremisesUserPrincipalUsername, onPremisesSAMAccountName.
-     * @return a KerberosSignOnMappingAttributeType
+     * @return a KerberosSignOnSettingsKerberosSignOnMappingAttributeType
      */
     @jakarta.annotation.Nullable
-    public KerberosSignOnMappingAttributeType getKerberosSignOnMappingAttributeType() {
+    public KerberosSignOnSettingsKerberosSignOnMappingAttributeType getKerberosSignOnMappingAttributeType() {
         return this.backingStore.get("kerberosSignOnMappingAttributeType");
     }
     /**
@@ -128,7 +128,7 @@ public class KerberosSignOnSettings implements AdditionalDataHolder, BackedModel
      * Sets the kerberosSignOnMappingAttributeType property value. The Delegated Login Identity for the connector to use on behalf of your users. For more information, see Working with different on-premises and cloud identities . Possible values are: userPrincipalName, onPremisesUserPrincipalName, userPrincipalUsername, onPremisesUserPrincipalUsername, onPremisesSAMAccountName.
      * @param value Value to set for the kerberosSignOnMappingAttributeType property.
      */
-    public void setKerberosSignOnMappingAttributeType(@jakarta.annotation.Nullable final KerberosSignOnMappingAttributeType value) {
+    public void setKerberosSignOnMappingAttributeType(@jakarta.annotation.Nullable final KerberosSignOnSettingsKerberosSignOnMappingAttributeType value) {
         this.backingStore.set("kerberosSignOnMappingAttributeType", value);
     }
     /**

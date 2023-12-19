@@ -3,7 +3,6 @@ package com.microsoft.graph.beta.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -64,7 +63,7 @@ public class MacOSCertificateProfileBase extends DeviceConfiguration implements 
         deserializerMap.put("certificateValidityPeriodScale", (n) -> { this.setCertificateValidityPeriodScale(n.getEnumValue(CertificateValidityPeriodScale::forValue)); });
         deserializerMap.put("certificateValidityPeriodValue", (n) -> { this.setCertificateValidityPeriodValue(n.getIntegerValue()); });
         deserializerMap.put("renewalThresholdPercentage", (n) -> { this.setRenewalThresholdPercentage(n.getIntegerValue()); });
-        deserializerMap.put("subjectAlternativeNameType", (n) -> { this.setSubjectAlternativeNameType(n.getEnumSetValue(SubjectAlternativeNameType::forValue)); });
+        deserializerMap.put("subjectAlternativeNameType", (n) -> { this.setSubjectAlternativeNameType(n.getEnumValue(MacOSCertificateProfileBaseSubjectAlternativeNameType::forValue)); });
         deserializerMap.put("subjectNameFormat", (n) -> { this.setSubjectNameFormat(n.getEnumValue(AppleSubjectNameFormat::forValue)); });
         return deserializerMap;
     }
@@ -78,10 +77,10 @@ public class MacOSCertificateProfileBase extends DeviceConfiguration implements 
     }
     /**
      * Gets the subjectAlternativeNameType property value. Certificate Subject Alternative Name Type. Possible values are: none, emailAddress, userPrincipalName, customAzureADAttribute, domainNameService, universalResourceIdentifier.
-     * @return a EnumSet<SubjectAlternativeNameType>
+     * @return a MacOSCertificateProfileBaseSubjectAlternativeNameType
      */
     @jakarta.annotation.Nullable
-    public EnumSet<SubjectAlternativeNameType> getSubjectAlternativeNameType() {
+    public MacOSCertificateProfileBaseSubjectAlternativeNameType getSubjectAlternativeNameType() {
         return this.backingStore.get("subjectAlternativeNameType");
     }
     /**
@@ -102,7 +101,7 @@ public class MacOSCertificateProfileBase extends DeviceConfiguration implements 
         writer.writeEnumValue("certificateValidityPeriodScale", this.getCertificateValidityPeriodScale());
         writer.writeIntegerValue("certificateValidityPeriodValue", this.getCertificateValidityPeriodValue());
         writer.writeIntegerValue("renewalThresholdPercentage", this.getRenewalThresholdPercentage());
-        writer.writeEnumSetValue("subjectAlternativeNameType", this.getSubjectAlternativeNameType());
+        writer.writeEnumValue("subjectAlternativeNameType", this.getSubjectAlternativeNameType());
         writer.writeEnumValue("subjectNameFormat", this.getSubjectNameFormat());
     }
     /**
@@ -130,7 +129,7 @@ public class MacOSCertificateProfileBase extends DeviceConfiguration implements 
      * Sets the subjectAlternativeNameType property value. Certificate Subject Alternative Name Type. Possible values are: none, emailAddress, userPrincipalName, customAzureADAttribute, domainNameService, universalResourceIdentifier.
      * @param value Value to set for the subjectAlternativeNameType property.
      */
-    public void setSubjectAlternativeNameType(@jakarta.annotation.Nullable final EnumSet<SubjectAlternativeNameType> value) {
+    public void setSubjectAlternativeNameType(@jakarta.annotation.Nullable final MacOSCertificateProfileBaseSubjectAlternativeNameType value) {
         this.backingStore.set("subjectAlternativeNameType", value);
     }
     /**

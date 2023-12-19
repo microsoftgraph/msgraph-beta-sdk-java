@@ -71,7 +71,7 @@ public class Acl implements AdditionalDataHolder, BackedModel, Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("accessType", (n) -> { this.setAccessType(n.getEnumValue(AccessType::forValue)); });
-        deserializerMap.put("identitySource", (n) -> { this.setIdentitySource(n.getEnumValue(IdentitySourceType::forValue)); });
+        deserializerMap.put("identitySource", (n) -> { this.setIdentitySource(n.getEnumValue(AclIdentitySource::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(AclType::forValue)); });
         deserializerMap.put("value", (n) -> { this.setValue(n.getStringValue()); });
@@ -79,10 +79,10 @@ public class Acl implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the identitySource property value. The source of identity. Possible values are azureActiveDirectory or external.
-     * @return a IdentitySourceType
+     * @return a AclIdentitySource
      */
     @jakarta.annotation.Nullable
-    public IdentitySourceType getIdentitySource() {
+    public AclIdentitySource getIdentitySource() {
         return this.backingStore.get("identitySource");
     }
     /**
@@ -148,7 +148,7 @@ public class Acl implements AdditionalDataHolder, BackedModel, Parsable {
      * Sets the identitySource property value. The source of identity. Possible values are azureActiveDirectory or external.
      * @param value Value to set for the identitySource property.
      */
-    public void setIdentitySource(@jakarta.annotation.Nullable final IdentitySourceType value) {
+    public void setIdentitySource(@jakarta.annotation.Nullable final AclIdentitySource value) {
         this.backingStore.set("identitySource", value);
     }
     /**

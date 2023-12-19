@@ -37,10 +37,10 @@ public class AssignmentReviewSettings implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the accessReviewTimeoutBehavior property value. The default decision to apply if the request isn't reviewed within the period specified in durationInDays. The possible values are: acceptAccessRecommendation, keepAccess, removeAccess, and unknownFutureValue.
-     * @return a AccessReviewTimeoutBehavior
+     * @return a AssignmentReviewSettingsAccessReviewTimeoutBehavior
      */
     @jakarta.annotation.Nullable
-    public AccessReviewTimeoutBehavior getAccessReviewTimeoutBehavior() {
+    public AssignmentReviewSettingsAccessReviewTimeoutBehavior getAccessReviewTimeoutBehavior() {
         return this.backingStore.get("accessReviewTimeoutBehavior");
     }
     /**
@@ -79,7 +79,7 @@ public class AssignmentReviewSettings implements AdditionalDataHolder, BackedMod
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(10);
-        deserializerMap.put("accessReviewTimeoutBehavior", (n) -> { this.setAccessReviewTimeoutBehavior(n.getEnumValue(AccessReviewTimeoutBehavior::forValue)); });
+        deserializerMap.put("accessReviewTimeoutBehavior", (n) -> { this.setAccessReviewTimeoutBehavior(n.getEnumValue(AssignmentReviewSettingsAccessReviewTimeoutBehavior::forValue)); });
         deserializerMap.put("durationInDays", (n) -> { this.setDurationInDays(n.getIntegerValue()); });
         deserializerMap.put("isAccessRecommendationEnabled", (n) -> { this.setIsAccessRecommendationEnabled(n.getBooleanValue()); });
         deserializerMap.put("isApprovalJustificationRequired", (n) -> { this.setIsApprovalJustificationRequired(n.getBooleanValue()); });
@@ -177,7 +177,7 @@ public class AssignmentReviewSettings implements AdditionalDataHolder, BackedMod
      * Sets the accessReviewTimeoutBehavior property value. The default decision to apply if the request isn't reviewed within the period specified in durationInDays. The possible values are: acceptAccessRecommendation, keepAccess, removeAccess, and unknownFutureValue.
      * @param value Value to set for the accessReviewTimeoutBehavior property.
      */
-    public void setAccessReviewTimeoutBehavior(@jakarta.annotation.Nullable final AccessReviewTimeoutBehavior value) {
+    public void setAccessReviewTimeoutBehavior(@jakarta.annotation.Nullable final AssignmentReviewSettingsAccessReviewTimeoutBehavior value) {
         this.backingStore.set("accessReviewTimeoutBehavior", value);
     }
     /**

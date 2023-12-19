@@ -58,10 +58,10 @@ public class TenantAllowBlockListEntryResult implements AdditionalDataHolder, Ba
     }
     /**
      * Gets the entryType property value. The tenant allow-block list entry type. The possible values are: url, fileHash, sender, recipient and unkownFutureValue.
-     * @return a TenantAllowBlockListEntryType
+     * @return a TenantAllowBlockListEntryResultEntryType
      */
     @jakarta.annotation.Nullable
-    public TenantAllowBlockListEntryType getEntryType() {
+    public TenantAllowBlockListEntryResultEntryType getEntryType() {
         return this.backingStore.get("entryType");
     }
     /**
@@ -79,11 +79,11 @@ public class TenantAllowBlockListEntryResult implements AdditionalDataHolder, Ba
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
-        deserializerMap.put("entryType", (n) -> { this.setEntryType(n.getEnumValue(TenantAllowBlockListEntryType::forValue)); });
+        deserializerMap.put("entryType", (n) -> { this.setEntryType(n.getEnumValue(TenantAllowBlockListEntryResultEntryType::forValue)); });
         deserializerMap.put("expirationDateTime", (n) -> { this.setExpirationDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("identity", (n) -> { this.setIdentity(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(LongRunningOperationStatus::forValue)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(TenantAllowBlockListEntryResultStatus::forValue)); });
         deserializerMap.put("value", (n) -> { this.setValue(n.getStringValue()); });
         return deserializerMap;
     }
@@ -105,10 +105,10 @@ public class TenantAllowBlockListEntryResult implements AdditionalDataHolder, Ba
     }
     /**
      * Gets the status property value. Specifies whether the tenant allow block list entry creation operation was successful. The possible values are: notStarted, running, succeeded, failed, skipped and unkownFutureValue.
-     * @return a LongRunningOperationStatus
+     * @return a TenantAllowBlockListEntryResultStatus
      */
     @jakarta.annotation.Nullable
-    public LongRunningOperationStatus getStatus() {
+    public TenantAllowBlockListEntryResultStatus getStatus() {
         return this.backingStore.get("status");
     }
     /**
@@ -152,7 +152,7 @@ public class TenantAllowBlockListEntryResult implements AdditionalDataHolder, Ba
      * Sets the entryType property value. The tenant allow-block list entry type. The possible values are: url, fileHash, sender, recipient and unkownFutureValue.
      * @param value Value to set for the entryType property.
      */
-    public void setEntryType(@jakarta.annotation.Nullable final TenantAllowBlockListEntryType value) {
+    public void setEntryType(@jakarta.annotation.Nullable final TenantAllowBlockListEntryResultEntryType value) {
         this.backingStore.set("entryType", value);
     }
     /**
@@ -180,7 +180,7 @@ public class TenantAllowBlockListEntryResult implements AdditionalDataHolder, Ba
      * Sets the status property value. Specifies whether the tenant allow block list entry creation operation was successful. The possible values are: notStarted, running, succeeded, failed, skipped and unkownFutureValue.
      * @param value Value to set for the status property.
      */
-    public void setStatus(@jakarta.annotation.Nullable final LongRunningOperationStatus value) {
+    public void setStatus(@jakarta.annotation.Nullable final TenantAllowBlockListEntryResultStatus value) {
         this.backingStore.set("status", value);
     }
     /**

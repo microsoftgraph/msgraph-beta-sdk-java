@@ -49,25 +49,25 @@ public class CloudPcOrganizationSettings extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("enableMEMAutoEnroll", (n) -> { this.setEnableMEMAutoEnroll(n.getBooleanValue()); });
         deserializerMap.put("enableSingleSignOn", (n) -> { this.setEnableSingleSignOn(n.getBooleanValue()); });
-        deserializerMap.put("osVersion", (n) -> { this.setOsVersion(n.getEnumValue(CloudPcOperatingSystem::forValue)); });
-        deserializerMap.put("userAccountType", (n) -> { this.setUserAccountType(n.getEnumValue(CloudPcUserAccountType::forValue)); });
+        deserializerMap.put("osVersion", (n) -> { this.setOsVersion(n.getEnumValue(CloudPcOrganizationSettingsOsVersion::forValue)); });
+        deserializerMap.put("userAccountType", (n) -> { this.setUserAccountType(n.getEnumValue(CloudPcOrganizationSettingsUserAccountType::forValue)); });
         deserializerMap.put("windowsSettings", (n) -> { this.setWindowsSettings(n.getObjectValue(CloudPcWindowsSettings::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the osVersion property value. The version of the operating system (OS) to provision on Cloud PCs. The possible values are: windows10, windows11, unknownFutureValue.
-     * @return a CloudPcOperatingSystem
+     * @return a CloudPcOrganizationSettingsOsVersion
      */
     @jakarta.annotation.Nullable
-    public CloudPcOperatingSystem getOsVersion() {
+    public CloudPcOrganizationSettingsOsVersion getOsVersion() {
         return this.backingStore.get("osVersion");
     }
     /**
      * Gets the userAccountType property value. The account type of the user on provisioned Cloud PCs. The possible values are: standardUser, administrator, unknownFutureValue.
-     * @return a CloudPcUserAccountType
+     * @return a CloudPcOrganizationSettingsUserAccountType
      */
     @jakarta.annotation.Nullable
-    public CloudPcUserAccountType getUserAccountType() {
+    public CloudPcOrganizationSettingsUserAccountType getUserAccountType() {
         return this.backingStore.get("userAccountType");
     }
     /**
@@ -109,14 +109,14 @@ public class CloudPcOrganizationSettings extends Entity implements Parsable {
      * Sets the osVersion property value. The version of the operating system (OS) to provision on Cloud PCs. The possible values are: windows10, windows11, unknownFutureValue.
      * @param value Value to set for the osVersion property.
      */
-    public void setOsVersion(@jakarta.annotation.Nullable final CloudPcOperatingSystem value) {
+    public void setOsVersion(@jakarta.annotation.Nullable final CloudPcOrganizationSettingsOsVersion value) {
         this.backingStore.set("osVersion", value);
     }
     /**
      * Sets the userAccountType property value. The account type of the user on provisioned Cloud PCs. The possible values are: standardUser, administrator, unknownFutureValue.
      * @param value Value to set for the userAccountType property.
      */
-    public void setUserAccountType(@jakarta.annotation.Nullable final CloudPcUserAccountType value) {
+    public void setUserAccountType(@jakarta.annotation.Nullable final CloudPcOrganizationSettingsUserAccountType value) {
         this.backingStore.set("userAccountType", value);
     }
     /**

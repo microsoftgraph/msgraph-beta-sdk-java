@@ -72,7 +72,7 @@ public class AuthenticationRequirementPolicy implements AdditionalDataHolder, Ba
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("detail", (n) -> { this.setDetail(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("requirementProvider", (n) -> { this.setRequirementProvider(n.getEnumValue(RequirementProvider::forValue)); });
+        deserializerMap.put("requirementProvider", (n) -> { this.setRequirementProvider(n.getEnumValue(AuthenticationRequirementPolicyRequirementProvider::forValue)); });
         return deserializerMap;
     }
     /**
@@ -85,10 +85,10 @@ public class AuthenticationRequirementPolicy implements AdditionalDataHolder, Ba
     }
     /**
      * Gets the requirementProvider property value. Identifies what Microsoft Entra feature requires MFA in this policy. Possible values are: user, request, servicePrincipal, v1ConditionalAccess, multiConditionalAccess, tenantSessionRiskPolicy, accountCompromisePolicies, v1ConditionalAccessDependency, v1ConditionalAccessPolicyIdRequested, mfaRegistrationRequiredByIdentityProtectionPolicy, baselineProtection, mfaRegistrationRequiredByBaselineProtection, mfaRegistrationRequiredByMultiConditionalAccess, enforcedForCspAdmins, securityDefaults, mfaRegistrationRequiredBySecurityDefaults, proofUpCodeRequest, crossTenantOutboundRule, gpsLocationCondition, riskBasedPolicy, unknownFutureValue.
-     * @return a RequirementProvider
+     * @return a AuthenticationRequirementPolicyRequirementProvider
      */
     @jakarta.annotation.Nullable
-    public RequirementProvider getRequirementProvider() {
+    public AuthenticationRequirementPolicyRequirementProvider getRequirementProvider() {
         return this.backingStore.get("requirementProvider");
     }
     /**
@@ -135,7 +135,7 @@ public class AuthenticationRequirementPolicy implements AdditionalDataHolder, Ba
      * Sets the requirementProvider property value. Identifies what Microsoft Entra feature requires MFA in this policy. Possible values are: user, request, servicePrincipal, v1ConditionalAccess, multiConditionalAccess, tenantSessionRiskPolicy, accountCompromisePolicies, v1ConditionalAccessDependency, v1ConditionalAccessPolicyIdRequested, mfaRegistrationRequiredByIdentityProtectionPolicy, baselineProtection, mfaRegistrationRequiredByBaselineProtection, mfaRegistrationRequiredByMultiConditionalAccess, enforcedForCspAdmins, securityDefaults, mfaRegistrationRequiredBySecurityDefaults, proofUpCodeRequest, crossTenantOutboundRule, gpsLocationCondition, riskBasedPolicy, unknownFutureValue.
      * @param value Value to set for the requirementProvider property.
      */
-    public void setRequirementProvider(@jakarta.annotation.Nullable final RequirementProvider value) {
+    public void setRequirementProvider(@jakarta.annotation.Nullable final AuthenticationRequirementPolicyRequirementProvider value) {
         this.backingStore.set("requirementProvider", value);
     }
 }

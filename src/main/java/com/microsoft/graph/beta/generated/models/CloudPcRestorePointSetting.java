@@ -61,8 +61,9 @@ public class CloudPcRestorePointSetting implements AdditionalDataHolder, BackedM
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("frequencyInHours", (n) -> { this.setFrequencyInHours(n.getIntegerValue()); });
+        deserializerMap.put("frequencyType", (n) -> { this.setFrequencyType(n.getEnumValue(CloudPcRestorePointSettingFrequencyType::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("userRestoreEnabled", (n) -> { this.setUserRestoreEnabled(n.getBooleanValue()); });
         return deserializerMap;
@@ -74,6 +75,14 @@ public class CloudPcRestorePointSetting implements AdditionalDataHolder, BackedM
     @jakarta.annotation.Nullable
     public Integer getFrequencyInHours() {
         return this.backingStore.get("frequencyInHours");
+    }
+    /**
+     * Gets the frequencyType property value. The frequencyType property
+     * @return a CloudPcRestorePointSettingFrequencyType
+     */
+    @jakarta.annotation.Nullable
+    public CloudPcRestorePointSettingFrequencyType getFrequencyType() {
+        return this.backingStore.get("frequencyType");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -98,6 +107,7 @@ public class CloudPcRestorePointSetting implements AdditionalDataHolder, BackedM
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("frequencyInHours", this.getFrequencyInHours());
+        writer.writeEnumValue("frequencyType", this.getFrequencyType());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeBooleanValue("userRestoreEnabled", this.getUserRestoreEnabled());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -123,6 +133,13 @@ public class CloudPcRestorePointSetting implements AdditionalDataHolder, BackedM
      */
     public void setFrequencyInHours(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("frequencyInHours", value);
+    }
+    /**
+     * Sets the frequencyType property value. The frequencyType property
+     * @param value Value to set for the frequencyType property.
+     */
+    public void setFrequencyType(@jakarta.annotation.Nullable final CloudPcRestorePointSettingFrequencyType value) {
+        this.backingStore.set("frequencyType", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property

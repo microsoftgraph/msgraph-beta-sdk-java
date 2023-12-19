@@ -52,10 +52,10 @@ public class CryptographySuite implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the authenticationTransformConstants property value. Authentication Transform Constants. Possible values are: md596, sha196, sha256128, aes128Gcm, aes192Gcm, aes256Gcm.
-     * @return a AuthenticationTransformConstant
+     * @return a CryptographySuiteAuthenticationTransformConstants
      */
     @jakarta.annotation.Nullable
-    public AuthenticationTransformConstant getAuthenticationTransformConstants() {
+    public CryptographySuiteAuthenticationTransformConstants getAuthenticationTransformConstants() {
         return this.backingStore.get("authenticationTransformConstants");
     }
     /**
@@ -68,26 +68,26 @@ public class CryptographySuite implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the cipherTransformConstants property value. Cipher Transform Constants. Possible values are: aes256, des, tripleDes, aes128, aes128Gcm, aes256Gcm, aes192, aes192Gcm, chaCha20Poly1305.
-     * @return a VpnEncryptionAlgorithmType
+     * @return a CryptographySuiteCipherTransformConstants
      */
     @jakarta.annotation.Nullable
-    public VpnEncryptionAlgorithmType getCipherTransformConstants() {
+    public CryptographySuiteCipherTransformConstants getCipherTransformConstants() {
         return this.backingStore.get("cipherTransformConstants");
     }
     /**
      * Gets the dhGroup property value. Diffie Hellman Group. Possible values are: group1, group2, group14, ecp256, ecp384, group24.
-     * @return a DiffieHellmanGroup
+     * @return a CryptographySuiteDhGroup
      */
     @jakarta.annotation.Nullable
-    public DiffieHellmanGroup getDhGroup() {
+    public CryptographySuiteDhGroup getDhGroup() {
         return this.backingStore.get("dhGroup");
     }
     /**
      * Gets the encryptionMethod property value. Encryption Method. Possible values are: aes256, des, tripleDes, aes128, aes128Gcm, aes256Gcm, aes192, aes192Gcm, chaCha20Poly1305.
-     * @return a VpnEncryptionAlgorithmType
+     * @return a CryptographySuiteEncryptionMethod
      */
     @jakarta.annotation.Nullable
-    public VpnEncryptionAlgorithmType getEncryptionMethod() {
+    public CryptographySuiteEncryptionMethod getEncryptionMethod() {
         return this.backingStore.get("encryptionMethod");
     }
     /**
@@ -97,21 +97,21 @@ public class CryptographySuite implements AdditionalDataHolder, BackedModel, Par
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
-        deserializerMap.put("authenticationTransformConstants", (n) -> { this.setAuthenticationTransformConstants(n.getEnumValue(AuthenticationTransformConstant::forValue)); });
-        deserializerMap.put("cipherTransformConstants", (n) -> { this.setCipherTransformConstants(n.getEnumValue(VpnEncryptionAlgorithmType::forValue)); });
-        deserializerMap.put("dhGroup", (n) -> { this.setDhGroup(n.getEnumValue(DiffieHellmanGroup::forValue)); });
-        deserializerMap.put("encryptionMethod", (n) -> { this.setEncryptionMethod(n.getEnumValue(VpnEncryptionAlgorithmType::forValue)); });
-        deserializerMap.put("integrityCheckMethod", (n) -> { this.setIntegrityCheckMethod(n.getEnumValue(VpnIntegrityAlgorithmType::forValue)); });
+        deserializerMap.put("authenticationTransformConstants", (n) -> { this.setAuthenticationTransformConstants(n.getEnumValue(CryptographySuiteAuthenticationTransformConstants::forValue)); });
+        deserializerMap.put("cipherTransformConstants", (n) -> { this.setCipherTransformConstants(n.getEnumValue(CryptographySuiteCipherTransformConstants::forValue)); });
+        deserializerMap.put("dhGroup", (n) -> { this.setDhGroup(n.getEnumValue(CryptographySuiteDhGroup::forValue)); });
+        deserializerMap.put("encryptionMethod", (n) -> { this.setEncryptionMethod(n.getEnumValue(CryptographySuiteEncryptionMethod::forValue)); });
+        deserializerMap.put("integrityCheckMethod", (n) -> { this.setIntegrityCheckMethod(n.getEnumValue(CryptographySuiteIntegrityCheckMethod::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("pfsGroup", (n) -> { this.setPfsGroup(n.getEnumValue(PerfectForwardSecrecyGroup::forValue)); });
+        deserializerMap.put("pfsGroup", (n) -> { this.setPfsGroup(n.getEnumValue(CryptographySuitePfsGroup::forValue)); });
         return deserializerMap;
     }
     /**
      * Gets the integrityCheckMethod property value. Integrity Check Method. Possible values are: sha2256, sha196, sha1160, sha2384, sha2_512, md5.
-     * @return a VpnIntegrityAlgorithmType
+     * @return a CryptographySuiteIntegrityCheckMethod
      */
     @jakarta.annotation.Nullable
-    public VpnIntegrityAlgorithmType getIntegrityCheckMethod() {
+    public CryptographySuiteIntegrityCheckMethod getIntegrityCheckMethod() {
         return this.backingStore.get("integrityCheckMethod");
     }
     /**
@@ -124,10 +124,10 @@ public class CryptographySuite implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the pfsGroup property value. Perfect Forward Secrecy Group. Possible values are: pfs1, pfs2, pfs2048, ecp256, ecp384, pfsMM, pfs24.
-     * @return a PerfectForwardSecrecyGroup
+     * @return a CryptographySuitePfsGroup
      */
     @jakarta.annotation.Nullable
-    public PerfectForwardSecrecyGroup getPfsGroup() {
+    public CryptographySuitePfsGroup getPfsGroup() {
         return this.backingStore.get("pfsGroup");
     }
     /**
@@ -156,7 +156,7 @@ public class CryptographySuite implements AdditionalDataHolder, BackedModel, Par
      * Sets the authenticationTransformConstants property value. Authentication Transform Constants. Possible values are: md596, sha196, sha256128, aes128Gcm, aes192Gcm, aes256Gcm.
      * @param value Value to set for the authenticationTransformConstants property.
      */
-    public void setAuthenticationTransformConstants(@jakarta.annotation.Nullable final AuthenticationTransformConstant value) {
+    public void setAuthenticationTransformConstants(@jakarta.annotation.Nullable final CryptographySuiteAuthenticationTransformConstants value) {
         this.backingStore.set("authenticationTransformConstants", value);
     }
     /**
@@ -171,28 +171,28 @@ public class CryptographySuite implements AdditionalDataHolder, BackedModel, Par
      * Sets the cipherTransformConstants property value. Cipher Transform Constants. Possible values are: aes256, des, tripleDes, aes128, aes128Gcm, aes256Gcm, aes192, aes192Gcm, chaCha20Poly1305.
      * @param value Value to set for the cipherTransformConstants property.
      */
-    public void setCipherTransformConstants(@jakarta.annotation.Nullable final VpnEncryptionAlgorithmType value) {
+    public void setCipherTransformConstants(@jakarta.annotation.Nullable final CryptographySuiteCipherTransformConstants value) {
         this.backingStore.set("cipherTransformConstants", value);
     }
     /**
      * Sets the dhGroup property value. Diffie Hellman Group. Possible values are: group1, group2, group14, ecp256, ecp384, group24.
      * @param value Value to set for the dhGroup property.
      */
-    public void setDhGroup(@jakarta.annotation.Nullable final DiffieHellmanGroup value) {
+    public void setDhGroup(@jakarta.annotation.Nullable final CryptographySuiteDhGroup value) {
         this.backingStore.set("dhGroup", value);
     }
     /**
      * Sets the encryptionMethod property value. Encryption Method. Possible values are: aes256, des, tripleDes, aes128, aes128Gcm, aes256Gcm, aes192, aes192Gcm, chaCha20Poly1305.
      * @param value Value to set for the encryptionMethod property.
      */
-    public void setEncryptionMethod(@jakarta.annotation.Nullable final VpnEncryptionAlgorithmType value) {
+    public void setEncryptionMethod(@jakarta.annotation.Nullable final CryptographySuiteEncryptionMethod value) {
         this.backingStore.set("encryptionMethod", value);
     }
     /**
      * Sets the integrityCheckMethod property value. Integrity Check Method. Possible values are: sha2256, sha196, sha1160, sha2384, sha2_512, md5.
      * @param value Value to set for the integrityCheckMethod property.
      */
-    public void setIntegrityCheckMethod(@jakarta.annotation.Nullable final VpnIntegrityAlgorithmType value) {
+    public void setIntegrityCheckMethod(@jakarta.annotation.Nullable final CryptographySuiteIntegrityCheckMethod value) {
         this.backingStore.set("integrityCheckMethod", value);
     }
     /**
@@ -206,7 +206,7 @@ public class CryptographySuite implements AdditionalDataHolder, BackedModel, Par
      * Sets the pfsGroup property value. Perfect Forward Secrecy Group. Possible values are: pfs1, pfs2, pfs2048, ecp256, ecp384, pfsMM, pfs24.
      * @param value Value to set for the pfsGroup property.
      */
-    public void setPfsGroup(@jakarta.annotation.Nullable final PerfectForwardSecrecyGroup value) {
+    public void setPfsGroup(@jakarta.annotation.Nullable final CryptographySuitePfsGroup value) {
         this.backingStore.set("pfsGroup", value);
     }
 }

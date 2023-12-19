@@ -39,10 +39,10 @@ public class MacOSScepCertificateProfile extends MacOSCertificateProfileBase imp
     }
     /**
      * Gets the certificateStore property value. Target store certificate. Possible values are: user, machine.
-     * @return a CertificateStore
+     * @return a MacOSScepCertificateProfileCertificateStore
      */
     @jakarta.annotation.Nullable
-    public CertificateStore getCertificateStore() {
+    public MacOSScepCertificateProfileCertificateStore getCertificateStore() {
         return this.backingStore.get("certificateStore");
     }
     /**
@@ -69,10 +69,10 @@ public class MacOSScepCertificateProfile extends MacOSCertificateProfileBase imp
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("allowAllAppsAccess", (n) -> { this.setAllowAllAppsAccess(n.getBooleanValue()); });
-        deserializerMap.put("certificateStore", (n) -> { this.setCertificateStore(n.getEnumValue(CertificateStore::forValue)); });
+        deserializerMap.put("certificateStore", (n) -> { this.setCertificateStore(n.getEnumValue(MacOSScepCertificateProfileCertificateStore::forValue)); });
         deserializerMap.put("customSubjectAlternativeNames", (n) -> { this.setCustomSubjectAlternativeNames(n.getCollectionOfObjectValues(CustomSubjectAlternativeName::createFromDiscriminatorValue)); });
         deserializerMap.put("extendedKeyUsages", (n) -> { this.setExtendedKeyUsages(n.getCollectionOfObjectValues(ExtendedKeyUsage::createFromDiscriminatorValue)); });
-        deserializerMap.put("hashAlgorithm", (n) -> { this.setHashAlgorithm(n.getEnumSetValue(HashAlgorithms::forValue)); });
+        deserializerMap.put("hashAlgorithm", (n) -> { this.setHashAlgorithm(n.getEnumValue(MacOSScepCertificateProfileHashAlgorithm::forValue)); });
         deserializerMap.put("keySize", (n) -> { this.setKeySize(n.getEnumValue(KeySize::forValue)); });
         deserializerMap.put("keyUsage", (n) -> { this.setKeyUsage(n.getEnumSetValue(KeyUsages::forValue)); });
         deserializerMap.put("managedDeviceCertificateStates", (n) -> { this.setManagedDeviceCertificateStates(n.getCollectionOfObjectValues(ManagedDeviceCertificateState::createFromDiscriminatorValue)); });
@@ -84,10 +84,10 @@ public class MacOSScepCertificateProfile extends MacOSCertificateProfileBase imp
     }
     /**
      * Gets the hashAlgorithm property value. SCEP Hash Algorithm. Possible values are: sha1, sha2.
-     * @return a EnumSet<HashAlgorithms>
+     * @return a MacOSScepCertificateProfileHashAlgorithm
      */
     @jakarta.annotation.Nullable
-    public EnumSet<HashAlgorithms> getHashAlgorithm() {
+    public MacOSScepCertificateProfileHashAlgorithm getHashAlgorithm() {
         return this.backingStore.get("hashAlgorithm");
     }
     /**
@@ -157,7 +157,7 @@ public class MacOSScepCertificateProfile extends MacOSCertificateProfileBase imp
         writer.writeEnumValue("certificateStore", this.getCertificateStore());
         writer.writeCollectionOfObjectValues("customSubjectAlternativeNames", this.getCustomSubjectAlternativeNames());
         writer.writeCollectionOfObjectValues("extendedKeyUsages", this.getExtendedKeyUsages());
-        writer.writeEnumSetValue("hashAlgorithm", this.getHashAlgorithm());
+        writer.writeEnumValue("hashAlgorithm", this.getHashAlgorithm());
         writer.writeEnumValue("keySize", this.getKeySize());
         writer.writeEnumSetValue("keyUsage", this.getKeyUsage());
         writer.writeCollectionOfObjectValues("managedDeviceCertificateStates", this.getManagedDeviceCertificateStates());
@@ -177,7 +177,7 @@ public class MacOSScepCertificateProfile extends MacOSCertificateProfileBase imp
      * Sets the certificateStore property value. Target store certificate. Possible values are: user, machine.
      * @param value Value to set for the certificateStore property.
      */
-    public void setCertificateStore(@jakarta.annotation.Nullable final CertificateStore value) {
+    public void setCertificateStore(@jakarta.annotation.Nullable final MacOSScepCertificateProfileCertificateStore value) {
         this.backingStore.set("certificateStore", value);
     }
     /**
@@ -198,7 +198,7 @@ public class MacOSScepCertificateProfile extends MacOSCertificateProfileBase imp
      * Sets the hashAlgorithm property value. SCEP Hash Algorithm. Possible values are: sha1, sha2.
      * @param value Value to set for the hashAlgorithm property.
      */
-    public void setHashAlgorithm(@jakarta.annotation.Nullable final EnumSet<HashAlgorithms> value) {
+    public void setHashAlgorithm(@jakarta.annotation.Nullable final MacOSScepCertificateProfileHashAlgorithm value) {
         this.backingStore.set("hashAlgorithm", value);
     }
     /**

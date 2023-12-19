@@ -1,6 +1,5 @@
 package com.microsoft.graph.beta.communications.onlinemeetings.item.sendvirtualappointmentremindersms;
 
-import com.microsoft.graph.beta.models.RemindBeforeTimeInMinutesType;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -64,7 +63,7 @@ public class SendVirtualAppointmentReminderSmsPostRequestBody implements Additio
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
         deserializerMap.put("phoneNumbers", (n) -> { this.setPhoneNumbers(n.getCollectionOfPrimitiveValues(String.class)); });
-        deserializerMap.put("remindBeforeTimeInMinutesType", (n) -> { this.setRemindBeforeTimeInMinutesType(n.getEnumValue(RemindBeforeTimeInMinutesType::forValue)); });
+        deserializerMap.put("remindBeforeTimeInMinutesType", (n) -> { this.setRemindBeforeTimeInMinutesType(n.getEnumValue(SendVirtualAppointmentReminderSmsPostRequestBodyRemindBeforeTimeInMinutesType::forValue)); });
         return deserializerMap;
     }
     /**
@@ -77,10 +76,10 @@ public class SendVirtualAppointmentReminderSmsPostRequestBody implements Additio
     }
     /**
      * Gets the remindBeforeTimeInMinutesType property value. The remindBeforeTimeInMinutesType property
-     * @return a RemindBeforeTimeInMinutesType
+     * @return a SendVirtualAppointmentReminderSmsPostRequestBodyRemindBeforeTimeInMinutesType
      */
     @jakarta.annotation.Nullable
-    public RemindBeforeTimeInMinutesType getRemindBeforeTimeInMinutesType() {
+    public SendVirtualAppointmentReminderSmsPostRequestBodyRemindBeforeTimeInMinutesType getRemindBeforeTimeInMinutesType() {
         return this.backingStore.get("remindBeforeTimeInMinutesType");
     }
     /**
@@ -119,7 +118,7 @@ public class SendVirtualAppointmentReminderSmsPostRequestBody implements Additio
      * Sets the remindBeforeTimeInMinutesType property value. The remindBeforeTimeInMinutesType property
      * @param value Value to set for the remindBeforeTimeInMinutesType property.
      */
-    public void setRemindBeforeTimeInMinutesType(@jakarta.annotation.Nullable final RemindBeforeTimeInMinutesType value) {
+    public void setRemindBeforeTimeInMinutesType(@jakarta.annotation.Nullable final SendVirtualAppointmentReminderSmsPostRequestBodyRemindBeforeTimeInMinutesType value) {
         this.backingStore.set("remindBeforeTimeInMinutesType", value);
     }
 }

@@ -81,10 +81,10 @@ public class OnPremisesPublishing implements AdditionalDataHolder, BackedModel, 
     }
     /**
      * Gets the externalAuthenticationType property value. Details the pre-authentication setting for the application. Pre-authentication enforces that users must authenticate before accessing the app. Pass through doesn't require authentication. Possible values are: passthru, aadPreAuthentication.
-     * @return a ExternalAuthenticationType
+     * @return a OnPremisesPublishingExternalAuthenticationType
      */
     @jakarta.annotation.Nullable
-    public ExternalAuthenticationType getExternalAuthenticationType() {
+    public OnPremisesPublishingExternalAuthenticationType getExternalAuthenticationType() {
         return this.backingStore.get("externalAuthenticationType");
     }
     /**
@@ -105,7 +105,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, BackedModel, 
         deserializerMap.put("alternateUrl", (n) -> { this.setAlternateUrl(n.getStringValue()); });
         deserializerMap.put("applicationServerTimeout", (n) -> { this.setApplicationServerTimeout(n.getStringValue()); });
         deserializerMap.put("applicationType", (n) -> { this.setApplicationType(n.getStringValue()); });
-        deserializerMap.put("externalAuthenticationType", (n) -> { this.setExternalAuthenticationType(n.getEnumValue(ExternalAuthenticationType::forValue)); });
+        deserializerMap.put("externalAuthenticationType", (n) -> { this.setExternalAuthenticationType(n.getEnumValue(OnPremisesPublishingExternalAuthenticationType::forValue)); });
         deserializerMap.put("externalUrl", (n) -> { this.setExternalUrl(n.getStringValue()); });
         deserializerMap.put("internalUrl", (n) -> { this.setInternalUrl(n.getStringValue()); });
         deserializerMap.put("isAccessibleViaZTNAClient", (n) -> { this.setIsAccessibleViaZTNAClient(n.getBooleanValue()); });
@@ -352,7 +352,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, BackedModel, 
      * Sets the externalAuthenticationType property value. Details the pre-authentication setting for the application. Pre-authentication enforces that users must authenticate before accessing the app. Pass through doesn't require authentication. Possible values are: passthru, aadPreAuthentication.
      * @param value Value to set for the externalAuthenticationType property.
      */
-    public void setExternalAuthenticationType(@jakarta.annotation.Nullable final ExternalAuthenticationType value) {
+    public void setExternalAuthenticationType(@jakarta.annotation.Nullable final OnPremisesPublishingExternalAuthenticationType value) {
         this.backingStore.set("externalAuthenticationType", value);
     }
     /**

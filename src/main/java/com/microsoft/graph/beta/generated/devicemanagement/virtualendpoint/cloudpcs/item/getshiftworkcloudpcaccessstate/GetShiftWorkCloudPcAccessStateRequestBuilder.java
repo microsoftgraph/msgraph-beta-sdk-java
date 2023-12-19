@@ -1,7 +1,6 @@
 package com.microsoft.graph.beta.devicemanagement.virtualendpoint.cloudpcs.item.getshiftworkcloudpcaccessstate;
 
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
-import com.microsoft.graph.beta.models.ShiftWorkCloudPcAccessState;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -37,30 +36,30 @@ public class GetShiftWorkCloudPcAccessStateRequestBuilder extends BaseRequestBui
     }
     /**
      * Invoke function getShiftWorkCloudPcAccessState
-     * @return a ShiftWorkCloudPcAccessState
+     * @return a GetShiftWorkCloudPcAccessStateGetResponse
      * @deprecated
      * The getShiftWorkCloudPcAccessState API is deprecated and will stop returning data on Dec 31, 2023. Please use the new getFrontlineCloudPcAccessState API as of 2023-08/getShiftWorkCloudPcAccessState on 2023-09-05 and will be removed 2023-12-31
      */
     @jakarta.annotation.Nullable
     @Deprecated
-    public ShiftWorkCloudPcAccessState get() {
+    public GetShiftWorkCloudPcAccessStateGetResponse get() {
         return get(null);
     }
     /**
      * Invoke function getShiftWorkCloudPcAccessState
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a ShiftWorkCloudPcAccessState
+     * @return a GetShiftWorkCloudPcAccessStateGetResponse
      * @deprecated
      * The getShiftWorkCloudPcAccessState API is deprecated and will stop returning data on Dec 31, 2023. Please use the new getFrontlineCloudPcAccessState API as of 2023-08/getShiftWorkCloudPcAccessState on 2023-09-05 and will be removed 2023-12-31
      */
     @jakarta.annotation.Nullable
     @Deprecated
-    public ShiftWorkCloudPcAccessState get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public GetShiftWorkCloudPcAccessStateGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendEnum(requestInfo, errorMapping, ShiftWorkCloudPcAccessState::forValue);
+        return this.requestAdapter.sendEnum(requestInfo, errorMapping, GetShiftWorkCloudPcAccessStateGetResponse::forValue);
     }
     /**
      * Invoke function getShiftWorkCloudPcAccessState

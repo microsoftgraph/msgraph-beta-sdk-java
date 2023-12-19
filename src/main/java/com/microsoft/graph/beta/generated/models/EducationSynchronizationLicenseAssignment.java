@@ -49,10 +49,10 @@ public class EducationSynchronizationLicenseAssignment implements AdditionalData
     }
     /**
      * Gets the appliesTo property value. The user role type to assign to license. Possible values are: student, teacher, faculty.
-     * @return a EducationUserRole
+     * @return a EducationSynchronizationLicenseAssignmentAppliesTo
      */
     @jakarta.annotation.Nullable
-    public EducationUserRole getAppliesTo() {
+    public EducationSynchronizationLicenseAssignmentAppliesTo getAppliesTo() {
         return this.backingStore.get("appliesTo");
     }
     /**
@@ -70,7 +70,7 @@ public class EducationSynchronizationLicenseAssignment implements AdditionalData
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
-        deserializerMap.put("appliesTo", (n) -> { this.setAppliesTo(n.getEnumValue(EducationUserRole::forValue)); });
+        deserializerMap.put("appliesTo", (n) -> { this.setAppliesTo(n.getEnumValue(EducationSynchronizationLicenseAssignmentAppliesTo::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("skuIds", (n) -> { this.setSkuIds(n.getCollectionOfPrimitiveValues(String.class)); });
         return deserializerMap;
@@ -113,7 +113,7 @@ public class EducationSynchronizationLicenseAssignment implements AdditionalData
      * Sets the appliesTo property value. The user role type to assign to license. Possible values are: student, teacher, faculty.
      * @param value Value to set for the appliesTo property.
      */
-    public void setAppliesTo(@jakarta.annotation.Nullable final EducationUserRole value) {
+    public void setAppliesTo(@jakarta.annotation.Nullable final EducationSynchronizationLicenseAssignmentAppliesTo value) {
         this.backingStore.set("appliesTo", value);
     }
     /**

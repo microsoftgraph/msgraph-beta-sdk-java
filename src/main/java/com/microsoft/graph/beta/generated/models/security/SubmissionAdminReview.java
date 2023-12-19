@@ -66,7 +66,7 @@ public class SubmissionAdminReview implements AdditionalDataHolder, BackedModel,
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("reviewBy", (n) -> { this.setReviewBy(n.getStringValue()); });
         deserializerMap.put("reviewDateTime", (n) -> { this.setReviewDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("reviewResult", (n) -> { this.setReviewResult(n.getEnumValue(SubmissionResultCategory::forValue)); });
+        deserializerMap.put("reviewResult", (n) -> { this.setReviewResult(n.getEnumValue(SubmissionAdminReviewReviewResult::forValue)); });
         return deserializerMap;
     }
     /**
@@ -95,10 +95,10 @@ public class SubmissionAdminReview implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the reviewResult property value. Specifies what the review result was. The possible values are: notJunk, spam, phishing, malware, allowedByPolicy, blockedByPolicy, spoof, unknown, noResultAvailable, and unknownFutureValue.
-     * @return a SubmissionResultCategory
+     * @return a SubmissionAdminReviewReviewResult
      */
     @jakarta.annotation.Nullable
-    public SubmissionResultCategory getReviewResult() {
+    public SubmissionAdminReviewReviewResult getReviewResult() {
         return this.backingStore.get("reviewResult");
     }
     /**
@@ -153,7 +153,7 @@ public class SubmissionAdminReview implements AdditionalDataHolder, BackedModel,
      * Sets the reviewResult property value. Specifies what the review result was. The possible values are: notJunk, spam, phishing, malware, allowedByPolicy, blockedByPolicy, spoof, unknown, noResultAvailable, and unknownFutureValue.
      * @param value Value to set for the reviewResult property.
      */
-    public void setReviewResult(@jakarta.annotation.Nullable final SubmissionResultCategory value) {
+    public void setReviewResult(@jakarta.annotation.Nullable final SubmissionAdminReviewReviewResult value) {
         this.backingStore.set("reviewResult", value);
     }
 }

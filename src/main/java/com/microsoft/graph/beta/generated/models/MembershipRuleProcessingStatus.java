@@ -74,7 +74,7 @@ public class MembershipRuleProcessingStatus implements AdditionalDataHolder, Bac
         deserializerMap.put("errorMessage", (n) -> { this.setErrorMessage(n.getStringValue()); });
         deserializerMap.put("lastMembershipUpdated", (n) -> { this.setLastMembershipUpdated(n.getOffsetDateTimeValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(MembershipRuleProcessingStatusDetails::forValue)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(MembershipRuleProcessingStatusStatus::forValue)); });
         return deserializerMap;
     }
     /**
@@ -95,10 +95,10 @@ public class MembershipRuleProcessingStatus implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the status property value. Current status of a dynamic group processing. Possible values are: NotStarted, Running, Succeeded, Failed, and UnknownFutureValue.  Required. Read-only.
-     * @return a MembershipRuleProcessingStatusDetails
+     * @return a MembershipRuleProcessingStatusStatus
      */
     @jakarta.annotation.Nullable
-    public MembershipRuleProcessingStatusDetails getStatus() {
+    public MembershipRuleProcessingStatusStatus getStatus() {
         return this.backingStore.get("status");
     }
     /**
@@ -153,7 +153,7 @@ public class MembershipRuleProcessingStatus implements AdditionalDataHolder, Bac
      * Sets the status property value. Current status of a dynamic group processing. Possible values are: NotStarted, Running, Succeeded, Failed, and UnknownFutureValue.  Required. Read-only.
      * @param value Value to set for the status property.
      */
-    public void setStatus(@jakarta.annotation.Nullable final MembershipRuleProcessingStatusDetails value) {
+    public void setStatus(@jakarta.annotation.Nullable final MembershipRuleProcessingStatusStatus value) {
         this.backingStore.set("status", value);
     }
 }

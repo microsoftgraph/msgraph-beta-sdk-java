@@ -64,7 +64,7 @@ public class TranslationPreferences implements AdditionalDataHolder, BackedModel
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("languageOverrides", (n) -> { this.setLanguageOverrides(n.getCollectionOfObjectValues(TranslationLanguageOverride::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("translationBehavior", (n) -> { this.setTranslationBehavior(n.getEnumValue(TranslationBehavior::forValue)); });
+        deserializerMap.put("translationBehavior", (n) -> { this.setTranslationBehavior(n.getEnumValue(TranslationPreferencesTranslationBehavior::forValue)); });
         deserializerMap.put("untranslatedLanguages", (n) -> { this.setUntranslatedLanguages(n.getCollectionOfPrimitiveValues(String.class)); });
         return deserializerMap;
     }
@@ -86,10 +86,10 @@ public class TranslationPreferences implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the translationBehavior property value. The user's preferred translation behavior.Returned by default. Not nullable.
-     * @return a TranslationBehavior
+     * @return a TranslationPreferencesTranslationBehavior
      */
     @jakarta.annotation.Nullable
-    public TranslationBehavior getTranslationBehavior() {
+    public TranslationPreferencesTranslationBehavior getTranslationBehavior() {
         return this.backingStore.get("translationBehavior");
     }
     /**
@@ -145,7 +145,7 @@ public class TranslationPreferences implements AdditionalDataHolder, BackedModel
      * Sets the translationBehavior property value. The user's preferred translation behavior.Returned by default. Not nullable.
      * @param value Value to set for the translationBehavior property.
      */
-    public void setTranslationBehavior(@jakarta.annotation.Nullable final TranslationBehavior value) {
+    public void setTranslationBehavior(@jakarta.annotation.Nullable final TranslationPreferencesTranslationBehavior value) {
         this.backingStore.set("translationBehavior", value);
     }
     /**

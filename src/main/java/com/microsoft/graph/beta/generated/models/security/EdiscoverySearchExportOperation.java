@@ -3,7 +3,6 @@ package com.microsoft.graph.beta.models.security;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -27,10 +26,10 @@ public class EdiscoverySearchExportOperation extends CaseOperation implements Pa
     }
     /**
      * Gets the additionalOptions property value. The additionalOptions property
-     * @return a EnumSet<AdditionalOptions>
+     * @return a EdiscoverySearchExportOperationAdditionalOptions
      */
     @jakarta.annotation.Nullable
-    public EnumSet<AdditionalOptions> getAdditionalOptions() {
+    public EdiscoverySearchExportOperationAdditionalOptions getAdditionalOptions() {
         return this.backingStore.get("additionalOptions");
     }
     /**
@@ -51,10 +50,10 @@ public class EdiscoverySearchExportOperation extends CaseOperation implements Pa
     }
     /**
      * Gets the exportCriteria property value. The exportCriteria property
-     * @return a EnumSet<ExportCriteria>
+     * @return a EdiscoverySearchExportOperationExportCriteria
      */
     @jakarta.annotation.Nullable
-    public EnumSet<ExportCriteria> getExportCriteria() {
+    public EdiscoverySearchExportOperationExportCriteria getExportCriteria() {
         return this.backingStore.get("exportCriteria");
     }
     /**
@@ -67,18 +66,18 @@ public class EdiscoverySearchExportOperation extends CaseOperation implements Pa
     }
     /**
      * Gets the exportFormat property value. The exportFormat property
-     * @return a ExportFormat
+     * @return a EdiscoverySearchExportOperationExportFormat
      */
     @jakarta.annotation.Nullable
-    public ExportFormat getExportFormat() {
+    public EdiscoverySearchExportOperationExportFormat getExportFormat() {
         return this.backingStore.get("exportFormat");
     }
     /**
      * Gets the exportLocation property value. The exportLocation property
-     * @return a EnumSet<ExportLocation>
+     * @return a EdiscoverySearchExportOperationExportLocation
      */
     @jakarta.annotation.Nullable
-    public EnumSet<ExportLocation> getExportLocation() {
+    public EdiscoverySearchExportOperationExportLocation getExportLocation() {
         return this.backingStore.get("exportLocation");
     }
     /**
@@ -96,13 +95,13 @@ public class EdiscoverySearchExportOperation extends CaseOperation implements Pa
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("additionalOptions", (n) -> { this.setAdditionalOptions(n.getEnumSetValue(AdditionalOptions::forValue)); });
+        deserializerMap.put("additionalOptions", (n) -> { this.setAdditionalOptions(n.getEnumValue(EdiscoverySearchExportOperationAdditionalOptions::forValue)); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
-        deserializerMap.put("exportCriteria", (n) -> { this.setExportCriteria(n.getEnumSetValue(ExportCriteria::forValue)); });
+        deserializerMap.put("exportCriteria", (n) -> { this.setExportCriteria(n.getEnumValue(EdiscoverySearchExportOperationExportCriteria::forValue)); });
         deserializerMap.put("exportFileMetadata", (n) -> { this.setExportFileMetadata(n.getCollectionOfObjectValues(ExportFileMetadata::createFromDiscriminatorValue)); });
-        deserializerMap.put("exportFormat", (n) -> { this.setExportFormat(n.getEnumValue(ExportFormat::forValue)); });
-        deserializerMap.put("exportLocation", (n) -> { this.setExportLocation(n.getEnumSetValue(ExportLocation::forValue)); });
+        deserializerMap.put("exportFormat", (n) -> { this.setExportFormat(n.getEnumValue(EdiscoverySearchExportOperationExportFormat::forValue)); });
+        deserializerMap.put("exportLocation", (n) -> { this.setExportLocation(n.getEnumValue(EdiscoverySearchExportOperationExportLocation::forValue)); });
         deserializerMap.put("exportSingleItems", (n) -> { this.setExportSingleItems(n.getBooleanValue()); });
         deserializerMap.put("search", (n) -> { this.setSearch(n.getObjectValue(EdiscoverySearch::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -122,13 +121,13 @@ public class EdiscoverySearchExportOperation extends CaseOperation implements Pa
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeEnumSetValue("additionalOptions", this.getAdditionalOptions());
+        writer.writeEnumValue("additionalOptions", this.getAdditionalOptions());
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
-        writer.writeEnumSetValue("exportCriteria", this.getExportCriteria());
+        writer.writeEnumValue("exportCriteria", this.getExportCriteria());
         writer.writeCollectionOfObjectValues("exportFileMetadata", this.getExportFileMetadata());
         writer.writeEnumValue("exportFormat", this.getExportFormat());
-        writer.writeEnumSetValue("exportLocation", this.getExportLocation());
+        writer.writeEnumValue("exportLocation", this.getExportLocation());
         writer.writeBooleanValue("exportSingleItems", this.getExportSingleItems());
         writer.writeObjectValue("search", this.getSearch());
     }
@@ -136,7 +135,7 @@ public class EdiscoverySearchExportOperation extends CaseOperation implements Pa
      * Sets the additionalOptions property value. The additionalOptions property
      * @param value Value to set for the additionalOptions property.
      */
-    public void setAdditionalOptions(@jakarta.annotation.Nullable final EnumSet<AdditionalOptions> value) {
+    public void setAdditionalOptions(@jakarta.annotation.Nullable final EdiscoverySearchExportOperationAdditionalOptions value) {
         this.backingStore.set("additionalOptions", value);
     }
     /**
@@ -157,7 +156,7 @@ public class EdiscoverySearchExportOperation extends CaseOperation implements Pa
      * Sets the exportCriteria property value. The exportCriteria property
      * @param value Value to set for the exportCriteria property.
      */
-    public void setExportCriteria(@jakarta.annotation.Nullable final EnumSet<ExportCriteria> value) {
+    public void setExportCriteria(@jakarta.annotation.Nullable final EdiscoverySearchExportOperationExportCriteria value) {
         this.backingStore.set("exportCriteria", value);
     }
     /**
@@ -171,14 +170,14 @@ public class EdiscoverySearchExportOperation extends CaseOperation implements Pa
      * Sets the exportFormat property value. The exportFormat property
      * @param value Value to set for the exportFormat property.
      */
-    public void setExportFormat(@jakarta.annotation.Nullable final ExportFormat value) {
+    public void setExportFormat(@jakarta.annotation.Nullable final EdiscoverySearchExportOperationExportFormat value) {
         this.backingStore.set("exportFormat", value);
     }
     /**
      * Sets the exportLocation property value. The exportLocation property
      * @param value Value to set for the exportLocation property.
      */
-    public void setExportLocation(@jakarta.annotation.Nullable final EnumSet<ExportLocation> value) {
+    public void setExportLocation(@jakarta.annotation.Nullable final EdiscoverySearchExportOperationExportLocation value) {
         this.backingStore.set("exportLocation", value);
     }
     /**

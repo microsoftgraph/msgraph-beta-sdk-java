@@ -70,7 +70,7 @@ public class PlannerPropertyRule implements AdditionalDataHolder, BackedModel, P
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("ruleKind", (n) -> { this.setRuleKind(n.getEnumValue(PlannerRuleKind::forValue)); });
+        deserializerMap.put("ruleKind", (n) -> { this.setRuleKind(n.getEnumValue(PlannerPropertyRuleRuleKind::forValue)); });
         return deserializerMap;
     }
     /**
@@ -83,10 +83,10 @@ public class PlannerPropertyRule implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the ruleKind property value. Identifies which type of property rules is represented by this instance. The possible values are: taskRule, bucketRule, planRule, unknownFutureValue.
-     * @return a PlannerRuleKind
+     * @return a PlannerPropertyRuleRuleKind
      */
     @jakarta.annotation.Nullable
-    public PlannerRuleKind getRuleKind() {
+    public PlannerPropertyRuleRuleKind getRuleKind() {
         return this.backingStore.get("ruleKind");
     }
     /**
@@ -125,7 +125,7 @@ public class PlannerPropertyRule implements AdditionalDataHolder, BackedModel, P
      * Sets the ruleKind property value. Identifies which type of property rules is represented by this instance. The possible values are: taskRule, bucketRule, planRule, unknownFutureValue.
      * @param value Value to set for the ruleKind property.
      */
-    public void setRuleKind(@jakarta.annotation.Nullable final PlannerRuleKind value) {
+    public void setRuleKind(@jakarta.annotation.Nullable final PlannerPropertyRuleRuleKind value) {
         this.backingStore.set("ruleKind", value);
     }
 }

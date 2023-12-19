@@ -3,7 +3,6 @@ package com.microsoft.graph.beta.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -27,18 +26,18 @@ public class SensitivityLabel extends Entity implements Parsable {
     }
     /**
      * Gets the applicableTo property value. The applicableTo property
-     * @return a EnumSet<SensitivityLabelTarget>
+     * @return a SensitivityLabelApplicableTo
      */
     @jakarta.annotation.Nullable
-    public EnumSet<SensitivityLabelTarget> getApplicableTo() {
+    public SensitivityLabelApplicableTo getApplicableTo() {
         return this.backingStore.get("applicableTo");
     }
     /**
      * Gets the applicationMode property value. The applicationMode property
-     * @return a ApplicationMode
+     * @return a SensitivityLabelApplicationMode
      */
     @jakarta.annotation.Nullable
-    public ApplicationMode getApplicationMode() {
+    public SensitivityLabelApplicationMode getApplicationMode() {
         return this.backingStore.get("applicationMode");
     }
     /**
@@ -80,8 +79,8 @@ public class SensitivityLabel extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("applicableTo", (n) -> { this.setApplicableTo(n.getEnumSetValue(SensitivityLabelTarget::forValue)); });
-        deserializerMap.put("applicationMode", (n) -> { this.setApplicationMode(n.getEnumValue(ApplicationMode::forValue)); });
+        deserializerMap.put("applicableTo", (n) -> { this.setApplicableTo(n.getEnumValue(SensitivityLabelApplicableTo::forValue)); });
+        deserializerMap.put("applicationMode", (n) -> { this.setApplicationMode(n.getEnumValue(SensitivityLabelApplicationMode::forValue)); });
         deserializerMap.put("assignedPolicies", (n) -> { this.setAssignedPolicies(n.getCollectionOfObjectValues(LabelPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("autoLabeling", (n) -> { this.setAutoLabeling(n.getObjectValue(AutoLabeling::createFromDiscriminatorValue)); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
@@ -158,7 +157,7 @@ public class SensitivityLabel extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeEnumSetValue("applicableTo", this.getApplicableTo());
+        writer.writeEnumValue("applicableTo", this.getApplicableTo());
         writer.writeEnumValue("applicationMode", this.getApplicationMode());
         writer.writeCollectionOfObjectValues("assignedPolicies", this.getAssignedPolicies());
         writer.writeObjectValue("autoLabeling", this.getAutoLabeling());
@@ -176,14 +175,14 @@ public class SensitivityLabel extends Entity implements Parsable {
      * Sets the applicableTo property value. The applicableTo property
      * @param value Value to set for the applicableTo property.
      */
-    public void setApplicableTo(@jakarta.annotation.Nullable final EnumSet<SensitivityLabelTarget> value) {
+    public void setApplicableTo(@jakarta.annotation.Nullable final SensitivityLabelApplicableTo value) {
         this.backingStore.set("applicableTo", value);
     }
     /**
      * Sets the applicationMode property value. The applicationMode property
      * @param value Value to set for the applicationMode property.
      */
-    public void setApplicationMode(@jakarta.annotation.Nullable final ApplicationMode value) {
+    public void setApplicationMode(@jakarta.annotation.Nullable final SensitivityLabelApplicationMode value) {
         this.backingStore.set("applicationMode", value);
     }
     /**

@@ -78,8 +78,8 @@ public class AppCredentialSignInActivity extends Entity implements Parsable {
         deserializerMap.put("credentialOrigin", (n) -> { this.setCredentialOrigin(n.getEnumValue(ApplicationKeyOrigin::forValue)); });
         deserializerMap.put("expirationDateTime", (n) -> { this.setExpirationDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("keyId", (n) -> { this.setKeyId(n.getStringValue()); });
-        deserializerMap.put("keyType", (n) -> { this.setKeyType(n.getEnumValue(ApplicationKeyType::forValue)); });
-        deserializerMap.put("keyUsage", (n) -> { this.setKeyUsage(n.getEnumValue(ApplicationKeyUsage::forValue)); });
+        deserializerMap.put("keyType", (n) -> { this.setKeyType(n.getEnumValue(AppCredentialSignInActivityKeyType::forValue)); });
+        deserializerMap.put("keyUsage", (n) -> { this.setKeyUsage(n.getEnumValue(AppCredentialSignInActivityKeyUsage::forValue)); });
         deserializerMap.put("resourceId", (n) -> { this.setResourceId(n.getStringValue()); });
         deserializerMap.put("servicePrincipalObjectId", (n) -> { this.setServicePrincipalObjectId(n.getStringValue()); });
         deserializerMap.put("signInActivity", (n) -> { this.setSignInActivity(n.getObjectValue(SignInActivity::createFromDiscriminatorValue)); });
@@ -95,18 +95,18 @@ public class AppCredentialSignInActivity extends Entity implements Parsable {
     }
     /**
      * Gets the keyType property value. Specifies the key type. The possible values are: clientSecret, certificate, unknownFutureValue.
-     * @return a ApplicationKeyType
+     * @return a AppCredentialSignInActivityKeyType
      */
     @jakarta.annotation.Nullable
-    public ApplicationKeyType getKeyType() {
+    public AppCredentialSignInActivityKeyType getKeyType() {
         return this.backingStore.get("keyType");
     }
     /**
      * Gets the keyUsage property value. Specifies what the key was used for. The possible values are: sign, verify, unknownFutureValue.
-     * @return a ApplicationKeyUsage
+     * @return a AppCredentialSignInActivityKeyUsage
      */
     @jakarta.annotation.Nullable
-    public ApplicationKeyUsage getKeyUsage() {
+    public AppCredentialSignInActivityKeyUsage getKeyUsage() {
         return this.backingStore.get("keyUsage");
     }
     /**
@@ -198,14 +198,14 @@ public class AppCredentialSignInActivity extends Entity implements Parsable {
      * Sets the keyType property value. Specifies the key type. The possible values are: clientSecret, certificate, unknownFutureValue.
      * @param value Value to set for the keyType property.
      */
-    public void setKeyType(@jakarta.annotation.Nullable final ApplicationKeyType value) {
+    public void setKeyType(@jakarta.annotation.Nullable final AppCredentialSignInActivityKeyType value) {
         this.backingStore.set("keyType", value);
     }
     /**
      * Sets the keyUsage property value. Specifies what the key was used for. The possible values are: sign, verify, unknownFutureValue.
      * @param value Value to set for the keyUsage property.
      */
-    public void setKeyUsage(@jakarta.annotation.Nullable final ApplicationKeyUsage value) {
+    public void setKeyUsage(@jakarta.annotation.Nullable final AppCredentialSignInActivityKeyUsage value) {
         this.backingStore.set("keyUsage", value);
     }
     /**

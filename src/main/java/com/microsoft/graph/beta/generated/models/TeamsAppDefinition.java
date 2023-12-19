@@ -4,7 +4,6 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -28,10 +27,10 @@ public class TeamsAppDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the allowedInstallationScopes property value. A collection of scopes where the Teams app can be installed. Possible values are:teamIndicates that the Teams app can be installed within a team and is authorized to access that team's data. groupChatIndicates that the Teams app can be installed within a group chat and is authorized to access that group chat's data.  personalIndicates that the Teams app can be installed in the personal scope of a user and is authorized to access that user's data.
-     * @return a EnumSet<TeamsAppInstallationScopes>
+     * @return a TeamsAppDefinitionAllowedInstallationScopes
      */
     @jakarta.annotation.Nullable
-    public EnumSet<TeamsAppInstallationScopes> getAllowedInstallationScopes() {
+    public TeamsAppDefinitionAllowedInstallationScopes getAllowedInstallationScopes() {
         return this.backingStore.get("allowedInstallationScopes");
     }
     /**
@@ -97,7 +96,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("allowedInstallationScopes", (n) -> { this.setAllowedInstallationScopes(n.getEnumSetValue(TeamsAppInstallationScopes::forValue)); });
+        deserializerMap.put("allowedInstallationScopes", (n) -> { this.setAllowedInstallationScopes(n.getEnumValue(TeamsAppDefinitionAllowedInstallationScopes::forValue)); });
         deserializerMap.put("authorization", (n) -> { this.setAuthorization(n.getObjectValue(TeamsAppAuthorization::createFromDiscriminatorValue)); });
         deserializerMap.put("azureADAppId", (n) -> { this.setAzureADAppId(n.getStringValue()); });
         deserializerMap.put("bot", (n) -> { this.setBot(n.getObjectValue(TeamworkBot::createFromDiscriminatorValue)); });
@@ -107,7 +106,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("outlineIcon", (n) -> { this.setOutlineIcon(n.getObjectValue(TeamsAppIcon::createFromDiscriminatorValue)); });
-        deserializerMap.put("publishingState", (n) -> { this.setPublishingState(n.getEnumValue(TeamsAppPublishingState::forValue)); });
+        deserializerMap.put("publishingState", (n) -> { this.setPublishingState(n.getEnumValue(TeamsAppDefinitionPublishingState::forValue)); });
         deserializerMap.put("shortdescription", (n) -> { this.setShortdescription(n.getStringValue()); });
         deserializerMap.put("teamsAppId", (n) -> { this.setTeamsAppId(n.getStringValue()); });
         deserializerMap.put("version", (n) -> { this.setVersion(n.getStringValue()); });
@@ -131,10 +130,10 @@ public class TeamsAppDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the publishingState property value. The published status of a specific version of a Teams app. Possible values are:submittedThe specific version of the Teams app has been submitted and is under review. publishedThe request to publish the specific version of the Teams app has been approved by the admin and the app is published.  rejected  The request to publish the specific version of the Teams app was rejected by the admin.
-     * @return a TeamsAppPublishingState
+     * @return a TeamsAppDefinitionPublishingState
      */
     @jakarta.annotation.Nullable
-    public TeamsAppPublishingState getPublishingState() {
+    public TeamsAppDefinitionPublishingState getPublishingState() {
         return this.backingStore.get("publishingState");
     }
     /**
@@ -168,7 +167,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeEnumSetValue("allowedInstallationScopes", this.getAllowedInstallationScopes());
+        writer.writeEnumValue("allowedInstallationScopes", this.getAllowedInstallationScopes());
         writer.writeObjectValue("authorization", this.getAuthorization());
         writer.writeStringValue("azureADAppId", this.getAzureADAppId());
         writer.writeObjectValue("bot", this.getBot());
@@ -187,7 +186,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      * Sets the allowedInstallationScopes property value. A collection of scopes where the Teams app can be installed. Possible values are:teamIndicates that the Teams app can be installed within a team and is authorized to access that team's data. groupChatIndicates that the Teams app can be installed within a group chat and is authorized to access that group chat's data.  personalIndicates that the Teams app can be installed in the personal scope of a user and is authorized to access that user's data.
      * @param value Value to set for the allowedInstallationScopes property.
      */
-    public void setAllowedInstallationScopes(@jakarta.annotation.Nullable final EnumSet<TeamsAppInstallationScopes> value) {
+    public void setAllowedInstallationScopes(@jakarta.annotation.Nullable final TeamsAppDefinitionAllowedInstallationScopes value) {
         this.backingStore.set("allowedInstallationScopes", value);
     }
     /**
@@ -257,7 +256,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      * Sets the publishingState property value. The published status of a specific version of a Teams app. Possible values are:submittedThe specific version of the Teams app has been submitted and is under review. publishedThe request to publish the specific version of the Teams app has been approved by the admin and the app is published.  rejected  The request to publish the specific version of the Teams app was rejected by the admin.
      * @param value Value to set for the publishingState property.
      */
-    public void setPublishingState(@jakarta.annotation.Nullable final TeamsAppPublishingState value) {
+    public void setPublishingState(@jakarta.annotation.Nullable final TeamsAppDefinitionPublishingState value) {
         this.backingStore.set("publishingState", value);
     }
     /**

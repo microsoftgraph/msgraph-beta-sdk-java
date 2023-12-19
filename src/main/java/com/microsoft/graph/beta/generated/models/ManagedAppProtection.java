@@ -106,10 +106,10 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     }
     /**
      * Gets the appActionIfUnableToAuthenticateUser property value. If set, it will specify what action to take in the case where the user is unable to checkin because their authentication token is invalid. This happens when the user is deleted or disabled in AAD. Possible values are: block, wipe, warn.
-     * @return a ManagedAppRemediationAction
+     * @return a ManagedAppProtectionAppActionIfUnableToAuthenticateUser
      */
     @jakarta.annotation.Nullable
-    public ManagedAppRemediationAction getAppActionIfUnableToAuthenticateUser() {
+    public ManagedAppProtectionAppActionIfUnableToAuthenticateUser getAppActionIfUnableToAuthenticateUser() {
         return this.backingStore.get("appActionIfUnableToAuthenticateUser");
     }
     /**
@@ -175,7 +175,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
         deserializerMap.put("allowedOutboundDataTransferDestinations", (n) -> { this.setAllowedOutboundDataTransferDestinations(n.getEnumValue(ManagedAppDataTransferLevel::forValue)); });
         deserializerMap.put("appActionIfDeviceComplianceRequired", (n) -> { this.setAppActionIfDeviceComplianceRequired(n.getEnumValue(ManagedAppRemediationAction::forValue)); });
         deserializerMap.put("appActionIfMaximumPinRetriesExceeded", (n) -> { this.setAppActionIfMaximumPinRetriesExceeded(n.getEnumValue(ManagedAppRemediationAction::forValue)); });
-        deserializerMap.put("appActionIfUnableToAuthenticateUser", (n) -> { this.setAppActionIfUnableToAuthenticateUser(n.getEnumValue(ManagedAppRemediationAction::forValue)); });
+        deserializerMap.put("appActionIfUnableToAuthenticateUser", (n) -> { this.setAppActionIfUnableToAuthenticateUser(n.getEnumValue(ManagedAppProtectionAppActionIfUnableToAuthenticateUser::forValue)); });
         deserializerMap.put("blockDataIngestionIntoOrganizationDocuments", (n) -> { this.setBlockDataIngestionIntoOrganizationDocuments(n.getBooleanValue()); });
         deserializerMap.put("contactSyncBlocked", (n) -> { this.setContactSyncBlocked(n.getBooleanValue()); });
         deserializerMap.put("dataBackupBlocked", (n) -> { this.setDataBackupBlocked(n.getBooleanValue()); });
@@ -198,7 +198,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
         deserializerMap.put("minimumWarningOsVersion", (n) -> { this.setMinimumWarningOsVersion(n.getStringValue()); });
         deserializerMap.put("minimumWipeAppVersion", (n) -> { this.setMinimumWipeAppVersion(n.getStringValue()); });
         deserializerMap.put("minimumWipeOsVersion", (n) -> { this.setMinimumWipeOsVersion(n.getStringValue()); });
-        deserializerMap.put("mobileThreatDefensePartnerPriority", (n) -> { this.setMobileThreatDefensePartnerPriority(n.getEnumValue(MobileThreatDefensePartnerPriority::forValue)); });
+        deserializerMap.put("mobileThreatDefensePartnerPriority", (n) -> { this.setMobileThreatDefensePartnerPriority(n.getEnumValue(ManagedAppProtectionMobileThreatDefensePartnerPriority::forValue)); });
         deserializerMap.put("mobileThreatDefenseRemediationAction", (n) -> { this.setMobileThreatDefenseRemediationAction(n.getEnumValue(ManagedAppRemediationAction::forValue)); });
         deserializerMap.put("notificationRestriction", (n) -> { this.setNotificationRestriction(n.getEnumValue(ManagedAppNotificationRestriction::forValue)); });
         deserializerMap.put("organizationalCredentialsRequired", (n) -> { this.setOrganizationalCredentialsRequired(n.getBooleanValue()); });
@@ -346,10 +346,10 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     }
     /**
      * Gets the mobileThreatDefensePartnerPriority property value. Indicates how to prioritize which Mobile Threat Defense (MTD) partner is enabled for a given platform, when more than one is enabled. An app can only be actively using a single Mobile Threat Defense partner. When NULL, Microsoft Defender will be given preference. Otherwise setting the value to defenderOverThirdPartyPartner or thirdPartyPartnerOverDefender will make explicit which partner to prioritize. Possible values are: null, defenderOverThirdPartyPartner, thirdPartyPartnerOverDefender and unknownFutureValue. Default value is null. Possible values are: defenderOverThirdPartyPartner, thirdPartyPartnerOverDefender, unknownFutureValue.
-     * @return a MobileThreatDefensePartnerPriority
+     * @return a ManagedAppProtectionMobileThreatDefensePartnerPriority
      */
     @jakarta.annotation.Nullable
-    public MobileThreatDefensePartnerPriority getMobileThreatDefensePartnerPriority() {
+    public ManagedAppProtectionMobileThreatDefensePartnerPriority getMobileThreatDefensePartnerPriority() {
         return this.backingStore.get("mobileThreatDefensePartnerPriority");
     }
     /**
@@ -587,7 +587,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * Sets the appActionIfUnableToAuthenticateUser property value. If set, it will specify what action to take in the case where the user is unable to checkin because their authentication token is invalid. This happens when the user is deleted or disabled in AAD. Possible values are: block, wipe, warn.
      * @param value Value to set for the appActionIfUnableToAuthenticateUser property.
      */
-    public void setAppActionIfUnableToAuthenticateUser(@jakarta.annotation.Nullable final ManagedAppRemediationAction value) {
+    public void setAppActionIfUnableToAuthenticateUser(@jakarta.annotation.Nullable final ManagedAppProtectionAppActionIfUnableToAuthenticateUser value) {
         this.backingStore.set("appActionIfUnableToAuthenticateUser", value);
     }
     /**
@@ -748,7 +748,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * Sets the mobileThreatDefensePartnerPriority property value. Indicates how to prioritize which Mobile Threat Defense (MTD) partner is enabled for a given platform, when more than one is enabled. An app can only be actively using a single Mobile Threat Defense partner. When NULL, Microsoft Defender will be given preference. Otherwise setting the value to defenderOverThirdPartyPartner or thirdPartyPartnerOverDefender will make explicit which partner to prioritize. Possible values are: null, defenderOverThirdPartyPartner, thirdPartyPartnerOverDefender and unknownFutureValue. Default value is null. Possible values are: defenderOverThirdPartyPartner, thirdPartyPartnerOverDefender, unknownFutureValue.
      * @param value Value to set for the mobileThreatDefensePartnerPriority property.
      */
-    public void setMobileThreatDefensePartnerPriority(@jakarta.annotation.Nullable final MobileThreatDefensePartnerPriority value) {
+    public void setMobileThreatDefensePartnerPriority(@jakarta.annotation.Nullable final ManagedAppProtectionMobileThreatDefensePartnerPriority value) {
         this.backingStore.set("mobileThreatDefensePartnerPriority", value);
     }
     /**

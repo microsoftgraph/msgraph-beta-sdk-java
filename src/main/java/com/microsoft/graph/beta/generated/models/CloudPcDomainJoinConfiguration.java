@@ -56,17 +56,26 @@ public class CloudPcDomainJoinConfiguration implements AdditionalDataHolder, Bac
         return this.backingStore;
     }
     /**
+     * Gets the domainJoinType property value. The domainJoinType property
+     * @return a CloudPcDomainJoinConfigurationDomainJoinType
+     */
+    @jakarta.annotation.Nullable
+    public CloudPcDomainJoinConfigurationDomainJoinType getDomainJoinType() {
+        return this.backingStore.get("domainJoinType");
+    }
+    /**
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
+        deserializerMap.put("domainJoinType", (n) -> { this.setDomainJoinType(n.getEnumValue(CloudPcDomainJoinConfigurationDomainJoinType::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("onPremisesConnectionId", (n) -> { this.setOnPremisesConnectionId(n.getStringValue()); });
-        deserializerMap.put("regionGroup", (n) -> { this.setRegionGroup(n.getEnumValue(CloudPcRegionGroup::forValue)); });
+        deserializerMap.put("regionGroup", (n) -> { this.setRegionGroup(n.getEnumValue(CloudPcDomainJoinConfigurationRegionGroup::forValue)); });
         deserializerMap.put("regionName", (n) -> { this.setRegionName(n.getStringValue()); });
-        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(CloudPcDomainJoinType::forValue)); });
+        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(CloudPcDomainJoinConfigurationType::forValue)); });
         return deserializerMap;
     }
     /**
@@ -87,10 +96,10 @@ public class CloudPcDomainJoinConfiguration implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the regionGroup property value. The logical geographic group this region belongs to. Multiple regions can belong to one region group. A customer can select a regionGroup when provisioning a Cloud PC, and the Cloud PC will be put in one of the regions in the group based on resource status. For example, the Europe region group contains the Northern Europe and Western Europe regions. Possible values are: default, australia, canada, usCentral, usEast, usWest, france, germany, europeUnion, unitedKingdom, japan, asia, india, southAmerica, euap, usGovernment, usGovernmentDOD, unknownFutureValue, norway, switzerland, and southKorea. Read-only.
-     * @return a CloudPcRegionGroup
+     * @return a CloudPcDomainJoinConfigurationRegionGroup
      */
     @jakarta.annotation.Nullable
-    public CloudPcRegionGroup getRegionGroup() {
+    public CloudPcDomainJoinConfigurationRegionGroup getRegionGroup() {
         return this.backingStore.get("regionGroup");
     }
     /**
@@ -103,10 +112,10 @@ public class CloudPcDomainJoinConfiguration implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the type property value. Specifies how the provisioned Cloud PC will be joined to Microsoft Entra ID. If you choose the hybridAzureADJoin type, only provide a value for the onPremisesConnectionId property and leave regionName as empty. If you choose the azureADJoin type, provide a value for either onPremisesConnectionId or regionName. The possible values are: azureADJoin, hybridAzureADJoin, unknownFutureValue.
-     * @return a CloudPcDomainJoinType
+     * @return a CloudPcDomainJoinConfigurationType
      */
     @jakarta.annotation.Nullable
-    public CloudPcDomainJoinType getType() {
+    public CloudPcDomainJoinConfigurationType getType() {
         return this.backingStore.get("type");
     }
     /**
@@ -115,6 +124,7 @@ public class CloudPcDomainJoinConfiguration implements AdditionalDataHolder, Bac
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeEnumValue("domainJoinType", this.getDomainJoinType());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("onPremisesConnectionId", this.getOnPremisesConnectionId());
         writer.writeEnumValue("regionGroup", this.getRegionGroup());
@@ -138,6 +148,13 @@ public class CloudPcDomainJoinConfiguration implements AdditionalDataHolder, Bac
         this.backingStore = value;
     }
     /**
+     * Sets the domainJoinType property value. The domainJoinType property
+     * @param value Value to set for the domainJoinType property.
+     */
+    public void setDomainJoinType(@jakarta.annotation.Nullable final CloudPcDomainJoinConfigurationDomainJoinType value) {
+        this.backingStore.set("domainJoinType", value);
+    }
+    /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
@@ -155,7 +172,7 @@ public class CloudPcDomainJoinConfiguration implements AdditionalDataHolder, Bac
      * Sets the regionGroup property value. The logical geographic group this region belongs to. Multiple regions can belong to one region group. A customer can select a regionGroup when provisioning a Cloud PC, and the Cloud PC will be put in one of the regions in the group based on resource status. For example, the Europe region group contains the Northern Europe and Western Europe regions. Possible values are: default, australia, canada, usCentral, usEast, usWest, france, germany, europeUnion, unitedKingdom, japan, asia, india, southAmerica, euap, usGovernment, usGovernmentDOD, unknownFutureValue, norway, switzerland, and southKorea. Read-only.
      * @param value Value to set for the regionGroup property.
      */
-    public void setRegionGroup(@jakarta.annotation.Nullable final CloudPcRegionGroup value) {
+    public void setRegionGroup(@jakarta.annotation.Nullable final CloudPcDomainJoinConfigurationRegionGroup value) {
         this.backingStore.set("regionGroup", value);
     }
     /**
@@ -169,7 +186,7 @@ public class CloudPcDomainJoinConfiguration implements AdditionalDataHolder, Bac
      * Sets the type property value. Specifies how the provisioned Cloud PC will be joined to Microsoft Entra ID. If you choose the hybridAzureADJoin type, only provide a value for the onPremisesConnectionId property and leave regionName as empty. If you choose the azureADJoin type, provide a value for either onPremisesConnectionId or regionName. The possible values are: azureADJoin, hybridAzureADJoin, unknownFutureValue.
      * @param value Value to set for the type property.
      */
-    public void setType(@jakarta.annotation.Nullable final CloudPcDomainJoinType value) {
+    public void setType(@jakarta.annotation.Nullable final CloudPcDomainJoinConfigurationType value) {
         this.backingStore.set("type", value);
     }
 }

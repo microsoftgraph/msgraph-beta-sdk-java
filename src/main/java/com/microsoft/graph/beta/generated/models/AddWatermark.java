@@ -32,15 +32,15 @@ public class AddWatermark extends MarkContent implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("orientation", (n) -> { this.setOrientation(n.getEnumValue(PageOrientation::forValue)); });
+        deserializerMap.put("orientation", (n) -> { this.setOrientation(n.getEnumValue(AddWatermarkOrientation::forValue)); });
         return deserializerMap;
     }
     /**
      * Gets the orientation property value. The orientation property
-     * @return a PageOrientation
+     * @return a AddWatermarkOrientation
      */
     @jakarta.annotation.Nullable
-    public PageOrientation getOrientation() {
+    public AddWatermarkOrientation getOrientation() {
         return this.backingStore.get("orientation");
     }
     /**
@@ -56,7 +56,7 @@ public class AddWatermark extends MarkContent implements Parsable {
      * Sets the orientation property value. The orientation property
      * @param value Value to set for the orientation property.
      */
-    public void setOrientation(@jakarta.annotation.Nullable final PageOrientation value) {
+    public void setOrientation(@jakarta.annotation.Nullable final AddWatermarkOrientation value) {
         this.backingStore.set("orientation", value);
     }
 }

@@ -1,6 +1,5 @@
 package com.microsoft.graph.beta.communications.onlinemeetings.item.sendvirtualappointmentsms;
 
-import com.microsoft.graph.beta.models.VirtualAppointmentSmsType;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -64,7 +63,7 @@ public class SendVirtualAppointmentSmsPostRequestBody implements AdditionalDataH
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
         deserializerMap.put("phoneNumbers", (n) -> { this.setPhoneNumbers(n.getCollectionOfPrimitiveValues(String.class)); });
-        deserializerMap.put("smsType", (n) -> { this.setSmsType(n.getEnumValue(VirtualAppointmentSmsType::forValue)); });
+        deserializerMap.put("smsType", (n) -> { this.setSmsType(n.getEnumValue(SendVirtualAppointmentSmsPostRequestBodySmsType::forValue)); });
         return deserializerMap;
     }
     /**
@@ -77,10 +76,10 @@ public class SendVirtualAppointmentSmsPostRequestBody implements AdditionalDataH
     }
     /**
      * Gets the smsType property value. The smsType property
-     * @return a VirtualAppointmentSmsType
+     * @return a SendVirtualAppointmentSmsPostRequestBodySmsType
      */
     @jakarta.annotation.Nullable
-    public VirtualAppointmentSmsType getSmsType() {
+    public SendVirtualAppointmentSmsPostRequestBodySmsType getSmsType() {
         return this.backingStore.get("smsType");
     }
     /**
@@ -119,7 +118,7 @@ public class SendVirtualAppointmentSmsPostRequestBody implements AdditionalDataH
      * Sets the smsType property value. The smsType property
      * @param value Value to set for the smsType property.
      */
-    public void setSmsType(@jakarta.annotation.Nullable final VirtualAppointmentSmsType value) {
+    public void setSmsType(@jakarta.annotation.Nullable final SendVirtualAppointmentSmsPostRequestBodySmsType value) {
         this.backingStore.set("smsType", value);
     }
 }

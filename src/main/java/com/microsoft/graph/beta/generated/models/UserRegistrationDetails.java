@@ -27,10 +27,10 @@ public class UserRegistrationDetails extends Entity implements Parsable {
     }
     /**
      * Gets the defaultMfaMethod property value. The method the user or admin selected as default for performing multifactor authentication for the user. The possible values are: none, mobilePhone, alternateMobilePhone, officePhone, microsoftAuthenticatorPush, softwareOneTimePasscode, unknownFutureValue.
-     * @return a DefaultMfaMethodType
+     * @return a UserRegistrationDetailsDefaultMfaMethod
      */
     @jakarta.annotation.Nullable
-    public DefaultMfaMethodType getDefaultMfaMethod() {
+    public UserRegistrationDetailsDefaultMfaMethod getDefaultMfaMethod() {
         return this.backingStore.get("defaultMfaMethod");
     }
     /**
@@ -40,7 +40,7 @@ public class UserRegistrationDetails extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("defaultMfaMethod", (n) -> { this.setDefaultMfaMethod(n.getEnumValue(DefaultMfaMethodType::forValue)); });
+        deserializerMap.put("defaultMfaMethod", (n) -> { this.setDefaultMfaMethod(n.getEnumValue(UserRegistrationDetailsDefaultMfaMethod::forValue)); });
         deserializerMap.put("isAdmin", (n) -> { this.setIsAdmin(n.getBooleanValue()); });
         deserializerMap.put("isMfaCapable", (n) -> { this.setIsMfaCapable(n.getBooleanValue()); });
         deserializerMap.put("isMfaRegistered", (n) -> { this.setIsMfaRegistered(n.getBooleanValue()); });
@@ -53,9 +53,9 @@ public class UserRegistrationDetails extends Entity implements Parsable {
         deserializerMap.put("methodsRegistered", (n) -> { this.setMethodsRegistered(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("systemPreferredAuthenticationMethods", (n) -> { this.setSystemPreferredAuthenticationMethods(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("userDisplayName", (n) -> { this.setUserDisplayName(n.getStringValue()); });
-        deserializerMap.put("userPreferredMethodForSecondaryAuthentication", (n) -> { this.setUserPreferredMethodForSecondaryAuthentication(n.getEnumValue(UserDefaultAuthenticationMethod::forValue)); });
+        deserializerMap.put("userPreferredMethodForSecondaryAuthentication", (n) -> { this.setUserPreferredMethodForSecondaryAuthentication(n.getEnumValue(UserRegistrationDetailsUserPreferredMethodForSecondaryAuthentication::forValue)); });
         deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
-        deserializerMap.put("userType", (n) -> { this.setUserType(n.getEnumValue(SignInUserType::forValue)); });
+        deserializerMap.put("userType", (n) -> { this.setUserType(n.getEnumValue(UserRegistrationDetailsUserType::forValue)); });
         return deserializerMap;
     }
     /**
@@ -156,10 +156,10 @@ public class UserRegistrationDetails extends Entity implements Parsable {
     }
     /**
      * Gets the userPreferredMethodForSecondaryAuthentication property value. The method the user selected as the default second-factor for performing multifactor authentication. Possible values are: push, oath, voiceMobile, voiceAlternateMobile, voiceOffice, sms, none, unknownFutureValue.
-     * @return a UserDefaultAuthenticationMethod
+     * @return a UserRegistrationDetailsUserPreferredMethodForSecondaryAuthentication
      */
     @jakarta.annotation.Nullable
-    public UserDefaultAuthenticationMethod getUserPreferredMethodForSecondaryAuthentication() {
+    public UserRegistrationDetailsUserPreferredMethodForSecondaryAuthentication getUserPreferredMethodForSecondaryAuthentication() {
         return this.backingStore.get("userPreferredMethodForSecondaryAuthentication");
     }
     /**
@@ -172,10 +172,10 @@ public class UserRegistrationDetails extends Entity implements Parsable {
     }
     /**
      * Gets the userType property value. Identifies whether the user is a member or guest in the tenant. The possible values are: member, guest, unknownFutureValue.
-     * @return a SignInUserType
+     * @return a UserRegistrationDetailsUserType
      */
     @jakarta.annotation.Nullable
-    public SignInUserType getUserType() {
+    public UserRegistrationDetailsUserType getUserType() {
         return this.backingStore.get("userType");
     }
     /**
@@ -206,7 +206,7 @@ public class UserRegistrationDetails extends Entity implements Parsable {
      * Sets the defaultMfaMethod property value. The method the user or admin selected as default for performing multifactor authentication for the user. The possible values are: none, mobilePhone, alternateMobilePhone, officePhone, microsoftAuthenticatorPush, softwareOneTimePasscode, unknownFutureValue.
      * @param value Value to set for the defaultMfaMethod property.
      */
-    public void setDefaultMfaMethod(@jakarta.annotation.Nullable final DefaultMfaMethodType value) {
+    public void setDefaultMfaMethod(@jakarta.annotation.Nullable final UserRegistrationDetailsDefaultMfaMethod value) {
         this.backingStore.set("defaultMfaMethod", value);
     }
     /**
@@ -297,7 +297,7 @@ public class UserRegistrationDetails extends Entity implements Parsable {
      * Sets the userPreferredMethodForSecondaryAuthentication property value. The method the user selected as the default second-factor for performing multifactor authentication. Possible values are: push, oath, voiceMobile, voiceAlternateMobile, voiceOffice, sms, none, unknownFutureValue.
      * @param value Value to set for the userPreferredMethodForSecondaryAuthentication property.
      */
-    public void setUserPreferredMethodForSecondaryAuthentication(@jakarta.annotation.Nullable final UserDefaultAuthenticationMethod value) {
+    public void setUserPreferredMethodForSecondaryAuthentication(@jakarta.annotation.Nullable final UserRegistrationDetailsUserPreferredMethodForSecondaryAuthentication value) {
         this.backingStore.set("userPreferredMethodForSecondaryAuthentication", value);
     }
     /**
@@ -311,7 +311,7 @@ public class UserRegistrationDetails extends Entity implements Parsable {
      * Sets the userType property value. Identifies whether the user is a member or guest in the tenant. The possible values are: member, guest, unknownFutureValue.
      * @param value Value to set for the userType property.
      */
-    public void setUserType(@jakarta.annotation.Nullable final SignInUserType value) {
+    public void setUserType(@jakarta.annotation.Nullable final UserRegistrationDetailsUserType value) {
         this.backingStore.set("userType", value);
     }
 }

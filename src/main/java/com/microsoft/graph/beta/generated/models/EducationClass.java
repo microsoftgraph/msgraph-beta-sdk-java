@@ -114,10 +114,10 @@ public class EducationClass extends Entity implements Parsable {
     }
     /**
      * Gets the externalSource property value. The type of external source this resource was generated from (automatically determined from externalSourceDetail). Possible values are: sis, lms, or manual.
-     * @return a EducationExternalSource
+     * @return a EducationClassExternalSource
      */
     @jakarta.annotation.Nullable
-    public EducationExternalSource getExternalSource() {
+    public EducationClassExternalSource getExternalSource() {
         return this.backingStore.get("externalSource");
     }
     /**
@@ -146,7 +146,7 @@ public class EducationClass extends Entity implements Parsable {
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("externalId", (n) -> { this.setExternalId(n.getStringValue()); });
         deserializerMap.put("externalName", (n) -> { this.setExternalName(n.getStringValue()); });
-        deserializerMap.put("externalSource", (n) -> { this.setExternalSource(n.getEnumValue(EducationExternalSource::forValue)); });
+        deserializerMap.put("externalSource", (n) -> { this.setExternalSource(n.getEnumValue(EducationClassExternalSource::forValue)); });
         deserializerMap.put("externalSourceDetail", (n) -> { this.setExternalSourceDetail(n.getStringValue()); });
         deserializerMap.put("grade", (n) -> { this.setGrade(n.getStringValue()); });
         deserializerMap.put("group", (n) -> { this.setGroup(n.getObjectValue(Group::createFromDiscriminatorValue)); });
@@ -332,7 +332,7 @@ public class EducationClass extends Entity implements Parsable {
      * Sets the externalSource property value. The type of external source this resource was generated from (automatically determined from externalSourceDetail). Possible values are: sis, lms, or manual.
      * @param value Value to set for the externalSource property.
      */
-    public void setExternalSource(@jakarta.annotation.Nullable final EducationExternalSource value) {
+    public void setExternalSource(@jakarta.annotation.Nullable final EducationClassExternalSource value) {
         this.backingStore.set("externalSource", value);
     }
     /**

@@ -57,10 +57,10 @@ public class AuthenticationStrength implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the authenticationStrengthResult property value. The result of the authentication strength. The possible values are: notSet, skippedForProofUp, satisfied, singleChallengeRequired, multipleChallengesRequired, singleRegistrationRequired, multipleRegistrationsRequired, cannotSatisfyDueToCombinationConfiguration, cannotSatisfy, unknownFutureValue.
-     * @return a AuthenticationStrengthResult
+     * @return a AuthenticationStrengthAuthenticationStrengthResult
      */
     @jakarta.annotation.Nullable
-    public AuthenticationStrengthResult getAuthenticationStrengthResult() {
+    public AuthenticationStrengthAuthenticationStrengthResult getAuthenticationStrengthResult() {
         return this.backingStore.get("authenticationStrengthResult");
     }
     /**
@@ -87,7 +87,7 @@ public class AuthenticationStrength implements AdditionalDataHolder, BackedModel
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("authenticationStrengthId", (n) -> { this.setAuthenticationStrengthId(n.getStringValue()); });
-        deserializerMap.put("authenticationStrengthResult", (n) -> { this.setAuthenticationStrengthResult(n.getEnumValue(AuthenticationStrengthResult::forValue)); });
+        deserializerMap.put("authenticationStrengthResult", (n) -> { this.setAuthenticationStrengthResult(n.getEnumValue(AuthenticationStrengthAuthenticationStrengthResult::forValue)); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;
@@ -130,7 +130,7 @@ public class AuthenticationStrength implements AdditionalDataHolder, BackedModel
      * Sets the authenticationStrengthResult property value. The result of the authentication strength. The possible values are: notSet, skippedForProofUp, satisfied, singleChallengeRequired, multipleChallengesRequired, singleRegistrationRequired, multipleRegistrationsRequired, cannotSatisfyDueToCombinationConfiguration, cannotSatisfy, unknownFutureValue.
      * @param value Value to set for the authenticationStrengthResult property.
      */
-    public void setAuthenticationStrengthResult(@jakarta.annotation.Nullable final AuthenticationStrengthResult value) {
+    public void setAuthenticationStrengthResult(@jakarta.annotation.Nullable final AuthenticationStrengthAuthenticationStrengthResult value) {
         this.backingStore.set("authenticationStrengthResult", value);
     }
     /**

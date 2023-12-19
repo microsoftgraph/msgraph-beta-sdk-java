@@ -35,10 +35,10 @@ public class StatusDetails extends StatusBase implements Parsable {
     }
     /**
      * Gets the errorCategory property value. Categorizes the error code. Possible values are Failure, NonServiceFailure, Success.
-     * @return a ProvisioningStatusErrorCategory
+     * @return a StatusDetailsErrorCategory
      */
     @jakarta.annotation.Nullable
-    public ProvisioningStatusErrorCategory getErrorCategory() {
+    public StatusDetailsErrorCategory getErrorCategory() {
         return this.backingStore.get("errorCategory");
     }
     /**
@@ -57,7 +57,7 @@ public class StatusDetails extends StatusBase implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("additionalDetails", (n) -> { this.setAdditionalDetails(n.getStringValue()); });
-        deserializerMap.put("errorCategory", (n) -> { this.setErrorCategory(n.getEnumValue(ProvisioningStatusErrorCategory::forValue)); });
+        deserializerMap.put("errorCategory", (n) -> { this.setErrorCategory(n.getEnumValue(StatusDetailsErrorCategory::forValue)); });
         deserializerMap.put("errorCode", (n) -> { this.setErrorCode(n.getStringValue()); });
         deserializerMap.put("reason", (n) -> { this.setReason(n.getStringValue()); });
         deserializerMap.put("recommendedAction", (n) -> { this.setRecommendedAction(n.getStringValue()); });
@@ -103,7 +103,7 @@ public class StatusDetails extends StatusBase implements Parsable {
      * Sets the errorCategory property value. Categorizes the error code. Possible values are Failure, NonServiceFailure, Success.
      * @param value Value to set for the errorCategory property.
      */
-    public void setErrorCategory(@jakarta.annotation.Nullable final ProvisioningStatusErrorCategory value) {
+    public void setErrorCategory(@jakarta.annotation.Nullable final StatusDetailsErrorCategory value) {
         this.backingStore.set("errorCategory", value);
     }
     /**

@@ -3,7 +3,6 @@ package com.microsoft.graph.beta.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -74,8 +73,8 @@ public class AndroidDeviceOwnerCertificateProfileBase extends DeviceConfiguratio
         deserializerMap.put("extendedKeyUsages", (n) -> { this.setExtendedKeyUsages(n.getCollectionOfObjectValues(ExtendedKeyUsage::createFromDiscriminatorValue)); });
         deserializerMap.put("renewalThresholdPercentage", (n) -> { this.setRenewalThresholdPercentage(n.getIntegerValue()); });
         deserializerMap.put("rootCertificate", (n) -> { this.setRootCertificate(n.getObjectValue(AndroidDeviceOwnerTrustedRootCertificate::createFromDiscriminatorValue)); });
-        deserializerMap.put("subjectAlternativeNameType", (n) -> { this.setSubjectAlternativeNameType(n.getEnumSetValue(SubjectAlternativeNameType::forValue)); });
-        deserializerMap.put("subjectNameFormat", (n) -> { this.setSubjectNameFormat(n.getEnumValue(SubjectNameFormat::forValue)); });
+        deserializerMap.put("subjectAlternativeNameType", (n) -> { this.setSubjectAlternativeNameType(n.getEnumValue(AndroidDeviceOwnerCertificateProfileBaseSubjectAlternativeNameType::forValue)); });
+        deserializerMap.put("subjectNameFormat", (n) -> { this.setSubjectNameFormat(n.getEnumValue(AndroidDeviceOwnerCertificateProfileBaseSubjectNameFormat::forValue)); });
         return deserializerMap;
     }
     /**
@@ -96,18 +95,18 @@ public class AndroidDeviceOwnerCertificateProfileBase extends DeviceConfiguratio
     }
     /**
      * Gets the subjectAlternativeNameType property value. Certificate Subject Alternative Name Type. Possible values are: none, emailAddress, userPrincipalName, customAzureADAttribute, domainNameService, universalResourceIdentifier.
-     * @return a EnumSet<SubjectAlternativeNameType>
+     * @return a AndroidDeviceOwnerCertificateProfileBaseSubjectAlternativeNameType
      */
     @jakarta.annotation.Nullable
-    public EnumSet<SubjectAlternativeNameType> getSubjectAlternativeNameType() {
+    public AndroidDeviceOwnerCertificateProfileBaseSubjectAlternativeNameType getSubjectAlternativeNameType() {
         return this.backingStore.get("subjectAlternativeNameType");
     }
     /**
      * Gets the subjectNameFormat property value. Certificate Subject Name Format. Possible values are: commonName, commonNameIncludingEmail, commonNameAsEmail, custom, commonNameAsIMEI, commonNameAsSerialNumber, commonNameAsAadDeviceId, commonNameAsIntuneDeviceId, commonNameAsDurableDeviceId.
-     * @return a SubjectNameFormat
+     * @return a AndroidDeviceOwnerCertificateProfileBaseSubjectNameFormat
      */
     @jakarta.annotation.Nullable
-    public SubjectNameFormat getSubjectNameFormat() {
+    public AndroidDeviceOwnerCertificateProfileBaseSubjectNameFormat getSubjectNameFormat() {
         return this.backingStore.get("subjectNameFormat");
     }
     /**
@@ -122,7 +121,7 @@ public class AndroidDeviceOwnerCertificateProfileBase extends DeviceConfiguratio
         writer.writeCollectionOfObjectValues("extendedKeyUsages", this.getExtendedKeyUsages());
         writer.writeIntegerValue("renewalThresholdPercentage", this.getRenewalThresholdPercentage());
         writer.writeObjectValue("rootCertificate", this.getRootCertificate());
-        writer.writeEnumSetValue("subjectAlternativeNameType", this.getSubjectAlternativeNameType());
+        writer.writeEnumValue("subjectAlternativeNameType", this.getSubjectAlternativeNameType());
         writer.writeEnumValue("subjectNameFormat", this.getSubjectNameFormat());
     }
     /**
@@ -164,14 +163,14 @@ public class AndroidDeviceOwnerCertificateProfileBase extends DeviceConfiguratio
      * Sets the subjectAlternativeNameType property value. Certificate Subject Alternative Name Type. Possible values are: none, emailAddress, userPrincipalName, customAzureADAttribute, domainNameService, universalResourceIdentifier.
      * @param value Value to set for the subjectAlternativeNameType property.
      */
-    public void setSubjectAlternativeNameType(@jakarta.annotation.Nullable final EnumSet<SubjectAlternativeNameType> value) {
+    public void setSubjectAlternativeNameType(@jakarta.annotation.Nullable final AndroidDeviceOwnerCertificateProfileBaseSubjectAlternativeNameType value) {
         this.backingStore.set("subjectAlternativeNameType", value);
     }
     /**
      * Sets the subjectNameFormat property value. Certificate Subject Name Format. Possible values are: commonName, commonNameIncludingEmail, commonNameAsEmail, custom, commonNameAsIMEI, commonNameAsSerialNumber, commonNameAsAadDeviceId, commonNameAsIntuneDeviceId, commonNameAsDurableDeviceId.
      * @param value Value to set for the subjectNameFormat property.
      */
-    public void setSubjectNameFormat(@jakarta.annotation.Nullable final SubjectNameFormat value) {
+    public void setSubjectNameFormat(@jakarta.annotation.Nullable final AndroidDeviceOwnerCertificateProfileBaseSubjectNameFormat value) {
         this.backingStore.set("subjectNameFormat", value);
     }
 }

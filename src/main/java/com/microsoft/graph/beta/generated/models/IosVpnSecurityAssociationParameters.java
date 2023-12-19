@@ -68,8 +68,8 @@ public class IosVpnSecurityAssociationParameters implements AdditionalDataHolder
         deserializerMap.put("lifetimeInMinutes", (n) -> { this.setLifetimeInMinutes(n.getIntegerValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("securityDiffieHellmanGroup", (n) -> { this.setSecurityDiffieHellmanGroup(n.getIntegerValue()); });
-        deserializerMap.put("securityEncryptionAlgorithm", (n) -> { this.setSecurityEncryptionAlgorithm(n.getEnumValue(VpnEncryptionAlgorithmType::forValue)); });
-        deserializerMap.put("securityIntegrityAlgorithm", (n) -> { this.setSecurityIntegrityAlgorithm(n.getEnumValue(VpnIntegrityAlgorithmType::forValue)); });
+        deserializerMap.put("securityEncryptionAlgorithm", (n) -> { this.setSecurityEncryptionAlgorithm(n.getEnumValue(IosVpnSecurityAssociationParametersSecurityEncryptionAlgorithm::forValue)); });
+        deserializerMap.put("securityIntegrityAlgorithm", (n) -> { this.setSecurityIntegrityAlgorithm(n.getEnumValue(IosVpnSecurityAssociationParametersSecurityIntegrityAlgorithm::forValue)); });
         return deserializerMap;
     }
     /**
@@ -98,18 +98,18 @@ public class IosVpnSecurityAssociationParameters implements AdditionalDataHolder
     }
     /**
      * Gets the securityEncryptionAlgorithm property value. Encryption algorithm. Possible values are: aes256, des, tripleDes, aes128, aes128Gcm, aes256Gcm, aes192, aes192Gcm, chaCha20Poly1305.
-     * @return a VpnEncryptionAlgorithmType
+     * @return a IosVpnSecurityAssociationParametersSecurityEncryptionAlgorithm
      */
     @jakarta.annotation.Nullable
-    public VpnEncryptionAlgorithmType getSecurityEncryptionAlgorithm() {
+    public IosVpnSecurityAssociationParametersSecurityEncryptionAlgorithm getSecurityEncryptionAlgorithm() {
         return this.backingStore.get("securityEncryptionAlgorithm");
     }
     /**
      * Gets the securityIntegrityAlgorithm property value. Integrity algorithm. Possible values are: sha2256, sha196, sha1160, sha2384, sha2_512, md5.
-     * @return a VpnIntegrityAlgorithmType
+     * @return a IosVpnSecurityAssociationParametersSecurityIntegrityAlgorithm
      */
     @jakarta.annotation.Nullable
-    public VpnIntegrityAlgorithmType getSecurityIntegrityAlgorithm() {
+    public IosVpnSecurityAssociationParametersSecurityIntegrityAlgorithm getSecurityIntegrityAlgorithm() {
         return this.backingStore.get("securityIntegrityAlgorithm");
     }
     /**
@@ -165,14 +165,14 @@ public class IosVpnSecurityAssociationParameters implements AdditionalDataHolder
      * Sets the securityEncryptionAlgorithm property value. Encryption algorithm. Possible values are: aes256, des, tripleDes, aes128, aes128Gcm, aes256Gcm, aes192, aes192Gcm, chaCha20Poly1305.
      * @param value Value to set for the securityEncryptionAlgorithm property.
      */
-    public void setSecurityEncryptionAlgorithm(@jakarta.annotation.Nullable final VpnEncryptionAlgorithmType value) {
+    public void setSecurityEncryptionAlgorithm(@jakarta.annotation.Nullable final IosVpnSecurityAssociationParametersSecurityEncryptionAlgorithm value) {
         this.backingStore.set("securityEncryptionAlgorithm", value);
     }
     /**
      * Sets the securityIntegrityAlgorithm property value. Integrity algorithm. Possible values are: sha2256, sha196, sha1160, sha2384, sha2_512, md5.
      * @param value Value to set for the securityIntegrityAlgorithm property.
      */
-    public void setSecurityIntegrityAlgorithm(@jakarta.annotation.Nullable final VpnIntegrityAlgorithmType value) {
+    public void setSecurityIntegrityAlgorithm(@jakarta.annotation.Nullable final IosVpnSecurityAssociationParametersSecurityIntegrityAlgorithm value) {
         this.backingStore.set("securityIntegrityAlgorithm", value);
     }
 }

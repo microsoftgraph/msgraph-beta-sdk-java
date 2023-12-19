@@ -81,8 +81,8 @@ public class CustomExtensionHandlerInstance implements AdditionalDataHolder, Bac
         deserializerMap.put("customExtensionId", (n) -> { this.setCustomExtensionId(n.getStringValue()); });
         deserializerMap.put("externalCorrelationId", (n) -> { this.setExternalCorrelationId(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("stage", (n) -> { this.setStage(n.getEnumValue(AccessPackageCustomExtensionStage::forValue)); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(AccessPackageCustomExtensionHandlerStatus::forValue)); });
+        deserializerMap.put("stage", (n) -> { this.setStage(n.getEnumValue(CustomExtensionHandlerInstanceStage::forValue)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(CustomExtensionHandlerInstanceStatus::forValue)); });
         return deserializerMap;
     }
     /**
@@ -95,18 +95,18 @@ public class CustomExtensionHandlerInstance implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the stage property value. Indicates the stage of the request workflow when the access package custom extension runs. The possible values are: assignmentRequestCreated, assignmentRequestApproved, assignmentRequestGranted, assignmentRequestRemoved, assignmentFourteenDaysBeforeExpiration, assignmentOneDayBeforeExpiration, unknownFutureValue.
-     * @return a AccessPackageCustomExtensionStage
+     * @return a CustomExtensionHandlerInstanceStage
      */
     @jakarta.annotation.Nullable
-    public AccessPackageCustomExtensionStage getStage() {
+    public CustomExtensionHandlerInstanceStage getStage() {
         return this.backingStore.get("stage");
     }
     /**
      * Gets the status property value. Status of the request to run the access package custom extension workflow that is associated with the logic app. The possible values are: requestSent, requestReceived, unknownFutureValue.
-     * @return a AccessPackageCustomExtensionHandlerStatus
+     * @return a CustomExtensionHandlerInstanceStatus
      */
     @jakarta.annotation.Nullable
-    public AccessPackageCustomExtensionHandlerStatus getStatus() {
+    public CustomExtensionHandlerInstanceStatus getStatus() {
         return this.backingStore.get("status");
     }
     /**
@@ -162,14 +162,14 @@ public class CustomExtensionHandlerInstance implements AdditionalDataHolder, Bac
      * Sets the stage property value. Indicates the stage of the request workflow when the access package custom extension runs. The possible values are: assignmentRequestCreated, assignmentRequestApproved, assignmentRequestGranted, assignmentRequestRemoved, assignmentFourteenDaysBeforeExpiration, assignmentOneDayBeforeExpiration, unknownFutureValue.
      * @param value Value to set for the stage property.
      */
-    public void setStage(@jakarta.annotation.Nullable final AccessPackageCustomExtensionStage value) {
+    public void setStage(@jakarta.annotation.Nullable final CustomExtensionHandlerInstanceStage value) {
         this.backingStore.set("stage", value);
     }
     /**
      * Sets the status property value. Status of the request to run the access package custom extension workflow that is associated with the logic app. The possible values are: requestSent, requestReceived, unknownFutureValue.
      * @param value Value to set for the status property.
      */
-    public void setStatus(@jakarta.annotation.Nullable final AccessPackageCustomExtensionHandlerStatus value) {
+    public void setStatus(@jakarta.annotation.Nullable final CustomExtensionHandlerInstanceStatus value) {
         this.backingStore.set("status", value);
     }
 }

@@ -78,17 +78,17 @@ public class OutlookTask extends OutlookItem implements Parsable {
         deserializerMap.put("completedDateTime", (n) -> { this.setCompletedDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
         deserializerMap.put("dueDateTime", (n) -> { this.setDueDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
         deserializerMap.put("hasAttachments", (n) -> { this.setHasAttachments(n.getBooleanValue()); });
-        deserializerMap.put("importance", (n) -> { this.setImportance(n.getEnumValue(Importance::forValue)); });
+        deserializerMap.put("importance", (n) -> { this.setImportance(n.getEnumValue(OutlookTaskImportance::forValue)); });
         deserializerMap.put("isReminderOn", (n) -> { this.setIsReminderOn(n.getBooleanValue()); });
         deserializerMap.put("multiValueExtendedProperties", (n) -> { this.setMultiValueExtendedProperties(n.getCollectionOfObjectValues(MultiValueLegacyExtendedProperty::createFromDiscriminatorValue)); });
         deserializerMap.put("owner", (n) -> { this.setOwner(n.getStringValue()); });
         deserializerMap.put("parentFolderId", (n) -> { this.setParentFolderId(n.getStringValue()); });
         deserializerMap.put("recurrence", (n) -> { this.setRecurrence(n.getObjectValue(PatternedRecurrence::createFromDiscriminatorValue)); });
         deserializerMap.put("reminderDateTime", (n) -> { this.setReminderDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
-        deserializerMap.put("sensitivity", (n) -> { this.setSensitivity(n.getEnumValue(Sensitivity::forValue)); });
+        deserializerMap.put("sensitivity", (n) -> { this.setSensitivity(n.getEnumValue(OutlookTaskSensitivity::forValue)); });
         deserializerMap.put("singleValueExtendedProperties", (n) -> { this.setSingleValueExtendedProperties(n.getCollectionOfObjectValues(SingleValueLegacyExtendedProperty::createFromDiscriminatorValue)); });
         deserializerMap.put("startDateTime", (n) -> { this.setStartDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(TaskStatus::forValue)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(OutlookTaskStatus::forValue)); });
         deserializerMap.put("subject", (n) -> { this.setSubject(n.getStringValue()); });
         return deserializerMap;
     }
@@ -102,10 +102,10 @@ public class OutlookTask extends OutlookItem implements Parsable {
     }
     /**
      * Gets the importance property value. The importance property
-     * @return a Importance
+     * @return a OutlookTaskImportance
      */
     @jakarta.annotation.Nullable
-    public Importance getImportance() {
+    public OutlookTaskImportance getImportance() {
         return this.backingStore.get("importance");
     }
     /**
@@ -158,10 +158,10 @@ public class OutlookTask extends OutlookItem implements Parsable {
     }
     /**
      * Gets the sensitivity property value. The sensitivity property
-     * @return a Sensitivity
+     * @return a OutlookTaskSensitivity
      */
     @jakarta.annotation.Nullable
-    public Sensitivity getSensitivity() {
+    public OutlookTaskSensitivity getSensitivity() {
         return this.backingStore.get("sensitivity");
     }
     /**
@@ -182,10 +182,10 @@ public class OutlookTask extends OutlookItem implements Parsable {
     }
     /**
      * Gets the status property value. The status property
-     * @return a TaskStatus
+     * @return a OutlookTaskStatus
      */
     @jakarta.annotation.Nullable
-    public TaskStatus getStatus() {
+    public OutlookTaskStatus getStatus() {
         return this.backingStore.get("status");
     }
     /**
@@ -268,7 +268,7 @@ public class OutlookTask extends OutlookItem implements Parsable {
      * Sets the importance property value. The importance property
      * @param value Value to set for the importance property.
      */
-    public void setImportance(@jakarta.annotation.Nullable final Importance value) {
+    public void setImportance(@jakarta.annotation.Nullable final OutlookTaskImportance value) {
         this.backingStore.set("importance", value);
     }
     /**
@@ -317,7 +317,7 @@ public class OutlookTask extends OutlookItem implements Parsable {
      * Sets the sensitivity property value. The sensitivity property
      * @param value Value to set for the sensitivity property.
      */
-    public void setSensitivity(@jakarta.annotation.Nullable final Sensitivity value) {
+    public void setSensitivity(@jakarta.annotation.Nullable final OutlookTaskSensitivity value) {
         this.backingStore.set("sensitivity", value);
     }
     /**
@@ -338,7 +338,7 @@ public class OutlookTask extends OutlookItem implements Parsable {
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
      */
-    public void setStatus(@jakarta.annotation.Nullable final TaskStatus value) {
+    public void setStatus(@jakarta.annotation.Nullable final OutlookTaskStatus value) {
         this.backingStore.set("status", value);
     }
     /**

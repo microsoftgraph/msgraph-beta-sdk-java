@@ -65,10 +65,10 @@ public class SessionLifetimePolicy implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the expirationRequirement property value. If a conditional access session management policy required the user to authenticate in this sign-in event, this field describes the policy type that required authentication. The possible values are: rememberMultifactorAuthenticationOnTrustedDevices, tenantTokenLifetimePolicy, audienceTokenLifetimePolicy, signInFrequencyPeriodicReauthentication, ngcMfa, signInFrequencyEveryTime, unknownFutureValue.
-     * @return a ExpirationRequirement
+     * @return a SessionLifetimePolicyExpirationRequirement
      */
     @jakarta.annotation.Nullable
-    public ExpirationRequirement getExpirationRequirement() {
+    public SessionLifetimePolicyExpirationRequirement getExpirationRequirement() {
         return this.backingStore.get("expirationRequirement");
     }
     /**
@@ -79,7 +79,7 @@ public class SessionLifetimePolicy implements AdditionalDataHolder, BackedModel,
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("detail", (n) -> { this.setDetail(n.getStringValue()); });
-        deserializerMap.put("expirationRequirement", (n) -> { this.setExpirationRequirement(n.getEnumValue(ExpirationRequirement::forValue)); });
+        deserializerMap.put("expirationRequirement", (n) -> { this.setExpirationRequirement(n.getEnumValue(SessionLifetimePolicyExpirationRequirement::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;
     }
@@ -128,7 +128,7 @@ public class SessionLifetimePolicy implements AdditionalDataHolder, BackedModel,
      * Sets the expirationRequirement property value. If a conditional access session management policy required the user to authenticate in this sign-in event, this field describes the policy type that required authentication. The possible values are: rememberMultifactorAuthenticationOnTrustedDevices, tenantTokenLifetimePolicy, audienceTokenLifetimePolicy, signInFrequencyPeriodicReauthentication, ngcMfa, signInFrequencyEveryTime, unknownFutureValue.
      * @param value Value to set for the expirationRequirement property.
      */
-    public void setExpirationRequirement(@jakarta.annotation.Nullable final ExpirationRequirement value) {
+    public void setExpirationRequirement(@jakarta.annotation.Nullable final SessionLifetimePolicyExpirationRequirement value) {
         this.backingStore.set("expirationRequirement", value);
     }
     /**

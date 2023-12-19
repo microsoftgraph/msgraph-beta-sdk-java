@@ -30,10 +30,10 @@ public class AndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration exte
     }
     /**
      * Gets the certificateAccessType property value. Certificate access type. Possible values are: userApproval, specificApps, unknownFutureValue.
-     * @return a AndroidDeviceOwnerCertificateAccessType
+     * @return a AndroidDeviceOwnerDerivedCredentialAuthenticationConfigurationCertificateAccessType
      */
     @jakarta.annotation.Nullable
-    public AndroidDeviceOwnerCertificateAccessType getCertificateAccessType() {
+    public AndroidDeviceOwnerDerivedCredentialAuthenticationConfigurationCertificateAccessType getCertificateAccessType() {
         return this.backingStore.get("certificateAccessType");
     }
     /**
@@ -51,7 +51,7 @@ public class AndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration exte
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("certificateAccessType", (n) -> { this.setCertificateAccessType(n.getEnumValue(AndroidDeviceOwnerCertificateAccessType::forValue)); });
+        deserializerMap.put("certificateAccessType", (n) -> { this.setCertificateAccessType(n.getEnumValue(AndroidDeviceOwnerDerivedCredentialAuthenticationConfigurationCertificateAccessType::forValue)); });
         deserializerMap.put("derivedCredentialSettings", (n) -> { this.setDerivedCredentialSettings(n.getObjectValue(DeviceManagementDerivedCredentialSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("silentCertificateAccessDetails", (n) -> { this.setSilentCertificateAccessDetails(n.getCollectionOfObjectValues(AndroidDeviceOwnerSilentCertificateAccess::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -79,7 +79,7 @@ public class AndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration exte
      * Sets the certificateAccessType property value. Certificate access type. Possible values are: userApproval, specificApps, unknownFutureValue.
      * @param value Value to set for the certificateAccessType property.
      */
-    public void setCertificateAccessType(@jakarta.annotation.Nullable final AndroidDeviceOwnerCertificateAccessType value) {
+    public void setCertificateAccessType(@jakarta.annotation.Nullable final AndroidDeviceOwnerDerivedCredentialAuthenticationConfigurationCertificateAccessType value) {
         this.backingStore.set("certificateAccessType", value);
     }
     /**

@@ -66,9 +66,9 @@ public class X509CertificateRule implements AdditionalDataHolder, BackedModel, P
         deserializerMap.put("issuerSubjectIdentifier", (n) -> { this.setIssuerSubjectIdentifier(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("policyOidIdentifier", (n) -> { this.setPolicyOidIdentifier(n.getStringValue()); });
-        deserializerMap.put("x509CertificateAuthenticationMode", (n) -> { this.setX509CertificateAuthenticationMode(n.getEnumValue(X509CertificateAuthenticationMode::forValue)); });
-        deserializerMap.put("x509CertificateRequiredAffinityLevel", (n) -> { this.setX509CertificateRequiredAffinityLevel(n.getEnumValue(X509CertificateAffinityLevel::forValue)); });
-        deserializerMap.put("x509CertificateRuleType", (n) -> { this.setX509CertificateRuleType(n.getEnumValue(X509CertificateRuleType::forValue)); });
+        deserializerMap.put("x509CertificateAuthenticationMode", (n) -> { this.setX509CertificateAuthenticationMode(n.getEnumValue(X509CertificateRuleX509CertificateAuthenticationMode::forValue)); });
+        deserializerMap.put("x509CertificateRequiredAffinityLevel", (n) -> { this.setX509CertificateRequiredAffinityLevel(n.getEnumValue(X509CertificateRuleX509CertificateRequiredAffinityLevel::forValue)); });
+        deserializerMap.put("x509CertificateRuleType", (n) -> { this.setX509CertificateRuleType(n.getEnumValue(X509CertificateRuleX509CertificateRuleType::forValue)); });
         return deserializerMap;
     }
     /**
@@ -105,26 +105,26 @@ public class X509CertificateRule implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the x509CertificateAuthenticationMode property value. The type of strong authentication mode. The possible values are: x509CertificateSingleFactor, x509CertificateMultiFactor, unknownFutureValue. Required.
-     * @return a X509CertificateAuthenticationMode
+     * @return a X509CertificateRuleX509CertificateAuthenticationMode
      */
     @jakarta.annotation.Nullable
-    public X509CertificateAuthenticationMode getX509CertificateAuthenticationMode() {
+    public X509CertificateRuleX509CertificateAuthenticationMode getX509CertificateAuthenticationMode() {
         return this.backingStore.get("x509CertificateAuthenticationMode");
     }
     /**
      * Gets the x509CertificateRequiredAffinityLevel property value. The possible values are: low, high, unknownFutureValue.
-     * @return a X509CertificateAffinityLevel
+     * @return a X509CertificateRuleX509CertificateRequiredAffinityLevel
      */
     @jakarta.annotation.Nullable
-    public X509CertificateAffinityLevel getX509CertificateRequiredAffinityLevel() {
+    public X509CertificateRuleX509CertificateRequiredAffinityLevel getX509CertificateRequiredAffinityLevel() {
         return this.backingStore.get("x509CertificateRequiredAffinityLevel");
     }
     /**
      * Gets the x509CertificateRuleType property value. The type of the X.509 certificate mode configuration rule. The possible values are: issuerSubject, policyOID, unknownFutureValue, issuerSubjectAndPolicyOID. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: issuerSubjectAndPolicyOID. Required.
-     * @return a X509CertificateRuleType
+     * @return a X509CertificateRuleX509CertificateRuleType
      */
     @jakarta.annotation.Nullable
-    public X509CertificateRuleType getX509CertificateRuleType() {
+    public X509CertificateRuleX509CertificateRuleType getX509CertificateRuleType() {
         return this.backingStore.get("x509CertificateRuleType");
     }
     /**
@@ -189,21 +189,21 @@ public class X509CertificateRule implements AdditionalDataHolder, BackedModel, P
      * Sets the x509CertificateAuthenticationMode property value. The type of strong authentication mode. The possible values are: x509CertificateSingleFactor, x509CertificateMultiFactor, unknownFutureValue. Required.
      * @param value Value to set for the x509CertificateAuthenticationMode property.
      */
-    public void setX509CertificateAuthenticationMode(@jakarta.annotation.Nullable final X509CertificateAuthenticationMode value) {
+    public void setX509CertificateAuthenticationMode(@jakarta.annotation.Nullable final X509CertificateRuleX509CertificateAuthenticationMode value) {
         this.backingStore.set("x509CertificateAuthenticationMode", value);
     }
     /**
      * Sets the x509CertificateRequiredAffinityLevel property value. The possible values are: low, high, unknownFutureValue.
      * @param value Value to set for the x509CertificateRequiredAffinityLevel property.
      */
-    public void setX509CertificateRequiredAffinityLevel(@jakarta.annotation.Nullable final X509CertificateAffinityLevel value) {
+    public void setX509CertificateRequiredAffinityLevel(@jakarta.annotation.Nullable final X509CertificateRuleX509CertificateRequiredAffinityLevel value) {
         this.backingStore.set("x509CertificateRequiredAffinityLevel", value);
     }
     /**
      * Sets the x509CertificateRuleType property value. The type of the X.509 certificate mode configuration rule. The possible values are: issuerSubject, policyOID, unknownFutureValue, issuerSubjectAndPolicyOID. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: issuerSubjectAndPolicyOID. Required.
      * @param value Value to set for the x509CertificateRuleType property.
      */
-    public void setX509CertificateRuleType(@jakarta.annotation.Nullable final X509CertificateRuleType value) {
+    public void setX509CertificateRuleType(@jakarta.annotation.Nullable final X509CertificateRuleX509CertificateRuleType value) {
         this.backingStore.set("x509CertificateRuleType", value);
     }
 }

@@ -71,19 +71,19 @@ public class CloudPcPartnerAgentInstallResult implements AdditionalDataHolder, B
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("errorMessage", (n) -> { this.setErrorMessage(n.getStringValue()); });
-        deserializerMap.put("installStatus", (n) -> { this.setInstallStatus(n.getEnumValue(CloudPcPartnerAgentInstallStatus::forValue)); });
+        deserializerMap.put("installStatus", (n) -> { this.setInstallStatus(n.getEnumValue(CloudPcPartnerAgentInstallResultInstallStatus::forValue)); });
         deserializerMap.put("isThirdPartyPartner", (n) -> { this.setIsThirdPartyPartner(n.getBooleanValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("partnerAgentName", (n) -> { this.setPartnerAgentName(n.getEnumValue(CloudPcPartnerAgentName::forValue)); });
+        deserializerMap.put("partnerAgentName", (n) -> { this.setPartnerAgentName(n.getEnumValue(CloudPcPartnerAgentInstallResultPartnerAgentName::forValue)); });
         deserializerMap.put("retriable", (n) -> { this.setRetriable(n.getBooleanValue()); });
         return deserializerMap;
     }
     /**
      * Gets the installStatus property value. The status of a partner agent installation. Possible values are: installed, installFailed, installing, uninstalling, uninstallFailed and licensed. Read-Only.
-     * @return a CloudPcPartnerAgentInstallStatus
+     * @return a CloudPcPartnerAgentInstallResultInstallStatus
      */
     @jakarta.annotation.Nullable
-    public CloudPcPartnerAgentInstallStatus getInstallStatus() {
+    public CloudPcPartnerAgentInstallResultInstallStatus getInstallStatus() {
         return this.backingStore.get("installStatus");
     }
     /**
@@ -104,10 +104,10 @@ public class CloudPcPartnerAgentInstallResult implements AdditionalDataHolder, B
     }
     /**
      * Gets the partnerAgentName property value. The name of the first-party or third-party partner agent. Possible values for third-party partners are Citrix, VMware and HP. Read-Only.
-     * @return a CloudPcPartnerAgentName
+     * @return a CloudPcPartnerAgentInstallResultPartnerAgentName
      */
     @jakarta.annotation.Nullable
-    public CloudPcPartnerAgentName getPartnerAgentName() {
+    public CloudPcPartnerAgentInstallResultPartnerAgentName getPartnerAgentName() {
         return this.backingStore.get("partnerAgentName");
     }
     /**
@@ -158,7 +158,7 @@ public class CloudPcPartnerAgentInstallResult implements AdditionalDataHolder, B
      * Sets the installStatus property value. The status of a partner agent installation. Possible values are: installed, installFailed, installing, uninstalling, uninstallFailed and licensed. Read-Only.
      * @param value Value to set for the installStatus property.
      */
-    public void setInstallStatus(@jakarta.annotation.Nullable final CloudPcPartnerAgentInstallStatus value) {
+    public void setInstallStatus(@jakarta.annotation.Nullable final CloudPcPartnerAgentInstallResultInstallStatus value) {
         this.backingStore.set("installStatus", value);
     }
     /**
@@ -179,7 +179,7 @@ public class CloudPcPartnerAgentInstallResult implements AdditionalDataHolder, B
      * Sets the partnerAgentName property value. The name of the first-party or third-party partner agent. Possible values for third-party partners are Citrix, VMware and HP. Read-Only.
      * @param value Value to set for the partnerAgentName property.
      */
-    public void setPartnerAgentName(@jakarta.annotation.Nullable final CloudPcPartnerAgentName value) {
+    public void setPartnerAgentName(@jakarta.annotation.Nullable final CloudPcPartnerAgentInstallResultPartnerAgentName value) {
         this.backingStore.set("partnerAgentName", value);
     }
     /**

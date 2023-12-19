@@ -30,10 +30,10 @@ public class Windows10PkcsCertificateProfile extends Windows10CertificateProfile
     }
     /**
      * Gets the certificateStore property value. Target store certificate. Possible values are: user, machine.
-     * @return a CertificateStore
+     * @return a Windows10PkcsCertificateProfileCertificateStore
      */
     @jakarta.annotation.Nullable
-    public CertificateStore getCertificateStore() {
+    public Windows10PkcsCertificateProfileCertificateStore getCertificateStore() {
         return this.backingStore.get("certificateStore");
     }
     /**
@@ -83,7 +83,7 @@ public class Windows10PkcsCertificateProfile extends Windows10CertificateProfile
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("certificateStore", (n) -> { this.setCertificateStore(n.getEnumValue(CertificateStore::forValue)); });
+        deserializerMap.put("certificateStore", (n) -> { this.setCertificateStore(n.getEnumValue(Windows10PkcsCertificateProfileCertificateStore::forValue)); });
         deserializerMap.put("certificateTemplateName", (n) -> { this.setCertificateTemplateName(n.getStringValue()); });
         deserializerMap.put("certificationAuthority", (n) -> { this.setCertificationAuthority(n.getStringValue()); });
         deserializerMap.put("certificationAuthorityName", (n) -> { this.setCertificationAuthorityName(n.getStringValue()); });
@@ -139,7 +139,7 @@ public class Windows10PkcsCertificateProfile extends Windows10CertificateProfile
      * Sets the certificateStore property value. Target store certificate. Possible values are: user, machine.
      * @param value Value to set for the certificateStore property.
      */
-    public void setCertificateStore(@jakarta.annotation.Nullable final CertificateStore value) {
+    public void setCertificateStore(@jakarta.annotation.Nullable final Windows10PkcsCertificateProfileCertificateStore value) {
         this.backingStore.set("certificateStore", value);
     }
     /**

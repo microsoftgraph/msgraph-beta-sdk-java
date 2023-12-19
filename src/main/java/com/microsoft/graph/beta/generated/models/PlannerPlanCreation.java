@@ -64,10 +64,10 @@ public class PlannerPlanCreation implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the creationSourceKind property value. Specifies what kind of creation source the plan is created with. The possible values are: external, publication and unknownFutureValue.
-     * @return a PlannerCreationSourceKind
+     * @return a PlannerPlanCreationCreationSourceKind
      */
     @jakarta.annotation.Nullable
-    public PlannerCreationSourceKind getCreationSourceKind() {
+    public PlannerPlanCreationCreationSourceKind getCreationSourceKind() {
         return this.backingStore.get("creationSourceKind");
     }
     /**
@@ -77,7 +77,7 @@ public class PlannerPlanCreation implements AdditionalDataHolder, BackedModel, P
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
-        deserializerMap.put("creationSourceKind", (n) -> { this.setCreationSourceKind(n.getEnumValue(PlannerCreationSourceKind::forValue)); });
+        deserializerMap.put("creationSourceKind", (n) -> { this.setCreationSourceKind(n.getEnumValue(PlannerPlanCreationCreationSourceKind::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;
     }
@@ -118,7 +118,7 @@ public class PlannerPlanCreation implements AdditionalDataHolder, BackedModel, P
      * Sets the creationSourceKind property value. Specifies what kind of creation source the plan is created with. The possible values are: external, publication and unknownFutureValue.
      * @param value Value to set for the creationSourceKind property.
      */
-    public void setCreationSourceKind(@jakarta.annotation.Nullable final PlannerCreationSourceKind value) {
+    public void setCreationSourceKind(@jakarta.annotation.Nullable final PlannerPlanCreationCreationSourceKind value) {
         this.backingStore.set("creationSourceKind", value);
     }
     /**

@@ -57,10 +57,10 @@ public class AlertRuleDefinitionTemplate implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the defaultSeverity property value. The defaultSeverity property
-     * @return a AlertSeverity
+     * @return a AlertRuleDefinitionTemplateDefaultSeverity
      */
     @jakarta.annotation.Nullable
-    public AlertSeverity getDefaultSeverity() {
+    public AlertRuleDefinitionTemplateDefaultSeverity getDefaultSeverity() {
         return this.backingStore.get("defaultSeverity");
     }
     /**
@@ -70,7 +70,7 @@ public class AlertRuleDefinitionTemplate implements AdditionalDataHolder, Backed
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
-        deserializerMap.put("defaultSeverity", (n) -> { this.setDefaultSeverity(n.getEnumValue(AlertSeverity::forValue)); });
+        deserializerMap.put("defaultSeverity", (n) -> { this.setDefaultSeverity(n.getEnumValue(AlertRuleDefinitionTemplateDefaultSeverity::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;
     }
@@ -111,7 +111,7 @@ public class AlertRuleDefinitionTemplate implements AdditionalDataHolder, Backed
      * Sets the defaultSeverity property value. The defaultSeverity property
      * @param value Value to set for the defaultSeverity property.
      */
-    public void setDefaultSeverity(@jakarta.annotation.Nullable final AlertSeverity value) {
+    public void setDefaultSeverity(@jakarta.annotation.Nullable final AlertRuleDefinitionTemplateDefaultSeverity value) {
         this.backingStore.set("defaultSeverity", value);
     }
     /**

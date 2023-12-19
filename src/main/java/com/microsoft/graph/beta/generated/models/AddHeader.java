@@ -27,10 +27,10 @@ public class AddHeader extends MarkContent implements Parsable {
     }
     /**
      * Gets the alignment property value. The alignment property
-     * @return a Alignment
+     * @return a AddHeaderAlignment
      */
     @jakarta.annotation.Nullable
-    public Alignment getAlignment() {
+    public AddHeaderAlignment getAlignment() {
         return this.backingStore.get("alignment");
     }
     /**
@@ -40,7 +40,7 @@ public class AddHeader extends MarkContent implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("alignment", (n) -> { this.setAlignment(n.getEnumValue(Alignment::forValue)); });
+        deserializerMap.put("alignment", (n) -> { this.setAlignment(n.getEnumValue(AddHeaderAlignment::forValue)); });
         deserializerMap.put("margin", (n) -> { this.setMargin(n.getIntegerValue()); });
         return deserializerMap;
     }
@@ -66,7 +66,7 @@ public class AddHeader extends MarkContent implements Parsable {
      * Sets the alignment property value. The alignment property
      * @param value Value to set for the alignment property.
      */
-    public void setAlignment(@jakarta.annotation.Nullable final Alignment value) {
+    public void setAlignment(@jakarta.annotation.Nullable final AddHeaderAlignment value) {
         this.backingStore.set("alignment", value);
     }
     /**

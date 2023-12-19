@@ -6,7 +6,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public enum CloudPcAuditCategory implements ValuedEnum {
     CloudPC("cloudPC"),
-    Other("other");
+    UnknownFutureValue("unknownFutureValue");
     public final String value;
     CloudPcAuditCategory(final String value) {
         this.value = value;
@@ -18,7 +18,7 @@ public enum CloudPcAuditCategory implements ValuedEnum {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "cloudPC": return CloudPC;
-            case "other": return Other;
+            case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }
     }

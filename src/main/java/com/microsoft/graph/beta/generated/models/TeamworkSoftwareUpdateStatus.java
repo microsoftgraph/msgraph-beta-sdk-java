@@ -81,7 +81,7 @@ public class TeamworkSoftwareUpdateStatus implements AdditionalDataHolder, Backe
         deserializerMap.put("availableVersion", (n) -> { this.setAvailableVersion(n.getStringValue()); });
         deserializerMap.put("currentVersion", (n) -> { this.setCurrentVersion(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("softwareFreshness", (n) -> { this.setSoftwareFreshness(n.getEnumValue(TeamworkSoftwareFreshness::forValue)); });
+        deserializerMap.put("softwareFreshness", (n) -> { this.setSoftwareFreshness(n.getEnumValue(TeamworkSoftwareUpdateStatusSoftwareFreshness::forValue)); });
         return deserializerMap;
     }
     /**
@@ -94,10 +94,10 @@ public class TeamworkSoftwareUpdateStatus implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the softwareFreshness property value. The update status of the software. The possible values are: unknown, latest, updateAvailable, unknownFutureValue.
-     * @return a TeamworkSoftwareFreshness
+     * @return a TeamworkSoftwareUpdateStatusSoftwareFreshness
      */
     @jakarta.annotation.Nullable
-    public TeamworkSoftwareFreshness getSoftwareFreshness() {
+    public TeamworkSoftwareUpdateStatusSoftwareFreshness getSoftwareFreshness() {
         return this.backingStore.get("softwareFreshness");
     }
     /**
@@ -152,7 +152,7 @@ public class TeamworkSoftwareUpdateStatus implements AdditionalDataHolder, Backe
      * Sets the softwareFreshness property value. The update status of the software. The possible values are: unknown, latest, updateAvailable, unknownFutureValue.
      * @param value Value to set for the softwareFreshness property.
      */
-    public void setSoftwareFreshness(@jakarta.annotation.Nullable final TeamworkSoftwareFreshness value) {
+    public void setSoftwareFreshness(@jakarta.annotation.Nullable final TeamworkSoftwareUpdateStatusSoftwareFreshness value) {
         this.backingStore.set("softwareFreshness", value);
     }
 }

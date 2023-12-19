@@ -31,10 +31,10 @@ public class IosScepCertificateProfile extends IosCertificateProfileBase impleme
     }
     /**
      * Gets the certificateStore property value. Target store certificate. Possible values are: user, machine.
-     * @return a CertificateStore
+     * @return a IosScepCertificateProfileCertificateStore
      */
     @jakarta.annotation.Nullable
-    public CertificateStore getCertificateStore() {
+    public IosScepCertificateProfileCertificateStore getCertificateStore() {
         return this.backingStore.get("certificateStore");
     }
     /**
@@ -60,7 +60,7 @@ public class IosScepCertificateProfile extends IosCertificateProfileBase impleme
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("certificateStore", (n) -> { this.setCertificateStore(n.getEnumValue(CertificateStore::forValue)); });
+        deserializerMap.put("certificateStore", (n) -> { this.setCertificateStore(n.getEnumValue(IosScepCertificateProfileCertificateStore::forValue)); });
         deserializerMap.put("customSubjectAlternativeNames", (n) -> { this.setCustomSubjectAlternativeNames(n.getCollectionOfObjectValues(CustomSubjectAlternativeName::createFromDiscriminatorValue)); });
         deserializerMap.put("extendedKeyUsages", (n) -> { this.setExtendedKeyUsages(n.getCollectionOfObjectValues(ExtendedKeyUsage::createFromDiscriminatorValue)); });
         deserializerMap.put("keySize", (n) -> { this.setKeySize(n.getEnumValue(KeySize::forValue)); });
@@ -150,7 +150,7 @@ public class IosScepCertificateProfile extends IosCertificateProfileBase impleme
      * Sets the certificateStore property value. Target store certificate. Possible values are: user, machine.
      * @param value Value to set for the certificateStore property.
      */
-    public void setCertificateStore(@jakarta.annotation.Nullable final CertificateStore value) {
+    public void setCertificateStore(@jakarta.annotation.Nullable final IosScepCertificateProfileCertificateStore value) {
         this.backingStore.set("certificateStore", value);
     }
     /**

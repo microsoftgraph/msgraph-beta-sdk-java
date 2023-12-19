@@ -44,10 +44,10 @@ public class AuditLogRecord extends Entity implements Parsable {
     }
     /**
      * Gets the auditLogRecordType property value. The auditLogRecordType property
-     * @return a AuditLogRecordType
+     * @return a AuditLogRecordAuditLogRecordType
      */
     @jakarta.annotation.Nullable
-    public AuditLogRecordType getAuditLogRecordType() {
+    public AuditLogRecordAuditLogRecordType getAuditLogRecordType() {
         return this.backingStore.get("auditLogRecordType");
     }
     /**
@@ -75,7 +75,7 @@ public class AuditLogRecord extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("administrativeUnits", (n) -> { this.setAdministrativeUnits(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("auditData", (n) -> { this.setAuditData(n.getObjectValue(AuditData::createFromDiscriminatorValue)); });
-        deserializerMap.put("auditLogRecordType", (n) -> { this.setAuditLogRecordType(n.getEnumValue(AuditLogRecordType::forValue)); });
+        deserializerMap.put("auditLogRecordType", (n) -> { this.setAuditLogRecordType(n.getEnumValue(AuditLogRecordAuditLogRecordType::forValue)); });
         deserializerMap.put("clientIp", (n) -> { this.setClientIp(n.getStringValue()); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("objectId", (n) -> { this.setObjectId(n.getStringValue()); });
@@ -84,7 +84,7 @@ public class AuditLogRecord extends Entity implements Parsable {
         deserializerMap.put("service", (n) -> { this.setService(n.getStringValue()); });
         deserializerMap.put("userId", (n) -> { this.setUserId(n.getStringValue()); });
         deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
-        deserializerMap.put("userType", (n) -> { this.setUserType(n.getEnumValue(AuditLogUserType::forValue)); });
+        deserializerMap.put("userType", (n) -> { this.setUserType(n.getEnumValue(AuditLogRecordUserType::forValue)); });
         return deserializerMap;
     }
     /**
@@ -137,10 +137,10 @@ public class AuditLogRecord extends Entity implements Parsable {
     }
     /**
      * Gets the userType property value. The userType property
-     * @return a AuditLogUserType
+     * @return a AuditLogRecordUserType
      */
     @jakarta.annotation.Nullable
-    public AuditLogUserType getUserType() {
+    public AuditLogRecordUserType getUserType() {
         return this.backingStore.get("userType");
     }
     /**
@@ -181,7 +181,7 @@ public class AuditLogRecord extends Entity implements Parsable {
      * Sets the auditLogRecordType property value. The auditLogRecordType property
      * @param value Value to set for the auditLogRecordType property.
      */
-    public void setAuditLogRecordType(@jakarta.annotation.Nullable final AuditLogRecordType value) {
+    public void setAuditLogRecordType(@jakarta.annotation.Nullable final AuditLogRecordAuditLogRecordType value) {
         this.backingStore.set("auditLogRecordType", value);
     }
     /**
@@ -244,7 +244,7 @@ public class AuditLogRecord extends Entity implements Parsable {
      * Sets the userType property value. The userType property
      * @param value Value to set for the userType property.
      */
-    public void setUserType(@jakarta.annotation.Nullable final AuditLogUserType value) {
+    public void setUserType(@jakarta.annotation.Nullable final AuditLogRecordUserType value) {
         this.backingStore.set("userType", value);
     }
 }

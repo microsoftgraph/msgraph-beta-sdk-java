@@ -34,7 +34,7 @@ public class DeviceConfigurationAssignment extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("intent", (n) -> { this.setIntent(n.getEnumValue(DeviceConfigAssignmentIntent::forValue)); });
+        deserializerMap.put("intent", (n) -> { this.setIntent(n.getEnumValue(DeviceConfigurationAssignmentIntent::forValue)); });
         deserializerMap.put("source", (n) -> { this.setSource(n.getEnumValue(DeviceAndAppManagementAssignmentSource::forValue)); });
         deserializerMap.put("sourceId", (n) -> { this.setSourceId(n.getStringValue()); });
         deserializerMap.put("target", (n) -> { this.setTarget(n.getObjectValue(DeviceAndAppManagementAssignmentTarget::createFromDiscriminatorValue)); });
@@ -42,10 +42,10 @@ public class DeviceConfigurationAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the intent property value. The admin intent to apply or remove the profile. Possible values are: apply, remove.
-     * @return a DeviceConfigAssignmentIntent
+     * @return a DeviceConfigurationAssignmentIntent
      */
     @jakarta.annotation.Nullable
-    public DeviceConfigAssignmentIntent getIntent() {
+    public DeviceConfigurationAssignmentIntent getIntent() {
         return this.backingStore.get("intent");
     }
     /**
@@ -87,7 +87,7 @@ public class DeviceConfigurationAssignment extends Entity implements Parsable {
      * Sets the intent property value. The admin intent to apply or remove the profile. Possible values are: apply, remove.
      * @param value Value to set for the intent property.
      */
-    public void setIntent(@jakarta.annotation.Nullable final DeviceConfigAssignmentIntent value) {
+    public void setIntent(@jakarta.annotation.Nullable final DeviceConfigurationAssignmentIntent value) {
         this.backingStore.set("intent", value);
     }
     /**

@@ -58,10 +58,10 @@ public class TenantStatusInformation implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the delegatedPrivilegeStatus property value. The status of the delegated admin privilege relationship between the managing entity and the managed tenant. Possible values are: none, delegatedAdminPrivileges, unknownFutureValue, granularDelegatedAdminPrivileges, delegatedAndGranularDelegetedAdminPrivileges. You must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: granularDelegatedAdminPrivileges , delegatedAndGranularDelegetedAdminPrivileges. Optional. Read-only.
-     * @return a DelegatedPrivilegeStatus
+     * @return a TenantStatusInformationDelegatedPrivilegeStatus
      */
     @jakarta.annotation.Nullable
-    public DelegatedPrivilegeStatus getDelegatedPrivilegeStatus() {
+    public TenantStatusInformationDelegatedPrivilegeStatus getDelegatedPrivilegeStatus() {
         return this.backingStore.get("delegatedPrivilegeStatus");
     }
     /**
@@ -71,15 +71,15 @@ public class TenantStatusInformation implements AdditionalDataHolder, BackedMode
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(10);
-        deserializerMap.put("delegatedPrivilegeStatus", (n) -> { this.setDelegatedPrivilegeStatus(n.getEnumValue(DelegatedPrivilegeStatus::forValue)); });
+        deserializerMap.put("delegatedPrivilegeStatus", (n) -> { this.setDelegatedPrivilegeStatus(n.getEnumValue(TenantStatusInformationDelegatedPrivilegeStatus::forValue)); });
         deserializerMap.put("lastDelegatedPrivilegeRefreshDateTime", (n) -> { this.setLastDelegatedPrivilegeRefreshDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("offboardedByUserId", (n) -> { this.setOffboardedByUserId(n.getStringValue()); });
         deserializerMap.put("offboardedDateTime", (n) -> { this.setOffboardedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("onboardedByUserId", (n) -> { this.setOnboardedByUserId(n.getStringValue()); });
         deserializerMap.put("onboardedDateTime", (n) -> { this.setOnboardedDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("onboardingStatus", (n) -> { this.setOnboardingStatus(n.getEnumValue(TenantOnboardingStatus::forValue)); });
-        deserializerMap.put("tenantOnboardingEligibilityReason", (n) -> { this.setTenantOnboardingEligibilityReason(n.getEnumValue(TenantOnboardingEligibilityReason::forValue)); });
+        deserializerMap.put("onboardingStatus", (n) -> { this.setOnboardingStatus(n.getEnumValue(TenantStatusInformationOnboardingStatus::forValue)); });
+        deserializerMap.put("tenantOnboardingEligibilityReason", (n) -> { this.setTenantOnboardingEligibilityReason(n.getEnumValue(TenantStatusInformationTenantOnboardingEligibilityReason::forValue)); });
         deserializerMap.put("workloadStatuses", (n) -> { this.setWorkloadStatuses(n.getCollectionOfObjectValues(WorkloadStatus::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -133,18 +133,18 @@ public class TenantStatusInformation implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the onboardingStatus property value. The onboarding status for the managed tenant.. Possible values are: ineligible, inProcess, active, inactive, unknownFutureValue. Optional. Read-only.
-     * @return a TenantOnboardingStatus
+     * @return a TenantStatusInformationOnboardingStatus
      */
     @jakarta.annotation.Nullable
-    public TenantOnboardingStatus getOnboardingStatus() {
+    public TenantStatusInformationOnboardingStatus getOnboardingStatus() {
         return this.backingStore.get("onboardingStatus");
     }
     /**
      * Gets the tenantOnboardingEligibilityReason property value. Organization's onboarding eligibility reason in Microsoft 365 Lighthouse.. Possible values are: none, contractType, delegatedAdminPrivileges,usersCount,license and unknownFutureValue. Optional. Read-only.
-     * @return a TenantOnboardingEligibilityReason
+     * @return a TenantStatusInformationTenantOnboardingEligibilityReason
      */
     @jakarta.annotation.Nullable
-    public TenantOnboardingEligibilityReason getTenantOnboardingEligibilityReason() {
+    public TenantStatusInformationTenantOnboardingEligibilityReason getTenantOnboardingEligibilityReason() {
         return this.backingStore.get("tenantOnboardingEligibilityReason");
     }
     /**
@@ -192,7 +192,7 @@ public class TenantStatusInformation implements AdditionalDataHolder, BackedMode
      * Sets the delegatedPrivilegeStatus property value. The status of the delegated admin privilege relationship between the managing entity and the managed tenant. Possible values are: none, delegatedAdminPrivileges, unknownFutureValue, granularDelegatedAdminPrivileges, delegatedAndGranularDelegetedAdminPrivileges. You must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: granularDelegatedAdminPrivileges , delegatedAndGranularDelegetedAdminPrivileges. Optional. Read-only.
      * @param value Value to set for the delegatedPrivilegeStatus property.
      */
-    public void setDelegatedPrivilegeStatus(@jakarta.annotation.Nullable final DelegatedPrivilegeStatus value) {
+    public void setDelegatedPrivilegeStatus(@jakarta.annotation.Nullable final TenantStatusInformationDelegatedPrivilegeStatus value) {
         this.backingStore.set("delegatedPrivilegeStatus", value);
     }
     /**
@@ -241,14 +241,14 @@ public class TenantStatusInformation implements AdditionalDataHolder, BackedMode
      * Sets the onboardingStatus property value. The onboarding status for the managed tenant.. Possible values are: ineligible, inProcess, active, inactive, unknownFutureValue. Optional. Read-only.
      * @param value Value to set for the onboardingStatus property.
      */
-    public void setOnboardingStatus(@jakarta.annotation.Nullable final TenantOnboardingStatus value) {
+    public void setOnboardingStatus(@jakarta.annotation.Nullable final TenantStatusInformationOnboardingStatus value) {
         this.backingStore.set("onboardingStatus", value);
     }
     /**
      * Sets the tenantOnboardingEligibilityReason property value. Organization's onboarding eligibility reason in Microsoft 365 Lighthouse.. Possible values are: none, contractType, delegatedAdminPrivileges,usersCount,license and unknownFutureValue. Optional. Read-only.
      * @param value Value to set for the tenantOnboardingEligibilityReason property.
      */
-    public void setTenantOnboardingEligibilityReason(@jakarta.annotation.Nullable final TenantOnboardingEligibilityReason value) {
+    public void setTenantOnboardingEligibilityReason(@jakarta.annotation.Nullable final TenantStatusInformationTenantOnboardingEligibilityReason value) {
         this.backingStore.set("tenantOnboardingEligibilityReason", value);
     }
     /**

@@ -34,10 +34,10 @@ public class MeetingRegistrationBase extends Entity implements Parsable {
     }
     /**
      * Gets the allowedRegistrant property value. Specifies who can register for the meeting.
-     * @return a MeetingAudience
+     * @return a MeetingRegistrationBaseAllowedRegistrant
      */
     @jakarta.annotation.Nullable
-    public MeetingAudience getAllowedRegistrant() {
+    public MeetingRegistrationBaseAllowedRegistrant getAllowedRegistrant() {
         return this.backingStore.get("allowedRegistrant");
     }
     /**
@@ -47,7 +47,7 @@ public class MeetingRegistrationBase extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("allowedRegistrant", (n) -> { this.setAllowedRegistrant(n.getEnumValue(MeetingAudience::forValue)); });
+        deserializerMap.put("allowedRegistrant", (n) -> { this.setAllowedRegistrant(n.getEnumValue(MeetingRegistrationBaseAllowedRegistrant::forValue)); });
         deserializerMap.put("registrants", (n) -> { this.setRegistrants(n.getCollectionOfObjectValues(MeetingRegistrantBase::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -73,7 +73,7 @@ public class MeetingRegistrationBase extends Entity implements Parsable {
      * Sets the allowedRegistrant property value. Specifies who can register for the meeting.
      * @param value Value to set for the allowedRegistrant property.
      */
-    public void setAllowedRegistrant(@jakarta.annotation.Nullable final MeetingAudience value) {
+    public void setAllowedRegistrant(@jakarta.annotation.Nullable final MeetingRegistrationBaseAllowedRegistrant value) {
         this.backingStore.set("allowedRegistrant", value);
     }
     /**

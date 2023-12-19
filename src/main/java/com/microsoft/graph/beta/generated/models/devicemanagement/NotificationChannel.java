@@ -62,17 +62,17 @@ public class NotificationChannel implements AdditionalDataHolder, BackedModel, P
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
-        deserializerMap.put("notificationChannelType", (n) -> { this.setNotificationChannelType(n.getEnumValue(NotificationChannelType::forValue)); });
+        deserializerMap.put("notificationChannelType", (n) -> { this.setNotificationChannelType(n.getEnumValue(NotificationChannelNotificationChannelType::forValue)); });
         deserializerMap.put("notificationReceivers", (n) -> { this.setNotificationReceivers(n.getCollectionOfObjectValues(NotificationReceiver::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;
     }
     /**
      * Gets the notificationChannelType property value. The type of the notification channel. The possible values are: portal, email, phoneCall, sms, unknownFutureValue.
-     * @return a NotificationChannelType
+     * @return a NotificationChannelNotificationChannelType
      */
     @jakarta.annotation.Nullable
-    public NotificationChannelType getNotificationChannelType() {
+    public NotificationChannelNotificationChannelType getNotificationChannelType() {
         return this.backingStore.get("notificationChannelType");
     }
     /**
@@ -121,7 +121,7 @@ public class NotificationChannel implements AdditionalDataHolder, BackedModel, P
      * Sets the notificationChannelType property value. The type of the notification channel. The possible values are: portal, email, phoneCall, sms, unknownFutureValue.
      * @param value Value to set for the notificationChannelType property.
      */
-    public void setNotificationChannelType(@jakarta.annotation.Nullable final NotificationChannelType value) {
+    public void setNotificationChannelType(@jakarta.annotation.Nullable final NotificationChannelNotificationChannelType value) {
         this.backingStore.set("notificationChannelType", value);
     }
     /**

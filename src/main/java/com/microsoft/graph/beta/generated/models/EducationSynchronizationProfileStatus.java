@@ -43,7 +43,7 @@ public class EducationSynchronizationProfileStatus extends Entity implements Par
         deserializerMap.put("errorCount", (n) -> { this.setErrorCount(n.getLongValue()); });
         deserializerMap.put("lastActivityDateTime", (n) -> { this.setLastActivityDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("lastSynchronizationDateTime", (n) -> { this.setLastSynchronizationDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(EducationSynchronizationStatus::forValue)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(EducationSynchronizationProfileStatusStatus::forValue)); });
         deserializerMap.put("statusMessage", (n) -> { this.setStatusMessage(n.getStringValue()); });
         return deserializerMap;
     }
@@ -65,10 +65,10 @@ public class EducationSynchronizationProfileStatus extends Entity implements Par
     }
     /**
      * Gets the status property value. The status of a sync. The possible values are: paused, inProgress, success, error, validationError, quarantined, unknownFutureValue, extracting, validating. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: extracting, validating.
-     * @return a EducationSynchronizationStatus
+     * @return a EducationSynchronizationProfileStatusStatus
      */
     @jakarta.annotation.Nullable
-    public EducationSynchronizationStatus getStatus() {
+    public EducationSynchronizationProfileStatusStatus getStatus() {
         return this.backingStore.get("status");
     }
     /**
@@ -117,7 +117,7 @@ public class EducationSynchronizationProfileStatus extends Entity implements Par
      * Sets the status property value. The status of a sync. The possible values are: paused, inProgress, success, error, validationError, quarantined, unknownFutureValue, extracting, validating. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: extracting, validating.
      * @param value Value to set for the status property.
      */
-    public void setStatus(@jakarta.annotation.Nullable final EducationSynchronizationStatus value) {
+    public void setStatus(@jakarta.annotation.Nullable final EducationSynchronizationProfileStatusStatus value) {
         this.backingStore.set("status", value);
     }
     /**

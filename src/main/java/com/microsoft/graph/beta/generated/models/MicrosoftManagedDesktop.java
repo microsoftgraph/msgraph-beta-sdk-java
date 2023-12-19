@@ -61,11 +61,20 @@ public class MicrosoftManagedDesktop implements AdditionalDataHolder, BackedMode
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        deserializerMap.put("managedType", (n) -> { this.setManagedType(n.getEnumValue(MicrosoftManagedDesktopManagedType::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("profile", (n) -> { this.setProfile(n.getStringValue()); });
         deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(MicrosoftManagedDesktopType::forValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the managedType property value. The managedType property
+     * @return a MicrosoftManagedDesktopManagedType
+     */
+    @jakarta.annotation.Nullable
+    public MicrosoftManagedDesktopManagedType getManagedType() {
+        return this.backingStore.get("managedType");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -97,6 +106,7 @@ public class MicrosoftManagedDesktop implements AdditionalDataHolder, BackedMode
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeEnumValue("managedType", this.getManagedType());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("profile", this.getProfile());
         writer.writeEnumValue("type", this.getType());
@@ -116,6 +126,13 @@ public class MicrosoftManagedDesktop implements AdditionalDataHolder, BackedMode
     public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
         Objects.requireNonNull(value);
         this.backingStore = value;
+    }
+    /**
+     * Sets the managedType property value. The managedType property
+     * @param value Value to set for the managedType property.
+     */
+    public void setManagedType(@jakarta.annotation.Nullable final MicrosoftManagedDesktopManagedType value) {
+        this.backingStore.set("managedType", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property

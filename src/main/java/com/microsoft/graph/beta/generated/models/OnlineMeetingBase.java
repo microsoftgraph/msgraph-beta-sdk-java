@@ -50,18 +50,18 @@ public class OnlineMeetingBase extends Entity implements Parsable {
     }
     /**
      * Gets the allowedPresenters property value. Specifies who can be a presenter in a meeting.
-     * @return a OnlineMeetingPresenters
+     * @return a OnlineMeetingBaseAllowedPresenters
      */
     @jakarta.annotation.Nullable
-    public OnlineMeetingPresenters getAllowedPresenters() {
+    public OnlineMeetingBaseAllowedPresenters getAllowedPresenters() {
         return this.backingStore.get("allowedPresenters");
     }
     /**
      * Gets the allowMeetingChat property value. Specifies the mode of meeting chat.
-     * @return a MeetingChatMode
+     * @return a OnlineMeetingBaseAllowMeetingChat
      */
     @jakarta.annotation.Nullable
-    public MeetingChatMode getAllowMeetingChat() {
+    public OnlineMeetingBaseAllowMeetingChat getAllowMeetingChat() {
         return this.backingStore.get("allowMeetingChat");
     }
     /**
@@ -98,10 +98,10 @@ public class OnlineMeetingBase extends Entity implements Parsable {
     }
     /**
      * Gets the anonymizeIdentityForRoles property value. Specifies whose identity is anonymized in the meeting. Possible values are: attendee. The attendee value can't be removed through a PATCH operation once added.
-     * @return a java.util.List<OnlineMeetingRole>
+     * @return a java.util.List<OnlineMeetingBaseAnonymizeIdentityForRoles>
      */
     @jakarta.annotation.Nullable
-    public java.util.List<OnlineMeetingRole> getAnonymizeIdentityForRoles() {
+    public java.util.List<OnlineMeetingBaseAnonymizeIdentityForRoles> getAnonymizeIdentityForRoles() {
         return this.backingStore.get("anonymizeIdentityForRoles");
     }
     /**
@@ -145,13 +145,13 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("allowAttendeeToEnableCamera", (n) -> { this.setAllowAttendeeToEnableCamera(n.getBooleanValue()); });
         deserializerMap.put("allowAttendeeToEnableMic", (n) -> { this.setAllowAttendeeToEnableMic(n.getBooleanValue()); });
-        deserializerMap.put("allowedPresenters", (n) -> { this.setAllowedPresenters(n.getEnumValue(OnlineMeetingPresenters::forValue)); });
-        deserializerMap.put("allowMeetingChat", (n) -> { this.setAllowMeetingChat(n.getEnumValue(MeetingChatMode::forValue)); });
+        deserializerMap.put("allowedPresenters", (n) -> { this.setAllowedPresenters(n.getEnumValue(OnlineMeetingBaseAllowedPresenters::forValue)); });
+        deserializerMap.put("allowMeetingChat", (n) -> { this.setAllowMeetingChat(n.getEnumValue(OnlineMeetingBaseAllowMeetingChat::forValue)); });
         deserializerMap.put("allowParticipantsToChangeName", (n) -> { this.setAllowParticipantsToChangeName(n.getBooleanValue()); });
         deserializerMap.put("allowRecording", (n) -> { this.setAllowRecording(n.getBooleanValue()); });
         deserializerMap.put("allowTeamworkReactions", (n) -> { this.setAllowTeamworkReactions(n.getBooleanValue()); });
         deserializerMap.put("allowTranscription", (n) -> { this.setAllowTranscription(n.getBooleanValue()); });
-        deserializerMap.put("anonymizeIdentityForRoles", (n) -> { this.setAnonymizeIdentityForRoles(n.getCollectionOfEnumValues(OnlineMeetingRole::forValue)); });
+        deserializerMap.put("anonymizeIdentityForRoles", (n) -> { this.setAnonymizeIdentityForRoles(n.getCollectionOfEnumValues(OnlineMeetingBaseAnonymizeIdentityForRoles::forValue)); });
         deserializerMap.put("attendanceReports", (n) -> { this.setAttendanceReports(n.getCollectionOfObjectValues(MeetingAttendanceReport::createFromDiscriminatorValue)); });
         deserializerMap.put("audioConferencing", (n) -> { this.setAudioConferencing(n.getObjectValue(AudioConferencing::createFromDiscriminatorValue)); });
         deserializerMap.put("chatInfo", (n) -> { this.setChatInfo(n.getObjectValue(ChatInfo::createFromDiscriminatorValue)); });
@@ -163,7 +163,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         deserializerMap.put("joinWebUrl", (n) -> { this.setJoinWebUrl(n.getStringValue()); });
         deserializerMap.put("lobbyBypassSettings", (n) -> { this.setLobbyBypassSettings(n.getObjectValue(LobbyBypassSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("recordAutomatically", (n) -> { this.setRecordAutomatically(n.getBooleanValue()); });
-        deserializerMap.put("shareMeetingChatHistoryDefault", (n) -> { this.setShareMeetingChatHistoryDefault(n.getEnumValue(MeetingChatHistoryDefaultMode::forValue)); });
+        deserializerMap.put("shareMeetingChatHistoryDefault", (n) -> { this.setShareMeetingChatHistoryDefault(n.getEnumValue(OnlineMeetingBaseShareMeetingChatHistoryDefault::forValue)); });
         deserializerMap.put("subject", (n) -> { this.setSubject(n.getStringValue()); });
         deserializerMap.put("videoTeleconferenceId", (n) -> { this.setVideoTeleconferenceId(n.getStringValue()); });
         deserializerMap.put("watermarkProtection", (n) -> { this.setWatermarkProtection(n.getObjectValue(WatermarkProtectionValues::createFromDiscriminatorValue)); });
@@ -227,10 +227,10 @@ public class OnlineMeetingBase extends Entity implements Parsable {
     }
     /**
      * Gets the shareMeetingChatHistoryDefault property value. The shareMeetingChatHistoryDefault property
-     * @return a MeetingChatHistoryDefaultMode
+     * @return a OnlineMeetingBaseShareMeetingChatHistoryDefault
      */
     @jakarta.annotation.Nullable
-    public MeetingChatHistoryDefaultMode getShareMeetingChatHistoryDefault() {
+    public OnlineMeetingBaseShareMeetingChatHistoryDefault getShareMeetingChatHistoryDefault() {
         return this.backingStore.get("shareMeetingChatHistoryDefault");
     }
     /**
@@ -307,14 +307,14 @@ public class OnlineMeetingBase extends Entity implements Parsable {
      * Sets the allowedPresenters property value. Specifies who can be a presenter in a meeting.
      * @param value Value to set for the allowedPresenters property.
      */
-    public void setAllowedPresenters(@jakarta.annotation.Nullable final OnlineMeetingPresenters value) {
+    public void setAllowedPresenters(@jakarta.annotation.Nullable final OnlineMeetingBaseAllowedPresenters value) {
         this.backingStore.set("allowedPresenters", value);
     }
     /**
      * Sets the allowMeetingChat property value. Specifies the mode of meeting chat.
      * @param value Value to set for the allowMeetingChat property.
      */
-    public void setAllowMeetingChat(@jakarta.annotation.Nullable final MeetingChatMode value) {
+    public void setAllowMeetingChat(@jakarta.annotation.Nullable final OnlineMeetingBaseAllowMeetingChat value) {
         this.backingStore.set("allowMeetingChat", value);
     }
     /**
@@ -349,7 +349,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
      * Sets the anonymizeIdentityForRoles property value. Specifies whose identity is anonymized in the meeting. Possible values are: attendee. The attendee value can't be removed through a PATCH operation once added.
      * @param value Value to set for the anonymizeIdentityForRoles property.
      */
-    public void setAnonymizeIdentityForRoles(@jakarta.annotation.Nullable final java.util.List<OnlineMeetingRole> value) {
+    public void setAnonymizeIdentityForRoles(@jakarta.annotation.Nullable final java.util.List<OnlineMeetingBaseAnonymizeIdentityForRoles> value) {
         this.backingStore.set("anonymizeIdentityForRoles", value);
     }
     /**
@@ -433,7 +433,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
      * Sets the shareMeetingChatHistoryDefault property value. The shareMeetingChatHistoryDefault property
      * @param value Value to set for the shareMeetingChatHistoryDefault property.
      */
-    public void setShareMeetingChatHistoryDefault(@jakarta.annotation.Nullable final MeetingChatHistoryDefaultMode value) {
+    public void setShareMeetingChatHistoryDefault(@jakarta.annotation.Nullable final OnlineMeetingBaseShareMeetingChatHistoryDefault value) {
         this.backingStore.set("shareMeetingChatHistoryDefault", value);
     }
     /**

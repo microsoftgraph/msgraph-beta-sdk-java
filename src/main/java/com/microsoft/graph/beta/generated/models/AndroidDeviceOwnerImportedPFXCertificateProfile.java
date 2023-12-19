@@ -30,10 +30,10 @@ public class AndroidDeviceOwnerImportedPFXCertificateProfile extends AndroidDevi
     }
     /**
      * Gets the certificateAccessType property value. Certificate access type. Possible values are: userApproval, specificApps, unknownFutureValue.
-     * @return a AndroidDeviceOwnerCertificateAccessType
+     * @return a AndroidDeviceOwnerImportedPFXCertificateProfileCertificateAccessType
      */
     @jakarta.annotation.Nullable
-    public AndroidDeviceOwnerCertificateAccessType getCertificateAccessType() {
+    public AndroidDeviceOwnerImportedPFXCertificateProfileCertificateAccessType getCertificateAccessType() {
         return this.backingStore.get("certificateAccessType");
     }
     /**
@@ -43,7 +43,7 @@ public class AndroidDeviceOwnerImportedPFXCertificateProfile extends AndroidDevi
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("certificateAccessType", (n) -> { this.setCertificateAccessType(n.getEnumValue(AndroidDeviceOwnerCertificateAccessType::forValue)); });
+        deserializerMap.put("certificateAccessType", (n) -> { this.setCertificateAccessType(n.getEnumValue(AndroidDeviceOwnerImportedPFXCertificateProfileCertificateAccessType::forValue)); });
         deserializerMap.put("intendedPurpose", (n) -> { this.setIntendedPurpose(n.getEnumValue(IntendedPurpose::forValue)); });
         deserializerMap.put("managedDeviceCertificateStates", (n) -> { this.setManagedDeviceCertificateStates(n.getCollectionOfObjectValues(ManagedDeviceCertificateState::createFromDiscriminatorValue)); });
         deserializerMap.put("silentCertificateAccessDetails", (n) -> { this.setSilentCertificateAccessDetails(n.getCollectionOfObjectValues(AndroidDeviceOwnerSilentCertificateAccess::createFromDiscriminatorValue)); });
@@ -89,7 +89,7 @@ public class AndroidDeviceOwnerImportedPFXCertificateProfile extends AndroidDevi
      * Sets the certificateAccessType property value. Certificate access type. Possible values are: userApproval, specificApps, unknownFutureValue.
      * @param value Value to set for the certificateAccessType property.
      */
-    public void setCertificateAccessType(@jakarta.annotation.Nullable final AndroidDeviceOwnerCertificateAccessType value) {
+    public void setCertificateAccessType(@jakarta.annotation.Nullable final AndroidDeviceOwnerImportedPFXCertificateProfileCertificateAccessType value) {
         this.backingStore.set("certificateAccessType", value);
     }
     /**

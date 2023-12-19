@@ -63,11 +63,11 @@ public class Schedule extends Entity implements Parsable {
         deserializerMap.put("openShiftChangeRequests", (n) -> { this.setOpenShiftChangeRequests(n.getCollectionOfObjectValues(OpenShiftChangeRequest::createFromDiscriminatorValue)); });
         deserializerMap.put("openShifts", (n) -> { this.setOpenShifts(n.getCollectionOfObjectValues(OpenShift::createFromDiscriminatorValue)); });
         deserializerMap.put("openShiftsEnabled", (n) -> { this.setOpenShiftsEnabled(n.getBooleanValue()); });
-        deserializerMap.put("provisionStatus", (n) -> { this.setProvisionStatus(n.getEnumValue(OperationStatus::forValue)); });
+        deserializerMap.put("provisionStatus", (n) -> { this.setProvisionStatus(n.getEnumValue(ScheduleProvisionStatus::forValue)); });
         deserializerMap.put("provisionStatusCode", (n) -> { this.setProvisionStatusCode(n.getStringValue()); });
         deserializerMap.put("schedulingGroups", (n) -> { this.setSchedulingGroups(n.getCollectionOfObjectValues(SchedulingGroup::createFromDiscriminatorValue)); });
         deserializerMap.put("shifts", (n) -> { this.setShifts(n.getCollectionOfObjectValues(Shift::createFromDiscriminatorValue)); });
-        deserializerMap.put("startDayOfWeek", (n) -> { this.setStartDayOfWeek(n.getEnumValue(DayOfWeek::forValue)); });
+        deserializerMap.put("startDayOfWeek", (n) -> { this.setStartDayOfWeek(n.getEnumValue(ScheduleStartDayOfWeek::forValue)); });
         deserializerMap.put("swapShiftsChangeRequests", (n) -> { this.setSwapShiftsChangeRequests(n.getCollectionOfObjectValues(SwapShiftsChangeRequest::createFromDiscriminatorValue)); });
         deserializerMap.put("swapShiftsRequestsEnabled", (n) -> { this.setSwapShiftsRequestsEnabled(n.getBooleanValue()); });
         deserializerMap.put("timeCards", (n) -> { this.setTimeCards(n.getCollectionOfObjectValues(TimeCard::createFromDiscriminatorValue)); });
@@ -123,10 +123,10 @@ public class Schedule extends Entity implements Parsable {
     }
     /**
      * Gets the provisionStatus property value. The status of the schedule provisioning. The possible values are notStarted, running, completed, failed.
-     * @return a OperationStatus
+     * @return a ScheduleProvisionStatus
      */
     @jakarta.annotation.Nullable
-    public OperationStatus getProvisionStatus() {
+    public ScheduleProvisionStatus getProvisionStatus() {
         return this.backingStore.get("provisionStatus");
     }
     /**
@@ -155,10 +155,10 @@ public class Schedule extends Entity implements Parsable {
     }
     /**
      * Gets the startDayOfWeek property value. Indicates the start day of the week.
-     * @return a DayOfWeek
+     * @return a ScheduleStartDayOfWeek
      */
     @jakarta.annotation.Nullable
-    public DayOfWeek getStartDayOfWeek() {
+    public ScheduleStartDayOfWeek getStartDayOfWeek() {
         return this.backingStore.get("startDayOfWeek");
     }
     /**
@@ -339,7 +339,7 @@ public class Schedule extends Entity implements Parsable {
      * Sets the provisionStatus property value. The status of the schedule provisioning. The possible values are notStarted, running, completed, failed.
      * @param value Value to set for the provisionStatus property.
      */
-    public void setProvisionStatus(@jakarta.annotation.Nullable final OperationStatus value) {
+    public void setProvisionStatus(@jakarta.annotation.Nullable final ScheduleProvisionStatus value) {
         this.backingStore.set("provisionStatus", value);
     }
     /**
@@ -367,7 +367,7 @@ public class Schedule extends Entity implements Parsable {
      * Sets the startDayOfWeek property value. Indicates the start day of the week.
      * @param value Value to set for the startDayOfWeek property.
      */
-    public void setStartDayOfWeek(@jakarta.annotation.Nullable final DayOfWeek value) {
+    public void setStartDayOfWeek(@jakarta.annotation.Nullable final ScheduleStartDayOfWeek value) {
         this.backingStore.set("startDayOfWeek", value);
     }
     /**

@@ -72,7 +72,7 @@ public class QualityUpdateCveSeverityInformation implements AdditionalDataHolder
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("exploitedCves", (n) -> { this.setExploitedCves(n.getCollectionOfObjectValues(CveInformation::createFromDiscriminatorValue)); });
         deserializerMap.put("maxBaseScore", (n) -> { this.setMaxBaseScore(n.getDoubleValue()); });
-        deserializerMap.put("maxSeverity", (n) -> { this.setMaxSeverity(n.getEnumValue(CveSeverityLevel::forValue)); });
+        deserializerMap.put("maxSeverity", (n) -> { this.setMaxSeverity(n.getEnumValue(QualityUpdateCveSeverityInformationMaxSeverity::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;
     }
@@ -86,10 +86,10 @@ public class QualityUpdateCveSeverityInformation implements AdditionalDataHolder
     }
     /**
      * Gets the maxSeverity property value. The maxSeverity property
-     * @return a CveSeverityLevel
+     * @return a QualityUpdateCveSeverityInformationMaxSeverity
      */
     @jakarta.annotation.Nullable
-    public CveSeverityLevel getMaxSeverity() {
+    public QualityUpdateCveSeverityInformationMaxSeverity getMaxSeverity() {
         return this.backingStore.get("maxSeverity");
     }
     /**
@@ -145,7 +145,7 @@ public class QualityUpdateCveSeverityInformation implements AdditionalDataHolder
      * Sets the maxSeverity property value. The maxSeverity property
      * @param value Value to set for the maxSeverity property.
      */
-    public void setMaxSeverity(@jakarta.annotation.Nullable final CveSeverityLevel value) {
+    public void setMaxSeverity(@jakarta.annotation.Nullable final QualityUpdateCveSeverityInformationMaxSeverity value) {
         this.backingStore.set("maxSeverity", value);
     }
     /**

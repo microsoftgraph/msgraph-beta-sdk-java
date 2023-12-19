@@ -27,10 +27,10 @@ public class TeamTemplateDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the audience property value. Describes the audience the team template is available to. The possible values are: organization, user, public, unknownFutureValue.
-     * @return a TeamTemplateAudience
+     * @return a TeamTemplateDefinitionAudience
      */
     @jakarta.annotation.Nullable
-    public TeamTemplateAudience getAudience() {
+    public TeamTemplateDefinitionAudience getAudience() {
         return this.backingStore.get("audience");
     }
     /**
@@ -64,7 +64,7 @@ public class TeamTemplateDefinition extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("audience", (n) -> { this.setAudience(n.getEnumValue(TeamTemplateAudience::forValue)); });
+        deserializerMap.put("audience", (n) -> { this.setAudience(n.getEnumValue(TeamTemplateDefinitionAudience::forValue)); });
         deserializerMap.put("categories", (n) -> { this.setCategories(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
@@ -166,7 +166,7 @@ public class TeamTemplateDefinition extends Entity implements Parsable {
      * Sets the audience property value. Describes the audience the team template is available to. The possible values are: organization, user, public, unknownFutureValue.
      * @param value Value to set for the audience property.
      */
-    public void setAudience(@jakarta.annotation.Nullable final TeamTemplateAudience value) {
+    public void setAudience(@jakarta.annotation.Nullable final TeamTemplateDefinitionAudience value) {
         this.backingStore.set("audience", value);
     }
     /**

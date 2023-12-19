@@ -70,10 +70,10 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Par
     }
     /**
      * Gets the deadPeerDetectionRate property value. Determine how often to check if a peer connection is still active. . Possible values are: medium, none, low, high.
-     * @return a VpnDeadPeerDetectionRate
+     * @return a IosikEv2VpnConfigurationDeadPeerDetectionRate
      */
     @jakarta.annotation.Nullable
-    public VpnDeadPeerDetectionRate getDeadPeerDetectionRate() {
+    public IosikEv2VpnConfigurationDeadPeerDetectionRate getDeadPeerDetectionRate() {
         return this.backingStore.get("deadPeerDetectionRate");
     }
     /**
@@ -144,7 +144,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Par
         deserializerMap.put("alwaysOnConfiguration", (n) -> { this.setAlwaysOnConfiguration(n.getObjectValue(AppleVpnAlwaysOnConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("childSecurityAssociationParameters", (n) -> { this.setChildSecurityAssociationParameters(n.getObjectValue(IosVpnSecurityAssociationParameters::createFromDiscriminatorValue)); });
         deserializerMap.put("clientAuthenticationType", (n) -> { this.setClientAuthenticationType(n.getEnumValue(VpnClientAuthenticationType::forValue)); });
-        deserializerMap.put("deadPeerDetectionRate", (n) -> { this.setDeadPeerDetectionRate(n.getEnumValue(VpnDeadPeerDetectionRate::forValue)); });
+        deserializerMap.put("deadPeerDetectionRate", (n) -> { this.setDeadPeerDetectionRate(n.getEnumValue(IosikEv2VpnConfigurationDeadPeerDetectionRate::forValue)); });
         deserializerMap.put("disableMobilityAndMultihoming", (n) -> { this.setDisableMobilityAndMultihoming(n.getBooleanValue()); });
         deserializerMap.put("disableRedirect", (n) -> { this.setDisableRedirect(n.getBooleanValue()); });
         deserializerMap.put("enableAlwaysOnConfiguration", (n) -> { this.setEnableAlwaysOnConfiguration(n.getBooleanValue()); });
@@ -158,7 +158,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Par
         deserializerMap.put("securityAssociationParameters", (n) -> { this.setSecurityAssociationParameters(n.getObjectValue(IosVpnSecurityAssociationParameters::createFromDiscriminatorValue)); });
         deserializerMap.put("serverCertificateCommonName", (n) -> { this.setServerCertificateCommonName(n.getStringValue()); });
         deserializerMap.put("serverCertificateIssuerCommonName", (n) -> { this.setServerCertificateIssuerCommonName(n.getStringValue()); });
-        deserializerMap.put("serverCertificateType", (n) -> { this.setServerCertificateType(n.getEnumValue(VpnServerCertificateType::forValue)); });
+        deserializerMap.put("serverCertificateType", (n) -> { this.setServerCertificateType(n.getEnumValue(IosikEv2VpnConfigurationServerCertificateType::forValue)); });
         deserializerMap.put("sharedSecret", (n) -> { this.setSharedSecret(n.getStringValue()); });
         deserializerMap.put("tlsMaximumVersion", (n) -> { this.setTlsMaximumVersion(n.getStringValue()); });
         deserializerMap.put("tlsMinimumVersion", (n) -> { this.setTlsMinimumVersion(n.getStringValue()); });
@@ -214,10 +214,10 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Par
     }
     /**
      * Gets the serverCertificateType property value. The type of certificate the VPN server will present to the VPN client for authentication. Possible values are: rsa, ecdsa256, ecdsa384, ecdsa521.
-     * @return a VpnServerCertificateType
+     * @return a IosikEv2VpnConfigurationServerCertificateType
      */
     @jakarta.annotation.Nullable
-    public VpnServerCertificateType getServerCertificateType() {
+    public IosikEv2VpnConfigurationServerCertificateType getServerCertificateType() {
         return this.backingStore.get("serverCertificateType");
     }
     /**
@@ -314,7 +314,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Par
      * Sets the deadPeerDetectionRate property value. Determine how often to check if a peer connection is still active. . Possible values are: medium, none, low, high.
      * @param value Value to set for the deadPeerDetectionRate property.
      */
-    public void setDeadPeerDetectionRate(@jakarta.annotation.Nullable final VpnDeadPeerDetectionRate value) {
+    public void setDeadPeerDetectionRate(@jakarta.annotation.Nullable final IosikEv2VpnConfigurationDeadPeerDetectionRate value) {
         this.backingStore.set("deadPeerDetectionRate", value);
     }
     /**
@@ -412,7 +412,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Par
      * Sets the serverCertificateType property value. The type of certificate the VPN server will present to the VPN client for authentication. Possible values are: rsa, ecdsa256, ecdsa384, ecdsa521.
      * @param value Value to set for the serverCertificateType property.
      */
-    public void setServerCertificateType(@jakarta.annotation.Nullable final VpnServerCertificateType value) {
+    public void setServerCertificateType(@jakarta.annotation.Nullable final IosikEv2VpnConfigurationServerCertificateType value) {
         this.backingStore.set("serverCertificateType", value);
     }
     /**

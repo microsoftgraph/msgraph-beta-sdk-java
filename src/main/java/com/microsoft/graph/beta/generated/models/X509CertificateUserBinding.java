@@ -64,7 +64,7 @@ public class X509CertificateUserBinding implements AdditionalDataHolder, BackedM
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("priority", (n) -> { this.setPriority(n.getIntegerValue()); });
-        deserializerMap.put("trustAffinityLevel", (n) -> { this.setTrustAffinityLevel(n.getEnumValue(X509CertificateAffinityLevel::forValue)); });
+        deserializerMap.put("trustAffinityLevel", (n) -> { this.setTrustAffinityLevel(n.getEnumValue(X509CertificateUserBindingTrustAffinityLevel::forValue)); });
         deserializerMap.put("userProperty", (n) -> { this.setUserProperty(n.getStringValue()); });
         deserializerMap.put("x509CertificateField", (n) -> { this.setX509CertificateField(n.getStringValue()); });
         return deserializerMap;
@@ -87,10 +87,10 @@ public class X509CertificateUserBinding implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the trustAffinityLevel property value. The affinity level of the username binding rule. The possible values are: low, high, unknownFutureValue.
-     * @return a X509CertificateAffinityLevel
+     * @return a X509CertificateUserBindingTrustAffinityLevel
      */
     @jakarta.annotation.Nullable
-    public X509CertificateAffinityLevel getTrustAffinityLevel() {
+    public X509CertificateUserBindingTrustAffinityLevel getTrustAffinityLevel() {
         return this.backingStore.get("trustAffinityLevel");
     }
     /**
@@ -155,7 +155,7 @@ public class X509CertificateUserBinding implements AdditionalDataHolder, BackedM
      * Sets the trustAffinityLevel property value. The affinity level of the username binding rule. The possible values are: low, high, unknownFutureValue.
      * @param value Value to set for the trustAffinityLevel property.
      */
-    public void setTrustAffinityLevel(@jakarta.annotation.Nullable final X509CertificateAffinityLevel value) {
+    public void setTrustAffinityLevel(@jakarta.annotation.Nullable final X509CertificateUserBindingTrustAffinityLevel value) {
         this.backingStore.set("trustAffinityLevel", value);
     }
     /**

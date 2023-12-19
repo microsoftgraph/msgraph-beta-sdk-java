@@ -83,7 +83,7 @@ public class PstnBlockedUsersLogRow implements AdditionalDataHolder, BackedModel
         deserializerMap.put("blockReason", (n) -> { this.setBlockReason(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("remediationId", (n) -> { this.setRemediationId(n.getStringValue()); });
-        deserializerMap.put("userBlockMode", (n) -> { this.setUserBlockMode(n.getEnumValue(PstnUserBlockMode::forValue)); });
+        deserializerMap.put("userBlockMode", (n) -> { this.setUserBlockMode(n.getEnumValue(PstnBlockedUsersLogRowUserBlockMode::forValue)); });
         deserializerMap.put("userDisplayName", (n) -> { this.setUserDisplayName(n.getStringValue()); });
         deserializerMap.put("userId", (n) -> { this.setUserId(n.getStringValue()); });
         deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
@@ -108,10 +108,10 @@ public class PstnBlockedUsersLogRow implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the userBlockMode property value. Indicates whether the user is blocked or unblocked from making PSTN calls in Microsoft Teams. The possible values are: blocked, unblocked, unknownFutureValue.
-     * @return a PstnUserBlockMode
+     * @return a PstnBlockedUsersLogRowUserBlockMode
      */
     @jakarta.annotation.Nullable
-    public PstnUserBlockMode getUserBlockMode() {
+    public PstnBlockedUsersLogRowUserBlockMode getUserBlockMode() {
         return this.backingStore.get("userBlockMode");
     }
     /**
@@ -210,7 +210,7 @@ public class PstnBlockedUsersLogRow implements AdditionalDataHolder, BackedModel
      * Sets the userBlockMode property value. Indicates whether the user is blocked or unblocked from making PSTN calls in Microsoft Teams. The possible values are: blocked, unblocked, unknownFutureValue.
      * @param value Value to set for the userBlockMode property.
      */
-    public void setUserBlockMode(@jakarta.annotation.Nullable final PstnUserBlockMode value) {
+    public void setUserBlockMode(@jakarta.annotation.Nullable final PstnBlockedUsersLogRowUserBlockMode value) {
         this.backingStore.set("userBlockMode", value);
     }
     /**

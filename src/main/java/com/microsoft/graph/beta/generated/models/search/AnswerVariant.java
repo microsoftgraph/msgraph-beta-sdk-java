@@ -1,6 +1,5 @@
 package com.microsoft.graph.beta.models.search;
 
-import com.microsoft.graph.beta.models.DevicePlatformType;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -83,7 +82,7 @@ public class AnswerVariant implements AdditionalDataHolder, BackedModel, Parsabl
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("languageTag", (n) -> { this.setLanguageTag(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("platform", (n) -> { this.setPlatform(n.getEnumValue(DevicePlatformType::forValue)); });
+        deserializerMap.put("platform", (n) -> { this.setPlatform(n.getEnumValue(AnswerVariantPlatform::forValue)); });
         deserializerMap.put("webUrl", (n) -> { this.setWebUrl(n.getStringValue()); });
         return deserializerMap;
     }
@@ -105,10 +104,10 @@ public class AnswerVariant implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the platform property value. The platform property
-     * @return a DevicePlatformType
+     * @return a AnswerVariantPlatform
      */
     @jakarta.annotation.Nullable
-    public DevicePlatformType getPlatform() {
+    public AnswerVariantPlatform getPlatform() {
         return this.backingStore.get("platform");
     }
     /**
@@ -180,7 +179,7 @@ public class AnswerVariant implements AdditionalDataHolder, BackedModel, Parsabl
      * Sets the platform property value. The platform property
      * @param value Value to set for the platform property.
      */
-    public void setPlatform(@jakarta.annotation.Nullable final DevicePlatformType value) {
+    public void setPlatform(@jakarta.annotation.Nullable final AnswerVariantPlatform value) {
         this.backingStore.set("platform", value);
     }
     /**

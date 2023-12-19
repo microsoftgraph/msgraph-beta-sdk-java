@@ -58,10 +58,10 @@ public class TeamworkConnection implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the connectionStatus property value. Indicates whether a component/peripheral is connected/disconnected or its state is unknown. The possible values are: unknown, connected, disconnected, unknownFutureValue.
-     * @return a TeamworkConnectionStatus
+     * @return a TeamworkConnectionConnectionStatus
      */
     @jakarta.annotation.Nullable
-    public TeamworkConnectionStatus getConnectionStatus() {
+    public TeamworkConnectionConnectionStatus getConnectionStatus() {
         return this.backingStore.get("connectionStatus");
     }
     /**
@@ -71,7 +71,7 @@ public class TeamworkConnection implements AdditionalDataHolder, BackedModel, Pa
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
-        deserializerMap.put("connectionStatus", (n) -> { this.setConnectionStatus(n.getEnumValue(TeamworkConnectionStatus::forValue)); });
+        deserializerMap.put("connectionStatus", (n) -> { this.setConnectionStatus(n.getEnumValue(TeamworkConnectionConnectionStatus::forValue)); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;
@@ -122,7 +122,7 @@ public class TeamworkConnection implements AdditionalDataHolder, BackedModel, Pa
      * Sets the connectionStatus property value. Indicates whether a component/peripheral is connected/disconnected or its state is unknown. The possible values are: unknown, connected, disconnected, unknownFutureValue.
      * @param value Value to set for the connectionStatus property.
      */
-    public void setConnectionStatus(@jakarta.annotation.Nullable final TeamworkConnectionStatus value) {
+    public void setConnectionStatus(@jakarta.annotation.Nullable final TeamworkConnectionConnectionStatus value) {
         this.backingStore.set("connectionStatus", value);
     }
     /**

@@ -57,10 +57,10 @@ public class MultiTenantOrganizationJoinRequestTransitionDetails implements Addi
     }
     /**
      * Gets the desiredMemberState property value. State of the tenant in the multitenant organization currently being processed. The possible values are: pending, active, removed, unknownFutureValue. Read-only.
-     * @return a MultiTenantOrganizationMemberState
+     * @return a MultiTenantOrganizationJoinRequestTransitionDetailsDesiredMemberState
      */
     @jakarta.annotation.Nullable
-    public MultiTenantOrganizationMemberState getDesiredMemberState() {
+    public MultiTenantOrganizationJoinRequestTransitionDetailsDesiredMemberState getDesiredMemberState() {
         return this.backingStore.get("desiredMemberState");
     }
     /**
@@ -78,10 +78,10 @@ public class MultiTenantOrganizationJoinRequestTransitionDetails implements Addi
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
-        deserializerMap.put("desiredMemberState", (n) -> { this.setDesiredMemberState(n.getEnumValue(MultiTenantOrganizationMemberState::forValue)); });
+        deserializerMap.put("desiredMemberState", (n) -> { this.setDesiredMemberState(n.getEnumValue(MultiTenantOrganizationJoinRequestTransitionDetailsDesiredMemberState::forValue)); });
         deserializerMap.put("details", (n) -> { this.setDetails(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(MultiTenantOrganizationMemberProcessingStatus::forValue)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(MultiTenantOrganizationJoinRequestTransitionDetailsStatus::forValue)); });
         return deserializerMap;
     }
     /**
@@ -94,10 +94,10 @@ public class MultiTenantOrganizationJoinRequestTransitionDetails implements Addi
     }
     /**
      * Gets the status property value. Processing state of the asynchronous job. The possible values are: notStarted, running, succeeded, failed, unknownFutureValue. Read-only.
-     * @return a MultiTenantOrganizationMemberProcessingStatus
+     * @return a MultiTenantOrganizationJoinRequestTransitionDetailsStatus
      */
     @jakarta.annotation.Nullable
-    public MultiTenantOrganizationMemberProcessingStatus getStatus() {
+    public MultiTenantOrganizationJoinRequestTransitionDetailsStatus getStatus() {
         return this.backingStore.get("status");
     }
     /**
@@ -131,7 +131,7 @@ public class MultiTenantOrganizationJoinRequestTransitionDetails implements Addi
      * Sets the desiredMemberState property value. State of the tenant in the multitenant organization currently being processed. The possible values are: pending, active, removed, unknownFutureValue. Read-only.
      * @param value Value to set for the desiredMemberState property.
      */
-    public void setDesiredMemberState(@jakarta.annotation.Nullable final MultiTenantOrganizationMemberState value) {
+    public void setDesiredMemberState(@jakarta.annotation.Nullable final MultiTenantOrganizationJoinRequestTransitionDetailsDesiredMemberState value) {
         this.backingStore.set("desiredMemberState", value);
     }
     /**
@@ -152,7 +152,7 @@ public class MultiTenantOrganizationJoinRequestTransitionDetails implements Addi
      * Sets the status property value. Processing state of the asynchronous job. The possible values are: notStarted, running, succeeded, failed, unknownFutureValue. Read-only.
      * @param value Value to set for the status property.
      */
-    public void setStatus(@jakarta.annotation.Nullable final MultiTenantOrganizationMemberProcessingStatus value) {
+    public void setStatus(@jakarta.annotation.Nullable final MultiTenantOrganizationJoinRequestTransitionDetailsStatus value) {
         this.backingStore.set("status", value);
     }
 }

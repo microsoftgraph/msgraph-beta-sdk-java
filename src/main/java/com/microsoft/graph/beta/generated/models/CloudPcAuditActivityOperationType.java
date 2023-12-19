@@ -8,7 +8,7 @@ public enum CloudPcAuditActivityOperationType implements ValuedEnum {
     Create("create"),
     Delete("delete"),
     Patch("patch"),
-    Other("other");
+    UnknownFutureValue("unknownFutureValue");
     public final String value;
     CloudPcAuditActivityOperationType(final String value) {
         this.value = value;
@@ -22,7 +22,7 @@ public enum CloudPcAuditActivityOperationType implements ValuedEnum {
             case "create": return Create;
             case "delete": return Delete;
             case "patch": return Patch;
-            case "other": return Other;
+            case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }
     }

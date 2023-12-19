@@ -30,10 +30,10 @@ public class AndroidWorkProfilePkcsCertificateProfile extends AndroidWorkProfile
     }
     /**
      * Gets the certificateStore property value. Target store certificate. Possible values are: user, machine.
-     * @return a CertificateStore
+     * @return a AndroidWorkProfilePkcsCertificateProfileCertificateStore
      */
     @jakarta.annotation.Nullable
-    public CertificateStore getCertificateStore() {
+    public AndroidWorkProfilePkcsCertificateProfileCertificateStore getCertificateStore() {
         return this.backingStore.get("certificateStore");
     }
     /**
@@ -75,7 +75,7 @@ public class AndroidWorkProfilePkcsCertificateProfile extends AndroidWorkProfile
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("certificateStore", (n) -> { this.setCertificateStore(n.getEnumValue(CertificateStore::forValue)); });
+        deserializerMap.put("certificateStore", (n) -> { this.setCertificateStore(n.getEnumValue(AndroidWorkProfilePkcsCertificateProfileCertificateStore::forValue)); });
         deserializerMap.put("certificateTemplateName", (n) -> { this.setCertificateTemplateName(n.getStringValue()); });
         deserializerMap.put("certificationAuthority", (n) -> { this.setCertificationAuthority(n.getStringValue()); });
         deserializerMap.put("certificationAuthorityName", (n) -> { this.setCertificationAuthorityName(n.getStringValue()); });
@@ -129,7 +129,7 @@ public class AndroidWorkProfilePkcsCertificateProfile extends AndroidWorkProfile
      * Sets the certificateStore property value. Target store certificate. Possible values are: user, machine.
      * @param value Value to set for the certificateStore property.
      */
-    public void setCertificateStore(@jakarta.annotation.Nullable final CertificateStore value) {
+    public void setCertificateStore(@jakarta.annotation.Nullable final AndroidWorkProfilePkcsCertificateProfileCertificateStore value) {
         this.backingStore.set("certificateStore", value);
     }
     /**

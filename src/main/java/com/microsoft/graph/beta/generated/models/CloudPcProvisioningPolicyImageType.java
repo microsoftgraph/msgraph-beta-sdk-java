@@ -6,7 +6,8 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public enum CloudPcProvisioningPolicyImageType implements ValuedEnum {
     Gallery("gallery"),
-    Custom("custom");
+    Custom("custom"),
+    UnknownFutureValue("unknownFutureValue");
     public final String value;
     CloudPcProvisioningPolicyImageType(final String value) {
         this.value = value;
@@ -19,6 +20,7 @@ public enum CloudPcProvisioningPolicyImageType implements ValuedEnum {
         switch(searchValue) {
             case "gallery": return Gallery;
             case "custom": return Custom;
+            case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }
     }

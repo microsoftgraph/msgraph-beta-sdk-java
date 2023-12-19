@@ -38,10 +38,10 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
     }
     /**
      * Gets the authenticationMethod property value. Specify the authentication method. Possible values are: certificate, usernameAndPassword, derivedCredential. Possible values are: certificate, usernameAndPassword, derivedCredential, unknownFutureValue.
-     * @return a WiredNetworkAuthenticationMethod
+     * @return a WindowsWiredNetworkConfigurationAuthenticationMethod
      */
     @jakarta.annotation.Nullable
-    public WiredNetworkAuthenticationMethod getAuthenticationMethod() {
+    public WindowsWiredNetworkConfigurationAuthenticationMethod getAuthenticationMethod() {
         return this.backingStore.get("authenticationMethod");
     }
     /**
@@ -62,10 +62,10 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
     }
     /**
      * Gets the authenticationType property value. Specify whether to authenticate the user, the device, either, or to use guest authentication (none). If you're using certificate authentication, make sure the certificate type matches the authentication type. Possible values are: none, user, machine, machineOrUser, guest. Possible values are: none, user, machine, machineOrUser, guest, unknownFutureValue.
-     * @return a WiredNetworkAuthenticationType
+     * @return a WindowsWiredNetworkConfigurationAuthenticationType
      */
     @jakarta.annotation.Nullable
-    public WiredNetworkAuthenticationType getAuthenticationType() {
+    public WindowsWiredNetworkConfigurationAuthenticationType getAuthenticationType() {
         return this.backingStore.get("authenticationType");
     }
     /**
@@ -116,10 +116,10 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("authenticationBlockPeriodInMinutes", (n) -> { this.setAuthenticationBlockPeriodInMinutes(n.getIntegerValue()); });
-        deserializerMap.put("authenticationMethod", (n) -> { this.setAuthenticationMethod(n.getEnumValue(WiredNetworkAuthenticationMethod::forValue)); });
+        deserializerMap.put("authenticationMethod", (n) -> { this.setAuthenticationMethod(n.getEnumValue(WindowsWiredNetworkConfigurationAuthenticationMethod::forValue)); });
         deserializerMap.put("authenticationPeriodInSeconds", (n) -> { this.setAuthenticationPeriodInSeconds(n.getIntegerValue()); });
         deserializerMap.put("authenticationRetryDelayPeriodInSeconds", (n) -> { this.setAuthenticationRetryDelayPeriodInSeconds(n.getIntegerValue()); });
-        deserializerMap.put("authenticationType", (n) -> { this.setAuthenticationType(n.getEnumValue(WiredNetworkAuthenticationType::forValue)); });
+        deserializerMap.put("authenticationType", (n) -> { this.setAuthenticationType(n.getEnumValue(WindowsWiredNetworkConfigurationAuthenticationType::forValue)); });
         deserializerMap.put("cacheCredentials", (n) -> { this.setCacheCredentials(n.getBooleanValue()); });
         deserializerMap.put("disableUserPromptForServerValidation", (n) -> { this.setDisableUserPromptForServerValidation(n.getBooleanValue()); });
         deserializerMap.put("eapolStartPeriodInSeconds", (n) -> { this.setEapolStartPeriodInSeconds(n.getIntegerValue()); });
@@ -127,7 +127,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
         deserializerMap.put("enforce8021X", (n) -> { this.setEnforce8021X(n.getBooleanValue()); });
         deserializerMap.put("forceFIPSCompliance", (n) -> { this.setForceFIPSCompliance(n.getBooleanValue()); });
         deserializerMap.put("identityCertificateForClientAuthentication", (n) -> { this.setIdentityCertificateForClientAuthentication(n.getObjectValue(WindowsCertificateProfileBase::createFromDiscriminatorValue)); });
-        deserializerMap.put("innerAuthenticationProtocolForEAPTTLS", (n) -> { this.setInnerAuthenticationProtocolForEAPTTLS(n.getEnumValue(NonEapAuthenticationMethodForEapTtlsType::forValue)); });
+        deserializerMap.put("innerAuthenticationProtocolForEAPTTLS", (n) -> { this.setInnerAuthenticationProtocolForEAPTTLS(n.getEnumValue(WindowsWiredNetworkConfigurationInnerAuthenticationProtocolForEAPTTLS::forValue)); });
         deserializerMap.put("maximumAuthenticationFailures", (n) -> { this.setMaximumAuthenticationFailures(n.getIntegerValue()); });
         deserializerMap.put("maximumEAPOLStartMessages", (n) -> { this.setMaximumEAPOLStartMessages(n.getIntegerValue()); });
         deserializerMap.put("outerIdentityPrivacyTemporaryValue", (n) -> { this.setOuterIdentityPrivacyTemporaryValue(n.getStringValue()); });
@@ -135,7 +135,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
         deserializerMap.put("requireCryptographicBinding", (n) -> { this.setRequireCryptographicBinding(n.getBooleanValue()); });
         deserializerMap.put("rootCertificateForClientValidation", (n) -> { this.setRootCertificateForClientValidation(n.getObjectValue(Windows81TrustedRootCertificate::createFromDiscriminatorValue)); });
         deserializerMap.put("rootCertificatesForServerValidation", (n) -> { this.setRootCertificatesForServerValidation(n.getCollectionOfObjectValues(Windows81TrustedRootCertificate::createFromDiscriminatorValue)); });
-        deserializerMap.put("secondaryAuthenticationMethod", (n) -> { this.setSecondaryAuthenticationMethod(n.getEnumValue(WiredNetworkAuthenticationMethod::forValue)); });
+        deserializerMap.put("secondaryAuthenticationMethod", (n) -> { this.setSecondaryAuthenticationMethod(n.getEnumValue(WindowsWiredNetworkConfigurationSecondaryAuthenticationMethod::forValue)); });
         deserializerMap.put("secondaryIdentityCertificateForClientAuthentication", (n) -> { this.setSecondaryIdentityCertificateForClientAuthentication(n.getObjectValue(WindowsCertificateProfileBase::createFromDiscriminatorValue)); });
         deserializerMap.put("secondaryRootCertificateForClientValidation", (n) -> { this.setSecondaryRootCertificateForClientValidation(n.getObjectValue(Windows81TrustedRootCertificate::createFromDiscriminatorValue)); });
         deserializerMap.put("trustedServerCertificateNames", (n) -> { this.setTrustedServerCertificateNames(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -159,10 +159,10 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
     }
     /**
      * Gets the innerAuthenticationProtocolForEAPTTLS property value. Specify inner authentication protocol for EAP TTLS. Possible values are: unencryptedPassword, challengeHandshakeAuthenticationProtocol, microsoftChap, microsoftChapVersionTwo. Possible values are: unencryptedPassword, challengeHandshakeAuthenticationProtocol, microsoftChap, microsoftChapVersionTwo.
-     * @return a NonEapAuthenticationMethodForEapTtlsType
+     * @return a WindowsWiredNetworkConfigurationInnerAuthenticationProtocolForEAPTTLS
      */
     @jakarta.annotation.Nullable
-    public NonEapAuthenticationMethodForEapTtlsType getInnerAuthenticationProtocolForEAPTTLS() {
+    public WindowsWiredNetworkConfigurationInnerAuthenticationProtocolForEAPTTLS getInnerAuthenticationProtocolForEAPTTLS() {
         return this.backingStore.get("innerAuthenticationProtocolForEAPTTLS");
     }
     /**
@@ -223,10 +223,10 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
     }
     /**
      * Gets the secondaryAuthenticationMethod property value. Specify the secondary authentication method. Possible values are: certificate, usernameAndPassword, derivedCredential. Possible values are: certificate, usernameAndPassword, derivedCredential, unknownFutureValue.
-     * @return a WiredNetworkAuthenticationMethod
+     * @return a WindowsWiredNetworkConfigurationSecondaryAuthenticationMethod
      */
     @jakarta.annotation.Nullable
-    public WiredNetworkAuthenticationMethod getSecondaryAuthenticationMethod() {
+    public WindowsWiredNetworkConfigurationSecondaryAuthenticationMethod getSecondaryAuthenticationMethod() {
         return this.backingStore.get("secondaryAuthenticationMethod");
     }
     /**
@@ -296,7 +296,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
      * Sets the authenticationMethod property value. Specify the authentication method. Possible values are: certificate, usernameAndPassword, derivedCredential. Possible values are: certificate, usernameAndPassword, derivedCredential, unknownFutureValue.
      * @param value Value to set for the authenticationMethod property.
      */
-    public void setAuthenticationMethod(@jakarta.annotation.Nullable final WiredNetworkAuthenticationMethod value) {
+    public void setAuthenticationMethod(@jakarta.annotation.Nullable final WindowsWiredNetworkConfigurationAuthenticationMethod value) {
         this.backingStore.set("authenticationMethod", value);
     }
     /**
@@ -317,7 +317,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
      * Sets the authenticationType property value. Specify whether to authenticate the user, the device, either, or to use guest authentication (none). If you're using certificate authentication, make sure the certificate type matches the authentication type. Possible values are: none, user, machine, machineOrUser, guest. Possible values are: none, user, machine, machineOrUser, guest, unknownFutureValue.
      * @param value Value to set for the authenticationType property.
      */
-    public void setAuthenticationType(@jakarta.annotation.Nullable final WiredNetworkAuthenticationType value) {
+    public void setAuthenticationType(@jakarta.annotation.Nullable final WindowsWiredNetworkConfigurationAuthenticationType value) {
         this.backingStore.set("authenticationType", value);
     }
     /**
@@ -373,7 +373,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
      * Sets the innerAuthenticationProtocolForEAPTTLS property value. Specify inner authentication protocol for EAP TTLS. Possible values are: unencryptedPassword, challengeHandshakeAuthenticationProtocol, microsoftChap, microsoftChapVersionTwo. Possible values are: unencryptedPassword, challengeHandshakeAuthenticationProtocol, microsoftChap, microsoftChapVersionTwo.
      * @param value Value to set for the innerAuthenticationProtocolForEAPTTLS property.
      */
-    public void setInnerAuthenticationProtocolForEAPTTLS(@jakarta.annotation.Nullable final NonEapAuthenticationMethodForEapTtlsType value) {
+    public void setInnerAuthenticationProtocolForEAPTTLS(@jakarta.annotation.Nullable final WindowsWiredNetworkConfigurationInnerAuthenticationProtocolForEAPTTLS value) {
         this.backingStore.set("innerAuthenticationProtocolForEAPTTLS", value);
     }
     /**
@@ -429,7 +429,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
      * Sets the secondaryAuthenticationMethod property value. Specify the secondary authentication method. Possible values are: certificate, usernameAndPassword, derivedCredential. Possible values are: certificate, usernameAndPassword, derivedCredential, unknownFutureValue.
      * @param value Value to set for the secondaryAuthenticationMethod property.
      */
-    public void setSecondaryAuthenticationMethod(@jakarta.annotation.Nullable final WiredNetworkAuthenticationMethod value) {
+    public void setSecondaryAuthenticationMethod(@jakarta.annotation.Nullable final WindowsWiredNetworkConfigurationSecondaryAuthenticationMethod value) {
         this.backingStore.set("secondaryAuthenticationMethod", value);
     }
     /**

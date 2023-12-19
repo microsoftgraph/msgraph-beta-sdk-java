@@ -62,17 +62,17 @@ public class DevicesFilter implements AdditionalDataHolder, BackedModel, Parsabl
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
-        deserializerMap.put("mode", (n) -> { this.setMode(n.getEnumValue(CrossTenantAccessPolicyTargetConfigurationAccessType::forValue)); });
+        deserializerMap.put("mode", (n) -> { this.setMode(n.getEnumValue(DevicesFilterMode::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("rule", (n) -> { this.setRule(n.getStringValue()); });
         return deserializerMap;
     }
     /**
      * Gets the mode property value. Determines whether devices satisfying the rule should be allowed or blocked.The possible values are: allowed, blocked, unknownFutureValue.
-     * @return a CrossTenantAccessPolicyTargetConfigurationAccessType
+     * @return a DevicesFilterMode
      */
     @jakarta.annotation.Nullable
-    public CrossTenantAccessPolicyTargetConfigurationAccessType getMode() {
+    public DevicesFilterMode getMode() {
         return this.backingStore.get("mode");
     }
     /**
@@ -121,7 +121,7 @@ public class DevicesFilter implements AdditionalDataHolder, BackedModel, Parsabl
      * Sets the mode property value. Determines whether devices satisfying the rule should be allowed or blocked.The possible values are: allowed, blocked, unknownFutureValue.
      * @param value Value to set for the mode property.
      */
-    public void setMode(@jakarta.annotation.Nullable final CrossTenantAccessPolicyTargetConfigurationAccessType value) {
+    public void setMode(@jakarta.annotation.Nullable final DevicesFilterMode value) {
         this.backingStore.set("mode", value);
     }
     /**

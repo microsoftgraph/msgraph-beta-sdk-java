@@ -42,7 +42,7 @@ public class CloudPcSupportedRegion extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("regionGroup", (n) -> { this.setRegionGroup(n.getEnumValue(CloudPcRegionGroup::forValue)); });
-        deserializerMap.put("regionStatus", (n) -> { this.setRegionStatus(n.getEnumValue(CloudPcSupportedRegionStatus::forValue)); });
+        deserializerMap.put("regionStatus", (n) -> { this.setRegionStatus(n.getEnumValue(CloudPcSupportedRegionRegionStatus::forValue)); });
         deserializerMap.put("supportedSolution", (n) -> { this.setSupportedSolution(n.getEnumSetValue(CloudPcManagementService::forValue)); });
         return deserializerMap;
     }
@@ -56,10 +56,10 @@ public class CloudPcSupportedRegion extends Entity implements Parsable {
     }
     /**
      * Gets the regionStatus property value. The status of the supported region. Possible values are: available, restricted, unavailable, unknownFutureValue. Read-only.
-     * @return a CloudPcSupportedRegionStatus
+     * @return a CloudPcSupportedRegionRegionStatus
      */
     @jakarta.annotation.Nullable
-    public CloudPcSupportedRegionStatus getRegionStatus() {
+    public CloudPcSupportedRegionRegionStatus getRegionStatus() {
         return this.backingStore.get("regionStatus");
     }
     /**
@@ -100,7 +100,7 @@ public class CloudPcSupportedRegion extends Entity implements Parsable {
      * Sets the regionStatus property value. The status of the supported region. Possible values are: available, restricted, unavailable, unknownFutureValue. Read-only.
      * @param value Value to set for the regionStatus property.
      */
-    public void setRegionStatus(@jakarta.annotation.Nullable final CloudPcSupportedRegionStatus value) {
+    public void setRegionStatus(@jakarta.annotation.Nullable final CloudPcSupportedRegionRegionStatus value) {
         this.backingStore.set("regionStatus", value);
     }
     /**

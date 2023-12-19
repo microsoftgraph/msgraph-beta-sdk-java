@@ -45,10 +45,10 @@ public class CloudPcRemoteActionResult implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the actionState property value. State of the action. Possible values are: None, pending, canceled, active, done, failed, notSupported. Read-only.
-     * @return a ActionState
+     * @return a CloudPcRemoteActionResultActionState
      */
     @jakarta.annotation.Nullable
-    public ActionState getActionState() {
+    public CloudPcRemoteActionResultActionState getActionState() {
         return this.backingStore.get("actionState");
     }
     /**
@@ -88,7 +88,7 @@ public class CloudPcRemoteActionResult implements AdditionalDataHolder, BackedMo
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(8);
         deserializerMap.put("actionName", (n) -> { this.setActionName(n.getStringValue()); });
-        deserializerMap.put("actionState", (n) -> { this.setActionState(n.getEnumValue(ActionState::forValue)); });
+        deserializerMap.put("actionState", (n) -> { this.setActionState(n.getEnumValue(CloudPcRemoteActionResultActionState::forValue)); });
         deserializerMap.put("cloudPcId", (n) -> { this.setCloudPcId(n.getStringValue()); });
         deserializerMap.put("lastUpdatedDateTime", (n) -> { this.setLastUpdatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("managedDeviceId", (n) -> { this.setManagedDeviceId(n.getStringValue()); });
@@ -164,7 +164,7 @@ public class CloudPcRemoteActionResult implements AdditionalDataHolder, BackedMo
      * Sets the actionState property value. State of the action. Possible values are: None, pending, canceled, active, done, failed, notSupported. Read-only.
      * @param value Value to set for the actionState property.
      */
-    public void setActionState(@jakarta.annotation.Nullable final ActionState value) {
+    public void setActionState(@jakarta.annotation.Nullable final CloudPcRemoteActionResultActionState value) {
         this.backingStore.set("actionState", value);
     }
     /**

@@ -28,10 +28,10 @@ public class DeviceLink extends Entity implements Parsable {
     }
     /**
      * Gets the bandwidthCapacityInMbps property value. Determines the maximum allowed Mbps (megabits per second) bandwidth from a branch site. The possible values are:250,500,750,1000.
-     * @return a BandwidthCapacityInMbps
+     * @return a DeviceLinkBandwidthCapacityInMbps
      */
     @jakarta.annotation.Nullable
-    public BandwidthCapacityInMbps getBandwidthCapacityInMbps() {
+    public DeviceLinkBandwidthCapacityInMbps getBandwidthCapacityInMbps() {
         return this.backingStore.get("bandwidthCapacityInMbps");
     }
     /**
@@ -57,7 +57,7 @@ public class DeviceLink extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("bandwidthCapacityInMbps", (n) -> { this.setBandwidthCapacityInMbps(n.getEnumValue(BandwidthCapacityInMbps::forValue)); });
+        deserializerMap.put("bandwidthCapacityInMbps", (n) -> { this.setBandwidthCapacityInMbps(n.getEnumValue(DeviceLinkBandwidthCapacityInMbps::forValue)); });
         deserializerMap.put("bgpConfiguration", (n) -> { this.setBgpConfiguration(n.getObjectValue(BgpConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("deviceVendor", (n) -> { this.setDeviceVendor(n.getEnumValue(DeviceVendor::forValue)); });
         deserializerMap.put("ipAddress", (n) -> { this.setIpAddress(n.getStringValue()); });
@@ -127,7 +127,7 @@ public class DeviceLink extends Entity implements Parsable {
      * Sets the bandwidthCapacityInMbps property value. Determines the maximum allowed Mbps (megabits per second) bandwidth from a branch site. The possible values are:250,500,750,1000.
      * @param value Value to set for the bandwidthCapacityInMbps property.
      */
-    public void setBandwidthCapacityInMbps(@jakarta.annotation.Nullable final BandwidthCapacityInMbps value) {
+    public void setBandwidthCapacityInMbps(@jakarta.annotation.Nullable final DeviceLinkBandwidthCapacityInMbps value) {
         this.backingStore.set("bandwidthCapacityInMbps", value);
     }
     /**

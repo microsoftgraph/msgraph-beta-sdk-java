@@ -41,7 +41,7 @@ public class AospDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy impl
         deserializerMap.put("passwordMinimumLength", (n) -> { this.setPasswordMinimumLength(n.getIntegerValue()); });
         deserializerMap.put("passwordMinutesOfInactivityBeforeLock", (n) -> { this.setPasswordMinutesOfInactivityBeforeLock(n.getIntegerValue()); });
         deserializerMap.put("passwordRequired", (n) -> { this.setPasswordRequired(n.getBooleanValue()); });
-        deserializerMap.put("passwordRequiredType", (n) -> { this.setPasswordRequiredType(n.getEnumValue(AndroidDeviceOwnerRequiredPasswordType::forValue)); });
+        deserializerMap.put("passwordRequiredType", (n) -> { this.setPasswordRequiredType(n.getEnumValue(AospDeviceOwnerCompliancePolicyPasswordRequiredType::forValue)); });
         deserializerMap.put("securityBlockJailbrokenDevices", (n) -> { this.setSecurityBlockJailbrokenDevices(n.getBooleanValue()); });
         deserializerMap.put("storageRequireEncryption", (n) -> { this.setStorageRequireEncryption(n.getBooleanValue()); });
         return deserializerMap;
@@ -96,10 +96,10 @@ public class AospDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy impl
     }
     /**
      * Gets the passwordRequiredType property value. Type of characters in password. Possible values are: deviceDefault, required, numeric, numericComplex, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, customPassword.
-     * @return a AndroidDeviceOwnerRequiredPasswordType
+     * @return a AospDeviceOwnerCompliancePolicyPasswordRequiredType
      */
     @jakarta.annotation.Nullable
-    public AndroidDeviceOwnerRequiredPasswordType getPasswordRequiredType() {
+    public AospDeviceOwnerCompliancePolicyPasswordRequiredType getPasswordRequiredType() {
         return this.backingStore.get("passwordRequiredType");
     }
     /**
@@ -181,7 +181,7 @@ public class AospDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy impl
      * Sets the passwordRequiredType property value. Type of characters in password. Possible values are: deviceDefault, required, numeric, numericComplex, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, customPassword.
      * @param value Value to set for the passwordRequiredType property.
      */
-    public void setPasswordRequiredType(@jakarta.annotation.Nullable final AndroidDeviceOwnerRequiredPasswordType value) {
+    public void setPasswordRequiredType(@jakarta.annotation.Nullable final AospDeviceOwnerCompliancePolicyPasswordRequiredType value) {
         this.backingStore.set("passwordRequiredType", value);
     }
     /**

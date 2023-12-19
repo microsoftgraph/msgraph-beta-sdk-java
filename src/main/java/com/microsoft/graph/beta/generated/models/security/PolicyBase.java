@@ -79,7 +79,7 @@ public class PolicyBase extends Entity implements Parsable {
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("lastModifiedBy", (n) -> { this.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(PolicyStatus::forValue)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(PolicyBaseStatus::forValue)); });
         return deserializerMap;
     }
     /**
@@ -100,10 +100,10 @@ public class PolicyBase extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status property
-     * @return a PolicyStatus
+     * @return a PolicyBaseStatus
      */
     @jakarta.annotation.Nullable
-    public PolicyStatus getStatus() {
+    public PolicyBaseStatus getStatus() {
         return this.backingStore.get("status");
     }
     /**
@@ -167,7 +167,7 @@ public class PolicyBase extends Entity implements Parsable {
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
      */
-    public void setStatus(@jakarta.annotation.Nullable final PolicyStatus value) {
+    public void setStatus(@jakarta.annotation.Nullable final PolicyBaseStatus value) {
         this.backingStore.set("status", value);
     }
 }

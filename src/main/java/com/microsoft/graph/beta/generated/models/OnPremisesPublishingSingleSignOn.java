@@ -64,7 +64,7 @@ public class OnPremisesPublishingSingleSignOn implements AdditionalDataHolder, B
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("kerberosSignOnSettings", (n) -> { this.setKerberosSignOnSettings(n.getObjectValue(KerberosSignOnSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("singleSignOnMode", (n) -> { this.setSingleSignOnMode(n.getEnumValue(SingleSignOnMode::forValue)); });
+        deserializerMap.put("singleSignOnMode", (n) -> { this.setSingleSignOnMode(n.getEnumValue(OnPremisesPublishingSingleSignOnSingleSignOnMode::forValue)); });
         return deserializerMap;
     }
     /**
@@ -85,10 +85,10 @@ public class OnPremisesPublishingSingleSignOn implements AdditionalDataHolder, B
     }
     /**
      * Gets the singleSignOnMode property value. The preferred single-sign on mode for the application. Possible values are: none, onPremisesKerberos, aadHeaderBased,pingHeaderBased, oAuthToken.
-     * @return a SingleSignOnMode
+     * @return a OnPremisesPublishingSingleSignOnSingleSignOnMode
      */
     @jakarta.annotation.Nullable
-    public SingleSignOnMode getSingleSignOnMode() {
+    public OnPremisesPublishingSingleSignOnSingleSignOnMode getSingleSignOnMode() {
         return this.backingStore.get("singleSignOnMode");
     }
     /**
@@ -135,7 +135,7 @@ public class OnPremisesPublishingSingleSignOn implements AdditionalDataHolder, B
      * Sets the singleSignOnMode property value. The preferred single-sign on mode for the application. Possible values are: none, onPremisesKerberos, aadHeaderBased,pingHeaderBased, oAuthToken.
      * @param value Value to set for the singleSignOnMode property.
      */
-    public void setSingleSignOnMode(@jakarta.annotation.Nullable final SingleSignOnMode value) {
+    public void setSingleSignOnMode(@jakarta.annotation.Nullable final OnPremisesPublishingSingleSignOnSingleSignOnMode value) {
         this.backingStore.set("singleSignOnMode", value);
     }
 }

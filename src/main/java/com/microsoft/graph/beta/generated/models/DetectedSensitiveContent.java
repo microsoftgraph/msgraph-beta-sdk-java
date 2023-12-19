@@ -3,7 +3,6 @@ package com.microsoft.graph.beta.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -42,10 +41,10 @@ public class DetectedSensitiveContent extends DetectedSensitiveContentBase imple
     }
     /**
      * Gets the classificationMethod property value. The classificationMethod property
-     * @return a ClassificationMethod
+     * @return a DetectedSensitiveContentClassificationMethod
      */
     @jakarta.annotation.Nullable
-    public ClassificationMethod getClassificationMethod() {
+    public DetectedSensitiveContentClassificationMethod getClassificationMethod() {
         return this.backingStore.get("classificationMethod");
     }
     /**
@@ -56,10 +55,10 @@ public class DetectedSensitiveContent extends DetectedSensitiveContentBase imple
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("classificationAttributes", (n) -> { this.setClassificationAttributes(n.getCollectionOfObjectValues(ClassificationAttribute::createFromDiscriminatorValue)); });
-        deserializerMap.put("classificationMethod", (n) -> { this.setClassificationMethod(n.getEnumValue(ClassificationMethod::forValue)); });
+        deserializerMap.put("classificationMethod", (n) -> { this.setClassificationMethod(n.getEnumValue(DetectedSensitiveContentClassificationMethod::forValue)); });
         deserializerMap.put("matches", (n) -> { this.setMatches(n.getCollectionOfObjectValues(SensitiveContentLocation::createFromDiscriminatorValue)); });
-        deserializerMap.put("scope", (n) -> { this.setScope(n.getEnumSetValue(SensitiveTypeScope::forValue)); });
-        deserializerMap.put("sensitiveTypeSource", (n) -> { this.setSensitiveTypeSource(n.getEnumValue(SensitiveTypeSource::forValue)); });
+        deserializerMap.put("scope", (n) -> { this.setScope(n.getEnumValue(DetectedSensitiveContentScope::forValue)); });
+        deserializerMap.put("sensitiveTypeSource", (n) -> { this.setSensitiveTypeSource(n.getEnumValue(DetectedSensitiveContentSensitiveTypeSource::forValue)); });
         return deserializerMap;
     }
     /**
@@ -72,18 +71,18 @@ public class DetectedSensitiveContent extends DetectedSensitiveContentBase imple
     }
     /**
      * Gets the scope property value. The scope property
-     * @return a EnumSet<SensitiveTypeScope>
+     * @return a DetectedSensitiveContentScope
      */
     @jakarta.annotation.Nullable
-    public EnumSet<SensitiveTypeScope> getScope() {
+    public DetectedSensitiveContentScope getScope() {
         return this.backingStore.get("scope");
     }
     /**
      * Gets the sensitiveTypeSource property value. The sensitiveTypeSource property
-     * @return a SensitiveTypeSource
+     * @return a DetectedSensitiveContentSensitiveTypeSource
      */
     @jakarta.annotation.Nullable
-    public SensitiveTypeSource getSensitiveTypeSource() {
+    public DetectedSensitiveContentSensitiveTypeSource getSensitiveTypeSource() {
         return this.backingStore.get("sensitiveTypeSource");
     }
     /**
@@ -96,7 +95,7 @@ public class DetectedSensitiveContent extends DetectedSensitiveContentBase imple
         writer.writeCollectionOfObjectValues("classificationAttributes", this.getClassificationAttributes());
         writer.writeEnumValue("classificationMethod", this.getClassificationMethod());
         writer.writeCollectionOfObjectValues("matches", this.getMatches());
-        writer.writeEnumSetValue("scope", this.getScope());
+        writer.writeEnumValue("scope", this.getScope());
         writer.writeEnumValue("sensitiveTypeSource", this.getSensitiveTypeSource());
     }
     /**
@@ -110,7 +109,7 @@ public class DetectedSensitiveContent extends DetectedSensitiveContentBase imple
      * Sets the classificationMethod property value. The classificationMethod property
      * @param value Value to set for the classificationMethod property.
      */
-    public void setClassificationMethod(@jakarta.annotation.Nullable final ClassificationMethod value) {
+    public void setClassificationMethod(@jakarta.annotation.Nullable final DetectedSensitiveContentClassificationMethod value) {
         this.backingStore.set("classificationMethod", value);
     }
     /**
@@ -124,14 +123,14 @@ public class DetectedSensitiveContent extends DetectedSensitiveContentBase imple
      * Sets the scope property value. The scope property
      * @param value Value to set for the scope property.
      */
-    public void setScope(@jakarta.annotation.Nullable final EnumSet<SensitiveTypeScope> value) {
+    public void setScope(@jakarta.annotation.Nullable final DetectedSensitiveContentScope value) {
         this.backingStore.set("scope", value);
     }
     /**
      * Sets the sensitiveTypeSource property value. The sensitiveTypeSource property
      * @param value Value to set for the sensitiveTypeSource property.
      */
-    public void setSensitiveTypeSource(@jakarta.annotation.Nullable final SensitiveTypeSource value) {
+    public void setSensitiveTypeSource(@jakarta.annotation.Nullable final DetectedSensitiveContentSensitiveTypeSource value) {
         this.backingStore.set("sensitiveTypeSource", value);
     }
 }

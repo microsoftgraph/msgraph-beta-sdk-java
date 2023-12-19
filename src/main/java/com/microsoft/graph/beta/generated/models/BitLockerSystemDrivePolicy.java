@@ -60,10 +60,10 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the encryptionMethod property value. Select the encryption method for operating system drives. Possible values are: aesCbc128, aesCbc256, xtsAes128, xtsAes256.
-     * @return a BitLockerEncryptionMethod
+     * @return a BitLockerSystemDrivePolicyEncryptionMethod
      */
     @jakarta.annotation.Nullable
-    public BitLockerEncryptionMethod getEncryptionMethod() {
+    public BitLockerSystemDrivePolicyEncryptionMethod getEncryptionMethod() {
         return this.backingStore.get("encryptionMethod");
     }
     /**
@@ -73,7 +73,7 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, BackedM
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(13);
-        deserializerMap.put("encryptionMethod", (n) -> { this.setEncryptionMethod(n.getEnumValue(BitLockerEncryptionMethod::forValue)); });
+        deserializerMap.put("encryptionMethod", (n) -> { this.setEncryptionMethod(n.getEnumValue(BitLockerSystemDrivePolicyEncryptionMethod::forValue)); });
         deserializerMap.put("minimumPinLength", (n) -> { this.setMinimumPinLength(n.getIntegerValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("prebootRecoveryEnableMessageAndUrl", (n) -> { this.setPrebootRecoveryEnableMessageAndUrl(n.getBooleanValue()); });
@@ -224,7 +224,7 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, BackedM
      * Sets the encryptionMethod property value. Select the encryption method for operating system drives. Possible values are: aesCbc128, aesCbc256, xtsAes128, xtsAes256.
      * @param value Value to set for the encryptionMethod property.
      */
-    public void setEncryptionMethod(@jakarta.annotation.Nullable final BitLockerEncryptionMethod value) {
+    public void setEncryptionMethod(@jakarta.annotation.Nullable final BitLockerSystemDrivePolicyEncryptionMethod value) {
         this.backingStore.set("encryptionMethod", value);
     }
     /**

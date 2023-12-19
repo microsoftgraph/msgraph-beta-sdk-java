@@ -30,10 +30,10 @@ public class AndroidDeviceOwnerEnterpriseWiFiConfiguration extends AndroidDevice
     }
     /**
      * Gets the authenticationMethod property value. Indicates the Authentication Method the client (device) needs to use when the EAP Type is configured to PEAP or EAP-TTLS. Possible values are: certificate, usernameAndPassword, derivedCredential.
-     * @return a WiFiAuthenticationMethod
+     * @return a AndroidDeviceOwnerEnterpriseWiFiConfigurationAuthenticationMethod
      */
     @jakarta.annotation.Nullable
-    public WiFiAuthenticationMethod getAuthenticationMethod() {
+    public AndroidDeviceOwnerEnterpriseWiFiConfigurationAuthenticationMethod getAuthenticationMethod() {
         return this.backingStore.get("authenticationMethod");
     }
     /**
@@ -59,12 +59,12 @@ public class AndroidDeviceOwnerEnterpriseWiFiConfiguration extends AndroidDevice
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("authenticationMethod", (n) -> { this.setAuthenticationMethod(n.getEnumValue(WiFiAuthenticationMethod::forValue)); });
+        deserializerMap.put("authenticationMethod", (n) -> { this.setAuthenticationMethod(n.getEnumValue(AndroidDeviceOwnerEnterpriseWiFiConfigurationAuthenticationMethod::forValue)); });
         deserializerMap.put("derivedCredentialSettings", (n) -> { this.setDerivedCredentialSettings(n.getObjectValue(DeviceManagementDerivedCredentialSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("eapType", (n) -> { this.setEapType(n.getEnumValue(AndroidEapType::forValue)); });
         deserializerMap.put("identityCertificateForClientAuthentication", (n) -> { this.setIdentityCertificateForClientAuthentication(n.getObjectValue(AndroidDeviceOwnerCertificateProfileBase::createFromDiscriminatorValue)); });
-        deserializerMap.put("innerAuthenticationProtocolForEapTtls", (n) -> { this.setInnerAuthenticationProtocolForEapTtls(n.getEnumValue(NonEapAuthenticationMethodForEapTtlsType::forValue)); });
-        deserializerMap.put("innerAuthenticationProtocolForPeap", (n) -> { this.setInnerAuthenticationProtocolForPeap(n.getEnumValue(NonEapAuthenticationMethodForPeap::forValue)); });
+        deserializerMap.put("innerAuthenticationProtocolForEapTtls", (n) -> { this.setInnerAuthenticationProtocolForEapTtls(n.getEnumValue(AndroidDeviceOwnerEnterpriseWiFiConfigurationInnerAuthenticationProtocolForEapTtls::forValue)); });
+        deserializerMap.put("innerAuthenticationProtocolForPeap", (n) -> { this.setInnerAuthenticationProtocolForPeap(n.getEnumValue(AndroidDeviceOwnerEnterpriseWiFiConfigurationInnerAuthenticationProtocolForPeap::forValue)); });
         deserializerMap.put("outerIdentityPrivacyTemporaryValue", (n) -> { this.setOuterIdentityPrivacyTemporaryValue(n.getStringValue()); });
         deserializerMap.put("rootCertificateForServerValidation", (n) -> { this.setRootCertificateForServerValidation(n.getObjectValue(AndroidDeviceOwnerTrustedRootCertificate::createFromDiscriminatorValue)); });
         deserializerMap.put("trustedServerCertificateNames", (n) -> { this.setTrustedServerCertificateNames(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -80,18 +80,18 @@ public class AndroidDeviceOwnerEnterpriseWiFiConfiguration extends AndroidDevice
     }
     /**
      * Gets the innerAuthenticationProtocolForEapTtls property value. Non-EAP Method for Authentication (Inner Identity) when EAP Type is EAP-TTLS and Authenticationmethod is Username and Password. Possible values are: unencryptedPassword, challengeHandshakeAuthenticationProtocol, microsoftChap, microsoftChapVersionTwo.
-     * @return a NonEapAuthenticationMethodForEapTtlsType
+     * @return a AndroidDeviceOwnerEnterpriseWiFiConfigurationInnerAuthenticationProtocolForEapTtls
      */
     @jakarta.annotation.Nullable
-    public NonEapAuthenticationMethodForEapTtlsType getInnerAuthenticationProtocolForEapTtls() {
+    public AndroidDeviceOwnerEnterpriseWiFiConfigurationInnerAuthenticationProtocolForEapTtls getInnerAuthenticationProtocolForEapTtls() {
         return this.backingStore.get("innerAuthenticationProtocolForEapTtls");
     }
     /**
      * Gets the innerAuthenticationProtocolForPeap property value. Non-EAP Method for Authentication (Inner Identity) when EAP Type is PEAP and Authenticationmethod is Username and Password. Possible values are: none, microsoftChapVersionTwo.
-     * @return a NonEapAuthenticationMethodForPeap
+     * @return a AndroidDeviceOwnerEnterpriseWiFiConfigurationInnerAuthenticationProtocolForPeap
      */
     @jakarta.annotation.Nullable
-    public NonEapAuthenticationMethodForPeap getInnerAuthenticationProtocolForPeap() {
+    public AndroidDeviceOwnerEnterpriseWiFiConfigurationInnerAuthenticationProtocolForPeap getInnerAuthenticationProtocolForPeap() {
         return this.backingStore.get("innerAuthenticationProtocolForPeap");
     }
     /**
@@ -139,7 +139,7 @@ public class AndroidDeviceOwnerEnterpriseWiFiConfiguration extends AndroidDevice
      * Sets the authenticationMethod property value. Indicates the Authentication Method the client (device) needs to use when the EAP Type is configured to PEAP or EAP-TTLS. Possible values are: certificate, usernameAndPassword, derivedCredential.
      * @param value Value to set for the authenticationMethod property.
      */
-    public void setAuthenticationMethod(@jakarta.annotation.Nullable final WiFiAuthenticationMethod value) {
+    public void setAuthenticationMethod(@jakarta.annotation.Nullable final AndroidDeviceOwnerEnterpriseWiFiConfigurationAuthenticationMethod value) {
         this.backingStore.set("authenticationMethod", value);
     }
     /**
@@ -167,14 +167,14 @@ public class AndroidDeviceOwnerEnterpriseWiFiConfiguration extends AndroidDevice
      * Sets the innerAuthenticationProtocolForEapTtls property value. Non-EAP Method for Authentication (Inner Identity) when EAP Type is EAP-TTLS and Authenticationmethod is Username and Password. Possible values are: unencryptedPassword, challengeHandshakeAuthenticationProtocol, microsoftChap, microsoftChapVersionTwo.
      * @param value Value to set for the innerAuthenticationProtocolForEapTtls property.
      */
-    public void setInnerAuthenticationProtocolForEapTtls(@jakarta.annotation.Nullable final NonEapAuthenticationMethodForEapTtlsType value) {
+    public void setInnerAuthenticationProtocolForEapTtls(@jakarta.annotation.Nullable final AndroidDeviceOwnerEnterpriseWiFiConfigurationInnerAuthenticationProtocolForEapTtls value) {
         this.backingStore.set("innerAuthenticationProtocolForEapTtls", value);
     }
     /**
      * Sets the innerAuthenticationProtocolForPeap property value. Non-EAP Method for Authentication (Inner Identity) when EAP Type is PEAP and Authenticationmethod is Username and Password. Possible values are: none, microsoftChapVersionTwo.
      * @param value Value to set for the innerAuthenticationProtocolForPeap property.
      */
-    public void setInnerAuthenticationProtocolForPeap(@jakarta.annotation.Nullable final NonEapAuthenticationMethodForPeap value) {
+    public void setInnerAuthenticationProtocolForPeap(@jakarta.annotation.Nullable final AndroidDeviceOwnerEnterpriseWiFiConfigurationInnerAuthenticationProtocolForPeap value) {
         this.backingStore.set("innerAuthenticationProtocolForPeap", value);
     }
     /**

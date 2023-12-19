@@ -59,19 +59,19 @@ public class InboundFlowsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/external/industryData/inboundFlows{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of the inboundFileFlow objects and their properties.
+     * Get a list of the inboundFlow objects and their properties.
      * @return a InboundFlowCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-inboundfileflow-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-inboundflow-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public InboundFlowCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a list of the inboundFileFlow objects and their properties.
+     * Get a list of the inboundFlow objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a InboundFlowCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-inboundfileflow-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-inboundflow-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public InboundFlowCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,21 +82,21 @@ public class InboundFlowsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, InboundFlowCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new inboundFileFlow object. The following prerequisite resources are required when you create an inboundFileFlow:
+     * Create a new inboundFlow object. The following prerequisite resources are required when you create an inboundFlow:
      * @param body The request body
      * @return a InboundFlow
-     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-inboundfileflow-post?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-inboundflow-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public InboundFlow post(@jakarta.annotation.Nonnull final InboundFlow body) {
         return post(body, null);
     }
     /**
-     * Create a new inboundFileFlow object. The following prerequisite resources are required when you create an inboundFileFlow:
+     * Create a new inboundFlow object. The following prerequisite resources are required when you create an inboundFlow:
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a InboundFlow
-     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-inboundfileflow-post?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-inboundflow-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public InboundFlow post(@jakarta.annotation.Nonnull final InboundFlow body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -108,7 +108,7 @@ public class InboundFlowsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, InboundFlow::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the inboundFileFlow objects and their properties.
+     * Get a list of the inboundFlow objects and their properties.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class InboundFlowsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the inboundFileFlow objects and their properties.
+     * Get a list of the inboundFlow objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -128,7 +128,7 @@ public class InboundFlowsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new inboundFileFlow object. The following prerequisite resources are required when you create an inboundFileFlow:
+     * Create a new inboundFlow object. The following prerequisite resources are required when you create an inboundFlow:
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class InboundFlowsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new inboundFileFlow object. The following prerequisite resources are required when you create an inboundFileFlow:
+     * Create a new inboundFlow object. The following prerequisite resources are required when you create an inboundFlow:
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -162,7 +162,7 @@ public class InboundFlowsRequestBuilder extends BaseRequestBuilder {
         return new InboundFlowsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the inboundFileFlow objects and their properties.
+     * Get a list of the inboundFlow objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -40,7 +40,7 @@ public class SitePage extends BaseSitePage implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("canvasLayout", (n) -> { this.setCanvasLayout(n.getObjectValue(CanvasLayout::createFromDiscriminatorValue)); });
-        deserializerMap.put("promotionKind", (n) -> { this.setPromotionKind(n.getEnumValue(PagePromotionType::forValue)); });
+        deserializerMap.put("promotionKind", (n) -> { this.setPromotionKind(n.getEnumValue(SitePagePromotionKind::forValue)); });
         deserializerMap.put("reactions", (n) -> { this.setReactions(n.getObjectValue(ReactionsFacet::createFromDiscriminatorValue)); });
         deserializerMap.put("showComments", (n) -> { this.setShowComments(n.getBooleanValue()); });
         deserializerMap.put("showRecommendedPages", (n) -> { this.setShowRecommendedPages(n.getBooleanValue()); });
@@ -51,10 +51,10 @@ public class SitePage extends BaseSitePage implements Parsable {
     }
     /**
      * Gets the promotionKind property value. Indicates the promotion kind of the sitePage. The possible values are: microsoftReserved, page, newsPost, unknownFutureValue.
-     * @return a PagePromotionType
+     * @return a SitePagePromotionKind
      */
     @jakarta.annotation.Nullable
-    public PagePromotionType getPromotionKind() {
+    public SitePagePromotionKind getPromotionKind() {
         return this.backingStore.get("promotionKind");
     }
     /**
@@ -132,7 +132,7 @@ public class SitePage extends BaseSitePage implements Parsable {
      * Sets the promotionKind property value. Indicates the promotion kind of the sitePage. The possible values are: microsoftReserved, page, newsPost, unknownFutureValue.
      * @param value Value to set for the promotionKind property.
      */
-    public void setPromotionKind(@jakarta.annotation.Nullable final PagePromotionType value) {
+    public void setPromotionKind(@jakarta.annotation.Nullable final SitePagePromotionKind value) {
         this.backingStore.set("promotionKind", value);
     }
     /**

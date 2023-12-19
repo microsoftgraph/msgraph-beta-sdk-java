@@ -52,7 +52,7 @@ public class Notification extends Entity implements Parsable {
         deserializerMap.put("expirationDateTime", (n) -> { this.setExpirationDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("groupName", (n) -> { this.setGroupName(n.getStringValue()); });
         deserializerMap.put("payload", (n) -> { this.setPayload(n.getObjectValue(PayloadTypes::createFromDiscriminatorValue)); });
-        deserializerMap.put("priority", (n) -> { this.setPriority(n.getEnumValue(Priority::forValue)); });
+        deserializerMap.put("priority", (n) -> { this.setPriority(n.getEnumValue(NotificationPriority::forValue)); });
         deserializerMap.put("targetHostName", (n) -> { this.setTargetHostName(n.getStringValue()); });
         deserializerMap.put("targetPolicy", (n) -> { this.setTargetPolicy(n.getObjectValue(TargetPolicyEndpoints::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -75,10 +75,10 @@ public class Notification extends Entity implements Parsable {
     }
     /**
      * Gets the priority property value. Indicates the priority of a raw user notification. Visual notifications are sent with high priority by default. Valid values are None, High and Low.
-     * @return a Priority
+     * @return a NotificationPriority
      */
     @jakarta.annotation.Nullable
-    public Priority getPriority() {
+    public NotificationPriority getPriority() {
         return this.backingStore.get("priority");
     }
     /**
@@ -144,7 +144,7 @@ public class Notification extends Entity implements Parsable {
      * Sets the priority property value. Indicates the priority of a raw user notification. Visual notifications are sent with high priority by default. Valid values are None, High and Low.
      * @param value Value to set for the priority property.
      */
-    public void setPriority(@jakarta.annotation.Nullable final Priority value) {
+    public void setPriority(@jakarta.annotation.Nullable final NotificationPriority value) {
         this.backingStore.set("priority", value);
     }
     /**

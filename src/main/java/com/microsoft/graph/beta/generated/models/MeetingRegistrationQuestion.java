@@ -26,10 +26,10 @@ public class MeetingRegistrationQuestion extends Entity implements Parsable {
     }
     /**
      * Gets the answerInputType property value. Answer input type of the custom registration question.
-     * @return a AnswerInputType
+     * @return a MeetingRegistrationQuestionAnswerInputType
      */
     @jakarta.annotation.Nullable
-    public AnswerInputType getAnswerInputType() {
+    public MeetingRegistrationQuestionAnswerInputType getAnswerInputType() {
         return this.backingStore.get("answerInputType");
     }
     /**
@@ -55,7 +55,7 @@ public class MeetingRegistrationQuestion extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("answerInputType", (n) -> { this.setAnswerInputType(n.getEnumValue(AnswerInputType::forValue)); });
+        deserializerMap.put("answerInputType", (n) -> { this.setAnswerInputType(n.getEnumValue(MeetingRegistrationQuestionAnswerInputType::forValue)); });
         deserializerMap.put("answerOptions", (n) -> { this.setAnswerOptions(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("isRequired", (n) -> { this.setIsRequired(n.getBooleanValue()); });
@@ -85,7 +85,7 @@ public class MeetingRegistrationQuestion extends Entity implements Parsable {
      * Sets the answerInputType property value. Answer input type of the custom registration question.
      * @param value Value to set for the answerInputType property.
      */
-    public void setAnswerInputType(@jakarta.annotation.Nullable final AnswerInputType value) {
+    public void setAnswerInputType(@jakarta.annotation.Nullable final MeetingRegistrationQuestionAnswerInputType value) {
         this.backingStore.set("answerInputType", value);
     }
     /**

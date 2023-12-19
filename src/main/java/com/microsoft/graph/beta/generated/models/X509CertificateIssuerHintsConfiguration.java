@@ -63,7 +63,7 @@ public class X509CertificateIssuerHintsConfiguration implements AdditionalDataHo
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(X509CertificateIssuerHintsState::forValue)); });
+        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(X509CertificateIssuerHintsConfigurationState::forValue)); });
         return deserializerMap;
     }
     /**
@@ -76,10 +76,10 @@ public class X509CertificateIssuerHintsConfiguration implements AdditionalDataHo
     }
     /**
      * Gets the state property value. The possible values are: disabled, enabled, unknownFutureValue.
-     * @return a X509CertificateIssuerHintsState
+     * @return a X509CertificateIssuerHintsConfigurationState
      */
     @jakarta.annotation.Nullable
-    public X509CertificateIssuerHintsState getState() {
+    public X509CertificateIssuerHintsConfigurationState getState() {
         return this.backingStore.get("state");
     }
     /**
@@ -118,7 +118,7 @@ public class X509CertificateIssuerHintsConfiguration implements AdditionalDataHo
      * Sets the state property value. The possible values are: disabled, enabled, unknownFutureValue.
      * @param value Value to set for the state property.
      */
-    public void setState(@jakarta.annotation.Nullable final X509CertificateIssuerHintsState value) {
+    public void setState(@jakarta.annotation.Nullable final X509CertificateIssuerHintsConfigurationState value) {
         this.backingStore.set("state", value);
     }
 }

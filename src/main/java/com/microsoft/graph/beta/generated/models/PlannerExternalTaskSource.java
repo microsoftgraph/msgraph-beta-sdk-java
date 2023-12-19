@@ -35,10 +35,10 @@ public class PlannerExternalTaskSource extends PlannerTaskCreation implements Pa
     }
     /**
      * Gets the displayLinkType property value. Specifies how an application should display the link to the associated plannerExternalTaskSource. The possible values are: none, default.
-     * @return a PlannerExternalTaskSourceDisplayType
+     * @return a PlannerExternalTaskSourceDisplayLinkType
      */
     @jakarta.annotation.Nullable
-    public PlannerExternalTaskSourceDisplayType getDisplayLinkType() {
+    public PlannerExternalTaskSourceDisplayLinkType getDisplayLinkType() {
         return this.backingStore.get("displayLinkType");
     }
     /**
@@ -81,7 +81,7 @@ public class PlannerExternalTaskSource extends PlannerTaskCreation implements Pa
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("contextScenarioId", (n) -> { this.setContextScenarioId(n.getStringValue()); });
-        deserializerMap.put("displayLinkType", (n) -> { this.setDisplayLinkType(n.getEnumValue(PlannerExternalTaskSourceDisplayType::forValue)); });
+        deserializerMap.put("displayLinkType", (n) -> { this.setDisplayLinkType(n.getEnumValue(PlannerExternalTaskSourceDisplayLinkType::forValue)); });
         deserializerMap.put("displayNameSegments", (n) -> { this.setDisplayNameSegments(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("externalContextId", (n) -> { this.setExternalContextId(n.getStringValue()); });
         deserializerMap.put("externalObjectId", (n) -> { this.setExternalObjectId(n.getStringValue()); });
@@ -123,7 +123,7 @@ public class PlannerExternalTaskSource extends PlannerTaskCreation implements Pa
      * Sets the displayLinkType property value. Specifies how an application should display the link to the associated plannerExternalTaskSource. The possible values are: none, default.
      * @param value Value to set for the displayLinkType property.
      */
-    public void setDisplayLinkType(@jakarta.annotation.Nullable final PlannerExternalTaskSourceDisplayType value) {
+    public void setDisplayLinkType(@jakarta.annotation.Nullable final PlannerExternalTaskSourceDisplayLinkType value) {
         this.backingStore.set("displayLinkType", value);
     }
     /**

@@ -34,10 +34,10 @@ public class HorizontalSection extends Entity implements Parsable {
     }
     /**
      * Gets the emphasis property value. Enumeration value that indicates the emphasis of the section background. The possible values are: none, netural, soft, strong, unknownFutureValue.
-     * @return a SectionEmphasisType
+     * @return a HorizontalSectionEmphasis
      */
     @jakarta.annotation.Nullable
-    public SectionEmphasisType getEmphasis() {
+    public HorizontalSectionEmphasis getEmphasis() {
         return this.backingStore.get("emphasis");
     }
     /**
@@ -48,16 +48,16 @@ public class HorizontalSection extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("columns", (n) -> { this.setColumns(n.getCollectionOfObjectValues(HorizontalSectionColumn::createFromDiscriminatorValue)); });
-        deserializerMap.put("emphasis", (n) -> { this.setEmphasis(n.getEnumValue(SectionEmphasisType::forValue)); });
-        deserializerMap.put("layout", (n) -> { this.setLayout(n.getEnumValue(HorizontalSectionLayoutType::forValue)); });
+        deserializerMap.put("emphasis", (n) -> { this.setEmphasis(n.getEnumValue(HorizontalSectionEmphasis::forValue)); });
+        deserializerMap.put("layout", (n) -> { this.setLayout(n.getEnumValue(HorizontalSectionLayout::forValue)); });
         return deserializerMap;
     }
     /**
      * Gets the layout property value. Layout type of the section. The possible values are: none, oneColumn, twoColumns, threeColumns, oneThirdLeftColumn, oneThirdRightColumn, fullWidth, unknownFutureValue.
-     * @return a HorizontalSectionLayoutType
+     * @return a HorizontalSectionLayout
      */
     @jakarta.annotation.Nullable
-    public HorizontalSectionLayoutType getLayout() {
+    public HorizontalSectionLayout getLayout() {
         return this.backingStore.get("layout");
     }
     /**
@@ -82,14 +82,14 @@ public class HorizontalSection extends Entity implements Parsable {
      * Sets the emphasis property value. Enumeration value that indicates the emphasis of the section background. The possible values are: none, netural, soft, strong, unknownFutureValue.
      * @param value Value to set for the emphasis property.
      */
-    public void setEmphasis(@jakarta.annotation.Nullable final SectionEmphasisType value) {
+    public void setEmphasis(@jakarta.annotation.Nullable final HorizontalSectionEmphasis value) {
         this.backingStore.set("emphasis", value);
     }
     /**
      * Sets the layout property value. Layout type of the section. The possible values are: none, oneColumn, twoColumns, threeColumns, oneThirdLeftColumn, oneThirdRightColumn, fullWidth, unknownFutureValue.
      * @param value Value to set for the layout property.
      */
-    public void setLayout(@jakarta.annotation.Nullable final HorizontalSectionLayoutType value) {
+    public void setLayout(@jakarta.annotation.Nullable final HorizontalSectionLayout value) {
         this.backingStore.set("layout", value);
     }
 }

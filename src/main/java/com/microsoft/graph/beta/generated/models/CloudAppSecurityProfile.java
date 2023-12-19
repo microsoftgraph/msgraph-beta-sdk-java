@@ -81,7 +81,7 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("manifest", (n) -> { this.setManifest(n.getStringValue()); });
         deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
-        deserializerMap.put("permissionsRequired", (n) -> { this.setPermissionsRequired(n.getEnumValue(ApplicationPermissionsRequired::forValue)); });
+        deserializerMap.put("permissionsRequired", (n) -> { this.setPermissionsRequired(n.getEnumValue(CloudAppSecurityProfilePermissionsRequired::forValue)); });
         deserializerMap.put("platform", (n) -> { this.setPlatform(n.getStringValue()); });
         deserializerMap.put("policyName", (n) -> { this.setPolicyName(n.getStringValue()); });
         deserializerMap.put("publisher", (n) -> { this.setPublisher(n.getStringValue()); });
@@ -125,10 +125,10 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the permissionsRequired property value. The permissionsRequired property
-     * @return a ApplicationPermissionsRequired
+     * @return a CloudAppSecurityProfilePermissionsRequired
      */
     @jakarta.annotation.Nullable
-    public ApplicationPermissionsRequired getPermissionsRequired() {
+    public CloudAppSecurityProfilePermissionsRequired getPermissionsRequired() {
         return this.backingStore.get("permissionsRequired");
     }
     /**
@@ -279,7 +279,7 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
      * Sets the permissionsRequired property value. The permissionsRequired property
      * @param value Value to set for the permissionsRequired property.
      */
-    public void setPermissionsRequired(@jakarta.annotation.Nullable final ApplicationPermissionsRequired value) {
+    public void setPermissionsRequired(@jakarta.annotation.Nullable final CloudAppSecurityProfilePermissionsRequired value) {
         this.backingStore.set("permissionsRequired", value);
     }
     /**

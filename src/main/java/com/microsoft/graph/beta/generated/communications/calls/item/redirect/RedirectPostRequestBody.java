@@ -1,6 +1,5 @@
 package com.microsoft.graph.beta.communications.calls.item.redirect;
 
-import com.microsoft.graph.beta.models.CallDisposition;
 import com.microsoft.graph.beta.models.InvitationParticipantInfo;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
@@ -75,7 +74,7 @@ public class RedirectPostRequestBody implements AdditionalDataHolder, BackedMode
         deserializerMap.put("callbackUri", (n) -> { this.setCallbackUri(n.getStringValue()); });
         deserializerMap.put("maskCallee", (n) -> { this.setMaskCallee(n.getBooleanValue()); });
         deserializerMap.put("maskCaller", (n) -> { this.setMaskCaller(n.getBooleanValue()); });
-        deserializerMap.put("targetDisposition", (n) -> { this.setTargetDisposition(n.getEnumValue(CallDisposition::forValue)); });
+        deserializerMap.put("targetDisposition", (n) -> { this.setTargetDisposition(n.getEnumValue(RedirectPostRequestBodyTargetDisposition::forValue)); });
         deserializerMap.put("targets", (n) -> { this.setTargets(n.getCollectionOfObjectValues(InvitationParticipantInfo::createFromDiscriminatorValue)); });
         deserializerMap.put("timeout", (n) -> { this.setTimeout(n.getIntegerValue()); });
         return deserializerMap;
@@ -98,10 +97,10 @@ public class RedirectPostRequestBody implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the targetDisposition property value. The targetDisposition property
-     * @return a CallDisposition
+     * @return a RedirectPostRequestBodyTargetDisposition
      */
     @jakarta.annotation.Nullable
-    public CallDisposition getTargetDisposition() {
+    public RedirectPostRequestBodyTargetDisposition getTargetDisposition() {
         return this.backingStore.get("targetDisposition");
     }
     /**
@@ -174,7 +173,7 @@ public class RedirectPostRequestBody implements AdditionalDataHolder, BackedMode
      * Sets the targetDisposition property value. The targetDisposition property
      * @param value Value to set for the targetDisposition property.
      */
-    public void setTargetDisposition(@jakarta.annotation.Nullable final CallDisposition value) {
+    public void setTargetDisposition(@jakarta.annotation.Nullable final RedirectPostRequestBodyTargetDisposition value) {
         this.backingStore.set("targetDisposition", value);
     }
     /**

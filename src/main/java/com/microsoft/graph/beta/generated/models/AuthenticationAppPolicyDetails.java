@@ -49,18 +49,18 @@ public class AuthenticationAppPolicyDetails implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the adminConfiguration property value. The admin configuration of the policy on the user's authentication app. For a policy that does not impact the success/failure of the authentication, the evaluation defaults to notApplicable. The possible values are: notApplicable, enabled, disabled, unknownFutureValue.
-     * @return a AuthenticationAppAdminConfiguration
+     * @return a AuthenticationAppPolicyDetailsAdminConfiguration
      */
     @jakarta.annotation.Nullable
-    public AuthenticationAppAdminConfiguration getAdminConfiguration() {
+    public AuthenticationAppPolicyDetailsAdminConfiguration getAdminConfiguration() {
         return this.backingStore.get("adminConfiguration");
     }
     /**
      * Gets the authenticationEvaluation property value. Evaluates the success/failure of the authentication based on the admin configuration of the policy on the user's client authentication app. The possible values are: success, failure, unknownFutureValue.
-     * @return a AuthenticationAppEvaluation
+     * @return a AuthenticationAppPolicyDetailsAuthenticationEvaluation
      */
     @jakarta.annotation.Nullable
-    public AuthenticationAppEvaluation getAuthenticationEvaluation() {
+    public AuthenticationAppPolicyDetailsAuthenticationEvaluation getAuthenticationEvaluation() {
         return this.backingStore.get("authenticationEvaluation");
     }
     /**
@@ -78,11 +78,11 @@ public class AuthenticationAppPolicyDetails implements AdditionalDataHolder, Bac
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
-        deserializerMap.put("adminConfiguration", (n) -> { this.setAdminConfiguration(n.getEnumValue(AuthenticationAppAdminConfiguration::forValue)); });
-        deserializerMap.put("authenticationEvaluation", (n) -> { this.setAuthenticationEvaluation(n.getEnumValue(AuthenticationAppEvaluation::forValue)); });
+        deserializerMap.put("adminConfiguration", (n) -> { this.setAdminConfiguration(n.getEnumValue(AuthenticationAppPolicyDetailsAdminConfiguration::forValue)); });
+        deserializerMap.put("authenticationEvaluation", (n) -> { this.setAuthenticationEvaluation(n.getEnumValue(AuthenticationAppPolicyDetailsAuthenticationEvaluation::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("policyName", (n) -> { this.setPolicyName(n.getStringValue()); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(AuthenticationAppPolicyStatus::forValue)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(AuthenticationAppPolicyDetailsStatus::forValue)); });
         return deserializerMap;
     }
     /**
@@ -103,10 +103,10 @@ public class AuthenticationAppPolicyDetails implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the status property value. Refers to whether the policy executed as expected on the user's client authentication app. The possible values are: unknown, appLockOutOfDate, appLockEnabled, appLockDisabled, appContextOutOfDate, appContextShown, appContextNotShown, locationContextOutOfDate, locationContextShown, locationContextNotShown, numberMatchOutOfDate, numberMatchCorrectNumberEntered, numberMatchIncorrectNumberEntered, numberMatchDeny, tamperResistantHardwareOutOfDate, tamperResistantHardwareUsed, tamperResistantHardwareNotUsed, unknownFutureValue.
-     * @return a AuthenticationAppPolicyStatus
+     * @return a AuthenticationAppPolicyDetailsStatus
      */
     @jakarta.annotation.Nullable
-    public AuthenticationAppPolicyStatus getStatus() {
+    public AuthenticationAppPolicyDetailsStatus getStatus() {
         return this.backingStore.get("status");
     }
     /**
@@ -133,14 +133,14 @@ public class AuthenticationAppPolicyDetails implements AdditionalDataHolder, Bac
      * Sets the adminConfiguration property value. The admin configuration of the policy on the user's authentication app. For a policy that does not impact the success/failure of the authentication, the evaluation defaults to notApplicable. The possible values are: notApplicable, enabled, disabled, unknownFutureValue.
      * @param value Value to set for the adminConfiguration property.
      */
-    public void setAdminConfiguration(@jakarta.annotation.Nullable final AuthenticationAppAdminConfiguration value) {
+    public void setAdminConfiguration(@jakarta.annotation.Nullable final AuthenticationAppPolicyDetailsAdminConfiguration value) {
         this.backingStore.set("adminConfiguration", value);
     }
     /**
      * Sets the authenticationEvaluation property value. Evaluates the success/failure of the authentication based on the admin configuration of the policy on the user's client authentication app. The possible values are: success, failure, unknownFutureValue.
      * @param value Value to set for the authenticationEvaluation property.
      */
-    public void setAuthenticationEvaluation(@jakarta.annotation.Nullable final AuthenticationAppEvaluation value) {
+    public void setAuthenticationEvaluation(@jakarta.annotation.Nullable final AuthenticationAppPolicyDetailsAuthenticationEvaluation value) {
         this.backingStore.set("authenticationEvaluation", value);
     }
     /**
@@ -169,7 +169,7 @@ public class AuthenticationAppPolicyDetails implements AdditionalDataHolder, Bac
      * Sets the status property value. Refers to whether the policy executed as expected on the user's client authentication app. The possible values are: unknown, appLockOutOfDate, appLockEnabled, appLockDisabled, appContextOutOfDate, appContextShown, appContextNotShown, locationContextOutOfDate, locationContextShown, locationContextNotShown, numberMatchOutOfDate, numberMatchCorrectNumberEntered, numberMatchIncorrectNumberEntered, numberMatchDeny, tamperResistantHardwareOutOfDate, tamperResistantHardwareUsed, tamperResistantHardwareNotUsed, unknownFutureValue.
      * @param value Value to set for the status property.
      */
-    public void setStatus(@jakarta.annotation.Nullable final AuthenticationAppPolicyStatus value) {
+    public void setStatus(@jakarta.annotation.Nullable final AuthenticationAppPolicyDetailsStatus value) {
         this.backingStore.set("status", value);
     }
 }

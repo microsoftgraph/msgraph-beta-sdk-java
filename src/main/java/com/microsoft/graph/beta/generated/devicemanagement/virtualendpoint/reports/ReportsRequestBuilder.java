@@ -2,6 +2,7 @@ package com.microsoft.graph.beta.devicemanagement.virtualendpoint.reports;
 
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.reports.exportjobs.ExportJobsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.reports.getactionstatusreports.GetActionStatusReportsRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.virtualendpoint.reports.getcloudpcperformancereport.GetCloudPcPerformanceReportRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.reports.getcloudpcrecommendationreports.GetCloudPcRecommendationReportsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.reports.getconnectionqualityreports.GetConnectionQualityReportsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.reports.getdailyaggregatedremoteconnectionreports.GetDailyAggregatedRemoteConnectionReportsRequestBuilder;
@@ -46,6 +47,13 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public GetActionStatusReportsRequestBuilder getActionStatusReports() {
         return new GetActionStatusReportsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the getCloudPcPerformanceReport method.
+     */
+    @jakarta.annotation.Nonnull
+    public GetCloudPcPerformanceReportRequestBuilder getCloudPcPerformanceReport() {
+        return new GetCloudPcPerformanceReportRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the getCloudPcRecommendationReports method.

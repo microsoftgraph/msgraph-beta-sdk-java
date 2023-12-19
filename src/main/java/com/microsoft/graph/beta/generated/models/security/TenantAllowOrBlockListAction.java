@@ -37,10 +37,10 @@ public class TenantAllowOrBlockListAction implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the action property value. Specifies whether the tenant allow-or-block list is an allow or block. The possible values are: allow, block, and unkownFutureValue.
-     * @return a TenantAllowBlockListAction
+     * @return a TenantAllowOrBlockListActionAction
      */
     @jakarta.annotation.Nullable
-    public TenantAllowBlockListAction getAction() {
+    public TenantAllowOrBlockListActionAction getAction() {
         return this.backingStore.get("action");
     }
     /**
@@ -79,7 +79,7 @@ public class TenantAllowOrBlockListAction implements AdditionalDataHolder, Backe
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
-        deserializerMap.put("action", (n) -> { this.setAction(n.getEnumValue(TenantAllowBlockListAction::forValue)); });
+        deserializerMap.put("action", (n) -> { this.setAction(n.getEnumValue(TenantAllowOrBlockListActionAction::forValue)); });
         deserializerMap.put("expirationDateTime", (n) -> { this.setExpirationDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("note", (n) -> { this.setNote(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -127,7 +127,7 @@ public class TenantAllowOrBlockListAction implements AdditionalDataHolder, Backe
      * Sets the action property value. Specifies whether the tenant allow-or-block list is an allow or block. The possible values are: allow, block, and unkownFutureValue.
      * @param value Value to set for the action property.
      */
-    public void setAction(@jakarta.annotation.Nullable final TenantAllowBlockListAction value) {
+    public void setAction(@jakarta.annotation.Nullable final TenantAllowOrBlockListActionAction value) {
         this.backingStore.set("action", value);
     }
     /**

@@ -40,25 +40,25 @@ public class MultiTenantOrganizationJoinRequestRecord extends Entity implements 
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("addedByTenantId", (n) -> { this.setAddedByTenantId(n.getStringValue()); });
-        deserializerMap.put("memberState", (n) -> { this.setMemberState(n.getEnumValue(MultiTenantOrganizationMemberState::forValue)); });
-        deserializerMap.put("role", (n) -> { this.setRole(n.getEnumValue(MultiTenantOrganizationMemberRole::forValue)); });
+        deserializerMap.put("memberState", (n) -> { this.setMemberState(n.getEnumValue(MultiTenantOrganizationJoinRequestRecordMemberState::forValue)); });
+        deserializerMap.put("role", (n) -> { this.setRole(n.getEnumValue(MultiTenantOrganizationJoinRequestRecordRole::forValue)); });
         deserializerMap.put("transitionDetails", (n) -> { this.setTransitionDetails(n.getObjectValue(MultiTenantOrganizationJoinRequestTransitionDetails::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the memberState property value. State of the tenant in the multi-tenant organization. The possible values are: pending, active, removed, unknownFutureValue. Tenants in the pending state must join the multi-tenant organization to participate in the multi-tenant organization. Tenants in the active state can participate in the multi-tenant organization. Tenants in the removed state are in the process of being removed from the multi-tenant organization. Read-only.
-     * @return a MultiTenantOrganizationMemberState
+     * @return a MultiTenantOrganizationJoinRequestRecordMemberState
      */
     @jakarta.annotation.Nullable
-    public MultiTenantOrganizationMemberState getMemberState() {
+    public MultiTenantOrganizationJoinRequestRecordMemberState getMemberState() {
         return this.backingStore.get("memberState");
     }
     /**
      * Gets the role property value. Role of the tenant in the multi-tenant organization. The possible values are: owner, member (default), unknownFutureValue. Tenants with the owner role can manage the multi-tenant organization. There can be multiple tenants with the owner role in a multi-tenant organization. Tenants with the member role can participate in a multi-tenant organization.
-     * @return a MultiTenantOrganizationMemberRole
+     * @return a MultiTenantOrganizationJoinRequestRecordRole
      */
     @jakarta.annotation.Nullable
-    public MultiTenantOrganizationMemberRole getRole() {
+    public MultiTenantOrganizationJoinRequestRecordRole getRole() {
         return this.backingStore.get("role");
     }
     /**
@@ -92,14 +92,14 @@ public class MultiTenantOrganizationJoinRequestRecord extends Entity implements 
      * Sets the memberState property value. State of the tenant in the multi-tenant organization. The possible values are: pending, active, removed, unknownFutureValue. Tenants in the pending state must join the multi-tenant organization to participate in the multi-tenant organization. Tenants in the active state can participate in the multi-tenant organization. Tenants in the removed state are in the process of being removed from the multi-tenant organization. Read-only.
      * @param value Value to set for the memberState property.
      */
-    public void setMemberState(@jakarta.annotation.Nullable final MultiTenantOrganizationMemberState value) {
+    public void setMemberState(@jakarta.annotation.Nullable final MultiTenantOrganizationJoinRequestRecordMemberState value) {
         this.backingStore.set("memberState", value);
     }
     /**
      * Sets the role property value. Role of the tenant in the multi-tenant organization. The possible values are: owner, member (default), unknownFutureValue. Tenants with the owner role can manage the multi-tenant organization. There can be multiple tenants with the owner role in a multi-tenant organization. Tenants with the member role can participate in a multi-tenant organization.
      * @param value Value to set for the role property.
      */
-    public void setRole(@jakarta.annotation.Nullable final MultiTenantOrganizationMemberRole value) {
+    public void setRole(@jakarta.annotation.Nullable final MultiTenantOrganizationJoinRequestRecordRole value) {
         this.backingStore.set("role", value);
     }
     /**

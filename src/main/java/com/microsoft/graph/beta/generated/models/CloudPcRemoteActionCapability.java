@@ -36,18 +36,18 @@ public class CloudPcRemoteActionCapability implements AdditionalDataHolder, Back
     }
     /**
      * Gets the actionCapability property value. Indicates the state of the supported action capability to perform a Cloud PC remote action. Possible values are: enabled, disabled. Default value is enabled.
-     * @return a ActionCapability
+     * @return a CloudPcRemoteActionCapabilityActionCapability
      */
     @jakarta.annotation.Nullable
-    public ActionCapability getActionCapability() {
+    public CloudPcRemoteActionCapabilityActionCapability getActionCapability() {
         return this.backingStore.get("actionCapability");
     }
     /**
      * Gets the actionName property value. The name of the supported Cloud PC remote action. Possible values are: unknown, restart, rename, restore, resize, reprovision, troubleShoot, changeUserAccountType, placeUnderReview. Default value is unknown.
-     * @return a CloudPcRemoteActionName
+     * @return a CloudPcRemoteActionCapabilityActionName
      */
     @jakarta.annotation.Nullable
-    public CloudPcRemoteActionName getActionName() {
+    public CloudPcRemoteActionCapabilityActionName getActionName() {
         return this.backingStore.get("actionName");
     }
     /**
@@ -78,8 +78,8 @@ public class CloudPcRemoteActionCapability implements AdditionalDataHolder, Back
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
-        deserializerMap.put("actionCapability", (n) -> { this.setActionCapability(n.getEnumValue(ActionCapability::forValue)); });
-        deserializerMap.put("actionName", (n) -> { this.setActionName(n.getEnumValue(CloudPcRemoteActionName::forValue)); });
+        deserializerMap.put("actionCapability", (n) -> { this.setActionCapability(n.getEnumValue(CloudPcRemoteActionCapabilityActionCapability::forValue)); });
+        deserializerMap.put("actionName", (n) -> { this.setActionName(n.getEnumValue(CloudPcRemoteActionCapabilityActionName::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;
     }
@@ -106,14 +106,14 @@ public class CloudPcRemoteActionCapability implements AdditionalDataHolder, Back
      * Sets the actionCapability property value. Indicates the state of the supported action capability to perform a Cloud PC remote action. Possible values are: enabled, disabled. Default value is enabled.
      * @param value Value to set for the actionCapability property.
      */
-    public void setActionCapability(@jakarta.annotation.Nullable final ActionCapability value) {
+    public void setActionCapability(@jakarta.annotation.Nullable final CloudPcRemoteActionCapabilityActionCapability value) {
         this.backingStore.set("actionCapability", value);
     }
     /**
      * Sets the actionName property value. The name of the supported Cloud PC remote action. Possible values are: unknown, restart, rename, restore, resize, reprovision, troubleShoot, changeUserAccountType, placeUnderReview. Default value is unknown.
      * @param value Value to set for the actionName property.
      */
-    public void setActionName(@jakarta.annotation.Nullable final CloudPcRemoteActionName value) {
+    public void setActionName(@jakarta.annotation.Nullable final CloudPcRemoteActionCapabilityActionName value) {
         this.backingStore.set("actionName", value);
     }
     /**

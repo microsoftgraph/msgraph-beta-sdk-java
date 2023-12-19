@@ -49,10 +49,10 @@ public class RoleAssignment implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the assignmentType property value. The type of the admin relationship(s) associated with the role assignment. Possible values are: none, delegatedAdminPrivileges, unknownFutureValue, granularDelegatedAdminPrivileges, delegatedAndGranularDelegetedAdminPrivileges. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: granularDelegatedAdminPrivileges , delegatedAndGranularDelegetedAdminPrivileges.
-     * @return a DelegatedPrivilegeStatus
+     * @return a RoleAssignmentAssignmentType
      */
     @jakarta.annotation.Nullable
-    public DelegatedPrivilegeStatus getAssignmentType() {
+    public RoleAssignmentAssignmentType getAssignmentType() {
         return this.backingStore.get("assignmentType");
     }
     /**
@@ -70,7 +70,7 @@ public class RoleAssignment implements AdditionalDataHolder, BackedModel, Parsab
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
-        deserializerMap.put("assignmentType", (n) -> { this.setAssignmentType(n.getEnumValue(DelegatedPrivilegeStatus::forValue)); });
+        deserializerMap.put("assignmentType", (n) -> { this.setAssignmentType(n.getEnumValue(RoleAssignmentAssignmentType::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("roles", (n) -> { this.setRoles(n.getCollectionOfObjectValues(RoleDefinition::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -113,7 +113,7 @@ public class RoleAssignment implements AdditionalDataHolder, BackedModel, Parsab
      * Sets the assignmentType property value. The type of the admin relationship(s) associated with the role assignment. Possible values are: none, delegatedAdminPrivileges, unknownFutureValue, granularDelegatedAdminPrivileges, delegatedAndGranularDelegetedAdminPrivileges. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: granularDelegatedAdminPrivileges , delegatedAndGranularDelegetedAdminPrivileges.
      * @param value Value to set for the assignmentType property.
      */
-    public void setAssignmentType(@jakarta.annotation.Nullable final DelegatedPrivilegeStatus value) {
+    public void setAssignmentType(@jakarta.annotation.Nullable final RoleAssignmentAssignmentType value) {
         this.backingStore.set("assignmentType", value);
     }
     /**

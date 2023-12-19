@@ -3,7 +3,6 @@ package com.microsoft.graph.beta.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -27,10 +26,10 @@ public class SensitiveType extends Entity implements Parsable {
     }
     /**
      * Gets the classificationMethod property value. The classificationMethod property
-     * @return a ClassificationMethod
+     * @return a SensitiveTypeClassificationMethod
      */
     @jakarta.annotation.Nullable
-    public ClassificationMethod getClassificationMethod() {
+    public SensitiveTypeClassificationMethod getClassificationMethod() {
         return this.backingStore.get("classificationMethod");
     }
     /**
@@ -48,14 +47,14 @@ public class SensitiveType extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("classificationMethod", (n) -> { this.setClassificationMethod(n.getEnumValue(ClassificationMethod::forValue)); });
+        deserializerMap.put("classificationMethod", (n) -> { this.setClassificationMethod(n.getEnumValue(SensitiveTypeClassificationMethod::forValue)); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
         deserializerMap.put("publisherName", (n) -> { this.setPublisherName(n.getStringValue()); });
         deserializerMap.put("rulePackageId", (n) -> { this.setRulePackageId(n.getStringValue()); });
         deserializerMap.put("rulePackageType", (n) -> { this.setRulePackageType(n.getStringValue()); });
-        deserializerMap.put("scope", (n) -> { this.setScope(n.getEnumSetValue(SensitiveTypeScope::forValue)); });
-        deserializerMap.put("sensitiveTypeSource", (n) -> { this.setSensitiveTypeSource(n.getEnumValue(SensitiveTypeSource::forValue)); });
+        deserializerMap.put("scope", (n) -> { this.setScope(n.getEnumValue(SensitiveTypeScope::forValue)); });
+        deserializerMap.put("sensitiveTypeSource", (n) -> { this.setSensitiveTypeSource(n.getEnumValue(SensitiveTypeSensitiveTypeSource::forValue)); });
         deserializerMap.put("state", (n) -> { this.setState(n.getStringValue()); });
         return deserializerMap;
     }
@@ -93,18 +92,18 @@ public class SensitiveType extends Entity implements Parsable {
     }
     /**
      * Gets the scope property value. The scope property
-     * @return a EnumSet<SensitiveTypeScope>
+     * @return a SensitiveTypeScope
      */
     @jakarta.annotation.Nullable
-    public EnumSet<SensitiveTypeScope> getScope() {
+    public SensitiveTypeScope getScope() {
         return this.backingStore.get("scope");
     }
     /**
      * Gets the sensitiveTypeSource property value. The sensitiveTypeSource property
-     * @return a SensitiveTypeSource
+     * @return a SensitiveTypeSensitiveTypeSource
      */
     @jakarta.annotation.Nullable
-    public SensitiveTypeSource getSensitiveTypeSource() {
+    public SensitiveTypeSensitiveTypeSource getSensitiveTypeSource() {
         return this.backingStore.get("sensitiveTypeSource");
     }
     /**
@@ -128,7 +127,7 @@ public class SensitiveType extends Entity implements Parsable {
         writer.writeStringValue("publisherName", this.getPublisherName());
         writer.writeStringValue("rulePackageId", this.getRulePackageId());
         writer.writeStringValue("rulePackageType", this.getRulePackageType());
-        writer.writeEnumSetValue("scope", this.getScope());
+        writer.writeEnumValue("scope", this.getScope());
         writer.writeEnumValue("sensitiveTypeSource", this.getSensitiveTypeSource());
         writer.writeStringValue("state", this.getState());
     }
@@ -136,7 +135,7 @@ public class SensitiveType extends Entity implements Parsable {
      * Sets the classificationMethod property value. The classificationMethod property
      * @param value Value to set for the classificationMethod property.
      */
-    public void setClassificationMethod(@jakarta.annotation.Nullable final ClassificationMethod value) {
+    public void setClassificationMethod(@jakarta.annotation.Nullable final SensitiveTypeClassificationMethod value) {
         this.backingStore.set("classificationMethod", value);
     }
     /**
@@ -178,14 +177,14 @@ public class SensitiveType extends Entity implements Parsable {
      * Sets the scope property value. The scope property
      * @param value Value to set for the scope property.
      */
-    public void setScope(@jakarta.annotation.Nullable final EnumSet<SensitiveTypeScope> value) {
+    public void setScope(@jakarta.annotation.Nullable final SensitiveTypeScope value) {
         this.backingStore.set("scope", value);
     }
     /**
      * Sets the sensitiveTypeSource property value. The sensitiveTypeSource property
      * @param value Value to set for the sensitiveTypeSource property.
      */
-    public void setSensitiveTypeSource(@jakarta.annotation.Nullable final SensitiveTypeSource value) {
+    public void setSensitiveTypeSource(@jakarta.annotation.Nullable final SensitiveTypeSensitiveTypeSource value) {
         this.backingStore.set("sensitiveTypeSource", value);
     }
     /**

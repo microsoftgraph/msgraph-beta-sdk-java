@@ -27,10 +27,10 @@ public class CallEvent extends Entity implements Parsable {
     }
     /**
      * Gets the callEventType property value. The callEventType property
-     * @return a CallEventType
+     * @return a CallEventCallEventType
      */
     @jakarta.annotation.Nullable
-    public CallEventType getCallEventType() {
+    public CallEventCallEventType getCallEventType() {
         return this.backingStore.get("callEventType");
     }
     /**
@@ -48,7 +48,7 @@ public class CallEvent extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("callEventType", (n) -> { this.setCallEventType(n.getEnumValue(CallEventType::forValue)); });
+        deserializerMap.put("callEventType", (n) -> { this.setCallEventType(n.getEnumValue(CallEventCallEventType::forValue)); });
         deserializerMap.put("eventDateTime", (n) -> { this.setEventDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("participants", (n) -> { this.setParticipants(n.getCollectionOfObjectValues(Participant::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -76,7 +76,7 @@ public class CallEvent extends Entity implements Parsable {
      * Sets the callEventType property value. The callEventType property
      * @param value Value to set for the callEventType property.
      */
-    public void setCallEventType(@jakarta.annotation.Nullable final CallEventType value) {
+    public void setCallEventType(@jakarta.annotation.Nullable final CallEventCallEventType value) {
         this.backingStore.set("callEventType", value);
     }
     /**

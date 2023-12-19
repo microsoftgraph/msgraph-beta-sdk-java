@@ -77,7 +77,7 @@ public class MatchingDlpRule implements AdditionalDataHolder, BackedModel, Parsa
         deserializerMap.put("policyName", (n) -> { this.setPolicyName(n.getStringValue()); });
         deserializerMap.put("priority", (n) -> { this.setPriority(n.getIntegerValue()); });
         deserializerMap.put("ruleId", (n) -> { this.setRuleId(n.getStringValue()); });
-        deserializerMap.put("ruleMode", (n) -> { this.setRuleMode(n.getEnumValue(RuleMode::forValue)); });
+        deserializerMap.put("ruleMode", (n) -> { this.setRuleMode(n.getEnumValue(MatchingDlpRuleRuleMode::forValue)); });
         deserializerMap.put("ruleName", (n) -> { this.setRuleName(n.getStringValue()); });
         return deserializerMap;
     }
@@ -131,10 +131,10 @@ public class MatchingDlpRule implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the ruleMode property value. The ruleMode property
-     * @return a RuleMode
+     * @return a MatchingDlpRuleRuleMode
      */
     @jakarta.annotation.Nullable
-    public RuleMode getRuleMode() {
+    public MatchingDlpRuleRuleMode getRuleMode() {
         return this.backingStore.get("ruleMode");
     }
     /**
@@ -230,7 +230,7 @@ public class MatchingDlpRule implements AdditionalDataHolder, BackedModel, Parsa
      * Sets the ruleMode property value. The ruleMode property
      * @param value Value to set for the ruleMode property.
      */
-    public void setRuleMode(@jakarta.annotation.Nullable final RuleMode value) {
+    public void setRuleMode(@jakarta.annotation.Nullable final MatchingDlpRuleRuleMode value) {
         this.backingStore.set("ruleMode", value);
     }
     /**

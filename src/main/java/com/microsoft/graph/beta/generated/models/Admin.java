@@ -85,11 +85,12 @@ public class Admin implements AdditionalDataHolder, BackedModel, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(11);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(12);
         deserializerMap.put("appsAndServices", (n) -> { this.setAppsAndServices(n.getObjectValue(AdminAppsAndServices::createFromDiscriminatorValue)); });
         deserializerMap.put("dynamics", (n) -> { this.setDynamics(n.getObjectValue(AdminDynamics::createFromDiscriminatorValue)); });
         deserializerMap.put("edge", (n) -> { this.setEdge(n.getObjectValue(Edge::createFromDiscriminatorValue)); });
         deserializerMap.put("forms", (n) -> { this.setForms(n.getObjectValue(AdminForms::createFromDiscriminatorValue)); });
+        deserializerMap.put("microsoft365Apps", (n) -> { this.setMicrosoft365Apps(n.getObjectValue(AdminMicrosoft365Apps::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("people", (n) -> { this.setPeople(n.getObjectValue(PeopleAdminSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("reportSettings", (n) -> { this.setReportSettings(n.getObjectValue(AdminReportSettings::createFromDiscriminatorValue)); });
@@ -106,6 +107,14 @@ public class Admin implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nullable
     public AdminForms getForms() {
         return this.backingStore.get("forms");
+    }
+    /**
+     * Gets the microsoft365Apps property value. A container for the Microsoft 365 apps admin functionality.
+     * @return a AdminMicrosoft365Apps
+     */
+    @jakarta.annotation.Nullable
+    public AdminMicrosoft365Apps getMicrosoft365Apps() {
+        return this.backingStore.get("microsoft365Apps");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -173,6 +182,7 @@ public class Admin implements AdditionalDataHolder, BackedModel, Parsable {
         writer.writeObjectValue("dynamics", this.getDynamics());
         writer.writeObjectValue("edge", this.getEdge());
         writer.writeObjectValue("forms", this.getForms());
+        writer.writeObjectValue("microsoft365Apps", this.getMicrosoft365Apps());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("people", this.getPeople());
         writer.writeObjectValue("reportSettings", this.getReportSettings());
@@ -224,6 +234,13 @@ public class Admin implements AdditionalDataHolder, BackedModel, Parsable {
      */
     public void setForms(@jakarta.annotation.Nullable final AdminForms value) {
         this.backingStore.set("forms", value);
+    }
+    /**
+     * Sets the microsoft365Apps property value. A container for the Microsoft 365 apps admin functionality.
+     * @param value Value to set for the microsoft365Apps property.
+     */
+    public void setMicrosoft365Apps(@jakarta.annotation.Nullable final AdminMicrosoft365Apps value) {
+        this.backingStore.set("microsoft365Apps", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property

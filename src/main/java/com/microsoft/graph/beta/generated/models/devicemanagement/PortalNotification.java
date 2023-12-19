@@ -81,10 +81,10 @@ public class PortalNotification implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the alertRuleTemplate property value. The associated alert rule template. The possible values are: cloudPcProvisionScenario, cloudPcImageUploadScenario, cloudPcOnPremiseNetworkConnectionCheckScenario, unknownFutureValue, cloudPcInGracePeriodScenario. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: cloudPcInGracePeriodScenario.
-     * @return a AlertRuleTemplate
+     * @return a PortalNotificationAlertRuleTemplate
      */
     @jakarta.annotation.Nullable
-    public AlertRuleTemplate getAlertRuleTemplate() {
+    public PortalNotificationAlertRuleTemplate getAlertRuleTemplate() {
         return this.backingStore.get("alertRuleTemplate");
     }
     /**
@@ -106,11 +106,11 @@ public class PortalNotification implements AdditionalDataHolder, BackedModel, Pa
         deserializerMap.put("alertRecordId", (n) -> { this.setAlertRecordId(n.getStringValue()); });
         deserializerMap.put("alertRuleId", (n) -> { this.setAlertRuleId(n.getStringValue()); });
         deserializerMap.put("alertRuleName", (n) -> { this.setAlertRuleName(n.getStringValue()); });
-        deserializerMap.put("alertRuleTemplate", (n) -> { this.setAlertRuleTemplate(n.getEnumValue(AlertRuleTemplate::forValue)); });
+        deserializerMap.put("alertRuleTemplate", (n) -> { this.setAlertRuleTemplate(n.getEnumValue(PortalNotificationAlertRuleTemplate::forValue)); });
         deserializerMap.put("id", (n) -> { this.setId(n.getStringValue()); });
         deserializerMap.put("isPortalNotificationSent", (n) -> { this.setIsPortalNotificationSent(n.getBooleanValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("severity", (n) -> { this.setSeverity(n.getEnumValue(RuleSeverityType::forValue)); });
+        deserializerMap.put("severity", (n) -> { this.setSeverity(n.getEnumValue(PortalNotificationSeverity::forValue)); });
         return deserializerMap;
     }
     /**
@@ -139,10 +139,10 @@ public class PortalNotification implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the severity property value. The associated alert rule severity. The possible values are: unknown, informational, warning, critical, unknownFutureValue.
-     * @return a RuleSeverityType
+     * @return a PortalNotificationSeverity
      */
     @jakarta.annotation.Nullable
-    public RuleSeverityType getSeverity() {
+    public PortalNotificationSeverity getSeverity() {
         return this.backingStore.get("severity");
     }
     /**
@@ -201,7 +201,7 @@ public class PortalNotification implements AdditionalDataHolder, BackedModel, Pa
      * Sets the alertRuleTemplate property value. The associated alert rule template. The possible values are: cloudPcProvisionScenario, cloudPcImageUploadScenario, cloudPcOnPremiseNetworkConnectionCheckScenario, unknownFutureValue, cloudPcInGracePeriodScenario. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: cloudPcInGracePeriodScenario.
      * @param value Value to set for the alertRuleTemplate property.
      */
-    public void setAlertRuleTemplate(@jakarta.annotation.Nullable final AlertRuleTemplate value) {
+    public void setAlertRuleTemplate(@jakarta.annotation.Nullable final PortalNotificationAlertRuleTemplate value) {
         this.backingStore.set("alertRuleTemplate", value);
     }
     /**
@@ -237,7 +237,7 @@ public class PortalNotification implements AdditionalDataHolder, BackedModel, Pa
      * Sets the severity property value. The associated alert rule severity. The possible values are: unknown, informational, warning, critical, unknownFutureValue.
      * @param value Value to set for the severity property.
      */
-    public void setSeverity(@jakarta.annotation.Nullable final RuleSeverityType value) {
+    public void setSeverity(@jakarta.annotation.Nullable final PortalNotificationSeverity value) {
         this.backingStore.set("severity", value);
     }
 }

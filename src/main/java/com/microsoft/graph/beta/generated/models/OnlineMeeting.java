@@ -60,10 +60,10 @@ public class OnlineMeeting extends OnlineMeetingBase implements Parsable {
     }
     /**
      * Gets the capabilities property value. The capabilities property
-     * @return a java.util.List<MeetingCapabilities>
+     * @return a java.util.List<OnlineMeetingCapabilities>
      */
     @jakarta.annotation.Nullable
-    public java.util.List<MeetingCapabilities> getCapabilities() {
+    public java.util.List<OnlineMeetingCapabilities> getCapabilities() {
         return this.backingStore.get("capabilities");
     }
     /**
@@ -101,7 +101,7 @@ public class OnlineMeeting extends OnlineMeetingBase implements Parsable {
         deserializerMap.put("attendeeReport", (n) -> { this.setAttendeeReport(n.getByteArrayValue()); });
         deserializerMap.put("broadcastRecording", (n) -> { this.setBroadcastRecording(n.getByteArrayValue()); });
         deserializerMap.put("broadcastSettings", (n) -> { this.setBroadcastSettings(n.getObjectValue(BroadcastMeetingSettings::createFromDiscriminatorValue)); });
-        deserializerMap.put("capabilities", (n) -> { this.setCapabilities(n.getCollectionOfEnumValues(MeetingCapabilities::forValue)); });
+        deserializerMap.put("capabilities", (n) -> { this.setCapabilities(n.getCollectionOfEnumValues(OnlineMeetingCapabilities::forValue)); });
         deserializerMap.put("creationDateTime", (n) -> { this.setCreationDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("endDateTime", (n) -> { this.setEndDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("externalId", (n) -> { this.setExternalId(n.getStringValue()); });
@@ -245,7 +245,7 @@ public class OnlineMeeting extends OnlineMeetingBase implements Parsable {
      * Sets the capabilities property value. The capabilities property
      * @param value Value to set for the capabilities property.
      */
-    public void setCapabilities(@jakarta.annotation.Nullable final java.util.List<MeetingCapabilities> value) {
+    public void setCapabilities(@jakarta.annotation.Nullable final java.util.List<OnlineMeetingCapabilities> value) {
         this.backingStore.set("capabilities", value);
     }
     /**

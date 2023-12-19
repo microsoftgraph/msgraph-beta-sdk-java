@@ -30,10 +30,10 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
     }
     /**
      * Gets the advancedThreatProtectionRequiredSecurityLevel property value. MDATP Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
-     * @return a DeviceThreatProtectionLevel
+     * @return a AndroidDeviceOwnerCompliancePolicyAdvancedThreatProtectionRequiredSecurityLevel
      */
     @jakarta.annotation.Nullable
-    public DeviceThreatProtectionLevel getAdvancedThreatProtectionRequiredSecurityLevel() {
+    public AndroidDeviceOwnerCompliancePolicyAdvancedThreatProtectionRequiredSecurityLevel getAdvancedThreatProtectionRequiredSecurityLevel() {
         return this.backingStore.get("advancedThreatProtectionRequiredSecurityLevel");
     }
     /**
@@ -46,10 +46,10 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
     }
     /**
      * Gets the deviceThreatProtectionRequiredSecurityLevel property value. Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
-     * @return a DeviceThreatProtectionLevel
+     * @return a AndroidDeviceOwnerCompliancePolicyDeviceThreatProtectionRequiredSecurityLevel
      */
     @jakarta.annotation.Nullable
-    public DeviceThreatProtectionLevel getDeviceThreatProtectionRequiredSecurityLevel() {
+    public AndroidDeviceOwnerCompliancePolicyDeviceThreatProtectionRequiredSecurityLevel getDeviceThreatProtectionRequiredSecurityLevel() {
         return this.backingStore.get("deviceThreatProtectionRequiredSecurityLevel");
     }
     /**
@@ -59,9 +59,9 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("advancedThreatProtectionRequiredSecurityLevel", (n) -> { this.setAdvancedThreatProtectionRequiredSecurityLevel(n.getEnumValue(DeviceThreatProtectionLevel::forValue)); });
+        deserializerMap.put("advancedThreatProtectionRequiredSecurityLevel", (n) -> { this.setAdvancedThreatProtectionRequiredSecurityLevel(n.getEnumValue(AndroidDeviceOwnerCompliancePolicyAdvancedThreatProtectionRequiredSecurityLevel::forValue)); });
         deserializerMap.put("deviceThreatProtectionEnabled", (n) -> { this.setDeviceThreatProtectionEnabled(n.getBooleanValue()); });
-        deserializerMap.put("deviceThreatProtectionRequiredSecurityLevel", (n) -> { this.setDeviceThreatProtectionRequiredSecurityLevel(n.getEnumValue(DeviceThreatProtectionLevel::forValue)); });
+        deserializerMap.put("deviceThreatProtectionRequiredSecurityLevel", (n) -> { this.setDeviceThreatProtectionRequiredSecurityLevel(n.getEnumValue(AndroidDeviceOwnerCompliancePolicyDeviceThreatProtectionRequiredSecurityLevel::forValue)); });
         deserializerMap.put("minAndroidSecurityPatchLevel", (n) -> { this.setMinAndroidSecurityPatchLevel(n.getStringValue()); });
         deserializerMap.put("osMaximumVersion", (n) -> { this.setOsMaximumVersion(n.getStringValue()); });
         deserializerMap.put("osMinimumVersion", (n) -> { this.setOsMinimumVersion(n.getStringValue()); });
@@ -76,7 +76,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
         deserializerMap.put("passwordMinutesOfInactivityBeforeLock", (n) -> { this.setPasswordMinutesOfInactivityBeforeLock(n.getIntegerValue()); });
         deserializerMap.put("passwordPreviousPasswordCountToBlock", (n) -> { this.setPasswordPreviousPasswordCountToBlock(n.getIntegerValue()); });
         deserializerMap.put("passwordRequired", (n) -> { this.setPasswordRequired(n.getBooleanValue()); });
-        deserializerMap.put("passwordRequiredType", (n) -> { this.setPasswordRequiredType(n.getEnumValue(AndroidDeviceOwnerRequiredPasswordType::forValue)); });
+        deserializerMap.put("passwordRequiredType", (n) -> { this.setPasswordRequiredType(n.getEnumValue(AndroidDeviceOwnerCompliancePolicyPasswordRequiredType::forValue)); });
         deserializerMap.put("requireNoPendingSystemUpdates", (n) -> { this.setRequireNoPendingSystemUpdates(n.getBooleanValue()); });
         deserializerMap.put("securityRequireIntuneAppIntegrity", (n) -> { this.setSecurityRequireIntuneAppIntegrity(n.getBooleanValue()); });
         deserializerMap.put("securityRequireSafetyNetAttestationBasicIntegrity", (n) -> { this.setSecurityRequireSafetyNetAttestationBasicIntegrity(n.getBooleanValue()); });
@@ -198,10 +198,10 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
     }
     /**
      * Gets the passwordRequiredType property value. Type of characters in password. Possible values are: deviceDefault, required, numeric, numericComplex, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, customPassword.
-     * @return a AndroidDeviceOwnerRequiredPasswordType
+     * @return a AndroidDeviceOwnerCompliancePolicyPasswordRequiredType
      */
     @jakarta.annotation.Nullable
-    public AndroidDeviceOwnerRequiredPasswordType getPasswordRequiredType() {
+    public AndroidDeviceOwnerCompliancePolicyPasswordRequiredType getPasswordRequiredType() {
         return this.backingStore.get("passwordRequiredType");
     }
     /**
@@ -279,7 +279,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      * Sets the advancedThreatProtectionRequiredSecurityLevel property value. MDATP Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
      * @param value Value to set for the advancedThreatProtectionRequiredSecurityLevel property.
      */
-    public void setAdvancedThreatProtectionRequiredSecurityLevel(@jakarta.annotation.Nullable final DeviceThreatProtectionLevel value) {
+    public void setAdvancedThreatProtectionRequiredSecurityLevel(@jakarta.annotation.Nullable final AndroidDeviceOwnerCompliancePolicyAdvancedThreatProtectionRequiredSecurityLevel value) {
         this.backingStore.set("advancedThreatProtectionRequiredSecurityLevel", value);
     }
     /**
@@ -293,7 +293,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      * Sets the deviceThreatProtectionRequiredSecurityLevel property value. Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
      * @param value Value to set for the deviceThreatProtectionRequiredSecurityLevel property.
      */
-    public void setDeviceThreatProtectionRequiredSecurityLevel(@jakarta.annotation.Nullable final DeviceThreatProtectionLevel value) {
+    public void setDeviceThreatProtectionRequiredSecurityLevel(@jakarta.annotation.Nullable final AndroidDeviceOwnerCompliancePolicyDeviceThreatProtectionRequiredSecurityLevel value) {
         this.backingStore.set("deviceThreatProtectionRequiredSecurityLevel", value);
     }
     /**
@@ -398,7 +398,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      * Sets the passwordRequiredType property value. Type of characters in password. Possible values are: deviceDefault, required, numeric, numericComplex, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, customPassword.
      * @param value Value to set for the passwordRequiredType property.
      */
-    public void setPasswordRequiredType(@jakarta.annotation.Nullable final AndroidDeviceOwnerRequiredPasswordType value) {
+    public void setPasswordRequiredType(@jakarta.annotation.Nullable final AndroidDeviceOwnerCompliancePolicyPasswordRequiredType value) {
         this.backingStore.set("passwordRequiredType", value);
     }
     /**

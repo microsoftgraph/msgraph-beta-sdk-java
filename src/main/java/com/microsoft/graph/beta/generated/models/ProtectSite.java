@@ -27,10 +27,10 @@ public class ProtectSite extends LabelActionBase implements Parsable {
     }
     /**
      * Gets the accessType property value. The accessType property
-     * @return a SiteAccessType
+     * @return a ProtectSiteAccessType
      */
     @jakarta.annotation.Nullable
-    public SiteAccessType getAccessType() {
+    public ProtectSiteAccessType getAccessType() {
         return this.backingStore.get("accessType");
     }
     /**
@@ -48,7 +48,7 @@ public class ProtectSite extends LabelActionBase implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("accessType", (n) -> { this.setAccessType(n.getEnumValue(SiteAccessType::forValue)); });
+        deserializerMap.put("accessType", (n) -> { this.setAccessType(n.getEnumValue(ProtectSiteAccessType::forValue)); });
         deserializerMap.put("conditionalAccessProtectionLevelId", (n) -> { this.setConditionalAccessProtectionLevelId(n.getStringValue()); });
         return deserializerMap;
     }
@@ -66,7 +66,7 @@ public class ProtectSite extends LabelActionBase implements Parsable {
      * Sets the accessType property value. The accessType property
      * @param value Value to set for the accessType property.
      */
-    public void setAccessType(@jakarta.annotation.Nullable final SiteAccessType value) {
+    public void setAccessType(@jakarta.annotation.Nullable final ProtectSiteAccessType value) {
         this.backingStore.set("accessType", value);
     }
     /**

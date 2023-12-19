@@ -4,6 +4,7 @@ import com.microsoft.graph.beta.models.LicenseDetails;
 import com.microsoft.graph.beta.models.LicenseDetailsCollectionResponse;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.serviceprincipals.item.licensedetails.count.CountRequestBuilder;
+import com.microsoft.graph.beta.serviceprincipals.item.licensedetails.getteamslicensingdetails.GetTeamsLicensingDetailsRequestBuilder;
 import com.microsoft.graph.beta.serviceprincipals.item.licensedetails.item.LicenseDetailsItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -29,6 +30,13 @@ public class LicenseDetailsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the getTeamsLicensingDetails method.
+     */
+    @jakarta.annotation.Nonnull
+    public GetTeamsLicensingDetailsRequestBuilder getTeamsLicensingDetails() {
+        return new GetTeamsLicensingDetailsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the licenseDetails property of the microsoft.graph.servicePrincipal entity.

@@ -1,6 +1,5 @@
 package com.microsoft.graph.beta.devicemanagement.comanageddevices.bulkrestorecloudpc;
 
-import com.microsoft.graph.beta.models.RestoreTimeRange;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -66,7 +65,7 @@ public class BulkRestoreCloudPcPostRequestBody implements AdditionalDataHolder, 
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("managedDeviceIds", (n) -> { this.setManagedDeviceIds(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("restorePointDateTime", (n) -> { this.setRestorePointDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("timeRange", (n) -> { this.setTimeRange(n.getEnumValue(RestoreTimeRange::forValue)); });
+        deserializerMap.put("timeRange", (n) -> { this.setTimeRange(n.getEnumValue(BulkRestoreCloudPcPostRequestBodyTimeRange::forValue)); });
         return deserializerMap;
     }
     /**
@@ -87,10 +86,10 @@ public class BulkRestoreCloudPcPostRequestBody implements AdditionalDataHolder, 
     }
     /**
      * Gets the timeRange property value. The timeRange property
-     * @return a RestoreTimeRange
+     * @return a BulkRestoreCloudPcPostRequestBodyTimeRange
      */
     @jakarta.annotation.Nullable
-    public RestoreTimeRange getTimeRange() {
+    public BulkRestoreCloudPcPostRequestBodyTimeRange getTimeRange() {
         return this.backingStore.get("timeRange");
     }
     /**
@@ -137,7 +136,7 @@ public class BulkRestoreCloudPcPostRequestBody implements AdditionalDataHolder, 
      * Sets the timeRange property value. The timeRange property
      * @param value Value to set for the timeRange property.
      */
-    public void setTimeRange(@jakarta.annotation.Nullable final RestoreTimeRange value) {
+    public void setTimeRange(@jakarta.annotation.Nullable final BulkRestoreCloudPcPostRequestBodyTimeRange value) {
         this.backingStore.set("timeRange", value);
     }
 }

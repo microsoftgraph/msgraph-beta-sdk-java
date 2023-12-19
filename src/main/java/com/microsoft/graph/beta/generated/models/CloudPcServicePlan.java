@@ -41,7 +41,7 @@ public class CloudPcServicePlan extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
-        deserializerMap.put("provisioningType", (n) -> { this.setProvisioningType(n.getEnumValue(CloudPcProvisioningType::forValue)); });
+        deserializerMap.put("provisioningType", (n) -> { this.setProvisioningType(n.getEnumValue(CloudPcServicePlanProvisioningType::forValue)); });
         deserializerMap.put("ramInGB", (n) -> { this.setRamInGB(n.getIntegerValue()); });
         deserializerMap.put("storageInGB", (n) -> { this.setStorageInGB(n.getIntegerValue()); });
         deserializerMap.put("supportedSolution", (n) -> { this.setSupportedSolution(n.getEnumSetValue(CloudPcManagementService::forValue)); });
@@ -52,10 +52,10 @@ public class CloudPcServicePlan extends Entity implements Parsable {
     }
     /**
      * Gets the provisioningType property value. Specifies the type of license used when provisioning Cloud PCs. By default, the license type is dedicated. Possible values are: dedicated, shared, unknownFutureValue.
-     * @return a CloudPcProvisioningType
+     * @return a CloudPcServicePlanProvisioningType
      */
     @jakarta.annotation.Nullable
-    public CloudPcProvisioningType getProvisioningType() {
+    public CloudPcServicePlanProvisioningType getProvisioningType() {
         return this.backingStore.get("provisioningType");
     }
     /**
@@ -133,7 +133,7 @@ public class CloudPcServicePlan extends Entity implements Parsable {
      * Sets the provisioningType property value. Specifies the type of license used when provisioning Cloud PCs. By default, the license type is dedicated. Possible values are: dedicated, shared, unknownFutureValue.
      * @param value Value to set for the provisioningType property.
      */
-    public void setProvisioningType(@jakarta.annotation.Nullable final CloudPcProvisioningType value) {
+    public void setProvisioningType(@jakarta.annotation.Nullable final CloudPcServicePlanProvisioningType value) {
         this.backingStore.set("provisioningType", value);
     }
     /**

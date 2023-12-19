@@ -52,7 +52,7 @@ public class QualityUpdateCatalogEntry extends SoftwareUpdateCatalogEntry implem
         deserializerMap.put("cveSeverityInformation", (n) -> { this.setCveSeverityInformation(n.getObjectValue(QualityUpdateCveSeverityInformation::createFromDiscriminatorValue)); });
         deserializerMap.put("isExpeditable", (n) -> { this.setIsExpeditable(n.getBooleanValue()); });
         deserializerMap.put("productRevisions", (n) -> { this.setProductRevisions(n.getCollectionOfObjectValues(ProductRevision::createFromDiscriminatorValue)); });
-        deserializerMap.put("qualityUpdateCadence", (n) -> { this.setQualityUpdateCadence(n.getEnumValue(QualityUpdateCadence::forValue)); });
+        deserializerMap.put("qualityUpdateCadence", (n) -> { this.setQualityUpdateCadence(n.getEnumValue(QualityUpdateCatalogEntryQualityUpdateCadence::forValue)); });
         deserializerMap.put("qualityUpdateClassification", (n) -> { this.setQualityUpdateClassification(n.getEnumValue(QualityUpdateClassification::forValue)); });
         deserializerMap.put("shortName", (n) -> { this.setShortName(n.getStringValue()); });
         return deserializerMap;
@@ -75,10 +75,10 @@ public class QualityUpdateCatalogEntry extends SoftwareUpdateCatalogEntry implem
     }
     /**
      * Gets the qualityUpdateCadence property value. The publishing cadence of the quality update. Possible values are: monthly, outOfBand, unknownFutureValue. Read-only.
-     * @return a QualityUpdateCadence
+     * @return a QualityUpdateCatalogEntryQualityUpdateCadence
      */
     @jakarta.annotation.Nullable
-    public QualityUpdateCadence getQualityUpdateCadence() {
+    public QualityUpdateCatalogEntryQualityUpdateCadence getQualityUpdateCadence() {
         return this.backingStore.get("qualityUpdateCadence");
     }
     /**
@@ -144,7 +144,7 @@ public class QualityUpdateCatalogEntry extends SoftwareUpdateCatalogEntry implem
      * Sets the qualityUpdateCadence property value. The publishing cadence of the quality update. Possible values are: monthly, outOfBand, unknownFutureValue. Read-only.
      * @param value Value to set for the qualityUpdateCadence property.
      */
-    public void setQualityUpdateCadence(@jakarta.annotation.Nullable final QualityUpdateCadence value) {
+    public void setQualityUpdateCadence(@jakarta.annotation.Nullable final QualityUpdateCatalogEntryQualityUpdateCadence value) {
         this.backingStore.set("qualityUpdateCadence", value);
     }
     /**

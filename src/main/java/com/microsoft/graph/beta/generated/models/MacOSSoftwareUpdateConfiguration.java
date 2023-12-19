@@ -73,7 +73,7 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
         deserializerMap.put("customUpdateTimeWindows", (n) -> { this.setCustomUpdateTimeWindows(n.getCollectionOfObjectValues(CustomUpdateTimeWindow::createFromDiscriminatorValue)); });
         deserializerMap.put("firmwareUpdateBehavior", (n) -> { this.setFirmwareUpdateBehavior(n.getEnumValue(MacOSSoftwareUpdateBehavior::forValue)); });
         deserializerMap.put("maxUserDeferralsCount", (n) -> { this.setMaxUserDeferralsCount(n.getIntegerValue()); });
-        deserializerMap.put("priority", (n) -> { this.setPriority(n.getEnumValue(MacOSPriority::forValue)); });
+        deserializerMap.put("priority", (n) -> { this.setPriority(n.getEnumValue(MacOSSoftwareUpdateConfigurationPriority::forValue)); });
         deserializerMap.put("updateScheduleType", (n) -> { this.setUpdateScheduleType(n.getEnumValue(MacOSSoftwareUpdateScheduleType::forValue)); });
         deserializerMap.put("updateTimeWindowUtcOffsetInMinutes", (n) -> { this.setUpdateTimeWindowUtcOffsetInMinutes(n.getIntegerValue()); });
         return deserializerMap;
@@ -96,10 +96,10 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
     }
     /**
      * Gets the priority property value. The scheduling priority for downloading and preparing the requested update. Default: Low. Possible values: Null, Low, High. Possible values are: low, high, unknownFutureValue.
-     * @return a MacOSPriority
+     * @return a MacOSSoftwareUpdateConfigurationPriority
      */
     @jakarta.annotation.Nullable
-    public MacOSPriority getPriority() {
+    public MacOSSoftwareUpdateConfigurationPriority getPriority() {
         return this.backingStore.get("priority");
     }
     /**
@@ -181,7 +181,7 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
      * Sets the priority property value. The scheduling priority for downloading and preparing the requested update. Default: Low. Possible values: Null, Low, High. Possible values are: low, high, unknownFutureValue.
      * @param value Value to set for the priority property.
      */
-    public void setPriority(@jakarta.annotation.Nullable final MacOSPriority value) {
+    public void setPriority(@jakarta.annotation.Nullable final MacOSSoftwareUpdateConfigurationPriority value) {
         this.backingStore.set("priority", value);
     }
     /**

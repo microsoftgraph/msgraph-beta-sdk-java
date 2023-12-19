@@ -1,6 +1,5 @@
 package com.microsoft.graph.beta.devicemanagement.comanageddevices.item.wipe;
 
-import com.microsoft.graph.beta.models.ObliterationBehavior;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -66,7 +65,7 @@ public class WipePostRequestBody implements AdditionalDataHolder, BackedModel, P
         deserializerMap.put("keepEnrollmentData", (n) -> { this.setKeepEnrollmentData(n.getBooleanValue()); });
         deserializerMap.put("keepUserData", (n) -> { this.setKeepUserData(n.getBooleanValue()); });
         deserializerMap.put("macOsUnlockCode", (n) -> { this.setMacOsUnlockCode(n.getStringValue()); });
-        deserializerMap.put("obliterationBehavior", (n) -> { this.setObliterationBehavior(n.getEnumValue(ObliterationBehavior::forValue)); });
+        deserializerMap.put("obliterationBehavior", (n) -> { this.setObliterationBehavior(n.getEnumValue(WipePostRequestBodyObliterationBehavior::forValue)); });
         deserializerMap.put("persistEsimDataPlan", (n) -> { this.setPersistEsimDataPlan(n.getBooleanValue()); });
         deserializerMap.put("useProtectedWipe", (n) -> { this.setUseProtectedWipe(n.getBooleanValue()); });
         return deserializerMap;
@@ -97,10 +96,10 @@ public class WipePostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the obliterationBehavior property value. The obliterationBehavior property
-     * @return a ObliterationBehavior
+     * @return a WipePostRequestBodyObliterationBehavior
      */
     @jakarta.annotation.Nullable
-    public ObliterationBehavior getObliterationBehavior() {
+    public WipePostRequestBodyObliterationBehavior getObliterationBehavior() {
         return this.backingStore.get("obliterationBehavior");
     }
     /**
@@ -173,7 +172,7 @@ public class WipePostRequestBody implements AdditionalDataHolder, BackedModel, P
      * Sets the obliterationBehavior property value. The obliterationBehavior property
      * @param value Value to set for the obliterationBehavior property.
      */
-    public void setObliterationBehavior(@jakarta.annotation.Nullable final ObliterationBehavior value) {
+    public void setObliterationBehavior(@jakarta.annotation.Nullable final WipePostRequestBodyObliterationBehavior value) {
         this.backingStore.set("obliterationBehavior", value);
     }
     /**

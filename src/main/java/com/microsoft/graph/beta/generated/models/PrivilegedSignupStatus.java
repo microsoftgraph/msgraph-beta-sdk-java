@@ -32,7 +32,7 @@ public class PrivilegedSignupStatus extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("isRegistered", (n) -> { this.setIsRegistered(n.getBooleanValue()); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(SetupStatus::forValue)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(PrivilegedSignupStatusStatus::forValue)); });
         return deserializerMap;
     }
     /**
@@ -45,10 +45,10 @@ public class PrivilegedSignupStatus extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status property
-     * @return a SetupStatus
+     * @return a PrivilegedSignupStatusStatus
      */
     @jakarta.annotation.Nullable
-    public SetupStatus getStatus() {
+    public PrivilegedSignupStatusStatus getStatus() {
         return this.backingStore.get("status");
     }
     /**
@@ -72,7 +72,7 @@ public class PrivilegedSignupStatus extends Entity implements Parsable {
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
      */
-    public void setStatus(@jakarta.annotation.Nullable final SetupStatus value) {
+    public void setStatus(@jakarta.annotation.Nullable final PrivilegedSignupStatusStatus value) {
         this.backingStore.set("status", value);
     }
 }

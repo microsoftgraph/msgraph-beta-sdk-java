@@ -59,7 +59,7 @@ public class PresentersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/solutions/virtualEvents/webinars/{virtualEventWebinar%2Did}/presenters{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Presenters' information of the virtual event.
+     * The virtual event presenters.
      * @return a VirtualEventPresenterCollectionResponse
      */
     @jakarta.annotation.Nullable
@@ -67,7 +67,7 @@ public class PresentersRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Presenters' information of the virtual event.
+     * The virtual event presenters.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a VirtualEventPresenterCollectionResponse
      */
@@ -104,7 +104,7 @@ public class PresentersRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, VirtualEventPresenter::createFromDiscriminatorValue);
     }
     /**
-     * Presenters' information of the virtual event.
+     * The virtual event presenters.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -112,7 +112,7 @@ public class PresentersRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Presenters' information of the virtual event.
+     * The virtual event presenters.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -158,7 +158,7 @@ public class PresentersRequestBuilder extends BaseRequestBuilder {
         return new PresentersRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Presenters' information of the virtual event.
+     * The virtual event presenters.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

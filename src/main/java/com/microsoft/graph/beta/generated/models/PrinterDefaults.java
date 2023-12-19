@@ -57,10 +57,10 @@ public class PrinterDefaults implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the colorMode property value. The default color mode to use when printing the document. Valid values are described in the following table.
-     * @return a PrintColorMode
+     * @return a PrinterDefaultsColorMode
      */
     @jakarta.annotation.Nullable
-    public PrintColorMode getColorMode() {
+    public PrinterDefaultsColorMode getColorMode() {
         return this.backingStore.get("colorMode");
     }
     /**
@@ -97,18 +97,18 @@ public class PrinterDefaults implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the duplexConfiguration property value. The duplexConfiguration property
-     * @return a PrintDuplexConfiguration
+     * @return a PrinterDefaultsDuplexConfiguration
      */
     @jakarta.annotation.Nullable
-    public PrintDuplexConfiguration getDuplexConfiguration() {
+    public PrinterDefaultsDuplexConfiguration getDuplexConfiguration() {
         return this.backingStore.get("duplexConfiguration");
     }
     /**
      * Gets the duplexMode property value. The default duplex (double-sided) configuration to use when printing a document. Valid values are described in the following table.
-     * @return a PrintDuplexMode
+     * @return a PrinterDefaultsDuplexMode
      */
     @jakarta.annotation.Nullable
-    public PrintDuplexMode getDuplexMode() {
+    public PrinterDefaultsDuplexMode getDuplexMode() {
         return this.backingStore.get("duplexMode");
     }
     /**
@@ -118,38 +118,38 @@ public class PrinterDefaults implements AdditionalDataHolder, BackedModel, Parsa
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(24);
-        deserializerMap.put("colorMode", (n) -> { this.setColorMode(n.getEnumValue(PrintColorMode::forValue)); });
+        deserializerMap.put("colorMode", (n) -> { this.setColorMode(n.getEnumValue(PrinterDefaultsColorMode::forValue)); });
         deserializerMap.put("contentType", (n) -> { this.setContentType(n.getStringValue()); });
         deserializerMap.put("copiesPerJob", (n) -> { this.setCopiesPerJob(n.getIntegerValue()); });
         deserializerMap.put("documentMimeType", (n) -> { this.setDocumentMimeType(n.getStringValue()); });
         deserializerMap.put("dpi", (n) -> { this.setDpi(n.getIntegerValue()); });
-        deserializerMap.put("duplexConfiguration", (n) -> { this.setDuplexConfiguration(n.getEnumValue(PrintDuplexConfiguration::forValue)); });
-        deserializerMap.put("duplexMode", (n) -> { this.setDuplexMode(n.getEnumValue(PrintDuplexMode::forValue)); });
-        deserializerMap.put("finishings", (n) -> { this.setFinishings(n.getCollectionOfEnumValues(PrintFinishing::forValue)); });
+        deserializerMap.put("duplexConfiguration", (n) -> { this.setDuplexConfiguration(n.getEnumValue(PrinterDefaultsDuplexConfiguration::forValue)); });
+        deserializerMap.put("duplexMode", (n) -> { this.setDuplexMode(n.getEnumValue(PrinterDefaultsDuplexMode::forValue)); });
+        deserializerMap.put("finishings", (n) -> { this.setFinishings(n.getCollectionOfEnumValues(PrinterDefaultsFinishings::forValue)); });
         deserializerMap.put("fitPdfToPage", (n) -> { this.setFitPdfToPage(n.getBooleanValue()); });
         deserializerMap.put("inputBin", (n) -> { this.setInputBin(n.getStringValue()); });
         deserializerMap.put("mediaColor", (n) -> { this.setMediaColor(n.getStringValue()); });
         deserializerMap.put("mediaSize", (n) -> { this.setMediaSize(n.getStringValue()); });
         deserializerMap.put("mediaType", (n) -> { this.setMediaType(n.getStringValue()); });
-        deserializerMap.put("multipageLayout", (n) -> { this.setMultipageLayout(n.getEnumValue(PrintMultipageLayout::forValue)); });
+        deserializerMap.put("multipageLayout", (n) -> { this.setMultipageLayout(n.getEnumValue(PrinterDefaultsMultipageLayout::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("orientation", (n) -> { this.setOrientation(n.getEnumValue(PrintOrientation::forValue)); });
+        deserializerMap.put("orientation", (n) -> { this.setOrientation(n.getEnumValue(PrinterDefaultsOrientation::forValue)); });
         deserializerMap.put("outputBin", (n) -> { this.setOutputBin(n.getStringValue()); });
         deserializerMap.put("pagesPerSheet", (n) -> { this.setPagesPerSheet(n.getIntegerValue()); });
         deserializerMap.put("pdfFitToPage", (n) -> { this.setPdfFitToPage(n.getBooleanValue()); });
-        deserializerMap.put("presentationDirection", (n) -> { this.setPresentationDirection(n.getEnumValue(PrintPresentationDirection::forValue)); });
-        deserializerMap.put("printColorConfiguration", (n) -> { this.setPrintColorConfiguration(n.getEnumValue(PrintColorConfiguration::forValue)); });
-        deserializerMap.put("printQuality", (n) -> { this.setPrintQuality(n.getEnumValue(PrintQuality::forValue)); });
-        deserializerMap.put("quality", (n) -> { this.setQuality(n.getEnumValue(PrintQuality::forValue)); });
-        deserializerMap.put("scaling", (n) -> { this.setScaling(n.getEnumValue(PrintScaling::forValue)); });
+        deserializerMap.put("presentationDirection", (n) -> { this.setPresentationDirection(n.getEnumValue(PrinterDefaultsPresentationDirection::forValue)); });
+        deserializerMap.put("printColorConfiguration", (n) -> { this.setPrintColorConfiguration(n.getEnumValue(PrinterDefaultsPrintColorConfiguration::forValue)); });
+        deserializerMap.put("printQuality", (n) -> { this.setPrintQuality(n.getEnumValue(PrinterDefaultsPrintQuality::forValue)); });
+        deserializerMap.put("quality", (n) -> { this.setQuality(n.getEnumValue(PrinterDefaultsQuality::forValue)); });
+        deserializerMap.put("scaling", (n) -> { this.setScaling(n.getEnumValue(PrinterDefaultsScaling::forValue)); });
         return deserializerMap;
     }
     /**
      * Gets the finishings property value. The default set of finishings to apply to print jobs. Valid values are described in the following table.
-     * @return a java.util.List<PrintFinishing>
+     * @return a java.util.List<PrinterDefaultsFinishings>
      */
     @jakarta.annotation.Nullable
-    public java.util.List<PrintFinishing> getFinishings() {
+    public java.util.List<PrinterDefaultsFinishings> getFinishings() {
         return this.backingStore.get("finishings");
     }
     /**
@@ -194,10 +194,10 @@ public class PrinterDefaults implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the multipageLayout property value. The default direction to lay out pages when multiple pages are being printed per sheet. Valid values are described in the following table.
-     * @return a PrintMultipageLayout
+     * @return a PrinterDefaultsMultipageLayout
      */
     @jakarta.annotation.Nullable
-    public PrintMultipageLayout getMultipageLayout() {
+    public PrinterDefaultsMultipageLayout getMultipageLayout() {
         return this.backingStore.get("multipageLayout");
     }
     /**
@@ -210,10 +210,10 @@ public class PrinterDefaults implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the orientation property value. The default orientation to use when printing the document. Valid values are described in the following table.
-     * @return a PrintOrientation
+     * @return a PrinterDefaultsOrientation
      */
     @jakarta.annotation.Nullable
-    public PrintOrientation getOrientation() {
+    public PrinterDefaultsOrientation getOrientation() {
         return this.backingStore.get("orientation");
     }
     /**
@@ -242,42 +242,42 @@ public class PrinterDefaults implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the presentationDirection property value. The presentationDirection property
-     * @return a PrintPresentationDirection
+     * @return a PrinterDefaultsPresentationDirection
      */
     @jakarta.annotation.Nullable
-    public PrintPresentationDirection getPresentationDirection() {
+    public PrinterDefaultsPresentationDirection getPresentationDirection() {
         return this.backingStore.get("presentationDirection");
     }
     /**
      * Gets the printColorConfiguration property value. The printColorConfiguration property
-     * @return a PrintColorConfiguration
+     * @return a PrinterDefaultsPrintColorConfiguration
      */
     @jakarta.annotation.Nullable
-    public PrintColorConfiguration getPrintColorConfiguration() {
+    public PrinterDefaultsPrintColorConfiguration getPrintColorConfiguration() {
         return this.backingStore.get("printColorConfiguration");
     }
     /**
      * Gets the printQuality property value. The printQuality property
-     * @return a PrintQuality
+     * @return a PrinterDefaultsPrintQuality
      */
     @jakarta.annotation.Nullable
-    public PrintQuality getPrintQuality() {
+    public PrinterDefaultsPrintQuality getPrintQuality() {
         return this.backingStore.get("printQuality");
     }
     /**
      * Gets the quality property value. The default quality to use when printing the document. Valid values are described in the following table.
-     * @return a PrintQuality
+     * @return a PrinterDefaultsQuality
      */
     @jakarta.annotation.Nullable
-    public PrintQuality getQuality() {
+    public PrinterDefaultsQuality getQuality() {
         return this.backingStore.get("quality");
     }
     /**
      * Gets the scaling property value. Specifies how the printer scales the document data to fit the requested media. Valid values are described in the following table.
-     * @return a PrintScaling
+     * @return a PrinterDefaultsScaling
      */
     @jakarta.annotation.Nullable
-    public PrintScaling getScaling() {
+    public PrinterDefaultsScaling getScaling() {
         return this.backingStore.get("scaling");
     }
     /**
@@ -331,7 +331,7 @@ public class PrinterDefaults implements AdditionalDataHolder, BackedModel, Parsa
      * Sets the colorMode property value. The default color mode to use when printing the document. Valid values are described in the following table.
      * @param value Value to set for the colorMode property.
      */
-    public void setColorMode(@jakarta.annotation.Nullable final PrintColorMode value) {
+    public void setColorMode(@jakarta.annotation.Nullable final PrinterDefaultsColorMode value) {
         this.backingStore.set("colorMode", value);
     }
     /**
@@ -366,21 +366,21 @@ public class PrinterDefaults implements AdditionalDataHolder, BackedModel, Parsa
      * Sets the duplexConfiguration property value. The duplexConfiguration property
      * @param value Value to set for the duplexConfiguration property.
      */
-    public void setDuplexConfiguration(@jakarta.annotation.Nullable final PrintDuplexConfiguration value) {
+    public void setDuplexConfiguration(@jakarta.annotation.Nullable final PrinterDefaultsDuplexConfiguration value) {
         this.backingStore.set("duplexConfiguration", value);
     }
     /**
      * Sets the duplexMode property value. The default duplex (double-sided) configuration to use when printing a document. Valid values are described in the following table.
      * @param value Value to set for the duplexMode property.
      */
-    public void setDuplexMode(@jakarta.annotation.Nullable final PrintDuplexMode value) {
+    public void setDuplexMode(@jakarta.annotation.Nullable final PrinterDefaultsDuplexMode value) {
         this.backingStore.set("duplexMode", value);
     }
     /**
      * Sets the finishings property value. The default set of finishings to apply to print jobs. Valid values are described in the following table.
      * @param value Value to set for the finishings property.
      */
-    public void setFinishings(@jakarta.annotation.Nullable final java.util.List<PrintFinishing> value) {
+    public void setFinishings(@jakarta.annotation.Nullable final java.util.List<PrinterDefaultsFinishings> value) {
         this.backingStore.set("finishings", value);
     }
     /**
@@ -422,7 +422,7 @@ public class PrinterDefaults implements AdditionalDataHolder, BackedModel, Parsa
      * Sets the multipageLayout property value. The default direction to lay out pages when multiple pages are being printed per sheet. Valid values are described in the following table.
      * @param value Value to set for the multipageLayout property.
      */
-    public void setMultipageLayout(@jakarta.annotation.Nullable final PrintMultipageLayout value) {
+    public void setMultipageLayout(@jakarta.annotation.Nullable final PrinterDefaultsMultipageLayout value) {
         this.backingStore.set("multipageLayout", value);
     }
     /**
@@ -436,7 +436,7 @@ public class PrinterDefaults implements AdditionalDataHolder, BackedModel, Parsa
      * Sets the orientation property value. The default orientation to use when printing the document. Valid values are described in the following table.
      * @param value Value to set for the orientation property.
      */
-    public void setOrientation(@jakarta.annotation.Nullable final PrintOrientation value) {
+    public void setOrientation(@jakarta.annotation.Nullable final PrinterDefaultsOrientation value) {
         this.backingStore.set("orientation", value);
     }
     /**
@@ -464,35 +464,35 @@ public class PrinterDefaults implements AdditionalDataHolder, BackedModel, Parsa
      * Sets the presentationDirection property value. The presentationDirection property
      * @param value Value to set for the presentationDirection property.
      */
-    public void setPresentationDirection(@jakarta.annotation.Nullable final PrintPresentationDirection value) {
+    public void setPresentationDirection(@jakarta.annotation.Nullable final PrinterDefaultsPresentationDirection value) {
         this.backingStore.set("presentationDirection", value);
     }
     /**
      * Sets the printColorConfiguration property value. The printColorConfiguration property
      * @param value Value to set for the printColorConfiguration property.
      */
-    public void setPrintColorConfiguration(@jakarta.annotation.Nullable final PrintColorConfiguration value) {
+    public void setPrintColorConfiguration(@jakarta.annotation.Nullable final PrinterDefaultsPrintColorConfiguration value) {
         this.backingStore.set("printColorConfiguration", value);
     }
     /**
      * Sets the printQuality property value. The printQuality property
      * @param value Value to set for the printQuality property.
      */
-    public void setPrintQuality(@jakarta.annotation.Nullable final PrintQuality value) {
+    public void setPrintQuality(@jakarta.annotation.Nullable final PrinterDefaultsPrintQuality value) {
         this.backingStore.set("printQuality", value);
     }
     /**
      * Sets the quality property value. The default quality to use when printing the document. Valid values are described in the following table.
      * @param value Value to set for the quality property.
      */
-    public void setQuality(@jakarta.annotation.Nullable final PrintQuality value) {
+    public void setQuality(@jakarta.annotation.Nullable final PrinterDefaultsQuality value) {
         this.backingStore.set("quality", value);
     }
     /**
      * Sets the scaling property value. Specifies how the printer scales the document data to fit the requested media. Valid values are described in the following table.
      * @param value Value to set for the scaling property.
      */
-    public void setScaling(@jakarta.annotation.Nullable final PrintScaling value) {
+    public void setScaling(@jakarta.annotation.Nullable final PrinterDefaultsScaling value) {
         this.backingStore.set("scaling", value);
     }
 }

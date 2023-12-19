@@ -26,10 +26,10 @@ public class VirtualEventWebinar extends VirtualEvent implements Parsable {
     }
     /**
      * Gets the audience property value. To whom the webinar is visible.
-     * @return a MeetingAudience
+     * @return a VirtualEventWebinarAudience
      */
     @jakarta.annotation.Nullable
-    public MeetingAudience getAudience() {
+    public VirtualEventWebinarAudience getAudience() {
         return this.backingStore.get("audience");
     }
     /**
@@ -47,7 +47,7 @@ public class VirtualEventWebinar extends VirtualEvent implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("audience", (n) -> { this.setAudience(n.getEnumValue(MeetingAudience::forValue)); });
+        deserializerMap.put("audience", (n) -> { this.setAudience(n.getEnumValue(VirtualEventWebinarAudience::forValue)); });
         deserializerMap.put("coOrganizers", (n) -> { this.setCoOrganizers(n.getCollectionOfObjectValues(CommunicationsUserIdentity::createFromDiscriminatorValue)); });
         deserializerMap.put("registrationConfiguration", (n) -> { this.setRegistrationConfiguration(n.getObjectValue(VirtualEventWebinarRegistrationConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("registrations", (n) -> { this.setRegistrations(n.getCollectionOfObjectValues(VirtualEventRegistration::createFromDiscriminatorValue)); });
@@ -85,7 +85,7 @@ public class VirtualEventWebinar extends VirtualEvent implements Parsable {
      * Sets the audience property value. To whom the webinar is visible.
      * @param value Value to set for the audience property.
      */
-    public void setAudience(@jakarta.annotation.Nullable final MeetingAudience value) {
+    public void setAudience(@jakarta.annotation.Nullable final VirtualEventWebinarAudience value) {
         this.backingStore.set("audience", value);
     }
     /**

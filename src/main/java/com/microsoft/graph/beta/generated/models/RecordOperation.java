@@ -26,10 +26,10 @@ public class RecordOperation extends CommsOperation implements Parsable {
     }
     /**
      * Gets the completionReason property value. Possible values are: operationCanceled, stopToneDetected, maxRecordDurationReached, initialSilenceTimeout, maxSilenceTimeout, playPromptFailed, playBeepFailed, mediaReceiveTimeout, unspecifiedError, none.
-     * @return a RecordCompletionReason
+     * @return a RecordOperationCompletionReason
      */
     @jakarta.annotation.Nullable
-    public RecordCompletionReason getCompletionReason() {
+    public RecordOperationCompletionReason getCompletionReason() {
         return this.backingStore.get("completionReason");
     }
     /**
@@ -39,7 +39,7 @@ public class RecordOperation extends CommsOperation implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("completionReason", (n) -> { this.setCompletionReason(n.getEnumValue(RecordCompletionReason::forValue)); });
+        deserializerMap.put("completionReason", (n) -> { this.setCompletionReason(n.getEnumValue(RecordOperationCompletionReason::forValue)); });
         deserializerMap.put("recordingAccessToken", (n) -> { this.setRecordingAccessToken(n.getStringValue()); });
         deserializerMap.put("recordingLocation", (n) -> { this.setRecordingLocation(n.getStringValue()); });
         return deserializerMap;
@@ -75,7 +75,7 @@ public class RecordOperation extends CommsOperation implements Parsable {
      * Sets the completionReason property value. Possible values are: operationCanceled, stopToneDetected, maxRecordDurationReached, initialSilenceTimeout, maxSilenceTimeout, playPromptFailed, playBeepFailed, mediaReceiveTimeout, unspecifiedError, none.
      * @param value Value to set for the completionReason property.
      */
-    public void setCompletionReason(@jakarta.annotation.Nullable final RecordCompletionReason value) {
+    public void setCompletionReason(@jakarta.annotation.Nullable final RecordOperationCompletionReason value) {
         this.backingStore.set("completionReason", value);
     }
     /**

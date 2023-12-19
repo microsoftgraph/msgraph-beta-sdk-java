@@ -3,7 +3,6 @@ package com.microsoft.graph.beta.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -27,10 +26,10 @@ public class UnifiedRoleDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the allowedPrincipalTypes property value. Types of principals that can be assigned the role. Read-only. The possible values are: user, servicePrincipal, group, unknownFutureValue. This is a multi-valued enumeration that can contain up to three values as a comma-separated string. For example, user, group. Supports $filter (eq).
-     * @return a EnumSet<AllowedRolePrincipalTypes>
+     * @return a UnifiedRoleDefinitionAllowedPrincipalTypes
      */
     @jakarta.annotation.Nullable
-    public EnumSet<AllowedRolePrincipalTypes> getAllowedPrincipalTypes() {
+    public UnifiedRoleDefinitionAllowedPrincipalTypes getAllowedPrincipalTypes() {
         return this.backingStore.get("allowedPrincipalTypes");
     }
     /**
@@ -56,7 +55,7 @@ public class UnifiedRoleDefinition extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("allowedPrincipalTypes", (n) -> { this.setAllowedPrincipalTypes(n.getEnumSetValue(AllowedRolePrincipalTypes::forValue)); });
+        deserializerMap.put("allowedPrincipalTypes", (n) -> { this.setAllowedPrincipalTypes(n.getEnumValue(UnifiedRoleDefinitionAllowedPrincipalTypes::forValue)); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("inheritsPermissionsFrom", (n) -> { this.setInheritsPermissionsFrom(n.getCollectionOfObjectValues(UnifiedRoleDefinition::createFromDiscriminatorValue)); });
@@ -140,7 +139,7 @@ public class UnifiedRoleDefinition extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeEnumSetValue("allowedPrincipalTypes", this.getAllowedPrincipalTypes());
+        writer.writeEnumValue("allowedPrincipalTypes", this.getAllowedPrincipalTypes());
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeCollectionOfObjectValues("inheritsPermissionsFrom", this.getInheritsPermissionsFrom());
@@ -156,7 +155,7 @@ public class UnifiedRoleDefinition extends Entity implements Parsable {
      * Sets the allowedPrincipalTypes property value. Types of principals that can be assigned the role. Read-only. The possible values are: user, servicePrincipal, group, unknownFutureValue. This is a multi-valued enumeration that can contain up to three values as a comma-separated string. For example, user, group. Supports $filter (eq).
      * @param value Value to set for the allowedPrincipalTypes property.
      */
-    public void setAllowedPrincipalTypes(@jakarta.annotation.Nullable final EnumSet<AllowedRolePrincipalTypes> value) {
+    public void setAllowedPrincipalTypes(@jakarta.annotation.Nullable final UnifiedRoleDefinitionAllowedPrincipalTypes value) {
         this.backingStore.set("allowedPrincipalTypes", value);
     }
     /**

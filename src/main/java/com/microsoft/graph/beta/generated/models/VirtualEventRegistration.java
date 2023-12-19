@@ -55,7 +55,7 @@ public class VirtualEventRegistration extends Entity implements Parsable {
         deserializerMap.put("registrationDateTime", (n) -> { this.setRegistrationDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("registrationQuestionAnswers", (n) -> { this.setRegistrationQuestionAnswers(n.getCollectionOfObjectValues(VirtualEventRegistrationQuestionAnswer::createFromDiscriminatorValue)); });
         deserializerMap.put("sessions", (n) -> { this.setSessions(n.getCollectionOfObjectValues(VirtualEventSession::createFromDiscriminatorValue)); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(VirtualEventAttendeeRegistrationStatus::forValue)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(VirtualEventRegistrationStatus::forValue)); });
         deserializerMap.put("userId", (n) -> { this.setUserId(n.getStringValue()); });
         return deserializerMap;
     }
@@ -101,10 +101,10 @@ public class VirtualEventRegistration extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. Registration status of the registrant. Read-only.
-     * @return a VirtualEventAttendeeRegistrationStatus
+     * @return a VirtualEventRegistrationStatus
      */
     @jakarta.annotation.Nullable
-    public VirtualEventAttendeeRegistrationStatus getStatus() {
+    public VirtualEventRegistrationStatus getStatus() {
         return this.backingStore.get("status");
     }
     /**
@@ -185,7 +185,7 @@ public class VirtualEventRegistration extends Entity implements Parsable {
      * Sets the status property value. Registration status of the registrant. Read-only.
      * @param value Value to set for the status property.
      */
-    public void setStatus(@jakarta.annotation.Nullable final VirtualEventAttendeeRegistrationStatus value) {
+    public void setStatus(@jakarta.annotation.Nullable final VirtualEventRegistrationStatus value) {
         this.backingStore.set("status", value);
     }
     /**

@@ -58,10 +58,10 @@ public class RunDetails implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the errorCode property value. The errorCode property
-     * @return a HuntingRuleErrorCode
+     * @return a RunDetailsErrorCode
      */
     @jakarta.annotation.Nullable
-    public HuntingRuleErrorCode getErrorCode() {
+    public RunDetailsErrorCode getErrorCode() {
         return this.backingStore.get("errorCode");
     }
     /**
@@ -79,11 +79,11 @@ public class RunDetails implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
-        deserializerMap.put("errorCode", (n) -> { this.setErrorCode(n.getEnumValue(HuntingRuleErrorCode::forValue)); });
+        deserializerMap.put("errorCode", (n) -> { this.setErrorCode(n.getEnumValue(RunDetailsErrorCode::forValue)); });
         deserializerMap.put("failureReason", (n) -> { this.setFailureReason(n.getStringValue()); });
         deserializerMap.put("lastRunDateTime", (n) -> { this.setLastRunDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(HuntingRuleRunStatus::forValue)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(RunDetailsStatus::forValue)); });
         return deserializerMap;
     }
     /**
@@ -104,10 +104,10 @@ public class RunDetails implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the status property value. The status property
-     * @return a HuntingRuleRunStatus
+     * @return a RunDetailsStatus
      */
     @jakarta.annotation.Nullable
-    public HuntingRuleRunStatus getStatus() {
+    public RunDetailsStatus getStatus() {
         return this.backingStore.get("status");
     }
     /**
@@ -142,7 +142,7 @@ public class RunDetails implements AdditionalDataHolder, BackedModel, Parsable {
      * Sets the errorCode property value. The errorCode property
      * @param value Value to set for the errorCode property.
      */
-    public void setErrorCode(@jakarta.annotation.Nullable final HuntingRuleErrorCode value) {
+    public void setErrorCode(@jakarta.annotation.Nullable final RunDetailsErrorCode value) {
         this.backingStore.set("errorCode", value);
     }
     /**
@@ -170,7 +170,7 @@ public class RunDetails implements AdditionalDataHolder, BackedModel, Parsable {
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
      */
-    public void setStatus(@jakarta.annotation.Nullable final HuntingRuleRunStatus value) {
+    public void setStatus(@jakarta.annotation.Nullable final RunDetailsStatus value) {
         this.backingStore.set("status", value);
     }
 }

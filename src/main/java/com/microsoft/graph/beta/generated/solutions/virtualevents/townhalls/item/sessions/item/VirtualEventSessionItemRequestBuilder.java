@@ -78,7 +78,7 @@ public class VirtualEventSessionItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Sessions of the virtual event.
+     * Sessions for the virtual event.
      * @return a VirtualEventSession
      */
     @jakarta.annotation.Nullable
@@ -86,7 +86,7 @@ public class VirtualEventSessionItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Sessions of the virtual event.
+     * Sessions for the virtual event.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a VirtualEventSession
      */
@@ -143,7 +143,7 @@ public class VirtualEventSessionItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Sessions of the virtual event.
+     * Sessions for the virtual event.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -151,7 +151,7 @@ public class VirtualEventSessionItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Sessions of the virtual event.
+     * Sessions for the virtual event.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -203,7 +203,7 @@ public class VirtualEventSessionItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Sessions of the virtual event.
+     * Sessions for the virtual event.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

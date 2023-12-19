@@ -57,10 +57,10 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the endpointType property value. The type of endpoint. Possible values are: default, voicemail, skypeForBusiness, skypeForBusinessVoipPhone and unknownFutureValue.
-     * @return a EndpointType
+     * @return a InvitationParticipantInfoEndpointType
      */
     @jakarta.annotation.Nullable
-    public EndpointType getEndpointType() {
+    public InvitationParticipantInfoEndpointType getEndpointType() {
         return this.backingStore.get("endpointType");
     }
     /**
@@ -70,7 +70,7 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, BackedMo
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
-        deserializerMap.put("endpointType", (n) -> { this.setEndpointType(n.getEnumValue(EndpointType::forValue)); });
+        deserializerMap.put("endpointType", (n) -> { this.setEndpointType(n.getEnumValue(InvitationParticipantInfoEndpointType::forValue)); });
         deserializerMap.put("hidden", (n) -> { this.setHidden(n.getBooleanValue()); });
         deserializerMap.put("identity", (n) -> { this.setIdentity(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -161,7 +161,7 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, BackedMo
      * Sets the endpointType property value. The type of endpoint. Possible values are: default, voicemail, skypeForBusiness, skypeForBusinessVoipPhone and unknownFutureValue.
      * @param value Value to set for the endpointType property.
      */
-    public void setEndpointType(@jakarta.annotation.Nullable final EndpointType value) {
+    public void setEndpointType(@jakarta.annotation.Nullable final InvitationParticipantInfoEndpointType value) {
         this.backingStore.set("endpointType", value);
     }
     /**

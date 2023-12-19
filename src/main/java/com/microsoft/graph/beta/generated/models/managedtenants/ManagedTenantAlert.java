@@ -144,8 +144,8 @@ public class ManagedTenantAlert extends Entity implements Parsable {
         deserializerMap.put("lastActionByUserId", (n) -> { this.setLastActionByUserId(n.getStringValue()); });
         deserializerMap.put("lastActionDateTime", (n) -> { this.setLastActionDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("message", (n) -> { this.setMessage(n.getStringValue()); });
-        deserializerMap.put("severity", (n) -> { this.setSeverity(n.getEnumValue(AlertSeverity::forValue)); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(AlertStatus::forValue)); });
+        deserializerMap.put("severity", (n) -> { this.setSeverity(n.getEnumValue(ManagedTenantAlertSeverity::forValue)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(ManagedTenantAlertStatus::forValue)); });
         deserializerMap.put("tenantId", (n) -> { this.setTenantId(n.getStringValue()); });
         deserializerMap.put("title", (n) -> { this.setTitle(n.getStringValue()); });
         return deserializerMap;
@@ -176,18 +176,18 @@ public class ManagedTenantAlert extends Entity implements Parsable {
     }
     /**
      * Gets the severity property value. The severity property
-     * @return a AlertSeverity
+     * @return a ManagedTenantAlertSeverity
      */
     @jakarta.annotation.Nullable
-    public AlertSeverity getSeverity() {
+    public ManagedTenantAlertSeverity getSeverity() {
         return this.backingStore.get("severity");
     }
     /**
      * Gets the status property value. The status property
-     * @return a AlertStatus
+     * @return a ManagedTenantAlertStatus
      */
     @jakarta.annotation.Nullable
-    public AlertStatus getStatus() {
+    public ManagedTenantAlertStatus getStatus() {
         return this.backingStore.get("status");
     }
     /**
@@ -342,14 +342,14 @@ public class ManagedTenantAlert extends Entity implements Parsable {
      * Sets the severity property value. The severity property
      * @param value Value to set for the severity property.
      */
-    public void setSeverity(@jakarta.annotation.Nullable final AlertSeverity value) {
+    public void setSeverity(@jakarta.annotation.Nullable final ManagedTenantAlertSeverity value) {
         this.backingStore.set("severity", value);
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
      */
-    public void setStatus(@jakarta.annotation.Nullable final AlertStatus value) {
+    public void setStatus(@jakarta.annotation.Nullable final ManagedTenantAlertStatus value) {
         this.backingStore.set("status", value);
     }
     /**

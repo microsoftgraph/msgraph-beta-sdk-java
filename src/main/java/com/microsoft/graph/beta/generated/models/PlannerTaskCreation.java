@@ -65,10 +65,10 @@ public class PlannerTaskCreation implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the creationSourceKind property value. Specifies what kind of creation source the task is created with. The possible values are: external, publication and unknownFutureValue.
-     * @return a PlannerCreationSourceKind
+     * @return a PlannerTaskCreationCreationSourceKind
      */
     @jakarta.annotation.Nullable
-    public PlannerCreationSourceKind getCreationSourceKind() {
+    public PlannerTaskCreationCreationSourceKind getCreationSourceKind() {
         return this.backingStore.get("creationSourceKind");
     }
     /**
@@ -78,7 +78,7 @@ public class PlannerTaskCreation implements AdditionalDataHolder, BackedModel, P
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
-        deserializerMap.put("creationSourceKind", (n) -> { this.setCreationSourceKind(n.getEnumValue(PlannerCreationSourceKind::forValue)); });
+        deserializerMap.put("creationSourceKind", (n) -> { this.setCreationSourceKind(n.getEnumValue(PlannerTaskCreationCreationSourceKind::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("teamsPublicationInfo", (n) -> { this.setTeamsPublicationInfo(n.getObjectValue(PlannerTeamsPublicationInfo::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -129,7 +129,7 @@ public class PlannerTaskCreation implements AdditionalDataHolder, BackedModel, P
      * Sets the creationSourceKind property value. Specifies what kind of creation source the task is created with. The possible values are: external, publication and unknownFutureValue.
      * @param value Value to set for the creationSourceKind property.
      */
-    public void setCreationSourceKind(@jakarta.annotation.Nullable final PlannerCreationSourceKind value) {
+    public void setCreationSourceKind(@jakarta.annotation.Nullable final PlannerTaskCreationCreationSourceKind value) {
         this.backingStore.set("creationSourceKind", value);
     }
     /**

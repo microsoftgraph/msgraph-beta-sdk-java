@@ -49,10 +49,10 @@ public class AuthorizationSystemInfo implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the authorizationSystemType property value. The type of authorization system.The possible values are: azure, gcp, aws, unknownFutureValue.
-     * @return a AuthorizationSystemType
+     * @return a AuthorizationSystemInfoAuthorizationSystemType
      */
     @jakarta.annotation.Nullable
-    public AuthorizationSystemType getAuthorizationSystemType() {
+    public AuthorizationSystemInfoAuthorizationSystemType getAuthorizationSystemType() {
         return this.backingStore.get("authorizationSystemType");
     }
     /**
@@ -78,7 +78,7 @@ public class AuthorizationSystemInfo implements AdditionalDataHolder, BackedMode
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
-        deserializerMap.put("authorizationSystemType", (n) -> { this.setAuthorizationSystemType(n.getEnumValue(AuthorizationSystemType::forValue)); });
+        deserializerMap.put("authorizationSystemType", (n) -> { this.setAuthorizationSystemType(n.getEnumValue(AuthorizationSystemInfoAuthorizationSystemType::forValue)); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("id", (n) -> { this.setId(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -123,7 +123,7 @@ public class AuthorizationSystemInfo implements AdditionalDataHolder, BackedMode
      * Sets the authorizationSystemType property value. The type of authorization system.The possible values are: azure, gcp, aws, unknownFutureValue.
      * @param value Value to set for the authorizationSystemType property.
      */
-    public void setAuthorizationSystemType(@jakarta.annotation.Nullable final AuthorizationSystemType value) {
+    public void setAuthorizationSystemType(@jakarta.annotation.Nullable final AuthorizationSystemInfoAuthorizationSystemType value) {
         this.backingStore.set("authorizationSystemType", value);
     }
     /**

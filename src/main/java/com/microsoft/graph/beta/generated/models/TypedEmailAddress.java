@@ -33,7 +33,7 @@ public class TypedEmailAddress extends EmailAddress implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("otherLabel", (n) -> { this.setOtherLabel(n.getStringValue()); });
-        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(EmailType::forValue)); });
+        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(TypedEmailAddressType::forValue)); });
         return deserializerMap;
     }
     /**
@@ -46,10 +46,10 @@ public class TypedEmailAddress extends EmailAddress implements Parsable {
     }
     /**
      * Gets the type property value. The type of email address. Possible values are: unknown, work, personal, main, other. The default value is unknown, which means address has not been set as a specific type.
-     * @return a EmailType
+     * @return a TypedEmailAddressType
      */
     @jakarta.annotation.Nullable
-    public EmailType getType() {
+    public TypedEmailAddressType getType() {
         return this.backingStore.get("type");
     }
     /**
@@ -73,7 +73,7 @@ public class TypedEmailAddress extends EmailAddress implements Parsable {
      * Sets the type property value. The type of email address. Possible values are: unknown, work, personal, main, other. The default value is unknown, which means address has not been set as a specific type.
      * @param value Value to set for the type property.
      */
-    public void setType(@jakarta.annotation.Nullable final EmailType value) {
+    public void setType(@jakarta.annotation.Nullable final TypedEmailAddressType value) {
         this.backingStore.set("type", value);
     }
 }

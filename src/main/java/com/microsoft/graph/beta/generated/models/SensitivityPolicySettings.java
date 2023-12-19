@@ -3,7 +3,6 @@ package com.microsoft.graph.beta.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -27,10 +26,10 @@ public class SensitivityPolicySettings extends Entity implements Parsable {
     }
     /**
      * Gets the applicableTo property value. The applicableTo property
-     * @return a EnumSet<SensitivityLabelTarget>
+     * @return a SensitivityPolicySettingsApplicableTo
      */
     @jakarta.annotation.Nullable
-    public EnumSet<SensitivityLabelTarget> getApplicableTo() {
+    public SensitivityPolicySettingsApplicableTo getApplicableTo() {
         return this.backingStore.get("applicableTo");
     }
     /**
@@ -48,7 +47,7 @@ public class SensitivityPolicySettings extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("applicableTo", (n) -> { this.setApplicableTo(n.getEnumSetValue(SensitivityLabelTarget::forValue)); });
+        deserializerMap.put("applicableTo", (n) -> { this.setApplicableTo(n.getEnumValue(SensitivityPolicySettingsApplicableTo::forValue)); });
         deserializerMap.put("downgradeSensitivityRequiresJustification", (n) -> { this.setDowngradeSensitivityRequiresJustification(n.getBooleanValue()); });
         deserializerMap.put("helpWebUrl", (n) -> { this.setHelpWebUrl(n.getStringValue()); });
         deserializerMap.put("isMandatory", (n) -> { this.setIsMandatory(n.getBooleanValue()); });
@@ -77,7 +76,7 @@ public class SensitivityPolicySettings extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeEnumSetValue("applicableTo", this.getApplicableTo());
+        writer.writeEnumValue("applicableTo", this.getApplicableTo());
         writer.writeBooleanValue("downgradeSensitivityRequiresJustification", this.getDowngradeSensitivityRequiresJustification());
         writer.writeStringValue("helpWebUrl", this.getHelpWebUrl());
         writer.writeBooleanValue("isMandatory", this.getIsMandatory());
@@ -86,7 +85,7 @@ public class SensitivityPolicySettings extends Entity implements Parsable {
      * Sets the applicableTo property value. The applicableTo property
      * @param value Value to set for the applicableTo property.
      */
-    public void setApplicableTo(@jakarta.annotation.Nullable final EnumSet<SensitivityLabelTarget> value) {
+    public void setApplicableTo(@jakarta.annotation.Nullable final SensitivityPolicySettingsApplicableTo value) {
         this.backingStore.set("applicableTo", value);
     }
     /**

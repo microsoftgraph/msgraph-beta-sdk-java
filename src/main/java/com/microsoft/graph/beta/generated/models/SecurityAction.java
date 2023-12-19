@@ -99,7 +99,7 @@ public class SecurityAction extends Entity implements Parsable {
         deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
         deserializerMap.put("parameters", (n) -> { this.setParameters(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
         deserializerMap.put("states", (n) -> { this.setStates(n.getCollectionOfObjectValues(SecurityActionState::createFromDiscriminatorValue)); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(OperationStatus::forValue)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(SecurityActionStatus::forValue)); });
         deserializerMap.put("user", (n) -> { this.setUser(n.getStringValue()); });
         deserializerMap.put("vendorInformation", (n) -> { this.setVendorInformation(n.getObjectValue(SecurityVendorInformation::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -138,10 +138,10 @@ public class SecurityAction extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. Status of the action. Possible values are: NotStarted, Running, Completed, Failed.
-     * @return a OperationStatus
+     * @return a SecurityActionStatus
      */
     @jakarta.annotation.Nullable
-    public OperationStatus getStatus() {
+    public SecurityActionStatus getStatus() {
         return this.backingStore.get("status");
     }
     /**
@@ -263,7 +263,7 @@ public class SecurityAction extends Entity implements Parsable {
      * Sets the status property value. Status of the action. Possible values are: NotStarted, Running, Completed, Failed.
      * @param value Value to set for the status property.
      */
-    public void setStatus(@jakarta.annotation.Nullable final OperationStatus value) {
+    public void setStatus(@jakarta.annotation.Nullable final SecurityActionStatus value) {
         this.backingStore.set("status", value);
     }
     /**

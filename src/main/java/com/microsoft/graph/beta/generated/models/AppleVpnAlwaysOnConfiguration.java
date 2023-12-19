@@ -52,10 +52,10 @@ public class AppleVpnAlwaysOnConfiguration implements AdditionalDataHolder, Back
     }
     /**
      * Gets the airPrintExceptionAction property value. Determine whether AirPrint service will be exempt from the always-on VPN connection. Possible values are: forceTrafficViaVPN, allowTrafficOutside, dropTraffic.
-     * @return a VpnServiceExceptionAction
+     * @return a AppleVpnAlwaysOnConfigurationAirPrintExceptionAction
      */
     @jakarta.annotation.Nullable
-    public VpnServiceExceptionAction getAirPrintExceptionAction() {
+    public AppleVpnAlwaysOnConfigurationAirPrintExceptionAction getAirPrintExceptionAction() {
         return this.backingStore.get("airPrintExceptionAction");
     }
     /**
@@ -92,10 +92,10 @@ public class AppleVpnAlwaysOnConfiguration implements AdditionalDataHolder, Back
     }
     /**
      * Gets the cellularExceptionAction property value. Determine whether Cellular service will be exempt from the always-on VPN connection. Possible values are: forceTrafficViaVPN, allowTrafficOutside, dropTraffic.
-     * @return a VpnServiceExceptionAction
+     * @return a AppleVpnAlwaysOnConfigurationCellularExceptionAction
      */
     @jakarta.annotation.Nullable
-    public VpnServiceExceptionAction getCellularExceptionAction() {
+    public AppleVpnAlwaysOnConfigurationCellularExceptionAction getCellularExceptionAction() {
         return this.backingStore.get("cellularExceptionAction");
     }
     /**
@@ -105,17 +105,17 @@ public class AppleVpnAlwaysOnConfiguration implements AdditionalDataHolder, Back
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(11);
-        deserializerMap.put("airPrintExceptionAction", (n) -> { this.setAirPrintExceptionAction(n.getEnumValue(VpnServiceExceptionAction::forValue)); });
+        deserializerMap.put("airPrintExceptionAction", (n) -> { this.setAirPrintExceptionAction(n.getEnumValue(AppleVpnAlwaysOnConfigurationAirPrintExceptionAction::forValue)); });
         deserializerMap.put("allowAllCaptiveNetworkPlugins", (n) -> { this.setAllowAllCaptiveNetworkPlugins(n.getBooleanValue()); });
         deserializerMap.put("allowCaptiveWebSheet", (n) -> { this.setAllowCaptiveWebSheet(n.getBooleanValue()); });
         deserializerMap.put("allowedCaptiveNetworkPlugins", (n) -> { this.setAllowedCaptiveNetworkPlugins(n.getObjectValue(SpecifiedCaptiveNetworkPlugins::createFromDiscriminatorValue)); });
-        deserializerMap.put("cellularExceptionAction", (n) -> { this.setCellularExceptionAction(n.getEnumValue(VpnServiceExceptionAction::forValue)); });
+        deserializerMap.put("cellularExceptionAction", (n) -> { this.setCellularExceptionAction(n.getEnumValue(AppleVpnAlwaysOnConfigurationCellularExceptionAction::forValue)); });
         deserializerMap.put("natKeepAliveIntervalInSeconds", (n) -> { this.setNatKeepAliveIntervalInSeconds(n.getIntegerValue()); });
         deserializerMap.put("natKeepAliveOffloadEnable", (n) -> { this.setNatKeepAliveOffloadEnable(n.getBooleanValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("tunnelConfiguration", (n) -> { this.setTunnelConfiguration(n.getEnumValue(VpnTunnelConfigurationType::forValue)); });
         deserializerMap.put("userToggleEnabled", (n) -> { this.setUserToggleEnabled(n.getBooleanValue()); });
-        deserializerMap.put("voicemailExceptionAction", (n) -> { this.setVoicemailExceptionAction(n.getEnumValue(VpnServiceExceptionAction::forValue)); });
+        deserializerMap.put("voicemailExceptionAction", (n) -> { this.setVoicemailExceptionAction(n.getEnumValue(AppleVpnAlwaysOnConfigurationVoicemailExceptionAction::forValue)); });
         return deserializerMap;
     }
     /**
@@ -160,10 +160,10 @@ public class AppleVpnAlwaysOnConfiguration implements AdditionalDataHolder, Back
     }
     /**
      * Gets the voicemailExceptionAction property value. Determine whether voicemail service will be exempt from the always-on VPN connection. Possible values are: forceTrafficViaVPN, allowTrafficOutside, dropTraffic.
-     * @return a VpnServiceExceptionAction
+     * @return a AppleVpnAlwaysOnConfigurationVoicemailExceptionAction
      */
     @jakarta.annotation.Nullable
-    public VpnServiceExceptionAction getVoicemailExceptionAction() {
+    public AppleVpnAlwaysOnConfigurationVoicemailExceptionAction getVoicemailExceptionAction() {
         return this.backingStore.get("voicemailExceptionAction");
     }
     /**
@@ -196,7 +196,7 @@ public class AppleVpnAlwaysOnConfiguration implements AdditionalDataHolder, Back
      * Sets the airPrintExceptionAction property value. Determine whether AirPrint service will be exempt from the always-on VPN connection. Possible values are: forceTrafficViaVPN, allowTrafficOutside, dropTraffic.
      * @param value Value to set for the airPrintExceptionAction property.
      */
-    public void setAirPrintExceptionAction(@jakarta.annotation.Nullable final VpnServiceExceptionAction value) {
+    public void setAirPrintExceptionAction(@jakarta.annotation.Nullable final AppleVpnAlwaysOnConfigurationAirPrintExceptionAction value) {
         this.backingStore.set("airPrintExceptionAction", value);
     }
     /**
@@ -232,7 +232,7 @@ public class AppleVpnAlwaysOnConfiguration implements AdditionalDataHolder, Back
      * Sets the cellularExceptionAction property value. Determine whether Cellular service will be exempt from the always-on VPN connection. Possible values are: forceTrafficViaVPN, allowTrafficOutside, dropTraffic.
      * @param value Value to set for the cellularExceptionAction property.
      */
-    public void setCellularExceptionAction(@jakarta.annotation.Nullable final VpnServiceExceptionAction value) {
+    public void setCellularExceptionAction(@jakarta.annotation.Nullable final AppleVpnAlwaysOnConfigurationCellularExceptionAction value) {
         this.backingStore.set("cellularExceptionAction", value);
     }
     /**
@@ -274,7 +274,7 @@ public class AppleVpnAlwaysOnConfiguration implements AdditionalDataHolder, Back
      * Sets the voicemailExceptionAction property value. Determine whether voicemail service will be exempt from the always-on VPN connection. Possible values are: forceTrafficViaVPN, allowTrafficOutside, dropTraffic.
      * @param value Value to set for the voicemailExceptionAction property.
      */
-    public void setVoicemailExceptionAction(@jakarta.annotation.Nullable final VpnServiceExceptionAction value) {
+    public void setVoicemailExceptionAction(@jakarta.annotation.Nullable final AppleVpnAlwaysOnConfigurationVoicemailExceptionAction value) {
         this.backingStore.set("voicemailExceptionAction", value);
     }
 }

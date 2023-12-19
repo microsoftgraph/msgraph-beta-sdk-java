@@ -36,10 +36,10 @@ public class PrivilegedApproval extends Entity implements Parsable {
     }
     /**
      * Gets the approvalState property value. The approvalState property
-     * @return a ApprovalState
+     * @return a PrivilegedApprovalApprovalState
      */
     @jakarta.annotation.Nullable
-    public ApprovalState getApprovalState() {
+    public PrivilegedApprovalApprovalState getApprovalState() {
         return this.backingStore.get("approvalState");
     }
     /**
@@ -74,7 +74,7 @@ public class PrivilegedApproval extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("approvalDuration", (n) -> { this.setApprovalDuration(n.getPeriodAndDurationValue()); });
-        deserializerMap.put("approvalState", (n) -> { this.setApprovalState(n.getEnumValue(ApprovalState::forValue)); });
+        deserializerMap.put("approvalState", (n) -> { this.setApprovalState(n.getEnumValue(PrivilegedApprovalApprovalState::forValue)); });
         deserializerMap.put("approvalType", (n) -> { this.setApprovalType(n.getStringValue()); });
         deserializerMap.put("approverReason", (n) -> { this.setApproverReason(n.getStringValue()); });
         deserializerMap.put("endDateTime", (n) -> { this.setEndDateTime(n.getOffsetDateTimeValue()); });
@@ -164,7 +164,7 @@ public class PrivilegedApproval extends Entity implements Parsable {
      * Sets the approvalState property value. The approvalState property
      * @param value Value to set for the approvalState property.
      */
-    public void setApprovalState(@jakarta.annotation.Nullable final ApprovalState value) {
+    public void setApprovalState(@jakarta.annotation.Nullable final PrivilegedApprovalApprovalState value) {
         this.backingStore.set("approvalState", value);
     }
     /**

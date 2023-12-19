@@ -26,10 +26,10 @@ public class PlayPromptOperation extends CommsOperation implements Parsable {
     }
     /**
      * Gets the completionReason property value. Possible values are: unknown, completedSuccessfully, mediaOperationCanceled.
-     * @return a PlayPromptCompletionReason
+     * @return a PlayPromptOperationCompletionReason
      */
     @jakarta.annotation.Nullable
-    public PlayPromptCompletionReason getCompletionReason() {
+    public PlayPromptOperationCompletionReason getCompletionReason() {
         return this.backingStore.get("completionReason");
     }
     /**
@@ -39,7 +39,7 @@ public class PlayPromptOperation extends CommsOperation implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("completionReason", (n) -> { this.setCompletionReason(n.getEnumValue(PlayPromptCompletionReason::forValue)); });
+        deserializerMap.put("completionReason", (n) -> { this.setCompletionReason(n.getEnumValue(PlayPromptOperationCompletionReason::forValue)); });
         return deserializerMap;
     }
     /**
@@ -55,7 +55,7 @@ public class PlayPromptOperation extends CommsOperation implements Parsable {
      * Sets the completionReason property value. Possible values are: unknown, completedSuccessfully, mediaOperationCanceled.
      * @param value Value to set for the completionReason property.
      */
-    public void setCompletionReason(@jakarta.annotation.Nullable final PlayPromptCompletionReason value) {
+    public void setCompletionReason(@jakarta.annotation.Nullable final PlayPromptOperationCompletionReason value) {
         this.backingStore.set("completionReason", value);
     }
 }

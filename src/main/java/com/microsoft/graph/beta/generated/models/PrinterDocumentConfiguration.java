@@ -65,10 +65,10 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the colorMode property value. The colorMode property
-     * @return a PrintColorMode
+     * @return a PrinterDocumentConfigurationColorMode
      */
     @jakarta.annotation.Nullable
-    public PrintColorMode getColorMode() {
+    public PrinterDocumentConfigurationColorMode getColorMode() {
         return this.backingStore.get("colorMode");
     }
     /**
@@ -89,26 +89,26 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the duplexMode property value. The duplexMode property
-     * @return a PrintDuplexMode
+     * @return a PrinterDocumentConfigurationDuplexMode
      */
     @jakarta.annotation.Nullable
-    public PrintDuplexMode getDuplexMode() {
+    public PrinterDocumentConfigurationDuplexMode getDuplexMode() {
         return this.backingStore.get("duplexMode");
     }
     /**
      * Gets the feedDirection property value. The feedDirection property
-     * @return a PrinterFeedDirection
+     * @return a PrinterDocumentConfigurationFeedDirection
      */
     @jakarta.annotation.Nullable
-    public PrinterFeedDirection getFeedDirection() {
+    public PrinterDocumentConfigurationFeedDirection getFeedDirection() {
         return this.backingStore.get("feedDirection");
     }
     /**
      * Gets the feedOrientation property value. The feedOrientation property
-     * @return a PrinterFeedOrientation
+     * @return a PrinterDocumentConfigurationFeedOrientation
      */
     @jakarta.annotation.Nullable
-    public PrinterFeedOrientation getFeedOrientation() {
+    public PrinterDocumentConfigurationFeedOrientation getFeedOrientation() {
         return this.backingStore.get("feedOrientation");
     }
     /**
@@ -119,34 +119,34 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Backe
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(21);
         deserializerMap.put("collate", (n) -> { this.setCollate(n.getBooleanValue()); });
-        deserializerMap.put("colorMode", (n) -> { this.setColorMode(n.getEnumValue(PrintColorMode::forValue)); });
+        deserializerMap.put("colorMode", (n) -> { this.setColorMode(n.getEnumValue(PrinterDocumentConfigurationColorMode::forValue)); });
         deserializerMap.put("copies", (n) -> { this.setCopies(n.getIntegerValue()); });
         deserializerMap.put("dpi", (n) -> { this.setDpi(n.getIntegerValue()); });
-        deserializerMap.put("duplexMode", (n) -> { this.setDuplexMode(n.getEnumValue(PrintDuplexMode::forValue)); });
-        deserializerMap.put("feedDirection", (n) -> { this.setFeedDirection(n.getEnumValue(PrinterFeedDirection::forValue)); });
-        deserializerMap.put("feedOrientation", (n) -> { this.setFeedOrientation(n.getEnumValue(PrinterFeedOrientation::forValue)); });
-        deserializerMap.put("finishings", (n) -> { this.setFinishings(n.getCollectionOfEnumValues(PrintFinishing::forValue)); });
+        deserializerMap.put("duplexMode", (n) -> { this.setDuplexMode(n.getEnumValue(PrinterDocumentConfigurationDuplexMode::forValue)); });
+        deserializerMap.put("feedDirection", (n) -> { this.setFeedDirection(n.getEnumValue(PrinterDocumentConfigurationFeedDirection::forValue)); });
+        deserializerMap.put("feedOrientation", (n) -> { this.setFeedOrientation(n.getEnumValue(PrinterDocumentConfigurationFeedOrientation::forValue)); });
+        deserializerMap.put("finishings", (n) -> { this.setFinishings(n.getCollectionOfEnumValues(PrinterDocumentConfigurationFinishings::forValue)); });
         deserializerMap.put("fitPdfToPage", (n) -> { this.setFitPdfToPage(n.getBooleanValue()); });
         deserializerMap.put("inputBin", (n) -> { this.setInputBin(n.getStringValue()); });
         deserializerMap.put("margin", (n) -> { this.setMargin(n.getObjectValue(PrintMargin::createFromDiscriminatorValue)); });
         deserializerMap.put("mediaSize", (n) -> { this.setMediaSize(n.getStringValue()); });
         deserializerMap.put("mediaType", (n) -> { this.setMediaType(n.getStringValue()); });
-        deserializerMap.put("multipageLayout", (n) -> { this.setMultipageLayout(n.getEnumValue(PrintMultipageLayout::forValue)); });
+        deserializerMap.put("multipageLayout", (n) -> { this.setMultipageLayout(n.getEnumValue(PrinterDocumentConfigurationMultipageLayout::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("orientation", (n) -> { this.setOrientation(n.getEnumValue(PrintOrientation::forValue)); });
+        deserializerMap.put("orientation", (n) -> { this.setOrientation(n.getEnumValue(PrinterDocumentConfigurationOrientation::forValue)); });
         deserializerMap.put("outputBin", (n) -> { this.setOutputBin(n.getStringValue()); });
         deserializerMap.put("pageRanges", (n) -> { this.setPageRanges(n.getCollectionOfObjectValues(IntegerRange::createFromDiscriminatorValue)); });
         deserializerMap.put("pagesPerSheet", (n) -> { this.setPagesPerSheet(n.getIntegerValue()); });
-        deserializerMap.put("quality", (n) -> { this.setQuality(n.getEnumValue(PrintQuality::forValue)); });
-        deserializerMap.put("scaling", (n) -> { this.setScaling(n.getEnumValue(PrintScaling::forValue)); });
+        deserializerMap.put("quality", (n) -> { this.setQuality(n.getEnumValue(PrinterDocumentConfigurationQuality::forValue)); });
+        deserializerMap.put("scaling", (n) -> { this.setScaling(n.getEnumValue(PrinterDocumentConfigurationScaling::forValue)); });
         return deserializerMap;
     }
     /**
      * Gets the finishings property value. The finishings property
-     * @return a java.util.List<PrintFinishing>
+     * @return a java.util.List<PrinterDocumentConfigurationFinishings>
      */
     @jakarta.annotation.Nullable
-    public java.util.List<PrintFinishing> getFinishings() {
+    public java.util.List<PrinterDocumentConfigurationFinishings> getFinishings() {
         return this.backingStore.get("finishings");
     }
     /**
@@ -191,10 +191,10 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the multipageLayout property value. The multipageLayout property
-     * @return a PrintMultipageLayout
+     * @return a PrinterDocumentConfigurationMultipageLayout
      */
     @jakarta.annotation.Nullable
-    public PrintMultipageLayout getMultipageLayout() {
+    public PrinterDocumentConfigurationMultipageLayout getMultipageLayout() {
         return this.backingStore.get("multipageLayout");
     }
     /**
@@ -207,10 +207,10 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the orientation property value. The orientation property
-     * @return a PrintOrientation
+     * @return a PrinterDocumentConfigurationOrientation
      */
     @jakarta.annotation.Nullable
-    public PrintOrientation getOrientation() {
+    public PrinterDocumentConfigurationOrientation getOrientation() {
         return this.backingStore.get("orientation");
     }
     /**
@@ -239,18 +239,18 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the quality property value. The quality property
-     * @return a PrintQuality
+     * @return a PrinterDocumentConfigurationQuality
      */
     @jakarta.annotation.Nullable
-    public PrintQuality getQuality() {
+    public PrinterDocumentConfigurationQuality getQuality() {
         return this.backingStore.get("quality");
     }
     /**
      * Gets the scaling property value. The scaling property
-     * @return a PrintScaling
+     * @return a PrinterDocumentConfigurationScaling
      */
     @jakarta.annotation.Nullable
-    public PrintScaling getScaling() {
+    public PrinterDocumentConfigurationScaling getScaling() {
         return this.backingStore.get("scaling");
     }
     /**
@@ -308,7 +308,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Backe
      * Sets the colorMode property value. The colorMode property
      * @param value Value to set for the colorMode property.
      */
-    public void setColorMode(@jakarta.annotation.Nullable final PrintColorMode value) {
+    public void setColorMode(@jakarta.annotation.Nullable final PrinterDocumentConfigurationColorMode value) {
         this.backingStore.set("colorMode", value);
     }
     /**
@@ -329,28 +329,28 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Backe
      * Sets the duplexMode property value. The duplexMode property
      * @param value Value to set for the duplexMode property.
      */
-    public void setDuplexMode(@jakarta.annotation.Nullable final PrintDuplexMode value) {
+    public void setDuplexMode(@jakarta.annotation.Nullable final PrinterDocumentConfigurationDuplexMode value) {
         this.backingStore.set("duplexMode", value);
     }
     /**
      * Sets the feedDirection property value. The feedDirection property
      * @param value Value to set for the feedDirection property.
      */
-    public void setFeedDirection(@jakarta.annotation.Nullable final PrinterFeedDirection value) {
+    public void setFeedDirection(@jakarta.annotation.Nullable final PrinterDocumentConfigurationFeedDirection value) {
         this.backingStore.set("feedDirection", value);
     }
     /**
      * Sets the feedOrientation property value. The feedOrientation property
      * @param value Value to set for the feedOrientation property.
      */
-    public void setFeedOrientation(@jakarta.annotation.Nullable final PrinterFeedOrientation value) {
+    public void setFeedOrientation(@jakarta.annotation.Nullable final PrinterDocumentConfigurationFeedOrientation value) {
         this.backingStore.set("feedOrientation", value);
     }
     /**
      * Sets the finishings property value. The finishings property
      * @param value Value to set for the finishings property.
      */
-    public void setFinishings(@jakarta.annotation.Nullable final java.util.List<PrintFinishing> value) {
+    public void setFinishings(@jakarta.annotation.Nullable final java.util.List<PrinterDocumentConfigurationFinishings> value) {
         this.backingStore.set("finishings", value);
     }
     /**
@@ -392,7 +392,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Backe
      * Sets the multipageLayout property value. The multipageLayout property
      * @param value Value to set for the multipageLayout property.
      */
-    public void setMultipageLayout(@jakarta.annotation.Nullable final PrintMultipageLayout value) {
+    public void setMultipageLayout(@jakarta.annotation.Nullable final PrinterDocumentConfigurationMultipageLayout value) {
         this.backingStore.set("multipageLayout", value);
     }
     /**
@@ -406,7 +406,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Backe
      * Sets the orientation property value. The orientation property
      * @param value Value to set for the orientation property.
      */
-    public void setOrientation(@jakarta.annotation.Nullable final PrintOrientation value) {
+    public void setOrientation(@jakarta.annotation.Nullable final PrinterDocumentConfigurationOrientation value) {
         this.backingStore.set("orientation", value);
     }
     /**
@@ -434,14 +434,14 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Backe
      * Sets the quality property value. The quality property
      * @param value Value to set for the quality property.
      */
-    public void setQuality(@jakarta.annotation.Nullable final PrintQuality value) {
+    public void setQuality(@jakarta.annotation.Nullable final PrinterDocumentConfigurationQuality value) {
         this.backingStore.set("quality", value);
     }
     /**
      * Sets the scaling property value. The scaling property
      * @param value Value to set for the scaling property.
      */
-    public void setScaling(@jakarta.annotation.Nullable final PrintScaling value) {
+    public void setScaling(@jakarta.annotation.Nullable final PrinterDocumentConfigurationScaling value) {
         this.backingStore.set("scaling", value);
     }
 }

@@ -75,7 +75,7 @@ public class Property implements AdditionalDataHolder, BackedModel, Parsable {
         deserializerMap.put("isRefinable", (n) -> { this.setIsRefinable(n.getBooleanValue()); });
         deserializerMap.put("isRetrievable", (n) -> { this.setIsRetrievable(n.getBooleanValue()); });
         deserializerMap.put("isSearchable", (n) -> { this.setIsSearchable(n.getBooleanValue()); });
-        deserializerMap.put("labels", (n) -> { this.setLabels(n.getCollectionOfEnumValues(Label::forValue)); });
+        deserializerMap.put("labels", (n) -> { this.setLabels(n.getCollectionOfEnumValues(PropertyLabels::forValue)); });
         deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(PropertyType::forValue)); });
@@ -115,10 +115,10 @@ public class Property implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the labels property value. The labels property
-     * @return a java.util.List<Label>
+     * @return a java.util.List<PropertyLabels>
      */
     @jakarta.annotation.Nullable
-    public java.util.List<Label> getLabels() {
+    public java.util.List<PropertyLabels> getLabels() {
         return this.backingStore.get("labels");
     }
     /**
@@ -216,7 +216,7 @@ public class Property implements AdditionalDataHolder, BackedModel, Parsable {
      * Sets the labels property value. The labels property
      * @param value Value to set for the labels property.
      */
-    public void setLabels(@jakarta.annotation.Nullable final java.util.List<Label> value) {
+    public void setLabels(@jakarta.annotation.Nullable final java.util.List<PropertyLabels> value) {
         this.backingStore.set("labels", value);
     }
     /**

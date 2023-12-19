@@ -1,6 +1,5 @@
 package com.microsoft.graph.beta.devicemanagement.virtualendpoint.cloudpcs.item.getfrontlinecloudpcaccessstate;
 
-import com.microsoft.graph.beta.models.FrontlineCloudPcAccessState;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -37,24 +36,24 @@ public class GetFrontlineCloudPcAccessStateRequestBuilder extends BaseRequestBui
     }
     /**
      * Invoke function getFrontlineCloudPcAccessState
-     * @return a FrontlineCloudPcAccessState
+     * @return a GetFrontlineCloudPcAccessStateGetResponse
      */
     @jakarta.annotation.Nullable
-    public FrontlineCloudPcAccessState get() {
+    public GetFrontlineCloudPcAccessStateGetResponse get() {
         return get(null);
     }
     /**
      * Invoke function getFrontlineCloudPcAccessState
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a FrontlineCloudPcAccessState
+     * @return a GetFrontlineCloudPcAccessStateGetResponse
      */
     @jakarta.annotation.Nullable
-    public FrontlineCloudPcAccessState get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public GetFrontlineCloudPcAccessStateGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendEnum(requestInfo, errorMapping, FrontlineCloudPcAccessState::forValue);
+        return this.requestAdapter.sendEnum(requestInfo, errorMapping, GetFrontlineCloudPcAccessStateGetResponse::forValue);
     }
     /**
      * Invoke function getFrontlineCloudPcAccessState

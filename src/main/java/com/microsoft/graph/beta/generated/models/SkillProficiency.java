@@ -59,17 +59,17 @@ public class SkillProficiency extends ItemFacet implements Parsable {
         deserializerMap.put("categories", (n) -> { this.setCategories(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("collaborationTags", (n) -> { this.setCollaborationTags(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
-        deserializerMap.put("proficiency", (n) -> { this.setProficiency(n.getEnumValue(SkillProficiencyLevel::forValue)); });
+        deserializerMap.put("proficiency", (n) -> { this.setProficiency(n.getEnumValue(SkillProficiencyProficiency::forValue)); });
         deserializerMap.put("thumbnailUrl", (n) -> { this.setThumbnailUrl(n.getStringValue()); });
         deserializerMap.put("webUrl", (n) -> { this.setWebUrl(n.getStringValue()); });
         return deserializerMap;
     }
     /**
      * Gets the proficiency property value. Detail of the users proficiency with this skill. Possible values are: elementary, limitedWorking, generalProfessional, advancedProfessional, expert, unknownFutureValue.
-     * @return a SkillProficiencyLevel
+     * @return a SkillProficiencyProficiency
      */
     @jakarta.annotation.Nullable
-    public SkillProficiencyLevel getProficiency() {
+    public SkillProficiencyProficiency getProficiency() {
         return this.backingStore.get("proficiency");
     }
     /**
@@ -127,7 +127,7 @@ public class SkillProficiency extends ItemFacet implements Parsable {
      * Sets the proficiency property value. Detail of the users proficiency with this skill. Possible values are: elementary, limitedWorking, generalProfessional, advancedProfessional, expert, unknownFutureValue.
      * @param value Value to set for the proficiency property.
      */
-    public void setProficiency(@jakarta.annotation.Nullable final SkillProficiencyLevel value) {
+    public void setProficiency(@jakarta.annotation.Nullable final SkillProficiencyProficiency value) {
         this.backingStore.set("proficiency", value);
     }
     /**

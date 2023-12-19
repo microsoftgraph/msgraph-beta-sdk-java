@@ -73,10 +73,10 @@ public class PartnerInformation implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the companyType property value. The companyType property
-     * @return a PartnerTenantType
+     * @return a PartnerInformationCompanyType
      */
     @jakarta.annotation.Nullable
-    public PartnerTenantType getCompanyType() {
+    public PartnerInformationCompanyType getCompanyType() {
         return this.backingStore.get("companyType");
     }
     /**
@@ -88,7 +88,7 @@ public class PartnerInformation implements AdditionalDataHolder, BackedModel, Pa
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(9);
         deserializerMap.put("commerceUrl", (n) -> { this.setCommerceUrl(n.getStringValue()); });
         deserializerMap.put("companyName", (n) -> { this.setCompanyName(n.getStringValue()); });
-        deserializerMap.put("companyType", (n) -> { this.setCompanyType(n.getEnumValue(PartnerTenantType::forValue)); });
+        deserializerMap.put("companyType", (n) -> { this.setCompanyType(n.getEnumValue(PartnerInformationCompanyType::forValue)); });
         deserializerMap.put("helpUrl", (n) -> { this.setHelpUrl(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("partnerTenantId", (n) -> { this.setPartnerTenantId(n.getStringValue()); });
@@ -195,7 +195,7 @@ public class PartnerInformation implements AdditionalDataHolder, BackedModel, Pa
      * Sets the companyType property value. The companyType property
      * @param value Value to set for the companyType property.
      */
-    public void setCompanyType(@jakarta.annotation.Nullable final PartnerTenantType value) {
+    public void setCompanyType(@jakarta.annotation.Nullable final PartnerInformationCompanyType value) {
         this.backingStore.set("companyType", value);
     }
     /**

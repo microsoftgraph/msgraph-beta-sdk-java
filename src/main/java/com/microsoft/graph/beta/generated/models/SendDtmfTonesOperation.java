@@ -26,10 +26,10 @@ public class SendDtmfTonesOperation extends CommsOperation implements Parsable {
     }
     /**
      * Gets the completionReason property value. The results of the action. Possible values are: unknown, completedSuccessfully, mediaOperationCanceled, unknownfutureValue.
-     * @return a SendDtmfCompletionReason
+     * @return a SendDtmfTonesOperationCompletionReason
      */
     @jakarta.annotation.Nullable
-    public SendDtmfCompletionReason getCompletionReason() {
+    public SendDtmfTonesOperationCompletionReason getCompletionReason() {
         return this.backingStore.get("completionReason");
     }
     /**
@@ -39,7 +39,7 @@ public class SendDtmfTonesOperation extends CommsOperation implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("completionReason", (n) -> { this.setCompletionReason(n.getEnumValue(SendDtmfCompletionReason::forValue)); });
+        deserializerMap.put("completionReason", (n) -> { this.setCompletionReason(n.getEnumValue(SendDtmfTonesOperationCompletionReason::forValue)); });
         return deserializerMap;
     }
     /**
@@ -55,7 +55,7 @@ public class SendDtmfTonesOperation extends CommsOperation implements Parsable {
      * Sets the completionReason property value. The results of the action. Possible values are: unknown, completedSuccessfully, mediaOperationCanceled, unknownfutureValue.
      * @param value Value to set for the completionReason property.
      */
-    public void setCompletionReason(@jakarta.annotation.Nullable final SendDtmfCompletionReason value) {
+    public void setCompletionReason(@jakarta.annotation.Nullable final SendDtmfTonesOperationCompletionReason value) {
         this.backingStore.set("completionReason", value);
     }
 }

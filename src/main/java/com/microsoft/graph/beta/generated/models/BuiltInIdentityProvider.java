@@ -33,7 +33,7 @@ public class BuiltInIdentityProvider extends IdentityProviderBase implements Par
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("identityProviderType", (n) -> { this.setIdentityProviderType(n.getStringValue()); });
-        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(IdentityProviderState::forValue)); });
+        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(BuiltInIdentityProviderState::forValue)); });
         return deserializerMap;
     }
     /**
@@ -46,10 +46,10 @@ public class BuiltInIdentityProvider extends IdentityProviderBase implements Par
     }
     /**
      * Gets the state property value. The state property
-     * @return a IdentityProviderState
+     * @return a BuiltInIdentityProviderState
      */
     @jakarta.annotation.Nullable
-    public IdentityProviderState getState() {
+    public BuiltInIdentityProviderState getState() {
         return this.backingStore.get("state");
     }
     /**
@@ -73,7 +73,7 @@ public class BuiltInIdentityProvider extends IdentityProviderBase implements Par
      * Sets the state property value. The state property
      * @param value Value to set for the state property.
      */
-    public void setState(@jakarta.annotation.Nullable final IdentityProviderState value) {
+    public void setState(@jakarta.annotation.Nullable final BuiltInIdentityProviderState value) {
         this.backingStore.set("state", value);
     }
 }

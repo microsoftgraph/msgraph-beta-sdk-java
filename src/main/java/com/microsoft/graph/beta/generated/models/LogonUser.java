@@ -53,10 +53,10 @@ public class LogonUser implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the accountType property value. User Account type, per Windows definition. Possible values are: unknown, standard, power, administrator.
-     * @return a UserAccountSecurityType
+     * @return a LogonUserAccountType
      */
     @jakarta.annotation.Nullable
-    public UserAccountSecurityType getAccountType() {
+    public LogonUserAccountType getAccountType() {
         return this.backingStore.get("accountType");
     }
     /**
@@ -89,11 +89,11 @@ public class LogonUser implements AdditionalDataHolder, BackedModel, Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(8);
         deserializerMap.put("accountDomain", (n) -> { this.setAccountDomain(n.getStringValue()); });
         deserializerMap.put("accountName", (n) -> { this.setAccountName(n.getStringValue()); });
-        deserializerMap.put("accountType", (n) -> { this.setAccountType(n.getEnumValue(UserAccountSecurityType::forValue)); });
+        deserializerMap.put("accountType", (n) -> { this.setAccountType(n.getEnumValue(LogonUserAccountType::forValue)); });
         deserializerMap.put("firstSeenDateTime", (n) -> { this.setFirstSeenDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("lastSeenDateTime", (n) -> { this.setLastSeenDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("logonId", (n) -> { this.setLogonId(n.getStringValue()); });
-        deserializerMap.put("logonTypes", (n) -> { this.setLogonTypes(n.getCollectionOfEnumValues(LogonType::forValue)); });
+        deserializerMap.put("logonTypes", (n) -> { this.setLogonTypes(n.getCollectionOfEnumValues(LogonUserLogonTypes::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;
     }
@@ -123,10 +123,10 @@ public class LogonUser implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the logonTypes property value. Collection of the logon types observed for the logged on user from when first to last seen. Possible values are: unknown, interactive, remoteInteractive, network, batch, service.
-     * @return a java.util.List<LogonType>
+     * @return a java.util.List<LogonUserLogonTypes>
      */
     @jakarta.annotation.Nullable
-    public java.util.List<LogonType> getLogonTypes() {
+    public java.util.List<LogonUserLogonTypes> getLogonTypes() {
         return this.backingStore.get("logonTypes");
     }
     /**
@@ -171,7 +171,7 @@ public class LogonUser implements AdditionalDataHolder, BackedModel, Parsable {
      * Sets the accountType property value. User Account type, per Windows definition. Possible values are: unknown, standard, power, administrator.
      * @param value Value to set for the accountType property.
      */
-    public void setAccountType(@jakarta.annotation.Nullable final UserAccountSecurityType value) {
+    public void setAccountType(@jakarta.annotation.Nullable final LogonUserAccountType value) {
         this.backingStore.set("accountType", value);
     }
     /**
@@ -214,7 +214,7 @@ public class LogonUser implements AdditionalDataHolder, BackedModel, Parsable {
      * Sets the logonTypes property value. Collection of the logon types observed for the logged on user from when first to last seen. Possible values are: unknown, interactive, remoteInteractive, network, batch, service.
      * @param value Value to set for the logonTypes property.
      */
-    public void setLogonTypes(@jakarta.annotation.Nullable final java.util.List<LogonType> value) {
+    public void setLogonTypes(@jakarta.annotation.Nullable final java.util.List<LogonUserLogonTypes> value) {
         this.backingStore.set("logonTypes", value);
     }
     /**

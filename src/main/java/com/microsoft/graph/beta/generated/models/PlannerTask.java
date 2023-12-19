@@ -3,8 +3,8 @@ package com.microsoft.graph.beta.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.time.LocalDate;
 import java.time.OffsetDateTime;
-import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -48,6 +48,14 @@ public class PlannerTask extends PlannerDelta implements Parsable {
     @jakarta.annotation.Nullable
     public PlannerAppliedCategories getAppliedCategories() {
         return this.backingStore.get("appliedCategories");
+    }
+    /**
+     * Gets the archivalInfo property value. The archivalInfo property
+     * @return a PlannerArchivalInfo
+     */
+    @jakarta.annotation.Nullable
+    public PlannerArchivalInfo getArchivalInfo() {
+        return this.backingStore.get("archivalInfo");
     }
     /**
      * Gets the assignedToTaskBoardFormat property value. Read-only. Nullable. Used to render the task correctly in the task board view when grouped by assignedTo.
@@ -170,6 +178,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("activeChecklistItemCount", (n) -> { this.setActiveChecklistItemCount(n.getIntegerValue()); });
         deserializerMap.put("appliedCategories", (n) -> { this.setAppliedCategories(n.getObjectValue(PlannerAppliedCategories::createFromDiscriminatorValue)); });
+        deserializerMap.put("archivalInfo", (n) -> { this.setArchivalInfo(n.getObjectValue(PlannerArchivalInfo::createFromDiscriminatorValue)); });
         deserializerMap.put("assignedToTaskBoardFormat", (n) -> { this.setAssignedToTaskBoardFormat(n.getObjectValue(PlannerAssignedToTaskBoardTaskFormat::createFromDiscriminatorValue)); });
         deserializerMap.put("assigneePriority", (n) -> { this.setAssigneePriority(n.getStringValue()); });
         deserializerMap.put("assignments", (n) -> { this.setAssignments(n.getObjectValue(PlannerAssignments::createFromDiscriminatorValue)); });
@@ -185,15 +194,18 @@ public class PlannerTask extends PlannerDelta implements Parsable {
         deserializerMap.put("details", (n) -> { this.setDetails(n.getObjectValue(PlannerTaskDetails::createFromDiscriminatorValue)); });
         deserializerMap.put("dueDateTime", (n) -> { this.setDueDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("hasDescription", (n) -> { this.setHasDescription(n.getBooleanValue()); });
+        deserializerMap.put("isArchived", (n) -> { this.setIsArchived(n.getBooleanValue()); });
+        deserializerMap.put("isOnMyDay", (n) -> { this.setIsOnMyDay(n.getBooleanValue()); });
+        deserializerMap.put("isOnMyDayLastModifiedDate", (n) -> { this.setIsOnMyDayLastModifiedDate(n.getLocalDateValue()); });
         deserializerMap.put("orderHint", (n) -> { this.setOrderHint(n.getStringValue()); });
         deserializerMap.put("percentComplete", (n) -> { this.setPercentComplete(n.getIntegerValue()); });
         deserializerMap.put("planId", (n) -> { this.setPlanId(n.getStringValue()); });
-        deserializerMap.put("previewType", (n) -> { this.setPreviewType(n.getEnumValue(PlannerPreviewType::forValue)); });
+        deserializerMap.put("previewType", (n) -> { this.setPreviewType(n.getEnumValue(PlannerTaskPreviewType::forValue)); });
         deserializerMap.put("priority", (n) -> { this.setPriority(n.getIntegerValue()); });
         deserializerMap.put("progressTaskBoardFormat", (n) -> { this.setProgressTaskBoardFormat(n.getObjectValue(PlannerProgressTaskBoardTaskFormat::createFromDiscriminatorValue)); });
         deserializerMap.put("recurrence", (n) -> { this.setRecurrence(n.getObjectValue(PlannerTaskRecurrence::createFromDiscriminatorValue)); });
         deserializerMap.put("referenceCount", (n) -> { this.setReferenceCount(n.getIntegerValue()); });
-        deserializerMap.put("specifiedCompletionRequirements", (n) -> { this.setSpecifiedCompletionRequirements(n.getEnumSetValue(PlannerTaskCompletionRequirements::forValue)); });
+        deserializerMap.put("specifiedCompletionRequirements", (n) -> { this.setSpecifiedCompletionRequirements(n.getEnumValue(PlannerTaskSpecifiedCompletionRequirements::forValue)); });
         deserializerMap.put("startDateTime", (n) -> { this.setStartDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("title", (n) -> { this.setTitle(n.getStringValue()); });
         return deserializerMap;
@@ -205,6 +217,30 @@ public class PlannerTask extends PlannerDelta implements Parsable {
     @jakarta.annotation.Nullable
     public Boolean getHasDescription() {
         return this.backingStore.get("hasDescription");
+    }
+    /**
+     * Gets the isArchived property value. The isArchived property
+     * @return a Boolean
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsArchived() {
+        return this.backingStore.get("isArchived");
+    }
+    /**
+     * Gets the isOnMyDay property value. The isOnMyDay property
+     * @return a Boolean
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsOnMyDay() {
+        return this.backingStore.get("isOnMyDay");
+    }
+    /**
+     * Gets the isOnMyDayLastModifiedDate property value. The isOnMyDayLastModifiedDate property
+     * @return a LocalDate
+     */
+    @jakarta.annotation.Nullable
+    public LocalDate getIsOnMyDayLastModifiedDate() {
+        return this.backingStore.get("isOnMyDayLastModifiedDate");
     }
     /**
      * Gets the orderHint property value. Hint used to order items of this type in a list view. The format is defined as outlined here.
@@ -232,10 +268,10 @@ public class PlannerTask extends PlannerDelta implements Parsable {
     }
     /**
      * Gets the previewType property value. This sets the type of preview that shows up on the task. Possible values are: automatic, noPreview, checklist, description, reference.
-     * @return a PlannerPreviewType
+     * @return a PlannerTaskPreviewType
      */
     @jakarta.annotation.Nullable
-    public PlannerPreviewType getPreviewType() {
+    public PlannerTaskPreviewType getPreviewType() {
         return this.backingStore.get("previewType");
     }
     /**
@@ -272,10 +308,10 @@ public class PlannerTask extends PlannerDelta implements Parsable {
     }
     /**
      * Gets the specifiedCompletionRequirements property value. Indicates all the requirements specified on the plannerTask. Possible values are: none, checklistCompletion, unknownFutureValue. Read-only. The plannerTaskCompletionRequirementDetails in plannerTaskDetails has details of the requirements specified, if any.
-     * @return a EnumSet<PlannerTaskCompletionRequirements>
+     * @return a PlannerTaskSpecifiedCompletionRequirements
      */
     @jakarta.annotation.Nullable
-    public EnumSet<PlannerTaskCompletionRequirements> getSpecifiedCompletionRequirements() {
+    public PlannerTaskSpecifiedCompletionRequirements getSpecifiedCompletionRequirements() {
         return this.backingStore.get("specifiedCompletionRequirements");
     }
     /**
@@ -303,6 +339,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
         super.serialize(writer);
         writer.writeIntegerValue("activeChecklistItemCount", this.getActiveChecklistItemCount());
         writer.writeObjectValue("appliedCategories", this.getAppliedCategories());
+        writer.writeObjectValue("archivalInfo", this.getArchivalInfo());
         writer.writeObjectValue("assignedToTaskBoardFormat", this.getAssignedToTaskBoardFormat());
         writer.writeStringValue("assigneePriority", this.getAssigneePriority());
         writer.writeObjectValue("assignments", this.getAssignments());
@@ -318,6 +355,9 @@ public class PlannerTask extends PlannerDelta implements Parsable {
         writer.writeObjectValue("details", this.getDetails());
         writer.writeOffsetDateTimeValue("dueDateTime", this.getDueDateTime());
         writer.writeBooleanValue("hasDescription", this.getHasDescription());
+        writer.writeBooleanValue("isArchived", this.getIsArchived());
+        writer.writeBooleanValue("isOnMyDay", this.getIsOnMyDay());
+        writer.writeLocalDateValue("isOnMyDayLastModifiedDate", this.getIsOnMyDayLastModifiedDate());
         writer.writeStringValue("orderHint", this.getOrderHint());
         writer.writeIntegerValue("percentComplete", this.getPercentComplete());
         writer.writeStringValue("planId", this.getPlanId());
@@ -326,7 +366,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
         writer.writeObjectValue("progressTaskBoardFormat", this.getProgressTaskBoardFormat());
         writer.writeObjectValue("recurrence", this.getRecurrence());
         writer.writeIntegerValue("referenceCount", this.getReferenceCount());
-        writer.writeEnumSetValue("specifiedCompletionRequirements", this.getSpecifiedCompletionRequirements());
+        writer.writeEnumValue("specifiedCompletionRequirements", this.getSpecifiedCompletionRequirements());
         writer.writeOffsetDateTimeValue("startDateTime", this.getStartDateTime());
         writer.writeStringValue("title", this.getTitle());
     }
@@ -343,6 +383,13 @@ public class PlannerTask extends PlannerDelta implements Parsable {
      */
     public void setAppliedCategories(@jakarta.annotation.Nullable final PlannerAppliedCategories value) {
         this.backingStore.set("appliedCategories", value);
+    }
+    /**
+     * Sets the archivalInfo property value. The archivalInfo property
+     * @param value Value to set for the archivalInfo property.
+     */
+    public void setArchivalInfo(@jakarta.annotation.Nullable final PlannerArchivalInfo value) {
+        this.backingStore.set("archivalInfo", value);
     }
     /**
      * Sets the assignedToTaskBoardFormat property value. Read-only. Nullable. Used to render the task correctly in the task board view when grouped by assignedTo.
@@ -450,6 +497,27 @@ public class PlannerTask extends PlannerDelta implements Parsable {
         this.backingStore.set("hasDescription", value);
     }
     /**
+     * Sets the isArchived property value. The isArchived property
+     * @param value Value to set for the isArchived property.
+     */
+    public void setIsArchived(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isArchived", value);
+    }
+    /**
+     * Sets the isOnMyDay property value. The isOnMyDay property
+     * @param value Value to set for the isOnMyDay property.
+     */
+    public void setIsOnMyDay(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isOnMyDay", value);
+    }
+    /**
+     * Sets the isOnMyDayLastModifiedDate property value. The isOnMyDayLastModifiedDate property
+     * @param value Value to set for the isOnMyDayLastModifiedDate property.
+     */
+    public void setIsOnMyDayLastModifiedDate(@jakarta.annotation.Nullable final LocalDate value) {
+        this.backingStore.set("isOnMyDayLastModifiedDate", value);
+    }
+    /**
      * Sets the orderHint property value. Hint used to order items of this type in a list view. The format is defined as outlined here.
      * @param value Value to set for the orderHint property.
      */
@@ -474,7 +542,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
      * Sets the previewType property value. This sets the type of preview that shows up on the task. Possible values are: automatic, noPreview, checklist, description, reference.
      * @param value Value to set for the previewType property.
      */
-    public void setPreviewType(@jakarta.annotation.Nullable final PlannerPreviewType value) {
+    public void setPreviewType(@jakarta.annotation.Nullable final PlannerTaskPreviewType value) {
         this.backingStore.set("previewType", value);
     }
     /**
@@ -509,7 +577,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
      * Sets the specifiedCompletionRequirements property value. Indicates all the requirements specified on the plannerTask. Possible values are: none, checklistCompletion, unknownFutureValue. Read-only. The plannerTaskCompletionRequirementDetails in plannerTaskDetails has details of the requirements specified, if any.
      * @param value Value to set for the specifiedCompletionRequirements property.
      */
-    public void setSpecifiedCompletionRequirements(@jakarta.annotation.Nullable final EnumSet<PlannerTaskCompletionRequirements> value) {
+    public void setSpecifiedCompletionRequirements(@jakarta.annotation.Nullable final PlannerTaskSpecifiedCompletionRequirements value) {
         this.backingStore.set("specifiedCompletionRequirements", value);
     }
     /**

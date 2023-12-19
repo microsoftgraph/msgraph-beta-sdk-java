@@ -1,7 +1,6 @@
 package com.microsoft.graph.beta.compliance.ediscovery.cases.item.reviewsets.item.microsoftgraphediscoveryexport;
 
 import com.microsoft.graph.beta.models.ediscovery.ExportFileStructure;
-import com.microsoft.graph.beta.models.ediscovery.ExportOptions;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -9,7 +8,6 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import com.microsoft.kiota.store.BackedModel;
 import com.microsoft.kiota.store.BackingStore;
 import com.microsoft.kiota.store.BackingStoreFactorySingleton;
-import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -84,10 +82,10 @@ public class ExportPostRequestBody implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the exportOptions property value. The exportOptions property
-     * @return a EnumSet<ExportOptions>
+     * @return a ExportPostRequestBodyExportOptions
      */
     @jakarta.annotation.Nullable
-    public EnumSet<ExportOptions> getExportOptions() {
+    public ExportPostRequestBodyExportOptions getExportOptions() {
         return this.backingStore.get("exportOptions");
     }
     /**
@@ -108,7 +106,7 @@ public class ExportPostRequestBody implements AdditionalDataHolder, BackedModel,
         deserializerMap.put("azureBlobContainer", (n) -> { this.setAzureBlobContainer(n.getStringValue()); });
         deserializerMap.put("azureBlobToken", (n) -> { this.setAzureBlobToken(n.getStringValue()); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
-        deserializerMap.put("exportOptions", (n) -> { this.setExportOptions(n.getEnumSetValue(ExportOptions::forValue)); });
+        deserializerMap.put("exportOptions", (n) -> { this.setExportOptions(n.getEnumValue(ExportPostRequestBodyExportOptions::forValue)); });
         deserializerMap.put("exportStructure", (n) -> { this.setExportStructure(n.getEnumValue(ExportFileStructure::forValue)); });
         deserializerMap.put("outputName", (n) -> { this.setOutputName(n.getStringValue()); });
         return deserializerMap;
@@ -130,7 +128,7 @@ public class ExportPostRequestBody implements AdditionalDataHolder, BackedModel,
         writer.writeStringValue("azureBlobContainer", this.getAzureBlobContainer());
         writer.writeStringValue("azureBlobToken", this.getAzureBlobToken());
         writer.writeStringValue("description", this.getDescription());
-        writer.writeEnumSetValue("exportOptions", this.getExportOptions());
+        writer.writeEnumValue("exportOptions", this.getExportOptions());
         writer.writeEnumValue("exportStructure", this.getExportStructure());
         writer.writeStringValue("outputName", this.getOutputName());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -175,7 +173,7 @@ public class ExportPostRequestBody implements AdditionalDataHolder, BackedModel,
      * Sets the exportOptions property value. The exportOptions property
      * @param value Value to set for the exportOptions property.
      */
-    public void setExportOptions(@jakarta.annotation.Nullable final EnumSet<ExportOptions> value) {
+    public void setExportOptions(@jakarta.annotation.Nullable final ExportPostRequestBodyExportOptions value) {
         this.backingStore.set("exportOptions", value);
     }
     /**

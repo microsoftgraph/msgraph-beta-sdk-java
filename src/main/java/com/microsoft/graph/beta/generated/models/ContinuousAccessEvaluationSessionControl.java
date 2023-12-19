@@ -62,16 +62,16 @@ public class ContinuousAccessEvaluationSessionControl implements AdditionalDataH
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
-        deserializerMap.put("mode", (n) -> { this.setMode(n.getEnumValue(ContinuousAccessEvaluationMode::forValue)); });
+        deserializerMap.put("mode", (n) -> { this.setMode(n.getEnumValue(ContinuousAccessEvaluationSessionControlMode::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;
     }
     /**
      * Gets the mode property value. Specifies continuous access evaluation settings. The possible values are: strictEnforcement, disabled, unknownFutureValue, strictLocation. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: strictLocation.
-     * @return a ContinuousAccessEvaluationMode
+     * @return a ContinuousAccessEvaluationSessionControlMode
      */
     @jakarta.annotation.Nullable
-    public ContinuousAccessEvaluationMode getMode() {
+    public ContinuousAccessEvaluationSessionControlMode getMode() {
         return this.backingStore.get("mode");
     }
     /**
@@ -111,7 +111,7 @@ public class ContinuousAccessEvaluationSessionControl implements AdditionalDataH
      * Sets the mode property value. Specifies continuous access evaluation settings. The possible values are: strictEnforcement, disabled, unknownFutureValue, strictLocation. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: strictLocation.
      * @param value Value to set for the mode property.
      */
-    public void setMode(@jakarta.annotation.Nullable final ContinuousAccessEvaluationMode value) {
+    public void setMode(@jakarta.annotation.Nullable final ContinuousAccessEvaluationSessionControlMode value) {
         this.backingStore.set("mode", value);
     }
     /**

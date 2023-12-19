@@ -367,10 +367,10 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderCloudBlockLevel property value. Added in Windows 10, version 1709. This policy setting determines how aggressive Windows Defender Antivirus will be in blocking and scanning suspicious files. Value type is integer. This feature requires the 'Join Microsoft MAPS' setting enabled in order to function. Possible values are: notConfigured, high, highPlus, zeroTolerance.
-     * @return a DefenderCloudBlockLevelType
+     * @return a Windows10EndpointProtectionConfigurationDefenderCloudBlockLevel
      */
     @jakarta.annotation.Nullable
-    public DefenderCloudBlockLevelType getDefenderCloudBlockLevel() {
+    public Windows10EndpointProtectionConfigurationDefenderCloudBlockLevel getDefenderCloudBlockLevel() {
         return this.backingStore.get("defenderCloudBlockLevel");
     }
     /**
@@ -663,10 +663,10 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderPotentiallyUnwantedAppAction property value. Added in Windows 10, version 1607. Specifies the level of detection for potentially unwanted applications (PUAs). Windows Defender alerts you when potentially unwanted software is being downloaded or attempts to install itself on your computer. Possible values are: userDefined, enable, auditMode, warn, notConfigured.
-     * @return a DefenderProtectionType
+     * @return a Windows10EndpointProtectionConfigurationDefenderPotentiallyUnwantedAppAction
      */
     @jakarta.annotation.Nullable
-    public DefenderProtectionType getDefenderPotentiallyUnwantedAppAction() {
+    public Windows10EndpointProtectionConfigurationDefenderPotentiallyUnwantedAppAction getDefenderPotentiallyUnwantedAppAction() {
         return this.backingStore.get("defenderPotentiallyUnwantedAppAction");
     }
     /**
@@ -703,10 +703,10 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderScanDirection property value. Controls which sets of files should be monitored. Possible values are: monitorAllFiles, monitorIncomingFilesOnly, monitorOutgoingFilesOnly.
-     * @return a DefenderRealtimeScanDirection
+     * @return a Windows10EndpointProtectionConfigurationDefenderScanDirection
      */
     @jakarta.annotation.Nullable
-    public DefenderRealtimeScanDirection getDefenderScanDirection() {
+    public Windows10EndpointProtectionConfigurationDefenderScanDirection getDefenderScanDirection() {
         return this.backingStore.get("defenderScanDirection");
     }
     /**
@@ -719,10 +719,10 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderScanType property value. Selects whether to perform a quick scan or full scan. Possible values are: userDefined, disabled, quick, full.
-     * @return a DefenderScanType
+     * @return a Windows10EndpointProtectionConfigurationDefenderScanType
      */
     @jakarta.annotation.Nullable
-    public DefenderScanType getDefenderScanType() {
+    public Windows10EndpointProtectionConfigurationDefenderScanType getDefenderScanType() {
         return this.backingStore.get("defenderScanType");
     }
     /**
@@ -735,10 +735,10 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderScheduledScanDay property value. Selects the day that the Windows Defender scan should run. Possible values are: userDefined, everyday, sunday, monday, tuesday, wednesday, thursday, friday, saturday, noScheduledScan.
-     * @return a WeeklySchedule
+     * @return a Windows10EndpointProtectionConfigurationDefenderScheduledScanDay
      */
     @jakarta.annotation.Nullable
-    public WeeklySchedule getDefenderScheduledScanDay() {
+    public Windows10EndpointProtectionConfigurationDefenderScheduledScanDay getDefenderScheduledScanDay() {
         return this.backingStore.get("defenderScheduledScanDay");
     }
     /**
@@ -951,10 +951,10 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderSubmitSamplesConsentType property value. Checks for the user consent level in Windows Defender to send data. Possible values are: sendSafeSamplesAutomatically, alwaysPrompt, neverSend, sendAllSamplesAutomatically.
-     * @return a DefenderSubmitSamplesConsentType
+     * @return a Windows10EndpointProtectionConfigurationDefenderSubmitSamplesConsentType
      */
     @jakarta.annotation.Nullable
-    public DefenderSubmitSamplesConsentType getDefenderSubmitSamplesConsentType() {
+    public Windows10EndpointProtectionConfigurationDefenderSubmitSamplesConsentType getDefenderSubmitSamplesConsentType() {
         return this.backingStore.get("defenderSubmitSamplesConsentType");
     }
     /**
@@ -1086,7 +1086,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
         deserializerMap.put("defenderBlockEndUserAccess", (n) -> { this.setDefenderBlockEndUserAccess(n.getBooleanValue()); });
         deserializerMap.put("defenderBlockPersistenceThroughWmiType", (n) -> { this.setDefenderBlockPersistenceThroughWmiType(n.getEnumValue(DefenderAttackSurfaceType::forValue)); });
         deserializerMap.put("defenderCheckForSignaturesBeforeRunningScan", (n) -> { this.setDefenderCheckForSignaturesBeforeRunningScan(n.getBooleanValue()); });
-        deserializerMap.put("defenderCloudBlockLevel", (n) -> { this.setDefenderCloudBlockLevel(n.getEnumValue(DefenderCloudBlockLevelType::forValue)); });
+        deserializerMap.put("defenderCloudBlockLevel", (n) -> { this.setDefenderCloudBlockLevel(n.getEnumValue(Windows10EndpointProtectionConfigurationDefenderCloudBlockLevel::forValue)); });
         deserializerMap.put("defenderCloudExtendedTimeoutInSeconds", (n) -> { this.setDefenderCloudExtendedTimeoutInSeconds(n.getIntegerValue()); });
         deserializerMap.put("defenderDaysBeforeDeletingQuarantinedMalware", (n) -> { this.setDefenderDaysBeforeDeletingQuarantinedMalware(n.getIntegerValue()); });
         deserializerMap.put("defenderDetectedMalwareActions", (n) -> { this.setDefenderDetectedMalwareActions(n.getObjectValue(DefenderDetectedMalwareActions::createFromDiscriminatorValue)); });
@@ -1123,16 +1123,16 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
         deserializerMap.put("defenderOfficeCommunicationAppsLaunchChildProcess", (n) -> { this.setDefenderOfficeCommunicationAppsLaunchChildProcess(n.getEnumValue(DefenderProtectionType::forValue)); });
         deserializerMap.put("defenderOfficeMacroCodeAllowWin32Imports", (n) -> { this.setDefenderOfficeMacroCodeAllowWin32Imports(n.getEnumValue(DefenderProtectionType::forValue)); });
         deserializerMap.put("defenderOfficeMacroCodeAllowWin32ImportsType", (n) -> { this.setDefenderOfficeMacroCodeAllowWin32ImportsType(n.getEnumValue(DefenderAttackSurfaceType::forValue)); });
-        deserializerMap.put("defenderPotentiallyUnwantedAppAction", (n) -> { this.setDefenderPotentiallyUnwantedAppAction(n.getEnumValue(DefenderProtectionType::forValue)); });
+        deserializerMap.put("defenderPotentiallyUnwantedAppAction", (n) -> { this.setDefenderPotentiallyUnwantedAppAction(n.getEnumValue(Windows10EndpointProtectionConfigurationDefenderPotentiallyUnwantedAppAction::forValue)); });
         deserializerMap.put("defenderPreventCredentialStealingType", (n) -> { this.setDefenderPreventCredentialStealingType(n.getEnumValue(DefenderProtectionType::forValue)); });
         deserializerMap.put("defenderProcessCreation", (n) -> { this.setDefenderProcessCreation(n.getEnumValue(DefenderProtectionType::forValue)); });
         deserializerMap.put("defenderProcessCreationType", (n) -> { this.setDefenderProcessCreationType(n.getEnumValue(DefenderAttackSurfaceType::forValue)); });
         deserializerMap.put("defenderProcessesToExclude", (n) -> { this.setDefenderProcessesToExclude(n.getCollectionOfPrimitiveValues(String.class)); });
-        deserializerMap.put("defenderScanDirection", (n) -> { this.setDefenderScanDirection(n.getEnumValue(DefenderRealtimeScanDirection::forValue)); });
+        deserializerMap.put("defenderScanDirection", (n) -> { this.setDefenderScanDirection(n.getEnumValue(Windows10EndpointProtectionConfigurationDefenderScanDirection::forValue)); });
         deserializerMap.put("defenderScanMaxCpuPercentage", (n) -> { this.setDefenderScanMaxCpuPercentage(n.getIntegerValue()); });
-        deserializerMap.put("defenderScanType", (n) -> { this.setDefenderScanType(n.getEnumValue(DefenderScanType::forValue)); });
+        deserializerMap.put("defenderScanType", (n) -> { this.setDefenderScanType(n.getEnumValue(Windows10EndpointProtectionConfigurationDefenderScanType::forValue)); });
         deserializerMap.put("defenderScheduledQuickScanTime", (n) -> { this.setDefenderScheduledQuickScanTime(n.getLocalTimeValue()); });
-        deserializerMap.put("defenderScheduledScanDay", (n) -> { this.setDefenderScheduledScanDay(n.getEnumValue(WeeklySchedule::forValue)); });
+        deserializerMap.put("defenderScheduledScanDay", (n) -> { this.setDefenderScheduledScanDay(n.getEnumValue(Windows10EndpointProtectionConfigurationDefenderScheduledScanDay::forValue)); });
         deserializerMap.put("defenderScheduledScanTime", (n) -> { this.setDefenderScheduledScanTime(n.getLocalTimeValue()); });
         deserializerMap.put("defenderScriptDownloadedPayloadExecution", (n) -> { this.setDefenderScriptDownloadedPayloadExecution(n.getEnumValue(DefenderProtectionType::forValue)); });
         deserializerMap.put("defenderScriptDownloadedPayloadExecutionType", (n) -> { this.setDefenderScriptDownloadedPayloadExecutionType(n.getEnumValue(DefenderAttackSurfaceType::forValue)); });
@@ -1159,7 +1159,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
         deserializerMap.put("defenderSecurityCenterNotificationsFromApp", (n) -> { this.setDefenderSecurityCenterNotificationsFromApp(n.getEnumValue(DefenderSecurityCenterNotificationsFromAppType::forValue)); });
         deserializerMap.put("defenderSecurityCenterOrganizationDisplayName", (n) -> { this.setDefenderSecurityCenterOrganizationDisplayName(n.getStringValue()); });
         deserializerMap.put("defenderSignatureUpdateIntervalInHours", (n) -> { this.setDefenderSignatureUpdateIntervalInHours(n.getIntegerValue()); });
-        deserializerMap.put("defenderSubmitSamplesConsentType", (n) -> { this.setDefenderSubmitSamplesConsentType(n.getEnumValue(DefenderSubmitSamplesConsentType::forValue)); });
+        deserializerMap.put("defenderSubmitSamplesConsentType", (n) -> { this.setDefenderSubmitSamplesConsentType(n.getEnumValue(Windows10EndpointProtectionConfigurationDefenderSubmitSamplesConsentType::forValue)); });
         deserializerMap.put("defenderUntrustedExecutable", (n) -> { this.setDefenderUntrustedExecutable(n.getEnumValue(DefenderProtectionType::forValue)); });
         deserializerMap.put("defenderUntrustedExecutableType", (n) -> { this.setDefenderUntrustedExecutableType(n.getEnumValue(DefenderAttackSurfaceType::forValue)); });
         deserializerMap.put("defenderUntrustedUSBProcess", (n) -> { this.setDefenderUntrustedUSBProcess(n.getEnumValue(DefenderProtectionType::forValue)); });
@@ -2604,7 +2604,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * Sets the defenderCloudBlockLevel property value. Added in Windows 10, version 1709. This policy setting determines how aggressive Windows Defender Antivirus will be in blocking and scanning suspicious files. Value type is integer. This feature requires the 'Join Microsoft MAPS' setting enabled in order to function. Possible values are: notConfigured, high, highPlus, zeroTolerance.
      * @param value Value to set for the defenderCloudBlockLevel property.
      */
-    public void setDefenderCloudBlockLevel(@jakarta.annotation.Nullable final DefenderCloudBlockLevelType value) {
+    public void setDefenderCloudBlockLevel(@jakarta.annotation.Nullable final Windows10EndpointProtectionConfigurationDefenderCloudBlockLevel value) {
         this.backingStore.set("defenderCloudBlockLevel", value);
     }
     /**
@@ -2863,7 +2863,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * Sets the defenderPotentiallyUnwantedAppAction property value. Added in Windows 10, version 1607. Specifies the level of detection for potentially unwanted applications (PUAs). Windows Defender alerts you when potentially unwanted software is being downloaded or attempts to install itself on your computer. Possible values are: userDefined, enable, auditMode, warn, notConfigured.
      * @param value Value to set for the defenderPotentiallyUnwantedAppAction property.
      */
-    public void setDefenderPotentiallyUnwantedAppAction(@jakarta.annotation.Nullable final DefenderProtectionType value) {
+    public void setDefenderPotentiallyUnwantedAppAction(@jakarta.annotation.Nullable final Windows10EndpointProtectionConfigurationDefenderPotentiallyUnwantedAppAction value) {
         this.backingStore.set("defenderPotentiallyUnwantedAppAction", value);
     }
     /**
@@ -2898,7 +2898,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * Sets the defenderScanDirection property value. Controls which sets of files should be monitored. Possible values are: monitorAllFiles, monitorIncomingFilesOnly, monitorOutgoingFilesOnly.
      * @param value Value to set for the defenderScanDirection property.
      */
-    public void setDefenderScanDirection(@jakarta.annotation.Nullable final DefenderRealtimeScanDirection value) {
+    public void setDefenderScanDirection(@jakarta.annotation.Nullable final Windows10EndpointProtectionConfigurationDefenderScanDirection value) {
         this.backingStore.set("defenderScanDirection", value);
     }
     /**
@@ -2912,7 +2912,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * Sets the defenderScanType property value. Selects whether to perform a quick scan or full scan. Possible values are: userDefined, disabled, quick, full.
      * @param value Value to set for the defenderScanType property.
      */
-    public void setDefenderScanType(@jakarta.annotation.Nullable final DefenderScanType value) {
+    public void setDefenderScanType(@jakarta.annotation.Nullable final Windows10EndpointProtectionConfigurationDefenderScanType value) {
         this.backingStore.set("defenderScanType", value);
     }
     /**
@@ -2926,7 +2926,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * Sets the defenderScheduledScanDay property value. Selects the day that the Windows Defender scan should run. Possible values are: userDefined, everyday, sunday, monday, tuesday, wednesday, thursday, friday, saturday, noScheduledScan.
      * @param value Value to set for the defenderScheduledScanDay property.
      */
-    public void setDefenderScheduledScanDay(@jakarta.annotation.Nullable final WeeklySchedule value) {
+    public void setDefenderScheduledScanDay(@jakarta.annotation.Nullable final Windows10EndpointProtectionConfigurationDefenderScheduledScanDay value) {
         this.backingStore.set("defenderScheduledScanDay", value);
     }
     /**
@@ -3115,7 +3115,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * Sets the defenderSubmitSamplesConsentType property value. Checks for the user consent level in Windows Defender to send data. Possible values are: sendSafeSamplesAutomatically, alwaysPrompt, neverSend, sendAllSamplesAutomatically.
      * @param value Value to set for the defenderSubmitSamplesConsentType property.
      */
-    public void setDefenderSubmitSamplesConsentType(@jakarta.annotation.Nullable final DefenderSubmitSamplesConsentType value) {
+    public void setDefenderSubmitSamplesConsentType(@jakarta.annotation.Nullable final Windows10EndpointProtectionConfigurationDefenderSubmitSamplesConsentType value) {
         this.backingStore.set("defenderSubmitSamplesConsentType", value);
     }
     /**

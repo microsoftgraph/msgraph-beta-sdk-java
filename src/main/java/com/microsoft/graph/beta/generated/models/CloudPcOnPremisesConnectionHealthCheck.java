@@ -49,6 +49,14 @@ public class CloudPcOnPremisesConnectionHealthCheck implements AdditionalDataHol
         return value;
     }
     /**
+     * Gets the additionalDetail property value. The additionalDetail property
+     * @return a String
+     */
+    @jakarta.annotation.Nullable
+    public String getAdditionalDetail() {
+        return this.backingStore.get("additionalDetail");
+    }
+    /**
      * Gets the additionalDetails property value. More details about the health check or the recommended action.
      * @return a String
      */
@@ -102,7 +110,8 @@ public class CloudPcOnPremisesConnectionHealthCheck implements AdditionalDataHol
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(9);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(10);
+        deserializerMap.put("additionalDetail", (n) -> { this.setAdditionalDetail(n.getStringValue()); });
         deserializerMap.put("additionalDetails", (n) -> { this.setAdditionalDetails(n.getStringValue()); });
         deserializerMap.put("correlationId", (n) -> { this.setCorrelationId(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
@@ -152,6 +161,7 @@ public class CloudPcOnPremisesConnectionHealthCheck implements AdditionalDataHol
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeStringValue("additionalDetail", this.getAdditionalDetail());
         writer.writeStringValue("additionalDetails", this.getAdditionalDetails());
         writer.writeStringValue("correlationId", this.getCorrelationId());
         writer.writeStringValue("displayName", this.getDisplayName());
@@ -169,6 +179,13 @@ public class CloudPcOnPremisesConnectionHealthCheck implements AdditionalDataHol
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the additionalDetail property value. The additionalDetail property
+     * @param value Value to set for the additionalDetail property.
+     */
+    public void setAdditionalDetail(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("additionalDetail", value);
     }
     /**
      * Sets the additionalDetails property value. More details about the health check or the recommended action.

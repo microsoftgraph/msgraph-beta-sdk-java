@@ -82,10 +82,10 @@ public class RecommendationBase extends Entity implements Parsable {
     }
     /**
      * Gets the featureAreas property value. The directory feature that the recommendation is related to.
-     * @return a java.util.List<RecommendationFeatureAreas>
+     * @return a java.util.List<RecommendationBaseFeatureAreas>
      */
     @jakarta.annotation.Nullable
-    public java.util.List<RecommendationFeatureAreas> getFeatureAreas() {
+    public java.util.List<RecommendationBaseFeatureAreas> getFeatureAreas() {
         return this.backingStore.get("featureAreas");
     }
     /**
@@ -101,7 +101,7 @@ public class RecommendationBase extends Entity implements Parsable {
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("currentScore", (n) -> { this.setCurrentScore(n.getDoubleValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
-        deserializerMap.put("featureAreas", (n) -> { this.setFeatureAreas(n.getCollectionOfEnumValues(RecommendationFeatureAreas::forValue)); });
+        deserializerMap.put("featureAreas", (n) -> { this.setFeatureAreas(n.getCollectionOfEnumValues(RecommendationBaseFeatureAreas::forValue)); });
         deserializerMap.put("impactedResources", (n) -> { this.setImpactedResources(n.getCollectionOfObjectValues(ImpactedResource::createFromDiscriminatorValue)); });
         deserializerMap.put("impactStartDateTime", (n) -> { this.setImpactStartDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("impactType", (n) -> { this.setImpactType(n.getStringValue()); });
@@ -112,7 +112,7 @@ public class RecommendationBase extends Entity implements Parsable {
         deserializerMap.put("maxScore", (n) -> { this.setMaxScore(n.getDoubleValue()); });
         deserializerMap.put("postponeUntilDateTime", (n) -> { this.setPostponeUntilDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("priority", (n) -> { this.setPriority(n.getEnumValue(RecommendationPriority::forValue)); });
-        deserializerMap.put("recommendationType", (n) -> { this.setRecommendationType(n.getEnumValue(RecommendationType::forValue)); });
+        deserializerMap.put("recommendationType", (n) -> { this.setRecommendationType(n.getEnumValue(RecommendationBaseRecommendationType::forValue)); });
         deserializerMap.put("releaseType", (n) -> { this.setReleaseType(n.getStringValue()); });
         deserializerMap.put("remediationImpact", (n) -> { this.setRemediationImpact(n.getStringValue()); });
         deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(RecommendationStatus::forValue)); });
@@ -200,10 +200,10 @@ public class RecommendationBase extends Entity implements Parsable {
     }
     /**
      * Gets the recommendationType property value. Friendly shortname to identify the recommendation. The possible values are: adfsAppsMigration, enableDesktopSSO, enablePHS, enableProvisioning, switchFromPerUserMFA, tenantMFA, thirdPartyApps, turnOffPerUserMFA, useAuthenticatorApp, useMyApps, staleApps, staleAppCreds, applicationCredentialExpiry, servicePrincipalKeyExpiry, adminMFAV2, blockLegacyAuthentication, integratedApps, mfaRegistrationV2, pwagePolicyNew, passwordHashSync, oneAdmin, roleOverlap, selfServicePasswordReset, signinRiskPolicy, userRiskPolicy, verifyAppPublisher, privateLinkForAAD, appRoleAssignmentsGroups, appRoleAssignmentsUsers, managedIdentity, overprivilegedApps, unknownFutureValue, longLivedCredentials, aadConnectDeprecated, adalToMsalMigration, ownerlessApps, inactiveGuests. Also, please note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: longLivedCredentials, aadConnectDeprecated, adalToMsalMigration, ownerlessApps, inactiveGuests.
-     * @return a RecommendationType
+     * @return a RecommendationBaseRecommendationType
      */
     @jakarta.annotation.Nullable
-    public RecommendationType getRecommendationType() {
+    public RecommendationBaseRecommendationType getRecommendationType() {
         return this.backingStore.get("recommendationType");
     }
     /**
@@ -305,7 +305,7 @@ public class RecommendationBase extends Entity implements Parsable {
      * Sets the featureAreas property value. The directory feature that the recommendation is related to.
      * @param value Value to set for the featureAreas property.
      */
-    public void setFeatureAreas(@jakarta.annotation.Nullable final java.util.List<RecommendationFeatureAreas> value) {
+    public void setFeatureAreas(@jakarta.annotation.Nullable final java.util.List<RecommendationBaseFeatureAreas> value) {
         this.backingStore.set("featureAreas", value);
     }
     /**
@@ -382,7 +382,7 @@ public class RecommendationBase extends Entity implements Parsable {
      * Sets the recommendationType property value. Friendly shortname to identify the recommendation. The possible values are: adfsAppsMigration, enableDesktopSSO, enablePHS, enableProvisioning, switchFromPerUserMFA, tenantMFA, thirdPartyApps, turnOffPerUserMFA, useAuthenticatorApp, useMyApps, staleApps, staleAppCreds, applicationCredentialExpiry, servicePrincipalKeyExpiry, adminMFAV2, blockLegacyAuthentication, integratedApps, mfaRegistrationV2, pwagePolicyNew, passwordHashSync, oneAdmin, roleOverlap, selfServicePasswordReset, signinRiskPolicy, userRiskPolicy, verifyAppPublisher, privateLinkForAAD, appRoleAssignmentsGroups, appRoleAssignmentsUsers, managedIdentity, overprivilegedApps, unknownFutureValue, longLivedCredentials, aadConnectDeprecated, adalToMsalMigration, ownerlessApps, inactiveGuests. Also, please note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: longLivedCredentials, aadConnectDeprecated, adalToMsalMigration, ownerlessApps, inactiveGuests.
      * @param value Value to set for the recommendationType property.
      */
-    public void setRecommendationType(@jakarta.annotation.Nullable final RecommendationType value) {
+    public void setRecommendationType(@jakarta.annotation.Nullable final RecommendationBaseRecommendationType value) {
         this.backingStore.set("recommendationType", value);
     }
     /**

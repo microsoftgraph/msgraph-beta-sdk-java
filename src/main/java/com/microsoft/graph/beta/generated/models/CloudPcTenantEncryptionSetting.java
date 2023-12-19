@@ -65,7 +65,7 @@ public class CloudPcTenantEncryptionSetting implements AdditionalDataHolder, Bac
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("lastSyncDateTime", (n) -> { this.setLastSyncDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("tenantDiskEncryptionType", (n) -> { this.setTenantDiskEncryptionType(n.getEnumValue(CloudPcDiskEncryptionType::forValue)); });
+        deserializerMap.put("tenantDiskEncryptionType", (n) -> { this.setTenantDiskEncryptionType(n.getEnumValue(CloudPcTenantEncryptionSettingTenantDiskEncryptionType::forValue)); });
         return deserializerMap;
     }
     /**
@@ -86,10 +86,10 @@ public class CloudPcTenantEncryptionSetting implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the tenantDiskEncryptionType property value. The tenantDiskEncryptionType property
-     * @return a CloudPcDiskEncryptionType
+     * @return a CloudPcTenantEncryptionSettingTenantDiskEncryptionType
      */
     @jakarta.annotation.Nullable
-    public CloudPcDiskEncryptionType getTenantDiskEncryptionType() {
+    public CloudPcTenantEncryptionSettingTenantDiskEncryptionType getTenantDiskEncryptionType() {
         return this.backingStore.get("tenantDiskEncryptionType");
     }
     /**
@@ -136,7 +136,7 @@ public class CloudPcTenantEncryptionSetting implements AdditionalDataHolder, Bac
      * Sets the tenantDiskEncryptionType property value. The tenantDiskEncryptionType property
      * @param value Value to set for the tenantDiskEncryptionType property.
      */
-    public void setTenantDiskEncryptionType(@jakarta.annotation.Nullable final CloudPcDiskEncryptionType value) {
+    public void setTenantDiskEncryptionType(@jakarta.annotation.Nullable final CloudPcTenantEncryptionSettingTenantDiskEncryptionType value) {
         this.backingStore.set("tenantDiskEncryptionType", value);
     }
 }

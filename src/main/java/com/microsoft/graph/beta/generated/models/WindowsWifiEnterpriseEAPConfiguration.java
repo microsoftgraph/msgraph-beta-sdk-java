@@ -30,10 +30,10 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
     }
     /**
      * Gets the authenticationMethod property value. Specify the authentication method. Possible values are: certificate, usernameAndPassword, derivedCredential.
-     * @return a WiFiAuthenticationMethod
+     * @return a WindowsWifiEnterpriseEAPConfigurationAuthenticationMethod
      */
     @jakarta.annotation.Nullable
-    public WiFiAuthenticationMethod getAuthenticationMethod() {
+    public WindowsWifiEnterpriseEAPConfigurationAuthenticationMethod getAuthenticationMethod() {
         return this.backingStore.get("authenticationMethod");
     }
     /**
@@ -54,10 +54,10 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
     }
     /**
      * Gets the authenticationType property value. Specify whether to authenticate the user, the device, either, or to use guest authentication (none). If youre using certificate authentication, make sure the certificate type matches the authentication type. Possible values are: none, user, machine, machineOrUser, guest.
-     * @return a WifiAuthenticationType
+     * @return a WindowsWifiEnterpriseEAPConfigurationAuthenticationType
      */
     @jakarta.annotation.Nullable
-    public WifiAuthenticationType getAuthenticationType() {
+    public WindowsWifiEnterpriseEAPConfigurationAuthenticationType getAuthenticationType() {
         return this.backingStore.get("authenticationType");
     }
     /**
@@ -115,10 +115,10 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("authenticationMethod", (n) -> { this.setAuthenticationMethod(n.getEnumValue(WiFiAuthenticationMethod::forValue)); });
+        deserializerMap.put("authenticationMethod", (n) -> { this.setAuthenticationMethod(n.getEnumValue(WindowsWifiEnterpriseEAPConfigurationAuthenticationMethod::forValue)); });
         deserializerMap.put("authenticationPeriodInSeconds", (n) -> { this.setAuthenticationPeriodInSeconds(n.getIntegerValue()); });
         deserializerMap.put("authenticationRetryDelayPeriodInSeconds", (n) -> { this.setAuthenticationRetryDelayPeriodInSeconds(n.getIntegerValue()); });
-        deserializerMap.put("authenticationType", (n) -> { this.setAuthenticationType(n.getEnumValue(WifiAuthenticationType::forValue)); });
+        deserializerMap.put("authenticationType", (n) -> { this.setAuthenticationType(n.getEnumValue(WindowsWifiEnterpriseEAPConfigurationAuthenticationType::forValue)); });
         deserializerMap.put("cacheCredentials", (n) -> { this.setCacheCredentials(n.getBooleanValue()); });
         deserializerMap.put("disableUserPromptForServerValidation", (n) -> { this.setDisableUserPromptForServerValidation(n.getBooleanValue()); });
         deserializerMap.put("eapolStartPeriodInSeconds", (n) -> { this.setEapolStartPeriodInSeconds(n.getIntegerValue()); });
@@ -126,14 +126,14 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
         deserializerMap.put("enablePairwiseMasterKeyCaching", (n) -> { this.setEnablePairwiseMasterKeyCaching(n.getBooleanValue()); });
         deserializerMap.put("enablePreAuthentication", (n) -> { this.setEnablePreAuthentication(n.getBooleanValue()); });
         deserializerMap.put("identityCertificateForClientAuthentication", (n) -> { this.setIdentityCertificateForClientAuthentication(n.getObjectValue(WindowsCertificateProfileBase::createFromDiscriminatorValue)); });
-        deserializerMap.put("innerAuthenticationProtocolForEAPTTLS", (n) -> { this.setInnerAuthenticationProtocolForEAPTTLS(n.getEnumValue(NonEapAuthenticationMethodForEapTtlsType::forValue)); });
+        deserializerMap.put("innerAuthenticationProtocolForEAPTTLS", (n) -> { this.setInnerAuthenticationProtocolForEAPTTLS(n.getEnumValue(WindowsWifiEnterpriseEAPConfigurationInnerAuthenticationProtocolForEAPTTLS::forValue)); });
         deserializerMap.put("maximumAuthenticationFailures", (n) -> { this.setMaximumAuthenticationFailures(n.getIntegerValue()); });
         deserializerMap.put("maximumAuthenticationTimeoutInSeconds", (n) -> { this.setMaximumAuthenticationTimeoutInSeconds(n.getIntegerValue()); });
         deserializerMap.put("maximumEAPOLStartMessages", (n) -> { this.setMaximumEAPOLStartMessages(n.getIntegerValue()); });
         deserializerMap.put("maximumNumberOfPairwiseMasterKeysInCache", (n) -> { this.setMaximumNumberOfPairwiseMasterKeysInCache(n.getIntegerValue()); });
         deserializerMap.put("maximumPairwiseMasterKeyCacheTimeInMinutes", (n) -> { this.setMaximumPairwiseMasterKeyCacheTimeInMinutes(n.getIntegerValue()); });
         deserializerMap.put("maximumPreAuthenticationAttempts", (n) -> { this.setMaximumPreAuthenticationAttempts(n.getIntegerValue()); });
-        deserializerMap.put("networkSingleSignOn", (n) -> { this.setNetworkSingleSignOn(n.getEnumValue(NetworkSingleSignOnType::forValue)); });
+        deserializerMap.put("networkSingleSignOn", (n) -> { this.setNetworkSingleSignOn(n.getEnumValue(WindowsWifiEnterpriseEAPConfigurationNetworkSingleSignOn::forValue)); });
         deserializerMap.put("outerIdentityPrivacyTemporaryValue", (n) -> { this.setOuterIdentityPrivacyTemporaryValue(n.getStringValue()); });
         deserializerMap.put("performServerValidation", (n) -> { this.setPerformServerValidation(n.getBooleanValue()); });
         deserializerMap.put("promptForAdditionalAuthenticationCredentials", (n) -> { this.setPromptForAdditionalAuthenticationCredentials(n.getBooleanValue()); });
@@ -154,10 +154,10 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
     }
     /**
      * Gets the innerAuthenticationProtocolForEAPTTLS property value. Specify inner authentication protocol for EAP TTLS. Possible values are: unencryptedPassword, challengeHandshakeAuthenticationProtocol, microsoftChap, microsoftChapVersionTwo.
-     * @return a NonEapAuthenticationMethodForEapTtlsType
+     * @return a WindowsWifiEnterpriseEAPConfigurationInnerAuthenticationProtocolForEAPTTLS
      */
     @jakarta.annotation.Nullable
-    public NonEapAuthenticationMethodForEapTtlsType getInnerAuthenticationProtocolForEAPTTLS() {
+    public WindowsWifiEnterpriseEAPConfigurationInnerAuthenticationProtocolForEAPTTLS getInnerAuthenticationProtocolForEAPTTLS() {
         return this.backingStore.get("innerAuthenticationProtocolForEAPTTLS");
     }
     /**
@@ -210,10 +210,10 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
     }
     /**
      * Gets the networkSingleSignOn property value. Specify the network single sign on type. Possible values are: disabled, prelogon, postlogon.
-     * @return a NetworkSingleSignOnType
+     * @return a WindowsWifiEnterpriseEAPConfigurationNetworkSingleSignOn
      */
     @jakarta.annotation.Nullable
-    public NetworkSingleSignOnType getNetworkSingleSignOn() {
+    public WindowsWifiEnterpriseEAPConfigurationNetworkSingleSignOn getNetworkSingleSignOn() {
         return this.backingStore.get("networkSingleSignOn");
     }
     /**
@@ -319,7 +319,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * Sets the authenticationMethod property value. Specify the authentication method. Possible values are: certificate, usernameAndPassword, derivedCredential.
      * @param value Value to set for the authenticationMethod property.
      */
-    public void setAuthenticationMethod(@jakarta.annotation.Nullable final WiFiAuthenticationMethod value) {
+    public void setAuthenticationMethod(@jakarta.annotation.Nullable final WindowsWifiEnterpriseEAPConfigurationAuthenticationMethod value) {
         this.backingStore.set("authenticationMethod", value);
     }
     /**
@@ -340,7 +340,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * Sets the authenticationType property value. Specify whether to authenticate the user, the device, either, or to use guest authentication (none). If youre using certificate authentication, make sure the certificate type matches the authentication type. Possible values are: none, user, machine, machineOrUser, guest.
      * @param value Value to set for the authenticationType property.
      */
-    public void setAuthenticationType(@jakarta.annotation.Nullable final WifiAuthenticationType value) {
+    public void setAuthenticationType(@jakarta.annotation.Nullable final WindowsWifiEnterpriseEAPConfigurationAuthenticationType value) {
         this.backingStore.set("authenticationType", value);
     }
     /**
@@ -396,7 +396,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * Sets the innerAuthenticationProtocolForEAPTTLS property value. Specify inner authentication protocol for EAP TTLS. Possible values are: unencryptedPassword, challengeHandshakeAuthenticationProtocol, microsoftChap, microsoftChapVersionTwo.
      * @param value Value to set for the innerAuthenticationProtocolForEAPTTLS property.
      */
-    public void setInnerAuthenticationProtocolForEAPTTLS(@jakarta.annotation.Nullable final NonEapAuthenticationMethodForEapTtlsType value) {
+    public void setInnerAuthenticationProtocolForEAPTTLS(@jakarta.annotation.Nullable final WindowsWifiEnterpriseEAPConfigurationInnerAuthenticationProtocolForEAPTTLS value) {
         this.backingStore.set("innerAuthenticationProtocolForEAPTTLS", value);
     }
     /**
@@ -445,7 +445,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
      * Sets the networkSingleSignOn property value. Specify the network single sign on type. Possible values are: disabled, prelogon, postlogon.
      * @param value Value to set for the networkSingleSignOn property.
      */
-    public void setNetworkSingleSignOn(@jakarta.annotation.Nullable final NetworkSingleSignOnType value) {
+    public void setNetworkSingleSignOn(@jakarta.annotation.Nullable final WindowsWifiEnterpriseEAPConfigurationNetworkSingleSignOn value) {
         this.backingStore.set("networkSingleSignOn", value);
     }
     /**

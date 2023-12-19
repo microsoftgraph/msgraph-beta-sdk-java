@@ -73,7 +73,7 @@ public class SecurityActionState implements AdditionalDataHolder, BackedModel, P
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("appId", (n) -> { this.setAppId(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(OperationStatus::forValue)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(SecurityActionStateStatus::forValue)); });
         deserializerMap.put("updatedDateTime", (n) -> { this.setUpdatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("user", (n) -> { this.setUser(n.getStringValue()); });
         return deserializerMap;
@@ -88,10 +88,10 @@ public class SecurityActionState implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the status property value. Status of the securityAction in this update. Possible values are: NotStarted, Running, Completed, Failed.
-     * @return a OperationStatus
+     * @return a SecurityActionStateStatus
      */
     @jakarta.annotation.Nullable
-    public OperationStatus getStatus() {
+    public SecurityActionStateStatus getStatus() {
         return this.backingStore.get("status");
     }
     /**
@@ -156,7 +156,7 @@ public class SecurityActionState implements AdditionalDataHolder, BackedModel, P
      * Sets the status property value. Status of the securityAction in this update. Possible values are: NotStarted, Running, Completed, Failed.
      * @param value Value to set for the status property.
      */
-    public void setStatus(@jakarta.annotation.Nullable final OperationStatus value) {
+    public void setStatus(@jakarta.annotation.Nullable final SecurityActionStateStatus value) {
         this.backingStore.set("status", value);
     }
     /**

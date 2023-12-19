@@ -31,18 +31,18 @@ public class AndroidDeviceOwnerScepCertificateProfile extends AndroidDeviceOwner
     }
     /**
      * Gets the certificateAccessType property value. Certificate access type. Possible values are: userApproval, specificApps, unknownFutureValue.
-     * @return a AndroidDeviceOwnerCertificateAccessType
+     * @return a AndroidDeviceOwnerScepCertificateProfileCertificateAccessType
      */
     @jakarta.annotation.Nullable
-    public AndroidDeviceOwnerCertificateAccessType getCertificateAccessType() {
+    public AndroidDeviceOwnerScepCertificateProfileCertificateAccessType getCertificateAccessType() {
         return this.backingStore.get("certificateAccessType");
     }
     /**
      * Gets the certificateStore property value. Target store certificate. Possible values are: user, machine.
-     * @return a CertificateStore
+     * @return a AndroidDeviceOwnerScepCertificateProfileCertificateStore
      */
     @jakarta.annotation.Nullable
-    public CertificateStore getCertificateStore() {
+    public AndroidDeviceOwnerScepCertificateProfileCertificateStore getCertificateStore() {
         return this.backingStore.get("certificateStore");
     }
     /**
@@ -60,8 +60,8 @@ public class AndroidDeviceOwnerScepCertificateProfile extends AndroidDeviceOwner
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("certificateAccessType", (n) -> { this.setCertificateAccessType(n.getEnumValue(AndroidDeviceOwnerCertificateAccessType::forValue)); });
-        deserializerMap.put("certificateStore", (n) -> { this.setCertificateStore(n.getEnumValue(CertificateStore::forValue)); });
+        deserializerMap.put("certificateAccessType", (n) -> { this.setCertificateAccessType(n.getEnumValue(AndroidDeviceOwnerScepCertificateProfileCertificateAccessType::forValue)); });
+        deserializerMap.put("certificateStore", (n) -> { this.setCertificateStore(n.getEnumValue(AndroidDeviceOwnerScepCertificateProfileCertificateStore::forValue)); });
         deserializerMap.put("customSubjectAlternativeNames", (n) -> { this.setCustomSubjectAlternativeNames(n.getCollectionOfObjectValues(CustomSubjectAlternativeName::createFromDiscriminatorValue)); });
         deserializerMap.put("hashAlgorithm", (n) -> { this.setHashAlgorithm(n.getEnumSetValue(HashAlgorithms::forValue)); });
         deserializerMap.put("keySize", (n) -> { this.setKeySize(n.getEnumValue(KeySize::forValue)); });
@@ -160,14 +160,14 @@ public class AndroidDeviceOwnerScepCertificateProfile extends AndroidDeviceOwner
      * Sets the certificateAccessType property value. Certificate access type. Possible values are: userApproval, specificApps, unknownFutureValue.
      * @param value Value to set for the certificateAccessType property.
      */
-    public void setCertificateAccessType(@jakarta.annotation.Nullable final AndroidDeviceOwnerCertificateAccessType value) {
+    public void setCertificateAccessType(@jakarta.annotation.Nullable final AndroidDeviceOwnerScepCertificateProfileCertificateAccessType value) {
         this.backingStore.set("certificateAccessType", value);
     }
     /**
      * Sets the certificateStore property value. Target store certificate. Possible values are: user, machine.
      * @param value Value to set for the certificateStore property.
      */
-    public void setCertificateStore(@jakarta.annotation.Nullable final CertificateStore value) {
+    public void setCertificateStore(@jakarta.annotation.Nullable final AndroidDeviceOwnerScepCertificateProfileCertificateStore value) {
         this.backingStore.set("certificateStore", value);
     }
     /**

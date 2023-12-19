@@ -27,11 +27,19 @@ public class AlertRule extends Entity implements Parsable {
     }
     /**
      * Gets the alertRuleTemplate property value. The rule template of the alert event. The possible values are: cloudPcProvisionScenario, cloudPcImageUploadScenario, cloudPcOnPremiseNetworkConnectionCheckScenario, cloudPcInGracePeriodScenario, cloudPcFrontlineInsufficientLicensesScenario, cloudPcInaccessibleScenario. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: cloudPcInGracePeriodScenario.
-     * @return a AlertRuleTemplate
+     * @return a AlertRuleAlertRuleTemplate
      */
     @jakarta.annotation.Nullable
-    public AlertRuleTemplate getAlertRuleTemplate() {
+    public AlertRuleAlertRuleTemplate getAlertRuleTemplate() {
         return this.backingStore.get("alertRuleTemplate");
+    }
+    /**
+     * Gets the conditions property value. The conditions that determine when to send alerts. For example, you can configure a condition to send an alert when provisioning fails for six or more Cloud PCs.
+     * @return a java.util.List<RuleCondition>
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<RuleCondition> getConditions() {
+        return this.backingStore.get("conditions");
     }
     /**
      * Gets the description property value. The rule description.
@@ -64,13 +72,14 @@ public class AlertRule extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("alertRuleTemplate", (n) -> { this.setAlertRuleTemplate(n.getEnumValue(AlertRuleTemplate::forValue)); });
+        deserializerMap.put("alertRuleTemplate", (n) -> { this.setAlertRuleTemplate(n.getEnumValue(AlertRuleAlertRuleTemplate::forValue)); });
+        deserializerMap.put("conditions", (n) -> { this.setConditions(n.getCollectionOfObjectValues(RuleCondition::createFromDiscriminatorValue)); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("enabled", (n) -> { this.setEnabled(n.getBooleanValue()); });
         deserializerMap.put("isSystemRule", (n) -> { this.setIsSystemRule(n.getBooleanValue()); });
         deserializerMap.put("notificationChannels", (n) -> { this.setNotificationChannels(n.getCollectionOfObjectValues(NotificationChannel::createFromDiscriminatorValue)); });
-        deserializerMap.put("severity", (n) -> { this.setSeverity(n.getEnumValue(RuleSeverityType::forValue)); });
+        deserializerMap.put("severity", (n) -> { this.setSeverity(n.getEnumValue(AlertRuleSeverity::forValue)); });
         deserializerMap.put("threshold", (n) -> { this.setThreshold(n.getObjectValue(RuleThreshold::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -92,10 +101,10 @@ public class AlertRule extends Entity implements Parsable {
     }
     /**
      * Gets the severity property value. The severity of the rule. The possible values are: unknown, informational, warning, critical, unknownFutureValue.
-     * @return a RuleSeverityType
+     * @return a AlertRuleSeverity
      */
     @jakarta.annotation.Nullable
-    public RuleSeverityType getSeverity() {
+    public AlertRuleSeverity getSeverity() {
         return this.backingStore.get("severity");
     }
     /**
@@ -114,6 +123,7 @@ public class AlertRule extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("alertRuleTemplate", this.getAlertRuleTemplate());
+        writer.writeCollectionOfObjectValues("conditions", this.getConditions());
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeBooleanValue("enabled", this.getEnabled());
@@ -126,8 +136,15 @@ public class AlertRule extends Entity implements Parsable {
      * Sets the alertRuleTemplate property value. The rule template of the alert event. The possible values are: cloudPcProvisionScenario, cloudPcImageUploadScenario, cloudPcOnPremiseNetworkConnectionCheckScenario, cloudPcInGracePeriodScenario, cloudPcFrontlineInsufficientLicensesScenario, cloudPcInaccessibleScenario. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: cloudPcInGracePeriodScenario.
      * @param value Value to set for the alertRuleTemplate property.
      */
-    public void setAlertRuleTemplate(@jakarta.annotation.Nullable final AlertRuleTemplate value) {
+    public void setAlertRuleTemplate(@jakarta.annotation.Nullable final AlertRuleAlertRuleTemplate value) {
         this.backingStore.set("alertRuleTemplate", value);
+    }
+    /**
+     * Sets the conditions property value. The conditions that determine when to send alerts. For example, you can configure a condition to send an alert when provisioning fails for six or more Cloud PCs.
+     * @param value Value to set for the conditions property.
+     */
+    public void setConditions(@jakarta.annotation.Nullable final java.util.List<RuleCondition> value) {
+        this.backingStore.set("conditions", value);
     }
     /**
      * Sets the description property value. The rule description.
@@ -168,7 +185,7 @@ public class AlertRule extends Entity implements Parsable {
      * Sets the severity property value. The severity of the rule. The possible values are: unknown, informational, warning, critical, unknownFutureValue.
      * @param value Value to set for the severity property.
      */
-    public void setSeverity(@jakarta.annotation.Nullable final RuleSeverityType value) {
+    public void setSeverity(@jakarta.annotation.Nullable final AlertRuleSeverity value) {
         this.backingStore.set("severity", value);
     }
     /**

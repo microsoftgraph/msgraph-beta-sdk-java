@@ -26,10 +26,10 @@ public class VirtualEventTownhall extends VirtualEvent implements Parsable {
     }
     /**
      * Gets the audience property value. The audience property
-     * @return a MeetingAudience
+     * @return a VirtualEventTownhallAudience
      */
     @jakarta.annotation.Nullable
-    public MeetingAudience getAudience() {
+    public VirtualEventTownhallAudience getAudience() {
         return this.backingStore.get("audience");
     }
     /**
@@ -47,7 +47,7 @@ public class VirtualEventTownhall extends VirtualEvent implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("audience", (n) -> { this.setAudience(n.getEnumValue(MeetingAudience::forValue)); });
+        deserializerMap.put("audience", (n) -> { this.setAudience(n.getEnumValue(VirtualEventTownhallAudience::forValue)); });
         deserializerMap.put("coOrganizers", (n) -> { this.setCoOrganizers(n.getCollectionOfObjectValues(CommunicationsUserIdentity::createFromDiscriminatorValue)); });
         deserializerMap.put("invitedAttendees", (n) -> { this.setInvitedAttendees(n.getCollectionOfObjectValues(CommunicationsUserIdentity::createFromDiscriminatorValue)); });
         deserializerMap.put("isInviteOnly", (n) -> { this.setIsInviteOnly(n.getBooleanValue()); });
@@ -85,7 +85,7 @@ public class VirtualEventTownhall extends VirtualEvent implements Parsable {
      * Sets the audience property value. The audience property
      * @param value Value to set for the audience property.
      */
-    public void setAudience(@jakarta.annotation.Nullable final MeetingAudience value) {
+    public void setAudience(@jakarta.annotation.Nullable final VirtualEventTownhallAudience value) {
         this.backingStore.set("audience", value);
     }
     /**

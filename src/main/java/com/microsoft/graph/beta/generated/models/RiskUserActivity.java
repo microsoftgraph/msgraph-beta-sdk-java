@@ -57,18 +57,18 @@ public class RiskUserActivity implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the detail property value. The possible values are none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
-     * @return a RiskDetail
+     * @return a RiskUserActivityDetail
      */
     @jakarta.annotation.Nullable
-    public RiskDetail getDetail() {
+    public RiskUserActivityDetail getDetail() {
         return this.backingStore.get("detail");
     }
     /**
      * Gets the eventTypes property value. The eventTypes property
-     * @return a java.util.List<RiskEventType>
+     * @return a java.util.List<RiskUserActivityEventTypes>
      */
     @jakarta.annotation.Nullable
-    public java.util.List<RiskEventType> getEventTypes() {
+    public java.util.List<RiskUserActivityEventTypes> getEventTypes() {
         return this.backingStore.get("eventTypes");
     }
     /**
@@ -78,8 +78,8 @@ public class RiskUserActivity implements AdditionalDataHolder, BackedModel, Pars
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
-        deserializerMap.put("detail", (n) -> { this.setDetail(n.getEnumValue(RiskDetail::forValue)); });
-        deserializerMap.put("eventTypes", (n) -> { this.setEventTypes(n.getCollectionOfEnumValues(RiskEventType::forValue)); });
+        deserializerMap.put("detail", (n) -> { this.setDetail(n.getEnumValue(RiskUserActivityDetail::forValue)); });
+        deserializerMap.put("eventTypes", (n) -> { this.setEventTypes(n.getCollectionOfEnumValues(RiskUserActivityEventTypes::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("riskEventTypes", (n) -> { this.setRiskEventTypes(n.getCollectionOfPrimitiveValues(String.class)); });
         return deserializerMap;
@@ -131,14 +131,14 @@ public class RiskUserActivity implements AdditionalDataHolder, BackedModel, Pars
      * Sets the detail property value. The possible values are none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
      * @param value Value to set for the detail property.
      */
-    public void setDetail(@jakarta.annotation.Nullable final RiskDetail value) {
+    public void setDetail(@jakarta.annotation.Nullable final RiskUserActivityDetail value) {
         this.backingStore.set("detail", value);
     }
     /**
      * Sets the eventTypes property value. The eventTypes property
      * @param value Value to set for the eventTypes property.
      */
-    public void setEventTypes(@jakarta.annotation.Nullable final java.util.List<RiskEventType> value) {
+    public void setEventTypes(@jakarta.annotation.Nullable final java.util.List<RiskUserActivityEventTypes> value) {
         this.backingStore.set("eventTypes", value);
     }
     /**

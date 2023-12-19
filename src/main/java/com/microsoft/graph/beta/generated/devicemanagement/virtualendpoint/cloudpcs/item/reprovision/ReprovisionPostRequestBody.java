@@ -1,7 +1,5 @@
 package com.microsoft.graph.beta.devicemanagement.virtualendpoint.cloudpcs.item.reprovision;
 
-import com.microsoft.graph.beta.models.CloudPcOperatingSystem;
-import com.microsoft.graph.beta.models.CloudPcUserAccountType;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -64,24 +62,24 @@ public class ReprovisionPostRequestBody implements AdditionalDataHolder, BackedM
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
-        deserializerMap.put("osVersion", (n) -> { this.setOsVersion(n.getEnumValue(CloudPcOperatingSystem::forValue)); });
-        deserializerMap.put("userAccountType", (n) -> { this.setUserAccountType(n.getEnumValue(CloudPcUserAccountType::forValue)); });
+        deserializerMap.put("osVersion", (n) -> { this.setOsVersion(n.getEnumValue(ReprovisionPostRequestBodyOsVersion::forValue)); });
+        deserializerMap.put("userAccountType", (n) -> { this.setUserAccountType(n.getEnumValue(ReprovisionPostRequestBodyUserAccountType::forValue)); });
         return deserializerMap;
     }
     /**
      * Gets the osVersion property value. The osVersion property
-     * @return a CloudPcOperatingSystem
+     * @return a ReprovisionPostRequestBodyOsVersion
      */
     @jakarta.annotation.Nullable
-    public CloudPcOperatingSystem getOsVersion() {
+    public ReprovisionPostRequestBodyOsVersion getOsVersion() {
         return this.backingStore.get("osVersion");
     }
     /**
      * Gets the userAccountType property value. The userAccountType property
-     * @return a CloudPcUserAccountType
+     * @return a ReprovisionPostRequestBodyUserAccountType
      */
     @jakarta.annotation.Nullable
-    public CloudPcUserAccountType getUserAccountType() {
+    public ReprovisionPostRequestBodyUserAccountType getUserAccountType() {
         return this.backingStore.get("userAccountType");
     }
     /**
@@ -113,14 +111,14 @@ public class ReprovisionPostRequestBody implements AdditionalDataHolder, BackedM
      * Sets the osVersion property value. The osVersion property
      * @param value Value to set for the osVersion property.
      */
-    public void setOsVersion(@jakarta.annotation.Nullable final CloudPcOperatingSystem value) {
+    public void setOsVersion(@jakarta.annotation.Nullable final ReprovisionPostRequestBodyOsVersion value) {
         this.backingStore.set("osVersion", value);
     }
     /**
      * Sets the userAccountType property value. The userAccountType property
      * @param value Value to set for the userAccountType property.
      */
-    public void setUserAccountType(@jakarta.annotation.Nullable final CloudPcUserAccountType value) {
+    public void setUserAccountType(@jakarta.annotation.Nullable final ReprovisionPostRequestBodyUserAccountType value) {
         this.backingStore.set("userAccountType", value);
     }
 }

@@ -37,10 +37,10 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
     }
     /**
      * Gets the action property value. The action property
-     * @return a FilteringPolicyAction
+     * @return a NetworkAccessTrafficAction
      */
     @jakarta.annotation.Nullable
-    public FilteringPolicyAction getAction() {
+    public NetworkAccessTrafficAction getAction() {
         return this.backingStore.get("action");
     }
     /**
@@ -122,10 +122,10 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
     }
     /**
      * Gets the deviceCategory property value. Represents the category classification of a device within a network infrastructure. The possible values are: client, branch, unknownFutureValue. Supports $filter (eq) and $orderby.
-     * @return a DeviceCategory
+     * @return a NetworkAccessTrafficDeviceCategory
      */
     @jakarta.annotation.Nullable
-    public DeviceCategory getDeviceCategory() {
+    public NetworkAccessTrafficDeviceCategory getDeviceCategory() {
         return this.backingStore.get("deviceCategory");
     }
     /**
@@ -159,7 +159,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(34);
-        deserializerMap.put("action", (n) -> { this.setAction(n.getEnumValue(FilteringPolicyAction::forValue)); });
+        deserializerMap.put("action", (n) -> { this.setAction(n.getEnumValue(NetworkAccessTrafficAction::forValue)); });
         deserializerMap.put("agentVersion", (n) -> { this.setAgentVersion(n.getStringValue()); });
         deserializerMap.put("connectionId", (n) -> { this.setConnectionId(n.getStringValue()); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
@@ -167,7 +167,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         deserializerMap.put("destinationIp", (n) -> { this.setDestinationIp(n.getStringValue()); });
         deserializerMap.put("destinationPort", (n) -> { this.setDestinationPort(n.getIntegerValue()); });
         deserializerMap.put("destinationWebCategory", (n) -> { this.setDestinationWebCategory(n.getObjectValue(WebCategory::createFromDiscriminatorValue)); });
-        deserializerMap.put("deviceCategory", (n) -> { this.setDeviceCategory(n.getEnumValue(DeviceCategory::forValue)); });
+        deserializerMap.put("deviceCategory", (n) -> { this.setDeviceCategory(n.getEnumValue(NetworkAccessTrafficDeviceCategory::forValue)); });
         deserializerMap.put("deviceId", (n) -> { this.setDeviceId(n.getStringValue()); });
         deserializerMap.put("deviceOperatingSystem", (n) -> { this.setDeviceOperatingSystem(n.getStringValue()); });
         deserializerMap.put("deviceOperatingSystemVersion", (n) -> { this.setDeviceOperatingSystemVersion(n.getStringValue()); });
@@ -175,7 +175,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         deserializerMap.put("filteringProfileName", (n) -> { this.setFilteringProfileName(n.getStringValue()); });
         deserializerMap.put("headers", (n) -> { this.setHeaders(n.getObjectValue(Headers::createFromDiscriminatorValue)); });
         deserializerMap.put("initiatingProcessName", (n) -> { this.setInitiatingProcessName(n.getStringValue()); });
-        deserializerMap.put("networkProtocol", (n) -> { this.setNetworkProtocol(n.getEnumValue(NetworkingProtocol::forValue)); });
+        deserializerMap.put("networkProtocol", (n) -> { this.setNetworkProtocol(n.getEnumValue(NetworkAccessTrafficNetworkProtocol::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("policyId", (n) -> { this.setPolicyId(n.getStringValue()); });
         deserializerMap.put("policyName", (n) -> { this.setPolicyName(n.getStringValue()); });
@@ -190,7 +190,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         deserializerMap.put("tenantId", (n) -> { this.setTenantId(n.getStringValue()); });
         deserializerMap.put("trafficType", (n) -> { this.setTrafficType(n.getEnumValue(TrafficType::forValue)); });
         deserializerMap.put("transactionId", (n) -> { this.setTransactionId(n.getStringValue()); });
-        deserializerMap.put("transportProtocol", (n) -> { this.setTransportProtocol(n.getEnumValue(NetworkingProtocol::forValue)); });
+        deserializerMap.put("transportProtocol", (n) -> { this.setTransportProtocol(n.getEnumValue(NetworkAccessTrafficTransportProtocol::forValue)); });
         deserializerMap.put("userId", (n) -> { this.setUserId(n.getStringValue()); });
         deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
         return deserializerMap;
@@ -229,10 +229,10 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
     }
     /**
      * Gets the networkProtocol property value. Represents the networking protocol used for communication.The possible values are: ip, icmp, igmp, ggp, ipv4, tcp, pup, udp, idp, ipv6, ipv6RoutingHeader, ipv6FragmentHeader, ipSecEncapsulatingSecurityPayload, ipSecAuthenticationHeader, icmpV6, ipv6NoNextHeader, ipv6DestinationOptions, nd, raw, ipx, spx, spxII, unknownFutureValue. Supports $filter (eq) and $orderby.
-     * @return a NetworkingProtocol
+     * @return a NetworkAccessTrafficNetworkProtocol
      */
     @jakarta.annotation.Nullable
-    public NetworkingProtocol getNetworkProtocol() {
+    public NetworkAccessTrafficNetworkProtocol getNetworkProtocol() {
         return this.backingStore.get("networkProtocol");
     }
     /**
@@ -349,10 +349,10 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
     }
     /**
      * Gets the transportProtocol property value. Represents the transport protocol used for communication.The possible values are: ip, icmp, igmp, ggp, ipv4, tcp, pup, udp, idp, ipv6, ipv6RoutingHeader, ipv6FragmentHeader, ipSecEncapsulatingSecurityPayload, ipSecAuthenticationHeader, icmpV6, ipv6NoNextHeader, ipv6DestinationOptions, nd, raw, ipx, spx, spxII, unknownFutureValue. Supports $filter (eq) and $orderby.
-     * @return a NetworkingProtocol
+     * @return a NetworkAccessTrafficTransportProtocol
      */
     @jakarta.annotation.Nullable
-    public NetworkingProtocol getTransportProtocol() {
+    public NetworkAccessTrafficTransportProtocol getTransportProtocol() {
         return this.backingStore.get("transportProtocol");
     }
     /**
@@ -417,7 +417,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
      * Sets the action property value. The action property
      * @param value Value to set for the action property.
      */
-    public void setAction(@jakarta.annotation.Nullable final FilteringPolicyAction value) {
+    public void setAction(@jakarta.annotation.Nullable final NetworkAccessTrafficAction value) {
         this.backingStore.set("action", value);
     }
     /**
@@ -488,7 +488,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
      * Sets the deviceCategory property value. Represents the category classification of a device within a network infrastructure. The possible values are: client, branch, unknownFutureValue. Supports $filter (eq) and $orderby.
      * @param value Value to set for the deviceCategory property.
      */
-    public void setDeviceCategory(@jakarta.annotation.Nullable final DeviceCategory value) {
+    public void setDeviceCategory(@jakarta.annotation.Nullable final NetworkAccessTrafficDeviceCategory value) {
         this.backingStore.set("deviceCategory", value);
     }
     /**
@@ -544,7 +544,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
      * Sets the networkProtocol property value. Represents the networking protocol used for communication.The possible values are: ip, icmp, igmp, ggp, ipv4, tcp, pup, udp, idp, ipv6, ipv6RoutingHeader, ipv6FragmentHeader, ipSecEncapsulatingSecurityPayload, ipSecAuthenticationHeader, icmpV6, ipv6NoNextHeader, ipv6DestinationOptions, nd, raw, ipx, spx, spxII, unknownFutureValue. Supports $filter (eq) and $orderby.
      * @param value Value to set for the networkProtocol property.
      */
-    public void setNetworkProtocol(@jakarta.annotation.Nullable final NetworkingProtocol value) {
+    public void setNetworkProtocol(@jakarta.annotation.Nullable final NetworkAccessTrafficNetworkProtocol value) {
         this.backingStore.set("networkProtocol", value);
     }
     /**
@@ -649,7 +649,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
      * Sets the transportProtocol property value. Represents the transport protocol used for communication.The possible values are: ip, icmp, igmp, ggp, ipv4, tcp, pup, udp, idp, ipv6, ipv6RoutingHeader, ipv6FragmentHeader, ipSecEncapsulatingSecurityPayload, ipSecAuthenticationHeader, icmpV6, ipv6NoNextHeader, ipv6DestinationOptions, nd, raw, ipx, spx, spxII, unknownFutureValue. Supports $filter (eq) and $orderby.
      * @param value Value to set for the transportProtocol property.
      */
-    public void setTransportProtocol(@jakarta.annotation.Nullable final NetworkingProtocol value) {
+    public void setTransportProtocol(@jakarta.annotation.Nullable final NetworkAccessTrafficTransportProtocol value) {
         this.backingStore.set("transportProtocol", value);
     }
     /**

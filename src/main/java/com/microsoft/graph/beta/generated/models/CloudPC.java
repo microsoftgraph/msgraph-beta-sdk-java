@@ -51,10 +51,10 @@ public class CloudPC extends Entity implements Parsable {
     }
     /**
      * Gets the diskEncryptionState property value. The disk encryption applied to the Cloud PC. Possible values: notAvailable, notEncrypted, encryptedUsingPlatformManagedKey, encryptedUsingCustomerManagedKey, and unknownFutureValue.
-     * @return a CloudPcDiskEncryptionState
+     * @return a CloudPCDiskEncryptionState
      */
     @jakarta.annotation.Nullable
-    public CloudPcDiskEncryptionState getDiskEncryptionState() {
+    public CloudPCDiskEncryptionState getDiskEncryptionState() {
         return this.backingStore.get("diskEncryptionState");
     }
     /**
@@ -75,7 +75,7 @@ public class CloudPC extends Entity implements Parsable {
         deserializerMap.put("aadDeviceId", (n) -> { this.setAadDeviceId(n.getStringValue()); });
         deserializerMap.put("connectionSettings", (n) -> { this.setConnectionSettings(n.getObjectValue(CloudPcConnectionSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("connectivityResult", (n) -> { this.setConnectivityResult(n.getObjectValue(CloudPcConnectivityResult::createFromDiscriminatorValue)); });
-        deserializerMap.put("diskEncryptionState", (n) -> { this.setDiskEncryptionState(n.getEnumValue(CloudPcDiskEncryptionState::forValue)); });
+        deserializerMap.put("diskEncryptionState", (n) -> { this.setDiskEncryptionState(n.getEnumValue(CloudPCDiskEncryptionState::forValue)); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("gracePeriodEndDateTime", (n) -> { this.setGracePeriodEndDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("imageDisplayName", (n) -> { this.setImageDisplayName(n.getStringValue()); });
@@ -85,19 +85,19 @@ public class CloudPC extends Entity implements Parsable {
         deserializerMap.put("managedDeviceId", (n) -> { this.setManagedDeviceId(n.getStringValue()); });
         deserializerMap.put("managedDeviceName", (n) -> { this.setManagedDeviceName(n.getStringValue()); });
         deserializerMap.put("onPremisesConnectionName", (n) -> { this.setOnPremisesConnectionName(n.getStringValue()); });
-        deserializerMap.put("osVersion", (n) -> { this.setOsVersion(n.getEnumValue(CloudPcOperatingSystem::forValue)); });
+        deserializerMap.put("osVersion", (n) -> { this.setOsVersion(n.getEnumValue(CloudPCOsVersion::forValue)); });
         deserializerMap.put("partnerAgentInstallResults", (n) -> { this.setPartnerAgentInstallResults(n.getCollectionOfObjectValues(CloudPcPartnerAgentInstallResult::createFromDiscriminatorValue)); });
-        deserializerMap.put("powerState", (n) -> { this.setPowerState(n.getEnumValue(CloudPcPowerState::forValue)); });
+        deserializerMap.put("powerState", (n) -> { this.setPowerState(n.getEnumValue(CloudPCPowerState::forValue)); });
         deserializerMap.put("provisioningPolicyId", (n) -> { this.setProvisioningPolicyId(n.getStringValue()); });
         deserializerMap.put("provisioningPolicyName", (n) -> { this.setProvisioningPolicyName(n.getStringValue()); });
-        deserializerMap.put("provisioningType", (n) -> { this.setProvisioningType(n.getEnumValue(CloudPcProvisioningType::forValue)); });
+        deserializerMap.put("provisioningType", (n) -> { this.setProvisioningType(n.getEnumValue(CloudPCProvisioningType::forValue)); });
         deserializerMap.put("scopeIds", (n) -> { this.setScopeIds(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("servicePlanId", (n) -> { this.setServicePlanId(n.getStringValue()); });
         deserializerMap.put("servicePlanName", (n) -> { this.setServicePlanName(n.getStringValue()); });
-        deserializerMap.put("servicePlanType", (n) -> { this.setServicePlanType(n.getEnumValue(CloudPcServicePlanType::forValue)); });
+        deserializerMap.put("servicePlanType", (n) -> { this.setServicePlanType(n.getEnumValue(CloudPCServicePlanType::forValue)); });
         deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(CloudPcStatus::forValue)); });
         deserializerMap.put("statusDetails", (n) -> { this.setStatusDetails(n.getObjectValue(CloudPcStatusDetails::createFromDiscriminatorValue)); });
-        deserializerMap.put("userAccountType", (n) -> { this.setUserAccountType(n.getEnumValue(CloudPcUserAccountType::forValue)); });
+        deserializerMap.put("userAccountType", (n) -> { this.setUserAccountType(n.getEnumValue(CloudPCUserAccountType::forValue)); });
         deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
         return deserializerMap;
     }
@@ -167,10 +167,10 @@ public class CloudPC extends Entity implements Parsable {
     }
     /**
      * Gets the osVersion property value. The version of the operating system (OS) to provision on Cloud PCs. Possible values are: windows10, windows11, and unknownFutureValue.
-     * @return a CloudPcOperatingSystem
+     * @return a CloudPCOsVersion
      */
     @jakarta.annotation.Nullable
-    public CloudPcOperatingSystem getOsVersion() {
+    public CloudPCOsVersion getOsVersion() {
         return this.backingStore.get("osVersion");
     }
     /**
@@ -183,10 +183,10 @@ public class CloudPC extends Entity implements Parsable {
     }
     /**
      * Gets the powerState property value. The power state of a Cloud PC. The possible values are: running, poweredOff and unknown. This property only supports shift work Cloud PCs.
-     * @return a CloudPcPowerState
+     * @return a CloudPCPowerState
      */
     @jakarta.annotation.Nullable
-    public CloudPcPowerState getPowerState() {
+    public CloudPCPowerState getPowerState() {
         return this.backingStore.get("powerState");
     }
     /**
@@ -207,10 +207,10 @@ public class CloudPC extends Entity implements Parsable {
     }
     /**
      * Gets the provisioningType property value. The type of licenses to be used when provisioning Cloud PCs using this policy. Possible values are: dedicated, shared, unknownFutureValue. Default value is dedicated.
-     * @return a CloudPcProvisioningType
+     * @return a CloudPCProvisioningType
      */
     @jakarta.annotation.Nullable
-    public CloudPcProvisioningType getProvisioningType() {
+    public CloudPCProvisioningType getProvisioningType() {
         return this.backingStore.get("provisioningType");
     }
     /**
@@ -239,10 +239,10 @@ public class CloudPC extends Entity implements Parsable {
     }
     /**
      * Gets the servicePlanType property value. The service plan type of the Cloud PC.
-     * @return a CloudPcServicePlanType
+     * @return a CloudPCServicePlanType
      */
     @jakarta.annotation.Nullable
-    public CloudPcServicePlanType getServicePlanType() {
+    public CloudPCServicePlanType getServicePlanType() {
         return this.backingStore.get("servicePlanType");
     }
     /**
@@ -263,10 +263,10 @@ public class CloudPC extends Entity implements Parsable {
     }
     /**
      * Gets the userAccountType property value. The account type of the user on provisioned Cloud PCs. Possible values are: standardUser, administrator, and unknownFutureValue.
-     * @return a CloudPcUserAccountType
+     * @return a CloudPCUserAccountType
      */
     @jakarta.annotation.Nullable
-    public CloudPcUserAccountType getUserAccountType() {
+    public CloudPCUserAccountType getUserAccountType() {
         return this.backingStore.get("userAccountType");
     }
     /**
@@ -337,7 +337,7 @@ public class CloudPC extends Entity implements Parsable {
      * Sets the diskEncryptionState property value. The disk encryption applied to the Cloud PC. Possible values: notAvailable, notEncrypted, encryptedUsingPlatformManagedKey, encryptedUsingCustomerManagedKey, and unknownFutureValue.
      * @param value Value to set for the diskEncryptionState property.
      */
-    public void setDiskEncryptionState(@jakarta.annotation.Nullable final CloudPcDiskEncryptionState value) {
+    public void setDiskEncryptionState(@jakarta.annotation.Nullable final CloudPCDiskEncryptionState value) {
         this.backingStore.set("diskEncryptionState", value);
     }
     /**
@@ -407,7 +407,7 @@ public class CloudPC extends Entity implements Parsable {
      * Sets the osVersion property value. The version of the operating system (OS) to provision on Cloud PCs. Possible values are: windows10, windows11, and unknownFutureValue.
      * @param value Value to set for the osVersion property.
      */
-    public void setOsVersion(@jakarta.annotation.Nullable final CloudPcOperatingSystem value) {
+    public void setOsVersion(@jakarta.annotation.Nullable final CloudPCOsVersion value) {
         this.backingStore.set("osVersion", value);
     }
     /**
@@ -421,7 +421,7 @@ public class CloudPC extends Entity implements Parsable {
      * Sets the powerState property value. The power state of a Cloud PC. The possible values are: running, poweredOff and unknown. This property only supports shift work Cloud PCs.
      * @param value Value to set for the powerState property.
      */
-    public void setPowerState(@jakarta.annotation.Nullable final CloudPcPowerState value) {
+    public void setPowerState(@jakarta.annotation.Nullable final CloudPCPowerState value) {
         this.backingStore.set("powerState", value);
     }
     /**
@@ -442,7 +442,7 @@ public class CloudPC extends Entity implements Parsable {
      * Sets the provisioningType property value. The type of licenses to be used when provisioning Cloud PCs using this policy. Possible values are: dedicated, shared, unknownFutureValue. Default value is dedicated.
      * @param value Value to set for the provisioningType property.
      */
-    public void setProvisioningType(@jakarta.annotation.Nullable final CloudPcProvisioningType value) {
+    public void setProvisioningType(@jakarta.annotation.Nullable final CloudPCProvisioningType value) {
         this.backingStore.set("provisioningType", value);
     }
     /**
@@ -470,7 +470,7 @@ public class CloudPC extends Entity implements Parsable {
      * Sets the servicePlanType property value. The service plan type of the Cloud PC.
      * @param value Value to set for the servicePlanType property.
      */
-    public void setServicePlanType(@jakarta.annotation.Nullable final CloudPcServicePlanType value) {
+    public void setServicePlanType(@jakarta.annotation.Nullable final CloudPCServicePlanType value) {
         this.backingStore.set("servicePlanType", value);
     }
     /**
@@ -491,7 +491,7 @@ public class CloudPC extends Entity implements Parsable {
      * Sets the userAccountType property value. The account type of the user on provisioned Cloud PCs. Possible values are: standardUser, administrator, and unknownFutureValue.
      * @param value Value to set for the userAccountType property.
      */
-    public void setUserAccountType(@jakarta.annotation.Nullable final CloudPcUserAccountType value) {
+    public void setUserAccountType(@jakarta.annotation.Nullable final CloudPCUserAccountType value) {
         this.backingStore.set("userAccountType", value);
     }
     /**

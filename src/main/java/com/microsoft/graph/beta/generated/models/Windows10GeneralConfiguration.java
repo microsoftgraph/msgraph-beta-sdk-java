@@ -360,10 +360,10 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the defenderPotentiallyUnwantedAppAction property value. Gets or sets Defenders action to take on Potentially Unwanted Application (PUA), which includes software with behaviors of ad-injection, software bundling, persistent solicitation for payment or subscription, etc. Defender alerts user when PUA is being downloaded or attempts to install itself. Added in Windows 10 for desktop. Possible values are: deviceDefault, block, audit.
-     * @return a DefenderPotentiallyUnwantedAppAction
+     * @return a Windows10GeneralConfigurationDefenderPotentiallyUnwantedAppAction
      */
     @jakarta.annotation.Nullable
-    public DefenderPotentiallyUnwantedAppAction getDefenderPotentiallyUnwantedAppAction() {
+    public Windows10GeneralConfigurationDefenderPotentiallyUnwantedAppAction getDefenderPotentiallyUnwantedAppAction() {
         return this.backingStore.get("defenderPotentiallyUnwantedAppAction");
     }
     /**
@@ -528,10 +528,10 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     }
     /**
      * Gets the defenderSubmitSamplesConsentType property value. Checks for the user consent level in Windows Defender to send data. Possible values are: sendSafeSamplesAutomatically, alwaysPrompt, neverSend, sendAllSamplesAutomatically.
-     * @return a DefenderSubmitSamplesConsentType
+     * @return a Windows10GeneralConfigurationDefenderSubmitSamplesConsentType
      */
     @jakarta.annotation.Nullable
-    public DefenderSubmitSamplesConsentType getDefenderSubmitSamplesConsentType() {
+    public Windows10GeneralConfigurationDefenderSubmitSamplesConsentType getDefenderSubmitSamplesConsentType() {
         return this.backingStore.get("defenderSubmitSamplesConsentType");
     }
     /**
@@ -1118,7 +1118,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         deserializerMap.put("defenderFileExtensionsToExclude", (n) -> { this.setDefenderFileExtensionsToExclude(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("defenderFilesAndFoldersToExclude", (n) -> { this.setDefenderFilesAndFoldersToExclude(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("defenderMonitorFileActivity", (n) -> { this.setDefenderMonitorFileActivity(n.getEnumValue(DefenderMonitorFileActivity::forValue)); });
-        deserializerMap.put("defenderPotentiallyUnwantedAppAction", (n) -> { this.setDefenderPotentiallyUnwantedAppAction(n.getEnumValue(DefenderPotentiallyUnwantedAppAction::forValue)); });
+        deserializerMap.put("defenderPotentiallyUnwantedAppAction", (n) -> { this.setDefenderPotentiallyUnwantedAppAction(n.getEnumValue(Windows10GeneralConfigurationDefenderPotentiallyUnwantedAppAction::forValue)); });
         deserializerMap.put("defenderPotentiallyUnwantedAppActionSetting", (n) -> { this.setDefenderPotentiallyUnwantedAppActionSetting(n.getEnumValue(DefenderProtectionType::forValue)); });
         deserializerMap.put("defenderProcessesToExclude", (n) -> { this.setDefenderProcessesToExclude(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("defenderPromptForSampleSubmission", (n) -> { this.setDefenderPromptForSampleSubmission(n.getEnumValue(DefenderPromptForSampleSubmission::forValue)); });
@@ -1139,7 +1139,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         deserializerMap.put("defenderScheduledScanTime", (n) -> { this.setDefenderScheduledScanTime(n.getLocalTimeValue()); });
         deserializerMap.put("defenderScheduleScanEnableLowCpuPriority", (n) -> { this.setDefenderScheduleScanEnableLowCpuPriority(n.getBooleanValue()); });
         deserializerMap.put("defenderSignatureUpdateIntervalInHours", (n) -> { this.setDefenderSignatureUpdateIntervalInHours(n.getIntegerValue()); });
-        deserializerMap.put("defenderSubmitSamplesConsentType", (n) -> { this.setDefenderSubmitSamplesConsentType(n.getEnumValue(DefenderSubmitSamplesConsentType::forValue)); });
+        deserializerMap.put("defenderSubmitSamplesConsentType", (n) -> { this.setDefenderSubmitSamplesConsentType(n.getEnumValue(Windows10GeneralConfigurationDefenderSubmitSamplesConsentType::forValue)); });
         deserializerMap.put("defenderSystemScanSchedule", (n) -> { this.setDefenderSystemScanSchedule(n.getEnumValue(WeeklySchedule::forValue)); });
         deserializerMap.put("developerUnlockSetting", (n) -> { this.setDeveloperUnlockSetting(n.getEnumValue(StateManagementSetting::forValue)); });
         deserializerMap.put("deviceManagementBlockFactoryResetOnMobile", (n) -> { this.setDeviceManagementBlockFactoryResetOnMobile(n.getBooleanValue()); });
@@ -3168,7 +3168,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * Sets the defenderPotentiallyUnwantedAppAction property value. Gets or sets Defenders action to take on Potentially Unwanted Application (PUA), which includes software with behaviors of ad-injection, software bundling, persistent solicitation for payment or subscription, etc. Defender alerts user when PUA is being downloaded or attempts to install itself. Added in Windows 10 for desktop. Possible values are: deviceDefault, block, audit.
      * @param value Value to set for the defenderPotentiallyUnwantedAppAction property.
      */
-    public void setDefenderPotentiallyUnwantedAppAction(@jakarta.annotation.Nullable final DefenderPotentiallyUnwantedAppAction value) {
+    public void setDefenderPotentiallyUnwantedAppAction(@jakarta.annotation.Nullable final Windows10GeneralConfigurationDefenderPotentiallyUnwantedAppAction value) {
         this.backingStore.set("defenderPotentiallyUnwantedAppAction", value);
     }
     /**
@@ -3315,7 +3315,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * Sets the defenderSubmitSamplesConsentType property value. Checks for the user consent level in Windows Defender to send data. Possible values are: sendSafeSamplesAutomatically, alwaysPrompt, neverSend, sendAllSamplesAutomatically.
      * @param value Value to set for the defenderSubmitSamplesConsentType property.
      */
-    public void setDefenderSubmitSamplesConsentType(@jakarta.annotation.Nullable final DefenderSubmitSamplesConsentType value) {
+    public void setDefenderSubmitSamplesConsentType(@jakarta.annotation.Nullable final Windows10GeneralConfigurationDefenderSubmitSamplesConsentType value) {
         this.backingStore.set("defenderSubmitSamplesConsentType", value);
     }
     /**

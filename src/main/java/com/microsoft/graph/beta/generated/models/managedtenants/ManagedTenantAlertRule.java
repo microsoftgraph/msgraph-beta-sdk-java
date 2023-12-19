@@ -5,7 +5,6 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -100,9 +99,9 @@ public class ManagedTenantAlertRule extends Entity implements Parsable {
         deserializerMap.put("lastActionByUserId", (n) -> { this.setLastActionByUserId(n.getStringValue()); });
         deserializerMap.put("lastActionDateTime", (n) -> { this.setLastActionDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("lastRunDateTime", (n) -> { this.setLastRunDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("notificationFinalDestinations", (n) -> { this.setNotificationFinalDestinations(n.getEnumSetValue(NotificationDestination::forValue)); });
+        deserializerMap.put("notificationFinalDestinations", (n) -> { this.setNotificationFinalDestinations(n.getEnumValue(ManagedTenantAlertRuleNotificationFinalDestinations::forValue)); });
         deserializerMap.put("ruleDefinition", (n) -> { this.setRuleDefinition(n.getObjectValue(ManagedTenantAlertRuleDefinition::createFromDiscriminatorValue)); });
-        deserializerMap.put("severity", (n) -> { this.setSeverity(n.getEnumValue(AlertSeverity::forValue)); });
+        deserializerMap.put("severity", (n) -> { this.setSeverity(n.getEnumValue(ManagedTenantAlertRuleSeverity::forValue)); });
         deserializerMap.put("targets", (n) -> { this.setTargets(n.getCollectionOfObjectValues(NotificationTarget::createFromDiscriminatorValue)); });
         deserializerMap.put("tenantIds", (n) -> { this.setTenantIds(n.getCollectionOfObjectValues(TenantInfo::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -133,10 +132,10 @@ public class ManagedTenantAlertRule extends Entity implements Parsable {
     }
     /**
      * Gets the notificationFinalDestinations property value. The notificationFinalDestinations property
-     * @return a EnumSet<NotificationDestination>
+     * @return a ManagedTenantAlertRuleNotificationFinalDestinations
      */
     @jakarta.annotation.Nullable
-    public EnumSet<NotificationDestination> getNotificationFinalDestinations() {
+    public ManagedTenantAlertRuleNotificationFinalDestinations getNotificationFinalDestinations() {
         return this.backingStore.get("notificationFinalDestinations");
     }
     /**
@@ -149,10 +148,10 @@ public class ManagedTenantAlertRule extends Entity implements Parsable {
     }
     /**
      * Gets the severity property value. The severity property
-     * @return a AlertSeverity
+     * @return a ManagedTenantAlertRuleSeverity
      */
     @jakarta.annotation.Nullable
-    public AlertSeverity getSeverity() {
+    public ManagedTenantAlertRuleSeverity getSeverity() {
         return this.backingStore.get("severity");
     }
     /**
@@ -188,7 +187,7 @@ public class ManagedTenantAlertRule extends Entity implements Parsable {
         writer.writeStringValue("lastActionByUserId", this.getLastActionByUserId());
         writer.writeOffsetDateTimeValue("lastActionDateTime", this.getLastActionDateTime());
         writer.writeOffsetDateTimeValue("lastRunDateTime", this.getLastRunDateTime());
-        writer.writeEnumSetValue("notificationFinalDestinations", this.getNotificationFinalDestinations());
+        writer.writeEnumValue("notificationFinalDestinations", this.getNotificationFinalDestinations());
         writer.writeObjectValue("ruleDefinition", this.getRuleDefinition());
         writer.writeEnumValue("severity", this.getSeverity());
         writer.writeCollectionOfObjectValues("targets", this.getTargets());
@@ -268,7 +267,7 @@ public class ManagedTenantAlertRule extends Entity implements Parsable {
      * Sets the notificationFinalDestinations property value. The notificationFinalDestinations property
      * @param value Value to set for the notificationFinalDestinations property.
      */
-    public void setNotificationFinalDestinations(@jakarta.annotation.Nullable final EnumSet<NotificationDestination> value) {
+    public void setNotificationFinalDestinations(@jakarta.annotation.Nullable final ManagedTenantAlertRuleNotificationFinalDestinations value) {
         this.backingStore.set("notificationFinalDestinations", value);
     }
     /**
@@ -282,7 +281,7 @@ public class ManagedTenantAlertRule extends Entity implements Parsable {
      * Sets the severity property value. The severity property
      * @param value Value to set for the severity property.
      */
-    public void setSeverity(@jakarta.annotation.Nullable final AlertSeverity value) {
+    public void setSeverity(@jakarta.annotation.Nullable final ManagedTenantAlertRuleSeverity value) {
         this.backingStore.set("severity", value);
     }
     /**

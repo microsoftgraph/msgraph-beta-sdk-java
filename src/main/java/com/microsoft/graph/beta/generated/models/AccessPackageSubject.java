@@ -89,7 +89,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
         deserializerMap.put("objectId", (n) -> { this.setObjectId(n.getStringValue()); });
         deserializerMap.put("onPremisesSecurityIdentifier", (n) -> { this.setOnPremisesSecurityIdentifier(n.getStringValue()); });
         deserializerMap.put("principalName", (n) -> { this.setPrincipalName(n.getStringValue()); });
-        deserializerMap.put("subjectLifecycle", (n) -> { this.setSubjectLifecycle(n.getEnumValue(AccessPackageSubjectLifecycle::forValue)); });
+        deserializerMap.put("subjectLifecycle", (n) -> { this.setSubjectLifecycle(n.getEnumValue(AccessPackageSubjectSubjectLifecycle::forValue)); });
         deserializerMap.put("type", (n) -> { this.setType(n.getStringValue()); });
         return deserializerMap;
     }
@@ -119,10 +119,10 @@ public class AccessPackageSubject extends Entity implements Parsable {
     }
     /**
      * Gets the subjectLifecycle property value. The lifecycle of the subject user, if a guest. The possible values are: notDefined, notGoverned, governed, unknownFutureValue.
-     * @return a AccessPackageSubjectLifecycle
+     * @return a AccessPackageSubjectSubjectLifecycle
      */
     @jakarta.annotation.Nullable
-    public AccessPackageSubjectLifecycle getSubjectLifecycle() {
+    public AccessPackageSubjectSubjectLifecycle getSubjectLifecycle() {
         return this.backingStore.get("subjectLifecycle");
     }
     /**
@@ -219,7 +219,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
      * Sets the subjectLifecycle property value. The lifecycle of the subject user, if a guest. The possible values are: notDefined, notGoverned, governed, unknownFutureValue.
      * @param value Value to set for the subjectLifecycle property.
      */
-    public void setSubjectLifecycle(@jakarta.annotation.Nullable final AccessPackageSubjectLifecycle value) {
+    public void setSubjectLifecycle(@jakarta.annotation.Nullable final AccessPackageSubjectSubjectLifecycle value) {
         this.backingStore.set("subjectLifecycle", value);
     }
     /**

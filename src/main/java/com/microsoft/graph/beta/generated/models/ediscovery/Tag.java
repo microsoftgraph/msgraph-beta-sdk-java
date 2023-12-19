@@ -29,10 +29,10 @@ public class Tag extends Entity implements Parsable {
     }
     /**
      * Gets the childSelectability property value. Indicates whether a single or multiple child tags can be associated with a document. Possible values are: One, Many.  This value controls whether the UX presents the tags as checkboxes or a radio button group.
-     * @return a ChildSelectability
+     * @return a TagChildSelectability
      */
     @jakarta.annotation.Nullable
-    public ChildSelectability getChildSelectability() {
+    public TagChildSelectability getChildSelectability() {
         return this.backingStore.get("childSelectability");
     }
     /**
@@ -74,7 +74,7 @@ public class Tag extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("childSelectability", (n) -> { this.setChildSelectability(n.getEnumValue(ChildSelectability::forValue)); });
+        deserializerMap.put("childSelectability", (n) -> { this.setChildSelectability(n.getEnumValue(TagChildSelectability::forValue)); });
         deserializerMap.put("childTags", (n) -> { this.setChildTags(n.getCollectionOfObjectValues(Tag::createFromDiscriminatorValue)); });
         deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
@@ -118,7 +118,7 @@ public class Tag extends Entity implements Parsable {
      * Sets the childSelectability property value. Indicates whether a single or multiple child tags can be associated with a document. Possible values are: One, Many.  This value controls whether the UX presents the tags as checkboxes or a radio button group.
      * @param value Value to set for the childSelectability property.
      */
-    public void setChildSelectability(@jakarta.annotation.Nullable final ChildSelectability value) {
+    public void setChildSelectability(@jakarta.annotation.Nullable final TagChildSelectability value) {
         this.backingStore.set("childSelectability", value);
     }
     /**

@@ -29,18 +29,18 @@ public class RetentionLabel extends Entity implements Parsable {
     }
     /**
      * Gets the actionAfterRetentionPeriod property value. Specifies the action to take on a document with this label applied during the retention period. The possible values are: none, delete, startDispositionReview, unknownFutureValue.
-     * @return a ActionAfterRetentionPeriod
+     * @return a RetentionLabelActionAfterRetentionPeriod
      */
     @jakarta.annotation.Nullable
-    public ActionAfterRetentionPeriod getActionAfterRetentionPeriod() {
+    public RetentionLabelActionAfterRetentionPeriod getActionAfterRetentionPeriod() {
         return this.backingStore.get("actionAfterRetentionPeriod");
     }
     /**
      * Gets the behaviorDuringRetentionPeriod property value. Specifies how the behavior of a document with this label should be during the retention period. The possible values are: doNotRetain, retain, retainAsRecord, retainAsRegulatoryRecord, unknownFutureValue.
-     * @return a BehaviorDuringRetentionPeriod
+     * @return a RetentionLabelBehaviorDuringRetentionPeriod
      */
     @jakarta.annotation.Nullable
-    public BehaviorDuringRetentionPeriod getBehaviorDuringRetentionPeriod() {
+    public RetentionLabelBehaviorDuringRetentionPeriod getBehaviorDuringRetentionPeriod() {
         return this.backingStore.get("behaviorDuringRetentionPeriod");
     }
     /**
@@ -61,10 +61,10 @@ public class RetentionLabel extends Entity implements Parsable {
     }
     /**
      * Gets the defaultRecordBehavior property value. Specifies the locked or unlocked state of a record label when it is created.The possible values are: startLocked, startUnlocked, unknownFutureValue.
-     * @return a DefaultRecordBehavior
+     * @return a RetentionLabelDefaultRecordBehavior
      */
     @jakarta.annotation.Nullable
-    public DefaultRecordBehavior getDefaultRecordBehavior() {
+    public RetentionLabelDefaultRecordBehavior getDefaultRecordBehavior() {
         return this.backingStore.get("defaultRecordBehavior");
     }
     /**
@@ -114,11 +114,11 @@ public class RetentionLabel extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("actionAfterRetentionPeriod", (n) -> { this.setActionAfterRetentionPeriod(n.getEnumValue(ActionAfterRetentionPeriod::forValue)); });
-        deserializerMap.put("behaviorDuringRetentionPeriod", (n) -> { this.setBehaviorDuringRetentionPeriod(n.getEnumValue(BehaviorDuringRetentionPeriod::forValue)); });
+        deserializerMap.put("actionAfterRetentionPeriod", (n) -> { this.setActionAfterRetentionPeriod(n.getEnumValue(RetentionLabelActionAfterRetentionPeriod::forValue)); });
+        deserializerMap.put("behaviorDuringRetentionPeriod", (n) -> { this.setBehaviorDuringRetentionPeriod(n.getEnumValue(RetentionLabelBehaviorDuringRetentionPeriod::forValue)); });
         deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("defaultRecordBehavior", (n) -> { this.setDefaultRecordBehavior(n.getEnumValue(DefaultRecordBehavior::forValue)); });
+        deserializerMap.put("defaultRecordBehavior", (n) -> { this.setDefaultRecordBehavior(n.getEnumValue(RetentionLabelDefaultRecordBehavior::forValue)); });
         deserializerMap.put("descriptionForAdmins", (n) -> { this.setDescriptionForAdmins(n.getStringValue()); });
         deserializerMap.put("descriptionForUsers", (n) -> { this.setDescriptionForUsers(n.getStringValue()); });
         deserializerMap.put("descriptors", (n) -> { this.setDescriptors(n.getObjectValue(FilePlanDescriptor::createFromDiscriminatorValue)); });
@@ -130,7 +130,7 @@ public class RetentionLabel extends Entity implements Parsable {
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("retentionDuration", (n) -> { this.setRetentionDuration(n.getObjectValue(RetentionDuration::createFromDiscriminatorValue)); });
         deserializerMap.put("retentionEventType", (n) -> { this.setRetentionEventType(n.getObjectValue(RetentionEventType::createFromDiscriminatorValue)); });
-        deserializerMap.put("retentionTrigger", (n) -> { this.setRetentionTrigger(n.getEnumValue(RetentionTrigger::forValue)); });
+        deserializerMap.put("retentionTrigger", (n) -> { this.setRetentionTrigger(n.getEnumValue(RetentionLabelRetentionTrigger::forValue)); });
         return deserializerMap;
     }
     /**
@@ -183,10 +183,10 @@ public class RetentionLabel extends Entity implements Parsable {
     }
     /**
      * Gets the retentionTrigger property value. Specifies whether the retention duration is calculated from the content creation date, labeled date, or last modification date. The possible values are: dateLabeled, dateCreated, dateModified, dateOfEvent, unknownFutureValue.
-     * @return a RetentionTrigger
+     * @return a RetentionLabelRetentionTrigger
      */
     @jakarta.annotation.Nullable
-    public RetentionTrigger getRetentionTrigger() {
+    public RetentionLabelRetentionTrigger getRetentionTrigger() {
         return this.backingStore.get("retentionTrigger");
     }
     /**
@@ -218,14 +218,14 @@ public class RetentionLabel extends Entity implements Parsable {
      * Sets the actionAfterRetentionPeriod property value. Specifies the action to take on a document with this label applied during the retention period. The possible values are: none, delete, startDispositionReview, unknownFutureValue.
      * @param value Value to set for the actionAfterRetentionPeriod property.
      */
-    public void setActionAfterRetentionPeriod(@jakarta.annotation.Nullable final ActionAfterRetentionPeriod value) {
+    public void setActionAfterRetentionPeriod(@jakarta.annotation.Nullable final RetentionLabelActionAfterRetentionPeriod value) {
         this.backingStore.set("actionAfterRetentionPeriod", value);
     }
     /**
      * Sets the behaviorDuringRetentionPeriod property value. Specifies how the behavior of a document with this label should be during the retention period. The possible values are: doNotRetain, retain, retainAsRecord, retainAsRegulatoryRecord, unknownFutureValue.
      * @param value Value to set for the behaviorDuringRetentionPeriod property.
      */
-    public void setBehaviorDuringRetentionPeriod(@jakarta.annotation.Nullable final BehaviorDuringRetentionPeriod value) {
+    public void setBehaviorDuringRetentionPeriod(@jakarta.annotation.Nullable final RetentionLabelBehaviorDuringRetentionPeriod value) {
         this.backingStore.set("behaviorDuringRetentionPeriod", value);
     }
     /**
@@ -246,7 +246,7 @@ public class RetentionLabel extends Entity implements Parsable {
      * Sets the defaultRecordBehavior property value. Specifies the locked or unlocked state of a record label when it is created.The possible values are: startLocked, startUnlocked, unknownFutureValue.
      * @param value Value to set for the defaultRecordBehavior property.
      */
-    public void setDefaultRecordBehavior(@jakarta.annotation.Nullable final DefaultRecordBehavior value) {
+    public void setDefaultRecordBehavior(@jakarta.annotation.Nullable final RetentionLabelDefaultRecordBehavior value) {
         this.backingStore.set("defaultRecordBehavior", value);
     }
     /**
@@ -330,7 +330,7 @@ public class RetentionLabel extends Entity implements Parsable {
      * Sets the retentionTrigger property value. Specifies whether the retention duration is calculated from the content creation date, labeled date, or last modification date. The possible values are: dateLabeled, dateCreated, dateModified, dateOfEvent, unknownFutureValue.
      * @param value Value to set for the retentionTrigger property.
      */
-    public void setRetentionTrigger(@jakarta.annotation.Nullable final RetentionTrigger value) {
+    public void setRetentionTrigger(@jakarta.annotation.Nullable final RetentionLabelRetentionTrigger value) {
         this.backingStore.set("retentionTrigger", value);
     }
 }

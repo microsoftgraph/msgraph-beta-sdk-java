@@ -58,10 +58,19 @@ public class PlannerTaskDetails extends PlannerDelta implements Parsable {
         deserializerMap.put("checklist", (n) -> { this.setChecklist(n.getObjectValue(PlannerChecklistItems::createFromDiscriminatorValue)); });
         deserializerMap.put("completionRequirements", (n) -> { this.setCompletionRequirements(n.getObjectValue(PlannerTaskCompletionRequirementDetails::createFromDiscriminatorValue)); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("forms", (n) -> { this.setForms(n.getObjectValue(PlannerFormsDictionary::createFromDiscriminatorValue)); });
         deserializerMap.put("notes", (n) -> { this.setNotes(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
-        deserializerMap.put("previewType", (n) -> { this.setPreviewType(n.getEnumValue(PlannerPreviewType::forValue)); });
+        deserializerMap.put("previewType", (n) -> { this.setPreviewType(n.getEnumValue(PlannerTaskDetailsPreviewType::forValue)); });
         deserializerMap.put("references", (n) -> { this.setReferences(n.getObjectValue(PlannerExternalReferences::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the forms property value. The forms property
+     * @return a PlannerFormsDictionary
+     */
+    @jakarta.annotation.Nullable
+    public PlannerFormsDictionary getForms() {
+        return this.backingStore.get("forms");
     }
     /**
      * Gets the notes property value. Rich text description of the task. To be used by HTML-aware clients. For backwards compatibility, a plain-text version of the HTML description will be synced to the 'description' field. If this field hasn't previously been set but 'description' has been, the existing description is synchronized to 'notes' with minimal whitespace-preserving HTML markup. Setting both 'description' and 'notes' is an error and will result in an exception.
@@ -73,10 +82,10 @@ public class PlannerTaskDetails extends PlannerDelta implements Parsable {
     }
     /**
      * Gets the previewType property value. This sets the type of preview that shows up on the task. Possible values are: automatic, noPreview, checklist, description, reference. When set to automatic the displayed preview is chosen by the app viewing the task.
-     * @return a PlannerPreviewType
+     * @return a PlannerTaskDetailsPreviewType
      */
     @jakarta.annotation.Nullable
-    public PlannerPreviewType getPreviewType() {
+    public PlannerTaskDetailsPreviewType getPreviewType() {
         return this.backingStore.get("previewType");
     }
     /**
@@ -97,6 +106,7 @@ public class PlannerTaskDetails extends PlannerDelta implements Parsable {
         writer.writeObjectValue("checklist", this.getChecklist());
         writer.writeObjectValue("completionRequirements", this.getCompletionRequirements());
         writer.writeStringValue("description", this.getDescription());
+        writer.writeObjectValue("forms", this.getForms());
         writer.writeObjectValue("notes", this.getNotes());
         writer.writeEnumValue("previewType", this.getPreviewType());
         writer.writeObjectValue("references", this.getReferences());
@@ -123,6 +133,13 @@ public class PlannerTaskDetails extends PlannerDelta implements Parsable {
         this.backingStore.set("description", value);
     }
     /**
+     * Sets the forms property value. The forms property
+     * @param value Value to set for the forms property.
+     */
+    public void setForms(@jakarta.annotation.Nullable final PlannerFormsDictionary value) {
+        this.backingStore.set("forms", value);
+    }
+    /**
      * Sets the notes property value. Rich text description of the task. To be used by HTML-aware clients. For backwards compatibility, a plain-text version of the HTML description will be synced to the 'description' field. If this field hasn't previously been set but 'description' has been, the existing description is synchronized to 'notes' with minimal whitespace-preserving HTML markup. Setting both 'description' and 'notes' is an error and will result in an exception.
      * @param value Value to set for the notes property.
      */
@@ -133,7 +150,7 @@ public class PlannerTaskDetails extends PlannerDelta implements Parsable {
      * Sets the previewType property value. This sets the type of preview that shows up on the task. Possible values are: automatic, noPreview, checklist, description, reference. When set to automatic the displayed preview is chosen by the app viewing the task.
      * @param value Value to set for the previewType property.
      */
-    public void setPreviewType(@jakarta.annotation.Nullable final PlannerPreviewType value) {
+    public void setPreviewType(@jakarta.annotation.Nullable final PlannerTaskDetailsPreviewType value) {
         this.backingStore.set("previewType", value);
     }
     /**

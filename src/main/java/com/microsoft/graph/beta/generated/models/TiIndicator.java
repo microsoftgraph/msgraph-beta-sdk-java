@@ -27,10 +27,10 @@ public class TiIndicator extends Entity implements Parsable {
     }
     /**
      * Gets the action property value. The action to apply if the indicator is matched from within the targetProduct security tool. Possible values are: unknown, allow, block, alert. Required.
-     * @return a TiAction
+     * @return a TiIndicatorAction
      */
     @jakarta.annotation.Nullable
-    public TiAction getAction() {
+    public TiIndicatorAction getAction() {
         return this.backingStore.get("action");
     }
     /**
@@ -75,10 +75,10 @@ public class TiIndicator extends Entity implements Parsable {
     }
     /**
      * Gets the diamondModel property value. The area of the Diamond Model in which this indicator exists. Possible values are: unknown, adversary, capability, infrastructure, victim.
-     * @return a DiamondModel
+     * @return a TiIndicatorDiamondModel
      */
     @jakarta.annotation.Nullable
-    public DiamondModel getDiamondModel() {
+    public TiIndicatorDiamondModel getDiamondModel() {
         return this.backingStore.get("diamondModel");
     }
     /**
@@ -184,13 +184,13 @@ public class TiIndicator extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("action", (n) -> { this.setAction(n.getEnumValue(TiAction::forValue)); });
+        deserializerMap.put("action", (n) -> { this.setAction(n.getEnumValue(TiIndicatorAction::forValue)); });
         deserializerMap.put("activityGroupNames", (n) -> { this.setActivityGroupNames(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("additionalInformation", (n) -> { this.setAdditionalInformation(n.getStringValue()); });
         deserializerMap.put("azureTenantId", (n) -> { this.setAzureTenantId(n.getStringValue()); });
         deserializerMap.put("confidence", (n) -> { this.setConfidence(n.getIntegerValue()); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
-        deserializerMap.put("diamondModel", (n) -> { this.setDiamondModel(n.getEnumValue(DiamondModel::forValue)); });
+        deserializerMap.put("diamondModel", (n) -> { this.setDiamondModel(n.getEnumValue(TiIndicatorDiamondModel::forValue)); });
         deserializerMap.put("domainName", (n) -> { this.setDomainName(n.getStringValue()); });
         deserializerMap.put("emailEncoding", (n) -> { this.setEmailEncoding(n.getStringValue()); });
         deserializerMap.put("emailLanguage", (n) -> { this.setEmailLanguage(n.getStringValue()); });
@@ -205,7 +205,7 @@ public class TiIndicator extends Entity implements Parsable {
         deserializerMap.put("externalId", (n) -> { this.setExternalId(n.getStringValue()); });
         deserializerMap.put("fileCompileDateTime", (n) -> { this.setFileCompileDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("fileCreatedDateTime", (n) -> { this.setFileCreatedDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("fileHashType", (n) -> { this.setFileHashType(n.getEnumValue(FileHashType::forValue)); });
+        deserializerMap.put("fileHashType", (n) -> { this.setFileHashType(n.getEnumValue(TiIndicatorFileHashType::forValue)); });
         deserializerMap.put("fileHashValue", (n) -> { this.setFileHashValue(n.getStringValue()); });
         deserializerMap.put("fileMutexName", (n) -> { this.setFileMutexName(n.getStringValue()); });
         deserializerMap.put("fileName", (n) -> { this.setFileName(n.getStringValue()); });
@@ -239,7 +239,7 @@ public class TiIndicator extends Entity implements Parsable {
         deserializerMap.put("tags", (n) -> { this.setTags(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("targetProduct", (n) -> { this.setTargetProduct(n.getStringValue()); });
         deserializerMap.put("threatType", (n) -> { this.setThreatType(n.getStringValue()); });
-        deserializerMap.put("tlpLevel", (n) -> { this.setTlpLevel(n.getEnumValue(TlpLevel::forValue)); });
+        deserializerMap.put("tlpLevel", (n) -> { this.setTlpLevel(n.getEnumValue(TiIndicatorTlpLevel::forValue)); });
         deserializerMap.put("url", (n) -> { this.setUrl(n.getStringValue()); });
         deserializerMap.put("userAgent", (n) -> { this.setUserAgent(n.getStringValue()); });
         return deserializerMap;
@@ -262,10 +262,10 @@ public class TiIndicator extends Entity implements Parsable {
     }
     /**
      * Gets the fileHashType property value. The fileHashType property
-     * @return a FileHashType
+     * @return a TiIndicatorFileHashType
      */
     @jakarta.annotation.Nullable
-    public FileHashType getFileHashType() {
+    public TiIndicatorFileHashType getFileHashType() {
         return this.backingStore.get("fileHashType");
     }
     /**
@@ -534,10 +534,10 @@ public class TiIndicator extends Entity implements Parsable {
     }
     /**
      * Gets the tlpLevel property value. Traffic Light Protocol value for the indicator. Possible values are: unknown, white, green, amber, red. Required.
-     * @return a TlpLevel
+     * @return a TiIndicatorTlpLevel
      */
     @jakarta.annotation.Nullable
-    public TlpLevel getTlpLevel() {
+    public TiIndicatorTlpLevel getTlpLevel() {
         return this.backingStore.get("tlpLevel");
     }
     /**
@@ -626,7 +626,7 @@ public class TiIndicator extends Entity implements Parsable {
      * Sets the action property value. The action to apply if the indicator is matched from within the targetProduct security tool. Possible values are: unknown, allow, block, alert. Required.
      * @param value Value to set for the action property.
      */
-    public void setAction(@jakarta.annotation.Nullable final TiAction value) {
+    public void setAction(@jakarta.annotation.Nullable final TiIndicatorAction value) {
         this.backingStore.set("action", value);
     }
     /**
@@ -668,7 +668,7 @@ public class TiIndicator extends Entity implements Parsable {
      * Sets the diamondModel property value. The area of the Diamond Model in which this indicator exists. Possible values are: unknown, adversary, capability, infrastructure, victim.
      * @param value Value to set for the diamondModel property.
      */
-    public void setDiamondModel(@jakarta.annotation.Nullable final DiamondModel value) {
+    public void setDiamondModel(@jakarta.annotation.Nullable final TiIndicatorDiamondModel value) {
         this.backingStore.set("diamondModel", value);
     }
     /**
@@ -773,7 +773,7 @@ public class TiIndicator extends Entity implements Parsable {
      * Sets the fileHashType property value. The fileHashType property
      * @param value Value to set for the fileHashType property.
      */
-    public void setFileHashType(@jakarta.annotation.Nullable final FileHashType value) {
+    public void setFileHashType(@jakarta.annotation.Nullable final TiIndicatorFileHashType value) {
         this.backingStore.set("fileHashType", value);
     }
     /**
@@ -1011,7 +1011,7 @@ public class TiIndicator extends Entity implements Parsable {
      * Sets the tlpLevel property value. Traffic Light Protocol value for the indicator. Possible values are: unknown, white, green, amber, red. Required.
      * @param value Value to set for the tlpLevel property.
      */
-    public void setTlpLevel(@jakarta.annotation.Nullable final TlpLevel value) {
+    public void setTlpLevel(@jakarta.annotation.Nullable final TiIndicatorTlpLevel value) {
         this.backingStore.set("tlpLevel", value);
     }
     /**

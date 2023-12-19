@@ -49,10 +49,10 @@ public class MatchingLabel implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the applicationMode property value. The applicationMode property
-     * @return a ApplicationMode
+     * @return a MatchingLabelApplicationMode
      */
     @jakarta.annotation.Nullable
-    public ApplicationMode getApplicationMode() {
+    public MatchingLabelApplicationMode getApplicationMode() {
         return this.backingStore.get("applicationMode");
     }
     /**
@@ -86,7 +86,7 @@ public class MatchingLabel implements AdditionalDataHolder, BackedModel, Parsabl
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(11);
-        deserializerMap.put("applicationMode", (n) -> { this.setApplicationMode(n.getEnumValue(ApplicationMode::forValue)); });
+        deserializerMap.put("applicationMode", (n) -> { this.setApplicationMode(n.getEnumValue(MatchingLabelApplicationMode::forValue)); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("id", (n) -> { this.setId(n.getStringValue()); });
@@ -193,7 +193,7 @@ public class MatchingLabel implements AdditionalDataHolder, BackedModel, Parsabl
      * Sets the applicationMode property value. The applicationMode property
      * @param value Value to set for the applicationMode property.
      */
-    public void setApplicationMode(@jakarta.annotation.Nullable final ApplicationMode value) {
+    public void setApplicationMode(@jakarta.annotation.Nullable final MatchingLabelApplicationMode value) {
         this.backingStore.set("applicationMode", value);
     }
     /**

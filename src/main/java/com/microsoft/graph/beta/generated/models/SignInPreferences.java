@@ -64,7 +64,7 @@ public class SignInPreferences implements AdditionalDataHolder, BackedModel, Par
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("isSystemPreferredAuthenticationMethodEnabled", (n) -> { this.setIsSystemPreferredAuthenticationMethodEnabled(n.getBooleanValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("userPreferredMethodForSecondaryAuthentication", (n) -> { this.setUserPreferredMethodForSecondaryAuthentication(n.getEnumValue(UserDefaultAuthenticationMethodType::forValue)); });
+        deserializerMap.put("userPreferredMethodForSecondaryAuthentication", (n) -> { this.setUserPreferredMethodForSecondaryAuthentication(n.getEnumValue(SignInPreferencesUserPreferredMethodForSecondaryAuthentication::forValue)); });
         return deserializerMap;
     }
     /**
@@ -85,10 +85,10 @@ public class SignInPreferences implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the userPreferredMethodForSecondaryAuthentication property value. The default second-factor method used by the user when signing in. If a user is enabled for system-preferred authentication, then this value is ignored except for a few scenarios where a user is authenticating via NPS extension or ADFS adapter. Possible values are push, oath, voiceMobile, voiceAlternateMobile, voiceOffice, sms, and unknownFutureValue
-     * @return a UserDefaultAuthenticationMethodType
+     * @return a SignInPreferencesUserPreferredMethodForSecondaryAuthentication
      */
     @jakarta.annotation.Nullable
-    public UserDefaultAuthenticationMethodType getUserPreferredMethodForSecondaryAuthentication() {
+    public SignInPreferencesUserPreferredMethodForSecondaryAuthentication getUserPreferredMethodForSecondaryAuthentication() {
         return this.backingStore.get("userPreferredMethodForSecondaryAuthentication");
     }
     /**
@@ -135,7 +135,7 @@ public class SignInPreferences implements AdditionalDataHolder, BackedModel, Par
      * Sets the userPreferredMethodForSecondaryAuthentication property value. The default second-factor method used by the user when signing in. If a user is enabled for system-preferred authentication, then this value is ignored except for a few scenarios where a user is authenticating via NPS extension or ADFS adapter. Possible values are push, oath, voiceMobile, voiceAlternateMobile, voiceOffice, sms, and unknownFutureValue
      * @param value Value to set for the userPreferredMethodForSecondaryAuthentication property.
      */
-    public void setUserPreferredMethodForSecondaryAuthentication(@jakarta.annotation.Nullable final UserDefaultAuthenticationMethodType value) {
+    public void setUserPreferredMethodForSecondaryAuthentication(@jakarta.annotation.Nullable final SignInPreferencesUserPreferredMethodForSecondaryAuthentication value) {
         this.backingStore.set("userPreferredMethodForSecondaryAuthentication", value);
     }
 }

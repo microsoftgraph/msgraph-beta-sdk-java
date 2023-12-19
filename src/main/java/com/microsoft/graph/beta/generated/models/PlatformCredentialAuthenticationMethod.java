@@ -60,24 +60,24 @@ public class PlatformCredentialAuthenticationMethod extends AuthenticationMethod
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("device", (n) -> { this.setDevice(n.getObjectValue(Device::createFromDiscriminatorValue)); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
-        deserializerMap.put("keyStrength", (n) -> { this.setKeyStrength(n.getEnumValue(AuthenticationMethodKeyStrength::forValue)); });
-        deserializerMap.put("platform", (n) -> { this.setPlatform(n.getEnumValue(AuthenticationMethodPlatform::forValue)); });
+        deserializerMap.put("keyStrength", (n) -> { this.setKeyStrength(n.getEnumValue(PlatformCredentialAuthenticationMethodKeyStrength::forValue)); });
+        deserializerMap.put("platform", (n) -> { this.setPlatform(n.getEnumValue(PlatformCredentialAuthenticationMethodPlatform::forValue)); });
         return deserializerMap;
     }
     /**
      * Gets the keyStrength property value. Key strength of this Platform Credential key. Possible values are: normal, weak, unknown.
-     * @return a AuthenticationMethodKeyStrength
+     * @return a PlatformCredentialAuthenticationMethodKeyStrength
      */
     @jakarta.annotation.Nullable
-    public AuthenticationMethodKeyStrength getKeyStrength() {
+    public PlatformCredentialAuthenticationMethodKeyStrength getKeyStrength() {
         return this.backingStore.get("keyStrength");
     }
     /**
      * Gets the platform property value. Platform on which this Platform Credential key is present. Possible values are: unknown, windows, macOS,iOS, android, linux.
-     * @return a AuthenticationMethodPlatform
+     * @return a PlatformCredentialAuthenticationMethodPlatform
      */
     @jakarta.annotation.Nullable
-    public AuthenticationMethodPlatform getPlatform() {
+    public PlatformCredentialAuthenticationMethodPlatform getPlatform() {
         return this.backingStore.get("platform");
     }
     /**
@@ -118,14 +118,14 @@ public class PlatformCredentialAuthenticationMethod extends AuthenticationMethod
      * Sets the keyStrength property value. Key strength of this Platform Credential key. Possible values are: normal, weak, unknown.
      * @param value Value to set for the keyStrength property.
      */
-    public void setKeyStrength(@jakarta.annotation.Nullable final AuthenticationMethodKeyStrength value) {
+    public void setKeyStrength(@jakarta.annotation.Nullable final PlatformCredentialAuthenticationMethodKeyStrength value) {
         this.backingStore.set("keyStrength", value);
     }
     /**
      * Sets the platform property value. Platform on which this Platform Credential key is present. Possible values are: unknown, windows, macOS,iOS, android, linux.
      * @param value Value to set for the platform property.
      */
-    public void setPlatform(@jakarta.annotation.Nullable final AuthenticationMethodPlatform value) {
+    public void setPlatform(@jakarta.annotation.Nullable final PlatformCredentialAuthenticationMethodPlatform value) {
         this.backingStore.set("platform", value);
     }
 }

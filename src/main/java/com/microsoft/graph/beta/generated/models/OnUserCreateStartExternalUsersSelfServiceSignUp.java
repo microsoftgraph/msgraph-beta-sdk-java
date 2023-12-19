@@ -32,15 +32,15 @@ public class OnUserCreateStartExternalUsersSelfServiceSignUp extends OnUserCreat
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("userTypeToCreate", (n) -> { this.setUserTypeToCreate(n.getEnumValue(UserType::forValue)); });
+        deserializerMap.put("userTypeToCreate", (n) -> { this.setUserTypeToCreate(n.getEnumValue(OnUserCreateStartExternalUsersSelfServiceSignUpUserTypeToCreate::forValue)); });
         return deserializerMap;
     }
     /**
      * Gets the userTypeToCreate property value. The type of user object to create. The possible values are: member, guest, unknownFutureValue.
-     * @return a UserType
+     * @return a OnUserCreateStartExternalUsersSelfServiceSignUpUserTypeToCreate
      */
     @jakarta.annotation.Nullable
-    public UserType getUserTypeToCreate() {
+    public OnUserCreateStartExternalUsersSelfServiceSignUpUserTypeToCreate getUserTypeToCreate() {
         return this.backingStore.get("userTypeToCreate");
     }
     /**
@@ -56,7 +56,7 @@ public class OnUserCreateStartExternalUsersSelfServiceSignUp extends OnUserCreat
      * Sets the userTypeToCreate property value. The type of user object to create. The possible values are: member, guest, unknownFutureValue.
      * @param value Value to set for the userTypeToCreate property.
      */
-    public void setUserTypeToCreate(@jakarta.annotation.Nullable final UserType value) {
+    public void setUserTypeToCreate(@jakarta.annotation.Nullable final OnUserCreateStartExternalUsersSelfServiceSignUpUserTypeToCreate value) {
         this.backingStore.set("userTypeToCreate", value);
     }
 }

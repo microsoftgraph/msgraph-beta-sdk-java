@@ -27,10 +27,10 @@ public class PermissionsRequestChange extends Entity implements Parsable {
     }
     /**
      * Gets the activeOccurrenceStatus property value. The status of the active occurence of the schedule if one exists. The possible values are: grantingFailed, granted, granting, revoked, revoking, revokingFailed, unknownFutureValue.
-     * @return a PermissionsRequestOccurrenceStatus
+     * @return a PermissionsRequestChangeActiveOccurrenceStatus
      */
     @jakarta.annotation.Nullable
-    public PermissionsRequestOccurrenceStatus getActiveOccurrenceStatus() {
+    public PermissionsRequestChangeActiveOccurrenceStatus getActiveOccurrenceStatus() {
         return this.backingStore.get("activeOccurrenceStatus");
     }
     /**
@@ -40,7 +40,7 @@ public class PermissionsRequestChange extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("activeOccurrenceStatus", (n) -> { this.setActiveOccurrenceStatus(n.getEnumValue(PermissionsRequestOccurrenceStatus::forValue)); });
+        deserializerMap.put("activeOccurrenceStatus", (n) -> { this.setActiveOccurrenceStatus(n.getEnumValue(PermissionsRequestChangeActiveOccurrenceStatus::forValue)); });
         deserializerMap.put("modificationDateTime", (n) -> { this.setModificationDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("permissionsRequestId", (n) -> { this.setPermissionsRequestId(n.getStringValue()); });
         deserializerMap.put("statusDetail", (n) -> { this.setStatusDetail(n.getEnumValue(StatusDetail::forValue)); });
@@ -96,7 +96,7 @@ public class PermissionsRequestChange extends Entity implements Parsable {
      * Sets the activeOccurrenceStatus property value. The status of the active occurence of the schedule if one exists. The possible values are: grantingFailed, granted, granting, revoked, revoking, revokingFailed, unknownFutureValue.
      * @param value Value to set for the activeOccurrenceStatus property.
      */
-    public void setActiveOccurrenceStatus(@jakarta.annotation.Nullable final PermissionsRequestOccurrenceStatus value) {
+    public void setActiveOccurrenceStatus(@jakarta.annotation.Nullable final PermissionsRequestChangeActiveOccurrenceStatus value) {
         this.backingStore.set("activeOccurrenceStatus", value);
     }
     /**

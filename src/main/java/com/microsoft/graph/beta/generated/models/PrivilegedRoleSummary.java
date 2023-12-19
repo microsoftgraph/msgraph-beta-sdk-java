@@ -42,7 +42,7 @@ public class PrivilegedRoleSummary extends Entity implements Parsable {
         deserializerMap.put("elevatedCount", (n) -> { this.setElevatedCount(n.getIntegerValue()); });
         deserializerMap.put("managedCount", (n) -> { this.setManagedCount(n.getIntegerValue()); });
         deserializerMap.put("mfaEnabled", (n) -> { this.setMfaEnabled(n.getBooleanValue()); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(RoleSummaryStatus::forValue)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(PrivilegedRoleSummaryStatus::forValue)); });
         deserializerMap.put("usersCount", (n) -> { this.setUsersCount(n.getIntegerValue()); });
         return deserializerMap;
     }
@@ -64,10 +64,10 @@ public class PrivilegedRoleSummary extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status property
-     * @return a RoleSummaryStatus
+     * @return a PrivilegedRoleSummaryStatus
      */
     @jakarta.annotation.Nullable
-    public RoleSummaryStatus getStatus() {
+    public PrivilegedRoleSummaryStatus getStatus() {
         return this.backingStore.get("status");
     }
     /**
@@ -116,7 +116,7 @@ public class PrivilegedRoleSummary extends Entity implements Parsable {
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
      */
-    public void setStatus(@jakarta.annotation.Nullable final RoleSummaryStatus value) {
+    public void setStatus(@jakarta.annotation.Nullable final PrivilegedRoleSummaryStatus value) {
         this.backingStore.set("status", value);
     }
     /**

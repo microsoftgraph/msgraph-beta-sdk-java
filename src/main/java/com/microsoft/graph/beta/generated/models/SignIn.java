@@ -4,7 +4,6 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -60,10 +59,10 @@ public class SignIn extends Entity implements Parsable {
     }
     /**
      * Gets the appTokenProtectionStatus property value. The appTokenProtectionStatus property
-     * @return a TokenProtectionStatus
+     * @return a SignInAppTokenProtectionStatus
      */
     @jakarta.annotation.Nullable
-    public TokenProtectionStatus getAppTokenProtectionStatus() {
+    public SignInAppTokenProtectionStatus getAppTokenProtectionStatus() {
         return this.backingStore.get("appTokenProtectionStatus");
     }
     /**
@@ -116,10 +115,10 @@ public class SignIn extends Entity implements Parsable {
     }
     /**
      * Gets the authenticationProtocol property value. Lists the protocol type or grant type used in the authentication. The possible values are: oAuth2, ropc, wsFederation, saml20, deviceCode, unknownFutureValue, authenticationTransfer, and none. Use none for all authentications that don't have a specific value in that list.
-     * @return a EnumSet<ProtocolType>
+     * @return a SignInAuthenticationProtocol
      */
     @jakarta.annotation.Nullable
-    public EnumSet<ProtocolType> getAuthenticationProtocol() {
+    public SignInAuthenticationProtocol getAuthenticationProtocol() {
         return this.backingStore.get("authenticationProtocol");
     }
     /**
@@ -164,18 +163,18 @@ public class SignIn extends Entity implements Parsable {
     }
     /**
      * Gets the clientCredentialType property value. Describes the credential type that a user client or service principal provided to Microsoft Entra ID to authenticate itself. You can review this property to track and eliminate less secure credential types or to watch for clients and service principals using anomalous credential types. The possible values are: none, clientSecret, clientAssertion, federatedIdentityCredential, managedIdentity, certificate, unknownFutureValue.
-     * @return a ClientCredentialType
+     * @return a SignInClientCredentialType
      */
     @jakarta.annotation.Nullable
-    public ClientCredentialType getClientCredentialType() {
+    public SignInClientCredentialType getClientCredentialType() {
         return this.backingStore.get("clientCredentialType");
     }
     /**
      * Gets the conditionalAccessStatus property value. The status of the conditional access policy triggered. Possible values: success, failure, notApplied, or unknownFutureValue.  Supports $filter (eq).
-     * @return a ConditionalAccessStatus
+     * @return a SignInConditionalAccessStatus
      */
     @jakarta.annotation.Nullable
-    public ConditionalAccessStatus getConditionalAccessStatus() {
+    public SignInConditionalAccessStatus getConditionalAccessStatus() {
         return this.backingStore.get("conditionalAccessStatus");
     }
     /**
@@ -196,10 +195,10 @@ public class SignIn extends Entity implements Parsable {
     }
     /**
      * Gets the crossTenantAccessType property value. Describes the type of cross-tenant access used by the actor to access the resource. Possible values are: none, b2bCollaboration, b2bDirectConnect, microsoftSupport, serviceProvider, unknownFutureValue, passthrough. Also, please note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: passthrough. If the sign in didn't cross tenant boundaries, the value is none.
-     * @return a EnumSet<SignInAccessType>
+     * @return a SignInCrossTenantAccessType
      */
     @jakarta.annotation.Nullable
-    public EnumSet<SignInAccessType> getCrossTenantAccessType() {
+    public SignInCrossTenantAccessType getCrossTenantAccessType() {
         return this.backingStore.get("crossTenantAccessType");
     }
     /**
@@ -229,30 +228,30 @@ public class SignIn extends Entity implements Parsable {
         deserializerMap.put("appId", (n) -> { this.setAppId(n.getStringValue()); });
         deserializerMap.put("appliedConditionalAccessPolicies", (n) -> { this.setAppliedConditionalAccessPolicies(n.getCollectionOfObjectValues(AppliedConditionalAccessPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("appliedEventListeners", (n) -> { this.setAppliedEventListeners(n.getCollectionOfObjectValues(AppliedAuthenticationEventListener::createFromDiscriminatorValue)); });
-        deserializerMap.put("appTokenProtectionStatus", (n) -> { this.setAppTokenProtectionStatus(n.getEnumValue(TokenProtectionStatus::forValue)); });
+        deserializerMap.put("appTokenProtectionStatus", (n) -> { this.setAppTokenProtectionStatus(n.getEnumValue(SignInAppTokenProtectionStatus::forValue)); });
         deserializerMap.put("authenticationAppDeviceDetails", (n) -> { this.setAuthenticationAppDeviceDetails(n.getObjectValue(AuthenticationAppDeviceDetails::createFromDiscriminatorValue)); });
         deserializerMap.put("authenticationAppPolicyEvaluationDetails", (n) -> { this.setAuthenticationAppPolicyEvaluationDetails(n.getCollectionOfObjectValues(AuthenticationAppPolicyDetails::createFromDiscriminatorValue)); });
         deserializerMap.put("authenticationContextClassReferences", (n) -> { this.setAuthenticationContextClassReferences(n.getCollectionOfObjectValues(AuthenticationContext::createFromDiscriminatorValue)); });
         deserializerMap.put("authenticationDetails", (n) -> { this.setAuthenticationDetails(n.getCollectionOfObjectValues(AuthenticationDetail::createFromDiscriminatorValue)); });
         deserializerMap.put("authenticationMethodsUsed", (n) -> { this.setAuthenticationMethodsUsed(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("authenticationProcessingDetails", (n) -> { this.setAuthenticationProcessingDetails(n.getCollectionOfObjectValues(KeyValue::createFromDiscriminatorValue)); });
-        deserializerMap.put("authenticationProtocol", (n) -> { this.setAuthenticationProtocol(n.getEnumSetValue(ProtocolType::forValue)); });
+        deserializerMap.put("authenticationProtocol", (n) -> { this.setAuthenticationProtocol(n.getEnumValue(SignInAuthenticationProtocol::forValue)); });
         deserializerMap.put("authenticationRequirement", (n) -> { this.setAuthenticationRequirement(n.getStringValue()); });
         deserializerMap.put("authenticationRequirementPolicies", (n) -> { this.setAuthenticationRequirementPolicies(n.getCollectionOfObjectValues(AuthenticationRequirementPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("autonomousSystemNumber", (n) -> { this.setAutonomousSystemNumber(n.getIntegerValue()); });
         deserializerMap.put("azureResourceId", (n) -> { this.setAzureResourceId(n.getStringValue()); });
         deserializerMap.put("clientAppUsed", (n) -> { this.setClientAppUsed(n.getStringValue()); });
-        deserializerMap.put("clientCredentialType", (n) -> { this.setClientCredentialType(n.getEnumValue(ClientCredentialType::forValue)); });
-        deserializerMap.put("conditionalAccessStatus", (n) -> { this.setConditionalAccessStatus(n.getEnumValue(ConditionalAccessStatus::forValue)); });
+        deserializerMap.put("clientCredentialType", (n) -> { this.setClientCredentialType(n.getEnumValue(SignInClientCredentialType::forValue)); });
+        deserializerMap.put("conditionalAccessStatus", (n) -> { this.setConditionalAccessStatus(n.getEnumValue(SignInConditionalAccessStatus::forValue)); });
         deserializerMap.put("correlationId", (n) -> { this.setCorrelationId(n.getStringValue()); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("crossTenantAccessType", (n) -> { this.setCrossTenantAccessType(n.getEnumSetValue(SignInAccessType::forValue)); });
+        deserializerMap.put("crossTenantAccessType", (n) -> { this.setCrossTenantAccessType(n.getEnumValue(SignInCrossTenantAccessType::forValue)); });
         deserializerMap.put("deviceDetail", (n) -> { this.setDeviceDetail(n.getObjectValue(DeviceDetail::createFromDiscriminatorValue)); });
         deserializerMap.put("federatedCredentialId", (n) -> { this.setFederatedCredentialId(n.getStringValue()); });
         deserializerMap.put("flaggedForReview", (n) -> { this.setFlaggedForReview(n.getBooleanValue()); });
         deserializerMap.put("homeTenantId", (n) -> { this.setHomeTenantId(n.getStringValue()); });
         deserializerMap.put("homeTenantName", (n) -> { this.setHomeTenantName(n.getStringValue()); });
-        deserializerMap.put("incomingTokenType", (n) -> { this.setIncomingTokenType(n.getEnumSetValue(IncomingTokenType::forValue)); });
+        deserializerMap.put("incomingTokenType", (n) -> { this.setIncomingTokenType(n.getEnumValue(SignInIncomingTokenType::forValue)); });
         deserializerMap.put("ipAddress", (n) -> { this.setIpAddress(n.getStringValue()); });
         deserializerMap.put("ipAddressFromResourceProvider", (n) -> { this.setIpAddressFromResourceProvider(n.getStringValue()); });
         deserializerMap.put("isInteractive", (n) -> { this.setIsInteractive(n.getBooleanValue()); });
@@ -262,18 +261,18 @@ public class SignIn extends Entity implements Parsable {
         deserializerMap.put("mfaDetail", (n) -> { this.setMfaDetail(n.getObjectValue(MfaDetail::createFromDiscriminatorValue)); });
         deserializerMap.put("networkLocationDetails", (n) -> { this.setNetworkLocationDetails(n.getCollectionOfObjectValues(NetworkLocationDetail::createFromDiscriminatorValue)); });
         deserializerMap.put("originalRequestId", (n) -> { this.setOriginalRequestId(n.getStringValue()); });
-        deserializerMap.put("originalTransferMethod", (n) -> { this.setOriginalTransferMethod(n.getEnumValue(OriginalTransferMethods::forValue)); });
+        deserializerMap.put("originalTransferMethod", (n) -> { this.setOriginalTransferMethod(n.getEnumValue(SignInOriginalTransferMethod::forValue)); });
         deserializerMap.put("privateLinkDetails", (n) -> { this.setPrivateLinkDetails(n.getObjectValue(PrivateLinkDetails::createFromDiscriminatorValue)); });
         deserializerMap.put("processingTimeInMilliseconds", (n) -> { this.setProcessingTimeInMilliseconds(n.getIntegerValue()); });
         deserializerMap.put("resourceDisplayName", (n) -> { this.setResourceDisplayName(n.getStringValue()); });
         deserializerMap.put("resourceId", (n) -> { this.setResourceId(n.getStringValue()); });
         deserializerMap.put("resourceServicePrincipalId", (n) -> { this.setResourceServicePrincipalId(n.getStringValue()); });
         deserializerMap.put("resourceTenantId", (n) -> { this.setResourceTenantId(n.getStringValue()); });
-        deserializerMap.put("riskDetail", (n) -> { this.setRiskDetail(n.getEnumValue(RiskDetail::forValue)); });
+        deserializerMap.put("riskDetail", (n) -> { this.setRiskDetail(n.getEnumValue(SignInRiskDetail::forValue)); });
         deserializerMap.put("riskEventTypes_v2", (n) -> { this.setRiskEventTypesV2(n.getCollectionOfPrimitiveValues(String.class)); });
-        deserializerMap.put("riskLevelAggregated", (n) -> { this.setRiskLevelAggregated(n.getEnumValue(RiskLevel::forValue)); });
-        deserializerMap.put("riskLevelDuringSignIn", (n) -> { this.setRiskLevelDuringSignIn(n.getEnumValue(RiskLevel::forValue)); });
-        deserializerMap.put("riskState", (n) -> { this.setRiskState(n.getEnumValue(RiskState::forValue)); });
+        deserializerMap.put("riskLevelAggregated", (n) -> { this.setRiskLevelAggregated(n.getEnumValue(SignInRiskLevelAggregated::forValue)); });
+        deserializerMap.put("riskLevelDuringSignIn", (n) -> { this.setRiskLevelDuringSignIn(n.getEnumValue(SignInRiskLevelDuringSignIn::forValue)); });
+        deserializerMap.put("riskState", (n) -> { this.setRiskState(n.getEnumValue(SignInRiskState::forValue)); });
         deserializerMap.put("servicePrincipalCredentialKeyId", (n) -> { this.setServicePrincipalCredentialKeyId(n.getStringValue()); });
         deserializerMap.put("servicePrincipalCredentialThumbprint", (n) -> { this.setServicePrincipalCredentialThumbprint(n.getStringValue()); });
         deserializerMap.put("servicePrincipalId", (n) -> { this.setServicePrincipalId(n.getStringValue()); });
@@ -281,11 +280,11 @@ public class SignIn extends Entity implements Parsable {
         deserializerMap.put("sessionLifetimePolicies", (n) -> { this.setSessionLifetimePolicies(n.getCollectionOfObjectValues(SessionLifetimePolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("signInEventTypes", (n) -> { this.setSignInEventTypes(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("signInIdentifier", (n) -> { this.setSignInIdentifier(n.getStringValue()); });
-        deserializerMap.put("signInIdentifierType", (n) -> { this.setSignInIdentifierType(n.getEnumValue(SignInIdentifierType::forValue)); });
-        deserializerMap.put("signInTokenProtectionStatus", (n) -> { this.setSignInTokenProtectionStatus(n.getEnumValue(TokenProtectionStatus::forValue)); });
+        deserializerMap.put("signInIdentifierType", (n) -> { this.setSignInIdentifierType(n.getEnumValue(SignInSignInIdentifierType::forValue)); });
+        deserializerMap.put("signInTokenProtectionStatus", (n) -> { this.setSignInTokenProtectionStatus(n.getEnumValue(SignInSignInTokenProtectionStatus::forValue)); });
         deserializerMap.put("status", (n) -> { this.setStatus(n.getObjectValue(SignInStatus::createFromDiscriminatorValue)); });
         deserializerMap.put("tokenIssuerName", (n) -> { this.setTokenIssuerName(n.getStringValue()); });
-        deserializerMap.put("tokenIssuerType", (n) -> { this.setTokenIssuerType(n.getEnumValue(TokenIssuerType::forValue)); });
+        deserializerMap.put("tokenIssuerType", (n) -> { this.setTokenIssuerType(n.getEnumValue(SignInTokenIssuerType::forValue)); });
         deserializerMap.put("uniqueTokenIdentifier", (n) -> { this.setUniqueTokenIdentifier(n.getStringValue()); });
         deserializerMap.put("userAgent", (n) -> { this.setUserAgent(n.getStringValue()); });
         deserializerMap.put("userDisplayName", (n) -> { this.setUserDisplayName(n.getStringValue()); });
@@ -320,10 +319,10 @@ public class SignIn extends Entity implements Parsable {
     }
     /**
      * Gets the incomingTokenType property value. Indicates the token types that were presented to Microsoft Entra ID to authenticate the actor in the sign in. The possible values are: none, primaryRefreshToken, saml11, saml20, unknownFutureValue, remoteDesktopToken.  NOTE Microsoft Entra ID might have also used token types not listed in this enum type to authenticate the actor. Don't infer the lack of a token if it isn't one of the types listed. Also, please note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: remoteDesktopToken.
-     * @return a EnumSet<IncomingTokenType>
+     * @return a SignInIncomingTokenType
      */
     @jakarta.annotation.Nullable
-    public EnumSet<IncomingTokenType> getIncomingTokenType() {
+    public SignInIncomingTokenType getIncomingTokenType() {
         return this.backingStore.get("incomingTokenType");
     }
     /**
@@ -400,10 +399,10 @@ public class SignIn extends Entity implements Parsable {
     }
     /**
      * Gets the originalTransferMethod property value. Transfer method used to initiate a session throughout all subsequent request. The possible values are: none, deviceCodeFlow, authenticationTransfer, unknownFutureValue.
-     * @return a OriginalTransferMethods
+     * @return a SignInOriginalTransferMethod
      */
     @jakarta.annotation.Nullable
-    public OriginalTransferMethods getOriginalTransferMethod() {
+    public SignInOriginalTransferMethod getOriginalTransferMethod() {
         return this.backingStore.get("originalTransferMethod");
     }
     /**
@@ -456,10 +455,10 @@ public class SignIn extends Entity implements Parsable {
     }
     /**
      * Gets the riskDetail property value. The reason behind a specific state of a risky user, sign-in, or a risk event. Possible values: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, or unknownFutureValue. The value none means that Microsoft Entra risk detection has not flagged the user or the sign-in as a risky event so far.  Supports $filter (eq). Note: Details for this property are only available for Microsoft Entra ID P2 customers. All other customers are returned hidden.
-     * @return a RiskDetail
+     * @return a SignInRiskDetail
      */
     @jakarta.annotation.Nullable
-    public RiskDetail getRiskDetail() {
+    public SignInRiskDetail getRiskDetail() {
         return this.backingStore.get("riskDetail");
     }
     /**
@@ -472,26 +471,26 @@ public class SignIn extends Entity implements Parsable {
     }
     /**
      * Gets the riskLevelAggregated property value. The aggregated risk level. Possible values: none, low, medium, high, hidden, or unknownFutureValue. The value hidden means the user or sign-in wasn't enabled for Microsoft Entra ID Protection.  Supports $filter (eq). Note: Details for this property are only available for Microsoft Entra ID P2 customers. All other customers are returned hidden.
-     * @return a RiskLevel
+     * @return a SignInRiskLevelAggregated
      */
     @jakarta.annotation.Nullable
-    public RiskLevel getRiskLevelAggregated() {
+    public SignInRiskLevelAggregated getRiskLevelAggregated() {
         return this.backingStore.get("riskLevelAggregated");
     }
     /**
      * Gets the riskLevelDuringSignIn property value. The risk level during sign-in. Possible values: none, low, medium, high, hidden, or unknownFutureValue. The value hidden means the user or sign-in wasn't enabled for Microsoft Entra ID Protection.  Supports $filter (eq). Note: Details for this property are only available for Microsoft Entra ID P2 customers. All other customers are returned hidden.
-     * @return a RiskLevel
+     * @return a SignInRiskLevelDuringSignIn
      */
     @jakarta.annotation.Nullable
-    public RiskLevel getRiskLevelDuringSignIn() {
+    public SignInRiskLevelDuringSignIn getRiskLevelDuringSignIn() {
         return this.backingStore.get("riskLevelDuringSignIn");
     }
     /**
      * Gets the riskState property value. The risk state of a risky user, sign-in, or a risk event. Possible values: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, or unknownFutureValue.  Supports $filter (eq).
-     * @return a RiskState
+     * @return a SignInRiskState
      */
     @jakarta.annotation.Nullable
-    public RiskState getRiskState() {
+    public SignInRiskState getRiskState() {
         return this.backingStore.get("riskState");
     }
     /**
@@ -552,18 +551,18 @@ public class SignIn extends Entity implements Parsable {
     }
     /**
      * Gets the signInIdentifierType property value. The type of sign in identifier. Possible values are: userPrincipalName, phoneNumber, proxyAddress, qrCode, onPremisesUserPrincipalName, unknownFutureValue.
-     * @return a SignInIdentifierType
+     * @return a SignInSignInIdentifierType
      */
     @jakarta.annotation.Nullable
-    public SignInIdentifierType getSignInIdentifierType() {
+    public SignInSignInIdentifierType getSignInIdentifierType() {
         return this.backingStore.get("signInIdentifierType");
     }
     /**
      * Gets the signInTokenProtectionStatus property value. Token protection creates a cryptographically secure tie between the token and the device it is issued to. This field indicates whether the signin token was bound to the device or not. The possible values are: none, bound, unbound, unknownFutureValue.
-     * @return a TokenProtectionStatus
+     * @return a SignInSignInTokenProtectionStatus
      */
     @jakarta.annotation.Nullable
-    public TokenProtectionStatus getSignInTokenProtectionStatus() {
+    public SignInSignInTokenProtectionStatus getSignInTokenProtectionStatus() {
         return this.backingStore.get("signInTokenProtectionStatus");
     }
     /**
@@ -584,10 +583,10 @@ public class SignIn extends Entity implements Parsable {
     }
     /**
      * Gets the tokenIssuerType property value. The type of identity provider. The possible values are: AzureAD, ADFederationServices, UnknownFutureValue, AzureADBackupAuth, ADFederationServicesMFAAdapter, NPSExtension. You must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: AzureADBackupAuth , ADFederationServicesMFAAdapter , NPSExtension.
-     * @return a TokenIssuerType
+     * @return a SignInTokenIssuerType
      */
     @jakarta.annotation.Nullable
-    public TokenIssuerType getTokenIssuerType() {
+    public SignInTokenIssuerType getTokenIssuerType() {
         return this.backingStore.get("tokenIssuerType");
     }
     /**
@@ -656,7 +655,7 @@ public class SignIn extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("authenticationDetails", this.getAuthenticationDetails());
         writer.writeCollectionOfPrimitiveValues("authenticationMethodsUsed", this.getAuthenticationMethodsUsed());
         writer.writeCollectionOfObjectValues("authenticationProcessingDetails", this.getAuthenticationProcessingDetails());
-        writer.writeEnumSetValue("authenticationProtocol", this.getAuthenticationProtocol());
+        writer.writeEnumValue("authenticationProtocol", this.getAuthenticationProtocol());
         writer.writeStringValue("authenticationRequirement", this.getAuthenticationRequirement());
         writer.writeCollectionOfObjectValues("authenticationRequirementPolicies", this.getAuthenticationRequirementPolicies());
         writer.writeIntegerValue("autonomousSystemNumber", this.getAutonomousSystemNumber());
@@ -666,13 +665,13 @@ public class SignIn extends Entity implements Parsable {
         writer.writeEnumValue("conditionalAccessStatus", this.getConditionalAccessStatus());
         writer.writeStringValue("correlationId", this.getCorrelationId());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
-        writer.writeEnumSetValue("crossTenantAccessType", this.getCrossTenantAccessType());
+        writer.writeEnumValue("crossTenantAccessType", this.getCrossTenantAccessType());
         writer.writeObjectValue("deviceDetail", this.getDeviceDetail());
         writer.writeStringValue("federatedCredentialId", this.getFederatedCredentialId());
         writer.writeBooleanValue("flaggedForReview", this.getFlaggedForReview());
         writer.writeStringValue("homeTenantId", this.getHomeTenantId());
         writer.writeStringValue("homeTenantName", this.getHomeTenantName());
-        writer.writeEnumSetValue("incomingTokenType", this.getIncomingTokenType());
+        writer.writeEnumValue("incomingTokenType", this.getIncomingTokenType());
         writer.writeStringValue("ipAddress", this.getIpAddress());
         writer.writeStringValue("ipAddressFromResourceProvider", this.getIpAddressFromResourceProvider());
         writer.writeBooleanValue("isInteractive", this.getIsInteractive());
@@ -745,7 +744,7 @@ public class SignIn extends Entity implements Parsable {
      * Sets the appTokenProtectionStatus property value. The appTokenProtectionStatus property
      * @param value Value to set for the appTokenProtectionStatus property.
      */
-    public void setAppTokenProtectionStatus(@jakarta.annotation.Nullable final TokenProtectionStatus value) {
+    public void setAppTokenProtectionStatus(@jakarta.annotation.Nullable final SignInAppTokenProtectionStatus value) {
         this.backingStore.set("appTokenProtectionStatus", value);
     }
     /**
@@ -794,7 +793,7 @@ public class SignIn extends Entity implements Parsable {
      * Sets the authenticationProtocol property value. Lists the protocol type or grant type used in the authentication. The possible values are: oAuth2, ropc, wsFederation, saml20, deviceCode, unknownFutureValue, authenticationTransfer, and none. Use none for all authentications that don't have a specific value in that list.
      * @param value Value to set for the authenticationProtocol property.
      */
-    public void setAuthenticationProtocol(@jakarta.annotation.Nullable final EnumSet<ProtocolType> value) {
+    public void setAuthenticationProtocol(@jakarta.annotation.Nullable final SignInAuthenticationProtocol value) {
         this.backingStore.set("authenticationProtocol", value);
     }
     /**
@@ -836,14 +835,14 @@ public class SignIn extends Entity implements Parsable {
      * Sets the clientCredentialType property value. Describes the credential type that a user client or service principal provided to Microsoft Entra ID to authenticate itself. You can review this property to track and eliminate less secure credential types or to watch for clients and service principals using anomalous credential types. The possible values are: none, clientSecret, clientAssertion, federatedIdentityCredential, managedIdentity, certificate, unknownFutureValue.
      * @param value Value to set for the clientCredentialType property.
      */
-    public void setClientCredentialType(@jakarta.annotation.Nullable final ClientCredentialType value) {
+    public void setClientCredentialType(@jakarta.annotation.Nullable final SignInClientCredentialType value) {
         this.backingStore.set("clientCredentialType", value);
     }
     /**
      * Sets the conditionalAccessStatus property value. The status of the conditional access policy triggered. Possible values: success, failure, notApplied, or unknownFutureValue.  Supports $filter (eq).
      * @param value Value to set for the conditionalAccessStatus property.
      */
-    public void setConditionalAccessStatus(@jakarta.annotation.Nullable final ConditionalAccessStatus value) {
+    public void setConditionalAccessStatus(@jakarta.annotation.Nullable final SignInConditionalAccessStatus value) {
         this.backingStore.set("conditionalAccessStatus", value);
     }
     /**
@@ -864,7 +863,7 @@ public class SignIn extends Entity implements Parsable {
      * Sets the crossTenantAccessType property value. Describes the type of cross-tenant access used by the actor to access the resource. Possible values are: none, b2bCollaboration, b2bDirectConnect, microsoftSupport, serviceProvider, unknownFutureValue, passthrough. Also, please note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: passthrough. If the sign in didn't cross tenant boundaries, the value is none.
      * @param value Value to set for the crossTenantAccessType property.
      */
-    public void setCrossTenantAccessType(@jakarta.annotation.Nullable final EnumSet<SignInAccessType> value) {
+    public void setCrossTenantAccessType(@jakarta.annotation.Nullable final SignInCrossTenantAccessType value) {
         this.backingStore.set("crossTenantAccessType", value);
     }
     /**
@@ -906,7 +905,7 @@ public class SignIn extends Entity implements Parsable {
      * Sets the incomingTokenType property value. Indicates the token types that were presented to Microsoft Entra ID to authenticate the actor in the sign in. The possible values are: none, primaryRefreshToken, saml11, saml20, unknownFutureValue, remoteDesktopToken.  NOTE Microsoft Entra ID might have also used token types not listed in this enum type to authenticate the actor. Don't infer the lack of a token if it isn't one of the types listed. Also, please note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: remoteDesktopToken.
      * @param value Value to set for the incomingTokenType property.
      */
-    public void setIncomingTokenType(@jakarta.annotation.Nullable final EnumSet<IncomingTokenType> value) {
+    public void setIncomingTokenType(@jakarta.annotation.Nullable final SignInIncomingTokenType value) {
         this.backingStore.set("incomingTokenType", value);
     }
     /**
@@ -976,7 +975,7 @@ public class SignIn extends Entity implements Parsable {
      * Sets the originalTransferMethod property value. Transfer method used to initiate a session throughout all subsequent request. The possible values are: none, deviceCodeFlow, authenticationTransfer, unknownFutureValue.
      * @param value Value to set for the originalTransferMethod property.
      */
-    public void setOriginalTransferMethod(@jakarta.annotation.Nullable final OriginalTransferMethods value) {
+    public void setOriginalTransferMethod(@jakarta.annotation.Nullable final SignInOriginalTransferMethod value) {
         this.backingStore.set("originalTransferMethod", value);
     }
     /**
@@ -1025,7 +1024,7 @@ public class SignIn extends Entity implements Parsable {
      * Sets the riskDetail property value. The reason behind a specific state of a risky user, sign-in, or a risk event. Possible values: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, or unknownFutureValue. The value none means that Microsoft Entra risk detection has not flagged the user or the sign-in as a risky event so far.  Supports $filter (eq). Note: Details for this property are only available for Microsoft Entra ID P2 customers. All other customers are returned hidden.
      * @param value Value to set for the riskDetail property.
      */
-    public void setRiskDetail(@jakarta.annotation.Nullable final RiskDetail value) {
+    public void setRiskDetail(@jakarta.annotation.Nullable final SignInRiskDetail value) {
         this.backingStore.set("riskDetail", value);
     }
     /**
@@ -1039,21 +1038,21 @@ public class SignIn extends Entity implements Parsable {
      * Sets the riskLevelAggregated property value. The aggregated risk level. Possible values: none, low, medium, high, hidden, or unknownFutureValue. The value hidden means the user or sign-in wasn't enabled for Microsoft Entra ID Protection.  Supports $filter (eq). Note: Details for this property are only available for Microsoft Entra ID P2 customers. All other customers are returned hidden.
      * @param value Value to set for the riskLevelAggregated property.
      */
-    public void setRiskLevelAggregated(@jakarta.annotation.Nullable final RiskLevel value) {
+    public void setRiskLevelAggregated(@jakarta.annotation.Nullable final SignInRiskLevelAggregated value) {
         this.backingStore.set("riskLevelAggregated", value);
     }
     /**
      * Sets the riskLevelDuringSignIn property value. The risk level during sign-in. Possible values: none, low, medium, high, hidden, or unknownFutureValue. The value hidden means the user or sign-in wasn't enabled for Microsoft Entra ID Protection.  Supports $filter (eq). Note: Details for this property are only available for Microsoft Entra ID P2 customers. All other customers are returned hidden.
      * @param value Value to set for the riskLevelDuringSignIn property.
      */
-    public void setRiskLevelDuringSignIn(@jakarta.annotation.Nullable final RiskLevel value) {
+    public void setRiskLevelDuringSignIn(@jakarta.annotation.Nullable final SignInRiskLevelDuringSignIn value) {
         this.backingStore.set("riskLevelDuringSignIn", value);
     }
     /**
      * Sets the riskState property value. The risk state of a risky user, sign-in, or a risk event. Possible values: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, or unknownFutureValue.  Supports $filter (eq).
      * @param value Value to set for the riskState property.
      */
-    public void setRiskState(@jakarta.annotation.Nullable final RiskState value) {
+    public void setRiskState(@jakarta.annotation.Nullable final SignInRiskState value) {
         this.backingStore.set("riskState", value);
     }
     /**
@@ -1109,14 +1108,14 @@ public class SignIn extends Entity implements Parsable {
      * Sets the signInIdentifierType property value. The type of sign in identifier. Possible values are: userPrincipalName, phoneNumber, proxyAddress, qrCode, onPremisesUserPrincipalName, unknownFutureValue.
      * @param value Value to set for the signInIdentifierType property.
      */
-    public void setSignInIdentifierType(@jakarta.annotation.Nullable final SignInIdentifierType value) {
+    public void setSignInIdentifierType(@jakarta.annotation.Nullable final SignInSignInIdentifierType value) {
         this.backingStore.set("signInIdentifierType", value);
     }
     /**
      * Sets the signInTokenProtectionStatus property value. Token protection creates a cryptographically secure tie between the token and the device it is issued to. This field indicates whether the signin token was bound to the device or not. The possible values are: none, bound, unbound, unknownFutureValue.
      * @param value Value to set for the signInTokenProtectionStatus property.
      */
-    public void setSignInTokenProtectionStatus(@jakarta.annotation.Nullable final TokenProtectionStatus value) {
+    public void setSignInTokenProtectionStatus(@jakarta.annotation.Nullable final SignInSignInTokenProtectionStatus value) {
         this.backingStore.set("signInTokenProtectionStatus", value);
     }
     /**
@@ -1137,7 +1136,7 @@ public class SignIn extends Entity implements Parsable {
      * Sets the tokenIssuerType property value. The type of identity provider. The possible values are: AzureAD, ADFederationServices, UnknownFutureValue, AzureADBackupAuth, ADFederationServicesMFAAdapter, NPSExtension. You must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: AzureADBackupAuth , ADFederationServicesMFAAdapter , NPSExtension.
      * @param value Value to set for the tokenIssuerType property.
      */
-    public void setTokenIssuerType(@jakarta.annotation.Nullable final TokenIssuerType value) {
+    public void setTokenIssuerType(@jakarta.annotation.Nullable final SignInTokenIssuerType value) {
         this.backingStore.set("tokenIssuerType", value);
     }
     /**

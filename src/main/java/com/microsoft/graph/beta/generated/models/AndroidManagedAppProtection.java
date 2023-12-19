@@ -46,10 +46,10 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     }
     /**
      * Gets the appActionIfAccountIsClockedOut property value. Defines a managed app behavior, either block or warn, if the user is clocked out (non-working time).
-     * @return a ManagedAppRemediationAction
+     * @return a AndroidManagedAppProtectionAppActionIfAccountIsClockedOut
      */
     @jakarta.annotation.Nullable
-    public ManagedAppRemediationAction getAppActionIfAccountIsClockedOut() {
+    public AndroidManagedAppProtectionAppActionIfAccountIsClockedOut getAppActionIfAccountIsClockedOut() {
         return this.backingStore.get("appActionIfAccountIsClockedOut");
     }
     /**
@@ -94,34 +94,34 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     }
     /**
      * Gets the appActionIfDevicePasscodeComplexityLessThanHigh property value. If the device does not have a passcode of high complexity or higher, trigger the stored action.
-     * @return a ManagedAppRemediationAction
+     * @return a AndroidManagedAppProtectionAppActionIfDevicePasscodeComplexityLessThanHigh
      */
     @jakarta.annotation.Nullable
-    public ManagedAppRemediationAction getAppActionIfDevicePasscodeComplexityLessThanHigh() {
+    public AndroidManagedAppProtectionAppActionIfDevicePasscodeComplexityLessThanHigh getAppActionIfDevicePasscodeComplexityLessThanHigh() {
         return this.backingStore.get("appActionIfDevicePasscodeComplexityLessThanHigh");
     }
     /**
      * Gets the appActionIfDevicePasscodeComplexityLessThanLow property value. If the device does not have a passcode of low complexity or higher, trigger the stored action.
-     * @return a ManagedAppRemediationAction
+     * @return a AndroidManagedAppProtectionAppActionIfDevicePasscodeComplexityLessThanLow
      */
     @jakarta.annotation.Nullable
-    public ManagedAppRemediationAction getAppActionIfDevicePasscodeComplexityLessThanLow() {
+    public AndroidManagedAppProtectionAppActionIfDevicePasscodeComplexityLessThanLow getAppActionIfDevicePasscodeComplexityLessThanLow() {
         return this.backingStore.get("appActionIfDevicePasscodeComplexityLessThanLow");
     }
     /**
      * Gets the appActionIfDevicePasscodeComplexityLessThanMedium property value. If the device does not have a passcode of medium complexity or higher, trigger the stored action.
-     * @return a ManagedAppRemediationAction
+     * @return a AndroidManagedAppProtectionAppActionIfDevicePasscodeComplexityLessThanMedium
      */
     @jakarta.annotation.Nullable
-    public ManagedAppRemediationAction getAppActionIfDevicePasscodeComplexityLessThanMedium() {
+    public AndroidManagedAppProtectionAppActionIfDevicePasscodeComplexityLessThanMedium getAppActionIfDevicePasscodeComplexityLessThanMedium() {
         return this.backingStore.get("appActionIfDevicePasscodeComplexityLessThanMedium");
     }
     /**
      * Gets the appActionIfSamsungKnoxAttestationRequired property value. Defines the behavior of a managed app when Samsung Knox Attestation is required. Possible values are null, warn, block & wipe. If the admin does not set this action, the default is null, which indicates this setting is not configured.
-     * @return a ManagedAppRemediationAction
+     * @return a AndroidManagedAppProtectionAppActionIfSamsungKnoxAttestationRequired
      */
     @jakarta.annotation.Nullable
-    public ManagedAppRemediationAction getAppActionIfSamsungKnoxAttestationRequired() {
+    public AndroidManagedAppProtectionAppActionIfSamsungKnoxAttestationRequired getAppActionIfSamsungKnoxAttestationRequired() {
         return this.backingStore.get("appActionIfSamsungKnoxAttestationRequired");
     }
     /**
@@ -253,16 +253,16 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("allowedAndroidDeviceManufacturers", (n) -> { this.setAllowedAndroidDeviceManufacturers(n.getStringValue()); });
         deserializerMap.put("allowedAndroidDeviceModels", (n) -> { this.setAllowedAndroidDeviceModels(n.getCollectionOfPrimitiveValues(String.class)); });
-        deserializerMap.put("appActionIfAccountIsClockedOut", (n) -> { this.setAppActionIfAccountIsClockedOut(n.getEnumValue(ManagedAppRemediationAction::forValue)); });
+        deserializerMap.put("appActionIfAccountIsClockedOut", (n) -> { this.setAppActionIfAccountIsClockedOut(n.getEnumValue(AndroidManagedAppProtectionAppActionIfAccountIsClockedOut::forValue)); });
         deserializerMap.put("appActionIfAndroidDeviceManufacturerNotAllowed", (n) -> { this.setAppActionIfAndroidDeviceManufacturerNotAllowed(n.getEnumValue(ManagedAppRemediationAction::forValue)); });
         deserializerMap.put("appActionIfAndroidDeviceModelNotAllowed", (n) -> { this.setAppActionIfAndroidDeviceModelNotAllowed(n.getEnumValue(ManagedAppRemediationAction::forValue)); });
         deserializerMap.put("appActionIfAndroidSafetyNetAppsVerificationFailed", (n) -> { this.setAppActionIfAndroidSafetyNetAppsVerificationFailed(n.getEnumValue(ManagedAppRemediationAction::forValue)); });
         deserializerMap.put("appActionIfAndroidSafetyNetDeviceAttestationFailed", (n) -> { this.setAppActionIfAndroidSafetyNetDeviceAttestationFailed(n.getEnumValue(ManagedAppRemediationAction::forValue)); });
         deserializerMap.put("appActionIfDeviceLockNotSet", (n) -> { this.setAppActionIfDeviceLockNotSet(n.getEnumValue(ManagedAppRemediationAction::forValue)); });
-        deserializerMap.put("appActionIfDevicePasscodeComplexityLessThanHigh", (n) -> { this.setAppActionIfDevicePasscodeComplexityLessThanHigh(n.getEnumValue(ManagedAppRemediationAction::forValue)); });
-        deserializerMap.put("appActionIfDevicePasscodeComplexityLessThanLow", (n) -> { this.setAppActionIfDevicePasscodeComplexityLessThanLow(n.getEnumValue(ManagedAppRemediationAction::forValue)); });
-        deserializerMap.put("appActionIfDevicePasscodeComplexityLessThanMedium", (n) -> { this.setAppActionIfDevicePasscodeComplexityLessThanMedium(n.getEnumValue(ManagedAppRemediationAction::forValue)); });
-        deserializerMap.put("appActionIfSamsungKnoxAttestationRequired", (n) -> { this.setAppActionIfSamsungKnoxAttestationRequired(n.getEnumValue(ManagedAppRemediationAction::forValue)); });
+        deserializerMap.put("appActionIfDevicePasscodeComplexityLessThanHigh", (n) -> { this.setAppActionIfDevicePasscodeComplexityLessThanHigh(n.getEnumValue(AndroidManagedAppProtectionAppActionIfDevicePasscodeComplexityLessThanHigh::forValue)); });
+        deserializerMap.put("appActionIfDevicePasscodeComplexityLessThanLow", (n) -> { this.setAppActionIfDevicePasscodeComplexityLessThanLow(n.getEnumValue(AndroidManagedAppProtectionAppActionIfDevicePasscodeComplexityLessThanLow::forValue)); });
+        deserializerMap.put("appActionIfDevicePasscodeComplexityLessThanMedium", (n) -> { this.setAppActionIfDevicePasscodeComplexityLessThanMedium(n.getEnumValue(AndroidManagedAppProtectionAppActionIfDevicePasscodeComplexityLessThanMedium::forValue)); });
+        deserializerMap.put("appActionIfSamsungKnoxAttestationRequired", (n) -> { this.setAppActionIfSamsungKnoxAttestationRequired(n.getEnumValue(AndroidManagedAppProtectionAppActionIfSamsungKnoxAttestationRequired::forValue)); });
         deserializerMap.put("approvedKeyboards", (n) -> { this.setApprovedKeyboards(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
         deserializerMap.put("apps", (n) -> { this.setApps(n.getCollectionOfObjectValues(ManagedMobileApp::createFromDiscriminatorValue)); });
         deserializerMap.put("biometricAuthenticationBlocked", (n) -> { this.setBiometricAuthenticationBlocked(n.getBooleanValue()); });
@@ -513,7 +513,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * Sets the appActionIfAccountIsClockedOut property value. Defines a managed app behavior, either block or warn, if the user is clocked out (non-working time).
      * @param value Value to set for the appActionIfAccountIsClockedOut property.
      */
-    public void setAppActionIfAccountIsClockedOut(@jakarta.annotation.Nullable final ManagedAppRemediationAction value) {
+    public void setAppActionIfAccountIsClockedOut(@jakarta.annotation.Nullable final AndroidManagedAppProtectionAppActionIfAccountIsClockedOut value) {
         this.backingStore.set("appActionIfAccountIsClockedOut", value);
     }
     /**
@@ -555,28 +555,28 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * Sets the appActionIfDevicePasscodeComplexityLessThanHigh property value. If the device does not have a passcode of high complexity or higher, trigger the stored action.
      * @param value Value to set for the appActionIfDevicePasscodeComplexityLessThanHigh property.
      */
-    public void setAppActionIfDevicePasscodeComplexityLessThanHigh(@jakarta.annotation.Nullable final ManagedAppRemediationAction value) {
+    public void setAppActionIfDevicePasscodeComplexityLessThanHigh(@jakarta.annotation.Nullable final AndroidManagedAppProtectionAppActionIfDevicePasscodeComplexityLessThanHigh value) {
         this.backingStore.set("appActionIfDevicePasscodeComplexityLessThanHigh", value);
     }
     /**
      * Sets the appActionIfDevicePasscodeComplexityLessThanLow property value. If the device does not have a passcode of low complexity or higher, trigger the stored action.
      * @param value Value to set for the appActionIfDevicePasscodeComplexityLessThanLow property.
      */
-    public void setAppActionIfDevicePasscodeComplexityLessThanLow(@jakarta.annotation.Nullable final ManagedAppRemediationAction value) {
+    public void setAppActionIfDevicePasscodeComplexityLessThanLow(@jakarta.annotation.Nullable final AndroidManagedAppProtectionAppActionIfDevicePasscodeComplexityLessThanLow value) {
         this.backingStore.set("appActionIfDevicePasscodeComplexityLessThanLow", value);
     }
     /**
      * Sets the appActionIfDevicePasscodeComplexityLessThanMedium property value. If the device does not have a passcode of medium complexity or higher, trigger the stored action.
      * @param value Value to set for the appActionIfDevicePasscodeComplexityLessThanMedium property.
      */
-    public void setAppActionIfDevicePasscodeComplexityLessThanMedium(@jakarta.annotation.Nullable final ManagedAppRemediationAction value) {
+    public void setAppActionIfDevicePasscodeComplexityLessThanMedium(@jakarta.annotation.Nullable final AndroidManagedAppProtectionAppActionIfDevicePasscodeComplexityLessThanMedium value) {
         this.backingStore.set("appActionIfDevicePasscodeComplexityLessThanMedium", value);
     }
     /**
      * Sets the appActionIfSamsungKnoxAttestationRequired property value. Defines the behavior of a managed app when Samsung Knox Attestation is required. Possible values are null, warn, block & wipe. If the admin does not set this action, the default is null, which indicates this setting is not configured.
      * @param value Value to set for the appActionIfSamsungKnoxAttestationRequired property.
      */
-    public void setAppActionIfSamsungKnoxAttestationRequired(@jakarta.annotation.Nullable final ManagedAppRemediationAction value) {
+    public void setAppActionIfSamsungKnoxAttestationRequired(@jakarta.annotation.Nullable final AndroidManagedAppProtectionAppActionIfSamsungKnoxAttestationRequired value) {
         this.backingStore.set("appActionIfSamsungKnoxAttestationRequired", value);
     }
     /**

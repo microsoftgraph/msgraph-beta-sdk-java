@@ -7,7 +7,6 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import com.microsoft.kiota.store.BackedModel;
 import com.microsoft.kiota.store.BackingStore;
 import com.microsoft.kiota.store.BackingStoreFactorySingleton;
-import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -100,7 +99,7 @@ public class SubmissionResult implements AdditionalDataHolder, BackedModel, Pars
         deserializerMap.put("detectedFiles", (n) -> { this.setDetectedFiles(n.getCollectionOfObjectValues(SubmissionDetectedFile::createFromDiscriminatorValue)); });
         deserializerMap.put("detectedUrls", (n) -> { this.setDetectedUrls(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("userMailboxSetting", (n) -> { this.setUserMailboxSetting(n.getEnumSetValue(UserMailboxSetting::forValue)); });
+        deserializerMap.put("userMailboxSetting", (n) -> { this.setUserMailboxSetting(n.getEnumValue(SubmissionResultUserMailboxSetting::forValue)); });
         return deserializerMap;
     }
     /**
@@ -113,10 +112,10 @@ public class SubmissionResult implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the userMailboxSetting property value. Specifies the setting for user mailbox denoted by a comma-separated string.
-     * @return a EnumSet<UserMailboxSetting>
+     * @return a SubmissionResultUserMailboxSetting
      */
     @jakarta.annotation.Nullable
-    public EnumSet<UserMailboxSetting> getUserMailboxSetting() {
+    public SubmissionResultUserMailboxSetting getUserMailboxSetting() {
         return this.backingStore.get("userMailboxSetting");
     }
     /**
@@ -130,7 +129,7 @@ public class SubmissionResult implements AdditionalDataHolder, BackedModel, Pars
         writer.writeCollectionOfObjectValues("detectedFiles", this.getDetectedFiles());
         writer.writeCollectionOfPrimitiveValues("detectedUrls", this.getDetectedUrls());
         writer.writeStringValue("@odata.type", this.getOdataType());
-        writer.writeEnumSetValue("userMailboxSetting", this.getUserMailboxSetting());
+        writer.writeEnumValue("userMailboxSetting", this.getUserMailboxSetting());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -187,7 +186,7 @@ public class SubmissionResult implements AdditionalDataHolder, BackedModel, Pars
      * Sets the userMailboxSetting property value. Specifies the setting for user mailbox denoted by a comma-separated string.
      * @param value Value to set for the userMailboxSetting property.
      */
-    public void setUserMailboxSetting(@jakarta.annotation.Nullable final EnumSet<UserMailboxSetting> value) {
+    public void setUserMailboxSetting(@jakarta.annotation.Nullable final SubmissionResultUserMailboxSetting value) {
         this.backingStore.set("userMailboxSetting", value);
     }
 }

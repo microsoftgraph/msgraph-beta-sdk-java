@@ -27,18 +27,18 @@ public class ProtectOnlineMeetingAction extends LabelActionBase implements Parsa
     }
     /**
      * Gets the allowedForwarders property value. The allowedForwarders property
-     * @return a OnlineMeetingForwarders
+     * @return a ProtectOnlineMeetingActionAllowedForwarders
      */
     @jakarta.annotation.Nullable
-    public OnlineMeetingForwarders getAllowedForwarders() {
+    public ProtectOnlineMeetingActionAllowedForwarders getAllowedForwarders() {
         return this.backingStore.get("allowedForwarders");
     }
     /**
      * Gets the allowedPresenters property value. The allowedPresenters property
-     * @return a OnlineMeetingPresenters
+     * @return a ProtectOnlineMeetingActionAllowedPresenters
      */
     @jakarta.annotation.Nullable
-    public OnlineMeetingPresenters getAllowedPresenters() {
+    public ProtectOnlineMeetingActionAllowedPresenters getAllowedPresenters() {
         return this.backingStore.get("allowedPresenters");
     }
     /**
@@ -48,8 +48,8 @@ public class ProtectOnlineMeetingAction extends LabelActionBase implements Parsa
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("allowedForwarders", (n) -> { this.setAllowedForwarders(n.getEnumValue(OnlineMeetingForwarders::forValue)); });
-        deserializerMap.put("allowedPresenters", (n) -> { this.setAllowedPresenters(n.getEnumValue(OnlineMeetingPresenters::forValue)); });
+        deserializerMap.put("allowedForwarders", (n) -> { this.setAllowedForwarders(n.getEnumValue(ProtectOnlineMeetingActionAllowedForwarders::forValue)); });
+        deserializerMap.put("allowedPresenters", (n) -> { this.setAllowedPresenters(n.getEnumValue(ProtectOnlineMeetingActionAllowedPresenters::forValue)); });
         deserializerMap.put("isCopyToClipboardEnabled", (n) -> { this.setIsCopyToClipboardEnabled(n.getBooleanValue()); });
         deserializerMap.put("isLobbyEnabled", (n) -> { this.setIsLobbyEnabled(n.getBooleanValue()); });
         deserializerMap.put("lobbyBypassSettings", (n) -> { this.setLobbyBypassSettings(n.getObjectValue(LobbyBypassSettings::createFromDiscriminatorValue)); });
@@ -96,14 +96,14 @@ public class ProtectOnlineMeetingAction extends LabelActionBase implements Parsa
      * Sets the allowedForwarders property value. The allowedForwarders property
      * @param value Value to set for the allowedForwarders property.
      */
-    public void setAllowedForwarders(@jakarta.annotation.Nullable final OnlineMeetingForwarders value) {
+    public void setAllowedForwarders(@jakarta.annotation.Nullable final ProtectOnlineMeetingActionAllowedForwarders value) {
         this.backingStore.set("allowedForwarders", value);
     }
     /**
      * Sets the allowedPresenters property value. The allowedPresenters property
      * @param value Value to set for the allowedPresenters property.
      */
-    public void setAllowedPresenters(@jakarta.annotation.Nullable final OnlineMeetingPresenters value) {
+    public void setAllowedPresenters(@jakarta.annotation.Nullable final ProtectOnlineMeetingActionAllowedPresenters value) {
         this.backingStore.set("allowedPresenters", value);
     }
     /**

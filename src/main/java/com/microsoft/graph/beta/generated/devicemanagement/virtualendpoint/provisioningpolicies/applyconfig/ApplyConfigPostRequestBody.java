@@ -1,6 +1,5 @@
 package com.microsoft.graph.beta.devicemanagement.virtualendpoint.provisioningpolicies.applyconfig;
 
-import com.microsoft.graph.beta.models.CloudPcPolicySettingType;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -8,7 +7,6 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import com.microsoft.kiota.store.BackedModel;
 import com.microsoft.kiota.store.BackingStore;
 import com.microsoft.kiota.store.BackingStoreFactorySingleton;
-import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -73,15 +71,15 @@ public class ApplyConfigPostRequestBody implements AdditionalDataHolder, BackedM
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
         deserializerMap.put("cloudPcIds", (n) -> { this.setCloudPcIds(n.getCollectionOfPrimitiveValues(String.class)); });
-        deserializerMap.put("policySettings", (n) -> { this.setPolicySettings(n.getEnumSetValue(CloudPcPolicySettingType::forValue)); });
+        deserializerMap.put("policySettings", (n) -> { this.setPolicySettings(n.getEnumValue(ApplyConfigPostRequestBodyPolicySettings::forValue)); });
         return deserializerMap;
     }
     /**
      * Gets the policySettings property value. The policySettings property
-     * @return a EnumSet<CloudPcPolicySettingType>
+     * @return a ApplyConfigPostRequestBodyPolicySettings
      */
     @jakarta.annotation.Nullable
-    public EnumSet<CloudPcPolicySettingType> getPolicySettings() {
+    public ApplyConfigPostRequestBodyPolicySettings getPolicySettings() {
         return this.backingStore.get("policySettings");
     }
     /**
@@ -91,7 +89,7 @@ public class ApplyConfigPostRequestBody implements AdditionalDataHolder, BackedM
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("cloudPcIds", this.getCloudPcIds());
-        writer.writeEnumSetValue("policySettings", this.getPolicySettings());
+        writer.writeEnumValue("policySettings", this.getPolicySettings());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -120,7 +118,7 @@ public class ApplyConfigPostRequestBody implements AdditionalDataHolder, BackedM
      * Sets the policySettings property value. The policySettings property
      * @param value Value to set for the policySettings property.
      */
-    public void setPolicySettings(@jakarta.annotation.Nullable final EnumSet<CloudPcPolicySettingType> value) {
+    public void setPolicySettings(@jakarta.annotation.Nullable final ApplyConfigPostRequestBodyPolicySettings value) {
         this.backingStore.set("policySettings", value);
     }
 }

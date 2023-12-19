@@ -7,7 +7,6 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import com.microsoft.kiota.store.BackedModel;
 import com.microsoft.kiota.store.BackingStore;
 import com.microsoft.kiota.store.BackingStoreFactorySingleton;
-import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -58,10 +57,10 @@ public class ConditionalAccessRuleSatisfied implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the conditionalAccessCondition property value. Refers to the conditional access policy conditions that are satisfied. The possible values are: none, application, users, devicePlatform, location, clientType, signInRisk, userRisk, time, deviceState, client, ipAddressSeenByAzureAD, ipAddressSeenByResourceProvider, unknownFutureValue, servicePrincipals, servicePrincipalRisk, authenticationFlows, insiderRisk. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: servicePrincipals, servicePrincipalRisk, authenticationFlows, insiderRisk. conditionalAccessConditions is a multi-valued enumeration and the property can contain multiple values in a comma-separated list.
-     * @return a EnumSet<ConditionalAccessConditions>
+     * @return a ConditionalAccessRuleSatisfiedConditionalAccessCondition
      */
     @jakarta.annotation.Nullable
-    public EnumSet<ConditionalAccessConditions> getConditionalAccessCondition() {
+    public ConditionalAccessRuleSatisfiedConditionalAccessCondition getConditionalAccessCondition() {
         return this.backingStore.get("conditionalAccessCondition");
     }
     /**
@@ -71,9 +70,9 @@ public class ConditionalAccessRuleSatisfied implements AdditionalDataHolder, Bac
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
-        deserializerMap.put("conditionalAccessCondition", (n) -> { this.setConditionalAccessCondition(n.getEnumSetValue(ConditionalAccessConditions::forValue)); });
+        deserializerMap.put("conditionalAccessCondition", (n) -> { this.setConditionalAccessCondition(n.getEnumValue(ConditionalAccessRuleSatisfiedConditionalAccessCondition::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("ruleSatisfied", (n) -> { this.setRuleSatisfied(n.getEnumValue(ConditionalAccessRule::forValue)); });
+        deserializerMap.put("ruleSatisfied", (n) -> { this.setRuleSatisfied(n.getEnumValue(ConditionalAccessRuleSatisfiedRuleSatisfied::forValue)); });
         return deserializerMap;
     }
     /**
@@ -86,10 +85,10 @@ public class ConditionalAccessRuleSatisfied implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the ruleSatisfied property value. Refers to the conditional access policy conditions that were satisfied. The possible values are: allApps, firstPartyApps, office365, appId, acr, appFilter, allUsers, guest, groupId, roleId, userId, allDevicePlatforms, devicePlatform, allLocations, insideCorpnet, allTrustedLocations, locationId, allDevices, deviceFilter, deviceState, unknownFutureValue, deviceFilterIncludeRuleNotMatched, allDeviceStates, anonymizedIPAddress, unfamiliarFeatures, nationStateIPAddress, realTimeThreatIntelligence, internalGuest, b2bCollaborationGuest, b2bCollaborationMember, b2bDirectConnectUser, otherExternalUser, serviceProvider, microsoftAdminPortals, deviceCodeFlow, accountTransfer, insiderRisk. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: deviceFilterIncludeRuleNotMatched, allDeviceStates, anonymizedIPAddress, unfamiliarFeatures, nationStateIPAddress, realTimeThreatIntelligence, internalGuest, b2bCollaborationGuest, b2bCollaborationMember, b2bDirectConnectUser, otherExternalUser, serviceProvider, microsoftAdminPortals, deviceCodeFlow, accountTransfer, insiderRisk.
-     * @return a ConditionalAccessRule
+     * @return a ConditionalAccessRuleSatisfiedRuleSatisfied
      */
     @jakarta.annotation.Nullable
-    public ConditionalAccessRule getRuleSatisfied() {
+    public ConditionalAccessRuleSatisfiedRuleSatisfied getRuleSatisfied() {
         return this.backingStore.get("ruleSatisfied");
     }
     /**
@@ -98,7 +97,7 @@ public class ConditionalAccessRuleSatisfied implements AdditionalDataHolder, Bac
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeEnumSetValue("conditionalAccessCondition", this.getConditionalAccessCondition());
+        writer.writeEnumValue("conditionalAccessCondition", this.getConditionalAccessCondition());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("ruleSatisfied", this.getRuleSatisfied());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -122,7 +121,7 @@ public class ConditionalAccessRuleSatisfied implements AdditionalDataHolder, Bac
      * Sets the conditionalAccessCondition property value. Refers to the conditional access policy conditions that are satisfied. The possible values are: none, application, users, devicePlatform, location, clientType, signInRisk, userRisk, time, deviceState, client, ipAddressSeenByAzureAD, ipAddressSeenByResourceProvider, unknownFutureValue, servicePrincipals, servicePrincipalRisk, authenticationFlows, insiderRisk. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: servicePrincipals, servicePrincipalRisk, authenticationFlows, insiderRisk. conditionalAccessConditions is a multi-valued enumeration and the property can contain multiple values in a comma-separated list.
      * @param value Value to set for the conditionalAccessCondition property.
      */
-    public void setConditionalAccessCondition(@jakarta.annotation.Nullable final EnumSet<ConditionalAccessConditions> value) {
+    public void setConditionalAccessCondition(@jakarta.annotation.Nullable final ConditionalAccessRuleSatisfiedConditionalAccessCondition value) {
         this.backingStore.set("conditionalAccessCondition", value);
     }
     /**
@@ -136,7 +135,7 @@ public class ConditionalAccessRuleSatisfied implements AdditionalDataHolder, Bac
      * Sets the ruleSatisfied property value. Refers to the conditional access policy conditions that were satisfied. The possible values are: allApps, firstPartyApps, office365, appId, acr, appFilter, allUsers, guest, groupId, roleId, userId, allDevicePlatforms, devicePlatform, allLocations, insideCorpnet, allTrustedLocations, locationId, allDevices, deviceFilter, deviceState, unknownFutureValue, deviceFilterIncludeRuleNotMatched, allDeviceStates, anonymizedIPAddress, unfamiliarFeatures, nationStateIPAddress, realTimeThreatIntelligence, internalGuest, b2bCollaborationGuest, b2bCollaborationMember, b2bDirectConnectUser, otherExternalUser, serviceProvider, microsoftAdminPortals, deviceCodeFlow, accountTransfer, insiderRisk. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: deviceFilterIncludeRuleNotMatched, allDeviceStates, anonymizedIPAddress, unfamiliarFeatures, nationStateIPAddress, realTimeThreatIntelligence, internalGuest, b2bCollaborationGuest, b2bCollaborationMember, b2bDirectConnectUser, otherExternalUser, serviceProvider, microsoftAdminPortals, deviceCodeFlow, accountTransfer, insiderRisk.
      * @param value Value to set for the ruleSatisfied property.
      */
-    public void setRuleSatisfied(@jakarta.annotation.Nullable final ConditionalAccessRule value) {
+    public void setRuleSatisfied(@jakarta.annotation.Nullable final ConditionalAccessRuleSatisfiedRuleSatisfied value) {
         this.backingStore.set("ruleSatisfied", value);
     }
 }

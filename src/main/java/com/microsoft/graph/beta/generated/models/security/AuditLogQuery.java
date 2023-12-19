@@ -58,7 +58,7 @@ public class AuditLogQuery extends Entity implements Parsable {
         deserializerMap.put("objectIdFilters", (n) -> { this.setObjectIdFilters(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("operationFilters", (n) -> { this.setOperationFilters(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("records", (n) -> { this.setRecords(n.getCollectionOfObjectValues(AuditLogRecord::createFromDiscriminatorValue)); });
-        deserializerMap.put("recordTypeFilters", (n) -> { this.setRecordTypeFilters(n.getCollectionOfEnumValues(AuditLogRecordType::forValue)); });
+        deserializerMap.put("recordTypeFilters", (n) -> { this.setRecordTypeFilters(n.getCollectionOfEnumValues(AuditLogQueryRecordTypeFilters::forValue)); });
         deserializerMap.put("serviceFilters", (n) -> { this.setServiceFilters(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(AuditLogQueryStatus::forValue)); });
         deserializerMap.put("userPrincipalNameFilters", (n) -> { this.setUserPrincipalNameFilters(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -122,10 +122,10 @@ public class AuditLogQuery extends Entity implements Parsable {
     }
     /**
      * Gets the recordTypeFilters property value. The recordTypeFilters property
-     * @return a java.util.List<AuditLogRecordType>
+     * @return a java.util.List<AuditLogQueryRecordTypeFilters>
      */
     @jakarta.annotation.Nullable
-    public java.util.List<AuditLogRecordType> getRecordTypeFilters() {
+    public java.util.List<AuditLogQueryRecordTypeFilters> getRecordTypeFilters() {
         return this.backingStore.get("recordTypeFilters");
     }
     /**
@@ -240,7 +240,7 @@ public class AuditLogQuery extends Entity implements Parsable {
      * Sets the recordTypeFilters property value. The recordTypeFilters property
      * @param value Value to set for the recordTypeFilters property.
      */
-    public void setRecordTypeFilters(@jakarta.annotation.Nullable final java.util.List<AuditLogRecordType> value) {
+    public void setRecordTypeFilters(@jakarta.annotation.Nullable final java.util.List<AuditLogQueryRecordTypeFilters> value) {
         this.backingStore.set("recordTypeFilters", value);
     }
     /**

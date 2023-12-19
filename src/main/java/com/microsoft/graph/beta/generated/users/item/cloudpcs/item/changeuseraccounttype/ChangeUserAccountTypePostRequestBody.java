@@ -1,6 +1,5 @@
 package com.microsoft.graph.beta.users.item.cloudpcs.item.changeuseraccounttype;
 
-import com.microsoft.graph.beta.models.CloudPcUserAccountType;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -63,15 +62,15 @@ public class ChangeUserAccountTypePostRequestBody implements AdditionalDataHolde
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(1);
-        deserializerMap.put("userAccountType", (n) -> { this.setUserAccountType(n.getEnumValue(CloudPcUserAccountType::forValue)); });
+        deserializerMap.put("userAccountType", (n) -> { this.setUserAccountType(n.getEnumValue(ChangeUserAccountTypePostRequestBodyUserAccountType::forValue)); });
         return deserializerMap;
     }
     /**
      * Gets the userAccountType property value. The userAccountType property
-     * @return a CloudPcUserAccountType
+     * @return a ChangeUserAccountTypePostRequestBodyUserAccountType
      */
     @jakarta.annotation.Nullable
-    public CloudPcUserAccountType getUserAccountType() {
+    public ChangeUserAccountTypePostRequestBodyUserAccountType getUserAccountType() {
         return this.backingStore.get("userAccountType");
     }
     /**
@@ -102,7 +101,7 @@ public class ChangeUserAccountTypePostRequestBody implements AdditionalDataHolde
      * Sets the userAccountType property value. The userAccountType property
      * @param value Value to set for the userAccountType property.
      */
-    public void setUserAccountType(@jakarta.annotation.Nullable final CloudPcUserAccountType value) {
+    public void setUserAccountType(@jakarta.annotation.Nullable final ChangeUserAccountTypePostRequestBodyUserAccountType value) {
         this.backingStore.set("userAccountType", value);
     }
 }

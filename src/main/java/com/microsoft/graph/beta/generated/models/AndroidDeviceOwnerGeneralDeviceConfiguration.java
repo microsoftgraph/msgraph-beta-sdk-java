@@ -54,18 +54,18 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the appsAutoUpdatePolicy property value. Indicates the value of the app auto update policy. Possible values are: notConfigured, userChoice, never, wiFiOnly, always.
-     * @return a AndroidDeviceOwnerAppAutoUpdatePolicyType
+     * @return a AndroidDeviceOwnerGeneralDeviceConfigurationAppsAutoUpdatePolicy
      */
     @jakarta.annotation.Nullable
-    public AndroidDeviceOwnerAppAutoUpdatePolicyType getAppsAutoUpdatePolicy() {
+    public AndroidDeviceOwnerGeneralDeviceConfigurationAppsAutoUpdatePolicy getAppsAutoUpdatePolicy() {
         return this.backingStore.get("appsAutoUpdatePolicy");
     }
     /**
      * Gets the appsDefaultPermissionPolicy property value. Indicates the permission policy for requests for runtime permissions if one is not defined for the app specifically. Possible values are: deviceDefault, prompt, autoGrant, autoDeny.
-     * @return a AndroidDeviceOwnerDefaultAppPermissionPolicyType
+     * @return a AndroidDeviceOwnerGeneralDeviceConfigurationAppsDefaultPermissionPolicy
      */
     @jakarta.annotation.Nullable
-    public AndroidDeviceOwnerDefaultAppPermissionPolicyType getAppsDefaultPermissionPolicy() {
+    public AndroidDeviceOwnerGeneralDeviceConfigurationAppsDefaultPermissionPolicy getAppsDefaultPermissionPolicy() {
         return this.backingStore.get("appsDefaultPermissionPolicy");
     }
     /**
@@ -134,10 +134,10 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the crossProfilePoliciesAllowDataSharing property value. Indicates whether data from one profile (personal or work) can be shared with apps in the other profile. Possible values are: notConfigured, crossProfileDataSharingBlocked, dataSharingFromWorkToPersonalBlocked, crossProfileDataSharingAllowed, unkownFutureValue.
-     * @return a AndroidDeviceOwnerCrossProfileDataSharing
+     * @return a AndroidDeviceOwnerGeneralDeviceConfigurationCrossProfilePoliciesAllowDataSharing
      */
     @jakarta.annotation.Nullable
-    public AndroidDeviceOwnerCrossProfileDataSharing getCrossProfilePoliciesAllowDataSharing() {
+    public AndroidDeviceOwnerGeneralDeviceConfigurationCrossProfilePoliciesAllowDataSharing getCrossProfilePoliciesAllowDataSharing() {
         return this.backingStore.get("crossProfilePoliciesAllowDataSharing");
     }
     /**
@@ -174,10 +174,10 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the deviceLocationMode property value. Indicates the location setting configuration for fully managed devices (COBO) and corporate owned devices with a work profile (COPE)
-     * @return a AndroidDeviceOwnerLocationMode
+     * @return a AndroidDeviceOwnerGeneralDeviceConfigurationDeviceLocationMode
      */
     @jakarta.annotation.Nullable
-    public AndroidDeviceOwnerLocationMode getDeviceLocationMode() {
+    public AndroidDeviceOwnerGeneralDeviceConfigurationDeviceLocationMode getDeviceLocationMode() {
         return this.backingStore.get("deviceLocationMode");
     }
     /**
@@ -222,8 +222,8 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         deserializerMap.put("accountsBlockModification", (n) -> { this.setAccountsBlockModification(n.getBooleanValue()); });
         deserializerMap.put("androidDeviceOwnerDelegatedScopeAppSettings", (n) -> { this.setAndroidDeviceOwnerDelegatedScopeAppSettings(n.getCollectionOfObjectValues(AndroidDeviceOwnerDelegatedScopeAppSetting::createFromDiscriminatorValue)); });
         deserializerMap.put("appsAllowInstallFromUnknownSources", (n) -> { this.setAppsAllowInstallFromUnknownSources(n.getBooleanValue()); });
-        deserializerMap.put("appsAutoUpdatePolicy", (n) -> { this.setAppsAutoUpdatePolicy(n.getEnumValue(AndroidDeviceOwnerAppAutoUpdatePolicyType::forValue)); });
-        deserializerMap.put("appsDefaultPermissionPolicy", (n) -> { this.setAppsDefaultPermissionPolicy(n.getEnumValue(AndroidDeviceOwnerDefaultAppPermissionPolicyType::forValue)); });
+        deserializerMap.put("appsAutoUpdatePolicy", (n) -> { this.setAppsAutoUpdatePolicy(n.getEnumValue(AndroidDeviceOwnerGeneralDeviceConfigurationAppsAutoUpdatePolicy::forValue)); });
+        deserializerMap.put("appsDefaultPermissionPolicy", (n) -> { this.setAppsDefaultPermissionPolicy(n.getEnumValue(AndroidDeviceOwnerGeneralDeviceConfigurationAppsDefaultPermissionPolicy::forValue)); });
         deserializerMap.put("appsRecommendSkippingFirstUseHints", (n) -> { this.setAppsRecommendSkippingFirstUseHints(n.getBooleanValue()); });
         deserializerMap.put("azureAdSharedDeviceDataClearApps", (n) -> { this.setAzureAdSharedDeviceDataClearApps(n.getCollectionOfObjectValues(AppListItem::createFromDiscriminatorValue)); });
         deserializerMap.put("bluetoothBlockConfiguration", (n) -> { this.setBluetoothBlockConfiguration(n.getBooleanValue()); });
@@ -232,12 +232,12 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         deserializerMap.put("cellularBlockWiFiTethering", (n) -> { this.setCellularBlockWiFiTethering(n.getBooleanValue()); });
         deserializerMap.put("certificateCredentialConfigurationDisabled", (n) -> { this.setCertificateCredentialConfigurationDisabled(n.getBooleanValue()); });
         deserializerMap.put("crossProfilePoliciesAllowCopyPaste", (n) -> { this.setCrossProfilePoliciesAllowCopyPaste(n.getBooleanValue()); });
-        deserializerMap.put("crossProfilePoliciesAllowDataSharing", (n) -> { this.setCrossProfilePoliciesAllowDataSharing(n.getEnumValue(AndroidDeviceOwnerCrossProfileDataSharing::forValue)); });
+        deserializerMap.put("crossProfilePoliciesAllowDataSharing", (n) -> { this.setCrossProfilePoliciesAllowDataSharing(n.getEnumValue(AndroidDeviceOwnerGeneralDeviceConfigurationCrossProfilePoliciesAllowDataSharing::forValue)); });
         deserializerMap.put("crossProfilePoliciesShowWorkContactsInPersonalProfile", (n) -> { this.setCrossProfilePoliciesShowWorkContactsInPersonalProfile(n.getBooleanValue()); });
         deserializerMap.put("dataRoamingBlocked", (n) -> { this.setDataRoamingBlocked(n.getBooleanValue()); });
         deserializerMap.put("dateTimeConfigurationBlocked", (n) -> { this.setDateTimeConfigurationBlocked(n.getBooleanValue()); });
         deserializerMap.put("detailedHelpText", (n) -> { this.setDetailedHelpText(n.getObjectValue(AndroidDeviceOwnerUserFacingMessage::createFromDiscriminatorValue)); });
-        deserializerMap.put("deviceLocationMode", (n) -> { this.setDeviceLocationMode(n.getEnumValue(AndroidDeviceOwnerLocationMode::forValue)); });
+        deserializerMap.put("deviceLocationMode", (n) -> { this.setDeviceLocationMode(n.getEnumValue(AndroidDeviceOwnerGeneralDeviceConfigurationDeviceLocationMode::forValue)); });
         deserializerMap.put("deviceOwnerLockScreenMessage", (n) -> { this.setDeviceOwnerLockScreenMessage(n.getObjectValue(AndroidDeviceOwnerUserFacingMessage::createFromDiscriminatorValue)); });
         deserializerMap.put("enrollmentProfile", (n) -> { this.setEnrollmentProfile(n.getEnumValue(AndroidDeviceOwnerEnrollmentProfileType::forValue)); });
         deserializerMap.put("factoryResetBlocked", (n) -> { this.setFactoryResetBlocked(n.getBooleanValue()); });
@@ -246,9 +246,9 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         deserializerMap.put("googleAccountsBlocked", (n) -> { this.setGoogleAccountsBlocked(n.getBooleanValue()); });
         deserializerMap.put("kioskCustomizationDeviceSettingsBlocked", (n) -> { this.setKioskCustomizationDeviceSettingsBlocked(n.getBooleanValue()); });
         deserializerMap.put("kioskCustomizationPowerButtonActionsBlocked", (n) -> { this.setKioskCustomizationPowerButtonActionsBlocked(n.getBooleanValue()); });
-        deserializerMap.put("kioskCustomizationStatusBar", (n) -> { this.setKioskCustomizationStatusBar(n.getEnumValue(AndroidDeviceOwnerKioskCustomizationStatusBar::forValue)); });
+        deserializerMap.put("kioskCustomizationStatusBar", (n) -> { this.setKioskCustomizationStatusBar(n.getEnumValue(AndroidDeviceOwnerGeneralDeviceConfigurationKioskCustomizationStatusBar::forValue)); });
         deserializerMap.put("kioskCustomizationSystemErrorWarnings", (n) -> { this.setKioskCustomizationSystemErrorWarnings(n.getBooleanValue()); });
-        deserializerMap.put("kioskCustomizationSystemNavigation", (n) -> { this.setKioskCustomizationSystemNavigation(n.getEnumValue(AndroidDeviceOwnerKioskCustomizationSystemNavigation::forValue)); });
+        deserializerMap.put("kioskCustomizationSystemNavigation", (n) -> { this.setKioskCustomizationSystemNavigation(n.getEnumValue(AndroidDeviceOwnerGeneralDeviceConfigurationKioskCustomizationSystemNavigation::forValue)); });
         deserializerMap.put("kioskModeAppOrderEnabled", (n) -> { this.setKioskModeAppOrderEnabled(n.getBooleanValue()); });
         deserializerMap.put("kioskModeAppPositions", (n) -> { this.setKioskModeAppPositions(n.getCollectionOfObjectValues(AndroidDeviceOwnerKioskModeAppPositionItem::createFromDiscriminatorValue)); });
         deserializerMap.put("kioskModeApps", (n) -> { this.setKioskModeApps(n.getCollectionOfObjectValues(AppListItem::createFromDiscriminatorValue)); });
@@ -257,16 +257,16 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         deserializerMap.put("kioskModeDebugMenuEasyAccessEnabled", (n) -> { this.setKioskModeDebugMenuEasyAccessEnabled(n.getBooleanValue()); });
         deserializerMap.put("kioskModeExitCode", (n) -> { this.setKioskModeExitCode(n.getStringValue()); });
         deserializerMap.put("kioskModeFlashlightConfigurationEnabled", (n) -> { this.setKioskModeFlashlightConfigurationEnabled(n.getBooleanValue()); });
-        deserializerMap.put("kioskModeFolderIcon", (n) -> { this.setKioskModeFolderIcon(n.getEnumValue(AndroidDeviceOwnerKioskModeFolderIcon::forValue)); });
+        deserializerMap.put("kioskModeFolderIcon", (n) -> { this.setKioskModeFolderIcon(n.getEnumValue(AndroidDeviceOwnerGeneralDeviceConfigurationKioskModeFolderIcon::forValue)); });
         deserializerMap.put("kioskModeGridHeight", (n) -> { this.setKioskModeGridHeight(n.getIntegerValue()); });
         deserializerMap.put("kioskModeGridWidth", (n) -> { this.setKioskModeGridWidth(n.getIntegerValue()); });
-        deserializerMap.put("kioskModeIconSize", (n) -> { this.setKioskModeIconSize(n.getEnumValue(AndroidDeviceOwnerKioskModeIconSize::forValue)); });
+        deserializerMap.put("kioskModeIconSize", (n) -> { this.setKioskModeIconSize(n.getEnumValue(AndroidDeviceOwnerGeneralDeviceConfigurationKioskModeIconSize::forValue)); });
         deserializerMap.put("kioskModeLockHomeScreen", (n) -> { this.setKioskModeLockHomeScreen(n.getBooleanValue()); });
         deserializerMap.put("kioskModeManagedFolders", (n) -> { this.setKioskModeManagedFolders(n.getCollectionOfObjectValues(AndroidDeviceOwnerKioskModeManagedFolder::createFromDiscriminatorValue)); });
         deserializerMap.put("kioskModeManagedHomeScreenAutoSignout", (n) -> { this.setKioskModeManagedHomeScreenAutoSignout(n.getBooleanValue()); });
         deserializerMap.put("kioskModeManagedHomeScreenInactiveSignOutDelayInSeconds", (n) -> { this.setKioskModeManagedHomeScreenInactiveSignOutDelayInSeconds(n.getIntegerValue()); });
         deserializerMap.put("kioskModeManagedHomeScreenInactiveSignOutNoticeInSeconds", (n) -> { this.setKioskModeManagedHomeScreenInactiveSignOutNoticeInSeconds(n.getIntegerValue()); });
-        deserializerMap.put("kioskModeManagedHomeScreenPinComplexity", (n) -> { this.setKioskModeManagedHomeScreenPinComplexity(n.getEnumValue(KioskModeManagedHomeScreenPinComplexity::forValue)); });
+        deserializerMap.put("kioskModeManagedHomeScreenPinComplexity", (n) -> { this.setKioskModeManagedHomeScreenPinComplexity(n.getEnumValue(AndroidDeviceOwnerGeneralDeviceConfigurationKioskModeManagedHomeScreenPinComplexity::forValue)); });
         deserializerMap.put("kioskModeManagedHomeScreenPinRequired", (n) -> { this.setKioskModeManagedHomeScreenPinRequired(n.getBooleanValue()); });
         deserializerMap.put("kioskModeManagedHomeScreenPinRequiredToResume", (n) -> { this.setKioskModeManagedHomeScreenPinRequiredToResume(n.getBooleanValue()); });
         deserializerMap.put("kioskModeManagedHomeScreenSignInBackground", (n) -> { this.setKioskModeManagedHomeScreenSignInBackground(n.getStringValue()); });
@@ -274,7 +274,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         deserializerMap.put("kioskModeManagedHomeScreenSignInEnabled", (n) -> { this.setKioskModeManagedHomeScreenSignInEnabled(n.getBooleanValue()); });
         deserializerMap.put("kioskModeManagedSettingsEntryDisabled", (n) -> { this.setKioskModeManagedSettingsEntryDisabled(n.getBooleanValue()); });
         deserializerMap.put("kioskModeMediaVolumeConfigurationEnabled", (n) -> { this.setKioskModeMediaVolumeConfigurationEnabled(n.getBooleanValue()); });
-        deserializerMap.put("kioskModeScreenOrientation", (n) -> { this.setKioskModeScreenOrientation(n.getEnumValue(AndroidDeviceOwnerKioskModeScreenOrientation::forValue)); });
+        deserializerMap.put("kioskModeScreenOrientation", (n) -> { this.setKioskModeScreenOrientation(n.getEnumValue(AndroidDeviceOwnerGeneralDeviceConfigurationKioskModeScreenOrientation::forValue)); });
         deserializerMap.put("kioskModeScreenSaverConfigurationEnabled", (n) -> { this.setKioskModeScreenSaverConfigurationEnabled(n.getBooleanValue()); });
         deserializerMap.put("kioskModeScreenSaverDetectMediaDisabled", (n) -> { this.setKioskModeScreenSaverDetectMediaDisabled(n.getBooleanValue()); });
         deserializerMap.put("kioskModeScreenSaverDisplayTimeInSeconds", (n) -> { this.setKioskModeScreenSaverDisplayTimeInSeconds(n.getIntegerValue()); });
@@ -282,9 +282,9 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         deserializerMap.put("kioskModeScreenSaverStartDelayInSeconds", (n) -> { this.setKioskModeScreenSaverStartDelayInSeconds(n.getIntegerValue()); });
         deserializerMap.put("kioskModeShowAppNotificationBadge", (n) -> { this.setKioskModeShowAppNotificationBadge(n.getBooleanValue()); });
         deserializerMap.put("kioskModeShowDeviceInfo", (n) -> { this.setKioskModeShowDeviceInfo(n.getBooleanValue()); });
-        deserializerMap.put("kioskModeUseManagedHomeScreenApp", (n) -> { this.setKioskModeUseManagedHomeScreenApp(n.getEnumValue(KioskModeType::forValue)); });
+        deserializerMap.put("kioskModeUseManagedHomeScreenApp", (n) -> { this.setKioskModeUseManagedHomeScreenApp(n.getEnumValue(AndroidDeviceOwnerGeneralDeviceConfigurationKioskModeUseManagedHomeScreenApp::forValue)); });
         deserializerMap.put("kioskModeVirtualHomeButtonEnabled", (n) -> { this.setKioskModeVirtualHomeButtonEnabled(n.getBooleanValue()); });
-        deserializerMap.put("kioskModeVirtualHomeButtonType", (n) -> { this.setKioskModeVirtualHomeButtonType(n.getEnumValue(AndroidDeviceOwnerVirtualHomeButtonType::forValue)); });
+        deserializerMap.put("kioskModeVirtualHomeButtonType", (n) -> { this.setKioskModeVirtualHomeButtonType(n.getEnumValue(AndroidDeviceOwnerGeneralDeviceConfigurationKioskModeVirtualHomeButtonType::forValue)); });
         deserializerMap.put("kioskModeWallpaperUrl", (n) -> { this.setKioskModeWallpaperUrl(n.getStringValue()); });
         deserializerMap.put("kioskModeWifiAllowedSsids", (n) -> { this.setKioskModeWifiAllowedSsids(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("kioskModeWiFiConfigurationEnabled", (n) -> { this.setKioskModeWiFiConfigurationEnabled(n.getBooleanValue()); });
@@ -296,10 +296,10 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         deserializerMap.put("microsoftLauncherCustomWallpaperEnabled", (n) -> { this.setMicrosoftLauncherCustomWallpaperEnabled(n.getBooleanValue()); });
         deserializerMap.put("microsoftLauncherCustomWallpaperImageUrl", (n) -> { this.setMicrosoftLauncherCustomWallpaperImageUrl(n.getStringValue()); });
         deserializerMap.put("microsoftLauncherDockPresenceAllowUserModification", (n) -> { this.setMicrosoftLauncherDockPresenceAllowUserModification(n.getBooleanValue()); });
-        deserializerMap.put("microsoftLauncherDockPresenceConfiguration", (n) -> { this.setMicrosoftLauncherDockPresenceConfiguration(n.getEnumValue(MicrosoftLauncherDockPresence::forValue)); });
+        deserializerMap.put("microsoftLauncherDockPresenceConfiguration", (n) -> { this.setMicrosoftLauncherDockPresenceConfiguration(n.getEnumValue(AndroidDeviceOwnerGeneralDeviceConfigurationMicrosoftLauncherDockPresenceConfiguration::forValue)); });
         deserializerMap.put("microsoftLauncherFeedAllowUserModification", (n) -> { this.setMicrosoftLauncherFeedAllowUserModification(n.getBooleanValue()); });
         deserializerMap.put("microsoftLauncherFeedEnabled", (n) -> { this.setMicrosoftLauncherFeedEnabled(n.getBooleanValue()); });
-        deserializerMap.put("microsoftLauncherSearchBarPlacementConfiguration", (n) -> { this.setMicrosoftLauncherSearchBarPlacementConfiguration(n.getEnumValue(MicrosoftLauncherSearchBarPlacement::forValue)); });
+        deserializerMap.put("microsoftLauncherSearchBarPlacementConfiguration", (n) -> { this.setMicrosoftLauncherSearchBarPlacementConfiguration(n.getEnumValue(AndroidDeviceOwnerGeneralDeviceConfigurationMicrosoftLauncherSearchBarPlacementConfiguration::forValue)); });
         deserializerMap.put("networkEscapeHatchAllowed", (n) -> { this.setNetworkEscapeHatchAllowed(n.getBooleanValue()); });
         deserializerMap.put("nfcBlockOutgoingBeam", (n) -> { this.setNfcBlockOutgoingBeam(n.getBooleanValue()); });
         deserializerMap.put("passwordBlockKeyguard", (n) -> { this.setPasswordBlockKeyguard(n.getBooleanValue()); });
@@ -314,15 +314,15 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         deserializerMap.put("passwordMinimumUpperCaseCharacters", (n) -> { this.setPasswordMinimumUpperCaseCharacters(n.getIntegerValue()); });
         deserializerMap.put("passwordMinutesOfInactivityBeforeScreenTimeout", (n) -> { this.setPasswordMinutesOfInactivityBeforeScreenTimeout(n.getIntegerValue()); });
         deserializerMap.put("passwordPreviousPasswordCountToBlock", (n) -> { this.setPasswordPreviousPasswordCountToBlock(n.getIntegerValue()); });
-        deserializerMap.put("passwordRequiredType", (n) -> { this.setPasswordRequiredType(n.getEnumValue(AndroidDeviceOwnerRequiredPasswordType::forValue)); });
-        deserializerMap.put("passwordRequireUnlock", (n) -> { this.setPasswordRequireUnlock(n.getEnumValue(AndroidDeviceOwnerRequiredPasswordUnlock::forValue)); });
+        deserializerMap.put("passwordRequiredType", (n) -> { this.setPasswordRequiredType(n.getEnumValue(AndroidDeviceOwnerGeneralDeviceConfigurationPasswordRequiredType::forValue)); });
+        deserializerMap.put("passwordRequireUnlock", (n) -> { this.setPasswordRequireUnlock(n.getEnumValue(AndroidDeviceOwnerGeneralDeviceConfigurationPasswordRequireUnlock::forValue)); });
         deserializerMap.put("passwordSignInFailureCountBeforeFactoryReset", (n) -> { this.setPasswordSignInFailureCountBeforeFactoryReset(n.getIntegerValue()); });
         deserializerMap.put("personalProfileAppsAllowInstallFromUnknownSources", (n) -> { this.setPersonalProfileAppsAllowInstallFromUnknownSources(n.getBooleanValue()); });
         deserializerMap.put("personalProfileCameraBlocked", (n) -> { this.setPersonalProfileCameraBlocked(n.getBooleanValue()); });
         deserializerMap.put("personalProfilePersonalApplications", (n) -> { this.setPersonalProfilePersonalApplications(n.getCollectionOfObjectValues(AppListItem::createFromDiscriminatorValue)); });
-        deserializerMap.put("personalProfilePlayStoreMode", (n) -> { this.setPersonalProfilePlayStoreMode(n.getEnumValue(PersonalProfilePersonalPlayStoreMode::forValue)); });
+        deserializerMap.put("personalProfilePlayStoreMode", (n) -> { this.setPersonalProfilePlayStoreMode(n.getEnumValue(AndroidDeviceOwnerGeneralDeviceConfigurationPersonalProfilePlayStoreMode::forValue)); });
         deserializerMap.put("personalProfileScreenCaptureBlocked", (n) -> { this.setPersonalProfileScreenCaptureBlocked(n.getBooleanValue()); });
-        deserializerMap.put("playStoreMode", (n) -> { this.setPlayStoreMode(n.getEnumValue(AndroidDeviceOwnerPlayStoreMode::forValue)); });
+        deserializerMap.put("playStoreMode", (n) -> { this.setPlayStoreMode(n.getEnumValue(AndroidDeviceOwnerGeneralDeviceConfigurationPlayStoreMode::forValue)); });
         deserializerMap.put("screenCaptureBlocked", (n) -> { this.setScreenCaptureBlocked(n.getBooleanValue()); });
         deserializerMap.put("securityCommonCriteriaModeEnabled", (n) -> { this.setSecurityCommonCriteriaModeEnabled(n.getBooleanValue()); });
         deserializerMap.put("securityDeveloperSettingsEnabled", (n) -> { this.setSecurityDeveloperSettingsEnabled(n.getBooleanValue()); });
@@ -335,7 +335,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         deserializerMap.put("storageBlockExternalMedia", (n) -> { this.setStorageBlockExternalMedia(n.getBooleanValue()); });
         deserializerMap.put("storageBlockUsbFileTransfer", (n) -> { this.setStorageBlockUsbFileTransfer(n.getBooleanValue()); });
         deserializerMap.put("systemUpdateFreezePeriods", (n) -> { this.setSystemUpdateFreezePeriods(n.getCollectionOfObjectValues(AndroidDeviceOwnerSystemUpdateFreezePeriod::createFromDiscriminatorValue)); });
-        deserializerMap.put("systemUpdateInstallType", (n) -> { this.setSystemUpdateInstallType(n.getEnumValue(AndroidDeviceOwnerSystemUpdateInstallType::forValue)); });
+        deserializerMap.put("systemUpdateInstallType", (n) -> { this.setSystemUpdateInstallType(n.getEnumValue(AndroidDeviceOwnerGeneralDeviceConfigurationSystemUpdateInstallType::forValue)); });
         deserializerMap.put("systemUpdateWindowEndMinutesAfterMidnight", (n) -> { this.setSystemUpdateWindowEndMinutesAfterMidnight(n.getIntegerValue()); });
         deserializerMap.put("systemUpdateWindowStartMinutesAfterMidnight", (n) -> { this.setSystemUpdateWindowStartMinutesAfterMidnight(n.getIntegerValue()); });
         deserializerMap.put("systemWindowsBlocked", (n) -> { this.setSystemWindowsBlocked(n.getBooleanValue()); });
@@ -355,8 +355,8 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         deserializerMap.put("workProfilePasswordMinimumSymbolCharacters", (n) -> { this.setWorkProfilePasswordMinimumSymbolCharacters(n.getIntegerValue()); });
         deserializerMap.put("workProfilePasswordMinimumUpperCaseCharacters", (n) -> { this.setWorkProfilePasswordMinimumUpperCaseCharacters(n.getIntegerValue()); });
         deserializerMap.put("workProfilePasswordPreviousPasswordCountToBlock", (n) -> { this.setWorkProfilePasswordPreviousPasswordCountToBlock(n.getIntegerValue()); });
-        deserializerMap.put("workProfilePasswordRequiredType", (n) -> { this.setWorkProfilePasswordRequiredType(n.getEnumValue(AndroidDeviceOwnerRequiredPasswordType::forValue)); });
-        deserializerMap.put("workProfilePasswordRequireUnlock", (n) -> { this.setWorkProfilePasswordRequireUnlock(n.getEnumValue(AndroidDeviceOwnerRequiredPasswordUnlock::forValue)); });
+        deserializerMap.put("workProfilePasswordRequiredType", (n) -> { this.setWorkProfilePasswordRequiredType(n.getEnumValue(AndroidDeviceOwnerGeneralDeviceConfigurationWorkProfilePasswordRequiredType::forValue)); });
+        deserializerMap.put("workProfilePasswordRequireUnlock", (n) -> { this.setWorkProfilePasswordRequireUnlock(n.getEnumValue(AndroidDeviceOwnerGeneralDeviceConfigurationWorkProfilePasswordRequireUnlock::forValue)); });
         deserializerMap.put("workProfilePasswordSignInFailureCountBeforeFactoryReset", (n) -> { this.setWorkProfilePasswordSignInFailureCountBeforeFactoryReset(n.getIntegerValue()); });
         return deserializerMap;
     }
@@ -394,10 +394,10 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the kioskCustomizationStatusBar property value. Indicates whether system info and notifications are disabled in Kiosk Mode. Possible values are: notConfigured, notificationsAndSystemInfoEnabled, systemInfoOnly.
-     * @return a AndroidDeviceOwnerKioskCustomizationStatusBar
+     * @return a AndroidDeviceOwnerGeneralDeviceConfigurationKioskCustomizationStatusBar
      */
     @jakarta.annotation.Nullable
-    public AndroidDeviceOwnerKioskCustomizationStatusBar getKioskCustomizationStatusBar() {
+    public AndroidDeviceOwnerGeneralDeviceConfigurationKioskCustomizationStatusBar getKioskCustomizationStatusBar() {
         return this.backingStore.get("kioskCustomizationStatusBar");
     }
     /**
@@ -410,10 +410,10 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the kioskCustomizationSystemNavigation property value. Indicates which navigation features are enabled in Kiosk Mode. Possible values are: notConfigured, navigationEnabled, homeButtonOnly.
-     * @return a AndroidDeviceOwnerKioskCustomizationSystemNavigation
+     * @return a AndroidDeviceOwnerGeneralDeviceConfigurationKioskCustomizationSystemNavigation
      */
     @jakarta.annotation.Nullable
-    public AndroidDeviceOwnerKioskCustomizationSystemNavigation getKioskCustomizationSystemNavigation() {
+    public AndroidDeviceOwnerGeneralDeviceConfigurationKioskCustomizationSystemNavigation getKioskCustomizationSystemNavigation() {
         return this.backingStore.get("kioskCustomizationSystemNavigation");
     }
     /**
@@ -482,10 +482,10 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the kioskModeFolderIcon property value. Folder icon configuration for managed home screen in Kiosk Mode. Possible values are: notConfigured, darkSquare, darkCircle, lightSquare, lightCircle.
-     * @return a AndroidDeviceOwnerKioskModeFolderIcon
+     * @return a AndroidDeviceOwnerGeneralDeviceConfigurationKioskModeFolderIcon
      */
     @jakarta.annotation.Nullable
-    public AndroidDeviceOwnerKioskModeFolderIcon getKioskModeFolderIcon() {
+    public AndroidDeviceOwnerGeneralDeviceConfigurationKioskModeFolderIcon getKioskModeFolderIcon() {
         return this.backingStore.get("kioskModeFolderIcon");
     }
     /**
@@ -506,10 +506,10 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the kioskModeIconSize property value. Icon size configuration for managed home screen in Kiosk Mode. Possible values are: notConfigured, smallest, small, regular, large, largest.
-     * @return a AndroidDeviceOwnerKioskModeIconSize
+     * @return a AndroidDeviceOwnerGeneralDeviceConfigurationKioskModeIconSize
      */
     @jakarta.annotation.Nullable
-    public AndroidDeviceOwnerKioskModeIconSize getKioskModeIconSize() {
+    public AndroidDeviceOwnerGeneralDeviceConfigurationKioskModeIconSize getKioskModeIconSize() {
         return this.backingStore.get("kioskModeIconSize");
     }
     /**
@@ -554,10 +554,10 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the kioskModeManagedHomeScreenPinComplexity property value. Complexity of PIN for sign-in session for Managed Home Screen. Possible values are: notConfigured, simple, complex.
-     * @return a KioskModeManagedHomeScreenPinComplexity
+     * @return a AndroidDeviceOwnerGeneralDeviceConfigurationKioskModeManagedHomeScreenPinComplexity
      */
     @jakarta.annotation.Nullable
-    public KioskModeManagedHomeScreenPinComplexity getKioskModeManagedHomeScreenPinComplexity() {
+    public AndroidDeviceOwnerGeneralDeviceConfigurationKioskModeManagedHomeScreenPinComplexity getKioskModeManagedHomeScreenPinComplexity() {
         return this.backingStore.get("kioskModeManagedHomeScreenPinComplexity");
     }
     /**
@@ -618,10 +618,10 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the kioskModeScreenOrientation property value. Screen orientation configuration for managed home screen in Kiosk Mode. Possible values are: notConfigured, portrait, landscape, autoRotate.
-     * @return a AndroidDeviceOwnerKioskModeScreenOrientation
+     * @return a AndroidDeviceOwnerGeneralDeviceConfigurationKioskModeScreenOrientation
      */
     @jakarta.annotation.Nullable
-    public AndroidDeviceOwnerKioskModeScreenOrientation getKioskModeScreenOrientation() {
+    public AndroidDeviceOwnerGeneralDeviceConfigurationKioskModeScreenOrientation getKioskModeScreenOrientation() {
         return this.backingStore.get("kioskModeScreenOrientation");
     }
     /**
@@ -682,10 +682,10 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the kioskModeUseManagedHomeScreenApp property value. Whether or not to use single app kiosk mode or multi-app kiosk mode. Possible values are: notConfigured, singleAppMode, multiAppMode.
-     * @return a KioskModeType
+     * @return a AndroidDeviceOwnerGeneralDeviceConfigurationKioskModeUseManagedHomeScreenApp
      */
     @jakarta.annotation.Nullable
-    public KioskModeType getKioskModeUseManagedHomeScreenApp() {
+    public AndroidDeviceOwnerGeneralDeviceConfigurationKioskModeUseManagedHomeScreenApp getKioskModeUseManagedHomeScreenApp() {
         return this.backingStore.get("kioskModeUseManagedHomeScreenApp");
     }
     /**
@@ -698,10 +698,10 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the kioskModeVirtualHomeButtonType property value. Indicates whether the virtual home button is a swipe up home button or a floating home button. Possible values are: notConfigured, swipeUp, floating.
-     * @return a AndroidDeviceOwnerVirtualHomeButtonType
+     * @return a AndroidDeviceOwnerGeneralDeviceConfigurationKioskModeVirtualHomeButtonType
      */
     @jakarta.annotation.Nullable
-    public AndroidDeviceOwnerVirtualHomeButtonType getKioskModeVirtualHomeButtonType() {
+    public AndroidDeviceOwnerGeneralDeviceConfigurationKioskModeVirtualHomeButtonType getKioskModeVirtualHomeButtonType() {
         return this.backingStore.get("kioskModeVirtualHomeButtonType");
     }
     /**
@@ -794,10 +794,10 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the microsoftLauncherDockPresenceConfiguration property value. Indicates whether or not you want to configure the device dock. Possible values are: notConfigured, show, hide, disabled.
-     * @return a MicrosoftLauncherDockPresence
+     * @return a AndroidDeviceOwnerGeneralDeviceConfigurationMicrosoftLauncherDockPresenceConfiguration
      */
     @jakarta.annotation.Nullable
-    public MicrosoftLauncherDockPresence getMicrosoftLauncherDockPresenceConfiguration() {
+    public AndroidDeviceOwnerGeneralDeviceConfigurationMicrosoftLauncherDockPresenceConfiguration getMicrosoftLauncherDockPresenceConfiguration() {
         return this.backingStore.get("microsoftLauncherDockPresenceConfiguration");
     }
     /**
@@ -818,10 +818,10 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the microsoftLauncherSearchBarPlacementConfiguration property value. Indicates the search bar placement configuration on the device. Possible values are: notConfigured, top, bottom, hide.
-     * @return a MicrosoftLauncherSearchBarPlacement
+     * @return a AndroidDeviceOwnerGeneralDeviceConfigurationMicrosoftLauncherSearchBarPlacementConfiguration
      */
     @jakarta.annotation.Nullable
-    public MicrosoftLauncherSearchBarPlacement getMicrosoftLauncherSearchBarPlacementConfiguration() {
+    public AndroidDeviceOwnerGeneralDeviceConfigurationMicrosoftLauncherSearchBarPlacementConfiguration getMicrosoftLauncherSearchBarPlacementConfiguration() {
         return this.backingStore.get("microsoftLauncherSearchBarPlacementConfiguration");
     }
     /**
@@ -938,18 +938,18 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the passwordRequiredType property value. Indicates the minimum password quality required on the device. Possible values are: deviceDefault, required, numeric, numericComplex, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, customPassword.
-     * @return a AndroidDeviceOwnerRequiredPasswordType
+     * @return a AndroidDeviceOwnerGeneralDeviceConfigurationPasswordRequiredType
      */
     @jakarta.annotation.Nullable
-    public AndroidDeviceOwnerRequiredPasswordType getPasswordRequiredType() {
+    public AndroidDeviceOwnerGeneralDeviceConfigurationPasswordRequiredType getPasswordRequiredType() {
         return this.backingStore.get("passwordRequiredType");
     }
     /**
      * Gets the passwordRequireUnlock property value. Indicates the timeout period after which a device must be unlocked using a form of strong authentication. Possible values are: deviceDefault, daily, unkownFutureValue.
-     * @return a AndroidDeviceOwnerRequiredPasswordUnlock
+     * @return a AndroidDeviceOwnerGeneralDeviceConfigurationPasswordRequireUnlock
      */
     @jakarta.annotation.Nullable
-    public AndroidDeviceOwnerRequiredPasswordUnlock getPasswordRequireUnlock() {
+    public AndroidDeviceOwnerGeneralDeviceConfigurationPasswordRequireUnlock getPasswordRequireUnlock() {
         return this.backingStore.get("passwordRequireUnlock");
     }
     /**
@@ -986,10 +986,10 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the personalProfilePlayStoreMode property value. Used together with PersonalProfilePersonalApplications to control how apps in the personal profile are allowed or blocked. Possible values are: notConfigured, blockedApps, allowedApps.
-     * @return a PersonalProfilePersonalPlayStoreMode
+     * @return a AndroidDeviceOwnerGeneralDeviceConfigurationPersonalProfilePlayStoreMode
      */
     @jakarta.annotation.Nullable
-    public PersonalProfilePersonalPlayStoreMode getPersonalProfilePlayStoreMode() {
+    public AndroidDeviceOwnerGeneralDeviceConfigurationPersonalProfilePlayStoreMode getPersonalProfilePlayStoreMode() {
         return this.backingStore.get("personalProfilePlayStoreMode");
     }
     /**
@@ -1002,10 +1002,10 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the playStoreMode property value. Indicates the Play Store mode of the device. Possible values are: notConfigured, allowList, blockList.
-     * @return a AndroidDeviceOwnerPlayStoreMode
+     * @return a AndroidDeviceOwnerGeneralDeviceConfigurationPlayStoreMode
      */
     @jakarta.annotation.Nullable
-    public AndroidDeviceOwnerPlayStoreMode getPlayStoreMode() {
+    public AndroidDeviceOwnerGeneralDeviceConfigurationPlayStoreMode getPlayStoreMode() {
         return this.backingStore.get("playStoreMode");
     }
     /**
@@ -1106,10 +1106,10 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the systemUpdateInstallType property value. The type of system update configuration. Possible values are: deviceDefault, postpone, windowed, automatic.
-     * @return a AndroidDeviceOwnerSystemUpdateInstallType
+     * @return a AndroidDeviceOwnerGeneralDeviceConfigurationSystemUpdateInstallType
      */
     @jakarta.annotation.Nullable
-    public AndroidDeviceOwnerSystemUpdateInstallType getSystemUpdateInstallType() {
+    public AndroidDeviceOwnerGeneralDeviceConfigurationSystemUpdateInstallType getSystemUpdateInstallType() {
         return this.backingStore.get("systemUpdateInstallType");
     }
     /**
@@ -1266,18 +1266,18 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the workProfilePasswordRequiredType property value. Indicates the minimum password quality required on the work profile password. Possible values are: deviceDefault, required, numeric, numericComplex, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, customPassword.
-     * @return a AndroidDeviceOwnerRequiredPasswordType
+     * @return a AndroidDeviceOwnerGeneralDeviceConfigurationWorkProfilePasswordRequiredType
      */
     @jakarta.annotation.Nullable
-    public AndroidDeviceOwnerRequiredPasswordType getWorkProfilePasswordRequiredType() {
+    public AndroidDeviceOwnerGeneralDeviceConfigurationWorkProfilePasswordRequiredType getWorkProfilePasswordRequiredType() {
         return this.backingStore.get("workProfilePasswordRequiredType");
     }
     /**
      * Gets the workProfilePasswordRequireUnlock property value. Indicates the timeout period after which a work profile must be unlocked using a form of strong authentication. Possible values are: deviceDefault, daily, unkownFutureValue.
-     * @return a AndroidDeviceOwnerRequiredPasswordUnlock
+     * @return a AndroidDeviceOwnerGeneralDeviceConfigurationWorkProfilePasswordRequireUnlock
      */
     @jakarta.annotation.Nullable
-    public AndroidDeviceOwnerRequiredPasswordUnlock getWorkProfilePasswordRequireUnlock() {
+    public AndroidDeviceOwnerGeneralDeviceConfigurationWorkProfilePasswordRequireUnlock getWorkProfilePasswordRequireUnlock() {
         return this.backingStore.get("workProfilePasswordRequireUnlock");
     }
     /**
@@ -1460,14 +1460,14 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * Sets the appsAutoUpdatePolicy property value. Indicates the value of the app auto update policy. Possible values are: notConfigured, userChoice, never, wiFiOnly, always.
      * @param value Value to set for the appsAutoUpdatePolicy property.
      */
-    public void setAppsAutoUpdatePolicy(@jakarta.annotation.Nullable final AndroidDeviceOwnerAppAutoUpdatePolicyType value) {
+    public void setAppsAutoUpdatePolicy(@jakarta.annotation.Nullable final AndroidDeviceOwnerGeneralDeviceConfigurationAppsAutoUpdatePolicy value) {
         this.backingStore.set("appsAutoUpdatePolicy", value);
     }
     /**
      * Sets the appsDefaultPermissionPolicy property value. Indicates the permission policy for requests for runtime permissions if one is not defined for the app specifically. Possible values are: deviceDefault, prompt, autoGrant, autoDeny.
      * @param value Value to set for the appsDefaultPermissionPolicy property.
      */
-    public void setAppsDefaultPermissionPolicy(@jakarta.annotation.Nullable final AndroidDeviceOwnerDefaultAppPermissionPolicyType value) {
+    public void setAppsDefaultPermissionPolicy(@jakarta.annotation.Nullable final AndroidDeviceOwnerGeneralDeviceConfigurationAppsDefaultPermissionPolicy value) {
         this.backingStore.set("appsDefaultPermissionPolicy", value);
     }
     /**
@@ -1530,7 +1530,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * Sets the crossProfilePoliciesAllowDataSharing property value. Indicates whether data from one profile (personal or work) can be shared with apps in the other profile. Possible values are: notConfigured, crossProfileDataSharingBlocked, dataSharingFromWorkToPersonalBlocked, crossProfileDataSharingAllowed, unkownFutureValue.
      * @param value Value to set for the crossProfilePoliciesAllowDataSharing property.
      */
-    public void setCrossProfilePoliciesAllowDataSharing(@jakarta.annotation.Nullable final AndroidDeviceOwnerCrossProfileDataSharing value) {
+    public void setCrossProfilePoliciesAllowDataSharing(@jakarta.annotation.Nullable final AndroidDeviceOwnerGeneralDeviceConfigurationCrossProfilePoliciesAllowDataSharing value) {
         this.backingStore.set("crossProfilePoliciesAllowDataSharing", value);
     }
     /**
@@ -1565,7 +1565,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * Sets the deviceLocationMode property value. Indicates the location setting configuration for fully managed devices (COBO) and corporate owned devices with a work profile (COPE)
      * @param value Value to set for the deviceLocationMode property.
      */
-    public void setDeviceLocationMode(@jakarta.annotation.Nullable final AndroidDeviceOwnerLocationMode value) {
+    public void setDeviceLocationMode(@jakarta.annotation.Nullable final AndroidDeviceOwnerGeneralDeviceConfigurationDeviceLocationMode value) {
         this.backingStore.set("deviceLocationMode", value);
     }
     /**
@@ -1628,7 +1628,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * Sets the kioskCustomizationStatusBar property value. Indicates whether system info and notifications are disabled in Kiosk Mode. Possible values are: notConfigured, notificationsAndSystemInfoEnabled, systemInfoOnly.
      * @param value Value to set for the kioskCustomizationStatusBar property.
      */
-    public void setKioskCustomizationStatusBar(@jakarta.annotation.Nullable final AndroidDeviceOwnerKioskCustomizationStatusBar value) {
+    public void setKioskCustomizationStatusBar(@jakarta.annotation.Nullable final AndroidDeviceOwnerGeneralDeviceConfigurationKioskCustomizationStatusBar value) {
         this.backingStore.set("kioskCustomizationStatusBar", value);
     }
     /**
@@ -1642,7 +1642,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * Sets the kioskCustomizationSystemNavigation property value. Indicates which navigation features are enabled in Kiosk Mode. Possible values are: notConfigured, navigationEnabled, homeButtonOnly.
      * @param value Value to set for the kioskCustomizationSystemNavigation property.
      */
-    public void setKioskCustomizationSystemNavigation(@jakarta.annotation.Nullable final AndroidDeviceOwnerKioskCustomizationSystemNavigation value) {
+    public void setKioskCustomizationSystemNavigation(@jakarta.annotation.Nullable final AndroidDeviceOwnerGeneralDeviceConfigurationKioskCustomizationSystemNavigation value) {
         this.backingStore.set("kioskCustomizationSystemNavigation", value);
     }
     /**
@@ -1705,7 +1705,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * Sets the kioskModeFolderIcon property value. Folder icon configuration for managed home screen in Kiosk Mode. Possible values are: notConfigured, darkSquare, darkCircle, lightSquare, lightCircle.
      * @param value Value to set for the kioskModeFolderIcon property.
      */
-    public void setKioskModeFolderIcon(@jakarta.annotation.Nullable final AndroidDeviceOwnerKioskModeFolderIcon value) {
+    public void setKioskModeFolderIcon(@jakarta.annotation.Nullable final AndroidDeviceOwnerGeneralDeviceConfigurationKioskModeFolderIcon value) {
         this.backingStore.set("kioskModeFolderIcon", value);
     }
     /**
@@ -1726,7 +1726,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * Sets the kioskModeIconSize property value. Icon size configuration for managed home screen in Kiosk Mode. Possible values are: notConfigured, smallest, small, regular, large, largest.
      * @param value Value to set for the kioskModeIconSize property.
      */
-    public void setKioskModeIconSize(@jakarta.annotation.Nullable final AndroidDeviceOwnerKioskModeIconSize value) {
+    public void setKioskModeIconSize(@jakarta.annotation.Nullable final AndroidDeviceOwnerGeneralDeviceConfigurationKioskModeIconSize value) {
         this.backingStore.set("kioskModeIconSize", value);
     }
     /**
@@ -1768,7 +1768,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * Sets the kioskModeManagedHomeScreenPinComplexity property value. Complexity of PIN for sign-in session for Managed Home Screen. Possible values are: notConfigured, simple, complex.
      * @param value Value to set for the kioskModeManagedHomeScreenPinComplexity property.
      */
-    public void setKioskModeManagedHomeScreenPinComplexity(@jakarta.annotation.Nullable final KioskModeManagedHomeScreenPinComplexity value) {
+    public void setKioskModeManagedHomeScreenPinComplexity(@jakarta.annotation.Nullable final AndroidDeviceOwnerGeneralDeviceConfigurationKioskModeManagedHomeScreenPinComplexity value) {
         this.backingStore.set("kioskModeManagedHomeScreenPinComplexity", value);
     }
     /**
@@ -1824,7 +1824,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * Sets the kioskModeScreenOrientation property value. Screen orientation configuration for managed home screen in Kiosk Mode. Possible values are: notConfigured, portrait, landscape, autoRotate.
      * @param value Value to set for the kioskModeScreenOrientation property.
      */
-    public void setKioskModeScreenOrientation(@jakarta.annotation.Nullable final AndroidDeviceOwnerKioskModeScreenOrientation value) {
+    public void setKioskModeScreenOrientation(@jakarta.annotation.Nullable final AndroidDeviceOwnerGeneralDeviceConfigurationKioskModeScreenOrientation value) {
         this.backingStore.set("kioskModeScreenOrientation", value);
     }
     /**
@@ -1880,7 +1880,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * Sets the kioskModeUseManagedHomeScreenApp property value. Whether or not to use single app kiosk mode or multi-app kiosk mode. Possible values are: notConfigured, singleAppMode, multiAppMode.
      * @param value Value to set for the kioskModeUseManagedHomeScreenApp property.
      */
-    public void setKioskModeUseManagedHomeScreenApp(@jakarta.annotation.Nullable final KioskModeType value) {
+    public void setKioskModeUseManagedHomeScreenApp(@jakarta.annotation.Nullable final AndroidDeviceOwnerGeneralDeviceConfigurationKioskModeUseManagedHomeScreenApp value) {
         this.backingStore.set("kioskModeUseManagedHomeScreenApp", value);
     }
     /**
@@ -1894,7 +1894,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * Sets the kioskModeVirtualHomeButtonType property value. Indicates whether the virtual home button is a swipe up home button or a floating home button. Possible values are: notConfigured, swipeUp, floating.
      * @param value Value to set for the kioskModeVirtualHomeButtonType property.
      */
-    public void setKioskModeVirtualHomeButtonType(@jakarta.annotation.Nullable final AndroidDeviceOwnerVirtualHomeButtonType value) {
+    public void setKioskModeVirtualHomeButtonType(@jakarta.annotation.Nullable final AndroidDeviceOwnerGeneralDeviceConfigurationKioskModeVirtualHomeButtonType value) {
         this.backingStore.set("kioskModeVirtualHomeButtonType", value);
     }
     /**
@@ -1978,7 +1978,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * Sets the microsoftLauncherDockPresenceConfiguration property value. Indicates whether or not you want to configure the device dock. Possible values are: notConfigured, show, hide, disabled.
      * @param value Value to set for the microsoftLauncherDockPresenceConfiguration property.
      */
-    public void setMicrosoftLauncherDockPresenceConfiguration(@jakarta.annotation.Nullable final MicrosoftLauncherDockPresence value) {
+    public void setMicrosoftLauncherDockPresenceConfiguration(@jakarta.annotation.Nullable final AndroidDeviceOwnerGeneralDeviceConfigurationMicrosoftLauncherDockPresenceConfiguration value) {
         this.backingStore.set("microsoftLauncherDockPresenceConfiguration", value);
     }
     /**
@@ -1999,7 +1999,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * Sets the microsoftLauncherSearchBarPlacementConfiguration property value. Indicates the search bar placement configuration on the device. Possible values are: notConfigured, top, bottom, hide.
      * @param value Value to set for the microsoftLauncherSearchBarPlacementConfiguration property.
      */
-    public void setMicrosoftLauncherSearchBarPlacementConfiguration(@jakarta.annotation.Nullable final MicrosoftLauncherSearchBarPlacement value) {
+    public void setMicrosoftLauncherSearchBarPlacementConfiguration(@jakarta.annotation.Nullable final AndroidDeviceOwnerGeneralDeviceConfigurationMicrosoftLauncherSearchBarPlacementConfiguration value) {
         this.backingStore.set("microsoftLauncherSearchBarPlacementConfiguration", value);
     }
     /**
@@ -2104,14 +2104,14 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * Sets the passwordRequiredType property value. Indicates the minimum password quality required on the device. Possible values are: deviceDefault, required, numeric, numericComplex, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, customPassword.
      * @param value Value to set for the passwordRequiredType property.
      */
-    public void setPasswordRequiredType(@jakarta.annotation.Nullable final AndroidDeviceOwnerRequiredPasswordType value) {
+    public void setPasswordRequiredType(@jakarta.annotation.Nullable final AndroidDeviceOwnerGeneralDeviceConfigurationPasswordRequiredType value) {
         this.backingStore.set("passwordRequiredType", value);
     }
     /**
      * Sets the passwordRequireUnlock property value. Indicates the timeout period after which a device must be unlocked using a form of strong authentication. Possible values are: deviceDefault, daily, unkownFutureValue.
      * @param value Value to set for the passwordRequireUnlock property.
      */
-    public void setPasswordRequireUnlock(@jakarta.annotation.Nullable final AndroidDeviceOwnerRequiredPasswordUnlock value) {
+    public void setPasswordRequireUnlock(@jakarta.annotation.Nullable final AndroidDeviceOwnerGeneralDeviceConfigurationPasswordRequireUnlock value) {
         this.backingStore.set("passwordRequireUnlock", value);
     }
     /**
@@ -2146,7 +2146,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * Sets the personalProfilePlayStoreMode property value. Used together with PersonalProfilePersonalApplications to control how apps in the personal profile are allowed or blocked. Possible values are: notConfigured, blockedApps, allowedApps.
      * @param value Value to set for the personalProfilePlayStoreMode property.
      */
-    public void setPersonalProfilePlayStoreMode(@jakarta.annotation.Nullable final PersonalProfilePersonalPlayStoreMode value) {
+    public void setPersonalProfilePlayStoreMode(@jakarta.annotation.Nullable final AndroidDeviceOwnerGeneralDeviceConfigurationPersonalProfilePlayStoreMode value) {
         this.backingStore.set("personalProfilePlayStoreMode", value);
     }
     /**
@@ -2160,7 +2160,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * Sets the playStoreMode property value. Indicates the Play Store mode of the device. Possible values are: notConfigured, allowList, blockList.
      * @param value Value to set for the playStoreMode property.
      */
-    public void setPlayStoreMode(@jakarta.annotation.Nullable final AndroidDeviceOwnerPlayStoreMode value) {
+    public void setPlayStoreMode(@jakarta.annotation.Nullable final AndroidDeviceOwnerGeneralDeviceConfigurationPlayStoreMode value) {
         this.backingStore.set("playStoreMode", value);
     }
     /**
@@ -2251,7 +2251,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * Sets the systemUpdateInstallType property value. The type of system update configuration. Possible values are: deviceDefault, postpone, windowed, automatic.
      * @param value Value to set for the systemUpdateInstallType property.
      */
-    public void setSystemUpdateInstallType(@jakarta.annotation.Nullable final AndroidDeviceOwnerSystemUpdateInstallType value) {
+    public void setSystemUpdateInstallType(@jakarta.annotation.Nullable final AndroidDeviceOwnerGeneralDeviceConfigurationSystemUpdateInstallType value) {
         this.backingStore.set("systemUpdateInstallType", value);
     }
     /**
@@ -2391,14 +2391,14 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      * Sets the workProfilePasswordRequiredType property value. Indicates the minimum password quality required on the work profile password. Possible values are: deviceDefault, required, numeric, numericComplex, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, customPassword.
      * @param value Value to set for the workProfilePasswordRequiredType property.
      */
-    public void setWorkProfilePasswordRequiredType(@jakarta.annotation.Nullable final AndroidDeviceOwnerRequiredPasswordType value) {
+    public void setWorkProfilePasswordRequiredType(@jakarta.annotation.Nullable final AndroidDeviceOwnerGeneralDeviceConfigurationWorkProfilePasswordRequiredType value) {
         this.backingStore.set("workProfilePasswordRequiredType", value);
     }
     /**
      * Sets the workProfilePasswordRequireUnlock property value. Indicates the timeout period after which a work profile must be unlocked using a form of strong authentication. Possible values are: deviceDefault, daily, unkownFutureValue.
      * @param value Value to set for the workProfilePasswordRequireUnlock property.
      */
-    public void setWorkProfilePasswordRequireUnlock(@jakarta.annotation.Nullable final AndroidDeviceOwnerRequiredPasswordUnlock value) {
+    public void setWorkProfilePasswordRequireUnlock(@jakarta.annotation.Nullable final AndroidDeviceOwnerGeneralDeviceConfigurationWorkProfilePasswordRequireUnlock value) {
         this.backingStore.set("workProfilePasswordRequireUnlock", value);
     }
     /**

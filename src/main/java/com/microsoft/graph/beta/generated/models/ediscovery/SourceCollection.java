@@ -6,7 +6,6 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -78,10 +77,10 @@ public class SourceCollection extends Entity implements Parsable {
     }
     /**
      * Gets the dataSourceScopes property value. When specified, the collection spans across a service for an entire workload. Possible values are: none, allTenantMailboxes, allTenantSites, allCaseCustodians, allCaseNoncustodialDataSources.
-     * @return a EnumSet<DataSourceScopes>
+     * @return a SourceCollectionDataSourceScopes
      */
     @jakarta.annotation.Nullable
-    public EnumSet<DataSourceScopes> getDataSourceScopes() {
+    public SourceCollectionDataSourceScopes getDataSourceScopes() {
         return this.backingStore.get("dataSourceScopes");
     }
     /**
@@ -113,7 +112,7 @@ public class SourceCollection extends Entity implements Parsable {
         deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("custodianSources", (n) -> { this.setCustodianSources(n.getCollectionOfObjectValues(DataSource::createFromDiscriminatorValue)); });
-        deserializerMap.put("dataSourceScopes", (n) -> { this.setDataSourceScopes(n.getEnumSetValue(DataSourceScopes::forValue)); });
+        deserializerMap.put("dataSourceScopes", (n) -> { this.setDataSourceScopes(n.getEnumValue(SourceCollectionDataSourceScopes::forValue)); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("lastEstimateStatisticsOperation", (n) -> { this.setLastEstimateStatisticsOperation(n.getObjectValue(EstimateStatisticsOperation::createFromDiscriminatorValue)); });
@@ -167,7 +166,7 @@ public class SourceCollection extends Entity implements Parsable {
         writer.writeObjectValue("createdBy", this.getCreatedBy());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeCollectionOfObjectValues("custodianSources", this.getCustodianSources());
-        writer.writeEnumSetValue("dataSourceScopes", this.getDataSourceScopes());
+        writer.writeEnumValue("dataSourceScopes", this.getDataSourceScopes());
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeObjectValue("lastEstimateStatisticsOperation", this.getLastEstimateStatisticsOperation());
@@ -221,7 +220,7 @@ public class SourceCollection extends Entity implements Parsable {
      * Sets the dataSourceScopes property value. When specified, the collection spans across a service for an entire workload. Possible values are: none, allTenantMailboxes, allTenantSites, allCaseCustodians, allCaseNoncustodialDataSources.
      * @param value Value to set for the dataSourceScopes property.
      */
-    public void setDataSourceScopes(@jakarta.annotation.Nullable final EnumSet<DataSourceScopes> value) {
+    public void setDataSourceScopes(@jakarta.annotation.Nullable final SourceCollectionDataSourceScopes value) {
         this.backingStore.set("dataSourceScopes", value);
     }
     /**

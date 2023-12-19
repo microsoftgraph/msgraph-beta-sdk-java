@@ -57,18 +57,18 @@ public class MultiTenantOrganizationMemberTransitionDetails implements Additiona
     }
     /**
      * Gets the desiredRole property value. Role of the tenant in the multitenant organization. The possible values are: owner, member, unknownFutureValue.
-     * @return a MultiTenantOrganizationMemberRole
+     * @return a MultiTenantOrganizationMemberTransitionDetailsDesiredRole
      */
     @jakarta.annotation.Nullable
-    public MultiTenantOrganizationMemberRole getDesiredRole() {
+    public MultiTenantOrganizationMemberTransitionDetailsDesiredRole getDesiredRole() {
         return this.backingStore.get("desiredRole");
     }
     /**
      * Gets the desiredState property value. State of the tenant in the multitenant organization currently being processed. The possible values are: pending, active, removed, unknownFutureValue. Read-only.
-     * @return a MultiTenantOrganizationMemberState
+     * @return a MultiTenantOrganizationMemberTransitionDetailsDesiredState
      */
     @jakarta.annotation.Nullable
-    public MultiTenantOrganizationMemberState getDesiredState() {
+    public MultiTenantOrganizationMemberTransitionDetailsDesiredState getDesiredState() {
         return this.backingStore.get("desiredState");
     }
     /**
@@ -86,11 +86,11 @@ public class MultiTenantOrganizationMemberTransitionDetails implements Additiona
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
-        deserializerMap.put("desiredRole", (n) -> { this.setDesiredRole(n.getEnumValue(MultiTenantOrganizationMemberRole::forValue)); });
-        deserializerMap.put("desiredState", (n) -> { this.setDesiredState(n.getEnumValue(MultiTenantOrganizationMemberState::forValue)); });
+        deserializerMap.put("desiredRole", (n) -> { this.setDesiredRole(n.getEnumValue(MultiTenantOrganizationMemberTransitionDetailsDesiredRole::forValue)); });
+        deserializerMap.put("desiredState", (n) -> { this.setDesiredState(n.getEnumValue(MultiTenantOrganizationMemberTransitionDetailsDesiredState::forValue)); });
         deserializerMap.put("details", (n) -> { this.setDetails(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(MultiTenantOrganizationMemberProcessingStatus::forValue)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(MultiTenantOrganizationMemberTransitionDetailsStatus::forValue)); });
         return deserializerMap;
     }
     /**
@@ -103,10 +103,10 @@ public class MultiTenantOrganizationMemberTransitionDetails implements Additiona
     }
     /**
      * Gets the status property value. Processing state of the asynchronous job. The possible values are: notStarted, running, succeeded, failed, unknownFutureValue. Read-only.
-     * @return a MultiTenantOrganizationMemberProcessingStatus
+     * @return a MultiTenantOrganizationMemberTransitionDetailsStatus
      */
     @jakarta.annotation.Nullable
-    public MultiTenantOrganizationMemberProcessingStatus getStatus() {
+    public MultiTenantOrganizationMemberTransitionDetailsStatus getStatus() {
         return this.backingStore.get("status");
     }
     /**
@@ -141,14 +141,14 @@ public class MultiTenantOrganizationMemberTransitionDetails implements Additiona
      * Sets the desiredRole property value. Role of the tenant in the multitenant organization. The possible values are: owner, member, unknownFutureValue.
      * @param value Value to set for the desiredRole property.
      */
-    public void setDesiredRole(@jakarta.annotation.Nullable final MultiTenantOrganizationMemberRole value) {
+    public void setDesiredRole(@jakarta.annotation.Nullable final MultiTenantOrganizationMemberTransitionDetailsDesiredRole value) {
         this.backingStore.set("desiredRole", value);
     }
     /**
      * Sets the desiredState property value. State of the tenant in the multitenant organization currently being processed. The possible values are: pending, active, removed, unknownFutureValue. Read-only.
      * @param value Value to set for the desiredState property.
      */
-    public void setDesiredState(@jakarta.annotation.Nullable final MultiTenantOrganizationMemberState value) {
+    public void setDesiredState(@jakarta.annotation.Nullable final MultiTenantOrganizationMemberTransitionDetailsDesiredState value) {
         this.backingStore.set("desiredState", value);
     }
     /**
@@ -169,7 +169,7 @@ public class MultiTenantOrganizationMemberTransitionDetails implements Additiona
      * Sets the status property value. Processing state of the asynchronous job. The possible values are: notStarted, running, succeeded, failed, unknownFutureValue. Read-only.
      * @param value Value to set for the status property.
      */
-    public void setStatus(@jakarta.annotation.Nullable final MultiTenantOrganizationMemberProcessingStatus value) {
+    public void setStatus(@jakarta.annotation.Nullable final MultiTenantOrganizationMemberTransitionDetailsStatus value) {
         this.backingStore.set("status", value);
     }
 }

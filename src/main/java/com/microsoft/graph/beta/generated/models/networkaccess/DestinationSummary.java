@@ -81,7 +81,7 @@ public class DestinationSummary implements AdditionalDataHolder, BackedModel, Pa
         deserializerMap.put("count", (n) -> { this.setCount(n.getIntegerValue()); });
         deserializerMap.put("destination", (n) -> { this.setDestination(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("trafficType", (n) -> { this.setTrafficType(n.getEnumValue(TrafficType::forValue)); });
+        deserializerMap.put("trafficType", (n) -> { this.setTrafficType(n.getEnumValue(DestinationSummaryTrafficType::forValue)); });
         return deserializerMap;
     }
     /**
@@ -94,10 +94,10 @@ public class DestinationSummary implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the trafficType property value. The traffic classification. The allowed values are internet, private, microsoft365, all, and unknownFutureValue.
-     * @return a TrafficType
+     * @return a DestinationSummaryTrafficType
      */
     @jakarta.annotation.Nullable
-    public TrafficType getTrafficType() {
+    public DestinationSummaryTrafficType getTrafficType() {
         return this.backingStore.get("trafficType");
     }
     /**
@@ -152,7 +152,7 @@ public class DestinationSummary implements AdditionalDataHolder, BackedModel, Pa
      * Sets the trafficType property value. The traffic classification. The allowed values are internet, private, microsoft365, all, and unknownFutureValue.
      * @param value Value to set for the trafficType property.
      */
-    public void setTrafficType(@jakarta.annotation.Nullable final TrafficType value) {
+    public void setTrafficType(@jakarta.annotation.Nullable final DestinationSummaryTrafficType value) {
         this.backingStore.set("trafficType", value);
     }
 }

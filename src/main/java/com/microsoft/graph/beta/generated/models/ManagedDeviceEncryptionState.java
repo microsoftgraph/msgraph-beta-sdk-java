@@ -3,7 +3,6 @@ package com.microsoft.graph.beta.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -30,10 +29,10 @@ public class ManagedDeviceEncryptionState extends Entity implements Parsable {
     }
     /**
      * Gets the advancedBitLockerStates property value. Advanced BitLocker State. Possible values are: success, noUserConsent, osVolumeUnprotected, osVolumeTpmRequired, osVolumeTpmOnlyRequired, osVolumeTpmPinRequired, osVolumeTpmStartupKeyRequired, osVolumeTpmPinStartupKeyRequired, osVolumeEncryptionMethodMismatch, recoveryKeyBackupFailed, fixedDriveNotEncrypted, fixedDriveEncryptionMethodMismatch, loggedOnUserNonAdmin, windowsRecoveryEnvironmentNotConfigured, tpmNotAvailable, tpmNotReady, networkError.
-     * @return a EnumSet<AdvancedBitLockerState>
+     * @return a ManagedDeviceEncryptionStateAdvancedBitLockerStates
      */
     @jakarta.annotation.Nullable
-    public EnumSet<AdvancedBitLockerState> getAdvancedBitLockerStates() {
+    public ManagedDeviceEncryptionStateAdvancedBitLockerStates getAdvancedBitLockerStates() {
         return this.backingStore.get("advancedBitLockerStates");
     }
     /**
@@ -83,13 +82,13 @@ public class ManagedDeviceEncryptionState extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("advancedBitLockerStates", (n) -> { this.setAdvancedBitLockerStates(n.getEnumSetValue(AdvancedBitLockerState::forValue)); });
+        deserializerMap.put("advancedBitLockerStates", (n) -> { this.setAdvancedBitLockerStates(n.getEnumValue(ManagedDeviceEncryptionStateAdvancedBitLockerStates::forValue)); });
         deserializerMap.put("deviceName", (n) -> { this.setDeviceName(n.getStringValue()); });
         deserializerMap.put("deviceType", (n) -> { this.setDeviceType(n.getEnumValue(DeviceTypes::forValue)); });
         deserializerMap.put("encryptionPolicySettingState", (n) -> { this.setEncryptionPolicySettingState(n.getEnumValue(ComplianceStatus::forValue)); });
         deserializerMap.put("encryptionReadinessState", (n) -> { this.setEncryptionReadinessState(n.getEnumValue(EncryptionReadinessState::forValue)); });
         deserializerMap.put("encryptionState", (n) -> { this.setEncryptionState(n.getEnumValue(EncryptionState::forValue)); });
-        deserializerMap.put("fileVaultStates", (n) -> { this.setFileVaultStates(n.getEnumSetValue(FileVaultState::forValue)); });
+        deserializerMap.put("fileVaultStates", (n) -> { this.setFileVaultStates(n.getEnumValue(ManagedDeviceEncryptionStateFileVaultStates::forValue)); });
         deserializerMap.put("osVersion", (n) -> { this.setOsVersion(n.getStringValue()); });
         deserializerMap.put("policyDetails", (n) -> { this.setPolicyDetails(n.getCollectionOfObjectValues(EncryptionReportPolicyDetails::createFromDiscriminatorValue)); });
         deserializerMap.put("tpmSpecificationVersion", (n) -> { this.setTpmSpecificationVersion(n.getStringValue()); });
@@ -98,10 +97,10 @@ public class ManagedDeviceEncryptionState extends Entity implements Parsable {
     }
     /**
      * Gets the fileVaultStates property value. FileVault State. Possible values are: success, driveEncryptedByUser, userDeferredEncryption, escrowNotEnabled.
-     * @return a EnumSet<FileVaultState>
+     * @return a ManagedDeviceEncryptionStateFileVaultStates
      */
     @jakarta.annotation.Nullable
-    public EnumSet<FileVaultState> getFileVaultStates() {
+    public ManagedDeviceEncryptionStateFileVaultStates getFileVaultStates() {
         return this.backingStore.get("fileVaultStates");
     }
     /**
@@ -143,13 +142,13 @@ public class ManagedDeviceEncryptionState extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeEnumSetValue("advancedBitLockerStates", this.getAdvancedBitLockerStates());
+        writer.writeEnumValue("advancedBitLockerStates", this.getAdvancedBitLockerStates());
         writer.writeStringValue("deviceName", this.getDeviceName());
         writer.writeEnumValue("deviceType", this.getDeviceType());
         writer.writeEnumValue("encryptionPolicySettingState", this.getEncryptionPolicySettingState());
         writer.writeEnumValue("encryptionReadinessState", this.getEncryptionReadinessState());
         writer.writeEnumValue("encryptionState", this.getEncryptionState());
-        writer.writeEnumSetValue("fileVaultStates", this.getFileVaultStates());
+        writer.writeEnumValue("fileVaultStates", this.getFileVaultStates());
         writer.writeStringValue("osVersion", this.getOsVersion());
         writer.writeCollectionOfObjectValues("policyDetails", this.getPolicyDetails());
         writer.writeStringValue("tpmSpecificationVersion", this.getTpmSpecificationVersion());
@@ -159,7 +158,7 @@ public class ManagedDeviceEncryptionState extends Entity implements Parsable {
      * Sets the advancedBitLockerStates property value. Advanced BitLocker State. Possible values are: success, noUserConsent, osVolumeUnprotected, osVolumeTpmRequired, osVolumeTpmOnlyRequired, osVolumeTpmPinRequired, osVolumeTpmStartupKeyRequired, osVolumeTpmPinStartupKeyRequired, osVolumeEncryptionMethodMismatch, recoveryKeyBackupFailed, fixedDriveNotEncrypted, fixedDriveEncryptionMethodMismatch, loggedOnUserNonAdmin, windowsRecoveryEnvironmentNotConfigured, tpmNotAvailable, tpmNotReady, networkError.
      * @param value Value to set for the advancedBitLockerStates property.
      */
-    public void setAdvancedBitLockerStates(@jakarta.annotation.Nullable final EnumSet<AdvancedBitLockerState> value) {
+    public void setAdvancedBitLockerStates(@jakarta.annotation.Nullable final ManagedDeviceEncryptionStateAdvancedBitLockerStates value) {
         this.backingStore.set("advancedBitLockerStates", value);
     }
     /**
@@ -201,7 +200,7 @@ public class ManagedDeviceEncryptionState extends Entity implements Parsable {
      * Sets the fileVaultStates property value. FileVault State. Possible values are: success, driveEncryptedByUser, userDeferredEncryption, escrowNotEnabled.
      * @param value Value to set for the fileVaultStates property.
      */
-    public void setFileVaultStates(@jakarta.annotation.Nullable final EnumSet<FileVaultState> value) {
+    public void setFileVaultStates(@jakarta.annotation.Nullable final ManagedDeviceEncryptionStateFileVaultStates value) {
         this.backingStore.set("fileVaultStates", value);
     }
     /**

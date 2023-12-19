@@ -72,7 +72,7 @@ public class RelatedPerson implements AdditionalDataHolder, BackedModel, Parsabl
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("relationship", (n) -> { this.setRelationship(n.getEnumValue(PersonRelationship::forValue)); });
+        deserializerMap.put("relationship", (n) -> { this.setRelationship(n.getEnumValue(RelatedPersonRelationship::forValue)); });
         deserializerMap.put("userId", (n) -> { this.setUserId(n.getStringValue()); });
         deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
         return deserializerMap;
@@ -87,10 +87,10 @@ public class RelatedPerson implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the relationship property value. Possible values are: manager, colleague, directReport, dotLineReport, assistant, dotLineManager, alternateContact, friend, spouse, sibling, child, parent, sponsor, emergencyContact, other, unknownFutureValue.
-     * @return a PersonRelationship
+     * @return a RelatedPersonRelationship
      */
     @jakarta.annotation.Nullable
-    public PersonRelationship getRelationship() {
+    public RelatedPersonRelationship getRelationship() {
         return this.backingStore.get("relationship");
     }
     /**
@@ -155,7 +155,7 @@ public class RelatedPerson implements AdditionalDataHolder, BackedModel, Parsabl
      * Sets the relationship property value. Possible values are: manager, colleague, directReport, dotLineReport, assistant, dotLineManager, alternateContact, friend, spouse, sibling, child, parent, sponsor, emergencyContact, other, unknownFutureValue.
      * @param value Value to set for the relationship property.
      */
-    public void setRelationship(@jakarta.annotation.Nullable final PersonRelationship value) {
+    public void setRelationship(@jakarta.annotation.Nullable final RelatedPersonRelationship value) {
         this.backingStore.set("relationship", value);
     }
     /**

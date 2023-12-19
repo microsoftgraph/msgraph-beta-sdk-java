@@ -3,7 +3,6 @@ package com.microsoft.graph.beta.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -39,10 +38,10 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
     }
     /**
      * Gets the authenticationMethod property value. Authentication method for this Email profile. Possible values are: usernameAndPassword, certificate, derivedCredential.
-     * @return a EasAuthenticationMethod
+     * @return a IosEasEmailProfileConfigurationAuthenticationMethod
      */
     @jakarta.annotation.Nullable
-    public EasAuthenticationMethod getAuthenticationMethod() {
+    public IosEasEmailProfileConfigurationAuthenticationMethod getAuthenticationMethod() {
         return this.backingStore.get("authenticationMethod");
     }
     /**
@@ -87,10 +86,10 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
     }
     /**
      * Gets the easServices property value. Exchange data to sync. Possible values are: none, calendars, contacts, email, notes, reminders.
-     * @return a EnumSet<EasServices>
+     * @return a IosEasEmailProfileConfigurationEasServices
      */
     @jakarta.annotation.Nullable
-    public EnumSet<EasServices> getEasServices() {
+    public IosEasEmailProfileConfigurationEasServices getEasServices() {
         return this.backingStore.get("easServices");
     }
     /**
@@ -111,10 +110,10 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
     }
     /**
      * Gets the encryptionCertificateType property value. Encryption Certificate type for this Email profile. Possible values are: none, certificate, derivedCredential.
-     * @return a EmailCertificateType
+     * @return a IosEasEmailProfileConfigurationEncryptionCertificateType
      */
     @jakarta.annotation.Nullable
-    public EmailCertificateType getEncryptionCertificateType() {
+    public IosEasEmailProfileConfigurationEncryptionCertificateType getEncryptionCertificateType() {
         return this.backingStore.get("encryptionCertificateType");
     }
     /**
@@ -125,22 +124,22 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("accountName", (n) -> { this.setAccountName(n.getStringValue()); });
-        deserializerMap.put("authenticationMethod", (n) -> { this.setAuthenticationMethod(n.getEnumValue(EasAuthenticationMethod::forValue)); });
+        deserializerMap.put("authenticationMethod", (n) -> { this.setAuthenticationMethod(n.getEnumValue(IosEasEmailProfileConfigurationAuthenticationMethod::forValue)); });
         deserializerMap.put("blockMovingMessagesToOtherEmailAccounts", (n) -> { this.setBlockMovingMessagesToOtherEmailAccounts(n.getBooleanValue()); });
         deserializerMap.put("blockSendingEmailFromThirdPartyApps", (n) -> { this.setBlockSendingEmailFromThirdPartyApps(n.getBooleanValue()); });
         deserializerMap.put("blockSyncingRecentlyUsedEmailAddresses", (n) -> { this.setBlockSyncingRecentlyUsedEmailAddresses(n.getBooleanValue()); });
         deserializerMap.put("derivedCredentialSettings", (n) -> { this.setDerivedCredentialSettings(n.getObjectValue(DeviceManagementDerivedCredentialSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("durationOfEmailToSync", (n) -> { this.setDurationOfEmailToSync(n.getEnumValue(EmailSyncDuration::forValue)); });
-        deserializerMap.put("easServices", (n) -> { this.setEasServices(n.getEnumSetValue(EasServices::forValue)); });
+        deserializerMap.put("easServices", (n) -> { this.setEasServices(n.getEnumValue(IosEasEmailProfileConfigurationEasServices::forValue)); });
         deserializerMap.put("easServicesUserOverrideEnabled", (n) -> { this.setEasServicesUserOverrideEnabled(n.getBooleanValue()); });
         deserializerMap.put("emailAddressSource", (n) -> { this.setEmailAddressSource(n.getEnumValue(UserEmailSource::forValue)); });
-        deserializerMap.put("encryptionCertificateType", (n) -> { this.setEncryptionCertificateType(n.getEnumValue(EmailCertificateType::forValue)); });
+        deserializerMap.put("encryptionCertificateType", (n) -> { this.setEncryptionCertificateType(n.getEnumValue(IosEasEmailProfileConfigurationEncryptionCertificateType::forValue)); });
         deserializerMap.put("hostName", (n) -> { this.setHostName(n.getStringValue()); });
         deserializerMap.put("identityCertificate", (n) -> { this.setIdentityCertificate(n.getObjectValue(IosCertificateProfileBase::createFromDiscriminatorValue)); });
         deserializerMap.put("perAppVPNProfileId", (n) -> { this.setPerAppVPNProfileId(n.getStringValue()); });
         deserializerMap.put("requireSmime", (n) -> { this.setRequireSmime(n.getBooleanValue()); });
         deserializerMap.put("requireSsl", (n) -> { this.setRequireSsl(n.getBooleanValue()); });
-        deserializerMap.put("signingCertificateType", (n) -> { this.setSigningCertificateType(n.getEnumValue(EmailCertificateType::forValue)); });
+        deserializerMap.put("signingCertificateType", (n) -> { this.setSigningCertificateType(n.getEnumValue(IosEasEmailProfileConfigurationSigningCertificateType::forValue)); });
         deserializerMap.put("smimeEnablePerMessageSwitch", (n) -> { this.setSmimeEnablePerMessageSwitch(n.getBooleanValue()); });
         deserializerMap.put("smimeEncryptByDefaultEnabled", (n) -> { this.setSmimeEncryptByDefaultEnabled(n.getBooleanValue()); });
         deserializerMap.put("smimeEncryptByDefaultUserOverrideEnabled", (n) -> { this.setSmimeEncryptByDefaultUserOverrideEnabled(n.getBooleanValue()); });
@@ -195,10 +194,10 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
     }
     /**
      * Gets the signingCertificateType property value. Signing Certificate type for this Email profile. Possible values are: none, certificate, derivedCredential.
-     * @return a EmailCertificateType
+     * @return a IosEasEmailProfileConfigurationSigningCertificateType
      */
     @jakarta.annotation.Nullable
-    public EmailCertificateType getSigningCertificateType() {
+    public IosEasEmailProfileConfigurationSigningCertificateType getSigningCertificateType() {
         return this.backingStore.get("signingCertificateType");
     }
     /**
@@ -295,7 +294,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
         writer.writeBooleanValue("blockSyncingRecentlyUsedEmailAddresses", this.getBlockSyncingRecentlyUsedEmailAddresses());
         writer.writeObjectValue("derivedCredentialSettings", this.getDerivedCredentialSettings());
         writer.writeEnumValue("durationOfEmailToSync", this.getDurationOfEmailToSync());
-        writer.writeEnumSetValue("easServices", this.getEasServices());
+        writer.writeEnumValue("easServices", this.getEasServices());
         writer.writeBooleanValue("easServicesUserOverrideEnabled", this.getEasServicesUserOverrideEnabled());
         writer.writeEnumValue("emailAddressSource", this.getEmailAddressSource());
         writer.writeEnumValue("encryptionCertificateType", this.getEncryptionCertificateType());
@@ -327,7 +326,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * Sets the authenticationMethod property value. Authentication method for this Email profile. Possible values are: usernameAndPassword, certificate, derivedCredential.
      * @param value Value to set for the authenticationMethod property.
      */
-    public void setAuthenticationMethod(@jakarta.annotation.Nullable final EasAuthenticationMethod value) {
+    public void setAuthenticationMethod(@jakarta.annotation.Nullable final IosEasEmailProfileConfigurationAuthenticationMethod value) {
         this.backingStore.set("authenticationMethod", value);
     }
     /**
@@ -369,7 +368,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * Sets the easServices property value. Exchange data to sync. Possible values are: none, calendars, contacts, email, notes, reminders.
      * @param value Value to set for the easServices property.
      */
-    public void setEasServices(@jakarta.annotation.Nullable final EnumSet<EasServices> value) {
+    public void setEasServices(@jakarta.annotation.Nullable final IosEasEmailProfileConfigurationEasServices value) {
         this.backingStore.set("easServices", value);
     }
     /**
@@ -390,7 +389,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * Sets the encryptionCertificateType property value. Encryption Certificate type for this Email profile. Possible values are: none, certificate, derivedCredential.
      * @param value Value to set for the encryptionCertificateType property.
      */
-    public void setEncryptionCertificateType(@jakarta.annotation.Nullable final EmailCertificateType value) {
+    public void setEncryptionCertificateType(@jakarta.annotation.Nullable final IosEasEmailProfileConfigurationEncryptionCertificateType value) {
         this.backingStore.set("encryptionCertificateType", value);
     }
     /**
@@ -432,7 +431,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * Sets the signingCertificateType property value. Signing Certificate type for this Email profile. Possible values are: none, certificate, derivedCredential.
      * @param value Value to set for the signingCertificateType property.
      */
-    public void setSigningCertificateType(@jakarta.annotation.Nullable final EmailCertificateType value) {
+    public void setSigningCertificateType(@jakarta.annotation.Nullable final IosEasEmailProfileConfigurationSigningCertificateType value) {
         this.backingStore.set("signingCertificateType", value);
     }
     /**

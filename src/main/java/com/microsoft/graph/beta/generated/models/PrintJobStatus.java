@@ -91,7 +91,7 @@ public class PrintJobStatus implements AdditionalDataHolder, BackedModel, Parsab
         deserializerMap.put("details", (n) -> { this.setDetails(n.getCollectionOfEnumValues(PrintJobStateDetail::forValue)); });
         deserializerMap.put("isAcquiredByPrinter", (n) -> { this.setIsAcquiredByPrinter(n.getBooleanValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("processingState", (n) -> { this.setProcessingState(n.getEnumValue(PrintJobProcessingState::forValue)); });
+        deserializerMap.put("processingState", (n) -> { this.setProcessingState(n.getEnumValue(PrintJobStatusProcessingState::forValue)); });
         deserializerMap.put("processingStateDescription", (n) -> { this.setProcessingStateDescription(n.getStringValue()); });
         deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(PrintJobProcessingState::forValue)); });
         return deserializerMap;
@@ -114,10 +114,10 @@ public class PrintJobStatus implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the processingState property value. The processingState property
-     * @return a PrintJobProcessingState
+     * @return a PrintJobStatusProcessingState
      */
     @jakarta.annotation.Nullable
-    public PrintJobProcessingState getProcessingState() {
+    public PrintJobStatusProcessingState getProcessingState() {
         return this.backingStore.get("processingState");
     }
     /**
@@ -206,7 +206,7 @@ public class PrintJobStatus implements AdditionalDataHolder, BackedModel, Parsab
      * Sets the processingState property value. The processingState property
      * @param value Value to set for the processingState property.
      */
-    public void setProcessingState(@jakarta.annotation.Nullable final PrintJobProcessingState value) {
+    public void setProcessingState(@jakarta.annotation.Nullable final PrintJobStatusProcessingState value) {
         this.backingStore.set("processingState", value);
     }
     /**

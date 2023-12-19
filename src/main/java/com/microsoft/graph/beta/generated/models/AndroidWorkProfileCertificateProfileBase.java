@@ -3,7 +3,6 @@ package com.microsoft.graph.beta.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -73,7 +72,7 @@ public class AndroidWorkProfileCertificateProfileBase extends DeviceConfiguratio
         deserializerMap.put("extendedKeyUsages", (n) -> { this.setExtendedKeyUsages(n.getCollectionOfObjectValues(ExtendedKeyUsage::createFromDiscriminatorValue)); });
         deserializerMap.put("renewalThresholdPercentage", (n) -> { this.setRenewalThresholdPercentage(n.getIntegerValue()); });
         deserializerMap.put("rootCertificate", (n) -> { this.setRootCertificate(n.getObjectValue(AndroidWorkProfileTrustedRootCertificate::createFromDiscriminatorValue)); });
-        deserializerMap.put("subjectAlternativeNameType", (n) -> { this.setSubjectAlternativeNameType(n.getEnumSetValue(SubjectAlternativeNameType::forValue)); });
+        deserializerMap.put("subjectAlternativeNameType", (n) -> { this.setSubjectAlternativeNameType(n.getEnumValue(AndroidWorkProfileCertificateProfileBaseSubjectAlternativeNameType::forValue)); });
         deserializerMap.put("subjectNameFormat", (n) -> { this.setSubjectNameFormat(n.getEnumValue(SubjectNameFormat::forValue)); });
         return deserializerMap;
     }
@@ -95,10 +94,10 @@ public class AndroidWorkProfileCertificateProfileBase extends DeviceConfiguratio
     }
     /**
      * Gets the subjectAlternativeNameType property value. Certificate Subject Alternative Name Type. Possible values are: none, emailAddress, userPrincipalName, customAzureADAttribute, domainNameService, universalResourceIdentifier.
-     * @return a EnumSet<SubjectAlternativeNameType>
+     * @return a AndroidWorkProfileCertificateProfileBaseSubjectAlternativeNameType
      */
     @jakarta.annotation.Nullable
-    public EnumSet<SubjectAlternativeNameType> getSubjectAlternativeNameType() {
+    public AndroidWorkProfileCertificateProfileBaseSubjectAlternativeNameType getSubjectAlternativeNameType() {
         return this.backingStore.get("subjectAlternativeNameType");
     }
     /**
@@ -121,7 +120,7 @@ public class AndroidWorkProfileCertificateProfileBase extends DeviceConfiguratio
         writer.writeCollectionOfObjectValues("extendedKeyUsages", this.getExtendedKeyUsages());
         writer.writeIntegerValue("renewalThresholdPercentage", this.getRenewalThresholdPercentage());
         writer.writeObjectValue("rootCertificate", this.getRootCertificate());
-        writer.writeEnumSetValue("subjectAlternativeNameType", this.getSubjectAlternativeNameType());
+        writer.writeEnumValue("subjectAlternativeNameType", this.getSubjectAlternativeNameType());
         writer.writeEnumValue("subjectNameFormat", this.getSubjectNameFormat());
     }
     /**
@@ -163,7 +162,7 @@ public class AndroidWorkProfileCertificateProfileBase extends DeviceConfiguratio
      * Sets the subjectAlternativeNameType property value. Certificate Subject Alternative Name Type. Possible values are: none, emailAddress, userPrincipalName, customAzureADAttribute, domainNameService, universalResourceIdentifier.
      * @param value Value to set for the subjectAlternativeNameType property.
      */
-    public void setSubjectAlternativeNameType(@jakarta.annotation.Nullable final EnumSet<SubjectAlternativeNameType> value) {
+    public void setSubjectAlternativeNameType(@jakarta.annotation.Nullable final AndroidWorkProfileCertificateProfileBaseSubjectAlternativeNameType value) {
         this.backingStore.set("subjectAlternativeNameType", value);
     }
     /**

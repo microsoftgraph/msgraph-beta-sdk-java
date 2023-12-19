@@ -57,18 +57,18 @@ public class ThreatSubmission extends Entity implements Parsable {
     }
     /**
      * Gets the clientSource property value. Specifies the source of the submission. The possible values are: microsoft,  other and unkownFutureValue.
-     * @return a SubmissionClientSource
+     * @return a ThreatSubmissionClientSource
      */
     @jakarta.annotation.Nullable
-    public SubmissionClientSource getClientSource() {
+    public ThreatSubmissionClientSource getClientSource() {
         return this.backingStore.get("clientSource");
     }
     /**
      * Gets the contentType property value. Specifies the type of content being submitted. The possible values are: email, url, file, app and unkownFutureValue.
-     * @return a SubmissionContentType
+     * @return a ThreatSubmissionContentType
      */
     @jakarta.annotation.Nullable
-    public SubmissionContentType getContentType() {
+    public ThreatSubmissionContentType getContentType() {
         return this.backingStore.get("contentType");
     }
     /**
@@ -96,13 +96,13 @@ public class ThreatSubmission extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("adminReview", (n) -> { this.setAdminReview(n.getObjectValue(SubmissionAdminReview::createFromDiscriminatorValue)); });
         deserializerMap.put("category", (n) -> { this.setCategory(n.getEnumValue(SubmissionCategory::forValue)); });
-        deserializerMap.put("clientSource", (n) -> { this.setClientSource(n.getEnumValue(SubmissionClientSource::forValue)); });
-        deserializerMap.put("contentType", (n) -> { this.setContentType(n.getEnumValue(SubmissionContentType::forValue)); });
+        deserializerMap.put("clientSource", (n) -> { this.setClientSource(n.getEnumValue(ThreatSubmissionClientSource::forValue)); });
+        deserializerMap.put("contentType", (n) -> { this.setContentType(n.getEnumValue(ThreatSubmissionContentType::forValue)); });
         deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(SubmissionUserIdentity::createFromDiscriminatorValue)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("result", (n) -> { this.setResult(n.getObjectValue(SubmissionResult::createFromDiscriminatorValue)); });
-        deserializerMap.put("source", (n) -> { this.setSource(n.getEnumValue(SubmissionSource::forValue)); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(LongRunningOperationStatus::forValue)); });
+        deserializerMap.put("source", (n) -> { this.setSource(n.getEnumValue(ThreatSubmissionSource::forValue)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(ThreatSubmissionStatus::forValue)); });
         deserializerMap.put("tenantId", (n) -> { this.setTenantId(n.getStringValue()); });
         return deserializerMap;
     }
@@ -116,18 +116,18 @@ public class ThreatSubmission extends Entity implements Parsable {
     }
     /**
      * Gets the source property value. Specifies the role of the submitter. Supports $filter = source eq 'value'. The possible values are: administrator,  user and unkownFutureValue.
-     * @return a SubmissionSource
+     * @return a ThreatSubmissionSource
      */
     @jakarta.annotation.Nullable
-    public SubmissionSource getSource() {
+    public ThreatSubmissionSource getSource() {
         return this.backingStore.get("source");
     }
     /**
      * Gets the status property value. Indicates whether the threat submission has been analyzed by Microsoft. Supports $filter = status eq 'value'. The possible values are: notStarted, running, succeeded, failed, skipped and unkownFutureValue.
-     * @return a LongRunningOperationStatus
+     * @return a ThreatSubmissionStatus
      */
     @jakarta.annotation.Nullable
-    public LongRunningOperationStatus getStatus() {
+    public ThreatSubmissionStatus getStatus() {
         return this.backingStore.get("status");
     }
     /**
@@ -174,14 +174,14 @@ public class ThreatSubmission extends Entity implements Parsable {
      * Sets the clientSource property value. Specifies the source of the submission. The possible values are: microsoft,  other and unkownFutureValue.
      * @param value Value to set for the clientSource property.
      */
-    public void setClientSource(@jakarta.annotation.Nullable final SubmissionClientSource value) {
+    public void setClientSource(@jakarta.annotation.Nullable final ThreatSubmissionClientSource value) {
         this.backingStore.set("clientSource", value);
     }
     /**
      * Sets the contentType property value. Specifies the type of content being submitted. The possible values are: email, url, file, app and unkownFutureValue.
      * @param value Value to set for the contentType property.
      */
-    public void setContentType(@jakarta.annotation.Nullable final SubmissionContentType value) {
+    public void setContentType(@jakarta.annotation.Nullable final ThreatSubmissionContentType value) {
         this.backingStore.set("contentType", value);
     }
     /**
@@ -209,14 +209,14 @@ public class ThreatSubmission extends Entity implements Parsable {
      * Sets the source property value. Specifies the role of the submitter. Supports $filter = source eq 'value'. The possible values are: administrator,  user and unkownFutureValue.
      * @param value Value to set for the source property.
      */
-    public void setSource(@jakarta.annotation.Nullable final SubmissionSource value) {
+    public void setSource(@jakarta.annotation.Nullable final ThreatSubmissionSource value) {
         this.backingStore.set("source", value);
     }
     /**
      * Sets the status property value. Indicates whether the threat submission has been analyzed by Microsoft. Supports $filter = status eq 'value'. The possible values are: notStarted, running, succeeded, failed, skipped and unkownFutureValue.
      * @param value Value to set for the status property.
      */
-    public void setStatus(@jakarta.annotation.Nullable final LongRunningOperationStatus value) {
+    public void setStatus(@jakarta.annotation.Nullable final ThreatSubmissionStatus value) {
         this.backingStore.set("status", value);
     }
     /**
