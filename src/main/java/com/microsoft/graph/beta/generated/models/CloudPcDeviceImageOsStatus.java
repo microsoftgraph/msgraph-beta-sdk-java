@@ -7,6 +7,7 @@ import java.util.Objects;
 public enum CloudPcDeviceImageOsStatus implements ValuedEnum {
     Supported("supported"),
     SupportedWithWarning("supportedWithWarning"),
+    Unknown("unknown"),
     UnknownFutureValue("unknownFutureValue");
     public final String value;
     CloudPcDeviceImageOsStatus(final String value) {
@@ -20,6 +21,7 @@ public enum CloudPcDeviceImageOsStatus implements ValuedEnum {
         switch(searchValue) {
             case "supported": return Supported;
             case "supportedWithWarning": return SupportedWithWarning;
+            case "unknown": return Unknown;
             case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }

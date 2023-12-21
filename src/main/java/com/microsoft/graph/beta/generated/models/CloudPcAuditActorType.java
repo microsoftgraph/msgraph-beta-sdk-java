@@ -8,7 +8,7 @@ public enum CloudPcAuditActorType implements ValuedEnum {
     ItPro("itPro"),
     Application("application"),
     Partner("partner"),
-    Unknown("unknown");
+    UnknownFutureValue("unknownFutureValue");
     public final String value;
     CloudPcAuditActorType(final String value) {
         this.value = value;
@@ -22,7 +22,7 @@ public enum CloudPcAuditActorType implements ValuedEnum {
             case "itPro": return ItPro;
             case "application": return Application;
             case "partner": return Partner;
-            case "unknown": return Unknown;
+            case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }
     }

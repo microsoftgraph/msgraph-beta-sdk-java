@@ -71,8 +71,9 @@ public class CreateLinkPostRequestBody implements AdditionalDataHolder, BackedMo
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(8);
         deserializerMap.put("expirationDateTime", (n) -> { this.setExpirationDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("message", (n) -> { this.setMessage(n.getStringValue()); });
         deserializerMap.put("password", (n) -> { this.setPassword(n.getStringValue()); });
         deserializerMap.put("recipients", (n) -> { this.setRecipients(n.getCollectionOfObjectValues(DriveRecipient::createFromDiscriminatorValue)); });
         deserializerMap.put("retainInheritedPermissions", (n) -> { this.setRetainInheritedPermissions(n.getBooleanValue()); });
@@ -80,6 +81,14 @@ public class CreateLinkPostRequestBody implements AdditionalDataHolder, BackedMo
         deserializerMap.put("sendNotification", (n) -> { this.setSendNotification(n.getBooleanValue()); });
         deserializerMap.put("type", (n) -> { this.setType(n.getStringValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the message property value. The message property
+     * @return a String
+     */
+    @jakarta.annotation.Nullable
+    public String getMessage() {
+        return this.backingStore.get("message");
     }
     /**
      * Gets the password property value. The password property
@@ -136,6 +145,7 @@ public class CreateLinkPostRequestBody implements AdditionalDataHolder, BackedMo
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeOffsetDateTimeValue("expirationDateTime", this.getExpirationDateTime());
+        writer.writeStringValue("message", this.getMessage());
         writer.writeStringValue("password", this.getPassword());
         writer.writeCollectionOfObjectValues("recipients", this.getRecipients());
         writer.writeBooleanValue("retainInheritedPermissions", this.getRetainInheritedPermissions());
@@ -165,6 +175,13 @@ public class CreateLinkPostRequestBody implements AdditionalDataHolder, BackedMo
      */
     public void setExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("expirationDateTime", value);
+    }
+    /**
+     * Sets the message property value. The message property
+     * @param value Value to set for the message property.
+     */
+    public void setMessage(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("message", value);
     }
     /**
      * Sets the password property value. The password property

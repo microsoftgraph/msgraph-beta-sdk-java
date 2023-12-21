@@ -69,10 +69,11 @@ public class CloudPcSourceDeviceImage implements AdditionalDataHolder, BackedMod
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("id", (n) -> { this.setId(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("resourceId", (n) -> { this.setResourceId(n.getStringValue()); });
         deserializerMap.put("subscriptionDisplayName", (n) -> { this.setSubscriptionDisplayName(n.getStringValue()); });
         deserializerMap.put("subscriptionId", (n) -> { this.setSubscriptionId(n.getStringValue()); });
         return deserializerMap;
@@ -92,6 +93,14 @@ public class CloudPcSourceDeviceImage implements AdditionalDataHolder, BackedMod
     @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.backingStore.get("odataType");
+    }
+    /**
+     * Gets the resourceId property value. The resourceId property
+     * @return a String
+     */
+    @jakarta.annotation.Nullable
+    public String getResourceId() {
+        return this.backingStore.get("resourceId");
     }
     /**
      * Gets the subscriptionDisplayName property value. The display name of subscription that hosts the source image.
@@ -118,6 +127,7 @@ public class CloudPcSourceDeviceImage implements AdditionalDataHolder, BackedMod
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("id", this.getId());
         writer.writeStringValue("@odata.type", this.getOdataType());
+        writer.writeStringValue("resourceId", this.getResourceId());
         writer.writeStringValue("subscriptionDisplayName", this.getSubscriptionDisplayName());
         writer.writeStringValue("subscriptionId", this.getSubscriptionId());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -157,6 +167,13 @@ public class CloudPcSourceDeviceImage implements AdditionalDataHolder, BackedMod
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("odataType", value);
+    }
+    /**
+     * Sets the resourceId property value. The resourceId property
+     * @param value Value to set for the resourceId property.
+     */
+    public void setResourceId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("resourceId", value);
     }
     /**
      * Sets the subscriptionDisplayName property value. The display name of subscription that hosts the source image.

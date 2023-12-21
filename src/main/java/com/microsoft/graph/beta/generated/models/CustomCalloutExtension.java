@@ -32,6 +32,8 @@ public class CustomCalloutExtension extends Entity implements Parsable {
                 case "#microsoft.graph.customAccessPackageWorkflowExtension": return new CustomAccessPackageWorkflowExtension();
                 case "#microsoft.graph.customAuthenticationExtension": return new CustomAuthenticationExtension();
                 case "#microsoft.graph.identityGovernance.customTaskExtension": return new CustomTaskExtension();
+                case "#microsoft.graph.onAttributeCollectionStartCustomExtension": return new OnAttributeCollectionStartCustomExtension();
+                case "#microsoft.graph.onAttributeCollectionSubmitCustomExtension": return new OnAttributeCollectionSubmitCustomExtension();
                 case "#microsoft.graph.onTokenIssuanceStartCustomExtension": return new OnTokenIssuanceStartCustomExtension();
             }
         }

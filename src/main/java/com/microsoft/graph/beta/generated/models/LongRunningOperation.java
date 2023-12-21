@@ -30,6 +30,7 @@ public class LongRunningOperation extends Entity implements Parsable {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
                 case "#microsoft.graph.attackSimulationOperation": return new AttackSimulationOperation();
+                case "#microsoft.graph.engagementAsyncOperation": return new EngagementAsyncOperation();
                 case "#microsoft.graph.goalsExportJob": return new GoalsExportJob();
                 case "#microsoft.graph.industryData.fileValidateOperation": return new FileValidateOperation();
                 case "#microsoft.graph.industryData.validateOperation": return new ValidateOperation();

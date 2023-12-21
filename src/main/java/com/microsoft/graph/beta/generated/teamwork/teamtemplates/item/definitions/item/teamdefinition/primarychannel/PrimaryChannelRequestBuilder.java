@@ -2,6 +2,7 @@ package com.microsoft.graph.beta.teamwork.teamtemplates.item.definitions.item.te
 
 import com.microsoft.graph.beta.models.Channel;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
+import com.microsoft.graph.beta.teamwork.teamtemplates.item.definitions.item.teamdefinition.primarychannel.archive.ArchiveRequestBuilder;
 import com.microsoft.graph.beta.teamwork.teamtemplates.item.definitions.item.teamdefinition.primarychannel.completemigration.CompleteMigrationRequestBuilder;
 import com.microsoft.graph.beta.teamwork.teamtemplates.item.definitions.item.teamdefinition.primarychannel.doesuserhaveaccessuseriduseridtenantidtenantiduserprincipalnameuserprincipalname.DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilder;
 import com.microsoft.graph.beta.teamwork.teamtemplates.item.definitions.item.teamdefinition.primarychannel.filesfolder.FilesFolderRequestBuilder;
@@ -11,6 +12,7 @@ import com.microsoft.graph.beta.teamwork.teamtemplates.item.definitions.item.tea
 import com.microsoft.graph.beta.teamwork.teamtemplates.item.definitions.item.teamdefinition.primarychannel.removeemail.RemoveEmailRequestBuilder;
 import com.microsoft.graph.beta.teamwork.teamtemplates.item.definitions.item.teamdefinition.primarychannel.sharedwithteams.SharedWithTeamsRequestBuilder;
 import com.microsoft.graph.beta.teamwork.teamtemplates.item.definitions.item.teamdefinition.primarychannel.tabs.TabsRequestBuilder;
+import com.microsoft.graph.beta.teamwork.teamtemplates.item.definitions.item.teamdefinition.primarychannel.unarchive.UnarchiveRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -29,6 +31,13 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrimaryChannelRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to call the archive method.
+     */
+    @jakarta.annotation.Nonnull
+    public ArchiveRequestBuilder archive() {
+        return new ArchiveRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Provides operations to call the completeMigration method.
      */
@@ -91,6 +100,13 @@ public class PrimaryChannelRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public TabsRequestBuilder tabs() {
         return new TabsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the unarchive method.
+     */
+    @jakarta.annotation.Nonnull
+    public UnarchiveRequestBuilder unarchive() {
+        return new UnarchiveRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new PrimaryChannelRequestBuilder and sets the default values.

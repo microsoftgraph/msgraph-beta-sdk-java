@@ -7,7 +7,8 @@ import java.util.Objects;
 public enum CloudPcDeviceImageStatus implements ValuedEnum {
     Pending("pending"),
     Ready("ready"),
-    Failed("failed");
+    Failed("failed"),
+    UnknownFutureValue("unknownFutureValue");
     public final String value;
     CloudPcDeviceImageStatus(final String value) {
         this.value = value;
@@ -21,6 +22,7 @@ public enum CloudPcDeviceImageStatus implements ValuedEnum {
             case "pending": return Pending;
             case "ready": return Ready;
             case "failed": return Failed;
+            case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }
     }

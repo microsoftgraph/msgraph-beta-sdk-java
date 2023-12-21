@@ -56,12 +56,21 @@ public class CloudPcDomainJoinConfiguration implements AdditionalDataHolder, Bac
         return this.backingStore;
     }
     /**
+     * Gets the domainJoinType property value. The domainJoinType property
+     * @return a CloudPcDomainJoinType
+     */
+    @jakarta.annotation.Nullable
+    public CloudPcDomainJoinType getDomainJoinType() {
+        return this.backingStore.get("domainJoinType");
+    }
+    /**
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
+        deserializerMap.put("domainJoinType", (n) -> { this.setDomainJoinType(n.getEnumValue(CloudPcDomainJoinType::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("onPremisesConnectionId", (n) -> { this.setOnPremisesConnectionId(n.getStringValue()); });
         deserializerMap.put("regionGroup", (n) -> { this.setRegionGroup(n.getEnumValue(CloudPcRegionGroup::forValue)); });
@@ -115,6 +124,7 @@ public class CloudPcDomainJoinConfiguration implements AdditionalDataHolder, Bac
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeEnumValue("domainJoinType", this.getDomainJoinType());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("onPremisesConnectionId", this.getOnPremisesConnectionId());
         writer.writeEnumValue("regionGroup", this.getRegionGroup());
@@ -136,6 +146,13 @@ public class CloudPcDomainJoinConfiguration implements AdditionalDataHolder, Bac
     public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
         Objects.requireNonNull(value);
         this.backingStore = value;
+    }
+    /**
+     * Sets the domainJoinType property value. The domainJoinType property
+     * @param value Value to set for the domainJoinType property.
+     */
+    public void setDomainJoinType(@jakarta.annotation.Nullable final CloudPcDomainJoinType value) {
+        this.backingStore.set("domainJoinType", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
