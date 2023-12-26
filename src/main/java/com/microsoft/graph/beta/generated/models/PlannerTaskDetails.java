@@ -25,6 +25,14 @@ public class PlannerTaskDetails extends PlannerDelta implements Parsable {
         return new PlannerTaskDetails();
     }
     /**
+     * Gets the approvalAttachment property value. The approvalAttachment property
+     * @return a PlannerBaseApprovalAttachment
+     */
+    @jakarta.annotation.Nullable
+    public PlannerBaseApprovalAttachment getApprovalAttachment() {
+        return this.backingStore.get("approvalAttachment");
+    }
+    /**
      * Gets the checklist property value. The collection of checklist items on the task.
      * @return a PlannerChecklistItems
      */
@@ -55,6 +63,7 @@ public class PlannerTaskDetails extends PlannerDelta implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("approvalAttachment", (n) -> { this.setApprovalAttachment(n.getObjectValue(PlannerBaseApprovalAttachment::createFromDiscriminatorValue)); });
         deserializerMap.put("checklist", (n) -> { this.setChecklist(n.getObjectValue(PlannerChecklistItems::createFromDiscriminatorValue)); });
         deserializerMap.put("completionRequirements", (n) -> { this.setCompletionRequirements(n.getObjectValue(PlannerTaskCompletionRequirementDetails::createFromDiscriminatorValue)); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
@@ -103,6 +112,7 @@ public class PlannerTaskDetails extends PlannerDelta implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeObjectValue("approvalAttachment", this.getApprovalAttachment());
         writer.writeObjectValue("checklist", this.getChecklist());
         writer.writeObjectValue("completionRequirements", this.getCompletionRequirements());
         writer.writeStringValue("description", this.getDescription());
@@ -110,6 +120,13 @@ public class PlannerTaskDetails extends PlannerDelta implements Parsable {
         writer.writeObjectValue("notes", this.getNotes());
         writer.writeEnumValue("previewType", this.getPreviewType());
         writer.writeObjectValue("references", this.getReferences());
+    }
+    /**
+     * Sets the approvalAttachment property value. The approvalAttachment property
+     * @param value Value to set for the approvalAttachment property.
+     */
+    public void setApprovalAttachment(@jakarta.annotation.Nullable final PlannerBaseApprovalAttachment value) {
+        this.backingStore.set("approvalAttachment", value);
     }
     /**
      * Sets the checklist property value. The collection of checklist items on the task.

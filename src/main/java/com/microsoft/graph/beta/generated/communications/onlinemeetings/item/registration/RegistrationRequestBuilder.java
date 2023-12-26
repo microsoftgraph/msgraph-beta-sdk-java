@@ -53,16 +53,16 @@ public class RegistrationRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/communications/onlineMeetings/{onlineMeeting%2Did}/registration{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Disable and delete the externalMeetingRegistration of an onlineMeeting.
-     * @see <a href="https://learn.microsoft.com/graph/api/externalmeetingregistration-delete?view=graph-rest-1.0">Find more info here</a>
+     * Disable and delete the meetingRegistration of an onlineMeeting on behalf of the organizer.
+     * @see <a href="https://learn.microsoft.com/graph/api/meetingregistration-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Disable and delete the externalMeetingRegistration of an onlineMeeting.
+     * Disable and delete the meetingRegistration of an onlineMeeting on behalf of the organizer.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @see <a href="https://learn.microsoft.com/graph/api/externalmeetingregistration-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/meetingregistration-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -121,7 +121,7 @@ public class RegistrationRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, MeetingRegistration::createFromDiscriminatorValue);
     }
     /**
-     * Disable and delete the externalMeetingRegistration of an onlineMeeting.
+     * Disable and delete the meetingRegistration of an onlineMeeting on behalf of the organizer.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -129,7 +129,7 @@ public class RegistrationRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Disable and delete the externalMeetingRegistration of an onlineMeeting.
+     * Disable and delete the meetingRegistration of an onlineMeeting on behalf of the organizer.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

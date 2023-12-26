@@ -88,19 +88,19 @@ public class UpdatableAssetItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties of an azureADDevice object.
+     * Read the properties and relationships of an updatableAssetGroup object.
      * @return a UpdatableAsset
-     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-azureaddevice-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-updatableassetgroup-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UpdatableAsset get() {
         return get(null);
     }
     /**
-     * Read the properties of an azureADDevice object.
+     * Read the properties and relationships of an updatableAssetGroup object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a UpdatableAsset
-     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-azureaddevice-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-updatableassetgroup-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UpdatableAsset get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -155,7 +155,7 @@ public class UpdatableAssetItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties of an azureADDevice object.
+     * Read the properties and relationships of an updatableAssetGroup object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -163,7 +163,7 @@ public class UpdatableAssetItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties of an azureADDevice object.
+     * Read the properties and relationships of an updatableAssetGroup object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -215,7 +215,7 @@ public class UpdatableAssetItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties of an azureADDevice object.
+     * Read the properties and relationships of an updatableAssetGroup object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

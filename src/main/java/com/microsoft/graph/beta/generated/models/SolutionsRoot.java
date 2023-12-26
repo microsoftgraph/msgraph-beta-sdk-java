@@ -56,6 +56,22 @@ public class SolutionsRoot implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore;
     }
     /**
+     * Gets the bookingBusinesses property value. The bookingBusinesses property
+     * @return a java.util.List<BookingBusiness>
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<BookingBusiness> getBookingBusinesses() {
+        return this.backingStore.get("bookingBusinesses");
+    }
+    /**
+     * Gets the bookingCurrencies property value. The bookingCurrencies property
+     * @return a java.util.List<BookingCurrency>
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<BookingCurrency> getBookingCurrencies() {
+        return this.backingStore.get("bookingCurrencies");
+    }
+    /**
      * Gets the businessScenarios property value. The businessScenarios property
      * @return a java.util.List<BusinessScenario>
      */
@@ -69,7 +85,9 @@ public class SolutionsRoot implements AdditionalDataHolder, BackedModel, Parsabl
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
+        deserializerMap.put("bookingBusinesses", (n) -> { this.setBookingBusinesses(n.getCollectionOfObjectValues(BookingBusiness::createFromDiscriminatorValue)); });
+        deserializerMap.put("bookingCurrencies", (n) -> { this.setBookingCurrencies(n.getCollectionOfObjectValues(BookingCurrency::createFromDiscriminatorValue)); });
         deserializerMap.put("businessScenarios", (n) -> { this.setBusinessScenarios(n.getCollectionOfObjectValues(BusinessScenario::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("virtualEvents", (n) -> { this.setVirtualEvents(n.getObjectValue(VirtualEventsRoot::createFromDiscriminatorValue)); });
@@ -97,6 +115,8 @@ public class SolutionsRoot implements AdditionalDataHolder, BackedModel, Parsabl
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeCollectionOfObjectValues("bookingBusinesses", this.getBookingBusinesses());
+        writer.writeCollectionOfObjectValues("bookingCurrencies", this.getBookingCurrencies());
         writer.writeCollectionOfObjectValues("businessScenarios", this.getBusinessScenarios());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("virtualEvents", this.getVirtualEvents());
@@ -116,6 +136,20 @@ public class SolutionsRoot implements AdditionalDataHolder, BackedModel, Parsabl
     public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
         Objects.requireNonNull(value);
         this.backingStore = value;
+    }
+    /**
+     * Sets the bookingBusinesses property value. The bookingBusinesses property
+     * @param value Value to set for the bookingBusinesses property.
+     */
+    public void setBookingBusinesses(@jakarta.annotation.Nullable final java.util.List<BookingBusiness> value) {
+        this.backingStore.set("bookingBusinesses", value);
+    }
+    /**
+     * Sets the bookingCurrencies property value. The bookingCurrencies property
+     * @param value Value to set for the bookingCurrencies property.
+     */
+    public void setBookingCurrencies(@jakarta.annotation.Nullable final java.util.List<BookingCurrency> value) {
+        this.backingStore.set("bookingCurrencies", value);
     }
     /**
      * Sets the businessScenarios property value. The businessScenarios property
