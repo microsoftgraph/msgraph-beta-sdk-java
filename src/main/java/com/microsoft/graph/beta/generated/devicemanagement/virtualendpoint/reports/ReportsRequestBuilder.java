@@ -14,6 +14,7 @@ import com.microsoft.graph.beta.devicemanagement.virtualendpoint.reports.getreal
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.reports.getremoteconnectionhistoricalreports.GetRemoteConnectionHistoricalReportsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.reports.getshareduselicenseusagereport.GetSharedUseLicenseUsageReportRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.reports.gettotalaggregatedremoteconnectionreports.GetTotalAggregatedRemoteConnectionReportsRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.virtualendpoint.reports.retrievecrossregiondisasterrecoveryreport.RetrieveCrossRegionDisasterRecoveryReportRequestBuilder;
 import com.microsoft.graph.beta.models.CloudPcReports;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -117,6 +118,13 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public GetTotalAggregatedRemoteConnectionReportsRequestBuilder getTotalAggregatedRemoteConnectionReports() {
         return new GetTotalAggregatedRemoteConnectionReportsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the retrieveCrossRegionDisasterRecoveryReport method.
+     */
+    @jakarta.annotation.Nonnull
+    public RetrieveCrossRegionDisasterRecoveryReportRequestBuilder retrieveCrossRegionDisasterRecoveryReport() {
+        return new RetrieveCrossRegionDisasterRecoveryReportRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new ReportsRequestBuilder and sets the default values.

@@ -26,7 +26,7 @@ public class OpenShift extends ChangeTrackedEntity implements Parsable {
         return new OpenShift();
     }
     /**
-     * Gets the draftOpenShift property value. An unpublished open shift.
+     * Gets the draftOpenShift property value. Draft changes in the openShift are only visible to managers until they are shared.
      * @return a OpenShiftItem
      */
     @jakarta.annotation.Nullable
@@ -50,7 +50,7 @@ public class OpenShift extends ChangeTrackedEntity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the isStagedForDeletion property value. The isStagedForDeletion property
+     * Gets the isStagedForDeletion property value. The openShift is marked for deletion, a process that is finalized when the schedule is shared.
      * @return a Boolean
      */
     @jakarta.annotation.Nullable
@@ -58,7 +58,7 @@ public class OpenShift extends ChangeTrackedEntity implements Parsable {
         return this.backingStore.get("isStagedForDeletion");
     }
     /**
-     * Gets the schedulingGroupId property value. ID for the scheduling group that the open shift belongs to.
+     * Gets the schedulingGroupId property value. The ID of the schedulingGroup that contains the openShift.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -66,7 +66,7 @@ public class OpenShift extends ChangeTrackedEntity implements Parsable {
         return this.backingStore.get("schedulingGroupId");
     }
     /**
-     * Gets the schedulingGroupName property value. The schedulingGroupName property
+     * Gets the schedulingGroupName property value. The name of the schedulingGroup that contains the openShift.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -74,7 +74,7 @@ public class OpenShift extends ChangeTrackedEntity implements Parsable {
         return this.backingStore.get("schedulingGroupName");
     }
     /**
-     * Gets the sharedOpenShift property value. A published open shift.
+     * Gets the sharedOpenShift property value. The shared version of this openShift that is viewable by both employees and managers.
      * @return a OpenShiftItem
      */
     @jakarta.annotation.Nullable
@@ -82,7 +82,7 @@ public class OpenShift extends ChangeTrackedEntity implements Parsable {
         return this.backingStore.get("sharedOpenShift");
     }
     /**
-     * Gets the teamId property value. The teamId property
+     * Gets the teamId property value. The ID of the team in which the openShift is located.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -90,7 +90,7 @@ public class OpenShift extends ChangeTrackedEntity implements Parsable {
         return this.backingStore.get("teamId");
     }
     /**
-     * Gets the teamName property value. The teamName property
+     * Gets the teamName property value. The name of the team in which the openShift is located.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -110,49 +110,49 @@ public class OpenShift extends ChangeTrackedEntity implements Parsable {
         writer.writeObjectValue("sharedOpenShift", this.getSharedOpenShift());
     }
     /**
-     * Sets the draftOpenShift property value. An unpublished open shift.
+     * Sets the draftOpenShift property value. Draft changes in the openShift are only visible to managers until they are shared.
      * @param value Value to set for the draftOpenShift property.
      */
     public void setDraftOpenShift(@jakarta.annotation.Nullable final OpenShiftItem value) {
         this.backingStore.set("draftOpenShift", value);
     }
     /**
-     * Sets the isStagedForDeletion property value. The isStagedForDeletion property
+     * Sets the isStagedForDeletion property value. The openShift is marked for deletion, a process that is finalized when the schedule is shared.
      * @param value Value to set for the isStagedForDeletion property.
      */
     public void setIsStagedForDeletion(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isStagedForDeletion", value);
     }
     /**
-     * Sets the schedulingGroupId property value. ID for the scheduling group that the open shift belongs to.
+     * Sets the schedulingGroupId property value. The ID of the schedulingGroup that contains the openShift.
      * @param value Value to set for the schedulingGroupId property.
      */
     public void setSchedulingGroupId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("schedulingGroupId", value);
     }
     /**
-     * Sets the schedulingGroupName property value. The schedulingGroupName property
+     * Sets the schedulingGroupName property value. The name of the schedulingGroup that contains the openShift.
      * @param value Value to set for the schedulingGroupName property.
      */
     public void setSchedulingGroupName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("schedulingGroupName", value);
     }
     /**
-     * Sets the sharedOpenShift property value. A published open shift.
+     * Sets the sharedOpenShift property value. The shared version of this openShift that is viewable by both employees and managers.
      * @param value Value to set for the sharedOpenShift property.
      */
     public void setSharedOpenShift(@jakarta.annotation.Nullable final OpenShiftItem value) {
         this.backingStore.set("sharedOpenShift", value);
     }
     /**
-     * Sets the teamId property value. The teamId property
+     * Sets the teamId property value. The ID of the team in which the openShift is located.
      * @param value Value to set for the teamId property.
      */
     public void setTeamId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("teamId", value);
     }
     /**
-     * Sets the teamName property value. The teamName property
+     * Sets the teamName property value. The name of the team in which the openShift is located.
      * @param value Value to set for the teamName property.
      */
     public void setTeamName(@jakarta.annotation.Nullable final String value) {

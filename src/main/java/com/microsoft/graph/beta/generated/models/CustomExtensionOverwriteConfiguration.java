@@ -56,7 +56,7 @@ public class CustomExtensionOverwriteConfiguration implements AdditionalDataHold
         return this.backingStore;
     }
     /**
-     * Gets the clientConfiguration property value. The clientConfiguration property
+     * Gets the clientConfiguration property value. Optional. Configuration of calling external API, such as timeout, retryCount, retriableResponseCodes.
      * @return a CustomExtensionClientConfiguration
      */
     @jakarta.annotation.Nullable
@@ -108,7 +108,7 @@ public class CustomExtensionOverwriteConfiguration implements AdditionalDataHold
         this.backingStore = value;
     }
     /**
-     * Sets the clientConfiguration property value. The clientConfiguration property
+     * Sets the clientConfiguration property value. Optional. Configuration of calling external API, such as timeout, retryCount, retriableResponseCodes.
      * @param value Value to set for the clientConfiguration property.
      */
     public void setClientConfiguration(@jakarta.annotation.Nullable final CustomExtensionClientConfiguration value) {

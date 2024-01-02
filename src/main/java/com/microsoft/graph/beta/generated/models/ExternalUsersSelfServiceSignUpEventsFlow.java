@@ -49,7 +49,7 @@ public class ExternalUsersSelfServiceSignUpEventsFlow extends AuthenticationEven
         return this.backingStore.get("onAttributeCollection");
     }
     /**
-     * Gets the onAttributeCollectionStart property value. The onAttributeCollectionStart property
+     * Gets the onAttributeCollectionStart property value. The configuration for what to invoke when attribution collection has started.
      * @return a OnAttributeCollectionStartHandler
      */
     @jakarta.annotation.Nullable
@@ -57,7 +57,7 @@ public class ExternalUsersSelfServiceSignUpEventsFlow extends AuthenticationEven
         return this.backingStore.get("onAttributeCollectionStart");
     }
     /**
-     * Gets the onAttributeCollectionSubmit property value. The onAttributeCollectionSubmit property
+     * Gets the onAttributeCollectionSubmit property value. The configuration for what to invoke when attributes have been submitted at the end of attribution collection.
      * @return a OnAttributeCollectionSubmitHandler
      */
     @jakarta.annotation.Nullable
@@ -110,14 +110,14 @@ public class ExternalUsersSelfServiceSignUpEventsFlow extends AuthenticationEven
         this.backingStore.set("onAttributeCollection", value);
     }
     /**
-     * Sets the onAttributeCollectionStart property value. The onAttributeCollectionStart property
+     * Sets the onAttributeCollectionStart property value. The configuration for what to invoke when attribution collection has started.
      * @param value Value to set for the onAttributeCollectionStart property.
      */
     public void setOnAttributeCollectionStart(@jakarta.annotation.Nullable final OnAttributeCollectionStartHandler value) {
         this.backingStore.set("onAttributeCollectionStart", value);
     }
     /**
-     * Sets the onAttributeCollectionSubmit property value. The onAttributeCollectionSubmit property
+     * Sets the onAttributeCollectionSubmit property value. The configuration for what to invoke when attributes have been submitted at the end of attribution collection.
      * @param value Value to set for the onAttributeCollectionSubmit property.
      */
     public void setOnAttributeCollectionSubmit(@jakarta.annotation.Nullable final OnAttributeCollectionSubmitHandler value) {

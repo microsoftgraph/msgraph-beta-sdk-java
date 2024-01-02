@@ -67,7 +67,7 @@ public class CustomAuthenticationExtensionsRequestBuilder extends BaseRequestBui
         super(requestAdapter, "{+baseurl}/identity/customAuthenticationExtensions{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of the customAuthenticationExtension objects and their properties. Currently, only onTokenIssuanceStartCustomExtension objects are returned.
+     * Get a list of the customAuthenticationExtension objects and their properties. The following derived types are supported.
      * @return a CustomAuthenticationExtensionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/identitycontainer-list-customauthenticationextensions?view=graph-rest-1.0">Find more info here</a>
      */
@@ -76,7 +76,7 @@ public class CustomAuthenticationExtensionsRequestBuilder extends BaseRequestBui
         return get(null);
     }
     /**
-     * Get a list of the customAuthenticationExtension objects and their properties. Currently, only onTokenIssuanceStartCustomExtension objects are returned.
+     * Get a list of the customAuthenticationExtension objects and their properties. The following derived types are supported.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CustomAuthenticationExtensionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/identitycontainer-list-customauthenticationextensions?view=graph-rest-1.0">Find more info here</a>
@@ -90,7 +90,7 @@ public class CustomAuthenticationExtensionsRequestBuilder extends BaseRequestBui
         return this.requestAdapter.send(requestInfo, errorMapping, CustomAuthenticationExtensionCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new customAuthenticationExtension object. Only the onTokenIssuanceStartCustomExtension object type is supported.
+     * Create a new customAuthenticationExtension object. The following derived types are currently supported.
      * @param body The request body
      * @return a CustomAuthenticationExtension
      * @see <a href="https://learn.microsoft.com/graph/api/identitycontainer-post-customauthenticationextensions?view=graph-rest-1.0">Find more info here</a>
@@ -100,7 +100,7 @@ public class CustomAuthenticationExtensionsRequestBuilder extends BaseRequestBui
         return post(body, null);
     }
     /**
-     * Create a new customAuthenticationExtension object. Only the onTokenIssuanceStartCustomExtension object type is supported.
+     * Create a new customAuthenticationExtension object. The following derived types are currently supported.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CustomAuthenticationExtension
@@ -116,7 +116,7 @@ public class CustomAuthenticationExtensionsRequestBuilder extends BaseRequestBui
         return this.requestAdapter.send(requestInfo, errorMapping, CustomAuthenticationExtension::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the customAuthenticationExtension objects and their properties. Currently, only onTokenIssuanceStartCustomExtension objects are returned.
+     * Get a list of the customAuthenticationExtension objects and their properties. The following derived types are supported.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -124,7 +124,7 @@ public class CustomAuthenticationExtensionsRequestBuilder extends BaseRequestBui
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the customAuthenticationExtension objects and their properties. Currently, only onTokenIssuanceStartCustomExtension objects are returned.
+     * Get a list of the customAuthenticationExtension objects and their properties. The following derived types are supported.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -136,7 +136,7 @@ public class CustomAuthenticationExtensionsRequestBuilder extends BaseRequestBui
         return requestInfo;
     }
     /**
-     * Create a new customAuthenticationExtension object. Only the onTokenIssuanceStartCustomExtension object type is supported.
+     * Create a new customAuthenticationExtension object. The following derived types are currently supported.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -145,7 +145,7 @@ public class CustomAuthenticationExtensionsRequestBuilder extends BaseRequestBui
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new customAuthenticationExtension object. Only the onTokenIssuanceStartCustomExtension object type is supported.
+     * Create a new customAuthenticationExtension object. The following derived types are currently supported.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -170,7 +170,7 @@ public class CustomAuthenticationExtensionsRequestBuilder extends BaseRequestBui
         return new CustomAuthenticationExtensionsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the customAuthenticationExtension objects and their properties. Currently, only onTokenIssuanceStartCustomExtension objects are returned.
+     * Get a list of the customAuthenticationExtension objects and their properties. The following derived types are supported.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -26,7 +26,7 @@ public class TimeOff extends ChangeTrackedEntity implements Parsable {
         return new TimeOff();
     }
     /**
-     * Gets the draftTimeOff property value. The draft version of this timeOff that is viewable by managers. Required.
+     * Gets the draftTimeOff property value. Draft changes in the timeOff are only visible to managers until they're shared.
      * @return a TimeOffItem
      */
     @jakarta.annotation.Nullable
@@ -47,7 +47,7 @@ public class TimeOff extends ChangeTrackedEntity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the isStagedForDeletion property value. The isStagedForDeletion property
+     * Gets the isStagedForDeletion property value. The timeOff is marked for deletion, a process that is finalized when the schedule is shared.
      * @return a Boolean
      */
     @jakarta.annotation.Nullable
@@ -55,7 +55,7 @@ public class TimeOff extends ChangeTrackedEntity implements Parsable {
         return this.backingStore.get("isStagedForDeletion");
     }
     /**
-     * Gets the sharedTimeOff property value. The shared version of this timeOff that is viewable by both employees and managers. Required.
+     * Gets the sharedTimeOff property value. The shared version of this timeOff that is viewable by both employees and managers.
      * @return a TimeOffItem
      */
     @jakarta.annotation.Nullable
@@ -83,21 +83,21 @@ public class TimeOff extends ChangeTrackedEntity implements Parsable {
         writer.writeStringValue("userId", this.getUserId());
     }
     /**
-     * Sets the draftTimeOff property value. The draft version of this timeOff that is viewable by managers. Required.
+     * Sets the draftTimeOff property value. Draft changes in the timeOff are only visible to managers until they're shared.
      * @param value Value to set for the draftTimeOff property.
      */
     public void setDraftTimeOff(@jakarta.annotation.Nullable final TimeOffItem value) {
         this.backingStore.set("draftTimeOff", value);
     }
     /**
-     * Sets the isStagedForDeletion property value. The isStagedForDeletion property
+     * Sets the isStagedForDeletion property value. The timeOff is marked for deletion, a process that is finalized when the schedule is shared.
      * @param value Value to set for the isStagedForDeletion property.
      */
     public void setIsStagedForDeletion(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isStagedForDeletion", value);
     }
     /**
-     * Sets the sharedTimeOff property value. The shared version of this timeOff that is viewable by both employees and managers. Required.
+     * Sets the sharedTimeOff property value. The shared version of this timeOff that is viewable by both employees and managers.
      * @param value Value to set for the sharedTimeOff property.
      */
     public void setSharedTimeOff(@jakarta.annotation.Nullable final TimeOffItem value) {
