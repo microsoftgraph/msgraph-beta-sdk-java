@@ -76,7 +76,7 @@ public class CloudPcScopedPermission implements AdditionalDataHolder, BackedMode
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the permission property value. The permission property
+     * Gets the permission property value. The operations allowed on scoped resources for the authenticated user. Example permission is Microsoft.CloudPC/ProvisioningPolicies/Create.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -84,7 +84,7 @@ public class CloudPcScopedPermission implements AdditionalDataHolder, BackedMode
         return this.backingStore.get("permission");
     }
     /**
-     * Gets the scopeIds property value. The scopeIds property
+     * Gets the scopeIds property value. The scope IDs of corresponding permission. Currently, it's Intune scope tag ID.
      * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
@@ -125,14 +125,14 @@ public class CloudPcScopedPermission implements AdditionalDataHolder, BackedMode
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the permission property value. The permission property
+     * Sets the permission property value. The operations allowed on scoped resources for the authenticated user. Example permission is Microsoft.CloudPC/ProvisioningPolicies/Create.
      * @param value Value to set for the permission property.
      */
     public void setPermission(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("permission", value);
     }
     /**
-     * Sets the scopeIds property value. The scopeIds property
+     * Sets the scopeIds property value. The scope IDs of corresponding permission. Currently, it's Intune scope tag ID.
      * @param value Value to set for the scopeIds property.
      */
     public void setScopeIds(@jakarta.annotation.Nullable final java.util.List<String> value) {

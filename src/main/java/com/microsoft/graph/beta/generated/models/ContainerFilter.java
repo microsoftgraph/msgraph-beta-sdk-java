@@ -67,7 +67,7 @@ public class ContainerFilter implements AdditionalDataHolder, BackedModel, Parsa
         return deserializerMap;
     }
     /**
-     * Gets the includedContainers property value. The includedContainers property
+     * Gets the includedContainers property value. The identifiers of containers, such as organizational units, that are in scope for a synchronization rule. For Active Directory organizational units, use the distinguished names. An empty list means no container filtering is configured.
      * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
@@ -108,7 +108,7 @@ public class ContainerFilter implements AdditionalDataHolder, BackedModel, Parsa
         this.backingStore = value;
     }
     /**
-     * Sets the includedContainers property value. The includedContainers property
+     * Sets the includedContainers property value. The identifiers of containers, such as organizational units, that are in scope for a synchronization rule. For Active Directory organizational units, use the distinguished names. An empty list means no container filtering is configured.
      * @param value Value to set for the includedContainers property.
      */
     public void setIncludedContainers(@jakarta.annotation.Nullable final java.util.List<String> value) {

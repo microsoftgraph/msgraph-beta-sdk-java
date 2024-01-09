@@ -36,19 +36,21 @@ public class MoveToContainerRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/planner/plans/{plannerPlan%2Did}/moveToContainer", rawUrl);
     }
     /**
-     * Invoke action moveToContainer
+     * Move a planner plan object from one planner plan container to another. Planner plans can only be moved from a user container to a group container.
      * @param body The request body
      * @return a PlannerPlan
+     * @see <a href="https://learn.microsoft.com/graph/api/plannerplan-movetocontainer?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PlannerPlan post(@jakarta.annotation.Nonnull final MoveToContainerPostRequestBody body) {
         return post(body, null);
     }
     /**
-     * Invoke action moveToContainer
+     * Move a planner plan object from one planner plan container to another. Planner plans can only be moved from a user container to a group container.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a PlannerPlan
+     * @see <a href="https://learn.microsoft.com/graph/api/plannerplan-movetocontainer?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PlannerPlan post(@jakarta.annotation.Nonnull final MoveToContainerPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -60,7 +62,7 @@ public class MoveToContainerRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PlannerPlan::createFromDiscriminatorValue);
     }
     /**
-     * Invoke action moveToContainer
+     * Move a planner plan object from one planner plan container to another. Planner plans can only be moved from a user container to a group container.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -69,7 +71,7 @@ public class MoveToContainerRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action moveToContainer
+     * Move a planner plan object from one planner plan container to another. Planner plans can only be moved from a user container to a group container.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

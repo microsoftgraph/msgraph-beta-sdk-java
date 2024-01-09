@@ -3,6 +3,7 @@ package com.microsoft.graph.beta.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -36,6 +37,14 @@ public class BookingCustomer extends BookingPerson implements Parsable {
         return this.backingStore.get("addresses");
     }
     /**
+     * Gets the createdDateTime property value. The createdDateTime property
+     * @return a OffsetDateTime
+     */
+    @jakarta.annotation.Nullable
+    public OffsetDateTime getCreatedDateTime() {
+        return this.backingStore.get("createdDateTime");
+    }
+    /**
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
@@ -43,8 +52,18 @@ public class BookingCustomer extends BookingPerson implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("addresses", (n) -> { this.setAddresses(n.getCollectionOfObjectValues(PhysicalAddress::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("lastUpdatedDateTime", (n) -> { this.setLastUpdatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("phones", (n) -> { this.setPhones(n.getCollectionOfObjectValues(Phone::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the lastUpdatedDateTime property value. The lastUpdatedDateTime property
+     * @return a OffsetDateTime
+     */
+    @jakarta.annotation.Nullable
+    public OffsetDateTime getLastUpdatedDateTime() {
+        return this.backingStore.get("lastUpdatedDateTime");
     }
     /**
      * Gets the phones property value. Phone numbers associated with the customer, including home, business and mobile numbers.
@@ -62,6 +81,8 @@ public class BookingCustomer extends BookingPerson implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("addresses", this.getAddresses());
+        writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
+        writer.writeOffsetDateTimeValue("lastUpdatedDateTime", this.getLastUpdatedDateTime());
         writer.writeCollectionOfObjectValues("phones", this.getPhones());
     }
     /**
@@ -70,6 +91,20 @@ public class BookingCustomer extends BookingPerson implements Parsable {
      */
     public void setAddresses(@jakarta.annotation.Nullable final java.util.List<PhysicalAddress> value) {
         this.backingStore.set("addresses", value);
+    }
+    /**
+     * Sets the createdDateTime property value. The createdDateTime property
+     * @param value Value to set for the createdDateTime property.
+     */
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
+        this.backingStore.set("createdDateTime", value);
+    }
+    /**
+     * Sets the lastUpdatedDateTime property value. The lastUpdatedDateTime property
+     * @param value Value to set for the lastUpdatedDateTime property.
+     */
+    public void setLastUpdatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
+        this.backingStore.set("lastUpdatedDateTime", value);
     }
     /**
      * Sets the phones property value. Phone numbers associated with the customer, including home, business and mobile numbers.

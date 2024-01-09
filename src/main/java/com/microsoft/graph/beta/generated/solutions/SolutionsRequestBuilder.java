@@ -2,6 +2,8 @@ package com.microsoft.graph.beta.solutions;
 
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.SolutionsRoot;
+import com.microsoft.graph.beta.solutions.bookingbusinesses.BookingBusinessesRequestBuilder;
+import com.microsoft.graph.beta.solutions.bookingcurrencies.BookingCurrenciesRequestBuilder;
 import com.microsoft.graph.beta.solutions.businessscenarios.BusinessScenariosRequestBuilder;
 import com.microsoft.graph.beta.solutions.virtualevents.VirtualEventsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -22,6 +24,20 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SolutionsRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the bookingBusinesses property of the microsoft.graph.solutionsRoot entity.
+     */
+    @jakarta.annotation.Nonnull
+    public BookingBusinessesRequestBuilder bookingBusinesses() {
+        return new BookingBusinessesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the bookingCurrencies property of the microsoft.graph.solutionsRoot entity.
+     */
+    @jakarta.annotation.Nonnull
+    public BookingCurrenciesRequestBuilder bookingCurrencies() {
+        return new BookingCurrenciesRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Provides operations to manage the businessScenarios property of the microsoft.graph.solutionsRoot entity.
      */

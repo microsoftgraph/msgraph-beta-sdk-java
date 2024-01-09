@@ -26,7 +26,7 @@ public class OnAttributeCollectionStartCustomExtensionHandler extends OnAttribut
         return new OnAttributeCollectionStartCustomExtensionHandler();
     }
     /**
-     * Gets the configuration property value. The configuration property
+     * Gets the configuration property value. Configuration regarding properties of the custom extension that are can be overwritten per event listener.
      * @return a CustomExtensionOverwriteConfiguration
      */
     @jakarta.annotation.Nullable
@@ -63,7 +63,7 @@ public class OnAttributeCollectionStartCustomExtensionHandler extends OnAttribut
         writer.writeObjectValue("customExtension", this.getCustomExtension());
     }
     /**
-     * Sets the configuration property value. The configuration property
+     * Sets the configuration property value. Configuration regarding properties of the custom extension that are can be overwritten per event listener.
      * @param value Value to set for the configuration property.
      */
     public void setConfiguration(@jakarta.annotation.Nullable final CustomExtensionOverwriteConfiguration value) {

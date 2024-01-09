@@ -1,5 +1,6 @@
 package com.microsoft.graph.beta.users.item.onlinemeetings.item.sendvirtualappointmentremindersms;
 
+import com.microsoft.graph.beta.models.AttendeeNotificationInfo;
 import com.microsoft.graph.beta.models.RemindBeforeTimeInMinutesType;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
@@ -49,6 +50,14 @@ public class SendVirtualAppointmentReminderSmsPostRequestBody implements Additio
         return value;
     }
     /**
+     * Gets the attendees property value. The attendees property
+     * @return a java.util.List<AttendeeNotificationInfo>
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<AttendeeNotificationInfo> getAttendees() {
+        return this.backingStore.get("attendees");
+    }
+    /**
      * Gets the backingStore property value. Stores model information.
      * @return a BackingStore
      */
@@ -63,17 +72,9 @@ public class SendVirtualAppointmentReminderSmsPostRequestBody implements Additio
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
-        deserializerMap.put("phoneNumbers", (n) -> { this.setPhoneNumbers(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("attendees", (n) -> { this.setAttendees(n.getCollectionOfObjectValues(AttendeeNotificationInfo::createFromDiscriminatorValue)); });
         deserializerMap.put("remindBeforeTimeInMinutesType", (n) -> { this.setRemindBeforeTimeInMinutesType(n.getEnumValue(RemindBeforeTimeInMinutesType::forValue)); });
         return deserializerMap;
-    }
-    /**
-     * Gets the phoneNumbers property value. The phoneNumbers property
-     * @return a java.util.List<String>
-     */
-    @jakarta.annotation.Nullable
-    public java.util.List<String> getPhoneNumbers() {
-        return this.backingStore.get("phoneNumbers");
     }
     /**
      * Gets the remindBeforeTimeInMinutesType property value. The remindBeforeTimeInMinutesType property
@@ -89,7 +90,7 @@ public class SendVirtualAppointmentReminderSmsPostRequestBody implements Additio
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeCollectionOfPrimitiveValues("phoneNumbers", this.getPhoneNumbers());
+        writer.writeCollectionOfObjectValues("attendees", this.getAttendees());
         writer.writeEnumValue("remindBeforeTimeInMinutesType", this.getRemindBeforeTimeInMinutesType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -101,19 +102,19 @@ public class SendVirtualAppointmentReminderSmsPostRequestBody implements Additio
         this.backingStore.set("additionalData", value);
     }
     /**
+     * Sets the attendees property value. The attendees property
+     * @param value Value to set for the attendees property.
+     */
+    public void setAttendees(@jakarta.annotation.Nullable final java.util.List<AttendeeNotificationInfo> value) {
+        this.backingStore.set("attendees", value);
+    }
+    /**
      * Sets the backingStore property value. Stores model information.
      * @param value Value to set for the backingStore property.
      */
     public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
         Objects.requireNonNull(value);
         this.backingStore = value;
-    }
-    /**
-     * Sets the phoneNumbers property value. The phoneNumbers property
-     * @param value Value to set for the phoneNumbers property.
-     */
-    public void setPhoneNumbers(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.backingStore.set("phoneNumbers", value);
     }
     /**
      * Sets the remindBeforeTimeInMinutesType property value. The remindBeforeTimeInMinutesType property

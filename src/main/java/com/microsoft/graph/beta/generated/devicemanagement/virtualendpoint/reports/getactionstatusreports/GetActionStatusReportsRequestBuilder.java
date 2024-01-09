@@ -36,19 +36,21 @@ public class GetActionStatusReportsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/reports/getActionStatusReports", rawUrl);
     }
     /**
-     * Invoke action getActionStatusReports
+     * Get the remote action status reports, including data such as the Cloud PC ID, Cloud PC device display name, initiating user's principal name, device owner's user principal name, action taken, and action state.
      * @param body The request body
      * @return a InputStream
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpcreports-getactionstatusreports?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public InputStream post(@jakarta.annotation.Nonnull final GetActionStatusReportsPostRequestBody body) {
         return post(body, null);
     }
     /**
-     * Invoke action getActionStatusReports
+     * Get the remote action status reports, including data such as the Cloud PC ID, Cloud PC device display name, initiating user's principal name, device owner's user principal name, action taken, and action state.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a InputStream
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpcreports-getactionstatusreports?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public InputStream post(@jakarta.annotation.Nonnull final GetActionStatusReportsPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -60,7 +62,7 @@ public class GetActionStatusReportsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitive(requestInfo, errorMapping, InputStream.class);
     }
     /**
-     * Invoke action getActionStatusReports
+     * Get the remote action status reports, including data such as the Cloud PC ID, Cloud PC device display name, initiating user's principal name, device owner's user principal name, action taken, and action state.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -69,7 +71,7 @@ public class GetActionStatusReportsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action getActionStatusReports
+     * Get the remote action status reports, including data such as the Cloud PC ID, Cloud PC device display name, initiating user's principal name, device owner's user principal name, action taken, and action state.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

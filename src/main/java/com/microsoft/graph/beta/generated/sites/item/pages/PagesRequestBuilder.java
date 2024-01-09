@@ -4,6 +4,7 @@ import com.microsoft.graph.beta.models.BaseSitePage;
 import com.microsoft.graph.beta.models.BaseSitePageCollectionResponse;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.sites.item.pages.count.CountRequestBuilder;
+import com.microsoft.graph.beta.sites.item.pages.graphsitepage.GraphSitePageRequestBuilder;
 import com.microsoft.graph.beta.sites.item.pages.item.BaseSitePageItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -29,6 +30,13 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Casts the previous resource to sitePage.
+     */
+    @jakarta.annotation.Nonnull
+    public GraphSitePageRequestBuilder graphSitePage() {
+        return new GraphSitePageRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the pages property of the microsoft.graph.site entity.

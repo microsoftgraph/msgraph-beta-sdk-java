@@ -67,7 +67,7 @@ public class GroupFilter implements AdditionalDataHolder, BackedModel, Parsable 
         return deserializerMap;
     }
     /**
-     * Gets the includedGroups property value. The includedGroups property
+     * Gets the includedGroups property value. Identifiers of groups that are in scope for a synchronization rule. For Active Directory groups, use the distinguished names. An empty list means no group filtering is configured.
      * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
@@ -108,7 +108,7 @@ public class GroupFilter implements AdditionalDataHolder, BackedModel, Parsable 
         this.backingStore = value;
     }
     /**
-     * Sets the includedGroups property value. The includedGroups property
+     * Sets the includedGroups property value. Identifiers of groups that are in scope for a synchronization rule. For Active Directory groups, use the distinguished names. An empty list means no group filtering is configured.
      * @param value Value to set for the includedGroups property.
      */
     public void setIncludedGroups(@jakarta.annotation.Nullable final java.util.List<String> value) {

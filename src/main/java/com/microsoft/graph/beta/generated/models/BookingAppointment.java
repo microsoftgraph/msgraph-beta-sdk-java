@@ -4,6 +4,7 @@ import com.microsoft.kiota.PeriodAndDuration;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -43,6 +44,22 @@ public class BookingAppointment extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public String getAnonymousJoinWebUrl() {
         return this.backingStore.get("anonymousJoinWebUrl");
+    }
+    /**
+     * Gets the appointmentLabel property value. Custom label that can be stamped on this appointment by users.
+     * @return a String
+     */
+    @jakarta.annotation.Nullable
+    public String getAppointmentLabel() {
+        return this.backingStore.get("appointmentLabel");
+    }
+    /**
+     * Gets the createdDateTime property value. The createdDateTime property
+     * @return a OffsetDateTime
+     */
+    @jakarta.annotation.Nullable
+    public OffsetDateTime getCreatedDateTime() {
+        return this.backingStore.get("createdDateTime");
     }
     /**
      * Gets the customerEmailAddress property value. The SMTP address of the bookingCustomer who is booking the appointment.
@@ -133,6 +150,8 @@ public class BookingAppointment extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("additionalInformation", (n) -> { this.setAdditionalInformation(n.getStringValue()); });
         deserializerMap.put("anonymousJoinWebUrl", (n) -> { this.setAnonymousJoinWebUrl(n.getStringValue()); });
+        deserializerMap.put("appointmentLabel", (n) -> { this.setAppointmentLabel(n.getStringValue()); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("customerEmailAddress", (n) -> { this.setCustomerEmailAddress(n.getStringValue()); });
         deserializerMap.put("customerId", (n) -> { this.setCustomerId(n.getStringValue()); });
         deserializerMap.put("customerLocation", (n) -> { this.setCustomerLocation(n.getObjectValue(Location::createFromDiscriminatorValue)); });
@@ -151,6 +170,7 @@ public class BookingAppointment extends Entity implements Parsable {
         deserializerMap.put("invoiceUrl", (n) -> { this.setInvoiceUrl(n.getStringValue()); });
         deserializerMap.put("isLocationOnline", (n) -> { this.setIsLocationOnline(n.getBooleanValue()); });
         deserializerMap.put("joinWebUrl", (n) -> { this.setJoinWebUrl(n.getStringValue()); });
+        deserializerMap.put("lastUpdatedDateTime", (n) -> { this.setLastUpdatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("maximumAttendeesCount", (n) -> { this.setMaximumAttendeesCount(n.getIntegerValue()); });
         deserializerMap.put("onlineMeetingUrl", (n) -> { this.setOnlineMeetingUrl(n.getStringValue()); });
         deserializerMap.put("optOutOfCustomerEmail", (n) -> { this.setOptOutOfCustomerEmail(n.getBooleanValue()); });
@@ -232,6 +252,14 @@ public class BookingAppointment extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public String getJoinWebUrl() {
         return this.backingStore.get("joinWebUrl");
+    }
+    /**
+     * Gets the lastUpdatedDateTime property value. The lastUpdatedDateTime property
+     * @return a OffsetDateTime
+     */
+    @jakarta.annotation.Nullable
+    public OffsetDateTime getLastUpdatedDateTime() {
+        return this.backingStore.get("lastUpdatedDateTime");
     }
     /**
      * Gets the maximumAttendeesCount property value. The maximum number of customers allowed in an appointment. If maximumAttendeesCount of the service is greater than 1, pass valid customer IDs while creating or updating an appointment. To create a customer, use the Create bookingCustomer operation.
@@ -370,6 +398,8 @@ public class BookingAppointment extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeStringValue("additionalInformation", this.getAdditionalInformation());
         writer.writeStringValue("anonymousJoinWebUrl", this.getAnonymousJoinWebUrl());
+        writer.writeStringValue("appointmentLabel", this.getAppointmentLabel());
+        writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeStringValue("customerEmailAddress", this.getCustomerEmailAddress());
         writer.writeStringValue("customerId", this.getCustomerId());
         writer.writeObjectValue("customerLocation", this.getCustomerLocation());
@@ -386,6 +416,7 @@ public class BookingAppointment extends Entity implements Parsable {
         writer.writeStringValue("invoiceUrl", this.getInvoiceUrl());
         writer.writeBooleanValue("isLocationOnline", this.getIsLocationOnline());
         writer.writeStringValue("joinWebUrl", this.getJoinWebUrl());
+        writer.writeOffsetDateTimeValue("lastUpdatedDateTime", this.getLastUpdatedDateTime());
         writer.writeIntegerValue("maximumAttendeesCount", this.getMaximumAttendeesCount());
         writer.writeStringValue("onlineMeetingUrl", this.getOnlineMeetingUrl());
         writer.writeBooleanValue("optOutOfCustomerEmail", this.getOptOutOfCustomerEmail());
@@ -416,6 +447,20 @@ public class BookingAppointment extends Entity implements Parsable {
      */
     public void setAnonymousJoinWebUrl(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("anonymousJoinWebUrl", value);
+    }
+    /**
+     * Sets the appointmentLabel property value. Custom label that can be stamped on this appointment by users.
+     * @param value Value to set for the appointmentLabel property.
+     */
+    public void setAppointmentLabel(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("appointmentLabel", value);
+    }
+    /**
+     * Sets the createdDateTime property value. The createdDateTime property
+     * @param value Value to set for the createdDateTime property.
+     */
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
+        this.backingStore.set("createdDateTime", value);
     }
     /**
      * Sets the customerEmailAddress property value. The SMTP address of the bookingCustomer who is booking the appointment.
@@ -542,6 +587,13 @@ public class BookingAppointment extends Entity implements Parsable {
      */
     public void setJoinWebUrl(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("joinWebUrl", value);
+    }
+    /**
+     * Sets the lastUpdatedDateTime property value. The lastUpdatedDateTime property
+     * @param value Value to set for the lastUpdatedDateTime property.
+     */
+    public void setLastUpdatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
+        this.backingStore.set("lastUpdatedDateTime", value);
     }
     /**
      * Sets the maximumAttendeesCount property value. The maximum number of customers allowed in an appointment. If maximumAttendeesCount of the service is greater than 1, pass valid customer IDs while creating or updating an appointment. To create a customer, use the Create bookingCustomer operation.

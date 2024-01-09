@@ -10,12 +10,14 @@ import com.microsoft.graph.beta.models.devicemanagement.AlertRecord;
 import com.microsoft.graph.beta.models.devicemanagement.AlertRule;
 import com.microsoft.graph.beta.models.devicemanagement.Monitoring;
 import com.microsoft.graph.beta.models.ediscovery.AddToReviewSetOperation;
+import com.microsoft.graph.beta.models.ediscovery.CaseEscaped;
 import com.microsoft.graph.beta.models.ediscovery.CaseExportOperation;
 import com.microsoft.graph.beta.models.ediscovery.CaseHoldOperation;
 import com.microsoft.graph.beta.models.ediscovery.CaseIndexOperation;
 import com.microsoft.graph.beta.models.ediscovery.CaseOperation;
 import com.microsoft.graph.beta.models.ediscovery.CaseSettings;
 import com.microsoft.graph.beta.models.ediscovery.Custodian;
+import com.microsoft.graph.beta.models.ediscovery.DataSourceContainer;
 import com.microsoft.graph.beta.models.ediscovery.Ediscoveryroot;
 import com.microsoft.graph.beta.models.ediscovery.EstimateStatisticsOperation;
 import com.microsoft.graph.beta.models.ediscovery.LegalHold;
@@ -26,7 +28,7 @@ import com.microsoft.graph.beta.models.ediscovery.ReviewSetQuery;
 import com.microsoft.graph.beta.models.ediscovery.SourceCollection;
 import com.microsoft.graph.beta.models.ediscovery.Tag;
 import com.microsoft.graph.beta.models.ediscovery.TagOperation;
-import com.microsoft.graph.beta.models.ediscovery.UnifiedGroupSource;
+import com.microsoft.graph.beta.models.ediscovery.UserSource;
 import com.microsoft.graph.beta.models.externalconnectors.ConnectionOperation;
 import com.microsoft.graph.beta.models.externalconnectors.ConnectionQuota;
 import com.microsoft.graph.beta.models.externalconnectors.ExternalActivity;
@@ -145,13 +147,11 @@ import com.microsoft.graph.beta.models.security.AuditCoreRoot;
 import com.microsoft.graph.beta.models.security.AuditLogQuery;
 import com.microsoft.graph.beta.models.security.AuditLogRecord;
 import com.microsoft.graph.beta.models.security.AuthorityTemplate;
-import com.microsoft.graph.beta.models.security.CaseEscaped;
 import com.microsoft.graph.beta.models.security.CasesRoot;
 import com.microsoft.graph.beta.models.security.CategoryTemplate;
 import com.microsoft.graph.beta.models.security.CitationTemplate;
 import com.microsoft.graph.beta.models.security.DataSet;
 import com.microsoft.graph.beta.models.security.DataSource;
-import com.microsoft.graph.beta.models.security.DataSourceContainer;
 import com.microsoft.graph.beta.models.security.DepartmentTemplate;
 import com.microsoft.graph.beta.models.security.DetectionRule;
 import com.microsoft.graph.beta.models.security.DispositionReviewStage;
@@ -220,8 +220,8 @@ import com.microsoft.graph.beta.models.security.ThreatSubmissionRoot;
 import com.microsoft.graph.beta.models.security.TriggersRoot;
 import com.microsoft.graph.beta.models.security.TriggerTypesRoot;
 import com.microsoft.graph.beta.models.security.UnclassifiedArtifact;
+import com.microsoft.graph.beta.models.security.UnifiedGroupSource;
 import com.microsoft.graph.beta.models.security.UrlThreatSubmission;
-import com.microsoft.graph.beta.models.security.UserSource;
 import com.microsoft.graph.beta.models.security.Vulnerability;
 import com.microsoft.graph.beta.models.security.VulnerabilityComponent;
 import com.microsoft.graph.beta.models.security.WhoisBaseRecord;
@@ -604,6 +604,8 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.cloudPC": return new CloudPC();
             case "#microsoft.graph.cloudPcAuditEvent": return new CloudPcAuditEvent();
             case "#microsoft.graph.cloudPcBulkAction": return new CloudPcBulkAction();
+            case "#microsoft.graph.cloudPcBulkDisasterRecoveryFailback": return new CloudPcBulkDisasterRecoveryFailback();
+            case "#microsoft.graph.cloudPcBulkDisasterRecoveryFailover": return new CloudPcBulkDisasterRecoveryFailover();
             case "#microsoft.graph.cloudPcBulkModifyDiskEncryptionType": return new CloudPcBulkModifyDiskEncryptionType();
             case "#microsoft.graph.cloudPcBulkPowerOff": return new CloudPcBulkPowerOff();
             case "#microsoft.graph.cloudPcBulkPowerOn": return new CloudPcBulkPowerOn();
@@ -810,8 +812,6 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.deviceManagementScriptRunSummary": return new DeviceManagementScriptRunSummary();
             case "#microsoft.graph.deviceManagementScriptUserState": return new DeviceManagementScriptUserState();
             case "#microsoft.graph.deviceManagementSettingCategory": return new DeviceManagementSettingCategory();
-            case "#microsoft.graph.deviceManagementSettingDefinition": return new DeviceManagementSettingDefinition();
-            case "#microsoft.graph.deviceManagementSettingInstance": return new DeviceManagementSettingInstance();
         }
         return null;
     }
@@ -823,6 +823,8 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     private static Entity createFromDiscriminatorValue_1(@jakarta.annotation.Nonnull final String discriminatorValue) {
         switch (discriminatorValue) {
+            case "#microsoft.graph.deviceManagementSettingDefinition": return new DeviceManagementSettingDefinition();
+            case "#microsoft.graph.deviceManagementSettingInstance": return new DeviceManagementSettingInstance();
             case "#microsoft.graph.deviceManagementStringSettingInstance": return new DeviceManagementStringSettingInstance();
             case "#microsoft.graph.deviceManagementTemplate": return new DeviceManagementTemplate();
             case "#microsoft.graph.deviceManagementTemplateInsightsDefinition": return new DeviceManagementTemplateInsightsDefinition();
@@ -1321,8 +1323,6 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.mobileAppSupersedence": return new MobileAppSupersedence();
             case "#microsoft.graph.mobileAppTroubleshootingEvent": return new MobileAppTroubleshootingEvent();
             case "#microsoft.graph.mobileContainedApp": return new MobileContainedApp();
-            case "#microsoft.graph.mobileLobApp": return new MobileLobApp();
-            case "#microsoft.graph.mobileThreatDefenseConnector": return new MobileThreatDefenseConnector();
         }
         return null;
     }
@@ -1334,6 +1334,8 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     private static Entity createFromDiscriminatorValue_2(@jakarta.annotation.Nonnull final String discriminatorValue) {
         switch (discriminatorValue) {
+            case "#microsoft.graph.mobileLobApp": return new MobileLobApp();
+            case "#microsoft.graph.mobileThreatDefenseConnector": return new MobileThreatDefenseConnector();
             case "#microsoft.graph.mobilityManagementPolicy": return new MobilityManagementPolicy();
             case "#microsoft.graph.monthlyInactiveUsersByApplicationMetric": return new MonthlyInactiveUsersByApplicationMetric();
             case "#microsoft.graph.monthlyInactiveUsersMetric": return new MonthlyInactiveUsersMetric();
@@ -1832,8 +1834,6 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.teamworkDeviceConfiguration": return new TeamworkDeviceConfiguration();
             case "#microsoft.graph.teamworkDeviceHealth": return new TeamworkDeviceHealth();
             case "#microsoft.graph.teamworkDeviceOperation": return new TeamworkDeviceOperation();
-            case "#microsoft.graph.teamworkHostedContent": return new TeamworkHostedContent();
-            case "#microsoft.graph.teamworkPeripheral": return new TeamworkPeripheral();
         }
         return null;
     }
@@ -1845,6 +1845,8 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     private static Entity createFromDiscriminatorValue_3(@jakarta.annotation.Nonnull final String discriminatorValue) {
         switch (discriminatorValue) {
+            case "#microsoft.graph.teamworkHostedContent": return new TeamworkHostedContent();
+            case "#microsoft.graph.teamworkPeripheral": return new TeamworkPeripheral();
             case "#microsoft.graph.teamworkTag": return new TeamworkTag();
             case "#microsoft.graph.teamworkTagMember": return new TeamworkTagMember();
             case "#microsoft.graph.telecomExpenseManagementPartner": return new TelecomExpenseManagementPartner();

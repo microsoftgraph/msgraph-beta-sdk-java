@@ -82,21 +82,21 @@ public class InboundFlowsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, InboundFlowCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new inboundFileFlow object. The following prerequisite resources are required when you create an inboundFileFlow:
+     * Create a new inboundFlow object. The following prerequisite resources are required when you create an inboundFlow:
      * @param body The request body
      * @return a InboundFlow
-     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-inboundfileflow-post?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-inboundflow-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public InboundFlow post(@jakarta.annotation.Nonnull final InboundFlow body) {
         return post(body, null);
     }
     /**
-     * Create a new inboundFileFlow object. The following prerequisite resources are required when you create an inboundFileFlow:
+     * Create a new inboundFlow object. The following prerequisite resources are required when you create an inboundFlow:
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a InboundFlow
-     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-inboundfileflow-post?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-inboundflow-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public InboundFlow post(@jakarta.annotation.Nonnull final InboundFlow body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -128,7 +128,7 @@ public class InboundFlowsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new inboundFileFlow object. The following prerequisite resources are required when you create an inboundFileFlow:
+     * Create a new inboundFlow object. The following prerequisite resources are required when you create an inboundFlow:
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class InboundFlowsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new inboundFileFlow object. The following prerequisite resources are required when you create an inboundFileFlow:
+     * Create a new inboundFlow object. The following prerequisite resources are required when you create an inboundFlow:
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

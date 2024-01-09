@@ -1,6 +1,7 @@
 package com.microsoft.graph.beta.groups.item.sites.item.pages.item;
 
 import com.microsoft.graph.beta.groups.item.sites.item.pages.item.createdbyuser.CreatedByUserRequestBuilder;
+import com.microsoft.graph.beta.groups.item.sites.item.pages.item.graphsitepage.GraphSitePageRequestBuilder;
 import com.microsoft.graph.beta.groups.item.sites.item.pages.item.lastmodifiedbyuser.LastModifiedByUserRequestBuilder;
 import com.microsoft.graph.beta.models.BaseSitePage;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
@@ -28,6 +29,13 @@ public class BaseSitePageItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public CreatedByUserRequestBuilder createdByUser() {
         return new CreatedByUserRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Casts the previous resource to sitePage.
+     */
+    @jakarta.annotation.Nonnull
+    public GraphSitePageRequestBuilder graphSitePage() {
+        return new GraphSitePageRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the lastModifiedByUser property of the microsoft.graph.baseItem entity.
