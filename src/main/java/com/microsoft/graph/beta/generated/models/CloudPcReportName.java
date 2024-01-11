@@ -18,6 +18,7 @@ public enum CloudPcReportName implements ValuedEnum {
     InaccessibleCloudPcReports("inaccessibleCloudPcReports"),
     RawRemoteConnectionReports("rawRemoteConnectionReports"),
     CloudPcUsageCategoryReports("cloudPcUsageCategoryReports"),
+    CrossRegionDisasterRecoveryReport("crossRegionDisasterRecoveryReport"),
     PerformanceTrendReport("performanceTrendReport"),
     InaccessibleCloudPcTrendReport("inaccessibleCloudPcTrendReport");
     public final String value;
@@ -43,6 +44,7 @@ public enum CloudPcReportName implements ValuedEnum {
             case "inaccessibleCloudPcReports": return InaccessibleCloudPcReports;
             case "rawRemoteConnectionReports": return RawRemoteConnectionReports;
             case "cloudPcUsageCategoryReports": return CloudPcUsageCategoryReports;
+            case "crossRegionDisasterRecoveryReport": return CrossRegionDisasterRecoveryReport;
             case "performanceTrendReport": return PerformanceTrendReport;
             case "inaccessibleCloudPcTrendReport": return InaccessibleCloudPcTrendReport;
             default: return null;

@@ -78,7 +78,7 @@ public class LongRunningOperation extends Entity implements Parsable {
         return this.backingStore.get("resourceLocation");
     }
     /**
-     * Gets the status property value. The status of the operation. The possible values are: notStarted, running, succeeded, failed, unknownFutureValue.
+     * Gets the status property value. The status of the operation. The possible values are: notStarted, running, succeeded, failed, skipped, unknownFutureValue.
      * @return a LongRunningOperationStatus
      */
     @jakarta.annotation.Nullable
@@ -128,7 +128,7 @@ public class LongRunningOperation extends Entity implements Parsable {
         this.backingStore.set("resourceLocation", value);
     }
     /**
-     * Sets the status property value. The status of the operation. The possible values are: notStarted, running, succeeded, failed, unknownFutureValue.
+     * Sets the status property value. The status of the operation. The possible values are: notStarted, running, succeeded, failed, skipped, unknownFutureValue.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final LongRunningOperationStatus value) {

@@ -46,7 +46,7 @@ public class ChangeTrackedEntity extends Entity implements Parsable {
         return new ChangeTrackedEntity();
     }
     /**
-     * Gets the createdBy property value. The createdBy property
+     * Gets the createdBy property value. Identity of the user who created the entity.
      * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
@@ -54,7 +54,7 @@ public class ChangeTrackedEntity extends Entity implements Parsable {
         return this.backingStore.get("createdBy");
     }
     /**
-     * Gets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Gets the createdDateTime property value. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
@@ -75,7 +75,7 @@ public class ChangeTrackedEntity extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the lastModifiedBy property value. Identity of the person who last modified the entity.
+     * Gets the lastModifiedBy property value. Identity of the user who last modified the entity.
      * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
@@ -83,7 +83,7 @@ public class ChangeTrackedEntity extends Entity implements Parsable {
         return this.backingStore.get("lastModifiedBy");
     }
     /**
-     * Gets the lastModifiedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Gets the lastModifiedDateTime property value. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
@@ -100,28 +100,28 @@ public class ChangeTrackedEntity extends Entity implements Parsable {
         writer.writeObjectValue("createdBy", this.getCreatedBy());
     }
     /**
-     * Sets the createdBy property value. The createdBy property
+     * Sets the createdBy property value. Identity of the user who created the entity.
      * @param value Value to set for the createdBy property.
      */
     public void setCreatedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.backingStore.set("createdBy", value);
     }
     /**
-     * Sets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Sets the createdDateTime property value. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the lastModifiedBy property value. Identity of the person who last modified the entity.
+     * Sets the lastModifiedBy property value. Identity of the user who last modified the entity.
      * @param value Value to set for the lastModifiedBy property.
      */
     public void setLastModifiedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.backingStore.set("lastModifiedBy", value);
     }
     /**
-     * Sets the lastModifiedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Sets the lastModifiedDateTime property value. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

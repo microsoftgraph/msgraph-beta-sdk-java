@@ -73,14 +73,23 @@ public class BookingSchedulingPolicy implements AdditionalDataHolder, BackedMode
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
         deserializerMap.put("allowStaffSelection", (n) -> { this.setAllowStaffSelection(n.getBooleanValue()); });
+        deserializerMap.put("isMeetingInviteToCustomersEnabled", (n) -> { this.setIsMeetingInviteToCustomersEnabled(n.getBooleanValue()); });
         deserializerMap.put("maximumAdvance", (n) -> { this.setMaximumAdvance(n.getPeriodAndDurationValue()); });
         deserializerMap.put("minimumLeadTime", (n) -> { this.setMinimumLeadTime(n.getPeriodAndDurationValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("sendConfirmationsToOwner", (n) -> { this.setSendConfirmationsToOwner(n.getBooleanValue()); });
         deserializerMap.put("timeSlotInterval", (n) -> { this.setTimeSlotInterval(n.getPeriodAndDurationValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the isMeetingInviteToCustomersEnabled property value. Enable sending meeting invite to customers.
+     * @return a Boolean
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsMeetingInviteToCustomersEnabled() {
+        return this.backingStore.get("isMeetingInviteToCustomersEnabled");
     }
     /**
      * Gets the maximumAdvance property value. Maximum number of days in advance that a booking can be made. It follows the ISO 8601 format.
@@ -129,6 +138,7 @@ public class BookingSchedulingPolicy implements AdditionalDataHolder, BackedMode
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("allowStaffSelection", this.getAllowStaffSelection());
+        writer.writeBooleanValue("isMeetingInviteToCustomersEnabled", this.getIsMeetingInviteToCustomersEnabled());
         writer.writePeriodAndDurationValue("maximumAdvance", this.getMaximumAdvance());
         writer.writePeriodAndDurationValue("minimumLeadTime", this.getMinimumLeadTime());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -157,6 +167,13 @@ public class BookingSchedulingPolicy implements AdditionalDataHolder, BackedMode
     public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
         Objects.requireNonNull(value);
         this.backingStore = value;
+    }
+    /**
+     * Sets the isMeetingInviteToCustomersEnabled property value. Enable sending meeting invite to customers.
+     * @param value Value to set for the isMeetingInviteToCustomersEnabled property.
+     */
+    public void setIsMeetingInviteToCustomersEnabled(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isMeetingInviteToCustomersEnabled", value);
     }
     /**
      * Sets the maximumAdvance property value. Maximum number of days in advance that a booking can be made. It follows the ISO 8601 format.

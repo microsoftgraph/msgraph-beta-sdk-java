@@ -34,6 +34,14 @@ public class PlannerTaskPropertyRule extends PlannerPropertyRule implements Pars
         return this.backingStore.get("appliedCategories");
     }
     /**
+     * Gets the approvalAttachment property value. The approvalAttachment property
+     * @return a PlannerFieldRules
+     */
+    @jakarta.annotation.Nullable
+    public PlannerFieldRules getApprovalAttachment() {
+        return this.backingStore.get("approvalAttachment");
+    }
+    /**
      * Gets the assignments property value. Rules and restrictions for assignments. Allowed overrides are userCreated and applicationCreated. Accepted values for the default rule and individual overrides are allow, add, addSelf, addOther, remove, removeSelf, removeOther, block.
      * @return a PlannerFieldRules
      */
@@ -81,6 +89,7 @@ public class PlannerTaskPropertyRule extends PlannerPropertyRule implements Pars
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("appliedCategories", (n) -> { this.setAppliedCategories(n.getObjectValue(PlannerFieldRules::createFromDiscriminatorValue)); });
+        deserializerMap.put("approvalAttachment", (n) -> { this.setApprovalAttachment(n.getObjectValue(PlannerFieldRules::createFromDiscriminatorValue)); });
         deserializerMap.put("assignments", (n) -> { this.setAssignments(n.getObjectValue(PlannerFieldRules::createFromDiscriminatorValue)); });
         deserializerMap.put("checkLists", (n) -> { this.setCheckLists(n.getObjectValue(PlannerFieldRules::createFromDiscriminatorValue)); });
         deserializerMap.put("completionRequirements", (n) -> { this.setCompletionRequirements(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -186,6 +195,7 @@ public class PlannerTaskPropertyRule extends PlannerPropertyRule implements Pars
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("appliedCategories", this.getAppliedCategories());
+        writer.writeObjectValue("approvalAttachment", this.getApprovalAttachment());
         writer.writeObjectValue("assignments", this.getAssignments());
         writer.writeObjectValue("checkLists", this.getCheckLists());
         writer.writeCollectionOfPrimitiveValues("completionRequirements", this.getCompletionRequirements());
@@ -208,6 +218,13 @@ public class PlannerTaskPropertyRule extends PlannerPropertyRule implements Pars
      */
     public void setAppliedCategories(@jakarta.annotation.Nullable final PlannerFieldRules value) {
         this.backingStore.set("appliedCategories", value);
+    }
+    /**
+     * Sets the approvalAttachment property value. The approvalAttachment property
+     * @param value Value to set for the approvalAttachment property.
+     */
+    public void setApprovalAttachment(@jakarta.annotation.Nullable final PlannerFieldRules value) {
+        this.backingStore.set("approvalAttachment", value);
     }
     /**
      * Sets the assignments property value. Rules and restrictions for assignments. Allowed overrides are userCreated and applicationCreated. Accepted values for the default rule and individual overrides are allow, add, addSelf, addOther, remove, removeSelf, removeOther, block.

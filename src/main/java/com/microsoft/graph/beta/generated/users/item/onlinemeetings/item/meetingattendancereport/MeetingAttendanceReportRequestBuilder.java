@@ -6,7 +6,7 @@ import com.microsoft.graph.beta.users.item.onlinemeetings.item.meetingattendance
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
-import com.microsoft.kiota.QueryParameter;
+import com.microsoft.kiota.QueryParameters;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
@@ -62,7 +62,7 @@ public class MeetingAttendanceReportRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get the meetingAttendanceReport for an onlineMeeting. Each time an online meeting ends, an attendance report will be generated for that session.
+     * Get the meetingAttendanceReport for an onlineMeeting. Each time an online meeting ends, an attendance report is generated for that session.
      * @return a MeetingAttendanceReport
      * @see <a href="https://learn.microsoft.com/graph/api/meetingattendancereport-get?view=graph-rest-1.0">Find more info here</a>
      */
@@ -71,7 +71,7 @@ public class MeetingAttendanceReportRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the meetingAttendanceReport for an onlineMeeting. Each time an online meeting ends, an attendance report will be generated for that session.
+     * Get the meetingAttendanceReport for an onlineMeeting. Each time an online meeting ends, an attendance report is generated for that session.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a MeetingAttendanceReport
      * @see <a href="https://learn.microsoft.com/graph/api/meetingattendancereport-get?view=graph-rest-1.0">Find more info here</a>
@@ -129,7 +129,7 @@ public class MeetingAttendanceReportRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get the meetingAttendanceReport for an onlineMeeting. Each time an online meeting ends, an attendance report will be generated for that session.
+     * Get the meetingAttendanceReport for an onlineMeeting. Each time an online meeting ends, an attendance report is generated for that session.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -137,7 +137,7 @@ public class MeetingAttendanceReportRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the meetingAttendanceReport for an onlineMeeting. Each time an online meeting ends, an attendance report will be generated for that session.
+     * Get the meetingAttendanceReport for an onlineMeeting. Each time an online meeting ends, an attendance report is generated for that session.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -189,22 +189,31 @@ public class MeetingAttendanceReportRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get the meetingAttendanceReport for an onlineMeeting. Each time an online meeting ends, an attendance report will be generated for that session.
+     * Get the meetingAttendanceReport for an onlineMeeting. Each time an online meeting ends, an attendance report is generated for that session.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
-    public class GetQueryParameters {
+    public class GetQueryParameters implements QueryParameters {
         /**
          * Expand related entities
          */
-        @QueryParameter(name = "%24expand")
         @jakarta.annotation.Nullable
         public String[] expand;
         /**
          * Select properties to be returned
          */
-        @QueryParameter(name = "%24select")
         @jakarta.annotation.Nullable
         public String[] select;
+        /**
+         * Extracts the query parameters into a map for the URI template parsing.
+         * @return a Map<String, Object>
+         */
+        @jakarta.annotation.Nonnull
+        public Map<String, Object> toQueryParameters() {
+            final Map<String, Object> allQueryParams = new HashMap();
+            allQueryParams.put("%24expand", expand);
+            allQueryParams.put("%24select", select);
+            return allQueryParams;
+        }
     }
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.

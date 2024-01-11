@@ -27,6 +27,8 @@ public class CloudPcBulkAction extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
+                case "#microsoft.graph.cloudPcBulkDisasterRecoveryFailback": return new CloudPcBulkDisasterRecoveryFailback();
+                case "#microsoft.graph.cloudPcBulkDisasterRecoveryFailover": return new CloudPcBulkDisasterRecoveryFailover();
                 case "#microsoft.graph.cloudPcBulkModifyDiskEncryptionType": return new CloudPcBulkModifyDiskEncryptionType();
                 case "#microsoft.graph.cloudPcBulkPowerOff": return new CloudPcBulkPowerOff();
                 case "#microsoft.graph.cloudPcBulkPowerOn": return new CloudPcBulkPowerOn();

@@ -21,7 +21,7 @@ import com.microsoft.graph.beta.users.item.messages.item.value.ContentRequestBui
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
-import com.microsoft.kiota.QueryParameter;
+import com.microsoft.kiota.QueryParameters;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
@@ -186,7 +186,7 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The messages in a mailbox or folder. Read-only. Nullable.
      * @return a Message
-     * @see <a href="https://learn.microsoft.com/graph/api/message-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/singlevaluelegacyextendedproperty-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Message get() {
@@ -196,7 +196,7 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
      * The messages in a mailbox or folder. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a Message
-     * @see <a href="https://learn.microsoft.com/graph/api/message-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/singlevaluelegacyextendedproperty-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Message get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -316,11 +316,10 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
      * The messages in a mailbox or folder. Read-only. Nullable.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
-    public class GetQueryParameters {
+    public class GetQueryParameters implements QueryParameters {
         /**
          * Expand related entities
          */
-        @QueryParameter(name = "%24expand")
         @jakarta.annotation.Nullable
         public String[] expand;
         /**
@@ -331,9 +330,20 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
         /**
          * Select properties to be returned
          */
-        @QueryParameter(name = "%24select")
         @jakarta.annotation.Nullable
         public String[] select;
+        /**
+         * Extracts the query parameters into a map for the URI template parsing.
+         * @return a Map<String, Object>
+         */
+        @jakarta.annotation.Nonnull
+        public Map<String, Object> toQueryParameters() {
+            final Map<String, Object> allQueryParams = new HashMap();
+            allQueryParams.put("includeHiddenMessages", includeHiddenMessages);
+            allQueryParams.put("%24expand", expand);
+            allQueryParams.put("%24select", select);
+            return allQueryParams;
+        }
     }
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.

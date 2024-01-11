@@ -26,7 +26,7 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
         return new Shift();
     }
     /**
-     * Gets the draftShift property value. The draft version of this shift that is viewable by managers. Required.
+     * Gets the draftShift property value. Draft changes in the shift are only visible to managers until they are shared.
      * @return a ShiftItem
      */
     @jakarta.annotation.Nullable
@@ -48,7 +48,7 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the isStagedForDeletion property value. The isStagedForDeletion property
+     * Gets the isStagedForDeletion property value. The shift is marked for deletion, a process that is finalized when the schedule is shared.
      * @return a Boolean
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
         return this.backingStore.get("schedulingGroupId");
     }
     /**
-     * Gets the sharedShift property value. The shared version of this shift that is viewable by both employees and managers. Required.
+     * Gets the sharedShift property value. The shared version of this shift that is viewable by both employees and managers.
      * @return a ShiftItem
      */
     @jakarta.annotation.Nullable
@@ -93,14 +93,14 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
         writer.writeStringValue("userId", this.getUserId());
     }
     /**
-     * Sets the draftShift property value. The draft version of this shift that is viewable by managers. Required.
+     * Sets the draftShift property value. Draft changes in the shift are only visible to managers until they are shared.
      * @param value Value to set for the draftShift property.
      */
     public void setDraftShift(@jakarta.annotation.Nullable final ShiftItem value) {
         this.backingStore.set("draftShift", value);
     }
     /**
-     * Sets the isStagedForDeletion property value. The isStagedForDeletion property
+     * Sets the isStagedForDeletion property value. The shift is marked for deletion, a process that is finalized when the schedule is shared.
      * @param value Value to set for the isStagedForDeletion property.
      */
     public void setIsStagedForDeletion(@jakarta.annotation.Nullable final Boolean value) {
@@ -114,7 +114,7 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
         this.backingStore.set("schedulingGroupId", value);
     }
     /**
-     * Sets the sharedShift property value. The shared version of this shift that is viewable by both employees and managers. Required.
+     * Sets the sharedShift property value. The shared version of this shift that is viewable by both employees and managers.
      * @param value Value to set for the sharedShift property.
      */
     public void setSharedShift(@jakarta.annotation.Nullable final ShiftItem value) {

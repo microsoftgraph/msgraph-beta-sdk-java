@@ -1,6 +1,7 @@
 package com.microsoft.graph.beta.users.item.onlinemeetings.item.sendvirtualappointmentsms;
 
-import com.microsoft.graph.beta.models.VirtualAppointmentSmsType;
+import com.microsoft.graph.beta.models.AttendeeNotificationInfo;
+import com.microsoft.graph.beta.models.VirtualAppointmentMessageType;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -49,6 +50,14 @@ public class SendVirtualAppointmentSmsPostRequestBody implements AdditionalDataH
         return value;
     }
     /**
+     * Gets the attendees property value. The attendees property
+     * @return a java.util.List<AttendeeNotificationInfo>
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<AttendeeNotificationInfo> getAttendees() {
+        return this.backingStore.get("attendees");
+    }
+    /**
      * Gets the backingStore property value. Stores model information.
      * @return a BackingStore
      */
@@ -63,25 +72,17 @@ public class SendVirtualAppointmentSmsPostRequestBody implements AdditionalDataH
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
-        deserializerMap.put("phoneNumbers", (n) -> { this.setPhoneNumbers(n.getCollectionOfPrimitiveValues(String.class)); });
-        deserializerMap.put("smsType", (n) -> { this.setSmsType(n.getEnumValue(VirtualAppointmentSmsType::forValue)); });
+        deserializerMap.put("attendees", (n) -> { this.setAttendees(n.getCollectionOfObjectValues(AttendeeNotificationInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("messageType", (n) -> { this.setMessageType(n.getEnumValue(VirtualAppointmentMessageType::forValue)); });
         return deserializerMap;
     }
     /**
-     * Gets the phoneNumbers property value. The phoneNumbers property
-     * @return a java.util.List<String>
+     * Gets the messageType property value. The messageType property
+     * @return a VirtualAppointmentMessageType
      */
     @jakarta.annotation.Nullable
-    public java.util.List<String> getPhoneNumbers() {
-        return this.backingStore.get("phoneNumbers");
-    }
-    /**
-     * Gets the smsType property value. The smsType property
-     * @return a VirtualAppointmentSmsType
-     */
-    @jakarta.annotation.Nullable
-    public VirtualAppointmentSmsType getSmsType() {
-        return this.backingStore.get("smsType");
+    public VirtualAppointmentMessageType getMessageType() {
+        return this.backingStore.get("messageType");
     }
     /**
      * Serializes information the current object
@@ -89,8 +90,8 @@ public class SendVirtualAppointmentSmsPostRequestBody implements AdditionalDataH
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeCollectionOfPrimitiveValues("phoneNumbers", this.getPhoneNumbers());
-        writer.writeEnumValue("smsType", this.getSmsType());
+        writer.writeCollectionOfObjectValues("attendees", this.getAttendees());
+        writer.writeEnumValue("messageType", this.getMessageType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -101,6 +102,13 @@ public class SendVirtualAppointmentSmsPostRequestBody implements AdditionalDataH
         this.backingStore.set("additionalData", value);
     }
     /**
+     * Sets the attendees property value. The attendees property
+     * @param value Value to set for the attendees property.
+     */
+    public void setAttendees(@jakarta.annotation.Nullable final java.util.List<AttendeeNotificationInfo> value) {
+        this.backingStore.set("attendees", value);
+    }
+    /**
      * Sets the backingStore property value. Stores model information.
      * @param value Value to set for the backingStore property.
      */
@@ -109,17 +117,10 @@ public class SendVirtualAppointmentSmsPostRequestBody implements AdditionalDataH
         this.backingStore = value;
     }
     /**
-     * Sets the phoneNumbers property value. The phoneNumbers property
-     * @param value Value to set for the phoneNumbers property.
+     * Sets the messageType property value. The messageType property
+     * @param value Value to set for the messageType property.
      */
-    public void setPhoneNumbers(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.backingStore.set("phoneNumbers", value);
-    }
-    /**
-     * Sets the smsType property value. The smsType property
-     * @param value Value to set for the smsType property.
-     */
-    public void setSmsType(@jakarta.annotation.Nullable final VirtualAppointmentSmsType value) {
-        this.backingStore.set("smsType", value);
+    public void setMessageType(@jakarta.annotation.Nullable final VirtualAppointmentMessageType value) {
+        this.backingStore.set("messageType", value);
     }
 }

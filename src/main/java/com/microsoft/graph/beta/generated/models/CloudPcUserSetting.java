@@ -42,6 +42,14 @@ public class CloudPcUserSetting extends Entity implements Parsable {
         return this.backingStore.get("createdDateTime");
     }
     /**
+     * Gets the crossRegionDisasterRecoverySetting property value. The crossRegionDisasterRecoverySetting property
+     * @return a CloudPcCrossRegionDisasterRecoverySetting
+     */
+    @jakarta.annotation.Nullable
+    public CloudPcCrossRegionDisasterRecoverySetting getCrossRegionDisasterRecoverySetting() {
+        return this.backingStore.get("crossRegionDisasterRecoverySetting");
+    }
+    /**
      * Gets the displayName property value. The setting name displayed in the user interface.
      * @return a String
      */
@@ -58,6 +66,7 @@ public class CloudPcUserSetting extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("assignments", (n) -> { this.setAssignments(n.getCollectionOfObjectValues(CloudPcUserSettingAssignment::createFromDiscriminatorValue)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("crossRegionDisasterRecoverySetting", (n) -> { this.setCrossRegionDisasterRecoverySetting(n.getObjectValue(CloudPcCrossRegionDisasterRecoverySetting::createFromDiscriminatorValue)); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("localAdminEnabled", (n) -> { this.setLocalAdminEnabled(n.getBooleanValue()); });
@@ -115,6 +124,7 @@ public class CloudPcUserSetting extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("assignments", this.getAssignments());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
+        writer.writeObjectValue("crossRegionDisasterRecoverySetting", this.getCrossRegionDisasterRecoverySetting());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
         writer.writeBooleanValue("localAdminEnabled", this.getLocalAdminEnabled());
@@ -135,6 +145,13 @@ public class CloudPcUserSetting extends Entity implements Parsable {
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("createdDateTime", value);
+    }
+    /**
+     * Sets the crossRegionDisasterRecoverySetting property value. The crossRegionDisasterRecoverySetting property
+     * @param value Value to set for the crossRegionDisasterRecoverySetting property.
+     */
+    public void setCrossRegionDisasterRecoverySetting(@jakarta.annotation.Nullable final CloudPcCrossRegionDisasterRecoverySetting value) {
+        this.backingStore.set("crossRegionDisasterRecoverySetting", value);
     }
     /**
      * Sets the displayName property value. The setting name displayed in the user interface.

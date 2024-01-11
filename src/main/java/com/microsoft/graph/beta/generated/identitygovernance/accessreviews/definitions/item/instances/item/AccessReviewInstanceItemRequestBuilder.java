@@ -16,7 +16,7 @@ import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
-import com.microsoft.kiota.QueryParameter;
+import com.microsoft.kiota.QueryParameters;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
@@ -274,19 +274,28 @@ public class AccessReviewInstanceItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve an accessReviewInstance object using the identifier of an accessReviewInstance and its parent accessReviewScheduleDefinition. This returns all properties of the instance except for the associated accessReviewInstanceDecisionItems. To retrieve the decisions on the instance, use List accessReviewInstanceDecisionItem.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
-    public class GetQueryParameters {
+    public class GetQueryParameters implements QueryParameters {
         /**
          * Expand related entities
          */
-        @QueryParameter(name = "%24expand")
         @jakarta.annotation.Nullable
         public String[] expand;
         /**
          * Select properties to be returned
          */
-        @QueryParameter(name = "%24select")
         @jakarta.annotation.Nullable
         public String[] select;
+        /**
+         * Extracts the query parameters into a map for the URI template parsing.
+         * @return a Map<String, Object>
+         */
+        @jakarta.annotation.Nonnull
+        public Map<String, Object> toQueryParameters() {
+            final Map<String, Object> allQueryParams = new HashMap();
+            allQueryParams.put("%24expand", expand);
+            allQueryParams.put("%24select", select);
+            return allQueryParams;
+        }
     }
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.

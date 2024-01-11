@@ -2,12 +2,14 @@ package com.microsoft.graph.beta.solutions;
 
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.SolutionsRoot;
+import com.microsoft.graph.beta.solutions.bookingbusinesses.BookingBusinessesRequestBuilder;
+import com.microsoft.graph.beta.solutions.bookingcurrencies.BookingCurrenciesRequestBuilder;
 import com.microsoft.graph.beta.solutions.businessscenarios.BusinessScenariosRequestBuilder;
 import com.microsoft.graph.beta.solutions.virtualevents.VirtualEventsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
-import com.microsoft.kiota.QueryParameter;
+import com.microsoft.kiota.QueryParameters;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
@@ -22,6 +24,20 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SolutionsRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the bookingBusinesses property of the microsoft.graph.solutionsRoot entity.
+     */
+    @jakarta.annotation.Nonnull
+    public BookingBusinessesRequestBuilder bookingBusinesses() {
+        return new BookingBusinessesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the bookingCurrencies property of the microsoft.graph.solutionsRoot entity.
+     */
+    @jakarta.annotation.Nonnull
+    public BookingCurrenciesRequestBuilder bookingCurrencies() {
+        return new BookingCurrenciesRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Provides operations to manage the businessScenarios property of the microsoft.graph.solutionsRoot entity.
      */
@@ -155,19 +171,28 @@ public class SolutionsRequestBuilder extends BaseRequestBuilder {
      * Get solutions
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
-    public class GetQueryParameters {
+    public class GetQueryParameters implements QueryParameters {
         /**
          * Expand related entities
          */
-        @QueryParameter(name = "%24expand")
         @jakarta.annotation.Nullable
         public String[] expand;
         /**
          * Select properties to be returned
          */
-        @QueryParameter(name = "%24select")
         @jakarta.annotation.Nullable
         public String[] select;
+        /**
+         * Extracts the query parameters into a map for the URI template parsing.
+         * @return a Map<String, Object>
+         */
+        @jakarta.annotation.Nonnull
+        public Map<String, Object> toQueryParameters() {
+            final Map<String, Object> allQueryParams = new HashMap();
+            allQueryParams.put("%24expand", expand);
+            allQueryParams.put("%24select", select);
+            return allQueryParams;
+        }
     }
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.

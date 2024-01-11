@@ -50,6 +50,14 @@ public class CloudPC extends Entity implements Parsable {
         return this.backingStore.get("connectivityResult");
     }
     /**
+     * Gets the disasterRecoveryCapability property value. The disasterRecoveryCapability property
+     * @return a CloudPcDisasterRecoveryCapability
+     */
+    @jakarta.annotation.Nullable
+    public CloudPcDisasterRecoveryCapability getDisasterRecoveryCapability() {
+        return this.backingStore.get("disasterRecoveryCapability");
+    }
+    /**
      * Gets the diskEncryptionState property value. The disk encryption applied to the Cloud PC. Possible values: notAvailable, notEncrypted, encryptedUsingPlatformManagedKey, encryptedUsingCustomerManagedKey, and unknownFutureValue.
      * @return a CloudPcDiskEncryptionState
      */
@@ -75,6 +83,7 @@ public class CloudPC extends Entity implements Parsable {
         deserializerMap.put("aadDeviceId", (n) -> { this.setAadDeviceId(n.getStringValue()); });
         deserializerMap.put("connectionSettings", (n) -> { this.setConnectionSettings(n.getObjectValue(CloudPcConnectionSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("connectivityResult", (n) -> { this.setConnectivityResult(n.getObjectValue(CloudPcConnectivityResult::createFromDiscriminatorValue)); });
+        deserializerMap.put("disasterRecoveryCapability", (n) -> { this.setDisasterRecoveryCapability(n.getObjectValue(CloudPcDisasterRecoveryCapability::createFromDiscriminatorValue)); });
         deserializerMap.put("diskEncryptionState", (n) -> { this.setDiskEncryptionState(n.getEnumValue(CloudPcDiskEncryptionState::forValue)); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("gracePeriodEndDateTime", (n) -> { this.setGracePeriodEndDateTime(n.getOffsetDateTimeValue()); });
@@ -287,6 +296,7 @@ public class CloudPC extends Entity implements Parsable {
         writer.writeStringValue("aadDeviceId", this.getAadDeviceId());
         writer.writeObjectValue("connectionSettings", this.getConnectionSettings());
         writer.writeObjectValue("connectivityResult", this.getConnectivityResult());
+        writer.writeObjectValue("disasterRecoveryCapability", this.getDisasterRecoveryCapability());
         writer.writeEnumValue("diskEncryptionState", this.getDiskEncryptionState());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeOffsetDateTimeValue("gracePeriodEndDateTime", this.getGracePeriodEndDateTime());
@@ -332,6 +342,13 @@ public class CloudPC extends Entity implements Parsable {
      */
     public void setConnectivityResult(@jakarta.annotation.Nullable final CloudPcConnectivityResult value) {
         this.backingStore.set("connectivityResult", value);
+    }
+    /**
+     * Sets the disasterRecoveryCapability property value. The disasterRecoveryCapability property
+     * @param value Value to set for the disasterRecoveryCapability property.
+     */
+    public void setDisasterRecoveryCapability(@jakarta.annotation.Nullable final CloudPcDisasterRecoveryCapability value) {
+        this.backingStore.set("disasterRecoveryCapability", value);
     }
     /**
      * Sets the diskEncryptionState property value. The disk encryption applied to the Cloud PC. Possible values: notAvailable, notEncrypted, encryptedUsingPlatformManagedKey, encryptedUsingCustomerManagedKey, and unknownFutureValue.

@@ -48,6 +48,14 @@ public class PlannerTaskCompletionRequirementDetails implements AdditionalDataHo
         return value;
     }
     /**
+     * Gets the approvalRequirement property value. The approvalRequirement property
+     * @return a PlannerApprovalRequirement
+     */
+    @jakarta.annotation.Nullable
+    public PlannerApprovalRequirement getApprovalRequirement() {
+        return this.backingStore.get("approvalRequirement");
+    }
+    /**
      * Gets the backingStore property value. Stores model information.
      * @return a BackingStore
      */
@@ -69,7 +77,8 @@ public class PlannerTaskCompletionRequirementDetails implements AdditionalDataHo
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        deserializerMap.put("approvalRequirement", (n) -> { this.setApprovalRequirement(n.getObjectValue(PlannerApprovalRequirement::createFromDiscriminatorValue)); });
         deserializerMap.put("checklistRequirement", (n) -> { this.setChecklistRequirement(n.getObjectValue(PlannerChecklistRequirement::createFromDiscriminatorValue)); });
         deserializerMap.put("formsRequirement", (n) -> { this.setFormsRequirement(n.getObjectValue(PlannerFormsRequirement::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -97,6 +106,7 @@ public class PlannerTaskCompletionRequirementDetails implements AdditionalDataHo
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeObjectValue("approvalRequirement", this.getApprovalRequirement());
         writer.writeObjectValue("checklistRequirement", this.getChecklistRequirement());
         writer.writeObjectValue("formsRequirement", this.getFormsRequirement());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -108,6 +118,13 @@ public class PlannerTaskCompletionRequirementDetails implements AdditionalDataHo
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the approvalRequirement property value. The approvalRequirement property
+     * @param value Value to set for the approvalRequirement property.
+     */
+    public void setApprovalRequirement(@jakarta.annotation.Nullable final PlannerApprovalRequirement value) {
+        this.backingStore.set("approvalRequirement", value);
     }
     /**
      * Sets the backingStore property value. Stores model information.

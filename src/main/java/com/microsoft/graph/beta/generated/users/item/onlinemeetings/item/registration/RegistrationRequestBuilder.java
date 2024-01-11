@@ -7,7 +7,7 @@ import com.microsoft.graph.beta.users.item.onlinemeetings.item.registration.regi
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
-import com.microsoft.kiota.QueryParameter;
+import com.microsoft.kiota.QueryParameters;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
@@ -53,16 +53,16 @@ public class RegistrationRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/onlineMeetings/{onlineMeeting%2Did}/registration{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Disable and delete the externalMeetingRegistration of an onlineMeeting.
-     * @see <a href="https://learn.microsoft.com/graph/api/externalmeetingregistration-delete?view=graph-rest-1.0">Find more info here</a>
+     * Disable and delete the meetingRegistration of an onlineMeeting on behalf of the organizer.
+     * @see <a href="https://learn.microsoft.com/graph/api/meetingregistration-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Disable and delete the externalMeetingRegistration of an onlineMeeting.
+     * Disable and delete the meetingRegistration of an onlineMeeting on behalf of the organizer.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @see <a href="https://learn.microsoft.com/graph/api/externalmeetingregistration-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/meetingregistration-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -72,19 +72,19 @@ public class RegistrationRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get the meetingRegistration details associated with an onlineMeeting on behalf of the organizer.
+     * Get the externalMeetingRegistration details associated with an onlineMeeting.
      * @return a MeetingRegistration
-     * @see <a href="https://learn.microsoft.com/graph/api/meetingregistration-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/externalmeetingregistration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MeetingRegistration get() {
         return get(null);
     }
     /**
-     * Get the meetingRegistration details associated with an onlineMeeting on behalf of the organizer.
+     * Get the externalMeetingRegistration details associated with an onlineMeeting.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a MeetingRegistration
-     * @see <a href="https://learn.microsoft.com/graph/api/meetingregistration-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/externalmeetingregistration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MeetingRegistration get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -121,7 +121,7 @@ public class RegistrationRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, MeetingRegistration::createFromDiscriminatorValue);
     }
     /**
-     * Disable and delete the externalMeetingRegistration of an onlineMeeting.
+     * Disable and delete the meetingRegistration of an onlineMeeting on behalf of the organizer.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -129,7 +129,7 @@ public class RegistrationRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Disable and delete the externalMeetingRegistration of an onlineMeeting.
+     * Disable and delete the meetingRegistration of an onlineMeeting on behalf of the organizer.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -141,7 +141,7 @@ public class RegistrationRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get the meetingRegistration details associated with an onlineMeeting on behalf of the organizer.
+     * Get the externalMeetingRegistration details associated with an onlineMeeting.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -149,7 +149,7 @@ public class RegistrationRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the meetingRegistration details associated with an onlineMeeting on behalf of the organizer.
+     * Get the externalMeetingRegistration details associated with an onlineMeeting.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -201,22 +201,31 @@ public class RegistrationRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get the meetingRegistration details associated with an onlineMeeting on behalf of the organizer.
+     * Get the externalMeetingRegistration details associated with an onlineMeeting.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
-    public class GetQueryParameters {
+    public class GetQueryParameters implements QueryParameters {
         /**
          * Expand related entities
          */
-        @QueryParameter(name = "%24expand")
         @jakarta.annotation.Nullable
         public String[] expand;
         /**
          * Select properties to be returned
          */
-        @QueryParameter(name = "%24select")
         @jakarta.annotation.Nullable
         public String[] select;
+        /**
+         * Extracts the query parameters into a map for the URI template parsing.
+         * @return a Map<String, Object>
+         */
+        @jakarta.annotation.Nonnull
+        public Map<String, Object> toQueryParameters() {
+            final Map<String, Object> allQueryParams = new HashMap();
+            allQueryParams.put("%24expand", expand);
+            allQueryParams.put("%24select", select);
+            return allQueryParams;
+        }
     }
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.
