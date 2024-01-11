@@ -9,7 +9,7 @@ import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
-import com.microsoft.kiota.QueryParameter;
+import com.microsoft.kiota.QueryParameters;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
@@ -67,7 +67,7 @@ public class CustomAuthenticationExtensionsRequestBuilder extends BaseRequestBui
         super(requestAdapter, "{+baseurl}/identity/customAuthenticationExtensions{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of the customAuthenticationExtension objects and their properties. Currently, only onTokenIssuanceStartCustomExtension objects are returned.
+     * Get a list of the customAuthenticationExtension objects and their properties. The following derived types are supported.
      * @return a CustomAuthenticationExtensionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/identitycontainer-list-customauthenticationextensions?view=graph-rest-1.0">Find more info here</a>
      */
@@ -76,7 +76,7 @@ public class CustomAuthenticationExtensionsRequestBuilder extends BaseRequestBui
         return get(null);
     }
     /**
-     * Get a list of the customAuthenticationExtension objects and their properties. Currently, only onTokenIssuanceStartCustomExtension objects are returned.
+     * Get a list of the customAuthenticationExtension objects and their properties. The following derived types are supported.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CustomAuthenticationExtensionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/identitycontainer-list-customauthenticationextensions?view=graph-rest-1.0">Find more info here</a>
@@ -90,7 +90,7 @@ public class CustomAuthenticationExtensionsRequestBuilder extends BaseRequestBui
         return this.requestAdapter.send(requestInfo, errorMapping, CustomAuthenticationExtensionCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new customAuthenticationExtension object. Only the onTokenIssuanceStartCustomExtension object type is supported.
+     * Create a new customAuthenticationExtension object. The following derived types are currently supported.
      * @param body The request body
      * @return a CustomAuthenticationExtension
      * @see <a href="https://learn.microsoft.com/graph/api/identitycontainer-post-customauthenticationextensions?view=graph-rest-1.0">Find more info here</a>
@@ -100,7 +100,7 @@ public class CustomAuthenticationExtensionsRequestBuilder extends BaseRequestBui
         return post(body, null);
     }
     /**
-     * Create a new customAuthenticationExtension object. Only the onTokenIssuanceStartCustomExtension object type is supported.
+     * Create a new customAuthenticationExtension object. The following derived types are currently supported.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CustomAuthenticationExtension
@@ -116,7 +116,7 @@ public class CustomAuthenticationExtensionsRequestBuilder extends BaseRequestBui
         return this.requestAdapter.send(requestInfo, errorMapping, CustomAuthenticationExtension::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the customAuthenticationExtension objects and their properties. Currently, only onTokenIssuanceStartCustomExtension objects are returned.
+     * Get a list of the customAuthenticationExtension objects and their properties. The following derived types are supported.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -124,7 +124,7 @@ public class CustomAuthenticationExtensionsRequestBuilder extends BaseRequestBui
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the customAuthenticationExtension objects and their properties. Currently, only onTokenIssuanceStartCustomExtension objects are returned.
+     * Get a list of the customAuthenticationExtension objects and their properties. The following derived types are supported.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -136,7 +136,7 @@ public class CustomAuthenticationExtensionsRequestBuilder extends BaseRequestBui
         return requestInfo;
     }
     /**
-     * Create a new customAuthenticationExtension object. Only the onTokenIssuanceStartCustomExtension object type is supported.
+     * Create a new customAuthenticationExtension object. The following derived types are currently supported.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -145,7 +145,7 @@ public class CustomAuthenticationExtensionsRequestBuilder extends BaseRequestBui
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new customAuthenticationExtension object. Only the onTokenIssuanceStartCustomExtension object type is supported.
+     * Create a new customAuthenticationExtension object. The following derived types are currently supported.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -170,58 +170,67 @@ public class CustomAuthenticationExtensionsRequestBuilder extends BaseRequestBui
         return new CustomAuthenticationExtensionsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the customAuthenticationExtension objects and their properties. Currently, only onTokenIssuanceStartCustomExtension objects are returned.
+     * Get a list of the customAuthenticationExtension objects and their properties. The following derived types are supported.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
-    public class GetQueryParameters {
+    public class GetQueryParameters implements QueryParameters {
         /**
          * Include count of items
          */
-        @QueryParameter(name = "%24count")
         @jakarta.annotation.Nullable
         public Boolean count;
         /**
          * Expand related entities
          */
-        @QueryParameter(name = "%24expand")
         @jakarta.annotation.Nullable
         public String[] expand;
         /**
          * Filter items by property values
          */
-        @QueryParameter(name = "%24filter")
         @jakarta.annotation.Nullable
         public String filter;
         /**
          * Order items by property values
          */
-        @QueryParameter(name = "%24orderby")
         @jakarta.annotation.Nullable
         public String[] orderby;
         /**
          * Search items by search phrases
          */
-        @QueryParameter(name = "%24search")
         @jakarta.annotation.Nullable
         public String search;
         /**
          * Select properties to be returned
          */
-        @QueryParameter(name = "%24select")
         @jakarta.annotation.Nullable
         public String[] select;
         /**
          * Skip the first n items
          */
-        @QueryParameter(name = "%24skip")
         @jakarta.annotation.Nullable
         public Integer skip;
         /**
          * Show only the first n items
          */
-        @QueryParameter(name = "%24top")
         @jakarta.annotation.Nullable
         public Integer top;
+        /**
+         * Extracts the query parameters into a map for the URI template parsing.
+         * @return a Map<String, Object>
+         */
+        @jakarta.annotation.Nonnull
+        public Map<String, Object> toQueryParameters() {
+            final Map<String, Object> allQueryParams = new HashMap();
+            allQueryParams.put("%24count", count);
+            allQueryParams.put("%24filter", filter);
+            allQueryParams.put("%24search", search);
+            allQueryParams.put("%24skip", skip);
+            allQueryParams.put("%24top", top);
+            allQueryParams.put("%24expand", expand);
+            allQueryParams.put("%24orderby", orderby);
+            allQueryParams.put("%24select", select);
+            return allQueryParams;
+        }
     }
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.

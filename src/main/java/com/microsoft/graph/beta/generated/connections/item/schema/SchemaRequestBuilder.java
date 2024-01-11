@@ -5,7 +5,7 @@ import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
-import com.microsoft.kiota.QueryParameter;
+import com.microsoft.kiota.QueryParameters;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
@@ -60,21 +60,21 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Schema::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a schema for an externalConnection.
+     * Create the schema for a Microsoft Search connection.
      * @param body The request body
      * @return a Schema
-     * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-schema-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-externalconnection-patch-schema?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Schema patch(@jakarta.annotation.Nonnull final Schema body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of a schema for an externalConnection.
+     * Create the schema for a Microsoft Search connection.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a Schema
-     * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-schema-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-externalconnection-patch-schema?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Schema patch(@jakarta.annotation.Nonnull final Schema body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -106,7 +106,7 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a schema for an externalConnection.
+     * Create the schema for a Microsoft Search connection.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -115,7 +115,7 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a schema for an externalConnection.
+     * Create the schema for a Microsoft Search connection.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -143,19 +143,28 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties of a schema for an externalConnection.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
-    public class GetQueryParameters {
+    public class GetQueryParameters implements QueryParameters {
         /**
          * Expand related entities
          */
-        @QueryParameter(name = "%24expand")
         @jakarta.annotation.Nullable
         public String[] expand;
         /**
          * Select properties to be returned
          */
-        @QueryParameter(name = "%24select")
         @jakarta.annotation.Nullable
         public String[] select;
+        /**
+         * Extracts the query parameters into a map for the URI template parsing.
+         * @return a Map<String, Object>
+         */
+        @jakarta.annotation.Nonnull
+        public Map<String, Object> toQueryParameters() {
+            final Map<String, Object> allQueryParams = new HashMap();
+            allQueryParams.put("%24expand", expand);
+            allQueryParams.put("%24select", select);
+            return allQueryParams;
+        }
     }
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.

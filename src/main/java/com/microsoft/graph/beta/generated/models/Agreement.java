@@ -34,7 +34,7 @@ public class Agreement extends Entity implements Parsable {
         return this.backingStore.get("acceptances");
     }
     /**
-     * Gets the displayName property value. Display name of the agreement. The display name is used for internal tracking of the agreement but is not shown to end users who view the agreement. Supports $filter (eq).
+     * Gets the displayName property value. Display name of the agreement. The display name is used for internal tracking of the agreement but isn't shown to end users who view the agreement. Supports $filter (eq).
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -75,7 +75,7 @@ public class Agreement extends Entity implements Parsable {
         return this.backingStore.get("files");
     }
     /**
-     * Gets the isPerDeviceAcceptanceRequired property value. This setting enables you to require end users to accept this agreement on every device that they are accessing it from. The end user will be required to register their device in Microsoft Entra ID, if they haven't already done so. Supports $filter (eq).
+     * Gets the isPerDeviceAcceptanceRequired property value. This setting enables you to require end users to accept this agreement on every device that they're accessing it from. The end user is required to register their device in Microsoft Entra ID, if they haven't already done so. Supports $filter (eq).
      * @return a Boolean
      */
     @jakarta.annotation.Nullable
@@ -99,7 +99,7 @@ public class Agreement extends Entity implements Parsable {
         return this.backingStore.get("termsExpiration");
     }
     /**
-     * Gets the userReacceptRequiredFrequency property value. The duration after which the user must re-accept the terms of use. The value is represented in ISO 8601 format for durations.
+     * Gets the userReacceptRequiredFrequency property value. The duration after which the user must reaccept the terms of use. The value is represented in ISO 8601 format for durations.
      * @return a PeriodAndDuration
      */
     @jakarta.annotation.Nullable
@@ -130,7 +130,7 @@ public class Agreement extends Entity implements Parsable {
         this.backingStore.set("acceptances", value);
     }
     /**
-     * Sets the displayName property value. Display name of the agreement. The display name is used for internal tracking of the agreement but is not shown to end users who view the agreement. Supports $filter (eq).
+     * Sets the displayName property value. Display name of the agreement. The display name is used for internal tracking of the agreement but isn't shown to end users who view the agreement. Supports $filter (eq).
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
@@ -151,7 +151,7 @@ public class Agreement extends Entity implements Parsable {
         this.backingStore.set("files", value);
     }
     /**
-     * Sets the isPerDeviceAcceptanceRequired property value. This setting enables you to require end users to accept this agreement on every device that they are accessing it from. The end user will be required to register their device in Microsoft Entra ID, if they haven't already done so. Supports $filter (eq).
+     * Sets the isPerDeviceAcceptanceRequired property value. This setting enables you to require end users to accept this agreement on every device that they're accessing it from. The end user is required to register their device in Microsoft Entra ID, if they haven't already done so. Supports $filter (eq).
      * @param value Value to set for the isPerDeviceAcceptanceRequired property.
      */
     public void setIsPerDeviceAcceptanceRequired(@jakarta.annotation.Nullable final Boolean value) {
@@ -172,7 +172,7 @@ public class Agreement extends Entity implements Parsable {
         this.backingStore.set("termsExpiration", value);
     }
     /**
-     * Sets the userReacceptRequiredFrequency property value. The duration after which the user must re-accept the terms of use. The value is represented in ISO 8601 format for durations.
+     * Sets the userReacceptRequiredFrequency property value. The duration after which the user must reaccept the terms of use. The value is represented in ISO 8601 format for durations.
      * @param value Value to set for the userReacceptRequiredFrequency property.
      */
     public void setUserReacceptRequiredFrequency(@jakarta.annotation.Nullable final PeriodAndDuration value) {

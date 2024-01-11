@@ -36,7 +36,7 @@ public class OnAttributeCollectionSubmitListener extends AuthenticationEventList
         return deserializerMap;
     }
     /**
-     * Gets the handler property value. The handler property
+     * Gets the handler property value. Configuration for what to invoke if the event resolves to this listener.
      * @return a OnAttributeCollectionSubmitHandler
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class OnAttributeCollectionSubmitListener extends AuthenticationEventList
         writer.writeObjectValue("handler", this.getHandler());
     }
     /**
-     * Sets the handler property value. The handler property
+     * Sets the handler property value. Configuration for what to invoke if the event resolves to this listener.
      * @param value Value to set for the handler property.
      */
     public void setHandler(@jakarta.annotation.Nullable final OnAttributeCollectionSubmitHandler value) {
