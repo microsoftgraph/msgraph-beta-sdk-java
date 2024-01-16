@@ -1,7 +1,7 @@
-package com.microsoft.graph.beta.identityprotection.riskdetections.item;
+package com.microsoft.graph.beta.users.item.authentication.signinpreferences;
 
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
-import com.microsoft.graph.beta.models.RiskDetection;
+import com.microsoft.graph.beta.models.SignInPreferences;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -16,112 +16,73 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * Provides operations to manage the riskDetections property of the microsoft.graph.identityProtectionRoot entity.
+ * Builds and executes requests for operations under /users/{user-id}/authentication/signInPreferences
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class RiskDetectionItemRequestBuilder extends BaseRequestBuilder {
+public class SignInPreferencesRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new RiskDetectionItemRequestBuilder and sets the default values.
+     * Instantiates a new SignInPreferencesRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
-    public RiskDetectionItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/identityProtection/riskDetections/{riskDetection%2Did}{?%24select,%24expand}", pathParameters);
+    public SignInPreferencesRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/authentication/signInPreferences{?%24select,%24expand}", pathParameters);
     }
     /**
-     * Instantiates a new RiskDetectionItemRequestBuilder and sets the default values.
+     * Instantiates a new SignInPreferencesRequestBuilder and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
-    public RiskDetectionItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/identityProtection/riskDetections/{riskDetection%2Did}{?%24select,%24expand}", rawUrl);
+    public SignInPreferencesRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/authentication/signInPreferences{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete navigation property riskDetections for identityProtection
-     */
-    public void delete() {
-        delete(null);
-    }
-    /**
-     * Delete navigation property riskDetections for identityProtection
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     */
-    public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
-        final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
-    }
-    /**
-     * Retrieve the properties of a collection of riskDetection objects.
-     * @return a RiskDetection
-     * @see <a href="https://learn.microsoft.com/graph/api/riskdetection-list?view=graph-rest-1.0">Find more info here</a>
+     * The settings and preferences for to the sign-in experience of a user. Use this property to configure the user's default multifactor authentication (MFA) method.
+     * @return a SignInPreferences
      */
     @jakarta.annotation.Nullable
-    public RiskDetection get() {
+    public SignInPreferences get() {
         return get(null);
     }
     /**
-     * Retrieve the properties of a collection of riskDetection objects.
+     * The settings and preferences for to the sign-in experience of a user. Use this property to configure the user's default multifactor authentication (MFA) method.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RiskDetection
-     * @see <a href="https://learn.microsoft.com/graph/api/riskdetection-list?view=graph-rest-1.0">Find more info here</a>
+     * @return a SignInPreferences
      */
     @jakarta.annotation.Nullable
-    public RiskDetection get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public SignInPreferences get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, RiskDetection::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, SignInPreferences::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property riskDetections in identityProtection
+     * Update property signInPreferences value.
      * @param body The request body
-     * @return a RiskDetection
+     * @return a SignInPreferences
      */
     @jakarta.annotation.Nullable
-    public RiskDetection patch(@jakarta.annotation.Nonnull final RiskDetection body) {
+    public SignInPreferences patch(@jakarta.annotation.Nonnull final SignInPreferences body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property riskDetections in identityProtection
+     * Update property signInPreferences value.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RiskDetection
+     * @return a SignInPreferences
      */
     @jakarta.annotation.Nullable
-    public RiskDetection patch(@jakarta.annotation.Nonnull final RiskDetection body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    public SignInPreferences patch(@jakarta.annotation.Nonnull final SignInPreferences body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, RiskDetection::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, SignInPreferences::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property riskDetections for identityProtection
-     * @return a RequestInformation
-     */
-    @jakarta.annotation.Nonnull
-    public RequestInformation toDeleteRequestInformation() {
-        return toDeleteRequestInformation(null);
-    }
-    /**
-     * Delete navigation property riskDetections for identityProtection
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
-     */
-    @jakarta.annotation.Nonnull
-    public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
-        requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
-        requestInfo.headers.tryAdd("Accept", "application/json");
-        return requestInfo;
-    }
-    /**
-     * Retrieve the properties of a collection of riskDetection objects.
+     * The settings and preferences for to the sign-in experience of a user. Use this property to configure the user's default multifactor authentication (MFA) method.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -129,7 +90,7 @@ public class RiskDetectionItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties of a collection of riskDetection objects.
+     * The settings and preferences for to the sign-in experience of a user. Use this property to configure the user's default multifactor authentication (MFA) method.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -141,22 +102,22 @@ public class RiskDetectionItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property riskDetections in identityProtection
+     * Update property signInPreferences value.
      * @param body The request body
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final RiskDetection body) {
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final SignInPreferences body) {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property riskDetections in identityProtection
+     * Update property signInPreferences value.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final RiskDetection body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final SignInPreferences body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
@@ -167,21 +128,15 @@ public class RiskDetectionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a RiskDetectionItemRequestBuilder
+     * @return a SignInPreferencesRequestBuilder
      */
     @jakarta.annotation.Nonnull
-    public RiskDetectionItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+    public SignInPreferencesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
-        return new RiskDetectionItemRequestBuilder(rawUrl, requestAdapter);
+        return new SignInPreferencesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Configuration for the request such as headers, query parameters, and middleware options.
-     */
-    @jakarta.annotation.Generated("com.microsoft.kiota")
-    public class DeleteRequestConfiguration extends BaseRequestConfiguration {
-    }
-    /**
-     * Retrieve the properties of a collection of riskDetection objects.
+     * The settings and preferences for to the sign-in experience of a user. Use this property to configure the user's default multifactor authentication (MFA) method.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
