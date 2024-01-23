@@ -56,7 +56,7 @@ public class CloudPcPartnerAgentInstallResult implements AdditionalDataHolder, B
         return this.backingStore;
     }
     /**
-     * Gets the errorMessage property value. The errorMessage property
+     * Gets the errorMessage property value. Contains a detailed error message when the partner agent installation failed.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -87,7 +87,7 @@ public class CloudPcPartnerAgentInstallResult implements AdditionalDataHolder, B
         return this.backingStore.get("installStatus");
     }
     /**
-     * Gets the isThirdPartyPartner property value. Indicates if the partner agent is a third party. When 'TRUE' the agent is a third-party (non-Microsoft) agent and when 'FALSE' the agent is a Microsoft agent or isn't known.  The default value is 'FALSE'
+     * Gets the isThirdPartyPartner property value. Indicates whether the partner agent is a third party. When true, the agent is a third-party (non-Microsoft) agent and when false, the agent is a Microsoft agent or isn't known.  The default value is false.
      * @return a Boolean
      */
     @jakarta.annotation.Nullable
@@ -111,7 +111,7 @@ public class CloudPcPartnerAgentInstallResult implements AdditionalDataHolder, B
         return this.backingStore.get("partnerAgentName");
     }
     /**
-     * Gets the retriable property value. Indicates if the partner agent is a third party. When 'TRUE' the agent is a third-party (non-Microsoft) agent and when 'FALSE' the agent is a Microsoft agent or isn't known. The default value is 'FALSE'
+     * Gets the retriable property value. Indicates whether the partner agent installation should be retried. The default value is false.
      * @return a Boolean
      */
     @jakarta.annotation.Nullable
@@ -148,7 +148,7 @@ public class CloudPcPartnerAgentInstallResult implements AdditionalDataHolder, B
         this.backingStore = value;
     }
     /**
-     * Sets the errorMessage property value. The errorMessage property
+     * Sets the errorMessage property value. Contains a detailed error message when the partner agent installation failed.
      * @param value Value to set for the errorMessage property.
      */
     public void setErrorMessage(@jakarta.annotation.Nullable final String value) {
@@ -162,7 +162,7 @@ public class CloudPcPartnerAgentInstallResult implements AdditionalDataHolder, B
         this.backingStore.set("installStatus", value);
     }
     /**
-     * Sets the isThirdPartyPartner property value. Indicates if the partner agent is a third party. When 'TRUE' the agent is a third-party (non-Microsoft) agent and when 'FALSE' the agent is a Microsoft agent or isn't known.  The default value is 'FALSE'
+     * Sets the isThirdPartyPartner property value. Indicates whether the partner agent is a third party. When true, the agent is a third-party (non-Microsoft) agent and when false, the agent is a Microsoft agent or isn't known.  The default value is false.
      * @param value Value to set for the isThirdPartyPartner property.
      */
     public void setIsThirdPartyPartner(@jakarta.annotation.Nullable final Boolean value) {
@@ -183,7 +183,7 @@ public class CloudPcPartnerAgentInstallResult implements AdditionalDataHolder, B
         this.backingStore.set("partnerAgentName", value);
     }
     /**
-     * Sets the retriable property value. Indicates if the partner agent is a third party. When 'TRUE' the agent is a third-party (non-Microsoft) agent and when 'FALSE' the agent is a Microsoft agent or isn't known. The default value is 'FALSE'
+     * Sets the retriable property value. Indicates whether the partner agent installation should be retried. The default value is false.
      * @param value Value to set for the retriable property.
      */
     public void setRetriable(@jakarta.annotation.Nullable final Boolean value) {

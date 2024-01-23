@@ -54,7 +54,7 @@ public class DeviceManagementExportJobItemRequestBuilder extends BaseRequestBuil
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Entity representing a job to export a report
+     * Entity representing a job to export a report.
      * @return a DeviceManagementExportJob
      */
     @jakarta.annotation.Nullable
@@ -62,7 +62,7 @@ public class DeviceManagementExportJobItemRequestBuilder extends BaseRequestBuil
         return get(null);
     }
     /**
-     * Entity representing a job to export a report
+     * Entity representing a job to export a report.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a DeviceManagementExportJob
      */
@@ -119,7 +119,7 @@ public class DeviceManagementExportJobItemRequestBuilder extends BaseRequestBuil
         return requestInfo;
     }
     /**
-     * Entity representing a job to export a report
+     * Entity representing a job to export a report.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -127,7 +127,7 @@ public class DeviceManagementExportJobItemRequestBuilder extends BaseRequestBuil
         return toGetRequestInformation(null);
     }
     /**
-     * Entity representing a job to export a report
+     * Entity representing a job to export a report.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -179,7 +179,7 @@ public class DeviceManagementExportJobItemRequestBuilder extends BaseRequestBuil
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Entity representing a job to export a report
+     * Entity representing a job to export a report.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

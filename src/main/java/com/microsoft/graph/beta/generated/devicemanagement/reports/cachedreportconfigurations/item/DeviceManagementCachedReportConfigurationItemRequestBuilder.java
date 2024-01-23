@@ -54,7 +54,7 @@ public class DeviceManagementCachedReportConfigurationItemRequestBuilder extends
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Entity representing the configuration of a cached report
+     * Entity representing the configuration of a cached report.
      * @return a DeviceManagementCachedReportConfiguration
      */
     @jakarta.annotation.Nullable
@@ -62,7 +62,7 @@ public class DeviceManagementCachedReportConfigurationItemRequestBuilder extends
         return get(null);
     }
     /**
-     * Entity representing the configuration of a cached report
+     * Entity representing the configuration of a cached report.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a DeviceManagementCachedReportConfiguration
      */
@@ -119,7 +119,7 @@ public class DeviceManagementCachedReportConfigurationItemRequestBuilder extends
         return requestInfo;
     }
     /**
-     * Entity representing the configuration of a cached report
+     * Entity representing the configuration of a cached report.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -127,7 +127,7 @@ public class DeviceManagementCachedReportConfigurationItemRequestBuilder extends
         return toGetRequestInformation(null);
     }
     /**
-     * Entity representing the configuration of a cached report
+     * Entity representing the configuration of a cached report.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -179,7 +179,7 @@ public class DeviceManagementCachedReportConfigurationItemRequestBuilder extends
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Entity representing the configuration of a cached report
+     * Entity representing the configuration of a cached report.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

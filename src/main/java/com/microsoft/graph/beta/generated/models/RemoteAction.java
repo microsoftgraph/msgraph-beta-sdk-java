@@ -79,7 +79,9 @@ public enum RemoteAction implements ValuedEnum {
     /** Indicate IT Admin initiates an action to remove devices from Device Firmware Configuration Interface management */
     RemoveDeviceFirmwareConfigurationInterfaceManagement("removeDeviceFirmwareConfigurationInterfaceManagement"),
     /** Indicates an action has been initiated to pause configuration refresh for the device. */
-    PauseConfigurationRefresh("pauseConfigurationRefresh");
+    PauseConfigurationRefresh("pauseConfigurationRefresh"),
+    /** Indicates remote device action to intiate Mobile Device Management (MDM) attestation if device is capable for it. */
+    InitiateDeviceAttestation("initiateDeviceAttestation");
     public final String value;
     RemoteAction(final String value) {
         this.value = value;
@@ -126,6 +128,7 @@ public enum RemoteAction implements ValuedEnum {
             case "revokeAppleVppLicenses": return RevokeAppleVppLicenses;
             case "removeDeviceFirmwareConfigurationInterfaceManagement": return RemoveDeviceFirmwareConfigurationInterfaceManagement;
             case "pauseConfigurationRefresh": return PauseConfigurationRefresh;
+            case "initiateDeviceAttestation": return InitiateDeviceAttestation;
             default: return null;
         }
     }

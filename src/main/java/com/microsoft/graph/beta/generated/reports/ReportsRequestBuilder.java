@@ -140,6 +140,7 @@ import com.microsoft.graph.beta.reports.monthlyprintusagebyprinter.MonthlyPrintU
 import com.microsoft.graph.beta.reports.monthlyprintusagebyuser.MonthlyPrintUsageByUserRequestBuilder;
 import com.microsoft.graph.beta.reports.monthlyprintusagesummariesbyprinter.MonthlyPrintUsageSummariesByPrinterRequestBuilder;
 import com.microsoft.graph.beta.reports.monthlyprintusagesummariesbyuser.MonthlyPrintUsageSummariesByUserRequestBuilder;
+import com.microsoft.graph.beta.reports.partners.PartnersRequestBuilder;
 import com.microsoft.graph.beta.reports.security.SecurityRequestBuilder;
 import com.microsoft.graph.beta.reports.serviceactivity.ServiceActivityRequestBuilder;
 import com.microsoft.graph.beta.reports.serviceprincipalsigninactivities.ServicePrincipalSignInActivitiesRequestBuilder;
@@ -340,6 +341,13 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public MonthlyPrintUsageSummariesByUserRequestBuilder monthlyPrintUsageSummariesByUser() {
         return new MonthlyPrintUsageSummariesByUserRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the partners property of the microsoft.graph.reportRoot entity.
+     */
+    @jakarta.annotation.Nonnull
+    public PartnersRequestBuilder partners() {
+        return new PartnersRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the security property of the microsoft.graph.reportRoot entity.

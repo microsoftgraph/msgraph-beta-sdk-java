@@ -56,7 +56,7 @@ public class GradingCategoryRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get gradingCategory from education
+     * When set, enables users to weight assignments differently when computing a class average grade.
      * @return a EducationGradingCategory
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class GradingCategoryRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get gradingCategory from education
+     * When set, enables users to weight assignments differently when computing a class average grade.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a EducationGradingCategory
      */
@@ -97,7 +97,7 @@ public class GradingCategoryRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get gradingCategory from education
+     * When set, enables users to weight assignments differently when computing a class average grade.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -105,7 +105,7 @@ public class GradingCategoryRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get gradingCategory from education
+     * When set, enables users to weight assignments differently when computing a class average grade.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -133,7 +133,7 @@ public class GradingCategoryRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get gradingCategory from education
+     * When set, enables users to weight assignments differently when computing a class average grade.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

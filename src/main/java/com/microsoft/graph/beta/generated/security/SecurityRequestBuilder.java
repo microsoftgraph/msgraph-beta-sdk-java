@@ -8,6 +8,7 @@ import com.microsoft.graph.beta.security.attacksimulation.AttackSimulationReques
 import com.microsoft.graph.beta.security.auditlog.AuditLogRequestBuilder;
 import com.microsoft.graph.beta.security.cases.CasesRequestBuilder;
 import com.microsoft.graph.beta.security.cloudappsecurityprofiles.CloudAppSecurityProfilesRequestBuilder;
+import com.microsoft.graph.beta.security.collaboration.CollaborationRequestBuilder;
 import com.microsoft.graph.beta.security.domainsecurityprofiles.DomainSecurityProfilesRequestBuilder;
 import com.microsoft.graph.beta.security.filesecurityprofiles.FileSecurityProfilesRequestBuilder;
 import com.microsoft.graph.beta.security.hostsecurityprofiles.HostSecurityProfilesRequestBuilder;
@@ -86,6 +87,13 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public CloudAppSecurityProfilesRequestBuilder cloudAppSecurityProfiles() {
         return new CloudAppSecurityProfilesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the collaboration property of the microsoft.graph.security entity.
+     */
+    @jakarta.annotation.Nonnull
+    public CollaborationRequestBuilder collaboration() {
+        return new CollaborationRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the domainSecurityProfiles property of the microsoft.graph.security entity.

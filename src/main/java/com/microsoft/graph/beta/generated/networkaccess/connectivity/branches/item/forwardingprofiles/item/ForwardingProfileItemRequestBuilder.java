@@ -23,7 +23,10 @@ import java.util.Objects;
 public class ForwardingProfileItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the policies property of the microsoft.graph.networkaccess.profile entity.
+     * @deprecated
+     * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public PoliciesRequestBuilder policies() {
         return new PoliciesRequestBuilder(pathParameters, requestAdapter);
@@ -46,14 +49,20 @@ public class ForwardingProfileItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Delete navigation property forwardingProfiles for networkAccess
+     * @deprecated
+     * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      */
+    @Deprecated
     public void delete() {
         delete(null);
     }
     /**
      * Delete navigation property forwardingProfiles for networkAccess
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @deprecated
+     * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      */
+    @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -64,8 +73,11 @@ public class ForwardingProfileItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Each forwarding profile associated with a branch site is specified. Supports $expand.
      * @return a ForwardingProfile
+     * @deprecated
+     * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public ForwardingProfile get() {
         return get(null);
     }
@@ -73,8 +85,11 @@ public class ForwardingProfileItemRequestBuilder extends BaseRequestBuilder {
      * Each forwarding profile associated with a branch site is specified. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ForwardingProfile
+     * @deprecated
+     * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public ForwardingProfile get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -86,8 +101,11 @@ public class ForwardingProfileItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property forwardingProfiles in networkAccess
      * @param body The request body
      * @return a ForwardingProfile
+     * @deprecated
+     * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public ForwardingProfile patch(@jakarta.annotation.Nonnull final ForwardingProfile body) {
         return patch(body, null);
     }
@@ -96,8 +114,11 @@ public class ForwardingProfileItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ForwardingProfile
+     * @deprecated
+     * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public ForwardingProfile patch(@jakarta.annotation.Nonnull final ForwardingProfile body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -109,8 +130,11 @@ public class ForwardingProfileItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property forwardingProfiles for networkAccess
      * @return a RequestInformation
+     * @deprecated
+     * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toDeleteRequestInformation() {
         return toDeleteRequestInformation(null);
     }
@@ -118,8 +142,11 @@ public class ForwardingProfileItemRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property forwardingProfiles for networkAccess
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
+     * @deprecated
+     * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
@@ -129,8 +156,11 @@ public class ForwardingProfileItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Each forwarding profile associated with a branch site is specified. Supports $expand.
      * @return a RequestInformation
+     * @deprecated
+     * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -138,8 +168,11 @@ public class ForwardingProfileItemRequestBuilder extends BaseRequestBuilder {
      * Each forwarding profile associated with a branch site is specified. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
+     * @deprecated
+     * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -150,8 +183,11 @@ public class ForwardingProfileItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property forwardingProfiles in networkAccess
      * @param body The request body
      * @return a RequestInformation
+     * @deprecated
+     * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final ForwardingProfile body) {
         return toPatchRequestInformation(body, null);
     }
@@ -160,8 +196,11 @@ public class ForwardingProfileItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
+     * @deprecated
+     * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final ForwardingProfile body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
@@ -174,8 +213,11 @@ public class ForwardingProfileItemRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a ForwardingProfileItemRequestBuilder
+     * @deprecated
+     * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public ForwardingProfileItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new ForwardingProfileItemRequestBuilder(rawUrl, requestAdapter);

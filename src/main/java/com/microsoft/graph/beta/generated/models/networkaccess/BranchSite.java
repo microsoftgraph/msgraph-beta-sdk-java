@@ -51,7 +51,7 @@ public class BranchSite extends Entity implements Parsable {
         return this.backingStore.get("connectivityState");
     }
     /**
-     * Gets the country property value. The branch site is created in the specified country.
+     * Gets the country property value. The country property
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -165,7 +165,7 @@ public class BranchSite extends Entity implements Parsable {
         this.backingStore.set("connectivityState", value);
     }
     /**
-     * Sets the country property value. The branch site is created in the specified country.
+     * Sets the country property value. The country property
      * @param value Value to set for the country property.
      */
     public void setCountry(@jakarta.annotation.Nullable final String value) {

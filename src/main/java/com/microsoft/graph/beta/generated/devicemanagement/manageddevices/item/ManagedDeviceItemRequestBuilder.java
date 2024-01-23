@@ -20,6 +20,7 @@ import com.microsoft.graph.beta.devicemanagement.manageddevices.item.getcloudpcr
 import com.microsoft.graph.beta.devicemanagement.manageddevices.item.getcloudpcreviewstatus.GetCloudPcReviewStatusRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.manageddevices.item.getfilevaultkey.GetFileVaultKeyRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.manageddevices.item.getnoncompliantsettings.GetNonCompliantSettingsRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.manageddevices.item.initiatedeviceattestation.InitiateDeviceAttestationRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.manageddevices.item.initiatemobiledevicemanagementkeyrecovery.InitiateMobileDeviceManagementKeyRecoveryRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.manageddevices.item.initiateondemandproactiveremediation.InitiateOnDemandProactiveRemediationRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.manageddevices.item.locatedevice.LocateDeviceRequestBuilder;
@@ -216,6 +217,13 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public GetNonCompliantSettingsRequestBuilder getNonCompliantSettings() {
         return new GetNonCompliantSettingsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the initiateDeviceAttestation method.
+     */
+    @jakarta.annotation.Nonnull
+    public InitiateDeviceAttestationRequestBuilder initiateDeviceAttestation() {
+        return new InitiateDeviceAttestationRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the initiateMobileDeviceManagementKeyRecovery method.

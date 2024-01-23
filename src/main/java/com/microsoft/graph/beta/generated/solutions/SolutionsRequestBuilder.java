@@ -5,6 +5,7 @@ import com.microsoft.graph.beta.models.SolutionsRoot;
 import com.microsoft.graph.beta.solutions.bookingbusinesses.BookingBusinessesRequestBuilder;
 import com.microsoft.graph.beta.solutions.bookingcurrencies.BookingCurrenciesRequestBuilder;
 import com.microsoft.graph.beta.solutions.businessscenarios.BusinessScenariosRequestBuilder;
+import com.microsoft.graph.beta.solutions.businessscenarioswithuniquename.BusinessScenariosWithUniqueNameRequestBuilder;
 import com.microsoft.graph.beta.solutions.virtualevents.VirtualEventsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -51,6 +52,16 @@ public class SolutionsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public VirtualEventsRequestBuilder virtualEvents() {
         return new VirtualEventsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the businessScenarios property of the microsoft.graph.solutionsRoot entity.
+     * @param uniqueName Alternate key of businessScenario
+     * @return a BusinessScenariosWithUniqueNameRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public BusinessScenariosWithUniqueNameRequestBuilder businessScenariosWithUniqueName(@jakarta.annotation.Nonnull final String uniqueName) {
+        Objects.requireNonNull(uniqueName);
+        return new BusinessScenariosWithUniqueNameRequestBuilder(pathParameters, requestAdapter, uniqueName);
     }
     /**
      * Instantiates a new SolutionsRequestBuilder and sets the default values.

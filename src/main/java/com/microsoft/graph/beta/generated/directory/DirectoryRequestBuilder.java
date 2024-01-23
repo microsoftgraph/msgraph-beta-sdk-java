@@ -15,6 +15,8 @@ import com.microsoft.graph.beta.directory.outboundshareduserprofiles.OutboundSha
 import com.microsoft.graph.beta.directory.recommendations.RecommendationsRequestBuilder;
 import com.microsoft.graph.beta.directory.sharedemaildomains.SharedEmailDomainsRequestBuilder;
 import com.microsoft.graph.beta.directory.subscriptions.SubscriptionsRequestBuilder;
+import com.microsoft.graph.beta.directory.subscriptionswithcommercesubscriptionid.SubscriptionsWithCommerceSubscriptionIdRequestBuilder;
+import com.microsoft.graph.beta.directory.subscriptionswithocpsubscriptionid.SubscriptionsWithOcpSubscriptionIdRequestBuilder;
 import com.microsoft.graph.beta.models.Directory;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -200,6 +202,26 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, Directory::createFromDiscriminatorValue);
+    }
+    /**
+     * Provides operations to manage the subscriptions property of the microsoft.graph.directory entity.
+     * @param commerceSubscriptionId Alternate key of companySubscription
+     * @return a SubscriptionsWithCommerceSubscriptionIdRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public SubscriptionsWithCommerceSubscriptionIdRequestBuilder subscriptionsWithCommerceSubscriptionId(@jakarta.annotation.Nonnull final String commerceSubscriptionId) {
+        Objects.requireNonNull(commerceSubscriptionId);
+        return new SubscriptionsWithCommerceSubscriptionIdRequestBuilder(pathParameters, requestAdapter, commerceSubscriptionId);
+    }
+    /**
+     * Provides operations to manage the subscriptions property of the microsoft.graph.directory entity.
+     * @param ocpSubscriptionId Alternate key of companySubscription
+     * @return a SubscriptionsWithOcpSubscriptionIdRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public SubscriptionsWithOcpSubscriptionIdRequestBuilder subscriptionsWithOcpSubscriptionId(@jakarta.annotation.Nonnull final String ocpSubscriptionId) {
+        Objects.requireNonNull(ocpSubscriptionId);
+        return new SubscriptionsWithOcpSubscriptionIdRequestBuilder(pathParameters, requestAdapter, ocpSubscriptionId);
     }
     /**
      * Get directory

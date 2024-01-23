@@ -3,6 +3,8 @@ package com.microsoft.graph.beta.onpremisespublishingprofiles.item.connectorgrou
 import com.microsoft.graph.beta.models.ConnectorGroup;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.onpremisespublishingprofiles.item.connectorgroups.item.applications.ApplicationsRequestBuilder;
+import com.microsoft.graph.beta.onpremisespublishingprofiles.item.connectorgroups.item.applicationswithappid.ApplicationsWithAppIdRequestBuilder;
+import com.microsoft.graph.beta.onpremisespublishingprofiles.item.connectorgroups.item.applicationswithuniquename.ApplicationsWithUniqueNameRequestBuilder;
 import com.microsoft.graph.beta.onpremisespublishingprofiles.item.connectorgroups.item.members.MembersRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -35,6 +37,26 @@ public class ConnectorGroupItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public MembersRequestBuilder members() {
         return new MembersRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the applications property of the microsoft.graph.connectorGroup entity.
+     * @param appId Alternate key of application
+     * @return a ApplicationsWithAppIdRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ApplicationsWithAppIdRequestBuilder applicationsWithAppId(@jakarta.annotation.Nonnull final String appId) {
+        Objects.requireNonNull(appId);
+        return new ApplicationsWithAppIdRequestBuilder(pathParameters, requestAdapter, appId);
+    }
+    /**
+     * Provides operations to manage the applications property of the microsoft.graph.connectorGroup entity.
+     * @param uniqueName Alternate key of application
+     * @return a ApplicationsWithUniqueNameRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ApplicationsWithUniqueNameRequestBuilder applicationsWithUniqueName(@jakarta.annotation.Nonnull final String uniqueName) {
+        Objects.requireNonNull(uniqueName);
+        return new ApplicationsWithUniqueNameRequestBuilder(pathParameters, requestAdapter, uniqueName);
     }
     /**
      * Instantiates a new ConnectorGroupItemRequestBuilder and sets the default values.

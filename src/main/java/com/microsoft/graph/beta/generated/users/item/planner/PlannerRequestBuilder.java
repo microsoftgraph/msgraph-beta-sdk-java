@@ -4,6 +4,7 @@ import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.PlannerUser;
 import com.microsoft.graph.beta.users.item.planner.all.AllRequestBuilder;
 import com.microsoft.graph.beta.users.item.planner.favoriteplans.FavoritePlansRequestBuilder;
+import com.microsoft.graph.beta.users.item.planner.mydaytasks.MyDayTasksRequestBuilder;
 import com.microsoft.graph.beta.users.item.planner.plans.PlansRequestBuilder;
 import com.microsoft.graph.beta.users.item.planner.recentplans.RecentPlansRequestBuilder;
 import com.microsoft.graph.beta.users.item.planner.rosterplans.RosterPlansRequestBuilder;
@@ -39,6 +40,13 @@ public class PlannerRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public FavoritePlansRequestBuilder favoritePlans() {
         return new FavoritePlansRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the myDayTasks property of the microsoft.graph.plannerUser entity.
+     */
+    @jakarta.annotation.Nonnull
+    public MyDayTasksRequestBuilder myDayTasks() {
+        return new MyDayTasksRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the plans property of the microsoft.graph.plannerUser entity.

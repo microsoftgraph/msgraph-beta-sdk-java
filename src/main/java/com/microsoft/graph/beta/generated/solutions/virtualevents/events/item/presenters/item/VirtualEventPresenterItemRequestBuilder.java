@@ -4,6 +4,7 @@ import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.VirtualEventPresenter;
 import com.microsoft.graph.beta.solutions.virtualevents.events.item.presenters.item.profilephoto.ProfilePhotoRequestBuilder;
 import com.microsoft.graph.beta.solutions.virtualevents.events.item.presenters.item.sessions.SessionsRequestBuilder;
+import com.microsoft.graph.beta.solutions.virtualevents.events.item.presenters.item.sessionswithjoinweburl.SessionsWithJoinWebUrlRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -113,6 +114,16 @@ public class VirtualEventPresenterItemRequestBuilder extends BaseRequestBuilder 
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, VirtualEventPresenter::createFromDiscriminatorValue);
+    }
+    /**
+     * Provides operations to manage the sessions property of the microsoft.graph.virtualEventPresenter entity.
+     * @param joinWebUrl Alternate key of virtualEventSession
+     * @return a SessionsWithJoinWebUrlRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public SessionsWithJoinWebUrlRequestBuilder sessionsWithJoinWebUrl(@jakarta.annotation.Nonnull final String joinWebUrl) {
+        Objects.requireNonNull(joinWebUrl);
+        return new SessionsWithJoinWebUrlRequestBuilder(pathParameters, requestAdapter, joinWebUrl);
     }
     /**
      * Delete navigation property presenters for solutions

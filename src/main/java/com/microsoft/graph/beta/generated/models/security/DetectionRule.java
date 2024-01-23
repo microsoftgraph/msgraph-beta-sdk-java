@@ -34,6 +34,14 @@ public class DetectionRule extends ProtectionRule implements Parsable {
         return this.backingStore.get("detectionAction");
     }
     /**
+     * Gets the detectorId property value. The detectorId property
+     * @return a String
+     */
+    @jakarta.annotation.Nullable
+    public String getDetectorId() {
+        return this.backingStore.get("detectorId");
+    }
+    /**
      * The deserialization information for the current model
      * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
@@ -41,6 +49,7 @@ public class DetectionRule extends ProtectionRule implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("detectionAction", (n) -> { this.setDetectionAction(n.getObjectValue(DetectionAction::createFromDiscriminatorValue)); });
+        deserializerMap.put("detectorId", (n) -> { this.setDetectorId(n.getStringValue()); });
         deserializerMap.put("lastRunDetails", (n) -> { this.setLastRunDetails(n.getObjectValue(RunDetails::createFromDiscriminatorValue)); });
         deserializerMap.put("queryCondition", (n) -> { this.setQueryCondition(n.getObjectValue(QueryCondition::createFromDiscriminatorValue)); });
         deserializerMap.put("schedule", (n) -> { this.setSchedule(n.getObjectValue(RuleSchedule::createFromDiscriminatorValue)); });
@@ -78,6 +87,7 @@ public class DetectionRule extends ProtectionRule implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("detectionAction", this.getDetectionAction());
+        writer.writeStringValue("detectorId", this.getDetectorId());
         writer.writeObjectValue("lastRunDetails", this.getLastRunDetails());
         writer.writeObjectValue("queryCondition", this.getQueryCondition());
         writer.writeObjectValue("schedule", this.getSchedule());
@@ -88,6 +98,13 @@ public class DetectionRule extends ProtectionRule implements Parsable {
      */
     public void setDetectionAction(@jakarta.annotation.Nullable final DetectionAction value) {
         this.backingStore.set("detectionAction", value);
+    }
+    /**
+     * Sets the detectorId property value. The detectorId property
+     * @param value Value to set for the detectorId property.
+     */
+    public void setDetectorId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("detectorId", value);
     }
     /**
      * Sets the lastRunDetails property value. The lastRunDetails property

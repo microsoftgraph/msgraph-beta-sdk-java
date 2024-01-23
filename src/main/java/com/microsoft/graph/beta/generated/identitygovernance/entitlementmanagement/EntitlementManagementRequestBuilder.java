@@ -14,6 +14,7 @@ import com.microsoft.graph.beta.identitygovernance.entitlementmanagement.accessp
 import com.microsoft.graph.beta.identitygovernance.entitlementmanagement.connectedorganizations.ConnectedOrganizationsRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.entitlementmanagement.settings.SettingsRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.entitlementmanagement.subjects.SubjectsRequestBuilder;
+import com.microsoft.graph.beta.identitygovernance.entitlementmanagement.subjectswithobjectid.SubjectsWithObjectIdRequestBuilder;
 import com.microsoft.graph.beta.models.EntitlementManagement;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -209,6 +210,16 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, EntitlementManagement::createFromDiscriminatorValue);
+    }
+    /**
+     * Provides operations to manage the subjects property of the microsoft.graph.entitlementManagement entity.
+     * @param objectId Alternate key of accessPackageSubject
+     * @return a SubjectsWithObjectIdRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public SubjectsWithObjectIdRequestBuilder subjectsWithObjectId(@jakarta.annotation.Nonnull final String objectId) {
+        Objects.requireNonNull(objectId);
+        return new SubjectsWithObjectIdRequestBuilder(pathParameters, requestAdapter, objectId);
     }
     /**
      * Delete navigation property entitlementManagement for identityGovernance

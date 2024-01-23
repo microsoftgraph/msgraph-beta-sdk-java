@@ -27,7 +27,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
         return new CloudPcDeviceImage();
     }
     /**
-     * Gets the displayName property value. The display name of the image.
+     * Gets the displayName property value. The display name of the associated device image. The device image display name and the version are used to uniquely identify the Cloud PC device image. Read-only.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -35,7 +35,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
         return this.backingStore.get("displayName");
     }
     /**
-     * Gets the errorCode property value. The errorCode property
+     * Gets the errorCode property value. The error code of the status of the image that indicates why the upload failed, if applicable. Possible values are: internalServerError, sourceImageNotFound, osVersionNotSupported, sourceImageInvalid, sourceImageNotGeneralized, unknownFutureValue, vmAlreadyAzureAdJoined, paidSourceImageNotSupport, sourceImageNotSupportCustomizeVMName, sourceImageSizeExceedsLimitation. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: vmAlreadyAzureAdJoined, paidSourceImageNotSupport, sourceImageNotSupportCustomizeVMName, sourceImageSizeExceedsLimitation. Read-only.
      * @return a CloudPcDeviceImageErrorCode
      */
     @jakarta.annotation.Nullable
@@ -43,7 +43,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
         return this.backingStore.get("errorCode");
     }
     /**
-     * Gets the expirationDate property value. The date the image became unavailable.
+     * Gets the expirationDate property value. The date when the image became unavailable. Read-only.
      * @return a LocalDate
      */
     @jakarta.annotation.Nullable
@@ -72,7 +72,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the lastModifiedDateTime property value. The data and time that the image was last modified. The time is shown in ISO 8601 format and  Coordinated Universal Time (UTC) time. For example, midnight UTC on Jan 1, 2014 appears as 2014-01-01T00:00:00Z.
+     * Gets the lastModifiedDateTime property value. The data and time when the image was last modified. The timestamp represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
@@ -80,7 +80,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
         return this.backingStore.get("lastModifiedDateTime");
     }
     /**
-     * Gets the operatingSystem property value. The operating system of the image. For example, Windows 10 Enterprise.
+     * Gets the operatingSystem property value. The operating system of the image. For example, Windows 10 Enterprise. Read-only.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -88,7 +88,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
         return this.backingStore.get("operatingSystem");
     }
     /**
-     * Gets the osBuildNumber property value. The OS build version of the image. For example, 1909.
+     * Gets the osBuildNumber property value. The OS build version of the image. For example, 1909. Read-only.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -96,7 +96,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
         return this.backingStore.get("osBuildNumber");
     }
     /**
-     * Gets the osStatus property value. The OS status of this image. Possible values are: supported, supportedWithWarning, unknownFutureValue.
+     * Gets the osStatus property value. The OS status of this image. Possible values are: supported, supportedWithWarning, unknown, unknownFutureValue. The default value is unknown. Read-only.
      * @return a CloudPcDeviceImageOsStatus
      */
     @jakarta.annotation.Nullable
@@ -112,7 +112,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
         return this.backingStore.get("scopeIds");
     }
     /**
-     * Gets the sourceImageResourceId property value. The ID of the source image resource on Azure. Required format: /subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/images/{imageName}.
+     * Gets the sourceImageResourceId property value. The unique identifier (ID) of the source image resource on Azure. The required ID format is: '/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/images/{imageName}'. Read-only.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -120,7 +120,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
         return this.backingStore.get("sourceImageResourceId");
     }
     /**
-     * Gets the status property value. The status of the image on Cloud PC. Possible values are: pending, ready, failed.
+     * Gets the status property value. The status of the image on the Cloud PC. Possible values are: pending, ready, failed, unknownFutureValue. Read-only.
      * @return a CloudPcDeviceImageStatus
      */
     @jakarta.annotation.Nullable
@@ -128,7 +128,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
         return this.backingStore.get("status");
     }
     /**
-     * Gets the statusDetails property value. The details of the status of the image that indicates why the upload failed, if applicable. Possible values are: internalServerError, sourceImageNotFound, osVersionNotSupported, sourceImageInvalid, and sourceImageNotGeneralized.
+     * Gets the statusDetails property value. The statusDetails property
      * @return a CloudPcDeviceImageStatusDetails
      */
     @jakarta.annotation.Nullable
@@ -136,7 +136,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
         return this.backingStore.get("statusDetails");
     }
     /**
-     * Gets the version property value. The image version. For example, 0.0.1 and 1.5.13.
+     * Gets the version property value. The image version. For example, 0.0.1 and 1.5.13. Read-only.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -164,49 +164,49 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
         writer.writeStringValue("version", this.getVersion());
     }
     /**
-     * Sets the displayName property value. The display name of the image.
+     * Sets the displayName property value. The display name of the associated device image. The device image display name and the version are used to uniquely identify the Cloud PC device image. Read-only.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the errorCode property value. The errorCode property
+     * Sets the errorCode property value. The error code of the status of the image that indicates why the upload failed, if applicable. Possible values are: internalServerError, sourceImageNotFound, osVersionNotSupported, sourceImageInvalid, sourceImageNotGeneralized, unknownFutureValue, vmAlreadyAzureAdJoined, paidSourceImageNotSupport, sourceImageNotSupportCustomizeVMName, sourceImageSizeExceedsLimitation. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: vmAlreadyAzureAdJoined, paidSourceImageNotSupport, sourceImageNotSupportCustomizeVMName, sourceImageSizeExceedsLimitation. Read-only.
      * @param value Value to set for the errorCode property.
      */
     public void setErrorCode(@jakarta.annotation.Nullable final CloudPcDeviceImageErrorCode value) {
         this.backingStore.set("errorCode", value);
     }
     /**
-     * Sets the expirationDate property value. The date the image became unavailable.
+     * Sets the expirationDate property value. The date when the image became unavailable. Read-only.
      * @param value Value to set for the expirationDate property.
      */
     public void setExpirationDate(@jakarta.annotation.Nullable final LocalDate value) {
         this.backingStore.set("expirationDate", value);
     }
     /**
-     * Sets the lastModifiedDateTime property value. The data and time that the image was last modified. The time is shown in ISO 8601 format and  Coordinated Universal Time (UTC) time. For example, midnight UTC on Jan 1, 2014 appears as 2014-01-01T00:00:00Z.
+     * Sets the lastModifiedDateTime property value. The data and time when the image was last modified. The timestamp represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
-     * Sets the operatingSystem property value. The operating system of the image. For example, Windows 10 Enterprise.
+     * Sets the operatingSystem property value. The operating system of the image. For example, Windows 10 Enterprise. Read-only.
      * @param value Value to set for the operatingSystem property.
      */
     public void setOperatingSystem(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("operatingSystem", value);
     }
     /**
-     * Sets the osBuildNumber property value. The OS build version of the image. For example, 1909.
+     * Sets the osBuildNumber property value. The OS build version of the image. For example, 1909. Read-only.
      * @param value Value to set for the osBuildNumber property.
      */
     public void setOsBuildNumber(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("osBuildNumber", value);
     }
     /**
-     * Sets the osStatus property value. The OS status of this image. Possible values are: supported, supportedWithWarning, unknownFutureValue.
+     * Sets the osStatus property value. The OS status of this image. Possible values are: supported, supportedWithWarning, unknown, unknownFutureValue. The default value is unknown. Read-only.
      * @param value Value to set for the osStatus property.
      */
     public void setOsStatus(@jakarta.annotation.Nullable final CloudPcDeviceImageOsStatus value) {
@@ -220,28 +220,28 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
         this.backingStore.set("scopeIds", value);
     }
     /**
-     * Sets the sourceImageResourceId property value. The ID of the source image resource on Azure. Required format: /subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/images/{imageName}.
+     * Sets the sourceImageResourceId property value. The unique identifier (ID) of the source image resource on Azure. The required ID format is: '/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/images/{imageName}'. Read-only.
      * @param value Value to set for the sourceImageResourceId property.
      */
     public void setSourceImageResourceId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("sourceImageResourceId", value);
     }
     /**
-     * Sets the status property value. The status of the image on Cloud PC. Possible values are: pending, ready, failed.
+     * Sets the status property value. The status of the image on the Cloud PC. Possible values are: pending, ready, failed, unknownFutureValue. Read-only.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final CloudPcDeviceImageStatus value) {
         this.backingStore.set("status", value);
     }
     /**
-     * Sets the statusDetails property value. The details of the status of the image that indicates why the upload failed, if applicable. Possible values are: internalServerError, sourceImageNotFound, osVersionNotSupported, sourceImageInvalid, and sourceImageNotGeneralized.
+     * Sets the statusDetails property value. The statusDetails property
      * @param value Value to set for the statusDetails property.
      */
     public void setStatusDetails(@jakarta.annotation.Nullable final CloudPcDeviceImageStatusDetails value) {
         this.backingStore.set("statusDetails", value);
     }
     /**
-     * Sets the version property value. The image version. For example, 0.0.1 and 1.5.13.
+     * Sets the version property value. The image version. For example, 0.0.1 and 1.5.13. Read-only.
      * @param value Value to set for the version property.
      */
     public void setVersion(@jakarta.annotation.Nullable final String value) {

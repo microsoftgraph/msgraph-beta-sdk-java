@@ -6,6 +6,7 @@ import com.microsoft.graph.beta.solutions.virtualevents.webinars.item.presenters
 import com.microsoft.graph.beta.solutions.virtualevents.webinars.item.registrationconfiguration.RegistrationConfigurationRequestBuilder;
 import com.microsoft.graph.beta.solutions.virtualevents.webinars.item.registrations.RegistrationsRequestBuilder;
 import com.microsoft.graph.beta.solutions.virtualevents.webinars.item.sessions.SessionsRequestBuilder;
+import com.microsoft.graph.beta.solutions.virtualevents.webinars.item.sessionswithjoinweburl.SessionsWithJoinWebUrlRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -131,6 +132,16 @@ public class VirtualEventWebinarItemRequestBuilder extends BaseRequestBuilder {
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, VirtualEventWebinar::createFromDiscriminatorValue);
+    }
+    /**
+     * Provides operations to manage the sessions property of the microsoft.graph.virtualEvent entity.
+     * @param joinWebUrl Alternate key of virtualEventSession
+     * @return a SessionsWithJoinWebUrlRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public SessionsWithJoinWebUrlRequestBuilder sessionsWithJoinWebUrl(@jakarta.annotation.Nonnull final String joinWebUrl) {
+        Objects.requireNonNull(joinWebUrl);
+        return new SessionsWithJoinWebUrlRequestBuilder(pathParameters, requestAdapter, joinWebUrl);
     }
     /**
      * Delete navigation property webinars for solutions

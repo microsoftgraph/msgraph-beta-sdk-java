@@ -26,7 +26,7 @@ public class TimeOff extends ChangeTrackedEntity implements Parsable {
         return new TimeOff();
     }
     /**
-     * Gets the draftTimeOff property value. Draft changes in the timeOff are only visible to managers until they're shared.
+     * Gets the draftTimeOff property value. The draft version of this timeOff item that is viewable by managers. It must be shared before it is visible to team members. Required.
      * @return a TimeOffItem
      */
     @jakarta.annotation.Nullable
@@ -55,7 +55,7 @@ public class TimeOff extends ChangeTrackedEntity implements Parsable {
         return this.backingStore.get("isStagedForDeletion");
     }
     /**
-     * Gets the sharedTimeOff property value. The shared version of this timeOff that is viewable by both employees and managers.
+     * Gets the sharedTimeOff property value. The shared version of this timeOff that is viewable by both employees and managers. Updates to the sharedTimeOff property send notifications to users in the Teams client. Required.
      * @return a TimeOffItem
      */
     @jakarta.annotation.Nullable
@@ -83,7 +83,7 @@ public class TimeOff extends ChangeTrackedEntity implements Parsable {
         writer.writeStringValue("userId", this.getUserId());
     }
     /**
-     * Sets the draftTimeOff property value. Draft changes in the timeOff are only visible to managers until they're shared.
+     * Sets the draftTimeOff property value. The draft version of this timeOff item that is viewable by managers. It must be shared before it is visible to team members. Required.
      * @param value Value to set for the draftTimeOff property.
      */
     public void setDraftTimeOff(@jakarta.annotation.Nullable final TimeOffItem value) {
@@ -97,7 +97,7 @@ public class TimeOff extends ChangeTrackedEntity implements Parsable {
         this.backingStore.set("isStagedForDeletion", value);
     }
     /**
-     * Sets the sharedTimeOff property value. The shared version of this timeOff that is viewable by both employees and managers.
+     * Sets the sharedTimeOff property value. The shared version of this timeOff that is viewable by both employees and managers. Updates to the sharedTimeOff property send notifications to users in the Teams client. Required.
      * @param value Value to set for the sharedTimeOff property.
      */
     public void setSharedTimeOff(@jakarta.annotation.Nullable final TimeOffItem value) {
