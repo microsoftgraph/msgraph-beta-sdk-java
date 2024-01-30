@@ -58,12 +58,21 @@ public class PlannerUser extends PlannerDelta implements Parsable {
         deserializerMap.put("all", (n) -> { this.setAll(n.getCollectionOfObjectValues(PlannerDelta::createFromDiscriminatorValue)); });
         deserializerMap.put("favoritePlanReferences", (n) -> { this.setFavoritePlanReferences(n.getObjectValue(PlannerFavoritePlanReferenceCollection::createFromDiscriminatorValue)); });
         deserializerMap.put("favoritePlans", (n) -> { this.setFavoritePlans(n.getCollectionOfObjectValues(PlannerPlan::createFromDiscriminatorValue)); });
+        deserializerMap.put("myDayTasks", (n) -> { this.setMyDayTasks(n.getCollectionOfObjectValues(PlannerTask::createFromDiscriminatorValue)); });
         deserializerMap.put("plans", (n) -> { this.setPlans(n.getCollectionOfObjectValues(PlannerPlan::createFromDiscriminatorValue)); });
         deserializerMap.put("recentPlanReferences", (n) -> { this.setRecentPlanReferences(n.getObjectValue(PlannerRecentPlanReferenceCollection::createFromDiscriminatorValue)); });
         deserializerMap.put("recentPlans", (n) -> { this.setRecentPlans(n.getCollectionOfObjectValues(PlannerPlan::createFromDiscriminatorValue)); });
         deserializerMap.put("rosterPlans", (n) -> { this.setRosterPlans(n.getCollectionOfObjectValues(PlannerPlan::createFromDiscriminatorValue)); });
         deserializerMap.put("tasks", (n) -> { this.setTasks(n.getCollectionOfObjectValues(PlannerTask::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the myDayTasks property value. The myDayTasks property
+     * @return a java.util.List<PlannerTask>
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<PlannerTask> getMyDayTasks() {
+        return this.backingStore.get("myDayTasks");
     }
     /**
      * Gets the plans property value. The plans property
@@ -115,6 +124,7 @@ public class PlannerUser extends PlannerDelta implements Parsable {
         writer.writeCollectionOfObjectValues("all", this.getAll());
         writer.writeObjectValue("favoritePlanReferences", this.getFavoritePlanReferences());
         writer.writeCollectionOfObjectValues("favoritePlans", this.getFavoritePlans());
+        writer.writeCollectionOfObjectValues("myDayTasks", this.getMyDayTasks());
         writer.writeCollectionOfObjectValues("plans", this.getPlans());
         writer.writeObjectValue("recentPlanReferences", this.getRecentPlanReferences());
         writer.writeCollectionOfObjectValues("recentPlans", this.getRecentPlans());
@@ -141,6 +151,13 @@ public class PlannerUser extends PlannerDelta implements Parsable {
      */
     public void setFavoritePlans(@jakarta.annotation.Nullable final java.util.List<PlannerPlan> value) {
         this.backingStore.set("favoritePlans", value);
+    }
+    /**
+     * Sets the myDayTasks property value. The myDayTasks property
+     * @param value Value to set for the myDayTasks property.
+     */
+    public void setMyDayTasks(@jakarta.annotation.Nullable final java.util.List<PlannerTask> value) {
+        this.backingStore.set("myDayTasks", value);
     }
     /**
      * Sets the plans property value. The plans property

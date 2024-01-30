@@ -4,6 +4,7 @@ import com.microsoft.graph.beta.communications.callrecords.CallRecordsRequestBui
 import com.microsoft.graph.beta.communications.calls.CallsRequestBuilder;
 import com.microsoft.graph.beta.communications.getpresencesbyuserid.GetPresencesByUserIdRequestBuilder;
 import com.microsoft.graph.beta.communications.onlinemeetings.OnlineMeetingsRequestBuilder;
+import com.microsoft.graph.beta.communications.onlinemeetingswithjoinweburl.OnlineMeetingsWithJoinWebUrlRequestBuilder;
 import com.microsoft.graph.beta.communications.presences.PresencesRequestBuilder;
 import com.microsoft.graph.beta.models.CloudCommunications;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
@@ -96,6 +97,16 @@ public class CommunicationsRequestBuilder extends BaseRequestBuilder {
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, CloudCommunications::createFromDiscriminatorValue);
+    }
+    /**
+     * Provides operations to manage the onlineMeetings property of the microsoft.graph.cloudCommunications entity.
+     * @param joinWebUrl Alternate key of onlineMeeting
+     * @return a OnlineMeetingsWithJoinWebUrlRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public OnlineMeetingsWithJoinWebUrlRequestBuilder onlineMeetingsWithJoinWebUrl(@jakarta.annotation.Nonnull final String joinWebUrl) {
+        Objects.requireNonNull(joinWebUrl);
+        return new OnlineMeetingsWithJoinWebUrlRequestBuilder(pathParameters, requestAdapter, joinWebUrl);
     }
     /**
      * Update communications

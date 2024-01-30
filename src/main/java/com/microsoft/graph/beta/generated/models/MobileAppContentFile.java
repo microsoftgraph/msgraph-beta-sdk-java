@@ -29,7 +29,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
         return new MobileAppContentFile();
     }
     /**
-     * Gets the azureStorageUri property value. The Azure Storage URI.
+     * Gets the azureStorageUri property value. Indicates the Azure Storage URI that the file is uploaded to. Created by the service upon receiving a valid mobileAppContentFile. Read-only.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -37,7 +37,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
         return this.backingStore.get("azureStorageUri");
     }
     /**
-     * Gets the azureStorageUriExpirationDateTime property value. The time the Azure storage Uri expires.
+     * Gets the azureStorageUriExpirationDateTime property value. Indicates the date and time when the Azure storage URI expires, in ISO 8601 format. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
@@ -45,7 +45,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
         return this.backingStore.get("azureStorageUriExpirationDateTime");
     }
     /**
-     * Gets the createdDateTime property value. The time the file was created.
+     * Gets the createdDateTime property value. Indicates created date and time associated with app content file, in ISO 8601 format. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
@@ -75,7 +75,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the isCommitted property value. A value indicating whether the file is committed.
+     * Gets the isCommitted property value. A value indicating whether the file is committed. A committed app content file has been fully uploaded and validated by the Intune service. TRUE means that app content file is committed, FALSE means that app content file is not committed. Defaults to FALSE. Read-only.
      * @return a Boolean
      */
     @jakarta.annotation.Nullable
@@ -83,7 +83,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
         return this.backingStore.get("isCommitted");
     }
     /**
-     * Gets the isDependency property value. Whether the content file is a dependency for the main content file.
+     * Gets the isDependency property value. Indicates whether this content file is a dependency for the main content file. TRUE means that the content file is a dependency, FALSE means that the content file is not a dependency and is the main content file. Defaults to FALSE.
      * @return a Boolean
      */
     @jakarta.annotation.Nullable
@@ -91,7 +91,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
         return this.backingStore.get("isDependency");
     }
     /**
-     * Gets the isFrameworkFile property value. A value indicating whether the file is a framework file.
+     * Gets the isFrameworkFile property value. A value indicating whether the file is a framework file. To be deprecated.
      * @return a Boolean
      */
     @jakarta.annotation.Nullable
@@ -99,7 +99,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
         return this.backingStore.get("isFrameworkFile");
     }
     /**
-     * Gets the manifest property value. The manifest information.
+     * Gets the manifest property value. Indicates the manifest information, containing file metadata.
      * @return a byte[]
      */
     @jakarta.annotation.Nullable
@@ -107,7 +107,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
         return this.backingStore.get("manifest");
     }
     /**
-     * Gets the name property value. the file name.
+     * Gets the name property value. Indicates the name of the file.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -115,7 +115,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
         return this.backingStore.get("name");
     }
     /**
-     * Gets the size property value. The size of the file prior to encryption.
+     * Gets the size property value. The size of the file prior to encryption. To be deprecated, please use sizeInBytes property instead.
      * @return a Long
      */
     @jakarta.annotation.Nullable
@@ -123,7 +123,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
         return this.backingStore.get("size");
     }
     /**
-     * Gets the sizeEncrypted property value. The size of the file after encryption.
+     * Gets the sizeEncrypted property value. The size of the file after encryption. To be deprecated, please use sizeEncryptedInBytes property instead.
      * @return a Long
      */
     @jakarta.annotation.Nullable
@@ -176,70 +176,70 @@ public class MobileAppContentFile extends Entity implements Parsable {
         writer.writeEnumValue("uploadState", this.getUploadState());
     }
     /**
-     * Sets the azureStorageUri property value. The Azure Storage URI.
+     * Sets the azureStorageUri property value. Indicates the Azure Storage URI that the file is uploaded to. Created by the service upon receiving a valid mobileAppContentFile. Read-only.
      * @param value Value to set for the azureStorageUri property.
      */
     public void setAzureStorageUri(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("azureStorageUri", value);
     }
     /**
-     * Sets the azureStorageUriExpirationDateTime property value. The time the Azure storage Uri expires.
+     * Sets the azureStorageUriExpirationDateTime property value. Indicates the date and time when the Azure storage URI expires, in ISO 8601 format. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
      * @param value Value to set for the azureStorageUriExpirationDateTime property.
      */
     public void setAzureStorageUriExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("azureStorageUriExpirationDateTime", value);
     }
     /**
-     * Sets the createdDateTime property value. The time the file was created.
+     * Sets the createdDateTime property value. Indicates created date and time associated with app content file, in ISO 8601 format. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the isCommitted property value. A value indicating whether the file is committed.
+     * Sets the isCommitted property value. A value indicating whether the file is committed. A committed app content file has been fully uploaded and validated by the Intune service. TRUE means that app content file is committed, FALSE means that app content file is not committed. Defaults to FALSE. Read-only.
      * @param value Value to set for the isCommitted property.
      */
     public void setIsCommitted(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isCommitted", value);
     }
     /**
-     * Sets the isDependency property value. Whether the content file is a dependency for the main content file.
+     * Sets the isDependency property value. Indicates whether this content file is a dependency for the main content file. TRUE means that the content file is a dependency, FALSE means that the content file is not a dependency and is the main content file. Defaults to FALSE.
      * @param value Value to set for the isDependency property.
      */
     public void setIsDependency(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isDependency", value);
     }
     /**
-     * Sets the isFrameworkFile property value. A value indicating whether the file is a framework file.
+     * Sets the isFrameworkFile property value. A value indicating whether the file is a framework file. To be deprecated.
      * @param value Value to set for the isFrameworkFile property.
      */
     public void setIsFrameworkFile(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isFrameworkFile", value);
     }
     /**
-     * Sets the manifest property value. The manifest information.
+     * Sets the manifest property value. Indicates the manifest information, containing file metadata.
      * @param value Value to set for the manifest property.
      */
     public void setManifest(@jakarta.annotation.Nullable final byte[] value) {
         this.backingStore.set("manifest", value);
     }
     /**
-     * Sets the name property value. the file name.
+     * Sets the name property value. Indicates the name of the file.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("name", value);
     }
     /**
-     * Sets the size property value. The size of the file prior to encryption.
+     * Sets the size property value. The size of the file prior to encryption. To be deprecated, please use sizeInBytes property instead.
      * @param value Value to set for the size property.
      */
     public void setSize(@jakarta.annotation.Nullable final Long value) {
         this.backingStore.set("size", value);
     }
     /**
-     * Sets the sizeEncrypted property value. The size of the file after encryption.
+     * Sets the sizeEncrypted property value. The size of the file after encryption. To be deprecated, please use sizeEncryptedInBytes property instead.
      * @param value Value to set for the sizeEncrypted property.
      */
     public void setSizeEncrypted(@jakarta.annotation.Nullable final Long value) {

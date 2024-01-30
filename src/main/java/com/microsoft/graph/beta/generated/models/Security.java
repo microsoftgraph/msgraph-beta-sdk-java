@@ -3,6 +3,7 @@ package com.microsoft.graph.beta.models;
 import com.microsoft.graph.beta.models.security.Alert;
 import com.microsoft.graph.beta.models.security.AuditCoreRoot;
 import com.microsoft.graph.beta.models.security.CasesRoot;
+import com.microsoft.graph.beta.models.security.CollaborationRoot;
 import com.microsoft.graph.beta.models.security.Incident;
 import com.microsoft.graph.beta.models.security.InformationProtection;
 import com.microsoft.graph.beta.models.security.LabelsRoot;
@@ -83,6 +84,14 @@ public class Security extends Entity implements Parsable {
         return this.backingStore.get("cloudAppSecurityProfiles");
     }
     /**
+     * Gets the collaboration property value. The collaboration property
+     * @return a CollaborationRoot
+     */
+    @jakarta.annotation.Nullable
+    public CollaborationRoot getCollaboration() {
+        return this.backingStore.get("collaboration");
+    }
+    /**
      * Gets the domainSecurityProfiles property value. The domainSecurityProfiles property
      * @return a java.util.List<DomainSecurityProfile>
      */
@@ -103,6 +112,7 @@ public class Security extends Entity implements Parsable {
         deserializerMap.put("auditLog", (n) -> { this.setAuditLog(n.getObjectValue(AuditCoreRoot::createFromDiscriminatorValue)); });
         deserializerMap.put("cases", (n) -> { this.setCases(n.getObjectValue(CasesRoot::createFromDiscriminatorValue)); });
         deserializerMap.put("cloudAppSecurityProfiles", (n) -> { this.setCloudAppSecurityProfiles(n.getCollectionOfObjectValues(CloudAppSecurityProfile::createFromDiscriminatorValue)); });
+        deserializerMap.put("collaboration", (n) -> { this.setCollaboration(n.getObjectValue(CollaborationRoot::createFromDiscriminatorValue)); });
         deserializerMap.put("domainSecurityProfiles", (n) -> { this.setDomainSecurityProfiles(n.getCollectionOfObjectValues(DomainSecurityProfile::createFromDiscriminatorValue)); });
         deserializerMap.put("fileSecurityProfiles", (n) -> { this.setFileSecurityProfiles(n.getCollectionOfObjectValues(FileSecurityProfile::createFromDiscriminatorValue)); });
         deserializerMap.put("hostSecurityProfiles", (n) -> { this.setHostSecurityProfiles(n.getCollectionOfObjectValues(HostSecurityProfile::createFromDiscriminatorValue)); });
@@ -281,6 +291,7 @@ public class Security extends Entity implements Parsable {
         writer.writeObjectValue("auditLog", this.getAuditLog());
         writer.writeObjectValue("cases", this.getCases());
         writer.writeCollectionOfObjectValues("cloudAppSecurityProfiles", this.getCloudAppSecurityProfiles());
+        writer.writeObjectValue("collaboration", this.getCollaboration());
         writer.writeCollectionOfObjectValues("domainSecurityProfiles", this.getDomainSecurityProfiles());
         writer.writeCollectionOfObjectValues("fileSecurityProfiles", this.getFileSecurityProfiles());
         writer.writeCollectionOfObjectValues("hostSecurityProfiles", this.getHostSecurityProfiles());
@@ -342,6 +353,13 @@ public class Security extends Entity implements Parsable {
      */
     public void setCloudAppSecurityProfiles(@jakarta.annotation.Nullable final java.util.List<CloudAppSecurityProfile> value) {
         this.backingStore.set("cloudAppSecurityProfiles", value);
+    }
+    /**
+     * Sets the collaboration property value. The collaboration property
+     * @param value Value to set for the collaboration property.
+     */
+    public void setCollaboration(@jakarta.annotation.Nullable final CollaborationRoot value) {
+        this.backingStore.set("collaboration", value);
     }
     /**
      * Sets the domainSecurityProfiles property value. The domainSecurityProfiles property

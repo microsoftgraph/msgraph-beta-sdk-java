@@ -2,6 +2,7 @@ package com.microsoft.graph.beta.appcatalogs.teamsapps.item.appdefinitions.item;
 
 import com.microsoft.graph.beta.appcatalogs.teamsapps.item.appdefinitions.item.bot.BotRequestBuilder;
 import com.microsoft.graph.beta.appcatalogs.teamsapps.item.appdefinitions.item.coloricon.ColorIconRequestBuilder;
+import com.microsoft.graph.beta.appcatalogs.teamsapps.item.appdefinitions.item.dashboardcards.DashboardCardsRequestBuilder;
 import com.microsoft.graph.beta.appcatalogs.teamsapps.item.appdefinitions.item.outlineicon.OutlineIconRequestBuilder;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.TeamsAppDefinition;
@@ -36,6 +37,13 @@ public class TeamsAppDefinitionItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public ColorIconRequestBuilder colorIcon() {
         return new ColorIconRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the dashboardCards property of the microsoft.graph.teamsAppDefinition entity.
+     */
+    @jakarta.annotation.Nonnull
+    public DashboardCardsRequestBuilder dashboardCards() {
+        return new DashboardCardsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the outlineIcon property of the microsoft.graph.teamsAppDefinition entity.

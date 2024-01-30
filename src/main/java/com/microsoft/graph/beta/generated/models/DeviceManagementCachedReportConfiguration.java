@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * Entity representing the configuration of a cached report
+ * Entity representing the configuration of a cached report.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementCachedReportConfiguration extends Entity implements Parsable {
@@ -29,7 +29,7 @@ public class DeviceManagementCachedReportConfiguration extends Entity implements
         return new DeviceManagementCachedReportConfiguration();
     }
     /**
-     * Gets the expirationDateTime property value. Time that the cached report expires. This property is read-only.
+     * Gets the expirationDateTime property value. Time that the cached report expires.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
@@ -62,7 +62,7 @@ public class DeviceManagementCachedReportConfiguration extends Entity implements
         return this.backingStore.get("filter");
     }
     /**
-     * Gets the lastRefreshDateTime property value. Time that the cached report was last refreshed. This property is read-only.
+     * Gets the lastRefreshDateTime property value. Time that the cached report was last refreshed.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
@@ -70,7 +70,7 @@ public class DeviceManagementCachedReportConfiguration extends Entity implements
         return this.backingStore.get("lastRefreshDateTime");
     }
     /**
-     * Gets the metadata property value. Caller-managed metadata associated with the report
+     * Gets the metadata property value. Caller-managed metadata associated with the report.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -78,7 +78,7 @@ public class DeviceManagementCachedReportConfiguration extends Entity implements
         return this.backingStore.get("metadata");
     }
     /**
-     * Gets the orderBy property value. Ordering of columns in the report
+     * Gets the orderBy property value. Ordering of columns in the report.
      * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
@@ -86,7 +86,7 @@ public class DeviceManagementCachedReportConfiguration extends Entity implements
         return this.backingStore.get("orderBy");
     }
     /**
-     * Gets the reportName property value. Name of the report. This property is read-only.
+     * Gets the reportName property value. Name of the report.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -94,7 +94,7 @@ public class DeviceManagementCachedReportConfiguration extends Entity implements
         return this.backingStore.get("reportName");
     }
     /**
-     * Gets the select property value. Columns selected from the report
+     * Gets the select property value. Columns selected from the report.
      * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
@@ -102,7 +102,7 @@ public class DeviceManagementCachedReportConfiguration extends Entity implements
         return this.backingStore.get("select");
     }
     /**
-     * Gets the status property value. Possible statuses associated with a generated report
+     * Gets the status property value. Possible statuses associated with a generated report.
      * @return a DeviceManagementReportStatus
      */
     @jakarta.annotation.Nullable
@@ -126,7 +126,7 @@ public class DeviceManagementCachedReportConfiguration extends Entity implements
         writer.writeEnumValue("status", this.getStatus());
     }
     /**
-     * Sets the expirationDateTime property value. Time that the cached report expires. This property is read-only.
+     * Sets the expirationDateTime property value. Time that the cached report expires.
      * @param value Value to set for the expirationDateTime property.
      */
     public void setExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -140,42 +140,42 @@ public class DeviceManagementCachedReportConfiguration extends Entity implements
         this.backingStore.set("filter", value);
     }
     /**
-     * Sets the lastRefreshDateTime property value. Time that the cached report was last refreshed. This property is read-only.
+     * Sets the lastRefreshDateTime property value. Time that the cached report was last refreshed.
      * @param value Value to set for the lastRefreshDateTime property.
      */
     public void setLastRefreshDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("lastRefreshDateTime", value);
     }
     /**
-     * Sets the metadata property value. Caller-managed metadata associated with the report
+     * Sets the metadata property value. Caller-managed metadata associated with the report.
      * @param value Value to set for the metadata property.
      */
     public void setMetadata(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("metadata", value);
     }
     /**
-     * Sets the orderBy property value. Ordering of columns in the report
+     * Sets the orderBy property value. Ordering of columns in the report.
      * @param value Value to set for the orderBy property.
      */
     public void setOrderBy(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("orderBy", value);
     }
     /**
-     * Sets the reportName property value. Name of the report. This property is read-only.
+     * Sets the reportName property value. Name of the report.
      * @param value Value to set for the reportName property.
      */
     public void setReportName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("reportName", value);
     }
     /**
-     * Sets the select property value. Columns selected from the report
+     * Sets the select property value. Columns selected from the report.
      * @param value Value to set for the select property.
      */
     public void setSelect(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("select", value);
     }
     /**
-     * Sets the status property value. Possible statuses associated with a generated report
+     * Sets the status property value. Possible statuses associated with a generated report.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final DeviceManagementReportStatus value) {

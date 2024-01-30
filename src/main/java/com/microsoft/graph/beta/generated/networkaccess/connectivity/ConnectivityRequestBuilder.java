@@ -3,6 +3,7 @@ package com.microsoft.graph.beta.networkaccess.connectivity;
 import com.microsoft.graph.beta.models.networkaccess.Connectivity;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.networkaccess.connectivity.branches.BranchesRequestBuilder;
+import com.microsoft.graph.beta.networkaccess.connectivity.remotenetworks.RemoteNetworksRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -27,6 +28,13 @@ public class ConnectivityRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public BranchesRequestBuilder branches() {
         return new BranchesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the remoteNetworks property of the microsoft.graph.networkaccess.connectivity entity.
+     */
+    @jakarta.annotation.Nonnull
+    public RemoteNetworksRequestBuilder remoteNetworks() {
+        return new RemoteNetworksRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new ConnectivityRequestBuilder and sets the default values.

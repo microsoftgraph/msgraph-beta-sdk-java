@@ -34,7 +34,11 @@ public enum ManagementAgentType implements ValuedEnum {
     Microsoft365ManagedMdm("microsoft365ManagedMdm"),
     MsSense("msSense"),
     /** This device is managed by Intune's MDM for AOSP (Android Open Source Project) devices */
-    IntuneAosp("intuneAosp");
+    IntuneAosp("intuneAosp"),
+    /** Indicates the management agent to manage the device is Google. */
+    Google("google"),
+    /** Evolvable enumeration sentinel value. Do not use. */
+    UnknownFutureValue("unknownFutureValue");
     public final String value;
     ManagementAgentType(final String value) {
         this.value = value;
@@ -59,6 +63,8 @@ public enum ManagementAgentType implements ValuedEnum {
             case "microsoft365ManagedMdm": return Microsoft365ManagedMdm;
             case "msSense": return MsSense;
             case "intuneAosp": return IntuneAosp;
+            case "google": return Google;
+            case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }
     }

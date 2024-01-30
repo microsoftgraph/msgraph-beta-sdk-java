@@ -11,7 +11,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * Custom Extended Key Usage definition
+ * The Custom Extended Key Usage definition
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ExtendedKeyUsage implements AdditionalDataHolder, BackedModel, Parsable {

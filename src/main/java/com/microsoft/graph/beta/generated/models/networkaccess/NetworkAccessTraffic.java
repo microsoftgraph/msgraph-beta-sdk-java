@@ -65,6 +65,14 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("agentVersion");
     }
     /**
+     * Gets the applicationSnapshot property value. The applicationSnapshot property
+     * @return a ApplicationSnapshot
+     */
+    @jakarta.annotation.Nullable
+    public ApplicationSnapshot getApplicationSnapshot() {
+        return this.backingStore.get("applicationSnapshot");
+    }
+    /**
      * Gets the backingStore property value. Stores model information.
      * @return a BackingStore
      */
@@ -158,9 +166,10 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(34);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(36);
         deserializerMap.put("action", (n) -> { this.setAction(n.getEnumValue(FilteringPolicyAction::forValue)); });
         deserializerMap.put("agentVersion", (n) -> { this.setAgentVersion(n.getStringValue()); });
+        deserializerMap.put("applicationSnapshot", (n) -> { this.setApplicationSnapshot(n.getObjectValue(ApplicationSnapshot::createFromDiscriminatorValue)); });
         deserializerMap.put("connectionId", (n) -> { this.setConnectionId(n.getStringValue()); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("destinationFQDN", (n) -> { this.setDestinationFQDN(n.getStringValue()); });
@@ -181,6 +190,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         deserializerMap.put("policyName", (n) -> { this.setPolicyName(n.getStringValue()); });
         deserializerMap.put("policyRuleId", (n) -> { this.setPolicyRuleId(n.getStringValue()); });
         deserializerMap.put("policyRuleName", (n) -> { this.setPolicyRuleName(n.getStringValue()); });
+        deserializerMap.put("privateAccessDetails", (n) -> { this.setPrivateAccessDetails(n.getObjectValue(PrivateAccessDetails::createFromDiscriminatorValue)); });
         deserializerMap.put("receivedBytes", (n) -> { this.setReceivedBytes(n.getLongValue()); });
         deserializerMap.put("resourceTenantId", (n) -> { this.setResourceTenantId(n.getStringValue()); });
         deserializerMap.put("sentBytes", (n) -> { this.setSentBytes(n.getLongValue()); });
@@ -274,6 +284,14 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
     @jakarta.annotation.Nullable
     public String getPolicyRuleName() {
         return this.backingStore.get("policyRuleName");
+    }
+    /**
+     * Gets the privateAccessDetails property value. The privateAccessDetails property
+     * @return a PrivateAccessDetails
+     */
+    @jakarta.annotation.Nullable
+    public PrivateAccessDetails getPrivateAccessDetails() {
+        return this.backingStore.get("privateAccessDetails");
     }
     /**
      * Gets the receivedBytes property value. Represents the total number of bytes received in a network communication or data transfer. Supports $filter (eq) and $orderby.
@@ -379,6 +397,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         Objects.requireNonNull(writer);
         writer.writeEnumValue("action", this.getAction());
         writer.writeStringValue("agentVersion", this.getAgentVersion());
+        writer.writeObjectValue("applicationSnapshot", this.getApplicationSnapshot());
         writer.writeStringValue("connectionId", this.getConnectionId());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeStringValue("destinationFQDN", this.getDestinationFQDN());
@@ -399,6 +418,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         writer.writeStringValue("policyName", this.getPolicyName());
         writer.writeStringValue("policyRuleId", this.getPolicyRuleId());
         writer.writeStringValue("policyRuleName", this.getPolicyRuleName());
+        writer.writeObjectValue("privateAccessDetails", this.getPrivateAccessDetails());
         writer.writeLongValue("receivedBytes", this.getReceivedBytes());
         writer.writeStringValue("resourceTenantId", this.getResourceTenantId());
         writer.writeLongValue("sentBytes", this.getSentBytes());
@@ -433,6 +453,13 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
      */
     public void setAgentVersion(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("agentVersion", value);
+    }
+    /**
+     * Sets the applicationSnapshot property value. The applicationSnapshot property
+     * @param value Value to set for the applicationSnapshot property.
+     */
+    public void setApplicationSnapshot(@jakarta.annotation.Nullable final ApplicationSnapshot value) {
+        this.backingStore.set("applicationSnapshot", value);
     }
     /**
      * Sets the backingStore property value. Stores model information.
@@ -581,6 +608,13 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
      */
     public void setPolicyRuleName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("policyRuleName", value);
+    }
+    /**
+     * Sets the privateAccessDetails property value. The privateAccessDetails property
+     * @param value Value to set for the privateAccessDetails property.
+     */
+    public void setPrivateAccessDetails(@jakarta.annotation.Nullable final PrivateAccessDetails value) {
+        this.backingStore.set("privateAccessDetails", value);
     }
     /**
      * Sets the receivedBytes property value. Represents the total number of bytes received in a network communication or data transfer. Supports $filter (eq) and $orderby.

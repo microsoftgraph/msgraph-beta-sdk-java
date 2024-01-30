@@ -41,7 +41,7 @@ public class EntitlementManagement extends Entity implements Parsable {
         return this.backingStore.get("accessPackageAssignmentPolicies");
     }
     /**
-     * Gets the accessPackageAssignmentRequests property value. Represents access package assignment requests created by or on behalf of a user.
+     * Gets the accessPackageAssignmentRequests property value. Represents access package assignment requests created by or on behalf of a user. DO NOT USE. TO BE RETIRED SOON. Use the assignmentRequests relationship instead.
      * @return a java.util.List<AccessPackageAssignmentRequest>
      */
     @jakarta.annotation.Nullable
@@ -113,6 +113,14 @@ public class EntitlementManagement extends Entity implements Parsable {
         return this.backingStore.get("accessPackages");
     }
     /**
+     * Gets the assignmentRequests property value. Represents access package assignment requests created by or on behalf of a user.
+     * @return a java.util.List<AccessPackageAssignmentRequest>
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<AccessPackageAssignmentRequest> getAssignmentRequests() {
+        return this.backingStore.get("assignmentRequests");
+    }
+    /**
      * Gets the connectedOrganizations property value. Represents references to a directory or domain of another organization whose users can request access.
      * @return a java.util.List<ConnectedOrganization>
      */
@@ -138,6 +146,7 @@ public class EntitlementManagement extends Entity implements Parsable {
         deserializerMap.put("accessPackageResourceRoleScopes", (n) -> { this.setAccessPackageResourceRoleScopes(n.getCollectionOfObjectValues(AccessPackageResourceRoleScope::createFromDiscriminatorValue)); });
         deserializerMap.put("accessPackageResources", (n) -> { this.setAccessPackageResources(n.getCollectionOfObjectValues(AccessPackageResource::createFromDiscriminatorValue)); });
         deserializerMap.put("accessPackages", (n) -> { this.setAccessPackages(n.getCollectionOfObjectValues(AccessPackage::createFromDiscriminatorValue)); });
+        deserializerMap.put("assignmentRequests", (n) -> { this.setAssignmentRequests(n.getCollectionOfObjectValues(AccessPackageAssignmentRequest::createFromDiscriminatorValue)); });
         deserializerMap.put("connectedOrganizations", (n) -> { this.setConnectedOrganizations(n.getCollectionOfObjectValues(ConnectedOrganization::createFromDiscriminatorValue)); });
         deserializerMap.put("settings", (n) -> { this.setSettings(n.getObjectValue(EntitlementManagementSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("subjects", (n) -> { this.setSubjects(n.getCollectionOfObjectValues(AccessPackageSubject::createFromDiscriminatorValue)); });
@@ -177,6 +186,7 @@ public class EntitlementManagement extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("accessPackageResourceRoleScopes", this.getAccessPackageResourceRoleScopes());
         writer.writeCollectionOfObjectValues("accessPackageResources", this.getAccessPackageResources());
         writer.writeCollectionOfObjectValues("accessPackages", this.getAccessPackages());
+        writer.writeCollectionOfObjectValues("assignmentRequests", this.getAssignmentRequests());
         writer.writeCollectionOfObjectValues("connectedOrganizations", this.getConnectedOrganizations());
         writer.writeObjectValue("settings", this.getSettings());
         writer.writeCollectionOfObjectValues("subjects", this.getSubjects());
@@ -196,7 +206,7 @@ public class EntitlementManagement extends Entity implements Parsable {
         this.backingStore.set("accessPackageAssignmentPolicies", value);
     }
     /**
-     * Sets the accessPackageAssignmentRequests property value. Represents access package assignment requests created by or on behalf of a user.
+     * Sets the accessPackageAssignmentRequests property value. Represents access package assignment requests created by or on behalf of a user. DO NOT USE. TO BE RETIRED SOON. Use the assignmentRequests relationship instead.
      * @param value Value to set for the accessPackageAssignmentRequests property.
      */
     public void setAccessPackageAssignmentRequests(@jakarta.annotation.Nullable final java.util.List<AccessPackageAssignmentRequest> value) {
@@ -257,6 +267,13 @@ public class EntitlementManagement extends Entity implements Parsable {
      */
     public void setAccessPackages(@jakarta.annotation.Nullable final java.util.List<AccessPackage> value) {
         this.backingStore.set("accessPackages", value);
+    }
+    /**
+     * Sets the assignmentRequests property value. Represents access package assignment requests created by or on behalf of a user.
+     * @param value Value to set for the assignmentRequests property.
+     */
+    public void setAssignmentRequests(@jakarta.annotation.Nullable final java.util.List<AccessPackageAssignmentRequest> value) {
+        this.backingStore.set("assignmentRequests", value);
     }
     /**
      * Sets the connectedOrganizations property value. Represents references to a directory or domain of another organization whose users can request access.

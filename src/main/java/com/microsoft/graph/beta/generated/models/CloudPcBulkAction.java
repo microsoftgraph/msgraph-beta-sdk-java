@@ -84,7 +84,16 @@ public class CloudPcBulkAction extends Entity implements Parsable {
         deserializerMap.put("cloudPcIds", (n) -> { this.setCloudPcIds(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("scheduledDuringMaintenanceWindow", (n) -> { this.setScheduledDuringMaintenanceWindow(n.getBooleanValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the scheduledDuringMaintenanceWindow property value. The scheduledDuringMaintenanceWindow property
+     * @return a Boolean
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getScheduledDuringMaintenanceWindow() {
+        return this.backingStore.get("scheduledDuringMaintenanceWindow");
     }
     /**
      * Serializes information the current object
@@ -97,6 +106,7 @@ public class CloudPcBulkAction extends Entity implements Parsable {
         writer.writeCollectionOfPrimitiveValues("cloudPcIds", this.getCloudPcIds());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeStringValue("displayName", this.getDisplayName());
+        writer.writeBooleanValue("scheduledDuringMaintenanceWindow", this.getScheduledDuringMaintenanceWindow());
     }
     /**
      * Sets the actionSummary property value. The actionSummary property
@@ -125,5 +135,12 @@ public class CloudPcBulkAction extends Entity implements Parsable {
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
+    }
+    /**
+     * Sets the scheduledDuringMaintenanceWindow property value. The scheduledDuringMaintenanceWindow property
+     * @param value Value to set for the scheduledDuringMaintenanceWindow property.
+     */
+    public void setScheduledDuringMaintenanceWindow(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("scheduledDuringMaintenanceWindow", value);
     }
 }

@@ -13,7 +13,9 @@ public enum MessagingRedirectAppType implements ValuedEnum {
     /** App protection policy will allow messaging redirection to any managed application. */
     AnyManagedApp("anyManagedApp"),
     /** App protection policy will allow messaging redirection only to specified applications in related App protection policy settings. See related settings `messagingRedirectAppDisplayName`, `messagingRedirectAppPackageId` and `messagingRedirectAppUrlScheme`. */
-    SpecificApps("specificApps");
+    SpecificApps("specificApps"),
+    /** App protection policy will block messaging redirection to any app. */
+    Blocked("blocked");
     public final String value;
     MessagingRedirectAppType(final String value) {
         this.value = value;
@@ -27,6 +29,7 @@ public enum MessagingRedirectAppType implements ValuedEnum {
             case "anyApp": return AnyApp;
             case "anyManagedApp": return AnyManagedApp;
             case "specificApps": return SpecificApps;
+            case "blocked": return Blocked;
             default: return null;
         }
     }

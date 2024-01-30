@@ -44,7 +44,7 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entit
         return this.backingStore.get("deviceBatteriesDetails");
     }
     /**
-     * Gets the deviceBatteryCount property value. Number of batteries in a user device. Valid values 1 to 2147483647
+     * Gets the deviceBatteryCount property value. Number of batteries in a user device. Valid values 0 to 2147483647
      * @return a Integer
      */
     @jakarta.annotation.Nullable
@@ -58,6 +58,14 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entit
     @jakarta.annotation.Nullable
     public Integer getDeviceBatteryHealthScore() {
         return this.backingStore.get("deviceBatteryHealthScore");
+    }
+    /**
+     * Gets the deviceBatteryTags property value. Tags for computed information on how battery on the device is behaving. E.g. newbattery, batterycapacityred, designcapacityzero, etc.
+     * @return a java.util.List<String>
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<String> getDeviceBatteryTags() {
+        return this.backingStore.get("deviceBatteryTags");
     }
     /**
      * Gets the deviceId property value. The unique identifier of the device, Intune DeviceID.
@@ -94,6 +102,7 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entit
         deserializerMap.put("deviceBatteriesDetails", (n) -> { this.setDeviceBatteriesDetails(n.getCollectionOfObjectValues(UserExperienceAnalyticsDeviceBatteryDetail::createFromDiscriminatorValue)); });
         deserializerMap.put("deviceBatteryCount", (n) -> { this.setDeviceBatteryCount(n.getIntegerValue()); });
         deserializerMap.put("deviceBatteryHealthScore", (n) -> { this.setDeviceBatteryHealthScore(n.getIntegerValue()); });
+        deserializerMap.put("deviceBatteryTags", (n) -> { this.setDeviceBatteryTags(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("deviceId", (n) -> { this.setDeviceId(n.getStringValue()); });
         deserializerMap.put("deviceName", (n) -> { this.setDeviceName(n.getStringValue()); });
         deserializerMap.put("estimatedRuntimeInMinutes", (n) -> { this.setEstimatedRuntimeInMinutes(n.getIntegerValue()); });
@@ -155,6 +164,7 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entit
         writer.writeCollectionOfObjectValues("deviceBatteriesDetails", this.getDeviceBatteriesDetails());
         writer.writeIntegerValue("deviceBatteryCount", this.getDeviceBatteryCount());
         writer.writeIntegerValue("deviceBatteryHealthScore", this.getDeviceBatteryHealthScore());
+        writer.writeCollectionOfPrimitiveValues("deviceBatteryTags", this.getDeviceBatteryTags());
         writer.writeStringValue("deviceId", this.getDeviceId());
         writer.writeStringValue("deviceName", this.getDeviceName());
         writer.writeIntegerValue("estimatedRuntimeInMinutes", this.getEstimatedRuntimeInMinutes());
@@ -179,7 +189,7 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entit
         this.backingStore.set("deviceBatteriesDetails", value);
     }
     /**
-     * Sets the deviceBatteryCount property value. Number of batteries in a user device. Valid values 1 to 2147483647
+     * Sets the deviceBatteryCount property value. Number of batteries in a user device. Valid values 0 to 2147483647
      * @param value Value to set for the deviceBatteryCount property.
      */
     public void setDeviceBatteryCount(@jakarta.annotation.Nullable final Integer value) {
@@ -191,6 +201,13 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entit
      */
     public void setDeviceBatteryHealthScore(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("deviceBatteryHealthScore", value);
+    }
+    /**
+     * Sets the deviceBatteryTags property value. Tags for computed information on how battery on the device is behaving. E.g. newbattery, batterycapacityred, designcapacityzero, etc.
+     * @param value Value to set for the deviceBatteryTags property.
+     */
+    public void setDeviceBatteryTags(@jakarta.annotation.Nullable final java.util.List<String> value) {
+        this.backingStore.set("deviceBatteryTags", value);
     }
     /**
      * Sets the deviceId property value. The unique identifier of the device, Intune DeviceID.

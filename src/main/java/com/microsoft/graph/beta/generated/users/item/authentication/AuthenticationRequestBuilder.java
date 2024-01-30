@@ -11,6 +11,7 @@ import com.microsoft.graph.beta.users.item.authentication.passwordlessmicrosofta
 import com.microsoft.graph.beta.users.item.authentication.passwordmethods.PasswordMethodsRequestBuilder;
 import com.microsoft.graph.beta.users.item.authentication.phonemethods.PhoneMethodsRequestBuilder;
 import com.microsoft.graph.beta.users.item.authentication.platformcredentialmethods.PlatformCredentialMethodsRequestBuilder;
+import com.microsoft.graph.beta.users.item.authentication.signinpreferences.SignInPreferencesRequestBuilder;
 import com.microsoft.graph.beta.users.item.authentication.softwareoathmethods.SoftwareOathMethodsRequestBuilder;
 import com.microsoft.graph.beta.users.item.authentication.temporaryaccesspassmethods.TemporaryAccessPassMethodsRequestBuilder;
 import com.microsoft.graph.beta.users.item.authentication.windowshelloforbusinessmethods.WindowsHelloForBusinessMethodsRequestBuilder;
@@ -94,6 +95,13 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public PlatformCredentialMethodsRequestBuilder platformCredentialMethods() {
         return new PlatformCredentialMethodsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * The signInPreferences property
+     */
+    @jakarta.annotation.Nonnull
+    public SignInPreferencesRequestBuilder signInPreferences() {
+        return new SignInPreferencesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the softwareOathMethods property of the microsoft.graph.authentication entity.

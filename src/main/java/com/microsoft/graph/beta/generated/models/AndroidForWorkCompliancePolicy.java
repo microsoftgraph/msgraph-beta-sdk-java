@@ -214,7 +214,7 @@ public class AndroidForWorkCompliancePolicy extends DeviceCompliancePolicy imple
         return this.backingStore.get("securityRequireGooglePlayServices");
     }
     /**
-     * Gets the securityRequireSafetyNetAttestationBasicIntegrity property value. Require the device to pass the SafetyNet basic integrity check.
+     * Gets the securityRequireSafetyNetAttestationBasicIntegrity property value. Require the device to pass the Play Integrity basic integrity check.
      * @return a Boolean
      */
     @jakarta.annotation.Nullable
@@ -222,7 +222,7 @@ public class AndroidForWorkCompliancePolicy extends DeviceCompliancePolicy imple
         return this.backingStore.get("securityRequireSafetyNetAttestationBasicIntegrity");
     }
     /**
-     * Gets the securityRequireSafetyNetAttestationCertifiedDevice property value. Require the device to pass the SafetyNet certified device check.
+     * Gets the securityRequireSafetyNetAttestationCertifiedDevice property value. Require the device to pass the Play Integrity device integrity check.
      * @return a Boolean
      */
     @jakarta.annotation.Nullable
@@ -419,14 +419,14 @@ public class AndroidForWorkCompliancePolicy extends DeviceCompliancePolicy imple
         this.backingStore.set("securityRequireGooglePlayServices", value);
     }
     /**
-     * Sets the securityRequireSafetyNetAttestationBasicIntegrity property value. Require the device to pass the SafetyNet basic integrity check.
+     * Sets the securityRequireSafetyNetAttestationBasicIntegrity property value. Require the device to pass the Play Integrity basic integrity check.
      * @param value Value to set for the securityRequireSafetyNetAttestationBasicIntegrity property.
      */
     public void setSecurityRequireSafetyNetAttestationBasicIntegrity(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("securityRequireSafetyNetAttestationBasicIntegrity", value);
     }
     /**
-     * Sets the securityRequireSafetyNetAttestationCertifiedDevice property value. Require the device to pass the SafetyNet certified device check.
+     * Sets the securityRequireSafetyNetAttestationCertifiedDevice property value. Require the device to pass the Play Integrity device integrity check.
      * @param value Value to set for the securityRequireSafetyNetAttestationCertifiedDevice property.
      */
     public void setSecurityRequireSafetyNetAttestationCertifiedDevice(@jakarta.annotation.Nullable final Boolean value) {

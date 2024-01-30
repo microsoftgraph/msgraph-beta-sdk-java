@@ -173,7 +173,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         return this.backingStore.get("detailedHelpText");
     }
     /**
-     * Gets the deviceLocationMode property value. Indicates the location setting configuration for fully managed devices (COBO) and corporate owned devices with a work profile (COPE)
+     * Gets the deviceLocationMode property value. Indicates the location setting configuration for fully managed devices (COBO) and corporate owned devices with a work profile (COPE). Possible values are: notConfigured, disabled, unknownFutureValue.
      * @return a AndroidDeviceOwnerLocationMode
      */
     @jakarta.annotation.Nullable
@@ -1562,7 +1562,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         this.backingStore.set("detailedHelpText", value);
     }
     /**
-     * Sets the deviceLocationMode property value. Indicates the location setting configuration for fully managed devices (COBO) and corporate owned devices with a work profile (COPE)
+     * Sets the deviceLocationMode property value. Indicates the location setting configuration for fully managed devices (COBO) and corporate owned devices with a work profile (COPE). Possible values are: notConfigured, disabled, unknownFutureValue.
      * @param value Value to set for the deviceLocationMode property.
      */
     public void setDeviceLocationMode(@jakarta.annotation.Nullable final AndroidDeviceOwnerLocationMode value) {

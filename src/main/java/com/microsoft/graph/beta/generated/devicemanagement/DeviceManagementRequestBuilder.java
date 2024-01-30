@@ -94,6 +94,8 @@ import com.microsoft.graph.beta.devicemanagement.mobilethreatdefenseconnectors.M
 import com.microsoft.graph.beta.devicemanagement.monitoring.MonitoringRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.ndesconnectors.NdesConnectorsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.notificationmessagetemplates.NotificationMessageTemplatesRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.operationapprovalpolicies.OperationApprovalPoliciesRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.operationapprovalrequests.OperationApprovalRequestsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.privilegemanagementelevations.PrivilegeManagementElevationsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.remoteactionaudits.RemoteActionAuditsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.remoteassistancepartners.RemoteAssistancePartnersRequestBuilder;
@@ -829,6 +831,20 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public NotificationMessageTemplatesRequestBuilder notificationMessageTemplates() {
         return new NotificationMessageTemplatesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the operationApprovalPolicies property of the microsoft.graph.deviceManagement entity.
+     */
+    @jakarta.annotation.Nonnull
+    public OperationApprovalPoliciesRequestBuilder operationApprovalPolicies() {
+        return new OperationApprovalPoliciesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the operationApprovalRequests property of the microsoft.graph.deviceManagement entity.
+     */
+    @jakarta.annotation.Nonnull
+    public OperationApprovalRequestsRequestBuilder operationApprovalRequests() {
+        return new OperationApprovalRequestsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the privilegeManagementElevations property of the microsoft.graph.deviceManagement entity.

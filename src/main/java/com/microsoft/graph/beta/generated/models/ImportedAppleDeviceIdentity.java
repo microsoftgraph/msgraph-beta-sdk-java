@@ -96,7 +96,7 @@ public class ImportedAppleDeviceIdentity extends Entity implements Parsable {
         return this.backingStore.get("isDeleted");
     }
     /**
-     * Gets the isSupervised property value. Indicates if the Apple device is supervised. More information is at: https://support.apple.com/en-us/HT202837
+     * Gets the isSupervised property value. Indicates if the Apple device is supervised.
      * @return a Boolean
      */
     @jakarta.annotation.Nullable
@@ -198,7 +198,7 @@ public class ImportedAppleDeviceIdentity extends Entity implements Parsable {
         this.backingStore.set("isDeleted", value);
     }
     /**
-     * Sets the isSupervised property value. Indicates if the Apple device is supervised. More information is at: https://support.apple.com/en-us/HT202837
+     * Sets the isSupervised property value. Indicates if the Apple device is supervised.
      * @param value Value to set for the isSupervised property.
      */
     public void setIsSupervised(@jakarta.annotation.Nullable final Boolean value) {

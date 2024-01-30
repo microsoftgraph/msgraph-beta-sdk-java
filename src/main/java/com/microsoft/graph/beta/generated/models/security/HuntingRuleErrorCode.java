@@ -13,7 +13,8 @@ public enum HuntingRuleErrorCode implements ValuedEnum {
     AlertCreationFailed("alertCreationFailed"),
     AlertReportNotFound("alertReportNotFound"),
     PartialRowsFailed("partialRowsFailed"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    NoImpactedEntity("noImpactedEntity");
     public final String value;
     HuntingRuleErrorCode(final String value) {
         this.value = value;
@@ -33,6 +34,7 @@ public enum HuntingRuleErrorCode implements ValuedEnum {
             case "alertReportNotFound": return AlertReportNotFound;
             case "partialRowsFailed": return PartialRowsFailed;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "noImpactedEntity": return NoImpactedEntity;
             default: return null;
         }
     }

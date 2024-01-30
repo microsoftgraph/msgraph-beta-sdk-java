@@ -87,7 +87,7 @@ public class DeviceManagementTroubleshootingErrorResource implements AdditionalD
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the text property value. Not yet documented
+     * Gets the text property value. The text property
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -135,7 +135,7 @@ public class DeviceManagementTroubleshootingErrorResource implements AdditionalD
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the text property value. Not yet documented
+     * Sets the text property value. The text property
      * @param value Value to set for the text property.
      */
     public void setText(@jakarta.annotation.Nullable final String value) {
