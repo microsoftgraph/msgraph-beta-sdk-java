@@ -26,7 +26,7 @@ public class FormsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public FormsRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/admin/forms{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/admin/forms{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new FormsRequestBuilder and sets the default values.
@@ -34,7 +34,7 @@ public class FormsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public FormsRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/admin/forms{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/admin/forms{?%24expand,%24select}", rawUrl);
     }
     /**
      * Delete navigation property forms for admin

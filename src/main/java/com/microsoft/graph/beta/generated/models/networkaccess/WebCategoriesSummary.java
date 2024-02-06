@@ -35,6 +35,14 @@ public class WebCategoriesSummary implements AdditionalDataHolder, BackedModel, 
         return new WebCategoriesSummary();
     }
     /**
+     * Gets the action property value. The action property
+     * @return a FilteringPolicyAction
+     */
+    @jakarta.annotation.Nullable
+    public FilteringPolicyAction getAction() {
+        return this.backingStore.get("action");
+    }
+    /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
@@ -69,7 +77,8 @@ public class WebCategoriesSummary implements AdditionalDataHolder, BackedModel, 
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
+        deserializerMap.put("action", (n) -> { this.setAction(n.getEnumValue(FilteringPolicyAction::forValue)); });
         deserializerMap.put("deviceCount", (n) -> { this.setDeviceCount(n.getLongValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("transactionCount", (n) -> { this.setTransactionCount(n.getLongValue()); });
@@ -115,12 +124,20 @@ public class WebCategoriesSummary implements AdditionalDataHolder, BackedModel, 
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeEnumValue("action", this.getAction());
         writer.writeLongValue("deviceCount", this.getDeviceCount());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeLongValue("transactionCount", this.getTransactionCount());
         writer.writeLongValue("userCount", this.getUserCount());
         writer.writeObjectValue("webCategory", this.getWebCategory());
         writer.writeAdditionalData(this.getAdditionalData());
+    }
+    /**
+     * Sets the action property value. The action property
+     * @param value Value to set for the action property.
+     */
+    public void setAction(@jakarta.annotation.Nullable final FilteringPolicyAction value) {
+        this.backingStore.set("action", value);
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.

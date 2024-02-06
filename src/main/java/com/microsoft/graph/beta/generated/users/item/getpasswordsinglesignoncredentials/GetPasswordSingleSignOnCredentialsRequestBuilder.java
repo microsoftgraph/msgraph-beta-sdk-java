@@ -35,17 +35,19 @@ public class GetPasswordSingleSignOnCredentialsRequestBuilder extends BaseReques
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/getPasswordSingleSignOnCredentials", rawUrl);
     }
     /**
-     * Invoke action getPasswordSingleSignOnCredentials
+     * Get the list of password-based single sign-on credentials for a given user. This API returns the encrypted passwords as null or empty strings.
      * @return a GetPasswordSingleSignOnCredentialsPostResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/user-getpasswordsinglesignoncredentials?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetPasswordSingleSignOnCredentialsPostResponse post() {
         return post(null);
     }
     /**
-     * Invoke action getPasswordSingleSignOnCredentials
+     * Get the list of password-based single sign-on credentials for a given user. This API returns the encrypted passwords as null or empty strings.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a GetPasswordSingleSignOnCredentialsPostResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/user-getpasswordsinglesignoncredentials?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetPasswordSingleSignOnCredentialsPostResponse post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -56,7 +58,7 @@ public class GetPasswordSingleSignOnCredentialsRequestBuilder extends BaseReques
         return this.requestAdapter.send(requestInfo, errorMapping, GetPasswordSingleSignOnCredentialsPostResponse::createFromDiscriminatorValue);
     }
     /**
-     * Invoke action getPasswordSingleSignOnCredentials
+     * Get the list of password-based single sign-on credentials for a given user. This API returns the encrypted passwords as null or empty strings.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -64,7 +66,7 @@ public class GetPasswordSingleSignOnCredentialsRequestBuilder extends BaseReques
         return toPostRequestInformation(null);
     }
     /**
-     * Invoke action getPasswordSingleSignOnCredentials
+     * Get the list of password-based single sign-on credentials for a given user. This API returns the encrypted passwords as null or empty strings.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

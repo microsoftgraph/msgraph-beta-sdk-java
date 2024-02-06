@@ -42,7 +42,9 @@ public enum ManagedDeviceRemoteAction implements ValuedEnum {
     /** Name of action to initiate On Demand Proactive Remediation */
     InitiateOnDemandProactiveRemediation("initiateOnDemandProactiveRemediation"),
     /** Evolvable enum member */
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    /** Indicates remote device action to intiate Mobile Device Management (MDM) attestation if device is capable for it */
+    InitiateDeviceAttestation("initiateDeviceAttestation");
     public final String value;
     ManagedDeviceRemoteAction(final String value) {
         this.value = value;
@@ -72,6 +74,7 @@ public enum ManagedDeviceRemoteAction implements ValuedEnum {
             case "initiateMobileDeviceManagementKeyRecovery": return InitiateMobileDeviceManagementKeyRecovery;
             case "initiateOnDemandProactiveRemediation": return InitiateOnDemandProactiveRemediation;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "initiateDeviceAttestation": return InitiateDeviceAttestation;
             default: return null;
         }
     }

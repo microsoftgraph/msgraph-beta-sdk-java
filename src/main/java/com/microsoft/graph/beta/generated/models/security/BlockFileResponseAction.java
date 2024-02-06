@@ -27,7 +27,7 @@ public class BlockFileResponseAction extends ResponseAction implements Parsable 
         return new BlockFileResponseAction();
     }
     /**
-     * Gets the deviceGroupNames property value. The deviceGroupNames property
+     * Gets the deviceGroupNames property value. Device groups to which the actions set in the custom detection rule are applied. More information
      * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class BlockFileResponseAction extends ResponseAction implements Parsable 
         writer.writeEnumSetValue("identifier", this.getIdentifier());
     }
     /**
-     * Sets the deviceGroupNames property value. The deviceGroupNames property
+     * Sets the deviceGroupNames property value. Device groups to which the actions set in the custom detection rule are applied. More information
      * @param value Value to set for the deviceGroupNames property.
      */
     public void setDeviceGroupNames(@jakarta.annotation.Nullable final java.util.List<String> value) {

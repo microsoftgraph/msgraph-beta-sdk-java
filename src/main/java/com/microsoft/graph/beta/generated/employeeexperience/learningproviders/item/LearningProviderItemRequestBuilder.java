@@ -1,7 +1,9 @@
 package com.microsoft.graph.beta.employeeexperience.learningproviders.item;
 
 import com.microsoft.graph.beta.employeeexperience.learningproviders.item.learningcontents.LearningContentsRequestBuilder;
+import com.microsoft.graph.beta.employeeexperience.learningproviders.item.learningcontentswithexternalid.LearningContentsWithExternalIdRequestBuilder;
 import com.microsoft.graph.beta.employeeexperience.learningproviders.item.learningcourseactivities.LearningCourseActivitiesRequestBuilder;
+import com.microsoft.graph.beta.employeeexperience.learningproviders.item.learningcourseactivitieswithexternalcourseactivityid.LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilder;
 import com.microsoft.graph.beta.models.LearningProvider;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -42,7 +44,7 @@ public class LearningProviderItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public LearningProviderItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/employeeExperience/learningProviders/{learningProvider%2Did}{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/employeeExperience/learningProviders/{learningProvider%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new LearningProviderItemRequestBuilder and sets the default values.
@@ -50,7 +52,7 @@ public class LearningProviderItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public LearningProviderItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/employeeExperience/learningProviders/{learningProvider%2Did}{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/employeeExperience/learningProviders/{learningProvider%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
      * Delete a learningProvider resource and remove its registration in Viva Learning for the tenant.
@@ -93,6 +95,26 @@ public class LearningProviderItemRequestBuilder extends BaseRequestBuilder {
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, LearningProvider::createFromDiscriminatorValue);
+    }
+    /**
+     * Provides operations to manage the learningContents property of the microsoft.graph.learningProvider entity.
+     * @param externalId Alternate key of learningContent
+     * @return a LearningContentsWithExternalIdRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public LearningContentsWithExternalIdRequestBuilder learningContentsWithExternalId(@jakarta.annotation.Nonnull final String externalId) {
+        Objects.requireNonNull(externalId);
+        return new LearningContentsWithExternalIdRequestBuilder(pathParameters, requestAdapter, externalId);
+    }
+    /**
+     * Provides operations to manage the learningCourseActivities property of the microsoft.graph.learningProvider entity.
+     * @param externalcourseActivityId Alternate key of learningCourseActivity
+     * @return a LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilder learningCourseActivitiesWithExternalcourseActivityId(@jakarta.annotation.Nonnull final String externalcourseActivityId) {
+        Objects.requireNonNull(externalcourseActivityId);
+        return new LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilder(pathParameters, requestAdapter, externalcourseActivityId);
     }
     /**
      * Update the properties of a learningProvider object.

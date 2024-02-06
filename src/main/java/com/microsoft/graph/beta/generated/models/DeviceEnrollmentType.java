@@ -41,7 +41,11 @@ public enum DeviceEnrollmentType implements ValuedEnum {
     /** Android Enterprise Fully Managed */
     AndroidEnterpriseFullyManaged("androidEnterpriseFullyManaged"),
     /** Android Enterprise Corporate Work Profile */
-    AndroidEnterpriseCorporateWorkProfile("androidEnterpriseCorporateWorkProfile");
+    AndroidEnterpriseCorporateWorkProfile("androidEnterpriseCorporateWorkProfile"),
+    /** Indicates the device enrollment is for android device owned by/associated with user using Android Open Source Project (AOSP) on a non-Google mobile services. */
+    AndroidAOSPUserOwnedDeviceEnrollment("androidAOSPUserOwnedDeviceEnrollment"),
+    /** Indicates the device enrollment is for user less android device using Android Open Source Project (AOSP) on a non-Google mobile services. */
+    AndroidAOSPUserlessDeviceEnrollment("androidAOSPUserlessDeviceEnrollment");
     public final String value;
     DeviceEnrollmentType(final String value) {
         this.value = value;
@@ -69,6 +73,8 @@ public enum DeviceEnrollmentType implements ValuedEnum {
             case "androidEnterpriseDedicatedDevice": return AndroidEnterpriseDedicatedDevice;
             case "androidEnterpriseFullyManaged": return AndroidEnterpriseFullyManaged;
             case "androidEnterpriseCorporateWorkProfile": return AndroidEnterpriseCorporateWorkProfile;
+            case "androidAOSPUserOwnedDeviceEnrollment": return AndroidAOSPUserOwnedDeviceEnrollment;
+            case "androidAOSPUserlessDeviceEnrollment": return AndroidAOSPUserlessDeviceEnrollment;
             default: return null;
         }
     }

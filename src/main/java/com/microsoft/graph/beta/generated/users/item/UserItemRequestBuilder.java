@@ -7,6 +7,7 @@ import com.microsoft.graph.beta.users.item.agreementacceptances.AgreementAccepta
 import com.microsoft.graph.beta.users.item.analytics.AnalyticsRequestBuilder;
 import com.microsoft.graph.beta.users.item.appconsentrequestsforapproval.AppConsentRequestsForApprovalRequestBuilder;
 import com.microsoft.graph.beta.users.item.approleassignedresources.AppRoleAssignedResourcesRequestBuilder;
+import com.microsoft.graph.beta.users.item.approleassignedresourceswithappid.AppRoleAssignedResourcesWithAppIdRequestBuilder;
 import com.microsoft.graph.beta.users.item.approleassignments.AppRoleAssignmentsRequestBuilder;
 import com.microsoft.graph.beta.users.item.approvals.ApprovalsRequestBuilder;
 import com.microsoft.graph.beta.users.item.assignlicense.AssignLicenseRequestBuilder;
@@ -27,6 +28,7 @@ import com.microsoft.graph.beta.users.item.deletepasswordsinglesignoncredentials
 import com.microsoft.graph.beta.users.item.deviceenrollmentconfigurations.DeviceEnrollmentConfigurationsRequestBuilder;
 import com.microsoft.graph.beta.users.item.devicemanagementtroubleshootingevents.DeviceManagementTroubleshootingEventsRequestBuilder;
 import com.microsoft.graph.beta.users.item.devices.DevicesRequestBuilder;
+import com.microsoft.graph.beta.users.item.deviceswithdeviceid.DevicesWithDeviceIdRequestBuilder;
 import com.microsoft.graph.beta.users.item.directreports.DirectReportsRequestBuilder;
 import com.microsoft.graph.beta.users.item.drive.DriveRequestBuilder;
 import com.microsoft.graph.beta.users.item.drives.DrivesRequestBuilder;
@@ -72,6 +74,7 @@ import com.microsoft.graph.beta.users.item.notifications.NotificationsRequestBui
 import com.microsoft.graph.beta.users.item.oauth2permissiongrants.Oauth2PermissionGrantsRequestBuilder;
 import com.microsoft.graph.beta.users.item.onenote.OnenoteRequestBuilder;
 import com.microsoft.graph.beta.users.item.onlinemeetings.OnlineMeetingsRequestBuilder;
+import com.microsoft.graph.beta.users.item.onlinemeetingswithjoinweburl.OnlineMeetingsWithJoinWebUrlRequestBuilder;
 import com.microsoft.graph.beta.users.item.outlook.OutlookRequestBuilder;
 import com.microsoft.graph.beta.users.item.owneddevices.OwnedDevicesRequestBuilder;
 import com.microsoft.graph.beta.users.item.ownedobjects.OwnedObjectsRequestBuilder;
@@ -856,12 +859,22 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
         return new WipeManagedAppRegistrationsByDeviceTagRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the appRoleAssignedResources property of the microsoft.graph.user entity.
+     * @param appId Alternate key of servicePrincipal
+     * @return a AppRoleAssignedResourcesWithAppIdRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public AppRoleAssignedResourcesWithAppIdRequestBuilder appRoleAssignedResourcesWithAppId(@jakarta.annotation.Nonnull final String appId) {
+        Objects.requireNonNull(appId);
+        return new AppRoleAssignedResourcesWithAppIdRequestBuilder(pathParameters, requestAdapter, appId);
+    }
+    /**
      * Instantiates a new UserItemRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public UserItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new UserItemRequestBuilder and sets the default values.
@@ -869,7 +882,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public UserItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
      * Delete user.   When deleted, user resources are moved to a temporary container and can be restored within 30 days.  After that time, they are permanently deleted.  To learn more, see deletedItems.
@@ -889,6 +902,16 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
+    }
+    /**
+     * Provides operations to manage the devices property of the microsoft.graph.user entity.
+     * @param deviceId Alternate key of device
+     * @return a DevicesWithDeviceIdRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public DevicesWithDeviceIdRequestBuilder devicesWithDeviceId(@jakarta.annotation.Nonnull final String deviceId) {
+        Objects.requireNonNull(deviceId);
+        return new DevicesWithDeviceIdRequestBuilder(pathParameters, requestAdapter, deviceId);
     }
     /**
      * Provides operations to call the exportDeviceAndAppManagementData method.
@@ -934,6 +957,16 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, User::createFromDiscriminatorValue);
+    }
+    /**
+     * Provides operations to manage the onlineMeetings property of the microsoft.graph.user entity.
+     * @param joinWebUrl Alternate key of onlineMeeting
+     * @return a OnlineMeetingsWithJoinWebUrlRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public OnlineMeetingsWithJoinWebUrlRequestBuilder onlineMeetingsWithJoinWebUrl(@jakarta.annotation.Nonnull final String joinWebUrl) {
+        Objects.requireNonNull(joinWebUrl);
+        return new OnlineMeetingsWithJoinWebUrlRequestBuilder(pathParameters, requestAdapter, joinWebUrl);
     }
     /**
      * Update the properties of a user object. Not all properties can be updated by Member or Guest users with their default permissions without Administrator roles. Compare member and guest default permissions to see properties they can manage.

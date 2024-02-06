@@ -3,10 +3,8 @@ package com.microsoft.graph.beta.solutions.virtualevents.events;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.VirtualEvent;
 import com.microsoft.graph.beta.models.VirtualEventCollectionResponse;
-import com.microsoft.graph.beta.solutions.virtualevents.events.cancel.CancelRequestBuilder;
 import com.microsoft.graph.beta.solutions.virtualevents.events.count.CountRequestBuilder;
 import com.microsoft.graph.beta.solutions.virtualevents.events.item.VirtualEventItemRequestBuilder;
-import com.microsoft.graph.beta.solutions.virtualevents.events.publish.PublishRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,25 +24,11 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EventsRequestBuilder extends BaseRequestBuilder {
     /**
-     * Provides operations to call the cancel method.
-     */
-    @jakarta.annotation.Nonnull
-    public CancelRequestBuilder cancel() {
-        return new CancelRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
      * Provides operations to count the resources in the collection.
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to call the publish method.
-     */
-    @jakarta.annotation.Nonnull
-    public PublishRequestBuilder publish() {
-        return new PublishRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the events property of the microsoft.graph.virtualEventsRoot entity.
@@ -64,7 +48,7 @@ public class EventsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public EventsRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/solutions/virtualEvents/events{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/solutions/virtualEvents/events{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
      * Instantiates a new EventsRequestBuilder and sets the default values.
@@ -72,7 +56,7 @@ public class EventsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public EventsRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/solutions/virtualEvents/events{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/solutions/virtualEvents/events{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
      * Get events from solutions

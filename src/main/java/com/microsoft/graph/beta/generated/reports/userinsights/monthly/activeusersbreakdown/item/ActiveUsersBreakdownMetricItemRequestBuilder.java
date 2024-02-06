@@ -26,7 +26,7 @@ public class ActiveUsersBreakdownMetricItemRequestBuilder extends BaseRequestBui
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ActiveUsersBreakdownMetricItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/reports/userInsights/monthly/activeUsersBreakdown/{activeUsersBreakdownMetric%2Did}{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/reports/userInsights/monthly/activeUsersBreakdown/{activeUsersBreakdownMetric%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new ActiveUsersBreakdownMetricItemRequestBuilder and sets the default values.
@@ -34,7 +34,7 @@ public class ActiveUsersBreakdownMetricItemRequestBuilder extends BaseRequestBui
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ActiveUsersBreakdownMetricItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/reports/userInsights/monthly/activeUsersBreakdown/{activeUsersBreakdownMetric%2Did}{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/reports/userInsights/monthly/activeUsersBreakdown/{activeUsersBreakdownMetric%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
      * Insights for the breakdown of users who were active on apps registered in the tenant for a specified period.

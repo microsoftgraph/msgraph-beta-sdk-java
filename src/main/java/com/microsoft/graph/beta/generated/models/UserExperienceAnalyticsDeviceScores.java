@@ -72,6 +72,7 @@ public class UserExperienceAnalyticsDeviceScores extends Entity implements Parsa
         deserializerMap.put("endpointAnalyticsScore", (n) -> { this.setEndpointAnalyticsScore(n.getDoubleValue()); });
         deserializerMap.put("healthStatus", (n) -> { this.setHealthStatus(n.getEnumValue(UserExperienceAnalyticsHealthState::forValue)); });
         deserializerMap.put("manufacturer", (n) -> { this.setManufacturer(n.getStringValue()); });
+        deserializerMap.put("meanResourceSpikeTimeScore", (n) -> { this.setMeanResourceSpikeTimeScore(n.getDoubleValue()); });
         deserializerMap.put("model", (n) -> { this.setModel(n.getStringValue()); });
         deserializerMap.put("startupPerformanceScore", (n) -> { this.setStartupPerformanceScore(n.getDoubleValue()); });
         deserializerMap.put("workFromAnywhereScore", (n) -> { this.setWorkFromAnywhereScore(n.getDoubleValue()); });
@@ -92,6 +93,14 @@ public class UserExperienceAnalyticsDeviceScores extends Entity implements Parsa
     @jakarta.annotation.Nullable
     public String getManufacturer() {
         return this.backingStore.get("manufacturer");
+    }
+    /**
+     * Gets the meanResourceSpikeTimeScore property value. Indicates a calulated score indicating the health of the device's resources CPU and RAM. Valid values range from 0-100. Value -1 means associated score is unavailable. A higher score indicates a healthier device. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+     * @return a Double
+     */
+    @jakarta.annotation.Nullable
+    public Double getMeanResourceSpikeTimeScore() {
+        return this.backingStore.get("meanResourceSpikeTimeScore");
     }
     /**
      * Gets the model property value. The model name of the device. Supports: $select, $OrderBy. Read-only.
@@ -130,6 +139,7 @@ public class UserExperienceAnalyticsDeviceScores extends Entity implements Parsa
         writer.writeDoubleValue("endpointAnalyticsScore", this.getEndpointAnalyticsScore());
         writer.writeEnumValue("healthStatus", this.getHealthStatus());
         writer.writeStringValue("manufacturer", this.getManufacturer());
+        writer.writeDoubleValue("meanResourceSpikeTimeScore", this.getMeanResourceSpikeTimeScore());
         writer.writeStringValue("model", this.getModel());
         writer.writeDoubleValue("startupPerformanceScore", this.getStartupPerformanceScore());
         writer.writeDoubleValue("workFromAnywhereScore", this.getWorkFromAnywhereScore());
@@ -175,6 +185,13 @@ public class UserExperienceAnalyticsDeviceScores extends Entity implements Parsa
      */
     public void setManufacturer(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("manufacturer", value);
+    }
+    /**
+     * Sets the meanResourceSpikeTimeScore property value. Indicates a calulated score indicating the health of the device's resources CPU and RAM. Valid values range from 0-100. Value -1 means associated score is unavailable. A higher score indicates a healthier device. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+     * @param value Value to set for the meanResourceSpikeTimeScore property.
+     */
+    public void setMeanResourceSpikeTimeScore(@jakarta.annotation.Nullable final Double value) {
+        this.backingStore.set("meanResourceSpikeTimeScore", value);
     }
     /**
      * Sets the model property value. The model name of the device. Supports: $select, $OrderBy. Read-only.

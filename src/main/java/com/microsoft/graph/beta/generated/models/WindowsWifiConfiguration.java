@@ -138,7 +138,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
         return this.backingStore.get("proxyManualPort");
     }
     /**
-     * Gets the proxySetting property value. Specify the proxy setting for Wi-Fi configuration. Possible values are: none, manual, automatic.
+     * Gets the proxySetting property value. Specify the proxy setting for Wi-Fi configuration. Possible values are: none, manual, automatic, unknownFutureValue.
      * @return a WiFiProxySetting
      */
     @jakarta.annotation.Nullable
@@ -253,7 +253,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
         this.backingStore.set("proxyManualPort", value);
     }
     /**
-     * Sets the proxySetting property value. Specify the proxy setting for Wi-Fi configuration. Possible values are: none, manual, automatic.
+     * Sets the proxySetting property value. Specify the proxy setting for Wi-Fi configuration. Possible values are: none, manual, automatic, unknownFutureValue.
      * @param value Value to set for the proxySetting property.
      */
     public void setProxySetting(@jakarta.annotation.Nullable final WiFiProxySetting value) {

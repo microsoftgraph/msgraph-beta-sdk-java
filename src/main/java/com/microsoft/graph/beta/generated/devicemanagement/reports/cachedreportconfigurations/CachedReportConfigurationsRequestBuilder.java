@@ -48,7 +48,7 @@ public class CachedReportConfigurationsRequestBuilder extends BaseRequestBuilder
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CachedReportConfigurationsRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/reports/cachedReportConfigurations{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/deviceManagement/reports/cachedReportConfigurations{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
      * Instantiates a new CachedReportConfigurationsRequestBuilder and sets the default values.
@@ -56,10 +56,10 @@ public class CachedReportConfigurationsRequestBuilder extends BaseRequestBuilder
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CachedReportConfigurationsRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/reports/cachedReportConfigurations{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/deviceManagement/reports/cachedReportConfigurations{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Entity representing the configuration of a cached report
+     * Entity representing the configuration of a cached report.
      * @return a DeviceManagementCachedReportConfigurationCollectionResponse
      */
     @jakarta.annotation.Nullable
@@ -67,7 +67,7 @@ public class CachedReportConfigurationsRequestBuilder extends BaseRequestBuilder
         return get(null);
     }
     /**
-     * Entity representing the configuration of a cached report
+     * Entity representing the configuration of a cached report.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a DeviceManagementCachedReportConfigurationCollectionResponse
      */
@@ -104,7 +104,7 @@ public class CachedReportConfigurationsRequestBuilder extends BaseRequestBuilder
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceManagementCachedReportConfiguration::createFromDiscriminatorValue);
     }
     /**
-     * Entity representing the configuration of a cached report
+     * Entity representing the configuration of a cached report.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -112,7 +112,7 @@ public class CachedReportConfigurationsRequestBuilder extends BaseRequestBuilder
         return toGetRequestInformation(null);
     }
     /**
-     * Entity representing the configuration of a cached report
+     * Entity representing the configuration of a cached report.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -158,7 +158,7 @@ public class CachedReportConfigurationsRequestBuilder extends BaseRequestBuilder
         return new CachedReportConfigurationsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Entity representing the configuration of a cached report
+     * Entity representing the configuration of a cached report.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

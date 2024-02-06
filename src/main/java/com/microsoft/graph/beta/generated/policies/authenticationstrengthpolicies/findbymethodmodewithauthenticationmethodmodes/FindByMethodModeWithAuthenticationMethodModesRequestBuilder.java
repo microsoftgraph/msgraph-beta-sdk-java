@@ -26,7 +26,7 @@ public class FindByMethodModeWithAuthenticationMethodModesRequestBuilder extends
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public FindByMethodModeWithAuthenticationMethodModesRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter, @jakarta.annotation.Nullable final String authenticationMethodModes) {
-        super(requestAdapter, "{+baseurl}/policies/authenticationStrengthPolicies/findByMethodMode(authenticationMethodModes={authenticationMethodModes}){?%24top,%24skip,%24search,%24filter,%24count,%24select,%24orderby}", pathParameters);
+        super(requestAdapter, "{+baseurl}/policies/authenticationStrengthPolicies/findByMethodMode(authenticationMethodModes={authenticationMethodModes}){?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
         this.pathParameters.put("authenticationMethodModes", authenticationMethodModes);
     }
     /**
@@ -35,13 +35,13 @@ public class FindByMethodModeWithAuthenticationMethodModesRequestBuilder extends
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public FindByMethodModeWithAuthenticationMethodModesRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/policies/authenticationStrengthPolicies/findByMethodMode(authenticationMethodModes={authenticationMethodModes}){?%24top,%24skip,%24search,%24filter,%24count,%24select,%24orderby}", rawUrl);
+        super(requestAdapter, "{+baseurl}/policies/authenticationStrengthPolicies/findByMethodMode(authenticationMethodModes={authenticationMethodModes}){?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
      * Invoke function findByMethodMode
      * @return a FindByMethodModeWithAuthenticationMethodModesGetResponse
      * @deprecated
-     * The findByMethodMode function is deprecated. Please use OData filter query instead. as of 2023-02/FindByMethodModeRemove on 2023-02-01 and will be removed 2023-03-31
+     * The findByMethodMode function is deprecated. Please use OData filter query instead. as of 2023-02/FindByMethodModeRemove
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -53,7 +53,7 @@ public class FindByMethodModeWithAuthenticationMethodModesRequestBuilder extends
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a FindByMethodModeWithAuthenticationMethodModesGetResponse
      * @deprecated
-     * The findByMethodMode function is deprecated. Please use OData filter query instead. as of 2023-02/FindByMethodModeRemove on 2023-02-01 and will be removed 2023-03-31
+     * The findByMethodMode function is deprecated. Please use OData filter query instead. as of 2023-02/FindByMethodModeRemove
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -68,7 +68,7 @@ public class FindByMethodModeWithAuthenticationMethodModesRequestBuilder extends
      * Invoke function findByMethodMode
      * @return a RequestInformation
      * @deprecated
-     * The findByMethodMode function is deprecated. Please use OData filter query instead. as of 2023-02/FindByMethodModeRemove on 2023-02-01 and will be removed 2023-03-31
+     * The findByMethodMode function is deprecated. Please use OData filter query instead. as of 2023-02/FindByMethodModeRemove
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -80,7 +80,7 @@ public class FindByMethodModeWithAuthenticationMethodModesRequestBuilder extends
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
-     * The findByMethodMode function is deprecated. Please use OData filter query instead. as of 2023-02/FindByMethodModeRemove on 2023-02-01 and will be removed 2023-03-31
+     * The findByMethodMode function is deprecated. Please use OData filter query instead. as of 2023-02/FindByMethodModeRemove
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -95,7 +95,7 @@ public class FindByMethodModeWithAuthenticationMethodModesRequestBuilder extends
      * @param rawUrl The raw URL to use for the request builder.
      * @return a FindByMethodModeWithAuthenticationMethodModesRequestBuilder
      * @deprecated
-     * The findByMethodMode function is deprecated. Please use OData filter query instead. as of 2023-02/FindByMethodModeRemove on 2023-02-01 and will be removed 2023-03-31
+     * The findByMethodMode function is deprecated. Please use OData filter query instead. as of 2023-02/FindByMethodModeRemove
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -113,6 +113,11 @@ public class FindByMethodModeWithAuthenticationMethodModesRequestBuilder extends
          */
         @jakarta.annotation.Nullable
         public Boolean count;
+        /**
+         * Expand related entities
+         */
+        @jakarta.annotation.Nullable
+        public String[] expand;
         /**
          * Filter items by property values
          */
@@ -155,6 +160,7 @@ public class FindByMethodModeWithAuthenticationMethodModesRequestBuilder extends
             allQueryParams.put("%24search", search);
             allQueryParams.put("%24skip", skip);
             allQueryParams.put("%24top", top);
+            allQueryParams.put("%24expand", expand);
             allQueryParams.put("%24orderby", orderby);
             allQueryParams.put("%24select", select);
             return allQueryParams;

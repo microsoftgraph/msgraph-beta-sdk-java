@@ -2,8 +2,11 @@ package com.microsoft.graph.beta.solutions.virtualevents.events.item;
 
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.VirtualEvent;
+import com.microsoft.graph.beta.solutions.virtualevents.events.item.cancel.CancelRequestBuilder;
 import com.microsoft.graph.beta.solutions.virtualevents.events.item.presenters.PresentersRequestBuilder;
+import com.microsoft.graph.beta.solutions.virtualevents.events.item.publish.PublishRequestBuilder;
 import com.microsoft.graph.beta.solutions.virtualevents.events.item.sessions.SessionsRequestBuilder;
+import com.microsoft.graph.beta.solutions.virtualevents.events.item.sessionswithjoinweburl.SessionsWithJoinWebUrlRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -23,11 +26,25 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class VirtualEventItemRequestBuilder extends BaseRequestBuilder {
     /**
+     * Provides operations to call the cancel method.
+     */
+    @jakarta.annotation.Nonnull
+    public CancelRequestBuilder cancel() {
+        return new CancelRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the presenters property of the microsoft.graph.virtualEvent entity.
      */
     @jakarta.annotation.Nonnull
     public PresentersRequestBuilder presenters() {
         return new PresentersRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the publish method.
+     */
+    @jakarta.annotation.Nonnull
+    public PublishRequestBuilder publish() {
+        return new PublishRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the sessions property of the microsoft.graph.virtualEvent entity.
@@ -42,7 +59,7 @@ public class VirtualEventItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public VirtualEventItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/solutions/virtualEvents/events/{virtualEvent%2Did}{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/solutions/virtualEvents/events/{virtualEvent%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new VirtualEventItemRequestBuilder and sets the default values.
@@ -50,7 +67,7 @@ public class VirtualEventItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public VirtualEventItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/solutions/virtualEvents/events/{virtualEvent%2Did}{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/solutions/virtualEvents/events/{virtualEvent%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
      * Delete navigation property events for solutions
@@ -113,6 +130,16 @@ public class VirtualEventItemRequestBuilder extends BaseRequestBuilder {
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, VirtualEvent::createFromDiscriminatorValue);
+    }
+    /**
+     * Provides operations to manage the sessions property of the microsoft.graph.virtualEvent entity.
+     * @param joinWebUrl Alternate key of virtualEventSession
+     * @return a SessionsWithJoinWebUrlRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public SessionsWithJoinWebUrlRequestBuilder sessionsWithJoinWebUrl(@jakarta.annotation.Nonnull final String joinWebUrl) {
+        Objects.requireNonNull(joinWebUrl);
+        return new SessionsWithJoinWebUrlRequestBuilder(pathParameters, requestAdapter, joinWebUrl);
     }
     /**
      * Delete navigation property events for solutions

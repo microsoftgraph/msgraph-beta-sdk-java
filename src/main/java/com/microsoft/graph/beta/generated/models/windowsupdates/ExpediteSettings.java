@@ -76,7 +76,7 @@ public class ExpediteSettings implements AdditionalDataHolder, BackedModel, Pars
         return this.backingStore.get("isExpedited");
     }
     /**
-     * Gets the isReadinessTest property value. The isReadinessTest property
+     * Gets the isReadinessTest property value. True indicates that the deployment is an expedite readiness test.
      * @return a Boolean
      */
     @jakarta.annotation.Nullable
@@ -125,7 +125,7 @@ public class ExpediteSettings implements AdditionalDataHolder, BackedModel, Pars
         this.backingStore.set("isExpedited", value);
     }
     /**
-     * Sets the isReadinessTest property value. The isReadinessTest property
+     * Sets the isReadinessTest property value. True indicates that the deployment is an expedite readiness test.
      * @param value Value to set for the isReadinessTest property.
      */
     public void setIsReadinessTest(@jakarta.annotation.Nullable final Boolean value) {

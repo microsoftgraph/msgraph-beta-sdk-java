@@ -94,6 +94,8 @@ import com.microsoft.graph.beta.devicemanagement.mobilethreatdefenseconnectors.M
 import com.microsoft.graph.beta.devicemanagement.monitoring.MonitoringRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.ndesconnectors.NdesConnectorsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.notificationmessagetemplates.NotificationMessageTemplatesRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.operationapprovalpolicies.OperationApprovalPoliciesRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.operationapprovalrequests.OperationApprovalRequestsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.privilegemanagementelevations.PrivilegeManagementElevationsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.remoteactionaudits.RemoteActionAuditsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.remoteassistancepartners.RemoteAssistancePartnersRequestBuilder;
@@ -831,6 +833,20 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
         return new NotificationMessageTemplatesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the operationApprovalPolicies property of the microsoft.graph.deviceManagement entity.
+     */
+    @jakarta.annotation.Nonnull
+    public OperationApprovalPoliciesRequestBuilder operationApprovalPolicies() {
+        return new OperationApprovalPoliciesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the operationApprovalRequests property of the microsoft.graph.deviceManagement entity.
+     */
+    @jakarta.annotation.Nonnull
+    public OperationApprovalRequestsRequestBuilder operationApprovalRequests() {
+        return new OperationApprovalRequestsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the privilegeManagementElevations property of the microsoft.graph.deviceManagement entity.
      */
     @jakarta.annotation.Nonnull
@@ -1424,7 +1440,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DeviceManagementRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/deviceManagement{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new DeviceManagementRequestBuilder and sets the default values.
@@ -1432,7 +1448,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DeviceManagementRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/deviceManagement{?%24expand,%24select}", rawUrl);
     }
     /**
      * Get deviceManagement

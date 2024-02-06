@@ -56,7 +56,7 @@ public class CloudPcDomainJoinConfiguration implements AdditionalDataHolder, Bac
         return this.backingStore;
     }
     /**
-     * Gets the domainJoinType property value. The domainJoinType property
+     * Gets the domainJoinType property value. Specifies the method by which the provisioned Cloud PC joins Microsoft Entra ID. If you choose the hybridAzureADJoin type, only provide a value for the onPremisesConnectionId property and leave the regionName property empty. If you choose the azureADJoin type, provide a value for either the onPremisesConnectionId or the regionName property. Possible values are: azureADJoin, hybridAzureADJoin, unknownFutureValue.
      * @return a CloudPcDomainJoinType
      */
     @jakarta.annotation.Nullable
@@ -111,7 +111,7 @@ public class CloudPcDomainJoinConfiguration implements AdditionalDataHolder, Bac
         return this.backingStore.get("regionName");
     }
     /**
-     * Gets the type property value. Specifies how the provisioned Cloud PC will be joined to Microsoft Entra ID. If you choose the hybridAzureADJoin type, only provide a value for the onPremisesConnectionId property and leave regionName as empty. If you choose the azureADJoin type, provide a value for either onPremisesConnectionId or regionName. The possible values are: azureADJoin, hybridAzureADJoin, unknownFutureValue.
+     * Gets the type property value. The type property
      * @return a CloudPcDomainJoinType
      */
     @jakarta.annotation.Nullable
@@ -148,7 +148,7 @@ public class CloudPcDomainJoinConfiguration implements AdditionalDataHolder, Bac
         this.backingStore = value;
     }
     /**
-     * Sets the domainJoinType property value. The domainJoinType property
+     * Sets the domainJoinType property value. Specifies the method by which the provisioned Cloud PC joins Microsoft Entra ID. If you choose the hybridAzureADJoin type, only provide a value for the onPremisesConnectionId property and leave the regionName property empty. If you choose the azureADJoin type, provide a value for either the onPremisesConnectionId or the regionName property. Possible values are: azureADJoin, hybridAzureADJoin, unknownFutureValue.
      * @param value Value to set for the domainJoinType property.
      */
     public void setDomainJoinType(@jakarta.annotation.Nullable final CloudPcDomainJoinType value) {
@@ -183,7 +183,7 @@ public class CloudPcDomainJoinConfiguration implements AdditionalDataHolder, Bac
         this.backingStore.set("regionName", value);
     }
     /**
-     * Sets the type property value. Specifies how the provisioned Cloud PC will be joined to Microsoft Entra ID. If you choose the hybridAzureADJoin type, only provide a value for the onPremisesConnectionId property and leave regionName as empty. If you choose the azureADJoin type, provide a value for either onPremisesConnectionId or regionName. The possible values are: azureADJoin, hybridAzureADJoin, unknownFutureValue.
+     * Sets the type property value. The type property
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final CloudPcDomainJoinType value) {

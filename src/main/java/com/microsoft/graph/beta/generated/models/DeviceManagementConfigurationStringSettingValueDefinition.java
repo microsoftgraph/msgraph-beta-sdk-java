@@ -52,7 +52,7 @@ public class DeviceManagementConfigurationStringSettingValueDefinition extends D
         return this.backingStore.get("fileTypes");
     }
     /**
-     * Gets the format property value. Pre-defined format of the string. Possible values are: none, email, guid, ip, base64, url, version, xml, date, time, binary, regEx, json, dateTime, surfaceHub.
+     * Gets the format property value. Pre-defined format of the string. Possible values are: none, email, guid, ip, base64, url, version, xml, date, time, binary, regEx, json, dateTime, surfaceHub, bashScript, unknownFutureValue.
      * @return a DeviceManagementConfigurationStringFormat
      */
     @jakarta.annotation.Nullable
@@ -76,7 +76,7 @@ public class DeviceManagementConfigurationStringSettingValueDefinition extends D
         return this.backingStore.get("isSecret");
     }
     /**
-     * Gets the maximumLength property value. Maximum length of string
+     * Gets the maximumLength property value. Maximum length of string. Valid values 0 to 87516
      * @return a Long
      */
     @jakarta.annotation.Nullable
@@ -84,7 +84,7 @@ public class DeviceManagementConfigurationStringSettingValueDefinition extends D
         return this.backingStore.get("maximumLength");
     }
     /**
-     * Gets the minimumLength property value. Minimum length of string
+     * Gets the minimumLength property value. Minimum length of string. Valid values 0 to 87516
      * @return a Long
      */
     @jakarta.annotation.Nullable
@@ -113,7 +113,7 @@ public class DeviceManagementConfigurationStringSettingValueDefinition extends D
         this.backingStore.set("fileTypes", value);
     }
     /**
-     * Sets the format property value. Pre-defined format of the string. Possible values are: none, email, guid, ip, base64, url, version, xml, date, time, binary, regEx, json, dateTime, surfaceHub.
+     * Sets the format property value. Pre-defined format of the string. Possible values are: none, email, guid, ip, base64, url, version, xml, date, time, binary, regEx, json, dateTime, surfaceHub, bashScript, unknownFutureValue.
      * @param value Value to set for the format property.
      */
     public void setFormat(@jakarta.annotation.Nullable final DeviceManagementConfigurationStringFormat value) {
@@ -134,14 +134,14 @@ public class DeviceManagementConfigurationStringSettingValueDefinition extends D
         this.backingStore.set("isSecret", value);
     }
     /**
-     * Sets the maximumLength property value. Maximum length of string
+     * Sets the maximumLength property value. Maximum length of string. Valid values 0 to 87516
      * @param value Value to set for the maximumLength property.
      */
     public void setMaximumLength(@jakarta.annotation.Nullable final Long value) {
         this.backingStore.set("maximumLength", value);
     }
     /**
-     * Sets the minimumLength property value. Minimum length of string
+     * Sets the minimumLength property value. Minimum length of string. Valid values 0 to 87516
      * @param value Value to set for the minimumLength property.
      */
     public void setMinimumLength(@jakarta.annotation.Nullable final Long value) {

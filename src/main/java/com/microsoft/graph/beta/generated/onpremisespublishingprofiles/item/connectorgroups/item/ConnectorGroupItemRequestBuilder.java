@@ -3,6 +3,8 @@ package com.microsoft.graph.beta.onpremisespublishingprofiles.item.connectorgrou
 import com.microsoft.graph.beta.models.ConnectorGroup;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.onpremisespublishingprofiles.item.connectorgroups.item.applications.ApplicationsRequestBuilder;
+import com.microsoft.graph.beta.onpremisespublishingprofiles.item.connectorgroups.item.applicationswithappid.ApplicationsWithAppIdRequestBuilder;
+import com.microsoft.graph.beta.onpremisespublishingprofiles.item.connectorgroups.item.applicationswithuniquename.ApplicationsWithUniqueNameRequestBuilder;
 import com.microsoft.graph.beta.onpremisespublishingprofiles.item.connectorgroups.item.members.MembersRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -37,12 +39,32 @@ public class ConnectorGroupItemRequestBuilder extends BaseRequestBuilder {
         return new MembersRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the applications property of the microsoft.graph.connectorGroup entity.
+     * @param appId Alternate key of application
+     * @return a ApplicationsWithAppIdRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ApplicationsWithAppIdRequestBuilder applicationsWithAppId(@jakarta.annotation.Nonnull final String appId) {
+        Objects.requireNonNull(appId);
+        return new ApplicationsWithAppIdRequestBuilder(pathParameters, requestAdapter, appId);
+    }
+    /**
+     * Provides operations to manage the applications property of the microsoft.graph.connectorGroup entity.
+     * @param uniqueName Alternate key of application
+     * @return a ApplicationsWithUniqueNameRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public ApplicationsWithUniqueNameRequestBuilder applicationsWithUniqueName(@jakarta.annotation.Nonnull final String uniqueName) {
+        Objects.requireNonNull(uniqueName);
+        return new ApplicationsWithUniqueNameRequestBuilder(pathParameters, requestAdapter, uniqueName);
+    }
+    /**
      * Instantiates a new ConnectorGroupItemRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ConnectorGroupItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/onPremisesPublishingProfiles/{onPremisesPublishingProfile%2Did}/connectorGroups/{connectorGroup%2Did}{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/onPremisesPublishingProfiles/{onPremisesPublishingProfile%2Did}/connectorGroups/{connectorGroup%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new ConnectorGroupItemRequestBuilder and sets the default values.
@@ -50,7 +72,7 @@ public class ConnectorGroupItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ConnectorGroupItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/onPremisesPublishingProfiles/{onPremisesPublishingProfile%2Did}/connectorGroups/{connectorGroup%2Did}{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/onPremisesPublishingProfiles/{onPremisesPublishingProfile%2Did}/connectorGroups/{connectorGroup%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
      * Delete a connectorGroup. All connectors and applications must be removed from the connector group before a connector group can be deleted.

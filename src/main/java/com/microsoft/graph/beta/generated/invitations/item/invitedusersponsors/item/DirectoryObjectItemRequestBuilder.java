@@ -26,7 +26,7 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DirectoryObjectItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/invitations/{invitation%2Did}/invitedUserSponsors/{directoryObject%2Did}{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/invitations/{invitation%2Did}/invitedUserSponsors/{directoryObject%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new DirectoryObjectItemRequestBuilder and sets the default values.
@@ -34,7 +34,7 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DirectoryObjectItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/invitations/{invitation%2Did}/invitedUserSponsors/{directoryObject%2Did}{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/invitations/{invitation%2Did}/invitedUserSponsors/{directoryObject%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
      * The users or groups who are sponsors of the invited user. Sponsors are users and groups that are responsible for guest users' privileges in the tenant and for keeping the guest users' information and access up to date.

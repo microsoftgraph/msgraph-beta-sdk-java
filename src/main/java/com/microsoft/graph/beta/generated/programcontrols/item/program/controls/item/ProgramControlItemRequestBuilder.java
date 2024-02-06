@@ -26,7 +26,7 @@ public class ProgramControlItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ProgramControlItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/programControls/{programControl%2Did}/program/controls/{programControl%2Did1}{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/programControls/{programControl%2Did}/program/controls/{programControl%2Did1}{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new ProgramControlItemRequestBuilder and sets the default values.
@@ -34,7 +34,7 @@ public class ProgramControlItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ProgramControlItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/programControls/{programControl%2Did}/program/controls/{programControl%2Did1}{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/programControls/{programControl%2Did}/program/controls/{programControl%2Did1}{?%24expand,%24select}", rawUrl);
     }
     /**
      * Delete navigation property controls for programControls

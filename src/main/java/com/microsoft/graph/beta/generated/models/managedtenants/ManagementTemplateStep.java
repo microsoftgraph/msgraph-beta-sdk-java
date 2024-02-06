@@ -88,13 +88,23 @@ public class ManagementTemplateStep extends Entity implements Parsable {
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("informationLinks", (n) -> { this.setInformationLinks(n.getCollectionOfObjectValues(ActionUrl::createFromDiscriminatorValue)); });
         deserializerMap.put("lastActionByUserId", (n) -> { this.setLastActionByUserId(n.getStringValue()); });
         deserializerMap.put("lastActionDateTime", (n) -> { this.setLastActionDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("managementTemplate", (n) -> { this.setManagementTemplate(n.getObjectValue(ManagementTemplate::createFromDiscriminatorValue)); });
         deserializerMap.put("portalLink", (n) -> { this.setPortalLink(n.getObjectValue(ActionUrl::createFromDiscriminatorValue)); });
         deserializerMap.put("priority", (n) -> { this.setPriority(n.getIntegerValue()); });
+        deserializerMap.put("userImpact", (n) -> { this.setUserImpact(n.getStringValue()); });
         deserializerMap.put("versions", (n) -> { this.setVersions(n.getCollectionOfObjectValues(ManagementTemplateStepVersion::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the informationLinks property value. The informationLinks property
+     * @return a java.util.List<ActionUrl>
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<ActionUrl> getInformationLinks() {
+        return this.backingStore.get("informationLinks");
     }
     /**
      * Gets the lastActionByUserId property value. The lastActionByUserId property
@@ -137,6 +147,14 @@ public class ManagementTemplateStep extends Entity implements Parsable {
         return this.backingStore.get("priority");
     }
     /**
+     * Gets the userImpact property value. The userImpact property
+     * @return a String
+     */
+    @jakarta.annotation.Nullable
+    public String getUserImpact() {
+        return this.backingStore.get("userImpact");
+    }
+    /**
      * Gets the versions property value. The versions property
      * @return a java.util.List<ManagementTemplateStepVersion>
      */
@@ -157,11 +175,13 @@ public class ManagementTemplateStep extends Entity implements Parsable {
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
+        writer.writeCollectionOfObjectValues("informationLinks", this.getInformationLinks());
         writer.writeStringValue("lastActionByUserId", this.getLastActionByUserId());
         writer.writeOffsetDateTimeValue("lastActionDateTime", this.getLastActionDateTime());
         writer.writeObjectValue("managementTemplate", this.getManagementTemplate());
         writer.writeObjectValue("portalLink", this.getPortalLink());
         writer.writeIntegerValue("priority", this.getPriority());
+        writer.writeStringValue("userImpact", this.getUserImpact());
         writer.writeCollectionOfObjectValues("versions", this.getVersions());
     }
     /**
@@ -207,6 +227,13 @@ public class ManagementTemplateStep extends Entity implements Parsable {
         this.backingStore.set("displayName", value);
     }
     /**
+     * Sets the informationLinks property value. The informationLinks property
+     * @param value Value to set for the informationLinks property.
+     */
+    public void setInformationLinks(@jakarta.annotation.Nullable final java.util.List<ActionUrl> value) {
+        this.backingStore.set("informationLinks", value);
+    }
+    /**
      * Sets the lastActionByUserId property value. The lastActionByUserId property
      * @param value Value to set for the lastActionByUserId property.
      */
@@ -240,6 +267,13 @@ public class ManagementTemplateStep extends Entity implements Parsable {
      */
     public void setPriority(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("priority", value);
+    }
+    /**
+     * Sets the userImpact property value. The userImpact property
+     * @param value Value to set for the userImpact property.
+     */
+    public void setUserImpact(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("userImpact", value);
     }
     /**
      * Sets the versions property value. The versions property

@@ -26,7 +26,7 @@ public class UserCountMetricItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public UserCountMetricItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/reports/userInsights/daily/userCount/{userCountMetric%2Did}{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/reports/userInsights/daily/userCount/{userCountMetric%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new UserCountMetricItemRequestBuilder and sets the default values.
@@ -34,7 +34,7 @@ public class UserCountMetricItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public UserCountMetricItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/reports/userInsights/daily/userCount/{userCountMetric%2Did}{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/reports/userInsights/daily/userCount/{userCountMetric%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
      * Insights for total users on apps registered in the tenant for a specified period.

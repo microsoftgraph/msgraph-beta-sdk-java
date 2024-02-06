@@ -36,30 +36,12 @@ public class AndroidLobApp extends MobileLobApp implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("identityName", (n) -> { this.setIdentityName(n.getStringValue()); });
-        deserializerMap.put("identityVersion", (n) -> { this.setIdentityVersion(n.getStringValue()); });
         deserializerMap.put("minimumSupportedOperatingSystem", (n) -> { this.setMinimumSupportedOperatingSystem(n.getObjectValue(AndroidMinimumOperatingSystem::createFromDiscriminatorValue)); });
         deserializerMap.put("packageId", (n) -> { this.setPackageId(n.getStringValue()); });
         deserializerMap.put("targetedPlatforms", (n) -> { this.setTargetedPlatforms(n.getEnumSetValue(AndroidTargetedPlatforms::forValue)); });
         deserializerMap.put("versionCode", (n) -> { this.setVersionCode(n.getStringValue()); });
         deserializerMap.put("versionName", (n) -> { this.setVersionName(n.getStringValue()); });
         return deserializerMap;
-    }
-    /**
-     * Gets the identityName property value. The Identity Name. This property is being deprecated in 2302(February 2023).
-     * @return a String
-     */
-    @jakarta.annotation.Nullable
-    public String getIdentityName() {
-        return this.backingStore.get("identityName");
-    }
-    /**
-     * Gets the identityVersion property value. The identity version. This property is being deprecated in 2302(February 2023).
-     * @return a String
-     */
-    @jakarta.annotation.Nullable
-    public String getIdentityVersion() {
-        return this.backingStore.get("identityVersion");
     }
     /**
      * Gets the minimumSupportedOperatingSystem property value. The value for the minimum applicable operating system.
@@ -108,27 +90,11 @@ public class AndroidLobApp extends MobileLobApp implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeStringValue("identityName", this.getIdentityName());
-        writer.writeStringValue("identityVersion", this.getIdentityVersion());
         writer.writeObjectValue("minimumSupportedOperatingSystem", this.getMinimumSupportedOperatingSystem());
         writer.writeStringValue("packageId", this.getPackageId());
         writer.writeEnumSetValue("targetedPlatforms", this.getTargetedPlatforms());
         writer.writeStringValue("versionCode", this.getVersionCode());
         writer.writeStringValue("versionName", this.getVersionName());
-    }
-    /**
-     * Sets the identityName property value. The Identity Name. This property is being deprecated in 2302(February 2023).
-     * @param value Value to set for the identityName property.
-     */
-    public void setIdentityName(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("identityName", value);
-    }
-    /**
-     * Sets the identityVersion property value. The identity version. This property is being deprecated in 2302(February 2023).
-     * @param value Value to set for the identityVersion property.
-     */
-    public void setIdentityVersion(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("identityVersion", value);
     }
     /**
      * Sets the minimumSupportedOperatingSystem property value. The value for the minimum applicable operating system.
