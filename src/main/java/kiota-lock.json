@@ -1,0 +1,35 @@
+{
+  "descriptionHash": "9A3D54AFB5249FCBEF591EB5FB5D4BA39D144CD382083CCB9FFA0CE3D9734F991959D7C5501ECD1A786FD5B345FE8AF9070B0822A5E8BB6A3EC092D8F90D08B3",
+  "descriptionLocation": "https://raw.githubusercontent.com/microsoftgraph/msgraph-metadata/master/openapi/beta/openapi.yaml",
+  "lockFileVersion": "1.0.0",
+  "kiotaVersion": "1.9.0",
+  "clientClassName": "BaseGraphServiceClient",
+  "clientNamespaceName": "com.Microsoft.Graph",
+  "language": "Java",
+  "usesBackingStore": true,
+  "excludeBackwardCompatible": false,
+  "includeAdditionalData": true,
+  "serializers": [
+    "Microsoft.Kiota.Serialization.Json.JsonSerializationWriterFactory",
+    "Microsoft.Kiota.Serialization.Text.TextSerializationWriterFactory",
+    "Microsoft.Kiota.Serialization.Form.FormSerializationWriterFactory",
+    "Microsoft.Kiota.Serialization.Multipart.MultipartSerializationWriterFactory"
+  ],
+  "deserializers": [
+    "Microsoft.Kiota.Serialization.Json.JsonParseNodeFactory",
+    "Microsoft.Kiota.Serialization.Text.TextParseNodeFactory",
+    "Microsoft.Kiota.Serialization.Form.FormParseNodeFactory"
+  ],
+  "structuredMimeTypes": [
+    "application/json",
+    "text/plain;q=0.9",
+    "application/x-www-form-urlencoded;q=0.2",
+    "multipart/form-data;q=0.1"
+  ],
+  "includePatterns": [],
+  "excludePatterns": [
+    "/me",
+    "/me/**"
+  ],
+  "disabledValidationRules": []
+}

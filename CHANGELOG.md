@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to this project will be documented in this file.
+All notable changes to this project will be documented in this file
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
@@ -10,6 +10,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 ### Changed
+
+## [6.1.0] - 2024-02-07
+
+### Added
+
+- Major Version 6.1.0 now Generally Available.
+- See [Upgrade Guide](https://github.com/microsoftgraph/msgraph-sdk-java/blob/dev/docs/upgrade-to-v6.md) and README for more information.
 
 ## [0.78.0] - 2023-08-10
 

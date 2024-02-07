@@ -2,7 +2,7 @@ name: Maven Preview and Github Release
 
 on:
   push:
-    branches: [ dev, feature/6.0 ]
+    branches: [ "dev", "feature/6.0" ]
     paths-ignore:
      - '.gradle/wrapper'
      - '.gitignore'
@@ -13,6 +13,7 @@ on:
   
 env: 
   PREVIEW_TASK: publishSnapshotPublicationToSonatypeSnapshotRepository
+  PUBLISH_TASK:  publishMavenCentralReleasePublicationToSonatypeRepository
 
 jobs:
   maven_Preview:
@@ -62,8 +63,55 @@ jobs:
             **/gradle/**
             Scripts/**
 
+  maven_Release:
+    if: ${{ github.ref == 'refs/heads/dev' }}
+    environment:
+      name: maven_central_release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          java-version: 18
+          distribution: 'adopt'
+          cache: gradle
+      - name: Easy detect-secrets
+        uses: RobertFischer/detect-secrets-action@v2.0.0
+      - name: Download File
+        run: .\Scripts\decodeAndWrite.ps1 -encodedValue $env:ENCODED_VALUE -outputPath $env:OUTPUT_PATH
+        shell: pwsh
+        env:
+          ENCODED_VALUE: ${{ secrets.LOCAL_PROPERTIES }}
+          OUTPUT_PATH: '.\local.properties'
+      - name: Download File
+        run: .\Scripts\decodeAndWrite.ps1 -encodedValue $env:ENCODED_VALUE -outputPath $env:OUTPUT_PATH
+        shell: pwsh
+        env:
+          ENCODED_VALUE: ${{ secrets.SECRING_GPG }}
+          OUTPUT_PATH: '.\secring.gpg'
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
+      - name: Publish
+        run: ./gradlew $PUBLISH_TASK
+      - name: Upload Build Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: drop
+          path: |
+            **/libs/*
+            build/generated-pom.xml
+            build/generated-pom.xml.asc
+            build.gradle
+            gradlew
+            gradlew.bat
+            settings.gradle
+            gradle.properties
+            **/gradle/**
+            Scripts/**
+
   create_Tag:
-    needs: maven_Preview
+    needs: maven_Release
     runs-on: ubuntu-latest
     env:
       RELEASE_TAG: ""
@@ -78,7 +126,7 @@ jobs:
         with:
           tag: ${{ steps.GetVersion.outputs.tag }}
       - name: Queue Git Release
-        uses: benc-uk/workflow-dispatch@v1
+        uses: benc-uk/workflow-dispatch@v121
         with:
           workflow: Git Release
           token: ${{ secrets.PERSONAL_TOKEN }}
