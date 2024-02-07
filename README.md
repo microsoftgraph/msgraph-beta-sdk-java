@@ -1,5 +1,5 @@
 # Microsoft Graph SDK for Java
-## Version 6.0.2 now in Release Candidate stage!
+## Version 6.1.0 now Generally Available! 
 
 [![Download](https://img.shields.io/nexus/s/https/oss.sonatype.org/com.microsoft.graph/microsoft-graph-beta.svg)](https://oss.sonatype.org/content/repositories/snapshots/com/microsoft/graph/microsoft-graph-beta/)
 
@@ -17,12 +17,11 @@ Add the repository and a compile dependency for `microsoft-graph-beta` to your p
 ```Groovy
 repositories {
   mavenCentral()
-  maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
 }
 
 dependencies {
     // Include the sdk as a dependency
-    implementation 'com.microsoft.graph:microsoft-graph-beta:6.0.2-SNAPSHOT'
+    implementation 'com.microsoft.graph:microsoft-graph-beta:6.1.0'
     // Uncomment the line below if you are building an android application
     //implementation 'com.google.guava:guava:30.1.1-android'
     // This dependency is only needed if you are using the TokenCrendentialAuthProvider
@@ -39,7 +38,7 @@ Add the dependency in `dependencies` in pom.xml
   <!-- Include the sdk as a dependency -->
   <groupId>com.microsoft.graph</groupId>
   <artifactId>microsoft-graph-beta</artifactId>
-  <version>6.0.2-SNAPSHOT</version>
+  <version>6.1.0</version>
 </dependency>
 <dependency>
   <!-- This dependency is only needed if you are using the TokenCrendentialAuthProvider -->
@@ -47,16 +46,6 @@ Add the dependency in `dependencies` in pom.xml
   <artifactId>azure-identity</artifactId>
   <version>1.11.0</version>
 </dependency>
-```
-
-Add the repository in `repositories` in pom.xml
-
-```xml
-<repository>
-  <id>sonatype-snapshot</id>
-  <name>Sonatype Snapshot</name>
-  <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-</repository>
 ```
 
 >**Note:** if the `repositories` node doesn't exist, add it in `project`. For more information about the maven repositories configuration, [refer to this documentation](https://maven.apache.org/guides/mini/guide-multiple-repositories.html).
