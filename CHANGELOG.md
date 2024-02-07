@@ -11,6 +11,43 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [6.1.0] - 2024-02-07
+
+### Added
+
+- Major Version 6.1.0 now Generally Available.
+- See [Upgrade Guide](https://github.com/microsoftgraph/msgraph-sdk-java/blob/dev/docs/upgrade-to-v6.md) and README for more information.
+
+## [0.78.0] - 2023-08-10
+
+### Changed
+
+- Weekly generation.
+
+## [0.77.0] - 2023-07-28
+
+### Changed
+
+- Weekly generation.
+
+## [0.76.0] - 2023-07-19
+
+### Changed
+
+- Weekly generation.
+
+## [0.75.0] - 2023-07-12
+
+### Changed
+
+- Weekly generation.
+
+## [0.74.0] - 2023-06-20
+
+### Changed
+
+- Weekly generation.
+
 ## [0.73.0] - 2023-05-19
 
 ### Changed
