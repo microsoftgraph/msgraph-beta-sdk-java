@@ -48,7 +48,7 @@ public class RecordsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public RecordsRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/security/auditLog/queries/{auditLogQuery%2Did}/records{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/security/auditLog/queries/{auditLogQuery%2Did}/records{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
      * Instantiates a new RecordsRequestBuilder and sets the default values.
@@ -56,10 +56,10 @@ public class RecordsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public RecordsRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/security/auditLog/queries/{auditLogQuery%2Did}/records{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/security/auditLog/queries/{auditLogQuery%2Did}/records{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get records from security
+     * An individual audit log record.
      * @return a AuditLogRecordCollectionResponse
      */
     @jakarta.annotation.Nullable
@@ -67,7 +67,7 @@ public class RecordsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get records from security
+     * An individual audit log record.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a AuditLogRecordCollectionResponse
      */
@@ -104,7 +104,7 @@ public class RecordsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AuditLogRecord::createFromDiscriminatorValue);
     }
     /**
-     * Get records from security
+     * An individual audit log record.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -112,7 +112,7 @@ public class RecordsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get records from security
+     * An individual audit log record.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -158,7 +158,7 @@ public class RecordsRequestBuilder extends BaseRequestBuilder {
         return new RecordsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get records from security
+     * An individual audit log record.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

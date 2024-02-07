@@ -58,7 +58,7 @@ public class UnifiedRoleAssignmentMultipleItemRequestBuilder extends BaseRequest
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public UnifiedRoleAssignmentMultipleItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/roleManagement/deviceManagement/roleAssignments/{unifiedRoleAssignmentMultiple%2Did}{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/roleManagement/deviceManagement/roleAssignments/{unifiedRoleAssignmentMultiple%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new UnifiedRoleAssignmentMultipleItemRequestBuilder and sets the default values.
@@ -66,7 +66,7 @@ public class UnifiedRoleAssignmentMultipleItemRequestBuilder extends BaseRequest
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public UnifiedRoleAssignmentMultipleItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/roleManagement/deviceManagement/roleAssignments/{unifiedRoleAssignmentMultiple%2Did}{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/roleManagement/deviceManagement/roleAssignments/{unifiedRoleAssignmentMultiple%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
      * Delete a unifiedRoleAssignmentMultiple object of an RBAC provider.  This is applicable for a RBAC application that supports multiple principals and scopes. The following RBAC providers are currently supported:- Cloud PC - device management (Intune)

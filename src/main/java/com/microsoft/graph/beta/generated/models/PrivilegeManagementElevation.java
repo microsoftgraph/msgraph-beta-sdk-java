@@ -102,6 +102,7 @@ public class PrivilegeManagementElevation extends Entity implements Parsable {
         deserializerMap.put("productName", (n) -> { this.setProductName(n.getStringValue()); });
         deserializerMap.put("result", (n) -> { this.setResult(n.getIntegerValue()); });
         deserializerMap.put("ruleId", (n) -> { this.setRuleId(n.getStringValue()); });
+        deserializerMap.put("systemInitiatedElevation", (n) -> { this.setSystemInitiatedElevation(n.getBooleanValue()); });
         deserializerMap.put("upn", (n) -> { this.setUpn(n.getStringValue()); });
         deserializerMap.put("userType", (n) -> { this.setUserType(n.getEnumValue(PrivilegeManagementEndUserType::forValue)); });
         return deserializerMap;
@@ -211,6 +212,14 @@ public class PrivilegeManagementElevation extends Entity implements Parsable {
         return this.backingStore.get("ruleId");
     }
     /**
+     * Gets the systemInitiatedElevation property value. To identify if the elevation is initiated by system or user interaction
+     * @return a Boolean
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getSystemInitiatedElevation() {
+        return this.backingStore.get("systemInitiatedElevation");
+    }
+    /**
      * Gets the upn property value. The User Principal Name of the user who performed the elevation. Example: `john@domain.com`
      * @return a String
      */
@@ -252,6 +261,7 @@ public class PrivilegeManagementElevation extends Entity implements Parsable {
         writer.writeStringValue("productName", this.getProductName());
         writer.writeIntegerValue("result", this.getResult());
         writer.writeStringValue("ruleId", this.getRuleId());
+        writer.writeBooleanValue("systemInitiatedElevation", this.getSystemInitiatedElevation());
         writer.writeStringValue("upn", this.getUpn());
         writer.writeEnumValue("userType", this.getUserType());
     }
@@ -387,6 +397,13 @@ public class PrivilegeManagementElevation extends Entity implements Parsable {
      */
     public void setRuleId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("ruleId", value);
+    }
+    /**
+     * Sets the systemInitiatedElevation property value. To identify if the elevation is initiated by system or user interaction
+     * @param value Value to set for the systemInitiatedElevation property.
+     */
+    public void setSystemInitiatedElevation(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("systemInitiatedElevation", value);
     }
     /**
      * Sets the upn property value. The User Principal Name of the user who performed the elevation. Example: `john@domain.com`

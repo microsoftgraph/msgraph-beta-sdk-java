@@ -65,6 +65,14 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("agentVersion");
     }
     /**
+     * Gets the applicationSnapshot property value. The applicationSnapshot property
+     * @return a ApplicationSnapshot
+     */
+    @jakarta.annotation.Nullable
+    public ApplicationSnapshot getApplicationSnapshot() {
+        return this.backingStore.get("applicationSnapshot");
+    }
+    /**
      * Gets the backingStore property value. Stores model information.
      * @return a BackingStore
      */
@@ -113,6 +121,14 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("destinationPort");
     }
     /**
+     * Gets the destinationUrl property value. The destinationUrl property
+     * @return a String
+     */
+    @jakarta.annotation.Nullable
+    public String getDestinationUrl() {
+        return this.backingStore.get("destinationUrl");
+    }
+    /**
      * Gets the destinationWebCategory property value. The destinationWebCategory property
      * @return a WebCategory
      */
@@ -158,14 +174,16 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(34);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(38);
         deserializerMap.put("action", (n) -> { this.setAction(n.getEnumValue(FilteringPolicyAction::forValue)); });
         deserializerMap.put("agentVersion", (n) -> { this.setAgentVersion(n.getStringValue()); });
+        deserializerMap.put("applicationSnapshot", (n) -> { this.setApplicationSnapshot(n.getObjectValue(ApplicationSnapshot::createFromDiscriminatorValue)); });
         deserializerMap.put("connectionId", (n) -> { this.setConnectionId(n.getStringValue()); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("destinationFQDN", (n) -> { this.setDestinationFQDN(n.getStringValue()); });
         deserializerMap.put("destinationIp", (n) -> { this.setDestinationIp(n.getStringValue()); });
         deserializerMap.put("destinationPort", (n) -> { this.setDestinationPort(n.getIntegerValue()); });
+        deserializerMap.put("destinationUrl", (n) -> { this.setDestinationUrl(n.getStringValue()); });
         deserializerMap.put("destinationWebCategory", (n) -> { this.setDestinationWebCategory(n.getObjectValue(WebCategory::createFromDiscriminatorValue)); });
         deserializerMap.put("deviceCategory", (n) -> { this.setDeviceCategory(n.getEnumValue(DeviceCategory::forValue)); });
         deserializerMap.put("deviceId", (n) -> { this.setDeviceId(n.getStringValue()); });
@@ -181,6 +199,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         deserializerMap.put("policyName", (n) -> { this.setPolicyName(n.getStringValue()); });
         deserializerMap.put("policyRuleId", (n) -> { this.setPolicyRuleId(n.getStringValue()); });
         deserializerMap.put("policyRuleName", (n) -> { this.setPolicyRuleName(n.getStringValue()); });
+        deserializerMap.put("privateAccessDetails", (n) -> { this.setPrivateAccessDetails(n.getObjectValue(PrivateAccessDetails::createFromDiscriminatorValue)); });
         deserializerMap.put("receivedBytes", (n) -> { this.setReceivedBytes(n.getLongValue()); });
         deserializerMap.put("resourceTenantId", (n) -> { this.setResourceTenantId(n.getStringValue()); });
         deserializerMap.put("sentBytes", (n) -> { this.setSentBytes(n.getLongValue()); });
@@ -188,6 +207,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         deserializerMap.put("sourceIp", (n) -> { this.setSourceIp(n.getStringValue()); });
         deserializerMap.put("sourcePort", (n) -> { this.setSourcePort(n.getIntegerValue()); });
         deserializerMap.put("tenantId", (n) -> { this.setTenantId(n.getStringValue()); });
+        deserializerMap.put("threatType", (n) -> { this.setThreatType(n.getStringValue()); });
         deserializerMap.put("trafficType", (n) -> { this.setTrafficType(n.getEnumValue(TrafficType::forValue)); });
         deserializerMap.put("transactionId", (n) -> { this.setTransactionId(n.getStringValue()); });
         deserializerMap.put("transportProtocol", (n) -> { this.setTransportProtocol(n.getEnumValue(NetworkingProtocol::forValue)); });
@@ -276,6 +296,14 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("policyRuleName");
     }
     /**
+     * Gets the privateAccessDetails property value. The privateAccessDetails property
+     * @return a PrivateAccessDetails
+     */
+    @jakarta.annotation.Nullable
+    public PrivateAccessDetails getPrivateAccessDetails() {
+        return this.backingStore.get("privateAccessDetails");
+    }
+    /**
      * Gets the receivedBytes property value. Represents the total number of bytes received in a network communication or data transfer. Supports $filter (eq) and $orderby.
      * @return a Long
      */
@@ -332,6 +360,14 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("tenantId");
     }
     /**
+     * Gets the threatType property value. The threatType property
+     * @return a String
+     */
+    @jakarta.annotation.Nullable
+    public String getThreatType() {
+        return this.backingStore.get("threatType");
+    }
+    /**
      * Gets the trafficType property value. The trafficType property
      * @return a TrafficType
      */
@@ -379,11 +415,13 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         Objects.requireNonNull(writer);
         writer.writeEnumValue("action", this.getAction());
         writer.writeStringValue("agentVersion", this.getAgentVersion());
+        writer.writeObjectValue("applicationSnapshot", this.getApplicationSnapshot());
         writer.writeStringValue("connectionId", this.getConnectionId());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeStringValue("destinationFQDN", this.getDestinationFQDN());
         writer.writeStringValue("destinationIp", this.getDestinationIp());
         writer.writeIntegerValue("destinationPort", this.getDestinationPort());
+        writer.writeStringValue("destinationUrl", this.getDestinationUrl());
         writer.writeObjectValue("destinationWebCategory", this.getDestinationWebCategory());
         writer.writeEnumValue("deviceCategory", this.getDeviceCategory());
         writer.writeStringValue("deviceId", this.getDeviceId());
@@ -399,6 +437,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         writer.writeStringValue("policyName", this.getPolicyName());
         writer.writeStringValue("policyRuleId", this.getPolicyRuleId());
         writer.writeStringValue("policyRuleName", this.getPolicyRuleName());
+        writer.writeObjectValue("privateAccessDetails", this.getPrivateAccessDetails());
         writer.writeLongValue("receivedBytes", this.getReceivedBytes());
         writer.writeStringValue("resourceTenantId", this.getResourceTenantId());
         writer.writeLongValue("sentBytes", this.getSentBytes());
@@ -406,6 +445,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         writer.writeStringValue("sourceIp", this.getSourceIp());
         writer.writeIntegerValue("sourcePort", this.getSourcePort());
         writer.writeStringValue("tenantId", this.getTenantId());
+        writer.writeStringValue("threatType", this.getThreatType());
         writer.writeEnumValue("trafficType", this.getTrafficType());
         writer.writeStringValue("transactionId", this.getTransactionId());
         writer.writeEnumValue("transportProtocol", this.getTransportProtocol());
@@ -433,6 +473,13 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
      */
     public void setAgentVersion(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("agentVersion", value);
+    }
+    /**
+     * Sets the applicationSnapshot property value. The applicationSnapshot property
+     * @param value Value to set for the applicationSnapshot property.
+     */
+    public void setApplicationSnapshot(@jakarta.annotation.Nullable final ApplicationSnapshot value) {
+        this.backingStore.set("applicationSnapshot", value);
     }
     /**
      * Sets the backingStore property value. Stores model information.
@@ -476,6 +523,13 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
      */
     public void setDestinationPort(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("destinationPort", value);
+    }
+    /**
+     * Sets the destinationUrl property value. The destinationUrl property
+     * @param value Value to set for the destinationUrl property.
+     */
+    public void setDestinationUrl(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("destinationUrl", value);
     }
     /**
      * Sets the destinationWebCategory property value. The destinationWebCategory property
@@ -583,6 +637,13 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         this.backingStore.set("policyRuleName", value);
     }
     /**
+     * Sets the privateAccessDetails property value. The privateAccessDetails property
+     * @param value Value to set for the privateAccessDetails property.
+     */
+    public void setPrivateAccessDetails(@jakarta.annotation.Nullable final PrivateAccessDetails value) {
+        this.backingStore.set("privateAccessDetails", value);
+    }
+    /**
      * Sets the receivedBytes property value. Represents the total number of bytes received in a network communication or data transfer. Supports $filter (eq) and $orderby.
      * @param value Value to set for the receivedBytes property.
      */
@@ -630,6 +691,13 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("tenantId", value);
+    }
+    /**
+     * Sets the threatType property value. The threatType property
+     * @param value Value to set for the threatType property.
+     */
+    public void setThreatType(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("threatType", value);
     }
     /**
      * Sets the trafficType property value. The trafficType property

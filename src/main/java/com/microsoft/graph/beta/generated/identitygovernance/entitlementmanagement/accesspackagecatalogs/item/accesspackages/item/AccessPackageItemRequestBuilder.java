@@ -26,7 +26,7 @@ public class AccessPackageItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AccessPackageItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/accessPackageCatalogs/{accessPackageCatalog%2Did}/accessPackages/{accessPackage%2Did}{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/accessPackageCatalogs/{accessPackageCatalog%2Did}/accessPackages/{accessPackage%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new AccessPackageItemRequestBuilder and sets the default values.
@@ -34,13 +34,13 @@ public class AccessPackageItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AccessPackageItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/accessPackageCatalogs/{accessPackageCatalog%2Did}/accessPackages/{accessPackage%2Did}{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/accessPackageCatalogs/{accessPackageCatalog%2Did}/accessPackages/{accessPackage%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
      * The access packages in this catalog. Read-only. Nullable. Supports $expand.
      * @return a AccessPackage
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -52,7 +52,7 @@ public class AccessPackageItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a AccessPackage
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -67,7 +67,7 @@ public class AccessPackageItemRequestBuilder extends BaseRequestBuilder {
      * The access packages in this catalog. Read-only. Nullable. Supports $expand.
      * @return a RequestInformation
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -79,7 +79,7 @@ public class AccessPackageItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -94,7 +94,7 @@ public class AccessPackageItemRequestBuilder extends BaseRequestBuilder {
      * @param rawUrl The raw URL to use for the request builder.
      * @return a AccessPackageItemRequestBuilder
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
      */
     @jakarta.annotation.Nonnull
     @Deprecated

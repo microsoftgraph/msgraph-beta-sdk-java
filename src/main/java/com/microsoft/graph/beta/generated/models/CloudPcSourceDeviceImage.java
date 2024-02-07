@@ -56,7 +56,7 @@ public class CloudPcSourceDeviceImage implements AdditionalDataHolder, BackedMod
         return this.backingStore;
     }
     /**
-     * Gets the displayName property value. The display name for the source image.
+     * Gets the displayName property value. The display name for the source image. Read-only.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -79,7 +79,7 @@ public class CloudPcSourceDeviceImage implements AdditionalDataHolder, BackedMod
         return deserializerMap;
     }
     /**
-     * Gets the id property value. The ID of the source image.
+     * Gets the id property value. The id property
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -95,7 +95,7 @@ public class CloudPcSourceDeviceImage implements AdditionalDataHolder, BackedMod
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the resourceId property value. The resourceId property
+     * Gets the resourceId property value. The fully qualified unique identifier (ID) of the source image resource in Azure. The ID format is: '/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/images/{imageName}'. Read-only.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -103,7 +103,7 @@ public class CloudPcSourceDeviceImage implements AdditionalDataHolder, BackedMod
         return this.backingStore.get("resourceId");
     }
     /**
-     * Gets the subscriptionDisplayName property value. The display name of subscription that hosts the source image.
+     * Gets the subscriptionDisplayName property value. The display name of the subscription that hosts the source image. Read-only.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -111,7 +111,7 @@ public class CloudPcSourceDeviceImage implements AdditionalDataHolder, BackedMod
         return this.backingStore.get("subscriptionDisplayName");
     }
     /**
-     * Gets the subscriptionId property value. The ID of subscription that hosts the source image.
+     * Gets the subscriptionId property value. The unique identifier (ID) of the subscription that hosts the source image. Read-only.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -148,14 +148,14 @@ public class CloudPcSourceDeviceImage implements AdditionalDataHolder, BackedMod
         this.backingStore = value;
     }
     /**
-     * Sets the displayName property value. The display name for the source image.
+     * Sets the displayName property value. The display name for the source image. Read-only.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the id property value. The ID of the source image.
+     * Sets the id property value. The id property
      * @param value Value to set for the id property.
      */
     public void setId(@jakarta.annotation.Nullable final String value) {
@@ -169,21 +169,21 @@ public class CloudPcSourceDeviceImage implements AdditionalDataHolder, BackedMod
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the resourceId property value. The resourceId property
+     * Sets the resourceId property value. The fully qualified unique identifier (ID) of the source image resource in Azure. The ID format is: '/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/images/{imageName}'. Read-only.
      * @param value Value to set for the resourceId property.
      */
     public void setResourceId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("resourceId", value);
     }
     /**
-     * Sets the subscriptionDisplayName property value. The display name of subscription that hosts the source image.
+     * Sets the subscriptionDisplayName property value. The display name of the subscription that hosts the source image. Read-only.
      * @param value Value to set for the subscriptionDisplayName property.
      */
     public void setSubscriptionDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("subscriptionDisplayName", value);
     }
     /**
-     * Sets the subscriptionId property value. The ID of subscription that hosts the source image.
+     * Sets the subscriptionId property value. The unique identifier (ID) of the subscription that hosts the source image. Read-only.
      * @param value Value to set for the subscriptionId property.
      */
     public void setSubscriptionId(@jakarta.annotation.Nullable final String value) {

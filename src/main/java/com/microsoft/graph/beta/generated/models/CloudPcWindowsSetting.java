@@ -67,7 +67,7 @@ public class CloudPcWindowsSetting implements AdditionalDataHolder, BackedModel,
         return deserializerMap;
     }
     /**
-     * Gets the locale property value. The locale property
+     * Gets the locale property value. The Windows language or region tag to use for language pack configuration and localization of the Cloud PC. The default value is en-US, which corresponds to English (United States).
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -108,7 +108,7 @@ public class CloudPcWindowsSetting implements AdditionalDataHolder, BackedModel,
         this.backingStore = value;
     }
     /**
-     * Sets the locale property value. The locale property
+     * Sets the locale property value. The Windows language or region tag to use for language pack configuration and localization of the Cloud PC. The default value is en-US, which corresponds to English (United States).
      * @param value Value to set for the locale property.
      */
     public void setLocale(@jakarta.annotation.Nullable final String value) {

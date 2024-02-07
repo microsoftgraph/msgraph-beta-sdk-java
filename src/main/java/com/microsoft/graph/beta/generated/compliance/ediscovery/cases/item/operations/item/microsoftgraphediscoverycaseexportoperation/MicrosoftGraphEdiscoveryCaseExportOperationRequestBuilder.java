@@ -24,7 +24,7 @@ public class MicrosoftGraphEdiscoveryCaseExportOperationRequestBuilder extends B
     /**
      * Provides operations to manage the reviewSet property of the microsoft.graph.ediscovery.caseExportOperation entity.
      * @deprecated
-     * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
+     * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
      */
     @Deprecated
     @jakarta.annotation.Nonnull
@@ -37,7 +37,7 @@ public class MicrosoftGraphEdiscoveryCaseExportOperationRequestBuilder extends B
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public MicrosoftGraphEdiscoveryCaseExportOperationRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/compliance/ediscovery/cases/{case%2Did}/operations/{caseOperation%2Did}/microsoft.graph.ediscovery.caseExportOperation{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/compliance/ediscovery/cases/{case%2Did}/operations/{caseOperation%2Did}/microsoft.graph.ediscovery.caseExportOperation{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new MicrosoftGraphEdiscoveryCaseExportOperationRequestBuilder and sets the default values.
@@ -45,13 +45,13 @@ public class MicrosoftGraphEdiscoveryCaseExportOperationRequestBuilder extends B
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public MicrosoftGraphEdiscoveryCaseExportOperationRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/compliance/ediscovery/cases/{case%2Did}/operations/{caseOperation%2Did}/microsoft.graph.ediscovery.caseExportOperation{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/compliance/ediscovery/cases/{case%2Did}/operations/{caseOperation%2Did}/microsoft.graph.ediscovery.caseExportOperation{?%24expand,%24select}", rawUrl);
     }
     /**
      * Get the item of type microsoft.graph.ediscovery.caseOperation as microsoft.graph.ediscovery.caseExportOperation
      * @return a CaseExportOperation
      * @deprecated
-     * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
+     * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -63,7 +63,7 @@ public class MicrosoftGraphEdiscoveryCaseExportOperationRequestBuilder extends B
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CaseExportOperation
      * @deprecated
-     * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
+     * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -78,7 +78,7 @@ public class MicrosoftGraphEdiscoveryCaseExportOperationRequestBuilder extends B
      * Get the item of type microsoft.graph.ediscovery.caseOperation as microsoft.graph.ediscovery.caseExportOperation
      * @return a RequestInformation
      * @deprecated
-     * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
+     * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -90,7 +90,7 @@ public class MicrosoftGraphEdiscoveryCaseExportOperationRequestBuilder extends B
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
-     * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
+     * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -105,7 +105,7 @@ public class MicrosoftGraphEdiscoveryCaseExportOperationRequestBuilder extends B
      * @param rawUrl The raw URL to use for the request builder.
      * @return a MicrosoftGraphEdiscoveryCaseExportOperationRequestBuilder
      * @deprecated
-     * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
+     * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
      */
     @jakarta.annotation.Nonnull
     @Deprecated

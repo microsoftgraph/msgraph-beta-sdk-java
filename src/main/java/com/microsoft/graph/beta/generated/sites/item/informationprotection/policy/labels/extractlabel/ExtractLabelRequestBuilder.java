@@ -40,7 +40,7 @@ public class ExtractLabelRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a InformationProtectionContentLabel
      * @deprecated
-     * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels on 2021-02-15 and will be removed 2022-08-15
+     * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels
      * @see <a href="https://learn.microsoft.com/graph/api/informationprotectionlabel-extractlabel?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -54,7 +54,7 @@ public class ExtractLabelRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a InformationProtectionContentLabel
      * @deprecated
-     * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels on 2021-02-15 and will be removed 2022-08-15
+     * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels
      * @see <a href="https://learn.microsoft.com/graph/api/informationprotectionlabel-extractlabel?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -72,7 +72,7 @@ public class ExtractLabelRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a RequestInformation
      * @deprecated
-     * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels on 2021-02-15 and will be removed 2022-08-15
+     * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -85,7 +85,7 @@ public class ExtractLabelRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
-     * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels on 2021-02-15 and will be removed 2022-08-15
+     * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -102,7 +102,7 @@ public class ExtractLabelRequestBuilder extends BaseRequestBuilder {
      * @param rawUrl The raw URL to use for the request builder.
      * @return a ExtractLabelRequestBuilder
      * @deprecated
-     * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels on 2021-02-15 and will be removed 2022-08-15
+     * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels
      */
     @jakarta.annotation.Nonnull
     @Deprecated

@@ -4,6 +4,7 @@ import com.microsoft.graph.beta.employeeexperience.communities.CommunitiesReques
 import com.microsoft.graph.beta.employeeexperience.engagementasyncoperations.EngagementAsyncOperationsRequestBuilder;
 import com.microsoft.graph.beta.employeeexperience.goals.GoalsRequestBuilder;
 import com.microsoft.graph.beta.employeeexperience.learningcourseactivities.LearningCourseActivitiesRequestBuilder;
+import com.microsoft.graph.beta.employeeexperience.learningcourseactivitieswithexternalcourseactivityid.LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilder;
 import com.microsoft.graph.beta.employeeexperience.learningproviders.LearningProvidersRequestBuilder;
 import com.microsoft.graph.beta.models.EmployeeExperience;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
@@ -96,6 +97,16 @@ public class EmployeeExperienceRequestBuilder extends BaseRequestBuilder {
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, EmployeeExperience::createFromDiscriminatorValue);
+    }
+    /**
+     * Provides operations to manage the learningCourseActivities property of the microsoft.graph.employeeExperience entity.
+     * @param externalcourseActivityId Alternate key of learningCourseActivity
+     * @return a LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilder learningCourseActivitiesWithExternalcourseActivityId(@jakarta.annotation.Nonnull final String externalcourseActivityId) {
+        Objects.requireNonNull(externalcourseActivityId);
+        return new LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilder(pathParameters, requestAdapter, externalcourseActivityId);
     }
     /**
      * Update employeeExperience

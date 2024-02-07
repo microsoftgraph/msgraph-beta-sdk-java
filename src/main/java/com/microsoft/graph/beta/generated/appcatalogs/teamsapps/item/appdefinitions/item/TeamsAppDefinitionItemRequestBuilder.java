@@ -2,6 +2,7 @@ package com.microsoft.graph.beta.appcatalogs.teamsapps.item.appdefinitions.item;
 
 import com.microsoft.graph.beta.appcatalogs.teamsapps.item.appdefinitions.item.bot.BotRequestBuilder;
 import com.microsoft.graph.beta.appcatalogs.teamsapps.item.appdefinitions.item.coloricon.ColorIconRequestBuilder;
+import com.microsoft.graph.beta.appcatalogs.teamsapps.item.appdefinitions.item.dashboardcards.DashboardCardsRequestBuilder;
 import com.microsoft.graph.beta.appcatalogs.teamsapps.item.appdefinitions.item.outlineicon.OutlineIconRequestBuilder;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.TeamsAppDefinition;
@@ -38,6 +39,13 @@ public class TeamsAppDefinitionItemRequestBuilder extends BaseRequestBuilder {
         return new ColorIconRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the dashboardCards property of the microsoft.graph.teamsAppDefinition entity.
+     */
+    @jakarta.annotation.Nonnull
+    public DashboardCardsRequestBuilder dashboardCards() {
+        return new DashboardCardsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the outlineIcon property of the microsoft.graph.teamsAppDefinition entity.
      */
     @jakarta.annotation.Nonnull
@@ -50,7 +58,7 @@ public class TeamsAppDefinitionItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public TeamsAppDefinitionItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/appCatalogs/teamsApps/{teamsApp%2Did}/appDefinitions/{teamsAppDefinition%2Did}{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/appCatalogs/teamsApps/{teamsApp%2Did}/appDefinitions/{teamsAppDefinition%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new TeamsAppDefinitionItemRequestBuilder and sets the default values.
@@ -58,7 +66,7 @@ public class TeamsAppDefinitionItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public TeamsAppDefinitionItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/appCatalogs/teamsApps/{teamsApp%2Did}/appDefinitions/{teamsAppDefinition%2Did}{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/appCatalogs/teamsApps/{teamsApp%2Did}/appDefinitions/{teamsAppDefinition%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
      * Delete navigation property appDefinitions for appCatalogs

@@ -26,7 +26,7 @@ public class AlertDefinitionRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AlertDefinitionRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/identityGovernance/roleManagementAlerts/alertConfigurations/{unifiedRoleManagementAlertConfiguration%2Did}/alertDefinition{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/identityGovernance/roleManagementAlerts/alertConfigurations/{unifiedRoleManagementAlertConfiguration%2Did}/alertDefinition{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new AlertDefinitionRequestBuilder and sets the default values.
@@ -34,7 +34,7 @@ public class AlertDefinitionRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AlertDefinitionRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/identityGovernance/roleManagementAlerts/alertConfigurations/{unifiedRoleManagementAlertConfiguration%2Did}/alertDefinition{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/identityGovernance/roleManagementAlerts/alertConfigurations/{unifiedRoleManagementAlertConfiguration%2Did}/alertDefinition{?%24expand,%24select}", rawUrl);
     }
     /**
      * The definition of the alert that contains its description, impact, and measures to mitigate or prevent it. Supports $expand.

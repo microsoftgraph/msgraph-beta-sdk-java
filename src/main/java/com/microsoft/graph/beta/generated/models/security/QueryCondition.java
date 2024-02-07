@@ -69,7 +69,7 @@ public class QueryCondition implements AdditionalDataHolder, BackedModel, Parsab
         return deserializerMap;
     }
     /**
-     * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Gets the lastModifiedDateTime property value. Timestamp of when the query in the custom detection rule was last updated.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
@@ -85,7 +85,7 @@ public class QueryCondition implements AdditionalDataHolder, BackedModel, Parsab
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the queryText property value. The queryText property
+     * Gets the queryText property value. Contents of the query.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -119,7 +119,7 @@ public class QueryCondition implements AdditionalDataHolder, BackedModel, Parsab
         this.backingStore = value;
     }
     /**
-     * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Sets the lastModifiedDateTime property value. Timestamp of when the query in the custom detection rule was last updated.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -133,7 +133,7 @@ public class QueryCondition implements AdditionalDataHolder, BackedModel, Parsab
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the queryText property value. The queryText property
+     * Sets the queryText property value. Contents of the query.
      * @param value Value to set for the queryText property.
      */
     public void setQueryText(@jakarta.annotation.Nullable final String value) {

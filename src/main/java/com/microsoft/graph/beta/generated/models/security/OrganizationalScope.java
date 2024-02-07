@@ -76,7 +76,7 @@ public class OrganizationalScope implements AdditionalDataHolder, BackedModel, P
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the scopeNames property value. The scopeNames property
+     * Gets the scopeNames property value. List of groups to which the custom detection rule applies.
      * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
@@ -125,7 +125,7 @@ public class OrganizationalScope implements AdditionalDataHolder, BackedModel, P
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the scopeNames property value. The scopeNames property
+     * Sets the scopeNames property value. List of groups to which the custom detection rule applies.
      * @param value Value to set for the scopeNames property.
      */
     public void setScopeNames(@jakarta.annotation.Nullable final java.util.List<String> value) {

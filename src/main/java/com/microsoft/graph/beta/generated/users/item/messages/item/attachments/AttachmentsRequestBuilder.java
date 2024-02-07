@@ -56,7 +56,7 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AttachmentsRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/messages/{message%2Did}/attachments{?%24filter,%24count,%24orderby,%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/messages/{message%2Did}/attachments{?%24count,%24expand,%24filter,%24orderby,%24select}", pathParameters);
     }
     /**
      * Instantiates a new AttachmentsRequestBuilder and sets the default values.
@@ -64,7 +64,7 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AttachmentsRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/messages/{message%2Did}/attachments{?%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/messages/{message%2Did}/attachments{?%24count,%24expand,%24filter,%24orderby,%24select}", rawUrl);
     }
     /**
      * Retrieve a list of attachment objects.

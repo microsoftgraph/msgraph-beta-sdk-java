@@ -34,7 +34,7 @@ public class ProgramItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ProgramItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/programs/{program%2Did}{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/programs/{program%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new ProgramItemRequestBuilder and sets the default values.
@@ -42,7 +42,7 @@ public class ProgramItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ProgramItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/programs/{program%2Did}{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/programs/{program%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
      * In the Microsoft Entra access reviews feature, delete a program object. Do not delete a program which still has programControl linked to it, those access reviews should first be deleted or unlinked from the program and linked to a different program.  Also, please note that the built-in default program cannot be deleted.

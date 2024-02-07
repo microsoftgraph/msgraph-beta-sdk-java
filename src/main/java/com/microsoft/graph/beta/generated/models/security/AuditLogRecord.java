@@ -27,7 +27,7 @@ public class AuditLogRecord extends Entity implements Parsable {
         return new AuditLogRecord();
     }
     /**
-     * Gets the administrativeUnits property value. The administrativeUnits property
+     * Gets the administrativeUnits property value. The administrative units tagged to an audit log record.
      * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
@@ -35,7 +35,7 @@ public class AuditLogRecord extends Entity implements Parsable {
         return this.backingStore.get("administrativeUnits");
     }
     /**
-     * Gets the auditData property value. The auditData property
+     * Gets the auditData property value. A JSON object that contains the actual audit log data.
      * @return a AuditData
      */
     @jakarta.annotation.Nullable
@@ -43,7 +43,7 @@ public class AuditLogRecord extends Entity implements Parsable {
         return this.backingStore.get("auditData");
     }
     /**
-     * Gets the auditLogRecordType property value. The auditLogRecordType property
+     * Gets the auditLogRecordType property value. The type of operation indicated by the record. The possible values are: exchangeAdmin, exchangeItem, exchangeItemGroup, sharePoint, syntheticProbe, sharePointFileOperation, oneDrive, azureActiveDirectory, azureActiveDirectoryAccountLogon, dataCenterSecurityCmdlet, complianceDLPSharePoint, sway, complianceDLPExchange, sharePointSharingOperation, azureActiveDirectoryStsLogon, skypeForBusinessPSTNUsage, skypeForBusinessUsersBlocked, securityComplianceCenterEOPCmdlet, exchangeAggregatedOperation, powerBIAudit, crm, yammer, skypeForBusinessCmdlets, discovery, microsoftTeams, threatIntelligence, mailSubmission, microsoftFlow, aeD, microsoftStream, complianceDLPSharePointClassification, threatFinder, project, sharePointListOperation, sharePointCommentOperation, dataGovernance, kaizala, securityComplianceAlerts, threatIntelligenceUrl, securityComplianceInsights, mipLabel, workplaceAnalytics, powerAppsApp, powerAppsPlan, threatIntelligenceAtpContent, labelContentExplorer, teamsHealthcare, exchangeItemAggregated, hygieneEvent, dataInsightsRestApiAudit, informationBarrierPolicyApplication, sharePointListItemOperation, sharePointContentTypeOperation, sharePointFieldOperation, microsoftTeamsAdmin, hrSignal, microsoftTeamsDevice, microsoftTeamsAnalytics, informationWorkerProtection, campaign, dlpEndpoint, airInvestigation, quarantine, microsoftForms, applicationAudit, complianceSupervisionExchange, customerKeyServiceEncryption, officeNative, mipAutoLabelSharePointItem, mipAutoLabelSharePointPolicyLocation, microsoftTeamsShifts, secureScore, mipAutoLabelExchangeItem, cortanaBriefing, search, wdatpAlerts, powerPlatformAdminDlp, powerPlatformAdminEnvironment, mdatpAudit, sensitivityLabelPolicyMatch, sensitivityLabelAction, sensitivityLabeledFileAction, attackSim, airManualInvestigation, securityComplianceRBAC, userTraining, airAdminActionInvestigation, mstic, physicalBadgingSignal, teamsEasyApprovals, aipDiscover, aipSensitivityLabelAction, aipProtectionAction, aipFileDeleted, aipHeartBeat, mcasAlerts, onPremisesFileShareScannerDlp, onPremisesSharePointScannerDlp, exchangeSearch, sharePointSearch, privacyDataMinimization, labelAnalyticsAggregate, myAnalyticsSettings, securityComplianceUserChange, complianceDLPExchangeClassification, complianceDLPEndpoint, mipExactDataMatch, msdeResponseActions, msdeGeneralSettings, msdeIndicatorsSettings, ms365DCustomDetection, msdeRolesSettings, mapgAlerts, mapgPolicy, mapgRemediation, privacyRemediationAction, privacyDigestEmail, mipAutoLabelSimulationProgress, mipAutoLabelSimulationCompletion, mipAutoLabelProgressFeedback, dlpSensitiveInformationType, mipAutoLabelSimulationStatistics, largeContentMetadata, microsoft365Group, cdpMlInferencingResult, filteringMailMetadata, cdpClassificationMailItem, cdpClassificationDocument, officeScriptsRunAction, filteringPostMailDeliveryAction, cdpUnifiedFeedback, tenantAllowBlockList, consumptionResource, healthcareSignal, dlpImportResult, cdpCompliancePolicyExecution, multiStageDisposition, privacyDataMatch, filteringDocMetadata, filteringEmailFeatures, powerBIDlp, filteringUrlInfo, filteringAttachmentInfo, coreReportingSettings, complianceConnector, powerPlatformLockboxResourceAccessRequest, powerPlatformLockboxResourceCommand, cdpPredictiveCodingLabel, cdpCompliancePolicyUserFeedback, webpageActivityEndpoint, omePortal, cmImprovementActionChange, filteringUrlClick, mipLabelAnalyticsAuditRecord, filteringEntityEvent, filteringRuleHits, filteringMailSubmission, labelExplorer, microsoftManagedServicePlatform, powerPlatformServiceActivity, scorePlatformGenericAuditRecord, filteringTimeTravelDocMetadata, alert, alertStatus, alertIncident, incidentStatus, case, caseInvestigation, recordsManagement, privacyRemediation, dataShareOperation, cdpDlpSensitive, ehrConnector, filteringMailGradingResult, publicFolder, privacyTenantAuditHistoryRecord, aipScannerDiscoverEvent, eduDataLakeDownloadOperation, m365ComplianceConnector, microsoftGraphDataConnectOperation, microsoftPurview, filteringEmailContentFeatures, powerPagesSite, powerAppsResource, plannerPlan, plannerCopyPlan, plannerTask, plannerRoster, plannerPlanList, plannerTaskList, plannerTenantSettings, projectForTheWebProject, projectForTheWebTask, projectForTheWebRoadmap, projectForTheWebRoadmapItem, projectForTheWebProjectSettings, projectForTheWebRoadmapSettings, quarantineMetadata, microsoftTodoAudit, timeTravelFilteringDocMetadata, teamsQuarantineMetadata, sharePointAppPermissionOperation, microsoftTeamsSensitivityLabelAction, filteringTeamsMetadata, filteringTeamsUrlInfo, filteringTeamsPostDeliveryAction, mdcAssessments, mdcRegulatoryComplianceStandards, mdcRegulatoryComplianceControls, mdcRegulatoryComplianceAssessments, mdcSecurityConnectors, mdaDataSecuritySignal, vivaGoals, filteringRuntimeInfo, attackSimAdmin, microsoftGraphDataConnectConsent, filteringAtpDetonationInfo, privacyPortal, managedTenants, unifiedSimulationMatchedItem, unifiedSimulationSummary, updateQuarantineMetadata, ms365DSuppressionRule, purviewDataMapOperation, filteringUrlPostClickAction, irmUserDefinedDetectionSignal, teamsUpdates, plannerRosterSensitivityLabel, ms365DIncident, filteringDelistingMetadata, complianceDLPSharePointClassificationExtended, microsoftDefenderForIdentityAudit, supervisoryReviewDayXInsight, defenderExpertsforXDRAdmin, cdpEdgeBlockedMessage, hostedRpa, cdpContentExplorerAggregateRecord, cdpHygieneAttachmentInfo, cdpHygieneSummary, cdpPostMailDeliveryAction, cdpEmailFeatures, cdpHygieneUrlInfo, cdpUrlClick, cdpPackageManagerHygieneEvent, filteringDocScan, timeTravelFilteringDocScan, mapgOnboard, unknownFutureValue.
      * @return a AuditLogRecordType
      */
     @jakarta.annotation.Nullable
@@ -51,7 +51,7 @@ public class AuditLogRecord extends Entity implements Parsable {
         return this.backingStore.get("auditLogRecordType");
     }
     /**
-     * Gets the clientIp property value. The clientIp property
+     * Gets the clientIp property value. The IP address of the device used when the activity was logged. The IP address is displayed in either an IPv4 or IPv6 address format.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -59,7 +59,7 @@ public class AuditLogRecord extends Entity implements Parsable {
         return this.backingStore.get("clientIp");
     }
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. The date and time in UTC when the user performed the activity.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
@@ -88,7 +88,7 @@ public class AuditLogRecord extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the objectId property value. The objectId property
+     * Gets the objectId property value. For Exchange admin audit logging, the name of the object modified by the cmdlet. For SharePoint activity, the full URL path name of the file or folder accessed by a user. For Microsoft Entra activity, the name of the user account that was modified.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -96,7 +96,7 @@ public class AuditLogRecord extends Entity implements Parsable {
         return this.backingStore.get("objectId");
     }
     /**
-     * Gets the operation property value. The operation property
+     * Gets the operation property value. The name of the user or admin activity.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -104,7 +104,7 @@ public class AuditLogRecord extends Entity implements Parsable {
         return this.backingStore.get("operation");
     }
     /**
-     * Gets the organizationId property value. The organizationId property
+     * Gets the organizationId property value. The GUID for your organization.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -112,7 +112,7 @@ public class AuditLogRecord extends Entity implements Parsable {
         return this.backingStore.get("organizationId");
     }
     /**
-     * Gets the service property value. The service property
+     * Gets the service property value. The Microsoft 365 service where the activity occurred.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -120,7 +120,7 @@ public class AuditLogRecord extends Entity implements Parsable {
         return this.backingStore.get("service");
     }
     /**
-     * Gets the userId property value. The userId property
+     * Gets the userId property value. The user who performed the action (specified in the Operation property) that resulted in the record being logged. Audit records for activity performed by system accounts (such as SHAREPOINT/system or NT AUTHORITY/SYSTEM) are also included in the audit log. Another common value for the UserId property is app@sharepoint. It indicates that the 'user' who performed the activity was an application with the necessary permissions in SharePoint to perform organization-wide actions (such as searching a SharePoint site or OneDrive account) on behalf of a user, admin, or service.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -128,7 +128,7 @@ public class AuditLogRecord extends Entity implements Parsable {
         return this.backingStore.get("userId");
     }
     /**
-     * Gets the userPrincipalName property value. The userPrincipalName property
+     * Gets the userPrincipalName property value. UPN of the user who performed the action.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -136,7 +136,7 @@ public class AuditLogRecord extends Entity implements Parsable {
         return this.backingStore.get("userPrincipalName");
     }
     /**
-     * Gets the userType property value. The userType property
+     * Gets the userType property value. The type of user that performed the operation. The possible values are: regular, reserved, admin, dcAdmin, system, application, servicePrincipal, customPolicy, systemPolicy, partnerTechnician, guest, unknownFutureValue.
      * @return a AuditLogUserType
      */
     @jakarta.annotation.Nullable
@@ -164,84 +164,84 @@ public class AuditLogRecord extends Entity implements Parsable {
         writer.writeEnumValue("userType", this.getUserType());
     }
     /**
-     * Sets the administrativeUnits property value. The administrativeUnits property
+     * Sets the administrativeUnits property value. The administrative units tagged to an audit log record.
      * @param value Value to set for the administrativeUnits property.
      */
     public void setAdministrativeUnits(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("administrativeUnits", value);
     }
     /**
-     * Sets the auditData property value. The auditData property
+     * Sets the auditData property value. A JSON object that contains the actual audit log data.
      * @param value Value to set for the auditData property.
      */
     public void setAuditData(@jakarta.annotation.Nullable final AuditData value) {
         this.backingStore.set("auditData", value);
     }
     /**
-     * Sets the auditLogRecordType property value. The auditLogRecordType property
+     * Sets the auditLogRecordType property value. The type of operation indicated by the record. The possible values are: exchangeAdmin, exchangeItem, exchangeItemGroup, sharePoint, syntheticProbe, sharePointFileOperation, oneDrive, azureActiveDirectory, azureActiveDirectoryAccountLogon, dataCenterSecurityCmdlet, complianceDLPSharePoint, sway, complianceDLPExchange, sharePointSharingOperation, azureActiveDirectoryStsLogon, skypeForBusinessPSTNUsage, skypeForBusinessUsersBlocked, securityComplianceCenterEOPCmdlet, exchangeAggregatedOperation, powerBIAudit, crm, yammer, skypeForBusinessCmdlets, discovery, microsoftTeams, threatIntelligence, mailSubmission, microsoftFlow, aeD, microsoftStream, complianceDLPSharePointClassification, threatFinder, project, sharePointListOperation, sharePointCommentOperation, dataGovernance, kaizala, securityComplianceAlerts, threatIntelligenceUrl, securityComplianceInsights, mipLabel, workplaceAnalytics, powerAppsApp, powerAppsPlan, threatIntelligenceAtpContent, labelContentExplorer, teamsHealthcare, exchangeItemAggregated, hygieneEvent, dataInsightsRestApiAudit, informationBarrierPolicyApplication, sharePointListItemOperation, sharePointContentTypeOperation, sharePointFieldOperation, microsoftTeamsAdmin, hrSignal, microsoftTeamsDevice, microsoftTeamsAnalytics, informationWorkerProtection, campaign, dlpEndpoint, airInvestigation, quarantine, microsoftForms, applicationAudit, complianceSupervisionExchange, customerKeyServiceEncryption, officeNative, mipAutoLabelSharePointItem, mipAutoLabelSharePointPolicyLocation, microsoftTeamsShifts, secureScore, mipAutoLabelExchangeItem, cortanaBriefing, search, wdatpAlerts, powerPlatformAdminDlp, powerPlatformAdminEnvironment, mdatpAudit, sensitivityLabelPolicyMatch, sensitivityLabelAction, sensitivityLabeledFileAction, attackSim, airManualInvestigation, securityComplianceRBAC, userTraining, airAdminActionInvestigation, mstic, physicalBadgingSignal, teamsEasyApprovals, aipDiscover, aipSensitivityLabelAction, aipProtectionAction, aipFileDeleted, aipHeartBeat, mcasAlerts, onPremisesFileShareScannerDlp, onPremisesSharePointScannerDlp, exchangeSearch, sharePointSearch, privacyDataMinimization, labelAnalyticsAggregate, myAnalyticsSettings, securityComplianceUserChange, complianceDLPExchangeClassification, complianceDLPEndpoint, mipExactDataMatch, msdeResponseActions, msdeGeneralSettings, msdeIndicatorsSettings, ms365DCustomDetection, msdeRolesSettings, mapgAlerts, mapgPolicy, mapgRemediation, privacyRemediationAction, privacyDigestEmail, mipAutoLabelSimulationProgress, mipAutoLabelSimulationCompletion, mipAutoLabelProgressFeedback, dlpSensitiveInformationType, mipAutoLabelSimulationStatistics, largeContentMetadata, microsoft365Group, cdpMlInferencingResult, filteringMailMetadata, cdpClassificationMailItem, cdpClassificationDocument, officeScriptsRunAction, filteringPostMailDeliveryAction, cdpUnifiedFeedback, tenantAllowBlockList, consumptionResource, healthcareSignal, dlpImportResult, cdpCompliancePolicyExecution, multiStageDisposition, privacyDataMatch, filteringDocMetadata, filteringEmailFeatures, powerBIDlp, filteringUrlInfo, filteringAttachmentInfo, coreReportingSettings, complianceConnector, powerPlatformLockboxResourceAccessRequest, powerPlatformLockboxResourceCommand, cdpPredictiveCodingLabel, cdpCompliancePolicyUserFeedback, webpageActivityEndpoint, omePortal, cmImprovementActionChange, filteringUrlClick, mipLabelAnalyticsAuditRecord, filteringEntityEvent, filteringRuleHits, filteringMailSubmission, labelExplorer, microsoftManagedServicePlatform, powerPlatformServiceActivity, scorePlatformGenericAuditRecord, filteringTimeTravelDocMetadata, alert, alertStatus, alertIncident, incidentStatus, case, caseInvestigation, recordsManagement, privacyRemediation, dataShareOperation, cdpDlpSensitive, ehrConnector, filteringMailGradingResult, publicFolder, privacyTenantAuditHistoryRecord, aipScannerDiscoverEvent, eduDataLakeDownloadOperation, m365ComplianceConnector, microsoftGraphDataConnectOperation, microsoftPurview, filteringEmailContentFeatures, powerPagesSite, powerAppsResource, plannerPlan, plannerCopyPlan, plannerTask, plannerRoster, plannerPlanList, plannerTaskList, plannerTenantSettings, projectForTheWebProject, projectForTheWebTask, projectForTheWebRoadmap, projectForTheWebRoadmapItem, projectForTheWebProjectSettings, projectForTheWebRoadmapSettings, quarantineMetadata, microsoftTodoAudit, timeTravelFilteringDocMetadata, teamsQuarantineMetadata, sharePointAppPermissionOperation, microsoftTeamsSensitivityLabelAction, filteringTeamsMetadata, filteringTeamsUrlInfo, filteringTeamsPostDeliveryAction, mdcAssessments, mdcRegulatoryComplianceStandards, mdcRegulatoryComplianceControls, mdcRegulatoryComplianceAssessments, mdcSecurityConnectors, mdaDataSecuritySignal, vivaGoals, filteringRuntimeInfo, attackSimAdmin, microsoftGraphDataConnectConsent, filteringAtpDetonationInfo, privacyPortal, managedTenants, unifiedSimulationMatchedItem, unifiedSimulationSummary, updateQuarantineMetadata, ms365DSuppressionRule, purviewDataMapOperation, filteringUrlPostClickAction, irmUserDefinedDetectionSignal, teamsUpdates, plannerRosterSensitivityLabel, ms365DIncident, filteringDelistingMetadata, complianceDLPSharePointClassificationExtended, microsoftDefenderForIdentityAudit, supervisoryReviewDayXInsight, defenderExpertsforXDRAdmin, cdpEdgeBlockedMessage, hostedRpa, cdpContentExplorerAggregateRecord, cdpHygieneAttachmentInfo, cdpHygieneSummary, cdpPostMailDeliveryAction, cdpEmailFeatures, cdpHygieneUrlInfo, cdpUrlClick, cdpPackageManagerHygieneEvent, filteringDocScan, timeTravelFilteringDocScan, mapgOnboard, unknownFutureValue.
      * @param value Value to set for the auditLogRecordType property.
      */
     public void setAuditLogRecordType(@jakarta.annotation.Nullable final AuditLogRecordType value) {
         this.backingStore.set("auditLogRecordType", value);
     }
     /**
-     * Sets the clientIp property value. The clientIp property
+     * Sets the clientIp property value. The IP address of the device used when the activity was logged. The IP address is displayed in either an IPv4 or IPv6 address format.
      * @param value Value to set for the clientIp property.
      */
     public void setClientIp(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("clientIp", value);
     }
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. The date and time in UTC when the user performed the activity.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the objectId property value. The objectId property
+     * Sets the objectId property value. For Exchange admin audit logging, the name of the object modified by the cmdlet. For SharePoint activity, the full URL path name of the file or folder accessed by a user. For Microsoft Entra activity, the name of the user account that was modified.
      * @param value Value to set for the objectId property.
      */
     public void setObjectId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("objectId", value);
     }
     /**
-     * Sets the operation property value. The operation property
+     * Sets the operation property value. The name of the user or admin activity.
      * @param value Value to set for the operation property.
      */
     public void setOperation(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("operation", value);
     }
     /**
-     * Sets the organizationId property value. The organizationId property
+     * Sets the organizationId property value. The GUID for your organization.
      * @param value Value to set for the organizationId property.
      */
     public void setOrganizationId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("organizationId", value);
     }
     /**
-     * Sets the service property value. The service property
+     * Sets the service property value. The Microsoft 365 service where the activity occurred.
      * @param value Value to set for the service property.
      */
     public void setService(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("service", value);
     }
     /**
-     * Sets the userId property value. The userId property
+     * Sets the userId property value. The user who performed the action (specified in the Operation property) that resulted in the record being logged. Audit records for activity performed by system accounts (such as SHAREPOINT/system or NT AUTHORITY/SYSTEM) are also included in the audit log. Another common value for the UserId property is app@sharepoint. It indicates that the 'user' who performed the activity was an application with the necessary permissions in SharePoint to perform organization-wide actions (such as searching a SharePoint site or OneDrive account) on behalf of a user, admin, or service.
      * @param value Value to set for the userId property.
      */
     public void setUserId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("userId", value);
     }
     /**
-     * Sets the userPrincipalName property value. The userPrincipalName property
+     * Sets the userPrincipalName property value. UPN of the user who performed the action.
      * @param value Value to set for the userPrincipalName property.
      */
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("userPrincipalName", value);
     }
     /**
-     * Sets the userType property value. The userType property
+     * Sets the userType property value. The type of user that performed the operation. The possible values are: regular, reserved, admin, dcAdmin, system, application, servicePrincipal, customPolicy, systemPolicy, partnerTechnician, guest, unknownFutureValue.
      * @param value Value to set for the userType property.
      */
     public void setUserType(@jakarta.annotation.Nullable final AuditLogUserType value) {

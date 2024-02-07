@@ -25,7 +25,7 @@ public class PrintTaskItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the definition property of the microsoft.graph.printTask entity.
      * @deprecated
-     * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans on 2023-06-13 and will be removed 2023-07-31
+     * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
      */
     @Deprecated
     @jakarta.annotation.Nonnull
@@ -35,7 +35,7 @@ public class PrintTaskItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the trigger property of the microsoft.graph.printTask entity.
      * @deprecated
-     * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans on 2023-06-13 and will be removed 2023-07-31
+     * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
      */
     @Deprecated
     @jakarta.annotation.Nonnull
@@ -48,7 +48,7 @@ public class PrintTaskItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public PrintTaskItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/print/printerShares/{printerShare%2Did}/jobs/{printJob%2Did}/tasks/{printTask%2Did}{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/print/printerShares/{printerShare%2Did}/jobs/{printJob%2Did}/tasks/{printTask%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new PrintTaskItemRequestBuilder and sets the default values.
@@ -56,12 +56,12 @@ public class PrintTaskItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public PrintTaskItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/print/printerShares/{printerShare%2Did}/jobs/{printJob%2Did}/tasks/{printTask%2Did}{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/print/printerShares/{printerShare%2Did}/jobs/{printJob%2Did}/tasks/{printTask%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
      * Delete navigation property tasks for print
      * @deprecated
-     * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans on 2023-06-13 and will be removed 2023-07-31
+     * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
      */
     @Deprecated
     public void delete() {
@@ -71,7 +71,7 @@ public class PrintTaskItemRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property tasks for print
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @deprecated
-     * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans on 2023-06-13 and will be removed 2023-07-31
+     * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
      */
     @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -85,7 +85,7 @@ public class PrintTaskItemRequestBuilder extends BaseRequestBuilder {
      * A list of printTasks that were triggered by this print job.
      * @return a PrintTask
      * @deprecated
-     * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans on 2023-06-13 and will be removed 2023-07-31
+     * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -97,7 +97,7 @@ public class PrintTaskItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a PrintTask
      * @deprecated
-     * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans on 2023-06-13 and will be removed 2023-07-31
+     * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -113,7 +113,7 @@ public class PrintTaskItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a PrintTask
      * @deprecated
-     * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans on 2023-06-13 and will be removed 2023-07-31
+     * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -126,7 +126,7 @@ public class PrintTaskItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a PrintTask
      * @deprecated
-     * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans on 2023-06-13 and will be removed 2023-07-31
+     * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -142,7 +142,7 @@ public class PrintTaskItemRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property tasks for print
      * @return a RequestInformation
      * @deprecated
-     * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans on 2023-06-13 and will be removed 2023-07-31
+     * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -154,7 +154,7 @@ public class PrintTaskItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
-     * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans on 2023-06-13 and will be removed 2023-07-31
+     * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -168,7 +168,7 @@ public class PrintTaskItemRequestBuilder extends BaseRequestBuilder {
      * A list of printTasks that were triggered by this print job.
      * @return a RequestInformation
      * @deprecated
-     * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans on 2023-06-13 and will be removed 2023-07-31
+     * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -180,7 +180,7 @@ public class PrintTaskItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
-     * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans on 2023-06-13 and will be removed 2023-07-31
+     * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -195,7 +195,7 @@ public class PrintTaskItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a RequestInformation
      * @deprecated
-     * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans on 2023-06-13 and will be removed 2023-07-31
+     * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -208,7 +208,7 @@ public class PrintTaskItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
-     * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans on 2023-06-13 and will be removed 2023-07-31
+     * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -225,7 +225,7 @@ public class PrintTaskItemRequestBuilder extends BaseRequestBuilder {
      * @param rawUrl The raw URL to use for the request builder.
      * @return a PrintTaskItemRequestBuilder
      * @deprecated
-     * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans on 2023-06-13 and will be removed 2023-07-31
+     * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
      */
     @jakarta.annotation.Nonnull
     @Deprecated

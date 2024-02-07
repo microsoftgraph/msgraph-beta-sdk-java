@@ -5,6 +5,7 @@ import com.microsoft.graph.beta.models.SolutionsRoot;
 import com.microsoft.graph.beta.solutions.bookingbusinesses.BookingBusinessesRequestBuilder;
 import com.microsoft.graph.beta.solutions.bookingcurrencies.BookingCurrenciesRequestBuilder;
 import com.microsoft.graph.beta.solutions.businessscenarios.BusinessScenariosRequestBuilder;
+import com.microsoft.graph.beta.solutions.businessscenarioswithuniquename.BusinessScenariosWithUniqueNameRequestBuilder;
 import com.microsoft.graph.beta.solutions.virtualevents.VirtualEventsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -53,12 +54,22 @@ public class SolutionsRequestBuilder extends BaseRequestBuilder {
         return new VirtualEventsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the businessScenarios property of the microsoft.graph.solutionsRoot entity.
+     * @param uniqueName Alternate key of businessScenario
+     * @return a BusinessScenariosWithUniqueNameRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public BusinessScenariosWithUniqueNameRequestBuilder businessScenariosWithUniqueName(@jakarta.annotation.Nonnull final String uniqueName) {
+        Objects.requireNonNull(uniqueName);
+        return new BusinessScenariosWithUniqueNameRequestBuilder(pathParameters, requestAdapter, uniqueName);
+    }
+    /**
      * Instantiates a new SolutionsRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public SolutionsRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/solutions{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/solutions{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new SolutionsRequestBuilder and sets the default values.
@@ -66,7 +77,7 @@ public class SolutionsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public SolutionsRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/solutions{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/solutions{?%24expand,%24select}", rawUrl);
     }
     /**
      * Get solutions

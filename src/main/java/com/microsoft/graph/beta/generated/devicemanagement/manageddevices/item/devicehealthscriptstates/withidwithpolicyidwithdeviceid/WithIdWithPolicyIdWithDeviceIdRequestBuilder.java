@@ -29,7 +29,7 @@ public class WithIdWithPolicyIdWithDeviceIdRequestBuilder extends BaseRequestBui
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public WithIdWithPolicyIdWithDeviceIdRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter, @jakarta.annotation.Nullable final String deviceId, @jakarta.annotation.Nullable final String id, @jakarta.annotation.Nullable final String policyId) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/managedDevices/{managedDevice%2Did}/deviceHealthScriptStates/id='{id}',policyId='{policyId}',deviceId='{deviceId}'{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/deviceManagement/managedDevices/{managedDevice%2Did}/deviceHealthScriptStates/id='{id}',policyId='{policyId}',deviceId='{deviceId}'{?%24expand,%24select}", pathParameters);
         this.pathParameters.put("deviceId", deviceId);
         this.pathParameters.put("id", id);
         this.pathParameters.put("policyId", policyId);
@@ -40,7 +40,7 @@ public class WithIdWithPolicyIdWithDeviceIdRequestBuilder extends BaseRequestBui
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public WithIdWithPolicyIdWithDeviceIdRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/managedDevices/{managedDevice%2Did}/deviceHealthScriptStates/id='{id}',policyId='{policyId}',deviceId='{deviceId}'{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/deviceManagement/managedDevices/{managedDevice%2Did}/deviceHealthScriptStates/id='{id}',policyId='{policyId}',deviceId='{deviceId}'{?%24expand,%24select}", rawUrl);
     }
     /**
      * Delete navigation property deviceHealthScriptStates for deviceManagement

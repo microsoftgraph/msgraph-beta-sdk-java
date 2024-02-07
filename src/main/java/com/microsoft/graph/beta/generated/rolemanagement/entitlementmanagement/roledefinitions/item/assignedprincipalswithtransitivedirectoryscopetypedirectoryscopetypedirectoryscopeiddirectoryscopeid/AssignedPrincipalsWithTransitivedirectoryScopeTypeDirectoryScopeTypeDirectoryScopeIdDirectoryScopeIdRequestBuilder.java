@@ -25,7 +25,7 @@ public class AssignedPrincipalsWithTransitivedirectoryScopeTypeDirectoryScopeTyp
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AssignedPrincipalsWithTransitivedirectoryScopeTypeDirectoryScopeTypeDirectoryScopeIdDirectoryScopeIdRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/roleManagement/entitlementManagement/roleDefinitions/{unifiedRoleDefinition%2Did}/assignedPrincipals(transitive=@transitive,directoryScopeType='@directoryScopeType',directoryScopeId='@directoryScopeId'){?transitive*,directoryScopeType*,directoryScopeId*,%24top,%24skip,%24search,%24filter,%24count,%24select,%24orderby}", pathParameters);
+        super(requestAdapter, "{+baseurl}/roleManagement/entitlementManagement/roleDefinitions/{unifiedRoleDefinition%2Did}/assignedPrincipals(transitive=@transitive,directoryScopeType='@directoryScopeType',directoryScopeId='@directoryScopeId'){?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top,directoryScopeId*,directoryScopeType*,transitive*}", pathParameters);
     }
     /**
      * Instantiates a new AssignedPrincipalsWithTransitivedirectoryScopeTypeDirectoryScopeTypeDirectoryScopeIdDirectoryScopeIdRequestBuilder and sets the default values.
@@ -33,7 +33,7 @@ public class AssignedPrincipalsWithTransitivedirectoryScopeTypeDirectoryScopeTyp
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AssignedPrincipalsWithTransitivedirectoryScopeTypeDirectoryScopeTypeDirectoryScopeIdDirectoryScopeIdRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/roleManagement/entitlementManagement/roleDefinitions/{unifiedRoleDefinition%2Did}/assignedPrincipals(transitive=@transitive,directoryScopeType='@directoryScopeType',directoryScopeId='@directoryScopeId'){?transitive*,directoryScopeType*,directoryScopeId*,%24top,%24skip,%24search,%24filter,%24count,%24select,%24orderby}", rawUrl);
+        super(requestAdapter, "{+baseurl}/roleManagement/entitlementManagement/roleDefinitions/{unifiedRoleDefinition%2Did}/assignedPrincipals(transitive=@transitive,directoryScopeType='@directoryScopeType',directoryScopeId='@directoryScopeId'){?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top,directoryScopeId*,directoryScopeType*,transitive*}", rawUrl);
     }
     /**
      * Invoke function assignedPrincipals
@@ -107,6 +107,11 @@ public class AssignedPrincipalsWithTransitivedirectoryScopeTypeDirectoryScopeTyp
         @jakarta.annotation.Nullable
         public String directoryScopeType;
         /**
+         * Expand related entities
+         */
+        @jakarta.annotation.Nullable
+        public String[] expand;
+        /**
          * Filter items by property values
          */
         @jakarta.annotation.Nullable
@@ -156,6 +161,7 @@ public class AssignedPrincipalsWithTransitivedirectoryScopeTypeDirectoryScopeTyp
             allQueryParams.put("%24skip", skip);
             allQueryParams.put("%24top", top);
             allQueryParams.put("transitive", transitive);
+            allQueryParams.put("%24expand", expand);
             allQueryParams.put("%24orderby", orderby);
             allQueryParams.put("%24select", select);
             return allQueryParams;

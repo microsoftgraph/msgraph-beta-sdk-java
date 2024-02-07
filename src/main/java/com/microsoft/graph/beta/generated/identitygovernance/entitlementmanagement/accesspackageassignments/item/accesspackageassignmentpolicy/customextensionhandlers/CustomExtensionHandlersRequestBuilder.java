@@ -26,7 +26,7 @@ public class CustomExtensionHandlersRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
      */
     @Deprecated
     @jakarta.annotation.Nonnull
@@ -38,7 +38,7 @@ public class CustomExtensionHandlersRequestBuilder extends BaseRequestBuilder {
      * @param customExtensionHandlerId The unique identifier of customExtensionHandler
      * @return a CustomExtensionHandlerItemRequestBuilder
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -54,7 +54,7 @@ public class CustomExtensionHandlersRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CustomExtensionHandlersRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/accessPackageAssignments/{accessPackageAssignment%2Did}/accessPackageAssignmentPolicy/customExtensionHandlers{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/accessPackageAssignments/{accessPackageAssignment%2Did}/accessPackageAssignmentPolicy/customExtensionHandlers{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
      * Instantiates a new CustomExtensionHandlersRequestBuilder and sets the default values.
@@ -62,13 +62,13 @@ public class CustomExtensionHandlersRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CustomExtensionHandlersRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/accessPackageAssignments/{accessPackageAssignment%2Did}/accessPackageAssignmentPolicy/customExtensionHandlers{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/accessPackageAssignments/{accessPackageAssignment%2Did}/accessPackageAssignmentPolicy/customExtensionHandlers{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
      * The collection of stages when to execute one or more custom access package workflow extensions. Supports $expand.
      * @return a CustomExtensionHandlerCollectionResponse
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -80,7 +80,7 @@ public class CustomExtensionHandlersRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CustomExtensionHandlerCollectionResponse
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -96,7 +96,7 @@ public class CustomExtensionHandlersRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a CustomExtensionHandler
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -109,7 +109,7 @@ public class CustomExtensionHandlersRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CustomExtensionHandler
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -125,7 +125,7 @@ public class CustomExtensionHandlersRequestBuilder extends BaseRequestBuilder {
      * The collection of stages when to execute one or more custom access package workflow extensions. Supports $expand.
      * @return a RequestInformation
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -137,7 +137,7 @@ public class CustomExtensionHandlersRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -152,7 +152,7 @@ public class CustomExtensionHandlersRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a RequestInformation
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -165,7 +165,7 @@ public class CustomExtensionHandlersRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -182,7 +182,7 @@ public class CustomExtensionHandlersRequestBuilder extends BaseRequestBuilder {
      * @param rawUrl The raw URL to use for the request builder.
      * @return a CustomExtensionHandlersRequestBuilder
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
      */
     @jakarta.annotation.Nonnull
     @Deprecated

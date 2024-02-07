@@ -34,7 +34,7 @@ public class ProtectionRule extends Entity implements Parsable {
         return new ProtectionRule();
     }
     /**
-     * Gets the createdBy property value. The createdBy property
+     * Gets the createdBy property value. Name of the user or application that created the rule.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -42,7 +42,7 @@ public class ProtectionRule extends Entity implements Parsable {
         return this.backingStore.get("createdBy");
     }
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. Timestamp of rule creation.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
@@ -50,7 +50,7 @@ public class ProtectionRule extends Entity implements Parsable {
         return this.backingStore.get("createdDateTime");
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. Name of the rule.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -73,7 +73,7 @@ public class ProtectionRule extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the isEnabled property value. The isEnabled property
+     * Gets the isEnabled property value. Whether rule is turned on for the tenant.
      * @return a Boolean
      */
     @jakarta.annotation.Nullable
@@ -81,7 +81,7 @@ public class ProtectionRule extends Entity implements Parsable {
         return this.backingStore.get("isEnabled");
     }
     /**
-     * Gets the lastModifiedBy property value. The lastModifiedBy property
+     * Gets the lastModifiedBy property value. Name of the user or application who last updated the rule.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -89,7 +89,7 @@ public class ProtectionRule extends Entity implements Parsable {
         return this.backingStore.get("lastModifiedBy");
     }
     /**
-     * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Gets the lastModifiedDateTime property value. Timestamp of when the rule was last updated.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
@@ -111,42 +111,42 @@ public class ProtectionRule extends Entity implements Parsable {
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
     }
     /**
-     * Sets the createdBy property value. The createdBy property
+     * Sets the createdBy property value. Name of the user or application that created the rule.
      * @param value Value to set for the createdBy property.
      */
     public void setCreatedBy(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("createdBy", value);
     }
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. Timestamp of rule creation.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. Name of the rule.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the isEnabled property value. The isEnabled property
+     * Sets the isEnabled property value. Whether rule is turned on for the tenant.
      * @param value Value to set for the isEnabled property.
      */
     public void setIsEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isEnabled", value);
     }
     /**
-     * Sets the lastModifiedBy property value. The lastModifiedBy property
+     * Sets the lastModifiedBy property value. Name of the user or application who last updated the rule.
      * @param value Value to set for the lastModifiedBy property.
      */
     public void setLastModifiedBy(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("lastModifiedBy", value);
     }
     /**
-     * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Sets the lastModifiedDateTime property value. Timestamp of when the rule was last updated.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

@@ -26,7 +26,7 @@ public class AuditLogRecordItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AuditLogRecordItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/security/auditLog/queries/{auditLogQuery%2Did}/records/{auditLogRecord%2Did}{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/security/auditLog/queries/{auditLogQuery%2Did}/records/{auditLogRecord%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new AuditLogRecordItemRequestBuilder and sets the default values.
@@ -34,7 +34,7 @@ public class AuditLogRecordItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AuditLogRecordItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/security/auditLog/queries/{auditLogQuery%2Did}/records/{auditLogRecord%2Did}{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/security/auditLog/queries/{auditLogQuery%2Did}/records/{auditLogRecord%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
      * Delete navigation property records for security
@@ -54,7 +54,7 @@ public class AuditLogRecordItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get records from security
+     * An individual audit log record.
      * @return a AuditLogRecord
      */
     @jakarta.annotation.Nullable
@@ -62,7 +62,7 @@ public class AuditLogRecordItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get records from security
+     * An individual audit log record.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a AuditLogRecord
      */
@@ -119,7 +119,7 @@ public class AuditLogRecordItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get records from security
+     * An individual audit log record.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -127,7 +127,7 @@ public class AuditLogRecordItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get records from security
+     * An individual audit log record.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -179,7 +179,7 @@ public class AuditLogRecordItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get records from security
+     * An individual audit log record.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -69,7 +69,7 @@ public class ServiceNowConnection extends Entity implements Parsable {
         return this.backingStore.get("incidentApiUrl");
     }
     /**
-     * Gets the instanceUrl property value. Indicates the ServiceNow instance URL that Intune will connect to. Saved in the format of https://<instance>.service-now.com
+     * Gets the instanceUrl property value. Indicates the ServiceNow instance URL that Intune will connect to. Saved in the format of https://.service-now.com
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -137,7 +137,7 @@ public class ServiceNowConnection extends Entity implements Parsable {
         this.backingStore.set("incidentApiUrl", value);
     }
     /**
-     * Sets the instanceUrl property value. Indicates the ServiceNow instance URL that Intune will connect to. Saved in the format of https://<instance>.service-now.com
+     * Sets the instanceUrl property value. Indicates the ServiceNow instance URL that Intune will connect to. Saved in the format of https://.service-now.com
      * @param value Value to set for the instanceUrl property.
      */
     public void setInstanceUrl(@jakarta.annotation.Nullable final String value) {

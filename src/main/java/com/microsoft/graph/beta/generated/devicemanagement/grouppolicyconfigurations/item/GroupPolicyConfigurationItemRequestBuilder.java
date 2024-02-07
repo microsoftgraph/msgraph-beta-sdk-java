@@ -58,7 +58,7 @@ public class GroupPolicyConfigurationItemRequestBuilder extends BaseRequestBuild
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public GroupPolicyConfigurationItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/groupPolicyConfigurations/{groupPolicyConfiguration%2Did}{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/deviceManagement/groupPolicyConfigurations/{groupPolicyConfiguration%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new GroupPolicyConfigurationItemRequestBuilder and sets the default values.
@@ -66,7 +66,7 @@ public class GroupPolicyConfigurationItemRequestBuilder extends BaseRequestBuild
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public GroupPolicyConfigurationItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/groupPolicyConfigurations/{groupPolicyConfiguration%2Did}{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/deviceManagement/groupPolicyConfigurations/{groupPolicyConfiguration%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
      * Delete navigation property groupPolicyConfigurations for deviceManagement

@@ -1,5 +1,6 @@
 package com.microsoft.graph.beta.admin.people;
 
+import com.microsoft.graph.beta.admin.people.iteminsights.ItemInsightsRequestBuilder;
 import com.microsoft.graph.beta.admin.people.profilecardproperties.ProfileCardPropertiesRequestBuilder;
 import com.microsoft.graph.beta.admin.people.pronouns.PronounsRequestBuilder;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
@@ -23,6 +24,13 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PeopleRequestBuilder extends BaseRequestBuilder {
     /**
+     * Provides operations to manage the itemInsights property of the microsoft.graph.peopleAdminSettings entity.
+     */
+    @jakarta.annotation.Nonnull
+    public ItemInsightsRequestBuilder itemInsights() {
+        return new ItemInsightsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the profileCardProperties property of the microsoft.graph.peopleAdminSettings entity.
      */
     @jakarta.annotation.Nonnull
@@ -42,7 +50,7 @@ public class PeopleRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public PeopleRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/admin/people{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/admin/people{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new PeopleRequestBuilder and sets the default values.
@@ -50,7 +58,7 @@ public class PeopleRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public PeopleRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/admin/people{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/admin/people{?%24expand,%24select}", rawUrl);
     }
     /**
      * Delete navigation property people for admin

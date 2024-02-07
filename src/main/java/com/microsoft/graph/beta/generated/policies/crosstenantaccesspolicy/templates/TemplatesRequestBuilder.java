@@ -42,7 +42,7 @@ public class TemplatesRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public TemplatesRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/policies/crossTenantAccessPolicy/templates{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/policies/crossTenantAccessPolicy/templates{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new TemplatesRequestBuilder and sets the default values.
@@ -50,7 +50,7 @@ public class TemplatesRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public TemplatesRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/policies/crossTenantAccessPolicy/templates{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/policies/crossTenantAccessPolicy/templates{?%24expand,%24select}", rawUrl);
     }
     /**
      * Delete navigation property templates for policies

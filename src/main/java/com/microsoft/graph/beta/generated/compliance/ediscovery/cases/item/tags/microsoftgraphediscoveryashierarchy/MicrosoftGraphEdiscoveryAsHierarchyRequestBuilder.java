@@ -25,7 +25,7 @@ public class MicrosoftGraphEdiscoveryAsHierarchyRequestBuilder extends BaseReque
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public MicrosoftGraphEdiscoveryAsHierarchyRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/compliance/ediscovery/cases/{case%2Did}/tags/microsoft.graph.ediscovery.asHierarchy(){?%24top,%24skip,%24search,%24filter,%24count,%24select,%24orderby}", pathParameters);
+        super(requestAdapter, "{+baseurl}/compliance/ediscovery/cases/{case%2Did}/tags/microsoft.graph.ediscovery.asHierarchy(){?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
      * Instantiates a new MicrosoftGraphEdiscoveryAsHierarchyRequestBuilder and sets the default values.
@@ -33,13 +33,13 @@ public class MicrosoftGraphEdiscoveryAsHierarchyRequestBuilder extends BaseReque
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public MicrosoftGraphEdiscoveryAsHierarchyRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/compliance/ediscovery/cases/{case%2Did}/tags/microsoft.graph.ediscovery.asHierarchy(){?%24top,%24skip,%24search,%24filter,%24count,%24select,%24orderby}", rawUrl);
+        super(requestAdapter, "{+baseurl}/compliance/ediscovery/cases/{case%2Did}/tags/microsoft.graph.ediscovery.asHierarchy(){?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
      * Invoke function asHierarchy
      * @return a AsHierarchyGetResponse
      * @deprecated
-     * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
+     * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -51,7 +51,7 @@ public class MicrosoftGraphEdiscoveryAsHierarchyRequestBuilder extends BaseReque
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a AsHierarchyGetResponse
      * @deprecated
-     * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
+     * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -66,7 +66,7 @@ public class MicrosoftGraphEdiscoveryAsHierarchyRequestBuilder extends BaseReque
      * Invoke function asHierarchy
      * @return a RequestInformation
      * @deprecated
-     * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
+     * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -78,7 +78,7 @@ public class MicrosoftGraphEdiscoveryAsHierarchyRequestBuilder extends BaseReque
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
-     * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
+     * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -93,7 +93,7 @@ public class MicrosoftGraphEdiscoveryAsHierarchyRequestBuilder extends BaseReque
      * @param rawUrl The raw URL to use for the request builder.
      * @return a MicrosoftGraphEdiscoveryAsHierarchyRequestBuilder
      * @deprecated
-     * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
+     * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -111,6 +111,11 @@ public class MicrosoftGraphEdiscoveryAsHierarchyRequestBuilder extends BaseReque
          */
         @jakarta.annotation.Nullable
         public Boolean count;
+        /**
+         * Expand related entities
+         */
+        @jakarta.annotation.Nullable
+        public String[] expand;
         /**
          * Filter items by property values
          */
@@ -153,6 +158,7 @@ public class MicrosoftGraphEdiscoveryAsHierarchyRequestBuilder extends BaseReque
             allQueryParams.put("%24search", search);
             allQueryParams.put("%24skip", skip);
             allQueryParams.put("%24top", top);
+            allQueryParams.put("%24expand", expand);
             allQueryParams.put("%24orderby", orderby);
             allQueryParams.put("%24select", select);
             return allQueryParams;

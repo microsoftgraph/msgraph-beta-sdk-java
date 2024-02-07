@@ -58,7 +58,7 @@ public class UpdatableAssetItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public UpdatableAssetItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/admin/windows/updates/updatableAssets/{updatableAsset%2Did}{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/admin/windows/updates/updatableAssets/{updatableAsset%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new UpdatableAssetItemRequestBuilder and sets the default values.
@@ -66,19 +66,19 @@ public class UpdatableAssetItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public UpdatableAssetItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/admin/windows/updates/updatableAssets/{updatableAsset%2Did}{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/admin/windows/updates/updatableAssets/{updatableAsset%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete an updatableAsset object.
-     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-updatableasset-delete?view=graph-rest-1.0">Find more info here</a>
+     * Delete an updatableAssetGroup object. When an updatableAssetGroup object, its member updatableAsset objects are not deleted.
+     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-updatableassetgroup-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete an updatableAsset object.
+     * Delete an updatableAssetGroup object. When an updatableAssetGroup object, its member updatableAsset objects are not deleted.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-updatableasset-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-updatableassetgroup-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -88,19 +88,19 @@ public class UpdatableAssetItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties of an azureADDevice object.
+     * Read the properties and relationships of an updatableAsset object.
      * @return a UpdatableAsset
-     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-azureaddevice-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-updatableasset-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UpdatableAsset get() {
         return get(null);
     }
     /**
-     * Read the properties of an azureADDevice object.
+     * Read the properties and relationships of an updatableAsset object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a UpdatableAsset
-     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-azureaddevice-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-updatableasset-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UpdatableAsset get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -135,7 +135,7 @@ public class UpdatableAssetItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, UpdatableAsset::createFromDiscriminatorValue);
     }
     /**
-     * Delete an updatableAsset object.
+     * Delete an updatableAssetGroup object. When an updatableAssetGroup object, its member updatableAsset objects are not deleted.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -143,7 +143,7 @@ public class UpdatableAssetItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete an updatableAsset object.
+     * Delete an updatableAssetGroup object. When an updatableAssetGroup object, its member updatableAsset objects are not deleted.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -155,7 +155,7 @@ public class UpdatableAssetItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties of an azureADDevice object.
+     * Read the properties and relationships of an updatableAsset object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -163,7 +163,7 @@ public class UpdatableAssetItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties of an azureADDevice object.
+     * Read the properties and relationships of an updatableAsset object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -215,7 +215,7 @@ public class UpdatableAssetItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties of an azureADDevice object.
+     * Read the properties and relationships of an updatableAsset object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

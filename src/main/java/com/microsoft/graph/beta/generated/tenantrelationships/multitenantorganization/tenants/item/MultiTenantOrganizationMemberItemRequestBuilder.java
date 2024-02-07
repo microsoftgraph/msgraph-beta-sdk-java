@@ -26,7 +26,7 @@ public class MultiTenantOrganizationMemberItemRequestBuilder extends BaseRequest
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public MultiTenantOrganizationMemberItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/tenantRelationships/multiTenantOrganization/tenants/{multiTenantOrganizationMember%2Did}{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/tenantRelationships/multiTenantOrganization/tenants/{multiTenantOrganizationMember%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new MultiTenantOrganizationMemberItemRequestBuilder and sets the default values.
@@ -34,7 +34,7 @@ public class MultiTenantOrganizationMemberItemRequestBuilder extends BaseRequest
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public MultiTenantOrganizationMemberItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/tenantRelationships/multiTenantOrganization/tenants/{multiTenantOrganizationMember%2Did}{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/tenantRelationships/multiTenantOrganization/tenants/{multiTenantOrganizationMember%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
      * Remove a tenant from a multitenant organization. A tenant can be removed in the following scenarios: To allow for asynchronous processing, you must wait for up to 2 hours before removal of a tenant is completed.

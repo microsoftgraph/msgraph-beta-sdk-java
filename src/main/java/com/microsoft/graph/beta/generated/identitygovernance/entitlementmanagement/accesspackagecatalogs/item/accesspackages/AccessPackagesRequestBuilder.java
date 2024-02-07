@@ -25,7 +25,7 @@ public class AccessPackagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
      */
     @Deprecated
     @jakarta.annotation.Nonnull
@@ -37,7 +37,7 @@ public class AccessPackagesRequestBuilder extends BaseRequestBuilder {
      * @param accessPackageId The unique identifier of accessPackage
      * @return a AccessPackageItemRequestBuilder
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -53,7 +53,7 @@ public class AccessPackagesRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AccessPackagesRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/accessPackageCatalogs/{accessPackageCatalog%2Did}/accessPackages{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/accessPackageCatalogs/{accessPackageCatalog%2Did}/accessPackages{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
      * Instantiates a new AccessPackagesRequestBuilder and sets the default values.
@@ -61,13 +61,13 @@ public class AccessPackagesRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AccessPackagesRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/accessPackageCatalogs/{accessPackageCatalog%2Did}/accessPackages{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/accessPackageCatalogs/{accessPackageCatalog%2Did}/accessPackages{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
      * The access packages in this catalog. Read-only. Nullable. Supports $expand.
      * @return a AccessPackageCollectionResponse
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -79,7 +79,7 @@ public class AccessPackagesRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a AccessPackageCollectionResponse
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -94,7 +94,7 @@ public class AccessPackagesRequestBuilder extends BaseRequestBuilder {
      * The access packages in this catalog. Read-only. Nullable. Supports $expand.
      * @return a RequestInformation
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -106,7 +106,7 @@ public class AccessPackagesRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -121,7 +121,7 @@ public class AccessPackagesRequestBuilder extends BaseRequestBuilder {
      * @param rawUrl The raw URL to use for the request builder.
      * @return a AccessPackagesRequestBuilder
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
      */
     @jakarta.annotation.Nonnull
     @Deprecated

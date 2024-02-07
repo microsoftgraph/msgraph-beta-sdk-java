@@ -59,7 +59,7 @@ public class DeviceManagementTroubleshootingErrorDetails implements AdditionalDa
         return this.backingStore;
     }
     /**
-     * Gets the context property value. Not yet documented
+     * Gets the context property value. The context property
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -67,7 +67,7 @@ public class DeviceManagementTroubleshootingErrorDetails implements AdditionalDa
         return this.backingStore.get("context");
     }
     /**
-     * Gets the failure property value. Not yet documented
+     * Gets the failure property value. The failure property
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -151,14 +151,14 @@ public class DeviceManagementTroubleshootingErrorDetails implements AdditionalDa
         this.backingStore = value;
     }
     /**
-     * Sets the context property value. Not yet documented
+     * Sets the context property value. The context property
      * @param value Value to set for the context property.
      */
     public void setContext(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("context", value);
     }
     /**
-     * Sets the failure property value. Not yet documented
+     * Sets the failure property value. The failure property
      * @param value Value to set for the failure property.
      */
     public void setFailure(@jakarta.annotation.Nullable final String value) {

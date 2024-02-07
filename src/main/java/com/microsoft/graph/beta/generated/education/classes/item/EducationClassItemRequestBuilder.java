@@ -98,7 +98,7 @@ public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public EducationClassItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/education/classes/{educationClass%2Did}{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/education/classes/{educationClass%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new EducationClassItemRequestBuilder and sets the default values.
@@ -106,7 +106,7 @@ public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public EducationClassItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/education/classes/{educationClass%2Did}{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/education/classes/{educationClass%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
      * Delete an educationClass. Because a class is also a universal group, deleting a class deletes the group.

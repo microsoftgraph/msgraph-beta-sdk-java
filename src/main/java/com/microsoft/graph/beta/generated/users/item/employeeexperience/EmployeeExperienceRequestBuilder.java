@@ -3,6 +3,7 @@ package com.microsoft.graph.beta.users.item.employeeexperience;
 import com.microsoft.graph.beta.models.EmployeeExperienceUser;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.users.item.employeeexperience.learningcourseactivities.LearningCourseActivitiesRequestBuilder;
+import com.microsoft.graph.beta.users.item.employeeexperience.learningcourseactivitieswithexternalcourseactivityid.LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -34,7 +35,7 @@ public class EmployeeExperienceRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public EmployeeExperienceRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/employeeExperience{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/employeeExperience{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new EmployeeExperienceRequestBuilder and sets the default values.
@@ -42,7 +43,7 @@ public class EmployeeExperienceRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public EmployeeExperienceRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/employeeExperience{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/employeeExperience{?%24expand,%24select}", rawUrl);
     }
     /**
      * Delete navigation property employeeExperience for users
@@ -81,6 +82,16 @@ public class EmployeeExperienceRequestBuilder extends BaseRequestBuilder {
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, EmployeeExperienceUser::createFromDiscriminatorValue);
+    }
+    /**
+     * Provides operations to manage the learningCourseActivities property of the microsoft.graph.employeeExperienceUser entity.
+     * @param externalcourseActivityId Alternate key of learningCourseActivity
+     * @return a LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilder learningCourseActivitiesWithExternalcourseActivityId(@jakarta.annotation.Nonnull final String externalcourseActivityId) {
+        Objects.requireNonNull(externalcourseActivityId);
+        return new LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilder(pathParameters, requestAdapter, externalcourseActivityId);
     }
     /**
      * Update the navigation property employeeExperience in users

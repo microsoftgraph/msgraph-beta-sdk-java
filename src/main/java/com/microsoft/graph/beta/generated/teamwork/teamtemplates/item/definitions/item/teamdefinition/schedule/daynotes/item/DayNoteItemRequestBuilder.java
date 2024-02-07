@@ -26,7 +26,7 @@ public class DayNoteItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DayNoteItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/teamwork/teamTemplates/{teamTemplate%2Did}/definitions/{teamTemplateDefinition%2Did}/teamDefinition/schedule/dayNotes/{dayNote%2Did}{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/teamwork/teamTemplates/{teamTemplate%2Did}/definitions/{teamTemplateDefinition%2Did}/teamDefinition/schedule/dayNotes/{dayNote%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new DayNoteItemRequestBuilder and sets the default values.
@@ -34,7 +34,7 @@ public class DayNoteItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DayNoteItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/teamwork/teamTemplates/{teamTemplate%2Did}/definitions/{teamTemplateDefinition%2Did}/teamDefinition/schedule/dayNotes/{dayNote%2Did}{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/teamwork/teamTemplates/{teamTemplate%2Did}/definitions/{teamTemplateDefinition%2Did}/teamDefinition/schedule/dayNotes/{dayNote%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
      * Delete navigation property dayNotes for teamwork

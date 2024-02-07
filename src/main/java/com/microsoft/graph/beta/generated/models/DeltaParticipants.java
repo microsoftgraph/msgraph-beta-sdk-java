@@ -36,7 +36,7 @@ public class DeltaParticipants extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the participants property value. The participants property
+     * Gets the participants property value. The collection of participants that were updated since the last roster update.
      * @return a java.util.List<Participant>
      */
     @jakarta.annotation.Nullable
@@ -62,7 +62,7 @@ public class DeltaParticipants extends Entity implements Parsable {
         writer.writeLongValue("sequenceNumber", this.getSequenceNumber());
     }
     /**
-     * Sets the participants property value. The participants property
+     * Sets the participants property value. The collection of participants that were updated since the last roster update.
      * @param value Value to set for the participants property.
      */
     public void setParticipants(@jakarta.annotation.Nullable final java.util.List<Participant> value) {

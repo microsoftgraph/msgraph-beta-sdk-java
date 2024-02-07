@@ -48,7 +48,7 @@ public class ExportJobsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ExportJobsRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/reports/exportJobs{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/deviceManagement/reports/exportJobs{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
      * Instantiates a new ExportJobsRequestBuilder and sets the default values.
@@ -56,10 +56,10 @@ public class ExportJobsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ExportJobsRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/reports/exportJobs{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/deviceManagement/reports/exportJobs{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Entity representing a job to export a report
+     * Entity representing a job to export a report.
      * @return a DeviceManagementExportJobCollectionResponse
      */
     @jakarta.annotation.Nullable
@@ -67,7 +67,7 @@ public class ExportJobsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Entity representing a job to export a report
+     * Entity representing a job to export a report.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a DeviceManagementExportJobCollectionResponse
      */
@@ -104,7 +104,7 @@ public class ExportJobsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceManagementExportJob::createFromDiscriminatorValue);
     }
     /**
-     * Entity representing a job to export a report
+     * Entity representing a job to export a report.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -112,7 +112,7 @@ public class ExportJobsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Entity representing a job to export a report
+     * Entity representing a job to export a report.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -158,7 +158,7 @@ public class ExportJobsRequestBuilder extends BaseRequestBuilder {
         return new ExportJobsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Entity representing a job to export a report
+     * Entity representing a job to export a report.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -34,7 +34,7 @@ public class TenantReferenceTenantItemRequestBuilder extends BaseRequestBuilder 
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public TenantReferenceTenantItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/directory/outboundSharedUserProfiles/{outboundSharedUserProfile%2DuserId}/tenants/{tenantReference%2DtenantId}{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/directory/outboundSharedUserProfiles/{outboundSharedUserProfile%2DuserId}/tenants/{tenantReference%2DtenantId}{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new TenantReferenceTenantItemRequestBuilder and sets the default values.
@@ -42,7 +42,7 @@ public class TenantReferenceTenantItemRequestBuilder extends BaseRequestBuilder 
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public TenantReferenceTenantItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/directory/outboundSharedUserProfiles/{outboundSharedUserProfile%2DuserId}/tenants/{tenantReference%2DtenantId}{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/directory/outboundSharedUserProfiles/{outboundSharedUserProfile%2DuserId}/tenants/{tenantReference%2DtenantId}{?%24expand,%24select}", rawUrl);
     }
     /**
      * Delete navigation property tenants for directory

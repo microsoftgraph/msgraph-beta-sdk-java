@@ -42,7 +42,7 @@ public class CloudPcOnPremisesConnectionItemRequestBuilder extends BaseRequestBu
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CloudPcOnPremisesConnectionItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/onPremisesConnections/{cloudPcOnPremisesConnection%2Did}{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/onPremisesConnections/{cloudPcOnPremisesConnection%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new CloudPcOnPremisesConnectionItemRequestBuilder and sets the default values.
@@ -50,7 +50,7 @@ public class CloudPcOnPremisesConnectionItemRequestBuilder extends BaseRequestBu
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CloudPcOnPremisesConnectionItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/onPremisesConnections/{cloudPcOnPremisesConnection%2Did}{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/onPremisesConnections/{cloudPcOnPremisesConnection%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
      * Delete a specific cloudPcOnPremisesConnection object. When you delete an Azure network connection, permissions to the service are removed from the specified Azure resources. You cannot delete an Azure network connection when it's in use, as indicated by the inUse property.

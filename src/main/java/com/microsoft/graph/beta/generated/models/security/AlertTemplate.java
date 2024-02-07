@@ -56,7 +56,7 @@ public class AlertTemplate implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore;
     }
     /**
-     * Gets the category property value. The category property
+     * Gets the category property value. Category assigned to the alert triggered by the custom detection rule.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class AlertTemplate implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore.get("category");
     }
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. Description of the alert triggered by the custom detection rule.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -89,7 +89,7 @@ public class AlertTemplate implements AdditionalDataHolder, BackedModel, Parsabl
         return deserializerMap;
     }
     /**
-     * Gets the impactedAssets property value. The impactedAssets property
+     * Gets the impactedAssets property value. Which asset or assets were impacted based on the alert triggered by the custom detection rule.
      * @return a java.util.List<ImpactedAsset>
      */
     @jakarta.annotation.Nullable
@@ -97,7 +97,7 @@ public class AlertTemplate implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore.get("impactedAssets");
     }
     /**
-     * Gets the mitreTechniques property value. The mitreTechniques property
+     * Gets the mitreTechniques property value. MITRE technique assigned to the alert triggered by the custom detection rule.
      * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
@@ -113,7 +113,7 @@ public class AlertTemplate implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the recommendedActions property value. The recommendedActions property
+     * Gets the recommendedActions property value. Recommended actions to mitigate the threat related to the alert triggered by the custom detection rule.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -129,7 +129,7 @@ public class AlertTemplate implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore.get("severity");
     }
     /**
-     * Gets the title property value. The title property
+     * Gets the title property value. Name of the alert triggered by the custom detection rule.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -168,28 +168,28 @@ public class AlertTemplate implements AdditionalDataHolder, BackedModel, Parsabl
         this.backingStore = value;
     }
     /**
-     * Sets the category property value. The category property
+     * Sets the category property value. Category assigned to the alert triggered by the custom detection rule.
      * @param value Value to set for the category property.
      */
     public void setCategory(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("category", value);
     }
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. Description of the alert triggered by the custom detection rule.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("description", value);
     }
     /**
-     * Sets the impactedAssets property value. The impactedAssets property
+     * Sets the impactedAssets property value. Which asset or assets were impacted based on the alert triggered by the custom detection rule.
      * @param value Value to set for the impactedAssets property.
      */
     public void setImpactedAssets(@jakarta.annotation.Nullable final java.util.List<ImpactedAsset> value) {
         this.backingStore.set("impactedAssets", value);
     }
     /**
-     * Sets the mitreTechniques property value. The mitreTechniques property
+     * Sets the mitreTechniques property value. MITRE technique assigned to the alert triggered by the custom detection rule.
      * @param value Value to set for the mitreTechniques property.
      */
     public void setMitreTechniques(@jakarta.annotation.Nullable final java.util.List<String> value) {
@@ -203,7 +203,7 @@ public class AlertTemplate implements AdditionalDataHolder, BackedModel, Parsabl
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the recommendedActions property value. The recommendedActions property
+     * Sets the recommendedActions property value. Recommended actions to mitigate the threat related to the alert triggered by the custom detection rule.
      * @param value Value to set for the recommendedActions property.
      */
     public void setRecommendedActions(@jakarta.annotation.Nullable final String value) {
@@ -217,7 +217,7 @@ public class AlertTemplate implements AdditionalDataHolder, BackedModel, Parsabl
         this.backingStore.set("severity", value);
     }
     /**
-     * Sets the title property value. The title property
+     * Sets the title property value. Name of the alert triggered by the custom detection rule.
      * @param value Value to set for the title property.
      */
     public void setTitle(@jakarta.annotation.Nullable final String value) {

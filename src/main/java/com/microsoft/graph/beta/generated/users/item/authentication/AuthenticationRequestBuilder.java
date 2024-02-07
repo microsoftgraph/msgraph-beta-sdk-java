@@ -11,6 +11,7 @@ import com.microsoft.graph.beta.users.item.authentication.passwordlessmicrosofta
 import com.microsoft.graph.beta.users.item.authentication.passwordmethods.PasswordMethodsRequestBuilder;
 import com.microsoft.graph.beta.users.item.authentication.phonemethods.PhoneMethodsRequestBuilder;
 import com.microsoft.graph.beta.users.item.authentication.platformcredentialmethods.PlatformCredentialMethodsRequestBuilder;
+import com.microsoft.graph.beta.users.item.authentication.signinpreferences.SignInPreferencesRequestBuilder;
 import com.microsoft.graph.beta.users.item.authentication.softwareoathmethods.SoftwareOathMethodsRequestBuilder;
 import com.microsoft.graph.beta.users.item.authentication.temporaryaccesspassmethods.TemporaryAccessPassMethodsRequestBuilder;
 import com.microsoft.graph.beta.users.item.authentication.windowshelloforbusinessmethods.WindowsHelloForBusinessMethodsRequestBuilder;
@@ -96,6 +97,13 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder {
         return new PlatformCredentialMethodsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * The signInPreferences property
+     */
+    @jakarta.annotation.Nonnull
+    public SignInPreferencesRequestBuilder signInPreferences() {
+        return new SignInPreferencesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the softwareOathMethods property of the microsoft.graph.authentication entity.
      */
     @jakarta.annotation.Nonnull
@@ -122,7 +130,7 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AuthenticationRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/authentication{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/authentication{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new AuthenticationRequestBuilder and sets the default values.
@@ -130,7 +138,7 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AuthenticationRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/authentication{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/authentication{?%24expand,%24select}", rawUrl);
     }
     /**
      * Delete navigation property authentication for users

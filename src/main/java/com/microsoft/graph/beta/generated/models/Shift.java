@@ -26,7 +26,7 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
         return new Shift();
     }
     /**
-     * Gets the draftShift property value. Draft changes in the shift are only visible to managers until they are shared.
+     * Gets the draftShift property value. Draft changes in the shift. Draft changes are only visible to managers. The changes are visible to employees when they are shared, which copies the changes from the draftShift to the sharedShift property.
      * @return a ShiftItem
      */
     @jakarta.annotation.Nullable
@@ -43,8 +43,11 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
         deserializerMap.put("draftShift", (n) -> { this.setDraftShift(n.getObjectValue(ShiftItem::createFromDiscriminatorValue)); });
         deserializerMap.put("isStagedForDeletion", (n) -> { this.setIsStagedForDeletion(n.getBooleanValue()); });
         deserializerMap.put("schedulingGroupId", (n) -> { this.setSchedulingGroupId(n.getStringValue()); });
+        deserializerMap.put("schedulingGroupInfo", (n) -> { this.setSchedulingGroupInfo(n.getObjectValue(SchedulingGroupInfo::createFromDiscriminatorValue)); });
         deserializerMap.put("sharedShift", (n) -> { this.setSharedShift(n.getObjectValue(ShiftItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("teamInfo", (n) -> { this.setTeamInfo(n.getObjectValue(ShiftsTeamInfo::createFromDiscriminatorValue)); });
         deserializerMap.put("userId", (n) -> { this.setUserId(n.getStringValue()); });
+        deserializerMap.put("userInfo", (n) -> { this.setUserInfo(n.getObjectValue(ShiftsUserInfo::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -64,12 +67,28 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
         return this.backingStore.get("schedulingGroupId");
     }
     /**
-     * Gets the sharedShift property value. The shared version of this shift that is viewable by both employees and managers.
+     * Gets the schedulingGroupInfo property value. The schedulingGroupInfo property
+     * @return a SchedulingGroupInfo
+     */
+    @jakarta.annotation.Nullable
+    public SchedulingGroupInfo getSchedulingGroupInfo() {
+        return this.backingStore.get("schedulingGroupInfo");
+    }
+    /**
+     * Gets the sharedShift property value. The shared version of this shift that is viewable by both employees and managers. Updates to the sharedShift property send notifications to users in the Teams client.
      * @return a ShiftItem
      */
     @jakarta.annotation.Nullable
     public ShiftItem getSharedShift() {
         return this.backingStore.get("sharedShift");
+    }
+    /**
+     * Gets the teamInfo property value. The teamInfo property
+     * @return a ShiftsTeamInfo
+     */
+    @jakarta.annotation.Nullable
+    public ShiftsTeamInfo getTeamInfo() {
+        return this.backingStore.get("teamInfo");
     }
     /**
      * Gets the userId property value. ID of the user assigned to the shift. Required.
@@ -78,6 +97,14 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
     @jakarta.annotation.Nullable
     public String getUserId() {
         return this.backingStore.get("userId");
+    }
+    /**
+     * Gets the userInfo property value. The userInfo property
+     * @return a ShiftsUserInfo
+     */
+    @jakarta.annotation.Nullable
+    public ShiftsUserInfo getUserInfo() {
+        return this.backingStore.get("userInfo");
     }
     /**
      * Serializes information the current object
@@ -93,7 +120,7 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
         writer.writeStringValue("userId", this.getUserId());
     }
     /**
-     * Sets the draftShift property value. Draft changes in the shift are only visible to managers until they are shared.
+     * Sets the draftShift property value. Draft changes in the shift. Draft changes are only visible to managers. The changes are visible to employees when they are shared, which copies the changes from the draftShift to the sharedShift property.
      * @param value Value to set for the draftShift property.
      */
     public void setDraftShift(@jakarta.annotation.Nullable final ShiftItem value) {
@@ -114,11 +141,25 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
         this.backingStore.set("schedulingGroupId", value);
     }
     /**
-     * Sets the sharedShift property value. The shared version of this shift that is viewable by both employees and managers.
+     * Sets the schedulingGroupInfo property value. The schedulingGroupInfo property
+     * @param value Value to set for the schedulingGroupInfo property.
+     */
+    public void setSchedulingGroupInfo(@jakarta.annotation.Nullable final SchedulingGroupInfo value) {
+        this.backingStore.set("schedulingGroupInfo", value);
+    }
+    /**
+     * Sets the sharedShift property value. The shared version of this shift that is viewable by both employees and managers. Updates to the sharedShift property send notifications to users in the Teams client.
      * @param value Value to set for the sharedShift property.
      */
     public void setSharedShift(@jakarta.annotation.Nullable final ShiftItem value) {
         this.backingStore.set("sharedShift", value);
+    }
+    /**
+     * Sets the teamInfo property value. The teamInfo property
+     * @param value Value to set for the teamInfo property.
+     */
+    public void setTeamInfo(@jakarta.annotation.Nullable final ShiftsTeamInfo value) {
+        this.backingStore.set("teamInfo", value);
     }
     /**
      * Sets the userId property value. ID of the user assigned to the shift. Required.
@@ -126,5 +167,12 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
      */
     public void setUserId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("userId", value);
+    }
+    /**
+     * Sets the userInfo property value. The userInfo property
+     * @param value Value to set for the userInfo property.
+     */
+    public void setUserInfo(@jakarta.annotation.Nullable final ShiftsUserInfo value) {
+        this.backingStore.set("userInfo", value);
     }
 }

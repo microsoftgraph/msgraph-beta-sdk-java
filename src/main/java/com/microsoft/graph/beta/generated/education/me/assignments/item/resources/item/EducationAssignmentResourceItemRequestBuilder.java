@@ -34,7 +34,7 @@ public class EducationAssignmentResourceItemRequestBuilder extends BaseRequestBu
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public EducationAssignmentResourceItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/education/me/assignments/{educationAssignment%2Did}/resources/{educationAssignmentResource%2Did}{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/education/me/assignments/{educationAssignment%2Did}/resources/{educationAssignmentResource%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new EducationAssignmentResourceItemRequestBuilder and sets the default values.
@@ -42,7 +42,7 @@ public class EducationAssignmentResourceItemRequestBuilder extends BaseRequestBu
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public EducationAssignmentResourceItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/education/me/assignments/{educationAssignment%2Did}/resources/{educationAssignmentResource%2Did}{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/education/me/assignments/{educationAssignment%2Did}/resources/{educationAssignmentResource%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
      * Delete a specific educationAssignmentResource attached to an assignment. Only teachers in the class can remove a resource. After an assignment has been published to students, teachers can't remove resources that are marked as 'distributeToStudents'.

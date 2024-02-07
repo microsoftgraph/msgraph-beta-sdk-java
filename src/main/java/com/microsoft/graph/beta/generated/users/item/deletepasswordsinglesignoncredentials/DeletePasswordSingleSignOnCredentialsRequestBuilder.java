@@ -35,16 +35,18 @@ public class DeletePasswordSingleSignOnCredentialsRequestBuilder extends BaseReq
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/deletePasswordSingleSignOnCredentials", rawUrl);
     }
     /**
-     * Invoke action deletePasswordSingleSignOnCredentials
+     * Delete the password-based single sign-on credentials for a given user to a given service principal.
      * @param body The request body
+     * @see <a href="https://learn.microsoft.com/graph/api/user-deletepasswordsinglesignoncredentials?view=graph-rest-1.0">Find more info here</a>
      */
     public void post(@jakarta.annotation.Nonnull final DeletePasswordSingleSignOnCredentialsPostRequestBody body) {
         post(body, null);
     }
     /**
-     * Invoke action deletePasswordSingleSignOnCredentials
+     * Delete the password-based single sign-on credentials for a given user to a given service principal.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @see <a href="https://learn.microsoft.com/graph/api/user-deletepasswordsinglesignoncredentials?view=graph-rest-1.0">Find more info here</a>
      */
     public void post(@jakarta.annotation.Nonnull final DeletePasswordSingleSignOnCredentialsPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
@@ -55,7 +57,7 @@ public class DeletePasswordSingleSignOnCredentialsRequestBuilder extends BaseReq
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Invoke action deletePasswordSingleSignOnCredentials
+     * Delete the password-based single sign-on credentials for a given user to a given service principal.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -64,7 +66,7 @@ public class DeletePasswordSingleSignOnCredentialsRequestBuilder extends BaseReq
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action deletePasswordSingleSignOnCredentials
+     * Delete the password-based single sign-on credentials for a given user to a given service principal.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

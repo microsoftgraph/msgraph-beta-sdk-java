@@ -25,7 +25,7 @@ public class GetCredentialUserRegistrationCountRequestBuilder extends BaseReques
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public GetCredentialUserRegistrationCountRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/reports/getCredentialUserRegistrationCount(){?%24top,%24skip,%24search,%24filter,%24count,%24select,%24orderby}", pathParameters);
+        super(requestAdapter, "{+baseurl}/reports/getCredentialUserRegistrationCount(){?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
      * Instantiates a new GetCredentialUserRegistrationCountRequestBuilder and sets the default values.
@@ -33,7 +33,7 @@ public class GetCredentialUserRegistrationCountRequestBuilder extends BaseReques
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public GetCredentialUserRegistrationCountRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/reports/getCredentialUserRegistrationCount(){?%24top,%24skip,%24search,%24filter,%24count,%24select,%24orderby}", rawUrl);
+        super(requestAdapter, "{+baseurl}/reports/getCredentialUserRegistrationCount(){?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
      * Report the current state of how many users in your organization are registered for self-service password reset and multifactor authentication (MFA) capabilities.
@@ -99,6 +99,11 @@ public class GetCredentialUserRegistrationCountRequestBuilder extends BaseReques
         @jakarta.annotation.Nullable
         public Boolean count;
         /**
+         * Expand related entities
+         */
+        @jakarta.annotation.Nullable
+        public String[] expand;
+        /**
          * Filter items by property values
          */
         @jakarta.annotation.Nullable
@@ -140,6 +145,7 @@ public class GetCredentialUserRegistrationCountRequestBuilder extends BaseReques
             allQueryParams.put("%24search", search);
             allQueryParams.put("%24skip", skip);
             allQueryParams.put("%24top", top);
+            allQueryParams.put("%24expand", expand);
             allQueryParams.put("%24orderby", orderby);
             allQueryParams.put("%24select", select);
             return allQueryParams;

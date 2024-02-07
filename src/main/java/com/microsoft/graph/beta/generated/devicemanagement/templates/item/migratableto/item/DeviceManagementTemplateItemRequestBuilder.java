@@ -61,7 +61,7 @@ public class DeviceManagementTemplateItemRequestBuilder extends BaseRequestBuild
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DeviceManagementTemplateItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/templates/{deviceManagementTemplate%2Did}/migratableTo/{deviceManagementTemplate%2Did1}{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/deviceManagement/templates/{deviceManagementTemplate%2Did}/migratableTo/{deviceManagementTemplate%2Did1}{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new DeviceManagementTemplateItemRequestBuilder and sets the default values.
@@ -69,7 +69,7 @@ public class DeviceManagementTemplateItemRequestBuilder extends BaseRequestBuild
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DeviceManagementTemplateItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/templates/{deviceManagementTemplate%2Did}/migratableTo/{deviceManagementTemplate%2Did1}{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/deviceManagement/templates/{deviceManagementTemplate%2Did}/migratableTo/{deviceManagementTemplate%2Did1}{?%24expand,%24select}", rawUrl);
     }
     /**
      * Delete navigation property migratableTo for deviceManagement

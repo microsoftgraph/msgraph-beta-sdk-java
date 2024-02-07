@@ -13,6 +13,7 @@ public class VirtualEventTownhall extends VirtualEvent implements Parsable {
      */
     public VirtualEventTownhall() {
         super();
+        this.setOdataType("#microsoft.graph.virtualEventTownhall");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

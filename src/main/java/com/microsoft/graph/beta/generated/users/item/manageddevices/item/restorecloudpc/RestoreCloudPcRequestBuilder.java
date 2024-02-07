@@ -38,7 +38,7 @@ public class RestoreCloudPcRequestBuilder extends BaseRequestBuilder {
      * Restore a Cloud PC device to a previous state with an Intune managed device ID.
      * @param body The request body
      * @deprecated
-     * The restoreCloudPc API is deprecated and will stop returning on Sep 30, 2023. Please use restore instead as of 2023-07/restoreCloudPc on 2023-08-22 and will be removed 2023-10-30
+     * The restoreCloudPc API is deprecated and will stop returning on Sep 30, 2023. Please use restore instead as of 2023-07/restoreCloudPc
      * @see <a href="https://learn.microsoft.com/graph/api/manageddevice-restorecloudpc?view=graph-rest-1.0">Find more info here</a>
      */
     @Deprecated
@@ -50,7 +50,7 @@ public class RestoreCloudPcRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @deprecated
-     * The restoreCloudPc API is deprecated and will stop returning on Sep 30, 2023. Please use restore instead as of 2023-07/restoreCloudPc on 2023-08-22 and will be removed 2023-10-30
+     * The restoreCloudPc API is deprecated and will stop returning on Sep 30, 2023. Please use restore instead as of 2023-07/restoreCloudPc
      * @see <a href="https://learn.microsoft.com/graph/api/manageddevice-restorecloudpc?view=graph-rest-1.0">Find more info here</a>
      */
     @Deprecated
@@ -67,7 +67,7 @@ public class RestoreCloudPcRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a RequestInformation
      * @deprecated
-     * The restoreCloudPc API is deprecated and will stop returning on Sep 30, 2023. Please use restore instead as of 2023-07/restoreCloudPc on 2023-08-22 and will be removed 2023-10-30
+     * The restoreCloudPc API is deprecated and will stop returning on Sep 30, 2023. Please use restore instead as of 2023-07/restoreCloudPc
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -80,7 +80,7 @@ public class RestoreCloudPcRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
-     * The restoreCloudPc API is deprecated and will stop returning on Sep 30, 2023. Please use restore instead as of 2023-07/restoreCloudPc on 2023-08-22 and will be removed 2023-10-30
+     * The restoreCloudPc API is deprecated and will stop returning on Sep 30, 2023. Please use restore instead as of 2023-07/restoreCloudPc
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -97,7 +97,7 @@ public class RestoreCloudPcRequestBuilder extends BaseRequestBuilder {
      * @param rawUrl The raw URL to use for the request builder.
      * @return a RestoreCloudPcRequestBuilder
      * @deprecated
-     * The restoreCloudPc API is deprecated and will stop returning on Sep 30, 2023. Please use restore instead as of 2023-07/restoreCloudPc on 2023-08-22 and will be removed 2023-10-30
+     * The restoreCloudPc API is deprecated and will stop returning on Sep 30, 2023. Please use restore instead as of 2023-07/restoreCloudPc
      */
     @jakarta.annotation.Nonnull
     @Deprecated

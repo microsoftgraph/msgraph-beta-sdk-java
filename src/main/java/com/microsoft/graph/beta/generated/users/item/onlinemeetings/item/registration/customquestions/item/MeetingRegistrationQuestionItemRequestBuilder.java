@@ -26,7 +26,7 @@ public class MeetingRegistrationQuestionItemRequestBuilder extends BaseRequestBu
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public MeetingRegistrationQuestionItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/onlineMeetings/{onlineMeeting%2Did}/registration/customQuestions/{meetingRegistrationQuestion%2Did}{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/onlineMeetings/{onlineMeeting%2Did}/registration/customQuestions/{meetingRegistrationQuestion%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new MeetingRegistrationQuestionItemRequestBuilder and sets the default values.
@@ -34,7 +34,7 @@ public class MeetingRegistrationQuestionItemRequestBuilder extends BaseRequestBu
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public MeetingRegistrationQuestionItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/onlineMeetings/{onlineMeeting%2Did}/registration/customQuestions/{meetingRegistrationQuestion%2Did}{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/onlineMeetings/{onlineMeeting%2Did}/registration/customQuestions/{meetingRegistrationQuestion%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
      * Delete a custom registration question from a meetingRegistration object on behalf of the organizer.

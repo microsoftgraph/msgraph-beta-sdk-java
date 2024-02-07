@@ -26,7 +26,7 @@ public class JobResponseBaseItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public JobResponseBaseItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/dataClassification/classifyTextJobs/{jobResponseBase%2Did}{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/dataClassification/classifyTextJobs/{jobResponseBase%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new JobResponseBaseItemRequestBuilder and sets the default values.
@@ -34,7 +34,7 @@ public class JobResponseBaseItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public JobResponseBaseItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/dataClassification/classifyTextJobs/{jobResponseBase%2Did}{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/dataClassification/classifyTextJobs/{jobResponseBase%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
      * Delete navigation property classifyTextJobs for dataClassification

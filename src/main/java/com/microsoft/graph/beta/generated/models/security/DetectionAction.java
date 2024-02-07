@@ -85,7 +85,7 @@ public class DetectionAction implements AdditionalDataHolder, BackedModel, Parsa
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the organizationalScope property value. The organizationalScope property
+     * Gets the organizationalScope property value. Groups to which the custom detection rule applies.
      * @return a OrganizationalScope
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class DetectionAction implements AdditionalDataHolder, BackedModel, Parsa
         return this.backingStore.get("organizationalScope");
     }
     /**
-     * Gets the responseActions property value. The responseActions property
+     * Gets the responseActions property value. Actions taken on impacted assets as set in the custom detection rule.
      * @return a java.util.List<ResponseAction>
      */
     @jakarta.annotation.Nullable
@@ -142,14 +142,14 @@ public class DetectionAction implements AdditionalDataHolder, BackedModel, Parsa
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the organizationalScope property value. The organizationalScope property
+     * Sets the organizationalScope property value. Groups to which the custom detection rule applies.
      * @param value Value to set for the organizationalScope property.
      */
     public void setOrganizationalScope(@jakarta.annotation.Nullable final OrganizationalScope value) {
         this.backingStore.set("organizationalScope", value);
     }
     /**
-     * Sets the responseActions property value. The responseActions property
+     * Sets the responseActions property value. Actions taken on impacted assets as set in the custom detection rule.
      * @param value Value to set for the responseActions property.
      */
     public void setResponseActions(@jakarta.annotation.Nullable final java.util.List<ResponseAction> value) {

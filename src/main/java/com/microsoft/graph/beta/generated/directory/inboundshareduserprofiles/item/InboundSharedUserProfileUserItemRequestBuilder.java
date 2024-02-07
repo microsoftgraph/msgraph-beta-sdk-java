@@ -42,7 +42,7 @@ public class InboundSharedUserProfileUserItemRequestBuilder extends BaseRequestB
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public InboundSharedUserProfileUserItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/directory/inboundSharedUserProfiles/{inboundSharedUserProfile%2DuserId}{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/directory/inboundSharedUserProfiles/{inboundSharedUserProfile%2DuserId}{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new InboundSharedUserProfileUserItemRequestBuilder and sets the default values.
@@ -50,7 +50,7 @@ public class InboundSharedUserProfileUserItemRequestBuilder extends BaseRequestB
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public InboundSharedUserProfileUserItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/directory/inboundSharedUserProfiles/{inboundSharedUserProfile%2DuserId}{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/directory/inboundSharedUserProfiles/{inboundSharedUserProfile%2DuserId}{?%24expand,%24select}", rawUrl);
     }
     /**
      * Delete navigation property inboundSharedUserProfiles for directory

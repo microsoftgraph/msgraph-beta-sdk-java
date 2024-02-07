@@ -69,9 +69,10 @@ public class UserExperienceSettings implements AdditionalDataHolder, BackedModel
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("daysUntilForcedReboot", (n) -> { this.setDaysUntilForcedReboot(n.getIntegerValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("offerAsOptional", (n) -> { this.setOfferAsOptional(n.getBooleanValue()); });
         return deserializerMap;
     }
     /**
@@ -83,6 +84,14 @@ public class UserExperienceSettings implements AdditionalDataHolder, BackedModel
         return this.backingStore.get("odataType");
     }
     /**
+     * Gets the offerAsOptional property value. Specifies whether the update is offered as Optional rather than Required.
+     * @return a Boolean
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getOfferAsOptional() {
+        return this.backingStore.get("offerAsOptional");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -90,6 +99,7 @@ public class UserExperienceSettings implements AdditionalDataHolder, BackedModel
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("daysUntilForcedReboot", this.getDaysUntilForcedReboot());
         writer.writeStringValue("@odata.type", this.getOdataType());
+        writer.writeBooleanValue("offerAsOptional", this.getOfferAsOptional());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -120,5 +130,12 @@ public class UserExperienceSettings implements AdditionalDataHolder, BackedModel
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("odataType", value);
+    }
+    /**
+     * Sets the offerAsOptional property value. Specifies whether the update is offered as Optional rather than Required.
+     * @param value Value to set for the offerAsOptional property.
+     */
+    public void setOfferAsOptional(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("offerAsOptional", value);
     }
 }

@@ -84,7 +84,7 @@ public class EducationSubmission extends Entity implements Parsable {
         return this.backingStore.get("reassignedBy");
     }
     /**
-     * Gets the reassignedDateTime property value. Moment in time when the submission was reassigned. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Gets the reassignedDateTime property value. Moment in time when the submission was reassigned. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
@@ -124,7 +124,7 @@ public class EducationSubmission extends Entity implements Parsable {
         return this.backingStore.get("returnedBy");
     }
     /**
-     * Gets the returnedDateTime property value. Moment in time when the submission was returned. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Gets the returnedDateTime property value. Moment in time when the submission was returned. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
@@ -148,7 +148,7 @@ public class EducationSubmission extends Entity implements Parsable {
         return this.backingStore.get("submittedBy");
     }
     /**
-     * Gets the submittedDateTime property value. Moment in time when the submission was moved into the submitted state. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Gets the submittedDateTime property value. Moment in time when the submission was moved into the submitted state. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
@@ -172,7 +172,7 @@ public class EducationSubmission extends Entity implements Parsable {
         return this.backingStore.get("unsubmittedBy");
     }
     /**
-     * Gets the unsubmittedDateTime property value. Moment in time when the submission was moved from submitted into the working state. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Gets the unsubmittedDateTime property value. Moment in time when the submission was moved from submitted into the working state. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
@@ -228,7 +228,7 @@ public class EducationSubmission extends Entity implements Parsable {
         this.backingStore.set("reassignedBy", value);
     }
     /**
-     * Sets the reassignedDateTime property value. Moment in time when the submission was reassigned. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Sets the reassignedDateTime property value. Moment in time when the submission was reassigned. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the reassignedDateTime property.
      */
     public void setReassignedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -263,7 +263,7 @@ public class EducationSubmission extends Entity implements Parsable {
         this.backingStore.set("returnedBy", value);
     }
     /**
-     * Sets the returnedDateTime property value. Moment in time when the submission was returned. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Sets the returnedDateTime property value. Moment in time when the submission was returned. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the returnedDateTime property.
      */
     public void setReturnedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -284,7 +284,7 @@ public class EducationSubmission extends Entity implements Parsable {
         this.backingStore.set("submittedBy", value);
     }
     /**
-     * Sets the submittedDateTime property value. Moment in time when the submission was moved into the submitted state. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Sets the submittedDateTime property value. Moment in time when the submission was moved into the submitted state. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the submittedDateTime property.
      */
     public void setSubmittedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -305,7 +305,7 @@ public class EducationSubmission extends Entity implements Parsable {
         this.backingStore.set("unsubmittedBy", value);
     }
     /**
-     * Sets the unsubmittedDateTime property value. Moment in time when the submission was moved from submitted into the working state. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Sets the unsubmittedDateTime property value. Moment in time when the submission was moved from submitted into the working state. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the unsubmittedDateTime property.
      */
     public void setUnsubmittedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

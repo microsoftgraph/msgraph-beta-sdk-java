@@ -34,7 +34,7 @@ public class OnAuthenticationMethodLoadStartRequestBuilder extends BaseRequestBu
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public OnAuthenticationMethodLoadStartRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/identity/authenticationEventsFlows/{authenticationEventsFlow%2Did}/graph.externalUsersSelfServiceSignUpEventsFlow/onAuthenticationMethodLoadStart{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/identity/authenticationEventsFlows/{authenticationEventsFlow%2Did}/graph.externalUsersSelfServiceSignUpEventsFlow/onAuthenticationMethodLoadStart{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new OnAuthenticationMethodLoadStartRequestBuilder and sets the default values.
@@ -42,7 +42,7 @@ public class OnAuthenticationMethodLoadStartRequestBuilder extends BaseRequestBu
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public OnAuthenticationMethodLoadStartRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/identity/authenticationEventsFlows/{authenticationEventsFlow%2Did}/graph.externalUsersSelfServiceSignUpEventsFlow/onAuthenticationMethodLoadStart{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/identity/authenticationEventsFlows/{authenticationEventsFlow%2Did}/graph.externalUsersSelfServiceSignUpEventsFlow/onAuthenticationMethodLoadStart{?%24expand,%24select}", rawUrl);
     }
     /**
      * Required. The configuration for what to invoke when authentication methods are ready to be presented to the user. Must have at least one identity provider linked.

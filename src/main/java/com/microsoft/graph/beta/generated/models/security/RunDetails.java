@@ -57,7 +57,7 @@ public class RunDetails implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore;
     }
     /**
-     * Gets the errorCode property value. The errorCode property
+     * Gets the errorCode property value. Error code of the most recent run that encountered an error. The possible values are: queryExecutionFailed, queryExecutionThrottling, queryExceededResultSize, queryLimitsExceeded, queryTimeout, alertCreationFailed, alertReportNotFound, partialRowsFailed, unknownFutureValue.
      * @return a HuntingRuleErrorCode
      */
     @jakarta.annotation.Nullable
@@ -65,7 +65,7 @@ public class RunDetails implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("errorCode");
     }
     /**
-     * Gets the failureReason property value. The failureReason property
+     * Gets the failureReason property value. Reason for failure when the custom detection last ran and failed. See the table below.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -87,7 +87,7 @@ public class RunDetails implements AdditionalDataHolder, BackedModel, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the lastRunDateTime property value. The lastRunDateTime property
+     * Gets the lastRunDateTime property value. Timestamp when the custom detection was last run.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
@@ -103,7 +103,7 @@ public class RunDetails implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the status property value. The status property
+     * Gets the status property value. Status of custom detection when it was last run. The possible values are: running, completed, failed, partiallyFailed, unknownFutureValue.
      * @return a HuntingRuleRunStatus
      */
     @jakarta.annotation.Nullable
@@ -139,21 +139,21 @@ public class RunDetails implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore = value;
     }
     /**
-     * Sets the errorCode property value. The errorCode property
+     * Sets the errorCode property value. Error code of the most recent run that encountered an error. The possible values are: queryExecutionFailed, queryExecutionThrottling, queryExceededResultSize, queryLimitsExceeded, queryTimeout, alertCreationFailed, alertReportNotFound, partialRowsFailed, unknownFutureValue.
      * @param value Value to set for the errorCode property.
      */
     public void setErrorCode(@jakarta.annotation.Nullable final HuntingRuleErrorCode value) {
         this.backingStore.set("errorCode", value);
     }
     /**
-     * Sets the failureReason property value. The failureReason property
+     * Sets the failureReason property value. Reason for failure when the custom detection last ran and failed. See the table below.
      * @param value Value to set for the failureReason property.
      */
     public void setFailureReason(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("failureReason", value);
     }
     /**
-     * Sets the lastRunDateTime property value. The lastRunDateTime property
+     * Sets the lastRunDateTime property value. Timestamp when the custom detection was last run.
      * @param value Value to set for the lastRunDateTime property.
      */
     public void setLastRunDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -167,7 +167,7 @@ public class RunDetails implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the status property value. The status property
+     * Sets the status property value. Status of custom detection when it was last run. The possible values are: running, completed, failed, partiallyFailed, unknownFutureValue.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final HuntingRuleRunStatus value) {

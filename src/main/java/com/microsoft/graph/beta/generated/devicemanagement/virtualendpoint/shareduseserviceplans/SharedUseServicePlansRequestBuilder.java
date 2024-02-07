@@ -26,7 +26,7 @@ public class SharedUseServicePlansRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
      * @deprecated
-     * The sharedUseServicePlans property is deprecated and will not be supported starting Oct 8, 2023. This property will not be included as part of the API response. as of 2023-03/sharedUseServicePlans on 2023-06-08 and will be removed 2023-10-08
+     * The sharedUseServicePlans property is deprecated and will not be supported starting Oct 8, 2023. This property will not be included as part of the API response. as of 2023-03/sharedUseServicePlans
      */
     @Deprecated
     @jakarta.annotation.Nonnull
@@ -38,7 +38,7 @@ public class SharedUseServicePlansRequestBuilder extends BaseRequestBuilder {
      * @param cloudPcSharedUseServicePlanId The unique identifier of cloudPcSharedUseServicePlan
      * @return a CloudPcSharedUseServicePlanItemRequestBuilder
      * @deprecated
-     * The sharedUseServicePlans property is deprecated and will not be supported starting Oct 8, 2023. This property will not be included as part of the API response. as of 2023-03/sharedUseServicePlans on 2023-06-08 and will be removed 2023-10-08
+     * The sharedUseServicePlans property is deprecated and will not be supported starting Oct 8, 2023. This property will not be included as part of the API response. as of 2023-03/sharedUseServicePlans
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -54,7 +54,7 @@ public class SharedUseServicePlansRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public SharedUseServicePlansRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/sharedUseServicePlans{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/sharedUseServicePlans{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
      * Instantiates a new SharedUseServicePlansRequestBuilder and sets the default values.
@@ -62,13 +62,13 @@ public class SharedUseServicePlansRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public SharedUseServicePlansRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/sharedUseServicePlans{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/sharedUseServicePlans{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
      * Get a list of the cloudPcSharedUseServicePlan objects and their properties.
      * @return a CloudPcSharedUseServicePlanCollectionResponse
      * @deprecated
-     * The sharedUseServicePlans property is deprecated and will not be supported starting Oct 8, 2023. This property will not be included as part of the API response. as of 2023-03/sharedUseServicePlans on 2023-06-08 and will be removed 2023-10-08
+     * The sharedUseServicePlans property is deprecated and will not be supported starting Oct 8, 2023. This property will not be included as part of the API response. as of 2023-03/sharedUseServicePlans
      * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-shareduseserviceplans?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -81,7 +81,7 @@ public class SharedUseServicePlansRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CloudPcSharedUseServicePlanCollectionResponse
      * @deprecated
-     * The sharedUseServicePlans property is deprecated and will not be supported starting Oct 8, 2023. This property will not be included as part of the API response. as of 2023-03/sharedUseServicePlans on 2023-06-08 and will be removed 2023-10-08
+     * The sharedUseServicePlans property is deprecated and will not be supported starting Oct 8, 2023. This property will not be included as part of the API response. as of 2023-03/sharedUseServicePlans
      * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-shareduseserviceplans?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -98,7 +98,7 @@ public class SharedUseServicePlansRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a CloudPcSharedUseServicePlan
      * @deprecated
-     * The sharedUseServicePlans property is deprecated and will not be supported starting Oct 8, 2023. This property will not be included as part of the API response. as of 2023-03/sharedUseServicePlans on 2023-06-08 and will be removed 2023-10-08
+     * The sharedUseServicePlans property is deprecated and will not be supported starting Oct 8, 2023. This property will not be included as part of the API response. as of 2023-03/sharedUseServicePlans
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -111,7 +111,7 @@ public class SharedUseServicePlansRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CloudPcSharedUseServicePlan
      * @deprecated
-     * The sharedUseServicePlans property is deprecated and will not be supported starting Oct 8, 2023. This property will not be included as part of the API response. as of 2023-03/sharedUseServicePlans on 2023-06-08 and will be removed 2023-10-08
+     * The sharedUseServicePlans property is deprecated and will not be supported starting Oct 8, 2023. This property will not be included as part of the API response. as of 2023-03/sharedUseServicePlans
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -127,7 +127,7 @@ public class SharedUseServicePlansRequestBuilder extends BaseRequestBuilder {
      * Get a list of the cloudPcSharedUseServicePlan objects and their properties.
      * @return a RequestInformation
      * @deprecated
-     * The sharedUseServicePlans property is deprecated and will not be supported starting Oct 8, 2023. This property will not be included as part of the API response. as of 2023-03/sharedUseServicePlans on 2023-06-08 and will be removed 2023-10-08
+     * The sharedUseServicePlans property is deprecated and will not be supported starting Oct 8, 2023. This property will not be included as part of the API response. as of 2023-03/sharedUseServicePlans
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -139,7 +139,7 @@ public class SharedUseServicePlansRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
-     * The sharedUseServicePlans property is deprecated and will not be supported starting Oct 8, 2023. This property will not be included as part of the API response. as of 2023-03/sharedUseServicePlans on 2023-06-08 and will be removed 2023-10-08
+     * The sharedUseServicePlans property is deprecated and will not be supported starting Oct 8, 2023. This property will not be included as part of the API response. as of 2023-03/sharedUseServicePlans
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -154,7 +154,7 @@ public class SharedUseServicePlansRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a RequestInformation
      * @deprecated
-     * The sharedUseServicePlans property is deprecated and will not be supported starting Oct 8, 2023. This property will not be included as part of the API response. as of 2023-03/sharedUseServicePlans on 2023-06-08 and will be removed 2023-10-08
+     * The sharedUseServicePlans property is deprecated and will not be supported starting Oct 8, 2023. This property will not be included as part of the API response. as of 2023-03/sharedUseServicePlans
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -167,7 +167,7 @@ public class SharedUseServicePlansRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
-     * The sharedUseServicePlans property is deprecated and will not be supported starting Oct 8, 2023. This property will not be included as part of the API response. as of 2023-03/sharedUseServicePlans on 2023-06-08 and will be removed 2023-10-08
+     * The sharedUseServicePlans property is deprecated and will not be supported starting Oct 8, 2023. This property will not be included as part of the API response. as of 2023-03/sharedUseServicePlans
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -184,7 +184,7 @@ public class SharedUseServicePlansRequestBuilder extends BaseRequestBuilder {
      * @param rawUrl The raw URL to use for the request builder.
      * @return a SharedUseServicePlansRequestBuilder
      * @deprecated
-     * The sharedUseServicePlans property is deprecated and will not be supported starting Oct 8, 2023. This property will not be included as part of the API response. as of 2023-03/sharedUseServicePlans on 2023-06-08 and will be removed 2023-10-08
+     * The sharedUseServicePlans property is deprecated and will not be supported starting Oct 8, 2023. This property will not be included as part of the API response. as of 2023-03/sharedUseServicePlans
      */
     @jakarta.annotation.Nonnull
     @Deprecated

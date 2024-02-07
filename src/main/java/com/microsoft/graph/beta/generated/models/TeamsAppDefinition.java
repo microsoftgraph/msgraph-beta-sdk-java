@@ -75,6 +75,14 @@ public class TeamsAppDefinition extends Entity implements Parsable {
         return this.backingStore.get("createdBy");
     }
     /**
+     * Gets the dashboardCards property value. The dashboardCards property
+     * @return a java.util.List<TeamsAppDashboardCardDefinition>
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<TeamsAppDashboardCardDefinition> getDashboardCards() {
+        return this.backingStore.get("dashboardCards");
+    }
+    /**
      * Gets the description property value. The description property
      * @return a String
      */
@@ -103,6 +111,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
         deserializerMap.put("bot", (n) -> { this.setBot(n.getObjectValue(TeamworkBot::createFromDiscriminatorValue)); });
         deserializerMap.put("colorIcon", (n) -> { this.setColorIcon(n.getObjectValue(TeamsAppIcon::createFromDiscriminatorValue)); });
         deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("dashboardCards", (n) -> { this.setDashboardCards(n.getCollectionOfObjectValues(TeamsAppDashboardCardDefinition::createFromDiscriminatorValue)); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
@@ -174,6 +183,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
         writer.writeObjectValue("bot", this.getBot());
         writer.writeObjectValue("colorIcon", this.getColorIcon());
         writer.writeObjectValue("createdBy", this.getCreatedBy());
+        writer.writeCollectionOfObjectValues("dashboardCards", this.getDashboardCards());
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
@@ -224,6 +234,13 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      */
     public void setCreatedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.backingStore.set("createdBy", value);
+    }
+    /**
+     * Sets the dashboardCards property value. The dashboardCards property
+     * @param value Value to set for the dashboardCards property.
+     */
+    public void setDashboardCards(@jakarta.annotation.Nullable final java.util.List<TeamsAppDashboardCardDefinition> value) {
+        this.backingStore.set("dashboardCards", value);
     }
     /**
      * Sets the description property value. The description property

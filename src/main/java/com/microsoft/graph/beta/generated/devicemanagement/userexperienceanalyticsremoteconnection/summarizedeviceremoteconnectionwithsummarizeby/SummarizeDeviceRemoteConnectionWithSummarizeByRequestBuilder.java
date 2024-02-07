@@ -26,7 +26,7 @@ public class SummarizeDeviceRemoteConnectionWithSummarizeByRequestBuilder extend
      * @param summarizeBy Usage: summarizeBy='{summarizeBy}'
      */
     public SummarizeDeviceRemoteConnectionWithSummarizeByRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter, @jakarta.annotation.Nullable final String summarizeBy) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/userExperienceAnalyticsRemoteConnection/summarizeDeviceRemoteConnection(summarizeBy='{summarizeBy}'){?%24top,%24skip,%24search,%24filter,%24count,%24select,%24orderby}", pathParameters);
+        super(requestAdapter, "{+baseurl}/deviceManagement/userExperienceAnalyticsRemoteConnection/summarizeDeviceRemoteConnection(summarizeBy='{summarizeBy}'){?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
         this.pathParameters.put("summarizeBy", summarizeBy);
     }
     /**
@@ -35,7 +35,7 @@ public class SummarizeDeviceRemoteConnectionWithSummarizeByRequestBuilder extend
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public SummarizeDeviceRemoteConnectionWithSummarizeByRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/userExperienceAnalyticsRemoteConnection/summarizeDeviceRemoteConnection(summarizeBy='{summarizeBy}'){?%24top,%24skip,%24search,%24filter,%24count,%24select,%24orderby}", rawUrl);
+        super(requestAdapter, "{+baseurl}/deviceManagement/userExperienceAnalyticsRemoteConnection/summarizeDeviceRemoteConnection(summarizeBy='{summarizeBy}'){?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
      * Invoke function summarizeDeviceRemoteConnection
@@ -99,6 +99,11 @@ public class SummarizeDeviceRemoteConnectionWithSummarizeByRequestBuilder extend
         @jakarta.annotation.Nullable
         public Boolean count;
         /**
+         * Expand related entities
+         */
+        @jakarta.annotation.Nullable
+        public String[] expand;
+        /**
          * Filter items by property values
          */
         @jakarta.annotation.Nullable
@@ -140,6 +145,7 @@ public class SummarizeDeviceRemoteConnectionWithSummarizeByRequestBuilder extend
             allQueryParams.put("%24search", search);
             allQueryParams.put("%24skip", skip);
             allQueryParams.put("%24top", top);
+            allQueryParams.put("%24expand", expand);
             allQueryParams.put("%24orderby", orderby);
             allQueryParams.put("%24select", select);
             return allQueryParams;

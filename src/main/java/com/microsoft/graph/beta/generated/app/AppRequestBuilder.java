@@ -2,6 +2,7 @@ package com.microsoft.graph.beta.app;
 
 import com.microsoft.graph.beta.app.calls.CallsRequestBuilder;
 import com.microsoft.graph.beta.app.onlinemeetings.OnlineMeetingsRequestBuilder;
+import com.microsoft.graph.beta.app.onlinemeetingswithjoinweburl.OnlineMeetingsWithJoinWebUrlRequestBuilder;
 import com.microsoft.graph.beta.models.CommsApplication;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -42,7 +43,7 @@ public class AppRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AppRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/app{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/app{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new AppRequestBuilder and sets the default values.
@@ -50,7 +51,7 @@ public class AppRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AppRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/app{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/app{?%24expand,%24select}", rawUrl);
     }
     /**
      * Get app
@@ -72,6 +73,16 @@ public class AppRequestBuilder extends BaseRequestBuilder {
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, CommsApplication::createFromDiscriminatorValue);
+    }
+    /**
+     * Provides operations to manage the onlineMeetings property of the microsoft.graph.commsApplication entity.
+     * @param joinWebUrl Alternate key of onlineMeeting
+     * @return a OnlineMeetingsWithJoinWebUrlRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public OnlineMeetingsWithJoinWebUrlRequestBuilder onlineMeetingsWithJoinWebUrl(@jakarta.annotation.Nonnull final String joinWebUrl) {
+        Objects.requireNonNull(joinWebUrl);
+        return new OnlineMeetingsWithJoinWebUrlRequestBuilder(pathParameters, requestAdapter, joinWebUrl);
     }
     /**
      * Update app

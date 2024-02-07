@@ -69,7 +69,7 @@ public class MicrosoftManagedDesktop implements AdditionalDataHolder, BackedMode
         return deserializerMap;
     }
     /**
-     * Gets the managedType property value. The managedType property
+     * Gets the managedType property value. Indicates the provisioning policy associated with Microsoft Managed Desktop settings. Possible values are: notManaged, premiumManaged, standardManaged, starterManaged, unknownFutureValue. The default value is notManaged.
      * @return a MicrosoftManagedDesktopType
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class MicrosoftManagedDesktop implements AdditionalDataHolder, BackedMode
         return this.backingStore.get("profile");
     }
     /**
-     * Gets the type property value. Indicates whether the provisioning policy enables Microsoft Managed Desktop. It indicates the type of plan under which the device is managed if the provisioning policy is enabled. Possible values are: notManaged, premiumManaged, standardManaged, starterManaged, unknownFutureValue.
+     * Gets the type property value. The type property
      * @return a MicrosoftManagedDesktopType
      */
     @jakarta.annotation.Nullable
@@ -128,7 +128,7 @@ public class MicrosoftManagedDesktop implements AdditionalDataHolder, BackedMode
         this.backingStore = value;
     }
     /**
-     * Sets the managedType property value. The managedType property
+     * Sets the managedType property value. Indicates the provisioning policy associated with Microsoft Managed Desktop settings. Possible values are: notManaged, premiumManaged, standardManaged, starterManaged, unknownFutureValue. The default value is notManaged.
      * @param value Value to set for the managedType property.
      */
     public void setManagedType(@jakarta.annotation.Nullable final MicrosoftManagedDesktopType value) {
@@ -149,7 +149,7 @@ public class MicrosoftManagedDesktop implements AdditionalDataHolder, BackedMode
         this.backingStore.set("profile", value);
     }
     /**
-     * Sets the type property value. Indicates whether the provisioning policy enables Microsoft Managed Desktop. It indicates the type of plan under which the device is managed if the provisioning policy is enabled. Possible values are: notManaged, premiumManaged, standardManaged, starterManaged, unknownFutureValue.
+     * Sets the type property value. The type property
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final MicrosoftManagedDesktopType value) {

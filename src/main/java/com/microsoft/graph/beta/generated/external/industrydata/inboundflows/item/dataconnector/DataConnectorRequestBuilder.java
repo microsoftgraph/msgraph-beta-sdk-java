@@ -26,7 +26,7 @@ public class DataConnectorRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DataConnectorRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/external/industryData/inboundFlows/{inboundFlow%2Did}/dataConnector{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/external/industryData/inboundFlows/{inboundFlow%2Did}/dataConnector{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new DataConnectorRequestBuilder and sets the default values.
@@ -34,7 +34,7 @@ public class DataConnectorRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DataConnectorRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/external/industryData/inboundFlows/{inboundFlow%2Did}/dataConnector{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/external/industryData/inboundFlows/{inboundFlow%2Did}/dataConnector{?%24expand,%24select}", rawUrl);
     }
     /**
      * The data connector in the context of which this flow pulls in data from a source system.

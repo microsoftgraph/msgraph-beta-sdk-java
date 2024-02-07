@@ -48,7 +48,7 @@ public class GroupPolicyPresentationListBox extends GroupPolicyUploadedPresentat
         return deserializerMap;
     }
     /**
-     * Gets the valuePrefix property value. Not yet documented
+     * Gets the valuePrefix property value. The valuePrefix property
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -73,7 +73,7 @@ public class GroupPolicyPresentationListBox extends GroupPolicyUploadedPresentat
         this.backingStore.set("explicitValue", value);
     }
     /**
-     * Sets the valuePrefix property value. Not yet documented
+     * Sets the valuePrefix property value. The valuePrefix property
      * @param value Value to set for the valuePrefix property.
      */
     public void setValuePrefix(@jakarta.annotation.Nullable final String value) {

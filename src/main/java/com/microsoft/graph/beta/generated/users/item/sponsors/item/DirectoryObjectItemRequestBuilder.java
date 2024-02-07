@@ -26,7 +26,7 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DirectoryObjectItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/sponsors/{directoryObject%2Did}{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/sponsors/{directoryObject%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new DirectoryObjectItemRequestBuilder and sets the default values.
@@ -34,26 +34,7 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DirectoryObjectItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/sponsors/{directoryObject%2Did}{?%24select,%24expand}", rawUrl);
-    }
-    /**
-     * Remove a user's sponsor.
-     * @see <a href="https://learn.microsoft.com/graph/api/user-delete-sponsors?view=graph-rest-1.0">Find more info here</a>
-     */
-    public void delete() {
-        delete(null);
-    }
-    /**
-     * Remove a user's sponsor.
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @see <a href="https://learn.microsoft.com/graph/api/user-delete-sponsors?view=graph-rest-1.0">Find more info here</a>
-     */
-    public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
-        final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/sponsors/{directoryObject%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
      * The users and groups responsible for this guest user's privileges in the tenant and keep the guest user's information and access updated. (HTTP Methods: GET, POST, DELETE.). Supports $expand.
@@ -75,26 +56,6 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, DirectoryObject::createFromDiscriminatorValue);
-    }
-    /**
-     * Remove a user's sponsor.
-     * @return a RequestInformation
-     */
-    @jakarta.annotation.Nonnull
-    public RequestInformation toDeleteRequestInformation() {
-        return toDeleteRequestInformation(null);
-    }
-    /**
-     * Remove a user's sponsor.
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
-     */
-    @jakarta.annotation.Nonnull
-    public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
-        requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
-        requestInfo.headers.tryAdd("Accept", "application/json");
-        return requestInfo;
     }
     /**
      * The users and groups responsible for this guest user's privileges in the tenant and keep the guest user's information and access updated. (HTTP Methods: GET, POST, DELETE.). Supports $expand.
@@ -125,12 +86,6 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
     public DirectoryObjectItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new DirectoryObjectItemRequestBuilder(rawUrl, requestAdapter);
-    }
-    /**
-     * Configuration for the request such as headers, query parameters, and middleware options.
-     */
-    @jakarta.annotation.Generated("com.microsoft.kiota")
-    public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
      * The users and groups responsible for this guest user's privileges in the tenant and keep the guest user's information and access updated. (HTTP Methods: GET, POST, DELETE.). Supports $expand.

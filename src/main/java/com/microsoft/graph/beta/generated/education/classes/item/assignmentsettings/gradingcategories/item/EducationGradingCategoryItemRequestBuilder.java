@@ -26,7 +26,7 @@ public class EducationGradingCategoryItemRequestBuilder extends BaseRequestBuild
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public EducationGradingCategoryItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/education/classes/{educationClass%2Did}/assignmentSettings/gradingCategories/{educationGradingCategory%2Did}{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/education/classes/{educationClass%2Did}/assignmentSettings/gradingCategories/{educationGradingCategory%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new EducationGradingCategoryItemRequestBuilder and sets the default values.
@@ -34,7 +34,7 @@ public class EducationGradingCategoryItemRequestBuilder extends BaseRequestBuild
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public EducationGradingCategoryItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/education/classes/{educationClass%2Did}/assignmentSettings/gradingCategories/{educationGradingCategory%2Did}{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/education/classes/{educationClass%2Did}/assignmentSettings/gradingCategories/{educationGradingCategory%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
      * Delete navigation property gradingCategories for education
@@ -54,7 +54,7 @@ public class EducationGradingCategoryItemRequestBuilder extends BaseRequestBuild
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get gradingCategories from education
+     * When set, enables users to weight assignments differently when computing a class average grade.
      * @return a EducationGradingCategory
      */
     @jakarta.annotation.Nullable
@@ -62,7 +62,7 @@ public class EducationGradingCategoryItemRequestBuilder extends BaseRequestBuild
         return get(null);
     }
     /**
-     * Get gradingCategories from education
+     * When set, enables users to weight assignments differently when computing a class average grade.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a EducationGradingCategory
      */
@@ -119,7 +119,7 @@ public class EducationGradingCategoryItemRequestBuilder extends BaseRequestBuild
         return requestInfo;
     }
     /**
-     * Get gradingCategories from education
+     * When set, enables users to weight assignments differently when computing a class average grade.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -127,7 +127,7 @@ public class EducationGradingCategoryItemRequestBuilder extends BaseRequestBuild
         return toGetRequestInformation(null);
     }
     /**
-     * Get gradingCategories from education
+     * When set, enables users to weight assignments differently when computing a class average grade.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -179,7 +179,7 @@ public class EducationGradingCategoryItemRequestBuilder extends BaseRequestBuild
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get gradingCategories from education
+     * When set, enables users to weight assignments differently when computing a class average grade.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
