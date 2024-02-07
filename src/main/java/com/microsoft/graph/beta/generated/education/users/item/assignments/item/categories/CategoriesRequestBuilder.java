@@ -64,7 +64,7 @@ public class CategoriesRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CategoriesRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/education/users/{educationUser%2Did}/assignments/{educationAssignment%2Did}/categories{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/education/users/{educationUser%2Did}/assignments/{educationAssignment%2Did}/categories{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
      * Instantiates a new CategoriesRequestBuilder and sets the default values.
@@ -72,10 +72,10 @@ public class CategoriesRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CategoriesRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/education/users/{educationUser%2Did}/assignments/{educationAssignment%2Did}/categories{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/education/users/{educationUser%2Did}/assignments/{educationAssignment%2Did}/categories{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * List all the categories associated with an assignment. Only teachers, students, and applications with application permissions can perform this operation.
+     * List all categories for an assignment. Only teachers, students, and applications with application permissions can perform this operation.
      * @return a EducationCategoryCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/educationassignment-list-categories?view=graph-rest-1.0">Find more info here</a>
      */
@@ -84,7 +84,7 @@ public class CategoriesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * List all the categories associated with an assignment. Only teachers, students, and applications with application permissions can perform this operation.
+     * List all categories for an assignment. Only teachers, students, and applications with application permissions can perform this operation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a EducationCategoryCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/educationassignment-list-categories?view=graph-rest-1.0">Find more info here</a>
@@ -122,7 +122,7 @@ public class CategoriesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EducationCategory::createFromDiscriminatorValue);
     }
     /**
-     * List all the categories associated with an assignment. Only teachers, students, and applications with application permissions can perform this operation.
+     * List all categories for an assignment. Only teachers, students, and applications with application permissions can perform this operation.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +130,7 @@ public class CategoriesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List all the categories associated with an assignment. Only teachers, students, and applications with application permissions can perform this operation.
+     * List all categories for an assignment. Only teachers, students, and applications with application permissions can perform this operation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -176,7 +176,7 @@ public class CategoriesRequestBuilder extends BaseRequestBuilder {
         return new CategoriesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List all the categories associated with an assignment. Only teachers, students, and applications with application permissions can perform this operation.
+     * List all categories for an assignment. Only teachers, students, and applications with application permissions can perform this operation.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

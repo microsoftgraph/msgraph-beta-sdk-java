@@ -3,6 +3,7 @@ package com.microsoft.graph.beta.networkaccess.connectivity;
 import com.microsoft.graph.beta.models.networkaccess.Connectivity;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.networkaccess.connectivity.branches.BranchesRequestBuilder;
+import com.microsoft.graph.beta.networkaccess.connectivity.remotenetworks.RemoteNetworksRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -29,12 +30,19 @@ public class ConnectivityRequestBuilder extends BaseRequestBuilder {
         return new BranchesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the remoteNetworks property of the microsoft.graph.networkaccess.connectivity entity.
+     */
+    @jakarta.annotation.Nonnull
+    public RemoteNetworksRequestBuilder remoteNetworks() {
+        return new RemoteNetworksRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Instantiates a new ConnectivityRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ConnectivityRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/networkAccess/connectivity{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/networkAccess/connectivity{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new ConnectivityRequestBuilder and sets the default values.
@@ -42,7 +50,7 @@ public class ConnectivityRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ConnectivityRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/networkAccess/connectivity{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/networkAccess/connectivity{?%24expand,%24select}", rawUrl);
     }
     /**
      * Delete navigation property connectivity for networkAccess

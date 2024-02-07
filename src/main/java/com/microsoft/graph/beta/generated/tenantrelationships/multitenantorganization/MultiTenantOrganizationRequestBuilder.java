@@ -42,7 +42,7 @@ public class MultiTenantOrganizationRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public MultiTenantOrganizationRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/tenantRelationships/multiTenantOrganization{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/tenantRelationships/multiTenantOrganization{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new MultiTenantOrganizationRequestBuilder and sets the default values.
@@ -50,7 +50,7 @@ public class MultiTenantOrganizationRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public MultiTenantOrganizationRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/tenantRelationships/multiTenantOrganization{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/tenantRelationships/multiTenantOrganization{?%24expand,%24select}", rawUrl);
     }
     /**
      * Get properties of the multitenant organization.
@@ -76,21 +76,21 @@ public class MultiTenantOrganizationRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, MultiTenantOrganization::createFromDiscriminatorValue);
     }
     /**
-     * Create a new multi-tenant organization. By default, the creator tenant becomes an owner tenant upon successful creation. Only owner tenants can manage a multi-tenant organization. To allow for asynchronous processing, you must wait a minimum of 2 hours between creation and joining a multi-tenant organization.
+     * Update the properties of a multi-tenant organization.
      * @param body The request body
      * @return a MultiTenantOrganization
-     * @see <a href="https://learn.microsoft.com/graph/api/tenantrelationship-put-multitenantorganization?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/multitenantorganization-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MultiTenantOrganization patch(@jakarta.annotation.Nonnull final MultiTenantOrganization body) {
         return patch(body, null);
     }
     /**
-     * Create a new multi-tenant organization. By default, the creator tenant becomes an owner tenant upon successful creation. Only owner tenants can manage a multi-tenant organization. To allow for asynchronous processing, you must wait a minimum of 2 hours between creation and joining a multi-tenant organization.
+     * Update the properties of a multi-tenant organization.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a MultiTenantOrganization
-     * @see <a href="https://learn.microsoft.com/graph/api/tenantrelationship-put-multitenantorganization?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/multitenantorganization-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MultiTenantOrganization patch(@jakarta.annotation.Nonnull final MultiTenantOrganization body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -122,7 +122,7 @@ public class MultiTenantOrganizationRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new multi-tenant organization. By default, the creator tenant becomes an owner tenant upon successful creation. Only owner tenants can manage a multi-tenant organization. To allow for asynchronous processing, you must wait a minimum of 2 hours between creation and joining a multi-tenant organization.
+     * Update the properties of a multi-tenant organization.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -131,7 +131,7 @@ public class MultiTenantOrganizationRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Create a new multi-tenant organization. By default, the creator tenant becomes an owner tenant upon successful creation. Only owner tenants can manage a multi-tenant organization. To allow for asynchronous processing, you must wait a minimum of 2 hours between creation and joining a multi-tenant organization.
+     * Update the properties of a multi-tenant organization.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

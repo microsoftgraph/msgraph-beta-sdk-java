@@ -42,7 +42,7 @@ public class UserFlowLanguageConfigurationItemRequestBuilder extends BaseRequest
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public UserFlowLanguageConfigurationItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/identity/b2cUserFlows/{b2cIdentityUserFlow%2Did}/languages/{userFlowLanguageConfiguration%2Did}{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/identity/b2cUserFlows/{b2cIdentityUserFlow%2Did}/languages/{userFlowLanguageConfiguration%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new UserFlowLanguageConfigurationItemRequestBuilder and sets the default values.
@@ -50,7 +50,7 @@ public class UserFlowLanguageConfigurationItemRequestBuilder extends BaseRequest
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public UserFlowLanguageConfigurationItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/identity/b2cUserFlows/{b2cIdentityUserFlow%2Did}/languages/{userFlowLanguageConfiguration%2Did}{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/identity/b2cUserFlows/{b2cIdentityUserFlow%2Did}/languages/{userFlowLanguageConfiguration%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
      * Deletes a userFlowLanguageConfiguration object from a Azure AD B2C user flow. Note: You cannot delete languages from an Microsoft Entra user flow.

@@ -7,6 +7,8 @@ import com.microsoft.graph.beta.teams.allmessages.AllMessagesRequestBuilder;
 import com.microsoft.graph.beta.teams.count.CountRequestBuilder;
 import com.microsoft.graph.beta.teams.getallmessages.GetAllMessagesRequestBuilder;
 import com.microsoft.graph.beta.teams.getopenshifts.GetOpenShiftsRequestBuilder;
+import com.microsoft.graph.beta.teams.getshifts.GetShiftsRequestBuilder;
+import com.microsoft.graph.beta.teams.gettimesoff.GetTimesOffRequestBuilder;
 import com.microsoft.graph.beta.teams.item.TeamItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -55,6 +57,20 @@ public class TeamsRequestBuilder extends BaseRequestBuilder {
         return new GetOpenShiftsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to call the getShifts method.
+     */
+    @jakarta.annotation.Nonnull
+    public GetShiftsRequestBuilder getShifts() {
+        return new GetShiftsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the getTimesOff method.
+     */
+    @jakarta.annotation.Nonnull
+    public GetTimesOffRequestBuilder getTimesOff() {
+        return new GetTimesOffRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the collection of team entities.
      * @param teamId The unique identifier of team
      * @return a TeamItemRequestBuilder
@@ -72,7 +88,7 @@ public class TeamsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public TeamsRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/teams{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/teams{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
      * Instantiates a new TeamsRequestBuilder and sets the default values.
@@ -80,7 +96,7 @@ public class TeamsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public TeamsRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/teams{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/teams{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
      * List all teams in an organization.

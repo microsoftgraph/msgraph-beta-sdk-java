@@ -25,7 +25,10 @@ import java.util.Objects;
 public class DeviceLinksRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @deprecated
+     * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
@@ -34,8 +37,11 @@ public class DeviceLinksRequestBuilder extends BaseRequestBuilder {
      * Provides operations to manage the deviceLinks property of the microsoft.graph.networkaccess.branchSite entity.
      * @param deviceLinkId The unique identifier of deviceLink
      * @return a DeviceLinkItemRequestBuilder
+     * @deprecated
+     * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public DeviceLinkItemRequestBuilder byDeviceLinkId(@jakarta.annotation.Nonnull final String deviceLinkId) {
         Objects.requireNonNull(deviceLinkId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
@@ -48,7 +54,7 @@ public class DeviceLinksRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DeviceLinksRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/networkAccess/connectivity/branches/{branchSite%2Did}/deviceLinks{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/networkAccess/connectivity/branches/{branchSite%2Did}/deviceLinks{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
      * Instantiates a new DeviceLinksRequestBuilder and sets the default values.
@@ -56,14 +62,17 @@ public class DeviceLinksRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DeviceLinksRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/networkAccess/connectivity/branches/{branchSite%2Did}/deviceLinks{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/networkAccess/connectivity/branches/{branchSite%2Did}/deviceLinks{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
      * Retrieve a list of device links associated with a specific branch.
      * @return a DeviceLinkCollectionResponse
+     * @deprecated
+     * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-branchsite-list-devicelinks?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public DeviceLinkCollectionResponse get() {
         return get(null);
     }
@@ -71,9 +80,12 @@ public class DeviceLinksRequestBuilder extends BaseRequestBuilder {
      * Retrieve a list of device links associated with a specific branch.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a DeviceLinkCollectionResponse
+     * @deprecated
+     * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-branchsite-list-devicelinks?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public DeviceLinkCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -85,9 +97,12 @@ public class DeviceLinksRequestBuilder extends BaseRequestBuilder {
      * Create a branch site with associated device links.
      * @param body The request body
      * @return a DeviceLink
+     * @deprecated
+     * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-branchsite-post-devicelinks?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public DeviceLink post(@jakarta.annotation.Nonnull final DeviceLink body) {
         return post(body, null);
     }
@@ -96,9 +111,12 @@ public class DeviceLinksRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a DeviceLink
+     * @deprecated
+     * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-branchsite-post-devicelinks?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public DeviceLink post(@jakarta.annotation.Nonnull final DeviceLink body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
@@ -110,8 +128,11 @@ public class DeviceLinksRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of device links associated with a specific branch.
      * @return a RequestInformation
+     * @deprecated
+     * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -119,8 +140,11 @@ public class DeviceLinksRequestBuilder extends BaseRequestBuilder {
      * Retrieve a list of device links associated with a specific branch.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
+     * @deprecated
+     * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -131,8 +155,11 @@ public class DeviceLinksRequestBuilder extends BaseRequestBuilder {
      * Create a branch site with associated device links.
      * @param body The request body
      * @return a RequestInformation
+     * @deprecated
+     * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final DeviceLink body) {
         return toPostRequestInformation(body, null);
     }
@@ -141,8 +168,11 @@ public class DeviceLinksRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
+     * @deprecated
+     * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final DeviceLink body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
@@ -155,8 +185,11 @@ public class DeviceLinksRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a DeviceLinksRequestBuilder
+     * @deprecated
+     * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public DeviceLinksRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new DeviceLinksRequestBuilder(rawUrl, requestAdapter);

@@ -36,19 +36,21 @@ public class GetCloudPcRecommendationReportsRequestBuilder extends BaseRequestBu
         super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/reports/getCloudPcRecommendationReports", rawUrl);
     }
     /**
-     * Invoke action getCloudPcRecommendationReports
+     * Get the device recommendation reports for Cloud PCs, such as the usage category report. The usage category report categorizes a Cloud PC as Undersized, Oversized, Rightsized, or Underutilized, and also provides the recommended SKU when the Cloud PC isn't Rightsized.
      * @param body The request body
      * @return a InputStream
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpcreports-getcloudpcrecommendationreports?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public InputStream post(@jakarta.annotation.Nonnull final GetCloudPcRecommendationReportsPostRequestBody body) {
         return post(body, null);
     }
     /**
-     * Invoke action getCloudPcRecommendationReports
+     * Get the device recommendation reports for Cloud PCs, such as the usage category report. The usage category report categorizes a Cloud PC as Undersized, Oversized, Rightsized, or Underutilized, and also provides the recommended SKU when the Cloud PC isn't Rightsized.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a InputStream
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpcreports-getcloudpcrecommendationreports?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public InputStream post(@jakarta.annotation.Nonnull final GetCloudPcRecommendationReportsPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -60,7 +62,7 @@ public class GetCloudPcRecommendationReportsRequestBuilder extends BaseRequestBu
         return this.requestAdapter.sendPrimitive(requestInfo, errorMapping, InputStream.class);
     }
     /**
-     * Invoke action getCloudPcRecommendationReports
+     * Get the device recommendation reports for Cloud PCs, such as the usage category report. The usage category report categorizes a Cloud PC as Undersized, Oversized, Rightsized, or Underutilized, and also provides the recommended SKU when the Cloud PC isn't Rightsized.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -69,7 +71,7 @@ public class GetCloudPcRecommendationReportsRequestBuilder extends BaseRequestBu
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action getCloudPcRecommendationReports
+     * Get the device recommendation reports for Cloud PCs, such as the usage category report. The usage category report categorizes a Cloud PC as Undersized, Oversized, Rightsized, or Underutilized, and also provides the recommended SKU when the Cloud PC isn't Rightsized.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

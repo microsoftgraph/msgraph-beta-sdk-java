@@ -24,7 +24,7 @@ public class PolicyRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the labels property of the microsoft.graph.informationProtectionPolicy entity.
      * @deprecated
-     * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels on 2021-02-15 and will be removed 2022-08-15
+     * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels
      */
     @Deprecated
     @jakarta.annotation.Nonnull
@@ -37,7 +37,7 @@ public class PolicyRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public PolicyRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/sites/{site%2Did}/informationProtection/policy{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/sites/{site%2Did}/informationProtection/policy{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new PolicyRequestBuilder and sets the default values.
@@ -45,12 +45,12 @@ public class PolicyRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public PolicyRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/sites/{site%2Did}/informationProtection/policy{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/sites/{site%2Did}/informationProtection/policy{?%24expand,%24select}", rawUrl);
     }
     /**
      * Delete navigation property policy for sites
      * @deprecated
-     * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels on 2021-02-15 and will be removed 2022-08-15
+     * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels
      */
     @Deprecated
     public void delete() {
@@ -60,7 +60,7 @@ public class PolicyRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property policy for sites
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @deprecated
-     * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels on 2021-02-15 and will be removed 2022-08-15
+     * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels
      */
     @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -74,7 +74,7 @@ public class PolicyRequestBuilder extends BaseRequestBuilder {
      * Get policy from sites
      * @return a InformationProtectionPolicy
      * @deprecated
-     * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels on 2021-02-15 and will be removed 2022-08-15
+     * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -86,7 +86,7 @@ public class PolicyRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a InformationProtectionPolicy
      * @deprecated
-     * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels on 2021-02-15 and will be removed 2022-08-15
+     * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -102,7 +102,7 @@ public class PolicyRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a InformationProtectionPolicy
      * @deprecated
-     * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels on 2021-02-15 and will be removed 2022-08-15
+     * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -115,7 +115,7 @@ public class PolicyRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a InformationProtectionPolicy
      * @deprecated
-     * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels on 2021-02-15 and will be removed 2022-08-15
+     * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -131,7 +131,7 @@ public class PolicyRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property policy for sites
      * @return a RequestInformation
      * @deprecated
-     * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels on 2021-02-15 and will be removed 2022-08-15
+     * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -143,7 +143,7 @@ public class PolicyRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
-     * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels on 2021-02-15 and will be removed 2022-08-15
+     * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -157,7 +157,7 @@ public class PolicyRequestBuilder extends BaseRequestBuilder {
      * Get policy from sites
      * @return a RequestInformation
      * @deprecated
-     * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels on 2021-02-15 and will be removed 2022-08-15
+     * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -169,7 +169,7 @@ public class PolicyRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
-     * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels on 2021-02-15 and will be removed 2022-08-15
+     * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -184,7 +184,7 @@ public class PolicyRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a RequestInformation
      * @deprecated
-     * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels on 2021-02-15 and will be removed 2022-08-15
+     * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -197,7 +197,7 @@ public class PolicyRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
-     * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels on 2021-02-15 and will be removed 2022-08-15
+     * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -214,7 +214,7 @@ public class PolicyRequestBuilder extends BaseRequestBuilder {
      * @param rawUrl The raw URL to use for the request builder.
      * @return a PolicyRequestBuilder
      * @deprecated
-     * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels on 2021-02-15 and will be removed 2022-08-15
+     * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels
      */
     @jakarta.annotation.Nonnull
     @Deprecated

@@ -26,7 +26,7 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ConversationMemberItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/teamwork/deletedTeams/{deletedTeam%2Did}/channels/{channel%2Did}/members/{conversationMember%2Did}{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/teamwork/deletedTeams/{deletedTeam%2Did}/channels/{channel%2Did}/members/{conversationMember%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new ConversationMemberItemRequestBuilder and sets the default values.
@@ -34,7 +34,7 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ConversationMemberItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/teamwork/deletedTeams/{deletedTeam%2Did}/channels/{channel%2Did}/members/{conversationMember%2Did}{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/teamwork/deletedTeams/{deletedTeam%2Did}/channels/{channel%2Did}/members/{conversationMember%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
      * Delete a conversationMember from a channel. This operation is allowed only for channels with a membershipType value of private or shared.
@@ -79,21 +79,21 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ConversationMember::createFromDiscriminatorValue);
     }
     /**
-     * Update the role of a conversationMember in a channel. This operation is allowed only for channels with a membershipType value of private or shared.
+     * Update the role of a conversationMember in a team.or channel.
      * @param body The request body
      * @return a ConversationMember
-     * @see <a href="https://learn.microsoft.com/graph/api/channel-update-members?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/conversationmember-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ConversationMember patch(@jakarta.annotation.Nonnull final ConversationMember body) {
         return patch(body, null);
     }
     /**
-     * Update the role of a conversationMember in a channel. This operation is allowed only for channels with a membershipType value of private or shared.
+     * Update the role of a conversationMember in a team.or channel.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ConversationMember
-     * @see <a href="https://learn.microsoft.com/graph/api/channel-update-members?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/conversationmember-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ConversationMember patch(@jakarta.annotation.Nonnull final ConversationMember body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -145,7 +145,7 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the role of a conversationMember in a channel. This operation is allowed only for channels with a membershipType value of private or shared.
+     * Update the role of a conversationMember in a team.or channel.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -154,7 +154,7 @@ public class ConversationMemberItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the role of a conversationMember in a channel. This operation is allowed only for channels with a membershipType value of private or shared.
+     * Update the role of a conversationMember in a team.or channel.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

@@ -45,7 +45,7 @@ public class MacOSPkgApp extends MobileLobApp implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the ignoreVersionDetection property value. A value indicating whether the app's version will be used to detect the app after it is installed on a device. Set this to true for apps that use a self-update feature. Set this to false to install the app when it is not already installed on the device, or if the deploying app's version number does not match the version that's already installed on the device. The default value is false.
+     * Gets the ignoreVersionDetection property value. When TRUE, indicates that the app's version will NOT be used to detect if the app is installed on a device. When FALSE, indicates that the app's version will be used to detect if the app is installed on a device. Set this to true for apps that use a self update feature. The default value is FALSE.
      * @return a Boolean
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class MacOSPkgApp extends MobileLobApp implements Parsable {
         return this.backingStore.get("ignoreVersionDetection");
     }
     /**
-     * Gets the includedApps property value. The list of apps expected to be installed by the .pkg.
+     * Gets the includedApps property value. The list of apps expected to be installed by the PKG.
      * @return a java.util.List<MacOSIncludedApp>
      */
     @jakarta.annotation.Nullable
@@ -61,7 +61,7 @@ public class MacOSPkgApp extends MobileLobApp implements Parsable {
         return this.backingStore.get("includedApps");
     }
     /**
-     * Gets the minimumSupportedOperatingSystem property value. The value for the minimum applicable operating system.
+     * Gets the minimumSupportedOperatingSystem property value. ComplexType macOSMinimumOperatingSystem that indicates the minimum operating system applicable for the application.
      * @return a MacOSMinimumOperatingSystem
      */
     @jakarta.annotation.Nullable
@@ -85,7 +85,7 @@ public class MacOSPkgApp extends MobileLobApp implements Parsable {
         return this.backingStore.get("preInstallScript");
     }
     /**
-     * Gets the primaryBundleId property value. The primary CFBundleIdentifier of the .pkg.
+     * Gets the primaryBundleId property value. The bundleId of the primary app in the PKG. This maps to the CFBundleIdentifier in the app's bundle configuration.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class MacOSPkgApp extends MobileLobApp implements Parsable {
         return this.backingStore.get("primaryBundleId");
     }
     /**
-     * Gets the primaryBundleVersion property value. The primary CFBundleVersion of the .pkg.
+     * Gets the primaryBundleVersion property value. The version of the primary app in the PKG. This maps to the CFBundleShortVersion in the app's bundle configuration.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -116,21 +116,21 @@ public class MacOSPkgApp extends MobileLobApp implements Parsable {
         writer.writeStringValue("primaryBundleVersion", this.getPrimaryBundleVersion());
     }
     /**
-     * Sets the ignoreVersionDetection property value. A value indicating whether the app's version will be used to detect the app after it is installed on a device. Set this to true for apps that use a self-update feature. Set this to false to install the app when it is not already installed on the device, or if the deploying app's version number does not match the version that's already installed on the device. The default value is false.
+     * Sets the ignoreVersionDetection property value. When TRUE, indicates that the app's version will NOT be used to detect if the app is installed on a device. When FALSE, indicates that the app's version will be used to detect if the app is installed on a device. Set this to true for apps that use a self update feature. The default value is FALSE.
      * @param value Value to set for the ignoreVersionDetection property.
      */
     public void setIgnoreVersionDetection(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("ignoreVersionDetection", value);
     }
     /**
-     * Sets the includedApps property value. The list of apps expected to be installed by the .pkg.
+     * Sets the includedApps property value. The list of apps expected to be installed by the PKG.
      * @param value Value to set for the includedApps property.
      */
     public void setIncludedApps(@jakarta.annotation.Nullable final java.util.List<MacOSIncludedApp> value) {
         this.backingStore.set("includedApps", value);
     }
     /**
-     * Sets the minimumSupportedOperatingSystem property value. The value for the minimum applicable operating system.
+     * Sets the minimumSupportedOperatingSystem property value. ComplexType macOSMinimumOperatingSystem that indicates the minimum operating system applicable for the application.
      * @param value Value to set for the minimumSupportedOperatingSystem property.
      */
     public void setMinimumSupportedOperatingSystem(@jakarta.annotation.Nullable final MacOSMinimumOperatingSystem value) {
@@ -151,14 +151,14 @@ public class MacOSPkgApp extends MobileLobApp implements Parsable {
         this.backingStore.set("preInstallScript", value);
     }
     /**
-     * Sets the primaryBundleId property value. The primary CFBundleIdentifier of the .pkg.
+     * Sets the primaryBundleId property value. The bundleId of the primary app in the PKG. This maps to the CFBundleIdentifier in the app's bundle configuration.
      * @param value Value to set for the primaryBundleId property.
      */
     public void setPrimaryBundleId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("primaryBundleId", value);
     }
     /**
-     * Sets the primaryBundleVersion property value. The primary CFBundleVersion of the .pkg.
+     * Sets the primaryBundleVersion property value. The version of the primary app in the PKG. This maps to the CFBundleShortVersion in the app's bundle configuration.
      * @param value Value to set for the primaryBundleVersion property.
      */
     public void setPrimaryBundleVersion(@jakarta.annotation.Nullable final String value) {

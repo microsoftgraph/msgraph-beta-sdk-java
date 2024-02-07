@@ -42,7 +42,7 @@ public class DeviceManagementTemplateSettingCategoryItemRequestBuilder extends B
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DeviceManagementTemplateSettingCategoryItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/templates/{deviceManagementTemplate%2Did}/migratableTo/{deviceManagementTemplate%2Did1}/categories/{deviceManagementTemplateSettingCategory%2Did}{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/deviceManagement/templates/{deviceManagementTemplate%2Did}/migratableTo/{deviceManagementTemplate%2Did1}/categories/{deviceManagementTemplateSettingCategory%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new DeviceManagementTemplateSettingCategoryItemRequestBuilder and sets the default values.
@@ -50,7 +50,7 @@ public class DeviceManagementTemplateSettingCategoryItemRequestBuilder extends B
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DeviceManagementTemplateSettingCategoryItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/templates/{deviceManagementTemplate%2Did}/migratableTo/{deviceManagementTemplate%2Did1}/categories/{deviceManagementTemplateSettingCategory%2Did}{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/deviceManagement/templates/{deviceManagementTemplate%2Did}/migratableTo/{deviceManagementTemplate%2Did1}/categories/{deviceManagementTemplateSettingCategory%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
      * Delete navigation property categories for deviceManagement

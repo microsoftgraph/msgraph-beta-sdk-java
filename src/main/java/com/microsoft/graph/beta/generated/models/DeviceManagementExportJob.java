@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * Entity representing a job to export a report
+ * Entity representing a job to export a report.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementExportJob extends Entity implements Parsable {
@@ -29,7 +29,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
         return new DeviceManagementExportJob();
     }
     /**
-     * Gets the expirationDateTime property value. Time that the exported report expires. This property is read-only.
+     * Gets the expirationDateTime property value. Time that the exported report expires.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
@@ -49,6 +49,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
         deserializerMap.put("localizationType", (n) -> { this.setLocalizationType(n.getEnumValue(DeviceManagementExportJobLocalizationType::forValue)); });
         deserializerMap.put("reportName", (n) -> { this.setReportName(n.getStringValue()); });
         deserializerMap.put("requestDateTime", (n) -> { this.setRequestDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("search", (n) -> { this.setSearch(n.getStringValue()); });
         deserializerMap.put("select", (n) -> { this.setSelect(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("snapshotId", (n) -> { this.setSnapshotId(n.getStringValue()); });
         deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(DeviceManagementReportStatus::forValue)); });
@@ -56,7 +57,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the filter property value. Filters applied on the report
+     * Gets the filter property value. Filters applied on the report. The maximum length allowed for this property is 2000 characters.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -64,7 +65,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
         return this.backingStore.get("filter");
     }
     /**
-     * Gets the format property value. Possible values for the file format of a report
+     * Gets the format property value. Possible values for the file format of a report.
      * @return a DeviceManagementReportFileFormat
      */
     @jakarta.annotation.Nullable
@@ -72,7 +73,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
         return this.backingStore.get("format");
     }
     /**
-     * Gets the localizationType property value. Configures how the requested export job is localized
+     * Gets the localizationType property value. Configures how the requested export job is localized.
      * @return a DeviceManagementExportJobLocalizationType
      */
     @jakarta.annotation.Nullable
@@ -80,7 +81,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
         return this.backingStore.get("localizationType");
     }
     /**
-     * Gets the reportName property value. Name of the report
+     * Gets the reportName property value. Name of the report. The maximum length allowed for this property is 2000 characters.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -88,7 +89,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
         return this.backingStore.get("reportName");
     }
     /**
-     * Gets the requestDateTime property value. Time that the exported report was requested. This property is read-only.
+     * Gets the requestDateTime property value. Time that the exported report was requested.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
@@ -96,7 +97,15 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
         return this.backingStore.get("requestDateTime");
     }
     /**
-     * Gets the select property value. Columns selected from the report
+     * Gets the search property value. Configures a search term to filter the data. The maximum length allowed for this property is 100 characters.
+     * @return a String
+     */
+    @jakarta.annotation.Nullable
+    public String getSearch() {
+        return this.backingStore.get("search");
+    }
+    /**
+     * Gets the select property value. Columns selected from the report. The maximum number of allowed columns names is 256. The maximum length allowed for each column name in this property is 1000 characters.
      * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
@@ -104,7 +113,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
         return this.backingStore.get("select");
     }
     /**
-     * Gets the snapshotId property value. A snapshot is an identifiable subset of the dataset represented by the ReportName. A sessionId or CachedReportConfiguration id can be used here. If a sessionId is specified, Filter, Select, and OrderBy are applied to the data represented by the sessionId. Filter, Select, and OrderBy cannot be specified together with a CachedReportConfiguration id.
+     * Gets the snapshotId property value. A snapshot is an identifiable subset of the dataset represented by the ReportName. A sessionId or CachedReportConfiguration id can be used here. If a sessionId is specified, Filter, Select, and OrderBy are applied to the data represented by the sessionId. Filter, Select, and OrderBy cannot be specified together with a CachedReportConfiguration id. The maximum length allowed for this property is 128 characters.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -112,7 +121,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
         return this.backingStore.get("snapshotId");
     }
     /**
-     * Gets the status property value. Possible statuses associated with a generated report
+     * Gets the status property value. Possible statuses associated with a generated report.
      * @return a DeviceManagementReportStatus
      */
     @jakarta.annotation.Nullable
@@ -120,7 +129,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
         return this.backingStore.get("status");
     }
     /**
-     * Gets the url property value. Temporary location of the exported report. This property is read-only.
+     * Gets the url property value. Temporary location of the exported report.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -140,76 +149,84 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
         writer.writeEnumValue("localizationType", this.getLocalizationType());
         writer.writeStringValue("reportName", this.getReportName());
         writer.writeOffsetDateTimeValue("requestDateTime", this.getRequestDateTime());
+        writer.writeStringValue("search", this.getSearch());
         writer.writeCollectionOfPrimitiveValues("select", this.getSelect());
         writer.writeStringValue("snapshotId", this.getSnapshotId());
         writer.writeEnumValue("status", this.getStatus());
         writer.writeStringValue("url", this.getUrl());
     }
     /**
-     * Sets the expirationDateTime property value. Time that the exported report expires. This property is read-only.
+     * Sets the expirationDateTime property value. Time that the exported report expires.
      * @param value Value to set for the expirationDateTime property.
      */
     public void setExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("expirationDateTime", value);
     }
     /**
-     * Sets the filter property value. Filters applied on the report
+     * Sets the filter property value. Filters applied on the report. The maximum length allowed for this property is 2000 characters.
      * @param value Value to set for the filter property.
      */
     public void setFilter(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("filter", value);
     }
     /**
-     * Sets the format property value. Possible values for the file format of a report
+     * Sets the format property value. Possible values for the file format of a report.
      * @param value Value to set for the format property.
      */
     public void setFormat(@jakarta.annotation.Nullable final DeviceManagementReportFileFormat value) {
         this.backingStore.set("format", value);
     }
     /**
-     * Sets the localizationType property value. Configures how the requested export job is localized
+     * Sets the localizationType property value. Configures how the requested export job is localized.
      * @param value Value to set for the localizationType property.
      */
     public void setLocalizationType(@jakarta.annotation.Nullable final DeviceManagementExportJobLocalizationType value) {
         this.backingStore.set("localizationType", value);
     }
     /**
-     * Sets the reportName property value. Name of the report
+     * Sets the reportName property value. Name of the report. The maximum length allowed for this property is 2000 characters.
      * @param value Value to set for the reportName property.
      */
     public void setReportName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("reportName", value);
     }
     /**
-     * Sets the requestDateTime property value. Time that the exported report was requested. This property is read-only.
+     * Sets the requestDateTime property value. Time that the exported report was requested.
      * @param value Value to set for the requestDateTime property.
      */
     public void setRequestDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("requestDateTime", value);
     }
     /**
-     * Sets the select property value. Columns selected from the report
+     * Sets the search property value. Configures a search term to filter the data. The maximum length allowed for this property is 100 characters.
+     * @param value Value to set for the search property.
+     */
+    public void setSearch(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("search", value);
+    }
+    /**
+     * Sets the select property value. Columns selected from the report. The maximum number of allowed columns names is 256. The maximum length allowed for each column name in this property is 1000 characters.
      * @param value Value to set for the select property.
      */
     public void setSelect(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("select", value);
     }
     /**
-     * Sets the snapshotId property value. A snapshot is an identifiable subset of the dataset represented by the ReportName. A sessionId or CachedReportConfiguration id can be used here. If a sessionId is specified, Filter, Select, and OrderBy are applied to the data represented by the sessionId. Filter, Select, and OrderBy cannot be specified together with a CachedReportConfiguration id.
+     * Sets the snapshotId property value. A snapshot is an identifiable subset of the dataset represented by the ReportName. A sessionId or CachedReportConfiguration id can be used here. If a sessionId is specified, Filter, Select, and OrderBy are applied to the data represented by the sessionId. Filter, Select, and OrderBy cannot be specified together with a CachedReportConfiguration id. The maximum length allowed for this property is 128 characters.
      * @param value Value to set for the snapshotId property.
      */
     public void setSnapshotId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("snapshotId", value);
     }
     /**
-     * Sets the status property value. Possible statuses associated with a generated report
+     * Sets the status property value. Possible statuses associated with a generated report.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final DeviceManagementReportStatus value) {
         this.backingStore.set("status", value);
     }
     /**
-     * Sets the url property value. Temporary location of the exported report. This property is read-only.
+     * Sets the url property value. Temporary location of the exported report.
      * @param value Value to set for the url property.
      */
     public void setUrl(@jakarta.annotation.Nullable final String value) {

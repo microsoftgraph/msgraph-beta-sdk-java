@@ -48,7 +48,7 @@ public class ConnectorGroupsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ConnectorGroupsRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/onPremisesPublishingProfiles/{onPremisesPublishingProfile%2Did}/connectorGroups{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/onPremisesPublishingProfiles/{onPremisesPublishingProfile%2Did}/connectorGroups{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
      * Instantiates a new ConnectorGroupsRequestBuilder and sets the default values.
@@ -56,7 +56,7 @@ public class ConnectorGroupsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ConnectorGroupsRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/onPremisesPublishingProfiles/{onPremisesPublishingProfile%2Did}/connectorGroups{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/onPremisesPublishingProfiles/{onPremisesPublishingProfile%2Did}/connectorGroups{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
      * Retrieve a list of connectorGroup objects.
@@ -82,21 +82,21 @@ public class ConnectorGroupsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ConnectorGroupCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a connectorGroup object.
+     * Create a new connectorGroup.
      * @param body The request body
      * @return a ConnectorGroup
-     * @see <a href="https://learn.microsoft.com/graph/api/connectorgroup-post?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/connectorgroup-post-connectorgroups?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ConnectorGroup post(@jakarta.annotation.Nonnull final ConnectorGroup body) {
         return post(body, null);
     }
     /**
-     * Create a connectorGroup object.
+     * Create a new connectorGroup.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ConnectorGroup
-     * @see <a href="https://learn.microsoft.com/graph/api/connectorgroup-post?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/connectorgroup-post-connectorgroups?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ConnectorGroup post(@jakarta.annotation.Nonnull final ConnectorGroup body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -128,7 +128,7 @@ public class ConnectorGroupsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a connectorGroup object.
+     * Create a new connectorGroup.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class ConnectorGroupsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a connectorGroup object.
+     * Create a new connectorGroup.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

@@ -28,7 +28,7 @@ public class DeviceManagementReports extends Entity implements Parsable {
         return new DeviceManagementReports();
     }
     /**
-     * Gets the cachedReportConfigurations property value. Entity representing the configuration of a cached report
+     * Gets the cachedReportConfigurations property value. Entity representing the configuration of a cached report.
      * @return a java.util.List<DeviceManagementCachedReportConfiguration>
      */
     @jakarta.annotation.Nullable
@@ -36,7 +36,7 @@ public class DeviceManagementReports extends Entity implements Parsable {
         return this.backingStore.get("cachedReportConfigurations");
     }
     /**
-     * Gets the exportJobs property value. Entity representing a job to export a report
+     * Gets the exportJobs property value. Entity representing a job to export a report.
      * @return a java.util.List<DeviceManagementExportJob>
      */
     @jakarta.annotation.Nullable
@@ -65,14 +65,14 @@ public class DeviceManagementReports extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("exportJobs", this.getExportJobs());
     }
     /**
-     * Sets the cachedReportConfigurations property value. Entity representing the configuration of a cached report
+     * Sets the cachedReportConfigurations property value. Entity representing the configuration of a cached report.
      * @param value Value to set for the cachedReportConfigurations property.
      */
     public void setCachedReportConfigurations(@jakarta.annotation.Nullable final java.util.List<DeviceManagementCachedReportConfiguration> value) {
         this.backingStore.set("cachedReportConfigurations", value);
     }
     /**
-     * Sets the exportJobs property value. Entity representing a job to export a report
+     * Sets the exportJobs property value. Entity representing a job to export a report.
      * @param value Value to set for the exportJobs property.
      */
     public void setExportJobs(@jakarta.annotation.Nullable final java.util.List<DeviceManagementExportJob> value) {

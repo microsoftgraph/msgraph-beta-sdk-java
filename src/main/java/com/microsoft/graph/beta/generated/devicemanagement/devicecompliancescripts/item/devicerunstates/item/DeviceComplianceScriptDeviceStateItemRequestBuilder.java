@@ -34,7 +34,7 @@ public class DeviceComplianceScriptDeviceStateItemRequestBuilder extends BaseReq
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DeviceComplianceScriptDeviceStateItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/deviceComplianceScripts/{deviceComplianceScript%2Did}/deviceRunStates/{deviceComplianceScriptDeviceState%2Did}{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/deviceManagement/deviceComplianceScripts/{deviceComplianceScript%2Did}/deviceRunStates/{deviceComplianceScriptDeviceState%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new DeviceComplianceScriptDeviceStateItemRequestBuilder and sets the default values.
@@ -42,7 +42,7 @@ public class DeviceComplianceScriptDeviceStateItemRequestBuilder extends BaseReq
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DeviceComplianceScriptDeviceStateItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/deviceComplianceScripts/{deviceComplianceScript%2Did}/deviceRunStates/{deviceComplianceScriptDeviceState%2Did}{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/deviceManagement/deviceComplianceScripts/{deviceComplianceScript%2Did}/deviceRunStates/{deviceComplianceScriptDeviceState%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
      * Delete navigation property deviceRunStates for deviceManagement

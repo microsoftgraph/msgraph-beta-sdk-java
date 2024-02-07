@@ -27,6 +27,13 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
     @jakarta.annotation.Nonnull
     public static Win32LobApp createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.win32CatalogApp": return new Win32CatalogApp();
+            }
+        }
         return new Win32LobApp();
     }
     /**

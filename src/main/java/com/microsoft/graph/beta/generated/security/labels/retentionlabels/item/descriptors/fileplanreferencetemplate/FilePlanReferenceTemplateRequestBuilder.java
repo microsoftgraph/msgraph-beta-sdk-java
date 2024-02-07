@@ -26,7 +26,7 @@ public class FilePlanReferenceTemplateRequestBuilder extends BaseRequestBuilder 
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public FilePlanReferenceTemplateRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/security/labels/retentionLabels/{retentionLabel%2Did}/descriptors/filePlanReferenceTemplate{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/security/labels/retentionLabels/{retentionLabel%2Did}/descriptors/filePlanReferenceTemplate{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new FilePlanReferenceTemplateRequestBuilder and sets the default values.
@@ -34,7 +34,7 @@ public class FilePlanReferenceTemplateRequestBuilder extends BaseRequestBuilder 
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public FilePlanReferenceTemplateRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/security/labels/retentionLabels/{retentionLabel%2Did}/descriptors/filePlanReferenceTemplate{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/security/labels/retentionLabels/{retentionLabel%2Did}/descriptors/filePlanReferenceTemplate{?%24expand,%24select}", rawUrl);
     }
     /**
      * Specifies a unique alpha-numeric identifier for an organizations retention schedule.

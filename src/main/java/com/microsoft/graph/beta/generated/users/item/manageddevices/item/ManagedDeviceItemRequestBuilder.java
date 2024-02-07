@@ -22,6 +22,7 @@ import com.microsoft.graph.beta.users.item.manageddevices.item.getcloudpcremotea
 import com.microsoft.graph.beta.users.item.manageddevices.item.getcloudpcreviewstatus.GetCloudPcReviewStatusRequestBuilder;
 import com.microsoft.graph.beta.users.item.manageddevices.item.getfilevaultkey.GetFileVaultKeyRequestBuilder;
 import com.microsoft.graph.beta.users.item.manageddevices.item.getnoncompliantsettings.GetNonCompliantSettingsRequestBuilder;
+import com.microsoft.graph.beta.users.item.manageddevices.item.initiatedeviceattestation.InitiateDeviceAttestationRequestBuilder;
 import com.microsoft.graph.beta.users.item.manageddevices.item.initiatemobiledevicemanagementkeyrecovery.InitiateMobileDeviceManagementKeyRecoveryRequestBuilder;
 import com.microsoft.graph.beta.users.item.manageddevices.item.initiateondemandproactiveremediation.InitiateOnDemandProactiveRemediationRequestBuilder;
 import com.microsoft.graph.beta.users.item.manageddevices.item.locatedevice.LocateDeviceRequestBuilder;
@@ -216,6 +217,13 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public GetNonCompliantSettingsRequestBuilder getNonCompliantSettings() {
         return new GetNonCompliantSettingsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the initiateDeviceAttestation method.
+     */
+    @jakarta.annotation.Nonnull
+    public InitiateDeviceAttestationRequestBuilder initiateDeviceAttestation() {
+        return new InitiateDeviceAttestationRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the initiateMobileDeviceManagementKeyRecovery method.
@@ -482,7 +490,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ManagedDeviceItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/managedDevices/{managedDevice%2Did}{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/managedDevices/{managedDevice%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new ManagedDeviceItemRequestBuilder and sets the default values.
@@ -490,7 +498,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ManagedDeviceItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/managedDevices/{managedDevice%2Did}{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/managedDevices/{managedDevice%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
      * Delete navigation property managedDevices for users

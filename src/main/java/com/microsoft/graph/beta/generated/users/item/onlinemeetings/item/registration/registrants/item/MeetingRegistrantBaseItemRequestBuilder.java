@@ -26,7 +26,7 @@ public class MeetingRegistrantBaseItemRequestBuilder extends BaseRequestBuilder 
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public MeetingRegistrantBaseItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/onlineMeetings/{onlineMeeting%2Did}/registration/registrants/{meetingRegistrantBase%2Did}{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/onlineMeetings/{onlineMeeting%2Did}/registration/registrants/{meetingRegistrantBase%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new MeetingRegistrantBaseItemRequestBuilder and sets the default values.
@@ -34,7 +34,7 @@ public class MeetingRegistrantBaseItemRequestBuilder extends BaseRequestBuilder 
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public MeetingRegistrantBaseItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/onlineMeetings/{onlineMeeting%2Did}/registration/registrants/{meetingRegistrantBase%2Did}{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/onlineMeetings/{onlineMeeting%2Did}/registration/registrants/{meetingRegistrantBase%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
      * Delete navigation property registrants for users

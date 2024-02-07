@@ -40,7 +40,7 @@ public class GetSharedUseLicenseUsageReportRequestBuilder extends BaseRequestBui
      * @param body The request body
      * @return a InputStream
      * @deprecated
-     * The getSharedUseLicenseUsageReport API is deprecated and will stop returning on Oct 17, 2023. Please use getFrontlineReport instead. as of 2023-05/getSharedUseLicenseUsageReport on 2023-05-17 and will be removed 2023-10-17
+     * The getSharedUseLicenseUsageReport API is deprecated and will stop returning on Oct 17, 2023. Please use getFrontlineReport instead. as of 2023-05/getSharedUseLicenseUsageReport
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpcreports-getshareduselicenseusagereport?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -54,7 +54,7 @@ public class GetSharedUseLicenseUsageReportRequestBuilder extends BaseRequestBui
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a InputStream
      * @deprecated
-     * The getSharedUseLicenseUsageReport API is deprecated and will stop returning on Oct 17, 2023. Please use getFrontlineReport instead. as of 2023-05/getSharedUseLicenseUsageReport on 2023-05-17 and will be removed 2023-10-17
+     * The getSharedUseLicenseUsageReport API is deprecated and will stop returning on Oct 17, 2023. Please use getFrontlineReport instead. as of 2023-05/getSharedUseLicenseUsageReport
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpcreports-getshareduselicenseusagereport?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -72,7 +72,7 @@ public class GetSharedUseLicenseUsageReportRequestBuilder extends BaseRequestBui
      * @param body The request body
      * @return a RequestInformation
      * @deprecated
-     * The getSharedUseLicenseUsageReport API is deprecated and will stop returning on Oct 17, 2023. Please use getFrontlineReport instead. as of 2023-05/getSharedUseLicenseUsageReport on 2023-05-17 and will be removed 2023-10-17
+     * The getSharedUseLicenseUsageReport API is deprecated and will stop returning on Oct 17, 2023. Please use getFrontlineReport instead. as of 2023-05/getSharedUseLicenseUsageReport
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -85,7 +85,7 @@ public class GetSharedUseLicenseUsageReportRequestBuilder extends BaseRequestBui
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
-     * The getSharedUseLicenseUsageReport API is deprecated and will stop returning on Oct 17, 2023. Please use getFrontlineReport instead. as of 2023-05/getSharedUseLicenseUsageReport on 2023-05-17 and will be removed 2023-10-17
+     * The getSharedUseLicenseUsageReport API is deprecated and will stop returning on Oct 17, 2023. Please use getFrontlineReport instead. as of 2023-05/getSharedUseLicenseUsageReport
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -102,7 +102,7 @@ public class GetSharedUseLicenseUsageReportRequestBuilder extends BaseRequestBui
      * @param rawUrl The raw URL to use for the request builder.
      * @return a GetSharedUseLicenseUsageReportRequestBuilder
      * @deprecated
-     * The getSharedUseLicenseUsageReport API is deprecated and will stop returning on Oct 17, 2023. Please use getFrontlineReport instead. as of 2023-05/getSharedUseLicenseUsageReport on 2023-05-17 and will be removed 2023-10-17
+     * The getSharedUseLicenseUsageReport API is deprecated and will stop returning on Oct 17, 2023. Please use getFrontlineReport instead. as of 2023-05/getSharedUseLicenseUsageReport
      */
     @jakarta.annotation.Nonnull
     @Deprecated

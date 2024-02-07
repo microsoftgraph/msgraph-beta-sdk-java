@@ -25,7 +25,10 @@ import java.util.Objects;
 public class LinksRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @deprecated
+     * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
@@ -34,8 +37,11 @@ public class LinksRequestBuilder extends BaseRequestBuilder {
      * Provides operations to manage the links property of the microsoft.graph.networkaccess.branchConnectivityConfiguration entity.
      * @param connectivityConfigurationLinkId The unique identifier of connectivityConfigurationLink
      * @return a ConnectivityConfigurationLinkItemRequestBuilder
+     * @deprecated
+     * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public ConnectivityConfigurationLinkItemRequestBuilder byConnectivityConfigurationLinkId(@jakarta.annotation.Nonnull final String connectivityConfigurationLinkId) {
         Objects.requireNonNull(connectivityConfigurationLinkId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
@@ -48,7 +54,7 @@ public class LinksRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public LinksRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/networkAccess/connectivity/branches/{branchSite%2Did}/connectivityConfiguration/links{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/networkAccess/connectivity/branches/{branchSite%2Did}/connectivityConfiguration/links{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
      * Instantiates a new LinksRequestBuilder and sets the default values.
@@ -56,13 +62,16 @@ public class LinksRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public LinksRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/networkAccess/connectivity/branches/{branchSite%2Did}/connectivityConfiguration/links{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/networkAccess/connectivity/branches/{branchSite%2Did}/connectivityConfiguration/links{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
      * List of connectivity configurations for deviceLink objects.
      * @return a ConnectivityConfigurationLinkCollectionResponse
+     * @deprecated
+     * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public ConnectivityConfigurationLinkCollectionResponse get() {
         return get(null);
     }
@@ -70,8 +79,11 @@ public class LinksRequestBuilder extends BaseRequestBuilder {
      * List of connectivity configurations for deviceLink objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ConnectivityConfigurationLinkCollectionResponse
+     * @deprecated
+     * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public ConnectivityConfigurationLinkCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -83,8 +95,11 @@ public class LinksRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to links for networkAccess
      * @param body The request body
      * @return a ConnectivityConfigurationLink
+     * @deprecated
+     * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public ConnectivityConfigurationLink post(@jakarta.annotation.Nonnull final ConnectivityConfigurationLink body) {
         return post(body, null);
     }
@@ -93,8 +108,11 @@ public class LinksRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a ConnectivityConfigurationLink
+     * @deprecated
+     * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public ConnectivityConfigurationLink post(@jakarta.annotation.Nonnull final ConnectivityConfigurationLink body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
@@ -106,8 +124,11 @@ public class LinksRequestBuilder extends BaseRequestBuilder {
     /**
      * List of connectivity configurations for deviceLink objects.
      * @return a RequestInformation
+     * @deprecated
+     * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -115,8 +136,11 @@ public class LinksRequestBuilder extends BaseRequestBuilder {
      * List of connectivity configurations for deviceLink objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
+     * @deprecated
+     * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -127,8 +151,11 @@ public class LinksRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to links for networkAccess
      * @param body The request body
      * @return a RequestInformation
+     * @deprecated
+     * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ConnectivityConfigurationLink body) {
         return toPostRequestInformation(body, null);
     }
@@ -137,8 +164,11 @@ public class LinksRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
+     * @deprecated
+     * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ConnectivityConfigurationLink body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
@@ -151,8 +181,11 @@ public class LinksRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a LinksRequestBuilder
+     * @deprecated
+     * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public LinksRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new LinksRequestBuilder(rawUrl, requestAdapter);

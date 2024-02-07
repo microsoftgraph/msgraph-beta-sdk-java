@@ -84,7 +84,7 @@ public class DeviceManagementAutopilotPolicyStatusDetail extends Entity implemen
         return this.backingStore.get("policyType");
     }
     /**
-     * Gets the trackedOnEnrollmentStatus property value. Indicates if this prolicy was tracked as part of the autopilot bootstrap enrollment sync session
+     * Gets the trackedOnEnrollmentStatus property value. Indicates if this policy was tracked as part of the autopilot bootstrap enrollment sync session
      * @return a Boolean
      */
     @jakarta.annotation.Nullable
@@ -141,7 +141,7 @@ public class DeviceManagementAutopilotPolicyStatusDetail extends Entity implemen
         this.backingStore.set("policyType", value);
     }
     /**
-     * Sets the trackedOnEnrollmentStatus property value. Indicates if this prolicy was tracked as part of the autopilot bootstrap enrollment sync session
+     * Sets the trackedOnEnrollmentStatus property value. Indicates if this policy was tracked as part of the autopilot bootstrap enrollment sync session
      * @param value Value to set for the trackedOnEnrollmentStatus property.
      */
     public void setTrackedOnEnrollmentStatus(@jakarta.annotation.Nullable final Boolean value) {

@@ -68,7 +68,7 @@ public class KeyValue implements AdditionalDataHolder, BackedModel, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the key property value. Key.
+     * Gets the key property value. Contains the name of the field that a value is associated with.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -84,7 +84,7 @@ public class KeyValue implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the value property value. Value.
+     * Gets the value property value. Contains the corresponding value for the specified key.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -118,7 +118,7 @@ public class KeyValue implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore = value;
     }
     /**
-     * Sets the key property value. Key.
+     * Sets the key property value. Contains the name of the field that a value is associated with.
      * @param value Value to set for the key property.
      */
     public void setKey(@jakarta.annotation.Nullable final String value) {
@@ -132,7 +132,7 @@ public class KeyValue implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the value property value. Value.
+     * Sets the value property value. Contains the corresponding value for the specified key.
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final String value) {

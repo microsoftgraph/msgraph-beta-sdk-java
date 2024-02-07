@@ -26,7 +26,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
         return new CloudPcGalleryImage();
     }
     /**
-     * Gets the displayName property value. The official display name of the gallery image. Read-only.
+     * Gets the displayName property value. The display name of this gallery image. For example, Windows 11 Enterprise + Microsoft 365 Apps 22H2. Read-only.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -34,7 +34,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
         return this.backingStore.get("displayName");
     }
     /**
-     * Gets the endDate property value. The date in which this image is no longer within long-term support. The Cloud PC continues to provide short-term support. Read-only.
+     * Gets the endDate property value. The date when the status of image becomes supportedWithWarning. Users can still provision new Cloud PCs if the current time is later than endDate and earlier than expirationDate. For example, assume the endDate of a gallery image is 2023-9-14 and expirationDate is 2024-3-14, users are able to provision new Cloud PCs if today is 2023-10-01. Read-only.
      * @return a LocalDate
      */
     @jakarta.annotation.Nullable
@@ -42,7 +42,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
         return this.backingStore.get("endDate");
     }
     /**
-     * Gets the expirationDate property value. The date when the image is no longer available. Read-only.
+     * Gets the expirationDate property value. The date when the image is no longer available. Users are unable to provision new Cloud PCs if the current time is later than expirationDate. The value is usually endDate plus six months. For example, if the startDate is 2025-10-14, the expirationDate is usually 2026-04-14. Read-only.
      * @return a LocalDate
      */
     @jakarta.annotation.Nullable
@@ -74,7 +74,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the offer property value. The offer name of the gallery image. This value is passed to Azure to get the image resource. Read-only.
+     * Gets the offer property value. The offer property
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -82,7 +82,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
         return this.backingStore.get("offer");
     }
     /**
-     * Gets the offerDisplayName property value. The official display offer name of the gallery image. For example, Windows 10 Enterprise + OS Optimizations. Read-only.
+     * Gets the offerDisplayName property value. The offerDisplayName property
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -90,7 +90,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
         return this.backingStore.get("offerDisplayName");
     }
     /**
-     * Gets the offerName property value. The offerName property
+     * Gets the offerName property value. The offer name of this gallery image that is passed to ARM to retrieve the image resource. Read-only.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -98,7 +98,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
         return this.backingStore.get("offerName");
     }
     /**
-     * Gets the publisher property value. The publisher name of the gallery image. This value is passed to Azure to get the image resource. Read-only.
+     * Gets the publisher property value. The publisher property
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -106,7 +106,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
         return this.backingStore.get("publisher");
     }
     /**
-     * Gets the publisherName property value. The publisherName property
+     * Gets the publisherName property value. The publisher name of this gallery image that is passed to ARM to retrieve the image resource. Read-only.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -114,7 +114,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
         return this.backingStore.get("publisherName");
     }
     /**
-     * Gets the recommendedSku property value. Recommended Cloud PC SKU for this gallery image. Read-only.
+     * Gets the recommendedSku property value. The recommendedSku property
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -122,7 +122,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
         return this.backingStore.get("recommendedSku");
     }
     /**
-     * Gets the sizeInGB property value. The size of this image in gigabytes. Read-only.
+     * Gets the sizeInGB property value. Indicates the size of this image in gigabytes. For example, 64. Read-only.
      * @return a Integer
      */
     @jakarta.annotation.Nullable
@@ -130,7 +130,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
         return this.backingStore.get("sizeInGB");
     }
     /**
-     * Gets the sku property value. The SKU name of the gallery image. This value is passed to Azure to get the image resource. Read-only.
+     * Gets the sku property value. The sku property
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -138,7 +138,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
         return this.backingStore.get("sku");
     }
     /**
-     * Gets the skuDisplayName property value. The official display stock keeping unit (SKU) name of this gallery image. For example, 2004. Read-only.
+     * Gets the skuDisplayName property value. The skuDisplayName property
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -146,7 +146,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
         return this.backingStore.get("skuDisplayName");
     }
     /**
-     * Gets the skuName property value. The skuName property
+     * Gets the skuName property value. The SKU name of this image that is passed to ARM to retrieve the image resource. Read-only.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -154,7 +154,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
         return this.backingStore.get("skuName");
     }
     /**
-     * Gets the startDate property value. The date when the image becomes available. Read-only.
+     * Gets the startDate property value. The date when the Cloud PC image is available for provisioning new Cloud PCs. For example, 2022-09-20. Read-only.
      * @return a LocalDate
      */
     @jakarta.annotation.Nullable
@@ -162,7 +162,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
         return this.backingStore.get("startDate");
     }
     /**
-     * Gets the status property value. The status of the gallery image on the Cloud PC. Possible values are: supported, supportedWithWarning, notSupported, unknownFutureValue. Read-only.
+     * Gets the status property value. The status of the gallery image on the Cloud PC. Possible values are: supported, supportedWithWarning, notSupported, unknownFutureValue. The default value is supported. Read-only.
      * @return a CloudPcGalleryImageStatus
      */
     @jakarta.annotation.Nullable
@@ -193,105 +193,105 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
         writer.writeEnumValue("status", this.getStatus());
     }
     /**
-     * Sets the displayName property value. The official display name of the gallery image. Read-only.
+     * Sets the displayName property value. The display name of this gallery image. For example, Windows 11 Enterprise + Microsoft 365 Apps 22H2. Read-only.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the endDate property value. The date in which this image is no longer within long-term support. The Cloud PC continues to provide short-term support. Read-only.
+     * Sets the endDate property value. The date when the status of image becomes supportedWithWarning. Users can still provision new Cloud PCs if the current time is later than endDate and earlier than expirationDate. For example, assume the endDate of a gallery image is 2023-9-14 and expirationDate is 2024-3-14, users are able to provision new Cloud PCs if today is 2023-10-01. Read-only.
      * @param value Value to set for the endDate property.
      */
     public void setEndDate(@jakarta.annotation.Nullable final LocalDate value) {
         this.backingStore.set("endDate", value);
     }
     /**
-     * Sets the expirationDate property value. The date when the image is no longer available. Read-only.
+     * Sets the expirationDate property value. The date when the image is no longer available. Users are unable to provision new Cloud PCs if the current time is later than expirationDate. The value is usually endDate plus six months. For example, if the startDate is 2025-10-14, the expirationDate is usually 2026-04-14. Read-only.
      * @param value Value to set for the expirationDate property.
      */
     public void setExpirationDate(@jakarta.annotation.Nullable final LocalDate value) {
         this.backingStore.set("expirationDate", value);
     }
     /**
-     * Sets the offer property value. The offer name of the gallery image. This value is passed to Azure to get the image resource. Read-only.
+     * Sets the offer property value. The offer property
      * @param value Value to set for the offer property.
      */
     public void setOffer(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("offer", value);
     }
     /**
-     * Sets the offerDisplayName property value. The official display offer name of the gallery image. For example, Windows 10 Enterprise + OS Optimizations. Read-only.
+     * Sets the offerDisplayName property value. The offerDisplayName property
      * @param value Value to set for the offerDisplayName property.
      */
     public void setOfferDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("offerDisplayName", value);
     }
     /**
-     * Sets the offerName property value. The offerName property
+     * Sets the offerName property value. The offer name of this gallery image that is passed to ARM to retrieve the image resource. Read-only.
      * @param value Value to set for the offerName property.
      */
     public void setOfferName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("offerName", value);
     }
     /**
-     * Sets the publisher property value. The publisher name of the gallery image. This value is passed to Azure to get the image resource. Read-only.
+     * Sets the publisher property value. The publisher property
      * @param value Value to set for the publisher property.
      */
     public void setPublisher(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("publisher", value);
     }
     /**
-     * Sets the publisherName property value. The publisherName property
+     * Sets the publisherName property value. The publisher name of this gallery image that is passed to ARM to retrieve the image resource. Read-only.
      * @param value Value to set for the publisherName property.
      */
     public void setPublisherName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("publisherName", value);
     }
     /**
-     * Sets the recommendedSku property value. Recommended Cloud PC SKU for this gallery image. Read-only.
+     * Sets the recommendedSku property value. The recommendedSku property
      * @param value Value to set for the recommendedSku property.
      */
     public void setRecommendedSku(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("recommendedSku", value);
     }
     /**
-     * Sets the sizeInGB property value. The size of this image in gigabytes. Read-only.
+     * Sets the sizeInGB property value. Indicates the size of this image in gigabytes. For example, 64. Read-only.
      * @param value Value to set for the sizeInGB property.
      */
     public void setSizeInGB(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("sizeInGB", value);
     }
     /**
-     * Sets the sku property value. The SKU name of the gallery image. This value is passed to Azure to get the image resource. Read-only.
+     * Sets the sku property value. The sku property
      * @param value Value to set for the sku property.
      */
     public void setSku(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("sku", value);
     }
     /**
-     * Sets the skuDisplayName property value. The official display stock keeping unit (SKU) name of this gallery image. For example, 2004. Read-only.
+     * Sets the skuDisplayName property value. The skuDisplayName property
      * @param value Value to set for the skuDisplayName property.
      */
     public void setSkuDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("skuDisplayName", value);
     }
     /**
-     * Sets the skuName property value. The skuName property
+     * Sets the skuName property value. The SKU name of this image that is passed to ARM to retrieve the image resource. Read-only.
      * @param value Value to set for the skuName property.
      */
     public void setSkuName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("skuName", value);
     }
     /**
-     * Sets the startDate property value. The date when the image becomes available. Read-only.
+     * Sets the startDate property value. The date when the Cloud PC image is available for provisioning new Cloud PCs. For example, 2022-09-20. Read-only.
      * @param value Value to set for the startDate property.
      */
     public void setStartDate(@jakarta.annotation.Nullable final LocalDate value) {
         this.backingStore.set("startDate", value);
     }
     /**
-     * Sets the status property value. The status of the gallery image on the Cloud PC. Possible values are: supported, supportedWithWarning, notSupported, unknownFutureValue. Read-only.
+     * Sets the status property value. The status of the gallery image on the Cloud PC. Possible values are: supported, supportedWithWarning, notSupported, unknownFutureValue. The default value is supported. Read-only.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final CloudPcGalleryImageStatus value) {

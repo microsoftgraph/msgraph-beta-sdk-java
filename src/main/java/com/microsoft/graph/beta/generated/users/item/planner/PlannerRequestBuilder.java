@@ -4,6 +4,7 @@ import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.PlannerUser;
 import com.microsoft.graph.beta.users.item.planner.all.AllRequestBuilder;
 import com.microsoft.graph.beta.users.item.planner.favoriteplans.FavoritePlansRequestBuilder;
+import com.microsoft.graph.beta.users.item.planner.mydaytasks.MyDayTasksRequestBuilder;
 import com.microsoft.graph.beta.users.item.planner.plans.PlansRequestBuilder;
 import com.microsoft.graph.beta.users.item.planner.recentplans.RecentPlansRequestBuilder;
 import com.microsoft.graph.beta.users.item.planner.rosterplans.RosterPlansRequestBuilder;
@@ -41,6 +42,13 @@ public class PlannerRequestBuilder extends BaseRequestBuilder {
         return new FavoritePlansRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the myDayTasks property of the microsoft.graph.plannerUser entity.
+     */
+    @jakarta.annotation.Nonnull
+    public MyDayTasksRequestBuilder myDayTasks() {
+        return new MyDayTasksRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the plans property of the microsoft.graph.plannerUser entity.
      */
     @jakarta.annotation.Nonnull
@@ -74,7 +82,7 @@ public class PlannerRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public PlannerRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/planner{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/planner{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new PlannerRequestBuilder and sets the default values.
@@ -82,7 +90,7 @@ public class PlannerRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public PlannerRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/planner{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/planner{?%24expand,%24select}", rawUrl);
     }
     /**
      * Delete navigation property planner for users

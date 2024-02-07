@@ -116,6 +116,7 @@ public class ReportRoot extends Entity implements Parsable {
         deserializerMap.put("monthlyPrintUsageByUser", (n) -> { this.setMonthlyPrintUsageByUser(n.getCollectionOfObjectValues(PrintUsageByUser::createFromDiscriminatorValue)); });
         deserializerMap.put("monthlyPrintUsageSummariesByPrinter", (n) -> { this.setMonthlyPrintUsageSummariesByPrinter(n.getCollectionOfObjectValues(PrintUsageByPrinter::createFromDiscriminatorValue)); });
         deserializerMap.put("monthlyPrintUsageSummariesByUser", (n) -> { this.setMonthlyPrintUsageSummariesByUser(n.getCollectionOfObjectValues(PrintUsageByUser::createFromDiscriminatorValue)); });
+        deserializerMap.put("partners", (n) -> { this.setPartners(n.getObjectValue(Partners::createFromDiscriminatorValue)); });
         deserializerMap.put("security", (n) -> { this.setSecurity(n.getObjectValue(SecurityReportsRoot::createFromDiscriminatorValue)); });
         deserializerMap.put("serviceActivity", (n) -> { this.setServiceActivity(n.getObjectValue(ServiceActivity::createFromDiscriminatorValue)); });
         deserializerMap.put("servicePrincipalSignInActivities", (n) -> { this.setServicePrincipalSignInActivities(n.getCollectionOfObjectValues(ServicePrincipalSignInActivity::createFromDiscriminatorValue)); });
@@ -155,6 +156,14 @@ public class ReportRoot extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public java.util.List<PrintUsageByUser> getMonthlyPrintUsageSummariesByUser() {
         return this.backingStore.get("monthlyPrintUsageSummariesByUser");
+    }
+    /**
+     * Gets the partners property value. Represents billing details for a Microsoft direct partner.
+     * @return a Partners
+     */
+    @jakarta.annotation.Nullable
+    public Partners getPartners() {
+        return this.backingStore.get("partners");
     }
     /**
      * Gets the security property value. Provides the ability to launch a simulated phishing attack that organizations can learn from.
@@ -224,6 +233,7 @@ public class ReportRoot extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("monthlyPrintUsageByUser", this.getMonthlyPrintUsageByUser());
         writer.writeCollectionOfObjectValues("monthlyPrintUsageSummariesByPrinter", this.getMonthlyPrintUsageSummariesByPrinter());
         writer.writeCollectionOfObjectValues("monthlyPrintUsageSummariesByUser", this.getMonthlyPrintUsageSummariesByUser());
+        writer.writeObjectValue("partners", this.getPartners());
         writer.writeObjectValue("security", this.getSecurity());
         writer.writeObjectValue("serviceActivity", this.getServiceActivity());
         writer.writeCollectionOfObjectValues("servicePrincipalSignInActivities", this.getServicePrincipalSignInActivities());
@@ -321,6 +331,13 @@ public class ReportRoot extends Entity implements Parsable {
      */
     public void setMonthlyPrintUsageSummariesByUser(@jakarta.annotation.Nullable final java.util.List<PrintUsageByUser> value) {
         this.backingStore.set("monthlyPrintUsageSummariesByUser", value);
+    }
+    /**
+     * Sets the partners property value. Represents billing details for a Microsoft direct partner.
+     * @param value Value to set for the partners property.
+     */
+    public void setPartners(@jakarta.annotation.Nullable final Partners value) {
+        this.backingStore.set("partners", value);
     }
     /**
      * Sets the security property value. Provides the ability to launch a simulated phishing attack that organizations can learn from.

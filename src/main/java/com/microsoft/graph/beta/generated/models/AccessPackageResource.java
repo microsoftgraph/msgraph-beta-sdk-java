@@ -26,7 +26,7 @@ public class AccessPackageResource extends Entity implements Parsable {
         return new AccessPackageResource();
     }
     /**
-     * Gets the accessPackageResourceEnvironment property value. Contains the environment information for the resource. This can be set using either the @odata.bind annotation or the environment's originId.Supports $expand.
+     * Gets the accessPackageResourceEnvironment property value. Contains the environment information for the resource. This environment can be set using either the @odata.bind annotation or the environment's originId. Supports $expand.
      * @return a AccessPackageResourceEnvironment
      */
     @jakarta.annotation.Nullable
@@ -82,7 +82,7 @@ public class AccessPackageResource extends Entity implements Parsable {
         return this.backingStore.get("description");
     }
     /**
-     * Gets the displayName property value. The display name of the resource, such as the application name, group name or site name.
+     * Gets the displayName property value. The display name of the resource, such as the application name, group name, or site name.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -120,7 +120,7 @@ public class AccessPackageResource extends Entity implements Parsable {
         return this.backingStore.get("isPendingOnboarding");
     }
     /**
-     * Gets the originId property value. The unique identifier of the resource in the origin system. In the case of a Microsoft Entra group, this is the identifier of the group.
+     * Gets the originId property value. The unique identifier of the resource in the origin system. In the case of a Microsoft Entra group, originId is the identifier of the group.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -128,7 +128,7 @@ public class AccessPackageResource extends Entity implements Parsable {
         return this.backingStore.get("originId");
     }
     /**
-     * Gets the originSystem property value. The type of the resource in the origin system, such as SharePointOnline, AadApplication or AadGroup.
+     * Gets the originSystem property value. The type of the resource in the origin system, such as SharePointOnline, AadApplication, or AadGroup.
      * @return a String
      */
     @jakarta.annotation.Nullable
@@ -173,7 +173,7 @@ public class AccessPackageResource extends Entity implements Parsable {
         writer.writeStringValue("url", this.getUrl());
     }
     /**
-     * Sets the accessPackageResourceEnvironment property value. Contains the environment information for the resource. This can be set using either the @odata.bind annotation or the environment's originId.Supports $expand.
+     * Sets the accessPackageResourceEnvironment property value. Contains the environment information for the resource. This environment can be set using either the @odata.bind annotation or the environment's originId. Supports $expand.
      * @param value Value to set for the accessPackageResourceEnvironment property.
      */
     public void setAccessPackageResourceEnvironment(@jakarta.annotation.Nullable final AccessPackageResourceEnvironment value) {
@@ -222,7 +222,7 @@ public class AccessPackageResource extends Entity implements Parsable {
         this.backingStore.set("description", value);
     }
     /**
-     * Sets the displayName property value. The display name of the resource, such as the application name, group name or site name.
+     * Sets the displayName property value. The display name of the resource, such as the application name, group name, or site name.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
@@ -236,14 +236,14 @@ public class AccessPackageResource extends Entity implements Parsable {
         this.backingStore.set("isPendingOnboarding", value);
     }
     /**
-     * Sets the originId property value. The unique identifier of the resource in the origin system. In the case of a Microsoft Entra group, this is the identifier of the group.
+     * Sets the originId property value. The unique identifier of the resource in the origin system. In the case of a Microsoft Entra group, originId is the identifier of the group.
      * @param value Value to set for the originId property.
      */
     public void setOriginId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("originId", value);
     }
     /**
-     * Sets the originSystem property value. The type of the resource in the origin system, such as SharePointOnline, AadApplication or AadGroup.
+     * Sets the originSystem property value. The type of the resource in the origin system, such as SharePointOnline, AadApplication, or AadGroup.
      * @param value Value to set for the originSystem property.
      */
     public void setOriginSystem(@jakarta.annotation.Nullable final String value) {

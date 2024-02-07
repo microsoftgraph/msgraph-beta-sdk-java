@@ -70,18 +70,30 @@ public class Destination implements AdditionalDataHolder, BackedModel, Parsable 
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(10);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(14);
         deserializerMap.put("deviceCount", (n) -> { this.setDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("firstAccessDateTime", (n) -> { this.setFirstAccessDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("fqdn", (n) -> { this.setFqdn(n.getStringValue()); });
         deserializerMap.put("ip", (n) -> { this.setIp(n.getStringValue()); });
         deserializerMap.put("lastAccessDateTime", (n) -> { this.setLastAccessDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("networkingProtocol", (n) -> { this.setNetworkingProtocol(n.getEnumValue(NetworkingProtocol::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("port", (n) -> { this.setPort(n.getIntegerValue()); });
+        deserializerMap.put("threatCount", (n) -> { this.setThreatCount(n.getIntegerValue()); });
+        deserializerMap.put("totalBytesReceived", (n) -> { this.setTotalBytesReceived(n.getLongValue()); });
+        deserializerMap.put("totalBytesSent", (n) -> { this.setTotalBytesSent(n.getLongValue()); });
         deserializerMap.put("trafficType", (n) -> { this.setTrafficType(n.getEnumValue(TrafficType::forValue)); });
         deserializerMap.put("transactionCount", (n) -> { this.setTransactionCount(n.getIntegerValue()); });
         deserializerMap.put("userCount", (n) -> { this.setUserCount(n.getIntegerValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the firstAccessDateTime property value. The firstAccessDateTime property
+     * @return a OffsetDateTime
+     */
+    @jakarta.annotation.Nullable
+    public OffsetDateTime getFirstAccessDateTime() {
+        return this.backingStore.get("firstAccessDateTime");
     }
     /**
      * Gets the fqdn property value. The fully qualified domain name (FQDN) of the destination.
@@ -132,6 +144,30 @@ public class Destination implements AdditionalDataHolder, BackedModel, Parsable 
         return this.backingStore.get("port");
     }
     /**
+     * Gets the threatCount property value. The threatCount property
+     * @return a Integer
+     */
+    @jakarta.annotation.Nullable
+    public Integer getThreatCount() {
+        return this.backingStore.get("threatCount");
+    }
+    /**
+     * Gets the totalBytesReceived property value. The totalBytesReceived property
+     * @return a Long
+     */
+    @jakarta.annotation.Nullable
+    public Long getTotalBytesReceived() {
+        return this.backingStore.get("totalBytesReceived");
+    }
+    /**
+     * Gets the totalBytesSent property value. The totalBytesSent property
+     * @return a Long
+     */
+    @jakarta.annotation.Nullable
+    public Long getTotalBytesSent() {
+        return this.backingStore.get("totalBytesSent");
+    }
+    /**
      * Gets the trafficType property value. The trafficType property
      * @return a TrafficType
      */
@@ -162,12 +198,16 @@ public class Destination implements AdditionalDataHolder, BackedModel, Parsable 
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("deviceCount", this.getDeviceCount());
+        writer.writeOffsetDateTimeValue("firstAccessDateTime", this.getFirstAccessDateTime());
         writer.writeStringValue("fqdn", this.getFqdn());
         writer.writeStringValue("ip", this.getIp());
         writer.writeOffsetDateTimeValue("lastAccessDateTime", this.getLastAccessDateTime());
         writer.writeEnumValue("networkingProtocol", this.getNetworkingProtocol());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeIntegerValue("port", this.getPort());
+        writer.writeIntegerValue("threatCount", this.getThreatCount());
+        writer.writeLongValue("totalBytesReceived", this.getTotalBytesReceived());
+        writer.writeLongValue("totalBytesSent", this.getTotalBytesSent());
         writer.writeEnumValue("trafficType", this.getTrafficType());
         writer.writeIntegerValue("transactionCount", this.getTransactionCount());
         writer.writeIntegerValue("userCount", this.getUserCount());
@@ -194,6 +234,13 @@ public class Destination implements AdditionalDataHolder, BackedModel, Parsable 
      */
     public void setDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("deviceCount", value);
+    }
+    /**
+     * Sets the firstAccessDateTime property value. The firstAccessDateTime property
+     * @param value Value to set for the firstAccessDateTime property.
+     */
+    public void setFirstAccessDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
+        this.backingStore.set("firstAccessDateTime", value);
     }
     /**
      * Sets the fqdn property value. The fully qualified domain name (FQDN) of the destination.
@@ -236,6 +283,27 @@ public class Destination implements AdditionalDataHolder, BackedModel, Parsable 
      */
     public void setPort(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("port", value);
+    }
+    /**
+     * Sets the threatCount property value. The threatCount property
+     * @param value Value to set for the threatCount property.
+     */
+    public void setThreatCount(@jakarta.annotation.Nullable final Integer value) {
+        this.backingStore.set("threatCount", value);
+    }
+    /**
+     * Sets the totalBytesReceived property value. The totalBytesReceived property
+     * @param value Value to set for the totalBytesReceived property.
+     */
+    public void setTotalBytesReceived(@jakarta.annotation.Nullable final Long value) {
+        this.backingStore.set("totalBytesReceived", value);
+    }
+    /**
+     * Sets the totalBytesSent property value. The totalBytesSent property
+     * @param value Value to set for the totalBytesSent property.
+     */
+    public void setTotalBytesSent(@jakarta.annotation.Nullable final Long value) {
+        this.backingStore.set("totalBytesSent", value);
     }
     /**
      * Sets the trafficType property value. The trafficType property

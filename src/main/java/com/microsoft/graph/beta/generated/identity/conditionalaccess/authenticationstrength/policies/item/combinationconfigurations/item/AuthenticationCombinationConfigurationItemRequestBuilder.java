@@ -26,7 +26,7 @@ public class AuthenticationCombinationConfigurationItemRequestBuilder extends Ba
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AuthenticationCombinationConfigurationItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/identity/conditionalAccess/authenticationStrength/policies/{authenticationStrengthPolicy%2Did}/combinationConfigurations/{authenticationCombinationConfiguration%2Did}{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/identity/conditionalAccess/authenticationStrength/policies/{authenticationStrengthPolicy%2Did}/combinationConfigurations/{authenticationCombinationConfiguration%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new AuthenticationCombinationConfigurationItemRequestBuilder and sets the default values.
@@ -34,7 +34,7 @@ public class AuthenticationCombinationConfigurationItemRequestBuilder extends Ba
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AuthenticationCombinationConfigurationItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/identity/conditionalAccess/authenticationStrength/policies/{authenticationStrengthPolicy%2Did}/combinationConfigurations/{authenticationCombinationConfiguration%2Did}{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/identity/conditionalAccess/authenticationStrength/policies/{authenticationStrengthPolicy%2Did}/combinationConfigurations/{authenticationCombinationConfiguration%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
      * Delete an authenticationCombinationConfiguration  for a custom authenticationStrengthPolicy object.
@@ -79,7 +79,7 @@ public class AuthenticationCombinationConfigurationItemRequestBuilder extends Ba
         return this.requestAdapter.send(requestInfo, errorMapping, AuthenticationCombinationConfiguration::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of an authenticationCombinationConfiguration object. In use, only fido2combinationConfigurations may be updated as they're the only type of authenticationCombinationConfiguration that may be created.
+     * Update the properties of an authenticationCombinationConfiguration object. The properties can be for one of the following derived types:* fido2combinationConfigurations* x509certificatecombinationconfiguration
      * @param body The request body
      * @return a AuthenticationCombinationConfiguration
      * @see <a href="https://learn.microsoft.com/graph/api/authenticationcombinationconfiguration-update?view=graph-rest-1.0">Find more info here</a>
@@ -89,7 +89,7 @@ public class AuthenticationCombinationConfigurationItemRequestBuilder extends Ba
         return patch(body, null);
     }
     /**
-     * Update the properties of an authenticationCombinationConfiguration object. In use, only fido2combinationConfigurations may be updated as they're the only type of authenticationCombinationConfiguration that may be created.
+     * Update the properties of an authenticationCombinationConfiguration object. The properties can be for one of the following derived types:* fido2combinationConfigurations* x509certificatecombinationconfiguration
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a AuthenticationCombinationConfiguration
@@ -145,7 +145,7 @@ public class AuthenticationCombinationConfigurationItemRequestBuilder extends Ba
         return requestInfo;
     }
     /**
-     * Update the properties of an authenticationCombinationConfiguration object. In use, only fido2combinationConfigurations may be updated as they're the only type of authenticationCombinationConfiguration that may be created.
+     * Update the properties of an authenticationCombinationConfiguration object. The properties can be for one of the following derived types:* fido2combinationConfigurations* x509certificatecombinationconfiguration
      * @param body The request body
      * @return a RequestInformation
      */
@@ -154,7 +154,7 @@ public class AuthenticationCombinationConfigurationItemRequestBuilder extends Ba
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of an authenticationCombinationConfiguration object. In use, only fido2combinationConfigurations may be updated as they're the only type of authenticationCombinationConfiguration that may be created.
+     * Update the properties of an authenticationCombinationConfiguration object. The properties can be for one of the following derived types:* fido2combinationConfigurations* x509certificatecombinationconfiguration
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

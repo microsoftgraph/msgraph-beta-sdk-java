@@ -105,7 +105,7 @@ public class AospDeviceOwnerWiFiConfiguration extends DeviceConfiguration implem
         return this.backingStore.get("proxyAutomaticConfigurationUrl");
     }
     /**
-     * Gets the proxyExclusionList property value. List of hosts to exclude using the proxy on connections for. These hosts can use wildcards such as *.example.com.
+     * Gets the proxyExclusionList property value. List of hosts to exclude using the proxy on connections for. These hosts can use wildcards such as .example.com.
      * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
@@ -215,7 +215,7 @@ public class AospDeviceOwnerWiFiConfiguration extends DeviceConfiguration implem
         this.backingStore.set("proxyAutomaticConfigurationUrl", value);
     }
     /**
-     * Sets the proxyExclusionList property value. List of hosts to exclude using the proxy on connections for. These hosts can use wildcards such as *.example.com.
+     * Sets the proxyExclusionList property value. List of hosts to exclude using the proxy on connections for. These hosts can use wildcards such as .example.com.
      * @param value Value to set for the proxyExclusionList property.
      */
     public void setProxyExclusionList(@jakarta.annotation.Nullable final java.util.List<String> value) {

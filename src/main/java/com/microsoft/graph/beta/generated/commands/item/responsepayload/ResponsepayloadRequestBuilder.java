@@ -26,7 +26,7 @@ public class ResponsepayloadRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ResponsepayloadRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/commands/{command%2Did}/responsepayload{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/commands/{command%2Did}/responsepayload{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new ResponsepayloadRequestBuilder and sets the default values.
@@ -34,7 +34,7 @@ public class ResponsepayloadRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ResponsepayloadRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/commands/{command%2Did}/responsepayload{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/commands/{command%2Did}/responsepayload{?%24expand,%24select}", rawUrl);
     }
     /**
      * Get responsepayload from commands

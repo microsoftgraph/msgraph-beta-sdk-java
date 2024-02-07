@@ -26,7 +26,7 @@ public class FindRoomsWithRoomListRequestBuilder extends BaseRequestBuilder {
      * @param RoomList Usage: RoomList='{RoomList}'
      */
     public FindRoomsWithRoomListRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter, @jakarta.annotation.Nullable final String RoomList) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/findRooms(RoomList='{RoomList}'){?%24top,%24skip,%24search,%24filter,%24count}", pathParameters);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/findRooms(RoomList='{RoomList}'){?%24count,%24filter,%24search,%24skip,%24top}", pathParameters);
         this.pathParameters.put("RoomList", RoomList);
     }
     /**
@@ -35,7 +35,7 @@ public class FindRoomsWithRoomListRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public FindRoomsWithRoomListRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/findRooms(RoomList='{RoomList}'){?%24top,%24skip,%24search,%24filter,%24count}", rawUrl);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/findRooms(RoomList='{RoomList}'){?%24count,%24filter,%24search,%24skip,%24top}", rawUrl);
     }
     /**
      * Invoke function findRooms

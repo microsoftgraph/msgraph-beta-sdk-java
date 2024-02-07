@@ -26,7 +26,7 @@ public class ManagedTenantAlertRuleItemRequestBuilder extends BaseRequestBuilder
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ManagedTenantAlertRuleItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/tenantRelationships/managedTenants/managedTenantAlertRuleDefinitions/{managedTenantAlertRuleDefinition%2Did}/alertRules/{managedTenantAlertRule%2Did}{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/tenantRelationships/managedTenants/managedTenantAlertRuleDefinitions/{managedTenantAlertRuleDefinition%2Did}/alertRules/{managedTenantAlertRule%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new ManagedTenantAlertRuleItemRequestBuilder and sets the default values.
@@ -34,7 +34,7 @@ public class ManagedTenantAlertRuleItemRequestBuilder extends BaseRequestBuilder
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ManagedTenantAlertRuleItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/tenantRelationships/managedTenants/managedTenantAlertRuleDefinitions/{managedTenantAlertRuleDefinition%2Did}/alertRules/{managedTenantAlertRule%2Did}{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/tenantRelationships/managedTenants/managedTenantAlertRuleDefinitions/{managedTenantAlertRuleDefinition%2Did}/alertRules/{managedTenantAlertRule%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
      * Get alertRules from tenantRelationships

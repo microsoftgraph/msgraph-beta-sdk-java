@@ -74,7 +74,7 @@ public class EducationUserItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public EducationUserItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/education/users/{educationUser%2Did}{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/education/users/{educationUser%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new EducationUserItemRequestBuilder and sets the default values.
@@ -82,7 +82,7 @@ public class EducationUserItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public EducationUserItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/education/users/{educationUser%2Did}{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/education/users/{educationUser%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
      * Delete a user.
@@ -127,21 +127,21 @@ public class EducationUserItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EducationUser::createFromDiscriminatorValue);
     }
     /**
-     * Update the relatedContact collection of an educationUser object.
+     * Update the properties of an educationuser object.
      * @param body The request body
      * @return a EducationUser
-     * @see <a href="https://learn.microsoft.com/graph/api/relatedcontact-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/educationuser-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EducationUser patch(@jakarta.annotation.Nonnull final EducationUser body) {
         return patch(body, null);
     }
     /**
-     * Update the relatedContact collection of an educationUser object.
+     * Update the properties of an educationuser object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a EducationUser
-     * @see <a href="https://learn.microsoft.com/graph/api/relatedcontact-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/educationuser-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EducationUser patch(@jakarta.annotation.Nonnull final EducationUser body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -193,7 +193,7 @@ public class EducationUserItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the relatedContact collection of an educationUser object.
+     * Update the properties of an educationuser object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -202,7 +202,7 @@ public class EducationUserItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the relatedContact collection of an educationUser object.
+     * Update the properties of an educationuser object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

@@ -13,6 +13,7 @@ public class VirtualEventWebinar extends VirtualEvent implements Parsable {
      */
     public VirtualEventWebinar() {
         super();
+        this.setOdataType("#microsoft.graph.virtualEventWebinar");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

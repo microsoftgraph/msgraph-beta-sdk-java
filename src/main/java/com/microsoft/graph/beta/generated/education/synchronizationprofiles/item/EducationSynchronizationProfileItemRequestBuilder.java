@@ -82,7 +82,7 @@ public class EducationSynchronizationProfileItemRequestBuilder extends BaseReque
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public EducationSynchronizationProfileItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/education/synchronizationProfiles/{educationSynchronizationProfile%2Did}{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/education/synchronizationProfiles/{educationSynchronizationProfile%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new EducationSynchronizationProfileItemRequestBuilder and sets the default values.
@@ -90,7 +90,7 @@ public class EducationSynchronizationProfileItemRequestBuilder extends BaseReque
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public EducationSynchronizationProfileItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/education/synchronizationProfiles/{educationSynchronizationProfile%2Did}{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/education/synchronizationProfiles/{educationSynchronizationProfile%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
      * Delete a school data synchronization profile in the tenant based on the identifier.

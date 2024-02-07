@@ -1,5 +1,7 @@
 package com.microsoft.graph.beta.drives.item.items.item.workbook.worksheets.item.tasks.itematwithindex;
 
+import com.microsoft.graph.beta.drives.item.items.item.workbook.worksheets.item.tasks.itematwithindex.changes.ChangesRequestBuilder;
+import com.microsoft.graph.beta.drives.item.items.item.workbook.worksheets.item.tasks.itematwithindex.comment.CommentRequestBuilder;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.WorkbookDocumentTask;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -19,6 +21,20 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ItemAtWithIndexRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the changes property of the microsoft.graph.workbookDocumentTask entity.
+     */
+    @jakarta.annotation.Nonnull
+    public ChangesRequestBuilder changes() {
+        return new ChangesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the comment property of the microsoft.graph.workbookDocumentTask entity.
+     */
+    @jakarta.annotation.Nonnull
+    public CommentRequestBuilder comment() {
+        return new CommentRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Instantiates a new ItemAtWithIndexRequestBuilder and sets the default values.
      * @param index Usage: index={index}

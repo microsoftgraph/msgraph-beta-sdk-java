@@ -252,14 +252,6 @@ public class ManagedDevice extends Entity implements Parsable {
         return this.backingStore.get("deviceHealthScriptStates");
     }
     /**
-     * Gets the deviceIdentityAttestationDetail property value. Indicates the attestation status of the managed device. And in which way. Default: Unknown.
-     * @return a DeviceIdentityAttestationDetail
-     */
-    @jakarta.annotation.Nullable
-    public DeviceIdentityAttestationDetail getDeviceIdentityAttestationDetail() {
-        return this.backingStore.get("deviceIdentityAttestationDetail");
-    }
-    /**
      * Gets the deviceName property value. Name of the device. This property is read-only.
      * @return a String
      */
@@ -397,7 +389,6 @@ public class ManagedDevice extends Entity implements Parsable {
         deserializerMap.put("deviceFirmwareConfigurationInterfaceManaged", (n) -> { this.setDeviceFirmwareConfigurationInterfaceManaged(n.getBooleanValue()); });
         deserializerMap.put("deviceHealthAttestationState", (n) -> { this.setDeviceHealthAttestationState(n.getObjectValue(DeviceHealthAttestationState::createFromDiscriminatorValue)); });
         deserializerMap.put("deviceHealthScriptStates", (n) -> { this.setDeviceHealthScriptStates(n.getCollectionOfObjectValues(DeviceHealthScriptPolicyState::createFromDiscriminatorValue)); });
-        deserializerMap.put("deviceIdentityAttestationDetail", (n) -> { this.setDeviceIdentityAttestationDetail(n.getObjectValue(DeviceIdentityAttestationDetail::createFromDiscriminatorValue)); });
         deserializerMap.put("deviceName", (n) -> { this.setDeviceName(n.getStringValue()); });
         deserializerMap.put("deviceRegistrationState", (n) -> { this.setDeviceRegistrationState(n.getEnumValue(DeviceRegistrationState::forValue)); });
         deserializerMap.put("deviceType", (n) -> { this.setDeviceType(n.getEnumValue(DeviceType::forValue)); });
@@ -911,7 +902,6 @@ public class ManagedDevice extends Entity implements Parsable {
         writer.writeEnumValue("deviceEnrollmentType", this.getDeviceEnrollmentType());
         writer.writeBooleanValue("deviceFirmwareConfigurationInterfaceManaged", this.getDeviceFirmwareConfigurationInterfaceManaged());
         writer.writeCollectionOfObjectValues("deviceHealthScriptStates", this.getDeviceHealthScriptStates());
-        writer.writeObjectValue("deviceIdentityAttestationDetail", this.getDeviceIdentityAttestationDetail());
         writer.writeEnumValue("deviceRegistrationState", this.getDeviceRegistrationState());
         writer.writeEnumValue("deviceType", this.getDeviceType());
         writer.writeEnumValue("exchangeAccessState", this.getExchangeAccessState());
@@ -1123,13 +1113,6 @@ public class ManagedDevice extends Entity implements Parsable {
      */
     public void setDeviceHealthScriptStates(@jakarta.annotation.Nullable final java.util.List<DeviceHealthScriptPolicyState> value) {
         this.backingStore.set("deviceHealthScriptStates", value);
-    }
-    /**
-     * Sets the deviceIdentityAttestationDetail property value. Indicates the attestation status of the managed device. And in which way. Default: Unknown.
-     * @param value Value to set for the deviceIdentityAttestationDetail property.
-     */
-    public void setDeviceIdentityAttestationDetail(@jakarta.annotation.Nullable final DeviceIdentityAttestationDetail value) {
-        this.backingStore.set("deviceIdentityAttestationDetail", value);
     }
     /**
      * Sets the deviceName property value. Name of the device. This property is read-only.

@@ -26,7 +26,7 @@ public class CurrencyRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CurrencyRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/financials/companies/{company%2Did}/salesOrders/{salesOrder%2Did}/currency{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/financials/companies/{company%2Did}/salesOrders/{salesOrder%2Did}/currency{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new CurrencyRequestBuilder and sets the default values.
@@ -34,7 +34,7 @@ public class CurrencyRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CurrencyRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/financials/companies/{company%2Did}/salesOrders/{salesOrder%2Did}/currency{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/financials/companies/{company%2Did}/salesOrders/{salesOrder%2Did}/currency{?%24expand,%24select}", rawUrl);
     }
     /**
      * Delete navigation property currency for financials

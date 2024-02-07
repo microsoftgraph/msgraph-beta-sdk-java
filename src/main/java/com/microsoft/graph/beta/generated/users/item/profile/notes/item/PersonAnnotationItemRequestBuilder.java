@@ -26,7 +26,7 @@ public class PersonAnnotationItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public PersonAnnotationItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/profile/notes/{personAnnotation%2Did}{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/profile/notes/{personAnnotation%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new PersonAnnotationItemRequestBuilder and sets the default values.
@@ -34,7 +34,7 @@ public class PersonAnnotationItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public PersonAnnotationItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/profile/notes/{personAnnotation%2Did}{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/profile/notes/{personAnnotation%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
      * Deletes a personAnnotation object from a user's profile.

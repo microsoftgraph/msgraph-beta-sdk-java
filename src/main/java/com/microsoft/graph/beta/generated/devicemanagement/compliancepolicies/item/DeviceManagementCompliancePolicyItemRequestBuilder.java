@@ -66,7 +66,7 @@ public class DeviceManagementCompliancePolicyItemRequestBuilder extends BaseRequ
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DeviceManagementCompliancePolicyItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/compliancePolicies/{deviceManagementCompliancePolicy%2Did}{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/deviceManagement/compliancePolicies/{deviceManagementCompliancePolicy%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new DeviceManagementCompliancePolicyItemRequestBuilder and sets the default values.
@@ -74,7 +74,7 @@ public class DeviceManagementCompliancePolicyItemRequestBuilder extends BaseRequ
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DeviceManagementCompliancePolicyItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/compliancePolicies/{deviceManagementCompliancePolicy%2Did}{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/deviceManagement/compliancePolicies/{deviceManagementCompliancePolicy%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
      * Delete navigation property compliancePolicies for deviceManagement

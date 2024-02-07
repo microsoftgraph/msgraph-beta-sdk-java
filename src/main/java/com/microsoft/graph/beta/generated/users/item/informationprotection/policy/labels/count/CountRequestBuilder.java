@@ -25,7 +25,7 @@ public class CountRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CountRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/informationProtection/policy/labels/$count{?%24search,%24filter}", pathParameters);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/informationProtection/policy/labels/$count{?%24filter,%24search}", pathParameters);
     }
     /**
      * Instantiates a new CountRequestBuilder and sets the default values.
@@ -33,13 +33,13 @@ public class CountRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CountRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/informationProtection/policy/labels/$count{?%24search,%24filter}", rawUrl);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/informationProtection/policy/labels/$count{?%24filter,%24search}", rawUrl);
     }
     /**
      * Get the number of the resource
      * @return a Integer
      * @deprecated
-     * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels on 2021-02-15 and will be removed 2022-08-15
+     * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -51,7 +51,7 @@ public class CountRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a Integer
      * @deprecated
-     * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels on 2021-02-15 and will be removed 2022-08-15
+     * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -66,7 +66,7 @@ public class CountRequestBuilder extends BaseRequestBuilder {
      * Get the number of the resource
      * @return a RequestInformation
      * @deprecated
-     * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels on 2021-02-15 and will be removed 2022-08-15
+     * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -78,7 +78,7 @@ public class CountRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
-     * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels on 2021-02-15 and will be removed 2022-08-15
+     * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -93,7 +93,7 @@ public class CountRequestBuilder extends BaseRequestBuilder {
      * @param rawUrl The raw URL to use for the request builder.
      * @return a CountRequestBuilder
      * @deprecated
-     * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels on 2021-02-15 and will be removed 2022-08-15
+     * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels
      */
     @jakarta.annotation.Nonnull
     @Deprecated

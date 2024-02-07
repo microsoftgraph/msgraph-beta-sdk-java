@@ -42,7 +42,7 @@ public class InboundFlowItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public InboundFlowItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/external/industryData/inboundFlows/{inboundFlow%2Did}{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/external/industryData/inboundFlows/{inboundFlow%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new InboundFlowItemRequestBuilder and sets the default values.
@@ -50,19 +50,19 @@ public class InboundFlowItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public InboundFlowItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/external/industryData/inboundFlows/{inboundFlow%2Did}{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/external/industryData/inboundFlows/{inboundFlow%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete an inboundFileFlow object.
-     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-inboundfileflow-delete?view=graph-rest-1.0">Find more info here</a>
+     * Delete an inboundFlow object.
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-inboundflow-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete an inboundFileFlow object.
+     * Delete an inboundFlow object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-inboundfileflow-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-inboundflow-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -72,19 +72,19 @@ public class InboundFlowItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of an inboundFlow object.
+     * Read the properties and relationships of an inboundFileFlow object.
      * @return a InboundFlow
-     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-inboundflow-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-inboundfileflow-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public InboundFlow get() {
         return get(null);
     }
     /**
-     * Read the properties and relationships of an inboundFlow object.
+     * Read the properties and relationships of an inboundFileFlow object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a InboundFlow
-     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-inboundflow-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-inboundfileflow-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public InboundFlow get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -121,7 +121,7 @@ public class InboundFlowItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, InboundFlow::createFromDiscriminatorValue);
     }
     /**
-     * Delete an inboundFileFlow object.
+     * Delete an inboundFlow object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -129,7 +129,7 @@ public class InboundFlowItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete an inboundFileFlow object.
+     * Delete an inboundFlow object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -141,7 +141,7 @@ public class InboundFlowItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of an inboundFlow object.
+     * Read the properties and relationships of an inboundFileFlow object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -149,7 +149,7 @@ public class InboundFlowItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of an inboundFlow object.
+     * Read the properties and relationships of an inboundFileFlow object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -201,7 +201,7 @@ public class InboundFlowItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of an inboundFlow object.
+     * Read the properties and relationships of an inboundFileFlow object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

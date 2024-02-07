@@ -627,6 +627,8 @@ public class DeviceManagement extends Entity implements Parsable {
         deserializerMap.put("monitoring", (n) -> { this.setMonitoring(n.getObjectValue(Monitoring::createFromDiscriminatorValue)); });
         deserializerMap.put("ndesConnectors", (n) -> { this.setNdesConnectors(n.getCollectionOfObjectValues(NdesConnector::createFromDiscriminatorValue)); });
         deserializerMap.put("notificationMessageTemplates", (n) -> { this.setNotificationMessageTemplates(n.getCollectionOfObjectValues(NotificationMessageTemplate::createFromDiscriminatorValue)); });
+        deserializerMap.put("operationApprovalPolicies", (n) -> { this.setOperationApprovalPolicies(n.getCollectionOfObjectValues(OperationApprovalPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("operationApprovalRequests", (n) -> { this.setOperationApprovalRequests(n.getCollectionOfObjectValues(OperationApprovalRequest::createFromDiscriminatorValue)); });
         deserializerMap.put("privilegeManagementElevations", (n) -> { this.setPrivilegeManagementElevations(n.getCollectionOfObjectValues(PrivilegeManagementElevation::createFromDiscriminatorValue)); });
         deserializerMap.put("remoteActionAudits", (n) -> { this.setRemoteActionAudits(n.getCollectionOfObjectValues(RemoteActionAudit::createFromDiscriminatorValue)); });
         deserializerMap.put("remoteAssistancePartners", (n) -> { this.setRemoteAssistancePartners(n.getCollectionOfObjectValues(RemoteAssistancePartner::createFromDiscriminatorValue)); });
@@ -964,6 +966,22 @@ public class DeviceManagement extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public java.util.List<NotificationMessageTemplate> getNotificationMessageTemplates() {
         return this.backingStore.get("notificationMessageTemplates");
+    }
+    /**
+     * Gets the operationApprovalPolicies property value. The Operation Approval Policies
+     * @return a java.util.List<OperationApprovalPolicy>
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<OperationApprovalPolicy> getOperationApprovalPolicies() {
+        return this.backingStore.get("operationApprovalPolicies");
+    }
+    /**
+     * Gets the operationApprovalRequests property value. The Operation Approval Requests
+     * @return a java.util.List<OperationApprovalRequest>
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<OperationApprovalRequest> getOperationApprovalRequests() {
+        return this.backingStore.get("operationApprovalRequests");
     }
     /**
      * Gets the privilegeManagementElevations property value. The endpoint privilege management elevation event entity contains elevation details.
@@ -1766,6 +1784,8 @@ public class DeviceManagement extends Entity implements Parsable {
         writer.writeObjectValue("monitoring", this.getMonitoring());
         writer.writeCollectionOfObjectValues("ndesConnectors", this.getNdesConnectors());
         writer.writeCollectionOfObjectValues("notificationMessageTemplates", this.getNotificationMessageTemplates());
+        writer.writeCollectionOfObjectValues("operationApprovalPolicies", this.getOperationApprovalPolicies());
+        writer.writeCollectionOfObjectValues("operationApprovalRequests", this.getOperationApprovalRequests());
         writer.writeCollectionOfObjectValues("privilegeManagementElevations", this.getPrivilegeManagementElevations());
         writer.writeCollectionOfObjectValues("remoteActionAudits", this.getRemoteActionAudits());
         writer.writeCollectionOfObjectValues("remoteAssistancePartners", this.getRemoteAssistancePartners());
@@ -2504,6 +2524,20 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     public void setNotificationMessageTemplates(@jakarta.annotation.Nullable final java.util.List<NotificationMessageTemplate> value) {
         this.backingStore.set("notificationMessageTemplates", value);
+    }
+    /**
+     * Sets the operationApprovalPolicies property value. The Operation Approval Policies
+     * @param value Value to set for the operationApprovalPolicies property.
+     */
+    public void setOperationApprovalPolicies(@jakarta.annotation.Nullable final java.util.List<OperationApprovalPolicy> value) {
+        this.backingStore.set("operationApprovalPolicies", value);
+    }
+    /**
+     * Sets the operationApprovalRequests property value. The Operation Approval Requests
+     * @param value Value to set for the operationApprovalRequests property.
+     */
+    public void setOperationApprovalRequests(@jakarta.annotation.Nullable final java.util.List<OperationApprovalRequest> value) {
+        this.backingStore.set("operationApprovalRequests", value);
     }
     /**
      * Sets the privilegeManagementElevations property value. The endpoint privilege management elevation event entity contains elevation details.

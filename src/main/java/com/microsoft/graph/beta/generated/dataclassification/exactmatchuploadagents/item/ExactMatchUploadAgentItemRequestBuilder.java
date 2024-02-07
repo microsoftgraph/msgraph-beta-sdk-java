@@ -26,7 +26,7 @@ public class ExactMatchUploadAgentItemRequestBuilder extends BaseRequestBuilder 
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ExactMatchUploadAgentItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/dataClassification/exactMatchUploadAgents/{exactMatchUploadAgent%2Did}{?%24select,%24expand}", pathParameters);
+        super(requestAdapter, "{+baseurl}/dataClassification/exactMatchUploadAgents/{exactMatchUploadAgent%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new ExactMatchUploadAgentItemRequestBuilder and sets the default values.
@@ -34,7 +34,7 @@ public class ExactMatchUploadAgentItemRequestBuilder extends BaseRequestBuilder 
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ExactMatchUploadAgentItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/dataClassification/exactMatchUploadAgents/{exactMatchUploadAgent%2Did}{?%24select,%24expand}", rawUrl);
+        super(requestAdapter, "{+baseurl}/dataClassification/exactMatchUploadAgents/{exactMatchUploadAgent%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
      * Delete navigation property exactMatchUploadAgents for dataClassification

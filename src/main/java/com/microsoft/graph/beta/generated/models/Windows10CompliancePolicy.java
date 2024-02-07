@@ -93,7 +93,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
         return this.backingStore.get("defenderVersion");
     }
     /**
-     * Gets the deviceCompliancePolicyScript property value. Not yet documented
+     * Gets the deviceCompliancePolicyScript property value. The deviceCompliancePolicyScript property
      * @return a DeviceCompliancePolicyScript
      */
     @jakarta.annotation.Nullable
@@ -462,7 +462,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
         this.backingStore.set("defenderVersion", value);
     }
     /**
-     * Sets the deviceCompliancePolicyScript property value. Not yet documented
+     * Sets the deviceCompliancePolicyScript property value. The deviceCompliancePolicyScript property
      * @param value Value to set for the deviceCompliancePolicyScript property.
      */
     public void setDeviceCompliancePolicyScript(@jakarta.annotation.Nullable final DeviceCompliancePolicyScript value) {
