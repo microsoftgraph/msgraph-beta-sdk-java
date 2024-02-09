@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AppleVpnConfiguration extends DeviceConfiguration implements Parsable {
     /**
-     * Instantiates a new AppleVpnConfiguration and sets the default values.
+     * Instantiates a new {@link AppleVpnConfiguration} and sets the default values.
      */
     public AppleVpnConfiguration() {
         super();
@@ -21,7 +21,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AppleVpnConfiguration
+     * @return a {@link AppleVpnConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static AppleVpnConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
     }
     /**
      * Gets the associatedDomains property value. Associated Domains
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAssociatedDomains() {
@@ -47,7 +47,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
     }
     /**
      * Gets the authenticationMethod property value. VPN Authentication Method.
-     * @return a VpnAuthenticationMethod
+     * @return a {@link VpnAuthenticationMethod}
      */
     @jakarta.annotation.Nullable
     public VpnAuthenticationMethod getAuthenticationMethod() {
@@ -55,7 +55,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
     }
     /**
      * Gets the connectionName property value. Connection name displayed to the user.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getConnectionName() {
@@ -63,7 +63,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
     }
     /**
      * Gets the connectionType property value. Apple VPN connection type.
-     * @return a AppleVpnConnectionType
+     * @return a {@link AppleVpnConnectionType}
      */
     @jakarta.annotation.Nullable
     public AppleVpnConnectionType getConnectionType() {
@@ -71,7 +71,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
     }
     /**
      * Gets the customData property value. Custom data when connection type is set to Custom VPN. Use this field to enable functionality not supported by Intune, but available in your VPN solution. Contact your VPN vendor to learn how to add these key/value pairs. This collection can contain a maximum of 25 elements.
-     * @return a java.util.List<KeyValue>
+     * @return a {@link java.util.List<KeyValue>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyValue> getCustomData() {
@@ -79,7 +79,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
     }
     /**
      * Gets the customKeyValueData property value. Custom data when connection type is set to Custom VPN. Use this field to enable functionality not supported by Intune, but available in your VPN solution. Contact your VPN vendor to learn how to add these key/value pairs. This collection can contain a maximum of 25 elements.
-     * @return a java.util.List<KeyValuePair>
+     * @return a {@link java.util.List<KeyValuePair>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyValuePair> getCustomKeyValueData() {
@@ -87,7 +87,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
     }
     /**
      * Gets the disableOnDemandUserOverride property value. Toggle to prevent user from disabling automatic VPN in the Settings app
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDisableOnDemandUserOverride() {
@@ -95,7 +95,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
     }
     /**
      * Gets the disconnectOnIdle property value. Whether to disconnect after on-demand connection idles
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDisconnectOnIdle() {
@@ -103,7 +103,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
     }
     /**
      * Gets the disconnectOnIdleTimerInSeconds property value. The length of time in seconds to wait before disconnecting an on-demand connection. Valid values 0 to 65535
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getDisconnectOnIdleTimerInSeconds() {
@@ -111,7 +111,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
     }
     /**
      * Gets the enablePerApp property value. Setting this to true creates Per-App VPN payload which can later be associated with Apps that can trigger this VPN conneciton on the end user's iOS device.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getEnablePerApp() {
@@ -119,7 +119,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
     }
     /**
      * Gets the enableSplitTunneling property value. Send all network traffic through VPN.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getEnableSplitTunneling() {
@@ -127,7 +127,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
     }
     /**
      * Gets the excludedDomains property value. Domains that are accessed through the public internet instead of through VPN, even when per-app VPN is activated
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getExcludedDomains() {
@@ -135,7 +135,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -166,7 +166,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
     }
     /**
      * Gets the identifier property value. Identifier provided by VPN vendor when connection type is set to Custom VPN. For example: Cisco AnyConnect uses an identifier of the form com.cisco.anyconnect.applevpn.plugin
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getIdentifier() {
@@ -174,7 +174,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
     }
     /**
      * Gets the loginGroupOrDomain property value. Login group or domain when connection type is set to Dell SonicWALL Mobile Connection.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getLoginGroupOrDomain() {
@@ -182,7 +182,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
     }
     /**
      * Gets the onDemandRules property value. On-Demand Rules. This collection can contain a maximum of 500 elements.
-     * @return a java.util.List<VpnOnDemandRule>
+     * @return a {@link java.util.List<VpnOnDemandRule>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<VpnOnDemandRule> getOnDemandRules() {
@@ -190,7 +190,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
     }
     /**
      * Gets the optInToDeviceIdSharing property value. Opt-In to sharing the device's Id to third-party vpn clients for use during network access control validation.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getOptInToDeviceIdSharing() {
@@ -198,7 +198,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
     }
     /**
      * Gets the providerType property value. Provider type for per-app VPN. Possible values are: notConfigured, appProxy, packetTunnel.
-     * @return a VpnProviderType
+     * @return a {@link VpnProviderType}
      */
     @jakarta.annotation.Nullable
     public VpnProviderType getProviderType() {
@@ -206,7 +206,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
     }
     /**
      * Gets the proxyServer property value. Proxy Server.
-     * @return a VpnProxyServer
+     * @return a {@link VpnProxyServer}
      */
     @jakarta.annotation.Nullable
     public VpnProxyServer getProxyServer() {
@@ -214,7 +214,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
     }
     /**
      * Gets the realm property value. Realm when connection type is set to Pulse Secure.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRealm() {
@@ -222,7 +222,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
     }
     /**
      * Gets the role property value. Role when connection type is set to Pulse Secure.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRole() {
@@ -230,7 +230,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
     }
     /**
      * Gets the safariDomains property value. Safari domains when this VPN per App setting is enabled. In addition to the apps associated with this VPN, Safari domains specified here will also be able to trigger this VPN connection.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSafariDomains() {
@@ -238,7 +238,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
     }
     /**
      * Gets the server property value. VPN Server definition.
-     * @return a VpnServer
+     * @return a {@link VpnServer}
      */
     @jakarta.annotation.Nullable
     public VpnServer getServer() {

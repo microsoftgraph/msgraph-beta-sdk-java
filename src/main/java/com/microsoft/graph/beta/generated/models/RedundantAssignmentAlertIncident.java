@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class RedundantAssignmentAlertIncident extends UnifiedRoleManagementAlertIncident implements Parsable {
     /**
-     * Instantiates a new RedundantAssignmentAlertIncident and sets the default values.
+     * Instantiates a new {@link RedundantAssignmentAlertIncident} and sets the default values.
      */
     public RedundantAssignmentAlertIncident() {
         super();
@@ -19,7 +19,7 @@ public class RedundantAssignmentAlertIncident extends UnifiedRoleManagementAlert
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a RedundantAssignmentAlertIncident
+     * @return a {@link RedundantAssignmentAlertIncident}
      */
     @jakarta.annotation.Nonnull
     public static RedundantAssignmentAlertIncident createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class RedundantAssignmentAlertIncident extends UnifiedRoleManagementAlert
     }
     /**
      * Gets the assigneeDisplayName property value. Display name of the subject that the incident applies to.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAssigneeDisplayName() {
@@ -36,7 +36,7 @@ public class RedundantAssignmentAlertIncident extends UnifiedRoleManagementAlert
     }
     /**
      * Gets the assigneeId property value. The identifier of the subject that the incident applies to.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAssigneeId() {
@@ -44,7 +44,7 @@ public class RedundantAssignmentAlertIncident extends UnifiedRoleManagementAlert
     }
     /**
      * Gets the assigneeUserPrincipalName property value. User principal name of the subject that the incident applies to. Applies to user principals only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAssigneeUserPrincipalName() {
@@ -52,7 +52,7 @@ public class RedundantAssignmentAlertIncident extends UnifiedRoleManagementAlert
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -68,7 +68,7 @@ public class RedundantAssignmentAlertIncident extends UnifiedRoleManagementAlert
     }
     /**
      * Gets the lastActivationDateTime property value. Date and time of the last activation of the eligible assignment.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastActivationDateTime() {
@@ -76,7 +76,7 @@ public class RedundantAssignmentAlertIncident extends UnifiedRoleManagementAlert
     }
     /**
      * Gets the roleDefinitionId property value. The identifier for the directory role definition that's in scope of this incident.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRoleDefinitionId() {
@@ -84,7 +84,7 @@ public class RedundantAssignmentAlertIncident extends UnifiedRoleManagementAlert
     }
     /**
      * Gets the roleDisplayName property value. The display name for the directory role.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRoleDisplayName() {
@@ -92,7 +92,7 @@ public class RedundantAssignmentAlertIncident extends UnifiedRoleManagementAlert
     }
     /**
      * Gets the roleTemplateId property value. The globally unique identifier for the directory role.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRoleTemplateId() {

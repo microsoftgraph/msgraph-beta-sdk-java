@@ -18,7 +18,7 @@ public class DeviceUsageSummary implements AdditionalDataHolder, BackedModel, Pa
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new DeviceUsageSummary and sets the default values.
+     * Instantiates a new {@link DeviceUsageSummary} and sets the default values.
      */
     public DeviceUsageSummary() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class DeviceUsageSummary implements AdditionalDataHolder, BackedModel, Pa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceUsageSummary
+     * @return a {@link DeviceUsageSummary}
      */
     @jakarta.annotation.Nonnull
     public static DeviceUsageSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class DeviceUsageSummary implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the activeDeviceCount property value. The number of distinct device IDs between the discovery pivot time and the end of the reporting period.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getActiveDeviceCount() {
@@ -44,7 +44,7 @@ public class DeviceUsageSummary implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -57,7 +57,7 @@ public class DeviceUsageSummary implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -65,7 +65,7 @@ public class DeviceUsageSummary implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -78,7 +78,7 @@ public class DeviceUsageSummary implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the inactiveDeviceCount property value. The discovery pivot time and the end of the reporting period, but were seen between the start of the reporting period and the discovery pivot time.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getInactiveDeviceCount() {
@@ -86,7 +86,7 @@ public class DeviceUsageSummary implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -94,7 +94,7 @@ public class DeviceUsageSummary implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the totalDeviceCount property value. The total number of distinct device IDs that were seen during the reporting period.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getTotalDeviceCount() {

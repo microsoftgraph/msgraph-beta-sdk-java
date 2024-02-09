@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TeamworkDeviceHealth extends Entity implements Parsable {
     /**
-     * Instantiates a new TeamworkDeviceHealth and sets the default values.
+     * Instantiates a new {@link TeamworkDeviceHealth} and sets the default values.
      */
     public TeamworkDeviceHealth() {
         super();
@@ -18,7 +18,7 @@ public class TeamworkDeviceHealth extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TeamworkDeviceHealth
+     * @return a {@link TeamworkDeviceHealth}
      */
     @jakarta.annotation.Nonnull
     public static TeamworkDeviceHealth createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class TeamworkDeviceHealth extends Entity implements Parsable {
     }
     /**
      * Gets the connection property value. The connection property
-     * @return a TeamworkConnection
+     * @return a {@link TeamworkConnection}
      */
     @jakarta.annotation.Nullable
     public TeamworkConnection getConnection() {
@@ -35,7 +35,7 @@ public class TeamworkDeviceHealth extends Entity implements Parsable {
     }
     /**
      * Gets the createdBy property value. Identity of the user who created the device health document.
-     * @return a IdentitySet
+     * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
@@ -43,7 +43,7 @@ public class TeamworkDeviceHealth extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. The UTC date and time when the device health document was created.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -51,7 +51,7 @@ public class TeamworkDeviceHealth extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -69,7 +69,7 @@ public class TeamworkDeviceHealth extends Entity implements Parsable {
     }
     /**
      * Gets the hardwareHealth property value. Health details about the device hardware.
-     * @return a TeamworkHardwareHealth
+     * @return a {@link TeamworkHardwareHealth}
      */
     @jakarta.annotation.Nullable
     public TeamworkHardwareHealth getHardwareHealth() {
@@ -77,7 +77,7 @@ public class TeamworkDeviceHealth extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedBy property value. Identity of the user who last modified the device health details.
-     * @return a IdentitySet
+     * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
     public IdentitySet getLastModifiedBy() {
@@ -85,7 +85,7 @@ public class TeamworkDeviceHealth extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. The UTC date and time when the device health detail was last modified.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -93,7 +93,7 @@ public class TeamworkDeviceHealth extends Entity implements Parsable {
     }
     /**
      * Gets the loginStatus property value. The login status of Microsoft Teams, Skype for Business, and Exchange.
-     * @return a TeamworkLoginStatus
+     * @return a {@link TeamworkLoginStatus}
      */
     @jakarta.annotation.Nullable
     public TeamworkLoginStatus getLoginStatus() {
@@ -101,7 +101,7 @@ public class TeamworkDeviceHealth extends Entity implements Parsable {
     }
     /**
      * Gets the peripheralsHealth property value. Health details about all peripherals (for example, speaker and microphone) attached to a device.
-     * @return a TeamworkPeripheralsHealth
+     * @return a {@link TeamworkPeripheralsHealth}
      */
     @jakarta.annotation.Nullable
     public TeamworkPeripheralsHealth getPeripheralsHealth() {
@@ -109,7 +109,7 @@ public class TeamworkDeviceHealth extends Entity implements Parsable {
     }
     /**
      * Gets the softwareUpdateHealth property value. Software updates available for the device.
-     * @return a TeamworkSoftwareUpdateHealth
+     * @return a {@link TeamworkSoftwareUpdateHealth}
      */
     @jakarta.annotation.Nullable
     public TeamworkSoftwareUpdateHealth getSoftwareUpdateHealth() {

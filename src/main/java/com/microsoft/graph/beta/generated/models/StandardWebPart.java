@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class StandardWebPart extends WebPart implements Parsable {
     /**
-     * Instantiates a new StandardWebPart and sets the default values.
+     * Instantiates a new {@link StandardWebPart} and sets the default values.
      */
     public StandardWebPart() {
         super();
@@ -18,7 +18,7 @@ public class StandardWebPart extends WebPart implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a StandardWebPart
+     * @return a {@link StandardWebPart}
      */
     @jakarta.annotation.Nonnull
     public static StandardWebPart createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class StandardWebPart extends WebPart implements Parsable {
     }
     /**
      * Gets the containerTextWebPartId property value. The instance identifier of the container text webPart. It only works for inline standard webPart in rich text webParts.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getContainerTextWebPartId() {
@@ -35,7 +35,7 @@ public class StandardWebPart extends WebPart implements Parsable {
     }
     /**
      * Gets the data property value. Data of the webPart.
-     * @return a WebPartData
+     * @return a {@link WebPartData}
      */
     @jakarta.annotation.Nullable
     public WebPartData getData() {
@@ -43,7 +43,7 @@ public class StandardWebPart extends WebPart implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -55,7 +55,7 @@ public class StandardWebPart extends WebPart implements Parsable {
     }
     /**
      * Gets the webPartType property value. A Guid that indicates the webPart type.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getWebPartType() {

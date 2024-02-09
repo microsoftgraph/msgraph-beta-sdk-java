@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CertificateConnectorDetails extends Entity implements Parsable {
     /**
-     * Instantiates a new CertificateConnectorDetails and sets the default values.
+     * Instantiates a new {@link CertificateConnectorDetails} and sets the default values.
      */
     public CertificateConnectorDetails() {
         super();
@@ -21,7 +21,7 @@ public class CertificateConnectorDetails extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CertificateConnectorDetails
+     * @return a {@link CertificateConnectorDetails}
      */
     @jakarta.annotation.Nonnull
     public static CertificateConnectorDetails createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class CertificateConnectorDetails extends Entity implements Parsable {
     }
     /**
      * Gets the connectorName property value. Connector name (set during enrollment).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getConnectorName() {
@@ -38,7 +38,7 @@ public class CertificateConnectorDetails extends Entity implements Parsable {
     }
     /**
      * Gets the connectorVersion property value. Version of the connector installed.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getConnectorVersion() {
@@ -46,7 +46,7 @@ public class CertificateConnectorDetails extends Entity implements Parsable {
     }
     /**
      * Gets the enrollmentDateTime property value. Date/time when this connector was enrolled.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getEnrollmentDateTime() {
@@ -54,7 +54,7 @@ public class CertificateConnectorDetails extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -68,7 +68,7 @@ public class CertificateConnectorDetails extends Entity implements Parsable {
     }
     /**
      * Gets the lastCheckinDateTime property value. Date/time when this connector last connected to the service.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastCheckinDateTime() {
@@ -76,7 +76,7 @@ public class CertificateConnectorDetails extends Entity implements Parsable {
     }
     /**
      * Gets the machineName property value. Name of the machine hosting this connector service.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getMachineName() {

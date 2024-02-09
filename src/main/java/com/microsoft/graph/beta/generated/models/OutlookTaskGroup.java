@@ -10,7 +10,7 @@ import java.util.UUID;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OutlookTaskGroup extends Entity implements Parsable {
     /**
-     * Instantiates a new OutlookTaskGroup and sets the default values.
+     * Instantiates a new {@link OutlookTaskGroup} and sets the default values.
      */
     public OutlookTaskGroup() {
         super();
@@ -18,7 +18,7 @@ public class OutlookTaskGroup extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a OutlookTaskGroup
+     * @return a {@link OutlookTaskGroup}
      */
     @jakarta.annotation.Nonnull
     public static OutlookTaskGroup createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class OutlookTaskGroup extends Entity implements Parsable {
     }
     /**
      * Gets the changeKey property value. The version of the task group.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getChangeKey() {
@@ -35,7 +35,7 @@ public class OutlookTaskGroup extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -49,7 +49,7 @@ public class OutlookTaskGroup extends Entity implements Parsable {
     }
     /**
      * Gets the groupKey property value. The unique GUID identifier for the task group.
-     * @return a UUID
+     * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
     public UUID getGroupKey() {
@@ -57,7 +57,7 @@ public class OutlookTaskGroup extends Entity implements Parsable {
     }
     /**
      * Gets the isDefaultGroup property value. True if the task group is the default task group.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDefaultGroup() {
@@ -65,7 +65,7 @@ public class OutlookTaskGroup extends Entity implements Parsable {
     }
     /**
      * Gets the name property value. The name of the task group.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -73,7 +73,7 @@ public class OutlookTaskGroup extends Entity implements Parsable {
     }
     /**
      * Gets the taskFolders property value. The collection of task folders in the task group. Read-only. Nullable.
-     * @return a java.util.List<OutlookTaskFolder>
+     * @return a {@link java.util.List<OutlookTaskFolder>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<OutlookTaskFolder> getTaskFolders() {

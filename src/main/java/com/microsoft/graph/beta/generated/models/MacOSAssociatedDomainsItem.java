@@ -21,7 +21,7 @@ public class MacOSAssociatedDomainsItem implements AdditionalDataHolder, BackedM
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new MacOSAssociatedDomainsItem and sets the default values.
+     * Instantiates a new {@link MacOSAssociatedDomainsItem} and sets the default values.
      */
     public MacOSAssociatedDomainsItem() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -30,7 +30,7 @@ public class MacOSAssociatedDomainsItem implements AdditionalDataHolder, BackedM
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MacOSAssociatedDomainsItem
+     * @return a {@link MacOSAssociatedDomainsItem}
      */
     @jakarta.annotation.Nonnull
     public static MacOSAssociatedDomainsItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class MacOSAssociatedDomainsItem implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -52,7 +52,7 @@ public class MacOSAssociatedDomainsItem implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the applicationIdentifier property value. The application identifier of the app to associate domains with.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getApplicationIdentifier() {
@@ -60,7 +60,7 @@ public class MacOSAssociatedDomainsItem implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -68,7 +68,7 @@ public class MacOSAssociatedDomainsItem implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the directDownloadsEnabled property value. Determines whether data should be downloaded directly or via a CDN.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDirectDownloadsEnabled() {
@@ -76,7 +76,7 @@ public class MacOSAssociatedDomainsItem implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the domains property value. The list of domains to associate.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getDomains() {
@@ -84,7 +84,7 @@ public class MacOSAssociatedDomainsItem implements AdditionalDataHolder, BackedM
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -97,7 +97,7 @@ public class MacOSAssociatedDomainsItem implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {

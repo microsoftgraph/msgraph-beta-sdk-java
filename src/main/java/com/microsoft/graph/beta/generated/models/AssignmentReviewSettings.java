@@ -19,7 +19,7 @@ public class AssignmentReviewSettings implements AdditionalDataHolder, BackedMod
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new AssignmentReviewSettings and sets the default values.
+     * Instantiates a new {@link AssignmentReviewSettings} and sets the default values.
      */
     public AssignmentReviewSettings() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class AssignmentReviewSettings implements AdditionalDataHolder, BackedMod
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AssignmentReviewSettings
+     * @return a {@link AssignmentReviewSettings}
      */
     @jakarta.annotation.Nonnull
     public static AssignmentReviewSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class AssignmentReviewSettings implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the accessReviewTimeoutBehavior property value. The default decision to apply if the request isn't reviewed within the period specified in durationInDays. The possible values are: acceptAccessRecommendation, keepAccess, removeAccess, and unknownFutureValue.
-     * @return a AccessReviewTimeoutBehavior
+     * @return a {@link AccessReviewTimeoutBehavior}
      */
     @jakarta.annotation.Nullable
     public AccessReviewTimeoutBehavior getAccessReviewTimeoutBehavior() {
@@ -45,7 +45,7 @@ public class AssignmentReviewSettings implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -58,7 +58,7 @@ public class AssignmentReviewSettings implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -66,7 +66,7 @@ public class AssignmentReviewSettings implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the durationInDays property value. The number of days within which reviewers should provide input.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getDurationInDays() {
@@ -74,7 +74,7 @@ public class AssignmentReviewSettings implements AdditionalDataHolder, BackedMod
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -93,7 +93,7 @@ public class AssignmentReviewSettings implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the isAccessRecommendationEnabled property value. Specifies whether to display recommendations to the reviewer. The default value is true
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsAccessRecommendationEnabled() {
@@ -101,7 +101,7 @@ public class AssignmentReviewSettings implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the isApprovalJustificationRequired property value. Specifies whether the reviewer must provide justification for the approval. The default value is true.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsApprovalJustificationRequired() {
@@ -109,7 +109,7 @@ public class AssignmentReviewSettings implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the isEnabled property value. If true, access reviews are required for assignments from this policy.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEnabled() {
@@ -117,7 +117,7 @@ public class AssignmentReviewSettings implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -125,7 +125,7 @@ public class AssignmentReviewSettings implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the recurrenceType property value. The interval for recurrence, such as monthly or quarterly.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRecurrenceType() {
@@ -133,7 +133,7 @@ public class AssignmentReviewSettings implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the reviewers property value. If the reviewerType is Reviewers, this collection specifies the users who will be reviewers, either by ID or as members of a group, using a collection of singleUser and groupMembers.
-     * @return a java.util.List<UserSet>
+     * @return a {@link java.util.List<UserSet>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserSet> getReviewers() {
@@ -141,7 +141,7 @@ public class AssignmentReviewSettings implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the reviewerType property value. Who should be asked to do the review, either Self, Reviewers or Manager.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getReviewerType() {
@@ -149,7 +149,7 @@ public class AssignmentReviewSettings implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the startDateTime property value. When the first review should start.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getStartDateTime() {

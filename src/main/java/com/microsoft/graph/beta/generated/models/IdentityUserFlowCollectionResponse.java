@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IdentityUserFlowCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * Instantiates a new IdentityUserFlowCollectionResponse and sets the default values.
+     * Instantiates a new {@link IdentityUserFlowCollectionResponse} and sets the default values.
      */
     public IdentityUserFlowCollectionResponse() {
         super();
@@ -17,7 +17,7 @@ public class IdentityUserFlowCollectionResponse extends BaseCollectionPagination
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a IdentityUserFlowCollectionResponse
+     * @return a {@link IdentityUserFlowCollectionResponse}
      */
     @jakarta.annotation.Nonnull
     public static IdentityUserFlowCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class IdentityUserFlowCollectionResponse extends BaseCollectionPagination
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -36,7 +36,7 @@ public class IdentityUserFlowCollectionResponse extends BaseCollectionPagination
     }
     /**
      * Gets the value property value. The value property
-     * @return a java.util.List<IdentityUserFlow>
+     * @return a {@link java.util.List<IdentityUserFlow>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<IdentityUserFlow> getValue() {

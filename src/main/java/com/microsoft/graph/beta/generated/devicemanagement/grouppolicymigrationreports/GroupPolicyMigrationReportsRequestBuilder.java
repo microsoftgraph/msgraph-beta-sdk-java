@@ -26,6 +26,7 @@ import java.util.Objects;
 public class GroupPolicyMigrationReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -33,6 +34,7 @@ public class GroupPolicyMigrationReportsRequestBuilder extends BaseRequestBuilde
     }
     /**
      * Provides operations to call the createMigrationReport method.
+     * @return a {@link CreateMigrationReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CreateMigrationReportRequestBuilder createMigrationReport() {
@@ -41,7 +43,7 @@ public class GroupPolicyMigrationReportsRequestBuilder extends BaseRequestBuilde
     /**
      * Provides operations to manage the groupPolicyMigrationReports property of the microsoft.graph.deviceManagement entity.
      * @param groupPolicyMigrationReportId The unique identifier of groupPolicyMigrationReport
-     * @return a GroupPolicyMigrationReportItemRequestBuilder
+     * @return a {@link GroupPolicyMigrationReportItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GroupPolicyMigrationReportItemRequestBuilder byGroupPolicyMigrationReportId(@jakarta.annotation.Nonnull final String groupPolicyMigrationReportId) {
@@ -51,7 +53,7 @@ public class GroupPolicyMigrationReportsRequestBuilder extends BaseRequestBuilde
         return new GroupPolicyMigrationReportItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new GroupPolicyMigrationReportsRequestBuilder and sets the default values.
+     * Instantiates a new {@link GroupPolicyMigrationReportsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -59,7 +61,7 @@ public class GroupPolicyMigrationReportsRequestBuilder extends BaseRequestBuilde
         super(requestAdapter, "{+baseurl}/deviceManagement/groupPolicyMigrationReports{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new GroupPolicyMigrationReportsRequestBuilder and sets the default values.
+     * Instantiates a new {@link GroupPolicyMigrationReportsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -68,7 +70,8 @@ public class GroupPolicyMigrationReportsRequestBuilder extends BaseRequestBuilde
     }
     /**
      * A list of Group Policy migration reports.
-     * @return a GroupPolicyMigrationReportCollectionResponse
+     * @return a {@link GroupPolicyMigrationReportCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public GroupPolicyMigrationReportCollectionResponse get() {
@@ -77,20 +80,21 @@ public class GroupPolicyMigrationReportsRequestBuilder extends BaseRequestBuilde
     /**
      * A list of Group Policy migration reports.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a GroupPolicyMigrationReportCollectionResponse
+     * @return a {@link GroupPolicyMigrationReportCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public GroupPolicyMigrationReportCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, GroupPolicyMigrationReportCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to groupPolicyMigrationReports for deviceManagement
      * @param body The request body
-     * @return a GroupPolicyMigrationReport
+     * @return a {@link GroupPolicyMigrationReport}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public GroupPolicyMigrationReport post(@jakarta.annotation.Nonnull final GroupPolicyMigrationReport body) {
@@ -100,20 +104,20 @@ public class GroupPolicyMigrationReportsRequestBuilder extends BaseRequestBuilde
      * Create new navigation property to groupPolicyMigrationReports for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a GroupPolicyMigrationReport
+     * @return a {@link GroupPolicyMigrationReport}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public GroupPolicyMigrationReport post(@jakarta.annotation.Nonnull final GroupPolicyMigrationReport body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, GroupPolicyMigrationReport::createFromDiscriminatorValue);
     }
     /**
      * A list of Group Policy migration reports.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -122,7 +126,7 @@ public class GroupPolicyMigrationReportsRequestBuilder extends BaseRequestBuilde
     /**
      * A list of Group Policy migration reports.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -134,7 +138,7 @@ public class GroupPolicyMigrationReportsRequestBuilder extends BaseRequestBuilde
     /**
      * Create new navigation property to groupPolicyMigrationReports for deviceManagement
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final GroupPolicyMigrationReport body) {
@@ -144,12 +148,12 @@ public class GroupPolicyMigrationReportsRequestBuilder extends BaseRequestBuilde
      * Create new navigation property to groupPolicyMigrationReports for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final GroupPolicyMigrationReport body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/deviceManagement/groupPolicyMigrationReports", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -158,7 +162,7 @@ public class GroupPolicyMigrationReportsRequestBuilder extends BaseRequestBuilde
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a GroupPolicyMigrationReportsRequestBuilder
+     * @return a {@link GroupPolicyMigrationReportsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GroupPolicyMigrationReportsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -212,7 +216,7 @@ public class GroupPolicyMigrationReportsRequestBuilder extends BaseRequestBuilde
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

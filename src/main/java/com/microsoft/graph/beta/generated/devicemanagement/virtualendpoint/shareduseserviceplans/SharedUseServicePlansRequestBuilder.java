@@ -25,6 +25,7 @@ import java.util.Objects;
 public class SharedUseServicePlansRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      * @deprecated
      * The sharedUseServicePlans property is deprecated and will not be supported starting Oct 8, 2023. This property will not be included as part of the API response. as of 2023-03/sharedUseServicePlans
      */
@@ -36,7 +37,7 @@ public class SharedUseServicePlansRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the sharedUseServicePlans property of the microsoft.graph.virtualEndpoint entity.
      * @param cloudPcSharedUseServicePlanId The unique identifier of cloudPcSharedUseServicePlan
-     * @return a CloudPcSharedUseServicePlanItemRequestBuilder
+     * @return a {@link CloudPcSharedUseServicePlanItemRequestBuilder}
      * @deprecated
      * The sharedUseServicePlans property is deprecated and will not be supported starting Oct 8, 2023. This property will not be included as part of the API response. as of 2023-03/sharedUseServicePlans
      */
@@ -49,7 +50,7 @@ public class SharedUseServicePlansRequestBuilder extends BaseRequestBuilder {
         return new CloudPcSharedUseServicePlanItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new SharedUseServicePlansRequestBuilder and sets the default values.
+     * Instantiates a new {@link SharedUseServicePlansRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -57,7 +58,7 @@ public class SharedUseServicePlansRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/sharedUseServicePlans{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new SharedUseServicePlansRequestBuilder and sets the default values.
+     * Instantiates a new {@link SharedUseServicePlansRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -66,7 +67,8 @@ public class SharedUseServicePlansRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of the cloudPcSharedUseServicePlan objects and their properties.
-     * @return a CloudPcSharedUseServicePlanCollectionResponse
+     * @return a {@link CloudPcSharedUseServicePlanCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The sharedUseServicePlans property is deprecated and will not be supported starting Oct 8, 2023. This property will not be included as part of the API response. as of 2023-03/sharedUseServicePlans
      * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-shareduseserviceplans?view=graph-rest-1.0">Find more info here</a>
@@ -79,7 +81,8 @@ public class SharedUseServicePlansRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the cloudPcSharedUseServicePlan objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CloudPcSharedUseServicePlanCollectionResponse
+     * @return a {@link CloudPcSharedUseServicePlanCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The sharedUseServicePlans property is deprecated and will not be supported starting Oct 8, 2023. This property will not be included as part of the API response. as of 2023-03/sharedUseServicePlans
      * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-shareduseserviceplans?view=graph-rest-1.0">Find more info here</a>
@@ -89,14 +92,14 @@ public class SharedUseServicePlansRequestBuilder extends BaseRequestBuilder {
     public CloudPcSharedUseServicePlanCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, CloudPcSharedUseServicePlanCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to sharedUseServicePlans for deviceManagement
      * @param body The request body
-     * @return a CloudPcSharedUseServicePlan
+     * @return a {@link CloudPcSharedUseServicePlan}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The sharedUseServicePlans property is deprecated and will not be supported starting Oct 8, 2023. This property will not be included as part of the API response. as of 2023-03/sharedUseServicePlans
      */
@@ -109,7 +112,8 @@ public class SharedUseServicePlansRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to sharedUseServicePlans for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CloudPcSharedUseServicePlan
+     * @return a {@link CloudPcSharedUseServicePlan}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The sharedUseServicePlans property is deprecated and will not be supported starting Oct 8, 2023. This property will not be included as part of the API response. as of 2023-03/sharedUseServicePlans
      */
@@ -119,13 +123,12 @@ public class SharedUseServicePlansRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, CloudPcSharedUseServicePlan::createFromDiscriminatorValue);
     }
     /**
      * Get a list of the cloudPcSharedUseServicePlan objects and their properties.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      * The sharedUseServicePlans property is deprecated and will not be supported starting Oct 8, 2023. This property will not be included as part of the API response. as of 2023-03/sharedUseServicePlans
      */
@@ -137,7 +140,7 @@ public class SharedUseServicePlansRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the cloudPcSharedUseServicePlan objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      * The sharedUseServicePlans property is deprecated and will not be supported starting Oct 8, 2023. This property will not be included as part of the API response. as of 2023-03/sharedUseServicePlans
      */
@@ -152,7 +155,7 @@ public class SharedUseServicePlansRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to sharedUseServicePlans for deviceManagement
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      * The sharedUseServicePlans property is deprecated and will not be supported starting Oct 8, 2023. This property will not be included as part of the API response. as of 2023-03/sharedUseServicePlans
      */
@@ -165,7 +168,7 @@ public class SharedUseServicePlansRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to sharedUseServicePlans for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      * The sharedUseServicePlans property is deprecated and will not be supported starting Oct 8, 2023. This property will not be included as part of the API response. as of 2023-03/sharedUseServicePlans
      */
@@ -173,7 +176,7 @@ public class SharedUseServicePlansRequestBuilder extends BaseRequestBuilder {
     @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final CloudPcSharedUseServicePlan body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/deviceManagement/virtualEndpoint/sharedUseServicePlans", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -182,7 +185,7 @@ public class SharedUseServicePlansRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a SharedUseServicePlansRequestBuilder
+     * @return a {@link SharedUseServicePlansRequestBuilder}
      * @deprecated
      * The sharedUseServicePlans property is deprecated and will not be supported starting Oct 8, 2023. This property will not be included as part of the API response. as of 2023-03/sharedUseServicePlans
      */
@@ -239,7 +242,7 @@ public class SharedUseServicePlansRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

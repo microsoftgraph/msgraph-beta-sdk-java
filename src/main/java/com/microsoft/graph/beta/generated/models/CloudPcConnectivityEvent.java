@@ -19,7 +19,7 @@ public class CloudPcConnectivityEvent implements AdditionalDataHolder, BackedMod
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new CloudPcConnectivityEvent and sets the default values.
+     * Instantiates a new {@link CloudPcConnectivityEvent} and sets the default values.
      */
     public CloudPcConnectivityEvent() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class CloudPcConnectivityEvent implements AdditionalDataHolder, BackedMod
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CloudPcConnectivityEvent
+     * @return a {@link CloudPcConnectivityEvent}
      */
     @jakarta.annotation.Nonnull
     public static CloudPcConnectivityEvent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class CloudPcConnectivityEvent implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -50,7 +50,7 @@ public class CloudPcConnectivityEvent implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -58,7 +58,7 @@ public class CloudPcConnectivityEvent implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the eventDateTime property value. Indicates the date and time when this event was created. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as 2014-01-01T00:00:00Z.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getEventDateTime() {
@@ -66,7 +66,7 @@ public class CloudPcConnectivityEvent implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the eventName property value. Name of the event.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getEventName() {
@@ -74,7 +74,7 @@ public class CloudPcConnectivityEvent implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the eventResult property value. The eventResult property
-     * @return a CloudPcConnectivityEventResult
+     * @return a {@link CloudPcConnectivityEventResult}
      */
     @jakarta.annotation.Nullable
     public CloudPcConnectivityEventResult getEventResult() {
@@ -82,7 +82,7 @@ public class CloudPcConnectivityEvent implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the eventType property value. The eventType property
-     * @return a CloudPcConnectivityEventType
+     * @return a {@link CloudPcConnectivityEventType}
      */
     @jakarta.annotation.Nullable
     public CloudPcConnectivityEventType getEventType() {
@@ -90,7 +90,7 @@ public class CloudPcConnectivityEvent implements AdditionalDataHolder, BackedMod
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -105,7 +105,7 @@ public class CloudPcConnectivityEvent implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the message property value. Additional message for this event.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getMessage() {
@@ -113,7 +113,7 @@ public class CloudPcConnectivityEvent implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {

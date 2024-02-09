@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class NoDeviceRegistrationMembership extends DeviceRegistrationMembership implements Parsable {
     /**
-     * Instantiates a new NoDeviceRegistrationMembership and sets the default values.
+     * Instantiates a new {@link NoDeviceRegistrationMembership} and sets the default values.
      */
     public NoDeviceRegistrationMembership() {
         super();
@@ -18,7 +18,7 @@ public class NoDeviceRegistrationMembership extends DeviceRegistrationMembership
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a NoDeviceRegistrationMembership
+     * @return a {@link NoDeviceRegistrationMembership}
      */
     @jakarta.annotation.Nonnull
     public static NoDeviceRegistrationMembership createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class NoDeviceRegistrationMembership extends DeviceRegistrationMembership
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

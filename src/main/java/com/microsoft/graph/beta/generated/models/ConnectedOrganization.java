@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ConnectedOrganization extends Entity implements Parsable {
     /**
-     * Instantiates a new ConnectedOrganization and sets the default values.
+     * Instantiates a new {@link ConnectedOrganization} and sets the default values.
      */
     public ConnectedOrganization() {
         super();
@@ -18,7 +18,7 @@ public class ConnectedOrganization extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ConnectedOrganization
+     * @return a {@link ConnectedOrganization}
      */
     @jakarta.annotation.Nonnull
     public static ConnectedOrganization createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class ConnectedOrganization extends Entity implements Parsable {
     }
     /**
      * Gets the createdBy property value. UPN of the user who created this resource. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCreatedBy() {
@@ -35,7 +35,7 @@ public class ConnectedOrganization extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -43,7 +43,7 @@ public class ConnectedOrganization extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The description of the connected organization.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -51,7 +51,7 @@ public class ConnectedOrganization extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name of the connected organization. Supports $filter (eq).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -59,7 +59,7 @@ public class ConnectedOrganization extends Entity implements Parsable {
     }
     /**
      * Gets the externalSponsors property value. The externalSponsors property
-     * @return a java.util.List<DirectoryObject>
+     * @return a {@link java.util.List<DirectoryObject>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getExternalSponsors() {
@@ -67,7 +67,7 @@ public class ConnectedOrganization extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -86,7 +86,7 @@ public class ConnectedOrganization extends Entity implements Parsable {
     }
     /**
      * Gets the identitySources property value. The identity sources in this connected organization, one of azureActiveDirectoryTenant, crossCloudAzureActiveDirectoryTenant, domainIdentitySource, externalDomainFederation, or socialIdentitySource. Read-only. Nullable. Supports $select and $filter(eq). To filter by the derived types, you must declare the resource using its full OData cast, for example, $filter=identitySources/any(is:is/microsoft.graph.azureActiveDirectoryTenant/tenantId eq 'bcfdfff4-cbc3-43f2-9000-ba7b7515054f').
-     * @return a java.util.List<IdentitySource>
+     * @return a {@link java.util.List<IdentitySource>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<IdentitySource> getIdentitySources() {
@@ -94,7 +94,7 @@ public class ConnectedOrganization extends Entity implements Parsable {
     }
     /**
      * Gets the internalSponsors property value. The internalSponsors property
-     * @return a java.util.List<DirectoryObject>
+     * @return a {@link java.util.List<DirectoryObject>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getInternalSponsors() {
@@ -102,7 +102,7 @@ public class ConnectedOrganization extends Entity implements Parsable {
     }
     /**
      * Gets the modifiedBy property value. UPN of the user who last modified this resource. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getModifiedBy() {
@@ -110,7 +110,7 @@ public class ConnectedOrganization extends Entity implements Parsable {
     }
     /**
      * Gets the modifiedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getModifiedDateTime() {
@@ -118,7 +118,7 @@ public class ConnectedOrganization extends Entity implements Parsable {
     }
     /**
      * Gets the state property value. The state of a connected organization defines whether assignment policies with requestor scope type AllConfiguredConnectedOrganizationSubjects are applicable or not. Possible values are: configured, proposed.
-     * @return a ConnectedOrganizationState
+     * @return a {@link ConnectedOrganizationState}
      */
     @jakarta.annotation.Nullable
     public ConnectedOrganizationState getState() {

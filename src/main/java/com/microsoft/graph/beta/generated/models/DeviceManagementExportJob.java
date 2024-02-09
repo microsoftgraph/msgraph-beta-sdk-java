@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementExportJob extends Entity implements Parsable {
     /**
-     * Instantiates a new DeviceManagementExportJob and sets the default values.
+     * Instantiates a new {@link DeviceManagementExportJob} and sets the default values.
      */
     public DeviceManagementExportJob() {
         super();
@@ -21,7 +21,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceManagementExportJob
+     * @return a {@link DeviceManagementExportJob}
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementExportJob createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
     }
     /**
      * Gets the expirationDateTime property value. Time that the exported report expires.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getExpirationDateTime() {
@@ -38,7 +38,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -58,7 +58,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
     }
     /**
      * Gets the filter property value. Filters applied on the report. The maximum length allowed for this property is 2000 characters.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getFilter() {
@@ -66,7 +66,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
     }
     /**
      * Gets the format property value. Possible values for the file format of a report.
-     * @return a DeviceManagementReportFileFormat
+     * @return a {@link DeviceManagementReportFileFormat}
      */
     @jakarta.annotation.Nullable
     public DeviceManagementReportFileFormat getFormat() {
@@ -74,7 +74,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
     }
     /**
      * Gets the localizationType property value. Configures how the requested export job is localized.
-     * @return a DeviceManagementExportJobLocalizationType
+     * @return a {@link DeviceManagementExportJobLocalizationType}
      */
     @jakarta.annotation.Nullable
     public DeviceManagementExportJobLocalizationType getLocalizationType() {
@@ -82,7 +82,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
     }
     /**
      * Gets the reportName property value. Name of the report. The maximum length allowed for this property is 2000 characters.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getReportName() {
@@ -90,7 +90,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
     }
     /**
      * Gets the requestDateTime property value. Time that the exported report was requested.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getRequestDateTime() {
@@ -98,7 +98,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
     }
     /**
      * Gets the search property value. Configures a search term to filter the data. The maximum length allowed for this property is 100 characters.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSearch() {
@@ -106,7 +106,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
     }
     /**
      * Gets the select property value. Columns selected from the report. The maximum number of allowed columns names is 256. The maximum length allowed for each column name in this property is 1000 characters.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSelect() {
@@ -114,7 +114,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
     }
     /**
      * Gets the snapshotId property value. A snapshot is an identifiable subset of the dataset represented by the ReportName. A sessionId or CachedReportConfiguration id can be used here. If a sessionId is specified, Filter, Select, and OrderBy are applied to the data represented by the sessionId. Filter, Select, and OrderBy cannot be specified together with a CachedReportConfiguration id. The maximum length allowed for this property is 128 characters.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSnapshotId() {
@@ -122,7 +122,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. Possible statuses associated with a generated report.
-     * @return a DeviceManagementReportStatus
+     * @return a {@link DeviceManagementReportStatus}
      */
     @jakarta.annotation.Nullable
     public DeviceManagementReportStatus getStatus() {
@@ -130,7 +130,7 @@ public class DeviceManagementExportJob extends Entity implements Parsable {
     }
     /**
      * Gets the url property value. Temporary location of the exported report.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUrl() {

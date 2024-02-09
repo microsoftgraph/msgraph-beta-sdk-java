@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile implements Parsable {
     /**
-     * Instantiates a new GroupPolicyUploadedDefinitionFile and sets the default values.
+     * Instantiates a new {@link GroupPolicyUploadedDefinitionFile} and sets the default values.
      */
     public GroupPolicyUploadedDefinitionFile() {
         super();
@@ -22,7 +22,7 @@ public class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a GroupPolicyUploadedDefinitionFile
+     * @return a {@link GroupPolicyUploadedDefinitionFile}
      */
     @jakarta.annotation.Nonnull
     public static GroupPolicyUploadedDefinitionFile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -31,7 +31,7 @@ public class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile
     }
     /**
      * Gets the content property value. The contents of the uploaded ADMX file.
-     * @return a byte[]
+     * @return a {@link byte[]}
      */
     @jakarta.annotation.Nullable
     public byte[] getContent() {
@@ -39,7 +39,7 @@ public class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile
     }
     /**
      * Gets the defaultLanguageCode property value. The default language of the uploaded ADMX file.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDefaultLanguageCode() {
@@ -47,7 +47,7 @@ public class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -62,7 +62,7 @@ public class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile
     }
     /**
      * Gets the groupPolicyOperations property value. The list of operations on the uploaded ADMX file.
-     * @return a java.util.List<GroupPolicyOperation>
+     * @return a {@link java.util.List<GroupPolicyOperation>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<GroupPolicyOperation> getGroupPolicyOperations() {
@@ -70,7 +70,7 @@ public class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile
     }
     /**
      * Gets the groupPolicyUploadedLanguageFiles property value. The list of ADML files associated with the uploaded ADMX file.
-     * @return a java.util.List<GroupPolicyUploadedLanguageFile>
+     * @return a {@link java.util.List<GroupPolicyUploadedLanguageFile>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<GroupPolicyUploadedLanguageFile> getGroupPolicyUploadedLanguageFiles() {
@@ -78,7 +78,7 @@ public class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile
     }
     /**
      * Gets the status property value. Type of Group Policy uploaded definition file status.
-     * @return a GroupPolicyUploadedDefinitionFileStatus
+     * @return a {@link GroupPolicyUploadedDefinitionFileStatus}
      */
     @jakarta.annotation.Nullable
     public GroupPolicyUploadedDefinitionFileStatus getStatus() {
@@ -86,7 +86,7 @@ public class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile
     }
     /**
      * Gets the uploadDateTime property value. The uploaded time of the uploaded ADMX file.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getUploadDateTime() {

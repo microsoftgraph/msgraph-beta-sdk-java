@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class InvalidLicenseAlertIncident extends UnifiedRoleManagementAlertIncident implements Parsable {
     /**
-     * Instantiates a new InvalidLicenseAlertIncident and sets the default values.
+     * Instantiates a new {@link InvalidLicenseAlertIncident} and sets the default values.
      */
     public InvalidLicenseAlertIncident() {
         super();
@@ -18,7 +18,7 @@ public class InvalidLicenseAlertIncident extends UnifiedRoleManagementAlertIncid
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a InvalidLicenseAlertIncident
+     * @return a {@link InvalidLicenseAlertIncident}
      */
     @jakarta.annotation.Nonnull
     public static InvalidLicenseAlertIncident createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class InvalidLicenseAlertIncident extends UnifiedRoleManagementAlertIncid
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -37,7 +37,7 @@ public class InvalidLicenseAlertIncident extends UnifiedRoleManagementAlertIncid
     }
     /**
      * Gets the tenantLicenseStatus property value. Status of the tenant's Microsoft Entra ID P2 license.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTenantLicenseStatus() {

@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AzureAdTokenAuthentication extends CustomExtensionAuthenticationConfiguration implements Parsable {
     /**
-     * Instantiates a new AzureAdTokenAuthentication and sets the default values.
+     * Instantiates a new {@link AzureAdTokenAuthentication} and sets the default values.
      */
     public AzureAdTokenAuthentication() {
         super();
@@ -18,7 +18,7 @@ public class AzureAdTokenAuthentication extends CustomExtensionAuthenticationCon
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AzureAdTokenAuthentication
+     * @return a {@link AzureAdTokenAuthentication}
      */
     @jakarta.annotation.Nonnull
     public static AzureAdTokenAuthentication createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class AzureAdTokenAuthentication extends CustomExtensionAuthenticationCon
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -37,7 +37,7 @@ public class AzureAdTokenAuthentication extends CustomExtensionAuthenticationCon
     }
     /**
      * Gets the resourceId property value. The appID of the Microsoft Entra application to use to authenticate a logic app with a custom access package workflow extension.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getResourceId() {

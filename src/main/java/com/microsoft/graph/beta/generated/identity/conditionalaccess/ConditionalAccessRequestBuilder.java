@@ -17,6 +17,7 @@ import java.util.Objects;
 public class ConditionalAccessRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the authenticationContextClassReferences property of the microsoft.graph.conditionalAccessRoot entity.
+     * @return a {@link AuthenticationContextClassReferencesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AuthenticationContextClassReferencesRequestBuilder authenticationContextClassReferences() {
@@ -24,6 +25,7 @@ public class ConditionalAccessRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the authenticationStrength property of the microsoft.graph.conditionalAccessRoot entity.
+     * @return a {@link AuthenticationStrengthRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AuthenticationStrengthRequestBuilder authenticationStrength() {
@@ -31,6 +33,7 @@ public class ConditionalAccessRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the authenticationStrengths property of the microsoft.graph.conditionalAccessRoot entity.
+     * @return a {@link AuthenticationStrengthsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AuthenticationStrengthsRequestBuilder authenticationStrengths() {
@@ -38,6 +41,7 @@ public class ConditionalAccessRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the namedLocations property of the microsoft.graph.conditionalAccessRoot entity.
+     * @return a {@link NamedLocationsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public NamedLocationsRequestBuilder namedLocations() {
@@ -45,6 +49,7 @@ public class ConditionalAccessRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the policies property of the microsoft.graph.conditionalAccessRoot entity.
+     * @return a {@link PoliciesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PoliciesRequestBuilder policies() {
@@ -52,13 +57,14 @@ public class ConditionalAccessRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the templates property of the microsoft.graph.conditionalAccessRoot entity.
+     * @return a {@link TemplatesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TemplatesRequestBuilder templates() {
         return new TemplatesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new ConditionalAccessRequestBuilder and sets the default values.
+     * Instantiates a new {@link ConditionalAccessRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -66,7 +72,7 @@ public class ConditionalAccessRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identity/conditionalAccess", pathParameters);
     }
     /**
-     * Instantiates a new ConditionalAccessRequestBuilder and sets the default values.
+     * Instantiates a new {@link ConditionalAccessRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */

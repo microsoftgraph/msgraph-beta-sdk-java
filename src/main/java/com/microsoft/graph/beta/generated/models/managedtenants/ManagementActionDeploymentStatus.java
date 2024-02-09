@@ -18,7 +18,7 @@ public class ManagementActionDeploymentStatus implements AdditionalDataHolder, B
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new ManagementActionDeploymentStatus and sets the default values.
+     * Instantiates a new {@link ManagementActionDeploymentStatus} and sets the default values.
      */
     public ManagementActionDeploymentStatus() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class ManagementActionDeploymentStatus implements AdditionalDataHolder, B
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ManagementActionDeploymentStatus
+     * @return a {@link ManagementActionDeploymentStatus}
      */
     @jakarta.annotation.Nonnull
     public static ManagementActionDeploymentStatus createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class ManagementActionDeploymentStatus implements AdditionalDataHolder, B
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class ManagementActionDeploymentStatus implements AdditionalDataHolder, B
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class ManagementActionDeploymentStatus implements AdditionalDataHolder, B
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -72,7 +72,7 @@ public class ManagementActionDeploymentStatus implements AdditionalDataHolder, B
     }
     /**
      * Gets the managementActionId property value. The identifier for the management action. Required. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getManagementActionId() {
@@ -80,7 +80,7 @@ public class ManagementActionDeploymentStatus implements AdditionalDataHolder, B
     }
     /**
      * Gets the managementTemplateId property value. The management template identifier that was used to generate the management action. Required. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getManagementTemplateId() {
@@ -88,7 +88,7 @@ public class ManagementActionDeploymentStatus implements AdditionalDataHolder, B
     }
     /**
      * Gets the managementTemplateVersion property value. The managementTemplateVersion property
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getManagementTemplateVersion() {
@@ -96,7 +96,7 @@ public class ManagementActionDeploymentStatus implements AdditionalDataHolder, B
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -104,7 +104,7 @@ public class ManagementActionDeploymentStatus implements AdditionalDataHolder, B
     }
     /**
      * Gets the status property value. The status property
-     * @return a ManagementActionStatus
+     * @return a {@link ManagementActionStatus}
      */
     @jakarta.annotation.Nullable
     public ManagementActionStatus getStatus() {
@@ -112,7 +112,7 @@ public class ManagementActionDeploymentStatus implements AdditionalDataHolder, B
     }
     /**
      * Gets the workloadActionDeploymentStatuses property value. The collection of workload action deployment statues for the given management action. Optional.
-     * @return a java.util.List<WorkloadActionDeploymentStatus>
+     * @return a {@link java.util.List<WorkloadActionDeploymentStatus>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<WorkloadActionDeploymentStatus> getWorkloadActionDeploymentStatuses() {

@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Workspace extends Place implements Parsable {
     /**
-     * Instantiates a new Workspace and sets the default values.
+     * Instantiates a new {@link Workspace} and sets the default values.
      */
     public Workspace() {
         super();
@@ -18,7 +18,7 @@ public class Workspace extends Place implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Workspace
+     * @return a {@link Workspace}
      */
     @jakarta.annotation.Nonnull
     public static Workspace createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class Workspace extends Place implements Parsable {
     }
     /**
      * Gets the building property value. Specifies the building name or building number that the workspace is in.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getBuilding() {
@@ -35,7 +35,7 @@ public class Workspace extends Place implements Parsable {
     }
     /**
      * Gets the capacity property value. Specifies the capacity of the workspace.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getCapacity() {
@@ -43,7 +43,7 @@ public class Workspace extends Place implements Parsable {
     }
     /**
      * Gets the emailAddress property value. Email address of the workspace.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getEmailAddress() {
@@ -51,7 +51,7 @@ public class Workspace extends Place implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -69,7 +69,7 @@ public class Workspace extends Place implements Parsable {
     }
     /**
      * Gets the floorLabel property value. Specifies a descriptive label for the floor, for example, P.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getFloorLabel() {
@@ -77,7 +77,7 @@ public class Workspace extends Place implements Parsable {
     }
     /**
      * Gets the floorNumber property value. Specifies the floor number that the workspace is on.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getFloorNumber() {
@@ -85,7 +85,7 @@ public class Workspace extends Place implements Parsable {
     }
     /**
      * Gets the isWheelChairAccessible property value. Specifies whether the workspace is wheelchair accessible.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsWheelChairAccessible() {
@@ -93,7 +93,7 @@ public class Workspace extends Place implements Parsable {
     }
     /**
      * Gets the label property value. Specifies a descriptive label for the workspace, for example, a number or name.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getLabel() {
@@ -101,15 +101,15 @@ public class Workspace extends Place implements Parsable {
     }
     /**
      * Gets the nickname property value. Specifies a nickname for the workspace, for example, 'quiet workspace'.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getNickname() {
         return this.backingStore.get("nickname");
     }
     /**
-     * Gets the tags property value. Specifies additional features of the workspace, for example, details like the type of view or furniture type.
-     * @return a java.util.List<String>
+     * Gets the tags property value. Specifies other features of the workspace; for example, the type of view or furniture type.
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getTags() {
@@ -189,7 +189,7 @@ public class Workspace extends Place implements Parsable {
         this.backingStore.set("nickname", value);
     }
     /**
-     * Sets the tags property value. Specifies additional features of the workspace, for example, details like the type of view or furniture type.
+     * Sets the tags property value. Specifies other features of the workspace; for example, the type of view or furniture type.
      * @param value Value to set for the tags property.
      */
     public void setTags(@jakarta.annotation.Nullable final java.util.List<String> value) {

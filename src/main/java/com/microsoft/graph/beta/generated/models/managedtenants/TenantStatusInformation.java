@@ -19,7 +19,7 @@ public class TenantStatusInformation implements AdditionalDataHolder, BackedMode
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new TenantStatusInformation and sets the default values.
+     * Instantiates a new {@link TenantStatusInformation} and sets the default values.
      */
     public TenantStatusInformation() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class TenantStatusInformation implements AdditionalDataHolder, BackedMode
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TenantStatusInformation
+     * @return a {@link TenantStatusInformation}
      */
     @jakarta.annotation.Nonnull
     public static TenantStatusInformation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class TenantStatusInformation implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -50,7 +50,7 @@ public class TenantStatusInformation implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -58,7 +58,7 @@ public class TenantStatusInformation implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the delegatedPrivilegeStatus property value. The status of the delegated admin privilege relationship between the managing entity and the managed tenant. Possible values are: none, delegatedAdminPrivileges, unknownFutureValue, granularDelegatedAdminPrivileges, delegatedAndGranularDelegetedAdminPrivileges. You must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: granularDelegatedAdminPrivileges , delegatedAndGranularDelegetedAdminPrivileges. Optional. Read-only.
-     * @return a DelegatedPrivilegeStatus
+     * @return a {@link DelegatedPrivilegeStatus}
      */
     @jakarta.annotation.Nullable
     public DelegatedPrivilegeStatus getDelegatedPrivilegeStatus() {
@@ -66,7 +66,7 @@ public class TenantStatusInformation implements AdditionalDataHolder, BackedMode
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -85,7 +85,7 @@ public class TenantStatusInformation implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the lastDelegatedPrivilegeRefreshDateTime property value. The date and time the delegated admin privileges status was updated. Optional. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastDelegatedPrivilegeRefreshDateTime() {
@@ -93,7 +93,7 @@ public class TenantStatusInformation implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -101,7 +101,7 @@ public class TenantStatusInformation implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the offboardedByUserId property value. The identifier for the account that offboarded the managed tenant. Optional. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOffboardedByUserId() {
@@ -109,7 +109,7 @@ public class TenantStatusInformation implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the offboardedDateTime property value. The date and time when the managed tenant was offboarded. Optional. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getOffboardedDateTime() {
@@ -117,7 +117,7 @@ public class TenantStatusInformation implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the onboardedByUserId property value. The identifier for the account that onboarded the managed tenant. Optional. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOnboardedByUserId() {
@@ -125,7 +125,7 @@ public class TenantStatusInformation implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the onboardedDateTime property value. The date and time when the managed tenant was onboarded. Optional. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getOnboardedDateTime() {
@@ -133,7 +133,7 @@ public class TenantStatusInformation implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the onboardingStatus property value. The onboarding status for the managed tenant.. Possible values are: ineligible, inProcess, active, inactive, unknownFutureValue. Optional. Read-only.
-     * @return a TenantOnboardingStatus
+     * @return a {@link TenantOnboardingStatus}
      */
     @jakarta.annotation.Nullable
     public TenantOnboardingStatus getOnboardingStatus() {
@@ -141,7 +141,7 @@ public class TenantStatusInformation implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the tenantOnboardingEligibilityReason property value. Organization's onboarding eligibility reason in Microsoft 365 Lighthouse.. Possible values are: none, contractType, delegatedAdminPrivileges,usersCount,license and unknownFutureValue. Optional. Read-only.
-     * @return a TenantOnboardingEligibilityReason
+     * @return a {@link TenantOnboardingEligibilityReason}
      */
     @jakarta.annotation.Nullable
     public TenantOnboardingEligibilityReason getTenantOnboardingEligibilityReason() {
@@ -149,7 +149,7 @@ public class TenantStatusInformation implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the workloadStatuses property value. The collection of workload statues for the managed tenant. Optional. Read-only.
-     * @return a java.util.List<WorkloadStatus>
+     * @return a {@link java.util.List<WorkloadStatus>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<WorkloadStatus> getWorkloadStatuses() {

@@ -18,7 +18,7 @@ public class TemplateParameter implements AdditionalDataHolder, BackedModel, Par
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new TemplateParameter and sets the default values.
+     * Instantiates a new {@link TemplateParameter} and sets the default values.
      */
     public TemplateParameter() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class TemplateParameter implements AdditionalDataHolder, BackedModel, Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TemplateParameter
+     * @return a {@link TemplateParameter}
      */
     @jakarta.annotation.Nonnull
     public static TemplateParameter createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class TemplateParameter implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class TemplateParameter implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class TemplateParameter implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the description property value. The description for the template parameter. Optional. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -65,7 +65,7 @@ public class TemplateParameter implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the displayName property value. The display name for the template parameter. Required. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -73,7 +73,7 @@ public class TemplateParameter implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -88,7 +88,7 @@ public class TemplateParameter implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the jsonAllowedValues property value. The allowed values for the template parameter represented by a serialized string of JSON. Optional. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getJsonAllowedValues() {
@@ -96,7 +96,7 @@ public class TemplateParameter implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the jsonDefaultValue property value. The default value for the template parameter represented by a serialized string of JSON. Required. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getJsonDefaultValue() {
@@ -104,7 +104,7 @@ public class TemplateParameter implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -112,7 +112,7 @@ public class TemplateParameter implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the valueType property value. The valueType property
-     * @return a ManagementParameterValueType
+     * @return a {@link ManagementParameterValueType}
      */
     @jakarta.annotation.Nullable
     public ManagementParameterValueType getValueType() {

@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Tag extends Entity implements Parsable {
     /**
-     * Instantiates a new Tag and sets the default values.
+     * Instantiates a new {@link Tag} and sets the default values.
      */
     public Tag() {
         super();
@@ -20,7 +20,7 @@ public class Tag extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Tag
+     * @return a {@link Tag}
      */
     @jakarta.annotation.Nonnull
     public static Tag createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -29,7 +29,7 @@ public class Tag extends Entity implements Parsable {
     }
     /**
      * Gets the childSelectability property value. Indicates whether a single or multiple child tags can be associated with a document. Possible values are: One, Many.  This value controls whether the UX presents the tags as checkboxes or a radio button group.
-     * @return a ChildSelectability
+     * @return a {@link ChildSelectability}
      */
     @jakarta.annotation.Nullable
     public ChildSelectability getChildSelectability() {
@@ -37,7 +37,7 @@ public class Tag extends Entity implements Parsable {
     }
     /**
      * Gets the childTags property value. Returns the tags that are a child of a tag.
-     * @return a java.util.List<Tag>
+     * @return a {@link java.util.List<Tag>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Tag> getChildTags() {
@@ -45,7 +45,7 @@ public class Tag extends Entity implements Parsable {
     }
     /**
      * Gets the createdBy property value. The user who created the tag.
-     * @return a IdentitySet
+     * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
@@ -53,7 +53,7 @@ public class Tag extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The description for the tag.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -61,7 +61,7 @@ public class Tag extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. Display name of the tag.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -69,7 +69,7 @@ public class Tag extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -85,7 +85,7 @@ public class Tag extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. The date and time the tag was last modified.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -93,7 +93,7 @@ public class Tag extends Entity implements Parsable {
     }
     /**
      * Gets the parent property value. Returns the parent tag of the specified tag.
-     * @return a Tag
+     * @return a {@link Tag}
      */
     @jakarta.annotation.Nullable
     public Tag getParent() {

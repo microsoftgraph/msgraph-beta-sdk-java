@@ -30,6 +30,7 @@ import java.util.Objects;
 public class IndustryDataRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the dataConnectors property of the microsoft.graph.industryData.industryDataRoot entity.
+     * @return a {@link DataConnectorsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DataConnectorsRequestBuilder dataConnectors() {
@@ -37,6 +38,7 @@ public class IndustryDataRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the inboundFlows property of the microsoft.graph.industryData.industryDataRoot entity.
+     * @return a {@link InboundFlowsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public InboundFlowsRequestBuilder inboundFlows() {
@@ -44,6 +46,7 @@ public class IndustryDataRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the operations property of the microsoft.graph.industryData.industryDataRoot entity.
+     * @return a {@link OperationsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public OperationsRequestBuilder operations() {
@@ -51,6 +54,7 @@ public class IndustryDataRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the referenceDefinitions property of the microsoft.graph.industryData.industryDataRoot entity.
+     * @return a {@link ReferenceDefinitionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ReferenceDefinitionsRequestBuilder referenceDefinitions() {
@@ -58,6 +62,7 @@ public class IndustryDataRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the roleGroups property of the microsoft.graph.industryData.industryDataRoot entity.
+     * @return a {@link RoleGroupsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RoleGroupsRequestBuilder roleGroups() {
@@ -65,6 +70,7 @@ public class IndustryDataRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the runs property of the microsoft.graph.industryData.industryDataRoot entity.
+     * @return a {@link RunsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RunsRequestBuilder runs() {
@@ -72,6 +78,7 @@ public class IndustryDataRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the sourceSystems property of the microsoft.graph.industryData.industryDataRoot entity.
+     * @return a {@link SourceSystemsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SourceSystemsRequestBuilder sourceSystems() {
@@ -79,13 +86,14 @@ public class IndustryDataRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the years property of the microsoft.graph.industryData.industryDataRoot entity.
+     * @return a {@link YearsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public YearsRequestBuilder years() {
         return new YearsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new IndustryDataRequestBuilder and sets the default values.
+     * Instantiates a new {@link IndustryDataRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -93,7 +101,7 @@ public class IndustryDataRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/external/industryData{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new IndustryDataRequestBuilder and sets the default values.
+     * Instantiates a new {@link IndustryDataRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -102,7 +110,8 @@ public class IndustryDataRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get industryData from external
-     * @return a IndustryDataRoot
+     * @return a {@link IndustryDataRoot}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public IndustryDataRoot get() {
@@ -111,19 +120,19 @@ public class IndustryDataRequestBuilder extends BaseRequestBuilder {
     /**
      * Get industryData from external
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a IndustryDataRoot
+     * @return a {@link IndustryDataRoot}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public IndustryDataRoot get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, IndustryDataRoot::createFromDiscriminatorValue);
     }
     /**
      * Get industryData from external
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -132,7 +141,7 @@ public class IndustryDataRequestBuilder extends BaseRequestBuilder {
     /**
      * Get industryData from external
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -144,7 +153,7 @@ public class IndustryDataRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a IndustryDataRequestBuilder
+     * @return a {@link IndustryDataRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public IndustryDataRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -168,7 +177,7 @@ public class IndustryDataRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

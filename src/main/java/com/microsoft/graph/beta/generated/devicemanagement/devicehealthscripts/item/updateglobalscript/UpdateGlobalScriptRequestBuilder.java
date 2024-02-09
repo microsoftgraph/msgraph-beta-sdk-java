@@ -19,7 +19,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UpdateGlobalScriptRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new UpdateGlobalScriptRequestBuilder and sets the default values.
+     * Instantiates a new {@link UpdateGlobalScriptRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -27,7 +27,7 @@ public class UpdateGlobalScriptRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/deviceHealthScripts/{deviceHealthScript%2Did}/updateGlobalScript", pathParameters);
     }
     /**
-     * Instantiates a new UpdateGlobalScriptRequestBuilder and sets the default values.
+     * Instantiates a new {@link UpdateGlobalScriptRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -37,7 +37,8 @@ public class UpdateGlobalScriptRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the Proprietary Device Health Script
      * @param body The request body
-     * @return a UpdateGlobalScriptPostResponse
+     * @return a {@link UpdateGlobalScriptPostResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public UpdateGlobalScriptPostResponse post(@jakarta.annotation.Nonnull final UpdateGlobalScriptPostRequestBody body) {
@@ -47,21 +48,21 @@ public class UpdateGlobalScriptRequestBuilder extends BaseRequestBuilder {
      * Update the Proprietary Device Health Script
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a UpdateGlobalScriptPostResponse
+     * @return a {@link UpdateGlobalScriptPostResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public UpdateGlobalScriptPostResponse post(@jakarta.annotation.Nonnull final UpdateGlobalScriptPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, UpdateGlobalScriptPostResponse::createFromDiscriminatorValue);
     }
     /**
      * Update the Proprietary Device Health Script
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final UpdateGlobalScriptPostRequestBody body) {
@@ -71,7 +72,7 @@ public class UpdateGlobalScriptRequestBuilder extends BaseRequestBuilder {
      * Update the Proprietary Device Health Script
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final UpdateGlobalScriptPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -85,7 +86,7 @@ public class UpdateGlobalScriptRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a UpdateGlobalScriptRequestBuilder
+     * @return a {@link UpdateGlobalScriptRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UpdateGlobalScriptRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AndroidDeviceOwnerScepCertificateProfile extends AndroidDeviceOwnerCertificateProfileBase implements Parsable {
     /**
-     * Instantiates a new AndroidDeviceOwnerScepCertificateProfile and sets the default values.
+     * Instantiates a new {@link AndroidDeviceOwnerScepCertificateProfile} and sets the default values.
      */
     public AndroidDeviceOwnerScepCertificateProfile() {
         super();
@@ -22,7 +22,7 @@ public class AndroidDeviceOwnerScepCertificateProfile extends AndroidDeviceOwner
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AndroidDeviceOwnerScepCertificateProfile
+     * @return a {@link AndroidDeviceOwnerScepCertificateProfile}
      */
     @jakarta.annotation.Nonnull
     public static AndroidDeviceOwnerScepCertificateProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -31,7 +31,7 @@ public class AndroidDeviceOwnerScepCertificateProfile extends AndroidDeviceOwner
     }
     /**
      * Gets the certificateAccessType property value. Certificate access type. Possible values are: userApproval, specificApps, unknownFutureValue.
-     * @return a AndroidDeviceOwnerCertificateAccessType
+     * @return a {@link AndroidDeviceOwnerCertificateAccessType}
      */
     @jakarta.annotation.Nullable
     public AndroidDeviceOwnerCertificateAccessType getCertificateAccessType() {
@@ -39,7 +39,7 @@ public class AndroidDeviceOwnerScepCertificateProfile extends AndroidDeviceOwner
     }
     /**
      * Gets the certificateStore property value. Target store certificate. Possible values are: user, machine.
-     * @return a CertificateStore
+     * @return a {@link CertificateStore}
      */
     @jakarta.annotation.Nullable
     public CertificateStore getCertificateStore() {
@@ -47,7 +47,7 @@ public class AndroidDeviceOwnerScepCertificateProfile extends AndroidDeviceOwner
     }
     /**
      * Gets the customSubjectAlternativeNames property value. Custom Subject Alternative Name Settings. This collection can contain a maximum of 500 elements.
-     * @return a java.util.List<CustomSubjectAlternativeName>
+     * @return a {@link java.util.List<CustomSubjectAlternativeName>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<CustomSubjectAlternativeName> getCustomSubjectAlternativeNames() {
@@ -55,7 +55,7 @@ public class AndroidDeviceOwnerScepCertificateProfile extends AndroidDeviceOwner
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -75,7 +75,7 @@ public class AndroidDeviceOwnerScepCertificateProfile extends AndroidDeviceOwner
     }
     /**
      * Gets the hashAlgorithm property value. Hash Algorithm Options.
-     * @return a EnumSet<HashAlgorithms>
+     * @return a {@link EnumSet<HashAlgorithms>}
      */
     @jakarta.annotation.Nullable
     public EnumSet<HashAlgorithms> getHashAlgorithm() {
@@ -83,7 +83,7 @@ public class AndroidDeviceOwnerScepCertificateProfile extends AndroidDeviceOwner
     }
     /**
      * Gets the keySize property value. Key Size Options.
-     * @return a KeySize
+     * @return a {@link KeySize}
      */
     @jakarta.annotation.Nullable
     public KeySize getKeySize() {
@@ -91,7 +91,7 @@ public class AndroidDeviceOwnerScepCertificateProfile extends AndroidDeviceOwner
     }
     /**
      * Gets the keyUsage property value. Key Usage Options.
-     * @return a EnumSet<KeyUsages>
+     * @return a {@link EnumSet<KeyUsages>}
      */
     @jakarta.annotation.Nullable
     public EnumSet<KeyUsages> getKeyUsage() {
@@ -99,7 +99,7 @@ public class AndroidDeviceOwnerScepCertificateProfile extends AndroidDeviceOwner
     }
     /**
      * Gets the managedDeviceCertificateStates property value. Certificate state for devices. This collection can contain a maximum of 2147483647 elements.
-     * @return a java.util.List<ManagedDeviceCertificateState>
+     * @return a {@link java.util.List<ManagedDeviceCertificateState>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedDeviceCertificateState> getManagedDeviceCertificateStates() {
@@ -107,7 +107,7 @@ public class AndroidDeviceOwnerScepCertificateProfile extends AndroidDeviceOwner
     }
     /**
      * Gets the scepServerUrls property value. SCEP Server Url(s)
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getScepServerUrls() {
@@ -115,7 +115,7 @@ public class AndroidDeviceOwnerScepCertificateProfile extends AndroidDeviceOwner
     }
     /**
      * Gets the silentCertificateAccessDetails property value. Certificate access information. This collection can contain a maximum of 50 elements.
-     * @return a java.util.List<AndroidDeviceOwnerSilentCertificateAccess>
+     * @return a {@link java.util.List<AndroidDeviceOwnerSilentCertificateAccess>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AndroidDeviceOwnerSilentCertificateAccess> getSilentCertificateAccessDetails() {
@@ -123,7 +123,7 @@ public class AndroidDeviceOwnerScepCertificateProfile extends AndroidDeviceOwner
     }
     /**
      * Gets the subjectAlternativeNameFormatString property value. Custom String that defines the AAD Attribute.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSubjectAlternativeNameFormatString() {
@@ -131,7 +131,7 @@ public class AndroidDeviceOwnerScepCertificateProfile extends AndroidDeviceOwner
     }
     /**
      * Gets the subjectNameFormatString property value. Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSubjectNameFormatString() {

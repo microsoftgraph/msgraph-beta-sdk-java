@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Logs extends Entity implements Parsable {
     /**
-     * Instantiates a new Logs and sets the default values.
+     * Instantiates a new {@link Logs} and sets the default values.
      */
     public Logs() {
         super();
@@ -18,7 +18,7 @@ public class Logs extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Logs
+     * @return a {@link Logs}
      */
     @jakarta.annotation.Nonnull
     public static Logs createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class Logs extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -38,7 +38,7 @@ public class Logs extends Entity implements Parsable {
     }
     /**
      * Gets the remoteNetworks property value. A collection of remote network health events.
-     * @return a java.util.List<RemoteNetworkHealthEvent>
+     * @return a {@link java.util.List<RemoteNetworkHealthEvent>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<RemoteNetworkHealthEvent> getRemoteNetworks() {
@@ -46,7 +46,7 @@ public class Logs extends Entity implements Parsable {
     }
     /**
      * Gets the traffic property value. A network access traffic log entry that contains comprehensive information about network traffic events.
-     * @return a java.util.List<NetworkAccessTraffic>
+     * @return a {@link java.util.List<NetworkAccessTraffic>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<NetworkAccessTraffic> getTraffic() {

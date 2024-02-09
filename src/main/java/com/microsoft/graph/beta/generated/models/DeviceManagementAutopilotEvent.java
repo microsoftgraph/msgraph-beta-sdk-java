@@ -14,7 +14,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
     /**
-     * Instantiates a new DeviceManagementAutopilotEvent and sets the default values.
+     * Instantiates a new {@link DeviceManagementAutopilotEvent} and sets the default values.
      */
     public DeviceManagementAutopilotEvent() {
         super();
@@ -22,7 +22,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceManagementAutopilotEvent
+     * @return a {@link DeviceManagementAutopilotEvent}
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementAutopilotEvent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -31,7 +31,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
     }
     /**
      * Gets the accountSetupDuration property value. Time spent in user ESP.
-     * @return a PeriodAndDuration
+     * @return a {@link PeriodAndDuration}
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getAccountSetupDuration() {
@@ -39,7 +39,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
     }
     /**
      * Gets the accountSetupStatus property value. Deployment states for Autopilot devices
-     * @return a WindowsAutopilotDeploymentState
+     * @return a {@link WindowsAutopilotDeploymentState}
      */
     @jakarta.annotation.Nullable
     public WindowsAutopilotDeploymentState getAccountSetupStatus() {
@@ -47,7 +47,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
     }
     /**
      * Gets the deploymentDuration property value. Autopilot deployment duration including enrollment.
-     * @return a PeriodAndDuration
+     * @return a {@link PeriodAndDuration}
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getDeploymentDuration() {
@@ -55,7 +55,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
     }
     /**
      * Gets the deploymentEndDateTime property value. Deployment end time.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getDeploymentEndDateTime() {
@@ -63,7 +63,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
     }
     /**
      * Gets the deploymentStartDateTime property value. Deployment start time.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getDeploymentStartDateTime() {
@@ -71,7 +71,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
     }
     /**
      * Gets the deploymentState property value. Deployment states for Autopilot devices
-     * @return a WindowsAutopilotDeploymentState
+     * @return a {@link WindowsAutopilotDeploymentState}
      */
     @jakarta.annotation.Nullable
     public WindowsAutopilotDeploymentState getDeploymentState() {
@@ -79,7 +79,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
     }
     /**
      * Gets the deploymentTotalDuration property value. Total deployment duration from enrollment to Desktop screen.
-     * @return a PeriodAndDuration
+     * @return a {@link PeriodAndDuration}
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getDeploymentTotalDuration() {
@@ -87,7 +87,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
     }
     /**
      * Gets the deviceId property value. Device id associated with the object
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceId() {
@@ -95,7 +95,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
     }
     /**
      * Gets the devicePreparationDuration property value. Time spent in device enrollment.
-     * @return a PeriodAndDuration
+     * @return a {@link PeriodAndDuration}
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getDevicePreparationDuration() {
@@ -103,7 +103,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
     }
     /**
      * Gets the deviceRegisteredDateTime property value. Device registration date.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getDeviceRegisteredDateTime() {
@@ -111,7 +111,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
     }
     /**
      * Gets the deviceSerialNumber property value. Device serial number.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceSerialNumber() {
@@ -119,7 +119,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
     }
     /**
      * Gets the deviceSetupDuration property value. Time spent in device ESP.
-     * @return a PeriodAndDuration
+     * @return a {@link PeriodAndDuration}
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getDeviceSetupDuration() {
@@ -127,7 +127,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
     }
     /**
      * Gets the deviceSetupStatus property value. Deployment states for Autopilot devices
-     * @return a WindowsAutopilotDeploymentState
+     * @return a {@link WindowsAutopilotDeploymentState}
      */
     @jakarta.annotation.Nullable
     public WindowsAutopilotDeploymentState getDeviceSetupStatus() {
@@ -135,7 +135,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
     }
     /**
      * Gets the enrollmentFailureDetails property value. Enrollment failure details.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getEnrollmentFailureDetails() {
@@ -143,7 +143,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
     }
     /**
      * Gets the enrollmentStartDateTime property value. Device enrollment start date.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getEnrollmentStartDateTime() {
@@ -151,7 +151,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
     }
     /**
      * Gets the enrollmentState property value. The enrollmentState property
-     * @return a EnrollmentState
+     * @return a {@link EnrollmentState}
      */
     @jakarta.annotation.Nullable
     public EnrollmentState getEnrollmentState() {
@@ -159,7 +159,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
     }
     /**
      * Gets the enrollmentType property value. The enrollmentType property
-     * @return a WindowsAutopilotEnrollmentType
+     * @return a {@link WindowsAutopilotEnrollmentType}
      */
     @jakarta.annotation.Nullable
     public WindowsAutopilotEnrollmentType getEnrollmentType() {
@@ -167,7 +167,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
     }
     /**
      * Gets the eventDateTime property value. Time when the event occurred .
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getEventDateTime() {
@@ -175,7 +175,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -211,7 +211,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
     }
     /**
      * Gets the managedDeviceName property value. Managed device name.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getManagedDeviceName() {
@@ -219,7 +219,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
     }
     /**
      * Gets the osVersion property value. Device operating system version.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOsVersion() {
@@ -227,7 +227,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
     }
     /**
      * Gets the policyStatusDetails property value. Policy and application status details for this device.
-     * @return a java.util.List<DeviceManagementAutopilotPolicyStatusDetail>
+     * @return a {@link java.util.List<DeviceManagementAutopilotPolicyStatusDetail>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementAutopilotPolicyStatusDetail> getPolicyStatusDetails() {
@@ -235,7 +235,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
     }
     /**
      * Gets the targetedAppCount property value. Count of applications targeted.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getTargetedAppCount() {
@@ -243,7 +243,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
     }
     /**
      * Gets the targetedPolicyCount property value. Count of policies targeted.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getTargetedPolicyCount() {
@@ -251,7 +251,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
     }
     /**
      * Gets the userPrincipalName property value. User principal name used to enroll the device.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
@@ -259,7 +259,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
     }
     /**
      * Gets the windows10EnrollmentCompletionPageConfigurationDisplayName property value. Enrollment Status Page profile name
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getWindows10EnrollmentCompletionPageConfigurationDisplayName() {
@@ -267,7 +267,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
     }
     /**
      * Gets the windows10EnrollmentCompletionPageConfigurationId property value. Enrollment Status Page profile ID
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getWindows10EnrollmentCompletionPageConfigurationId() {
@@ -275,7 +275,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
     }
     /**
      * Gets the windowsAutopilotDeploymentProfileDisplayName property value. Autopilot profile name.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getWindowsAutopilotDeploymentProfileDisplayName() {

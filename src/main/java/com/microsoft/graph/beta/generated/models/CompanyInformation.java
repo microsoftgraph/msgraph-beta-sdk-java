@@ -21,7 +21,7 @@ public class CompanyInformation implements AdditionalDataHolder, BackedModel, Pa
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new CompanyInformation and sets the default values.
+     * Instantiates a new {@link CompanyInformation} and sets the default values.
      */
     public CompanyInformation() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -30,7 +30,7 @@ public class CompanyInformation implements AdditionalDataHolder, BackedModel, Pa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CompanyInformation
+     * @return a {@link CompanyInformation}
      */
     @jakarta.annotation.Nonnull
     public static CompanyInformation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class CompanyInformation implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -52,7 +52,7 @@ public class CompanyInformation implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the address property value. The address property
-     * @return a PostalAddressType
+     * @return a {@link PostalAddressType}
      */
     @jakarta.annotation.Nullable
     public PostalAddressType getAddress() {
@@ -60,7 +60,7 @@ public class CompanyInformation implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -68,7 +68,7 @@ public class CompanyInformation implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the currencyCode property value. The currencyCode property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCurrencyCode() {
@@ -76,7 +76,7 @@ public class CompanyInformation implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the currentFiscalYearStartDate property value. The currentFiscalYearStartDate property
-     * @return a LocalDate
+     * @return a {@link LocalDate}
      */
     @jakarta.annotation.Nullable
     public LocalDate getCurrentFiscalYearStartDate() {
@@ -84,7 +84,7 @@ public class CompanyInformation implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the displayName property value. The displayName property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -92,7 +92,7 @@ public class CompanyInformation implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the email property value. The email property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getEmail() {
@@ -100,7 +100,7 @@ public class CompanyInformation implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the faxNumber property value. The faxNumber property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getFaxNumber() {
@@ -108,7 +108,7 @@ public class CompanyInformation implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -131,7 +131,7 @@ public class CompanyInformation implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the id property value. The id property
-     * @return a UUID
+     * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
     public UUID getId() {
@@ -139,7 +139,7 @@ public class CompanyInformation implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the industry property value. The industry property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getIndustry() {
@@ -147,7 +147,7 @@ public class CompanyInformation implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -155,7 +155,7 @@ public class CompanyInformation implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -163,7 +163,7 @@ public class CompanyInformation implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the phoneNumber property value. The phoneNumber property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPhoneNumber() {
@@ -171,7 +171,7 @@ public class CompanyInformation implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the picture property value. The picture property
-     * @return a byte[]
+     * @return a {@link byte[]}
      */
     @jakarta.annotation.Nullable
     public byte[] getPicture() {
@@ -179,7 +179,7 @@ public class CompanyInformation implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the taxRegistrationNumber property value. The taxRegistrationNumber property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTaxRegistrationNumber() {
@@ -187,7 +187,7 @@ public class CompanyInformation implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the website property value. The website property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getWebsite() {

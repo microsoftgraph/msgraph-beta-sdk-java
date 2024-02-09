@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Profile extends Entity implements Parsable {
     /**
-     * Instantiates a new Profile and sets the default values.
+     * Instantiates a new {@link Profile} and sets the default values.
      */
     public Profile() {
         super();
@@ -17,7 +17,7 @@ public class Profile extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Profile
+     * @return a {@link Profile}
      */
     @jakarta.annotation.Nonnull
     public static Profile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class Profile extends Entity implements Parsable {
     }
     /**
      * Gets the account property value. The account property
-     * @return a java.util.List<UserAccountInformation>
+     * @return a {@link java.util.List<UserAccountInformation>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserAccountInformation> getAccount() {
@@ -34,7 +34,7 @@ public class Profile extends Entity implements Parsable {
     }
     /**
      * Gets the addresses property value. Represents details of addresses associated with the user.
-     * @return a java.util.List<ItemAddress>
+     * @return a {@link java.util.List<ItemAddress>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ItemAddress> getAddresses() {
@@ -42,7 +42,7 @@ public class Profile extends Entity implements Parsable {
     }
     /**
      * Gets the anniversaries property value. Represents the details of meaningful dates associated with a person.
-     * @return a java.util.List<PersonAnnualEvent>
+     * @return a {@link java.util.List<PersonAnnualEvent>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<PersonAnnualEvent> getAnniversaries() {
@@ -50,7 +50,7 @@ public class Profile extends Entity implements Parsable {
     }
     /**
      * Gets the awards property value. Represents the details of awards or honors associated with a person.
-     * @return a java.util.List<PersonAward>
+     * @return a {@link java.util.List<PersonAward>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<PersonAward> getAwards() {
@@ -58,7 +58,7 @@ public class Profile extends Entity implements Parsable {
     }
     /**
      * Gets the certifications property value. Represents the details of certifications associated with a person.
-     * @return a java.util.List<PersonCertification>
+     * @return a {@link java.util.List<PersonCertification>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<PersonCertification> getCertifications() {
@@ -66,7 +66,7 @@ public class Profile extends Entity implements Parsable {
     }
     /**
      * Gets the educationalActivities property value. Represents data that a user has supplied related to undergraduate, graduate, postgraduate or other educational activities.
-     * @return a java.util.List<EducationalActivity>
+     * @return a {@link java.util.List<EducationalActivity>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<EducationalActivity> getEducationalActivities() {
@@ -74,7 +74,7 @@ public class Profile extends Entity implements Parsable {
     }
     /**
      * Gets the emails property value. Represents detailed information about email addresses associated with the user.
-     * @return a java.util.List<ItemEmail>
+     * @return a {@link java.util.List<ItemEmail>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ItemEmail> getEmails() {
@@ -82,7 +82,7 @@ public class Profile extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -110,7 +110,7 @@ public class Profile extends Entity implements Parsable {
     }
     /**
      * Gets the interests property value. Provides detailed information about interests the user has associated with themselves in various services.
-     * @return a java.util.List<PersonInterest>
+     * @return a {@link java.util.List<PersonInterest>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<PersonInterest> getInterests() {
@@ -118,7 +118,7 @@ public class Profile extends Entity implements Parsable {
     }
     /**
      * Gets the languages property value. Represents detailed information about languages that a user has added to their profile.
-     * @return a java.util.List<LanguageProficiency>
+     * @return a {@link java.util.List<LanguageProficiency>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<LanguageProficiency> getLanguages() {
@@ -126,7 +126,7 @@ public class Profile extends Entity implements Parsable {
     }
     /**
      * Gets the names property value. Represents the names a user has added to their profile.
-     * @return a java.util.List<PersonName>
+     * @return a {@link java.util.List<PersonName>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<PersonName> getNames() {
@@ -134,7 +134,7 @@ public class Profile extends Entity implements Parsable {
     }
     /**
      * Gets the notes property value. Represents notes that a user has added to their profile.
-     * @return a java.util.List<PersonAnnotation>
+     * @return a {@link java.util.List<PersonAnnotation>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<PersonAnnotation> getNotes() {
@@ -142,7 +142,7 @@ public class Profile extends Entity implements Parsable {
     }
     /**
      * Gets the patents property value. Represents patents that a user has added to their profile.
-     * @return a java.util.List<ItemPatent>
+     * @return a {@link java.util.List<ItemPatent>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ItemPatent> getPatents() {
@@ -150,7 +150,7 @@ public class Profile extends Entity implements Parsable {
     }
     /**
      * Gets the phones property value. Represents detailed information about phone numbers associated with a user in various services.
-     * @return a java.util.List<ItemPhone>
+     * @return a {@link java.util.List<ItemPhone>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ItemPhone> getPhones() {
@@ -158,7 +158,7 @@ public class Profile extends Entity implements Parsable {
     }
     /**
      * Gets the positions property value. Represents detailed information about work positions associated with a user's profile.
-     * @return a java.util.List<WorkPosition>
+     * @return a {@link java.util.List<WorkPosition>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<WorkPosition> getPositions() {
@@ -166,7 +166,7 @@ public class Profile extends Entity implements Parsable {
     }
     /**
      * Gets the projects property value. Represents detailed information about projects associated with a user.
-     * @return a java.util.List<ProjectParticipation>
+     * @return a {@link java.util.List<ProjectParticipation>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ProjectParticipation> getProjects() {
@@ -174,7 +174,7 @@ public class Profile extends Entity implements Parsable {
     }
     /**
      * Gets the publications property value. Represents details of any publications a user has added to their profile.
-     * @return a java.util.List<ItemPublication>
+     * @return a {@link java.util.List<ItemPublication>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ItemPublication> getPublications() {
@@ -182,7 +182,7 @@ public class Profile extends Entity implements Parsable {
     }
     /**
      * Gets the skills property value. Represents detailed information about skills associated with a user in various services.
-     * @return a java.util.List<SkillProficiency>
+     * @return a {@link java.util.List<SkillProficiency>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<SkillProficiency> getSkills() {
@@ -190,7 +190,7 @@ public class Profile extends Entity implements Parsable {
     }
     /**
      * Gets the webAccounts property value. Represents web accounts the user has indicated they use or has added to their user profile.
-     * @return a java.util.List<WebAccount>
+     * @return a {@link java.util.List<WebAccount>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<WebAccount> getWebAccounts() {
@@ -198,7 +198,7 @@ public class Profile extends Entity implements Parsable {
     }
     /**
      * Gets the websites property value. Represents detailed information about websites associated with a user in various services.
-     * @return a java.util.List<PersonWebsite>
+     * @return a {@link java.util.List<PersonWebsite>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<PersonWebsite> getWebsites() {

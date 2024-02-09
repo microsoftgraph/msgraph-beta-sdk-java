@@ -31,6 +31,7 @@ import java.util.Objects;
 public class UsersRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -38,6 +39,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the delta method.
+     * @return a {@link DeltaRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DeltaRequestBuilder delta() {
@@ -45,6 +47,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getByIds method.
+     * @return a {@link GetByIdsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetByIdsRequestBuilder getByIds() {
@@ -52,6 +55,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getManagedAppBlockedUsers method.
+     * @return a {@link GetManagedAppBlockedUsersRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetManagedAppBlockedUsersRequestBuilder getManagedAppBlockedUsers() {
@@ -59,6 +63,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getUserOwnedObjects method.
+     * @return a {@link GetUserOwnedObjectsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetUserOwnedObjectsRequestBuilder getUserOwnedObjects() {
@@ -66,6 +71,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the validatePassword method.
+     * @return a {@link ValidatePasswordRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ValidatePasswordRequestBuilder validatePassword() {
@@ -73,6 +79,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the validateProperties method.
+     * @return a {@link ValidatePropertiesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ValidatePropertiesRequestBuilder validateProperties() {
@@ -81,7 +88,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the collection of user entities.
      * @param userId The unique identifier of user
-     * @return a UserItemRequestBuilder
+     * @return a {@link UserItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UserItemRequestBuilder byUserId(@jakarta.annotation.Nonnull final String userId) {
@@ -91,7 +98,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
         return new UserItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new UsersRequestBuilder and sets the default values.
+     * Instantiates a new {@link UsersRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -99,7 +106,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new UsersRequestBuilder and sets the default values.
+     * Instantiates a new {@link UsersRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -108,7 +115,8 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of user objects. This operation returns by default only a subset of the more commonly used properties for each user. These default properties are noted in the Properties section. To get properties that are not returned by default, do a GET operation for the user and specify the properties in a $select OData query option.
-     * @return a UserCollectionResponse
+     * @return a {@link UserCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/user-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -118,21 +126,22 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of user objects. This operation returns by default only a subset of the more commonly used properties for each user. These default properties are noted in the Properties section. To get properties that are not returned by default, do a GET operation for the user and specify the properties in a $select OData query option.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a UserCollectionResponse
+     * @return a {@link UserCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/user-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UserCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, UserCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new user.The request body contains the user to create. At a minimum, you must specify the required properties for the user. You can optionally specify any other writable properties. This operation returns by default only a subset of the properties for each user. These default properties are noted in the Properties section. To get properties that are not returned by default, do a GET operation and specify the properties in a $select OData query option.
      * @param body The request body
-     * @return a User
+     * @return a {@link User}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/user-post-users?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -143,7 +152,8 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
      * Create a new user.The request body contains the user to create. At a minimum, you must specify the required properties for the user. You can optionally specify any other writable properties. This operation returns by default only a subset of the properties for each user. These default properties are noted in the Properties section. To get properties that are not returned by default, do a GET operation and specify the properties in a $select OData query option.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a User
+     * @return a {@link User}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/user-post-users?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -151,13 +161,12 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, User::createFromDiscriminatorValue);
     }
     /**
      * Retrieve a list of user objects. This operation returns by default only a subset of the more commonly used properties for each user. These default properties are noted in the Properties section. To get properties that are not returned by default, do a GET operation for the user and specify the properties in a $select OData query option.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -166,7 +175,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of user objects. This operation returns by default only a subset of the more commonly used properties for each user. These default properties are noted in the Properties section. To get properties that are not returned by default, do a GET operation for the user and specify the properties in a $select OData query option.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -178,7 +187,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new user.The request body contains the user to create. At a minimum, you must specify the required properties for the user. You can optionally specify any other writable properties. This operation returns by default only a subset of the properties for each user. These default properties are noted in the Properties section. To get properties that are not returned by default, do a GET operation and specify the properties in a $select OData query option.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final User body) {
@@ -188,12 +197,12 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
      * Create a new user.The request body contains the user to create. At a minimum, you must specify the required properties for the user. You can optionally specify any other writable properties. This operation returns by default only a subset of the properties for each user. These default properties are noted in the Properties section. To get properties that are not returned by default, do a GET operation and specify the properties in a $select OData query option.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final User body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/users", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -202,7 +211,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a UsersRequestBuilder
+     * @return a {@link UsersRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UsersRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -251,7 +260,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

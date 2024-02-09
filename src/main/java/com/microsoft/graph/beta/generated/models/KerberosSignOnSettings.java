@@ -18,7 +18,7 @@ public class KerberosSignOnSettings implements AdditionalDataHolder, BackedModel
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new KerberosSignOnSettings and sets the default values.
+     * Instantiates a new {@link KerberosSignOnSettings} and sets the default values.
      */
     public KerberosSignOnSettings() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class KerberosSignOnSettings implements AdditionalDataHolder, BackedModel
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a KerberosSignOnSettings
+     * @return a {@link KerberosSignOnSettings}
      */
     @jakarta.annotation.Nonnull
     public static KerberosSignOnSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class KerberosSignOnSettings implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class KerberosSignOnSettings implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class KerberosSignOnSettings implements AdditionalDataHolder, BackedModel
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -69,7 +69,7 @@ public class KerberosSignOnSettings implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the kerberosServicePrincipalName property value. The Internal Application SPN of the application server. This SPN needs to be in the list of services to which the connector can present delegated credentials.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getKerberosServicePrincipalName() {
@@ -77,7 +77,7 @@ public class KerberosSignOnSettings implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the kerberosSignOnMappingAttributeType property value. The Delegated Login Identity for the connector to use on behalf of your users. For more information, see Working with different on-premises and cloud identities . Possible values are: userPrincipalName, onPremisesUserPrincipalName, userPrincipalUsername, onPremisesUserPrincipalUsername, onPremisesSAMAccountName.
-     * @return a KerberosSignOnMappingAttributeType
+     * @return a {@link KerberosSignOnMappingAttributeType}
      */
     @jakarta.annotation.Nullable
     public KerberosSignOnMappingAttributeType getKerberosSignOnMappingAttributeType() {
@@ -85,7 +85,7 @@ public class KerberosSignOnSettings implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {

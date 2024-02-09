@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfiguration implements Parsable {
     /**
-     * Instantiates a new Windows10DeviceFirmwareConfigurationInterface and sets the default values.
+     * Instantiates a new {@link Windows10DeviceFirmwareConfigurationInterface} and sets the default values.
      */
     public Windows10DeviceFirmwareConfigurationInterface() {
         super();
@@ -21,7 +21,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Windows10DeviceFirmwareConfigurationInterface
+     * @return a {@link Windows10DeviceFirmwareConfigurationInterface}
      */
     @jakarta.annotation.Nonnull
     public static Windows10DeviceFirmwareConfigurationInterface createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
     }
     /**
      * Gets the bluetooth property value. Possible values of a property
-     * @return a Enablement
+     * @return a {@link Enablement}
      */
     @jakarta.annotation.Nullable
     public Enablement getBluetooth() {
@@ -38,7 +38,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
     }
     /**
      * Gets the bootFromBuiltInNetworkAdapters property value. Possible values of a property
-     * @return a Enablement
+     * @return a {@link Enablement}
      */
     @jakarta.annotation.Nullable
     public Enablement getBootFromBuiltInNetworkAdapters() {
@@ -46,7 +46,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
     }
     /**
      * Gets the bootFromExternalMedia property value. Possible values of a property
-     * @return a Enablement
+     * @return a {@link Enablement}
      */
     @jakarta.annotation.Nullable
     public Enablement getBootFromExternalMedia() {
@@ -54,7 +54,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
     }
     /**
      * Gets the cameras property value. Possible values of a property
-     * @return a Enablement
+     * @return a {@link Enablement}
      */
     @jakarta.annotation.Nullable
     public Enablement getCameras() {
@@ -62,7 +62,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
     }
     /**
      * Gets the changeUefiSettingsPermission property value. Defines the permission level granted to users to enable them change Uefi settings
-     * @return a ChangeUefiSettingsPermission
+     * @return a {@link ChangeUefiSettingsPermission}
      */
     @jakarta.annotation.Nullable
     public ChangeUefiSettingsPermission getChangeUefiSettingsPermission() {
@@ -70,7 +70,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -100,7 +100,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
     }
     /**
      * Gets the frontCamera property value. Possible values of a property
-     * @return a Enablement
+     * @return a {@link Enablement}
      */
     @jakarta.annotation.Nullable
     public Enablement getFrontCamera() {
@@ -108,7 +108,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
     }
     /**
      * Gets the infraredCamera property value. Possible values of a property
-     * @return a Enablement
+     * @return a {@link Enablement}
      */
     @jakarta.annotation.Nullable
     public Enablement getInfraredCamera() {
@@ -116,7 +116,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
     }
     /**
      * Gets the microphone property value. Possible values of a property
-     * @return a Enablement
+     * @return a {@link Enablement}
      */
     @jakarta.annotation.Nullable
     public Enablement getMicrophone() {
@@ -124,7 +124,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
     }
     /**
      * Gets the microphonesAndSpeakers property value. Possible values of a property
-     * @return a Enablement
+     * @return a {@link Enablement}
      */
     @jakarta.annotation.Nullable
     public Enablement getMicrophonesAndSpeakers() {
@@ -132,7 +132,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
     }
     /**
      * Gets the nearFieldCommunication property value. Possible values of a property
-     * @return a Enablement
+     * @return a {@link Enablement}
      */
     @jakarta.annotation.Nullable
     public Enablement getNearFieldCommunication() {
@@ -140,7 +140,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
     }
     /**
      * Gets the radios property value. Possible values of a property
-     * @return a Enablement
+     * @return a {@link Enablement}
      */
     @jakarta.annotation.Nullable
     public Enablement getRadios() {
@@ -148,7 +148,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
     }
     /**
      * Gets the rearCamera property value. Possible values of a property
-     * @return a Enablement
+     * @return a {@link Enablement}
      */
     @jakarta.annotation.Nullable
     public Enablement getRearCamera() {
@@ -156,7 +156,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
     }
     /**
      * Gets the sdCard property value. Possible values of a property
-     * @return a Enablement
+     * @return a {@link Enablement}
      */
     @jakarta.annotation.Nullable
     public Enablement getSdCard() {
@@ -164,7 +164,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
     }
     /**
      * Gets the simultaneousMultiThreading property value. Possible values of a property
-     * @return a Enablement
+     * @return a {@link Enablement}
      */
     @jakarta.annotation.Nullable
     public Enablement getSimultaneousMultiThreading() {
@@ -172,7 +172,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
     }
     /**
      * Gets the usbTypeAPort property value. Possible values of a property
-     * @return a Enablement
+     * @return a {@link Enablement}
      */
     @jakarta.annotation.Nullable
     public Enablement getUsbTypeAPort() {
@@ -180,7 +180,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
     }
     /**
      * Gets the virtualizationOfCpuAndIO property value. Possible values of a property
-     * @return a Enablement
+     * @return a {@link Enablement}
      */
     @jakarta.annotation.Nullable
     public Enablement getVirtualizationOfCpuAndIO() {
@@ -188,7 +188,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
     }
     /**
      * Gets the wakeOnLAN property value. Possible values of a property
-     * @return a Enablement
+     * @return a {@link Enablement}
      */
     @jakarta.annotation.Nullable
     public Enablement getWakeOnLAN() {
@@ -196,7 +196,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
     }
     /**
      * Gets the wakeOnPower property value. Possible values of a property
-     * @return a Enablement
+     * @return a {@link Enablement}
      */
     @jakarta.annotation.Nullable
     public Enablement getWakeOnPower() {
@@ -204,7 +204,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
     }
     /**
      * Gets the wiFi property value. Possible values of a property
-     * @return a Enablement
+     * @return a {@link Enablement}
      */
     @jakarta.annotation.Nullable
     public Enablement getWiFi() {
@@ -212,7 +212,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
     }
     /**
      * Gets the windowsPlatformBinaryTable property value. Possible values of a property
-     * @return a Enablement
+     * @return a {@link Enablement}
      */
     @jakarta.annotation.Nullable
     public Enablement getWindowsPlatformBinaryTable() {
@@ -220,7 +220,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
     }
     /**
      * Gets the wirelessWideAreaNetwork property value. Possible values of a property
-     * @return a Enablement
+     * @return a {@link Enablement}
      */
     @jakarta.annotation.Nullable
     public Enablement getWirelessWideAreaNetwork() {

@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DailyInactiveUsersByApplicationMetric extends InactiveUsersByApplicationMetricBase implements Parsable {
     /**
-     * Instantiates a new DailyInactiveUsersByApplicationMetric and sets the default values.
+     * Instantiates a new {@link DailyInactiveUsersByApplicationMetric} and sets the default values.
      */
     public DailyInactiveUsersByApplicationMetric() {
         super();
@@ -17,7 +17,7 @@ public class DailyInactiveUsersByApplicationMetric extends InactiveUsersByApplic
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DailyInactiveUsersByApplicationMetric
+     * @return a {@link DailyInactiveUsersByApplicationMetric}
      */
     @jakarta.annotation.Nonnull
     public static DailyInactiveUsersByApplicationMetric createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class DailyInactiveUsersByApplicationMetric extends InactiveUsersByApplic
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -36,7 +36,7 @@ public class DailyInactiveUsersByApplicationMetric extends InactiveUsersByApplic
     }
     /**
      * Gets the inactive1DayCount property value. The inactive1DayCount property
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getInactive1DayCount() {

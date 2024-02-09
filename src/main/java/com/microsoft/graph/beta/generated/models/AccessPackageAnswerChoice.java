@@ -18,7 +18,7 @@ public class AccessPackageAnswerChoice implements AdditionalDataHolder, BackedMo
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new AccessPackageAnswerChoice and sets the default values.
+     * Instantiates a new {@link AccessPackageAnswerChoice} and sets the default values.
      */
     public AccessPackageAnswerChoice() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class AccessPackageAnswerChoice implements AdditionalDataHolder, BackedMo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AccessPackageAnswerChoice
+     * @return a {@link AccessPackageAnswerChoice}
      */
     @jakarta.annotation.Nonnull
     public static AccessPackageAnswerChoice createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class AccessPackageAnswerChoice implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the actualValue property value. The actual value of the selected choice. This is typically a string value which is understandable by applications. Required.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getActualValue() {
@@ -44,7 +44,7 @@ public class AccessPackageAnswerChoice implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -57,7 +57,7 @@ public class AccessPackageAnswerChoice implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -65,7 +65,7 @@ public class AccessPackageAnswerChoice implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the displayValue property value. The localized display values shown to the requestor and approvers. Required.
-     * @return a AccessPackageLocalizedContent
+     * @return a {@link AccessPackageLocalizedContent}
      */
     @jakarta.annotation.Nullable
     public AccessPackageLocalizedContent getDisplayValue() {
@@ -73,7 +73,7 @@ public class AccessPackageAnswerChoice implements AdditionalDataHolder, BackedMo
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -85,7 +85,7 @@ public class AccessPackageAnswerChoice implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {

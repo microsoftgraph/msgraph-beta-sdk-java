@@ -18,7 +18,7 @@ public class UpdateAdDomainPasswordPostRequestBody implements AdditionalDataHold
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new UpdateAdDomainPasswordPostRequestBody and sets the default values.
+     * Instantiates a new {@link UpdateAdDomainPasswordPostRequestBody} and sets the default values.
      */
     public UpdateAdDomainPasswordPostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class UpdateAdDomainPasswordPostRequestBody implements AdditionalDataHold
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UpdateAdDomainPasswordPostRequestBody
+     * @return a {@link UpdateAdDomainPasswordPostRequestBody}
      */
     @jakarta.annotation.Nonnull
     public static UpdateAdDomainPasswordPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class UpdateAdDomainPasswordPostRequestBody implements AdditionalDataHold
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class UpdateAdDomainPasswordPostRequestBody implements AdditionalDataHold
     }
     /**
      * Gets the adDomainPassword property value. The adDomainPassword property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAdDomainPassword() {
@@ -57,7 +57,7 @@ public class UpdateAdDomainPasswordPostRequestBody implements AdditionalDataHold
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -65,7 +65,7 @@ public class UpdateAdDomainPasswordPostRequestBody implements AdditionalDataHold
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

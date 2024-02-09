@@ -11,7 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Alert extends Entity implements Parsable {
     /**
-     * Instantiates a new Alert and sets the default values.
+     * Instantiates a new {@link Alert} and sets the default values.
      */
     public Alert() {
         super();
@@ -19,7 +19,7 @@ public class Alert extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Alert
+     * @return a {@link Alert}
      */
     @jakarta.annotation.Nonnull
     public static Alert createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class Alert extends Entity implements Parsable {
     }
     /**
      * Gets the actions property value. The actions property
-     * @return a java.util.List<AlertAction>
+     * @return a {@link java.util.List<AlertAction>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AlertAction> getActions() {
@@ -36,7 +36,7 @@ public class Alert extends Entity implements Parsable {
     }
     /**
      * Gets the alertType property value. The alertType property
-     * @return a AlertType
+     * @return a {@link AlertType}
      */
     @jakarta.annotation.Nullable
     public AlertType getAlertType() {
@@ -44,7 +44,7 @@ public class Alert extends Entity implements Parsable {
     }
     /**
      * Gets the creationDateTime property value. The creationDateTime property
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreationDateTime() {
@@ -52,7 +52,7 @@ public class Alert extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The description property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -60,7 +60,7 @@ public class Alert extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -74,7 +74,7 @@ public class Alert extends Entity implements Parsable {
     }
     /**
      * Gets the firstImpactedDateTime property value. The firstImpactedDateTime property
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getFirstImpactedDateTime() {

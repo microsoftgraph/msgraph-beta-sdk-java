@@ -21,7 +21,7 @@ public class DeviceScopeActionResult implements AdditionalDataHolder, BackedMode
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new DeviceScopeActionResult and sets the default values.
+     * Instantiates a new {@link DeviceScopeActionResult} and sets the default values.
      */
     public DeviceScopeActionResult() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -30,7 +30,7 @@ public class DeviceScopeActionResult implements AdditionalDataHolder, BackedMode
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceScopeActionResult
+     * @return a {@link DeviceScopeActionResult}
      */
     @jakarta.annotation.Nonnull
     public static DeviceScopeActionResult createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class DeviceScopeActionResult implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -52,7 +52,7 @@ public class DeviceScopeActionResult implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -60,7 +60,7 @@ public class DeviceScopeActionResult implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the deviceScopeAction property value. Trigger on the service to either START or STOP computing metrics data based on a device scope configuration.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceScopeAction() {
@@ -68,7 +68,7 @@ public class DeviceScopeActionResult implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the deviceScopeId property value. The unique identifier of the device scope the action was triggered on.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceScopeId() {
@@ -76,7 +76,7 @@ public class DeviceScopeActionResult implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the failedMessage property value. The message indicates the reason the device scope action failed to trigger.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getFailedMessage() {
@@ -84,7 +84,7 @@ public class DeviceScopeActionResult implements AdditionalDataHolder, BackedMode
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -98,7 +98,7 @@ public class DeviceScopeActionResult implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -106,7 +106,7 @@ public class DeviceScopeActionResult implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the status property value. Indicates the status of the attempted device scope action
-     * @return a DeviceScopeActionStatus
+     * @return a {@link DeviceScopeActionStatus}
      */
     @jakarta.annotation.Nullable
     public DeviceScopeActionStatus getStatus() {

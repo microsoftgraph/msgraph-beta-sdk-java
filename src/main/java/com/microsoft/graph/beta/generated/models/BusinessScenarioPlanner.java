@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class BusinessScenarioPlanner extends Entity implements Parsable {
     /**
-     * Instantiates a new BusinessScenarioPlanner and sets the default values.
+     * Instantiates a new {@link BusinessScenarioPlanner} and sets the default values.
      */
     public BusinessScenarioPlanner() {
         super();
@@ -17,7 +17,7 @@ public class BusinessScenarioPlanner extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a BusinessScenarioPlanner
+     * @return a {@link BusinessScenarioPlanner}
      */
     @jakarta.annotation.Nonnull
     public static BusinessScenarioPlanner createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class BusinessScenarioPlanner extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -38,7 +38,7 @@ public class BusinessScenarioPlanner extends Entity implements Parsable {
     }
     /**
      * Gets the planConfiguration property value. The configuration of Planner plans that will be created for the scenario.
-     * @return a PlannerPlanConfiguration
+     * @return a {@link PlannerPlanConfiguration}
      */
     @jakarta.annotation.Nullable
     public PlannerPlanConfiguration getPlanConfiguration() {
@@ -46,7 +46,7 @@ public class BusinessScenarioPlanner extends Entity implements Parsable {
     }
     /**
      * Gets the taskConfiguration property value. The configuration of Planner tasks that will be created for the scenario.
-     * @return a PlannerTaskConfiguration
+     * @return a {@link PlannerTaskConfiguration}
      */
     @jakarta.annotation.Nullable
     public PlannerTaskConfiguration getTaskConfiguration() {
@@ -54,7 +54,7 @@ public class BusinessScenarioPlanner extends Entity implements Parsable {
     }
     /**
      * Gets the tasks property value. The Planner tasks for the scenario.
-     * @return a java.util.List<BusinessScenarioTask>
+     * @return a {@link java.util.List<BusinessScenarioTask>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<BusinessScenarioTask> getTasks() {

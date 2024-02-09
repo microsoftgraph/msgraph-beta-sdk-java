@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SuperAwsRoleFinding extends IdentityFinding implements Parsable {
     /**
-     * Instantiates a new SuperAwsRoleFinding and sets the default values.
+     * Instantiates a new {@link SuperAwsRoleFinding} and sets the default values.
      */
     public SuperAwsRoleFinding() {
         super();
@@ -17,7 +17,7 @@ public class SuperAwsRoleFinding extends IdentityFinding implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SuperAwsRoleFinding
+     * @return a {@link SuperAwsRoleFinding}
      */
     @jakarta.annotation.Nonnull
     public static SuperAwsRoleFinding createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class SuperAwsRoleFinding extends IdentityFinding implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IosVppAppAssignedDeviceLicense extends IosVppAppAssignedLicense implements Parsable {
     /**
-     * Instantiates a new IosVppAppAssignedDeviceLicense and sets the default values.
+     * Instantiates a new {@link IosVppAppAssignedDeviceLicense} and sets the default values.
      */
     public IosVppAppAssignedDeviceLicense() {
         super();
@@ -20,7 +20,7 @@ public class IosVppAppAssignedDeviceLicense extends IosVppAppAssignedLicense imp
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a IosVppAppAssignedDeviceLicense
+     * @return a {@link IosVppAppAssignedDeviceLicense}
      */
     @jakarta.annotation.Nonnull
     public static IosVppAppAssignedDeviceLicense createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -29,7 +29,7 @@ public class IosVppAppAssignedDeviceLicense extends IosVppAppAssignedLicense imp
     }
     /**
      * Gets the deviceName property value. The device name.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceName() {
@@ -37,7 +37,7 @@ public class IosVppAppAssignedDeviceLicense extends IosVppAppAssignedLicense imp
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -48,7 +48,7 @@ public class IosVppAppAssignedDeviceLicense extends IosVppAppAssignedLicense imp
     }
     /**
      * Gets the managedDeviceId property value. The managed device ID.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getManagedDeviceId() {

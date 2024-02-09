@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AwsExternalSystemAccessFinding extends Finding implements Parsable {
     /**
-     * Instantiates a new AwsExternalSystemAccessFinding and sets the default values.
+     * Instantiates a new {@link AwsExternalSystemAccessFinding} and sets the default values.
      */
     public AwsExternalSystemAccessFinding() {
         super();
@@ -18,7 +18,7 @@ public class AwsExternalSystemAccessFinding extends Finding implements Parsable 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AwsExternalSystemAccessFinding
+     * @return a {@link AwsExternalSystemAccessFinding}
      */
     @jakarta.annotation.Nonnull
     public static AwsExternalSystemAccessFinding createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class AwsExternalSystemAccessFinding extends Finding implements Parsable 
     }
     /**
      * Gets the accessMethods property value. The accessMethods property
-     * @return a EnumSet<ExternalSystemAccessMethods>
+     * @return a {@link EnumSet<ExternalSystemAccessMethods>}
      */
     @jakarta.annotation.Nullable
     public EnumSet<ExternalSystemAccessMethods> getAccessMethods() {
@@ -35,7 +35,7 @@ public class AwsExternalSystemAccessFinding extends Finding implements Parsable 
     }
     /**
      * Gets the affectedSystem property value. The affectedSystem property
-     * @return a AuthorizationSystem
+     * @return a {@link AuthorizationSystem}
      */
     @jakarta.annotation.Nullable
     public AuthorizationSystem getAffectedSystem() {
@@ -43,7 +43,7 @@ public class AwsExternalSystemAccessFinding extends Finding implements Parsable 
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -57,7 +57,7 @@ public class AwsExternalSystemAccessFinding extends Finding implements Parsable 
     }
     /**
      * Gets the systemWithAccess property value. The systemWithAccess property
-     * @return a AuthorizationSystemInfo
+     * @return a {@link AuthorizationSystemInfo}
      */
     @jakarta.annotation.Nullable
     public AuthorizationSystemInfo getSystemWithAccess() {
@@ -65,7 +65,7 @@ public class AwsExternalSystemAccessFinding extends Finding implements Parsable 
     }
     /**
      * Gets the trustedIdentityCount property value. The number of identities in the external system that are trusted, if not all. Supports $orderby.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getTrustedIdentityCount() {
@@ -73,7 +73,7 @@ public class AwsExternalSystemAccessFinding extends Finding implements Parsable 
     }
     /**
      * Gets the trustsAllIdentities property value. Flag that determines if all identities in the external system are trusted, or only a subset.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getTrustsAllIdentities() {

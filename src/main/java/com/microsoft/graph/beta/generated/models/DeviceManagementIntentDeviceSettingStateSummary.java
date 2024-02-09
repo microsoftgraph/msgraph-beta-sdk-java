@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementIntentDeviceSettingStateSummary extends Entity implements Parsable {
     /**
-     * Instantiates a new DeviceManagementIntentDeviceSettingStateSummary and sets the default values.
+     * Instantiates a new {@link DeviceManagementIntentDeviceSettingStateSummary} and sets the default values.
      */
     public DeviceManagementIntentDeviceSettingStateSummary() {
         super();
@@ -20,7 +20,7 @@ public class DeviceManagementIntentDeviceSettingStateSummary extends Entity impl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceManagementIntentDeviceSettingStateSummary
+     * @return a {@link DeviceManagementIntentDeviceSettingStateSummary}
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementIntentDeviceSettingStateSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -29,7 +29,7 @@ public class DeviceManagementIntentDeviceSettingStateSummary extends Entity impl
     }
     /**
      * Gets the compliantCount property value. Number of compliant devices
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getCompliantCount() {
@@ -37,7 +37,7 @@ public class DeviceManagementIntentDeviceSettingStateSummary extends Entity impl
     }
     /**
      * Gets the conflictCount property value. Number of devices in conflict
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getConflictCount() {
@@ -45,7 +45,7 @@ public class DeviceManagementIntentDeviceSettingStateSummary extends Entity impl
     }
     /**
      * Gets the errorCount property value. Number of error devices
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getErrorCount() {
@@ -53,7 +53,7 @@ public class DeviceManagementIntentDeviceSettingStateSummary extends Entity impl
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -69,7 +69,7 @@ public class DeviceManagementIntentDeviceSettingStateSummary extends Entity impl
     }
     /**
      * Gets the nonCompliantCount property value. Number of non compliant devices
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getNonCompliantCount() {
@@ -77,7 +77,7 @@ public class DeviceManagementIntentDeviceSettingStateSummary extends Entity impl
     }
     /**
      * Gets the notApplicableCount property value. Number of not applicable devices
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getNotApplicableCount() {
@@ -85,7 +85,7 @@ public class DeviceManagementIntentDeviceSettingStateSummary extends Entity impl
     }
     /**
      * Gets the remediatedCount property value. Number of remediated devices
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getRemediatedCount() {
@@ -93,7 +93,7 @@ public class DeviceManagementIntentDeviceSettingStateSummary extends Entity impl
     }
     /**
      * Gets the settingName property value. Name of a setting
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSettingName() {

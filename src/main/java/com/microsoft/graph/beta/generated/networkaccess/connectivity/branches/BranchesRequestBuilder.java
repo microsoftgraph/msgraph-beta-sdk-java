@@ -25,6 +25,7 @@ import java.util.Objects;
 public class BranchesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      * @deprecated
      * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      */
@@ -36,7 +37,7 @@ public class BranchesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the branches property of the microsoft.graph.networkaccess.connectivity entity.
      * @param branchSiteId The unique identifier of branchSite
-     * @return a BranchSiteItemRequestBuilder
+     * @return a {@link BranchSiteItemRequestBuilder}
      * @deprecated
      * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      */
@@ -49,7 +50,7 @@ public class BranchesRequestBuilder extends BaseRequestBuilder {
         return new BranchSiteItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new BranchesRequestBuilder and sets the default values.
+     * Instantiates a new {@link BranchesRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -57,7 +58,7 @@ public class BranchesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/networkAccess/connectivity/branches{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new BranchesRequestBuilder and sets the default values.
+     * Instantiates a new {@link BranchesRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -66,7 +67,8 @@ public class BranchesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of branches within a tenant connected to the Global Secure Access services.
-     * @return a BranchSiteCollectionResponse
+     * @return a {@link BranchSiteCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-connectivity-list-branches?view=graph-rest-1.0">Find more info here</a>
@@ -79,7 +81,8 @@ public class BranchesRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of branches within a tenant connected to the Global Secure Access services.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a BranchSiteCollectionResponse
+     * @return a {@link BranchSiteCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-connectivity-list-branches?view=graph-rest-1.0">Find more info here</a>
@@ -89,14 +92,14 @@ public class BranchesRequestBuilder extends BaseRequestBuilder {
     public BranchSiteCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, BranchSiteCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new branch.
      * @param body The request body
-     * @return a BranchSite
+     * @return a {@link BranchSite}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-connectivity-post-branches?view=graph-rest-1.0">Find more info here</a>
@@ -110,7 +113,8 @@ public class BranchesRequestBuilder extends BaseRequestBuilder {
      * Create a new branch.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a BranchSite
+     * @return a {@link BranchSite}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-connectivity-post-branches?view=graph-rest-1.0">Find more info here</a>
@@ -121,13 +125,12 @@ public class BranchesRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, BranchSite::createFromDiscriminatorValue);
     }
     /**
      * Retrieve a list of branches within a tenant connected to the Global Secure Access services.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      */
@@ -139,7 +142,7 @@ public class BranchesRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of branches within a tenant connected to the Global Secure Access services.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      */
@@ -154,7 +157,7 @@ public class BranchesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new branch.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      */
@@ -167,7 +170,7 @@ public class BranchesRequestBuilder extends BaseRequestBuilder {
      * Create a new branch.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      */
@@ -175,7 +178,7 @@ public class BranchesRequestBuilder extends BaseRequestBuilder {
     @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final BranchSite body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/networkAccess/connectivity/branches", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -184,7 +187,7 @@ public class BranchesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a BranchesRequestBuilder
+     * @return a {@link BranchesRequestBuilder}
      * @deprecated
      * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      */
@@ -241,7 +244,7 @@ public class BranchesRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

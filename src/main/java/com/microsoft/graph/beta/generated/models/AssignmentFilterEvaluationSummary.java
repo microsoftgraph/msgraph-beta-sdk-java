@@ -22,7 +22,7 @@ public class AssignmentFilterEvaluationSummary implements AdditionalDataHolder, 
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new AssignmentFilterEvaluationSummary and sets the default values.
+     * Instantiates a new {@link AssignmentFilterEvaluationSummary} and sets the default values.
      */
     public AssignmentFilterEvaluationSummary() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -31,7 +31,7 @@ public class AssignmentFilterEvaluationSummary implements AdditionalDataHolder, 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AssignmentFilterEvaluationSummary
+     * @return a {@link AssignmentFilterEvaluationSummary}
      */
     @jakarta.annotation.Nonnull
     public static AssignmentFilterEvaluationSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class AssignmentFilterEvaluationSummary implements AdditionalDataHolder, 
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -53,7 +53,7 @@ public class AssignmentFilterEvaluationSummary implements AdditionalDataHolder, 
     }
     /**
      * Gets the assignmentFilterDisplayName property value. The admin defined name for assignment filter.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAssignmentFilterDisplayName() {
@@ -61,7 +61,7 @@ public class AssignmentFilterEvaluationSummary implements AdditionalDataHolder, 
     }
     /**
      * Gets the assignmentFilterId property value. Unique identifier for the assignment filter object
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAssignmentFilterId() {
@@ -69,7 +69,7 @@ public class AssignmentFilterEvaluationSummary implements AdditionalDataHolder, 
     }
     /**
      * Gets the assignmentFilterLastModifiedDateTime property value. The time the assignment filter was last modified.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getAssignmentFilterLastModifiedDateTime() {
@@ -77,7 +77,7 @@ public class AssignmentFilterEvaluationSummary implements AdditionalDataHolder, 
     }
     /**
      * Gets the assignmentFilterPlatform property value. Supported platform types.
-     * @return a DevicePlatformType
+     * @return a {@link DevicePlatformType}
      */
     @jakarta.annotation.Nullable
     public DevicePlatformType getAssignmentFilterPlatform() {
@@ -85,7 +85,7 @@ public class AssignmentFilterEvaluationSummary implements AdditionalDataHolder, 
     }
     /**
      * Gets the assignmentFilterType property value. Represents type of the assignment filter.
-     * @return a DeviceAndAppManagementAssignmentFilterType
+     * @return a {@link DeviceAndAppManagementAssignmentFilterType}
      */
     @jakarta.annotation.Nullable
     public DeviceAndAppManagementAssignmentFilterType getAssignmentFilterType() {
@@ -93,7 +93,7 @@ public class AssignmentFilterEvaluationSummary implements AdditionalDataHolder, 
     }
     /**
      * Gets the assignmentFilterTypeAndEvaluationResults property value. A collection of filter types and their corresponding evaluation results.
-     * @return a java.util.List<AssignmentFilterTypeAndEvaluationResult>
+     * @return a {@link java.util.List<AssignmentFilterTypeAndEvaluationResult>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AssignmentFilterTypeAndEvaluationResult> getAssignmentFilterTypeAndEvaluationResults() {
@@ -101,7 +101,7 @@ public class AssignmentFilterEvaluationSummary implements AdditionalDataHolder, 
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -109,7 +109,7 @@ public class AssignmentFilterEvaluationSummary implements AdditionalDataHolder, 
     }
     /**
      * Gets the evaluationDateTime property value. The time assignment filter was evaluated.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getEvaluationDateTime() {
@@ -117,7 +117,7 @@ public class AssignmentFilterEvaluationSummary implements AdditionalDataHolder, 
     }
     /**
      * Gets the evaluationResult property value. Supported evaluation results for filter.
-     * @return a AssignmentFilterEvaluationResult
+     * @return a {@link AssignmentFilterEvaluationResult}
      */
     @jakarta.annotation.Nullable
     public AssignmentFilterEvaluationResult getEvaluationResult() {
@@ -125,7 +125,7 @@ public class AssignmentFilterEvaluationSummary implements AdditionalDataHolder, 
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -143,7 +143,7 @@ public class AssignmentFilterEvaluationSummary implements AdditionalDataHolder, 
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {

@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class RecommendationBase extends Entity implements Parsable {
     /**
-     * Instantiates a new RecommendationBase and sets the default values.
+     * Instantiates a new {@link RecommendationBase} and sets the default values.
      */
     public RecommendationBase() {
         super();
@@ -18,7 +18,7 @@ public class RecommendationBase extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a RecommendationBase
+     * @return a {@link RecommendationBase}
      */
     @jakarta.annotation.Nonnull
     public static RecommendationBase createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -34,7 +34,7 @@ public class RecommendationBase extends Entity implements Parsable {
     }
     /**
      * Gets the actionSteps property value. List of actions to take to complete a recommendation.
-     * @return a java.util.List<ActionStep>
+     * @return a {@link java.util.List<ActionStep>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ActionStep> getActionSteps() {
@@ -42,7 +42,7 @@ public class RecommendationBase extends Entity implements Parsable {
     }
     /**
      * Gets the benefits property value. An explanation of why completing the recommendation will benefit you. Corresponds to the Value section of a recommendation shown in the Microsoft Entra admin center.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getBenefits() {
@@ -50,7 +50,7 @@ public class RecommendationBase extends Entity implements Parsable {
     }
     /**
      * Gets the category property value. The category property
-     * @return a RecommendationCategory
+     * @return a {@link RecommendationCategory}
      */
     @jakarta.annotation.Nullable
     public RecommendationCategory getCategory() {
@@ -58,7 +58,7 @@ public class RecommendationBase extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. The date and time when the recommendation was detected as applicable to your directory.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -66,7 +66,7 @@ public class RecommendationBase extends Entity implements Parsable {
     }
     /**
      * Gets the currentScore property value. The number of points the tenant has attained. Only applies to recommendations with category set to identitySecureScore.
-     * @return a Double
+     * @return a {@link Double}
      */
     @jakarta.annotation.Nullable
     public Double getCurrentScore() {
@@ -74,7 +74,7 @@ public class RecommendationBase extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The title of the recommendation.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -82,7 +82,7 @@ public class RecommendationBase extends Entity implements Parsable {
     }
     /**
      * Gets the featureAreas property value. The directory feature that the recommendation is related to.
-     * @return a java.util.List<RecommendationFeatureAreas>
+     * @return a {@link java.util.List<RecommendationFeatureAreas>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<RecommendationFeatureAreas> getFeatureAreas() {
@@ -90,7 +90,7 @@ public class RecommendationBase extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -120,7 +120,7 @@ public class RecommendationBase extends Entity implements Parsable {
     }
     /**
      * Gets the impactedResources property value. The list of directory objects associated with the recommendation.
-     * @return a java.util.List<ImpactedResource>
+     * @return a {@link java.util.List<ImpactedResource>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ImpactedResource> getImpactedResources() {
@@ -128,7 +128,7 @@ public class RecommendationBase extends Entity implements Parsable {
     }
     /**
      * Gets the impactStartDateTime property value. The future date and time when a recommendation should be completed.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getImpactStartDateTime() {
@@ -136,7 +136,7 @@ public class RecommendationBase extends Entity implements Parsable {
     }
     /**
      * Gets the impactType property value. Indicates the scope of impact of a recommendation. Tenant level indicates that the recommendation impacts the whole tenant. Other possible values include users, applications.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getImpactType() {
@@ -144,7 +144,7 @@ public class RecommendationBase extends Entity implements Parsable {
     }
     /**
      * Gets the insights property value. Describes why a recommendation uniquely applies to your directory. Corresponds to the Description section of a recommendation shown in the Microsoft Entra admin center.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getInsights() {
@@ -152,7 +152,7 @@ public class RecommendationBase extends Entity implements Parsable {
     }
     /**
      * Gets the lastCheckedDateTime property value. The most recent date and time a recommendation was deemed applicable to your directory.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastCheckedDateTime() {
@@ -160,7 +160,7 @@ public class RecommendationBase extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedBy property value. Name of the user who last updated the status of the recommendation.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getLastModifiedBy() {
@@ -168,7 +168,7 @@ public class RecommendationBase extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. The date and time the status of a recommendation was last updated.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -176,7 +176,7 @@ public class RecommendationBase extends Entity implements Parsable {
     }
     /**
      * Gets the maxScore property value. The maximum number of points attainable. Only applies to recommendations with category set to identitySecureScore.
-     * @return a Double
+     * @return a {@link Double}
      */
     @jakarta.annotation.Nullable
     public Double getMaxScore() {
@@ -184,7 +184,7 @@ public class RecommendationBase extends Entity implements Parsable {
     }
     /**
      * Gets the postponeUntilDateTime property value. The future date and time when the status of a postponed recommendation will be active again.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getPostponeUntilDateTime() {
@@ -192,7 +192,7 @@ public class RecommendationBase extends Entity implements Parsable {
     }
     /**
      * Gets the priority property value. The priority property
-     * @return a RecommendationPriority
+     * @return a {@link RecommendationPriority}
      */
     @jakarta.annotation.Nullable
     public RecommendationPriority getPriority() {
@@ -200,7 +200,7 @@ public class RecommendationBase extends Entity implements Parsable {
     }
     /**
      * Gets the recommendationType property value. Friendly shortname to identify the recommendation. The possible values are: adfsAppsMigration, enableDesktopSSO, enablePHS, enableProvisioning, switchFromPerUserMFA, tenantMFA, thirdPartyApps, turnOffPerUserMFA, useAuthenticatorApp, useMyApps, staleApps, staleAppCreds, applicationCredentialExpiry, servicePrincipalKeyExpiry, adminMFAV2, blockLegacyAuthentication, integratedApps, mfaRegistrationV2, pwagePolicyNew, passwordHashSync, oneAdmin, roleOverlap, selfServicePasswordReset, signinRiskPolicy, userRiskPolicy, verifyAppPublisher, privateLinkForAAD, appRoleAssignmentsGroups, appRoleAssignmentsUsers, managedIdentity, overprivilegedApps, unknownFutureValue, longLivedCredentials, aadConnectDeprecated, adalToMsalMigration, ownerlessApps, inactiveGuests. Also, please note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: longLivedCredentials, aadConnectDeprecated, adalToMsalMigration, ownerlessApps, inactiveGuests.
-     * @return a RecommendationType
+     * @return a {@link RecommendationType}
      */
     @jakarta.annotation.Nullable
     public RecommendationType getRecommendationType() {
@@ -208,7 +208,7 @@ public class RecommendationBase extends Entity implements Parsable {
     }
     /**
      * Gets the releaseType property value. The current release type of the recommendation. The possible values are: preview, generallyAvailable, unknownFutureValue.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getReleaseType() {
@@ -216,7 +216,7 @@ public class RecommendationBase extends Entity implements Parsable {
     }
     /**
      * Gets the remediationImpact property value. Description of the impact on users of the remediation. Only applies to recommendations with category set to identitySecureScore.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRemediationImpact() {
@@ -224,7 +224,7 @@ public class RecommendationBase extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status property
-     * @return a RecommendationStatus
+     * @return a {@link RecommendationStatus}
      */
     @jakarta.annotation.Nullable
     public RecommendationStatus getStatus() {

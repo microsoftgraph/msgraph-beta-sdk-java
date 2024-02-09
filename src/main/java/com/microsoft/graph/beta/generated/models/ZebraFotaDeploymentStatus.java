@@ -22,7 +22,7 @@ public class ZebraFotaDeploymentStatus implements AdditionalDataHolder, BackedMo
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new ZebraFotaDeploymentStatus and sets the default values.
+     * Instantiates a new {@link ZebraFotaDeploymentStatus} and sets the default values.
      */
     public ZebraFotaDeploymentStatus() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -31,7 +31,7 @@ public class ZebraFotaDeploymentStatus implements AdditionalDataHolder, BackedMo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ZebraFotaDeploymentStatus
+     * @return a {@link ZebraFotaDeploymentStatus}
      */
     @jakarta.annotation.Nonnull
     public static ZebraFotaDeploymentStatus createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class ZebraFotaDeploymentStatus implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -53,7 +53,7 @@ public class ZebraFotaDeploymentStatus implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -61,7 +61,7 @@ public class ZebraFotaDeploymentStatus implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the cancelRequested property value. A boolean that indicates if a cancellation was requested on the deployment. NOTE: A cancellation request does not guarantee that the deployment was canceled.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getCancelRequested() {
@@ -69,7 +69,7 @@ public class ZebraFotaDeploymentStatus implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the completeOrCanceledDateTime property value. The date and time when this deployment was completed or canceled. The actual date time is determined by the value of state. If the state is canceled, this property holds the cancellation date/time. If the the state is completed, this property holds the completion date/time. If the deployment is not completed before the deployment end date, then completed date/time and end date/time are the same. This is always in the deployment timezone. Note: An installation that is in progress can continue past the deployment end date.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCompleteOrCanceledDateTime() {
@@ -77,7 +77,7 @@ public class ZebraFotaDeploymentStatus implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the errorCode property value. An error code indicating the failure reason, when the deployment state is createFailed. Possible values: See zebraFotaErrorCode enum.
-     * @return a ZebraFotaErrorCode
+     * @return a {@link ZebraFotaErrorCode}
      */
     @jakarta.annotation.Nullable
     public ZebraFotaErrorCode getErrorCode() {
@@ -85,7 +85,7 @@ public class ZebraFotaDeploymentStatus implements AdditionalDataHolder, BackedMo
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -110,7 +110,7 @@ public class ZebraFotaDeploymentStatus implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the lastUpdatedDateTime property value. Date and time when the deployment status was updated from Zebra
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastUpdatedDateTime() {
@@ -118,7 +118,7 @@ public class ZebraFotaDeploymentStatus implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -126,7 +126,7 @@ public class ZebraFotaDeploymentStatus implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the state property value. Represents the state of Zebra FOTA deployment.
-     * @return a ZebraFotaDeploymentState
+     * @return a {@link ZebraFotaDeploymentState}
      */
     @jakarta.annotation.Nullable
     public ZebraFotaDeploymentState getState() {
@@ -134,7 +134,7 @@ public class ZebraFotaDeploymentStatus implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the totalAwaitingInstall property value. An integer that indicates the total number of devices where installation was successful.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getTotalAwaitingInstall() {
@@ -142,7 +142,7 @@ public class ZebraFotaDeploymentStatus implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the totalCanceled property value. An integer that indicates the total number of devices where installation was canceled.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getTotalCanceled() {
@@ -150,7 +150,7 @@ public class ZebraFotaDeploymentStatus implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the totalCreated property value. An integer that indicates the total number of devices that have a job in the CREATED state. Typically indicates jobs that did not reach the devices.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getTotalCreated() {
@@ -158,7 +158,7 @@ public class ZebraFotaDeploymentStatus implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the totalDevices property value. An integer that indicates the total number of devices in the deployment.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getTotalDevices() {
@@ -166,7 +166,7 @@ public class ZebraFotaDeploymentStatus implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the totalDownloading property value. An integer that indicates the total number of devices where installation was successful.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getTotalDownloading() {
@@ -174,7 +174,7 @@ public class ZebraFotaDeploymentStatus implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the totalFailedDownload property value. An integer that indicates the total number of devices that have failed to download the new OS file.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getTotalFailedDownload() {
@@ -182,7 +182,7 @@ public class ZebraFotaDeploymentStatus implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the totalFailedInstall property value. An integer that indicates the total number of devices that have failed to install the new OS file.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getTotalFailedInstall() {
@@ -190,7 +190,7 @@ public class ZebraFotaDeploymentStatus implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the totalScheduled property value. An integer that indicates the total number of devices that received the json and are scheduled.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getTotalScheduled() {
@@ -198,7 +198,7 @@ public class ZebraFotaDeploymentStatus implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the totalSucceededInstall property value. An integer that indicates the total number of devices where installation was successful.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getTotalSucceededInstall() {
@@ -206,7 +206,7 @@ public class ZebraFotaDeploymentStatus implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the totalUnknown property value. An integer that indicates the total number of devices where no deployment status or end state has not received, even after the scheduled end date was reached.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getTotalUnknown() {

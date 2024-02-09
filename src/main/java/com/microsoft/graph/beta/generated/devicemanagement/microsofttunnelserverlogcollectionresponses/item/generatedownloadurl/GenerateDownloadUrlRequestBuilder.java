@@ -19,7 +19,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GenerateDownloadUrlRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new GenerateDownloadUrlRequestBuilder and sets the default values.
+     * Instantiates a new {@link GenerateDownloadUrlRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -27,7 +27,7 @@ public class GenerateDownloadUrlRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/microsoftTunnelServerLogCollectionResponses/{microsoftTunnelServerLogCollectionResponse%2Did}/generateDownloadUrl", pathParameters);
     }
     /**
-     * Instantiates a new GenerateDownloadUrlRequestBuilder and sets the default values.
+     * Instantiates a new {@link GenerateDownloadUrlRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -36,7 +36,8 @@ public class GenerateDownloadUrlRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Invoke action generateDownloadUrl
-     * @return a GenerateDownloadUrlPostResponse
+     * @return a {@link GenerateDownloadUrlPostResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public GenerateDownloadUrlPostResponse post() {
@@ -45,19 +46,19 @@ public class GenerateDownloadUrlRequestBuilder extends BaseRequestBuilder {
     /**
      * Invoke action generateDownloadUrl
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a GenerateDownloadUrlPostResponse
+     * @return a {@link GenerateDownloadUrlPostResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public GenerateDownloadUrlPostResponse post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toPostRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, GenerateDownloadUrlPostResponse::createFromDiscriminatorValue);
     }
     /**
      * Invoke action generateDownloadUrl
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation() {
@@ -66,7 +67,7 @@ public class GenerateDownloadUrlRequestBuilder extends BaseRequestBuilder {
     /**
      * Invoke action generateDownloadUrl
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -78,7 +79,7 @@ public class GenerateDownloadUrlRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a GenerateDownloadUrlRequestBuilder
+     * @return a {@link GenerateDownloadUrlRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GenerateDownloadUrlRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

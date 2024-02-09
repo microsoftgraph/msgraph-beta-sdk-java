@@ -20,7 +20,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GetAssignmentFiltersStatusDetailsRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new GetAssignmentFiltersStatusDetailsRequestBuilder and sets the default values.
+     * Instantiates a new {@link GetAssignmentFiltersStatusDetailsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -28,7 +28,7 @@ public class GetAssignmentFiltersStatusDetailsRequestBuilder extends BaseRequest
         super(requestAdapter, "{+baseurl}/deviceManagement/getAssignmentFiltersStatusDetails", pathParameters);
     }
     /**
-     * Instantiates a new GetAssignmentFiltersStatusDetailsRequestBuilder and sets the default values.
+     * Instantiates a new {@link GetAssignmentFiltersStatusDetailsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -38,7 +38,8 @@ public class GetAssignmentFiltersStatusDetailsRequestBuilder extends BaseRequest
     /**
      * Invoke action getAssignmentFiltersStatusDetails
      * @param body The request body
-     * @return a AssignmentFilterStatusDetails
+     * @return a {@link AssignmentFilterStatusDetails}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public AssignmentFilterStatusDetails post(@jakarta.annotation.Nonnull final GetAssignmentFiltersStatusDetailsPostRequestBody body) {
@@ -48,21 +49,21 @@ public class GetAssignmentFiltersStatusDetailsRequestBuilder extends BaseRequest
      * Invoke action getAssignmentFiltersStatusDetails
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a AssignmentFilterStatusDetails
+     * @return a {@link AssignmentFilterStatusDetails}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public AssignmentFilterStatusDetails post(@jakarta.annotation.Nonnull final GetAssignmentFiltersStatusDetailsPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, AssignmentFilterStatusDetails::createFromDiscriminatorValue);
     }
     /**
      * Invoke action getAssignmentFiltersStatusDetails
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final GetAssignmentFiltersStatusDetailsPostRequestBody body) {
@@ -72,7 +73,7 @@ public class GetAssignmentFiltersStatusDetailsRequestBuilder extends BaseRequest
      * Invoke action getAssignmentFiltersStatusDetails
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final GetAssignmentFiltersStatusDetailsPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -86,7 +87,7 @@ public class GetAssignmentFiltersStatusDetailsRequestBuilder extends BaseRequest
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a GetAssignmentFiltersStatusDetailsRequestBuilder
+     * @return a {@link GetAssignmentFiltersStatusDetailsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetAssignmentFiltersStatusDetailsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

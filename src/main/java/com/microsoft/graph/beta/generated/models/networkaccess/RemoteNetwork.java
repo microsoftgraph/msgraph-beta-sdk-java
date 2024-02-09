@@ -11,7 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class RemoteNetwork extends Entity implements Parsable {
     /**
-     * Instantiates a new RemoteNetwork and sets the default values.
+     * Instantiates a new {@link RemoteNetwork} and sets the default values.
      */
     public RemoteNetwork() {
         super();
@@ -19,7 +19,7 @@ public class RemoteNetwork extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a RemoteNetwork
+     * @return a {@link RemoteNetwork}
      */
     @jakarta.annotation.Nonnull
     public static RemoteNetwork createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class RemoteNetwork extends Entity implements Parsable {
     }
     /**
      * Gets the bandwidthCapacity property value. The bandwidthCapacity property
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getBandwidthCapacity() {
@@ -36,7 +36,7 @@ public class RemoteNetwork extends Entity implements Parsable {
     }
     /**
      * Gets the connectivityConfiguration property value. The connectivityConfiguration property
-     * @return a RemoteNetworkConnectivityConfiguration
+     * @return a {@link RemoteNetworkConnectivityConfiguration}
      */
     @jakarta.annotation.Nullable
     public RemoteNetworkConnectivityConfiguration getConnectivityConfiguration() {
@@ -44,7 +44,7 @@ public class RemoteNetwork extends Entity implements Parsable {
     }
     /**
      * Gets the connectivityState property value. The connectivityState property
-     * @return a ConnectivityState
+     * @return a {@link ConnectivityState}
      */
     @jakarta.annotation.Nullable
     public ConnectivityState getConnectivityState() {
@@ -52,7 +52,7 @@ public class RemoteNetwork extends Entity implements Parsable {
     }
     /**
      * Gets the country property value. The country property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCountry() {
@@ -60,7 +60,7 @@ public class RemoteNetwork extends Entity implements Parsable {
     }
     /**
      * Gets the deviceLinks property value. The deviceLinks property
-     * @return a java.util.List<DeviceLink>
+     * @return a {@link java.util.List<DeviceLink>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceLink> getDeviceLinks() {
@@ -68,7 +68,7 @@ public class RemoteNetwork extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -87,7 +87,7 @@ public class RemoteNetwork extends Entity implements Parsable {
     }
     /**
      * Gets the forwardingProfiles property value. The forwardingProfiles property
-     * @return a java.util.List<ForwardingProfile>
+     * @return a {@link java.util.List<ForwardingProfile>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ForwardingProfile> getForwardingProfiles() {
@@ -95,7 +95,7 @@ public class RemoteNetwork extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -103,7 +103,7 @@ public class RemoteNetwork extends Entity implements Parsable {
     }
     /**
      * Gets the name property value. The name property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -111,7 +111,7 @@ public class RemoteNetwork extends Entity implements Parsable {
     }
     /**
      * Gets the region property value. The region property
-     * @return a Region
+     * @return a {@link Region}
      */
     @jakarta.annotation.Nullable
     public Region getRegion() {
@@ -119,7 +119,7 @@ public class RemoteNetwork extends Entity implements Parsable {
     }
     /**
      * Gets the version property value. The version property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getVersion() {

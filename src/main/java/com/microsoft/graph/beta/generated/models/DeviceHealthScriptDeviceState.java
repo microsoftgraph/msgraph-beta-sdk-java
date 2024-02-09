@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceHealthScriptDeviceState extends Entity implements Parsable {
     /**
-     * Instantiates a new DeviceHealthScriptDeviceState and sets the default values.
+     * Instantiates a new {@link DeviceHealthScriptDeviceState} and sets the default values.
      */
     public DeviceHealthScriptDeviceState() {
         super();
@@ -21,7 +21,7 @@ public class DeviceHealthScriptDeviceState extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceHealthScriptDeviceState
+     * @return a {@link DeviceHealthScriptDeviceState}
      */
     @jakarta.annotation.Nonnull
     public static DeviceHealthScriptDeviceState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class DeviceHealthScriptDeviceState extends Entity implements Parsable {
     }
     /**
      * Gets the assignmentFilterIds property value. A list of the assignment filter ids used for health script applicability evaluation
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAssignmentFilterIds() {
@@ -38,7 +38,7 @@ public class DeviceHealthScriptDeviceState extends Entity implements Parsable {
     }
     /**
      * Gets the detectionState property value. Indicates the type of execution status of the device management script.
-     * @return a RunState
+     * @return a {@link RunState}
      */
     @jakarta.annotation.Nullable
     public RunState getDetectionState() {
@@ -46,7 +46,7 @@ public class DeviceHealthScriptDeviceState extends Entity implements Parsable {
     }
     /**
      * Gets the expectedStateUpdateDateTime property value. The next timestamp of when the device health script is expected to execute
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getExpectedStateUpdateDateTime() {
@@ -54,7 +54,7 @@ public class DeviceHealthScriptDeviceState extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -75,7 +75,7 @@ public class DeviceHealthScriptDeviceState extends Entity implements Parsable {
     }
     /**
      * Gets the lastStateUpdateDateTime property value. The last timestamp of when the device health script executed
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastStateUpdateDateTime() {
@@ -83,7 +83,7 @@ public class DeviceHealthScriptDeviceState extends Entity implements Parsable {
     }
     /**
      * Gets the lastSyncDateTime property value. The last time that Intune Managment Extension synced with Intune
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastSyncDateTime() {
@@ -91,7 +91,7 @@ public class DeviceHealthScriptDeviceState extends Entity implements Parsable {
     }
     /**
      * Gets the managedDevice property value. The managed device on which the device health script executed
-     * @return a ManagedDevice
+     * @return a {@link ManagedDevice}
      */
     @jakarta.annotation.Nullable
     public ManagedDevice getManagedDevice() {
@@ -99,7 +99,7 @@ public class DeviceHealthScriptDeviceState extends Entity implements Parsable {
     }
     /**
      * Gets the postRemediationDetectionScriptError property value. Error from the detection script after remediation
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPostRemediationDetectionScriptError() {
@@ -107,7 +107,7 @@ public class DeviceHealthScriptDeviceState extends Entity implements Parsable {
     }
     /**
      * Gets the postRemediationDetectionScriptOutput property value. Detection script output after remediation
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPostRemediationDetectionScriptOutput() {
@@ -115,7 +115,7 @@ public class DeviceHealthScriptDeviceState extends Entity implements Parsable {
     }
     /**
      * Gets the preRemediationDetectionScriptError property value. Error from the detection script before remediation
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPreRemediationDetectionScriptError() {
@@ -123,7 +123,7 @@ public class DeviceHealthScriptDeviceState extends Entity implements Parsable {
     }
     /**
      * Gets the preRemediationDetectionScriptOutput property value. Output of the detection script before remediation
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPreRemediationDetectionScriptOutput() {
@@ -131,7 +131,7 @@ public class DeviceHealthScriptDeviceState extends Entity implements Parsable {
     }
     /**
      * Gets the remediationScriptError property value. Error output of the remediation script
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRemediationScriptError() {
@@ -139,7 +139,7 @@ public class DeviceHealthScriptDeviceState extends Entity implements Parsable {
     }
     /**
      * Gets the remediationState property value. Indicates the type of execution status of the device management script.
-     * @return a RemediationState
+     * @return a {@link RemediationState}
      */
     @jakarta.annotation.Nullable
     public RemediationState getRemediationState() {

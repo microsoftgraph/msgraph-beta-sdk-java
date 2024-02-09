@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EngagementAsyncOperation extends LongRunningOperation implements Parsable {
     /**
-     * Instantiates a new EngagementAsyncOperation and sets the default values.
+     * Instantiates a new {@link EngagementAsyncOperation} and sets the default values.
      */
     public EngagementAsyncOperation() {
         super();
@@ -17,7 +17,7 @@ public class EngagementAsyncOperation extends LongRunningOperation implements Pa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EngagementAsyncOperation
+     * @return a {@link EngagementAsyncOperation}
      */
     @jakarta.annotation.Nonnull
     public static EngagementAsyncOperation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class EngagementAsyncOperation extends LongRunningOperation implements Pa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -37,7 +37,7 @@ public class EngagementAsyncOperation extends LongRunningOperation implements Pa
     }
     /**
      * Gets the operationType property value. The type of the long-running operation. The possible values are: createCommunity, unknownFutureValue.
-     * @return a EngagementAsyncOperationType
+     * @return a {@link EngagementAsyncOperationType}
      */
     @jakarta.annotation.Nullable
     public EngagementAsyncOperationType getOperationType() {
@@ -45,7 +45,7 @@ public class EngagementAsyncOperation extends LongRunningOperation implements Pa
     }
     /**
      * Gets the resourceId property value. The ID of the object created or modified as a result of this async operation.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getResourceId() {

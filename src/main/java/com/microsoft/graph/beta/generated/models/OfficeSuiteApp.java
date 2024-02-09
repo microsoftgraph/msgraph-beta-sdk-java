@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OfficeSuiteApp extends MobileApp implements Parsable {
     /**
-     * Instantiates a new OfficeSuiteApp and sets the default values.
+     * Instantiates a new {@link OfficeSuiteApp} and sets the default values.
      */
     public OfficeSuiteApp() {
         super();
@@ -22,7 +22,7 @@ public class OfficeSuiteApp extends MobileApp implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a OfficeSuiteApp
+     * @return a {@link OfficeSuiteApp}
      */
     @jakarta.annotation.Nonnull
     public static OfficeSuiteApp createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -31,7 +31,7 @@ public class OfficeSuiteApp extends MobileApp implements Parsable {
     }
     /**
      * Gets the autoAcceptEula property value. The value to accept the EULA automatically on the enduser's device.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAutoAcceptEula() {
@@ -39,7 +39,7 @@ public class OfficeSuiteApp extends MobileApp implements Parsable {
     }
     /**
      * Gets the excludedApps property value. The property to represent the apps which are excluded from the selected Office365 Product Id.
-     * @return a ExcludedApps
+     * @return a {@link ExcludedApps}
      */
     @jakarta.annotation.Nullable
     public ExcludedApps getExcludedApps() {
@@ -47,7 +47,7 @@ public class OfficeSuiteApp extends MobileApp implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -69,7 +69,7 @@ public class OfficeSuiteApp extends MobileApp implements Parsable {
     }
     /**
      * Gets the installProgressDisplayLevel property value. The Enum to specify the level of display for the Installation Progress Setup UI on the Device.
-     * @return a OfficeSuiteInstallProgressDisplayLevel
+     * @return a {@link OfficeSuiteInstallProgressDisplayLevel}
      */
     @jakarta.annotation.Nullable
     public OfficeSuiteInstallProgressDisplayLevel getInstallProgressDisplayLevel() {
@@ -77,7 +77,7 @@ public class OfficeSuiteApp extends MobileApp implements Parsable {
     }
     /**
      * Gets the localesToInstall property value. The property to represent the locales which are installed when the apps from Office365 is installed. It uses standard RFC 6033. Ref: https://technet.microsoft.com/library/cc179219(v=office.16).aspx
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getLocalesToInstall() {
@@ -85,7 +85,7 @@ public class OfficeSuiteApp extends MobileApp implements Parsable {
     }
     /**
      * Gets the officeConfigurationXml property value. The property to represent the XML configuration file that can be specified for Office ProPlus Apps. Takes precedence over all other properties. When present, the XML configuration file will be used to create the app.
-     * @return a byte[]
+     * @return a {@link byte[]}
      */
     @jakarta.annotation.Nullable
     public byte[] getOfficeConfigurationXml() {
@@ -93,7 +93,7 @@ public class OfficeSuiteApp extends MobileApp implements Parsable {
     }
     /**
      * Gets the officePlatformArchitecture property value. Contains properties for Windows architecture.
-     * @return a EnumSet<WindowsArchitecture>
+     * @return a {@link EnumSet<WindowsArchitecture>}
      */
     @jakarta.annotation.Nullable
     public EnumSet<WindowsArchitecture> getOfficePlatformArchitecture() {
@@ -101,7 +101,7 @@ public class OfficeSuiteApp extends MobileApp implements Parsable {
     }
     /**
      * Gets the officeSuiteAppDefaultFileFormat property value. Describes the OfficeSuiteApp file format types that can be selected.
-     * @return a OfficeSuiteDefaultFileFormatType
+     * @return a {@link OfficeSuiteDefaultFileFormatType}
      */
     @jakarta.annotation.Nullable
     public OfficeSuiteDefaultFileFormatType getOfficeSuiteAppDefaultFileFormat() {
@@ -109,7 +109,7 @@ public class OfficeSuiteApp extends MobileApp implements Parsable {
     }
     /**
      * Gets the productIds property value. The Product Ids that represent the Office365 Suite SKU.
-     * @return a java.util.List<OfficeProductId>
+     * @return a {@link java.util.List<OfficeProductId>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<OfficeProductId> getProductIds() {
@@ -117,7 +117,7 @@ public class OfficeSuiteApp extends MobileApp implements Parsable {
     }
     /**
      * Gets the shouldUninstallOlderVersionsOfOffice property value. The property to determine whether to uninstall existing Office MSI if an Office365 app suite is deployed to the device or not.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getShouldUninstallOlderVersionsOfOffice() {
@@ -125,7 +125,7 @@ public class OfficeSuiteApp extends MobileApp implements Parsable {
     }
     /**
      * Gets the targetVersion property value. The property to represent the specific target version for the Office365 app suite that should be remained deployed on the devices.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTargetVersion() {
@@ -133,7 +133,7 @@ public class OfficeSuiteApp extends MobileApp implements Parsable {
     }
     /**
      * Gets the updateChannel property value. The Enum to specify the Office365 Updates Channel.
-     * @return a OfficeUpdateChannel
+     * @return a {@link OfficeUpdateChannel}
      */
     @jakarta.annotation.Nullable
     public OfficeUpdateChannel getUpdateChannel() {
@@ -141,7 +141,7 @@ public class OfficeSuiteApp extends MobileApp implements Parsable {
     }
     /**
      * Gets the updateVersion property value. The property to represent the update version in which the specific target version is available for the Office365 app suite.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUpdateVersion() {
@@ -149,7 +149,7 @@ public class OfficeSuiteApp extends MobileApp implements Parsable {
     }
     /**
      * Gets the useSharedComputerActivation property value. The property to represent that whether the shared computer activation is used not for Office365 app suite.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getUseSharedComputerActivation() {

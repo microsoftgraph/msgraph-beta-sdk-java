@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Teamwork extends Entity implements Parsable {
     /**
-     * Instantiates a new Teamwork and sets the default values.
+     * Instantiates a new {@link Teamwork} and sets the default values.
      */
     public Teamwork() {
         super();
@@ -17,7 +17,7 @@ public class Teamwork extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Teamwork
+     * @return a {@link Teamwork}
      */
     @jakarta.annotation.Nonnull
     public static Teamwork createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class Teamwork extends Entity implements Parsable {
     }
     /**
      * Gets the deletedChats property value. A collection of deleted chats.
-     * @return a java.util.List<DeletedChat>
+     * @return a {@link java.util.List<DeletedChat>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeletedChat> getDeletedChats() {
@@ -34,7 +34,7 @@ public class Teamwork extends Entity implements Parsable {
     }
     /**
      * Gets the deletedTeams property value. A collection of deleted teams.
-     * @return a java.util.List<DeletedTeam>
+     * @return a {@link java.util.List<DeletedTeam>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeletedTeam> getDeletedTeams() {
@@ -42,7 +42,7 @@ public class Teamwork extends Entity implements Parsable {
     }
     /**
      * Gets the devices property value. The Teams devices provisioned for the tenant.
-     * @return a java.util.List<TeamworkDevice>
+     * @return a {@link java.util.List<TeamworkDevice>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<TeamworkDevice> getDevices() {
@@ -50,7 +50,7 @@ public class Teamwork extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -67,7 +67,7 @@ public class Teamwork extends Entity implements Parsable {
     }
     /**
      * Gets the isTeamsEnabled property value. Indicates whether Microsoft Teams is enabled for the organization.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsTeamsEnabled() {
@@ -75,7 +75,7 @@ public class Teamwork extends Entity implements Parsable {
     }
     /**
      * Gets the region property value. Represents the region of the organization.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRegion() {
@@ -83,7 +83,7 @@ public class Teamwork extends Entity implements Parsable {
     }
     /**
      * Gets the teamsAppSettings property value. Represents tenant-wide settings for all Teams apps in the tenant.
-     * @return a TeamsAppSettings
+     * @return a {@link TeamsAppSettings}
      */
     @jakarta.annotation.Nullable
     public TeamsAppSettings getTeamsAppSettings() {
@@ -91,7 +91,7 @@ public class Teamwork extends Entity implements Parsable {
     }
     /**
      * Gets the teamTemplates property value. The templates associated with a team.
-     * @return a java.util.List<TeamTemplate>
+     * @return a {@link java.util.List<TeamTemplate>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<TeamTemplate> getTeamTemplates() {
@@ -99,7 +99,7 @@ public class Teamwork extends Entity implements Parsable {
     }
     /**
      * Gets the workforceIntegrations property value. A workforce integration with shifts.
-     * @return a java.util.List<WorkforceIntegration>
+     * @return a {@link java.util.List<WorkforceIntegration>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<WorkforceIntegration> getWorkforceIntegrations() {

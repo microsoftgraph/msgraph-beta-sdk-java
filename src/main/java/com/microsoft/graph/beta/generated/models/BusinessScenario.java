@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class BusinessScenario extends Entity implements Parsable {
     /**
-     * Instantiates a new BusinessScenario and sets the default values.
+     * Instantiates a new {@link BusinessScenario} and sets the default values.
      */
     public BusinessScenario() {
         super();
@@ -18,7 +18,7 @@ public class BusinessScenario extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a BusinessScenario
+     * @return a {@link BusinessScenario}
      */
     @jakarta.annotation.Nonnull
     public static BusinessScenario createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class BusinessScenario extends Entity implements Parsable {
     }
     /**
      * Gets the createdBy property value. The identity of the user who created the scenario.
-     * @return a IdentitySet
+     * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
@@ -35,7 +35,7 @@ public class BusinessScenario extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. The date and time when the scenario was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -43,7 +43,7 @@ public class BusinessScenario extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. Display name of the scenario.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -51,7 +51,7 @@ public class BusinessScenario extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -68,7 +68,7 @@ public class BusinessScenario extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedBy property value. The identity of the user who last modified the scenario.
-     * @return a IdentitySet
+     * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
     public IdentitySet getLastModifiedBy() {
@@ -76,7 +76,7 @@ public class BusinessScenario extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. The date and time when the scenario was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -84,7 +84,7 @@ public class BusinessScenario extends Entity implements Parsable {
     }
     /**
      * Gets the ownerAppIds property value. Identifiers of applications that are authorized to work with this scenario.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getOwnerAppIds() {
@@ -92,7 +92,7 @@ public class BusinessScenario extends Entity implements Parsable {
     }
     /**
      * Gets the planner property value. Planner content related to the scenario.
-     * @return a BusinessScenarioPlanner
+     * @return a {@link BusinessScenarioPlanner}
      */
     @jakarta.annotation.Nullable
     public BusinessScenarioPlanner getPlanner() {
@@ -100,7 +100,7 @@ public class BusinessScenario extends Entity implements Parsable {
     }
     /**
      * Gets the uniqueName property value. Unique name of the scenario. To avoid conflicts, the recommended value for the unique name is a reverse domain name format, owned by the author of the scenario. For example, a scenario authored by Contoso.com would have a unique name that starts with com.contoso.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUniqueName() {

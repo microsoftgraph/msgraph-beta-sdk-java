@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ScheduledPermissionsRequest extends Entity implements Parsable {
     /**
-     * Instantiates a new ScheduledPermissionsRequest and sets the default values.
+     * Instantiates a new {@link ScheduledPermissionsRequest} and sets the default values.
      */
     public ScheduledPermissionsRequest() {
         super();
@@ -18,7 +18,7 @@ public class ScheduledPermissionsRequest extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ScheduledPermissionsRequest
+     * @return a {@link ScheduledPermissionsRequest}
      */
     @jakarta.annotation.Nonnull
     public static ScheduledPermissionsRequest createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,8 +26,16 @@ public class ScheduledPermissionsRequest extends Entity implements Parsable {
         return new ScheduledPermissionsRequest();
     }
     /**
+     * Gets the action property value. The action property
+     * @return a {@link UnifiedRoleScheduleRequestActions}
+     */
+    @jakarta.annotation.Nullable
+    public UnifiedRoleScheduleRequestActions getAction() {
+        return this.backingStore.get("action");
+    }
+    /**
      * Gets the createdDateTime property value. Defines when the identity created the request.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -35,11 +43,12 @@ public class ScheduledPermissionsRequest extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("action", (n) -> { this.setAction(n.getEnumValue(UnifiedRoleScheduleRequestActions::forValue)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("justification", (n) -> { this.setJustification(n.getStringValue()); });
         deserializerMap.put("notes", (n) -> { this.setNotes(n.getStringValue()); });
@@ -51,7 +60,7 @@ public class ScheduledPermissionsRequest extends Entity implements Parsable {
     }
     /**
      * Gets the justification property value. The identity's justification for the request.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getJustification() {
@@ -59,7 +68,7 @@ public class ScheduledPermissionsRequest extends Entity implements Parsable {
     }
     /**
      * Gets the notes property value. Additional context for the permissions request.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getNotes() {
@@ -67,7 +76,7 @@ public class ScheduledPermissionsRequest extends Entity implements Parsable {
     }
     /**
      * Gets the requestedPermissions property value. The requestedPermissions property
-     * @return a PermissionsDefinition
+     * @return a {@link PermissionsDefinition}
      */
     @jakarta.annotation.Nullable
     public PermissionsDefinition getRequestedPermissions() {
@@ -75,7 +84,7 @@ public class ScheduledPermissionsRequest extends Entity implements Parsable {
     }
     /**
      * Gets the scheduleInfo property value. When to assign the requested permissions.
-     * @return a RequestSchedule
+     * @return a {@link RequestSchedule}
      */
     @jakarta.annotation.Nullable
     public RequestSchedule getScheduleInfo() {
@@ -83,7 +92,7 @@ public class ScheduledPermissionsRequest extends Entity implements Parsable {
     }
     /**
      * Gets the statusDetail property value. The statusDetail property
-     * @return a StatusDetail
+     * @return a {@link StatusDetail}
      */
     @jakarta.annotation.Nullable
     public StatusDetail getStatusDetail() {
@@ -91,7 +100,7 @@ public class ScheduledPermissionsRequest extends Entity implements Parsable {
     }
     /**
      * Gets the ticketInfo property value. Ticketing-related metadata that you can use to correlate to the request.
-     * @return a TicketInfo
+     * @return a {@link TicketInfo}
      */
     @jakarta.annotation.Nullable
     public TicketInfo getTicketInfo() {
@@ -104,6 +113,7 @@ public class ScheduledPermissionsRequest extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeEnumValue("action", this.getAction());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeStringValue("justification", this.getJustification());
         writer.writeStringValue("notes", this.getNotes());
@@ -111,6 +121,13 @@ public class ScheduledPermissionsRequest extends Entity implements Parsable {
         writer.writeObjectValue("scheduleInfo", this.getScheduleInfo());
         writer.writeEnumValue("statusDetail", this.getStatusDetail());
         writer.writeObjectValue("ticketInfo", this.getTicketInfo());
+    }
+    /**
+     * Sets the action property value. The action property
+     * @param value Value to set for the action property.
+     */
+    public void setAction(@jakarta.annotation.Nullable final UnifiedRoleScheduleRequestActions value) {
+        this.backingStore.set("action", value);
     }
     /**
      * Sets the createdDateTime property value. Defines when the identity created the request.

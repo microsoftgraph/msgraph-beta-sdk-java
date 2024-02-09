@@ -19,7 +19,7 @@ public class DetectedSensitiveContentBase implements AdditionalDataHolder, Backe
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new DetectedSensitiveContentBase and sets the default values.
+     * Instantiates a new {@link DetectedSensitiveContentBase} and sets the default values.
      */
     public DetectedSensitiveContentBase() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class DetectedSensitiveContentBase implements AdditionalDataHolder, Backe
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DetectedSensitiveContentBase
+     * @return a {@link DetectedSensitiveContentBase}
      */
     @jakarta.annotation.Nonnull
     public static DetectedSensitiveContentBase createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class DetectedSensitiveContentBase implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -59,7 +59,7 @@ public class DetectedSensitiveContentBase implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -67,7 +67,7 @@ public class DetectedSensitiveContentBase implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the confidence property value. The confidence property
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getConfidence() {
@@ -75,7 +75,7 @@ public class DetectedSensitiveContentBase implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the displayName property value. The displayName property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -83,7 +83,7 @@ public class DetectedSensitiveContentBase implements AdditionalDataHolder, Backe
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -98,7 +98,7 @@ public class DetectedSensitiveContentBase implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the id property value. The id property
-     * @return a UUID
+     * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
     public UUID getId() {
@@ -106,7 +106,7 @@ public class DetectedSensitiveContentBase implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -114,7 +114,7 @@ public class DetectedSensitiveContentBase implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the recommendedConfidence property value. The recommendedConfidence property
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getRecommendedConfidence() {
@@ -122,7 +122,7 @@ public class DetectedSensitiveContentBase implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the uniqueCount property value. The uniqueCount property
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getUniqueCount() {

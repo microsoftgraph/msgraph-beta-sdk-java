@@ -57,6 +57,7 @@ import java.util.Objects;
 public class CompanyItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the accounts property of the microsoft.graph.company entity.
+     * @return a {@link AccountsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AccountsRequestBuilder accounts() {
@@ -64,6 +65,7 @@ public class CompanyItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the agedAccountsPayable property of the microsoft.graph.company entity.
+     * @return a {@link AgedAccountsPayableRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AgedAccountsPayableRequestBuilder agedAccountsPayable() {
@@ -71,6 +73,7 @@ public class CompanyItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the agedAccountsReceivable property of the microsoft.graph.company entity.
+     * @return a {@link AgedAccountsReceivableRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AgedAccountsReceivableRequestBuilder agedAccountsReceivable() {
@@ -78,6 +81,7 @@ public class CompanyItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the companyInformation property of the microsoft.graph.company entity.
+     * @return a {@link CompanyInformationRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CompanyInformationRequestBuilder companyInformation() {
@@ -85,6 +89,7 @@ public class CompanyItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the countriesRegions property of the microsoft.graph.company entity.
+     * @return a {@link CountriesRegionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountriesRegionsRequestBuilder countriesRegions() {
@@ -92,6 +97,7 @@ public class CompanyItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the currencies property of the microsoft.graph.company entity.
+     * @return a {@link CurrenciesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CurrenciesRequestBuilder currencies() {
@@ -99,6 +105,7 @@ public class CompanyItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the customerPaymentJournals property of the microsoft.graph.company entity.
+     * @return a {@link CustomerPaymentJournalsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CustomerPaymentJournalsRequestBuilder customerPaymentJournals() {
@@ -106,6 +113,7 @@ public class CompanyItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the customerPayments property of the microsoft.graph.company entity.
+     * @return a {@link CustomerPaymentsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CustomerPaymentsRequestBuilder customerPayments() {
@@ -113,6 +121,7 @@ public class CompanyItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the customers property of the microsoft.graph.company entity.
+     * @return a {@link CustomersRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CustomersRequestBuilder customers() {
@@ -120,6 +129,7 @@ public class CompanyItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the dimensions property of the microsoft.graph.company entity.
+     * @return a {@link DimensionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DimensionsRequestBuilder dimensions() {
@@ -127,6 +137,7 @@ public class CompanyItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the dimensionValues property of the microsoft.graph.company entity.
+     * @return a {@link DimensionValuesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DimensionValuesRequestBuilder dimensionValues() {
@@ -134,6 +145,7 @@ public class CompanyItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the employees property of the microsoft.graph.company entity.
+     * @return a {@link EmployeesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public EmployeesRequestBuilder employees() {
@@ -141,6 +153,7 @@ public class CompanyItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the generalLedgerEntries property of the microsoft.graph.company entity.
+     * @return a {@link GeneralLedgerEntriesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GeneralLedgerEntriesRequestBuilder generalLedgerEntries() {
@@ -148,6 +161,7 @@ public class CompanyItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the itemCategories property of the microsoft.graph.company entity.
+     * @return a {@link ItemCategoriesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ItemCategoriesRequestBuilder itemCategories() {
@@ -155,6 +169,7 @@ public class CompanyItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the items property of the microsoft.graph.company entity.
+     * @return a {@link ItemsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ItemsRequestBuilder items() {
@@ -162,6 +177,7 @@ public class CompanyItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the journalLines property of the microsoft.graph.company entity.
+     * @return a {@link JournalLinesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public JournalLinesRequestBuilder journalLines() {
@@ -169,6 +185,7 @@ public class CompanyItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the journals property of the microsoft.graph.company entity.
+     * @return a {@link JournalsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public JournalsRequestBuilder journals() {
@@ -176,6 +193,7 @@ public class CompanyItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the paymentMethods property of the microsoft.graph.company entity.
+     * @return a {@link PaymentMethodsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PaymentMethodsRequestBuilder paymentMethods() {
@@ -183,6 +201,7 @@ public class CompanyItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the paymentTerms property of the microsoft.graph.company entity.
+     * @return a {@link PaymentTermsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PaymentTermsRequestBuilder paymentTerms() {
@@ -190,6 +209,7 @@ public class CompanyItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the picture property of the microsoft.graph.company entity.
+     * @return a {@link PictureRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PictureRequestBuilder picture() {
@@ -197,6 +217,7 @@ public class CompanyItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the purchaseInvoiceLines property of the microsoft.graph.company entity.
+     * @return a {@link PurchaseInvoiceLinesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PurchaseInvoiceLinesRequestBuilder purchaseInvoiceLines() {
@@ -204,6 +225,7 @@ public class CompanyItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the purchaseInvoices property of the microsoft.graph.company entity.
+     * @return a {@link PurchaseInvoicesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PurchaseInvoicesRequestBuilder purchaseInvoices() {
@@ -211,6 +233,7 @@ public class CompanyItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the salesCreditMemoLines property of the microsoft.graph.company entity.
+     * @return a {@link SalesCreditMemoLinesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SalesCreditMemoLinesRequestBuilder salesCreditMemoLines() {
@@ -218,6 +241,7 @@ public class CompanyItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the salesCreditMemos property of the microsoft.graph.company entity.
+     * @return a {@link SalesCreditMemosRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SalesCreditMemosRequestBuilder salesCreditMemos() {
@@ -225,6 +249,7 @@ public class CompanyItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the salesInvoiceLines property of the microsoft.graph.company entity.
+     * @return a {@link SalesInvoiceLinesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SalesInvoiceLinesRequestBuilder salesInvoiceLines() {
@@ -232,6 +257,7 @@ public class CompanyItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the salesInvoices property of the microsoft.graph.company entity.
+     * @return a {@link SalesInvoicesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SalesInvoicesRequestBuilder salesInvoices() {
@@ -239,6 +265,7 @@ public class CompanyItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the salesOrderLines property of the microsoft.graph.company entity.
+     * @return a {@link SalesOrderLinesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SalesOrderLinesRequestBuilder salesOrderLines() {
@@ -246,6 +273,7 @@ public class CompanyItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the salesOrders property of the microsoft.graph.company entity.
+     * @return a {@link SalesOrdersRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SalesOrdersRequestBuilder salesOrders() {
@@ -253,6 +281,7 @@ public class CompanyItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the salesQuoteLines property of the microsoft.graph.company entity.
+     * @return a {@link SalesQuoteLinesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SalesQuoteLinesRequestBuilder salesQuoteLines() {
@@ -260,6 +289,7 @@ public class CompanyItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the salesQuotes property of the microsoft.graph.company entity.
+     * @return a {@link SalesQuotesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SalesQuotesRequestBuilder salesQuotes() {
@@ -267,6 +297,7 @@ public class CompanyItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the shipmentMethods property of the microsoft.graph.company entity.
+     * @return a {@link ShipmentMethodsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ShipmentMethodsRequestBuilder shipmentMethods() {
@@ -274,6 +305,7 @@ public class CompanyItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the taxAreas property of the microsoft.graph.company entity.
+     * @return a {@link TaxAreasRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TaxAreasRequestBuilder taxAreas() {
@@ -281,6 +313,7 @@ public class CompanyItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the taxGroups property of the microsoft.graph.company entity.
+     * @return a {@link TaxGroupsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TaxGroupsRequestBuilder taxGroups() {
@@ -288,6 +321,7 @@ public class CompanyItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the unitsOfMeasure property of the microsoft.graph.company entity.
+     * @return a {@link UnitsOfMeasureRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UnitsOfMeasureRequestBuilder unitsOfMeasure() {
@@ -295,13 +329,14 @@ public class CompanyItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the vendors property of the microsoft.graph.company entity.
+     * @return a {@link VendorsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public VendorsRequestBuilder vendors() {
         return new VendorsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new CompanyItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link CompanyItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -309,7 +344,7 @@ public class CompanyItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/financials/companies/{company%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new CompanyItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link CompanyItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -318,7 +353,8 @@ public class CompanyItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get companies from financials
-     * @return a Company
+     * @return a {@link Company}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public Company get() {
@@ -327,19 +363,19 @@ public class CompanyItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get companies from financials
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a Company
+     * @return a {@link Company}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public Company get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, Company::createFromDiscriminatorValue);
     }
     /**
      * Get companies from financials
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -348,7 +384,7 @@ public class CompanyItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get companies from financials
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -360,7 +396,7 @@ public class CompanyItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a CompanyItemRequestBuilder
+     * @return a {@link CompanyItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CompanyItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -384,7 +420,7 @@ public class CompanyItemRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

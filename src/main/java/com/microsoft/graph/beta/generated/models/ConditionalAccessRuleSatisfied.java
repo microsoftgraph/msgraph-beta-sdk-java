@@ -19,7 +19,7 @@ public class ConditionalAccessRuleSatisfied implements AdditionalDataHolder, Bac
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new ConditionalAccessRuleSatisfied and sets the default values.
+     * Instantiates a new {@link ConditionalAccessRuleSatisfied} and sets the default values.
      */
     public ConditionalAccessRuleSatisfied() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class ConditionalAccessRuleSatisfied implements AdditionalDataHolder, Bac
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ConditionalAccessRuleSatisfied
+     * @return a {@link ConditionalAccessRuleSatisfied}
      */
     @jakarta.annotation.Nonnull
     public static ConditionalAccessRuleSatisfied createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class ConditionalAccessRuleSatisfied implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -50,7 +50,7 @@ public class ConditionalAccessRuleSatisfied implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -58,7 +58,7 @@ public class ConditionalAccessRuleSatisfied implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the conditionalAccessCondition property value. Refers to the conditional access policy conditions that are satisfied. The possible values are: none, application, users, devicePlatform, location, clientType, signInRisk, userRisk, time, deviceState, client, ipAddressSeenByAzureAD, ipAddressSeenByResourceProvider, unknownFutureValue, servicePrincipals, servicePrincipalRisk, authenticationFlows, insiderRisk. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: servicePrincipals, servicePrincipalRisk, authenticationFlows, insiderRisk. conditionalAccessConditions is a multi-valued enumeration and the property can contain multiple values in a comma-separated list.
-     * @return a EnumSet<ConditionalAccessConditions>
+     * @return a {@link EnumSet<ConditionalAccessConditions>}
      */
     @jakarta.annotation.Nullable
     public EnumSet<ConditionalAccessConditions> getConditionalAccessCondition() {
@@ -66,7 +66,7 @@ public class ConditionalAccessRuleSatisfied implements AdditionalDataHolder, Bac
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -78,7 +78,7 @@ public class ConditionalAccessRuleSatisfied implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -86,7 +86,7 @@ public class ConditionalAccessRuleSatisfied implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the ruleSatisfied property value. Refers to the conditional access policy conditions that were satisfied. The possible values are: allApps, firstPartyApps, office365, appId, acr, appFilter, allUsers, guest, groupId, roleId, userId, allDevicePlatforms, devicePlatform, allLocations, insideCorpnet, allTrustedLocations, locationId, allDevices, deviceFilter, deviceState, unknownFutureValue, deviceFilterIncludeRuleNotMatched, allDeviceStates, anonymizedIPAddress, unfamiliarFeatures, nationStateIPAddress, realTimeThreatIntelligence, internalGuest, b2bCollaborationGuest, b2bCollaborationMember, b2bDirectConnectUser, otherExternalUser, serviceProvider, microsoftAdminPortals, deviceCodeFlow, accountTransfer, insiderRisk. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: deviceFilterIncludeRuleNotMatched, allDeviceStates, anonymizedIPAddress, unfamiliarFeatures, nationStateIPAddress, realTimeThreatIntelligence, internalGuest, b2bCollaborationGuest, b2bCollaborationMember, b2bDirectConnectUser, otherExternalUser, serviceProvider, microsoftAdminPortals, deviceCodeFlow, accountTransfer, insiderRisk.
-     * @return a ConditionalAccessRule
+     * @return a {@link ConditionalAccessRule}
      */
     @jakarta.annotation.Nullable
     public ConditionalAccessRule getRuleSatisfied() {

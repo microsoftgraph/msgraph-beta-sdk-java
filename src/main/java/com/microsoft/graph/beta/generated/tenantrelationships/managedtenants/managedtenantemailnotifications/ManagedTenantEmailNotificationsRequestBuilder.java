@@ -25,6 +25,7 @@ import java.util.Objects;
 public class ManagedTenantEmailNotificationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -33,7 +34,7 @@ public class ManagedTenantEmailNotificationsRequestBuilder extends BaseRequestBu
     /**
      * Provides operations to manage the managedTenantEmailNotifications property of the microsoft.graph.managedTenants.managedTenant entity.
      * @param managedTenantEmailNotificationId The unique identifier of managedTenantEmailNotification
-     * @return a ManagedTenantEmailNotificationItemRequestBuilder
+     * @return a {@link ManagedTenantEmailNotificationItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ManagedTenantEmailNotificationItemRequestBuilder byManagedTenantEmailNotificationId(@jakarta.annotation.Nonnull final String managedTenantEmailNotificationId) {
@@ -43,7 +44,7 @@ public class ManagedTenantEmailNotificationsRequestBuilder extends BaseRequestBu
         return new ManagedTenantEmailNotificationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new ManagedTenantEmailNotificationsRequestBuilder and sets the default values.
+     * Instantiates a new {@link ManagedTenantEmailNotificationsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -51,7 +52,7 @@ public class ManagedTenantEmailNotificationsRequestBuilder extends BaseRequestBu
         super(requestAdapter, "{+baseurl}/tenantRelationships/managedTenants/managedTenantEmailNotifications{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new ManagedTenantEmailNotificationsRequestBuilder and sets the default values.
+     * Instantiates a new {@link ManagedTenantEmailNotificationsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -60,7 +61,8 @@ public class ManagedTenantEmailNotificationsRequestBuilder extends BaseRequestBu
     }
     /**
      * Get managedTenantEmailNotifications from tenantRelationships
-     * @return a ManagedTenantEmailNotificationCollectionResponse
+     * @return a {@link ManagedTenantEmailNotificationCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public ManagedTenantEmailNotificationCollectionResponse get() {
@@ -69,20 +71,21 @@ public class ManagedTenantEmailNotificationsRequestBuilder extends BaseRequestBu
     /**
      * Get managedTenantEmailNotifications from tenantRelationships
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a ManagedTenantEmailNotificationCollectionResponse
+     * @return a {@link ManagedTenantEmailNotificationCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public ManagedTenantEmailNotificationCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, ManagedTenantEmailNotificationCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to managedTenantEmailNotifications for tenantRelationships
      * @param body The request body
-     * @return a ManagedTenantEmailNotification
+     * @return a {@link ManagedTenantEmailNotification}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public ManagedTenantEmailNotification post(@jakarta.annotation.Nonnull final ManagedTenantEmailNotification body) {
@@ -92,20 +95,20 @@ public class ManagedTenantEmailNotificationsRequestBuilder extends BaseRequestBu
      * Create new navigation property to managedTenantEmailNotifications for tenantRelationships
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a ManagedTenantEmailNotification
+     * @return a {@link ManagedTenantEmailNotification}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public ManagedTenantEmailNotification post(@jakarta.annotation.Nonnull final ManagedTenantEmailNotification body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, ManagedTenantEmailNotification::createFromDiscriminatorValue);
     }
     /**
      * Get managedTenantEmailNotifications from tenantRelationships
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -114,7 +117,7 @@ public class ManagedTenantEmailNotificationsRequestBuilder extends BaseRequestBu
     /**
      * Get managedTenantEmailNotifications from tenantRelationships
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -126,7 +129,7 @@ public class ManagedTenantEmailNotificationsRequestBuilder extends BaseRequestBu
     /**
      * Create new navigation property to managedTenantEmailNotifications for tenantRelationships
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ManagedTenantEmailNotification body) {
@@ -136,12 +139,12 @@ public class ManagedTenantEmailNotificationsRequestBuilder extends BaseRequestBu
      * Create new navigation property to managedTenantEmailNotifications for tenantRelationships
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ManagedTenantEmailNotification body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/tenantRelationships/managedTenants/managedTenantEmailNotifications", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -150,7 +153,7 @@ public class ManagedTenantEmailNotificationsRequestBuilder extends BaseRequestBu
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a ManagedTenantEmailNotificationsRequestBuilder
+     * @return a {@link ManagedTenantEmailNotificationsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ManagedTenantEmailNotificationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -204,7 +207,7 @@ public class ManagedTenantEmailNotificationsRequestBuilder extends BaseRequestBu
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

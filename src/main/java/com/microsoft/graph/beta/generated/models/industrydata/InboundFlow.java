@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class InboundFlow extends IndustryDataActivity implements Parsable {
     /**
-     * Instantiates a new InboundFlow and sets the default values.
+     * Instantiates a new {@link InboundFlow} and sets the default values.
      */
     public InboundFlow() {
         super();
@@ -19,7 +19,7 @@ public class InboundFlow extends IndustryDataActivity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a InboundFlow
+     * @return a {@link InboundFlow}
      */
     @jakarta.annotation.Nonnull
     public static InboundFlow createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -35,7 +35,7 @@ public class InboundFlow extends IndustryDataActivity implements Parsable {
     }
     /**
      * Gets the dataConnector property value. The dataConnector property
-     * @return a IndustryDataConnector
+     * @return a {@link IndustryDataConnector}
      */
     @jakarta.annotation.Nullable
     public IndustryDataConnector getDataConnector() {
@@ -43,7 +43,7 @@ public class InboundFlow extends IndustryDataActivity implements Parsable {
     }
     /**
      * Gets the dataDomain property value. The dataDomain property
-     * @return a InboundDomain
+     * @return a {@link InboundDomain}
      */
     @jakarta.annotation.Nullable
     public InboundDomain getDataDomain() {
@@ -51,7 +51,7 @@ public class InboundFlow extends IndustryDataActivity implements Parsable {
     }
     /**
      * Gets the effectiveDateTime property value. The start of the time window when the flow is allowed to run. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getEffectiveDateTime() {
@@ -59,7 +59,7 @@ public class InboundFlow extends IndustryDataActivity implements Parsable {
     }
     /**
      * Gets the expirationDateTime property value. The end of the time window when the flow is allowed to run. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getExpirationDateTime() {
@@ -67,7 +67,7 @@ public class InboundFlow extends IndustryDataActivity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -81,7 +81,7 @@ public class InboundFlow extends IndustryDataActivity implements Parsable {
     }
     /**
      * Gets the year property value. The year property
-     * @return a YearTimePeriodDefinition
+     * @return a {@link YearTimePeriodDefinition}
      */
     @jakarta.annotation.Nullable
     public YearTimePeriodDefinition getYear() {

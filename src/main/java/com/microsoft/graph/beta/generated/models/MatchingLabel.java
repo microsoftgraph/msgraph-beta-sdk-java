@@ -18,7 +18,7 @@ public class MatchingLabel implements AdditionalDataHolder, BackedModel, Parsabl
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new MatchingLabel and sets the default values.
+     * Instantiates a new {@link MatchingLabel} and sets the default values.
      */
     public MatchingLabel() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class MatchingLabel implements AdditionalDataHolder, BackedModel, Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MatchingLabel
+     * @return a {@link MatchingLabel}
      */
     @jakarta.annotation.Nonnull
     public static MatchingLabel createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class MatchingLabel implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class MatchingLabel implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the applicationMode property value. The applicationMode property
-     * @return a ApplicationMode
+     * @return a {@link ApplicationMode}
      */
     @jakarta.annotation.Nullable
     public ApplicationMode getApplicationMode() {
@@ -57,7 +57,7 @@ public class MatchingLabel implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -65,7 +65,7 @@ public class MatchingLabel implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the description property value. The description property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -73,7 +73,7 @@ public class MatchingLabel implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the displayName property value. The displayName property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -81,7 +81,7 @@ public class MatchingLabel implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -101,7 +101,7 @@ public class MatchingLabel implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the id property value. The id property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getId() {
@@ -109,7 +109,7 @@ public class MatchingLabel implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the isEndpointProtectionEnabled property value. The isEndpointProtectionEnabled property
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEndpointProtectionEnabled() {
@@ -117,7 +117,7 @@ public class MatchingLabel implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the labelActions property value. The labelActions property
-     * @return a java.util.List<LabelActionBase>
+     * @return a {@link java.util.List<LabelActionBase>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<LabelActionBase> getLabelActions() {
@@ -125,7 +125,7 @@ public class MatchingLabel implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the name property value. The name property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -133,7 +133,7 @@ public class MatchingLabel implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -141,7 +141,7 @@ public class MatchingLabel implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the policyTip property value. The policyTip property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPolicyTip() {
@@ -149,7 +149,7 @@ public class MatchingLabel implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the priority property value. The priority property
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPriority() {
@@ -157,7 +157,7 @@ public class MatchingLabel implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the toolTip property value. The toolTip property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getToolTip() {

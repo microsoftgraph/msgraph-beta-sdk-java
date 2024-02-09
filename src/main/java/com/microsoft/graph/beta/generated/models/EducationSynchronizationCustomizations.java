@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EducationSynchronizationCustomizations extends EducationSynchronizationCustomizationsBase implements Parsable {
     /**
-     * Instantiates a new EducationSynchronizationCustomizations and sets the default values.
+     * Instantiates a new {@link EducationSynchronizationCustomizations} and sets the default values.
      */
     public EducationSynchronizationCustomizations() {
         super();
@@ -18,7 +18,7 @@ public class EducationSynchronizationCustomizations extends EducationSynchroniza
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EducationSynchronizationCustomizations
+     * @return a {@link EducationSynchronizationCustomizations}
      */
     @jakarta.annotation.Nonnull
     public static EducationSynchronizationCustomizations createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class EducationSynchronizationCustomizations extends EducationSynchroniza
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -42,7 +42,7 @@ public class EducationSynchronizationCustomizations extends EducationSynchroniza
     }
     /**
      * Gets the school property value. Customizations for School entities.
-     * @return a EducationSynchronizationCustomization
+     * @return a {@link EducationSynchronizationCustomization}
      */
     @jakarta.annotation.Nullable
     public EducationSynchronizationCustomization getSchool() {
@@ -50,7 +50,7 @@ public class EducationSynchronizationCustomizations extends EducationSynchroniza
     }
     /**
      * Gets the section property value. Customizations for Section entities.
-     * @return a EducationSynchronizationCustomization
+     * @return a {@link EducationSynchronizationCustomization}
      */
     @jakarta.annotation.Nullable
     public EducationSynchronizationCustomization getSection() {
@@ -58,7 +58,7 @@ public class EducationSynchronizationCustomizations extends EducationSynchroniza
     }
     /**
      * Gets the student property value. Customizations for Student entities.
-     * @return a EducationSynchronizationCustomization
+     * @return a {@link EducationSynchronizationCustomization}
      */
     @jakarta.annotation.Nullable
     public EducationSynchronizationCustomization getStudent() {
@@ -66,7 +66,7 @@ public class EducationSynchronizationCustomizations extends EducationSynchroniza
     }
     /**
      * Gets the studentEnrollment property value. Customizations for Student Enrollments.
-     * @return a EducationSynchronizationCustomization
+     * @return a {@link EducationSynchronizationCustomization}
      */
     @jakarta.annotation.Nullable
     public EducationSynchronizationCustomization getStudentEnrollment() {
@@ -74,7 +74,7 @@ public class EducationSynchronizationCustomizations extends EducationSynchroniza
     }
     /**
      * Gets the teacher property value. Customizations for Teacher entities.
-     * @return a EducationSynchronizationCustomization
+     * @return a {@link EducationSynchronizationCustomization}
      */
     @jakarta.annotation.Nullable
     public EducationSynchronizationCustomization getTeacher() {
@@ -82,7 +82,7 @@ public class EducationSynchronizationCustomizations extends EducationSynchroniza
     }
     /**
      * Gets the teacherRoster property value. Customizations for Teacher Rosters.
-     * @return a EducationSynchronizationCustomization
+     * @return a {@link EducationSynchronizationCustomization}
      */
     @jakarta.annotation.Nullable
     public EducationSynchronizationCustomization getTeacherRoster() {

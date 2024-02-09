@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ServicePrincipalCreationPolicy extends PolicyBase implements Parsable {
     /**
-     * Instantiates a new ServicePrincipalCreationPolicy and sets the default values.
+     * Instantiates a new {@link ServicePrincipalCreationPolicy} and sets the default values.
      */
     public ServicePrincipalCreationPolicy() {
         super();
@@ -18,7 +18,7 @@ public class ServicePrincipalCreationPolicy extends PolicyBase implements Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ServicePrincipalCreationPolicy
+     * @return a {@link ServicePrincipalCreationPolicy}
      */
     @jakarta.annotation.Nonnull
     public static ServicePrincipalCreationPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class ServicePrincipalCreationPolicy extends PolicyBase implements Parsab
     }
     /**
      * Gets the excludes property value. The excludes property
-     * @return a java.util.List<ServicePrincipalCreationConditionSet>
+     * @return a {@link java.util.List<ServicePrincipalCreationConditionSet>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ServicePrincipalCreationConditionSet> getExcludes() {
@@ -35,7 +35,7 @@ public class ServicePrincipalCreationPolicy extends PolicyBase implements Parsab
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -47,7 +47,7 @@ public class ServicePrincipalCreationPolicy extends PolicyBase implements Parsab
     }
     /**
      * Gets the includes property value. The includes property
-     * @return a java.util.List<ServicePrincipalCreationConditionSet>
+     * @return a {@link java.util.List<ServicePrincipalCreationConditionSet>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ServicePrincipalCreationConditionSet> getIncludes() {
@@ -55,7 +55,7 @@ public class ServicePrincipalCreationPolicy extends PolicyBase implements Parsab
     }
     /**
      * Gets the isBuiltIn property value. The isBuiltIn property
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsBuiltIn() {

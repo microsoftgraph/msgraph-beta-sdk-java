@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsDriverUpdateInventory extends Entity implements Parsable {
     /**
-     * Instantiates a new WindowsDriverUpdateInventory and sets the default values.
+     * Instantiates a new {@link WindowsDriverUpdateInventory} and sets the default values.
      */
     public WindowsDriverUpdateInventory() {
         super();
@@ -21,7 +21,7 @@ public class WindowsDriverUpdateInventory extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WindowsDriverUpdateInventory
+     * @return a {@link WindowsDriverUpdateInventory}
      */
     @jakarta.annotation.Nonnull
     public static WindowsDriverUpdateInventory createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class WindowsDriverUpdateInventory extends Entity implements Parsable {
     }
     /**
      * Gets the applicableDeviceCount property value. The number of devices for which this driver is applicable.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getApplicableDeviceCount() {
@@ -38,7 +38,7 @@ public class WindowsDriverUpdateInventory extends Entity implements Parsable {
     }
     /**
      * Gets the approvalStatus property value. An enum type to represent approval status of a driver.
-     * @return a DriverApprovalStatus
+     * @return a {@link DriverApprovalStatus}
      */
     @jakarta.annotation.Nullable
     public DriverApprovalStatus getApprovalStatus() {
@@ -46,7 +46,7 @@ public class WindowsDriverUpdateInventory extends Entity implements Parsable {
     }
     /**
      * Gets the category property value. An enum type to represent which category a driver belongs to.
-     * @return a DriverCategory
+     * @return a {@link DriverCategory}
      */
     @jakarta.annotation.Nullable
     public DriverCategory getCategory() {
@@ -54,7 +54,7 @@ public class WindowsDriverUpdateInventory extends Entity implements Parsable {
     }
     /**
      * Gets the deployDateTime property value. The date time when a driver should be deployed if approvalStatus is approved.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getDeployDateTime() {
@@ -62,7 +62,7 @@ public class WindowsDriverUpdateInventory extends Entity implements Parsable {
     }
     /**
      * Gets the driverClass property value. The class of the driver.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDriverClass() {
@@ -70,7 +70,7 @@ public class WindowsDriverUpdateInventory extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -88,7 +88,7 @@ public class WindowsDriverUpdateInventory extends Entity implements Parsable {
     }
     /**
      * Gets the manufacturer property value. The manufacturer of the driver.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getManufacturer() {
@@ -96,7 +96,7 @@ public class WindowsDriverUpdateInventory extends Entity implements Parsable {
     }
     /**
      * Gets the name property value. The name of the driver.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -104,7 +104,7 @@ public class WindowsDriverUpdateInventory extends Entity implements Parsable {
     }
     /**
      * Gets the releaseDateTime property value. The release date time of the driver.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getReleaseDateTime() {
@@ -112,7 +112,7 @@ public class WindowsDriverUpdateInventory extends Entity implements Parsable {
     }
     /**
      * Gets the version property value. The version of the driver.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getVersion() {

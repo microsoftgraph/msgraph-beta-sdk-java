@@ -23,13 +23,14 @@ import java.util.Objects;
 public class MeetingAttendanceReportRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the attendanceRecords property of the microsoft.graph.meetingAttendanceReport entity.
+     * @return a {@link AttendanceRecordsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AttendanceRecordsRequestBuilder attendanceRecords() {
         return new AttendanceRecordsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new MeetingAttendanceReportRequestBuilder and sets the default values.
+     * Instantiates a new {@link MeetingAttendanceReportRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -37,7 +38,7 @@ public class MeetingAttendanceReportRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/app/onlineMeetings/{onlineMeeting%2Did}/meetingAttendanceReport{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new MeetingAttendanceReportRequestBuilder and sets the default values.
+     * Instantiates a new {@link MeetingAttendanceReportRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -46,6 +47,7 @@ public class MeetingAttendanceReportRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Delete navigation property meetingAttendanceReport for app
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete() {
         delete(null);
@@ -53,17 +55,18 @@ public class MeetingAttendanceReportRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property meetingAttendanceReport for app
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Get the meetingAttendanceReport for an onlineMeeting. Each time an online meeting ends, an attendance report is generated for that session.
-     * @return a MeetingAttendanceReport
+     * @return a {@link MeetingAttendanceReport}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/meetingattendancereport-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -73,21 +76,22 @@ public class MeetingAttendanceReportRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the meetingAttendanceReport for an onlineMeeting. Each time an online meeting ends, an attendance report is generated for that session.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a MeetingAttendanceReport
+     * @return a {@link MeetingAttendanceReport}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/meetingattendancereport-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MeetingAttendanceReport get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, MeetingAttendanceReport::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property meetingAttendanceReport in app
      * @param body The request body
-     * @return a MeetingAttendanceReport
+     * @return a {@link MeetingAttendanceReport}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public MeetingAttendanceReport patch(@jakarta.annotation.Nonnull final MeetingAttendanceReport body) {
@@ -97,20 +101,20 @@ public class MeetingAttendanceReportRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property meetingAttendanceReport in app
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a MeetingAttendanceReport
+     * @return a {@link MeetingAttendanceReport}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public MeetingAttendanceReport patch(@jakarta.annotation.Nonnull final MeetingAttendanceReport body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, MeetingAttendanceReport::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property meetingAttendanceReport for app
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -119,18 +123,18 @@ public class MeetingAttendanceReportRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property meetingAttendanceReport for app
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/app/onlineMeetings/{onlineMeeting%2Did}/meetingAttendanceReport", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Get the meetingAttendanceReport for an onlineMeeting. Each time an online meeting ends, an attendance report is generated for that session.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -139,7 +143,7 @@ public class MeetingAttendanceReportRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the meetingAttendanceReport for an onlineMeeting. Each time an online meeting ends, an attendance report is generated for that session.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -151,7 +155,7 @@ public class MeetingAttendanceReportRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property meetingAttendanceReport in app
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final MeetingAttendanceReport body) {
@@ -161,12 +165,12 @@ public class MeetingAttendanceReportRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property meetingAttendanceReport in app
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final MeetingAttendanceReport body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/app/onlineMeetings/{onlineMeeting%2Did}/meetingAttendanceReport", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -175,7 +179,7 @@ public class MeetingAttendanceReportRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a MeetingAttendanceReportRequestBuilder
+     * @return a {@link MeetingAttendanceReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MeetingAttendanceReportRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -205,7 +209,7 @@ public class MeetingAttendanceReportRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

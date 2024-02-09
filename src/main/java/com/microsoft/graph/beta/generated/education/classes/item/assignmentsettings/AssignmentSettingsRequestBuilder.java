@@ -23,13 +23,14 @@ import java.util.Objects;
 public class AssignmentSettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the gradingCategories property of the microsoft.graph.educationAssignmentSettings entity.
+     * @return a {@link GradingCategoriesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GradingCategoriesRequestBuilder gradingCategories() {
         return new GradingCategoriesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new AssignmentSettingsRequestBuilder and sets the default values.
+     * Instantiates a new {@link AssignmentSettingsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -37,7 +38,7 @@ public class AssignmentSettingsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/classes/{educationClass%2Did}/assignmentSettings{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new AssignmentSettingsRequestBuilder and sets the default values.
+     * Instantiates a new {@link AssignmentSettingsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -46,6 +47,7 @@ public class AssignmentSettingsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Delete navigation property assignmentSettings for education
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete() {
         delete(null);
@@ -53,17 +55,18 @@ public class AssignmentSettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property assignmentSettings for education
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Read the properties and relationships of an educationAssignmentSettings object. Only teachers can perform this operation.
-     * @return a EducationAssignmentSettings
+     * @return a {@link EducationAssignmentSettings}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/educationassignmentsettings-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -73,21 +76,22 @@ public class AssignmentSettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of an educationAssignmentSettings object. Only teachers can perform this operation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a EducationAssignmentSettings
+     * @return a {@link EducationAssignmentSettings}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/educationassignmentsettings-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EducationAssignmentSettings get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, EducationAssignmentSettings::createFromDiscriminatorValue);
     }
     /**
      * Update the properties of an educationAssignmentSettings object. Only teachers can update these settings.
      * @param body The request body
-     * @return a EducationAssignmentSettings
+     * @return a {@link EducationAssignmentSettings}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/educationassignmentsettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -98,7 +102,8 @@ public class AssignmentSettingsRequestBuilder extends BaseRequestBuilder {
      * Update the properties of an educationAssignmentSettings object. Only teachers can update these settings.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a EducationAssignmentSettings
+     * @return a {@link EducationAssignmentSettings}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/educationassignmentsettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -106,13 +111,12 @@ public class AssignmentSettingsRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, EducationAssignmentSettings::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property assignmentSettings for education
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -121,18 +125,18 @@ public class AssignmentSettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property assignmentSettings for education
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/education/classes/{educationClass%2Did}/assignmentSettings", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Read the properties and relationships of an educationAssignmentSettings object. Only teachers can perform this operation.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -141,7 +145,7 @@ public class AssignmentSettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of an educationAssignmentSettings object. Only teachers can perform this operation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -153,7 +157,7 @@ public class AssignmentSettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of an educationAssignmentSettings object. Only teachers can update these settings.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final EducationAssignmentSettings body) {
@@ -163,12 +167,12 @@ public class AssignmentSettingsRequestBuilder extends BaseRequestBuilder {
      * Update the properties of an educationAssignmentSettings object. Only teachers can update these settings.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final EducationAssignmentSettings body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/education/classes/{educationClass%2Did}/assignmentSettings", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -177,7 +181,7 @@ public class AssignmentSettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a AssignmentSettingsRequestBuilder
+     * @return a {@link AssignmentSettingsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AssignmentSettingsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -207,7 +211,7 @@ public class AssignmentSettingsRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

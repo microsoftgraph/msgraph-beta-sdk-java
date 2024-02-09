@@ -11,7 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrivilegedApproval extends Entity implements Parsable {
     /**
-     * Instantiates a new PrivilegedApproval and sets the default values.
+     * Instantiates a new {@link PrivilegedApproval} and sets the default values.
      */
     public PrivilegedApproval() {
         super();
@@ -19,7 +19,7 @@ public class PrivilegedApproval extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PrivilegedApproval
+     * @return a {@link PrivilegedApproval}
      */
     @jakarta.annotation.Nonnull
     public static PrivilegedApproval createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class PrivilegedApproval extends Entity implements Parsable {
     }
     /**
      * Gets the approvalDuration property value. The approvalDuration property
-     * @return a PeriodAndDuration
+     * @return a {@link PeriodAndDuration}
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getApprovalDuration() {
@@ -36,7 +36,7 @@ public class PrivilegedApproval extends Entity implements Parsable {
     }
     /**
      * Gets the approvalState property value. The approvalState property
-     * @return a ApprovalState
+     * @return a {@link ApprovalState}
      */
     @jakarta.annotation.Nullable
     public ApprovalState getApprovalState() {
@@ -44,7 +44,7 @@ public class PrivilegedApproval extends Entity implements Parsable {
     }
     /**
      * Gets the approvalType property value. The approvalType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getApprovalType() {
@@ -52,7 +52,7 @@ public class PrivilegedApproval extends Entity implements Parsable {
     }
     /**
      * Gets the approverReason property value. The approverReason property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getApproverReason() {
@@ -60,7 +60,7 @@ public class PrivilegedApproval extends Entity implements Parsable {
     }
     /**
      * Gets the endDateTime property value. The endDateTime property
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getEndDateTime() {
@@ -68,7 +68,7 @@ public class PrivilegedApproval extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -88,7 +88,7 @@ public class PrivilegedApproval extends Entity implements Parsable {
     }
     /**
      * Gets the request property value. The request property
-     * @return a PrivilegedRoleAssignmentRequest
+     * @return a {@link PrivilegedRoleAssignmentRequest}
      */
     @jakarta.annotation.Nullable
     public PrivilegedRoleAssignmentRequest getRequest() {
@@ -96,7 +96,7 @@ public class PrivilegedApproval extends Entity implements Parsable {
     }
     /**
      * Gets the requestorReason property value. The requestorReason property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRequestorReason() {
@@ -104,7 +104,7 @@ public class PrivilegedApproval extends Entity implements Parsable {
     }
     /**
      * Gets the roleId property value. The roleId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRoleId() {
@@ -112,7 +112,7 @@ public class PrivilegedApproval extends Entity implements Parsable {
     }
     /**
      * Gets the roleInfo property value. The roleInfo property
-     * @return a PrivilegedRole
+     * @return a {@link PrivilegedRole}
      */
     @jakarta.annotation.Nullable
     public PrivilegedRole getRoleInfo() {
@@ -120,7 +120,7 @@ public class PrivilegedApproval extends Entity implements Parsable {
     }
     /**
      * Gets the startDateTime property value. The startDateTime property
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
@@ -128,7 +128,7 @@ public class PrivilegedApproval extends Entity implements Parsable {
     }
     /**
      * Gets the userId property value. The userId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserId() {

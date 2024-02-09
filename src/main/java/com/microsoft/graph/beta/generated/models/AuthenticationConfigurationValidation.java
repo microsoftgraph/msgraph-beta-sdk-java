@@ -18,7 +18,7 @@ public class AuthenticationConfigurationValidation implements AdditionalDataHold
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new AuthenticationConfigurationValidation and sets the default values.
+     * Instantiates a new {@link AuthenticationConfigurationValidation} and sets the default values.
      */
     public AuthenticationConfigurationValidation() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class AuthenticationConfigurationValidation implements AdditionalDataHold
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AuthenticationConfigurationValidation
+     * @return a {@link AuthenticationConfigurationValidation}
      */
     @jakarta.annotation.Nonnull
     public static AuthenticationConfigurationValidation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class AuthenticationConfigurationValidation implements AdditionalDataHold
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class AuthenticationConfigurationValidation implements AdditionalDataHold
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class AuthenticationConfigurationValidation implements AdditionalDataHold
     }
     /**
      * Gets the errors property value. Errors in the validation result of a customAuthenticationExtension.
-     * @return a java.util.List<GenericError>
+     * @return a {@link java.util.List<GenericError>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<GenericError> getErrors() {
@@ -65,7 +65,7 @@ public class AuthenticationConfigurationValidation implements AdditionalDataHold
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -77,7 +77,7 @@ public class AuthenticationConfigurationValidation implements AdditionalDataHold
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -85,7 +85,7 @@ public class AuthenticationConfigurationValidation implements AdditionalDataHold
     }
     /**
      * Gets the warnings property value. Warnings in the validation result of a customAuthenticationExtension.
-     * @return a java.util.List<GenericError>
+     * @return a {@link java.util.List<GenericError>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<GenericError> getWarnings() {

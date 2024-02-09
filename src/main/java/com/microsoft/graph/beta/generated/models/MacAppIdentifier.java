@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MacAppIdentifier extends MobileAppIdentifier implements Parsable {
     /**
-     * Instantiates a new MacAppIdentifier and sets the default values.
+     * Instantiates a new {@link MacAppIdentifier} and sets the default values.
      */
     public MacAppIdentifier() {
         super();
@@ -21,7 +21,7 @@ public class MacAppIdentifier extends MobileAppIdentifier implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MacAppIdentifier
+     * @return a {@link MacAppIdentifier}
      */
     @jakarta.annotation.Nonnull
     public static MacAppIdentifier createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class MacAppIdentifier extends MobileAppIdentifier implements Parsable {
     }
     /**
      * Gets the bundleId property value. The identifier for an app, as specified in the app store.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getBundleId() {
@@ -38,7 +38,7 @@ public class MacAppIdentifier extends MobileAppIdentifier implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

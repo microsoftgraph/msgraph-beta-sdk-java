@@ -11,7 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GetCredentialUsageSummaryWithPeriodGetResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * Instantiates a new GetCredentialUsageSummaryWithPeriodGetResponse and sets the default values.
+     * Instantiates a new {@link GetCredentialUsageSummaryWithPeriodGetResponse} and sets the default values.
      */
     public GetCredentialUsageSummaryWithPeriodGetResponse() {
         super();
@@ -19,7 +19,7 @@ public class GetCredentialUsageSummaryWithPeriodGetResponse extends BaseCollecti
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a GetCredentialUsageSummaryWithPeriodGetResponse
+     * @return a {@link GetCredentialUsageSummaryWithPeriodGetResponse}
      */
     @jakarta.annotation.Nonnull
     public static GetCredentialUsageSummaryWithPeriodGetResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class GetCredentialUsageSummaryWithPeriodGetResponse extends BaseCollecti
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -38,7 +38,7 @@ public class GetCredentialUsageSummaryWithPeriodGetResponse extends BaseCollecti
     }
     /**
      * Gets the value property value. The value property
-     * @return a java.util.List<CredentialUsageSummary>
+     * @return a {@link java.util.List<CredentialUsageSummary>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<CredentialUsageSummary> getValue() {

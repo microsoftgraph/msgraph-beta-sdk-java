@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserCredentialUsageDetails extends Entity implements Parsable {
     /**
-     * Instantiates a new UserCredentialUsageDetails and sets the default values.
+     * Instantiates a new {@link UserCredentialUsageDetails} and sets the default values.
      */
     public UserCredentialUsageDetails() {
         super();
@@ -18,7 +18,7 @@ public class UserCredentialUsageDetails extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserCredentialUsageDetails
+     * @return a {@link UserCredentialUsageDetails}
      */
     @jakarta.annotation.Nonnull
     public static UserCredentialUsageDetails createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class UserCredentialUsageDetails extends Entity implements Parsable {
     }
     /**
      * Gets the authMethod property value. The authMethod property
-     * @return a UsageAuthMethod
+     * @return a {@link UsageAuthMethod}
      */
     @jakarta.annotation.Nullable
     public UsageAuthMethod getAuthMethod() {
@@ -35,7 +35,7 @@ public class UserCredentialUsageDetails extends Entity implements Parsable {
     }
     /**
      * Gets the eventDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getEventDateTime() {
@@ -43,7 +43,7 @@ public class UserCredentialUsageDetails extends Entity implements Parsable {
     }
     /**
      * Gets the failureReason property value. Provides the failure reason for the corresponding reset or registration workflow.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getFailureReason() {
@@ -51,7 +51,7 @@ public class UserCredentialUsageDetails extends Entity implements Parsable {
     }
     /**
      * Gets the feature property value. The feature property
-     * @return a FeatureType
+     * @return a {@link FeatureType}
      */
     @jakarta.annotation.Nullable
     public FeatureType getFeature() {
@@ -59,7 +59,7 @@ public class UserCredentialUsageDetails extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -75,7 +75,7 @@ public class UserCredentialUsageDetails extends Entity implements Parsable {
     }
     /**
      * Gets the isSuccess property value. Indicates success or failure of the workflow.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsSuccess() {
@@ -83,7 +83,7 @@ public class UserCredentialUsageDetails extends Entity implements Parsable {
     }
     /**
      * Gets the userDisplayName property value. User name of the user performing the reset or registration workflow.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserDisplayName() {
@@ -91,7 +91,7 @@ public class UserCredentialUsageDetails extends Entity implements Parsable {
     }
     /**
      * Gets the userPrincipalName property value. User principal name of the user performing the reset or registration workflow.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {

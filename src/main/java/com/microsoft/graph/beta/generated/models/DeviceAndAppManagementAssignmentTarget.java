@@ -21,7 +21,7 @@ public class DeviceAndAppManagementAssignmentTarget implements AdditionalDataHol
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new DeviceAndAppManagementAssignmentTarget and sets the default values.
+     * Instantiates a new {@link DeviceAndAppManagementAssignmentTarget} and sets the default values.
      */
     public DeviceAndAppManagementAssignmentTarget() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -30,7 +30,7 @@ public class DeviceAndAppManagementAssignmentTarget implements AdditionalDataHol
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceAndAppManagementAssignmentTarget
+     * @return a {@link DeviceAndAppManagementAssignmentTarget}
      */
     @jakarta.annotation.Nonnull
     public static DeviceAndAppManagementAssignmentTarget createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -51,7 +51,7 @@ public class DeviceAndAppManagementAssignmentTarget implements AdditionalDataHol
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -64,7 +64,7 @@ public class DeviceAndAppManagementAssignmentTarget implements AdditionalDataHol
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -72,7 +72,7 @@ public class DeviceAndAppManagementAssignmentTarget implements AdditionalDataHol
     }
     /**
      * Gets the deviceAndAppManagementAssignmentFilterId property value. The Id of the filter for the target assignment.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceAndAppManagementAssignmentFilterId() {
@@ -80,7 +80,7 @@ public class DeviceAndAppManagementAssignmentTarget implements AdditionalDataHol
     }
     /**
      * Gets the deviceAndAppManagementAssignmentFilterType property value. Represents type of the assignment filter.
-     * @return a DeviceAndAppManagementAssignmentFilterType
+     * @return a {@link DeviceAndAppManagementAssignmentFilterType}
      */
     @jakarta.annotation.Nullable
     public DeviceAndAppManagementAssignmentFilterType getDeviceAndAppManagementAssignmentFilterType() {
@@ -88,7 +88,7 @@ public class DeviceAndAppManagementAssignmentTarget implements AdditionalDataHol
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -100,7 +100,7 @@ public class DeviceAndAppManagementAssignmentTarget implements AdditionalDataHol
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {

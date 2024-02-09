@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MacOSExtensionsConfiguration extends DeviceConfiguration implements Parsable {
     /**
-     * Instantiates a new MacOSExtensionsConfiguration and sets the default values.
+     * Instantiates a new {@link MacOSExtensionsConfiguration} and sets the default values.
      */
     public MacOSExtensionsConfiguration() {
         super();
@@ -21,7 +21,7 @@ public class MacOSExtensionsConfiguration extends DeviceConfiguration implements
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MacOSExtensionsConfiguration
+     * @return a {@link MacOSExtensionsConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static MacOSExtensionsConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class MacOSExtensionsConfiguration extends DeviceConfiguration implements
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -46,7 +46,7 @@ public class MacOSExtensionsConfiguration extends DeviceConfiguration implements
     }
     /**
      * Gets the kernelExtensionAllowedTeamIdentifiers property value. All kernel extensions validly signed by the team identifiers in this list will be allowed to load.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getKernelExtensionAllowedTeamIdentifiers() {
@@ -54,7 +54,7 @@ public class MacOSExtensionsConfiguration extends DeviceConfiguration implements
     }
     /**
      * Gets the kernelExtensionOverridesAllowed property value. If set to true, users can approve additional kernel extensions not explicitly allowed by configurations profiles.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getKernelExtensionOverridesAllowed() {
@@ -62,7 +62,7 @@ public class MacOSExtensionsConfiguration extends DeviceConfiguration implements
     }
     /**
      * Gets the kernelExtensionsAllowed property value. A list of kernel extensions that will be allowed to load. . This collection can contain a maximum of 500 elements.
-     * @return a java.util.List<MacOSKernelExtension>
+     * @return a {@link java.util.List<MacOSKernelExtension>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<MacOSKernelExtension> getKernelExtensionsAllowed() {
@@ -70,7 +70,7 @@ public class MacOSExtensionsConfiguration extends DeviceConfiguration implements
     }
     /**
      * Gets the systemExtensionsAllowed property value. Gets or sets a list of allowed macOS system extensions. This collection can contain a maximum of 500 elements.
-     * @return a java.util.List<MacOSSystemExtension>
+     * @return a {@link java.util.List<MacOSSystemExtension>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<MacOSSystemExtension> getSystemExtensionsAllowed() {
@@ -78,7 +78,7 @@ public class MacOSExtensionsConfiguration extends DeviceConfiguration implements
     }
     /**
      * Gets the systemExtensionsAllowedTeamIdentifiers property value. Gets or sets a list of allowed team identifiers. Any system extension signed with any of the specified team identifiers will be approved.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSystemExtensionsAllowedTeamIdentifiers() {
@@ -86,7 +86,7 @@ public class MacOSExtensionsConfiguration extends DeviceConfiguration implements
     }
     /**
      * Gets the systemExtensionsAllowedTypes property value. Gets or sets a list of allowed macOS system extension types. This collection can contain a maximum of 500 elements.
-     * @return a java.util.List<MacOSSystemExtensionTypeMapping>
+     * @return a {@link java.util.List<MacOSSystemExtensionTypeMapping>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<MacOSSystemExtensionTypeMapping> getSystemExtensionsAllowedTypes() {
@@ -94,7 +94,7 @@ public class MacOSExtensionsConfiguration extends DeviceConfiguration implements
     }
     /**
      * Gets the systemExtensionsBlockOverride property value. Gets or sets whether to allow the user to approve additional system extensions not explicitly allowed by configuration profiles.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getSystemExtensionsBlockOverride() {

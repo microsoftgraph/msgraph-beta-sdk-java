@@ -18,7 +18,7 @@ public class PasswordValidationInformation implements AdditionalDataHolder, Back
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new PasswordValidationInformation and sets the default values.
+     * Instantiates a new {@link PasswordValidationInformation} and sets the default values.
      */
     public PasswordValidationInformation() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class PasswordValidationInformation implements AdditionalDataHolder, Back
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PasswordValidationInformation
+     * @return a {@link PasswordValidationInformation}
      */
     @jakarta.annotation.Nonnull
     public static PasswordValidationInformation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class PasswordValidationInformation implements AdditionalDataHolder, Back
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class PasswordValidationInformation implements AdditionalDataHolder, Back
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class PasswordValidationInformation implements AdditionalDataHolder, Back
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -69,7 +69,7 @@ public class PasswordValidationInformation implements AdditionalDataHolder, Back
     }
     /**
      * Gets the isValid property value. Specifies whether the password is valid based on the calculation of the results in the validationResults property. Not nullable. Read-only.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsValid() {
@@ -77,7 +77,7 @@ public class PasswordValidationInformation implements AdditionalDataHolder, Back
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -85,7 +85,7 @@ public class PasswordValidationInformation implements AdditionalDataHolder, Back
     }
     /**
      * Gets the validationResults property value. The list of password validation rules and whether the password passed those rules. Not nullable. Read-only.
-     * @return a java.util.List<ValidationResult>
+     * @return a {@link java.util.List<ValidationResult>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ValidationResult> getValidationResults() {

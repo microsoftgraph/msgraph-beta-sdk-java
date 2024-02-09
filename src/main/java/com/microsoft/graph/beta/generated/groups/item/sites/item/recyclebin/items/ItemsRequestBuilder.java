@@ -25,6 +25,7 @@ import java.util.Objects;
 public class ItemsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -33,7 +34,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the items property of the microsoft.graph.recycleBin entity.
      * @param recycleBinItemId The unique identifier of recycleBinItem
-     * @return a RecycleBinItemItemRequestBuilder
+     * @return a {@link RecycleBinItemItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RecycleBinItemItemRequestBuilder byRecycleBinItemId(@jakarta.annotation.Nonnull final String recycleBinItemId) {
@@ -43,7 +44,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
         return new RecycleBinItemItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new ItemsRequestBuilder and sets the default values.
+     * Instantiates a new {@link ItemsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -51,7 +52,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/recycleBin/items{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new ItemsRequestBuilder and sets the default values.
+     * Instantiates a new {@link ItemsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -60,7 +61,8 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a collection of recycleBinItem resources in the recyleBin of the specified SharePoint site.
-     * @return a RecycleBinItemCollectionResponse
+     * @return a {@link RecycleBinItemCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/recyclebin-list-items?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -70,21 +72,22 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a collection of recycleBinItem resources in the recyleBin of the specified SharePoint site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RecycleBinItemCollectionResponse
+     * @return a {@link RecycleBinItemCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/recyclebin-list-items?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RecycleBinItemCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, RecycleBinItemCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to items for groups
      * @param body The request body
-     * @return a RecycleBinItem
+     * @return a {@link RecycleBinItem}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public RecycleBinItem post(@jakarta.annotation.Nonnull final RecycleBinItem body) {
@@ -94,20 +97,20 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to items for groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RecycleBinItem
+     * @return a {@link RecycleBinItem}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public RecycleBinItem post(@jakarta.annotation.Nonnull final RecycleBinItem body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, RecycleBinItem::createFromDiscriminatorValue);
     }
     /**
      * Get a collection of recycleBinItem resources in the recyleBin of the specified SharePoint site.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -116,7 +119,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a collection of recycleBinItem resources in the recyleBin of the specified SharePoint site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -128,7 +131,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to items for groups
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final RecycleBinItem body) {
@@ -138,12 +141,12 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to items for groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final RecycleBinItem body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/recycleBin/items", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -152,7 +155,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a ItemsRequestBuilder
+     * @return a {@link ItemsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ItemsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -206,7 +209,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

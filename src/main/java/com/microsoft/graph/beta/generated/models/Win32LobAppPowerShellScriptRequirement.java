@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Win32LobAppPowerShellScriptRequirement extends Win32LobAppRequirement implements Parsable {
     /**
-     * Instantiates a new Win32LobAppPowerShellScriptRequirement and sets the default values.
+     * Instantiates a new {@link Win32LobAppPowerShellScriptRequirement} and sets the default values.
      */
     public Win32LobAppPowerShellScriptRequirement() {
         super();
@@ -21,7 +21,7 @@ public class Win32LobAppPowerShellScriptRequirement extends Win32LobAppRequireme
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Win32LobAppPowerShellScriptRequirement
+     * @return a {@link Win32LobAppPowerShellScriptRequirement}
      */
     @jakarta.annotation.Nonnull
     public static Win32LobAppPowerShellScriptRequirement createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class Win32LobAppPowerShellScriptRequirement extends Win32LobAppRequireme
     }
     /**
      * Gets the detectionType property value. Contains all supported Powershell Script output detection type.
-     * @return a Win32LobAppPowerShellScriptDetectionType
+     * @return a {@link Win32LobAppPowerShellScriptDetectionType}
      */
     @jakarta.annotation.Nullable
     public Win32LobAppPowerShellScriptDetectionType getDetectionType() {
@@ -38,7 +38,7 @@ public class Win32LobAppPowerShellScriptRequirement extends Win32LobAppRequireme
     }
     /**
      * Gets the displayName property value. The unique display name for this rule
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -46,7 +46,7 @@ public class Win32LobAppPowerShellScriptRequirement extends Win32LobAppRequireme
     }
     /**
      * Gets the enforceSignatureCheck property value. A value indicating whether signature check is enforced
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getEnforceSignatureCheck() {
@@ -54,7 +54,7 @@ public class Win32LobAppPowerShellScriptRequirement extends Win32LobAppRequireme
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -69,7 +69,7 @@ public class Win32LobAppPowerShellScriptRequirement extends Win32LobAppRequireme
     }
     /**
      * Gets the runAs32Bit property value. A value indicating whether this script should run as 32-bit
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getRunAs32Bit() {
@@ -77,7 +77,7 @@ public class Win32LobAppPowerShellScriptRequirement extends Win32LobAppRequireme
     }
     /**
      * Gets the runAsAccount property value. Indicates the type of execution context the app runs in.
-     * @return a RunAsAccountType
+     * @return a {@link RunAsAccountType}
      */
     @jakarta.annotation.Nullable
     public RunAsAccountType getRunAsAccount() {
@@ -85,7 +85,7 @@ public class Win32LobAppPowerShellScriptRequirement extends Win32LobAppRequireme
     }
     /**
      * Gets the scriptContent property value. The base64 encoded script content to detect Win32 Line of Business (LoB) app
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getScriptContent() {

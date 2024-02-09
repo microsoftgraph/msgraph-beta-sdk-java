@@ -25,6 +25,7 @@ import java.util.Objects;
 public class AddressesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -33,7 +34,7 @@ public class AddressesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the addresses property of the microsoft.graph.profile entity.
      * @param itemAddressId The unique identifier of itemAddress
-     * @return a ItemAddressItemRequestBuilder
+     * @return a {@link ItemAddressItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ItemAddressItemRequestBuilder byItemAddressId(@jakarta.annotation.Nonnull final String itemAddressId) {
@@ -43,7 +44,7 @@ public class AddressesRequestBuilder extends BaseRequestBuilder {
         return new ItemAddressItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new AddressesRequestBuilder and sets the default values.
+     * Instantiates a new {@link AddressesRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -51,7 +52,7 @@ public class AddressesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/profile/addresses{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new AddressesRequestBuilder and sets the default values.
+     * Instantiates a new {@link AddressesRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -60,7 +61,8 @@ public class AddressesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the itemAddress resources from the addresses navigation property.
-     * @return a ItemAddressCollectionResponse
+     * @return a {@link ItemAddressCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/profile-list-addresses?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -70,21 +72,22 @@ public class AddressesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the itemAddress resources from the addresses navigation property.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a ItemAddressCollectionResponse
+     * @return a {@link ItemAddressCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/profile-list-addresses?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ItemAddressCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, ItemAddressCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new itemAddress object in a user's profile.
      * @param body The request body
-     * @return a ItemAddress
+     * @return a {@link ItemAddress}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/profile-post-addresses?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -95,7 +98,8 @@ public class AddressesRequestBuilder extends BaseRequestBuilder {
      * Create a new itemAddress object in a user's profile.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a ItemAddress
+     * @return a {@link ItemAddress}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/profile-post-addresses?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -103,13 +107,12 @@ public class AddressesRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, ItemAddress::createFromDiscriminatorValue);
     }
     /**
      * Get the itemAddress resources from the addresses navigation property.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -118,7 +121,7 @@ public class AddressesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the itemAddress resources from the addresses navigation property.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -130,7 +133,7 @@ public class AddressesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new itemAddress object in a user's profile.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ItemAddress body) {
@@ -140,12 +143,12 @@ public class AddressesRequestBuilder extends BaseRequestBuilder {
      * Create a new itemAddress object in a user's profile.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ItemAddress body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/users/{user%2Did}/profile/addresses", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -154,7 +157,7 @@ public class AddressesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a AddressesRequestBuilder
+     * @return a {@link AddressesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AddressesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -208,7 +211,7 @@ public class AddressesRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

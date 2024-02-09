@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AwsSecurityToolAdministrationFinding extends Finding implements Parsable {
     /**
-     * Instantiates a new AwsSecurityToolAdministrationFinding and sets the default values.
+     * Instantiates a new {@link AwsSecurityToolAdministrationFinding} and sets the default values.
      */
     public AwsSecurityToolAdministrationFinding() {
         super();
@@ -18,7 +18,7 @@ public class AwsSecurityToolAdministrationFinding extends Finding implements Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AwsSecurityToolAdministrationFinding
+     * @return a {@link AwsSecurityToolAdministrationFinding}
      */
     @jakarta.annotation.Nonnull
     public static AwsSecurityToolAdministrationFinding createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class AwsSecurityToolAdministrationFinding extends Finding implements Par
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -50,7 +50,7 @@ public class AwsSecurityToolAdministrationFinding extends Finding implements Par
     }
     /**
      * Gets the identity property value. The identity property
-     * @return a AuthorizationSystemIdentity
+     * @return a {@link AuthorizationSystemIdentity}
      */
     @jakarta.annotation.Nullable
     public AuthorizationSystemIdentity getIdentity() {
@@ -58,7 +58,7 @@ public class AwsSecurityToolAdministrationFinding extends Finding implements Par
     }
     /**
      * Gets the identityDetails property value. The identityDetails property
-     * @return a IdentityDetails
+     * @return a {@link IdentityDetails}
      */
     @jakarta.annotation.Nullable
     public IdentityDetails getIdentityDetails() {
@@ -66,7 +66,7 @@ public class AwsSecurityToolAdministrationFinding extends Finding implements Par
     }
     /**
      * Gets the permissionsCreepIndex property value. The permissionsCreepIndex property
-     * @return a PermissionsCreepIndex
+     * @return a {@link PermissionsCreepIndex}
      */
     @jakarta.annotation.Nullable
     public PermissionsCreepIndex getPermissionsCreepIndex() {
@@ -74,7 +74,7 @@ public class AwsSecurityToolAdministrationFinding extends Finding implements Par
     }
     /**
      * Gets the securityTools property value. The securityTools property
-     * @return a EnumSet<AwsSecurityToolWebServices>
+     * @return a {@link EnumSet<AwsSecurityToolWebServices>}
      */
     @jakarta.annotation.Nullable
     public EnumSet<AwsSecurityToolWebServices> getSecurityTools() {

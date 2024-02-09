@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementCachedReportConfigurationCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * Instantiates a new DeviceManagementCachedReportConfigurationCollectionResponse and sets the default values.
+     * Instantiates a new {@link DeviceManagementCachedReportConfigurationCollectionResponse} and sets the default values.
      */
     public DeviceManagementCachedReportConfigurationCollectionResponse() {
         super();
@@ -17,7 +17,7 @@ public class DeviceManagementCachedReportConfigurationCollectionResponse extends
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceManagementCachedReportConfigurationCollectionResponse
+     * @return a {@link DeviceManagementCachedReportConfigurationCollectionResponse}
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementCachedReportConfigurationCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class DeviceManagementCachedReportConfigurationCollectionResponse extends
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -36,7 +36,7 @@ public class DeviceManagementCachedReportConfigurationCollectionResponse extends
     }
     /**
      * Gets the value property value. The value property
-     * @return a java.util.List<DeviceManagementCachedReportConfiguration>
+     * @return a {@link java.util.List<DeviceManagementCachedReportConfiguration>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementCachedReportConfiguration> getValue() {

@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceConfigurationGroupAssignment extends Entity implements Parsable {
     /**
-     * Instantiates a new DeviceConfigurationGroupAssignment and sets the default values.
+     * Instantiates a new {@link DeviceConfigurationGroupAssignment} and sets the default values.
      */
     public DeviceConfigurationGroupAssignment() {
         super();
@@ -20,7 +20,7 @@ public class DeviceConfigurationGroupAssignment extends Entity implements Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceConfigurationGroupAssignment
+     * @return a {@link DeviceConfigurationGroupAssignment}
      */
     @jakarta.annotation.Nonnull
     public static DeviceConfigurationGroupAssignment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -29,7 +29,7 @@ public class DeviceConfigurationGroupAssignment extends Entity implements Parsab
     }
     /**
      * Gets the deviceConfiguration property value. The navigation link to the Device Configuration being targeted.
-     * @return a DeviceConfiguration
+     * @return a {@link DeviceConfiguration}
      */
     @jakarta.annotation.Nullable
     public DeviceConfiguration getDeviceConfiguration() {
@@ -37,7 +37,7 @@ public class DeviceConfigurationGroupAssignment extends Entity implements Parsab
     }
     /**
      * Gets the excludeGroup property value. Indicates if this group is should be excluded. Defaults that the group should be included
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getExcludeGroup() {
@@ -45,7 +45,7 @@ public class DeviceConfigurationGroupAssignment extends Entity implements Parsab
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -57,7 +57,7 @@ public class DeviceConfigurationGroupAssignment extends Entity implements Parsab
     }
     /**
      * Gets the targetGroupId property value. The Id of the AAD group we are targeting the device configuration to.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTargetGroupId() {

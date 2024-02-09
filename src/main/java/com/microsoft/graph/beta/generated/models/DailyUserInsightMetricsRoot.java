@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DailyUserInsightMetricsRoot extends Entity implements Parsable {
     /**
-     * Instantiates a new DailyUserInsightMetricsRoot and sets the default values.
+     * Instantiates a new {@link DailyUserInsightMetricsRoot} and sets the default values.
      */
     public DailyUserInsightMetricsRoot() {
         super();
@@ -17,7 +17,7 @@ public class DailyUserInsightMetricsRoot extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DailyUserInsightMetricsRoot
+     * @return a {@link DailyUserInsightMetricsRoot}
      */
     @jakarta.annotation.Nonnull
     public static DailyUserInsightMetricsRoot createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class DailyUserInsightMetricsRoot extends Entity implements Parsable {
     }
     /**
      * Gets the activeUsers property value. Insights for active users on apps registered in the tenant for a specified period.
-     * @return a java.util.List<ActiveUsersMetric>
+     * @return a {@link java.util.List<ActiveUsersMetric>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ActiveUsersMetric> getActiveUsers() {
@@ -34,7 +34,7 @@ public class DailyUserInsightMetricsRoot extends Entity implements Parsable {
     }
     /**
      * Gets the activeUsersBreakdown property value. Insights for the breakdown of users who were active on apps registered in the tenant for a specified period.
-     * @return a java.util.List<ActiveUsersBreakdownMetric>
+     * @return a {@link java.util.List<ActiveUsersBreakdownMetric>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ActiveUsersBreakdownMetric> getActiveUsersBreakdown() {
@@ -42,7 +42,7 @@ public class DailyUserInsightMetricsRoot extends Entity implements Parsable {
     }
     /**
      * Gets the authentications property value. Insights for authentications on apps registered in the tenant for a specified period.
-     * @return a java.util.List<AuthenticationsMetric>
+     * @return a {@link java.util.List<AuthenticationsMetric>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthenticationsMetric> getAuthentications() {
@@ -50,7 +50,7 @@ public class DailyUserInsightMetricsRoot extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -68,7 +68,7 @@ public class DailyUserInsightMetricsRoot extends Entity implements Parsable {
     }
     /**
      * Gets the inactiveUsers property value. The inactiveUsers property
-     * @return a java.util.List<DailyInactiveUsersMetric>
+     * @return a {@link java.util.List<DailyInactiveUsersMetric>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DailyInactiveUsersMetric> getInactiveUsers() {
@@ -76,7 +76,7 @@ public class DailyUserInsightMetricsRoot extends Entity implements Parsable {
     }
     /**
      * Gets the inactiveUsersByApplication property value. The inactiveUsersByApplication property
-     * @return a java.util.List<DailyInactiveUsersByApplicationMetric>
+     * @return a {@link java.util.List<DailyInactiveUsersByApplicationMetric>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DailyInactiveUsersByApplicationMetric> getInactiveUsersByApplication() {
@@ -84,7 +84,7 @@ public class DailyUserInsightMetricsRoot extends Entity implements Parsable {
     }
     /**
      * Gets the mfaCompletions property value. Insights for MFA usage on apps registered in the tenant for a specified period.
-     * @return a java.util.List<MfaCompletionMetric>
+     * @return a {@link java.util.List<MfaCompletionMetric>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<MfaCompletionMetric> getMfaCompletions() {
@@ -92,7 +92,7 @@ public class DailyUserInsightMetricsRoot extends Entity implements Parsable {
     }
     /**
      * Gets the signUps property value. Total sign-ups on apps registered in the tenant for a specified period.
-     * @return a java.util.List<UserSignUpMetric>
+     * @return a {@link java.util.List<UserSignUpMetric>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserSignUpMetric> getSignUps() {
@@ -100,7 +100,7 @@ public class DailyUserInsightMetricsRoot extends Entity implements Parsable {
     }
     /**
      * Gets the summary property value. Summary of all usage insights on apps registered in the tenant for a specified period.
-     * @return a java.util.List<InsightSummary>
+     * @return a {@link java.util.List<InsightSummary>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<InsightSummary> getSummary() {
@@ -108,7 +108,7 @@ public class DailyUserInsightMetricsRoot extends Entity implements Parsable {
     }
     /**
      * Gets the userCount property value. Insights for total users on apps registered in the tenant for a specified period.
-     * @return a java.util.List<UserCountMetric>
+     * @return a {@link java.util.List<UserCountMetric>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserCountMetric> getUserCount() {

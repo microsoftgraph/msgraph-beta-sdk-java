@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SecurityBaselineState extends Entity implements Parsable {
     /**
-     * Instantiates a new SecurityBaselineState and sets the default values.
+     * Instantiates a new {@link SecurityBaselineState} and sets the default values.
      */
     public SecurityBaselineState() {
         super();
@@ -20,7 +20,7 @@ public class SecurityBaselineState extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SecurityBaselineState
+     * @return a {@link SecurityBaselineState}
      */
     @jakarta.annotation.Nonnull
     public static SecurityBaselineState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -29,7 +29,7 @@ public class SecurityBaselineState extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name of the security baseline
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -37,7 +37,7 @@ public class SecurityBaselineState extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -51,7 +51,7 @@ public class SecurityBaselineState extends Entity implements Parsable {
     }
     /**
      * Gets the securityBaselineTemplateId property value. The security baseline template id
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSecurityBaselineTemplateId() {
@@ -59,7 +59,7 @@ public class SecurityBaselineState extends Entity implements Parsable {
     }
     /**
      * Gets the settingStates property value. The security baseline state for different settings for a device
-     * @return a java.util.List<SecurityBaselineSettingState>
+     * @return a {@link java.util.List<SecurityBaselineSettingState>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<SecurityBaselineSettingState> getSettingStates() {
@@ -67,7 +67,7 @@ public class SecurityBaselineState extends Entity implements Parsable {
     }
     /**
      * Gets the state property value. Security Baseline Compliance State
-     * @return a SecurityBaselineComplianceState
+     * @return a {@link SecurityBaselineComplianceState}
      */
     @jakarta.annotation.Nullable
     public SecurityBaselineComplianceState getState() {
@@ -75,7 +75,7 @@ public class SecurityBaselineState extends Entity implements Parsable {
     }
     /**
      * Gets the userPrincipalName property value. User Principal Name
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {

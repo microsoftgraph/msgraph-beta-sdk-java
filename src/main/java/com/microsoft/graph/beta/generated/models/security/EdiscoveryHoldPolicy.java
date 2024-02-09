@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EdiscoveryHoldPolicy extends PolicyBase implements Parsable {
     /**
-     * Instantiates a new EdiscoveryHoldPolicy and sets the default values.
+     * Instantiates a new {@link EdiscoveryHoldPolicy} and sets the default values.
      */
     public EdiscoveryHoldPolicy() {
         super();
@@ -18,7 +18,7 @@ public class EdiscoveryHoldPolicy extends PolicyBase implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EdiscoveryHoldPolicy
+     * @return a {@link EdiscoveryHoldPolicy}
      */
     @jakarta.annotation.Nonnull
     public static EdiscoveryHoldPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class EdiscoveryHoldPolicy extends PolicyBase implements Parsable {
     }
     /**
      * Gets the contentQuery property value. KQL query that specifies content to be held in the specified locations. To learn more, see Keyword queries and search conditions for Content Search and eDiscovery.  To hold all content in the specified locations, leave contentQuery blank.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getContentQuery() {
@@ -35,7 +35,7 @@ public class EdiscoveryHoldPolicy extends PolicyBase implements Parsable {
     }
     /**
      * Gets the errors property value. Lists any errors that happened while placing the hold.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getErrors() {
@@ -43,7 +43,7 @@ public class EdiscoveryHoldPolicy extends PolicyBase implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -57,7 +57,7 @@ public class EdiscoveryHoldPolicy extends PolicyBase implements Parsable {
     }
     /**
      * Gets the isEnabled property value. Indicates whether the hold is enabled and actively holding content.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEnabled() {
@@ -65,7 +65,7 @@ public class EdiscoveryHoldPolicy extends PolicyBase implements Parsable {
     }
     /**
      * Gets the siteSources property value. Data sources that represent SharePoint sites.
-     * @return a java.util.List<SiteSource>
+     * @return a {@link java.util.List<SiteSource>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<SiteSource> getSiteSources() {
@@ -73,7 +73,7 @@ public class EdiscoveryHoldPolicy extends PolicyBase implements Parsable {
     }
     /**
      * Gets the userSources property value. Data sources that represent Exchange mailboxes.
-     * @return a java.util.List<UserSource>
+     * @return a {@link java.util.List<UserSource>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserSource> getUserSources() {

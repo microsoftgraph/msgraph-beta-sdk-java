@@ -11,7 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class YearTimePeriodDefinition extends Entity implements Parsable {
     /**
-     * Instantiates a new YearTimePeriodDefinition and sets the default values.
+     * Instantiates a new {@link YearTimePeriodDefinition} and sets the default values.
      */
     public YearTimePeriodDefinition() {
         super();
@@ -19,7 +19,7 @@ public class YearTimePeriodDefinition extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a YearTimePeriodDefinition
+     * @return a {@link YearTimePeriodDefinition}
      */
     @jakarta.annotation.Nonnull
     public static YearTimePeriodDefinition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class YearTimePeriodDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The name of the year. Maximum supported length is 100 characters.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -36,7 +36,7 @@ public class YearTimePeriodDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the endDate property value. The last day of the year using ISO 8601 format for date.
-     * @return a LocalDate
+     * @return a {@link LocalDate}
      */
     @jakarta.annotation.Nullable
     public LocalDate getEndDate() {
@@ -44,7 +44,7 @@ public class YearTimePeriodDefinition extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -57,7 +57,7 @@ public class YearTimePeriodDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the startDate property value. The first day of the year using ISO 8601 format for date.
-     * @return a LocalDate
+     * @return a {@link LocalDate}
      */
     @jakarta.annotation.Nullable
     public LocalDate getStartDate() {
@@ -65,7 +65,7 @@ public class YearTimePeriodDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the year property value. The year property
-     * @return a YearReferenceValue
+     * @return a {@link YearReferenceValue}
      */
     @jakarta.annotation.Nullable
     public YearReferenceValue getYear() {

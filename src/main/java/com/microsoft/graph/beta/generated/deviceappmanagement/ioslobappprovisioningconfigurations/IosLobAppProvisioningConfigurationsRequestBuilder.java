@@ -26,6 +26,7 @@ import java.util.Objects;
 public class IosLobAppProvisioningConfigurationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -33,6 +34,7 @@ public class IosLobAppProvisioningConfigurationsRequestBuilder extends BaseReque
     }
     /**
      * Provides operations to call the hasPayloadLinks method.
+     * @return a {@link HasPayloadLinksRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public HasPayloadLinksRequestBuilder hasPayloadLinks() {
@@ -41,7 +43,7 @@ public class IosLobAppProvisioningConfigurationsRequestBuilder extends BaseReque
     /**
      * Provides operations to manage the iosLobAppProvisioningConfigurations property of the microsoft.graph.deviceAppManagement entity.
      * @param iosLobAppProvisioningConfigurationId The unique identifier of iosLobAppProvisioningConfiguration
-     * @return a IosLobAppProvisioningConfigurationItemRequestBuilder
+     * @return a {@link IosLobAppProvisioningConfigurationItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public IosLobAppProvisioningConfigurationItemRequestBuilder byIosLobAppProvisioningConfigurationId(@jakarta.annotation.Nonnull final String iosLobAppProvisioningConfigurationId) {
@@ -51,7 +53,7 @@ public class IosLobAppProvisioningConfigurationsRequestBuilder extends BaseReque
         return new IosLobAppProvisioningConfigurationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new IosLobAppProvisioningConfigurationsRequestBuilder and sets the default values.
+     * Instantiates a new {@link IosLobAppProvisioningConfigurationsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -59,7 +61,7 @@ public class IosLobAppProvisioningConfigurationsRequestBuilder extends BaseReque
         super(requestAdapter, "{+baseurl}/deviceAppManagement/iosLobAppProvisioningConfigurations{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new IosLobAppProvisioningConfigurationsRequestBuilder and sets the default values.
+     * Instantiates a new {@link IosLobAppProvisioningConfigurationsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -68,7 +70,8 @@ public class IosLobAppProvisioningConfigurationsRequestBuilder extends BaseReque
     }
     /**
      * The IOS Lob App Provisioning Configurations.
-     * @return a IosLobAppProvisioningConfigurationCollectionResponse
+     * @return a {@link IosLobAppProvisioningConfigurationCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public IosLobAppProvisioningConfigurationCollectionResponse get() {
@@ -77,20 +80,21 @@ public class IosLobAppProvisioningConfigurationsRequestBuilder extends BaseReque
     /**
      * The IOS Lob App Provisioning Configurations.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a IosLobAppProvisioningConfigurationCollectionResponse
+     * @return a {@link IosLobAppProvisioningConfigurationCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public IosLobAppProvisioningConfigurationCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, IosLobAppProvisioningConfigurationCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to iosLobAppProvisioningConfigurations for deviceAppManagement
      * @param body The request body
-     * @return a IosLobAppProvisioningConfiguration
+     * @return a {@link IosLobAppProvisioningConfiguration}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public IosLobAppProvisioningConfiguration post(@jakarta.annotation.Nonnull final IosLobAppProvisioningConfiguration body) {
@@ -100,20 +104,20 @@ public class IosLobAppProvisioningConfigurationsRequestBuilder extends BaseReque
      * Create new navigation property to iosLobAppProvisioningConfigurations for deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a IosLobAppProvisioningConfiguration
+     * @return a {@link IosLobAppProvisioningConfiguration}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public IosLobAppProvisioningConfiguration post(@jakarta.annotation.Nonnull final IosLobAppProvisioningConfiguration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, IosLobAppProvisioningConfiguration::createFromDiscriminatorValue);
     }
     /**
      * The IOS Lob App Provisioning Configurations.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -122,7 +126,7 @@ public class IosLobAppProvisioningConfigurationsRequestBuilder extends BaseReque
     /**
      * The IOS Lob App Provisioning Configurations.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -134,7 +138,7 @@ public class IosLobAppProvisioningConfigurationsRequestBuilder extends BaseReque
     /**
      * Create new navigation property to iosLobAppProvisioningConfigurations for deviceAppManagement
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final IosLobAppProvisioningConfiguration body) {
@@ -144,12 +148,12 @@ public class IosLobAppProvisioningConfigurationsRequestBuilder extends BaseReque
      * Create new navigation property to iosLobAppProvisioningConfigurations for deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final IosLobAppProvisioningConfiguration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/deviceAppManagement/iosLobAppProvisioningConfigurations", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -158,7 +162,7 @@ public class IosLobAppProvisioningConfigurationsRequestBuilder extends BaseReque
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a IosLobAppProvisioningConfigurationsRequestBuilder
+     * @return a {@link IosLobAppProvisioningConfigurationsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public IosLobAppProvisioningConfigurationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -212,7 +216,7 @@ public class IosLobAppProvisioningConfigurationsRequestBuilder extends BaseReque
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

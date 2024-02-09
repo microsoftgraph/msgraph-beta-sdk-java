@@ -19,7 +19,7 @@ public class GetCloudPcPerformanceReportPostRequestBody implements AdditionalDat
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new GetCloudPcPerformanceReportPostRequestBody and sets the default values.
+     * Instantiates a new {@link GetCloudPcPerformanceReportPostRequestBody} and sets the default values.
      */
     public GetCloudPcPerformanceReportPostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class GetCloudPcPerformanceReportPostRequestBody implements AdditionalDat
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a GetCloudPcPerformanceReportPostRequestBody
+     * @return a {@link GetCloudPcPerformanceReportPostRequestBody}
      */
     @jakarta.annotation.Nonnull
     public static GetCloudPcPerformanceReportPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class GetCloudPcPerformanceReportPostRequestBody implements AdditionalDat
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -50,7 +50,7 @@ public class GetCloudPcPerformanceReportPostRequestBody implements AdditionalDat
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -58,7 +58,7 @@ public class GetCloudPcPerformanceReportPostRequestBody implements AdditionalDat
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -75,7 +75,7 @@ public class GetCloudPcPerformanceReportPostRequestBody implements AdditionalDat
     }
     /**
      * Gets the filter property value. The filter property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getFilter() {
@@ -83,7 +83,7 @@ public class GetCloudPcPerformanceReportPostRequestBody implements AdditionalDat
     }
     /**
      * Gets the groupBy property value. The groupBy property
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getGroupBy() {
@@ -91,7 +91,7 @@ public class GetCloudPcPerformanceReportPostRequestBody implements AdditionalDat
     }
     /**
      * Gets the orderBy property value. The orderBy property
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getOrderBy() {
@@ -99,7 +99,7 @@ public class GetCloudPcPerformanceReportPostRequestBody implements AdditionalDat
     }
     /**
      * Gets the reportName property value. The reportName property
-     * @return a CloudPCPerformanceReportName
+     * @return a {@link CloudPCPerformanceReportName}
      */
     @jakarta.annotation.Nullable
     public CloudPCPerformanceReportName getReportName() {
@@ -107,7 +107,7 @@ public class GetCloudPcPerformanceReportPostRequestBody implements AdditionalDat
     }
     /**
      * Gets the search property value. The search property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSearch() {
@@ -115,7 +115,7 @@ public class GetCloudPcPerformanceReportPostRequestBody implements AdditionalDat
     }
     /**
      * Gets the select property value. The select property
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSelect() {
@@ -123,7 +123,7 @@ public class GetCloudPcPerformanceReportPostRequestBody implements AdditionalDat
     }
     /**
      * Gets the skip property value. The skip property
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getSkip() {
@@ -131,7 +131,7 @@ public class GetCloudPcPerformanceReportPostRequestBody implements AdditionalDat
     }
     /**
      * Gets the top property value. The top property
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getTop() {

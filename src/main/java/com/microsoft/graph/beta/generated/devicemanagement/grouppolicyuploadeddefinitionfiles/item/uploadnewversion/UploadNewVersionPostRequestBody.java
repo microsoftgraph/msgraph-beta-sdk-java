@@ -19,7 +19,7 @@ public class UploadNewVersionPostRequestBody implements AdditionalDataHolder, Ba
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new UploadNewVersionPostRequestBody and sets the default values.
+     * Instantiates a new {@link UploadNewVersionPostRequestBody} and sets the default values.
      */
     public UploadNewVersionPostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class UploadNewVersionPostRequestBody implements AdditionalDataHolder, Ba
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UploadNewVersionPostRequestBody
+     * @return a {@link UploadNewVersionPostRequestBody}
      */
     @jakarta.annotation.Nonnull
     public static UploadNewVersionPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class UploadNewVersionPostRequestBody implements AdditionalDataHolder, Ba
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -50,7 +50,7 @@ public class UploadNewVersionPostRequestBody implements AdditionalDataHolder, Ba
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -58,7 +58,7 @@ public class UploadNewVersionPostRequestBody implements AdditionalDataHolder, Ba
     }
     /**
      * Gets the content property value. The content property
-     * @return a byte[]
+     * @return a {@link byte[]}
      */
     @jakarta.annotation.Nullable
     public byte[] getContent() {
@@ -66,7 +66,7 @@ public class UploadNewVersionPostRequestBody implements AdditionalDataHolder, Ba
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -77,7 +77,7 @@ public class UploadNewVersionPostRequestBody implements AdditionalDataHolder, Ba
     }
     /**
      * Gets the groupPolicyUploadedLanguageFiles property value. The groupPolicyUploadedLanguageFiles property
-     * @return a java.util.List<GroupPolicyUploadedLanguageFile>
+     * @return a {@link java.util.List<GroupPolicyUploadedLanguageFile>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<GroupPolicyUploadedLanguageFile> getGroupPolicyUploadedLanguageFiles() {

@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration extends DeviceConfiguration implements Parsable {
     /**
-     * Instantiates a new AndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration and sets the default values.
+     * Instantiates a new {@link AndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration} and sets the default values.
      */
     public AndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration() {
         super();
@@ -21,7 +21,7 @@ public class AndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration exte
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration
+     * @return a {@link AndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static AndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class AndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration exte
     }
     /**
      * Gets the certificateAccessType property value. Certificate access type. Possible values are: userApproval, specificApps, unknownFutureValue.
-     * @return a AndroidDeviceOwnerCertificateAccessType
+     * @return a {@link AndroidDeviceOwnerCertificateAccessType}
      */
     @jakarta.annotation.Nullable
     public AndroidDeviceOwnerCertificateAccessType getCertificateAccessType() {
@@ -38,7 +38,7 @@ public class AndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration exte
     }
     /**
      * Gets the derivedCredentialSettings property value. Tenant level settings for the Derived Credentials to be used for authentication.
-     * @return a DeviceManagementDerivedCredentialSettings
+     * @return a {@link DeviceManagementDerivedCredentialSettings}
      */
     @jakarta.annotation.Nullable
     public DeviceManagementDerivedCredentialSettings getDerivedCredentialSettings() {
@@ -46,7 +46,7 @@ public class AndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration exte
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -58,7 +58,7 @@ public class AndroidDeviceOwnerDerivedCredentialAuthenticationConfiguration exte
     }
     /**
      * Gets the silentCertificateAccessDetails property value. Certificate access information. This collection can contain a maximum of 50 elements.
-     * @return a java.util.List<AndroidDeviceOwnerSilentCertificateAccess>
+     * @return a {@link java.util.List<AndroidDeviceOwnerSilentCertificateAccess>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AndroidDeviceOwnerSilentCertificateAccess> getSilentCertificateAccessDetails() {

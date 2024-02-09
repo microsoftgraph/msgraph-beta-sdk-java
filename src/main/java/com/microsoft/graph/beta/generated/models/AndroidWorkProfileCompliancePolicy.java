@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy implements Parsable {
     /**
-     * Instantiates a new AndroidWorkProfileCompliancePolicy and sets the default values.
+     * Instantiates a new {@link AndroidWorkProfileCompliancePolicy} and sets the default values.
      */
     public AndroidWorkProfileCompliancePolicy() {
         super();
@@ -21,7 +21,7 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AndroidWorkProfileCompliancePolicy
+     * @return a {@link AndroidWorkProfileCompliancePolicy}
      */
     @jakarta.annotation.Nonnull
     public static AndroidWorkProfileCompliancePolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
     }
     /**
      * Gets the advancedThreatProtectionRequiredSecurityLevel property value. Device threat protection levels for the Device Threat Protection API.
-     * @return a DeviceThreatProtectionLevel
+     * @return a {@link DeviceThreatProtectionLevel}
      */
     @jakarta.annotation.Nullable
     public DeviceThreatProtectionLevel getAdvancedThreatProtectionRequiredSecurityLevel() {
@@ -38,7 +38,7 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
     }
     /**
      * Gets the deviceThreatProtectionEnabled property value. Require that devices have enabled device threat protection.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDeviceThreatProtectionEnabled() {
@@ -46,7 +46,7 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
     }
     /**
      * Gets the deviceThreatProtectionRequiredSecurityLevel property value. Device threat protection levels for the Device Threat Protection API.
-     * @return a DeviceThreatProtectionLevel
+     * @return a {@link DeviceThreatProtectionLevel}
      */
     @jakarta.annotation.Nullable
     public DeviceThreatProtectionLevel getDeviceThreatProtectionRequiredSecurityLevel() {
@@ -54,7 +54,7 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -84,11 +84,18 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
         deserializerMap.put("securityRequireUpToDateSecurityProviders", (n) -> { this.setSecurityRequireUpToDateSecurityProviders(n.getBooleanValue()); });
         deserializerMap.put("securityRequireVerifyApps", (n) -> { this.setSecurityRequireVerifyApps(n.getBooleanValue()); });
         deserializerMap.put("storageRequireEncryption", (n) -> { this.setStorageRequireEncryption(n.getBooleanValue()); });
+        deserializerMap.put("workProfileInactiveBeforeScreenLockInMinutes", (n) -> { this.setWorkProfileInactiveBeforeScreenLockInMinutes(n.getIntegerValue()); });
+        deserializerMap.put("workProfilePasswordExpirationInDays", (n) -> { this.setWorkProfilePasswordExpirationInDays(n.getIntegerValue()); });
+        deserializerMap.put("workProfilePasswordMinimumLength", (n) -> { this.setWorkProfilePasswordMinimumLength(n.getIntegerValue()); });
+        deserializerMap.put("workProfilePasswordRequiredType", (n) -> { this.setWorkProfilePasswordRequiredType(n.getEnumValue(AndroidWorkProfileRequiredPasswordType::forValue)); });
+        deserializerMap.put("workProfilePreviousPasswordBlockCount", (n) -> { this.setWorkProfilePreviousPasswordBlockCount(n.getIntegerValue()); });
+        deserializerMap.put("workProfileRequiredPasswordComplexity", (n) -> { this.setWorkProfileRequiredPasswordComplexity(n.getEnumValue(AndroidRequiredPasswordComplexity::forValue)); });
+        deserializerMap.put("workProfileRequirePassword", (n) -> { this.setWorkProfileRequirePassword(n.getBooleanValue()); });
         return deserializerMap;
     }
     /**
      * Gets the minAndroidSecurityPatchLevel property value. Minimum Android security patch level.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getMinAndroidSecurityPatchLevel() {
@@ -96,7 +103,7 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
     }
     /**
      * Gets the osMaximumVersion property value. Maximum Android version.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOsMaximumVersion() {
@@ -104,7 +111,7 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
     }
     /**
      * Gets the osMinimumVersion property value. Minimum Android version.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOsMinimumVersion() {
@@ -112,7 +119,7 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
     }
     /**
      * Gets the passwordExpirationDays property value. Number of days before the password expires. Valid values 1 to 365
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordExpirationDays() {
@@ -120,7 +127,7 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
     }
     /**
      * Gets the passwordMinimumLength property value. Minimum password length. Valid values 4 to 16
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordMinimumLength() {
@@ -128,7 +135,7 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
     }
     /**
      * Gets the passwordMinutesOfInactivityBeforeLock property value. Minutes of inactivity before a password is required.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordMinutesOfInactivityBeforeLock() {
@@ -136,7 +143,7 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
     }
     /**
      * Gets the passwordPreviousPasswordBlockCount property value. Number of previous passwords to block. Valid values 1 to 24
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordPreviousPasswordBlockCount() {
@@ -144,7 +151,7 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
     }
     /**
      * Gets the passwordRequired property value. Require a password to unlock device.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getPasswordRequired() {
@@ -152,7 +159,7 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
     }
     /**
      * Gets the passwordRequiredType property value. Android required password type.
-     * @return a AndroidRequiredPasswordType
+     * @return a {@link AndroidRequiredPasswordType}
      */
     @jakarta.annotation.Nullable
     public AndroidRequiredPasswordType getPasswordRequiredType() {
@@ -160,7 +167,7 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
     }
     /**
      * Gets the passwordSignInFailureCountBeforeFactoryReset property value. Number of sign-in failures allowed before factory reset. Valid values 1 to 16
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordSignInFailureCountBeforeFactoryReset() {
@@ -168,7 +175,7 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
     }
     /**
      * Gets the requiredPasswordComplexity property value. The password complexity types that can be set on Android. One of: NONE, LOW, MEDIUM, HIGH. This is an API targeted to Android 11+.
-     * @return a AndroidRequiredPasswordComplexity
+     * @return a {@link AndroidRequiredPasswordComplexity}
      */
     @jakarta.annotation.Nullable
     public AndroidRequiredPasswordComplexity getRequiredPasswordComplexity() {
@@ -176,7 +183,7 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
     }
     /**
      * Gets the securityBlockJailbrokenDevices property value. Devices must not be jailbroken or rooted.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getSecurityBlockJailbrokenDevices() {
@@ -184,7 +191,7 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
     }
     /**
      * Gets the securityDisableUsbDebugging property value. Disable USB debugging on Android devices.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getSecurityDisableUsbDebugging() {
@@ -192,7 +199,7 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
     }
     /**
      * Gets the securityPreventInstallAppsFromUnknownSources property value. Require that devices disallow installation of apps from unknown sources.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getSecurityPreventInstallAppsFromUnknownSources() {
@@ -200,7 +207,7 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
     }
     /**
      * Gets the securityRequireCompanyPortalAppIntegrity property value. Require the device to pass the Company Portal client app runtime integrity check.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getSecurityRequireCompanyPortalAppIntegrity() {
@@ -208,7 +215,7 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
     }
     /**
      * Gets the securityRequiredAndroidSafetyNetEvaluationType property value. An enum representing the Android Play Integrity API evaluation types.
-     * @return a AndroidSafetyNetEvaluationType
+     * @return a {@link AndroidSafetyNetEvaluationType}
      */
     @jakarta.annotation.Nullable
     public AndroidSafetyNetEvaluationType getSecurityRequiredAndroidSafetyNetEvaluationType() {
@@ -216,7 +223,7 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
     }
     /**
      * Gets the securityRequireGooglePlayServices property value. Require Google Play Services to be installed and enabled on the device.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getSecurityRequireGooglePlayServices() {
@@ -224,7 +231,7 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
     }
     /**
      * Gets the securityRequireSafetyNetAttestationBasicIntegrity property value. Require the device to pass the Play Integrity basic integrity check.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getSecurityRequireSafetyNetAttestationBasicIntegrity() {
@@ -232,7 +239,7 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
     }
     /**
      * Gets the securityRequireSafetyNetAttestationCertifiedDevice property value. Require the device to pass the Play Integrity device integrity check.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getSecurityRequireSafetyNetAttestationCertifiedDevice() {
@@ -240,7 +247,7 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
     }
     /**
      * Gets the securityRequireUpToDateSecurityProviders property value. Require the device to have up to date security providers. The device will require Google Play Services to be enabled and up to date.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getSecurityRequireUpToDateSecurityProviders() {
@@ -248,7 +255,7 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
     }
     /**
      * Gets the securityRequireVerifyApps property value. Require the Android Verify apps feature is turned on.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getSecurityRequireVerifyApps() {
@@ -256,11 +263,67 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
     }
     /**
      * Gets the storageRequireEncryption property value. Require encryption on Android devices.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getStorageRequireEncryption() {
         return this.backingStore.get("storageRequireEncryption");
+    }
+    /**
+     * Gets the workProfileInactiveBeforeScreenLockInMinutes property value. Minutes of inactivity before the screen times out.
+     * @return a {@link Integer}
+     */
+    @jakarta.annotation.Nullable
+    public Integer getWorkProfileInactiveBeforeScreenLockInMinutes() {
+        return this.backingStore.get("workProfileInactiveBeforeScreenLockInMinutes");
+    }
+    /**
+     * Gets the workProfilePasswordExpirationInDays property value. Number of days before the work profile password expires. Valid values 1 to 365
+     * @return a {@link Integer}
+     */
+    @jakarta.annotation.Nullable
+    public Integer getWorkProfilePasswordExpirationInDays() {
+        return this.backingStore.get("workProfilePasswordExpirationInDays");
+    }
+    /**
+     * Gets the workProfilePasswordMinimumLength property value. Minimum length of work profile password. Valid values 4 to 16
+     * @return a {@link Integer}
+     */
+    @jakarta.annotation.Nullable
+    public Integer getWorkProfilePasswordMinimumLength() {
+        return this.backingStore.get("workProfilePasswordMinimumLength");
+    }
+    /**
+     * Gets the workProfilePasswordRequiredType property value. Android Work Profile required password type.
+     * @return a {@link AndroidWorkProfileRequiredPasswordType}
+     */
+    @jakarta.annotation.Nullable
+    public AndroidWorkProfileRequiredPasswordType getWorkProfilePasswordRequiredType() {
+        return this.backingStore.get("workProfilePasswordRequiredType");
+    }
+    /**
+     * Gets the workProfilePreviousPasswordBlockCount property value. Number of previous work profile passwords to block. Valid values 0 to 24
+     * @return a {@link Integer}
+     */
+    @jakarta.annotation.Nullable
+    public Integer getWorkProfilePreviousPasswordBlockCount() {
+        return this.backingStore.get("workProfilePreviousPasswordBlockCount");
+    }
+    /**
+     * Gets the workProfileRequiredPasswordComplexity property value. The password complexity types that can be set on Android. One of: NONE, LOW, MEDIUM, HIGH. This is an API targeted to Android 11+.
+     * @return a {@link AndroidRequiredPasswordComplexity}
+     */
+    @jakarta.annotation.Nullable
+    public AndroidRequiredPasswordComplexity getWorkProfileRequiredPasswordComplexity() {
+        return this.backingStore.get("workProfileRequiredPasswordComplexity");
+    }
+    /**
+     * Gets the workProfileRequirePassword property value. Password is required or not for work profile
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getWorkProfileRequirePassword() {
+        return this.backingStore.get("workProfileRequirePassword");
     }
     /**
      * Serializes information the current object
@@ -294,6 +357,13 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
         writer.writeBooleanValue("securityRequireUpToDateSecurityProviders", this.getSecurityRequireUpToDateSecurityProviders());
         writer.writeBooleanValue("securityRequireVerifyApps", this.getSecurityRequireVerifyApps());
         writer.writeBooleanValue("storageRequireEncryption", this.getStorageRequireEncryption());
+        writer.writeIntegerValue("workProfileInactiveBeforeScreenLockInMinutes", this.getWorkProfileInactiveBeforeScreenLockInMinutes());
+        writer.writeIntegerValue("workProfilePasswordExpirationInDays", this.getWorkProfilePasswordExpirationInDays());
+        writer.writeIntegerValue("workProfilePasswordMinimumLength", this.getWorkProfilePasswordMinimumLength());
+        writer.writeEnumValue("workProfilePasswordRequiredType", this.getWorkProfilePasswordRequiredType());
+        writer.writeIntegerValue("workProfilePreviousPasswordBlockCount", this.getWorkProfilePreviousPasswordBlockCount());
+        writer.writeEnumValue("workProfileRequiredPasswordComplexity", this.getWorkProfileRequiredPasswordComplexity());
+        writer.writeBooleanValue("workProfileRequirePassword", this.getWorkProfileRequirePassword());
     }
     /**
      * Sets the advancedThreatProtectionRequiredSecurityLevel property value. Device threat protection levels for the Device Threat Protection API.
@@ -469,5 +539,54 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
      */
     public void setStorageRequireEncryption(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("storageRequireEncryption", value);
+    }
+    /**
+     * Sets the workProfileInactiveBeforeScreenLockInMinutes property value. Minutes of inactivity before the screen times out.
+     * @param value Value to set for the workProfileInactiveBeforeScreenLockInMinutes property.
+     */
+    public void setWorkProfileInactiveBeforeScreenLockInMinutes(@jakarta.annotation.Nullable final Integer value) {
+        this.backingStore.set("workProfileInactiveBeforeScreenLockInMinutes", value);
+    }
+    /**
+     * Sets the workProfilePasswordExpirationInDays property value. Number of days before the work profile password expires. Valid values 1 to 365
+     * @param value Value to set for the workProfilePasswordExpirationInDays property.
+     */
+    public void setWorkProfilePasswordExpirationInDays(@jakarta.annotation.Nullable final Integer value) {
+        this.backingStore.set("workProfilePasswordExpirationInDays", value);
+    }
+    /**
+     * Sets the workProfilePasswordMinimumLength property value. Minimum length of work profile password. Valid values 4 to 16
+     * @param value Value to set for the workProfilePasswordMinimumLength property.
+     */
+    public void setWorkProfilePasswordMinimumLength(@jakarta.annotation.Nullable final Integer value) {
+        this.backingStore.set("workProfilePasswordMinimumLength", value);
+    }
+    /**
+     * Sets the workProfilePasswordRequiredType property value. Android Work Profile required password type.
+     * @param value Value to set for the workProfilePasswordRequiredType property.
+     */
+    public void setWorkProfilePasswordRequiredType(@jakarta.annotation.Nullable final AndroidWorkProfileRequiredPasswordType value) {
+        this.backingStore.set("workProfilePasswordRequiredType", value);
+    }
+    /**
+     * Sets the workProfilePreviousPasswordBlockCount property value. Number of previous work profile passwords to block. Valid values 0 to 24
+     * @param value Value to set for the workProfilePreviousPasswordBlockCount property.
+     */
+    public void setWorkProfilePreviousPasswordBlockCount(@jakarta.annotation.Nullable final Integer value) {
+        this.backingStore.set("workProfilePreviousPasswordBlockCount", value);
+    }
+    /**
+     * Sets the workProfileRequiredPasswordComplexity property value. The password complexity types that can be set on Android. One of: NONE, LOW, MEDIUM, HIGH. This is an API targeted to Android 11+.
+     * @param value Value to set for the workProfileRequiredPasswordComplexity property.
+     */
+    public void setWorkProfileRequiredPasswordComplexity(@jakarta.annotation.Nullable final AndroidRequiredPasswordComplexity value) {
+        this.backingStore.set("workProfileRequiredPasswordComplexity", value);
+    }
+    /**
+     * Sets the workProfileRequirePassword property value. Password is required or not for work profile
+     * @param value Value to set for the workProfileRequirePassword property.
+     */
+    public void setWorkProfileRequirePassword(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("workProfileRequirePassword", value);
     }
 }

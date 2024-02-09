@@ -19,7 +19,7 @@ public class HybridAgentUpdaterConfiguration implements AdditionalDataHolder, Ba
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new HybridAgentUpdaterConfiguration and sets the default values.
+     * Instantiates a new {@link HybridAgentUpdaterConfiguration} and sets the default values.
      */
     public HybridAgentUpdaterConfiguration() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class HybridAgentUpdaterConfiguration implements AdditionalDataHolder, Ba
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a HybridAgentUpdaterConfiguration
+     * @return a {@link HybridAgentUpdaterConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static HybridAgentUpdaterConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class HybridAgentUpdaterConfiguration implements AdditionalDataHolder, Ba
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -50,7 +50,7 @@ public class HybridAgentUpdaterConfiguration implements AdditionalDataHolder, Ba
     }
     /**
      * Gets the allowUpdateConfigurationOverride property value. Indicates if updater configuration will be skipped and the agent will receive an update when the next version of the agent is available.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowUpdateConfigurationOverride() {
@@ -58,7 +58,7 @@ public class HybridAgentUpdaterConfiguration implements AdditionalDataHolder, Ba
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -66,7 +66,7 @@ public class HybridAgentUpdaterConfiguration implements AdditionalDataHolder, Ba
     }
     /**
      * Gets the deferUpdateDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getDeferUpdateDateTime() {
@@ -74,7 +74,7 @@ public class HybridAgentUpdaterConfiguration implements AdditionalDataHolder, Ba
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -87,7 +87,7 @@ public class HybridAgentUpdaterConfiguration implements AdditionalDataHolder, Ba
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -95,7 +95,7 @@ public class HybridAgentUpdaterConfiguration implements AdditionalDataHolder, Ba
     }
     /**
      * Gets the updateWindow property value. The updateWindow property
-     * @return a UpdateWindow
+     * @return a {@link UpdateWindow}
      */
     @jakarta.annotation.Nullable
     public UpdateWindow getUpdateWindow() {

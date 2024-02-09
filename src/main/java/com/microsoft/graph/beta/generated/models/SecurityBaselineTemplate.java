@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SecurityBaselineTemplate extends DeviceManagementTemplate implements Parsable {
     /**
-     * Instantiates a new SecurityBaselineTemplate and sets the default values.
+     * Instantiates a new {@link SecurityBaselineTemplate} and sets the default values.
      */
     public SecurityBaselineTemplate() {
         super();
@@ -21,7 +21,7 @@ public class SecurityBaselineTemplate extends DeviceManagementTemplate implement
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SecurityBaselineTemplate
+     * @return a {@link SecurityBaselineTemplate}
      */
     @jakarta.annotation.Nonnull
     public static SecurityBaselineTemplate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class SecurityBaselineTemplate extends DeviceManagementTemplate implement
     }
     /**
      * Gets the categoryDeviceStateSummaries property value. The security baseline per category device state summary
-     * @return a java.util.List<SecurityBaselineCategoryStateSummary>
+     * @return a {@link java.util.List<SecurityBaselineCategoryStateSummary>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<SecurityBaselineCategoryStateSummary> getCategoryDeviceStateSummaries() {
@@ -38,7 +38,7 @@ public class SecurityBaselineTemplate extends DeviceManagementTemplate implement
     }
     /**
      * Gets the deviceStates property value. The security baseline device states
-     * @return a java.util.List<SecurityBaselineDeviceState>
+     * @return a {@link java.util.List<SecurityBaselineDeviceState>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<SecurityBaselineDeviceState> getDeviceStates() {
@@ -46,7 +46,7 @@ public class SecurityBaselineTemplate extends DeviceManagementTemplate implement
     }
     /**
      * Gets the deviceStateSummary property value. The security baseline device state summary
-     * @return a SecurityBaselineStateSummary
+     * @return a {@link SecurityBaselineStateSummary}
      */
     @jakarta.annotation.Nullable
     public SecurityBaselineStateSummary getDeviceStateSummary() {
@@ -54,7 +54,7 @@ public class SecurityBaselineTemplate extends DeviceManagementTemplate implement
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

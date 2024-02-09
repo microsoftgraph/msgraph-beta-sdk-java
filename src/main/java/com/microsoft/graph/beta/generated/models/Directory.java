@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Directory extends Entity implements Parsable {
     /**
-     * Instantiates a new Directory and sets the default values.
+     * Instantiates a new {@link Directory} and sets the default values.
      */
     public Directory() {
         super();
@@ -17,7 +17,7 @@ public class Directory extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Directory
+     * @return a {@link Directory}
      */
     @jakarta.annotation.Nonnull
     public static Directory createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class Directory extends Entity implements Parsable {
     }
     /**
      * Gets the administrativeUnits property value. Conceptual container for user and group directory objects.
-     * @return a java.util.List<AdministrativeUnit>
+     * @return a {@link java.util.List<AdministrativeUnit>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AdministrativeUnit> getAdministrativeUnits() {
@@ -34,7 +34,7 @@ public class Directory extends Entity implements Parsable {
     }
     /**
      * Gets the attributeSets property value. Group of related custom security attribute definitions.
-     * @return a java.util.List<AttributeSet>
+     * @return a {@link java.util.List<AttributeSet>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AttributeSet> getAttributeSets() {
@@ -42,7 +42,7 @@ public class Directory extends Entity implements Parsable {
     }
     /**
      * Gets the certificateAuthorities property value. The certificateAuthorities property
-     * @return a CertificateAuthorityPath
+     * @return a {@link CertificateAuthorityPath}
      */
     @jakarta.annotation.Nullable
     public CertificateAuthorityPath getCertificateAuthorities() {
@@ -50,7 +50,7 @@ public class Directory extends Entity implements Parsable {
     }
     /**
      * Gets the customSecurityAttributeDefinitions property value. Schema of a custom security attributes (key-value pairs).
-     * @return a java.util.List<CustomSecurityAttributeDefinition>
+     * @return a {@link java.util.List<CustomSecurityAttributeDefinition>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<CustomSecurityAttributeDefinition> getCustomSecurityAttributeDefinitions() {
@@ -58,7 +58,7 @@ public class Directory extends Entity implements Parsable {
     }
     /**
      * Gets the deletedItems property value. The deletedItems property
-     * @return a java.util.List<DirectoryObject>
+     * @return a {@link java.util.List<DirectoryObject>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getDeletedItems() {
@@ -66,7 +66,7 @@ public class Directory extends Entity implements Parsable {
     }
     /**
      * Gets the deviceLocalCredentials property value. The credentials of the device's local administrator account backed up to Microsoft Entra ID.
-     * @return a java.util.List<DeviceLocalCredentialInfo>
+     * @return a {@link java.util.List<DeviceLocalCredentialInfo>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceLocalCredentialInfo> getDeviceLocalCredentials() {
@@ -74,7 +74,7 @@ public class Directory extends Entity implements Parsable {
     }
     /**
      * Gets the featureRolloutPolicies property value. The featureRolloutPolicies property
-     * @return a java.util.List<FeatureRolloutPolicy>
+     * @return a {@link java.util.List<FeatureRolloutPolicy>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<FeatureRolloutPolicy> getFeatureRolloutPolicies() {
@@ -82,7 +82,7 @@ public class Directory extends Entity implements Parsable {
     }
     /**
      * Gets the federationConfigurations property value. Configure domain federation with organizations whose identity provider (IdP) supports either the SAML or WS-Fed protocol.
-     * @return a java.util.List<IdentityProviderBase>
+     * @return a {@link java.util.List<IdentityProviderBase>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<IdentityProviderBase> getFederationConfigurations() {
@@ -90,7 +90,7 @@ public class Directory extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -114,7 +114,7 @@ public class Directory extends Entity implements Parsable {
     }
     /**
      * Gets the impactedResources property value. The impactedResources property
-     * @return a java.util.List<ImpactedResource>
+     * @return a {@link java.util.List<ImpactedResource>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ImpactedResource> getImpactedResources() {
@@ -122,7 +122,7 @@ public class Directory extends Entity implements Parsable {
     }
     /**
      * Gets the inboundSharedUserProfiles property value. A collection of external Azure AD users whose profile data has been shared with the Azure AD tenant. Nullable.
-     * @return a java.util.List<InboundSharedUserProfile>
+     * @return a {@link java.util.List<InboundSharedUserProfile>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<InboundSharedUserProfile> getInboundSharedUserProfiles() {
@@ -130,7 +130,7 @@ public class Directory extends Entity implements Parsable {
     }
     /**
      * Gets the onPremisesSynchronization property value. A container for on-premises directory synchronization functionalities that are available for the organization.
-     * @return a java.util.List<OnPremisesDirectorySynchronization>
+     * @return a {@link java.util.List<OnPremisesDirectorySynchronization>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<OnPremisesDirectorySynchronization> getOnPremisesSynchronization() {
@@ -138,7 +138,7 @@ public class Directory extends Entity implements Parsable {
     }
     /**
      * Gets the outboundSharedUserProfiles property value. The outboundSharedUserProfiles property
-     * @return a java.util.List<OutboundSharedUserProfile>
+     * @return a {@link java.util.List<OutboundSharedUserProfile>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<OutboundSharedUserProfile> getOutboundSharedUserProfiles() {
@@ -146,7 +146,7 @@ public class Directory extends Entity implements Parsable {
     }
     /**
      * Gets the recommendations property value. List of recommended improvements to improve tenant posture.
-     * @return a java.util.List<Recommendation>
+     * @return a {@link java.util.List<Recommendation>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Recommendation> getRecommendations() {
@@ -154,7 +154,7 @@ public class Directory extends Entity implements Parsable {
     }
     /**
      * Gets the sharedEmailDomains property value. The sharedEmailDomains property
-     * @return a java.util.List<SharedEmailDomain>
+     * @return a {@link java.util.List<SharedEmailDomain>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<SharedEmailDomain> getSharedEmailDomains() {
@@ -162,7 +162,7 @@ public class Directory extends Entity implements Parsable {
     }
     /**
      * Gets the subscriptions property value. List of commercial subscriptions that an organization has acquired.
-     * @return a java.util.List<CompanySubscription>
+     * @return a {@link java.util.List<CompanySubscription>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<CompanySubscription> getSubscriptions() {

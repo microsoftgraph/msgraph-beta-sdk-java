@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserRegistrationDetails extends Entity implements Parsable {
     /**
-     * Instantiates a new UserRegistrationDetails and sets the default values.
+     * Instantiates a new {@link UserRegistrationDetails} and sets the default values.
      */
     public UserRegistrationDetails() {
         super();
@@ -18,7 +18,7 @@ public class UserRegistrationDetails extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserRegistrationDetails
+     * @return a {@link UserRegistrationDetails}
      */
     @jakarta.annotation.Nonnull
     public static UserRegistrationDetails createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class UserRegistrationDetails extends Entity implements Parsable {
     }
     /**
      * Gets the defaultMfaMethod property value. The method the user or admin selected as default for performing multifactor authentication for the user. The possible values are: none, mobilePhone, alternateMobilePhone, officePhone, microsoftAuthenticatorPush, softwareOneTimePasscode, unknownFutureValue.
-     * @return a DefaultMfaMethodType
+     * @return a {@link DefaultMfaMethodType}
      */
     @jakarta.annotation.Nullable
     public DefaultMfaMethodType getDefaultMfaMethod() {
@@ -35,7 +35,7 @@ public class UserRegistrationDetails extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -60,7 +60,7 @@ public class UserRegistrationDetails extends Entity implements Parsable {
     }
     /**
      * Gets the isAdmin property value. Indicates whether the user has an admin role in the tenant. This value can be used to check the authentication methods that privileged accounts are registered for and capable of.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsAdmin() {
@@ -68,7 +68,7 @@ public class UserRegistrationDetails extends Entity implements Parsable {
     }
     /**
      * Gets the isMfaCapable property value. Indicates whether the user has registered a strong authentication method for multifactor authentication. The method must be allowed by the authentication methods policy. Supports $filter (eq).
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsMfaCapable() {
@@ -76,7 +76,7 @@ public class UserRegistrationDetails extends Entity implements Parsable {
     }
     /**
      * Gets the isMfaRegistered property value. Indicates whether the user has registered a strong authentication method for multifactor authentication. The method may not necessarily be allowed by the authentication methods policy. Supports $filter (eq).
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsMfaRegistered() {
@@ -84,7 +84,7 @@ public class UserRegistrationDetails extends Entity implements Parsable {
     }
     /**
      * Gets the isPasswordlessCapable property value. Indicates whether the user has registered a passwordless strong authentication method (including FIDO2, Windows Hello for Business, and Microsoft Authenticator (Passwordless)) that is allowed by the authentication methods policy. Supports $filter (eq).
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsPasswordlessCapable() {
@@ -92,7 +92,7 @@ public class UserRegistrationDetails extends Entity implements Parsable {
     }
     /**
      * Gets the isSsprCapable property value. Indicates whether the user has registered the required number of authentication methods for self-service password reset and the user is allowed to perform self-service password reset by policy. Supports $filter (eq).
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsSsprCapable() {
@@ -100,7 +100,7 @@ public class UserRegistrationDetails extends Entity implements Parsable {
     }
     /**
      * Gets the isSsprEnabled property value. Indicates whether the user is allowed to perform self-service password reset by policy. The user may not necessarily have registered the required number of authentication methods for self-service password reset. Supports $filter (eq).
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsSsprEnabled() {
@@ -108,7 +108,7 @@ public class UserRegistrationDetails extends Entity implements Parsable {
     }
     /**
      * Gets the isSsprRegistered property value. Indicates whether the user has registered the required number of authentication methods for self-service password reset. The user may not necessarily be allowed to perform self-service password reset by policy. Supports $filter (eq).
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsSsprRegistered() {
@@ -116,7 +116,7 @@ public class UserRegistrationDetails extends Entity implements Parsable {
     }
     /**
      * Gets the isSystemPreferredAuthenticationMethodEnabled property value. Indicates whether system preferred authentication method is enabled. If enabled, the system dynamically determines the most secure authentication method among the methods registered by the user. Supports $filter (eq).
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsSystemPreferredAuthenticationMethodEnabled() {
@@ -124,7 +124,7 @@ public class UserRegistrationDetails extends Entity implements Parsable {
     }
     /**
      * Gets the lastUpdatedDateTime property value. The date and time (UTC) when the record was last updated. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastUpdatedDateTime() {
@@ -132,7 +132,7 @@ public class UserRegistrationDetails extends Entity implements Parsable {
     }
     /**
      * Gets the methodsRegistered property value. Collection of authentication methods registered, such as mobilePhone, email, passKeyDeviceBound. Supports $filter (any with eq).
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getMethodsRegistered() {
@@ -140,7 +140,7 @@ public class UserRegistrationDetails extends Entity implements Parsable {
     }
     /**
      * Gets the systemPreferredAuthenticationMethods property value. Collection of authentication methods that the system determined to be the most secure authentication methods among the registered methods for second factor authentication. Possible values are: push, oath, voiceMobile, voiceAlternateMobile, voiceOffice, sms, none, unknownFutureValue. Supports $filter (any with eq).
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSystemPreferredAuthenticationMethods() {
@@ -148,7 +148,7 @@ public class UserRegistrationDetails extends Entity implements Parsable {
     }
     /**
      * Gets the userDisplayName property value. The user display name, such as Adele Vance. Supports $filter (eq, startsWith) and $orderby.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserDisplayName() {
@@ -156,7 +156,7 @@ public class UserRegistrationDetails extends Entity implements Parsable {
     }
     /**
      * Gets the userPreferredMethodForSecondaryAuthentication property value. The method the user selected as the default second-factor for performing multifactor authentication. Possible values are: push, oath, voiceMobile, voiceAlternateMobile, voiceOffice, sms, none, unknownFutureValue.
-     * @return a UserDefaultAuthenticationMethod
+     * @return a {@link UserDefaultAuthenticationMethod}
      */
     @jakarta.annotation.Nullable
     public UserDefaultAuthenticationMethod getUserPreferredMethodForSecondaryAuthentication() {
@@ -164,7 +164,7 @@ public class UserRegistrationDetails extends Entity implements Parsable {
     }
     /**
      * Gets the userPrincipalName property value. The user principal name, such as AdeleV@contoso.com. Supports $filter (eq, startsWith) and $orderby.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
@@ -172,7 +172,7 @@ public class UserRegistrationDetails extends Entity implements Parsable {
     }
     /**
      * Gets the userType property value. Identifies whether the user is a member or guest in the tenant. The possible values are: member, guest, unknownFutureValue.
-     * @return a SignInUserType
+     * @return a {@link SignInUserType}
      */
     @jakarta.annotation.Nullable
     public SignInUserType getUserType() {

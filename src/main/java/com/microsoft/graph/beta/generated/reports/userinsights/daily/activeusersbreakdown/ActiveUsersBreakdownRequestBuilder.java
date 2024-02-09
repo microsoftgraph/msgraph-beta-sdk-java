@@ -24,6 +24,7 @@ import java.util.Objects;
 public class ActiveUsersBreakdownRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -32,7 +33,7 @@ public class ActiveUsersBreakdownRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the activeUsersBreakdown property of the microsoft.graph.dailyUserInsightMetricsRoot entity.
      * @param activeUsersBreakdownMetricId The unique identifier of activeUsersBreakdownMetric
-     * @return a ActiveUsersBreakdownMetricItemRequestBuilder
+     * @return a {@link ActiveUsersBreakdownMetricItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ActiveUsersBreakdownMetricItemRequestBuilder byActiveUsersBreakdownMetricId(@jakarta.annotation.Nonnull final String activeUsersBreakdownMetricId) {
@@ -42,7 +43,7 @@ public class ActiveUsersBreakdownRequestBuilder extends BaseRequestBuilder {
         return new ActiveUsersBreakdownMetricItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new ActiveUsersBreakdownRequestBuilder and sets the default values.
+     * Instantiates a new {@link ActiveUsersBreakdownRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -50,7 +51,7 @@ public class ActiveUsersBreakdownRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/reports/userInsights/daily/activeUsersBreakdown{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new ActiveUsersBreakdownRequestBuilder and sets the default values.
+     * Instantiates a new {@link ActiveUsersBreakdownRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -59,7 +60,8 @@ public class ActiveUsersBreakdownRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of daily activeUsersBreakdown objects on apps registered in your tenant configured for Microsoft Entra External ID for customers.
-     * @return a ActiveUsersBreakdownMetricCollectionResponse
+     * @return a {@link ActiveUsersBreakdownMetricCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/dailyuserinsightmetricsroot-list-activeusersbreakdown?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -69,20 +71,20 @@ public class ActiveUsersBreakdownRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of daily activeUsersBreakdown objects on apps registered in your tenant configured for Microsoft Entra External ID for customers.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a ActiveUsersBreakdownMetricCollectionResponse
+     * @return a {@link ActiveUsersBreakdownMetricCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/dailyuserinsightmetricsroot-list-activeusersbreakdown?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ActiveUsersBreakdownMetricCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, ActiveUsersBreakdownMetricCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Get a list of daily activeUsersBreakdown objects on apps registered in your tenant configured for Microsoft Entra External ID for customers.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -91,7 +93,7 @@ public class ActiveUsersBreakdownRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of daily activeUsersBreakdown objects on apps registered in your tenant configured for Microsoft Entra External ID for customers.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -103,7 +105,7 @@ public class ActiveUsersBreakdownRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a ActiveUsersBreakdownRequestBuilder
+     * @return a {@link ActiveUsersBreakdownRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ActiveUsersBreakdownRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -157,7 +159,7 @@ public class ActiveUsersBreakdownRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

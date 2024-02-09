@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserRequestsMetricCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * Instantiates a new UserRequestsMetricCollectionResponse and sets the default values.
+     * Instantiates a new {@link UserRequestsMetricCollectionResponse} and sets the default values.
      */
     public UserRequestsMetricCollectionResponse() {
         super();
@@ -17,7 +17,7 @@ public class UserRequestsMetricCollectionResponse extends BaseCollectionPaginati
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserRequestsMetricCollectionResponse
+     * @return a {@link UserRequestsMetricCollectionResponse}
      */
     @jakarta.annotation.Nonnull
     public static UserRequestsMetricCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class UserRequestsMetricCollectionResponse extends BaseCollectionPaginati
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -36,7 +36,7 @@ public class UserRequestsMetricCollectionResponse extends BaseCollectionPaginati
     }
     /**
      * Gets the value property value. The value property
-     * @return a java.util.List<UserRequestsMetric>
+     * @return a {@link java.util.List<UserRequestsMetric>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserRequestsMetric> getValue() {

@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CloudPcGalleryImage extends Entity implements Parsable {
     /**
-     * Instantiates a new CloudPcGalleryImage and sets the default values.
+     * Instantiates a new {@link CloudPcGalleryImage} and sets the default values.
      */
     public CloudPcGalleryImage() {
         super();
@@ -18,7 +18,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CloudPcGalleryImage
+     * @return a {@link CloudPcGalleryImage}
      */
     @jakarta.annotation.Nonnull
     public static CloudPcGalleryImage createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name of this gallery image. For example, Windows 11 Enterprise + Microsoft 365 Apps 22H2. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -35,7 +35,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
     }
     /**
      * Gets the endDate property value. The date when the status of image becomes supportedWithWarning. Users can still provision new Cloud PCs if the current time is later than endDate and earlier than expirationDate. For example, assume the endDate of a gallery image is 2023-9-14 and expirationDate is 2024-3-14, users are able to provision new Cloud PCs if today is 2023-10-01. Read-only.
-     * @return a LocalDate
+     * @return a {@link LocalDate}
      */
     @jakarta.annotation.Nullable
     public LocalDate getEndDate() {
@@ -43,7 +43,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
     }
     /**
      * Gets the expirationDate property value. The date when the image is no longer available. Users are unable to provision new Cloud PCs if the current time is later than expirationDate. The value is usually endDate plus six months. For example, if the startDate is 2025-10-14, the expirationDate is usually 2026-04-14. Read-only.
-     * @return a LocalDate
+     * @return a {@link LocalDate}
      */
     @jakarta.annotation.Nullable
     public LocalDate getExpirationDate() {
@@ -51,7 +51,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -75,7 +75,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
     }
     /**
      * Gets the offer property value. The offer property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOffer() {
@@ -83,7 +83,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
     }
     /**
      * Gets the offerDisplayName property value. The offerDisplayName property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOfferDisplayName() {
@@ -91,7 +91,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
     }
     /**
      * Gets the offerName property value. The offer name of this gallery image that is passed to ARM to retrieve the image resource. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOfferName() {
@@ -99,7 +99,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
     }
     /**
      * Gets the publisher property value. The publisher property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPublisher() {
@@ -107,7 +107,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
     }
     /**
      * Gets the publisherName property value. The publisher name of this gallery image that is passed to ARM to retrieve the image resource. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPublisherName() {
@@ -115,7 +115,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
     }
     /**
      * Gets the recommendedSku property value. The recommendedSku property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRecommendedSku() {
@@ -123,7 +123,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
     }
     /**
      * Gets the sizeInGB property value. Indicates the size of this image in gigabytes. For example, 64. Read-only.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getSizeInGB() {
@@ -131,7 +131,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
     }
     /**
      * Gets the sku property value. The sku property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSku() {
@@ -139,7 +139,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
     }
     /**
      * Gets the skuDisplayName property value. The skuDisplayName property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSkuDisplayName() {
@@ -147,7 +147,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
     }
     /**
      * Gets the skuName property value. The SKU name of this image that is passed to ARM to retrieve the image resource. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSkuName() {
@@ -155,7 +155,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
     }
     /**
      * Gets the startDate property value. The date when the Cloud PC image is available for provisioning new Cloud PCs. For example, 2022-09-20. Read-only.
-     * @return a LocalDate
+     * @return a {@link LocalDate}
      */
     @jakarta.annotation.Nullable
     public LocalDate getStartDate() {
@@ -163,7 +163,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status of the gallery image on the Cloud PC. Possible values are: supported, supportedWithWarning, notSupported, unknownFutureValue. The default value is supported. Read-only.
-     * @return a CloudPcGalleryImageStatus
+     * @return a {@link CloudPcGalleryImageStatus}
      */
     @jakarta.annotation.Nullable
     public CloudPcGalleryImageStatus getStatus() {

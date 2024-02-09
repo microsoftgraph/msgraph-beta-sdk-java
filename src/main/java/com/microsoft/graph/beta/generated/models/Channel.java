@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Channel extends Entity implements Parsable {
     /**
-     * Instantiates a new Channel and sets the default values.
+     * Instantiates a new {@link Channel} and sets the default values.
      */
     public Channel() {
         super();
@@ -18,7 +18,7 @@ public class Channel extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Channel
+     * @return a {@link Channel}
      */
     @jakarta.annotation.Nonnull
     public static Channel createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class Channel extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. Read only. Timestamp at which the channel was created.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -35,7 +35,7 @@ public class Channel extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. Optional textual description for the channel.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -43,7 +43,7 @@ public class Channel extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. Channel name as it will appear to the user in Microsoft Teams. The maximum length is 50 characters.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -51,7 +51,7 @@ public class Channel extends Entity implements Parsable {
     }
     /**
      * Gets the email property value. The email address for sending messages to the channel. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getEmail() {
@@ -59,7 +59,7 @@ public class Channel extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -84,7 +84,7 @@ public class Channel extends Entity implements Parsable {
     }
     /**
      * Gets the filesFolder property value. Metadata for the location where the channel's files are stored.
-     * @return a DriveItem
+     * @return a {@link DriveItem}
      */
     @jakarta.annotation.Nullable
     public DriveItem getFilesFolder() {
@@ -92,7 +92,7 @@ public class Channel extends Entity implements Parsable {
     }
     /**
      * Gets the isArchived property value. The isArchived property
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsArchived() {
@@ -100,7 +100,7 @@ public class Channel extends Entity implements Parsable {
     }
     /**
      * Gets the isFavoriteByDefault property value. Indicates whether the channel should automatically be marked 'favorite' for all members of the team. Can only be set programmatically with Create team. Default: false.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsFavoriteByDefault() {
@@ -108,7 +108,7 @@ public class Channel extends Entity implements Parsable {
     }
     /**
      * Gets the members property value. A collection of membership records associated with the channel.
-     * @return a java.util.List<ConversationMember>
+     * @return a {@link java.util.List<ConversationMember>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ConversationMember> getMembers() {
@@ -116,7 +116,7 @@ public class Channel extends Entity implements Parsable {
     }
     /**
      * Gets the membershipType property value. The type of the channel. Can be set during creation and can't be changed. The possible values are: standard, private, unknownFutureValue, shared. The default value is standard. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: shared.
-     * @return a ChannelMembershipType
+     * @return a {@link ChannelMembershipType}
      */
     @jakarta.annotation.Nullable
     public ChannelMembershipType getMembershipType() {
@@ -124,7 +124,7 @@ public class Channel extends Entity implements Parsable {
     }
     /**
      * Gets the messages property value. A collection of all the messages in the channel. A navigation property. Nullable.
-     * @return a java.util.List<ChatMessage>
+     * @return a {@link java.util.List<ChatMessage>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ChatMessage> getMessages() {
@@ -132,7 +132,7 @@ public class Channel extends Entity implements Parsable {
     }
     /**
      * Gets the moderationSettings property value. Settings to configure channel moderation to control who can start new posts and reply to posts in that channel.
-     * @return a ChannelModerationSettings
+     * @return a {@link ChannelModerationSettings}
      */
     @jakarta.annotation.Nullable
     public ChannelModerationSettings getModerationSettings() {
@@ -140,7 +140,7 @@ public class Channel extends Entity implements Parsable {
     }
     /**
      * Gets the sharedWithTeams property value. A collection of teams with which a channel is shared.
-     * @return a java.util.List<SharedWithChannelTeamInfo>
+     * @return a {@link java.util.List<SharedWithChannelTeamInfo>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<SharedWithChannelTeamInfo> getSharedWithTeams() {
@@ -148,7 +148,7 @@ public class Channel extends Entity implements Parsable {
     }
     /**
      * Gets the summary property value. Contains summary information about the channel, including number of guests, members, owners, and an indicator for members from other tenants. The summary property will only be returned if it is specified in the $select clause of the Get channel method.
-     * @return a ChannelSummary
+     * @return a {@link ChannelSummary}
      */
     @jakarta.annotation.Nullable
     public ChannelSummary getSummary() {
@@ -156,7 +156,7 @@ public class Channel extends Entity implements Parsable {
     }
     /**
      * Gets the tabs property value. A collection of all the tabs in the channel. A navigation property.
-     * @return a java.util.List<TeamsTab>
+     * @return a {@link java.util.List<TeamsTab>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<TeamsTab> getTabs() {
@@ -164,7 +164,7 @@ public class Channel extends Entity implements Parsable {
     }
     /**
      * Gets the tenantId property value. The ID of the Microsoft Entra tenant.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
@@ -172,7 +172,7 @@ public class Channel extends Entity implements Parsable {
     }
     /**
      * Gets the webUrl property value. A hyperlink that will go to the channel in Microsoft Teams. This is the URL that you get when you right-click a channel in Microsoft Teams and select Get link to channel. This URL should be treated as an opaque blob, and not parsed. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getWebUrl() {

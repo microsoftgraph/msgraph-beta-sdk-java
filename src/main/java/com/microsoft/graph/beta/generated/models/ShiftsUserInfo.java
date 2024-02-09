@@ -18,7 +18,7 @@ public class ShiftsUserInfo implements AdditionalDataHolder, BackedModel, Parsab
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new ShiftsUserInfo and sets the default values.
+     * Instantiates a new {@link ShiftsUserInfo} and sets the default values.
      */
     public ShiftsUserInfo() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class ShiftsUserInfo implements AdditionalDataHolder, BackedModel, Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ShiftsUserInfo
+     * @return a {@link ShiftsUserInfo}
      */
     @jakarta.annotation.Nonnull
     public static ShiftsUserInfo createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class ShiftsUserInfo implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,15 +49,15 @@ public class ShiftsUserInfo implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
         return this.backingStore;
     }
     /**
-     * Gets the displayName property value. The displayName property
-     * @return a String
+     * Gets the displayName property value. The display name for the user. Required.
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -65,7 +65,7 @@ public class ShiftsUserInfo implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -77,15 +77,15 @@ public class ShiftsUserInfo implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the userId property value. The userId property
-     * @return a String
+     * Gets the userId property value. ID of the user.
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
@@ -118,7 +118,7 @@ public class ShiftsUserInfo implements AdditionalDataHolder, BackedModel, Parsab
         this.backingStore = value;
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The display name for the user. Required.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
@@ -132,7 +132,7 @@ public class ShiftsUserInfo implements AdditionalDataHolder, BackedModel, Parsab
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the userId property value. The userId property
+     * Sets the userId property value. ID of the user.
      * @param value Value to set for the userId property.
      */
     public void setUserId(@jakarta.annotation.Nullable final String value) {

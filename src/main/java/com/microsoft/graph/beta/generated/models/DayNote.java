@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DayNote extends ChangeTrackedEntity implements Parsable {
     /**
-     * Instantiates a new DayNote and sets the default values.
+     * Instantiates a new {@link DayNote} and sets the default values.
      */
     public DayNote() {
         super();
@@ -19,7 +19,7 @@ public class DayNote extends ChangeTrackedEntity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DayNote
+     * @return a {@link DayNote}
      */
     @jakarta.annotation.Nonnull
     public static DayNote createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class DayNote extends ChangeTrackedEntity implements Parsable {
     }
     /**
      * Gets the dayNoteDate property value. The date of the day note.
-     * @return a LocalDate
+     * @return a {@link LocalDate}
      */
     @jakarta.annotation.Nullable
     public LocalDate getDayNoteDate() {
@@ -36,7 +36,7 @@ public class DayNote extends ChangeTrackedEntity implements Parsable {
     }
     /**
      * Gets the draftDayNote property value. The draft version of this day note that is viewable by managers. Only contentType text is supported.
-     * @return a ItemBody
+     * @return a {@link ItemBody}
      */
     @jakarta.annotation.Nullable
     public ItemBody getDraftDayNote() {
@@ -44,7 +44,7 @@ public class DayNote extends ChangeTrackedEntity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -56,7 +56,7 @@ public class DayNote extends ChangeTrackedEntity implements Parsable {
     }
     /**
      * Gets the sharedDayNote property value. The shared version of this day note that is viewable by both employees and managers. Only contentType text is supported.
-     * @return a ItemBody
+     * @return a {@link ItemBody}
      */
     @jakarta.annotation.Nullable
     public ItemBody getSharedDayNote() {

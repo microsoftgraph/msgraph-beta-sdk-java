@@ -18,7 +18,7 @@ public class IndustryDataActivityStatistics implements AdditionalDataHolder, Bac
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new IndustryDataActivityStatistics and sets the default values.
+     * Instantiates a new {@link IndustryDataActivityStatistics} and sets the default values.
      */
     public IndustryDataActivityStatistics() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class IndustryDataActivityStatistics implements AdditionalDataHolder, Bac
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a IndustryDataActivityStatistics
+     * @return a {@link IndustryDataActivityStatistics}
      */
     @jakarta.annotation.Nonnull
     public static IndustryDataActivityStatistics createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,7 +43,7 @@ public class IndustryDataActivityStatistics implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the activityId property value. The identifier for the activity that is being reported on.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getActivityId() {
@@ -51,7 +51,7 @@ public class IndustryDataActivityStatistics implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -64,7 +64,7 @@ public class IndustryDataActivityStatistics implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -72,7 +72,7 @@ public class IndustryDataActivityStatistics implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the displayName property value. The display name of the underlying flow.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -80,7 +80,7 @@ public class IndustryDataActivityStatistics implements AdditionalDataHolder, Bac
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -93,7 +93,7 @@ public class IndustryDataActivityStatistics implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -101,7 +101,7 @@ public class IndustryDataActivityStatistics implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the status property value. The status property
-     * @return a IndustryDataActivityStatus
+     * @return a {@link IndustryDataActivityStatus}
      */
     @jakarta.annotation.Nullable
     public IndustryDataActivityStatus getStatus() {

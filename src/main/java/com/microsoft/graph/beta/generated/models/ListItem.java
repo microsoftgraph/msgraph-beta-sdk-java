@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ListItem extends BaseItem implements Parsable {
     /**
-     * Instantiates a new ListItem and sets the default values.
+     * Instantiates a new {@link ListItem} and sets the default values.
      */
     public ListItem() {
         super();
@@ -18,7 +18,7 @@ public class ListItem extends BaseItem implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ListItem
+     * @return a {@link ListItem}
      */
     @jakarta.annotation.Nonnull
     public static ListItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class ListItem extends BaseItem implements Parsable {
     }
     /**
      * Gets the activities property value. The list of recent activities that took place on this item.
-     * @return a java.util.List<ItemActivityOLD>
+     * @return a {@link java.util.List<ItemActivityOLD>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ItemActivityOLD> getActivities() {
@@ -35,7 +35,7 @@ public class ListItem extends BaseItem implements Parsable {
     }
     /**
      * Gets the analytics property value. Analytics about the view activities that took place on this item.
-     * @return a ItemAnalytics
+     * @return a {@link ItemAnalytics}
      */
     @jakarta.annotation.Nullable
     public ItemAnalytics getAnalytics() {
@@ -43,7 +43,7 @@ public class ListItem extends BaseItem implements Parsable {
     }
     /**
      * Gets the contentType property value. The content type of this list item
-     * @return a ContentTypeInfo
+     * @return a {@link ContentTypeInfo}
      */
     @jakarta.annotation.Nullable
     public ContentTypeInfo getContentType() {
@@ -51,7 +51,7 @@ public class ListItem extends BaseItem implements Parsable {
     }
     /**
      * Gets the deleted property value. The deleted property
-     * @return a Deleted
+     * @return a {@link Deleted}
      */
     @jakarta.annotation.Nullable
     public Deleted getDeleted() {
@@ -59,7 +59,7 @@ public class ListItem extends BaseItem implements Parsable {
     }
     /**
      * Gets the documentSetVersions property value. Version information for a document set version created by a user.
-     * @return a java.util.List<DocumentSetVersion>
+     * @return a {@link java.util.List<DocumentSetVersion>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DocumentSetVersion> getDocumentSetVersions() {
@@ -67,7 +67,7 @@ public class ListItem extends BaseItem implements Parsable {
     }
     /**
      * Gets the driveItem property value. For document libraries, the driveItem relationship exposes the listItem as a [driveItem][]
-     * @return a DriveItem
+     * @return a {@link DriveItem}
      */
     @jakarta.annotation.Nullable
     public DriveItem getDriveItem() {
@@ -75,7 +75,7 @@ public class ListItem extends BaseItem implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -93,7 +93,7 @@ public class ListItem extends BaseItem implements Parsable {
     }
     /**
      * Gets the fields property value. The values of the columns set on this list item.
-     * @return a FieldValueSet
+     * @return a {@link FieldValueSet}
      */
     @jakarta.annotation.Nullable
     public FieldValueSet getFields() {
@@ -101,7 +101,7 @@ public class ListItem extends BaseItem implements Parsable {
     }
     /**
      * Gets the sharepointIds property value. Returns identifiers useful for SharePoint REST compatibility. Read-only.
-     * @return a SharepointIds
+     * @return a {@link SharepointIds}
      */
     @jakarta.annotation.Nullable
     public SharepointIds getSharepointIds() {
@@ -109,7 +109,7 @@ public class ListItem extends BaseItem implements Parsable {
     }
     /**
      * Gets the versions property value. The list of previous versions of the list item.
-     * @return a java.util.List<ListItemVersion>
+     * @return a {@link java.util.List<ListItemVersion>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ListItemVersion> getVersions() {

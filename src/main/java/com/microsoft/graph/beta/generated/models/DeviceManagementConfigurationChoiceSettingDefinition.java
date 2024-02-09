@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementConfigurationChoiceSettingDefinition extends DeviceManagementConfigurationSettingDefinition implements Parsable {
     /**
-     * Instantiates a new DeviceManagementConfigurationChoiceSettingDefinition and sets the default values.
+     * Instantiates a new {@link DeviceManagementConfigurationChoiceSettingDefinition} and sets the default values.
      */
     public DeviceManagementConfigurationChoiceSettingDefinition() {
         super();
@@ -17,7 +17,7 @@ public class DeviceManagementConfigurationChoiceSettingDefinition extends Device
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceManagementConfigurationChoiceSettingDefinition
+     * @return a {@link DeviceManagementConfigurationChoiceSettingDefinition}
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementConfigurationChoiceSettingDefinition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -33,7 +33,7 @@ public class DeviceManagementConfigurationChoiceSettingDefinition extends Device
     }
     /**
      * Gets the defaultOptionId property value. Default option for choice setting
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDefaultOptionId() {
@@ -41,7 +41,7 @@ public class DeviceManagementConfigurationChoiceSettingDefinition extends Device
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -52,7 +52,7 @@ public class DeviceManagementConfigurationChoiceSettingDefinition extends Device
     }
     /**
      * Gets the options property value. Options for the setting that can be selected
-     * @return a java.util.List<DeviceManagementConfigurationOptionDefinition>
+     * @return a {@link java.util.List<DeviceManagementConfigurationOptionDefinition>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementConfigurationOptionDefinition> getOptions() {

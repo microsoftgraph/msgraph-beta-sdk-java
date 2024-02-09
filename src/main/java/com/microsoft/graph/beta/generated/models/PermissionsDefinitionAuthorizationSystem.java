@@ -18,7 +18,7 @@ public class PermissionsDefinitionAuthorizationSystem implements AdditionalDataH
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new PermissionsDefinitionAuthorizationSystem and sets the default values.
+     * Instantiates a new {@link PermissionsDefinitionAuthorizationSystem} and sets the default values.
      */
     public PermissionsDefinitionAuthorizationSystem() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class PermissionsDefinitionAuthorizationSystem implements AdditionalDataH
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PermissionsDefinitionAuthorizationSystem
+     * @return a {@link PermissionsDefinitionAuthorizationSystem}
      */
     @jakarta.annotation.Nonnull
     public static PermissionsDefinitionAuthorizationSystem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class PermissionsDefinitionAuthorizationSystem implements AdditionalDataH
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class PermissionsDefinitionAuthorizationSystem implements AdditionalDataH
     }
     /**
      * Gets the authorizationSystemId property value. ID of the authorization system retrieved from the customer cloud environment.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAuthorizationSystemId() {
@@ -57,7 +57,7 @@ public class PermissionsDefinitionAuthorizationSystem implements AdditionalDataH
     }
     /**
      * Gets the authorizationSystemType property value. The type of authorization system.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAuthorizationSystemType() {
@@ -65,7 +65,7 @@ public class PermissionsDefinitionAuthorizationSystem implements AdditionalDataH
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -73,7 +73,7 @@ public class PermissionsDefinitionAuthorizationSystem implements AdditionalDataH
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -85,7 +85,7 @@ public class PermissionsDefinitionAuthorizationSystem implements AdditionalDataH
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {

@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagementIntent extends Entity implements Parsable {
     /**
-     * Instantiates a new ManagementIntent and sets the default values.
+     * Instantiates a new {@link ManagementIntent} and sets the default values.
      */
     public ManagementIntent() {
         super();
@@ -18,7 +18,7 @@ public class ManagementIntent extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ManagementIntent
+     * @return a {@link ManagementIntent}
      */
     @jakarta.annotation.Nonnull
     public static ManagementIntent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class ManagementIntent extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name for the management intent. Optional. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -35,7 +35,7 @@ public class ManagementIntent extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -47,7 +47,7 @@ public class ManagementIntent extends Entity implements Parsable {
     }
     /**
      * Gets the isGlobal property value. A flag indicating whether the management intent is global. Required. Read-only.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsGlobal() {
@@ -55,7 +55,7 @@ public class ManagementIntent extends Entity implements Parsable {
     }
     /**
      * Gets the managementTemplates property value. The collection of management templates associated with the management intent. Optional. Read-only.
-     * @return a java.util.List<ManagementTemplateDetailedInfo>
+     * @return a {@link java.util.List<ManagementTemplateDetailedInfo>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagementTemplateDetailedInfo> getManagementTemplates() {

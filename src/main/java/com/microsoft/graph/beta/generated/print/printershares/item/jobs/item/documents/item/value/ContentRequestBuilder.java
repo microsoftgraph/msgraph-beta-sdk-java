@@ -20,7 +20,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ContentRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new ContentRequestBuilder and sets the default values.
+     * Instantiates a new {@link ContentRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -28,7 +28,7 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/print/printerShares/{printerShare%2Did}/jobs/{printJob%2Did}/documents/{printDocument%2Did}/$value", pathParameters);
     }
     /**
-     * Instantiates a new ContentRequestBuilder and sets the default values.
+     * Instantiates a new {@link ContentRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -37,7 +37,8 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get media content for the navigation property documents from print
-     * @return a InputStream
+     * @return a {@link InputStream}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
      */
@@ -49,7 +50,8 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
     /**
      * Get media content for the navigation property documents from print
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a InputStream
+     * @return a {@link InputStream}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
      */
@@ -58,14 +60,14 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
     public InputStream get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.sendPrimitive(requestInfo, errorMapping, InputStream.class);
     }
     /**
      * Update media content for the navigation property documents in print
      * @param body Binary request body
-     * @return a InputStream
+     * @return a {@link InputStream}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
      */
@@ -78,7 +80,8 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
      * Update media content for the navigation property documents in print
      * @param body Binary request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a InputStream
+     * @return a {@link InputStream}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
      */
@@ -88,13 +91,12 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPutRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.sendPrimitive(requestInfo, errorMapping, InputStream.class);
     }
     /**
      * Get media content for the navigation property documents from print
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
      */
@@ -106,7 +108,7 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
     /**
      * Get media content for the navigation property documents from print
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
      */
@@ -121,7 +123,7 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
     /**
      * Update media content for the navigation property documents in print
      * @param body Binary request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
      */
@@ -134,7 +136,7 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
      * Update media content for the navigation property documents in print
      * @param body Binary request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
      */
@@ -151,7 +153,7 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a ContentRequestBuilder
+     * @return a {@link ContentRequestBuilder}
      * @deprecated
      * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
      */

@@ -21,7 +21,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class FilePlanReferenceTemplateRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new FilePlanReferenceTemplateRequestBuilder and sets the default values.
+     * Instantiates a new {@link FilePlanReferenceTemplateRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -29,7 +29,7 @@ public class FilePlanReferenceTemplateRequestBuilder extends BaseRequestBuilder 
         super(requestAdapter, "{+baseurl}/security/labels/retentionLabels/{retentionLabel%2Did}/descriptors/filePlanReferenceTemplate{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new FilePlanReferenceTemplateRequestBuilder and sets the default values.
+     * Instantiates a new {@link FilePlanReferenceTemplateRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -38,7 +38,8 @@ public class FilePlanReferenceTemplateRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * Specifies a unique alpha-numeric identifier for an organizations retention schedule.
-     * @return a FilePlanReferenceTemplate
+     * @return a {@link FilePlanReferenceTemplate}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public FilePlanReferenceTemplate get() {
@@ -47,19 +48,19 @@ public class FilePlanReferenceTemplateRequestBuilder extends BaseRequestBuilder 
     /**
      * Specifies a unique alpha-numeric identifier for an organizations retention schedule.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a FilePlanReferenceTemplate
+     * @return a {@link FilePlanReferenceTemplate}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public FilePlanReferenceTemplate get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, FilePlanReferenceTemplate::createFromDiscriminatorValue);
     }
     /**
      * Specifies a unique alpha-numeric identifier for an organizations retention schedule.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -68,7 +69,7 @@ public class FilePlanReferenceTemplateRequestBuilder extends BaseRequestBuilder 
     /**
      * Specifies a unique alpha-numeric identifier for an organizations retention schedule.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -80,7 +81,7 @@ public class FilePlanReferenceTemplateRequestBuilder extends BaseRequestBuilder 
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a FilePlanReferenceTemplateRequestBuilder
+     * @return a {@link FilePlanReferenceTemplateRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public FilePlanReferenceTemplateRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -104,7 +105,7 @@ public class FilePlanReferenceTemplateRequestBuilder extends BaseRequestBuilder 
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

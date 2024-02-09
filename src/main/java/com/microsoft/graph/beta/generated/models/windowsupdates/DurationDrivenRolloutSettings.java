@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DurationDrivenRolloutSettings extends GradualRolloutSettings implements Parsable {
     /**
-     * Instantiates a new DurationDrivenRolloutSettings and sets the default values.
+     * Instantiates a new {@link DurationDrivenRolloutSettings} and sets the default values.
      */
     public DurationDrivenRolloutSettings() {
         super();
@@ -19,7 +19,7 @@ public class DurationDrivenRolloutSettings extends GradualRolloutSettings implem
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DurationDrivenRolloutSettings
+     * @return a {@link DurationDrivenRolloutSettings}
      */
     @jakarta.annotation.Nonnull
     public static DurationDrivenRolloutSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class DurationDrivenRolloutSettings extends GradualRolloutSettings implem
     }
     /**
      * Gets the durationUntilDeploymentEnd property value. The target duration of the rollout. Given durationBetweenOffers and durationUntilDeploymentEnd, the system will automatically calculate how many devices are in each offering.
-     * @return a PeriodAndDuration
+     * @return a {@link PeriodAndDuration}
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getDurationUntilDeploymentEnd() {
@@ -36,7 +36,7 @@ public class DurationDrivenRolloutSettings extends GradualRolloutSettings implem
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

@@ -25,6 +25,7 @@ import java.util.Objects;
 public class AccessPackageAssignmentPoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
      */
@@ -36,7 +37,7 @@ public class AccessPackageAssignmentPoliciesRequestBuilder extends BaseRequestBu
     /**
      * Provides operations to manage the accessPackageAssignmentPolicies property of the microsoft.graph.accessPackage entity.
      * @param accessPackageAssignmentPolicyId The unique identifier of accessPackageAssignmentPolicy
-     * @return a AccessPackageAssignmentPolicyItemRequestBuilder
+     * @return a {@link AccessPackageAssignmentPolicyItemRequestBuilder}
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
      */
@@ -49,7 +50,7 @@ public class AccessPackageAssignmentPoliciesRequestBuilder extends BaseRequestBu
         return new AccessPackageAssignmentPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new AccessPackageAssignmentPoliciesRequestBuilder and sets the default values.
+     * Instantiates a new {@link AccessPackageAssignmentPoliciesRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -57,7 +58,7 @@ public class AccessPackageAssignmentPoliciesRequestBuilder extends BaseRequestBu
         super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/accessPackages/{accessPackage%2Did}/accessPackageAssignmentPolicies{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new AccessPackageAssignmentPoliciesRequestBuilder and sets the default values.
+     * Instantiates a new {@link AccessPackageAssignmentPoliciesRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -66,7 +67,8 @@ public class AccessPackageAssignmentPoliciesRequestBuilder extends BaseRequestBu
     }
     /**
      * Read-only. Nullable. Supports $expand.
-     * @return a AccessPackageAssignmentPolicyCollectionResponse
+     * @return a {@link AccessPackageAssignmentPolicyCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
      */
@@ -78,7 +80,8 @@ public class AccessPackageAssignmentPoliciesRequestBuilder extends BaseRequestBu
     /**
      * Read-only. Nullable. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a AccessPackageAssignmentPolicyCollectionResponse
+     * @return a {@link AccessPackageAssignmentPolicyCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
      */
@@ -87,14 +90,14 @@ public class AccessPackageAssignmentPoliciesRequestBuilder extends BaseRequestBu
     public AccessPackageAssignmentPolicyCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, AccessPackageAssignmentPolicyCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to accessPackageAssignmentPolicies for identityGovernance
      * @param body The request body
-     * @return a AccessPackageAssignmentPolicy
+     * @return a {@link AccessPackageAssignmentPolicy}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
      */
@@ -107,7 +110,8 @@ public class AccessPackageAssignmentPoliciesRequestBuilder extends BaseRequestBu
      * Create new navigation property to accessPackageAssignmentPolicies for identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a AccessPackageAssignmentPolicy
+     * @return a {@link AccessPackageAssignmentPolicy}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
      */
@@ -117,13 +121,12 @@ public class AccessPackageAssignmentPoliciesRequestBuilder extends BaseRequestBu
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, AccessPackageAssignmentPolicy::createFromDiscriminatorValue);
     }
     /**
      * Read-only. Nullable. Supports $expand.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
      */
@@ -135,7 +138,7 @@ public class AccessPackageAssignmentPoliciesRequestBuilder extends BaseRequestBu
     /**
      * Read-only. Nullable. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
      */
@@ -150,7 +153,7 @@ public class AccessPackageAssignmentPoliciesRequestBuilder extends BaseRequestBu
     /**
      * Create new navigation property to accessPackageAssignmentPolicies for identityGovernance
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
      */
@@ -163,7 +166,7 @@ public class AccessPackageAssignmentPoliciesRequestBuilder extends BaseRequestBu
      * Create new navigation property to accessPackageAssignmentPolicies for identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
      */
@@ -171,7 +174,7 @@ public class AccessPackageAssignmentPoliciesRequestBuilder extends BaseRequestBu
     @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final AccessPackageAssignmentPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/identityGovernance/entitlementManagement/accessPackages/{accessPackage%2Did}/accessPackageAssignmentPolicies", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -180,7 +183,7 @@ public class AccessPackageAssignmentPoliciesRequestBuilder extends BaseRequestBu
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a AccessPackageAssignmentPoliciesRequestBuilder
+     * @return a {@link AccessPackageAssignmentPoliciesRequestBuilder}
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
      */
@@ -237,7 +240,7 @@ public class AccessPackageAssignmentPoliciesRequestBuilder extends BaseRequestBu
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

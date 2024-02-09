@@ -19,7 +19,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CancelPrintJobRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new CancelPrintJobRequestBuilder and sets the default values.
+     * Instantiates a new {@link CancelPrintJobRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -27,7 +27,7 @@ public class CancelPrintJobRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/print/printers/{printer%2Did}/jobs/{printJob%2Did}/cancelPrintJob", pathParameters);
     }
     /**
-     * Instantiates a new CancelPrintJobRequestBuilder and sets the default values.
+     * Instantiates a new {@link CancelPrintJobRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -36,6 +36,7 @@ public class CancelPrintJobRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Invoke action cancelPrintJob
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The cancelPrintJob API is deprecated and will stop returning data on July 31, 2023. Please use the cancel API instead of this. as of 2023-06/Tasks_And_Plans
      */
@@ -46,6 +47,7 @@ public class CancelPrintJobRequestBuilder extends BaseRequestBuilder {
     /**
      * Invoke action cancelPrintJob
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The cancelPrintJob API is deprecated and will stop returning data on July 31, 2023. Please use the cancel API instead of this. as of 2023-06/Tasks_And_Plans
      */
@@ -53,13 +55,12 @@ public class CancelPrintJobRequestBuilder extends BaseRequestBuilder {
     public void post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toPostRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Invoke action cancelPrintJob
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      * The cancelPrintJob API is deprecated and will stop returning data on July 31, 2023. Please use the cancel API instead of this. as of 2023-06/Tasks_And_Plans
      */
@@ -71,7 +72,7 @@ public class CancelPrintJobRequestBuilder extends BaseRequestBuilder {
     /**
      * Invoke action cancelPrintJob
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      * The cancelPrintJob API is deprecated and will stop returning data on July 31, 2023. Please use the cancel API instead of this. as of 2023-06/Tasks_And_Plans
      */
@@ -86,7 +87,7 @@ public class CancelPrintJobRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a CancelPrintJobRequestBuilder
+     * @return a {@link CancelPrintJobRequestBuilder}
      * @deprecated
      * The cancelPrintJob API is deprecated and will stop returning data on July 31, 2023. Please use the cancel API instead of this. as of 2023-06/Tasks_And_Plans
      */

@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Person extends Entity implements Parsable {
     /**
-     * Instantiates a new Person and sets the default values.
+     * Instantiates a new {@link Person} and sets the default values.
      */
     public Person() {
         super();
@@ -17,7 +17,7 @@ public class Person extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Person
+     * @return a {@link Person}
      */
     @jakarta.annotation.Nonnull
     public static Person createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class Person extends Entity implements Parsable {
     }
     /**
      * Gets the birthday property value. The person's birthday.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getBirthday() {
@@ -34,7 +34,7 @@ public class Person extends Entity implements Parsable {
     }
     /**
      * Gets the companyName property value. The name of the person's company.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCompanyName() {
@@ -42,7 +42,7 @@ public class Person extends Entity implements Parsable {
     }
     /**
      * Gets the department property value. The person's department.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDepartment() {
@@ -50,7 +50,7 @@ public class Person extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The person's display name.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -58,7 +58,7 @@ public class Person extends Entity implements Parsable {
     }
     /**
      * Gets the emailAddresses property value. The person's email addresses.
-     * @return a java.util.List<RankedEmailAddress>
+     * @return a {@link java.util.List<RankedEmailAddress>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<RankedEmailAddress> getEmailAddresses() {
@@ -66,7 +66,7 @@ public class Person extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -95,7 +95,7 @@ public class Person extends Entity implements Parsable {
     }
     /**
      * Gets the givenName property value. The person's given name.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getGivenName() {
@@ -103,7 +103,7 @@ public class Person extends Entity implements Parsable {
     }
     /**
      * Gets the isFavorite property value. True if the user has flagged this person as a favorite.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsFavorite() {
@@ -111,7 +111,7 @@ public class Person extends Entity implements Parsable {
     }
     /**
      * Gets the mailboxType property value. The type of mailbox that is represented by the person's email address.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getMailboxType() {
@@ -119,7 +119,7 @@ public class Person extends Entity implements Parsable {
     }
     /**
      * Gets the officeLocation property value. The location of the person's office.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOfficeLocation() {
@@ -127,7 +127,7 @@ public class Person extends Entity implements Parsable {
     }
     /**
      * Gets the personNotes property value. Free-form notes that the user has taken about this person.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPersonNotes() {
@@ -135,7 +135,7 @@ public class Person extends Entity implements Parsable {
     }
     /**
      * Gets the personType property value. The type of person, for example distribution list.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPersonType() {
@@ -143,7 +143,7 @@ public class Person extends Entity implements Parsable {
     }
     /**
      * Gets the phones property value. The person's phone numbers.
-     * @return a java.util.List<Phone>
+     * @return a {@link java.util.List<Phone>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Phone> getPhones() {
@@ -151,7 +151,7 @@ public class Person extends Entity implements Parsable {
     }
     /**
      * Gets the postalAddresses property value. The person's addresses.
-     * @return a java.util.List<Location>
+     * @return a {@link java.util.List<Location>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Location> getPostalAddresses() {
@@ -159,7 +159,7 @@ public class Person extends Entity implements Parsable {
     }
     /**
      * Gets the profession property value. The person's profession.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getProfession() {
@@ -167,7 +167,7 @@ public class Person extends Entity implements Parsable {
     }
     /**
      * Gets the sources property value. The sources the user data comes from, for example Directory or Outlook Contacts.
-     * @return a java.util.List<PersonDataSource>
+     * @return a {@link java.util.List<PersonDataSource>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<PersonDataSource> getSources() {
@@ -175,7 +175,7 @@ public class Person extends Entity implements Parsable {
     }
     /**
      * Gets the surname property value. The person's surname.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSurname() {
@@ -183,7 +183,7 @@ public class Person extends Entity implements Parsable {
     }
     /**
      * Gets the title property value. The person's title.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTitle() {
@@ -191,7 +191,7 @@ public class Person extends Entity implements Parsable {
     }
     /**
      * Gets the userPrincipalName property value. The user principal name (UPN) of the person. The UPN is an Internet-style login name for the person based on the Internet standard RFC 822. By convention, this should map to the person's email name. The general format is alias@domain.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
@@ -199,7 +199,7 @@ public class Person extends Entity implements Parsable {
     }
     /**
      * Gets the websites property value. The person's websites.
-     * @return a java.util.List<Website>
+     * @return a {@link java.util.List<Website>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Website> getWebsites() {
@@ -207,7 +207,7 @@ public class Person extends Entity implements Parsable {
     }
     /**
      * Gets the yomiCompany property value. The phonetic Japanese name of the person's company.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getYomiCompany() {

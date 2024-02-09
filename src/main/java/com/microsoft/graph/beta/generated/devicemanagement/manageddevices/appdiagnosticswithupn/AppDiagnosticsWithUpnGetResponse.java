@@ -11,7 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AppDiagnosticsWithUpnGetResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * Instantiates a new AppDiagnosticsWithUpnGetResponse and sets the default values.
+     * Instantiates a new {@link AppDiagnosticsWithUpnGetResponse} and sets the default values.
      */
     public AppDiagnosticsWithUpnGetResponse() {
         super();
@@ -19,7 +19,7 @@ public class AppDiagnosticsWithUpnGetResponse extends BaseCollectionPaginationCo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AppDiagnosticsWithUpnGetResponse
+     * @return a {@link AppDiagnosticsWithUpnGetResponse}
      */
     @jakarta.annotation.Nonnull
     public static AppDiagnosticsWithUpnGetResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class AppDiagnosticsWithUpnGetResponse extends BaseCollectionPaginationCo
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -38,7 +38,7 @@ public class AppDiagnosticsWithUpnGetResponse extends BaseCollectionPaginationCo
     }
     /**
      * Gets the value property value. The value property
-     * @return a java.util.List<PowerliftIncidentMetadata>
+     * @return a {@link java.util.List<PowerliftIncidentMetadata>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<PowerliftIncidentMetadata> getValue() {

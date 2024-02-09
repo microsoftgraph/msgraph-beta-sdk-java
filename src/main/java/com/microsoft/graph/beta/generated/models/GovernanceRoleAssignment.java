@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GovernanceRoleAssignment extends Entity implements Parsable {
     /**
-     * Instantiates a new GovernanceRoleAssignment and sets the default values.
+     * Instantiates a new {@link GovernanceRoleAssignment} and sets the default values.
      */
     public GovernanceRoleAssignment() {
         super();
@@ -18,7 +18,7 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a GovernanceRoleAssignment
+     * @return a {@link GovernanceRoleAssignment}
      */
     @jakarta.annotation.Nonnull
     public static GovernanceRoleAssignment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the assignmentState property value. The state of the assignment. The value can be Eligible for eligible assignment or Active if it's directly assigned Active by administrators, or activated on an eligible assignment by the users.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAssignmentState() {
@@ -35,7 +35,7 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the endDateTime property value. For a non-permanent role assignment, this is the time when the role assignment is expired. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getEndDateTime() {
@@ -43,7 +43,7 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the externalId property value. The external ID the resource that is used to identify the role assignment in the provider.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getExternalId() {
@@ -51,7 +51,7 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -74,7 +74,7 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the linkedEligibleRoleAssignment property value. Read-only. If this is an active assignment and created due to activation on an eligible assignment, it represents the object of that eligible assignment; Otherwise, the value is null.
-     * @return a GovernanceRoleAssignment
+     * @return a {@link GovernanceRoleAssignment}
      */
     @jakarta.annotation.Nullable
     public GovernanceRoleAssignment getLinkedEligibleRoleAssignment() {
@@ -82,7 +82,7 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the linkedEligibleRoleAssignmentId property value. If this is an active assignment and created due to activation on an eligible assignment, it represents the ID of that eligible assignment; Otherwise, the value is null.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getLinkedEligibleRoleAssignmentId() {
@@ -90,7 +90,7 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the memberType property value. The type of member. The value can be: Inherited (if the role assignment is inherited from a parent resource scope), Group (if the role assignment isn't inherited, but comes from the membership of a group assignment), or User (if the role assignment isn't inherited or from a group assignment).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getMemberType() {
@@ -98,7 +98,7 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the resource property value. Read-only. The resource associated with the role assignment.
-     * @return a GovernanceResource
+     * @return a {@link GovernanceResource}
      */
     @jakarta.annotation.Nullable
     public GovernanceResource getResource() {
@@ -106,7 +106,7 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the resourceId property value. Required. The ID of the resource that the role assignment is associated with.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getResourceId() {
@@ -114,7 +114,7 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the roleDefinition property value. Read-only. The role definition associated with the role assignment.
-     * @return a GovernanceRoleDefinition
+     * @return a {@link GovernanceRoleDefinition}
      */
     @jakarta.annotation.Nullable
     public GovernanceRoleDefinition getRoleDefinition() {
@@ -122,7 +122,7 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the roleDefinitionId property value. Required. The ID of the role definition that the role assignment is associated with.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRoleDefinitionId() {
@@ -130,7 +130,7 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the startDateTime property value. The start time of the role assignment. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
@@ -138,7 +138,7 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getStatus() {
@@ -146,7 +146,7 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the subject property value. Read-only. The subject associated with the role assignment.
-     * @return a GovernanceSubject
+     * @return a {@link GovernanceSubject}
      */
     @jakarta.annotation.Nullable
     public GovernanceSubject getSubject() {
@@ -154,7 +154,7 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the subjectId property value. Required. The ID of the subject that the role assignment is associated with.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSubjectId() {

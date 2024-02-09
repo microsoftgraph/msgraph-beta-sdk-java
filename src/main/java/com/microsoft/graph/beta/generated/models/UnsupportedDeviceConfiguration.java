@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UnsupportedDeviceConfiguration extends DeviceConfiguration implements Parsable {
     /**
-     * Instantiates a new UnsupportedDeviceConfiguration and sets the default values.
+     * Instantiates a new {@link UnsupportedDeviceConfiguration} and sets the default values.
      */
     public UnsupportedDeviceConfiguration() {
         super();
@@ -21,7 +21,7 @@ public class UnsupportedDeviceConfiguration extends DeviceConfiguration implemen
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UnsupportedDeviceConfiguration
+     * @return a {@link UnsupportedDeviceConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static UnsupportedDeviceConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class UnsupportedDeviceConfiguration extends DeviceConfiguration implemen
     }
     /**
      * Gets the details property value. Details describing why the entity is unsupported. This collection can contain a maximum of 1000 elements.
-     * @return a java.util.List<UnsupportedDeviceConfigurationDetail>
+     * @return a {@link java.util.List<UnsupportedDeviceConfigurationDetail>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnsupportedDeviceConfigurationDetail> getDetails() {
@@ -38,7 +38,7 @@ public class UnsupportedDeviceConfiguration extends DeviceConfiguration implemen
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -49,7 +49,7 @@ public class UnsupportedDeviceConfiguration extends DeviceConfiguration implemen
     }
     /**
      * Gets the originalEntityTypeName property value. The type of entity that would be returned otherwise.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOriginalEntityTypeName() {

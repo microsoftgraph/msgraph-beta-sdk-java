@@ -25,6 +25,7 @@ import java.util.Objects;
 public class RetentionLabelItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the descriptors property of the microsoft.graph.security.retentionLabel entity.
+     * @return a {@link DescriptorsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DescriptorsRequestBuilder descriptors() {
@@ -32,6 +33,7 @@ public class RetentionLabelItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the dispositionReviewStages property of the microsoft.graph.security.retentionLabel entity.
+     * @return a {@link DispositionReviewStagesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DispositionReviewStagesRequestBuilder dispositionReviewStages() {
@@ -39,13 +41,14 @@ public class RetentionLabelItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the retentionEventType property of the microsoft.graph.security.retentionLabel entity.
+     * @return a {@link RetentionEventTypeRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RetentionEventTypeRequestBuilder retentionEventType() {
         return new RetentionEventTypeRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new RetentionLabelItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link RetentionLabelItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -53,7 +56,7 @@ public class RetentionLabelItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/labels/retentionLabels/{retentionLabel%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new RetentionLabelItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link RetentionLabelItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -62,6 +65,7 @@ public class RetentionLabelItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Delete a retentionLabel object.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/security-retentionlabel-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
@@ -70,18 +74,19 @@ public class RetentionLabelItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete a retentionLabel object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/security-retentionlabel-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Represents how customers can manage their data, whether and for how long to retain or delete it.
-     * @return a RetentionLabel
+     * @return a {@link RetentionLabel}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public RetentionLabel get() {
@@ -90,20 +95,21 @@ public class RetentionLabelItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Represents how customers can manage their data, whether and for how long to retain or delete it.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RetentionLabel
+     * @return a {@link RetentionLabel}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public RetentionLabel get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, RetentionLabel::createFromDiscriminatorValue);
     }
     /**
      * Update the properties of a retentionLabel object. To update a disposition review stage, include the actionAfterRetentionPeriod property in the request body with one of the possible values specified.
      * @param body The request body
-     * @return a RetentionLabel
+     * @return a {@link RetentionLabel}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/security-retentionlabel-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -114,7 +120,8 @@ public class RetentionLabelItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a retentionLabel object. To update a disposition review stage, include the actionAfterRetentionPeriod property in the request body with one of the possible values specified.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RetentionLabel
+     * @return a {@link RetentionLabel}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/security-retentionlabel-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -122,13 +129,12 @@ public class RetentionLabelItemRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, RetentionLabel::createFromDiscriminatorValue);
     }
     /**
      * Delete a retentionLabel object.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -137,18 +143,18 @@ public class RetentionLabelItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete a retentionLabel object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/security/labels/retentionLabels/{retentionLabel%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Represents how customers can manage their data, whether and for how long to retain or delete it.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -157,7 +163,7 @@ public class RetentionLabelItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Represents how customers can manage their data, whether and for how long to retain or delete it.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -169,7 +175,7 @@ public class RetentionLabelItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of a retentionLabel object. To update a disposition review stage, include the actionAfterRetentionPeriod property in the request body with one of the possible values specified.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final RetentionLabel body) {
@@ -179,12 +185,12 @@ public class RetentionLabelItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a retentionLabel object. To update a disposition review stage, include the actionAfterRetentionPeriod property in the request body with one of the possible values specified.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final RetentionLabel body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/security/labels/retentionLabels/{retentionLabel%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -193,7 +199,7 @@ public class RetentionLabelItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a RetentionLabelItemRequestBuilder
+     * @return a {@link RetentionLabelItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RetentionLabelItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -223,7 +229,7 @@ public class RetentionLabelItemRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

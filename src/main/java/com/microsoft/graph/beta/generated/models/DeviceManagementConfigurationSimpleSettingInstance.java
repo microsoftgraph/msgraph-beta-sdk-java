@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementConfigurationSimpleSettingInstance extends DeviceManagementConfigurationSettingInstance implements Parsable {
     /**
-     * Instantiates a new DeviceManagementConfigurationSimpleSettingInstance and sets the default values.
+     * Instantiates a new {@link DeviceManagementConfigurationSimpleSettingInstance} and sets the default values.
      */
     public DeviceManagementConfigurationSimpleSettingInstance() {
         super();
@@ -21,7 +21,7 @@ public class DeviceManagementConfigurationSimpleSettingInstance extends DeviceMa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceManagementConfigurationSimpleSettingInstance
+     * @return a {@link DeviceManagementConfigurationSimpleSettingInstance}
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementConfigurationSimpleSettingInstance createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class DeviceManagementConfigurationSimpleSettingInstance extends DeviceMa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -40,7 +40,7 @@ public class DeviceManagementConfigurationSimpleSettingInstance extends DeviceMa
     }
     /**
      * Gets the simpleSettingValue property value. The simpleSettingValue property
-     * @return a DeviceManagementConfigurationSimpleSettingValue
+     * @return a {@link DeviceManagementConfigurationSimpleSettingValue}
      */
     @jakarta.annotation.Nullable
     public DeviceManagementConfigurationSimpleSettingValue getSimpleSettingValue() {

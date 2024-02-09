@@ -24,6 +24,7 @@ import java.util.Objects;
 public class SalesInvoiceLinesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -32,7 +33,7 @@ public class SalesInvoiceLinesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the salesInvoiceLines property of the microsoft.graph.salesInvoice entity.
      * @param salesInvoiceLineId The unique identifier of salesInvoiceLine
-     * @return a SalesInvoiceLineItemRequestBuilder
+     * @return a {@link SalesInvoiceLineItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SalesInvoiceLineItemRequestBuilder bySalesInvoiceLineId(@jakarta.annotation.Nonnull final String salesInvoiceLineId) {
@@ -42,7 +43,7 @@ public class SalesInvoiceLinesRequestBuilder extends BaseRequestBuilder {
         return new SalesInvoiceLineItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new SalesInvoiceLinesRequestBuilder and sets the default values.
+     * Instantiates a new {@link SalesInvoiceLinesRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -50,7 +51,7 @@ public class SalesInvoiceLinesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/financials/companies/{company%2Did}/salesInvoices/{salesInvoice%2Did}/salesInvoiceLines{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new SalesInvoiceLinesRequestBuilder and sets the default values.
+     * Instantiates a new {@link SalesInvoiceLinesRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -59,7 +60,8 @@ public class SalesInvoiceLinesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get salesInvoiceLines from financials
-     * @return a SalesInvoiceLineCollectionResponse
+     * @return a {@link SalesInvoiceLineCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public SalesInvoiceLineCollectionResponse get() {
@@ -68,19 +70,19 @@ public class SalesInvoiceLinesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get salesInvoiceLines from financials
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a SalesInvoiceLineCollectionResponse
+     * @return a {@link SalesInvoiceLineCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public SalesInvoiceLineCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, SalesInvoiceLineCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Get salesInvoiceLines from financials
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -89,7 +91,7 @@ public class SalesInvoiceLinesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get salesInvoiceLines from financials
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -101,7 +103,7 @@ public class SalesInvoiceLinesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a SalesInvoiceLinesRequestBuilder
+     * @return a {@link SalesInvoiceLinesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SalesInvoiceLinesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -155,7 +157,7 @@ public class SalesInvoiceLinesRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

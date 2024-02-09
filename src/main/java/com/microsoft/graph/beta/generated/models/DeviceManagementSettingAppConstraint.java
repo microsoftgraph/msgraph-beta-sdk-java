@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementSettingAppConstraint extends DeviceManagementConstraint implements Parsable {
     /**
-     * Instantiates a new DeviceManagementSettingAppConstraint and sets the default values.
+     * Instantiates a new {@link DeviceManagementSettingAppConstraint} and sets the default values.
      */
     public DeviceManagementSettingAppConstraint() {
         super();
@@ -21,7 +21,7 @@ public class DeviceManagementSettingAppConstraint extends DeviceManagementConstr
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceManagementSettingAppConstraint
+     * @return a {@link DeviceManagementSettingAppConstraint}
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementSettingAppConstraint createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class DeviceManagementSettingAppConstraint extends DeviceManagementConstr
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -40,7 +40,7 @@ public class DeviceManagementSettingAppConstraint extends DeviceManagementConstr
     }
     /**
      * Gets the supportedTypes property value. Acceptable app types to allow for this setting
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSupportedTypes() {

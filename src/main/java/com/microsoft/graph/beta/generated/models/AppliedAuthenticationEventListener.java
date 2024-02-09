@@ -18,7 +18,7 @@ public class AppliedAuthenticationEventListener implements AdditionalDataHolder,
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new AppliedAuthenticationEventListener and sets the default values.
+     * Instantiates a new {@link AppliedAuthenticationEventListener} and sets the default values.
      */
     public AppliedAuthenticationEventListener() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class AppliedAuthenticationEventListener implements AdditionalDataHolder,
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AppliedAuthenticationEventListener
+     * @return a {@link AppliedAuthenticationEventListener}
      */
     @jakarta.annotation.Nonnull
     public static AppliedAuthenticationEventListener createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class AppliedAuthenticationEventListener implements AdditionalDataHolder,
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class AppliedAuthenticationEventListener implements AdditionalDataHolder,
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class AppliedAuthenticationEventListener implements AdditionalDataHolder,
     }
     /**
      * Gets the eventType property value. The type of authentication event that triggered the custom authentication extension request. The possible values are: tokenIssuanceStart, pageRenderStart, unknownFutureValue.
-     * @return a AuthenticationEventType
+     * @return a {@link AuthenticationEventType}
      */
     @jakarta.annotation.Nullable
     public AuthenticationEventType getEventType() {
@@ -65,7 +65,7 @@ public class AppliedAuthenticationEventListener implements AdditionalDataHolder,
     }
     /**
      * Gets the executedListenerId property value. ID of the authentication event listener that was executed.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getExecutedListenerId() {
@@ -73,7 +73,7 @@ public class AppliedAuthenticationEventListener implements AdditionalDataHolder,
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -86,7 +86,7 @@ public class AppliedAuthenticationEventListener implements AdditionalDataHolder,
     }
     /**
      * Gets the handlerResult property value. The result from the listening client, such as an Azure Logic App and Azure Functions, of this authentication event.
-     * @return a AuthenticationEventHandlerResult
+     * @return a {@link AuthenticationEventHandlerResult}
      */
     @jakarta.annotation.Nullable
     public AuthenticationEventHandlerResult getHandlerResult() {
@@ -94,7 +94,7 @@ public class AppliedAuthenticationEventListener implements AdditionalDataHolder,
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {

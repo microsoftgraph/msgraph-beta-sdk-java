@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GroupPolicyConfigurationAssignment extends Entity implements Parsable {
     /**
-     * Instantiates a new GroupPolicyConfigurationAssignment and sets the default values.
+     * Instantiates a new {@link GroupPolicyConfigurationAssignment} and sets the default values.
      */
     public GroupPolicyConfigurationAssignment() {
         super();
@@ -21,7 +21,7 @@ public class GroupPolicyConfigurationAssignment extends Entity implements Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a GroupPolicyConfigurationAssignment
+     * @return a {@link GroupPolicyConfigurationAssignment}
      */
     @jakarta.annotation.Nonnull
     public static GroupPolicyConfigurationAssignment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class GroupPolicyConfigurationAssignment extends Entity implements Parsab
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -41,7 +41,7 @@ public class GroupPolicyConfigurationAssignment extends Entity implements Parsab
     }
     /**
      * Gets the lastModifiedDateTime property value. The date and time the entity was last modified.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -49,7 +49,7 @@ public class GroupPolicyConfigurationAssignment extends Entity implements Parsab
     }
     /**
      * Gets the target property value. The type of groups targeted the group policy configuration.
-     * @return a DeviceAndAppManagementAssignmentTarget
+     * @return a {@link DeviceAndAppManagementAssignmentTarget}
      */
     @jakarta.annotation.Nullable
     public DeviceAndAppManagementAssignmentTarget getTarget() {

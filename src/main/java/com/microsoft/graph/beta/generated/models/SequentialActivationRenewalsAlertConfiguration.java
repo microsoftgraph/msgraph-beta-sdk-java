@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SequentialActivationRenewalsAlertConfiguration extends UnifiedRoleManagementAlertConfiguration implements Parsable {
     /**
-     * Instantiates a new SequentialActivationRenewalsAlertConfiguration and sets the default values.
+     * Instantiates a new {@link SequentialActivationRenewalsAlertConfiguration} and sets the default values.
      */
     public SequentialActivationRenewalsAlertConfiguration() {
         super();
@@ -19,7 +19,7 @@ public class SequentialActivationRenewalsAlertConfiguration extends UnifiedRoleM
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SequentialActivationRenewalsAlertConfiguration
+     * @return a {@link SequentialActivationRenewalsAlertConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static SequentialActivationRenewalsAlertConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class SequentialActivationRenewalsAlertConfiguration extends UnifiedRoleM
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -39,7 +39,7 @@ public class SequentialActivationRenewalsAlertConfiguration extends UnifiedRoleM
     }
     /**
      * Gets the sequentialActivationCounterThreshold property value. The minimum number of activations within the timeIntervalBetweenActivations period to trigger an alert.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getSequentialActivationCounterThreshold() {
@@ -47,7 +47,7 @@ public class SequentialActivationRenewalsAlertConfiguration extends UnifiedRoleM
     }
     /**
      * Gets the timeIntervalBetweenActivations property value. Time interval between activations to trigger an alert.
-     * @return a PeriodAndDuration
+     * @return a {@link PeriodAndDuration}
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getTimeIntervalBetweenActivations() {

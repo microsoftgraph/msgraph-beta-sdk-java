@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class JobResponseBase extends Entity implements Parsable {
     /**
-     * Instantiates a new JobResponseBase and sets the default values.
+     * Instantiates a new {@link JobResponseBase} and sets the default values.
      */
     public JobResponseBase() {
         super();
@@ -18,7 +18,7 @@ public class JobResponseBase extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a JobResponseBase
+     * @return a {@link JobResponseBase}
      */
     @jakarta.annotation.Nonnull
     public static JobResponseBase createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class JobResponseBase extends Entity implements Parsable {
     }
     /**
      * Gets the creationDateTime property value. The creationDateTime property
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreationDateTime() {
@@ -44,7 +44,7 @@ public class JobResponseBase extends Entity implements Parsable {
     }
     /**
      * Gets the endDateTime property value. The endDateTime property
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getEndDateTime() {
@@ -52,7 +52,7 @@ public class JobResponseBase extends Entity implements Parsable {
     }
     /**
      * Gets the error property value. The error property
-     * @return a ClassificationError
+     * @return a {@link ClassificationError}
      */
     @jakarta.annotation.Nullable
     public ClassificationError getError() {
@@ -60,7 +60,7 @@ public class JobResponseBase extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -77,7 +77,7 @@ public class JobResponseBase extends Entity implements Parsable {
     }
     /**
      * Gets the startDateTime property value. The startDateTime property
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
@@ -85,7 +85,7 @@ public class JobResponseBase extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getStatus() {
@@ -93,7 +93,7 @@ public class JobResponseBase extends Entity implements Parsable {
     }
     /**
      * Gets the tenantId property value. The tenantId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
@@ -101,7 +101,7 @@ public class JobResponseBase extends Entity implements Parsable {
     }
     /**
      * Gets the type property value. The type property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getType() {
@@ -109,7 +109,7 @@ public class JobResponseBase extends Entity implements Parsable {
     }
     /**
      * Gets the userId property value. The userId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserId() {

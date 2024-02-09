@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class FilteringPolicyLink extends PolicyLink implements Parsable {
     /**
-     * Instantiates a new FilteringPolicyLink and sets the default values.
+     * Instantiates a new {@link FilteringPolicyLink} and sets the default values.
      */
     public FilteringPolicyLink() {
         super();
@@ -19,7 +19,7 @@ public class FilteringPolicyLink extends PolicyLink implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a FilteringPolicyLink
+     * @return a {@link FilteringPolicyLink}
      */
     @jakarta.annotation.Nonnull
     public static FilteringPolicyLink createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class FilteringPolicyLink extends PolicyLink implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. The date and time when the filtering Policy link was created.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -36,7 +36,7 @@ public class FilteringPolicyLink extends PolicyLink implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -49,7 +49,7 @@ public class FilteringPolicyLink extends PolicyLink implements Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. The date and time when the policy was most recently modified.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -57,7 +57,7 @@ public class FilteringPolicyLink extends PolicyLink implements Parsable {
     }
     /**
      * Gets the loggingState property value. The loggingState property
-     * @return a Status
+     * @return a {@link Status}
      */
     @jakarta.annotation.Nullable
     public Status getLoggingState() {
@@ -65,7 +65,7 @@ public class FilteringPolicyLink extends PolicyLink implements Parsable {
     }
     /**
      * Gets the priority property value. The priority property
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getPriority() {

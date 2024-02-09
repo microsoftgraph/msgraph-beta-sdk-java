@@ -18,7 +18,7 @@ public class PlannerTaskCompletionRequirementDetails implements AdditionalDataHo
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new PlannerTaskCompletionRequirementDetails and sets the default values.
+     * Instantiates a new {@link PlannerTaskCompletionRequirementDetails} and sets the default values.
      */
     public PlannerTaskCompletionRequirementDetails() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class PlannerTaskCompletionRequirementDetails implements AdditionalDataHo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PlannerTaskCompletionRequirementDetails
+     * @return a {@link PlannerTaskCompletionRequirementDetails}
      */
     @jakarta.annotation.Nonnull
     public static PlannerTaskCompletionRequirementDetails createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class PlannerTaskCompletionRequirementDetails implements AdditionalDataHo
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class PlannerTaskCompletionRequirementDetails implements AdditionalDataHo
     }
     /**
      * Gets the approvalRequirement property value. The approvalRequirement property
-     * @return a PlannerApprovalRequirement
+     * @return a {@link PlannerApprovalRequirement}
      */
     @jakarta.annotation.Nullable
     public PlannerApprovalRequirement getApprovalRequirement() {
@@ -57,7 +57,7 @@ public class PlannerTaskCompletionRequirementDetails implements AdditionalDataHo
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -65,7 +65,7 @@ public class PlannerTaskCompletionRequirementDetails implements AdditionalDataHo
     }
     /**
      * Gets the checklistRequirement property value. Information about the requirements for completing the checklist.
-     * @return a PlannerChecklistRequirement
+     * @return a {@link PlannerChecklistRequirement}
      */
     @jakarta.annotation.Nullable
     public PlannerChecklistRequirement getChecklistRequirement() {
@@ -73,7 +73,7 @@ public class PlannerTaskCompletionRequirementDetails implements AdditionalDataHo
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -86,7 +86,7 @@ public class PlannerTaskCompletionRequirementDetails implements AdditionalDataHo
     }
     /**
      * Gets the formsRequirement property value. The formsRequirement property
-     * @return a PlannerFormsRequirement
+     * @return a {@link PlannerFormsRequirement}
      */
     @jakarta.annotation.Nullable
     public PlannerFormsRequirement getFormsRequirement() {
@@ -94,7 +94,7 @@ public class PlannerTaskCompletionRequirementDetails implements AdditionalDataHo
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {

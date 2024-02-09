@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ProvisioningObjectSummary extends Entity implements Parsable {
     /**
-     * Instantiates a new ProvisioningObjectSummary and sets the default values.
+     * Instantiates a new {@link ProvisioningObjectSummary} and sets the default values.
      */
     public ProvisioningObjectSummary() {
         super();
@@ -18,7 +18,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ProvisioningObjectSummary
+     * @return a {@link ProvisioningObjectSummary}
      */
     @jakarta.annotation.Nonnull
     public static ProvisioningObjectSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
     }
     /**
      * Gets the action property value. The action property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAction() {
@@ -35,7 +35,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
     }
     /**
      * Gets the activityDateTime property value. Represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.  Supports $filter (eq, gt, lt) and orderby.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getActivityDateTime() {
@@ -43,7 +43,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
     }
     /**
      * Gets the changeId property value. Unique ID of this change in this cycle. Supports $filter (eq, contains).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getChangeId() {
@@ -51,7 +51,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
     }
     /**
      * Gets the cycleId property value. Unique ID per job iteration. Supports $filter (eq, contains).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCycleId() {
@@ -59,7 +59,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
     }
     /**
      * Gets the durationInMilliseconds property value. Indicates how long this provisioning action took to finish. Measured in milliseconds. Supports $filter (eq, gt, lt).
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getDurationInMilliseconds() {
@@ -67,7 +67,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -94,7 +94,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
     }
     /**
      * Gets the initiatedBy property value. Details of who initiated this provisioning. Supports $filter (eq, contains).
-     * @return a Initiator
+     * @return a {@link Initiator}
      */
     @jakarta.annotation.Nullable
     public Initiator getInitiatedBy() {
@@ -102,7 +102,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
     }
     /**
      * Gets the jobId property value. The unique ID for the whole provisioning job. Supports $filter (eq, contains).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getJobId() {
@@ -110,7 +110,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
     }
     /**
      * Gets the modifiedProperties property value. Details of each property that was modified in this provisioning action on this object.
-     * @return a java.util.List<ModifiedProperty>
+     * @return a {@link java.util.List<ModifiedProperty>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ModifiedProperty> getModifiedProperties() {
@@ -118,7 +118,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
     }
     /**
      * Gets the provisioningAction property value. Indicates the activity name or the operation name. Possible values are: create, update, delete, stageddelete, disable, other and unknownFutureValue. For a list of activities logged, refer to Microsoft Entra activity list. Supports $filter (eq, contains).
-     * @return a ProvisioningAction
+     * @return a {@link ProvisioningAction}
      */
     @jakarta.annotation.Nullable
     public ProvisioningAction getProvisioningAction() {
@@ -126,7 +126,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
     }
     /**
      * Gets the provisioningStatusInfo property value. Details of provisioning status. Supports $filter (eq, contains) for status.
-     * @return a ProvisioningStatusInfo
+     * @return a {@link ProvisioningStatusInfo}
      */
     @jakarta.annotation.Nullable
     public ProvisioningStatusInfo getProvisioningStatusInfo() {
@@ -134,7 +134,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
     }
     /**
      * Gets the provisioningSteps property value. Details of each step in provisioning.
-     * @return a java.util.List<ProvisioningStep>
+     * @return a {@link java.util.List<ProvisioningStep>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ProvisioningStep> getProvisioningSteps() {
@@ -142,7 +142,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
     }
     /**
      * Gets the servicePrincipal property value. Represents the service principal used for provisioning. Supports $filter (eq) for id and name.
-     * @return a ProvisioningServicePrincipal
+     * @return a {@link ProvisioningServicePrincipal}
      */
     @jakarta.annotation.Nullable
     public ProvisioningServicePrincipal getServicePrincipal() {
@@ -150,7 +150,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
     }
     /**
      * Gets the sourceIdentity property value. Details of source object being provisioned. Supports $filter (eq, contains) for identityType, id, and displayName.
-     * @return a ProvisionedIdentity
+     * @return a {@link ProvisionedIdentity}
      */
     @jakarta.annotation.Nullable
     public ProvisionedIdentity getSourceIdentity() {
@@ -158,7 +158,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
     }
     /**
      * Gets the sourceSystem property value. Details of source system of the object being provisioned. Supports $filter (eq, contains) for displayName.
-     * @return a ProvisioningSystem
+     * @return a {@link ProvisioningSystem}
      */
     @jakarta.annotation.Nullable
     public ProvisioningSystem getSourceSystem() {
@@ -166,7 +166,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
     }
     /**
      * Gets the statusInfo property value. The statusInfo property
-     * @return a StatusBase
+     * @return a {@link StatusBase}
      */
     @jakarta.annotation.Nullable
     public StatusBase getStatusInfo() {
@@ -174,7 +174,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
     }
     /**
      * Gets the targetIdentity property value. Details of target object being provisioned. Supports $filter (eq, contains) for identityType, id, and displayName.
-     * @return a ProvisionedIdentity
+     * @return a {@link ProvisionedIdentity}
      */
     @jakarta.annotation.Nullable
     public ProvisionedIdentity getTargetIdentity() {
@@ -182,7 +182,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
     }
     /**
      * Gets the targetSystem property value. Details of target system of the object being provisioned. Supports $filter (eq, contains) for displayName.
-     * @return a ProvisioningSystem
+     * @return a {@link ProvisioningSystem}
      */
     @jakarta.annotation.Nullable
     public ProvisioningSystem getTargetSystem() {
@@ -190,7 +190,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
     }
     /**
      * Gets the tenantId property value. Unique Microsoft Entra tenant ID. Supports $filter (eq, contains).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {

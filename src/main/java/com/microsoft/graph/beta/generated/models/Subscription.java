@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Subscription extends Entity implements Parsable {
     /**
-     * Instantiates a new Subscription and sets the default values.
+     * Instantiates a new {@link Subscription} and sets the default values.
      */
     public Subscription() {
         super();
@@ -18,7 +18,7 @@ public class Subscription extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Subscription
+     * @return a {@link Subscription}
      */
     @jakarta.annotation.Nonnull
     public static Subscription createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class Subscription extends Entity implements Parsable {
     }
     /**
      * Gets the applicationId property value. Optional. Identifier of the application used to create the subscription. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getApplicationId() {
@@ -35,7 +35,7 @@ public class Subscription extends Entity implements Parsable {
     }
     /**
      * Gets the changeType property value. Required. Indicates the type of change in the subscribed resource that will raise a change notification. The supported values are: created, updated, deleted. Multiple values can be combined using a comma-separated list. Note:  Drive root item and list change notifications support only the updated changeType. User and group change notifications support updated and deleted changeType. Use updated to receive notifications when user or group is created, updated or soft deleted.  Use deleted to receive notifications when user or group is permanently deleted.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getChangeType() {
@@ -43,7 +43,7 @@ public class Subscription extends Entity implements Parsable {
     }
     /**
      * Gets the clientState property value. Optional. Specifies the value of the clientState property sent by the service in each change notification. The maximum length is 255 characters. The client can check that the change notification came from the service by comparing the value of the clientState property sent with the subscription with the value of the clientState property received with each change notification.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getClientState() {
@@ -51,7 +51,7 @@ public class Subscription extends Entity implements Parsable {
     }
     /**
      * Gets the creatorId property value. Optional. Identifier of the user or service principal that created the subscription. If the app used delegated permissions to create the subscription, this field contains the ID of the signed-in user the app called on behalf of. If the app used application permissions, this field contains the ID of the service principal corresponding to the app. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCreatorId() {
@@ -59,7 +59,7 @@ public class Subscription extends Entity implements Parsable {
     }
     /**
      * Gets the encryptionCertificate property value. Optional. A base64-encoded representation of a certificate with a public key used to encrypt resource data in change notifications. Optional but required when includeResourceData is true.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getEncryptionCertificate() {
@@ -67,7 +67,7 @@ public class Subscription extends Entity implements Parsable {
     }
     /**
      * Gets the encryptionCertificateId property value. Optional. A custom app-provided identifier to help identify the certificate needed to decrypt resource data. Required when includeResourceData is true.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getEncryptionCertificateId() {
@@ -75,7 +75,7 @@ public class Subscription extends Entity implements Parsable {
     }
     /**
      * Gets the expirationDateTime property value. Required. Specifies the date and time when the webhook subscription expires. The time is in UTC, and can be an amount of time from subscription creation that varies for the resource subscribed to. For the maximum supported subscription length of time, see the table below.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getExpirationDateTime() {
@@ -83,7 +83,7 @@ public class Subscription extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -107,7 +107,7 @@ public class Subscription extends Entity implements Parsable {
     }
     /**
      * Gets the includeResourceData property value. Optional. When set to true, change notifications include resource data (such as content of a chat message).
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIncludeResourceData() {
@@ -115,7 +115,7 @@ public class Subscription extends Entity implements Parsable {
     }
     /**
      * Gets the latestSupportedTlsVersion property value. Optional. Specifies the latest version of Transport Layer Security (TLS) that the notification endpoint, specified by notificationUrl, supports. The possible values are: v10, v11, v12, v13. For subscribers whose notification endpoint supports a version lower than the currently recommended version (TLS 1.2), specifying this property by a set timeline allows them to temporarily use their deprecated version of TLS before completing their upgrade to TLS 1.2. For these subscribers, not setting this property per the timeline would result in subscription operations failing. For subscribers whose notification endpoint already supports TLS 1.2, setting this property is optional. In such cases, Microsoft Graph defaults the property to v1_2.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getLatestSupportedTlsVersion() {
@@ -123,7 +123,7 @@ public class Subscription extends Entity implements Parsable {
     }
     /**
      * Gets the lifecycleNotificationUrl property value. Required for Teams resources if the expirationDateTime value is more than 1 hour from now; optional otherwise. The URL of the endpoint that receives lifecycle notifications, including subscriptionRemoved, reauthorizationRequired, and missed notifications. This URL must make use of the HTTPS protocol. For more information, see Reduce missing subscriptions and change notifications.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getLifecycleNotificationUrl() {
@@ -131,7 +131,7 @@ public class Subscription extends Entity implements Parsable {
     }
     /**
      * Gets the notificationContentType property value. Optional. Desired content-type for Microsoft Graph change notifications for supported resource types. The default content-type is application/json.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getNotificationContentType() {
@@ -139,7 +139,7 @@ public class Subscription extends Entity implements Parsable {
     }
     /**
      * Gets the notificationQueryOptions property value. Optional.  OData query options for specifying the value for the targeting resource. Clients receive notifications when the resource reaches the state matching the query options provided here. With this new property in the subscription creation payload along with all existing properties, Webhooks will deliver notifications whenever a resource reaches the desired state mentioned in the notificationQueryOptions property. For example, when the print job is completed or when a print job resource isFetchable property value becomes true etc.  Supported only for Universal Print Service. For more information, see Subscribe to change notifications from cloud printing APIs using Microsoft Graph.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getNotificationQueryOptions() {
@@ -147,7 +147,7 @@ public class Subscription extends Entity implements Parsable {
     }
     /**
      * Gets the notificationUrl property value. Required. The URL of the endpoint that receives the change notifications. This URL must make use of the HTTPS protocol. Any query string parameter included in the notificationUrl property will be included in the HTTP POST request when Microsoft Graph sends the change notifications.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getNotificationUrl() {
@@ -155,7 +155,7 @@ public class Subscription extends Entity implements Parsable {
     }
     /**
      * Gets the notificationUrlAppId property value. Optional. The app ID that the subscription service can use to generate the validation token. This allows the client to validate the authenticity of the notification received.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getNotificationUrlAppId() {
@@ -163,7 +163,7 @@ public class Subscription extends Entity implements Parsable {
     }
     /**
      * Gets the resource property value. Required. Specifies the resource that will be monitored for changes. Do not include the base URL (https://graph.microsoft.com/beta/). See the possible resource path values for each supported resource.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getResource() {

@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementConfigurationCategory extends Entity implements Parsable {
     /**
-     * Instantiates a new DeviceManagementConfigurationCategory and sets the default values.
+     * Instantiates a new {@link DeviceManagementConfigurationCategory} and sets the default values.
      */
     public DeviceManagementConfigurationCategory() {
         super();
@@ -21,7 +21,7 @@ public class DeviceManagementConfigurationCategory extends Entity implements Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceManagementConfigurationCategory
+     * @return a {@link DeviceManagementConfigurationCategory}
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementConfigurationCategory createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class DeviceManagementConfigurationCategory extends Entity implements Par
     }
     /**
      * Gets the categoryDescription property value. Description of the category header in policy summary.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCategoryDescription() {
@@ -38,7 +38,7 @@ public class DeviceManagementConfigurationCategory extends Entity implements Par
     }
     /**
      * Gets the childCategoryIds property value. List of child ids of the category.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getChildCategoryIds() {
@@ -46,7 +46,7 @@ public class DeviceManagementConfigurationCategory extends Entity implements Par
     }
     /**
      * Gets the description property value. Description of the category. For example: Display
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -54,7 +54,7 @@ public class DeviceManagementConfigurationCategory extends Entity implements Par
     }
     /**
      * Gets the displayName property value. Name of the category. For example: Device Lock
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -62,7 +62,7 @@ public class DeviceManagementConfigurationCategory extends Entity implements Par
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -82,7 +82,7 @@ public class DeviceManagementConfigurationCategory extends Entity implements Par
     }
     /**
      * Gets the helpText property value. Help text of the category. Give more details of the category.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getHelpText() {
@@ -90,7 +90,7 @@ public class DeviceManagementConfigurationCategory extends Entity implements Par
     }
     /**
      * Gets the name property value. Name of the item
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -98,7 +98,7 @@ public class DeviceManagementConfigurationCategory extends Entity implements Par
     }
     /**
      * Gets the parentCategoryId property value. Direct parent id of the category. If the category is the root, the parent id is same as its id.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getParentCategoryId() {
@@ -106,7 +106,7 @@ public class DeviceManagementConfigurationCategory extends Entity implements Par
     }
     /**
      * Gets the platforms property value. Supported platform types.
-     * @return a EnumSet<DeviceManagementConfigurationPlatforms>
+     * @return a {@link EnumSet<DeviceManagementConfigurationPlatforms>}
      */
     @jakarta.annotation.Nullable
     public EnumSet<DeviceManagementConfigurationPlatforms> getPlatforms() {
@@ -114,7 +114,7 @@ public class DeviceManagementConfigurationCategory extends Entity implements Par
     }
     /**
      * Gets the rootCategoryId property value. Root id of the category.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRootCategoryId() {
@@ -122,7 +122,7 @@ public class DeviceManagementConfigurationCategory extends Entity implements Par
     }
     /**
      * Gets the settingUsage property value. Supported setting types
-     * @return a EnumSet<DeviceManagementConfigurationSettingUsage>
+     * @return a {@link EnumSet<DeviceManagementConfigurationSettingUsage>}
      */
     @jakarta.annotation.Nullable
     public EnumSet<DeviceManagementConfigurationSettingUsage> getSettingUsage() {
@@ -130,7 +130,7 @@ public class DeviceManagementConfigurationCategory extends Entity implements Par
     }
     /**
      * Gets the technologies property value. Describes which technology this setting can be deployed with
-     * @return a EnumSet<DeviceManagementConfigurationTechnologies>
+     * @return a {@link EnumSet<DeviceManagementConfigurationTechnologies>}
      */
     @jakarta.annotation.Nullable
     public EnumSet<DeviceManagementConfigurationTechnologies> getTechnologies() {

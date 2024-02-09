@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserPFXCertificate extends Entity implements Parsable {
     /**
-     * Instantiates a new UserPFXCertificate and sets the default values.
+     * Instantiates a new {@link UserPFXCertificate} and sets the default values.
      */
     public UserPFXCertificate() {
         super();
@@ -21,7 +21,7 @@ public class UserPFXCertificate extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserPFXCertificate
+     * @return a {@link UserPFXCertificate}
      */
     @jakarta.annotation.Nonnull
     public static UserPFXCertificate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class UserPFXCertificate extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. Date/time when this PFX certificate was imported.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -38,7 +38,7 @@ public class UserPFXCertificate extends Entity implements Parsable {
     }
     /**
      * Gets the encryptedPfxBlob property value. Encrypted PFX blob.
-     * @return a byte[]
+     * @return a {@link byte[]}
      */
     @jakarta.annotation.Nullable
     public byte[] getEncryptedPfxBlob() {
@@ -46,7 +46,7 @@ public class UserPFXCertificate extends Entity implements Parsable {
     }
     /**
      * Gets the encryptedPfxPassword property value. Encrypted PFX password.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getEncryptedPfxPassword() {
@@ -54,7 +54,7 @@ public class UserPFXCertificate extends Entity implements Parsable {
     }
     /**
      * Gets the expirationDateTime property value. Certificate's validity expiration date/time.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getExpirationDateTime() {
@@ -62,7 +62,7 @@ public class UserPFXCertificate extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -83,7 +83,7 @@ public class UserPFXCertificate extends Entity implements Parsable {
     }
     /**
      * Gets the intendedPurpose property value. Supported values for the intended purpose of a user PFX certificate.
-     * @return a UserPfxIntendedPurpose
+     * @return a {@link UserPfxIntendedPurpose}
      */
     @jakarta.annotation.Nullable
     public UserPfxIntendedPurpose getIntendedPurpose() {
@@ -91,7 +91,7 @@ public class UserPFXCertificate extends Entity implements Parsable {
     }
     /**
      * Gets the keyName property value. Name of the key (within the provider) used to encrypt the blob.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getKeyName() {
@@ -99,7 +99,7 @@ public class UserPFXCertificate extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. Date/time when this PFX certificate was last modified.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -107,7 +107,7 @@ public class UserPFXCertificate extends Entity implements Parsable {
     }
     /**
      * Gets the paddingScheme property value. Supported values for the padding scheme used by encryption provider.
-     * @return a UserPfxPaddingScheme
+     * @return a {@link UserPfxPaddingScheme}
      */
     @jakarta.annotation.Nullable
     public UserPfxPaddingScheme getPaddingScheme() {
@@ -115,7 +115,7 @@ public class UserPFXCertificate extends Entity implements Parsable {
     }
     /**
      * Gets the providerName property value. Crypto provider used to encrypt this blob.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getProviderName() {
@@ -123,7 +123,7 @@ public class UserPFXCertificate extends Entity implements Parsable {
     }
     /**
      * Gets the startDateTime property value. Certificate's validity start date/time.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
@@ -131,7 +131,7 @@ public class UserPFXCertificate extends Entity implements Parsable {
     }
     /**
      * Gets the thumbprint property value. SHA-1 thumbprint of the PFX certificate.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getThumbprint() {
@@ -139,7 +139,7 @@ public class UserPFXCertificate extends Entity implements Parsable {
     }
     /**
      * Gets the userPrincipalName property value. User Principal Name of the PFX certificate.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {

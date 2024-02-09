@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnrollmentConfiguration implements Parsable {
     /**
-     * Instantiates a new Windows10EnrollmentCompletionPageConfiguration and sets the default values.
+     * Instantiates a new {@link Windows10EnrollmentCompletionPageConfiguration} and sets the default values.
      */
     public Windows10EnrollmentCompletionPageConfiguration() {
         super();
@@ -21,7 +21,7 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Windows10EnrollmentCompletionPageConfiguration
+     * @return a {@link Windows10EnrollmentCompletionPageConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static Windows10EnrollmentCompletionPageConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
     }
     /**
      * Gets the allowDeviceResetOnInstallFailure property value. Allow or block device reset on installation failure
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowDeviceResetOnInstallFailure() {
@@ -38,7 +38,7 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
     }
     /**
      * Gets the allowDeviceUseOnInstallFailure property value. Allow the user to continue using the device on installation failure
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowDeviceUseOnInstallFailure() {
@@ -46,7 +46,7 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
     }
     /**
      * Gets the allowLogCollectionOnInstallFailure property value. Allow or block log collection on installation failure
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowLogCollectionOnInstallFailure() {
@@ -54,7 +54,7 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
     }
     /**
      * Gets the allowNonBlockingAppInstallation property value. Install all required apps as non blocking apps during white glove
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowNonBlockingAppInstallation() {
@@ -62,7 +62,7 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
     }
     /**
      * Gets the blockDeviceSetupRetryByUser property value. Allow the user to retry the setup on installation failure
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getBlockDeviceSetupRetryByUser() {
@@ -70,7 +70,7 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
     }
     /**
      * Gets the customErrorMessage property value. Set custom error message to show upon installation failure
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCustomErrorMessage() {
@@ -78,7 +78,7 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
     }
     /**
      * Gets the disableUserStatusTrackingAfterFirstUser property value. Only show installation progress for first user post enrollment
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDisableUserStatusTrackingAfterFirstUser() {
@@ -86,7 +86,7 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -107,7 +107,7 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
     }
     /**
      * Gets the installProgressTimeoutInMinutes property value. Set installation progress timeout in minutes
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getInstallProgressTimeoutInMinutes() {
@@ -115,7 +115,7 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
     }
     /**
      * Gets the installQualityUpdates property value. Allows quality updates installation during OOBE
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getInstallQualityUpdates() {
@@ -123,7 +123,7 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
     }
     /**
      * Gets the selectedMobileAppIds property value. Selected applications to track the installation status
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSelectedMobileAppIds() {
@@ -131,7 +131,7 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
     }
     /**
      * Gets the showInstallationProgress property value. Show or hide installation progress to user
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getShowInstallationProgress() {
@@ -139,7 +139,7 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
     }
     /**
      * Gets the trackInstallProgressForAutopilotOnly property value. Only show installation progress for Autopilot enrollment scenarios
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getTrackInstallProgressForAutopilotOnly() {

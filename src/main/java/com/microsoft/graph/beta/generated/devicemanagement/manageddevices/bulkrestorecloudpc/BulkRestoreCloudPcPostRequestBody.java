@@ -20,7 +20,7 @@ public class BulkRestoreCloudPcPostRequestBody implements AdditionalDataHolder, 
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new BulkRestoreCloudPcPostRequestBody and sets the default values.
+     * Instantiates a new {@link BulkRestoreCloudPcPostRequestBody} and sets the default values.
      */
     public BulkRestoreCloudPcPostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -29,7 +29,7 @@ public class BulkRestoreCloudPcPostRequestBody implements AdditionalDataHolder, 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a BulkRestoreCloudPcPostRequestBody
+     * @return a {@link BulkRestoreCloudPcPostRequestBody}
      */
     @jakarta.annotation.Nonnull
     public static BulkRestoreCloudPcPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,7 +38,7 @@ public class BulkRestoreCloudPcPostRequestBody implements AdditionalDataHolder, 
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -51,7 +51,7 @@ public class BulkRestoreCloudPcPostRequestBody implements AdditionalDataHolder, 
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -59,7 +59,7 @@ public class BulkRestoreCloudPcPostRequestBody implements AdditionalDataHolder, 
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -71,7 +71,7 @@ public class BulkRestoreCloudPcPostRequestBody implements AdditionalDataHolder, 
     }
     /**
      * Gets the managedDeviceIds property value. The managedDeviceIds property
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getManagedDeviceIds() {
@@ -79,7 +79,7 @@ public class BulkRestoreCloudPcPostRequestBody implements AdditionalDataHolder, 
     }
     /**
      * Gets the restorePointDateTime property value. The restorePointDateTime property
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getRestorePointDateTime() {
@@ -87,7 +87,7 @@ public class BulkRestoreCloudPcPostRequestBody implements AdditionalDataHolder, 
     }
     /**
      * Gets the timeRange property value. The timeRange property
-     * @return a RestoreTimeRange
+     * @return a {@link RestoreTimeRange}
      */
     @jakarta.annotation.Nullable
     public RestoreTimeRange getTimeRange() {

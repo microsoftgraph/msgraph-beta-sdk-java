@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration implements Parsable {
     /**
-     * Instantiates a new MacOSGeneralDeviceConfiguration and sets the default values.
+     * Instantiates a new {@link MacOSGeneralDeviceConfiguration} and sets the default values.
      */
     public MacOSGeneralDeviceConfiguration() {
         super();
@@ -22,7 +22,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MacOSGeneralDeviceConfiguration
+     * @return a {@link MacOSGeneralDeviceConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static MacOSGeneralDeviceConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -31,7 +31,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the activationLockWhenSupervisedAllowed property value. When TRUE, activation lock is allowed when the devices is in the supervised mode. When FALSE, activation lock is not allowed. Default is false.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getActivationLockWhenSupervisedAllowed() {
@@ -39,7 +39,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the addingGameCenterFriendsBlocked property value. Yes prevents users from adding friends to Game Center. Available for devices running macOS versions 10.13 and later.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAddingGameCenterFriendsBlocked() {
@@ -47,7 +47,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the airDropBlocked property value. Indicates whether or not to allow AirDrop.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAirDropBlocked() {
@@ -55,7 +55,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the appleWatchBlockAutoUnlock property value. Indicates whether or to block users from unlocking their Mac with Apple Watch.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAppleWatchBlockAutoUnlock() {
@@ -63,7 +63,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the cameraBlocked property value. Indicates whether or not to block the user from accessing the camera of the device.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getCameraBlocked() {
@@ -71,7 +71,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the classroomAppBlockRemoteScreenObservation property value. Indicates whether or not to allow remote screen observation by Classroom app. Requires MDM enrollment via Apple School Manager or Apple Business Manager.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getClassroomAppBlockRemoteScreenObservation() {
@@ -79,7 +79,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the classroomAppForceUnpromptedScreenObservation property value. Indicates whether or not to automatically give permission to the teacher of a managed course on the Classroom app to view a student's screen without prompting. Requires MDM enrollment via Apple School Manager or Apple Business Manager.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getClassroomAppForceUnpromptedScreenObservation() {
@@ -87,7 +87,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the classroomForceAutomaticallyJoinClasses property value. Indicates whether or not to automatically give permission to the teacher's requests, without prompting the student. Requires MDM enrollment via Apple School Manager or Apple Business Manager.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getClassroomForceAutomaticallyJoinClasses() {
@@ -95,7 +95,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the classroomForceRequestPermissionToLeaveClasses property value. Indicates whether a student enrolled in an unmanaged course via Classroom will be required to request permission from the teacher when attempting to leave the course. Requires MDM enrollment via Apple School Manager or Apple Business Manager.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getClassroomForceRequestPermissionToLeaveClasses() {
@@ -103,7 +103,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the classroomForceUnpromptedAppAndDeviceLock property value. Indicates whether or not to allow the teacher to lock apps or the device without prompting the student. Requires MDM enrollment via Apple School Manager or Apple Business Manager.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getClassroomForceUnpromptedAppAndDeviceLock() {
@@ -111,7 +111,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the compliantAppListType property value. Possible values of the compliance app list.
-     * @return a AppListType
+     * @return a {@link AppListType}
      */
     @jakarta.annotation.Nullable
     public AppListType getCompliantAppListType() {
@@ -119,7 +119,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the compliantAppsList property value. List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements.
-     * @return a java.util.List<AppListItem>
+     * @return a {@link java.util.List<AppListItem>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AppListItem> getCompliantAppsList() {
@@ -127,7 +127,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the contentCachingBlocked property value. Indicates whether or not to allow content caching.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getContentCachingBlocked() {
@@ -135,7 +135,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the definitionLookupBlocked property value. Indicates whether or not to block definition lookup.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDefinitionLookupBlocked() {
@@ -143,7 +143,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the emailInDomainSuffixes property value. An email address lacking a suffix that matches any of these strings will be considered out-of-domain.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getEmailInDomainSuffixes() {
@@ -151,7 +151,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the eraseContentAndSettingsBlocked property value. TRUE disables the reset option on supervised devices. FALSE enables the reset option on supervised devices. Available for devices running macOS versions 12.0 and later.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getEraseContentAndSettingsBlocked() {
@@ -159,7 +159,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -228,7 +228,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the gameCenterBlocked property value. Yes disables Game Center, and the Game Center icon is removed from the Home screen. Available for devices running macOS versions 10.13 and later.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getGameCenterBlocked() {
@@ -236,7 +236,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the iCloudBlockActivityContinuation property value. Indicates whether or not to block the user from continuing work that they started on a MacOS device on another iOS or MacOS device (MacOS 10.15 or later).
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getICloudBlockActivityContinuation() {
@@ -244,7 +244,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the iCloudBlockAddressBook property value. Indicates whether or not to block iCloud from syncing contacts.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getICloudBlockAddressBook() {
@@ -252,7 +252,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the iCloudBlockBookmarks property value. Indicates whether or not to block iCloud from syncing bookmarks.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getICloudBlockBookmarks() {
@@ -260,7 +260,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the iCloudBlockCalendar property value. Indicates whether or not to block iCloud from syncing calendars.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getICloudBlockCalendar() {
@@ -268,7 +268,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the iCloudBlockDocumentSync property value. Indicates whether or not to block iCloud document sync.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getICloudBlockDocumentSync() {
@@ -276,7 +276,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the iCloudBlockMail property value. Indicates whether or not to block iCloud from syncing mail.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getICloudBlockMail() {
@@ -284,7 +284,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the iCloudBlockNotes property value. Indicates whether or not to block iCloud from syncing notes.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getICloudBlockNotes() {
@@ -292,7 +292,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the iCloudBlockPhotoLibrary property value. Indicates whether or not to block iCloud Photo Library.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getICloudBlockPhotoLibrary() {
@@ -300,7 +300,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the iCloudBlockReminders property value. Indicates whether or not to block iCloud from syncing reminders.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getICloudBlockReminders() {
@@ -308,7 +308,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the iCloudDesktopAndDocumentsBlocked property value. When TRUE the synchronization of cloud desktop and documents is blocked. When FALSE, synchronization of the cloud desktop and documents are allowed. Available for devices running macOS 10.12.4 and later.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getICloudDesktopAndDocumentsBlocked() {
@@ -316,7 +316,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the iCloudPrivateRelayBlocked property value. iCloud private relay is an iCloud+ service that prevents networks and servers from monitoring a person's activity across the internet. By blocking iCloud private relay, Apple will not encrypt the traffic leaving the device. Available for devices running macOS 12 and later.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getICloudPrivateRelayBlocked() {
@@ -324,7 +324,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the iTunesBlockFileSharing property value. Indicates whether or not to block files from being transferred using iTunes.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getITunesBlockFileSharing() {
@@ -332,7 +332,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the iTunesBlockMusicService property value. Indicates whether or not to block Music service and revert Music app to classic mode.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getITunesBlockMusicService() {
@@ -340,7 +340,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the keyboardBlockDictation property value. Indicates whether or not to block the user from using dictation input.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getKeyboardBlockDictation() {
@@ -348,7 +348,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the keychainBlockCloudSync property value. Indicates whether or not iCloud keychain synchronization is blocked (macOS 10.12 and later).
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getKeychainBlockCloudSync() {
@@ -356,7 +356,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the multiplayerGamingBlocked property value. TRUE prevents multiplayer gaming when using Game Center. FALSE allows multiplayer gaming when using Game Center. Available for devices running macOS versions 10.13 and later.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getMultiplayerGamingBlocked() {
@@ -364,7 +364,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the passwordBlockAirDropSharing property value. Indicates whether or not to block sharing passwords with the AirDrop passwords feature.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getPasswordBlockAirDropSharing() {
@@ -372,7 +372,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the passwordBlockAutoFill property value. Indicates whether or not to block the AutoFill Passwords feature.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getPasswordBlockAutoFill() {
@@ -380,7 +380,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the passwordBlockFingerprintUnlock property value. Indicates whether or not to block fingerprint unlock.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getPasswordBlockFingerprintUnlock() {
@@ -388,7 +388,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the passwordBlockModification property value. Indicates whether or not to allow passcode modification.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getPasswordBlockModification() {
@@ -396,7 +396,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the passwordBlockProximityRequests property value. Indicates whether or not to block requesting passwords from nearby devices.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getPasswordBlockProximityRequests() {
@@ -404,7 +404,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the passwordBlockSimple property value. Block simple passwords.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getPasswordBlockSimple() {
@@ -412,7 +412,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the passwordExpirationDays property value. Number of days before the password expires.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordExpirationDays() {
@@ -420,7 +420,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the passwordMaximumAttemptCount property value. The number of allowed failed attempts to enter the passcode at the device's lock screen. Valid values 2 to 11
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordMaximumAttemptCount() {
@@ -428,7 +428,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the passwordMinimumCharacterSetCount property value. Number of character sets a password must contain. Valid values 0 to 4
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordMinimumCharacterSetCount() {
@@ -436,7 +436,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the passwordMinimumLength property value. Minimum length of passwords.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordMinimumLength() {
@@ -444,7 +444,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the passwordMinutesOfInactivityBeforeLock property value. Minutes of inactivity required before a password is required.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordMinutesOfInactivityBeforeLock() {
@@ -452,7 +452,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the passwordMinutesOfInactivityBeforeScreenTimeout property value. Minutes of inactivity required before the screen times out.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordMinutesOfInactivityBeforeScreenTimeout() {
@@ -460,7 +460,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the passwordMinutesUntilFailedLoginReset property value. The number of minutes before the login is reset after the maximum number of unsuccessful login attempts is reached.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordMinutesUntilFailedLoginReset() {
@@ -468,7 +468,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the passwordPreviousPasswordBlockCount property value. Number of previous passwords to block.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordPreviousPasswordBlockCount() {
@@ -476,7 +476,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the passwordRequired property value. Whether or not to require a password.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getPasswordRequired() {
@@ -484,7 +484,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the passwordRequiredType property value. Possible values of required passwords.
-     * @return a RequiredPasswordType
+     * @return a {@link RequiredPasswordType}
      */
     @jakarta.annotation.Nullable
     public RequiredPasswordType getPasswordRequiredType() {
@@ -492,7 +492,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the privacyAccessControls property value. List of privacy preference policy controls. This collection can contain a maximum of 10000 elements.
-     * @return a java.util.List<MacOSPrivacyAccessControlItem>
+     * @return a {@link java.util.List<MacOSPrivacyAccessControlItem>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<MacOSPrivacyAccessControlItem> getPrivacyAccessControls() {
@@ -500,7 +500,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the safariBlockAutofill property value. Indicates whether or not to block the user from using Auto fill in Safari.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getSafariBlockAutofill() {
@@ -508,7 +508,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the screenCaptureBlocked property value. Indicates whether or not to block the user from taking Screenshots.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getScreenCaptureBlocked() {
@@ -516,7 +516,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the softwareUpdateMajorOSDeferredInstallDelayInDays property value. Specify the number of days (1-90) to delay visibility of major OS software updates. Available for devices running macOS versions 11.3 and later. Valid values 0 to 90
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getSoftwareUpdateMajorOSDeferredInstallDelayInDays() {
@@ -524,7 +524,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the softwareUpdateMinorOSDeferredInstallDelayInDays property value. Specify the number of days (1-90) to delay visibility of minor OS software updates. Available for devices running macOS versions 11.3 and later. Valid values 0 to 90
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getSoftwareUpdateMinorOSDeferredInstallDelayInDays() {
@@ -532,7 +532,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the softwareUpdateNonOSDeferredInstallDelayInDays property value. Specify the number of days (1-90) to delay visibility of non-OS software updates. Available for devices running macOS versions 11.3 and later. Valid values 0 to 90
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getSoftwareUpdateNonOSDeferredInstallDelayInDays() {
@@ -540,7 +540,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the softwareUpdatesEnforcedDelayInDays property value. Sets how many days a software update will be delyed for a supervised device. Valid values 0 to 90
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getSoftwareUpdatesEnforcedDelayInDays() {
@@ -548,7 +548,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the spotlightBlockInternetResults property value. Indicates whether or not to block Spotlight from returning any results from an Internet search.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getSpotlightBlockInternetResults() {
@@ -556,7 +556,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the touchIdTimeoutInHours property value. Maximum hours after which the user must enter their password to unlock the device instead of using Touch ID. Available for devices running macOS 12 and later. Valid values 0 to 2147483647
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getTouchIdTimeoutInHours() {
@@ -564,7 +564,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the updateDelayPolicy property value. Determines whether to delay OS and/or app updates for macOS. Possible values are: none, delayOSUpdateVisibility, delayAppUpdateVisibility, unknownFutureValue, delayMajorOsUpdateVisibility.
-     * @return a EnumSet<MacOSSoftwareUpdateDelayPolicy>
+     * @return a {@link EnumSet<MacOSSoftwareUpdateDelayPolicy>}
      */
     @jakarta.annotation.Nullable
     public EnumSet<MacOSSoftwareUpdateDelayPolicy> getUpdateDelayPolicy() {
@@ -572,7 +572,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the wallpaperModificationBlocked property value. TRUE prevents the wallpaper from being changed. FALSE allows the wallpaper to be changed. Available for devices running macOS versions 10.13 and later.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getWallpaperModificationBlocked() {

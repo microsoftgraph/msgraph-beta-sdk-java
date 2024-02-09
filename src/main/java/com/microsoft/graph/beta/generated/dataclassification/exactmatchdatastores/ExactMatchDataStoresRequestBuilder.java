@@ -25,6 +25,7 @@ import java.util.Objects;
 public class ExactMatchDataStoresRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -33,7 +34,7 @@ public class ExactMatchDataStoresRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the exactMatchDataStores property of the microsoft.graph.dataClassificationService entity.
      * @param exactMatchDataStoreId The unique identifier of exactMatchDataStore
-     * @return a ExactMatchDataStoreItemRequestBuilder
+     * @return a {@link ExactMatchDataStoreItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ExactMatchDataStoreItemRequestBuilder byExactMatchDataStoreId(@jakarta.annotation.Nonnull final String exactMatchDataStoreId) {
@@ -43,7 +44,7 @@ public class ExactMatchDataStoresRequestBuilder extends BaseRequestBuilder {
         return new ExactMatchDataStoreItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new ExactMatchDataStoresRequestBuilder and sets the default values.
+     * Instantiates a new {@link ExactMatchDataStoresRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -51,7 +52,7 @@ public class ExactMatchDataStoresRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/dataClassification/exactMatchDataStores{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new ExactMatchDataStoresRequestBuilder and sets the default values.
+     * Instantiates a new {@link ExactMatchDataStoresRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -60,7 +61,8 @@ public class ExactMatchDataStoresRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get exactMatchDataStores from dataClassification
-     * @return a ExactMatchDataStoreCollectionResponse
+     * @return a {@link ExactMatchDataStoreCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public ExactMatchDataStoreCollectionResponse get() {
@@ -69,20 +71,21 @@ public class ExactMatchDataStoresRequestBuilder extends BaseRequestBuilder {
     /**
      * Get exactMatchDataStores from dataClassification
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a ExactMatchDataStoreCollectionResponse
+     * @return a {@link ExactMatchDataStoreCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public ExactMatchDataStoreCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, ExactMatchDataStoreCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to exactMatchDataStores for dataClassification
      * @param body The request body
-     * @return a ExactMatchDataStore
+     * @return a {@link ExactMatchDataStore}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public ExactMatchDataStore post(@jakarta.annotation.Nonnull final ExactMatchDataStore body) {
@@ -92,20 +95,20 @@ public class ExactMatchDataStoresRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to exactMatchDataStores for dataClassification
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a ExactMatchDataStore
+     * @return a {@link ExactMatchDataStore}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public ExactMatchDataStore post(@jakarta.annotation.Nonnull final ExactMatchDataStore body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, ExactMatchDataStore::createFromDiscriminatorValue);
     }
     /**
      * Get exactMatchDataStores from dataClassification
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -114,7 +117,7 @@ public class ExactMatchDataStoresRequestBuilder extends BaseRequestBuilder {
     /**
      * Get exactMatchDataStores from dataClassification
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -126,7 +129,7 @@ public class ExactMatchDataStoresRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to exactMatchDataStores for dataClassification
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ExactMatchDataStore body) {
@@ -136,12 +139,12 @@ public class ExactMatchDataStoresRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to exactMatchDataStores for dataClassification
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ExactMatchDataStore body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/dataClassification/exactMatchDataStores", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -150,7 +153,7 @@ public class ExactMatchDataStoresRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a ExactMatchDataStoresRequestBuilder
+     * @return a {@link ExactMatchDataStoresRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ExactMatchDataStoresRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -204,7 +207,7 @@ public class ExactMatchDataStoresRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

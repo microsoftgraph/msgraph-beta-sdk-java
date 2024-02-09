@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Participant extends Entity implements Parsable {
     /**
-     * Instantiates a new Participant and sets the default values.
+     * Instantiates a new {@link Participant} and sets the default values.
      */
     public Participant() {
         super();
@@ -17,7 +17,7 @@ public class Participant extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Participant
+     * @return a {@link Participant}
      */
     @jakarta.annotation.Nonnull
     public static Participant createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class Participant extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -46,7 +46,7 @@ public class Participant extends Entity implements Parsable {
     }
     /**
      * Gets the info property value. The info property
-     * @return a ParticipantInfo
+     * @return a {@link ParticipantInfo}
      */
     @jakarta.annotation.Nullable
     public ParticipantInfo getInfo() {
@@ -54,7 +54,7 @@ public class Participant extends Entity implements Parsable {
     }
     /**
      * Gets the isIdentityAnonymized property value. The isIdentityAnonymized property
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsIdentityAnonymized() {
@@ -62,7 +62,7 @@ public class Participant extends Entity implements Parsable {
     }
     /**
      * Gets the isInLobby property value. true if the participant is in lobby.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsInLobby() {
@@ -70,7 +70,7 @@ public class Participant extends Entity implements Parsable {
     }
     /**
      * Gets the isMuted property value. true if the participant is muted (client or server muted).
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsMuted() {
@@ -78,7 +78,7 @@ public class Participant extends Entity implements Parsable {
     }
     /**
      * Gets the mediaStreams property value. The list of media streams.
-     * @return a java.util.List<MediaStream>
+     * @return a {@link java.util.List<MediaStream>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<MediaStream> getMediaStreams() {
@@ -86,7 +86,7 @@ public class Participant extends Entity implements Parsable {
     }
     /**
      * Gets the metadata property value. A blob of data provided by the participant in the roster.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getMetadata() {
@@ -94,7 +94,7 @@ public class Participant extends Entity implements Parsable {
     }
     /**
      * Gets the preferredDisplayName property value. The participant's preferred display name that overrides the original display name.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPreferredDisplayName() {
@@ -102,7 +102,7 @@ public class Participant extends Entity implements Parsable {
     }
     /**
      * Gets the recordingInfo property value. Information on whether the participant has recording capability.
-     * @return a RecordingInfo
+     * @return a {@link RecordingInfo}
      */
     @jakarta.annotation.Nullable
     public RecordingInfo getRecordingInfo() {
@@ -110,7 +110,7 @@ public class Participant extends Entity implements Parsable {
     }
     /**
      * Gets the removedState property value. Indicates the reason why the participant was removed from the roster.
-     * @return a RemovedState
+     * @return a {@link RemovedState}
      */
     @jakarta.annotation.Nullable
     public RemovedState getRemovedState() {
@@ -118,7 +118,7 @@ public class Participant extends Entity implements Parsable {
     }
     /**
      * Gets the restrictedExperience property value. Indicates the reason or reasons why media content from this participant is restricted.
-     * @return a OnlineMeetingRestricted
+     * @return a {@link OnlineMeetingRestricted}
      */
     @jakarta.annotation.Nullable
     public OnlineMeetingRestricted getRestrictedExperience() {
@@ -126,7 +126,7 @@ public class Participant extends Entity implements Parsable {
     }
     /**
      * Gets the rosterSequenceNumber property value. Indicates the roster sequence number the participant was last updated in.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getRosterSequenceNumber() {

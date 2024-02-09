@@ -19,7 +19,7 @@ public class CloudPcOnPremisesConnectionHealthCheck implements AdditionalDataHol
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new CloudPcOnPremisesConnectionHealthCheck and sets the default values.
+     * Instantiates a new {@link CloudPcOnPremisesConnectionHealthCheck} and sets the default values.
      */
     public CloudPcOnPremisesConnectionHealthCheck() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class CloudPcOnPremisesConnectionHealthCheck implements AdditionalDataHol
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CloudPcOnPremisesConnectionHealthCheck
+     * @return a {@link CloudPcOnPremisesConnectionHealthCheck}
      */
     @jakarta.annotation.Nonnull
     public static CloudPcOnPremisesConnectionHealthCheck createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class CloudPcOnPremisesConnectionHealthCheck implements AdditionalDataHol
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -50,7 +50,7 @@ public class CloudPcOnPremisesConnectionHealthCheck implements AdditionalDataHol
     }
     /**
      * Gets the additionalDetail property value. The additionalDetail property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAdditionalDetail() {
@@ -58,7 +58,7 @@ public class CloudPcOnPremisesConnectionHealthCheck implements AdditionalDataHol
     }
     /**
      * Gets the additionalDetails property value. More details about the health check or the recommended action.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAdditionalDetails() {
@@ -66,7 +66,7 @@ public class CloudPcOnPremisesConnectionHealthCheck implements AdditionalDataHol
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -74,7 +74,7 @@ public class CloudPcOnPremisesConnectionHealthCheck implements AdditionalDataHol
     }
     /**
      * Gets the correlationId property value. The unique identifier of the health check item-related activities. This identifier can be useful in troubleshooting.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCorrelationId() {
@@ -82,7 +82,7 @@ public class CloudPcOnPremisesConnectionHealthCheck implements AdditionalDataHol
     }
     /**
      * Gets the displayName property value. The display name for this health check item.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -90,7 +90,7 @@ public class CloudPcOnPremisesConnectionHealthCheck implements AdditionalDataHol
     }
     /**
      * Gets the endDateTime property value. The end time of the health check item. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getEndDateTime() {
@@ -98,7 +98,7 @@ public class CloudPcOnPremisesConnectionHealthCheck implements AdditionalDataHol
     }
     /**
      * Gets the errorType property value. The type of error that occurred during this health check.
-     * @return a CloudPcOnPremisesConnectionHealthCheckErrorType
+     * @return a {@link CloudPcOnPremisesConnectionHealthCheckErrorType}
      */
     @jakarta.annotation.Nullable
     public CloudPcOnPremisesConnectionHealthCheckErrorType getErrorType() {
@@ -106,7 +106,7 @@ public class CloudPcOnPremisesConnectionHealthCheck implements AdditionalDataHol
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -125,7 +125,7 @@ public class CloudPcOnPremisesConnectionHealthCheck implements AdditionalDataHol
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -133,7 +133,7 @@ public class CloudPcOnPremisesConnectionHealthCheck implements AdditionalDataHol
     }
     /**
      * Gets the recommendedAction property value. The recommended action to fix the corresponding error.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRecommendedAction() {
@@ -141,7 +141,7 @@ public class CloudPcOnPremisesConnectionHealthCheck implements AdditionalDataHol
     }
     /**
      * Gets the startDateTime property value. The start time of the health check item. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
@@ -149,7 +149,7 @@ public class CloudPcOnPremisesConnectionHealthCheck implements AdditionalDataHol
     }
     /**
      * Gets the status property value. The status property
-     * @return a CloudPcOnPremisesConnectionStatus
+     * @return a {@link CloudPcOnPremisesConnectionStatus}
      */
     @jakarta.annotation.Nullable
     public CloudPcOnPremisesConnectionStatus getStatus() {

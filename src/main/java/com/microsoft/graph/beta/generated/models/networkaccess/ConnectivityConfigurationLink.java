@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ConnectivityConfigurationLink extends Entity implements Parsable {
     /**
-     * Instantiates a new ConnectivityConfigurationLink and sets the default values.
+     * Instantiates a new {@link ConnectivityConfigurationLink} and sets the default values.
      */
     public ConnectivityConfigurationLink() {
         super();
@@ -18,7 +18,7 @@ public class ConnectivityConfigurationLink extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ConnectivityConfigurationLink
+     * @return a {@link ConnectivityConfigurationLink}
      */
     @jakarta.annotation.Nonnull
     public static ConnectivityConfigurationLink createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class ConnectivityConfigurationLink extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. Specifies the name of the link.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -35,7 +35,7 @@ public class ConnectivityConfigurationLink extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -47,7 +47,7 @@ public class ConnectivityConfigurationLink extends Entity implements Parsable {
     }
     /**
      * Gets the localConfigurations property value. Specifies Microsoft's end of the tunnel configuration for a device link.
-     * @return a java.util.List<LocalConnectivityConfiguration>
+     * @return a {@link java.util.List<LocalConnectivityConfiguration>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<LocalConnectivityConfiguration> getLocalConfigurations() {
@@ -55,7 +55,7 @@ public class ConnectivityConfigurationLink extends Entity implements Parsable {
     }
     /**
      * Gets the peerConfiguration property value. The peerConfiguration property
-     * @return a PeerConnectivityConfiguration
+     * @return a {@link PeerConnectivityConfiguration}
      */
     @jakarta.annotation.Nullable
     public PeerConnectivityConfiguration getPeerConfiguration() {

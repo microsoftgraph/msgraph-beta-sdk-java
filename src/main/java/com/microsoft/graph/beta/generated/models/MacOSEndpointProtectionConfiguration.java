@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration implements Parsable {
     /**
-     * Instantiates a new MacOSEndpointProtectionConfiguration and sets the default values.
+     * Instantiates a new {@link MacOSEndpointProtectionConfiguration} and sets the default values.
      */
     public MacOSEndpointProtectionConfiguration() {
         super();
@@ -22,7 +22,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MacOSEndpointProtectionConfiguration
+     * @return a {@link MacOSEndpointProtectionConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static MacOSEndpointProtectionConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -31,7 +31,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
     }
     /**
      * Gets the advancedThreatProtectionAutomaticSampleSubmission property value. Possible values of a property
-     * @return a Enablement
+     * @return a {@link Enablement}
      */
     @jakarta.annotation.Nullable
     public Enablement getAdvancedThreatProtectionAutomaticSampleSubmission() {
@@ -39,7 +39,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
     }
     /**
      * Gets the advancedThreatProtectionCloudDelivered property value. Possible values of a property
-     * @return a Enablement
+     * @return a {@link Enablement}
      */
     @jakarta.annotation.Nullable
     public Enablement getAdvancedThreatProtectionCloudDelivered() {
@@ -47,7 +47,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
     }
     /**
      * Gets the advancedThreatProtectionDiagnosticDataCollection property value. Possible values of a property
-     * @return a Enablement
+     * @return a {@link Enablement}
      */
     @jakarta.annotation.Nullable
     public Enablement getAdvancedThreatProtectionDiagnosticDataCollection() {
@@ -55,7 +55,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
     }
     /**
      * Gets the advancedThreatProtectionExcludedExtensions property value. A list of file extensions to exclude from antivirus scanning for Microsoft Defender Advanced Threat Protection on macOS.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAdvancedThreatProtectionExcludedExtensions() {
@@ -63,7 +63,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
     }
     /**
      * Gets the advancedThreatProtectionExcludedFiles property value. A list of paths to files to exclude from antivirus scanning for Microsoft Defender Advanced Threat Protection on macOS.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAdvancedThreatProtectionExcludedFiles() {
@@ -71,7 +71,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
     }
     /**
      * Gets the advancedThreatProtectionExcludedFolders property value. A list of paths to folders to exclude from antivirus scanning for Microsoft Defender Advanced Threat Protection on macOS.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAdvancedThreatProtectionExcludedFolders() {
@@ -79,7 +79,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
     }
     /**
      * Gets the advancedThreatProtectionExcludedProcesses property value. A list of process names to exclude from antivirus scanning for Microsoft Defender Advanced Threat Protection on macOS.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAdvancedThreatProtectionExcludedProcesses() {
@@ -87,7 +87,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
     }
     /**
      * Gets the advancedThreatProtectionRealTime property value. Possible values of a property
-     * @return a Enablement
+     * @return a {@link Enablement}
      */
     @jakarta.annotation.Nullable
     public Enablement getAdvancedThreatProtectionRealTime() {
@@ -95,7 +95,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -128,7 +128,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
     }
     /**
      * Gets the fileVaultAllowDeferralUntilSignOut property value. Optional. If set to true, the user can defer the enabling of FileVault until they sign out.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getFileVaultAllowDeferralUntilSignOut() {
@@ -136,7 +136,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
     }
     /**
      * Gets the fileVaultDisablePromptAtSignOut property value. Optional. When using the Defer option, if set to true, the user is not prompted to enable FileVault at sign-out.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getFileVaultDisablePromptAtSignOut() {
@@ -144,7 +144,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
     }
     /**
      * Gets the fileVaultEnabled property value. Whether FileVault should be enabled or not.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getFileVaultEnabled() {
@@ -152,7 +152,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
     }
     /**
      * Gets the fileVaultHidePersonalRecoveryKey property value. Optional. A hidden personal recovery key does not appear on the user's screen during FileVault encryption, reducing the risk of it ending up in the wrong hands.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getFileVaultHidePersonalRecoveryKey() {
@@ -160,7 +160,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
     }
     /**
      * Gets the fileVaultInstitutionalRecoveryKeyCertificate property value. Required if selected recovery key type(s) include InstitutionalRecoveryKey. The DER Encoded certificate file used to set an institutional recovery key.
-     * @return a byte[]
+     * @return a {@link byte[]}
      */
     @jakarta.annotation.Nullable
     public byte[] getFileVaultInstitutionalRecoveryKeyCertificate() {
@@ -168,7 +168,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
     }
     /**
      * Gets the fileVaultInstitutionalRecoveryKeyCertificateFileName property value. File name of the institutional recovery key certificate to display in UI. (.der).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getFileVaultInstitutionalRecoveryKeyCertificateFileName() {
@@ -176,7 +176,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
     }
     /**
      * Gets the fileVaultNumberOfTimesUserCanIgnore property value. Optional. When using the Defer option, this is the maximum number of times the user can ignore prompts to enable FileVault before FileVault will be required for the user to sign in. If set to -1, it will always prompt to enable FileVault until FileVault is enabled, though it will allow the user to bypass enabling FileVault. Setting this to 0 will disable the feature.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getFileVaultNumberOfTimesUserCanIgnore() {
@@ -184,7 +184,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
     }
     /**
      * Gets the fileVaultPersonalRecoveryKeyHelpMessage property value. Required if selected recovery key type(s) include PersonalRecoveryKey. A short message displayed to the user that explains how they can retrieve their personal recovery key.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getFileVaultPersonalRecoveryKeyHelpMessage() {
@@ -192,7 +192,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
     }
     /**
      * Gets the fileVaultPersonalRecoveryKeyRotationInMonths property value. Optional. If selected recovery key type(s) include PersonalRecoveryKey, the frequency to rotate that key, in months.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getFileVaultPersonalRecoveryKeyRotationInMonths() {
@@ -200,7 +200,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
     }
     /**
      * Gets the fileVaultSelectedRecoveryKeyTypes property value. Recovery key types for macOS FileVault
-     * @return a EnumSet<MacOSFileVaultRecoveryKeyTypes>
+     * @return a {@link EnumSet<MacOSFileVaultRecoveryKeyTypes>}
      */
     @jakarta.annotation.Nullable
     public EnumSet<MacOSFileVaultRecoveryKeyTypes> getFileVaultSelectedRecoveryKeyTypes() {
@@ -208,7 +208,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
     }
     /**
      * Gets the firewallApplications property value. List of applications with firewall settings. Firewall settings for applications not on this list are determined by the user. This collection can contain a maximum of 500 elements.
-     * @return a java.util.List<MacOSFirewallApplication>
+     * @return a {@link java.util.List<MacOSFirewallApplication>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<MacOSFirewallApplication> getFirewallApplications() {
@@ -216,7 +216,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
     }
     /**
      * Gets the firewallBlockAllIncoming property value. Corresponds to the 'Block all incoming connections' option.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getFirewallBlockAllIncoming() {
@@ -224,7 +224,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
     }
     /**
      * Gets the firewallEnabled property value. Whether the firewall should be enabled or not.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getFirewallEnabled() {
@@ -232,7 +232,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
     }
     /**
      * Gets the firewallEnableStealthMode property value. Corresponds to 'Enable stealth mode.'
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getFirewallEnableStealthMode() {
@@ -240,7 +240,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
     }
     /**
      * Gets the gatekeeperAllowedAppSource property value. App source options for macOS Gatekeeper.
-     * @return a MacOSGatekeeperAppSources
+     * @return a {@link MacOSGatekeeperAppSources}
      */
     @jakarta.annotation.Nullable
     public MacOSGatekeeperAppSources getGatekeeperAllowedAppSource() {
@@ -248,7 +248,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
     }
     /**
      * Gets the gatekeeperBlockOverride property value. If set to true, the user override for Gatekeeper will be disabled.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getGatekeeperBlockOverride() {

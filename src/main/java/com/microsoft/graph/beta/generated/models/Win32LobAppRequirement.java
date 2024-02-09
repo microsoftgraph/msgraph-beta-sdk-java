@@ -22,7 +22,7 @@ public class Win32LobAppRequirement implements AdditionalDataHolder, BackedModel
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new Win32LobAppRequirement and sets the default values.
+     * Instantiates a new {@link Win32LobAppRequirement} and sets the default values.
      */
     public Win32LobAppRequirement() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -31,7 +31,7 @@ public class Win32LobAppRequirement implements AdditionalDataHolder, BackedModel
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Win32LobAppRequirement
+     * @return a {@link Win32LobAppRequirement}
      */
     @jakarta.annotation.Nonnull
     public static Win32LobAppRequirement createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -49,7 +49,7 @@ public class Win32LobAppRequirement implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -62,7 +62,7 @@ public class Win32LobAppRequirement implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -70,7 +70,7 @@ public class Win32LobAppRequirement implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the detectionValue property value. The detection value
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDetectionValue() {
@@ -78,7 +78,7 @@ public class Win32LobAppRequirement implements AdditionalDataHolder, BackedModel
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -90,7 +90,7 @@ public class Win32LobAppRequirement implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -98,7 +98,7 @@ public class Win32LobAppRequirement implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the operator property value. Contains properties for detection operator.
-     * @return a EnumSet<Win32LobAppDetectionOperator>
+     * @return a {@link EnumSet<Win32LobAppDetectionOperator>}
      */
     @jakarta.annotation.Nullable
     public EnumSet<Win32LobAppDetectionOperator> getOperator() {

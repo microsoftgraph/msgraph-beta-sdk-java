@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GroupPolicyPresentationValueLongDecimal extends GroupPolicyPresentationValue implements Parsable {
     /**
-     * Instantiates a new GroupPolicyPresentationValueLongDecimal and sets the default values.
+     * Instantiates a new {@link GroupPolicyPresentationValueLongDecimal} and sets the default values.
      */
     public GroupPolicyPresentationValueLongDecimal() {
         super();
@@ -20,7 +20,7 @@ public class GroupPolicyPresentationValueLongDecimal extends GroupPolicyPresenta
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a GroupPolicyPresentationValueLongDecimal
+     * @return a {@link GroupPolicyPresentationValueLongDecimal}
      */
     @jakarta.annotation.Nonnull
     public static GroupPolicyPresentationValueLongDecimal createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -29,7 +29,7 @@ public class GroupPolicyPresentationValueLongDecimal extends GroupPolicyPresenta
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -39,7 +39,7 @@ public class GroupPolicyPresentationValueLongDecimal extends GroupPolicyPresenta
     }
     /**
      * Gets the value property value. An unsigned long value for the associated presentation.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getValue() {

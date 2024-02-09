@@ -23,13 +23,14 @@ import java.util.Objects;
 public class TeamTemplateItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the definitions property of the microsoft.graph.teamTemplate entity.
+     * @return a {@link DefinitionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DefinitionsRequestBuilder definitions() {
         return new DefinitionsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new TeamTemplateItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link TeamTemplateItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -37,7 +38,7 @@ public class TeamTemplateItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/teamwork/teamTemplates/{teamTemplate%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new TeamTemplateItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link TeamTemplateItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -46,6 +47,7 @@ public class TeamTemplateItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Delete navigation property teamTemplates for teamwork
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete() {
         delete(null);
@@ -53,17 +55,18 @@ public class TeamTemplateItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property teamTemplates for teamwork
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * The templates associated with a team.
-     * @return a TeamTemplate
+     * @return a {@link TeamTemplate}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public TeamTemplate get() {
@@ -72,20 +75,21 @@ public class TeamTemplateItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The templates associated with a team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a TeamTemplate
+     * @return a {@link TeamTemplate}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public TeamTemplate get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, TeamTemplate::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property teamTemplates in teamwork
      * @param body The request body
-     * @return a TeamTemplate
+     * @return a {@link TeamTemplate}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public TeamTemplate patch(@jakarta.annotation.Nonnull final TeamTemplate body) {
@@ -95,20 +99,20 @@ public class TeamTemplateItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property teamTemplates in teamwork
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a TeamTemplate
+     * @return a {@link TeamTemplate}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public TeamTemplate patch(@jakarta.annotation.Nonnull final TeamTemplate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, TeamTemplate::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property teamTemplates for teamwork
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -117,18 +121,18 @@ public class TeamTemplateItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property teamTemplates for teamwork
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/teamwork/teamTemplates/{teamTemplate%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * The templates associated with a team.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -137,7 +141,7 @@ public class TeamTemplateItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The templates associated with a team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -149,7 +153,7 @@ public class TeamTemplateItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property teamTemplates in teamwork
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final TeamTemplate body) {
@@ -159,12 +163,12 @@ public class TeamTemplateItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property teamTemplates in teamwork
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final TeamTemplate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/teamwork/teamTemplates/{teamTemplate%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -173,7 +177,7 @@ public class TeamTemplateItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a TeamTemplateItemRequestBuilder
+     * @return a {@link TeamTemplateItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TeamTemplateItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -203,7 +207,7 @@ public class TeamTemplateItemRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

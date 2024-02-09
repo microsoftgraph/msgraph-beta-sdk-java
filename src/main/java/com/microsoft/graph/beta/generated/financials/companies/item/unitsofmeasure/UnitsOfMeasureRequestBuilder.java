@@ -26,6 +26,7 @@ import java.util.UUID;
 public class UnitsOfMeasureRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -34,7 +35,7 @@ public class UnitsOfMeasureRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the unitsOfMeasure property of the microsoft.graph.company entity.
      * @param unitOfMeasureId The unique identifier of unitOfMeasure
-     * @return a UnitOfMeasureItemRequestBuilder
+     * @return a {@link UnitOfMeasureItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UnitOfMeasureItemRequestBuilder byUnitOfMeasureId(@jakarta.annotation.Nonnull final UUID unitOfMeasureId) {
@@ -44,7 +45,7 @@ public class UnitsOfMeasureRequestBuilder extends BaseRequestBuilder {
         return new UnitOfMeasureItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new UnitsOfMeasureRequestBuilder and sets the default values.
+     * Instantiates a new {@link UnitsOfMeasureRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -52,7 +53,7 @@ public class UnitsOfMeasureRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/financials/companies/{company%2Did}/unitsOfMeasure{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new UnitsOfMeasureRequestBuilder and sets the default values.
+     * Instantiates a new {@link UnitsOfMeasureRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -61,7 +62,8 @@ public class UnitsOfMeasureRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get unitsOfMeasure from financials
-     * @return a UnitOfMeasureCollectionResponse
+     * @return a {@link UnitOfMeasureCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public UnitOfMeasureCollectionResponse get() {
@@ -70,20 +72,21 @@ public class UnitsOfMeasureRequestBuilder extends BaseRequestBuilder {
     /**
      * Get unitsOfMeasure from financials
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a UnitOfMeasureCollectionResponse
+     * @return a {@link UnitOfMeasureCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public UnitOfMeasureCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, UnitOfMeasureCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to unitsOfMeasure for financials
      * @param body The request body
-     * @return a UnitOfMeasure
+     * @return a {@link UnitOfMeasure}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public UnitOfMeasure post(@jakarta.annotation.Nonnull final UnitOfMeasure body) {
@@ -93,20 +96,20 @@ public class UnitsOfMeasureRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to unitsOfMeasure for financials
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a UnitOfMeasure
+     * @return a {@link UnitOfMeasure}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public UnitOfMeasure post(@jakarta.annotation.Nonnull final UnitOfMeasure body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, UnitOfMeasure::createFromDiscriminatorValue);
     }
     /**
      * Get unitsOfMeasure from financials
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -115,7 +118,7 @@ public class UnitsOfMeasureRequestBuilder extends BaseRequestBuilder {
     /**
      * Get unitsOfMeasure from financials
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -127,7 +130,7 @@ public class UnitsOfMeasureRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to unitsOfMeasure for financials
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final UnitOfMeasure body) {
@@ -137,12 +140,12 @@ public class UnitsOfMeasureRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to unitsOfMeasure for financials
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final UnitOfMeasure body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/financials/companies/{company%2Did}/unitsOfMeasure", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -151,7 +154,7 @@ public class UnitsOfMeasureRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a UnitsOfMeasureRequestBuilder
+     * @return a {@link UnitsOfMeasureRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UnitsOfMeasureRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -205,7 +208,7 @@ public class UnitsOfMeasureRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

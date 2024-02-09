@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CloudPcExportJob extends Entity implements Parsable {
     /**
-     * Instantiates a new CloudPcExportJob and sets the default values.
+     * Instantiates a new {@link CloudPcExportJob} and sets the default values.
      */
     public CloudPcExportJob() {
         super();
@@ -18,7 +18,7 @@ public class CloudPcExportJob extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CloudPcExportJob
+     * @return a {@link CloudPcExportJob}
      */
     @jakarta.annotation.Nonnull
     public static CloudPcExportJob createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class CloudPcExportJob extends Entity implements Parsable {
     }
     /**
      * Gets the expirationDateTime property value. The date and time when the export job expires.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getExpirationDateTime() {
@@ -35,7 +35,7 @@ public class CloudPcExportJob extends Entity implements Parsable {
     }
     /**
      * Gets the exportJobStatus property value. The status of the export job. The possible values are: notStarted, inProgress, completed, unknownFutureValue. Read-only.
-     * @return a CloudPcExportJobStatus
+     * @return a {@link CloudPcExportJobStatus}
      */
     @jakarta.annotation.Nullable
     public CloudPcExportJobStatus getExportJobStatus() {
@@ -43,7 +43,7 @@ public class CloudPcExportJob extends Entity implements Parsable {
     }
     /**
      * Gets the exportUrl property value. The storage account URL of the exported report. It can be used to download the file.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getExportUrl() {
@@ -51,7 +51,7 @@ public class CloudPcExportJob extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -68,7 +68,7 @@ public class CloudPcExportJob extends Entity implements Parsable {
     }
     /**
      * Gets the filter property value. The filter applied on the report.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getFilter() {
@@ -76,7 +76,7 @@ public class CloudPcExportJob extends Entity implements Parsable {
     }
     /**
      * Gets the format property value. The format of the exported report.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getFormat() {
@@ -84,7 +84,7 @@ public class CloudPcExportJob extends Entity implements Parsable {
     }
     /**
      * Gets the reportName property value. The report name. The possible values are: remoteConnectionHistoricalReports, dailyAggregatedRemoteConnectionReports, totalAggregatedRemoteConnectionReports, sharedUseLicenseUsageReport, sharedUseLicenseUsageRealTimeReport, unknownFutureValue,  noLicenseAvailableConnectivityFailureReport, frontlineLicenseUsageReport, frontlineLicenseUsageRealTimeReport,  remoteConnectionQualityReports, inaccessibleCloudPcReports, rawRemoteConnectionReports, cloudPcUsageCategoryReports. You must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: noLicenseAvailableConnectivityFailureReport, frontlineLicenseUsageReport, frontlineLicenseUsageRealTimeReport, remoteConnectionQualityReports, inaccessibleCloudPcReports, rawRemoteConnectionReports, cloudPcUsageCategoryReports.
-     * @return a CloudPcReportName
+     * @return a {@link CloudPcReportName}
      */
     @jakarta.annotation.Nullable
     public CloudPcReportName getReportName() {
@@ -92,7 +92,7 @@ public class CloudPcExportJob extends Entity implements Parsable {
     }
     /**
      * Gets the requestDateTime property value. The date and time when the export job was requested.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getRequestDateTime() {
@@ -100,7 +100,7 @@ public class CloudPcExportJob extends Entity implements Parsable {
     }
     /**
      * Gets the select property value. The selected columns of the report.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSelect() {

@@ -14,7 +14,7 @@ import java.util.UUID;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceLogCollectionResponse extends Entity implements Parsable {
     /**
-     * Instantiates a new DeviceLogCollectionResponse and sets the default values.
+     * Instantiates a new {@link DeviceLogCollectionResponse} and sets the default values.
      */
     public DeviceLogCollectionResponse() {
         super();
@@ -22,7 +22,7 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceLogCollectionResponse
+     * @return a {@link DeviceLogCollectionResponse}
      */
     @jakarta.annotation.Nonnull
     public static DeviceLogCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -31,7 +31,7 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
     }
     /**
      * Gets the enrolledByUser property value. The User Principal Name (UPN) of the user that enrolled the device.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getEnrolledByUser() {
@@ -39,7 +39,7 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
     }
     /**
      * Gets the errorCode property value. The error code, if any. Valid values -9.22337203685478E+18 to 9.22337203685478E+18
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getErrorCode() {
@@ -47,7 +47,7 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
     }
     /**
      * Gets the expirationDateTimeUTC property value. The DateTime of the expiration of the logs.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getExpirationDateTimeUTC() {
@@ -55,7 +55,7 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -74,7 +74,7 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
     }
     /**
      * Gets the initiatedByUserPrincipalName property value. The UPN for who initiated the request.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getInitiatedByUserPrincipalName() {
@@ -82,7 +82,7 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
     }
     /**
      * Gets the managedDeviceId property value. Indicates Intune device unique identifier.
-     * @return a UUID
+     * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
     public UUID getManagedDeviceId() {
@@ -90,7 +90,7 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
     }
     /**
      * Gets the receivedDateTimeUTC property value. The DateTime the request was received.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getReceivedDateTimeUTC() {
@@ -98,7 +98,7 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
     }
     /**
      * Gets the requestedDateTimeUTC property value. The DateTime of the request.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getRequestedDateTimeUTC() {
@@ -106,7 +106,7 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
     }
     /**
      * Gets the size property value. The size of the logs. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     * @return a Double
+     * @return a {@link Double}
      */
     @jakarta.annotation.Nullable
     public Double getSize() {
@@ -114,7 +114,7 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
     }
     /**
      * Gets the sizeInKB property value. The size of the logs in KB. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     * @return a Double
+     * @return a {@link Double}
      */
     @jakarta.annotation.Nullable
     public Double getSizeInKB() {
@@ -122,7 +122,7 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. AppLogUploadStatus
-     * @return a AppLogUploadState
+     * @return a {@link AppLogUploadState}
      */
     @jakarta.annotation.Nullable
     public AppLogUploadState getStatus() {

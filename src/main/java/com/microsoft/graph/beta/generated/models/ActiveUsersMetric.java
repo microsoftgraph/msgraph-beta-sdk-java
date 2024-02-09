@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ActiveUsersMetric extends Entity implements Parsable {
     /**
-     * Instantiates a new ActiveUsersMetric and sets the default values.
+     * Instantiates a new {@link ActiveUsersMetric} and sets the default values.
      */
     public ActiveUsersMetric() {
         super();
@@ -18,7 +18,7 @@ public class ActiveUsersMetric extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ActiveUsersMetric
+     * @return a {@link ActiveUsersMetric}
      */
     @jakarta.annotation.Nonnull
     public static ActiveUsersMetric createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class ActiveUsersMetric extends Entity implements Parsable {
     }
     /**
      * Gets the count property value. The total number of users who made at least one authentication request within the specified time period.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getCount() {
@@ -35,7 +35,7 @@ public class ActiveUsersMetric extends Entity implements Parsable {
     }
     /**
      * Gets the factDate property value. Date of the insight.
-     * @return a LocalDate
+     * @return a {@link LocalDate}
      */
     @jakarta.annotation.Nullable
     public LocalDate getFactDate() {
@@ -43,7 +43,7 @@ public class ActiveUsersMetric extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

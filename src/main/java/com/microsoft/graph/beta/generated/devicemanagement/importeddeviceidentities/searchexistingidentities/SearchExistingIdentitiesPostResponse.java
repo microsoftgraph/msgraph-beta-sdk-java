@@ -11,7 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SearchExistingIdentitiesPostResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * Instantiates a new SearchExistingIdentitiesPostResponse and sets the default values.
+     * Instantiates a new {@link SearchExistingIdentitiesPostResponse} and sets the default values.
      */
     public SearchExistingIdentitiesPostResponse() {
         super();
@@ -19,7 +19,7 @@ public class SearchExistingIdentitiesPostResponse extends BaseCollectionPaginati
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SearchExistingIdentitiesPostResponse
+     * @return a {@link SearchExistingIdentitiesPostResponse}
      */
     @jakarta.annotation.Nonnull
     public static SearchExistingIdentitiesPostResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class SearchExistingIdentitiesPostResponse extends BaseCollectionPaginati
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -38,7 +38,7 @@ public class SearchExistingIdentitiesPostResponse extends BaseCollectionPaginati
     }
     /**
      * Gets the value property value. The value property
-     * @return a java.util.List<ImportedDeviceIdentity>
+     * @return a {@link java.util.List<ImportedDeviceIdentity>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ImportedDeviceIdentity> getValue() {

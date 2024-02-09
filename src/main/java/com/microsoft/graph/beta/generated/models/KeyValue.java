@@ -18,7 +18,7 @@ public class KeyValue implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new KeyValue and sets the default values.
+     * Instantiates a new {@link KeyValue} and sets the default values.
      */
     public KeyValue() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class KeyValue implements AdditionalDataHolder, BackedModel, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a KeyValue
+     * @return a {@link KeyValue}
      */
     @jakarta.annotation.Nonnull
     public static KeyValue createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class KeyValue implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class KeyValue implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class KeyValue implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -68,8 +68,8 @@ public class KeyValue implements AdditionalDataHolder, BackedModel, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the key property value. Contains the name of the field that a value is associated with.
-     * @return a String
+     * Gets the key property value. Key.
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getKey() {
@@ -77,15 +77,15 @@ public class KeyValue implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the value property value. Contains the corresponding value for the specified key.
-     * @return a String
+     * Gets the value property value. Value.
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getValue() {
@@ -118,7 +118,7 @@ public class KeyValue implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore = value;
     }
     /**
-     * Sets the key property value. Contains the name of the field that a value is associated with.
+     * Sets the key property value. Key.
      * @param value Value to set for the key property.
      */
     public void setKey(@jakarta.annotation.Nullable final String value) {
@@ -132,7 +132,7 @@ public class KeyValue implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the value property value. Contains the corresponding value for the specified key.
+     * Sets the value property value. Value.
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final String value) {

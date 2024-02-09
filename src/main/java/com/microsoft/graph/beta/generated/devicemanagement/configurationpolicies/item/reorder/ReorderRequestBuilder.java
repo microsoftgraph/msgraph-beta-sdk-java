@@ -19,7 +19,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ReorderRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new ReorderRequestBuilder and sets the default values.
+     * Instantiates a new {@link ReorderRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -27,7 +27,7 @@ public class ReorderRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/configurationPolicies/{deviceManagementConfigurationPolicy%2Did}/reorder", pathParameters);
     }
     /**
-     * Instantiates a new ReorderRequestBuilder and sets the default values.
+     * Instantiates a new {@link ReorderRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -37,6 +37,7 @@ public class ReorderRequestBuilder extends BaseRequestBuilder {
     /**
      * Invoke action reorder
      * @param body The request body
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void post(@jakarta.annotation.Nonnull final ReorderPostRequestBody body) {
         post(body, null);
@@ -45,19 +46,19 @@ public class ReorderRequestBuilder extends BaseRequestBuilder {
      * Invoke action reorder
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void post(@jakarta.annotation.Nonnull final ReorderPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Invoke action reorder
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ReorderPostRequestBody body) {
@@ -67,7 +68,7 @@ public class ReorderRequestBuilder extends BaseRequestBuilder {
      * Invoke action reorder
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ReorderPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -81,7 +82,7 @@ public class ReorderRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a ReorderRequestBuilder
+     * @return a {@link ReorderRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ReorderRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

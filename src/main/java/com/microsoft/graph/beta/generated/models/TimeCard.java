@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TimeCard extends ChangeTrackedEntity implements Parsable {
     /**
-     * Instantiates a new TimeCard and sets the default values.
+     * Instantiates a new {@link TimeCard} and sets the default values.
      */
     public TimeCard() {
         super();
@@ -19,7 +19,7 @@ public class TimeCard extends ChangeTrackedEntity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TimeCard
+     * @return a {@link TimeCard}
      */
     @jakarta.annotation.Nonnull
     public static TimeCard createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class TimeCard extends ChangeTrackedEntity implements Parsable {
     }
     /**
      * Gets the breaks property value. The list of breaks associated with the timeCard.
-     * @return a java.util.List<TimeCardBreak>
+     * @return a {@link java.util.List<TimeCardBreak>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<TimeCardBreak> getBreaks() {
@@ -36,7 +36,7 @@ public class TimeCard extends ChangeTrackedEntity implements Parsable {
     }
     /**
      * Gets the clockInEvent property value. The clock-in event of the timeCard.
-     * @return a TimeCardEvent
+     * @return a {@link TimeCardEvent}
      */
     @jakarta.annotation.Nullable
     public TimeCardEvent getClockInEvent() {
@@ -44,7 +44,7 @@ public class TimeCard extends ChangeTrackedEntity implements Parsable {
     }
     /**
      * Gets the clockOutEvent property value. The clock-out event of the timeCard.
-     * @return a TimeCardEvent
+     * @return a {@link TimeCardEvent}
      */
     @jakarta.annotation.Nullable
     public TimeCardEvent getClockOutEvent() {
@@ -52,7 +52,7 @@ public class TimeCard extends ChangeTrackedEntity implements Parsable {
     }
     /**
      * Gets the confirmedBy property value. Indicates whether this timeCard entry is confirmed. Possible values are none, user, manager, unknownFutureValue.
-     * @return a EnumSet<ConfirmedBy>
+     * @return a {@link EnumSet<ConfirmedBy>}
      */
     @jakarta.annotation.Nullable
     public EnumSet<ConfirmedBy> getConfirmedBy() {
@@ -60,7 +60,7 @@ public class TimeCard extends ChangeTrackedEntity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -77,7 +77,7 @@ public class TimeCard extends ChangeTrackedEntity implements Parsable {
     }
     /**
      * Gets the notes property value. Notes about the timeCard.
-     * @return a ItemBody
+     * @return a {@link ItemBody}
      */
     @jakarta.annotation.Nullable
     public ItemBody getNotes() {
@@ -85,7 +85,7 @@ public class TimeCard extends ChangeTrackedEntity implements Parsable {
     }
     /**
      * Gets the originalEntry property value. The original timeCardEntry of the timeCard, before user edits.
-     * @return a TimeCardEntry
+     * @return a {@link TimeCardEntry}
      */
     @jakarta.annotation.Nullable
     public TimeCardEntry getOriginalEntry() {
@@ -93,7 +93,7 @@ public class TimeCard extends ChangeTrackedEntity implements Parsable {
     }
     /**
      * Gets the state property value. The current state of the timeCard during its life cycle.Possible values are: clockedIn, onBreak, clockedOut, unknownFutureValue.
-     * @return a TimeCardState
+     * @return a {@link TimeCardState}
      */
     @jakarta.annotation.Nullable
     public TimeCardState getState() {
@@ -101,7 +101,7 @@ public class TimeCard extends ChangeTrackedEntity implements Parsable {
     }
     /**
      * Gets the userId property value. User ID to which  the timeCard belongs.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserId() {

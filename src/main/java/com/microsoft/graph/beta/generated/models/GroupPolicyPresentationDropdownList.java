@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GroupPolicyPresentationDropdownList extends GroupPolicyUploadedPresentation implements Parsable {
     /**
-     * Instantiates a new GroupPolicyPresentationDropdownList and sets the default values.
+     * Instantiates a new {@link GroupPolicyPresentationDropdownList} and sets the default values.
      */
     public GroupPolicyPresentationDropdownList() {
         super();
@@ -21,7 +21,7 @@ public class GroupPolicyPresentationDropdownList extends GroupPolicyUploadedPres
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a GroupPolicyPresentationDropdownList
+     * @return a {@link GroupPolicyPresentationDropdownList}
      */
     @jakarta.annotation.Nonnull
     public static GroupPolicyPresentationDropdownList createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class GroupPolicyPresentationDropdownList extends GroupPolicyUploadedPres
     }
     /**
      * Gets the defaultItem property value. Localized string value identifying the default choice of the list of items.
-     * @return a GroupPolicyPresentationDropdownListItem
+     * @return a {@link GroupPolicyPresentationDropdownListItem}
      */
     @jakarta.annotation.Nullable
     public GroupPolicyPresentationDropdownListItem getDefaultItem() {
@@ -38,7 +38,7 @@ public class GroupPolicyPresentationDropdownList extends GroupPolicyUploadedPres
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -50,7 +50,7 @@ public class GroupPolicyPresentationDropdownList extends GroupPolicyUploadedPres
     }
     /**
      * Gets the items property value. Represents a set of localized display names and their associated values.
-     * @return a java.util.List<GroupPolicyPresentationDropdownListItem>
+     * @return a {@link java.util.List<GroupPolicyPresentationDropdownListItem>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<GroupPolicyPresentationDropdownListItem> getItems() {
@@ -58,7 +58,7 @@ public class GroupPolicyPresentationDropdownList extends GroupPolicyUploadedPres
     }
     /**
      * Gets the required property value. Requirement to enter a value in the parameter box. The default value is false.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getRequired() {

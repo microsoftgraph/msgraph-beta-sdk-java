@@ -24,6 +24,7 @@ import java.util.Objects;
 public class SalesInvoiceLineItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the account property of the microsoft.graph.salesInvoiceLine entity.
+     * @return a {@link AccountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AccountRequestBuilder account() {
@@ -31,13 +32,14 @@ public class SalesInvoiceLineItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the item property of the microsoft.graph.salesInvoiceLine entity.
+     * @return a {@link ItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ItemRequestBuilder item() {
         return new ItemRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new SalesInvoiceLineItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link SalesInvoiceLineItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -45,7 +47,7 @@ public class SalesInvoiceLineItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/financials/companies/{company%2Did}/salesInvoices/{salesInvoice%2Did}/salesInvoiceLines/{salesInvoiceLine%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new SalesInvoiceLineItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link SalesInvoiceLineItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -54,7 +56,8 @@ public class SalesInvoiceLineItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get salesInvoiceLines from financials
-     * @return a SalesInvoiceLine
+     * @return a {@link SalesInvoiceLine}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public SalesInvoiceLine get() {
@@ -63,20 +66,21 @@ public class SalesInvoiceLineItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get salesInvoiceLines from financials
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a SalesInvoiceLine
+     * @return a {@link SalesInvoiceLine}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public SalesInvoiceLine get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, SalesInvoiceLine::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property salesInvoiceLines in financials
      * @param body The request body
-     * @return a SalesInvoiceLine
+     * @return a {@link SalesInvoiceLine}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public SalesInvoiceLine patch(@jakarta.annotation.Nonnull final SalesInvoiceLine body) {
@@ -86,20 +90,20 @@ public class SalesInvoiceLineItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property salesInvoiceLines in financials
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a SalesInvoiceLine
+     * @return a {@link SalesInvoiceLine}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public SalesInvoiceLine patch(@jakarta.annotation.Nonnull final SalesInvoiceLine body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, SalesInvoiceLine::createFromDiscriminatorValue);
     }
     /**
      * Get salesInvoiceLines from financials
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -108,7 +112,7 @@ public class SalesInvoiceLineItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get salesInvoiceLines from financials
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -120,7 +124,7 @@ public class SalesInvoiceLineItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property salesInvoiceLines in financials
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final SalesInvoiceLine body) {
@@ -130,12 +134,12 @@ public class SalesInvoiceLineItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property salesInvoiceLines in financials
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final SalesInvoiceLine body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/financials/companies/{company%2Did}/salesInvoices/{salesInvoice%2Did}/salesInvoiceLines/{salesInvoiceLine%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -144,7 +148,7 @@ public class SalesInvoiceLineItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a SalesInvoiceLineItemRequestBuilder
+     * @return a {@link SalesInvoiceLineItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SalesInvoiceLineItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -168,7 +172,7 @@ public class SalesInvoiceLineItemRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

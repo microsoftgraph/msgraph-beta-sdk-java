@@ -19,7 +19,7 @@ public class DiscoveredApplicationSegmentReport implements AdditionalDataHolder,
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new DiscoveredApplicationSegmentReport and sets the default values.
+     * Instantiates a new {@link DiscoveredApplicationSegmentReport} and sets the default values.
      */
     public DiscoveredApplicationSegmentReport() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class DiscoveredApplicationSegmentReport implements AdditionalDataHolder,
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DiscoveredApplicationSegmentReport
+     * @return a {@link DiscoveredApplicationSegmentReport}
      */
     @jakarta.annotation.Nonnull
     public static DiscoveredApplicationSegmentReport createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class DiscoveredApplicationSegmentReport implements AdditionalDataHolder,
     }
     /**
      * Gets the accessType property value. The accessType property
-     * @return a AccessType
+     * @return a {@link AccessType}
      */
     @jakarta.annotation.Nullable
     public AccessType getAccessType() {
@@ -45,7 +45,7 @@ public class DiscoveredApplicationSegmentReport implements AdditionalDataHolder,
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -58,7 +58,7 @@ public class DiscoveredApplicationSegmentReport implements AdditionalDataHolder,
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -66,7 +66,7 @@ public class DiscoveredApplicationSegmentReport implements AdditionalDataHolder,
     }
     /**
      * Gets the deviceCount property value. The deviceCount property
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getDeviceCount() {
@@ -74,7 +74,7 @@ public class DiscoveredApplicationSegmentReport implements AdditionalDataHolder,
     }
     /**
      * Gets the discoveredApplicationSegmentId property value. The discoveredApplicationSegmentId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDiscoveredApplicationSegmentId() {
@@ -82,7 +82,7 @@ public class DiscoveredApplicationSegmentReport implements AdditionalDataHolder,
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -105,7 +105,7 @@ public class DiscoveredApplicationSegmentReport implements AdditionalDataHolder,
     }
     /**
      * Gets the firstAccessDateTime property value. The firstAccessDateTime property
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getFirstAccessDateTime() {
@@ -113,7 +113,7 @@ public class DiscoveredApplicationSegmentReport implements AdditionalDataHolder,
     }
     /**
      * Gets the fqdn property value. The fqdn property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getFqdn() {
@@ -121,7 +121,7 @@ public class DiscoveredApplicationSegmentReport implements AdditionalDataHolder,
     }
     /**
      * Gets the ip property value. The ip property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getIp() {
@@ -129,7 +129,7 @@ public class DiscoveredApplicationSegmentReport implements AdditionalDataHolder,
     }
     /**
      * Gets the lastAccessDateTime property value. The lastAccessDateTime property
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastAccessDateTime() {
@@ -137,7 +137,7 @@ public class DiscoveredApplicationSegmentReport implements AdditionalDataHolder,
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -145,7 +145,7 @@ public class DiscoveredApplicationSegmentReport implements AdditionalDataHolder,
     }
     /**
      * Gets the port property value. The port property
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPort() {
@@ -153,7 +153,7 @@ public class DiscoveredApplicationSegmentReport implements AdditionalDataHolder,
     }
     /**
      * Gets the totalBytesReceived property value. The totalBytesReceived property
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getTotalBytesReceived() {
@@ -161,7 +161,7 @@ public class DiscoveredApplicationSegmentReport implements AdditionalDataHolder,
     }
     /**
      * Gets the totalBytesSent property value. The totalBytesSent property
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getTotalBytesSent() {
@@ -169,7 +169,7 @@ public class DiscoveredApplicationSegmentReport implements AdditionalDataHolder,
     }
     /**
      * Gets the transactionCount property value. The transactionCount property
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getTransactionCount() {
@@ -177,7 +177,7 @@ public class DiscoveredApplicationSegmentReport implements AdditionalDataHolder,
     }
     /**
      * Gets the transportProtocol property value. The transportProtocol property
-     * @return a NetworkingProtocol
+     * @return a {@link NetworkingProtocol}
      */
     @jakarta.annotation.Nullable
     public NetworkingProtocol getTransportProtocol() {
@@ -185,7 +185,7 @@ public class DiscoveredApplicationSegmentReport implements AdditionalDataHolder,
     }
     /**
      * Gets the userCount property value. The userCount property
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getUserCount() {

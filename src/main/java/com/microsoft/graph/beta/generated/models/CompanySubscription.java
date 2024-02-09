@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CompanySubscription extends Entity implements Parsable {
     /**
-     * Instantiates a new CompanySubscription and sets the default values.
+     * Instantiates a new {@link CompanySubscription} and sets the default values.
      */
     public CompanySubscription() {
         super();
@@ -18,7 +18,7 @@ public class CompanySubscription extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CompanySubscription
+     * @return a {@link CompanySubscription}
      */
     @jakarta.annotation.Nonnull
     public static CompanySubscription createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class CompanySubscription extends Entity implements Parsable {
     }
     /**
      * Gets the commerceSubscriptionId property value. The ID of this subscription in the commerce system. Alternate key.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCommerceSubscriptionId() {
@@ -35,7 +35,7 @@ public class CompanySubscription extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. The date and time when this subscription was created. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -43,7 +43,7 @@ public class CompanySubscription extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -65,7 +65,7 @@ public class CompanySubscription extends Entity implements Parsable {
     }
     /**
      * Gets the isTrial property value. Whether the subscription is a free trial or purchased.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsTrial() {
@@ -73,7 +73,7 @@ public class CompanySubscription extends Entity implements Parsable {
     }
     /**
      * Gets the nextLifecycleDateTime property value. The date and time when the subscription will move to the next state (as defined by the status property) if not renewed by the tenant. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getNextLifecycleDateTime() {
@@ -81,7 +81,7 @@ public class CompanySubscription extends Entity implements Parsable {
     }
     /**
      * Gets the ocpSubscriptionId property value. The ocpSubscriptionId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOcpSubscriptionId() {
@@ -89,7 +89,7 @@ public class CompanySubscription extends Entity implements Parsable {
     }
     /**
      * Gets the ownerId property value. The object ID of the account admin.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOwnerId() {
@@ -97,7 +97,7 @@ public class CompanySubscription extends Entity implements Parsable {
     }
     /**
      * Gets the ownerTenantId property value. The unique identifier for the Microsoft partner tenant that created the subscription on a customer tenant.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOwnerTenantId() {
@@ -105,7 +105,7 @@ public class CompanySubscription extends Entity implements Parsable {
     }
     /**
      * Gets the ownerType property value. Indicates the entity that ownerId belongs to, for example, 'User'.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOwnerType() {
@@ -113,7 +113,7 @@ public class CompanySubscription extends Entity implements Parsable {
     }
     /**
      * Gets the serviceStatus property value. The provisioning status of each service that's included in this subscription.
-     * @return a java.util.List<ServicePlanInfo>
+     * @return a {@link java.util.List<ServicePlanInfo>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ServicePlanInfo> getServiceStatus() {
@@ -121,7 +121,7 @@ public class CompanySubscription extends Entity implements Parsable {
     }
     /**
      * Gets the skuId property value. The object ID of the SKU associated with this subscription.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSkuId() {
@@ -129,7 +129,7 @@ public class CompanySubscription extends Entity implements Parsable {
     }
     /**
      * Gets the skuPartNumber property value. The SKU associated with this subscription.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSkuPartNumber() {
@@ -137,7 +137,7 @@ public class CompanySubscription extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status of this subscription. Possible values are: Enabled, Deleted, Suspended, Warning, LockedOut.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getStatus() {
@@ -145,7 +145,7 @@ public class CompanySubscription extends Entity implements Parsable {
     }
     /**
      * Gets the totalLicenses property value. The number of seats included in this subscription.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getTotalLicenses() {

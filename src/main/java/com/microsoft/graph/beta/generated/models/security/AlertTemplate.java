@@ -18,7 +18,7 @@ public class AlertTemplate implements AdditionalDataHolder, BackedModel, Parsabl
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new AlertTemplate and sets the default values.
+     * Instantiates a new {@link AlertTemplate} and sets the default values.
      */
     public AlertTemplate() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class AlertTemplate implements AdditionalDataHolder, BackedModel, Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AlertTemplate
+     * @return a {@link AlertTemplate}
      */
     @jakarta.annotation.Nonnull
     public static AlertTemplate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class AlertTemplate implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class AlertTemplate implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class AlertTemplate implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the category property value. Category assigned to the alert triggered by the custom detection rule.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCategory() {
@@ -65,7 +65,7 @@ public class AlertTemplate implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the description property value. Description of the alert triggered by the custom detection rule.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -73,7 +73,7 @@ public class AlertTemplate implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -90,7 +90,7 @@ public class AlertTemplate implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the impactedAssets property value. Which asset or assets were impacted based on the alert triggered by the custom detection rule.
-     * @return a java.util.List<ImpactedAsset>
+     * @return a {@link java.util.List<ImpactedAsset>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ImpactedAsset> getImpactedAssets() {
@@ -98,7 +98,7 @@ public class AlertTemplate implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the mitreTechniques property value. MITRE technique assigned to the alert triggered by the custom detection rule.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getMitreTechniques() {
@@ -106,7 +106,7 @@ public class AlertTemplate implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -114,7 +114,7 @@ public class AlertTemplate implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the recommendedActions property value. Recommended actions to mitigate the threat related to the alert triggered by the custom detection rule.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRecommendedActions() {
@@ -122,7 +122,7 @@ public class AlertTemplate implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the severity property value. The severity property
-     * @return a AlertSeverity
+     * @return a {@link AlertSeverity}
      */
     @jakarta.annotation.Nullable
     public AlertSeverity getSeverity() {
@@ -130,7 +130,7 @@ public class AlertTemplate implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the title property value. Name of the alert triggered by the custom detection rule.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTitle() {

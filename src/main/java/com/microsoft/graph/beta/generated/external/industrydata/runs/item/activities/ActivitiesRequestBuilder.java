@@ -24,6 +24,7 @@ import java.util.Objects;
 public class ActivitiesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -32,7 +33,7 @@ public class ActivitiesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the activities property of the microsoft.graph.industryData.industryDataRun entity.
      * @param industryDataRunActivityId The unique identifier of industryDataRunActivity
-     * @return a IndustryDataRunActivityItemRequestBuilder
+     * @return a {@link IndustryDataRunActivityItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public IndustryDataRunActivityItemRequestBuilder byIndustryDataRunActivityId(@jakarta.annotation.Nonnull final String industryDataRunActivityId) {
@@ -42,7 +43,7 @@ public class ActivitiesRequestBuilder extends BaseRequestBuilder {
         return new IndustryDataRunActivityItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new ActivitiesRequestBuilder and sets the default values.
+     * Instantiates a new {@link ActivitiesRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -50,7 +51,7 @@ public class ActivitiesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/external/industryData/runs/{industryDataRun%2Did}/activities{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new ActivitiesRequestBuilder and sets the default values.
+     * Instantiates a new {@link ActivitiesRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -59,7 +60,8 @@ public class ActivitiesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The set of activities performed during the run.
-     * @return a IndustryDataRunActivityCollectionResponse
+     * @return a {@link IndustryDataRunActivityCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public IndustryDataRunActivityCollectionResponse get() {
@@ -68,19 +70,19 @@ public class ActivitiesRequestBuilder extends BaseRequestBuilder {
     /**
      * The set of activities performed during the run.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a IndustryDataRunActivityCollectionResponse
+     * @return a {@link IndustryDataRunActivityCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public IndustryDataRunActivityCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, IndustryDataRunActivityCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * The set of activities performed during the run.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -89,7 +91,7 @@ public class ActivitiesRequestBuilder extends BaseRequestBuilder {
     /**
      * The set of activities performed during the run.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -101,7 +103,7 @@ public class ActivitiesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a ActivitiesRequestBuilder
+     * @return a {@link ActivitiesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ActivitiesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -155,7 +157,7 @@ public class ActivitiesRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

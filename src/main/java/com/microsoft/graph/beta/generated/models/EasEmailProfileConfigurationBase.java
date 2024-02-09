@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EasEmailProfileConfigurationBase extends DeviceConfiguration implements Parsable {
     /**
-     * Instantiates a new EasEmailProfileConfigurationBase and sets the default values.
+     * Instantiates a new {@link EasEmailProfileConfigurationBase} and sets the default values.
      */
     public EasEmailProfileConfigurationBase() {
         super();
@@ -21,7 +21,7 @@ public class EasEmailProfileConfigurationBase extends DeviceConfiguration implem
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EasEmailProfileConfigurationBase
+     * @return a {@link EasEmailProfileConfigurationBase}
      */
     @jakarta.annotation.Nonnull
     public static EasEmailProfileConfigurationBase createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class EasEmailProfileConfigurationBase extends DeviceConfiguration implem
     }
     /**
      * Gets the customDomainName property value. Custom domain name value used while generating an email profile before installing on the device.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCustomDomainName() {
@@ -47,7 +47,7 @@ public class EasEmailProfileConfigurationBase extends DeviceConfiguration implem
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -60,7 +60,7 @@ public class EasEmailProfileConfigurationBase extends DeviceConfiguration implem
     }
     /**
      * Gets the userDomainNameSource property value. UserDomainname attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: fullDomainName, netBiosDomainName.
-     * @return a DomainNameSource
+     * @return a {@link DomainNameSource}
      */
     @jakarta.annotation.Nullable
     public DomainNameSource getUserDomainNameSource() {
@@ -68,7 +68,7 @@ public class EasEmailProfileConfigurationBase extends DeviceConfiguration implem
     }
     /**
      * Gets the usernameAADSource property value. Name of the AAD field, that will be used to retrieve UserName for email profile. Possible values are: userPrincipalName, primarySmtpAddress, samAccountName.
-     * @return a UsernameSource
+     * @return a {@link UsernameSource}
      */
     @jakarta.annotation.Nullable
     public UsernameSource getUsernameAADSource() {
@@ -76,7 +76,7 @@ public class EasEmailProfileConfigurationBase extends DeviceConfiguration implem
     }
     /**
      * Gets the usernameSource property value. Possible values for username source or email source.
-     * @return a UserEmailSource
+     * @return a {@link UserEmailSource}
      */
     @jakarta.annotation.Nullable
     public UserEmailSource getUsernameSource() {

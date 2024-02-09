@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WinGetApp extends MobileApp implements Parsable {
     /**
-     * Instantiates a new WinGetApp and sets the default values.
+     * Instantiates a new {@link WinGetApp} and sets the default values.
      */
     public WinGetApp() {
         super();
@@ -21,7 +21,7 @@ public class WinGetApp extends MobileApp implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WinGetApp
+     * @return a {@link WinGetApp}
      */
     @jakarta.annotation.Nonnull
     public static WinGetApp createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class WinGetApp extends MobileApp implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -42,7 +42,7 @@ public class WinGetApp extends MobileApp implements Parsable {
     }
     /**
      * Gets the installExperience property value. The install experience settings associated with this application, which are used to ensure the desired install experiences on the target device are taken into account. This includes the account type (System or User) that actions should be run as on target devices. Required at creation time.
-     * @return a WinGetAppInstallExperience
+     * @return a {@link WinGetAppInstallExperience}
      */
     @jakarta.annotation.Nullable
     public WinGetAppInstallExperience getInstallExperience() {
@@ -50,7 +50,7 @@ public class WinGetApp extends MobileApp implements Parsable {
     }
     /**
      * Gets the manifestHash property value. Hash of package metadata properties used to validate that the application matches the metadata in the source repository.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getManifestHash() {
@@ -58,7 +58,7 @@ public class WinGetApp extends MobileApp implements Parsable {
     }
     /**
      * Gets the packageIdentifier property value. The PackageIdentifier from the WinGet source repository REST API. This also maps to the Id when using the WinGet client command line application. Required at creation time, cannot be modified on existing objects.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPackageIdentifier() {

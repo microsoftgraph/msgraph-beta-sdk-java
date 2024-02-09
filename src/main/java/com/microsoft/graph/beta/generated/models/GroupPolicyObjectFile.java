@@ -14,7 +14,7 @@ import java.util.UUID;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GroupPolicyObjectFile extends Entity implements Parsable {
     /**
-     * Instantiates a new GroupPolicyObjectFile and sets the default values.
+     * Instantiates a new {@link GroupPolicyObjectFile} and sets the default values.
      */
     public GroupPolicyObjectFile() {
         super();
@@ -22,7 +22,7 @@ public class GroupPolicyObjectFile extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a GroupPolicyObjectFile
+     * @return a {@link GroupPolicyObjectFile}
      */
     @jakarta.annotation.Nonnull
     public static GroupPolicyObjectFile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -31,7 +31,7 @@ public class GroupPolicyObjectFile extends Entity implements Parsable {
     }
     /**
      * Gets the content property value. The Group Policy Object file content.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getContent() {
@@ -39,7 +39,7 @@ public class GroupPolicyObjectFile extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. The date and time at which the GroupPolicy was first uploaded.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -47,7 +47,7 @@ public class GroupPolicyObjectFile extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -62,7 +62,7 @@ public class GroupPolicyObjectFile extends Entity implements Parsable {
     }
     /**
      * Gets the groupPolicyObjectId property value. The Group Policy Object GUID from GPO Xml content
-     * @return a UUID
+     * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
     public UUID getGroupPolicyObjectId() {
@@ -70,7 +70,7 @@ public class GroupPolicyObjectFile extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. The date and time at which the GroupPolicyObjectFile was last modified.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -78,7 +78,7 @@ public class GroupPolicyObjectFile extends Entity implements Parsable {
     }
     /**
      * Gets the ouDistinguishedName property value. The distinguished name of the OU.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOuDistinguishedName() {
@@ -86,7 +86,7 @@ public class GroupPolicyObjectFile extends Entity implements Parsable {
     }
     /**
      * Gets the roleScopeTagIds property value. The list of scope tags for the configuration.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {

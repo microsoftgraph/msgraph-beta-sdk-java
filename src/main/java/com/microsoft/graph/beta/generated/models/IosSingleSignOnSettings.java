@@ -21,7 +21,7 @@ public class IosSingleSignOnSettings implements AdditionalDataHolder, BackedMode
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new IosSingleSignOnSettings and sets the default values.
+     * Instantiates a new {@link IosSingleSignOnSettings} and sets the default values.
      */
     public IosSingleSignOnSettings() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -30,7 +30,7 @@ public class IosSingleSignOnSettings implements AdditionalDataHolder, BackedMode
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a IosSingleSignOnSettings
+     * @return a {@link IosSingleSignOnSettings}
      */
     @jakarta.annotation.Nonnull
     public static IosSingleSignOnSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class IosSingleSignOnSettings implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -52,7 +52,7 @@ public class IosSingleSignOnSettings implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the allowedAppsList property value. List of app identifiers that are allowed to use this login. If this field is omitted, the login applies to all applications on the device. This collection can contain a maximum of 500 elements.
-     * @return a java.util.List<AppListItem>
+     * @return a {@link java.util.List<AppListItem>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AppListItem> getAllowedAppsList() {
@@ -60,7 +60,7 @@ public class IosSingleSignOnSettings implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the allowedUrls property value. List of HTTP URLs that must be matched in order to use this login. With iOS 9.0 or later, a wildcard characters may be used.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAllowedUrls() {
@@ -68,7 +68,7 @@ public class IosSingleSignOnSettings implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -76,7 +76,7 @@ public class IosSingleSignOnSettings implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the displayName property value. The display name of login settings shown on the receiving device.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -84,7 +84,7 @@ public class IosSingleSignOnSettings implements AdditionalDataHolder, BackedMode
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -99,7 +99,7 @@ public class IosSingleSignOnSettings implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the kerberosPrincipalName property value. A Kerberos principal name. If not provided, the user is prompted for one during profile installation.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getKerberosPrincipalName() {
@@ -107,7 +107,7 @@ public class IosSingleSignOnSettings implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the kerberosRealm property value. A Kerberos realm name. Case sensitive.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getKerberosRealm() {
@@ -115,7 +115,7 @@ public class IosSingleSignOnSettings implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {

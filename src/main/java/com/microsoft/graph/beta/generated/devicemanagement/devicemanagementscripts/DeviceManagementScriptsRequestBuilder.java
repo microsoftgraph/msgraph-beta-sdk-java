@@ -26,6 +26,7 @@ import java.util.Objects;
 public class DeviceManagementScriptsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -33,6 +34,7 @@ public class DeviceManagementScriptsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the hasPayloadLinks method.
+     * @return a {@link HasPayloadLinksRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public HasPayloadLinksRequestBuilder hasPayloadLinks() {
@@ -41,7 +43,7 @@ public class DeviceManagementScriptsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the deviceManagementScripts property of the microsoft.graph.deviceManagement entity.
      * @param deviceManagementScriptId The unique identifier of deviceManagementScript
-     * @return a DeviceManagementScriptItemRequestBuilder
+     * @return a {@link DeviceManagementScriptItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DeviceManagementScriptItemRequestBuilder byDeviceManagementScriptId(@jakarta.annotation.Nonnull final String deviceManagementScriptId) {
@@ -51,7 +53,7 @@ public class DeviceManagementScriptsRequestBuilder extends BaseRequestBuilder {
         return new DeviceManagementScriptItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new DeviceManagementScriptsRequestBuilder and sets the default values.
+     * Instantiates a new {@link DeviceManagementScriptsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -59,7 +61,7 @@ public class DeviceManagementScriptsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/deviceManagementScripts{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new DeviceManagementScriptsRequestBuilder and sets the default values.
+     * Instantiates a new {@link DeviceManagementScriptsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -68,7 +70,8 @@ public class DeviceManagementScriptsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The list of device management scripts associated with the tenant.
-     * @return a DeviceManagementScriptCollectionResponse
+     * @return a {@link DeviceManagementScriptCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public DeviceManagementScriptCollectionResponse get() {
@@ -77,20 +80,21 @@ public class DeviceManagementScriptsRequestBuilder extends BaseRequestBuilder {
     /**
      * The list of device management scripts associated with the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a DeviceManagementScriptCollectionResponse
+     * @return a {@link DeviceManagementScriptCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public DeviceManagementScriptCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceManagementScriptCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to deviceManagementScripts for deviceManagement
      * @param body The request body
-     * @return a DeviceManagementScript
+     * @return a {@link DeviceManagementScript}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public DeviceManagementScript post(@jakarta.annotation.Nonnull final DeviceManagementScript body) {
@@ -100,20 +104,20 @@ public class DeviceManagementScriptsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to deviceManagementScripts for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a DeviceManagementScript
+     * @return a {@link DeviceManagementScript}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public DeviceManagementScript post(@jakarta.annotation.Nonnull final DeviceManagementScript body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceManagementScript::createFromDiscriminatorValue);
     }
     /**
      * The list of device management scripts associated with the tenant.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -122,7 +126,7 @@ public class DeviceManagementScriptsRequestBuilder extends BaseRequestBuilder {
     /**
      * The list of device management scripts associated with the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -134,7 +138,7 @@ public class DeviceManagementScriptsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to deviceManagementScripts for deviceManagement
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final DeviceManagementScript body) {
@@ -144,12 +148,12 @@ public class DeviceManagementScriptsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to deviceManagementScripts for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final DeviceManagementScript body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/deviceManagement/deviceManagementScripts", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -158,7 +162,7 @@ public class DeviceManagementScriptsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a DeviceManagementScriptsRequestBuilder
+     * @return a {@link DeviceManagementScriptsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DeviceManagementScriptsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -212,7 +216,7 @@ public class DeviceManagementScriptsRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

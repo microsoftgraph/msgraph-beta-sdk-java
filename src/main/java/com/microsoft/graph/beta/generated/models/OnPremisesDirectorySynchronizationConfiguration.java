@@ -19,7 +19,7 @@ public class OnPremisesDirectorySynchronizationConfiguration implements Addition
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new OnPremisesDirectorySynchronizationConfiguration and sets the default values.
+     * Instantiates a new {@link OnPremisesDirectorySynchronizationConfiguration} and sets the default values.
      */
     public OnPremisesDirectorySynchronizationConfiguration() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class OnPremisesDirectorySynchronizationConfiguration implements Addition
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a OnPremisesDirectorySynchronizationConfiguration
+     * @return a {@link OnPremisesDirectorySynchronizationConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static OnPremisesDirectorySynchronizationConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class OnPremisesDirectorySynchronizationConfiguration implements Addition
     }
     /**
      * Gets the accidentalDeletionPrevention property value. Contains the accidental deletion prevention configuration for a tenant.
-     * @return a OnPremisesAccidentalDeletionPrevention
+     * @return a {@link OnPremisesAccidentalDeletionPrevention}
      */
     @jakarta.annotation.Nullable
     public OnPremisesAccidentalDeletionPrevention getAccidentalDeletionPrevention() {
@@ -45,7 +45,7 @@ public class OnPremisesDirectorySynchronizationConfiguration implements Addition
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -58,7 +58,7 @@ public class OnPremisesDirectorySynchronizationConfiguration implements Addition
     }
     /**
      * Gets the anchorAttribute property value. The anchor attribute allows customers to customize the property used to create source anchors for synchronization enabled objects.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAnchorAttribute() {
@@ -66,7 +66,7 @@ public class OnPremisesDirectorySynchronizationConfiguration implements Addition
     }
     /**
      * Gets the applicationId property value. The identifier of the on-premises directory synchronization client application that is configured for the tenant.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getApplicationId() {
@@ -74,7 +74,7 @@ public class OnPremisesDirectorySynchronizationConfiguration implements Addition
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -82,7 +82,7 @@ public class OnPremisesDirectorySynchronizationConfiguration implements Addition
     }
     /**
      * Gets the currentExportData property value. Data for the current export run.
-     * @return a OnPremisesCurrentExportData
+     * @return a {@link OnPremisesCurrentExportData}
      */
     @jakarta.annotation.Nullable
     public OnPremisesCurrentExportData getCurrentExportData() {
@@ -90,7 +90,7 @@ public class OnPremisesDirectorySynchronizationConfiguration implements Addition
     }
     /**
      * Gets the customerRequestedSynchronizationInterval property value. Interval of time that the customer requested the sync client waits between sync cycles.
-     * @return a PeriodAndDuration
+     * @return a {@link PeriodAndDuration}
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getCustomerRequestedSynchronizationInterval() {
@@ -98,7 +98,7 @@ public class OnPremisesDirectorySynchronizationConfiguration implements Addition
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -116,7 +116,7 @@ public class OnPremisesDirectorySynchronizationConfiguration implements Addition
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -124,7 +124,7 @@ public class OnPremisesDirectorySynchronizationConfiguration implements Addition
     }
     /**
      * Gets the synchronizationClientVersion property value. Indicates the version of the on-premises directory synchronization application.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSynchronizationClientVersion() {
@@ -132,7 +132,7 @@ public class OnPremisesDirectorySynchronizationConfiguration implements Addition
     }
     /**
      * Gets the synchronizationInterval property value. Interval of time the sync client should honor between sync cycles
-     * @return a PeriodAndDuration
+     * @return a {@link PeriodAndDuration}
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getSynchronizationInterval() {
@@ -140,7 +140,7 @@ public class OnPremisesDirectorySynchronizationConfiguration implements Addition
     }
     /**
      * Gets the writebackConfiguration property value. Configuration to control how cloud created or owned objects are synchronized back to the on-premises directory.
-     * @return a OnPremisesWritebackConfiguration
+     * @return a {@link OnPremisesWritebackConfiguration}
      */
     @jakarta.annotation.Nullable
     public OnPremisesWritebackConfiguration getWritebackConfiguration() {

@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AwsIdentityAccessManagementKeyAgeFinding extends Finding implements Parsable {
     /**
-     * Instantiates a new AwsIdentityAccessManagementKeyAgeFinding and sets the default values.
+     * Instantiates a new {@link AwsIdentityAccessManagementKeyAgeFinding} and sets the default values.
      */
     public AwsIdentityAccessManagementKeyAgeFinding() {
         super();
@@ -17,7 +17,7 @@ public class AwsIdentityAccessManagementKeyAgeFinding extends Finding implements
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AwsIdentityAccessManagementKeyAgeFinding
+     * @return a {@link AwsIdentityAccessManagementKeyAgeFinding}
      */
     @jakarta.annotation.Nonnull
     public static AwsIdentityAccessManagementKeyAgeFinding createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class AwsIdentityAccessManagementKeyAgeFinding extends Finding implements
     }
     /**
      * Gets the accessKey property value. The accessKey property
-     * @return a AwsAccessKey
+     * @return a {@link AwsAccessKey}
      */
     @jakarta.annotation.Nullable
     public AwsAccessKey getAccessKey() {
@@ -34,7 +34,7 @@ public class AwsIdentityAccessManagementKeyAgeFinding extends Finding implements
     }
     /**
      * Gets the actionSummary property value. The actionSummary property
-     * @return a ActionSummary
+     * @return a {@link ActionSummary}
      */
     @jakarta.annotation.Nullable
     public ActionSummary getActionSummary() {
@@ -42,7 +42,7 @@ public class AwsIdentityAccessManagementKeyAgeFinding extends Finding implements
     }
     /**
      * Gets the awsAccessKeyDetails property value. The awsAccessKeyDetails property
-     * @return a AwsAccessKeyDetails
+     * @return a {@link AwsAccessKeyDetails}
      */
     @jakarta.annotation.Nullable
     public AwsAccessKeyDetails getAwsAccessKeyDetails() {
@@ -50,7 +50,7 @@ public class AwsIdentityAccessManagementKeyAgeFinding extends Finding implements
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -64,7 +64,7 @@ public class AwsIdentityAccessManagementKeyAgeFinding extends Finding implements
     }
     /**
      * Gets the permissionsCreepIndex property value. The permissionsCreepIndex property
-     * @return a PermissionsCreepIndex
+     * @return a {@link PermissionsCreepIndex}
      */
     @jakarta.annotation.Nullable
     public PermissionsCreepIndex getPermissionsCreepIndex() {
@@ -72,7 +72,7 @@ public class AwsIdentityAccessManagementKeyAgeFinding extends Finding implements
     }
     /**
      * Gets the status property value. The status property
-     * @return a IamStatus
+     * @return a {@link IamStatus}
      */
     @jakarta.annotation.Nullable
     public IamStatus getStatus() {

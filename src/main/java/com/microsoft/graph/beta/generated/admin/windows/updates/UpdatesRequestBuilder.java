@@ -28,6 +28,7 @@ import java.util.Objects;
 public class UpdatesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the catalog property of the microsoft.graph.adminWindowsUpdates entity.
+     * @return a {@link CatalogRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CatalogRequestBuilder catalog() {
@@ -35,6 +36,7 @@ public class UpdatesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the deploymentAudiences property of the microsoft.graph.adminWindowsUpdates entity.
+     * @return a {@link DeploymentAudiencesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DeploymentAudiencesRequestBuilder deploymentAudiences() {
@@ -42,6 +44,7 @@ public class UpdatesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the deployments property of the microsoft.graph.adminWindowsUpdates entity.
+     * @return a {@link DeploymentsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DeploymentsRequestBuilder deployments() {
@@ -49,6 +52,7 @@ public class UpdatesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the resourceConnections property of the microsoft.graph.adminWindowsUpdates entity.
+     * @return a {@link ResourceConnectionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ResourceConnectionsRequestBuilder resourceConnections() {
@@ -56,6 +60,7 @@ public class UpdatesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the updatableAssets property of the microsoft.graph.adminWindowsUpdates entity.
+     * @return a {@link UpdatableAssetsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UpdatableAssetsRequestBuilder updatableAssets() {
@@ -63,13 +68,14 @@ public class UpdatesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the updatePolicies property of the microsoft.graph.adminWindowsUpdates entity.
+     * @return a {@link UpdatePoliciesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UpdatePoliciesRequestBuilder updatePolicies() {
         return new UpdatePoliciesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new UpdatesRequestBuilder and sets the default values.
+     * Instantiates a new {@link UpdatesRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -77,7 +83,7 @@ public class UpdatesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/admin/windows/updates{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new UpdatesRequestBuilder and sets the default values.
+     * Instantiates a new {@link UpdatesRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -86,6 +92,7 @@ public class UpdatesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Delete navigation property updates for admin
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete() {
         delete(null);
@@ -93,17 +100,18 @@ public class UpdatesRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property updates for admin
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Entity that acts as a container for all Windows Update for Business deployment service functionalities. Read-only.
-     * @return a AdminWindowsUpdates
+     * @return a {@link AdminWindowsUpdates}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public AdminWindowsUpdates get() {
@@ -112,20 +120,21 @@ public class UpdatesRequestBuilder extends BaseRequestBuilder {
     /**
      * Entity that acts as a container for all Windows Update for Business deployment service functionalities. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a AdminWindowsUpdates
+     * @return a {@link AdminWindowsUpdates}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public AdminWindowsUpdates get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, AdminWindowsUpdates::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property updates in admin
      * @param body The request body
-     * @return a AdminWindowsUpdates
+     * @return a {@link AdminWindowsUpdates}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public AdminWindowsUpdates patch(@jakarta.annotation.Nonnull final AdminWindowsUpdates body) {
@@ -135,20 +144,20 @@ public class UpdatesRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property updates in admin
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a AdminWindowsUpdates
+     * @return a {@link AdminWindowsUpdates}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public AdminWindowsUpdates patch(@jakarta.annotation.Nonnull final AdminWindowsUpdates body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, AdminWindowsUpdates::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property updates for admin
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -157,18 +166,18 @@ public class UpdatesRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property updates for admin
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/admin/windows/updates", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Entity that acts as a container for all Windows Update for Business deployment service functionalities. Read-only.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -177,7 +186,7 @@ public class UpdatesRequestBuilder extends BaseRequestBuilder {
     /**
      * Entity that acts as a container for all Windows Update for Business deployment service functionalities. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -189,7 +198,7 @@ public class UpdatesRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property updates in admin
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final AdminWindowsUpdates body) {
@@ -199,12 +208,12 @@ public class UpdatesRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property updates in admin
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final AdminWindowsUpdates body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/admin/windows/updates", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -213,7 +222,7 @@ public class UpdatesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a UpdatesRequestBuilder
+     * @return a {@link UpdatesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UpdatesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -243,7 +252,7 @@ public class UpdatesRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

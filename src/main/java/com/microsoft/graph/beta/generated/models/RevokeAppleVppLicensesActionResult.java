@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class RevokeAppleVppLicensesActionResult extends DeviceActionResult implements Parsable {
     /**
-     * Instantiates a new RevokeAppleVppLicensesActionResult and sets the default values.
+     * Instantiates a new {@link RevokeAppleVppLicensesActionResult} and sets the default values.
      */
     public RevokeAppleVppLicensesActionResult() {
         super();
@@ -20,7 +20,7 @@ public class RevokeAppleVppLicensesActionResult extends DeviceActionResult imple
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a RevokeAppleVppLicensesActionResult
+     * @return a {@link RevokeAppleVppLicensesActionResult}
      */
     @jakarta.annotation.Nonnull
     public static RevokeAppleVppLicensesActionResult createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -29,7 +29,7 @@ public class RevokeAppleVppLicensesActionResult extends DeviceActionResult imple
     }
     /**
      * Gets the failedLicensesCount property value. Total number of Apple Vpp licenses that failed to revoke
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getFailedLicensesCount() {
@@ -37,7 +37,7 @@ public class RevokeAppleVppLicensesActionResult extends DeviceActionResult imple
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -48,7 +48,7 @@ public class RevokeAppleVppLicensesActionResult extends DeviceActionResult imple
     }
     /**
      * Gets the totalLicensesCount property value. Total number of Apple Vpp licenses associated
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getTotalLicensesCount() {

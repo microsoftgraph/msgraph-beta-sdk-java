@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GoalsExportJobCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * Instantiates a new GoalsExportJobCollectionResponse and sets the default values.
+     * Instantiates a new {@link GoalsExportJobCollectionResponse} and sets the default values.
      */
     public GoalsExportJobCollectionResponse() {
         super();
@@ -17,7 +17,7 @@ public class GoalsExportJobCollectionResponse extends BaseCollectionPaginationCo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a GoalsExportJobCollectionResponse
+     * @return a {@link GoalsExportJobCollectionResponse}
      */
     @jakarta.annotation.Nonnull
     public static GoalsExportJobCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class GoalsExportJobCollectionResponse extends BaseCollectionPaginationCo
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -36,7 +36,7 @@ public class GoalsExportJobCollectionResponse extends BaseCollectionPaginationCo
     }
     /**
      * Gets the value property value. The value property
-     * @return a java.util.List<GoalsExportJob>
+     * @return a {@link java.util.List<GoalsExportJob>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<GoalsExportJob> getValue() {

@@ -18,7 +18,7 @@ public class SystemCredentialPreferences implements AdditionalDataHolder, Backed
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new SystemCredentialPreferences and sets the default values.
+     * Instantiates a new {@link SystemCredentialPreferences} and sets the default values.
      */
     public SystemCredentialPreferences() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class SystemCredentialPreferences implements AdditionalDataHolder, Backed
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SystemCredentialPreferences
+     * @return a {@link SystemCredentialPreferences}
      */
     @jakarta.annotation.Nonnull
     public static SystemCredentialPreferences createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class SystemCredentialPreferences implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class SystemCredentialPreferences implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class SystemCredentialPreferences implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the excludeTargets property value. Users and groups excluded from the preferred authentication method experience of the system.
-     * @return a java.util.List<ExcludeTarget>
+     * @return a {@link java.util.List<ExcludeTarget>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ExcludeTarget> getExcludeTargets() {
@@ -65,7 +65,7 @@ public class SystemCredentialPreferences implements AdditionalDataHolder, Backed
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -78,7 +78,7 @@ public class SystemCredentialPreferences implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the includeTargets property value. Users and groups included in the preferred authentication method experience of the system.
-     * @return a java.util.List<IncludeTarget>
+     * @return a {@link java.util.List<IncludeTarget>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<IncludeTarget> getIncludeTargets() {
@@ -86,7 +86,7 @@ public class SystemCredentialPreferences implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -94,7 +94,7 @@ public class SystemCredentialPreferences implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the state property value. The state property
-     * @return a AdvancedConfigState
+     * @return a {@link AdvancedConfigState}
      */
     @jakarta.annotation.Nullable
     public AdvancedConfigState getState() {

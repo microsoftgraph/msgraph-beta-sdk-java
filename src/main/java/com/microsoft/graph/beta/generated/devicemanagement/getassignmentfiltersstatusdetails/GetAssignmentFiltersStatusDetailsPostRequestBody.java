@@ -18,7 +18,7 @@ public class GetAssignmentFiltersStatusDetailsPostRequestBody implements Additio
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new GetAssignmentFiltersStatusDetailsPostRequestBody and sets the default values.
+     * Instantiates a new {@link GetAssignmentFiltersStatusDetailsPostRequestBody} and sets the default values.
      */
     public GetAssignmentFiltersStatusDetailsPostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class GetAssignmentFiltersStatusDetailsPostRequestBody implements Additio
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a GetAssignmentFiltersStatusDetailsPostRequestBody
+     * @return a {@link GetAssignmentFiltersStatusDetailsPostRequestBody}
      */
     @jakarta.annotation.Nonnull
     public static GetAssignmentFiltersStatusDetailsPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class GetAssignmentFiltersStatusDetailsPostRequestBody implements Additio
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class GetAssignmentFiltersStatusDetailsPostRequestBody implements Additio
     }
     /**
      * Gets the assignmentFilterIds property value. The assignmentFilterIds property
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAssignmentFilterIds() {
@@ -57,7 +57,7 @@ public class GetAssignmentFiltersStatusDetailsPostRequestBody implements Additio
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -65,7 +65,7 @@ public class GetAssignmentFiltersStatusDetailsPostRequestBody implements Additio
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -80,7 +80,7 @@ public class GetAssignmentFiltersStatusDetailsPostRequestBody implements Additio
     }
     /**
      * Gets the managedDeviceId property value. The managedDeviceId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getManagedDeviceId() {
@@ -88,7 +88,7 @@ public class GetAssignmentFiltersStatusDetailsPostRequestBody implements Additio
     }
     /**
      * Gets the payloadId property value. The payloadId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPayloadId() {
@@ -96,7 +96,7 @@ public class GetAssignmentFiltersStatusDetailsPostRequestBody implements Additio
     }
     /**
      * Gets the skip property value. The skip property
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getSkip() {
@@ -104,7 +104,7 @@ public class GetAssignmentFiltersStatusDetailsPostRequestBody implements Additio
     }
     /**
      * Gets the top property value. The top property
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getTop() {
@@ -112,7 +112,7 @@ public class GetAssignmentFiltersStatusDetailsPostRequestBody implements Additio
     }
     /**
      * Gets the userId property value. The userId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserId() {

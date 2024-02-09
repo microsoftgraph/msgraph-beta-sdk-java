@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AllowedDataLocation extends Entity implements Parsable {
     /**
-     * Instantiates a new AllowedDataLocation and sets the default values.
+     * Instantiates a new {@link AllowedDataLocation} and sets the default values.
      */
     public AllowedDataLocation() {
         super();
@@ -17,7 +17,7 @@ public class AllowedDataLocation extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AllowedDataLocation
+     * @return a {@link AllowedDataLocation}
      */
     @jakarta.annotation.Nonnull
     public static AllowedDataLocation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class AllowedDataLocation extends Entity implements Parsable {
     }
     /**
      * Gets the appId property value. The appId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAppId() {
@@ -34,7 +34,7 @@ public class AllowedDataLocation extends Entity implements Parsable {
     }
     /**
      * Gets the domain property value. The domain property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDomain() {
@@ -42,7 +42,7 @@ public class AllowedDataLocation extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -55,7 +55,7 @@ public class AllowedDataLocation extends Entity implements Parsable {
     }
     /**
      * Gets the isDefault property value. The isDefault property
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDefault() {
@@ -63,7 +63,7 @@ public class AllowedDataLocation extends Entity implements Parsable {
     }
     /**
      * Gets the location property value. The location property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getLocation() {

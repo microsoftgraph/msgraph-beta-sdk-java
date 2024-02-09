@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsInformationProtectionDeviceRegistration extends Entity implements Parsable {
     /**
-     * Instantiates a new WindowsInformationProtectionDeviceRegistration and sets the default values.
+     * Instantiates a new {@link WindowsInformationProtectionDeviceRegistration} and sets the default values.
      */
     public WindowsInformationProtectionDeviceRegistration() {
         super();
@@ -21,7 +21,7 @@ public class WindowsInformationProtectionDeviceRegistration extends Entity imple
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WindowsInformationProtectionDeviceRegistration
+     * @return a {@link WindowsInformationProtectionDeviceRegistration}
      */
     @jakarta.annotation.Nonnull
     public static WindowsInformationProtectionDeviceRegistration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class WindowsInformationProtectionDeviceRegistration extends Entity imple
     }
     /**
      * Gets the deviceMacAddress property value. Device Mac address.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceMacAddress() {
@@ -38,7 +38,7 @@ public class WindowsInformationProtectionDeviceRegistration extends Entity imple
     }
     /**
      * Gets the deviceName property value. Device name.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceName() {
@@ -46,7 +46,7 @@ public class WindowsInformationProtectionDeviceRegistration extends Entity imple
     }
     /**
      * Gets the deviceRegistrationId property value. Device identifier for this device registration record.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceRegistrationId() {
@@ -54,7 +54,7 @@ public class WindowsInformationProtectionDeviceRegistration extends Entity imple
     }
     /**
      * Gets the deviceType property value. Device type, for example, Windows laptop VS Windows phone.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceType() {
@@ -62,7 +62,7 @@ public class WindowsInformationProtectionDeviceRegistration extends Entity imple
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -77,7 +77,7 @@ public class WindowsInformationProtectionDeviceRegistration extends Entity imple
     }
     /**
      * Gets the lastCheckInDateTime property value. Last checkin time of the device.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastCheckInDateTime() {
@@ -85,7 +85,7 @@ public class WindowsInformationProtectionDeviceRegistration extends Entity imple
     }
     /**
      * Gets the userId property value. UserId associated with this device registration record.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserId() {

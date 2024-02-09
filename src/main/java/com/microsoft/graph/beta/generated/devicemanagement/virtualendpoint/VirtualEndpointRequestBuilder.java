@@ -42,6 +42,7 @@ import java.util.Objects;
 public class VirtualEndpointRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the auditEvents property of the microsoft.graph.virtualEndpoint entity.
+     * @return a {@link AuditEventsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AuditEventsRequestBuilder auditEvents() {
@@ -49,6 +50,7 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the bulkActions property of the microsoft.graph.virtualEndpoint entity.
+     * @return a {@link BulkActionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public BulkActionsRequestBuilder bulkActions() {
@@ -56,6 +58,7 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the cloudPCs property of the microsoft.graph.virtualEndpoint entity.
+     * @return a {@link CloudPCsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CloudPCsRequestBuilder cloudPCs() {
@@ -63,6 +66,7 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the crossCloudGovernmentOrganizationMapping property of the microsoft.graph.virtualEndpoint entity.
+     * @return a {@link CrossCloudGovernmentOrganizationMappingRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CrossCloudGovernmentOrganizationMappingRequestBuilder crossCloudGovernmentOrganizationMapping() {
@@ -70,6 +74,7 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the deviceImages property of the microsoft.graph.virtualEndpoint entity.
+     * @return a {@link DeviceImagesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DeviceImagesRequestBuilder deviceImages() {
@@ -77,6 +82,7 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the externalPartnerSettings property of the microsoft.graph.virtualEndpoint entity.
+     * @return a {@link ExternalPartnerSettingsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ExternalPartnerSettingsRequestBuilder externalPartnerSettings() {
@@ -84,6 +90,7 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the frontLineServicePlans property of the microsoft.graph.virtualEndpoint entity.
+     * @return a {@link FrontLineServicePlansRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public FrontLineServicePlansRequestBuilder frontLineServicePlans() {
@@ -91,6 +98,7 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the galleryImages property of the microsoft.graph.virtualEndpoint entity.
+     * @return a {@link GalleryImagesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GalleryImagesRequestBuilder galleryImages() {
@@ -98,6 +106,7 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getEffectivePermissions method.
+     * @return a {@link GetEffectivePermissionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetEffectivePermissionsRequestBuilder getEffectivePermissions() {
@@ -105,6 +114,7 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the onPremisesConnections property of the microsoft.graph.virtualEndpoint entity.
+     * @return a {@link OnPremisesConnectionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public OnPremisesConnectionsRequestBuilder onPremisesConnections() {
@@ -112,6 +122,7 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the organizationSettings property of the microsoft.graph.virtualEndpoint entity.
+     * @return a {@link OrganizationSettingsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public OrganizationSettingsRequestBuilder organizationSettings() {
@@ -119,6 +130,7 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the provisioningPolicies property of the microsoft.graph.virtualEndpoint entity.
+     * @return a {@link ProvisioningPoliciesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ProvisioningPoliciesRequestBuilder provisioningPolicies() {
@@ -126,6 +138,7 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the reports property of the microsoft.graph.virtualEndpoint entity.
+     * @return a {@link ReportsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ReportsRequestBuilder reports() {
@@ -133,6 +146,7 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the retrieveScopedPermissions method.
+     * @return a {@link RetrieveScopedPermissionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RetrieveScopedPermissionsRequestBuilder retrieveScopedPermissions() {
@@ -140,6 +154,7 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the retrieveTenantEncryptionSetting method.
+     * @return a {@link RetrieveTenantEncryptionSettingRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RetrieveTenantEncryptionSettingRequestBuilder retrieveTenantEncryptionSetting() {
@@ -147,6 +162,7 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the servicePlans property of the microsoft.graph.virtualEndpoint entity.
+     * @return a {@link ServicePlansRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ServicePlansRequestBuilder servicePlans() {
@@ -154,6 +170,7 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the sharedUseServicePlans property of the microsoft.graph.virtualEndpoint entity.
+     * @return a {@link SharedUseServicePlansRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SharedUseServicePlansRequestBuilder sharedUseServicePlans() {
@@ -161,6 +178,7 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the snapshots property of the microsoft.graph.virtualEndpoint entity.
+     * @return a {@link SnapshotsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SnapshotsRequestBuilder snapshots() {
@@ -168,6 +186,7 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the supportedRegions property of the microsoft.graph.virtualEndpoint entity.
+     * @return a {@link SupportedRegionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SupportedRegionsRequestBuilder supportedRegions() {
@@ -175,13 +194,14 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the userSettings property of the microsoft.graph.virtualEndpoint entity.
+     * @return a {@link UserSettingsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UserSettingsRequestBuilder userSettings() {
         return new UserSettingsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new VirtualEndpointRequestBuilder and sets the default values.
+     * Instantiates a new {@link VirtualEndpointRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -189,7 +209,7 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new VirtualEndpointRequestBuilder and sets the default values.
+     * Instantiates a new {@link VirtualEndpointRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -198,6 +218,7 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Delete navigation property virtualEndpoint for deviceManagement
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete() {
         delete(null);
@@ -205,17 +226,18 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property virtualEndpoint for deviceManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Get virtualEndpoint from deviceManagement
-     * @return a VirtualEndpoint
+     * @return a {@link VirtualEndpoint}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public VirtualEndpoint get() {
@@ -224,20 +246,21 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder {
     /**
      * Get virtualEndpoint from deviceManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a VirtualEndpoint
+     * @return a {@link VirtualEndpoint}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public VirtualEndpoint get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, VirtualEndpoint::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property virtualEndpoint in deviceManagement
      * @param body The request body
-     * @return a VirtualEndpoint
+     * @return a {@link VirtualEndpoint}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public VirtualEndpoint patch(@jakarta.annotation.Nonnull final VirtualEndpoint body) {
@@ -247,20 +270,20 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property virtualEndpoint in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a VirtualEndpoint
+     * @return a {@link VirtualEndpoint}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public VirtualEndpoint patch(@jakarta.annotation.Nonnull final VirtualEndpoint body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, VirtualEndpoint::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property virtualEndpoint for deviceManagement
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -269,18 +292,18 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property virtualEndpoint for deviceManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/deviceManagement/virtualEndpoint", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Get virtualEndpoint from deviceManagement
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -289,7 +312,7 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder {
     /**
      * Get virtualEndpoint from deviceManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -301,7 +324,7 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property virtualEndpoint in deviceManagement
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final VirtualEndpoint body) {
@@ -311,12 +334,12 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property virtualEndpoint in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final VirtualEndpoint body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/deviceManagement/virtualEndpoint", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -325,7 +348,7 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a VirtualEndpointRequestBuilder
+     * @return a {@link VirtualEndpointRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public VirtualEndpointRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -355,7 +378,7 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

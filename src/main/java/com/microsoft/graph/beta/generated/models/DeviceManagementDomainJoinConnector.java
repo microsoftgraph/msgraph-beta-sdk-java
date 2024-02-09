@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementDomainJoinConnector extends Entity implements Parsable {
     /**
-     * Instantiates a new DeviceManagementDomainJoinConnector and sets the default values.
+     * Instantiates a new {@link DeviceManagementDomainJoinConnector} and sets the default values.
      */
     public DeviceManagementDomainJoinConnector() {
         super();
@@ -21,7 +21,7 @@ public class DeviceManagementDomainJoinConnector extends Entity implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceManagementDomainJoinConnector
+     * @return a {@link DeviceManagementDomainJoinConnector}
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementDomainJoinConnector createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class DeviceManagementDomainJoinConnector extends Entity implements Parsa
     }
     /**
      * Gets the displayName property value. The connector display name.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -38,7 +38,7 @@ public class DeviceManagementDomainJoinConnector extends Entity implements Parsa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -51,7 +51,7 @@ public class DeviceManagementDomainJoinConnector extends Entity implements Parsa
     }
     /**
      * Gets the lastConnectionDateTime property value. Last time connector contacted Intune.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastConnectionDateTime() {
@@ -59,7 +59,7 @@ public class DeviceManagementDomainJoinConnector extends Entity implements Parsa
     }
     /**
      * Gets the state property value. The ODJ request states.
-     * @return a DeviceManagementDomainJoinConnectorState
+     * @return a {@link DeviceManagementDomainJoinConnectorState}
      */
     @jakarta.annotation.Nullable
     public DeviceManagementDomainJoinConnectorState getState() {
@@ -67,7 +67,7 @@ public class DeviceManagementDomainJoinConnector extends Entity implements Parsa
     }
     /**
      * Gets the version property value. The version of the connector.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getVersion() {

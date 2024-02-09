@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CloudPcBulkRestore extends CloudPcBulkAction implements Parsable {
     /**
-     * Instantiates a new CloudPcBulkRestore and sets the default values.
+     * Instantiates a new {@link CloudPcBulkRestore} and sets the default values.
      */
     public CloudPcBulkRestore() {
         super();
@@ -19,7 +19,7 @@ public class CloudPcBulkRestore extends CloudPcBulkAction implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CloudPcBulkRestore
+     * @return a {@link CloudPcBulkRestore}
      */
     @jakarta.annotation.Nonnull
     public static CloudPcBulkRestore createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class CloudPcBulkRestore extends CloudPcBulkAction implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -39,7 +39,7 @@ public class CloudPcBulkRestore extends CloudPcBulkAction implements Parsable {
     }
     /**
      * Gets the restorePointDateTime property value. The restorePointDateTime property
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getRestorePointDateTime() {
@@ -47,7 +47,7 @@ public class CloudPcBulkRestore extends CloudPcBulkAction implements Parsable {
     }
     /**
      * Gets the timeRange property value. The timeRange property
-     * @return a RestoreTimeRange
+     * @return a {@link RestoreTimeRange}
      */
     @jakarta.annotation.Nullable
     public RestoreTimeRange getTimeRange() {

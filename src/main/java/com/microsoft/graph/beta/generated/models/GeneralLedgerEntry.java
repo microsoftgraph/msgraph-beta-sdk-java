@@ -22,7 +22,7 @@ public class GeneralLedgerEntry implements AdditionalDataHolder, BackedModel, Pa
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new GeneralLedgerEntry and sets the default values.
+     * Instantiates a new {@link GeneralLedgerEntry} and sets the default values.
      */
     public GeneralLedgerEntry() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -31,7 +31,7 @@ public class GeneralLedgerEntry implements AdditionalDataHolder, BackedModel, Pa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a GeneralLedgerEntry
+     * @return a {@link GeneralLedgerEntry}
      */
     @jakarta.annotation.Nonnull
     public static GeneralLedgerEntry createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class GeneralLedgerEntry implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the account property value. The account property
-     * @return a Account
+     * @return a {@link Account}
      */
     @jakarta.annotation.Nullable
     public Account getAccount() {
@@ -48,7 +48,7 @@ public class GeneralLedgerEntry implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the accountId property value. The accountId property
-     * @return a UUID
+     * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
     public UUID getAccountId() {
@@ -56,7 +56,7 @@ public class GeneralLedgerEntry implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the accountNumber property value. The accountNumber property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAccountNumber() {
@@ -64,7 +64,7 @@ public class GeneralLedgerEntry implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -77,7 +77,7 @@ public class GeneralLedgerEntry implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -85,7 +85,7 @@ public class GeneralLedgerEntry implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the creditAmount property value. The creditAmount property
-     * @return a BigDecimal
+     * @return a {@link BigDecimal}
      */
     @jakarta.annotation.Nullable
     public BigDecimal getCreditAmount() {
@@ -93,7 +93,7 @@ public class GeneralLedgerEntry implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the debitAmount property value. The debitAmount property
-     * @return a BigDecimal
+     * @return a {@link BigDecimal}
      */
     @jakarta.annotation.Nullable
     public BigDecimal getDebitAmount() {
@@ -101,7 +101,7 @@ public class GeneralLedgerEntry implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the description property value. The description property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -109,7 +109,7 @@ public class GeneralLedgerEntry implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the documentNumber property value. The documentNumber property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDocumentNumber() {
@@ -117,7 +117,7 @@ public class GeneralLedgerEntry implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the documentType property value. The documentType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDocumentType() {
@@ -125,7 +125,7 @@ public class GeneralLedgerEntry implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -146,7 +146,7 @@ public class GeneralLedgerEntry implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the id property value. The id property
-     * @return a UUID
+     * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
     public UUID getId() {
@@ -154,7 +154,7 @@ public class GeneralLedgerEntry implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -162,7 +162,7 @@ public class GeneralLedgerEntry implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -170,7 +170,7 @@ public class GeneralLedgerEntry implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the postingDate property value. The postingDate property
-     * @return a LocalDate
+     * @return a {@link LocalDate}
      */
     @jakarta.annotation.Nullable
     public LocalDate getPostingDate() {

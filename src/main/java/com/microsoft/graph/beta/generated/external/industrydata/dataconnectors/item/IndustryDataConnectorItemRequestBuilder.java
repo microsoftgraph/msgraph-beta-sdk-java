@@ -24,6 +24,7 @@ import java.util.Objects;
 public class IndustryDataConnectorItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the validate method.
+     * @return a {@link MicrosoftGraphIndustryDataValidateRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MicrosoftGraphIndustryDataValidateRequestBuilder microsoftGraphIndustryDataValidate() {
@@ -31,13 +32,14 @@ public class IndustryDataConnectorItemRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * Provides operations to manage the sourceSystem property of the microsoft.graph.industryData.industryDataConnector entity.
+     * @return a {@link SourceSystemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SourceSystemRequestBuilder sourceSystem() {
         return new SourceSystemRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new IndustryDataConnectorItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link IndustryDataConnectorItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -45,7 +47,7 @@ public class IndustryDataConnectorItemRequestBuilder extends BaseRequestBuilder 
         super(requestAdapter, "{+baseurl}/external/industryData/dataConnectors/{industryDataConnector%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new IndustryDataConnectorItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link IndustryDataConnectorItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -53,27 +55,29 @@ public class IndustryDataConnectorItemRequestBuilder extends BaseRequestBuilder 
         super(requestAdapter, "{+baseurl}/external/industryData/dataConnectors/{industryDataConnector%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete an azureDataLakeConnector object.
-     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-azuredatalakeconnector-delete?view=graph-rest-1.0">Find more info here</a>
+     * Delete an industryDataConnector object.
+     * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-industrydataconnector-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete an azureDataLakeConnector object.
+     * Delete an industryDataConnector object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-azuredatalakeconnector-delete?view=graph-rest-1.0">Find more info here</a>
+     * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-industrydataconnector-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Read the properties and relationships of an azureDataLakeConnector object.
-     * @return a IndustryDataConnector
+     * @return a {@link IndustryDataConnector}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/industrydata-azuredatalakeconnector-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -83,66 +87,67 @@ public class IndustryDataConnectorItemRequestBuilder extends BaseRequestBuilder 
     /**
      * Read the properties and relationships of an azureDataLakeConnector object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a IndustryDataConnector
+     * @return a {@link IndustryDataConnector}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/industrydata-azuredatalakeconnector-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public IndustryDataConnector get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, IndustryDataConnector::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of an azureDataLakeConnector object.
+     * Update the properties of an industryDataConnector object.
      * @param body The request body
-     * @return a IndustryDataConnector
-     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-azuredatalakeconnector-update?view=graph-rest-1.0">Find more info here</a>
+     * @return a {@link IndustryDataConnector}
+     * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-industrydataconnector-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public IndustryDataConnector patch(@jakarta.annotation.Nonnull final IndustryDataConnector body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of an azureDataLakeConnector object.
+     * Update the properties of an industryDataConnector object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a IndustryDataConnector
-     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-azuredatalakeconnector-update?view=graph-rest-1.0">Find more info here</a>
+     * @return a {@link IndustryDataConnector}
+     * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-industrydataconnector-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public IndustryDataConnector patch(@jakarta.annotation.Nonnull final IndustryDataConnector body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, IndustryDataConnector::createFromDiscriminatorValue);
     }
     /**
-     * Delete an azureDataLakeConnector object.
-     * @return a RequestInformation
+     * Delete an industryDataConnector object.
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete an azureDataLakeConnector object.
+     * Delete an industryDataConnector object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/external/industryData/dataConnectors/{industryDataConnector%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Read the properties and relationships of an azureDataLakeConnector object.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -151,7 +156,7 @@ public class IndustryDataConnectorItemRequestBuilder extends BaseRequestBuilder 
     /**
      * Read the properties and relationships of an azureDataLakeConnector object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -161,24 +166,24 @@ public class IndustryDataConnectorItemRequestBuilder extends BaseRequestBuilder 
         return requestInfo;
     }
     /**
-     * Update the properties of an azureDataLakeConnector object.
+     * Update the properties of an industryDataConnector object.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final IndustryDataConnector body) {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of an azureDataLakeConnector object.
+     * Update the properties of an industryDataConnector object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final IndustryDataConnector body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/external/industryData/dataConnectors/{industryDataConnector%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -187,7 +192,7 @@ public class IndustryDataConnectorItemRequestBuilder extends BaseRequestBuilder 
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a IndustryDataConnectorItemRequestBuilder
+     * @return a {@link IndustryDataConnectorItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public IndustryDataConnectorItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -217,7 +222,7 @@ public class IndustryDataConnectorItemRequestBuilder extends BaseRequestBuilder 
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

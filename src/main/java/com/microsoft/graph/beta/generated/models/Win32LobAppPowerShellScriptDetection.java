@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Win32LobAppPowerShellScriptDetection extends Win32LobAppDetection implements Parsable {
     /**
-     * Instantiates a new Win32LobAppPowerShellScriptDetection and sets the default values.
+     * Instantiates a new {@link Win32LobAppPowerShellScriptDetection} and sets the default values.
      */
     public Win32LobAppPowerShellScriptDetection() {
         super();
@@ -21,7 +21,7 @@ public class Win32LobAppPowerShellScriptDetection extends Win32LobAppDetection i
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Win32LobAppPowerShellScriptDetection
+     * @return a {@link Win32LobAppPowerShellScriptDetection}
      */
     @jakarta.annotation.Nonnull
     public static Win32LobAppPowerShellScriptDetection createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class Win32LobAppPowerShellScriptDetection extends Win32LobAppDetection i
     }
     /**
      * Gets the enforceSignatureCheck property value. A value indicating whether signature check is enforced
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getEnforceSignatureCheck() {
@@ -38,7 +38,7 @@ public class Win32LobAppPowerShellScriptDetection extends Win32LobAppDetection i
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -50,7 +50,7 @@ public class Win32LobAppPowerShellScriptDetection extends Win32LobAppDetection i
     }
     /**
      * Gets the runAs32Bit property value. A value indicating whether this script should run as 32-bit
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getRunAs32Bit() {
@@ -58,7 +58,7 @@ public class Win32LobAppPowerShellScriptDetection extends Win32LobAppDetection i
     }
     /**
      * Gets the scriptContent property value. The base64 encoded script content to detect Win32 Line of Business (LoB) app
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getScriptContent() {

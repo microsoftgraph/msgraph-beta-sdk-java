@@ -19,7 +19,7 @@ public class PstnBlockedUsersLogRow implements AdditionalDataHolder, BackedModel
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new PstnBlockedUsersLogRow and sets the default values.
+     * Instantiates a new {@link PstnBlockedUsersLogRow} and sets the default values.
      */
     public PstnBlockedUsersLogRow() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class PstnBlockedUsersLogRow implements AdditionalDataHolder, BackedModel
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PstnBlockedUsersLogRow
+     * @return a {@link PstnBlockedUsersLogRow}
      */
     @jakarta.annotation.Nonnull
     public static PstnBlockedUsersLogRow createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class PstnBlockedUsersLogRow implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -50,7 +50,7 @@ public class PstnBlockedUsersLogRow implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -58,7 +58,7 @@ public class PstnBlockedUsersLogRow implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the blockDateTime property value. The date and time when the user was blocked/unblocked from making PSTN calls. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getBlockDateTime() {
@@ -66,7 +66,7 @@ public class PstnBlockedUsersLogRow implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the blockReason property value. The reason why the user is blocked/unblocked from making calls.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getBlockReason() {
@@ -74,7 +74,7 @@ public class PstnBlockedUsersLogRow implements AdditionalDataHolder, BackedModel
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -92,7 +92,7 @@ public class PstnBlockedUsersLogRow implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -100,7 +100,7 @@ public class PstnBlockedUsersLogRow implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the remediationId property value. Unique identifier (GUID) for the blocking/unblocking action.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRemediationId() {
@@ -108,7 +108,7 @@ public class PstnBlockedUsersLogRow implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the userBlockMode property value. Indicates whether the user is blocked or unblocked from making PSTN calls in Microsoft Teams. The possible values are: blocked, unblocked, unknownFutureValue.
-     * @return a PstnUserBlockMode
+     * @return a {@link PstnUserBlockMode}
      */
     @jakarta.annotation.Nullable
     public PstnUserBlockMode getUserBlockMode() {
@@ -116,7 +116,7 @@ public class PstnBlockedUsersLogRow implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the userDisplayName property value. Display name of the user.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserDisplayName() {
@@ -124,7 +124,7 @@ public class PstnBlockedUsersLogRow implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the userId property value. The unique identifier (GUID) of the user in Microsoft Entra ID.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
@@ -132,7 +132,7 @@ public class PstnBlockedUsersLogRow implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the userPrincipalName property value. The user principal name (sign-in name) in Microsoft Entra ID. This is usually the same as the user's SIP address, and can be same as the user's e-mail address.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
@@ -140,7 +140,7 @@ public class PstnBlockedUsersLogRow implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the userTelephoneNumber property value. User's blocked number. For details, see E.164.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserTelephoneNumber() {

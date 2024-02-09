@@ -27,6 +27,7 @@ import java.util.Objects;
 public class GovernanceRoleAssignmentRequestItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the cancel method.
+     * @return a {@link CancelRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CancelRequestBuilder cancel() {
@@ -34,6 +35,7 @@ public class GovernanceRoleAssignmentRequestItemRequestBuilder extends BaseReque
     }
     /**
      * Provides operations to manage the resource property of the microsoft.graph.governanceRoleAssignmentRequest entity.
+     * @return a {@link ResourceRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ResourceRequestBuilder resource() {
@@ -41,6 +43,7 @@ public class GovernanceRoleAssignmentRequestItemRequestBuilder extends BaseReque
     }
     /**
      * Provides operations to manage the roleDefinition property of the microsoft.graph.governanceRoleAssignmentRequest entity.
+     * @return a {@link RoleDefinitionRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RoleDefinitionRequestBuilder roleDefinition() {
@@ -48,6 +51,7 @@ public class GovernanceRoleAssignmentRequestItemRequestBuilder extends BaseReque
     }
     /**
      * Provides operations to manage the subject property of the microsoft.graph.governanceRoleAssignmentRequest entity.
+     * @return a {@link SubjectRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SubjectRequestBuilder subject() {
@@ -55,13 +59,14 @@ public class GovernanceRoleAssignmentRequestItemRequestBuilder extends BaseReque
     }
     /**
      * Provides operations to call the updateRequest method.
+     * @return a {@link UpdateRequestRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UpdateRequestRequestBuilder updateRequest() {
         return new UpdateRequestRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new GovernanceRoleAssignmentRequestItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link GovernanceRoleAssignmentRequestItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -69,7 +74,7 @@ public class GovernanceRoleAssignmentRequestItemRequestBuilder extends BaseReque
         super(requestAdapter, "{+baseurl}/privilegedAccess/{privilegedAccess%2Did}/roleAssignmentRequests/{governanceRoleAssignmentRequest%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new GovernanceRoleAssignmentRequestItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link GovernanceRoleAssignmentRequestItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -78,6 +83,7 @@ public class GovernanceRoleAssignmentRequestItemRequestBuilder extends BaseReque
     }
     /**
      * Delete navigation property roleAssignmentRequests for privilegedAccess
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete() {
         delete(null);
@@ -85,17 +91,18 @@ public class GovernanceRoleAssignmentRequestItemRequestBuilder extends BaseReque
     /**
      * Delete navigation property roleAssignmentRequests for privilegedAccess
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * A collection of role assignment requests for the provider.
-     * @return a GovernanceRoleAssignmentRequest
+     * @return a {@link GovernanceRoleAssignmentRequest}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public GovernanceRoleAssignmentRequest get() {
@@ -104,20 +111,21 @@ public class GovernanceRoleAssignmentRequestItemRequestBuilder extends BaseReque
     /**
      * A collection of role assignment requests for the provider.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a GovernanceRoleAssignmentRequest
+     * @return a {@link GovernanceRoleAssignmentRequest}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public GovernanceRoleAssignmentRequest get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, GovernanceRoleAssignmentRequest::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property roleAssignmentRequests in privilegedAccess
      * @param body The request body
-     * @return a GovernanceRoleAssignmentRequest
+     * @return a {@link GovernanceRoleAssignmentRequest}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public GovernanceRoleAssignmentRequest patch(@jakarta.annotation.Nonnull final GovernanceRoleAssignmentRequest body) {
@@ -127,20 +135,20 @@ public class GovernanceRoleAssignmentRequestItemRequestBuilder extends BaseReque
      * Update the navigation property roleAssignmentRequests in privilegedAccess
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a GovernanceRoleAssignmentRequest
+     * @return a {@link GovernanceRoleAssignmentRequest}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public GovernanceRoleAssignmentRequest patch(@jakarta.annotation.Nonnull final GovernanceRoleAssignmentRequest body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, GovernanceRoleAssignmentRequest::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property roleAssignmentRequests for privilegedAccess
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -149,18 +157,18 @@ public class GovernanceRoleAssignmentRequestItemRequestBuilder extends BaseReque
     /**
      * Delete navigation property roleAssignmentRequests for privilegedAccess
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/privilegedAccess/{privilegedAccess%2Did}/roleAssignmentRequests/{governanceRoleAssignmentRequest%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * A collection of role assignment requests for the provider.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -169,7 +177,7 @@ public class GovernanceRoleAssignmentRequestItemRequestBuilder extends BaseReque
     /**
      * A collection of role assignment requests for the provider.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -181,7 +189,7 @@ public class GovernanceRoleAssignmentRequestItemRequestBuilder extends BaseReque
     /**
      * Update the navigation property roleAssignmentRequests in privilegedAccess
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final GovernanceRoleAssignmentRequest body) {
@@ -191,12 +199,12 @@ public class GovernanceRoleAssignmentRequestItemRequestBuilder extends BaseReque
      * Update the navigation property roleAssignmentRequests in privilegedAccess
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final GovernanceRoleAssignmentRequest body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/privilegedAccess/{privilegedAccess%2Did}/roleAssignmentRequests/{governanceRoleAssignmentRequest%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -205,7 +213,7 @@ public class GovernanceRoleAssignmentRequestItemRequestBuilder extends BaseReque
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a GovernanceRoleAssignmentRequestItemRequestBuilder
+     * @return a {@link GovernanceRoleAssignmentRequestItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GovernanceRoleAssignmentRequestItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -235,7 +243,7 @@ public class GovernanceRoleAssignmentRequestItemRequestBuilder extends BaseReque
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

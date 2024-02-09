@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Authentication extends Entity implements Parsable {
     /**
-     * Instantiates a new Authentication and sets the default values.
+     * Instantiates a new {@link Authentication} and sets the default values.
      */
     public Authentication() {
         super();
@@ -17,7 +17,7 @@ public class Authentication extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Authentication
+     * @return a {@link Authentication}
      */
     @jakarta.annotation.Nonnull
     public static Authentication createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class Authentication extends Entity implements Parsable {
     }
     /**
      * Gets the emailMethods property value. Represents the email addresses registered to a user for authentication.
-     * @return a java.util.List<EmailAuthenticationMethod>
+     * @return a {@link java.util.List<EmailAuthenticationMethod>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<EmailAuthenticationMethod> getEmailMethods() {
@@ -34,7 +34,7 @@ public class Authentication extends Entity implements Parsable {
     }
     /**
      * Gets the fido2Methods property value. Represents the FIDO2 security keys registered to a user for authentication.
-     * @return a java.util.List<Fido2AuthenticationMethod>
+     * @return a {@link java.util.List<Fido2AuthenticationMethod>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Fido2AuthenticationMethod> getFido2Methods() {
@@ -42,7 +42,7 @@ public class Authentication extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -64,7 +64,7 @@ public class Authentication extends Entity implements Parsable {
     }
     /**
      * Gets the methods property value. Represents all authentication methods registered to a user.
-     * @return a java.util.List<AuthenticationMethod>
+     * @return a {@link java.util.List<AuthenticationMethod>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthenticationMethod> getMethods() {
@@ -72,7 +72,7 @@ public class Authentication extends Entity implements Parsable {
     }
     /**
      * Gets the microsoftAuthenticatorMethods property value. The details of the Microsoft Authenticator app registered to a user for authentication.
-     * @return a java.util.List<MicrosoftAuthenticatorAuthenticationMethod>
+     * @return a {@link java.util.List<MicrosoftAuthenticatorAuthenticationMethod>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<MicrosoftAuthenticatorAuthenticationMethod> getMicrosoftAuthenticatorMethods() {
@@ -80,7 +80,7 @@ public class Authentication extends Entity implements Parsable {
     }
     /**
      * Gets the operations property value. The operations property
-     * @return a java.util.List<LongRunningOperation>
+     * @return a {@link java.util.List<LongRunningOperation>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<LongRunningOperation> getOperations() {
@@ -88,7 +88,7 @@ public class Authentication extends Entity implements Parsable {
     }
     /**
      * Gets the passwordlessMicrosoftAuthenticatorMethods property value. Represents the Microsoft Authenticator Passwordless Phone Sign-in methods registered to a user for authentication.
-     * @return a java.util.List<PasswordlessMicrosoftAuthenticatorAuthenticationMethod>
+     * @return a {@link java.util.List<PasswordlessMicrosoftAuthenticatorAuthenticationMethod>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<PasswordlessMicrosoftAuthenticatorAuthenticationMethod> getPasswordlessMicrosoftAuthenticatorMethods() {
@@ -96,7 +96,7 @@ public class Authentication extends Entity implements Parsable {
     }
     /**
      * Gets the passwordMethods property value. Represents the details of the password authentication method registered to a user for authentication.
-     * @return a java.util.List<PasswordAuthenticationMethod>
+     * @return a {@link java.util.List<PasswordAuthenticationMethod>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<PasswordAuthenticationMethod> getPasswordMethods() {
@@ -104,7 +104,7 @@ public class Authentication extends Entity implements Parsable {
     }
     /**
      * Gets the phoneMethods property value. Represents the phone registered to a user for authentication.
-     * @return a java.util.List<PhoneAuthenticationMethod>
+     * @return a {@link java.util.List<PhoneAuthenticationMethod>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<PhoneAuthenticationMethod> getPhoneMethods() {
@@ -112,7 +112,7 @@ public class Authentication extends Entity implements Parsable {
     }
     /**
      * Gets the platformCredentialMethods property value. The platformCredentialMethods property
-     * @return a java.util.List<PlatformCredentialAuthenticationMethod>
+     * @return a {@link java.util.List<PlatformCredentialAuthenticationMethod>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<PlatformCredentialAuthenticationMethod> getPlatformCredentialMethods() {
@@ -120,7 +120,7 @@ public class Authentication extends Entity implements Parsable {
     }
     /**
      * Gets the signInPreferences property value. The settings and preferences for to the sign-in experience of a user. Use this property to configure the user's default multifactor authentication (MFA) method.
-     * @return a SignInPreferences
+     * @return a {@link SignInPreferences}
      */
     @jakarta.annotation.Nullable
     public SignInPreferences getSignInPreferences() {
@@ -128,7 +128,7 @@ public class Authentication extends Entity implements Parsable {
     }
     /**
      * Gets the softwareOathMethods property value. The softwareOathMethods property
-     * @return a java.util.List<SoftwareOathAuthenticationMethod>
+     * @return a {@link java.util.List<SoftwareOathAuthenticationMethod>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<SoftwareOathAuthenticationMethod> getSoftwareOathMethods() {
@@ -136,7 +136,7 @@ public class Authentication extends Entity implements Parsable {
     }
     /**
      * Gets the temporaryAccessPassMethods property value. Represents a Temporary Access Pass registered to a user for authentication through time-limited passcodes.
-     * @return a java.util.List<TemporaryAccessPassAuthenticationMethod>
+     * @return a {@link java.util.List<TemporaryAccessPassAuthenticationMethod>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<TemporaryAccessPassAuthenticationMethod> getTemporaryAccessPassMethods() {
@@ -144,7 +144,7 @@ public class Authentication extends Entity implements Parsable {
     }
     /**
      * Gets the windowsHelloForBusinessMethods property value. Represents the Windows Hello for Business authentication method registered to a user for authentication.
-     * @return a java.util.List<WindowsHelloForBusinessAuthenticationMethod>
+     * @return a {@link java.util.List<WindowsHelloForBusinessAuthenticationMethod>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<WindowsHelloForBusinessAuthenticationMethod> getWindowsHelloForBusinessMethods() {

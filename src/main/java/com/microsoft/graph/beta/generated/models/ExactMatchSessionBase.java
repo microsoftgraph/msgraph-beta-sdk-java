@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ExactMatchSessionBase extends ExactMatchJobBase implements Parsable {
     /**
-     * Instantiates a new ExactMatchSessionBase and sets the default values.
+     * Instantiates a new {@link ExactMatchSessionBase} and sets the default values.
      */
     public ExactMatchSessionBase() {
         super();
@@ -19,7 +19,7 @@ public class ExactMatchSessionBase extends ExactMatchJobBase implements Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ExactMatchSessionBase
+     * @return a {@link ExactMatchSessionBase}
      */
     @jakarta.annotation.Nonnull
     public static ExactMatchSessionBase createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -35,7 +35,7 @@ public class ExactMatchSessionBase extends ExactMatchJobBase implements Parsable
     }
     /**
      * Gets the dataStoreId property value. The dataStoreId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDataStoreId() {
@@ -43,7 +43,7 @@ public class ExactMatchSessionBase extends ExactMatchJobBase implements Parsable
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -60,7 +60,7 @@ public class ExactMatchSessionBase extends ExactMatchJobBase implements Parsable
     }
     /**
      * Gets the processingCompletionDateTime property value. The processingCompletionDateTime property
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getProcessingCompletionDateTime() {
@@ -68,7 +68,7 @@ public class ExactMatchSessionBase extends ExactMatchJobBase implements Parsable
     }
     /**
      * Gets the remainingBlockCount property value. The remainingBlockCount property
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getRemainingBlockCount() {
@@ -76,7 +76,7 @@ public class ExactMatchSessionBase extends ExactMatchJobBase implements Parsable
     }
     /**
      * Gets the remainingJobCount property value. The remainingJobCount property
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getRemainingJobCount() {
@@ -84,7 +84,7 @@ public class ExactMatchSessionBase extends ExactMatchJobBase implements Parsable
     }
     /**
      * Gets the state property value. The state property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getState() {
@@ -92,7 +92,7 @@ public class ExactMatchSessionBase extends ExactMatchJobBase implements Parsable
     }
     /**
      * Gets the totalBlockCount property value. The totalBlockCount property
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getTotalBlockCount() {
@@ -100,7 +100,7 @@ public class ExactMatchSessionBase extends ExactMatchJobBase implements Parsable
     }
     /**
      * Gets the totalJobCount property value. The totalJobCount property
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getTotalJobCount() {
@@ -108,7 +108,7 @@ public class ExactMatchSessionBase extends ExactMatchJobBase implements Parsable
     }
     /**
      * Gets the uploadCompletionDateTime property value. The uploadCompletionDateTime property
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getUploadCompletionDateTime() {

@@ -25,6 +25,7 @@ import java.util.Objects;
 public class CustomAccessPackageWorkflowExtensionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
      */
@@ -36,7 +37,7 @@ public class CustomAccessPackageWorkflowExtensionsRequestBuilder extends BaseReq
     /**
      * Provides operations to manage the customAccessPackageWorkflowExtensions property of the microsoft.graph.accessPackageCatalog entity.
      * @param customAccessPackageWorkflowExtensionId The unique identifier of customAccessPackageWorkflowExtension
-     * @return a CustomAccessPackageWorkflowExtensionItemRequestBuilder
+     * @return a {@link CustomAccessPackageWorkflowExtensionItemRequestBuilder}
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
      */
@@ -49,7 +50,7 @@ public class CustomAccessPackageWorkflowExtensionsRequestBuilder extends BaseReq
         return new CustomAccessPackageWorkflowExtensionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new CustomAccessPackageWorkflowExtensionsRequestBuilder and sets the default values.
+     * Instantiates a new {@link CustomAccessPackageWorkflowExtensionsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -57,7 +58,7 @@ public class CustomAccessPackageWorkflowExtensionsRequestBuilder extends BaseReq
         super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/accessPackageCatalogs/{accessPackageCatalog%2Did}/customAccessPackageWorkflowExtensions{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new CustomAccessPackageWorkflowExtensionsRequestBuilder and sets the default values.
+     * Instantiates a new {@link CustomAccessPackageWorkflowExtensionsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -66,7 +67,8 @@ public class CustomAccessPackageWorkflowExtensionsRequestBuilder extends BaseReq
     }
     /**
      * Get a list of the customAccessPackageWorkflowExtension objects and their properties. The resulting list includes all the customAccessPackageWorkflowExtension objects for the catalog that the caller has access to read.
-     * @return a CustomAccessPackageWorkflowExtensionCollectionResponse
+     * @return a {@link CustomAccessPackageWorkflowExtensionCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackagecatalog-list-customaccesspackageworkflowextensions?view=graph-rest-1.0">Find more info here</a>
@@ -79,7 +81,8 @@ public class CustomAccessPackageWorkflowExtensionsRequestBuilder extends BaseReq
     /**
      * Get a list of the customAccessPackageWorkflowExtension objects and their properties. The resulting list includes all the customAccessPackageWorkflowExtension objects for the catalog that the caller has access to read.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CustomAccessPackageWorkflowExtensionCollectionResponse
+     * @return a {@link CustomAccessPackageWorkflowExtensionCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackagecatalog-list-customaccesspackageworkflowextensions?view=graph-rest-1.0">Find more info here</a>
@@ -89,14 +92,14 @@ public class CustomAccessPackageWorkflowExtensionsRequestBuilder extends BaseReq
     public CustomAccessPackageWorkflowExtensionCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, CustomAccessPackageWorkflowExtensionCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new customAccessPackageWorkflowExtension object and add it to an existing accessPackageCatalog object.  
      * @param body The request body
-     * @return a CustomAccessPackageWorkflowExtension
+     * @return a {@link CustomAccessPackageWorkflowExtension}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackagecatalog-post-customaccesspackageworkflowextensions?view=graph-rest-1.0">Find more info here</a>
@@ -110,7 +113,8 @@ public class CustomAccessPackageWorkflowExtensionsRequestBuilder extends BaseReq
      * Create a new customAccessPackageWorkflowExtension object and add it to an existing accessPackageCatalog object.  
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CustomAccessPackageWorkflowExtension
+     * @return a {@link CustomAccessPackageWorkflowExtension}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackagecatalog-post-customaccesspackageworkflowextensions?view=graph-rest-1.0">Find more info here</a>
@@ -121,13 +125,12 @@ public class CustomAccessPackageWorkflowExtensionsRequestBuilder extends BaseReq
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, CustomAccessPackageWorkflowExtension::createFromDiscriminatorValue);
     }
     /**
      * Get a list of the customAccessPackageWorkflowExtension objects and their properties. The resulting list includes all the customAccessPackageWorkflowExtension objects for the catalog that the caller has access to read.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
      */
@@ -139,7 +142,7 @@ public class CustomAccessPackageWorkflowExtensionsRequestBuilder extends BaseReq
     /**
      * Get a list of the customAccessPackageWorkflowExtension objects and their properties. The resulting list includes all the customAccessPackageWorkflowExtension objects for the catalog that the caller has access to read.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
      */
@@ -154,7 +157,7 @@ public class CustomAccessPackageWorkflowExtensionsRequestBuilder extends BaseReq
     /**
      * Create a new customAccessPackageWorkflowExtension object and add it to an existing accessPackageCatalog object.  
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
      */
@@ -167,7 +170,7 @@ public class CustomAccessPackageWorkflowExtensionsRequestBuilder extends BaseReq
      * Create a new customAccessPackageWorkflowExtension object and add it to an existing accessPackageCatalog object.  
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
      */
@@ -175,7 +178,7 @@ public class CustomAccessPackageWorkflowExtensionsRequestBuilder extends BaseReq
     @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final CustomAccessPackageWorkflowExtension body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/identityGovernance/entitlementManagement/accessPackageCatalogs/{accessPackageCatalog%2Did}/customAccessPackageWorkflowExtensions", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -184,7 +187,7 @@ public class CustomAccessPackageWorkflowExtensionsRequestBuilder extends BaseReq
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a CustomAccessPackageWorkflowExtensionsRequestBuilder
+     * @return a {@link CustomAccessPackageWorkflowExtensionsRequestBuilder}
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
      */
@@ -241,7 +244,7 @@ public class CustomAccessPackageWorkflowExtensionsRequestBuilder extends BaseReq
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

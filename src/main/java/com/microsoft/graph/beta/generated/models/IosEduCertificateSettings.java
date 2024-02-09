@@ -21,7 +21,7 @@ public class IosEduCertificateSettings implements AdditionalDataHolder, BackedMo
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new IosEduCertificateSettings and sets the default values.
+     * Instantiates a new {@link IosEduCertificateSettings} and sets the default values.
      */
     public IosEduCertificateSettings() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -30,7 +30,7 @@ public class IosEduCertificateSettings implements AdditionalDataHolder, BackedMo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a IosEduCertificateSettings
+     * @return a {@link IosEduCertificateSettings}
      */
     @jakarta.annotation.Nonnull
     public static IosEduCertificateSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class IosEduCertificateSettings implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -52,7 +52,7 @@ public class IosEduCertificateSettings implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -60,7 +60,7 @@ public class IosEduCertificateSettings implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the certFileName property value. File name to display in UI.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCertFileName() {
@@ -68,7 +68,7 @@ public class IosEduCertificateSettings implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the certificateTemplateName property value. PKCS Certificate Template Name.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCertificateTemplateName() {
@@ -76,7 +76,7 @@ public class IosEduCertificateSettings implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the certificateValidityPeriodScale property value. Certificate Validity Period Options.
-     * @return a CertificateValidityPeriodScale
+     * @return a {@link CertificateValidityPeriodScale}
      */
     @jakarta.annotation.Nullable
     public CertificateValidityPeriodScale getCertificateValidityPeriodScale() {
@@ -84,7 +84,7 @@ public class IosEduCertificateSettings implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the certificateValidityPeriodValue property value. Value for the Certificate Validity Period.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getCertificateValidityPeriodValue() {
@@ -92,7 +92,7 @@ public class IosEduCertificateSettings implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the certificationAuthority property value. PKCS Certification Authority.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCertificationAuthority() {
@@ -100,7 +100,7 @@ public class IosEduCertificateSettings implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the certificationAuthorityName property value. PKCS Certification Authority Name.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCertificationAuthorityName() {
@@ -108,7 +108,7 @@ public class IosEduCertificateSettings implements AdditionalDataHolder, BackedMo
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -126,7 +126,7 @@ public class IosEduCertificateSettings implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -134,7 +134,7 @@ public class IosEduCertificateSettings implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the renewalThresholdPercentage property value. Certificate renewal threshold percentage. Valid values 1 to 99
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getRenewalThresholdPercentage() {
@@ -142,7 +142,7 @@ public class IosEduCertificateSettings implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the trustedRootCertificate property value. Trusted Root Certificate.
-     * @return a byte[]
+     * @return a {@link byte[]}
      */
     @jakarta.annotation.Nullable
     public byte[] getTrustedRootCertificate() {

@@ -27,7 +27,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ServiceActivityRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new ServiceActivityRequestBuilder and sets the default values.
+     * Instantiates a new {@link ServiceActivityRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -35,7 +35,7 @@ public class ServiceActivityRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/reports/serviceActivity{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new ServiceActivityRequestBuilder and sets the default values.
+     * Instantiates a new {@link ServiceActivityRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -44,6 +44,7 @@ public class ServiceActivityRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Delete navigation property serviceActivity for reports
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete() {
         delete(null);
@@ -51,17 +52,18 @@ public class ServiceActivityRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property serviceActivity for reports
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Reports that relate to tenant-level authentication activities in Microsoft Entra.
-     * @return a ServiceActivity
+     * @return a {@link ServiceActivity}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public ServiceActivity get() {
@@ -70,21 +72,21 @@ public class ServiceActivityRequestBuilder extends BaseRequestBuilder {
     /**
      * Reports that relate to tenant-level authentication activities in Microsoft Entra.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a ServiceActivity
+     * @return a {@link ServiceActivity}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public ServiceActivity get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, ServiceActivity::createFromDiscriminatorValue);
     }
     /**
      * Provides operations to call the getMetricsForConditionalAccessCompliantDevicesSignInSuccess method.
      * @param exclusiveIntervalEndDateTime Usage: exclusiveIntervalEndDateTime={exclusiveIntervalEndDateTime}
      * @param inclusiveIntervalStartDateTime Usage: inclusiveIntervalStartDateTime={inclusiveIntervalStartDateTime}
-     * @return a GetMetricsForConditionalAccessCompliantDevicesSignInSuccessWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder
+     * @return a {@link GetMetricsForConditionalAccessCompliantDevicesSignInSuccessWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetMetricsForConditionalAccessCompliantDevicesSignInSuccessWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder getMetricsForConditionalAccessCompliantDevicesSignInSuccessWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutes(@jakarta.annotation.Nonnull final OffsetDateTime exclusiveIntervalEndDateTime, @jakarta.annotation.Nonnull final OffsetDateTime inclusiveIntervalStartDateTime) {
@@ -96,7 +98,7 @@ public class ServiceActivityRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the getMetricsForConditionalAccessManagedDevicesSignInSuccess method.
      * @param exclusiveIntervalEndDateTime Usage: exclusiveIntervalEndDateTime={exclusiveIntervalEndDateTime}
      * @param inclusiveIntervalStartDateTime Usage: inclusiveIntervalStartDateTime={inclusiveIntervalStartDateTime}
-     * @return a GetMetricsForConditionalAccessManagedDevicesSignInSuccessWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder
+     * @return a {@link GetMetricsForConditionalAccessManagedDevicesSignInSuccessWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetMetricsForConditionalAccessManagedDevicesSignInSuccessWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder getMetricsForConditionalAccessManagedDevicesSignInSuccessWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutes(@jakarta.annotation.Nonnull final OffsetDateTime exclusiveIntervalEndDateTime, @jakarta.annotation.Nonnull final OffsetDateTime inclusiveIntervalStartDateTime) {
@@ -108,7 +110,7 @@ public class ServiceActivityRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the getMetricsForMfaSignInFailure method.
      * @param exclusiveIntervalEndDateTime Usage: exclusiveIntervalEndDateTime={exclusiveIntervalEndDateTime}
      * @param inclusiveIntervalStartDateTime Usage: inclusiveIntervalStartDateTime={inclusiveIntervalStartDateTime}
-     * @return a GetMetricsForMfaSignInFailureWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder
+     * @return a {@link GetMetricsForMfaSignInFailureWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetMetricsForMfaSignInFailureWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder getMetricsForMfaSignInFailureWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutes(@jakarta.annotation.Nonnull final OffsetDateTime exclusiveIntervalEndDateTime, @jakarta.annotation.Nonnull final OffsetDateTime inclusiveIntervalStartDateTime) {
@@ -120,7 +122,7 @@ public class ServiceActivityRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the getMetricsForMfaSignInSuccess method.
      * @param exclusiveIntervalEndDateTime Usage: exclusiveIntervalEndDateTime={exclusiveIntervalEndDateTime}
      * @param inclusiveIntervalStartDateTime Usage: inclusiveIntervalStartDateTime={inclusiveIntervalStartDateTime}
-     * @return a GetMetricsForMfaSignInSuccessWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder
+     * @return a {@link GetMetricsForMfaSignInSuccessWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetMetricsForMfaSignInSuccessWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder getMetricsForMfaSignInSuccessWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutes(@jakarta.annotation.Nonnull final OffsetDateTime exclusiveIntervalEndDateTime, @jakarta.annotation.Nonnull final OffsetDateTime inclusiveIntervalStartDateTime) {
@@ -132,7 +134,7 @@ public class ServiceActivityRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the getMetricsForSamlSignInSuccess method.
      * @param exclusiveIntervalEndDateTime Usage: exclusiveIntervalEndDateTime={exclusiveIntervalEndDateTime}
      * @param inclusiveIntervalStartDateTime Usage: inclusiveIntervalStartDateTime={inclusiveIntervalStartDateTime}
-     * @return a GetMetricsForSamlSignInSuccessWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder
+     * @return a {@link GetMetricsForSamlSignInSuccessWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetMetricsForSamlSignInSuccessWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder getMetricsForSamlSignInSuccessWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutes(@jakarta.annotation.Nonnull final OffsetDateTime exclusiveIntervalEndDateTime, @jakarta.annotation.Nonnull final OffsetDateTime inclusiveIntervalStartDateTime) {
@@ -143,7 +145,8 @@ public class ServiceActivityRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property serviceActivity in reports
      * @param body The request body
-     * @return a ServiceActivity
+     * @return a {@link ServiceActivity}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public ServiceActivity patch(@jakarta.annotation.Nonnull final ServiceActivity body) {
@@ -153,20 +156,20 @@ public class ServiceActivityRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property serviceActivity in reports
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a ServiceActivity
+     * @return a {@link ServiceActivity}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public ServiceActivity patch(@jakarta.annotation.Nonnull final ServiceActivity body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, ServiceActivity::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property serviceActivity for reports
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -175,18 +178,18 @@ public class ServiceActivityRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property serviceActivity for reports
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/reports/serviceActivity", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Reports that relate to tenant-level authentication activities in Microsoft Entra.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -195,7 +198,7 @@ public class ServiceActivityRequestBuilder extends BaseRequestBuilder {
     /**
      * Reports that relate to tenant-level authentication activities in Microsoft Entra.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -207,7 +210,7 @@ public class ServiceActivityRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property serviceActivity in reports
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final ServiceActivity body) {
@@ -217,12 +220,12 @@ public class ServiceActivityRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property serviceActivity in reports
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final ServiceActivity body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/reports/serviceActivity", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -231,7 +234,7 @@ public class ServiceActivityRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a ServiceActivityRequestBuilder
+     * @return a {@link ServiceActivityRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ServiceActivityRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -261,7 +264,7 @@ public class ServiceActivityRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

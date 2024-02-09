@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SecurityBaselineDeviceState extends Entity implements Parsable {
     /**
-     * Instantiates a new SecurityBaselineDeviceState and sets the default values.
+     * Instantiates a new {@link SecurityBaselineDeviceState} and sets the default values.
      */
     public SecurityBaselineDeviceState() {
         super();
@@ -21,7 +21,7 @@ public class SecurityBaselineDeviceState extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SecurityBaselineDeviceState
+     * @return a {@link SecurityBaselineDeviceState}
      */
     @jakarta.annotation.Nonnull
     public static SecurityBaselineDeviceState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class SecurityBaselineDeviceState extends Entity implements Parsable {
     }
     /**
      * Gets the deviceDisplayName property value. Display name of the device
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceDisplayName() {
@@ -38,7 +38,7 @@ public class SecurityBaselineDeviceState extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -52,7 +52,7 @@ public class SecurityBaselineDeviceState extends Entity implements Parsable {
     }
     /**
      * Gets the lastReportedDateTime property value. Last modified date time of the policy report
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastReportedDateTime() {
@@ -60,7 +60,7 @@ public class SecurityBaselineDeviceState extends Entity implements Parsable {
     }
     /**
      * Gets the managedDeviceId property value. Intune device id
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getManagedDeviceId() {
@@ -68,7 +68,7 @@ public class SecurityBaselineDeviceState extends Entity implements Parsable {
     }
     /**
      * Gets the state property value. Security Baseline Compliance State
-     * @return a SecurityBaselineComplianceState
+     * @return a {@link SecurityBaselineComplianceState}
      */
     @jakarta.annotation.Nullable
     public SecurityBaselineComplianceState getState() {
@@ -76,7 +76,7 @@ public class SecurityBaselineDeviceState extends Entity implements Parsable {
     }
     /**
      * Gets the userPrincipalName property value. User Principal Name
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {

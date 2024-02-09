@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ContactFolder extends Entity implements Parsable {
     /**
-     * Instantiates a new ContactFolder and sets the default values.
+     * Instantiates a new {@link ContactFolder} and sets the default values.
      */
     public ContactFolder() {
         super();
@@ -17,7 +17,7 @@ public class ContactFolder extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ContactFolder
+     * @return a {@link ContactFolder}
      */
     @jakarta.annotation.Nonnull
     public static ContactFolder createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class ContactFolder extends Entity implements Parsable {
     }
     /**
      * Gets the childFolders property value. The collection of child folders in the folder. Navigation property. Read-only. Nullable.
-     * @return a java.util.List<ContactFolder>
+     * @return a {@link java.util.List<ContactFolder>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ContactFolder> getChildFolders() {
@@ -34,7 +34,7 @@ public class ContactFolder extends Entity implements Parsable {
     }
     /**
      * Gets the contacts property value. The contacts in the folder. Navigation property. Read-only. Nullable.
-     * @return a java.util.List<Contact>
+     * @return a {@link java.util.List<Contact>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Contact> getContacts() {
@@ -42,7 +42,7 @@ public class ContactFolder extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The folder's display name.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -50,7 +50,7 @@ public class ContactFolder extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -66,7 +66,7 @@ public class ContactFolder extends Entity implements Parsable {
     }
     /**
      * Gets the multiValueExtendedProperties property value. The collection of multi-value extended properties defined for the contactFolder. Read-only. Nullable.
-     * @return a java.util.List<MultiValueLegacyExtendedProperty>
+     * @return a {@link java.util.List<MultiValueLegacyExtendedProperty>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<MultiValueLegacyExtendedProperty> getMultiValueExtendedProperties() {
@@ -74,7 +74,7 @@ public class ContactFolder extends Entity implements Parsable {
     }
     /**
      * Gets the parentFolderId property value. The ID of the folder's parent folder.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getParentFolderId() {
@@ -82,7 +82,7 @@ public class ContactFolder extends Entity implements Parsable {
     }
     /**
      * Gets the singleValueExtendedProperties property value. The collection of single-value extended properties defined for the contactFolder. Read-only. Nullable.
-     * @return a java.util.List<SingleValueLegacyExtendedProperty>
+     * @return a {@link java.util.List<SingleValueLegacyExtendedProperty>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<SingleValueLegacyExtendedProperty> getSingleValueExtendedProperties() {
@@ -90,7 +90,7 @@ public class ContactFolder extends Entity implements Parsable {
     }
     /**
      * Gets the wellKnownName property value. The name of the folder if the folder is a recognized folder. Currently contacts is the only recognized contacts folder.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getWellKnownName() {

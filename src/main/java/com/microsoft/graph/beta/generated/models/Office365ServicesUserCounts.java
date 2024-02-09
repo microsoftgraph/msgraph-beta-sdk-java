@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Office365ServicesUserCounts extends Entity implements Parsable {
     /**
-     * Instantiates a new Office365ServicesUserCounts and sets the default values.
+     * Instantiates a new {@link Office365ServicesUserCounts} and sets the default values.
      */
     public Office365ServicesUserCounts() {
         super();
@@ -18,7 +18,7 @@ public class Office365ServicesUserCounts extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Office365ServicesUserCounts
+     * @return a {@link Office365ServicesUserCounts}
      */
     @jakarta.annotation.Nonnull
     public static Office365ServicesUserCounts createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class Office365ServicesUserCounts extends Entity implements Parsable {
     }
     /**
      * Gets the exchangeActive property value. The number of active users on Exchange. Any user who can read and send email is considered an active user.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getExchangeActive() {
@@ -35,7 +35,7 @@ public class Office365ServicesUserCounts extends Entity implements Parsable {
     }
     /**
      * Gets the exchangeInactive property value. The number of inactive users on Exchange.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getExchangeInactive() {
@@ -43,7 +43,7 @@ public class Office365ServicesUserCounts extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -68,7 +68,7 @@ public class Office365ServicesUserCounts extends Entity implements Parsable {
     }
     /**
      * Gets the office365Active property value. The number of active users on Microsoft 365.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getOffice365Active() {
@@ -76,7 +76,7 @@ public class Office365ServicesUserCounts extends Entity implements Parsable {
     }
     /**
      * Gets the office365Inactive property value. The number of inactive users on Microsoft 365.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getOffice365Inactive() {
@@ -84,7 +84,7 @@ public class Office365ServicesUserCounts extends Entity implements Parsable {
     }
     /**
      * Gets the oneDriveActive property value. The number of active users on OneDrive. Any user who viewed or edited files, shared files internally or externally, or synced files is considered an active user.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getOneDriveActive() {
@@ -92,7 +92,7 @@ public class Office365ServicesUserCounts extends Entity implements Parsable {
     }
     /**
      * Gets the oneDriveInactive property value. The number of inactive users on OneDrive.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getOneDriveInactive() {
@@ -100,7 +100,7 @@ public class Office365ServicesUserCounts extends Entity implements Parsable {
     }
     /**
      * Gets the reportPeriod property value. The number of days the report covers.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getReportPeriod() {
@@ -108,7 +108,7 @@ public class Office365ServicesUserCounts extends Entity implements Parsable {
     }
     /**
      * Gets the reportRefreshDate property value. The latest date of the content.
-     * @return a LocalDate
+     * @return a {@link LocalDate}
      */
     @jakarta.annotation.Nullable
     public LocalDate getReportRefreshDate() {
@@ -116,7 +116,7 @@ public class Office365ServicesUserCounts extends Entity implements Parsable {
     }
     /**
      * Gets the sharePointActive property value. The number of active users on SharePoint. Any user who viewed or edited files, shared files internally or externally, synced files, or viewed SharePoint pages is considered an active user.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getSharePointActive() {
@@ -124,7 +124,7 @@ public class Office365ServicesUserCounts extends Entity implements Parsable {
     }
     /**
      * Gets the sharePointInactive property value. The number of inactive users on SharePoint.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getSharePointInactive() {
@@ -132,7 +132,7 @@ public class Office365ServicesUserCounts extends Entity implements Parsable {
     }
     /**
      * Gets the skypeForBusinessActive property value. The number of active users on Skype For Business. Any user who organized or participated in conferences, or joined peer-to-peer sessions is considered an active user.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getSkypeForBusinessActive() {
@@ -140,7 +140,7 @@ public class Office365ServicesUserCounts extends Entity implements Parsable {
     }
     /**
      * Gets the skypeForBusinessInactive property value. The number of inactive users on Skype For Business.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getSkypeForBusinessInactive() {
@@ -148,7 +148,7 @@ public class Office365ServicesUserCounts extends Entity implements Parsable {
     }
     /**
      * Gets the teamsActive property value. The number of active users on Microsoft Teams. Any user who posted messages in team channels, sent messages in private chat sessions, or participated in meetings or calls is considered an active user.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getTeamsActive() {
@@ -156,7 +156,7 @@ public class Office365ServicesUserCounts extends Entity implements Parsable {
     }
     /**
      * Gets the teamsInactive property value. The number of inactive users on Microsoft Teams.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getTeamsInactive() {
@@ -164,7 +164,7 @@ public class Office365ServicesUserCounts extends Entity implements Parsable {
     }
     /**
      * Gets the yammerActive property value. The number of active users on Yammer. Any user who can post, read, or like messages is considered an active user.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getYammerActive() {
@@ -172,7 +172,7 @@ public class Office365ServicesUserCounts extends Entity implements Parsable {
     }
     /**
      * Gets the yammerInactive property value. The number of inactive users on Yammer.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getYammerInactive() {

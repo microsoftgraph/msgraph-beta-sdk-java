@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementConfigurationChoiceSettingCollectionDefinition extends DeviceManagementConfigurationChoiceSettingDefinition implements Parsable {
     /**
-     * Instantiates a new DeviceManagementConfigurationChoiceSettingCollectionDefinition and sets the default values.
+     * Instantiates a new {@link DeviceManagementConfigurationChoiceSettingCollectionDefinition} and sets the default values.
      */
     public DeviceManagementConfigurationChoiceSettingCollectionDefinition() {
         super();
@@ -17,7 +17,7 @@ public class DeviceManagementConfigurationChoiceSettingCollectionDefinition exte
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceManagementConfigurationChoiceSettingCollectionDefinition
+     * @return a {@link DeviceManagementConfigurationChoiceSettingCollectionDefinition}
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementConfigurationChoiceSettingCollectionDefinition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class DeviceManagementConfigurationChoiceSettingCollectionDefinition exte
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -37,7 +37,7 @@ public class DeviceManagementConfigurationChoiceSettingCollectionDefinition exte
     }
     /**
      * Gets the maximumCount property value. Maximum number of choices in the collection
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getMaximumCount() {
@@ -45,7 +45,7 @@ public class DeviceManagementConfigurationChoiceSettingCollectionDefinition exte
     }
     /**
      * Gets the minimumCount property value. Minimum number of choices in the collection
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getMinimumCount() {

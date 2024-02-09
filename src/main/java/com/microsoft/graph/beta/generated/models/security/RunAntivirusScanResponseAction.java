@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class RunAntivirusScanResponseAction extends ResponseAction implements Parsable {
     /**
-     * Instantiates a new RunAntivirusScanResponseAction and sets the default values.
+     * Instantiates a new {@link RunAntivirusScanResponseAction} and sets the default values.
      */
     public RunAntivirusScanResponseAction() {
         super();
@@ -19,7 +19,7 @@ public class RunAntivirusScanResponseAction extends ResponseAction implements Pa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a RunAntivirusScanResponseAction
+     * @return a {@link RunAntivirusScanResponseAction}
      */
     @jakarta.annotation.Nonnull
     public static RunAntivirusScanResponseAction createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class RunAntivirusScanResponseAction extends ResponseAction implements Pa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -38,7 +38,7 @@ public class RunAntivirusScanResponseAction extends ResponseAction implements Pa
     }
     /**
      * Gets the identifier property value. The identifier property
-     * @return a EnumSet<DeviceIdEntityIdentifier>
+     * @return a {@link EnumSet<DeviceIdEntityIdentifier>}
      */
     @jakarta.annotation.Nullable
     public EnumSet<DeviceIdEntityIdentifier> getIdentifier() {

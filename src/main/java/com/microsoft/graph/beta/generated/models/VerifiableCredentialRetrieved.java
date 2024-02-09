@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class VerifiableCredentialRetrieved extends VerifiableCredentialRequirementStatus implements Parsable {
     /**
-     * Instantiates a new VerifiableCredentialRetrieved and sets the default values.
+     * Instantiates a new {@link VerifiableCredentialRetrieved} and sets the default values.
      */
     public VerifiableCredentialRetrieved() {
         super();
@@ -19,7 +19,7 @@ public class VerifiableCredentialRetrieved extends VerifiableCredentialRequireme
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a VerifiableCredentialRetrieved
+     * @return a {@link VerifiableCredentialRetrieved}
      */
     @jakarta.annotation.Nonnull
     public static VerifiableCredentialRetrieved createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class VerifiableCredentialRetrieved extends VerifiableCredentialRequireme
     }
     /**
      * Gets the expiryDateTime property value. The specific date and time that the presentation request will expire and a new one will need to be generated.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getExpiryDateTime() {
@@ -36,7 +36,7 @@ public class VerifiableCredentialRetrieved extends VerifiableCredentialRequireme
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

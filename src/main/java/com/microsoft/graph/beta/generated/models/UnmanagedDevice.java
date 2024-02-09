@@ -22,7 +22,7 @@ public class UnmanagedDevice implements AdditionalDataHolder, BackedModel, Parsa
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new UnmanagedDevice and sets the default values.
+     * Instantiates a new {@link UnmanagedDevice} and sets the default values.
      */
     public UnmanagedDevice() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -31,7 +31,7 @@ public class UnmanagedDevice implements AdditionalDataHolder, BackedModel, Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UnmanagedDevice
+     * @return a {@link UnmanagedDevice}
      */
     @jakarta.annotation.Nonnull
     public static UnmanagedDevice createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class UnmanagedDevice implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -53,7 +53,7 @@ public class UnmanagedDevice implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -61,7 +61,7 @@ public class UnmanagedDevice implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the deviceName property value. Device name.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceName() {
@@ -69,7 +69,7 @@ public class UnmanagedDevice implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the domain property value. Domain.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDomain() {
@@ -77,7 +77,7 @@ public class UnmanagedDevice implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -98,7 +98,7 @@ public class UnmanagedDevice implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the ipAddress property value. IP address.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getIpAddress() {
@@ -106,7 +106,7 @@ public class UnmanagedDevice implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the lastLoggedOnUser property value. Last logged on user.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getLastLoggedOnUser() {
@@ -114,7 +114,7 @@ public class UnmanagedDevice implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the lastSeenDateTime property value. Last seen date and time.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastSeenDateTime() {
@@ -122,7 +122,7 @@ public class UnmanagedDevice implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the location property value. Location.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getLocation() {
@@ -130,7 +130,7 @@ public class UnmanagedDevice implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the macAddress property value. MAC address.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getMacAddress() {
@@ -138,7 +138,7 @@ public class UnmanagedDevice implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the manufacturer property value. Manufacturer.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getManufacturer() {
@@ -146,7 +146,7 @@ public class UnmanagedDevice implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the model property value. Model.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getModel() {
@@ -154,7 +154,7 @@ public class UnmanagedDevice implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -162,7 +162,7 @@ public class UnmanagedDevice implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the os property value. Operating system.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOs() {
@@ -170,7 +170,7 @@ public class UnmanagedDevice implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the osVersion property value. Operating system version.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOsVersion() {

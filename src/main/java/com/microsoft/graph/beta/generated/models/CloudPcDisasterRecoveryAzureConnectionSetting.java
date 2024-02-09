@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CloudPcDisasterRecoveryAzureConnectionSetting extends CloudPcDisasterRecoveryNetworkSetting implements Parsable {
     /**
-     * Instantiates a new CloudPcDisasterRecoveryAzureConnectionSetting and sets the default values.
+     * Instantiates a new {@link CloudPcDisasterRecoveryAzureConnectionSetting} and sets the default values.
      */
     public CloudPcDisasterRecoveryAzureConnectionSetting() {
         super();
@@ -18,7 +18,7 @@ public class CloudPcDisasterRecoveryAzureConnectionSetting extends CloudPcDisast
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CloudPcDisasterRecoveryAzureConnectionSetting
+     * @return a {@link CloudPcDisasterRecoveryAzureConnectionSetting}
      */
     @jakarta.annotation.Nonnull
     public static CloudPcDisasterRecoveryAzureConnectionSetting createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class CloudPcDisasterRecoveryAzureConnectionSetting extends CloudPcDisast
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -37,7 +37,7 @@ public class CloudPcDisasterRecoveryAzureConnectionSetting extends CloudPcDisast
     }
     /**
      * Gets the onPremisesConnectionId property value. The onPremisesConnectionId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOnPremisesConnectionId() {

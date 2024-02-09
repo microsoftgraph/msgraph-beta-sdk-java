@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AospDeviceOwnerWiFiConfiguration extends DeviceConfiguration implements Parsable {
     /**
-     * Instantiates a new AospDeviceOwnerWiFiConfiguration and sets the default values.
+     * Instantiates a new {@link AospDeviceOwnerWiFiConfiguration} and sets the default values.
      */
     public AospDeviceOwnerWiFiConfiguration() {
         super();
@@ -21,7 +21,7 @@ public class AospDeviceOwnerWiFiConfiguration extends DeviceConfiguration implem
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AospDeviceOwnerWiFiConfiguration
+     * @return a {@link AospDeviceOwnerWiFiConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static AospDeviceOwnerWiFiConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class AospDeviceOwnerWiFiConfiguration extends DeviceConfiguration implem
     }
     /**
      * Gets the connectAutomatically property value. Connect automatically when this network is in range. Setting this to true will skip the user prompt and automatically connect the device to Wi-Fi network.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getConnectAutomatically() {
@@ -45,7 +45,7 @@ public class AospDeviceOwnerWiFiConfiguration extends DeviceConfiguration implem
     }
     /**
      * Gets the connectWhenNetworkNameIsHidden property value. When set to true, this profile forces the device to connect to a network that doesn't broadcast its SSID to all devices.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getConnectWhenNetworkNameIsHidden() {
@@ -53,7 +53,7 @@ public class AospDeviceOwnerWiFiConfiguration extends DeviceConfiguration implem
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -74,7 +74,7 @@ public class AospDeviceOwnerWiFiConfiguration extends DeviceConfiguration implem
     }
     /**
      * Gets the networkName property value. Network Name
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getNetworkName() {
@@ -82,7 +82,7 @@ public class AospDeviceOwnerWiFiConfiguration extends DeviceConfiguration implem
     }
     /**
      * Gets the preSharedKey property value. This is the pre-shared key for WPA Personal Wi-Fi network.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPreSharedKey() {
@@ -90,7 +90,7 @@ public class AospDeviceOwnerWiFiConfiguration extends DeviceConfiguration implem
     }
     /**
      * Gets the preSharedKeyIsSet property value. This is the pre-shared key for WPA Personal Wi-Fi network.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getPreSharedKeyIsSet() {
@@ -98,7 +98,7 @@ public class AospDeviceOwnerWiFiConfiguration extends DeviceConfiguration implem
     }
     /**
      * Gets the proxyAutomaticConfigurationUrl property value. Specify the proxy server configuration script URL.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getProxyAutomaticConfigurationUrl() {
@@ -106,7 +106,7 @@ public class AospDeviceOwnerWiFiConfiguration extends DeviceConfiguration implem
     }
     /**
      * Gets the proxyExclusionList property value. List of hosts to exclude using the proxy on connections for. These hosts can use wildcards such as .example.com.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getProxyExclusionList() {
@@ -114,7 +114,7 @@ public class AospDeviceOwnerWiFiConfiguration extends DeviceConfiguration implem
     }
     /**
      * Gets the proxyManualAddress property value. Specify the proxy server IP address. Both IPv4 and IPv6 addresses are supported. For example: 192.168.1.1.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getProxyManualAddress() {
@@ -122,7 +122,7 @@ public class AospDeviceOwnerWiFiConfiguration extends DeviceConfiguration implem
     }
     /**
      * Gets the proxyManualPort property value. Specify the proxy server port.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getProxyManualPort() {
@@ -130,7 +130,7 @@ public class AospDeviceOwnerWiFiConfiguration extends DeviceConfiguration implem
     }
     /**
      * Gets the proxySetting property value. Wi-Fi Proxy Settings.
-     * @return a WiFiProxySetting
+     * @return a {@link WiFiProxySetting}
      */
     @jakarta.annotation.Nullable
     public WiFiProxySetting getProxySetting() {
@@ -138,7 +138,7 @@ public class AospDeviceOwnerWiFiConfiguration extends DeviceConfiguration implem
     }
     /**
      * Gets the ssid property value. This is the name of the Wi-Fi network that is broadcast to all devices.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSsid() {
@@ -146,7 +146,7 @@ public class AospDeviceOwnerWiFiConfiguration extends DeviceConfiguration implem
     }
     /**
      * Gets the wiFiSecurityType property value. Wi-Fi Security Types for AOSP Device Owner.
-     * @return a AospDeviceOwnerWiFiSecurityType
+     * @return a {@link AospDeviceOwnerWiFiSecurityType}
      */
     @jakarta.annotation.Nullable
     public AospDeviceOwnerWiFiSecurityType getWiFiSecurityType() {

@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsImpactingProcess extends Entity implements Parsable {
     /**
-     * Instantiates a new UserExperienceAnalyticsImpactingProcess and sets the default values.
+     * Instantiates a new {@link UserExperienceAnalyticsImpactingProcess} and sets the default values.
      */
     public UserExperienceAnalyticsImpactingProcess() {
         super();
@@ -20,7 +20,7 @@ public class UserExperienceAnalyticsImpactingProcess extends Entity implements P
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserExperienceAnalyticsImpactingProcess
+     * @return a {@link UserExperienceAnalyticsImpactingProcess}
      */
     @jakarta.annotation.Nonnull
     public static UserExperienceAnalyticsImpactingProcess createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -29,7 +29,7 @@ public class UserExperienceAnalyticsImpactingProcess extends Entity implements P
     }
     /**
      * Gets the category property value. The category of impacting process.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCategory() {
@@ -37,7 +37,7 @@ public class UserExperienceAnalyticsImpactingProcess extends Entity implements P
     }
     /**
      * Gets the description property value. The description of process.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -45,7 +45,7 @@ public class UserExperienceAnalyticsImpactingProcess extends Entity implements P
     }
     /**
      * Gets the deviceId property value. The unique identifier of the impacted device.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceId() {
@@ -53,7 +53,7 @@ public class UserExperienceAnalyticsImpactingProcess extends Entity implements P
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -68,7 +68,7 @@ public class UserExperienceAnalyticsImpactingProcess extends Entity implements P
     }
     /**
      * Gets the impactValue property value. The impact value of the process. Valid values 0 to 1.79769313486232E+308
-     * @return a Double
+     * @return a {@link Double}
      */
     @jakarta.annotation.Nullable
     public Double getImpactValue() {
@@ -76,7 +76,7 @@ public class UserExperienceAnalyticsImpactingProcess extends Entity implements P
     }
     /**
      * Gets the processName property value. The process name.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getProcessName() {
@@ -84,7 +84,7 @@ public class UserExperienceAnalyticsImpactingProcess extends Entity implements P
     }
     /**
      * Gets the publisher property value. The publisher of the process.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPublisher() {

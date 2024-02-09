@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GovernanceSubject extends Entity implements Parsable {
     /**
-     * Instantiates a new GovernanceSubject and sets the default values.
+     * Instantiates a new {@link GovernanceSubject} and sets the default values.
      */
     public GovernanceSubject() {
         super();
@@ -17,7 +17,7 @@ public class GovernanceSubject extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a GovernanceSubject
+     * @return a {@link GovernanceSubject}
      */
     @jakarta.annotation.Nonnull
     public static GovernanceSubject createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class GovernanceSubject extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name of the subject.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -34,7 +34,7 @@ public class GovernanceSubject extends Entity implements Parsable {
     }
     /**
      * Gets the email property value. The email address of the user subject. If the subject is in other types, it's empty.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getEmail() {
@@ -42,7 +42,7 @@ public class GovernanceSubject extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -55,7 +55,7 @@ public class GovernanceSubject extends Entity implements Parsable {
     }
     /**
      * Gets the principalName property value. The principal name of the user subject. If the subject is in other types, it's empty.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPrincipalName() {
@@ -63,7 +63,7 @@ public class GovernanceSubject extends Entity implements Parsable {
     }
     /**
      * Gets the type property value. The type of the subject. The value can be User, Group, and ServicePrincipal.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getType() {

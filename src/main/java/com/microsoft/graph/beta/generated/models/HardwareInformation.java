@@ -21,7 +21,7 @@ public class HardwareInformation implements AdditionalDataHolder, BackedModel, P
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new HardwareInformation and sets the default values.
+     * Instantiates a new {@link HardwareInformation} and sets the default values.
      */
     public HardwareInformation() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -30,7 +30,7 @@ public class HardwareInformation implements AdditionalDataHolder, BackedModel, P
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a HardwareInformation
+     * @return a {@link HardwareInformation}
      */
     @jakarta.annotation.Nonnull
     public static HardwareInformation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class HardwareInformation implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -52,7 +52,7 @@ public class HardwareInformation implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -60,7 +60,7 @@ public class HardwareInformation implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the batteryChargeCycles property value. The number of charge cycles the devices current battery has gone through. Valid values 0 to 2147483647
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getBatteryChargeCycles() {
@@ -68,7 +68,7 @@ public class HardwareInformation implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the batteryHealthPercentage property value. The devices current batterys health percentage. Valid values 0 to 100
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getBatteryHealthPercentage() {
@@ -76,7 +76,7 @@ public class HardwareInformation implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the batteryLevelPercentage property value. The battery level, between 0.0 and 100, or null if the battery level cannot be determined. The update frequency of this property is per-checkin. Note this property is currently supported only on devices running iOS 5.0 and later, and is available only when Device Information access right is obtained. Valid values 0 to 100
-     * @return a Double
+     * @return a {@link Double}
      */
     @jakarta.annotation.Nullable
     public Double getBatteryLevelPercentage() {
@@ -84,7 +84,7 @@ public class HardwareInformation implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the batterySerialNumber property value. The serial number of the devices current battery
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getBatterySerialNumber() {
@@ -92,7 +92,7 @@ public class HardwareInformation implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the cellularTechnology property value. Cellular technology of the device
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCellularTechnology() {
@@ -100,7 +100,7 @@ public class HardwareInformation implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the deviceFullQualifiedDomainName property value. Returns the fully qualified domain name of the device (if any). If the device is not domain-joined, it returns an empty string.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceFullQualifiedDomainName() {
@@ -108,7 +108,7 @@ public class HardwareInformation implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the deviceGuardLocalSystemAuthorityCredentialGuardState property value. The deviceGuardLocalSystemAuthorityCredentialGuardState property
-     * @return a DeviceGuardLocalSystemAuthorityCredentialGuardState
+     * @return a {@link DeviceGuardLocalSystemAuthorityCredentialGuardState}
      */
     @jakarta.annotation.Nullable
     public DeviceGuardLocalSystemAuthorityCredentialGuardState getDeviceGuardLocalSystemAuthorityCredentialGuardState() {
@@ -116,7 +116,7 @@ public class HardwareInformation implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the deviceGuardVirtualizationBasedSecurityHardwareRequirementState property value. The deviceGuardVirtualizationBasedSecurityHardwareRequirementState property
-     * @return a DeviceGuardVirtualizationBasedSecurityHardwareRequirementState
+     * @return a {@link DeviceGuardVirtualizationBasedSecurityHardwareRequirementState}
      */
     @jakarta.annotation.Nullable
     public DeviceGuardVirtualizationBasedSecurityHardwareRequirementState getDeviceGuardVirtualizationBasedSecurityHardwareRequirementState() {
@@ -124,7 +124,7 @@ public class HardwareInformation implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the deviceGuardVirtualizationBasedSecurityState property value. The deviceGuardVirtualizationBasedSecurityState property
-     * @return a DeviceGuardVirtualizationBasedSecurityState
+     * @return a {@link DeviceGuardVirtualizationBasedSecurityState}
      */
     @jakarta.annotation.Nullable
     public DeviceGuardVirtualizationBasedSecurityState getDeviceGuardVirtualizationBasedSecurityState() {
@@ -132,7 +132,7 @@ public class HardwareInformation implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the deviceLicensingLastErrorCode property value. A standard error code indicating the last error, or 0 indicating no error (default). The update frequency of this property is daily. Note this property is currently supported only for Windows based Device based subscription licensing. Valid values 0 to 2147483647
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getDeviceLicensingLastErrorCode() {
@@ -140,7 +140,7 @@ public class HardwareInformation implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the deviceLicensingLastErrorDescription property value. Error text message as a descripition for deviceLicensingLastErrorCode. The update frequency of this property is daily. Note this property is currently supported only for Windows based Device based subscription licensing.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceLicensingLastErrorDescription() {
@@ -148,7 +148,7 @@ public class HardwareInformation implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the deviceLicensingStatus property value. Indicates the device licensing status after Windows device based subscription has been enabled.
-     * @return a DeviceLicensingStatus
+     * @return a {@link DeviceLicensingStatus}
      */
     @jakarta.annotation.Nullable
     public DeviceLicensingStatus getDeviceLicensingStatus() {
@@ -156,7 +156,7 @@ public class HardwareInformation implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the esimIdentifier property value. eSIM identifier
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getEsimIdentifier() {
@@ -164,7 +164,7 @@ public class HardwareInformation implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -214,7 +214,7 @@ public class HardwareInformation implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the freeStorageSpace property value. Free storage space of the device.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getFreeStorageSpace() {
@@ -222,7 +222,7 @@ public class HardwareInformation implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the imei property value. IMEI
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getImei() {
@@ -230,7 +230,7 @@ public class HardwareInformation implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the ipAddressV4 property value. IPAddressV4
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getIpAddressV4() {
@@ -238,7 +238,7 @@ public class HardwareInformation implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the isEncrypted property value. Encryption status of the device
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEncrypted() {
@@ -246,7 +246,7 @@ public class HardwareInformation implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the isSharedDevice property value. Shared iPad
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsSharedDevice() {
@@ -254,7 +254,7 @@ public class HardwareInformation implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the isSupervised property value. Supervised mode of the device
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsSupervised() {
@@ -262,7 +262,7 @@ public class HardwareInformation implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the manufacturer property value. Manufacturer of the device
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getManufacturer() {
@@ -270,7 +270,7 @@ public class HardwareInformation implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the meid property value. MEID
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getMeid() {
@@ -278,7 +278,7 @@ public class HardwareInformation implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the model property value. Model of the device
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getModel() {
@@ -286,7 +286,7 @@ public class HardwareInformation implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -294,7 +294,7 @@ public class HardwareInformation implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the operatingSystemEdition property value. String that specifies the OS edition.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOperatingSystemEdition() {
@@ -302,7 +302,7 @@ public class HardwareInformation implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the operatingSystemLanguage property value. Operating system language of the device
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOperatingSystemLanguage() {
@@ -310,7 +310,7 @@ public class HardwareInformation implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the operatingSystemProductType property value. Int that specifies the Windows Operating System ProductType. More details here https://go.microsoft.com/fwlink/?linkid=2126950. Valid values 0 to 2147483647
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getOperatingSystemProductType() {
@@ -318,7 +318,7 @@ public class HardwareInformation implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the osBuildNumber property value. Operating System Build Number on Android device
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOsBuildNumber() {
@@ -326,7 +326,7 @@ public class HardwareInformation implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the phoneNumber property value. Phone number of the device
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPhoneNumber() {
@@ -334,7 +334,7 @@ public class HardwareInformation implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the productName property value. The product name, e.g. iPad8,12 etc. The update frequency of this property is weekly. Note this property is currently supported only on iOS/MacOS devices, and is available only when Device Information access right is obtained.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getProductName() {
@@ -342,7 +342,7 @@ public class HardwareInformation implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the residentUsersCount property value. The number of users currently on this device, or null (default) if the value of this property cannot be determined. The update frequency of this property is per-checkin. Note this property is currently supported only on devices running iOS 13.4 and later, and is available only when Device Information access right is obtained. Valid values 0 to 2147483647
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getResidentUsersCount() {
@@ -350,7 +350,7 @@ public class HardwareInformation implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the serialNumber property value. Serial number.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSerialNumber() {
@@ -358,7 +358,7 @@ public class HardwareInformation implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the sharedDeviceCachedUsers property value. All users on the shared Apple device
-     * @return a java.util.List<SharedAppleDeviceUser>
+     * @return a {@link java.util.List<SharedAppleDeviceUser>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<SharedAppleDeviceUser> getSharedDeviceCachedUsers() {
@@ -366,7 +366,7 @@ public class HardwareInformation implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the subnetAddress property value. SubnetAddress
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSubnetAddress() {
@@ -374,7 +374,7 @@ public class HardwareInformation implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the subscriberCarrier property value. Subscriber carrier of the device
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSubscriberCarrier() {
@@ -382,7 +382,7 @@ public class HardwareInformation implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the systemManagementBIOSVersion property value. BIOS version as reported by SMBIOS
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSystemManagementBIOSVersion() {
@@ -390,7 +390,7 @@ public class HardwareInformation implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the totalStorageSpace property value. Total storage space of the device.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getTotalStorageSpace() {
@@ -398,7 +398,7 @@ public class HardwareInformation implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the tpmManufacturer property value. The identifying information that uniquely names the TPM manufacturer
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTpmManufacturer() {
@@ -406,7 +406,7 @@ public class HardwareInformation implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the tpmSpecificationVersion property value. String that specifies the specification version.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTpmSpecificationVersion() {
@@ -414,7 +414,7 @@ public class HardwareInformation implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the tpmVersion property value. The version of the TPM, as specified by the manufacturer
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTpmVersion() {
@@ -422,7 +422,7 @@ public class HardwareInformation implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the wifiMac property value. WiFi MAC address of the device
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getWifiMac() {
@@ -430,7 +430,7 @@ public class HardwareInformation implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the wiredIPv4Addresses property value. A list of wired IPv4 addresses. The update frequency (the maximum delay for the change of property value to be synchronized from the device to the cloud storage) of this property is daily. Note this property is currently supported only on devices running on Windows.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getWiredIPv4Addresses() {

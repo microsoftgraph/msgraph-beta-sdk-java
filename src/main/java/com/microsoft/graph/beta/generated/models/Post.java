@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Post extends OutlookItem implements Parsable {
     /**
-     * Instantiates a new Post and sets the default values.
+     * Instantiates a new {@link Post} and sets the default values.
      */
     public Post() {
         super();
@@ -19,7 +19,7 @@ public class Post extends OutlookItem implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Post
+     * @return a {@link Post}
      */
     @jakarta.annotation.Nonnull
     public static Post createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class Post extends OutlookItem implements Parsable {
     }
     /**
      * Gets the attachments property value. The collection of fileAttachment, itemAttachment, and referenceAttachment attachments for the post. Read-only. Nullable. Supports $expand.
-     * @return a java.util.List<Attachment>
+     * @return a {@link java.util.List<Attachment>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Attachment> getAttachments() {
@@ -36,7 +36,7 @@ public class Post extends OutlookItem implements Parsable {
     }
     /**
      * Gets the body property value. The contents of the post. This is a default property. This property can be null.
-     * @return a ItemBody
+     * @return a {@link ItemBody}
      */
     @jakarta.annotation.Nullable
     public ItemBody getBody() {
@@ -44,7 +44,7 @@ public class Post extends OutlookItem implements Parsable {
     }
     /**
      * Gets the conversationId property value. Unique ID of the conversation. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getConversationId() {
@@ -52,7 +52,7 @@ public class Post extends OutlookItem implements Parsable {
     }
     /**
      * Gets the conversationThreadId property value. Unique ID of the conversation thread. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getConversationThreadId() {
@@ -60,7 +60,7 @@ public class Post extends OutlookItem implements Parsable {
     }
     /**
      * Gets the extensions property value. The collection of open extensions defined for the post. Read-only. Nullable. Supports $expand.
-     * @return a java.util.List<Extension>
+     * @return a {@link java.util.List<Extension>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Extension> getExtensions() {
@@ -68,7 +68,7 @@ public class Post extends OutlookItem implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -92,7 +92,7 @@ public class Post extends OutlookItem implements Parsable {
     }
     /**
      * Gets the from property value. The from property
-     * @return a Recipient
+     * @return a {@link Recipient}
      */
     @jakarta.annotation.Nullable
     public Recipient getFrom() {
@@ -100,7 +100,7 @@ public class Post extends OutlookItem implements Parsable {
     }
     /**
      * Gets the hasAttachments property value. Indicates whether the post has at least one attachment. This is a default property.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getHasAttachments() {
@@ -108,7 +108,7 @@ public class Post extends OutlookItem implements Parsable {
     }
     /**
      * Gets the importance property value. The importance of a group post: low, normal, high.
-     * @return a Importance
+     * @return a {@link Importance}
      */
     @jakarta.annotation.Nullable
     public Importance getImportance() {
@@ -116,7 +116,7 @@ public class Post extends OutlookItem implements Parsable {
     }
     /**
      * Gets the inReplyTo property value. The earlier post that this post is replying to in the conversationThread. Read-only. Supports $expand.
-     * @return a Post
+     * @return a {@link Post}
      */
     @jakarta.annotation.Nullable
     public Post getInReplyTo() {
@@ -124,7 +124,7 @@ public class Post extends OutlookItem implements Parsable {
     }
     /**
      * Gets the mentions property value. The mentions property
-     * @return a java.util.List<Mention>
+     * @return a {@link java.util.List<Mention>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Mention> getMentions() {
@@ -132,7 +132,7 @@ public class Post extends OutlookItem implements Parsable {
     }
     /**
      * Gets the multiValueExtendedProperties property value. The collection of multi-value extended properties defined for the post. Read-only. Nullable.
-     * @return a java.util.List<MultiValueLegacyExtendedProperty>
+     * @return a {@link java.util.List<MultiValueLegacyExtendedProperty>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<MultiValueLegacyExtendedProperty> getMultiValueExtendedProperties() {
@@ -140,7 +140,7 @@ public class Post extends OutlookItem implements Parsable {
     }
     /**
      * Gets the newParticipants property value. Conversation participants that were added to the thread as part of this post.
-     * @return a java.util.List<Recipient>
+     * @return a {@link java.util.List<Recipient>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Recipient> getNewParticipants() {
@@ -148,7 +148,7 @@ public class Post extends OutlookItem implements Parsable {
     }
     /**
      * Gets the receivedDateTime property value. Specifies when the post was received. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getReceivedDateTime() {
@@ -156,7 +156,7 @@ public class Post extends OutlookItem implements Parsable {
     }
     /**
      * Gets the sender property value. Contains the address of the sender. The value of Sender is assumed to be the address of the authenticated user in the case when Sender is not specified. This is a default property.
-     * @return a Recipient
+     * @return a {@link Recipient}
      */
     @jakarta.annotation.Nullable
     public Recipient getSender() {
@@ -164,7 +164,7 @@ public class Post extends OutlookItem implements Parsable {
     }
     /**
      * Gets the singleValueExtendedProperties property value. The collection of single-value extended properties defined for the post. Read-only. Nullable.
-     * @return a java.util.List<SingleValueLegacyExtendedProperty>
+     * @return a {@link java.util.List<SingleValueLegacyExtendedProperty>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<SingleValueLegacyExtendedProperty> getSingleValueExtendedProperties() {

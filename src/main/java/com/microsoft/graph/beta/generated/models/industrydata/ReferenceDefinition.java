@@ -11,7 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ReferenceDefinition extends Entity implements Parsable {
     /**
-     * Instantiates a new ReferenceDefinition and sets the default values.
+     * Instantiates a new {@link ReferenceDefinition} and sets the default values.
      */
     public ReferenceDefinition() {
         super();
@@ -19,7 +19,7 @@ public class ReferenceDefinition extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ReferenceDefinition
+     * @return a {@link ReferenceDefinition}
      */
     @jakarta.annotation.Nonnull
     public static ReferenceDefinition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class ReferenceDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the code property value. The code value for the definition that must be unique within the referenceType.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCode() {
@@ -36,7 +36,7 @@ public class ReferenceDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. The date and time when the definition was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -44,7 +44,7 @@ public class ReferenceDefinition extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -60,7 +60,7 @@ public class ReferenceDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the isDisabled property value. Indicates whether the definition has been disabled.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDisabled() {
@@ -68,7 +68,7 @@ public class ReferenceDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. The date and time when the definition was most recently changed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -76,7 +76,7 @@ public class ReferenceDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the referenceType property value. The categorical type for a collection of enumerated values.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getReferenceType() {
@@ -84,7 +84,7 @@ public class ReferenceDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the sortIndex property value. The ordering index to present the definitions within a type consistently in user interfaces.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getSortIndex() {
@@ -92,7 +92,7 @@ public class ReferenceDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the source property value. The standards body or organization source which defined the code.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSource() {

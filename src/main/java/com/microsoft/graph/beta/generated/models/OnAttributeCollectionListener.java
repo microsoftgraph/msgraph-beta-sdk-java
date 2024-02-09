@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OnAttributeCollectionListener extends AuthenticationEventListener implements Parsable {
     /**
-     * Instantiates a new OnAttributeCollectionListener and sets the default values.
+     * Instantiates a new {@link OnAttributeCollectionListener} and sets the default values.
      */
     public OnAttributeCollectionListener() {
         super();
@@ -18,7 +18,7 @@ public class OnAttributeCollectionListener extends AuthenticationEventListener i
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a OnAttributeCollectionListener
+     * @return a {@link OnAttributeCollectionListener}
      */
     @jakarta.annotation.Nonnull
     public static OnAttributeCollectionListener createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class OnAttributeCollectionListener extends AuthenticationEventListener i
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -37,7 +37,7 @@ public class OnAttributeCollectionListener extends AuthenticationEventListener i
     }
     /**
      * Gets the handler property value. Required. Configuration for what to invoke if the event resolves to this listener.
-     * @return a OnAttributeCollectionHandler
+     * @return a {@link OnAttributeCollectionHandler}
      */
     @jakarta.annotation.Nullable
     public OnAttributeCollectionHandler getHandler() {

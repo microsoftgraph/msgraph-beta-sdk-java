@@ -26,6 +26,7 @@ import java.util.Objects;
 public class LicenseDetailsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -33,6 +34,7 @@ public class LicenseDetailsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getTeamsLicensingDetails method.
+     * @return a {@link GetTeamsLicensingDetailsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetTeamsLicensingDetailsRequestBuilder getTeamsLicensingDetails() {
@@ -41,7 +43,7 @@ public class LicenseDetailsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the licenseDetails property of the microsoft.graph.servicePrincipal entity.
      * @param licenseDetailsId The unique identifier of licenseDetails
-     * @return a LicenseDetailsItemRequestBuilder
+     * @return a {@link LicenseDetailsItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public LicenseDetailsItemRequestBuilder byLicenseDetailsId(@jakarta.annotation.Nonnull final String licenseDetailsId) {
@@ -51,7 +53,7 @@ public class LicenseDetailsRequestBuilder extends BaseRequestBuilder {
         return new LicenseDetailsItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new LicenseDetailsRequestBuilder and sets the default values.
+     * Instantiates a new {@link LicenseDetailsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -59,7 +61,7 @@ public class LicenseDetailsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/servicePrincipals/{servicePrincipal%2Did}/licenseDetails{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new LicenseDetailsRequestBuilder and sets the default values.
+     * Instantiates a new {@link LicenseDetailsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -68,7 +70,8 @@ public class LicenseDetailsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get licenseDetails from servicePrincipals
-     * @return a LicenseDetailsCollectionResponse
+     * @return a {@link LicenseDetailsCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public LicenseDetailsCollectionResponse get() {
@@ -77,20 +80,21 @@ public class LicenseDetailsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get licenseDetails from servicePrincipals
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a LicenseDetailsCollectionResponse
+     * @return a {@link LicenseDetailsCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public LicenseDetailsCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, LicenseDetailsCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to licenseDetails for servicePrincipals
      * @param body The request body
-     * @return a LicenseDetails
+     * @return a {@link LicenseDetails}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public LicenseDetails post(@jakarta.annotation.Nonnull final LicenseDetails body) {
@@ -100,20 +104,20 @@ public class LicenseDetailsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to licenseDetails for servicePrincipals
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a LicenseDetails
+     * @return a {@link LicenseDetails}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public LicenseDetails post(@jakarta.annotation.Nonnull final LicenseDetails body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, LicenseDetails::createFromDiscriminatorValue);
     }
     /**
      * Get licenseDetails from servicePrincipals
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -122,7 +126,7 @@ public class LicenseDetailsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get licenseDetails from servicePrincipals
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -134,7 +138,7 @@ public class LicenseDetailsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to licenseDetails for servicePrincipals
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final LicenseDetails body) {
@@ -144,12 +148,12 @@ public class LicenseDetailsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to licenseDetails for servicePrincipals
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final LicenseDetails body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/servicePrincipals/{servicePrincipal%2Did}/licenseDetails", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -158,7 +162,7 @@ public class LicenseDetailsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a LicenseDetailsRequestBuilder
+     * @return a {@link LicenseDetailsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public LicenseDetailsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -212,7 +216,7 @@ public class LicenseDetailsRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

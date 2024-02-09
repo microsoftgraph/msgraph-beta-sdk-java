@@ -26,6 +26,7 @@ import java.util.Objects;
 public class UpdatableAssetItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the addMembers method.
+     * @return a {@link MicrosoftGraphWindowsUpdatesAddMembersRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MicrosoftGraphWindowsUpdatesAddMembersRequestBuilder microsoftGraphWindowsUpdatesAddMembers() {
@@ -33,6 +34,7 @@ public class UpdatableAssetItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the addMembersById method.
+     * @return a {@link MicrosoftGraphWindowsUpdatesAddMembersByIdRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MicrosoftGraphWindowsUpdatesAddMembersByIdRequestBuilder microsoftGraphWindowsUpdatesAddMembersById() {
@@ -40,6 +42,7 @@ public class UpdatableAssetItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the removeMembers method.
+     * @return a {@link MicrosoftGraphWindowsUpdatesRemoveMembersRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MicrosoftGraphWindowsUpdatesRemoveMembersRequestBuilder microsoftGraphWindowsUpdatesRemoveMembers() {
@@ -47,13 +50,14 @@ public class UpdatableAssetItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the removeMembersById method.
+     * @return a {@link MicrosoftGraphWindowsUpdatesRemoveMembersByIdRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MicrosoftGraphWindowsUpdatesRemoveMembersByIdRequestBuilder microsoftGraphWindowsUpdatesRemoveMembersById() {
         return new MicrosoftGraphWindowsUpdatesRemoveMembersByIdRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new UpdatableAssetItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link UpdatableAssetItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -61,7 +65,7 @@ public class UpdatableAssetItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/admin/windows/updates/updatableAssets/{updatableAsset%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new UpdatableAssetItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link UpdatableAssetItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -69,51 +73,54 @@ public class UpdatableAssetItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/admin/windows/updates/updatableAssets/{updatableAsset%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete an updatableAssetGroup object. When an updatableAssetGroup object, its member updatableAsset objects are not deleted.
-     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-updatableassetgroup-delete?view=graph-rest-1.0">Find more info here</a>
+     * Delete an updatableAsset object.
+     * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-updatableasset-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete an updatableAssetGroup object. When an updatableAssetGroup object, its member updatableAsset objects are not deleted.
+     * Delete an updatableAsset object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-updatableassetgroup-delete?view=graph-rest-1.0">Find more info here</a>
+     * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-updatableasset-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of an updatableAsset object.
-     * @return a UpdatableAsset
-     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-updatableasset-get?view=graph-rest-1.0">Find more info here</a>
+     * Read the properties and relationships of an updatableAssetGroup object.
+     * @return a {@link UpdatableAsset}
+     * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-updatableassetgroup-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UpdatableAsset get() {
         return get(null);
     }
     /**
-     * Read the properties and relationships of an updatableAsset object.
+     * Read the properties and relationships of an updatableAssetGroup object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a UpdatableAsset
-     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-updatableasset-get?view=graph-rest-1.0">Find more info here</a>
+     * @return a {@link UpdatableAsset}
+     * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-updatableassetgroup-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UpdatableAsset get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, UpdatableAsset::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property updatableAssets in admin
      * @param body The request body
-     * @return a UpdatableAsset
+     * @return a {@link UpdatableAsset}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public UpdatableAsset patch(@jakarta.annotation.Nonnull final UpdatableAsset body) {
@@ -123,49 +130,49 @@ public class UpdatableAssetItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property updatableAssets in admin
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a UpdatableAsset
+     * @return a {@link UpdatableAsset}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public UpdatableAsset patch(@jakarta.annotation.Nonnull final UpdatableAsset body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, UpdatableAsset::createFromDiscriminatorValue);
     }
     /**
-     * Delete an updatableAssetGroup object. When an updatableAssetGroup object, its member updatableAsset objects are not deleted.
-     * @return a RequestInformation
+     * Delete an updatableAsset object.
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete an updatableAssetGroup object. When an updatableAssetGroup object, its member updatableAsset objects are not deleted.
+     * Delete an updatableAsset object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/admin/windows/updates/updatableAssets/{updatableAsset%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of an updatableAsset object.
-     * @return a RequestInformation
+     * Read the properties and relationships of an updatableAssetGroup object.
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of an updatableAsset object.
+     * Read the properties and relationships of an updatableAssetGroup object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -177,7 +184,7 @@ public class UpdatableAssetItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property updatableAssets in admin
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final UpdatableAsset body) {
@@ -187,12 +194,12 @@ public class UpdatableAssetItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property updatableAssets in admin
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final UpdatableAsset body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/admin/windows/updates/updatableAssets/{updatableAsset%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -201,7 +208,7 @@ public class UpdatableAssetItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a UpdatableAssetItemRequestBuilder
+     * @return a {@link UpdatableAssetItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UpdatableAssetItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -215,7 +222,7 @@ public class UpdatableAssetItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of an updatableAsset object.
+     * Read the properties and relationships of an updatableAssetGroup object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
@@ -231,7 +238,7 @@ public class UpdatableAssetItemRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

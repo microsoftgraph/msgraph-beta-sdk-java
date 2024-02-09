@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeploymentAudience extends Entity implements Parsable {
     /**
-     * Instantiates a new DeploymentAudience and sets the default values.
+     * Instantiates a new {@link DeploymentAudience} and sets the default values.
      */
     public DeploymentAudience() {
         super();
@@ -18,7 +18,7 @@ public class DeploymentAudience extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeploymentAudience
+     * @return a {@link DeploymentAudience}
      */
     @jakarta.annotation.Nonnull
     public static DeploymentAudience createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class DeploymentAudience extends Entity implements Parsable {
     }
     /**
      * Gets the applicableContent property value. Content eligible to deploy to devices in the audience. Not nullable. Read-only.
-     * @return a java.util.List<ApplicableContent>
+     * @return a {@link java.util.List<ApplicableContent>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ApplicableContent> getApplicableContent() {
@@ -35,7 +35,7 @@ public class DeploymentAudience extends Entity implements Parsable {
     }
     /**
      * Gets the exclusions property value. Specifies the assets to exclude from the audience.
-     * @return a java.util.List<UpdatableAsset>
+     * @return a {@link java.util.List<UpdatableAsset>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<UpdatableAsset> getExclusions() {
@@ -43,7 +43,7 @@ public class DeploymentAudience extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -55,7 +55,7 @@ public class DeploymentAudience extends Entity implements Parsable {
     }
     /**
      * Gets the members property value. Specifies the assets to include in the audience.
-     * @return a java.util.List<UpdatableAsset>
+     * @return a {@link java.util.List<UpdatableAsset>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<UpdatableAsset> getMembers() {

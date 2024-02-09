@@ -26,6 +26,7 @@ import java.util.Objects;
 public class SublabelsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -33,6 +34,7 @@ public class SublabelsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the evaluate method.
+     * @return a {@link EvaluateRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public EvaluateRequestBuilder evaluate() {
@@ -41,7 +43,7 @@ public class SublabelsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the sublabels property of the microsoft.graph.sensitivityLabel entity.
      * @param sensitivityLabelId1 The unique identifier of sensitivityLabel
-     * @return a SensitivityLabelItemRequestBuilder
+     * @return a {@link SensitivityLabelItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SensitivityLabelItemRequestBuilder bySensitivityLabelId1(@jakarta.annotation.Nonnull final String sensitivityLabelId1) {
@@ -51,7 +53,7 @@ public class SublabelsRequestBuilder extends BaseRequestBuilder {
         return new SensitivityLabelItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new SublabelsRequestBuilder and sets the default values.
+     * Instantiates a new {@link SublabelsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -59,7 +61,7 @@ public class SublabelsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/informationProtection/sensitivityLabels/{sensitivityLabel%2Did}/sublabels{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new SublabelsRequestBuilder and sets the default values.
+     * Instantiates a new {@link SublabelsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -68,7 +70,8 @@ public class SublabelsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get sublabels from users
-     * @return a SensitivityLabelCollectionResponse
+     * @return a {@link SensitivityLabelCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public SensitivityLabelCollectionResponse get() {
@@ -77,20 +80,21 @@ public class SublabelsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get sublabels from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a SensitivityLabelCollectionResponse
+     * @return a {@link SensitivityLabelCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public SensitivityLabelCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, SensitivityLabelCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to sublabels for users
      * @param body The request body
-     * @return a SensitivityLabel
+     * @return a {@link SensitivityLabel}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public SensitivityLabel post(@jakarta.annotation.Nonnull final SensitivityLabel body) {
@@ -100,20 +104,20 @@ public class SublabelsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to sublabels for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a SensitivityLabel
+     * @return a {@link SensitivityLabel}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public SensitivityLabel post(@jakarta.annotation.Nonnull final SensitivityLabel body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, SensitivityLabel::createFromDiscriminatorValue);
     }
     /**
      * Get sublabels from users
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -122,7 +126,7 @@ public class SublabelsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get sublabels from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -134,7 +138,7 @@ public class SublabelsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to sublabels for users
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final SensitivityLabel body) {
@@ -144,12 +148,12 @@ public class SublabelsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to sublabels for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final SensitivityLabel body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/users/{user%2Did}/informationProtection/sensitivityLabels/{sensitivityLabel%2Did}/sublabels", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -158,7 +162,7 @@ public class SublabelsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a SublabelsRequestBuilder
+     * @return a {@link SublabelsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SublabelsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -212,7 +216,7 @@ public class SublabelsRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

@@ -18,7 +18,7 @@ public class MultiTenantOrganizationMemberTransitionDetails implements Additiona
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new MultiTenantOrganizationMemberTransitionDetails and sets the default values.
+     * Instantiates a new {@link MultiTenantOrganizationMemberTransitionDetails} and sets the default values.
      */
     public MultiTenantOrganizationMemberTransitionDetails() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class MultiTenantOrganizationMemberTransitionDetails implements Additiona
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MultiTenantOrganizationMemberTransitionDetails
+     * @return a {@link MultiTenantOrganizationMemberTransitionDetails}
      */
     @jakarta.annotation.Nonnull
     public static MultiTenantOrganizationMemberTransitionDetails createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class MultiTenantOrganizationMemberTransitionDetails implements Additiona
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class MultiTenantOrganizationMemberTransitionDetails implements Additiona
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class MultiTenantOrganizationMemberTransitionDetails implements Additiona
     }
     /**
      * Gets the desiredRole property value. Role of the tenant in the multitenant organization. The possible values are: owner, member, unknownFutureValue.
-     * @return a MultiTenantOrganizationMemberRole
+     * @return a {@link MultiTenantOrganizationMemberRole}
      */
     @jakarta.annotation.Nullable
     public MultiTenantOrganizationMemberRole getDesiredRole() {
@@ -65,7 +65,7 @@ public class MultiTenantOrganizationMemberTransitionDetails implements Additiona
     }
     /**
      * Gets the desiredState property value. State of the tenant in the multitenant organization currently being processed. The possible values are: pending, active, removed, unknownFutureValue. Read-only.
-     * @return a MultiTenantOrganizationMemberState
+     * @return a {@link MultiTenantOrganizationMemberState}
      */
     @jakarta.annotation.Nullable
     public MultiTenantOrganizationMemberState getDesiredState() {
@@ -73,7 +73,7 @@ public class MultiTenantOrganizationMemberTransitionDetails implements Additiona
     }
     /**
      * Gets the details property value. Details that explain the processing status if any. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDetails() {
@@ -81,7 +81,7 @@ public class MultiTenantOrganizationMemberTransitionDetails implements Additiona
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -95,7 +95,7 @@ public class MultiTenantOrganizationMemberTransitionDetails implements Additiona
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -103,7 +103,7 @@ public class MultiTenantOrganizationMemberTransitionDetails implements Additiona
     }
     /**
      * Gets the status property value. Processing state of the asynchronous job. The possible values are: notStarted, running, succeeded, failed, unknownFutureValue. Read-only.
-     * @return a MultiTenantOrganizationMemberProcessingStatus
+     * @return a {@link MultiTenantOrganizationMemberProcessingStatus}
      */
     @jakarta.annotation.Nullable
     public MultiTenantOrganizationMemberProcessingStatus getStatus() {

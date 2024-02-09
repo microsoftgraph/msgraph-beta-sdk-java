@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessPackage extends Entity implements Parsable {
     /**
-     * Instantiates a new AccessPackage and sets the default values.
+     * Instantiates a new {@link AccessPackage} and sets the default values.
      */
     public AccessPackage() {
         super();
@@ -18,7 +18,7 @@ public class AccessPackage extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AccessPackage
+     * @return a {@link AccessPackage}
      */
     @jakarta.annotation.Nonnull
     public static AccessPackage createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class AccessPackage extends Entity implements Parsable {
     }
     /**
      * Gets the accessPackageAssignmentPolicies property value. Read-only. Nullable. Supports $expand.
-     * @return a java.util.List<AccessPackageAssignmentPolicy>
+     * @return a {@link java.util.List<AccessPackageAssignmentPolicy>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackageAssignmentPolicy> getAccessPackageAssignmentPolicies() {
@@ -35,7 +35,7 @@ public class AccessPackage extends Entity implements Parsable {
     }
     /**
      * Gets the accessPackageCatalog property value. The accessPackageCatalog property
-     * @return a AccessPackageCatalog
+     * @return a {@link AccessPackageCatalog}
      */
     @jakarta.annotation.Nullable
     public AccessPackageCatalog getAccessPackageCatalog() {
@@ -43,7 +43,7 @@ public class AccessPackage extends Entity implements Parsable {
     }
     /**
      * Gets the accessPackageResourceRoleScopes property value. The accessPackageResourceRoleScopes property
-     * @return a java.util.List<AccessPackageResourceRoleScope>
+     * @return a {@link java.util.List<AccessPackageResourceRoleScope>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackageResourceRoleScope> getAccessPackageResourceRoleScopes() {
@@ -51,7 +51,7 @@ public class AccessPackage extends Entity implements Parsable {
     }
     /**
      * Gets the accessPackagesIncompatibleWith property value. The access packages that are incompatible with this package. Read-only.
-     * @return a java.util.List<AccessPackage>
+     * @return a {@link java.util.List<AccessPackage>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackage> getAccessPackagesIncompatibleWith() {
@@ -59,7 +59,7 @@ public class AccessPackage extends Entity implements Parsable {
     }
     /**
      * Gets the catalogId property value. Identifier of the access package catalog referencing this access package. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCatalogId() {
@@ -67,7 +67,7 @@ public class AccessPackage extends Entity implements Parsable {
     }
     /**
      * Gets the createdBy property value. The userPrincipalName of the user or identity of the subject who created this resource. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCreatedBy() {
@@ -75,7 +75,7 @@ public class AccessPackage extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -83,7 +83,7 @@ public class AccessPackage extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The description of the access package.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -91,7 +91,7 @@ public class AccessPackage extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name of the access package. Supports $filter (eq, contains).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -99,7 +99,7 @@ public class AccessPackage extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -123,7 +123,7 @@ public class AccessPackage extends Entity implements Parsable {
     }
     /**
      * Gets the incompatibleAccessPackages property value. The  access packages whose assigned users are ineligible to be assigned this access package.
-     * @return a java.util.List<AccessPackage>
+     * @return a {@link java.util.List<AccessPackage>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackage> getIncompatibleAccessPackages() {
@@ -131,7 +131,7 @@ public class AccessPackage extends Entity implements Parsable {
     }
     /**
      * Gets the incompatibleGroups property value. The groups whose members are ineligible to be assigned this access package.
-     * @return a java.util.List<Group>
+     * @return a {@link java.util.List<Group>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Group> getIncompatibleGroups() {
@@ -139,7 +139,7 @@ public class AccessPackage extends Entity implements Parsable {
     }
     /**
      * Gets the isHidden property value. Whether the access package is hidden from the requestor.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsHidden() {
@@ -147,7 +147,7 @@ public class AccessPackage extends Entity implements Parsable {
     }
     /**
      * Gets the isRoleScopesVisible property value. Indicates whether role scopes are visible.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsRoleScopesVisible() {
@@ -155,7 +155,7 @@ public class AccessPackage extends Entity implements Parsable {
     }
     /**
      * Gets the modifiedBy property value. The userPrincipalName of the user who last modified this resource. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getModifiedBy() {
@@ -163,7 +163,7 @@ public class AccessPackage extends Entity implements Parsable {
     }
     /**
      * Gets the modifiedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getModifiedDateTime() {

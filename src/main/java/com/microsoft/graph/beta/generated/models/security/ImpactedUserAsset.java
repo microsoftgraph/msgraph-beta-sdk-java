@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ImpactedUserAsset extends ImpactedAsset implements Parsable {
     /**
-     * Instantiates a new ImpactedUserAsset and sets the default values.
+     * Instantiates a new {@link ImpactedUserAsset} and sets the default values.
      */
     public ImpactedUserAsset() {
         super();
@@ -18,7 +18,7 @@ public class ImpactedUserAsset extends ImpactedAsset implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ImpactedUserAsset
+     * @return a {@link ImpactedUserAsset}
      */
     @jakarta.annotation.Nonnull
     public static ImpactedUserAsset createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class ImpactedUserAsset extends ImpactedAsset implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -37,7 +37,7 @@ public class ImpactedUserAsset extends ImpactedAsset implements Parsable {
     }
     /**
      * Gets the identifier property value. The identifier property
-     * @return a UserAssetIdentifier
+     * @return a {@link UserAssetIdentifier}
      */
     @jakarta.annotation.Nullable
     public UserAssetIdentifier getIdentifier() {

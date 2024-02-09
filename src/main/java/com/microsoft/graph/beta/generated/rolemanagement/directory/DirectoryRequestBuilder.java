@@ -35,6 +35,7 @@ import java.util.Objects;
 public class DirectoryRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the resourceNamespaces property of the microsoft.graph.rbacApplication entity.
+     * @return a {@link ResourceNamespacesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ResourceNamespacesRequestBuilder resourceNamespaces() {
@@ -42,6 +43,7 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the roleAssignmentApprovals property of the microsoft.graph.rbacApplication entity.
+     * @return a {@link RoleAssignmentApprovalsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RoleAssignmentApprovalsRequestBuilder roleAssignmentApprovals() {
@@ -49,6 +51,7 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the roleAssignments property of the microsoft.graph.rbacApplication entity.
+     * @return a {@link RoleAssignmentsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RoleAssignmentsRequestBuilder roleAssignments() {
@@ -56,6 +59,7 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the roleAssignmentScheduleInstances property of the microsoft.graph.rbacApplication entity.
+     * @return a {@link RoleAssignmentScheduleInstancesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RoleAssignmentScheduleInstancesRequestBuilder roleAssignmentScheduleInstances() {
@@ -63,6 +67,7 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the roleAssignmentScheduleRequests property of the microsoft.graph.rbacApplication entity.
+     * @return a {@link RoleAssignmentScheduleRequestsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RoleAssignmentScheduleRequestsRequestBuilder roleAssignmentScheduleRequests() {
@@ -70,6 +75,7 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the roleAssignmentSchedules property of the microsoft.graph.rbacApplication entity.
+     * @return a {@link RoleAssignmentSchedulesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RoleAssignmentSchedulesRequestBuilder roleAssignmentSchedules() {
@@ -77,6 +83,7 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the roleDefinitions property of the microsoft.graph.rbacApplication entity.
+     * @return a {@link RoleDefinitionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RoleDefinitionsRequestBuilder roleDefinitions() {
@@ -84,6 +91,7 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the roleEligibilityScheduleInstances property of the microsoft.graph.rbacApplication entity.
+     * @return a {@link RoleEligibilityScheduleInstancesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RoleEligibilityScheduleInstancesRequestBuilder roleEligibilityScheduleInstances() {
@@ -91,6 +99,7 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the roleEligibilityScheduleRequests property of the microsoft.graph.rbacApplication entity.
+     * @return a {@link RoleEligibilityScheduleRequestsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RoleEligibilityScheduleRequestsRequestBuilder roleEligibilityScheduleRequests() {
@@ -98,6 +107,7 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the roleEligibilitySchedules property of the microsoft.graph.rbacApplication entity.
+     * @return a {@link RoleEligibilitySchedulesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RoleEligibilitySchedulesRequestBuilder roleEligibilitySchedules() {
@@ -105,6 +115,7 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the roleScheduleInstances method.
+     * @return a {@link RoleScheduleInstancesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppScopeIdPrincipalIdPrincipalIdRoleDefinitionIdRoleDefinitionIdRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RoleScheduleInstancesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppScopeIdPrincipalIdPrincipalIdRoleDefinitionIdRoleDefinitionIdRequestBuilder roleScheduleInstancesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppScopeIdPrincipalIdPrincipalIdRoleDefinitionIdRoleDefinitionId() {
@@ -112,6 +123,7 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the roleSchedules method.
+     * @return a {@link RoleSchedulesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppScopeIdPrincipalIdPrincipalIdRoleDefinitionIdRoleDefinitionIdRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RoleSchedulesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppScopeIdPrincipalIdPrincipalIdRoleDefinitionIdRoleDefinitionIdRequestBuilder roleSchedulesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppScopeIdPrincipalIdPrincipalIdRoleDefinitionIdRoleDefinitionId() {
@@ -119,13 +131,14 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the transitiveRoleAssignments property of the microsoft.graph.rbacApplication entity.
+     * @return a {@link TransitiveRoleAssignmentsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TransitiveRoleAssignmentsRequestBuilder transitiveRoleAssignments() {
         return new TransitiveRoleAssignmentsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new DirectoryRequestBuilder and sets the default values.
+     * Instantiates a new {@link DirectoryRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -133,7 +146,7 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/roleManagement/directory{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new DirectoryRequestBuilder and sets the default values.
+     * Instantiates a new {@link DirectoryRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -142,6 +155,7 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Delete navigation property directory for roleManagement
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete() {
         delete(null);
@@ -149,17 +163,18 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property directory for roleManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Get directory from roleManagement
-     * @return a RbacApplication
+     * @return a {@link RbacApplication}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public RbacApplication get() {
@@ -168,20 +183,21 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
     /**
      * Get directory from roleManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RbacApplication
+     * @return a {@link RbacApplication}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public RbacApplication get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, RbacApplication::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property directory in roleManagement
      * @param body The request body
-     * @return a RbacApplication
+     * @return a {@link RbacApplication}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public RbacApplication patch(@jakarta.annotation.Nonnull final RbacApplication body) {
@@ -191,20 +207,20 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property directory in roleManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RbacApplication
+     * @return a {@link RbacApplication}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public RbacApplication patch(@jakarta.annotation.Nonnull final RbacApplication body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, RbacApplication::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property directory for roleManagement
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -213,18 +229,18 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property directory for roleManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/roleManagement/directory", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Get directory from roleManagement
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -233,7 +249,7 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
     /**
      * Get directory from roleManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -245,7 +261,7 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property directory in roleManagement
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final RbacApplication body) {
@@ -255,12 +271,12 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property directory in roleManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final RbacApplication body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/roleManagement/directory", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -269,7 +285,7 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a DirectoryRequestBuilder
+     * @return a {@link DirectoryRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DirectoryRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -299,7 +315,7 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

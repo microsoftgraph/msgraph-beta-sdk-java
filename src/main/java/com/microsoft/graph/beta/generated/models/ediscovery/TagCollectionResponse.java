@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TagCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * Instantiates a new TagCollectionResponse and sets the default values.
+     * Instantiates a new {@link TagCollectionResponse} and sets the default values.
      */
     public TagCollectionResponse() {
         super();
@@ -18,7 +18,7 @@ public class TagCollectionResponse extends BaseCollectionPaginationCountResponse
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TagCollectionResponse
+     * @return a {@link TagCollectionResponse}
      */
     @jakarta.annotation.Nonnull
     public static TagCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class TagCollectionResponse extends BaseCollectionPaginationCountResponse
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -37,7 +37,7 @@ public class TagCollectionResponse extends BaseCollectionPaginationCountResponse
     }
     /**
      * Gets the value property value. The value property
-     * @return a java.util.List<Tag>
+     * @return a {@link java.util.List<Tag>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Tag> getValue() {

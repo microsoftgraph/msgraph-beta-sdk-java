@@ -21,7 +21,7 @@ public class Item implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new Item and sets the default values.
+     * Instantiates a new {@link Item} and sets the default values.
      */
     public Item() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -30,7 +30,7 @@ public class Item implements AdditionalDataHolder, BackedModel, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Item
+     * @return a {@link Item}
      */
     @jakarta.annotation.Nonnull
     public static Item createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class Item implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -52,7 +52,7 @@ public class Item implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -60,7 +60,7 @@ public class Item implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the baseUnitOfMeasureId property value. The baseUnitOfMeasureId property
-     * @return a UUID
+     * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
     public UUID getBaseUnitOfMeasureId() {
@@ -68,7 +68,7 @@ public class Item implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the blocked property value. The blocked property
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getBlocked() {
@@ -76,7 +76,7 @@ public class Item implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the displayName property value. The displayName property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -84,7 +84,7 @@ public class Item implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -112,7 +112,7 @@ public class Item implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the gtin property value. The gtin property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getGtin() {
@@ -120,7 +120,7 @@ public class Item implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the id property value. The id property
-     * @return a UUID
+     * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
     public UUID getId() {
@@ -128,7 +128,7 @@ public class Item implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the inventory property value. The inventory property
-     * @return a BigDecimal
+     * @return a {@link BigDecimal}
      */
     @jakarta.annotation.Nullable
     public BigDecimal getInventory() {
@@ -136,7 +136,7 @@ public class Item implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the itemCategory property value. The itemCategory property
-     * @return a ItemCategory
+     * @return a {@link ItemCategory}
      */
     @jakarta.annotation.Nullable
     public ItemCategory getItemCategory() {
@@ -144,7 +144,7 @@ public class Item implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the itemCategoryCode property value. The itemCategoryCode property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getItemCategoryCode() {
@@ -152,7 +152,7 @@ public class Item implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the itemCategoryId property value. The itemCategoryId property
-     * @return a UUID
+     * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
     public UUID getItemCategoryId() {
@@ -160,7 +160,7 @@ public class Item implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -168,7 +168,7 @@ public class Item implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the number property value. The number property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getNumber() {
@@ -176,7 +176,7 @@ public class Item implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -184,7 +184,7 @@ public class Item implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the picture property value. The picture property
-     * @return a java.util.List<Picture>
+     * @return a {@link java.util.List<Picture>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Picture> getPicture() {
@@ -192,7 +192,7 @@ public class Item implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the priceIncludesTax property value. The priceIncludesTax property
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getPriceIncludesTax() {
@@ -200,7 +200,7 @@ public class Item implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the taxGroupCode property value. The taxGroupCode property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTaxGroupCode() {
@@ -208,7 +208,7 @@ public class Item implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the taxGroupId property value. The taxGroupId property
-     * @return a UUID
+     * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
     public UUID getTaxGroupId() {
@@ -216,7 +216,7 @@ public class Item implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the type property value. The type property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getType() {
@@ -224,7 +224,7 @@ public class Item implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the unitCost property value. The unitCost property
-     * @return a BigDecimal
+     * @return a {@link BigDecimal}
      */
     @jakarta.annotation.Nullable
     public BigDecimal getUnitCost() {
@@ -232,7 +232,7 @@ public class Item implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the unitPrice property value. The unitPrice property
-     * @return a BigDecimal
+     * @return a {@link BigDecimal}
      */
     @jakarta.annotation.Nullable
     public BigDecimal getUnitPrice() {

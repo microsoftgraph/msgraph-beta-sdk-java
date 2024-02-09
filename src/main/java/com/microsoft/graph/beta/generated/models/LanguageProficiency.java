@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class LanguageProficiency extends ItemFacet implements Parsable {
     /**
-     * Instantiates a new LanguageProficiency and sets the default values.
+     * Instantiates a new {@link LanguageProficiency} and sets the default values.
      */
     public LanguageProficiency() {
         super();
@@ -18,7 +18,7 @@ public class LanguageProficiency extends ItemFacet implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a LanguageProficiency
+     * @return a {@link LanguageProficiency}
      */
     @jakarta.annotation.Nonnull
     public static LanguageProficiency createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class LanguageProficiency extends ItemFacet implements Parsable {
     }
     /**
      * Gets the displayName property value. Contains the long-form name for the language.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -35,7 +35,7 @@ public class LanguageProficiency extends ItemFacet implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -51,7 +51,7 @@ public class LanguageProficiency extends ItemFacet implements Parsable {
     }
     /**
      * Gets the proficiency property value. The proficiency property
-     * @return a LanguageProficiencyLevel
+     * @return a {@link LanguageProficiencyLevel}
      */
     @jakarta.annotation.Nullable
     public LanguageProficiencyLevel getProficiency() {
@@ -59,7 +59,7 @@ public class LanguageProficiency extends ItemFacet implements Parsable {
     }
     /**
      * Gets the reading property value. Represents the users reading comprehension for the language represented by the object. Possible values are: elementary, conversational, limitedWorking, professionalWorking, fullProfessional, nativeOrBilingual, unknownFutureValue.
-     * @return a LanguageProficiencyLevel
+     * @return a {@link LanguageProficiencyLevel}
      */
     @jakarta.annotation.Nullable
     public LanguageProficiencyLevel getReading() {
@@ -67,7 +67,7 @@ public class LanguageProficiency extends ItemFacet implements Parsable {
     }
     /**
      * Gets the spoken property value. Represents the users spoken proficiency for the language represented by the object. Possible values are: elementary, conversational, limitedWorking, professionalWorking, fullProfessional, nativeOrBilingual, unknownFutureValue.
-     * @return a LanguageProficiencyLevel
+     * @return a {@link LanguageProficiencyLevel}
      */
     @jakarta.annotation.Nullable
     public LanguageProficiencyLevel getSpoken() {
@@ -75,7 +75,7 @@ public class LanguageProficiency extends ItemFacet implements Parsable {
     }
     /**
      * Gets the tag property value. Contains the four-character BCP47 name for the language (en-US, no-NB, en-AU).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTag() {
@@ -83,7 +83,7 @@ public class LanguageProficiency extends ItemFacet implements Parsable {
     }
     /**
      * Gets the thumbnailUrl property value. The thumbnailUrl property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getThumbnailUrl() {
@@ -91,7 +91,7 @@ public class LanguageProficiency extends ItemFacet implements Parsable {
     }
     /**
      * Gets the written property value. Represents the users written proficiency for the language represented by the object. Possible values are: elementary, conversational, limitedWorking, professionalWorking, fullProfessional, nativeOrBilingual, unknownFutureValue.
-     * @return a LanguageProficiencyLevel
+     * @return a {@link LanguageProficiencyLevel}
      */
     @jakarta.annotation.Nullable
     public LanguageProficiencyLevel getWritten() {

@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GroupPolicyPresentation extends Entity implements Parsable {
     /**
-     * Instantiates a new GroupPolicyPresentation and sets the default values.
+     * Instantiates a new {@link GroupPolicyPresentation} and sets the default values.
      */
     public GroupPolicyPresentation() {
         super();
@@ -21,7 +21,7 @@ public class GroupPolicyPresentation extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a GroupPolicyPresentation
+     * @return a {@link GroupPolicyPresentation}
      */
     @jakarta.annotation.Nonnull
     public static GroupPolicyPresentation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class GroupPolicyPresentation extends Entity implements Parsable {
     }
     /**
      * Gets the definition property value. The group policy definition associated with the presentation.
-     * @return a GroupPolicyDefinition
+     * @return a {@link GroupPolicyDefinition}
      */
     @jakarta.annotation.Nullable
     public GroupPolicyDefinition getDefinition() {
@@ -54,7 +54,7 @@ public class GroupPolicyPresentation extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -66,7 +66,7 @@ public class GroupPolicyPresentation extends Entity implements Parsable {
     }
     /**
      * Gets the label property value. Localized text label for any presentation entity. The default value is empty.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getLabel() {
@@ -74,7 +74,7 @@ public class GroupPolicyPresentation extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. The date and time the entity was last modified.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {

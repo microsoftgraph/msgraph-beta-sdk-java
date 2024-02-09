@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class InactiveGcpServiceAccountFinding extends IdentityFinding implements Parsable {
     /**
-     * Instantiates a new InactiveGcpServiceAccountFinding and sets the default values.
+     * Instantiates a new {@link InactiveGcpServiceAccountFinding} and sets the default values.
      */
     public InactiveGcpServiceAccountFinding() {
         super();
@@ -17,7 +17,7 @@ public class InactiveGcpServiceAccountFinding extends IdentityFinding implements
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a InactiveGcpServiceAccountFinding
+     * @return a {@link InactiveGcpServiceAccountFinding}
      */
     @jakarta.annotation.Nonnull
     public static InactiveGcpServiceAccountFinding createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class InactiveGcpServiceAccountFinding extends IdentityFinding implements
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguration implements Parsable {
     /**
-     * Instantiates a new WindowsDeliveryOptimizationConfiguration and sets the default values.
+     * Instantiates a new {@link WindowsDeliveryOptimizationConfiguration} and sets the default values.
      */
     public WindowsDeliveryOptimizationConfiguration() {
         super();
@@ -21,7 +21,7 @@ public class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguratio
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WindowsDeliveryOptimizationConfiguration
+     * @return a {@link WindowsDeliveryOptimizationConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static WindowsDeliveryOptimizationConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the backgroundDownloadFromHttpDelayInSeconds property value. Specifies number of seconds to delay an HTTP source in a background download that is allowed to use peer-to-peer. Valid values 0 to 4294967295
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getBackgroundDownloadFromHttpDelayInSeconds() {
@@ -38,7 +38,7 @@ public class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the bandwidthMode property value. Specifies foreground and background bandwidth usage using percentages, absolutes, or hours.
-     * @return a DeliveryOptimizationBandwidth
+     * @return a {@link DeliveryOptimizationBandwidth}
      */
     @jakarta.annotation.Nullable
     public DeliveryOptimizationBandwidth getBandwidthMode() {
@@ -46,7 +46,7 @@ public class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the cacheServerBackgroundDownloadFallbackToHttpDelayInSeconds property value. Specifies number of seconds to delay a fall back from cache servers to an HTTP source for a background download. Valid values 0 to 2592000.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getCacheServerBackgroundDownloadFallbackToHttpDelayInSeconds() {
@@ -54,7 +54,7 @@ public class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the cacheServerForegroundDownloadFallbackToHttpDelayInSeconds property value. Specifies number of seconds to delay a fall back from cache servers to an HTTP source for a foreground download. Valid values 0 to 2592000.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getCacheServerForegroundDownloadFallbackToHttpDelayInSeconds() {
@@ -62,7 +62,7 @@ public class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the cacheServerHostNames property value. Specifies cache servers host names.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getCacheServerHostNames() {
@@ -70,7 +70,7 @@ public class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the deliveryOptimizationMode property value. Delivery optimization mode for peer distribution
-     * @return a WindowsDeliveryOptimizationMode
+     * @return a {@link WindowsDeliveryOptimizationMode}
      */
     @jakarta.annotation.Nullable
     public WindowsDeliveryOptimizationMode getDeliveryOptimizationMode() {
@@ -78,7 +78,7 @@ public class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguratio
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -104,7 +104,7 @@ public class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the foregroundDownloadFromHttpDelayInSeconds property value. Specifies number of seconds to delay an HTTP source in a foreground download that is allowed to use peer-to-peer (0-86400). Valid values 0 to 86400
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getForegroundDownloadFromHttpDelayInSeconds() {
@@ -112,7 +112,7 @@ public class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the groupIdSource property value. Specifies to restrict peer selection to a specfic source.
-     * @return a DeliveryOptimizationGroupIdSource
+     * @return a {@link DeliveryOptimizationGroupIdSource}
      */
     @jakarta.annotation.Nullable
     public DeliveryOptimizationGroupIdSource getGroupIdSource() {
@@ -120,7 +120,7 @@ public class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the maximumCacheAgeInDays property value. Specifies the maximum time in days that each file is held in the Delivery Optimization cache after downloading successfully (0-3650). Valid values 0 to 3650
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getMaximumCacheAgeInDays() {
@@ -128,7 +128,7 @@ public class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the maximumCacheSize property value. Specifies the maximum cache size that Delivery Optimization either as a percentage or in GB.
-     * @return a DeliveryOptimizationMaxCacheSize
+     * @return a {@link DeliveryOptimizationMaxCacheSize}
      */
     @jakarta.annotation.Nullable
     public DeliveryOptimizationMaxCacheSize getMaximumCacheSize() {
@@ -136,7 +136,7 @@ public class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the minimumBatteryPercentageAllowedToUpload property value. Specifies the minimum battery percentage to allow the device to upload data (0-100). Valid values 0 to 100
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getMinimumBatteryPercentageAllowedToUpload() {
@@ -144,7 +144,7 @@ public class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the minimumDiskSizeAllowedToPeerInGigabytes property value. Specifies the minimum disk size in GB to use Peer Caching (1-100000). Valid values 1 to 100000
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getMinimumDiskSizeAllowedToPeerInGigabytes() {
@@ -152,7 +152,7 @@ public class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the minimumFileSizeToCacheInMegabytes property value. Specifies the minimum content file size in MB enabled to use Peer Caching (1-100000). Valid values 1 to 100000
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getMinimumFileSizeToCacheInMegabytes() {
@@ -160,7 +160,7 @@ public class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the minimumRamAllowedToPeerInGigabytes property value. Specifies the minimum RAM size in GB to use Peer Caching (1-100000). Valid values 1 to 100000
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getMinimumRamAllowedToPeerInGigabytes() {
@@ -168,7 +168,7 @@ public class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the modifyCacheLocation property value. Specifies the drive that Delivery Optimization should use for its cache.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getModifyCacheLocation() {
@@ -176,7 +176,7 @@ public class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the restrictPeerSelectionBy property value. Values to restrict peer selection by.
-     * @return a DeliveryOptimizationRestrictPeerSelectionByOptions
+     * @return a {@link DeliveryOptimizationRestrictPeerSelectionByOptions}
      */
     @jakarta.annotation.Nullable
     public DeliveryOptimizationRestrictPeerSelectionByOptions getRestrictPeerSelectionBy() {
@@ -184,7 +184,7 @@ public class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the vpnPeerCaching property value. Possible values of a property
-     * @return a Enablement
+     * @return a {@link Enablement}
      */
     @jakarta.annotation.Nullable
     public Enablement getVpnPeerCaching() {

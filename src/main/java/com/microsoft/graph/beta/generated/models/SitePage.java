@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SitePage extends BaseSitePage implements Parsable {
     /**
-     * Instantiates a new SitePage and sets the default values.
+     * Instantiates a new {@link SitePage} and sets the default values.
      */
     public SitePage() {
         super();
@@ -17,7 +17,7 @@ public class SitePage extends BaseSitePage implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SitePage
+     * @return a {@link SitePage}
      */
     @jakarta.annotation.Nonnull
     public static SitePage createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class SitePage extends BaseSitePage implements Parsable {
     }
     /**
      * Gets the canvasLayout property value. Indicates the layout of the content in a given SharePoint page, including horizontal sections and vertical sections.
-     * @return a CanvasLayout
+     * @return a {@link CanvasLayout}
      */
     @jakarta.annotation.Nullable
     public CanvasLayout getCanvasLayout() {
@@ -34,7 +34,7 @@ public class SitePage extends BaseSitePage implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -51,7 +51,7 @@ public class SitePage extends BaseSitePage implements Parsable {
     }
     /**
      * Gets the promotionKind property value. Indicates the promotion kind of the sitePage. The possible values are: microsoftReserved, page, newsPost, unknownFutureValue.
-     * @return a PagePromotionType
+     * @return a {@link PagePromotionType}
      */
     @jakarta.annotation.Nullable
     public PagePromotionType getPromotionKind() {
@@ -59,7 +59,7 @@ public class SitePage extends BaseSitePage implements Parsable {
     }
     /**
      * Gets the reactions property value. Reactions information for the page.
-     * @return a ReactionsFacet
+     * @return a {@link ReactionsFacet}
      */
     @jakarta.annotation.Nullable
     public ReactionsFacet getReactions() {
@@ -67,7 +67,7 @@ public class SitePage extends BaseSitePage implements Parsable {
     }
     /**
      * Gets the showComments property value. Determines whether or not to show comments at the bottom of the page.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getShowComments() {
@@ -75,7 +75,7 @@ public class SitePage extends BaseSitePage implements Parsable {
     }
     /**
      * Gets the showRecommendedPages property value. Determines whether or not to show recommended pages at the bottom of the page.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getShowRecommendedPages() {
@@ -83,7 +83,7 @@ public class SitePage extends BaseSitePage implements Parsable {
     }
     /**
      * Gets the thumbnailWebUrl property value. Url of the sitePage's thumbnail image
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getThumbnailWebUrl() {
@@ -91,7 +91,7 @@ public class SitePage extends BaseSitePage implements Parsable {
     }
     /**
      * Gets the titleArea property value. Title area on the SharePoint page.
-     * @return a TitleArea
+     * @return a {@link TitleArea}
      */
     @jakarta.annotation.Nullable
     public TitleArea getTitleArea() {
@@ -99,7 +99,7 @@ public class SitePage extends BaseSitePage implements Parsable {
     }
     /**
      * Gets the webParts property value. Collection of webparts on the SharePoint page.
-     * @return a java.util.List<WebPart>
+     * @return a {@link java.util.List<WebPart>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<WebPart> getWebParts() {

@@ -26,6 +26,7 @@ import java.util.Objects;
 public class DepOnboardingSettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -34,7 +35,7 @@ public class DepOnboardingSettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the depOnboardingSettings property of the microsoft.graph.deviceManagement entity.
      * @param depOnboardingSettingId The unique identifier of depOnboardingSetting
-     * @return a DepOnboardingSettingItemRequestBuilder
+     * @return a {@link DepOnboardingSettingItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DepOnboardingSettingItemRequestBuilder byDepOnboardingSettingId(@jakarta.annotation.Nonnull final String depOnboardingSettingId) {
@@ -44,7 +45,7 @@ public class DepOnboardingSettingsRequestBuilder extends BaseRequestBuilder {
         return new DepOnboardingSettingItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new DepOnboardingSettingsRequestBuilder and sets the default values.
+     * Instantiates a new {@link DepOnboardingSettingsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -52,7 +53,7 @@ public class DepOnboardingSettingsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/depOnboardingSettings{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new DepOnboardingSettingsRequestBuilder and sets the default values.
+     * Instantiates a new {@link DepOnboardingSettingsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -61,7 +62,8 @@ public class DepOnboardingSettingsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * This collections of multiple DEP tokens per-tenant.
-     * @return a DepOnboardingSettingCollectionResponse
+     * @return a {@link DepOnboardingSettingCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public DepOnboardingSettingCollectionResponse get() {
@@ -70,20 +72,20 @@ public class DepOnboardingSettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * This collections of multiple DEP tokens per-tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a DepOnboardingSettingCollectionResponse
+     * @return a {@link DepOnboardingSettingCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public DepOnboardingSettingCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, DepOnboardingSettingCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Provides operations to call the getExpiringVppTokenCount method.
      * @param expiringBeforeDateTime Usage: expiringBeforeDateTime='{expiringBeforeDateTime}'
-     * @return a GetExpiringVppTokenCountWithExpiringBeforeDateTimeRequestBuilder
+     * @return a {@link GetExpiringVppTokenCountWithExpiringBeforeDateTimeRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetExpiringVppTokenCountWithExpiringBeforeDateTimeRequestBuilder getExpiringVppTokenCountWithExpiringBeforeDateTime(@jakarta.annotation.Nonnull final String expiringBeforeDateTime) {
@@ -93,7 +95,8 @@ public class DepOnboardingSettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to depOnboardingSettings for deviceManagement
      * @param body The request body
-     * @return a DepOnboardingSetting
+     * @return a {@link DepOnboardingSetting}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public DepOnboardingSetting post(@jakarta.annotation.Nonnull final DepOnboardingSetting body) {
@@ -103,20 +106,20 @@ public class DepOnboardingSettingsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to depOnboardingSettings for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a DepOnboardingSetting
+     * @return a {@link DepOnboardingSetting}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public DepOnboardingSetting post(@jakarta.annotation.Nonnull final DepOnboardingSetting body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, DepOnboardingSetting::createFromDiscriminatorValue);
     }
     /**
      * This collections of multiple DEP tokens per-tenant.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -125,7 +128,7 @@ public class DepOnboardingSettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * This collections of multiple DEP tokens per-tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -137,7 +140,7 @@ public class DepOnboardingSettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to depOnboardingSettings for deviceManagement
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final DepOnboardingSetting body) {
@@ -147,12 +150,12 @@ public class DepOnboardingSettingsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to depOnboardingSettings for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final DepOnboardingSetting body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/deviceManagement/depOnboardingSettings", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -161,7 +164,7 @@ public class DepOnboardingSettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a DepOnboardingSettingsRequestBuilder
+     * @return a {@link DepOnboardingSettingsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DepOnboardingSettingsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -215,7 +218,7 @@ public class DepOnboardingSettingsRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

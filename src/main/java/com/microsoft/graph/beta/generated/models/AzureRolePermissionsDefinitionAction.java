@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AzureRolePermissionsDefinitionAction extends AzurePermissionsDefinitionAction implements Parsable {
     /**
-     * Instantiates a new AzureRolePermissionsDefinitionAction and sets the default values.
+     * Instantiates a new {@link AzureRolePermissionsDefinitionAction} and sets the default values.
      */
     public AzureRolePermissionsDefinitionAction() {
         super();
@@ -18,7 +18,7 @@ public class AzureRolePermissionsDefinitionAction extends AzurePermissionsDefini
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AzureRolePermissionsDefinitionAction
+     * @return a {@link AzureRolePermissionsDefinitionAction}
      */
     @jakarta.annotation.Nonnull
     public static AzureRolePermissionsDefinitionAction createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class AzureRolePermissionsDefinitionAction extends AzurePermissionsDefini
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -37,7 +37,7 @@ public class AzureRolePermissionsDefinitionAction extends AzurePermissionsDefini
     }
     /**
      * Gets the roles property value. The roles property
-     * @return a java.util.List<PermissionsDefinitionAzureRole>
+     * @return a {@link java.util.List<PermissionsDefinitionAzureRole>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<PermissionsDefinitionAzureRole> getRoles() {

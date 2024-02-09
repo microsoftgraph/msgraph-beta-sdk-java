@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AuthorizationSystemResource extends Entity implements Parsable {
     /**
-     * Instantiates a new AuthorizationSystemResource and sets the default values.
+     * Instantiates a new {@link AuthorizationSystemResource} and sets the default values.
      */
     public AuthorizationSystemResource() {
         super();
@@ -17,7 +17,7 @@ public class AuthorizationSystemResource extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AuthorizationSystemResource
+     * @return a {@link AuthorizationSystemResource}
      */
     @jakarta.annotation.Nonnull
     public static AuthorizationSystemResource createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -35,7 +35,7 @@ public class AuthorizationSystemResource extends Entity implements Parsable {
     }
     /**
      * Gets the authorizationSystem property value. The authorization system that the resource exists in.
-     * @return a AuthorizationSystem
+     * @return a {@link AuthorizationSystem}
      */
     @jakarta.annotation.Nullable
     public AuthorizationSystem getAuthorizationSystem() {
@@ -43,7 +43,7 @@ public class AuthorizationSystemResource extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The name of the resource. Read-only. Supports $filter (eq,contains).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -51,7 +51,7 @@ public class AuthorizationSystemResource extends Entity implements Parsable {
     }
     /**
      * Gets the externalId property value. The ID of the resource as defined by the authorization system provider. Read-only. Supports $filter (eq).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getExternalId() {
@@ -59,7 +59,7 @@ public class AuthorizationSystemResource extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -72,7 +72,7 @@ public class AuthorizationSystemResource extends Entity implements Parsable {
     }
     /**
      * Gets the resourceType property value. The type of the resource. Read-only. Supports $filter (eq).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getResourceType() {

@@ -18,7 +18,7 @@ public class CompanyDetail implements AdditionalDataHolder, BackedModel, Parsabl
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new CompanyDetail and sets the default values.
+     * Instantiates a new {@link CompanyDetail} and sets the default values.
      */
     public CompanyDetail() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class CompanyDetail implements AdditionalDataHolder, BackedModel, Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CompanyDetail
+     * @return a {@link CompanyDetail}
      */
     @jakarta.annotation.Nonnull
     public static CompanyDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class CompanyDetail implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class CompanyDetail implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the address property value. Address of the company.
-     * @return a PhysicalAddress
+     * @return a {@link PhysicalAddress}
      */
     @jakarta.annotation.Nullable
     public PhysicalAddress getAddress() {
@@ -57,7 +57,7 @@ public class CompanyDetail implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -65,7 +65,7 @@ public class CompanyDetail implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the department property value. Department Name within a company.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDepartment() {
@@ -73,7 +73,7 @@ public class CompanyDetail implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the displayName property value. Company name.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -81,7 +81,7 @@ public class CompanyDetail implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -97,7 +97,7 @@ public class CompanyDetail implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -105,7 +105,7 @@ public class CompanyDetail implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the officeLocation property value. Office Location of the person referred to.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOfficeLocation() {
@@ -113,7 +113,7 @@ public class CompanyDetail implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the pronunciation property value. Pronunciation guide for the company name.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPronunciation() {
@@ -121,7 +121,7 @@ public class CompanyDetail implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the webUrl property value. Link to the company home page.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getWebUrl() {

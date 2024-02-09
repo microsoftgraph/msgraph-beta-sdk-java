@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IosDerivedCredentialAuthenticationConfiguration extends DeviceConfiguration implements Parsable {
     /**
-     * Instantiates a new IosDerivedCredentialAuthenticationConfiguration and sets the default values.
+     * Instantiates a new {@link IosDerivedCredentialAuthenticationConfiguration} and sets the default values.
      */
     public IosDerivedCredentialAuthenticationConfiguration() {
         super();
@@ -21,7 +21,7 @@ public class IosDerivedCredentialAuthenticationConfiguration extends DeviceConfi
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a IosDerivedCredentialAuthenticationConfiguration
+     * @return a {@link IosDerivedCredentialAuthenticationConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static IosDerivedCredentialAuthenticationConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class IosDerivedCredentialAuthenticationConfiguration extends DeviceConfi
     }
     /**
      * Gets the derivedCredentialSettings property value. Tenant level settings for the Derived Credentials to be used for authentication.
-     * @return a DeviceManagementDerivedCredentialSettings
+     * @return a {@link DeviceManagementDerivedCredentialSettings}
      */
     @jakarta.annotation.Nullable
     public DeviceManagementDerivedCredentialSettings getDerivedCredentialSettings() {
@@ -38,7 +38,7 @@ public class IosDerivedCredentialAuthenticationConfiguration extends DeviceConfi
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

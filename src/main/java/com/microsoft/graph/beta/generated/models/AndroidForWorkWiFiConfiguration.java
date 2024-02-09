@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AndroidForWorkWiFiConfiguration extends DeviceConfiguration implements Parsable {
     /**
-     * Instantiates a new AndroidForWorkWiFiConfiguration and sets the default values.
+     * Instantiates a new {@link AndroidForWorkWiFiConfiguration} and sets the default values.
      */
     public AndroidForWorkWiFiConfiguration() {
         super();
@@ -21,7 +21,7 @@ public class AndroidForWorkWiFiConfiguration extends DeviceConfiguration impleme
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AndroidForWorkWiFiConfiguration
+     * @return a {@link AndroidForWorkWiFiConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static AndroidForWorkWiFiConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class AndroidForWorkWiFiConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the connectAutomatically property value. Connect automatically when this network is in range. Setting this to true will skip the user prompt and automatically connect the device to Wi-Fi network.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getConnectAutomatically() {
@@ -45,7 +45,7 @@ public class AndroidForWorkWiFiConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the connectWhenNetworkNameIsHidden property value. When set to true, this profile forces the device to connect to a network that doesn't broadcast its SSID to all devices.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getConnectWhenNetworkNameIsHidden() {
@@ -53,7 +53,7 @@ public class AndroidForWorkWiFiConfiguration extends DeviceConfiguration impleme
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -67,7 +67,7 @@ public class AndroidForWorkWiFiConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the networkName property value. Network Name
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getNetworkName() {
@@ -75,7 +75,7 @@ public class AndroidForWorkWiFiConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the ssid property value. This is the name of the Wi-Fi network that is broadcast to all devices.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSsid() {
@@ -83,7 +83,7 @@ public class AndroidForWorkWiFiConfiguration extends DeviceConfiguration impleme
     }
     /**
      * Gets the wiFiSecurityType property value. Wi-Fi Security Types for Android.
-     * @return a AndroidWiFiSecurityType
+     * @return a {@link AndroidWiFiSecurityType}
      */
     @jakarta.annotation.Nullable
     public AndroidWiFiSecurityType getWiFiSecurityType() {

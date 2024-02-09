@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserInsightsRoot extends Entity implements Parsable {
     /**
-     * Instantiates a new UserInsightsRoot and sets the default values.
+     * Instantiates a new {@link UserInsightsRoot} and sets the default values.
      */
     public UserInsightsRoot() {
         super();
@@ -17,7 +17,7 @@ public class UserInsightsRoot extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserInsightsRoot
+     * @return a {@link UserInsightsRoot}
      */
     @jakarta.annotation.Nonnull
     public static UserInsightsRoot createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class UserInsightsRoot extends Entity implements Parsable {
     }
     /**
      * Gets the daily property value. Summaries of daily user activities on apps registered in your tenant that is configured for Microsoft Entra External ID for customers.
-     * @return a DailyUserInsightMetricsRoot
+     * @return a {@link DailyUserInsightMetricsRoot}
      */
     @jakarta.annotation.Nullable
     public DailyUserInsightMetricsRoot getDaily() {
@@ -34,7 +34,7 @@ public class UserInsightsRoot extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -45,7 +45,7 @@ public class UserInsightsRoot extends Entity implements Parsable {
     }
     /**
      * Gets the monthly property value. Summaries of monthly user activities on apps registered in your tenant that is configured for Microsoft Entra External ID for customers.
-     * @return a MonthlyUserInsightMetricsRoot
+     * @return a {@link MonthlyUserInsightMetricsRoot}
      */
     @jakarta.annotation.Nullable
     public MonthlyUserInsightMetricsRoot getMonthly() {

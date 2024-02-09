@@ -18,7 +18,7 @@ public class SelfActivatePostRequestBody implements AdditionalDataHolder, Backed
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new SelfActivatePostRequestBody and sets the default values.
+     * Instantiates a new {@link SelfActivatePostRequestBody} and sets the default values.
      */
     public SelfActivatePostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class SelfActivatePostRequestBody implements AdditionalDataHolder, Backed
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SelfActivatePostRequestBody
+     * @return a {@link SelfActivatePostRequestBody}
      */
     @jakarta.annotation.Nonnull
     public static SelfActivatePostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class SelfActivatePostRequestBody implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class SelfActivatePostRequestBody implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class SelfActivatePostRequestBody implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the duration property value. The duration property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDuration() {
@@ -65,7 +65,7 @@ public class SelfActivatePostRequestBody implements AdditionalDataHolder, Backed
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -78,7 +78,7 @@ public class SelfActivatePostRequestBody implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the reason property value. The reason property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getReason() {
@@ -86,7 +86,7 @@ public class SelfActivatePostRequestBody implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the ticketNumber property value. The ticketNumber property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTicketNumber() {
@@ -94,7 +94,7 @@ public class SelfActivatePostRequestBody implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the ticketSystem property value. The ticketSystem property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTicketSystem() {

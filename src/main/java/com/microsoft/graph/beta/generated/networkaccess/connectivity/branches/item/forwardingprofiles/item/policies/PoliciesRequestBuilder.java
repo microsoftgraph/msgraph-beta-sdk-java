@@ -25,6 +25,7 @@ import java.util.Objects;
 public class PoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      * @deprecated
      * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      */
@@ -36,7 +37,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the policies property of the microsoft.graph.networkaccess.profile entity.
      * @param policyLinkId The unique identifier of policyLink
-     * @return a PolicyLinkItemRequestBuilder
+     * @return a {@link PolicyLinkItemRequestBuilder}
      * @deprecated
      * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      */
@@ -49,7 +50,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
         return new PolicyLinkItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new PoliciesRequestBuilder and sets the default values.
+     * Instantiates a new {@link PoliciesRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -57,7 +58,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/networkAccess/connectivity/branches/{branchSite%2Did}/forwardingProfiles/{forwardingProfile%2Did}/policies{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new PoliciesRequestBuilder and sets the default values.
+     * Instantiates a new {@link PoliciesRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -66,7 +67,8 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Traffic forwarding policies associated with this profile.
-     * @return a PolicyLinkCollectionResponse
+     * @return a {@link PolicyLinkCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      */
@@ -78,7 +80,8 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Traffic forwarding policies associated with this profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a PolicyLinkCollectionResponse
+     * @return a {@link PolicyLinkCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      */
@@ -87,14 +90,14 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
     public PolicyLinkCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, PolicyLinkCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to policies for networkAccess
      * @param body The request body
-     * @return a PolicyLink
+     * @return a {@link PolicyLink}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      */
@@ -107,7 +110,8 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to policies for networkAccess
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a PolicyLink
+     * @return a {@link PolicyLink}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      */
@@ -117,13 +121,12 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, PolicyLink::createFromDiscriminatorValue);
     }
     /**
      * Traffic forwarding policies associated with this profile.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      */
@@ -135,7 +138,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Traffic forwarding policies associated with this profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      */
@@ -150,7 +153,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to policies for networkAccess
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      */
@@ -163,7 +166,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to policies for networkAccess
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      */
@@ -171,7 +174,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
     @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final PolicyLink body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/networkAccess/connectivity/branches/{branchSite%2Did}/forwardingProfiles/{forwardingProfile%2Did}/policies", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -180,7 +183,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a PoliciesRequestBuilder
+     * @return a {@link PoliciesRequestBuilder}
      * @deprecated
      * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      */
@@ -237,7 +240,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

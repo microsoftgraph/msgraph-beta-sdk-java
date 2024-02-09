@@ -19,7 +19,7 @@ public class ExecuteActionPostRequestBody implements AdditionalDataHolder, Backe
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new ExecuteActionPostRequestBody and sets the default values.
+     * Instantiates a new {@link ExecuteActionPostRequestBody} and sets the default values.
      */
     public ExecuteActionPostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class ExecuteActionPostRequestBody implements AdditionalDataHolder, Backe
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ExecuteActionPostRequestBody
+     * @return a {@link ExecuteActionPostRequestBody}
      */
     @jakarta.annotation.Nonnull
     public static ExecuteActionPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class ExecuteActionPostRequestBody implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the actionName property value. The actionName property
-     * @return a ManagedDeviceRemoteAction
+     * @return a {@link ManagedDeviceRemoteAction}
      */
     @jakarta.annotation.Nullable
     public ManagedDeviceRemoteAction getActionName() {
@@ -45,7 +45,7 @@ public class ExecuteActionPostRequestBody implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -58,7 +58,7 @@ public class ExecuteActionPostRequestBody implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -66,7 +66,7 @@ public class ExecuteActionPostRequestBody implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the carrierUrl property value. The carrierUrl property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCarrierUrl() {
@@ -74,7 +74,7 @@ public class ExecuteActionPostRequestBody implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the deprovisionReason property value. The deprovisionReason property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeprovisionReason() {
@@ -82,7 +82,7 @@ public class ExecuteActionPostRequestBody implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the deviceIds property value. The deviceIds property
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getDeviceIds() {
@@ -90,7 +90,7 @@ public class ExecuteActionPostRequestBody implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the deviceName property value. The deviceName property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceName() {
@@ -98,7 +98,7 @@ public class ExecuteActionPostRequestBody implements AdditionalDataHolder, Backe
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -118,7 +118,7 @@ public class ExecuteActionPostRequestBody implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the keepEnrollmentData property value. The keepEnrollmentData property
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getKeepEnrollmentData() {
@@ -126,7 +126,7 @@ public class ExecuteActionPostRequestBody implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the keepUserData property value. The keepUserData property
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getKeepUserData() {
@@ -134,7 +134,7 @@ public class ExecuteActionPostRequestBody implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the notificationBody property value. The notificationBody property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getNotificationBody() {
@@ -142,7 +142,7 @@ public class ExecuteActionPostRequestBody implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the notificationTitle property value. The notificationTitle property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getNotificationTitle() {
@@ -150,7 +150,7 @@ public class ExecuteActionPostRequestBody implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the organizationalUnitPath property value. The organizationalUnitPath property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOrganizationalUnitPath() {
@@ -158,7 +158,7 @@ public class ExecuteActionPostRequestBody implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the persistEsimDataPlan property value. The persistEsimDataPlan property
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getPersistEsimDataPlan() {

@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceComplianceScriptDeviceState extends Entity implements Parsable {
     /**
-     * Instantiates a new DeviceComplianceScriptDeviceState and sets the default values.
+     * Instantiates a new {@link DeviceComplianceScriptDeviceState} and sets the default values.
      */
     public DeviceComplianceScriptDeviceState() {
         super();
@@ -21,7 +21,7 @@ public class DeviceComplianceScriptDeviceState extends Entity implements Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceComplianceScriptDeviceState
+     * @return a {@link DeviceComplianceScriptDeviceState}
      */
     @jakarta.annotation.Nonnull
     public static DeviceComplianceScriptDeviceState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class DeviceComplianceScriptDeviceState extends Entity implements Parsabl
     }
     /**
      * Gets the detectionState property value. Indicates the type of execution status of the device management script.
-     * @return a RunState
+     * @return a {@link RunState}
      */
     @jakarta.annotation.Nullable
     public RunState getDetectionState() {
@@ -38,7 +38,7 @@ public class DeviceComplianceScriptDeviceState extends Entity implements Parsabl
     }
     /**
      * Gets the expectedStateUpdateDateTime property value. The next timestamp of when the device compliance script is expected to execute
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getExpectedStateUpdateDateTime() {
@@ -46,7 +46,7 @@ public class DeviceComplianceScriptDeviceState extends Entity implements Parsabl
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -62,7 +62,7 @@ public class DeviceComplianceScriptDeviceState extends Entity implements Parsabl
     }
     /**
      * Gets the lastStateUpdateDateTime property value. The last timestamp of when the device compliance script executed
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastStateUpdateDateTime() {
@@ -70,7 +70,7 @@ public class DeviceComplianceScriptDeviceState extends Entity implements Parsabl
     }
     /**
      * Gets the lastSyncDateTime property value. The last time that Intune Managment Extension synced with Intune
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastSyncDateTime() {
@@ -78,7 +78,7 @@ public class DeviceComplianceScriptDeviceState extends Entity implements Parsabl
     }
     /**
      * Gets the managedDevice property value. The managed device on which the device compliance script executed
-     * @return a ManagedDevice
+     * @return a {@link ManagedDevice}
      */
     @jakarta.annotation.Nullable
     public ManagedDevice getManagedDevice() {
@@ -86,7 +86,7 @@ public class DeviceComplianceScriptDeviceState extends Entity implements Parsabl
     }
     /**
      * Gets the scriptError property value. Error from the detection script
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getScriptError() {
@@ -94,7 +94,7 @@ public class DeviceComplianceScriptDeviceState extends Entity implements Parsabl
     }
     /**
      * Gets the scriptOutput property value. Output of the detection script
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getScriptOutput() {

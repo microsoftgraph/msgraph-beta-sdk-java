@@ -11,7 +11,7 @@ import java.util.UUID;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Application extends DirectoryObject implements Parsable {
     /**
-     * Instantiates a new Application and sets the default values.
+     * Instantiates a new {@link Application} and sets the default values.
      */
     public Application() {
         super();
@@ -20,7 +20,7 @@ public class Application extends DirectoryObject implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Application
+     * @return a {@link Application}
      */
     @jakarta.annotation.Nonnull
     public static Application createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -29,7 +29,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the api property value. Specifies settings for an application that implements a web API.
-     * @return a ApiApplication
+     * @return a {@link ApiApplication}
      */
     @jakarta.annotation.Nullable
     public ApiApplication getApi() {
@@ -37,7 +37,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the appId property value. The unique identifier for the application that is assigned by Microsoft Entra ID. Not nullable. Read-only. Alternate key. Supports $filter (eq).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAppId() {
@@ -45,7 +45,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the appManagementPolicies property value. The appManagementPolicy applied to this application.
-     * @return a java.util.List<AppManagementPolicy>
+     * @return a {@link java.util.List<AppManagementPolicy>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AppManagementPolicy> getAppManagementPolicies() {
@@ -53,7 +53,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the appRoles property value. The collection of roles defined for the application. With app role assignments, these roles can be assigned to users, groups, or service principals associated with other applications. Not nullable.
-     * @return a java.util.List<AppRole>
+     * @return a {@link java.util.List<AppRole>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AppRole> getAppRoles() {
@@ -61,7 +61,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the authenticationBehaviors property value. The collection of authentication behaviors set for the application. Authentication behaviors are unset by default and must be explicitly enabled (or disabled). Returned only on $select.  For more information about authentication behaviors, see Manage application authenticationBehaviors to avoid unverified use of email claims for user identification or authorization.
-     * @return a AuthenticationBehaviors
+     * @return a {@link AuthenticationBehaviors}
      */
     @jakarta.annotation.Nullable
     public AuthenticationBehaviors getAuthenticationBehaviors() {
@@ -69,7 +69,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the certification property value. Specifies the certification status of the application.
-     * @return a Certification
+     * @return a {@link Certification}
      */
     @jakarta.annotation.Nullable
     public Certification getCertification() {
@@ -77,7 +77,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the connectorGroup property value. The connectorGroup the application is using with Microsoft Entra application proxy. Nullable.
-     * @return a ConnectorGroup
+     * @return a {@link ConnectorGroup}
      */
     @jakarta.annotation.Nullable
     public ConnectorGroup getConnectorGroup() {
@@ -85,7 +85,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. The date and time the application was registered. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.  Supports $filter (eq, ne, not, ge, le, in, and eq on null values) and $orderby.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -93,7 +93,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the createdOnBehalfOf property value. Supports $filter (/$count eq 0, /$count ne 0). Read-only.
-     * @return a DirectoryObject
+     * @return a {@link DirectoryObject}
      */
     @jakarta.annotation.Nullable
     public DirectoryObject getCreatedOnBehalfOf() {
@@ -101,7 +101,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the defaultRedirectUri property value. The default redirect URI. If specified and there is no explicit redirect URI in the sign-in request for SAML and OIDC flows, Microsoft Entra ID sends the token to this redirect URI. Microsoft Entra ID also sends the token to this default URI in SAML IdP-initiated single sign-on. The value must match one of the configured redirect URIs for the application.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDefaultRedirectUri() {
@@ -109,7 +109,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the description property value. Free text field to provide a description of the application object to end users. The maximum allowed size is 1024 characters. Returned by default. Supports $filter (eq, ne, not, ge, le, startsWith) and $search.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -117,7 +117,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the disabledByMicrosoftStatus property value. Specifies whether Microsoft has disabled the registered application. Possible values are: null (default value), NotDisabled, and DisabledDueToViolationOfServicesAgreement (reasons may include suspicious, abusive, or malicious activity, or a violation of the Microsoft Services Agreement).  Supports $filter (eq, ne, not).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisabledByMicrosoftStatus() {
@@ -125,7 +125,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name for the application. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderby.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -133,7 +133,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the extensionProperties property value. Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0).
-     * @return a java.util.List<ExtensionProperty>
+     * @return a {@link java.util.List<ExtensionProperty>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ExtensionProperty> getExtensionProperties() {
@@ -141,7 +141,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the federatedIdentityCredentials property value. Federated identities for applications. Supports $expand and $filter (startsWith, /$count eq 0, /$count ne 0).
-     * @return a java.util.List<FederatedIdentityCredential>
+     * @return a {@link java.util.List<FederatedIdentityCredential>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<FederatedIdentityCredential> getFederatedIdentityCredentials() {
@@ -149,7 +149,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -205,7 +205,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the groupMembershipClaims property value. Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following string values: None, SecurityGroup (for security groups and Microsoft Entra roles), All (this gets all security groups, distribution groups, and Microsoft Entra directory roles that the signed-in user is a member of).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getGroupMembershipClaims() {
@@ -213,7 +213,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the homeRealmDiscoveryPolicies property value. The homeRealmDiscoveryPolicies property
-     * @return a java.util.List<HomeRealmDiscoveryPolicy>
+     * @return a {@link java.util.List<HomeRealmDiscoveryPolicy>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<HomeRealmDiscoveryPolicy> getHomeRealmDiscoveryPolicies() {
@@ -221,7 +221,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the identifierUris property value. Also known as App ID URI, this value is set when an application is used as a resource app. The identifierUris acts as the prefix for the scopes you'll reference in your API's code, and it must be globally unique. You can use the default value provided, which is in the form api://<application-client-id>, or specify a more readable URI like https://contoso.com/api. For more information on valid identifierUris patterns and best practices, see Microsoft Entra application registration security best practices. Not nullable. Supports $filter (eq, ne, ge, le, startsWith).
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getIdentifierUris() {
@@ -229,7 +229,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the info property value. Basic profile information of the application, such as it's marketing, support, terms of service, and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more information, see How to: Add Terms of service and privacy statement for registered Microsoft Entra apps. Supports $filter (eq, ne, not, ge, le, and eq on null values).
-     * @return a InformationalUrl
+     * @return a {@link InformationalUrl}
      */
     @jakarta.annotation.Nullable
     public InformationalUrl getInfo() {
@@ -237,7 +237,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the isDeviceOnlyAuthSupported property value. Specifies whether this application supports device authentication without a user. The default is false.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDeviceOnlyAuthSupported() {
@@ -245,7 +245,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the isFallbackPublicClient property value. Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as a web app. There are certain scenarios where Microsoft Entra ID cannot determine the client application type. For example, the ROPC flow where the application is configured without specifying a redirect URI. In those cases Microsoft Entra ID interprets the application type based on the value of this property.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsFallbackPublicClient() {
@@ -253,7 +253,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the keyCredentials property value. The collection of key credentials associated with the application. Not nullable. Supports $filter (eq, not, ge, le).
-     * @return a java.util.List<KeyCredential>
+     * @return a {@link java.util.List<KeyCredential>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyCredential> getKeyCredentials() {
@@ -261,7 +261,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the logo property value. The main logo for the application. Not nullable.
-     * @return a byte[]
+     * @return a {@link byte[]}
      */
     @jakarta.annotation.Nullable
     public byte[] getLogo() {
@@ -269,7 +269,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the notes property value. Notes relevant for the management of the application.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getNotes() {
@@ -277,7 +277,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the onPremisesPublishing property value. Represents the set of properties required for configuring Application Proxy for this application. Configuring these properties allows you to publish your on-premises application for secure remote access.
-     * @return a OnPremisesPublishing
+     * @return a {@link OnPremisesPublishing}
      */
     @jakarta.annotation.Nullable
     public OnPremisesPublishing getOnPremisesPublishing() {
@@ -285,7 +285,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the optionalClaims property value. Application developers can configure optional claims in their Microsoft Entra applications to specify the claims that are sent to their application by the Microsoft security token service. For more information, see How to: Provide optional claims to your app.
-     * @return a OptionalClaims
+     * @return a {@link OptionalClaims}
      */
     @jakarta.annotation.Nullable
     public OptionalClaims getOptionalClaims() {
@@ -293,7 +293,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the owners property value. Directory objects that are owners of the application. Read-only. Nullable. Supports $expand, $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1), and $select nested in $expand.
-     * @return a java.util.List<DirectoryObject>
+     * @return a {@link java.util.List<DirectoryObject>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getOwners() {
@@ -301,7 +301,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the parentalControlSettings property value. Specifies parental control settings for an application.
-     * @return a ParentalControlSettings
+     * @return a {@link ParentalControlSettings}
      */
     @jakarta.annotation.Nullable
     public ParentalControlSettings getParentalControlSettings() {
@@ -309,7 +309,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the passwordCredentials property value. The collection of password credentials associated with the application. Not nullable.
-     * @return a java.util.List<PasswordCredential>
+     * @return a {@link java.util.List<PasswordCredential>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<PasswordCredential> getPasswordCredentials() {
@@ -317,7 +317,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the publicClient property value. Specifies settings for installed clients such as desktop or mobile devices.
-     * @return a PublicClientApplication
+     * @return a {@link PublicClientApplication}
      */
     @jakarta.annotation.Nullable
     public PublicClientApplication getPublicClient() {
@@ -325,7 +325,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the publisherDomain property value. The verified publisher domain for the application. Read-only. Supports $filter (eq, ne, ge, le, startsWith).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPublisherDomain() {
@@ -333,7 +333,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the requestSignatureVerification property value. Specifies whether this application requires Microsoft Entra ID to verify the signed authentication requests.
-     * @return a RequestSignatureVerification
+     * @return a {@link RequestSignatureVerification}
      */
     @jakarta.annotation.Nullable
     public RequestSignatureVerification getRequestSignatureVerification() {
@@ -341,7 +341,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the requiredResourceAccess property value. Specifies the resources that the application needs to access. This property also specifies the set of delegated permissions and application roles that it needs for each of those resources. This configuration of access to the required resources drives the consent experience. No more than 50 resource services (APIs) can be configured. Beginning mid-October 2021, the total number of required permissions must not exceed 400. For more information, see Limits on requested permissions per app. Not nullable. Supports $filter (eq, not, ge, le).
-     * @return a java.util.List<RequiredResourceAccess>
+     * @return a {@link java.util.List<RequiredResourceAccess>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<RequiredResourceAccess> getRequiredResourceAccess() {
@@ -349,7 +349,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the samlMetadataUrl property value. The URL where the service exposes SAML metadata for federation. This property is valid only for single-tenant applications. Nullable.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSamlMetadataUrl() {
@@ -357,7 +357,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the serviceManagementReference property value. References application or service contact information from a Service or Asset Management database. Nullable.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getServiceManagementReference() {
@@ -365,7 +365,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the servicePrincipalLockConfiguration property value. Specifies whether sensitive properties of a multi-tenant application should be locked for editing after the application is provisioned in a tenant. Nullable. null by default.
-     * @return a ServicePrincipalLockConfiguration
+     * @return a {@link ServicePrincipalLockConfiguration}
      */
     @jakarta.annotation.Nullable
     public ServicePrincipalLockConfiguration getServicePrincipalLockConfiguration() {
@@ -373,7 +373,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the signInAudience property value. Specifies the Microsoft accounts that are supported for the current application. The possible values are: AzureADMyOrg, AzureADMultipleOrgs, AzureADandPersonalMicrosoftAccount (default), and PersonalMicrosoftAccount. See more in the table. The value of this object also limits the number of permissions an app can request. For more information, see Limits on requested permissions per app. The value for this property has implications on other app object properties. As a result, if you change this property, you may need to change other properties first. For more information, see Validation differences for signInAudience.Supports $filter (eq, ne, not).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSignInAudience() {
@@ -381,7 +381,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the spa property value. Specifies settings for a single-page application, including sign out URLs and redirect URIs for authorization codes and access tokens.
-     * @return a SpaApplication
+     * @return a {@link SpaApplication}
      */
     @jakarta.annotation.Nullable
     public SpaApplication getSpa() {
@@ -389,7 +389,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the synchronization property value. Represents the capability for Microsoft Entra identity synchronization through the Microsoft Graph API.
-     * @return a Synchronization
+     * @return a {@link Synchronization}
      */
     @jakarta.annotation.Nullable
     public Synchronization getSynchronization() {
@@ -397,7 +397,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the tags property value. Custom strings that can be used to categorize and identify the application. Not nullable. Strings added here will also appear in the tags property of any associated service principals.Supports $filter (eq, not, ge, le, startsWith) and $search.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getTags() {
@@ -405,7 +405,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the tokenEncryptionKeyId property value. Specifies the keyId of a public key from the keyCredentials collection. When configured, Microsoft Entra ID encrypts all the tokens it emits by using the key this property points to. The application code that receives the encrypted token must use the matching private key to decrypt the token before it can be used for the signed-in user.
-     * @return a UUID
+     * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
     public UUID getTokenEncryptionKeyId() {
@@ -413,7 +413,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the tokenIssuancePolicies property value. The tokenIssuancePolicies property
-     * @return a java.util.List<TokenIssuancePolicy>
+     * @return a {@link java.util.List<TokenIssuancePolicy>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<TokenIssuancePolicy> getTokenIssuancePolicies() {
@@ -421,7 +421,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the tokenLifetimePolicies property value. The tokenLifetimePolicies assigned to this application. Supports $expand.
-     * @return a java.util.List<TokenLifetimePolicy>
+     * @return a {@link java.util.List<TokenLifetimePolicy>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<TokenLifetimePolicy> getTokenLifetimePolicies() {
@@ -429,7 +429,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the uniqueName property value. The unique identifier that can be assigned to an application as an alternative identifier. Immutable. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUniqueName() {
@@ -437,7 +437,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the verifiedPublisher property value. Specifies the verified publisher of the application. For more information about how publisher verification helps support application security, trustworthiness, and compliance, see Publisher verification.
-     * @return a VerifiedPublisher
+     * @return a {@link VerifiedPublisher}
      */
     @jakarta.annotation.Nullable
     public VerifiedPublisher getVerifiedPublisher() {
@@ -445,7 +445,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the web property value. Specifies settings for a web application.
-     * @return a WebApplication
+     * @return a {@link WebApplication}
      */
     @jakarta.annotation.Nullable
     public WebApplication getWeb() {
@@ -453,7 +453,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the windows property value. Specifies settings for apps running Microsoft Windows and published in the Microsoft Store or Xbox games store.
-     * @return a WindowsApplication
+     * @return a {@link WindowsApplication}
      */
     @jakarta.annotation.Nullable
     public WindowsApplication getWindows() {

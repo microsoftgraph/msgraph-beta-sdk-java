@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class X509CertificateCombinationConfiguration extends AuthenticationCombinationConfiguration implements Parsable {
     /**
-     * Instantiates a new X509CertificateCombinationConfiguration and sets the default values.
+     * Instantiates a new {@link X509CertificateCombinationConfiguration} and sets the default values.
      */
     public X509CertificateCombinationConfiguration() {
         super();
@@ -18,7 +18,7 @@ public class X509CertificateCombinationConfiguration extends AuthenticationCombi
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a X509CertificateCombinationConfiguration
+     * @return a {@link X509CertificateCombinationConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static X509CertificateCombinationConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class X509CertificateCombinationConfiguration extends AuthenticationCombi
     }
     /**
      * Gets the allowedIssuerSkis property value. A list of allowed subject key identifier values.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAllowedIssuerSkis() {
@@ -35,7 +35,7 @@ public class X509CertificateCombinationConfiguration extends AuthenticationCombi
     }
     /**
      * Gets the allowedPolicyOIDs property value. A list of allowed policy OIDs.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAllowedPolicyOIDs() {
@@ -43,7 +43,7 @@ public class X509CertificateCombinationConfiguration extends AuthenticationCombi
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
