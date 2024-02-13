@@ -18,7 +18,7 @@ public class BgpConfiguration implements AdditionalDataHolder, BackedModel, Pars
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new BgpConfiguration and sets the default values.
+     * Instantiates a new {@link BgpConfiguration} and sets the default values.
      */
     public BgpConfiguration() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class BgpConfiguration implements AdditionalDataHolder, BackedModel, Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a BgpConfiguration
+     * @return a {@link BgpConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static BgpConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class BgpConfiguration implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class BgpConfiguration implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the asn property value. Specifies the ASN of the BGP.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getAsn() {
@@ -57,7 +57,7 @@ public class BgpConfiguration implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -65,7 +65,7 @@ public class BgpConfiguration implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -79,7 +79,7 @@ public class BgpConfiguration implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the ipAddress property value. The ipAddress property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getIpAddress() {
@@ -87,7 +87,7 @@ public class BgpConfiguration implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the localIpAddress property value. Specifies the BGP IP address of peer (Microsoft, in this case).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getLocalIpAddress() {
@@ -95,7 +95,7 @@ public class BgpConfiguration implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -103,7 +103,7 @@ public class BgpConfiguration implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the peerIpAddress property value. Specifies the BGP IP address of customer's on-premise VPN router configuration.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPeerIpAddress() {

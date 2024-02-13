@@ -11,7 +11,7 @@ import java.util.UUID;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class StrongAuthenticationPhoneAppDetail extends Entity implements Parsable {
     /**
-     * Instantiates a new StrongAuthenticationPhoneAppDetail and sets the default values.
+     * Instantiates a new {@link StrongAuthenticationPhoneAppDetail} and sets the default values.
      */
     public StrongAuthenticationPhoneAppDetail() {
         super();
@@ -19,7 +19,7 @@ public class StrongAuthenticationPhoneAppDetail extends Entity implements Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a StrongAuthenticationPhoneAppDetail
+     * @return a {@link StrongAuthenticationPhoneAppDetail}
      */
     @jakarta.annotation.Nonnull
     public static StrongAuthenticationPhoneAppDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class StrongAuthenticationPhoneAppDetail extends Entity implements Parsab
     }
     /**
      * Gets the authenticationType property value. The authenticationType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAuthenticationType() {
@@ -36,7 +36,7 @@ public class StrongAuthenticationPhoneAppDetail extends Entity implements Parsab
     }
     /**
      * Gets the authenticatorFlavor property value. The authenticatorFlavor property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAuthenticatorFlavor() {
@@ -44,7 +44,7 @@ public class StrongAuthenticationPhoneAppDetail extends Entity implements Parsab
     }
     /**
      * Gets the deviceId property value. The deviceId property
-     * @return a UUID
+     * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
     public UUID getDeviceId() {
@@ -52,7 +52,7 @@ public class StrongAuthenticationPhoneAppDetail extends Entity implements Parsab
     }
     /**
      * Gets the deviceName property value. The deviceName property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceName() {
@@ -60,7 +60,7 @@ public class StrongAuthenticationPhoneAppDetail extends Entity implements Parsab
     }
     /**
      * Gets the deviceTag property value. The deviceTag property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceTag() {
@@ -68,7 +68,7 @@ public class StrongAuthenticationPhoneAppDetail extends Entity implements Parsab
     }
     /**
      * Gets the deviceToken property value. The deviceToken property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceToken() {
@@ -76,7 +76,7 @@ public class StrongAuthenticationPhoneAppDetail extends Entity implements Parsab
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -100,7 +100,7 @@ public class StrongAuthenticationPhoneAppDetail extends Entity implements Parsab
     }
     /**
      * Gets the hashFunction property value. The hashFunction property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getHashFunction() {
@@ -108,7 +108,7 @@ public class StrongAuthenticationPhoneAppDetail extends Entity implements Parsab
     }
     /**
      * Gets the lastAuthenticatedDateTime property value. The lastAuthenticatedDateTime property
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastAuthenticatedDateTime() {
@@ -116,7 +116,7 @@ public class StrongAuthenticationPhoneAppDetail extends Entity implements Parsab
     }
     /**
      * Gets the notificationType property value. The notificationType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getNotificationType() {
@@ -124,7 +124,7 @@ public class StrongAuthenticationPhoneAppDetail extends Entity implements Parsab
     }
     /**
      * Gets the oathSecretKey property value. The oathSecretKey property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOathSecretKey() {
@@ -132,7 +132,7 @@ public class StrongAuthenticationPhoneAppDetail extends Entity implements Parsab
     }
     /**
      * Gets the oathTokenMetadata property value. The oathTokenMetadata property
-     * @return a OathTokenMetadata
+     * @return a {@link OathTokenMetadata}
      */
     @jakarta.annotation.Nullable
     public OathTokenMetadata getOathTokenMetadata() {
@@ -140,7 +140,7 @@ public class StrongAuthenticationPhoneAppDetail extends Entity implements Parsab
     }
     /**
      * Gets the oathTokenTimeDriftInSeconds property value. The oathTokenTimeDriftInSeconds property
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getOathTokenTimeDriftInSeconds() {
@@ -148,7 +148,7 @@ public class StrongAuthenticationPhoneAppDetail extends Entity implements Parsab
     }
     /**
      * Gets the phoneAppVersion property value. The phoneAppVersion property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPhoneAppVersion() {
@@ -156,7 +156,7 @@ public class StrongAuthenticationPhoneAppDetail extends Entity implements Parsab
     }
     /**
      * Gets the tenantDeviceId property value. The tenantDeviceId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTenantDeviceId() {
@@ -164,7 +164,7 @@ public class StrongAuthenticationPhoneAppDetail extends Entity implements Parsab
     }
     /**
      * Gets the tokenGenerationIntervalInSeconds property value. The tokenGenerationIntervalInSeconds property
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getTokenGenerationIntervalInSeconds() {

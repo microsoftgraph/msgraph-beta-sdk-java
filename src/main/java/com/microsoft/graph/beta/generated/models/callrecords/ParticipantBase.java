@@ -1,5 +1,6 @@
 package com.microsoft.graph.beta.models.callrecords;
 
+import com.microsoft.graph.beta.models.CommunicationsIdentitySet;
 import com.microsoft.graph.beta.models.Entity;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -10,7 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ParticipantBase extends Entity implements Parsable {
     /**
-     * Instantiates a new ParticipantBase and sets the default values.
+     * Instantiates a new {@link ParticipantBase} and sets the default values.
      */
     public ParticipantBase() {
         super();
@@ -18,7 +19,7 @@ public class ParticipantBase extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ParticipantBase
+     * @return a {@link ParticipantBase}
      */
     @jakarta.annotation.Nonnull
     public static ParticipantBase createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -35,20 +36,20 @@ public class ParticipantBase extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("identity", (n) -> { this.setIdentity(n.getObjectValue(UserIdentity::createFromDiscriminatorValue)); });
+        deserializerMap.put("identity", (n) -> { this.setIdentity(n.getObjectValue(CommunicationsIdentitySet::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the identity property value. The identity of the call participant.
-     * @return a UserIdentity
+     * @return a {@link CommunicationsIdentitySet}
      */
     @jakarta.annotation.Nullable
-    public UserIdentity getIdentity() {
+    public CommunicationsIdentitySet getIdentity() {
         return this.backingStore.get("identity");
     }
     /**
@@ -64,7 +65,7 @@ public class ParticipantBase extends Entity implements Parsable {
      * Sets the identity property value. The identity of the call participant.
      * @param value Value to set for the identity property.
      */
-    public void setIdentity(@jakarta.annotation.Nullable final UserIdentity value) {
+    public void setIdentity(@jakarta.annotation.Nullable final CommunicationsIdentitySet value) {
         this.backingStore.set("identity", value);
     }
 }

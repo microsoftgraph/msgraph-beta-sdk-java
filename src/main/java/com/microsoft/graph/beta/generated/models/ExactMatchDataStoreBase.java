@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ExactMatchDataStoreBase extends Entity implements Parsable {
     /**
-     * Instantiates a new ExactMatchDataStoreBase and sets the default values.
+     * Instantiates a new {@link ExactMatchDataStoreBase} and sets the default values.
      */
     public ExactMatchDataStoreBase() {
         super();
@@ -18,7 +18,7 @@ public class ExactMatchDataStoreBase extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ExactMatchDataStoreBase
+     * @return a {@link ExactMatchDataStoreBase}
      */
     @jakarta.annotation.Nonnull
     public static ExactMatchDataStoreBase createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -34,7 +34,7 @@ public class ExactMatchDataStoreBase extends Entity implements Parsable {
     }
     /**
      * Gets the columns property value. The columns property
-     * @return a java.util.List<ExactDataMatchStoreColumn>
+     * @return a {@link java.util.List<ExactDataMatchStoreColumn>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ExactDataMatchStoreColumn> getColumns() {
@@ -42,7 +42,7 @@ public class ExactMatchDataStoreBase extends Entity implements Parsable {
     }
     /**
      * Gets the dataLastUpdatedDateTime property value. The dataLastUpdatedDateTime property
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getDataLastUpdatedDateTime() {
@@ -50,7 +50,7 @@ public class ExactMatchDataStoreBase extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The description property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -58,7 +58,7 @@ public class ExactMatchDataStoreBase extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The displayName property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -66,7 +66,7 @@ public class ExactMatchDataStoreBase extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

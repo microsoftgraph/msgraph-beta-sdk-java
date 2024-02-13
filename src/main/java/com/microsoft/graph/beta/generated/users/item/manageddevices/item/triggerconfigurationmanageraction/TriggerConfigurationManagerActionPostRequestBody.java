@@ -19,7 +19,7 @@ public class TriggerConfigurationManagerActionPostRequestBody implements Additio
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new TriggerConfigurationManagerActionPostRequestBody and sets the default values.
+     * Instantiates a new {@link TriggerConfigurationManagerActionPostRequestBody} and sets the default values.
      */
     public TriggerConfigurationManagerActionPostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class TriggerConfigurationManagerActionPostRequestBody implements Additio
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TriggerConfigurationManagerActionPostRequestBody
+     * @return a {@link TriggerConfigurationManagerActionPostRequestBody}
      */
     @jakarta.annotation.Nonnull
     public static TriggerConfigurationManagerActionPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class TriggerConfigurationManagerActionPostRequestBody implements Additio
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -50,7 +50,7 @@ public class TriggerConfigurationManagerActionPostRequestBody implements Additio
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -58,7 +58,7 @@ public class TriggerConfigurationManagerActionPostRequestBody implements Additio
     }
     /**
      * Gets the configurationManagerAction property value. Parameter for action triggerConfigurationManagerAction
-     * @return a ConfigurationManagerAction
+     * @return a {@link ConfigurationManagerAction}
      */
     @jakarta.annotation.Nullable
     public ConfigurationManagerAction getConfigurationManagerAction() {
@@ -66,7 +66,7 @@ public class TriggerConfigurationManagerActionPostRequestBody implements Additio
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

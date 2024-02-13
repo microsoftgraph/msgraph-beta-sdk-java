@@ -18,7 +18,7 @@ public class AuthenticationConditionApplication implements AdditionalDataHolder,
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new AuthenticationConditionApplication and sets the default values.
+     * Instantiates a new {@link AuthenticationConditionApplication} and sets the default values.
      */
     public AuthenticationConditionApplication() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class AuthenticationConditionApplication implements AdditionalDataHolder,
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AuthenticationConditionApplication
+     * @return a {@link AuthenticationConditionApplication}
      */
     @jakarta.annotation.Nonnull
     public static AuthenticationConditionApplication createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class AuthenticationConditionApplication implements AdditionalDataHolder,
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class AuthenticationConditionApplication implements AdditionalDataHolder,
     }
     /**
      * Gets the appId property value. The identifier for an application corresponding to a condition which will trigger an authenticationEventListener.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAppId() {
@@ -57,7 +57,7 @@ public class AuthenticationConditionApplication implements AdditionalDataHolder,
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -65,7 +65,7 @@ public class AuthenticationConditionApplication implements AdditionalDataHolder,
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -76,7 +76,7 @@ public class AuthenticationConditionApplication implements AdditionalDataHolder,
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {

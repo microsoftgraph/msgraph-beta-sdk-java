@@ -27,6 +27,7 @@ import java.util.Objects;
 public class CategoriesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -34,6 +35,7 @@ public class CategoriesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the delta method.
+     * @return a {@link DeltaRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DeltaRequestBuilder delta() {
@@ -41,6 +43,7 @@ public class CategoriesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of educationRoot entities.
+     * @return a {@link RefRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RefRequestBuilder ref() {
@@ -49,7 +52,7 @@ public class CategoriesRequestBuilder extends BaseRequestBuilder {
     /**
      * Gets an item from the com.Microsoft.Graph.Beta.education.classes.item.assignments.item.categories.item collection
      * @param educationCategoryId The unique identifier of educationCategory
-     * @return a EducationCategoryItemRequestBuilder
+     * @return a {@link EducationCategoryItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public EducationCategoryItemRequestBuilder byEducationCategoryId(@jakarta.annotation.Nonnull final String educationCategoryId) {
@@ -59,7 +62,7 @@ public class CategoriesRequestBuilder extends BaseRequestBuilder {
         return new EducationCategoryItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new CategoriesRequestBuilder and sets the default values.
+     * Instantiates a new {@link CategoriesRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -67,7 +70,7 @@ public class CategoriesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/classes/{educationClass%2Did}/assignments/{educationAssignment%2Did}/categories{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new CategoriesRequestBuilder and sets the default values.
+     * Instantiates a new {@link CategoriesRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -76,7 +79,8 @@ public class CategoriesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List all categories for an assignment. Only teachers, students, and applications with application permissions can perform this operation.
-     * @return a EducationCategoryCollectionResponse
+     * @return a {@link EducationCategoryCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/educationassignment-list-categories?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -86,21 +90,22 @@ public class CategoriesRequestBuilder extends BaseRequestBuilder {
     /**
      * List all categories for an assignment. Only teachers, students, and applications with application permissions can perform this operation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a EducationCategoryCollectionResponse
+     * @return a {@link EducationCategoryCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/educationassignment-list-categories?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EducationCategoryCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, EducationCategoryCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to categories for education
      * @param body The request body
-     * @return a EducationCategory
+     * @return a {@link EducationCategory}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public EducationCategory post(@jakarta.annotation.Nonnull final EducationCategory body) {
@@ -110,20 +115,20 @@ public class CategoriesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to categories for education
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a EducationCategory
+     * @return a {@link EducationCategory}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public EducationCategory post(@jakarta.annotation.Nonnull final EducationCategory body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, EducationCategory::createFromDiscriminatorValue);
     }
     /**
      * List all categories for an assignment. Only teachers, students, and applications with application permissions can perform this operation.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -132,7 +137,7 @@ public class CategoriesRequestBuilder extends BaseRequestBuilder {
     /**
      * List all categories for an assignment. Only teachers, students, and applications with application permissions can perform this operation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -144,7 +149,7 @@ public class CategoriesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to categories for education
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final EducationCategory body) {
@@ -154,12 +159,12 @@ public class CategoriesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to categories for education
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final EducationCategory body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/education/classes/{educationClass%2Did}/assignments/{educationAssignment%2Did}/categories", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -168,7 +173,7 @@ public class CategoriesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a CategoriesRequestBuilder
+     * @return a {@link CategoriesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CategoriesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -222,7 +227,7 @@ public class CategoriesRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

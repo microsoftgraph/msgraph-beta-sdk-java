@@ -20,7 +20,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GetRawRemoteConnectionReportsRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new GetRawRemoteConnectionReportsRequestBuilder and sets the default values.
+     * Instantiates a new {@link GetRawRemoteConnectionReportsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -28,7 +28,7 @@ public class GetRawRemoteConnectionReportsRequestBuilder extends BaseRequestBuil
         super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/reports/getRawRemoteConnectionReports", pathParameters);
     }
     /**
-     * Instantiates a new GetRawRemoteConnectionReportsRequestBuilder and sets the default values.
+     * Instantiates a new {@link GetRawRemoteConnectionReportsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -38,7 +38,8 @@ public class GetRawRemoteConnectionReportsRequestBuilder extends BaseRequestBuil
     /**
      * Get the raw real-time remote connection report for a Cloud PC without any calculation, such as roundTripTime or available bandwidth, which are aggregated hourly from the raw event data.
      * @param body The request body
-     * @return a InputStream
+     * @return a {@link InputStream}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpcreports-getrawremoteconnectionreports?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -49,7 +50,8 @@ public class GetRawRemoteConnectionReportsRequestBuilder extends BaseRequestBuil
      * Get the raw real-time remote connection report for a Cloud PC without any calculation, such as roundTripTime or available bandwidth, which are aggregated hourly from the raw event data.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a InputStream
+     * @return a {@link InputStream}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpcreports-getrawremoteconnectionreports?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -57,14 +59,13 @@ public class GetRawRemoteConnectionReportsRequestBuilder extends BaseRequestBuil
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.sendPrimitive(requestInfo, errorMapping, InputStream.class);
     }
     /**
      * Get the raw real-time remote connection report for a Cloud PC without any calculation, such as roundTripTime or available bandwidth, which are aggregated hourly from the raw event data.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final GetRawRemoteConnectionReportsPostRequestBody body) {
@@ -74,7 +75,7 @@ public class GetRawRemoteConnectionReportsRequestBuilder extends BaseRequestBuil
      * Get the raw real-time remote connection report for a Cloud PC without any calculation, such as roundTripTime or available bandwidth, which are aggregated hourly from the raw event data.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final GetRawRemoteConnectionReportsPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -88,7 +89,7 @@ public class GetRawRemoteConnectionReportsRequestBuilder extends BaseRequestBuil
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a GetRawRemoteConnectionReportsRequestBuilder
+     * @return a {@link GetRawRemoteConnectionReportsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetRawRemoteConnectionReportsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

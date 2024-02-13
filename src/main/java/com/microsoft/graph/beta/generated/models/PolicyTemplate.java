@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PolicyTemplate extends Entity implements Parsable {
     /**
-     * Instantiates a new PolicyTemplate and sets the default values.
+     * Instantiates a new {@link PolicyTemplate} and sets the default values.
      */
     public PolicyTemplate() {
         super();
@@ -17,7 +17,7 @@ public class PolicyTemplate extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PolicyTemplate
+     * @return a {@link PolicyTemplate}
      */
     @jakarta.annotation.Nonnull
     public static PolicyTemplate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class PolicyTemplate extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -37,7 +37,7 @@ public class PolicyTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the multiTenantOrganizationIdentitySynchronization property value. Defines an optional cross-tenant access policy template with user synchronization settings for a multi-tenant organization.
-     * @return a MultiTenantOrganizationIdentitySyncPolicyTemplate
+     * @return a {@link MultiTenantOrganizationIdentitySyncPolicyTemplate}
      */
     @jakarta.annotation.Nullable
     public MultiTenantOrganizationIdentitySyncPolicyTemplate getMultiTenantOrganizationIdentitySynchronization() {
@@ -45,7 +45,7 @@ public class PolicyTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the multiTenantOrganizationPartnerConfiguration property value. Defines an optional cross-tenant access policy template with inbound and outbound partner configuration settings for a multi-tenant organization.
-     * @return a MultiTenantOrganizationPartnerConfigurationTemplate
+     * @return a {@link MultiTenantOrganizationPartnerConfigurationTemplate}
      */
     @jakarta.annotation.Nullable
     public MultiTenantOrganizationPartnerConfigurationTemplate getMultiTenantOrganizationPartnerConfiguration() {

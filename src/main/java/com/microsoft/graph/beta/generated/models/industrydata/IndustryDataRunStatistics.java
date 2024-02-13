@@ -18,7 +18,7 @@ public class IndustryDataRunStatistics implements AdditionalDataHolder, BackedMo
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new IndustryDataRunStatistics and sets the default values.
+     * Instantiates a new {@link IndustryDataRunStatistics} and sets the default values.
      */
     public IndustryDataRunStatistics() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class IndustryDataRunStatistics implements AdditionalDataHolder, BackedMo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a IndustryDataRunStatistics
+     * @return a {@link IndustryDataRunStatistics}
      */
     @jakarta.annotation.Nonnull
     public static IndustryDataRunStatistics createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class IndustryDataRunStatistics implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the activityStatistics property value. The collection of statistics for each activity included in this run.
-     * @return a java.util.List<IndustryDataActivityStatistics>
+     * @return a {@link java.util.List<IndustryDataActivityStatistics>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<IndustryDataActivityStatistics> getActivityStatistics() {
@@ -44,7 +44,7 @@ public class IndustryDataRunStatistics implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -57,7 +57,7 @@ public class IndustryDataRunStatistics implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -65,7 +65,7 @@ public class IndustryDataRunStatistics implements AdditionalDataHolder, BackedMo
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -79,7 +79,7 @@ public class IndustryDataRunStatistics implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the inboundTotals property value. The aggregate statistics for all inbound flows.
-     * @return a AggregatedInboundStatistics
+     * @return a {@link AggregatedInboundStatistics}
      */
     @jakarta.annotation.Nullable
     public AggregatedInboundStatistics getInboundTotals() {
@@ -87,7 +87,7 @@ public class IndustryDataRunStatistics implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -95,7 +95,7 @@ public class IndustryDataRunStatistics implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the runId property value. The ID of the underlying run for the statistics.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRunId() {
@@ -103,7 +103,7 @@ public class IndustryDataRunStatistics implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the status property value. The status property
-     * @return a IndustryDataRunStatus
+     * @return a {@link IndustryDataRunStatus}
      */
     @jakarta.annotation.Nullable
     public IndustryDataRunStatus getStatus() {

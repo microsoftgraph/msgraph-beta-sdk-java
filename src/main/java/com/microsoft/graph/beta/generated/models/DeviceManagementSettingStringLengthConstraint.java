@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementSettingStringLengthConstraint extends DeviceManagementConstraint implements Parsable {
     /**
-     * Instantiates a new DeviceManagementSettingStringLengthConstraint and sets the default values.
+     * Instantiates a new {@link DeviceManagementSettingStringLengthConstraint} and sets the default values.
      */
     public DeviceManagementSettingStringLengthConstraint() {
         super();
@@ -21,7 +21,7 @@ public class DeviceManagementSettingStringLengthConstraint extends DeviceManagem
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceManagementSettingStringLengthConstraint
+     * @return a {@link DeviceManagementSettingStringLengthConstraint}
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementSettingStringLengthConstraint createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class DeviceManagementSettingStringLengthConstraint extends DeviceManagem
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -41,7 +41,7 @@ public class DeviceManagementSettingStringLengthConstraint extends DeviceManagem
     }
     /**
      * Gets the maximumLength property value. The maximum permitted string length
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getMaximumLength() {
@@ -49,7 +49,7 @@ public class DeviceManagementSettingStringLengthConstraint extends DeviceManagem
     }
     /**
      * Gets the minimumLength property value. The minimum permitted string length
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getMinimumLength() {

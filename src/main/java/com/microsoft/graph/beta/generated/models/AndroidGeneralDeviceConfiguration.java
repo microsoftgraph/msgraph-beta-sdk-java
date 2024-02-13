@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration implements Parsable {
     /**
-     * Instantiates a new AndroidGeneralDeviceConfiguration and sets the default values.
+     * Instantiates a new {@link AndroidGeneralDeviceConfiguration} and sets the default values.
      */
     public AndroidGeneralDeviceConfiguration() {
         super();
@@ -21,7 +21,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AndroidGeneralDeviceConfiguration
+     * @return a {@link AndroidGeneralDeviceConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static AndroidGeneralDeviceConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the appsBlockClipboardSharing property value. Indicates whether or not to block clipboard sharing to copy and paste between applications.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAppsBlockClipboardSharing() {
@@ -38,7 +38,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the appsBlockCopyPaste property value. Indicates whether or not to block copy and paste within applications.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAppsBlockCopyPaste() {
@@ -46,7 +46,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the appsBlockYouTube property value. Indicates whether or not to block the YouTube app.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAppsBlockYouTube() {
@@ -54,7 +54,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the appsHideList property value. List of apps to be hidden on the KNOX device. This collection can contain a maximum of 500 elements.
-     * @return a java.util.List<AppListItem>
+     * @return a {@link java.util.List<AppListItem>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AppListItem> getAppsHideList() {
@@ -62,7 +62,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the appsInstallAllowList property value. List of apps which can be installed on the KNOX device. This collection can contain a maximum of 500 elements.
-     * @return a java.util.List<AppListItem>
+     * @return a {@link java.util.List<AppListItem>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AppListItem> getAppsInstallAllowList() {
@@ -70,7 +70,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the appsLaunchBlockList property value. List of apps which are blocked from being launched on the KNOX device. This collection can contain a maximum of 500 elements.
-     * @return a java.util.List<AppListItem>
+     * @return a {@link java.util.List<AppListItem>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AppListItem> getAppsLaunchBlockList() {
@@ -78,7 +78,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the bluetoothBlocked property value. Indicates whether or not to block Bluetooth.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getBluetoothBlocked() {
@@ -86,7 +86,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the cameraBlocked property value. Indicates whether or not to block the use of the camera.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getCameraBlocked() {
@@ -94,7 +94,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the cellularBlockDataRoaming property value. Indicates whether or not to block data roaming.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getCellularBlockDataRoaming() {
@@ -102,7 +102,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the cellularBlockMessaging property value. Indicates whether or not to block SMS/MMS messaging.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getCellularBlockMessaging() {
@@ -110,7 +110,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the cellularBlockVoiceRoaming property value. Indicates whether or not to block voice roaming.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getCellularBlockVoiceRoaming() {
@@ -118,7 +118,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the cellularBlockWiFiTethering property value. Indicates whether or not to block syncing Wi-Fi tethering.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getCellularBlockWiFiTethering() {
@@ -126,7 +126,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the compliantAppListType property value. Possible values of the compliance app list.
-     * @return a AppListType
+     * @return a {@link AppListType}
      */
     @jakarta.annotation.Nullable
     public AppListType getCompliantAppListType() {
@@ -134,7 +134,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the compliantAppsList property value. List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements.
-     * @return a java.util.List<AppListItem>
+     * @return a {@link java.util.List<AppListItem>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AppListItem> getCompliantAppsList() {
@@ -142,7 +142,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the dateAndTimeBlockChanges property value. Indicates whether or not to block changing date and time while in KNOX Mode.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDateAndTimeBlockChanges() {
@@ -150,7 +150,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the deviceSharingAllowed property value. Indicates whether or not to allow device sharing mode.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDeviceSharingAllowed() {
@@ -158,7 +158,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the diagnosticDataBlockSubmission property value. Indicates whether or not to block diagnostic data submission.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDiagnosticDataBlockSubmission() {
@@ -166,7 +166,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the factoryResetBlocked property value. Indicates whether or not to block user performing a factory reset.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getFactoryResetBlocked() {
@@ -174,7 +174,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -233,7 +233,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the googleAccountBlockAutoSync property value. Indicates whether or not to block Google account auto sync.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getGoogleAccountBlockAutoSync() {
@@ -241,7 +241,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the googlePlayStoreBlocked property value. Indicates whether or not to block the Google Play store.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getGooglePlayStoreBlocked() {
@@ -249,7 +249,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the kioskModeApps property value. A list of apps that will be allowed to run when the device is in Kiosk Mode. This collection can contain a maximum of 500 elements.
-     * @return a java.util.List<AppListItem>
+     * @return a {@link java.util.List<AppListItem>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AppListItem> getKioskModeApps() {
@@ -257,7 +257,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the kioskModeBlockSleepButton property value. Indicates whether or not to block the screen sleep button while in Kiosk Mode.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getKioskModeBlockSleepButton() {
@@ -265,7 +265,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the kioskModeBlockVolumeButtons property value. Indicates whether or not to block the volume buttons while in Kiosk Mode.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getKioskModeBlockVolumeButtons() {
@@ -273,7 +273,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the locationServicesBlocked property value. Indicates whether or not to block location services.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getLocationServicesBlocked() {
@@ -281,7 +281,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the nfcBlocked property value. Indicates whether or not to block Near-Field Communication.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getNfcBlocked() {
@@ -289,7 +289,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the passwordBlockFingerprintUnlock property value. Indicates whether or not to block fingerprint unlock.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getPasswordBlockFingerprintUnlock() {
@@ -297,7 +297,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the passwordBlockTrustAgents property value. Indicates whether or not to block Smart Lock and other trust agents.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getPasswordBlockTrustAgents() {
@@ -305,7 +305,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the passwordExpirationDays property value. Number of days before the password expires. Valid values 1 to 365
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordExpirationDays() {
@@ -313,7 +313,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the passwordMinimumLength property value. Minimum length of passwords. Valid values 4 to 16
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordMinimumLength() {
@@ -321,7 +321,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the passwordMinutesOfInactivityBeforeScreenTimeout property value. Minutes of inactivity before the screen times out.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordMinutesOfInactivityBeforeScreenTimeout() {
@@ -329,7 +329,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the passwordPreviousPasswordBlockCount property value. Number of previous passwords to block. Valid values 0 to 24
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordPreviousPasswordBlockCount() {
@@ -337,7 +337,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the passwordRequired property value. Indicates whether or not to require a password.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getPasswordRequired() {
@@ -345,7 +345,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the passwordRequiredType property value. Android required password type.
-     * @return a AndroidRequiredPasswordType
+     * @return a {@link AndroidRequiredPasswordType}
      */
     @jakarta.annotation.Nullable
     public AndroidRequiredPasswordType getPasswordRequiredType() {
@@ -353,7 +353,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the passwordSignInFailureCountBeforeFactoryReset property value. Number of sign in failures allowed before factory reset. Valid values 1 to 16
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordSignInFailureCountBeforeFactoryReset() {
@@ -361,7 +361,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the powerOffBlocked property value. Indicates whether or not to block powering off the device.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getPowerOffBlocked() {
@@ -369,7 +369,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the requiredPasswordComplexity property value. The password complexity types that can be set on Android. One of: NONE, LOW, MEDIUM, HIGH. This is an API targeted to Android 11+.
-     * @return a AndroidRequiredPasswordComplexity
+     * @return a {@link AndroidRequiredPasswordComplexity}
      */
     @jakarta.annotation.Nullable
     public AndroidRequiredPasswordComplexity getRequiredPasswordComplexity() {
@@ -377,7 +377,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the screenCaptureBlocked property value. Indicates whether or not to block screenshots.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getScreenCaptureBlocked() {
@@ -385,7 +385,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the securityRequireVerifyApps property value. Require the Android Verify apps feature is turned on.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getSecurityRequireVerifyApps() {
@@ -393,7 +393,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the storageBlockGoogleBackup property value. Indicates whether or not to block Google Backup.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getStorageBlockGoogleBackup() {
@@ -401,7 +401,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the storageBlockRemovableStorage property value. Indicates whether or not to block removable storage usage.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getStorageBlockRemovableStorage() {
@@ -409,7 +409,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the storageRequireDeviceEncryption property value. Indicates whether or not to require device encryption.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getStorageRequireDeviceEncryption() {
@@ -417,7 +417,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the storageRequireRemovableStorageEncryption property value. Indicates whether or not to require removable storage encryption.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getStorageRequireRemovableStorageEncryption() {
@@ -425,7 +425,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the voiceAssistantBlocked property value. Indicates whether or not to block the use of the Voice Assistant.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getVoiceAssistantBlocked() {
@@ -433,7 +433,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the voiceDialingBlocked property value. Indicates whether or not to block voice dialing.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getVoiceDialingBlocked() {
@@ -441,7 +441,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the webBrowserBlockAutofill property value. Indicates whether or not to block the web browser's auto fill feature.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getWebBrowserBlockAutofill() {
@@ -449,7 +449,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the webBrowserBlocked property value. Indicates whether or not to block the web browser.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getWebBrowserBlocked() {
@@ -457,7 +457,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the webBrowserBlockJavaScript property value. Indicates whether or not to block JavaScript within the web browser.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getWebBrowserBlockJavaScript() {
@@ -465,7 +465,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the webBrowserBlockPopups property value. Indicates whether or not to block popups within the web browser.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getWebBrowserBlockPopups() {
@@ -473,7 +473,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the webBrowserCookieSettings property value. Web Browser Cookie Settings.
-     * @return a WebBrowserCookieSettings
+     * @return a {@link WebBrowserCookieSettings}
      */
     @jakarta.annotation.Nullable
     public WebBrowserCookieSettings getWebBrowserCookieSettings() {
@@ -481,7 +481,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     }
     /**
      * Gets the wiFiBlocked property value. Indicates whether or not to block syncing Wi-Fi.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getWiFiBlocked() {

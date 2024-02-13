@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrivilegedRoleAssignment extends Entity implements Parsable {
     /**
-     * Instantiates a new PrivilegedRoleAssignment and sets the default values.
+     * Instantiates a new {@link PrivilegedRoleAssignment} and sets the default values.
      */
     public PrivilegedRoleAssignment() {
         super();
@@ -18,7 +18,7 @@ public class PrivilegedRoleAssignment extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PrivilegedRoleAssignment
+     * @return a {@link PrivilegedRoleAssignment}
      */
     @jakarta.annotation.Nonnull
     public static PrivilegedRoleAssignment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class PrivilegedRoleAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the expirationDateTime property value. The expirationDateTime property
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getExpirationDateTime() {
@@ -35,7 +35,7 @@ public class PrivilegedRoleAssignment extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -50,7 +50,7 @@ public class PrivilegedRoleAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the isElevated property value. The isElevated property
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsElevated() {
@@ -58,7 +58,7 @@ public class PrivilegedRoleAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the resultMessage property value. The resultMessage property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getResultMessage() {
@@ -66,7 +66,7 @@ public class PrivilegedRoleAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the roleId property value. The roleId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRoleId() {
@@ -74,7 +74,7 @@ public class PrivilegedRoleAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the roleInfo property value. The roleInfo property
-     * @return a PrivilegedRole
+     * @return a {@link PrivilegedRole}
      */
     @jakarta.annotation.Nullable
     public PrivilegedRole getRoleInfo() {
@@ -82,7 +82,7 @@ public class PrivilegedRoleAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the userId property value. The userId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserId() {

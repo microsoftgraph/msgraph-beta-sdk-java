@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeliveryOptimizationBandwidthAbsolute extends DeliveryOptimizationBandwidth implements Parsable {
     /**
-     * Instantiates a new DeliveryOptimizationBandwidthAbsolute and sets the default values.
+     * Instantiates a new {@link DeliveryOptimizationBandwidthAbsolute} and sets the default values.
      */
     public DeliveryOptimizationBandwidthAbsolute() {
         super();
@@ -21,7 +21,7 @@ public class DeliveryOptimizationBandwidthAbsolute extends DeliveryOptimizationB
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeliveryOptimizationBandwidthAbsolute
+     * @return a {@link DeliveryOptimizationBandwidthAbsolute}
      */
     @jakarta.annotation.Nonnull
     public static DeliveryOptimizationBandwidthAbsolute createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class DeliveryOptimizationBandwidthAbsolute extends DeliveryOptimizationB
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -41,7 +41,7 @@ public class DeliveryOptimizationBandwidthAbsolute extends DeliveryOptimizationB
     }
     /**
      * Gets the maximumDownloadBandwidthInKilobytesPerSecond property value. Specifies the maximum download bandwidth in KiloBytes/second that the device can use across all concurrent download activities using Delivery Optimization. Valid values 0 to 4294967295
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getMaximumDownloadBandwidthInKilobytesPerSecond() {
@@ -49,7 +49,7 @@ public class DeliveryOptimizationBandwidthAbsolute extends DeliveryOptimizationB
     }
     /**
      * Gets the maximumUploadBandwidthInKilobytesPerSecond property value. Specifies the maximum upload bandwidth in KiloBytes/second that a device will use across all concurrent upload activity using Delivery Optimization (0-4000000). Valid values 0 to 4000000
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getMaximumUploadBandwidthInKilobytesPerSecond() {

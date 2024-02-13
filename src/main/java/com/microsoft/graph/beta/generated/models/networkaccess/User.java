@@ -19,7 +19,7 @@ public class User implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new User and sets the default values.
+     * Instantiates a new {@link User} and sets the default values.
      */
     public User() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class User implements AdditionalDataHolder, BackedModel, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a User
+     * @return a {@link User}
      */
     @jakarta.annotation.Nonnull
     public static User createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class User implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -50,7 +50,7 @@ public class User implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -58,7 +58,7 @@ public class User implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the displayName property value. User display Name.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -66,7 +66,7 @@ public class User implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -82,7 +82,7 @@ public class User implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the lastAccessDateTime property value. The date and time of the most recent access.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastAccessDateTime() {
@@ -90,7 +90,7 @@ public class User implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -98,7 +98,7 @@ public class User implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the trafficType property value. The trafficType property
-     * @return a TrafficType
+     * @return a {@link TrafficType}
      */
     @jakarta.annotation.Nullable
     public TrafficType getTrafficType() {
@@ -106,7 +106,7 @@ public class User implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the userId property value. The ID for the user.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
@@ -114,7 +114,7 @@ public class User implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the userPrincipalName property value. A unique identifier that is associated with a user in a system or directory. Typically, this value is an email address that is used for user authentication and identification.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
@@ -122,7 +122,7 @@ public class User implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the userType property value. The userType property
-     * @return a UserType
+     * @return a {@link UserType}
      */
     @jakarta.annotation.Nullable
     public UserType getUserType() {

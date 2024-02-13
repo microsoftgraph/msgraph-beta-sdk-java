@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SensitivityLabel extends Entity implements Parsable {
     /**
-     * Instantiates a new SensitivityLabel and sets the default values.
+     * Instantiates a new {@link SensitivityLabel} and sets the default values.
      */
     public SensitivityLabel() {
         super();
@@ -18,7 +18,7 @@ public class SensitivityLabel extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SensitivityLabel
+     * @return a {@link SensitivityLabel}
      */
     @jakarta.annotation.Nonnull
     public static SensitivityLabel createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class SensitivityLabel extends Entity implements Parsable {
     }
     /**
      * Gets the color property value. The color that the UI should display for the label, if configured.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getColor() {
@@ -35,7 +35,7 @@ public class SensitivityLabel extends Entity implements Parsable {
     }
     /**
      * Gets the contentFormats property value. Returns the supported content formats for the label.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getContentFormats() {
@@ -43,7 +43,7 @@ public class SensitivityLabel extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The admin-defined description for the label.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -51,7 +51,7 @@ public class SensitivityLabel extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -70,7 +70,7 @@ public class SensitivityLabel extends Entity implements Parsable {
     }
     /**
      * Gets the hasProtection property value. Indicates whether the label has protection actions configured.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getHasProtection() {
@@ -78,7 +78,7 @@ public class SensitivityLabel extends Entity implements Parsable {
     }
     /**
      * Gets the isActive property value. Indicates whether the label is active or not. Active labels should be hidden or disabled in the UI.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsActive() {
@@ -86,7 +86,7 @@ public class SensitivityLabel extends Entity implements Parsable {
     }
     /**
      * Gets the isAppliable property value. Indicates whether the label can be applied to content. False if the label is a parent with child labels.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsAppliable() {
@@ -94,7 +94,7 @@ public class SensitivityLabel extends Entity implements Parsable {
     }
     /**
      * Gets the name property value. The plaintext name of the label.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -102,7 +102,7 @@ public class SensitivityLabel extends Entity implements Parsable {
     }
     /**
      * Gets the parent property value. The parent label associated with a child label. Null if the label has no parent.
-     * @return a SensitivityLabel
+     * @return a {@link SensitivityLabel}
      */
     @jakarta.annotation.Nullable
     public SensitivityLabel getParent() {
@@ -110,7 +110,7 @@ public class SensitivityLabel extends Entity implements Parsable {
     }
     /**
      * Gets the sensitivity property value. The sensitivity value of the label, where lower is less sensitive.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getSensitivity() {
@@ -118,7 +118,7 @@ public class SensitivityLabel extends Entity implements Parsable {
     }
     /**
      * Gets the tooltip property value. The tooltip that should be displayed for the label in a UI.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTooltip() {

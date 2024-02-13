@@ -18,7 +18,7 @@ public class BookingPageSettings implements AdditionalDataHolder, BackedModel, P
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new BookingPageSettings and sets the default values.
+     * Instantiates a new {@link BookingPageSettings} and sets the default values.
      */
     public BookingPageSettings() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class BookingPageSettings implements AdditionalDataHolder, BackedModel, P
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a BookingPageSettings
+     * @return a {@link BookingPageSettings}
      */
     @jakarta.annotation.Nonnull
     public static BookingPageSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class BookingPageSettings implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the accessControl property value. The accessControl property
-     * @return a BookingPageAccessControl
+     * @return a {@link BookingPageAccessControl}
      */
     @jakarta.annotation.Nullable
     public BookingPageAccessControl getAccessControl() {
@@ -44,7 +44,7 @@ public class BookingPageSettings implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -57,39 +57,39 @@ public class BookingPageSettings implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
         return this.backingStore;
     }
     /**
-     * Gets the bookingPageColorCode property value. Custom color for bookings page. Value should be in Hex format. Example: `#123456`.
-     * @return a String
+     * Gets the bookingPageColorCode property value. Custom color for the bookings page. The value should be in Hex format. Example: #123456.
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getBookingPageColorCode() {
         return this.backingStore.get("bookingPageColorCode");
     }
     /**
-     * Gets the businessTimeZone property value. The time zone of the customer. For a list of possible values, see [dateTimeTimeZone](https://learn.microsoft.com/en-us/graph/api/resources/datetimetimezone?view=graph-rest-beta).
-     * @return a String
+     * Gets the businessTimeZone property value. The time zone of the customer. For a list of possible values, see dateTimeTimeZone.
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getBusinessTimeZone() {
         return this.backingStore.get("businessTimeZone");
     }
     /**
-     * Gets the customerConsentMessage property value. Customer consent message that is displayed in the Booking page.
-     * @return a String
+     * Gets the customerConsentMessage property value. The personal data collection and usage consent message in the bookings page.
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCustomerConsentMessage() {
         return this.backingStore.get("customerConsentMessage");
     }
     /**
-     * Gets the enforceOneTimePassword property value. Enforcing One Time Password (OTP) during appointment creation.
-     * @return a Boolean
+     * Gets the enforceOneTimePassword property value. Determines if the one-time password is required to create an appointment. The default value is false.
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getEnforceOneTimePassword() {
@@ -97,7 +97,7 @@ public class BookingPageSettings implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -117,32 +117,32 @@ public class BookingPageSettings implements AdditionalDataHolder, BackedModel, P
         return deserializerMap;
     }
     /**
-     * Gets the isBusinessLogoDisplayEnabled property value. Enable display of business logo display on the Bookings page.
-     * @return a Boolean
+     * Gets the isBusinessLogoDisplayEnabled property value. Indicates if the business logo is displayed on the bookings page. The default value is false.
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsBusinessLogoDisplayEnabled() {
         return this.backingStore.get("isBusinessLogoDisplayEnabled");
     }
     /**
-     * Gets the isCustomerConsentEnabled property value. Enforces customer consent on the customer consent message before appointment is booked.
-     * @return a Boolean
+     * Gets the isCustomerConsentEnabled property value. Enables personal data collection and the usage consent toggle on the bookings page. The default value is false.
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsCustomerConsentEnabled() {
         return this.backingStore.get("isCustomerConsentEnabled");
     }
     /**
-     * Gets the isSearchEngineIndexabilityDisabled property value. Disable booking page to be indexed by search engines. False by default.
-     * @return a Boolean
+     * Gets the isSearchEngineIndexabilityDisabled property value. Ensures that the web crawlers don't index this page. The defaults value is false.
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsSearchEngineIndexabilityDisabled() {
         return this.backingStore.get("isSearchEngineIndexabilityDisabled");
     }
     /**
-     * Gets the isTimeSlotTimeZoneSetToBusinessTimeZone property value. If business time zone the default value for the time slots that we show in the bookings page. False by default.
-     * @return a Boolean
+     * Gets the isTimeSlotTimeZoneSetToBusinessTimeZone property value. Displays the booking time slots in the business time zone. The default value is false.
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsTimeSlotTimeZoneSetToBusinessTimeZone() {
@@ -150,23 +150,23 @@ public class BookingPageSettings implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the privacyPolicyWebUrl property value. The URL of the business' Privacy Policy.
-     * @return a String
+     * Gets the privacyPolicyWebUrl property value. RL of a webpage that provides the terms and conditions of the business. If a privacy policy isn't included, the following text appears on the bookings page as default: 'The policies and practices of <booking business's name> apply to the use of your data.
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPrivacyPolicyWebUrl() {
         return this.backingStore.get("privacyPolicyWebUrl");
     }
     /**
-     * Gets the termsAndConditionsWebUrl property value. The URL of the business' Terms and Conditions.
-     * @return a String
+     * Gets the termsAndConditionsWebUrl property value. URL of a webpage that provides the terms and conditions of the business.
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTermsAndConditionsWebUrl() {
@@ -215,56 +215,56 @@ public class BookingPageSettings implements AdditionalDataHolder, BackedModel, P
         this.backingStore = value;
     }
     /**
-     * Sets the bookingPageColorCode property value. Custom color for bookings page. Value should be in Hex format. Example: `#123456`.
+     * Sets the bookingPageColorCode property value. Custom color for the bookings page. The value should be in Hex format. Example: #123456.
      * @param value Value to set for the bookingPageColorCode property.
      */
     public void setBookingPageColorCode(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("bookingPageColorCode", value);
     }
     /**
-     * Sets the businessTimeZone property value. The time zone of the customer. For a list of possible values, see [dateTimeTimeZone](https://learn.microsoft.com/en-us/graph/api/resources/datetimetimezone?view=graph-rest-beta).
+     * Sets the businessTimeZone property value. The time zone of the customer. For a list of possible values, see dateTimeTimeZone.
      * @param value Value to set for the businessTimeZone property.
      */
     public void setBusinessTimeZone(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("businessTimeZone", value);
     }
     /**
-     * Sets the customerConsentMessage property value. Customer consent message that is displayed in the Booking page.
+     * Sets the customerConsentMessage property value. The personal data collection and usage consent message in the bookings page.
      * @param value Value to set for the customerConsentMessage property.
      */
     public void setCustomerConsentMessage(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("customerConsentMessage", value);
     }
     /**
-     * Sets the enforceOneTimePassword property value. Enforcing One Time Password (OTP) during appointment creation.
+     * Sets the enforceOneTimePassword property value. Determines if the one-time password is required to create an appointment. The default value is false.
      * @param value Value to set for the enforceOneTimePassword property.
      */
     public void setEnforceOneTimePassword(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("enforceOneTimePassword", value);
     }
     /**
-     * Sets the isBusinessLogoDisplayEnabled property value. Enable display of business logo display on the Bookings page.
+     * Sets the isBusinessLogoDisplayEnabled property value. Indicates if the business logo is displayed on the bookings page. The default value is false.
      * @param value Value to set for the isBusinessLogoDisplayEnabled property.
      */
     public void setIsBusinessLogoDisplayEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isBusinessLogoDisplayEnabled", value);
     }
     /**
-     * Sets the isCustomerConsentEnabled property value. Enforces customer consent on the customer consent message before appointment is booked.
+     * Sets the isCustomerConsentEnabled property value. Enables personal data collection and the usage consent toggle on the bookings page. The default value is false.
      * @param value Value to set for the isCustomerConsentEnabled property.
      */
     public void setIsCustomerConsentEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isCustomerConsentEnabled", value);
     }
     /**
-     * Sets the isSearchEngineIndexabilityDisabled property value. Disable booking page to be indexed by search engines. False by default.
+     * Sets the isSearchEngineIndexabilityDisabled property value. Ensures that the web crawlers don't index this page. The defaults value is false.
      * @param value Value to set for the isSearchEngineIndexabilityDisabled property.
      */
     public void setIsSearchEngineIndexabilityDisabled(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isSearchEngineIndexabilityDisabled", value);
     }
     /**
-     * Sets the isTimeSlotTimeZoneSetToBusinessTimeZone property value. If business time zone the default value for the time slots that we show in the bookings page. False by default.
+     * Sets the isTimeSlotTimeZoneSetToBusinessTimeZone property value. Displays the booking time slots in the business time zone. The default value is false.
      * @param value Value to set for the isTimeSlotTimeZoneSetToBusinessTimeZone property.
      */
     public void setIsTimeSlotTimeZoneSetToBusinessTimeZone(@jakarta.annotation.Nullable final Boolean value) {
@@ -278,14 +278,14 @@ public class BookingPageSettings implements AdditionalDataHolder, BackedModel, P
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the privacyPolicyWebUrl property value. The URL of the business' Privacy Policy.
+     * Sets the privacyPolicyWebUrl property value. RL of a webpage that provides the terms and conditions of the business. If a privacy policy isn't included, the following text appears on the bookings page as default: 'The policies and practices of <booking business's name> apply to the use of your data.
      * @param value Value to set for the privacyPolicyWebUrl property.
      */
     public void setPrivacyPolicyWebUrl(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("privacyPolicyWebUrl", value);
     }
     /**
-     * Sets the termsAndConditionsWebUrl property value. The URL of the business' Terms and Conditions.
+     * Sets the termsAndConditionsWebUrl property value. URL of a webpage that provides the terms and conditions of the business.
      * @param value Value to set for the termsAndConditionsWebUrl property.
      */
     public void setTermsAndConditionsWebUrl(@jakarta.annotation.Nullable final String value) {

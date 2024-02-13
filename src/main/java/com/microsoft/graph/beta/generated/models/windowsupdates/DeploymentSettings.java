@@ -18,7 +18,7 @@ public class DeploymentSettings implements AdditionalDataHolder, BackedModel, Pa
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new DeploymentSettings and sets the default values.
+     * Instantiates a new {@link DeploymentSettings} and sets the default values.
      */
     public DeploymentSettings() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class DeploymentSettings implements AdditionalDataHolder, BackedModel, Pa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeploymentSettings
+     * @return a {@link DeploymentSettings}
      */
     @jakarta.annotation.Nonnull
     public static DeploymentSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class DeploymentSettings implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class DeploymentSettings implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class DeploymentSettings implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the contentApplicability property value. Settings for governing whether content is applicable to a device.
-     * @return a ContentApplicabilitySettings
+     * @return a {@link ContentApplicabilitySettings}
      */
     @jakarta.annotation.Nullable
     public ContentApplicabilitySettings getContentApplicability() {
@@ -65,7 +65,7 @@ public class DeploymentSettings implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the expedite property value. Settings for governing whether updates should be expedited.
-     * @return a ExpediteSettings
+     * @return a {@link ExpediteSettings}
      */
     @jakarta.annotation.Nullable
     public ExpediteSettings getExpedite() {
@@ -73,7 +73,7 @@ public class DeploymentSettings implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -88,7 +88,7 @@ public class DeploymentSettings implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the monitoring property value. Settings for governing conditions to monitor and automated actions to take.
-     * @return a MonitoringSettings
+     * @return a {@link MonitoringSettings}
      */
     @jakarta.annotation.Nullable
     public MonitoringSettings getMonitoring() {
@@ -96,7 +96,7 @@ public class DeploymentSettings implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -104,7 +104,7 @@ public class DeploymentSettings implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the schedule property value. Settings for governing how and when the content is rolled out.
-     * @return a ScheduleSettings
+     * @return a {@link ScheduleSettings}
      */
     @jakarta.annotation.Nullable
     public ScheduleSettings getSchedule() {
@@ -112,7 +112,7 @@ public class DeploymentSettings implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the userExperience property value. Settings for governing end user update experience.
-     * @return a UserExperienceSettings
+     * @return a {@link UserExperienceSettings}
      */
     @jakarta.annotation.Nullable
     public UserExperienceSettings getUserExperience() {

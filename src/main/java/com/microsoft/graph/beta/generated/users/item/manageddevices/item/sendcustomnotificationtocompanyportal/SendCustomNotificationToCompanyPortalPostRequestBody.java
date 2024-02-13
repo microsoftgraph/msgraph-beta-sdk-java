@@ -18,7 +18,7 @@ public class SendCustomNotificationToCompanyPortalPostRequestBody implements Add
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new SendCustomNotificationToCompanyPortalPostRequestBody and sets the default values.
+     * Instantiates a new {@link SendCustomNotificationToCompanyPortalPostRequestBody} and sets the default values.
      */
     public SendCustomNotificationToCompanyPortalPostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class SendCustomNotificationToCompanyPortalPostRequestBody implements Add
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SendCustomNotificationToCompanyPortalPostRequestBody
+     * @return a {@link SendCustomNotificationToCompanyPortalPostRequestBody}
      */
     @jakarta.annotation.Nonnull
     public static SendCustomNotificationToCompanyPortalPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class SendCustomNotificationToCompanyPortalPostRequestBody implements Add
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class SendCustomNotificationToCompanyPortalPostRequestBody implements Add
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class SendCustomNotificationToCompanyPortalPostRequestBody implements Add
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -68,7 +68,7 @@ public class SendCustomNotificationToCompanyPortalPostRequestBody implements Add
     }
     /**
      * Gets the notificationBody property value. The notificationBody property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getNotificationBody() {
@@ -76,7 +76,7 @@ public class SendCustomNotificationToCompanyPortalPostRequestBody implements Add
     }
     /**
      * Gets the notificationTitle property value. The notificationTitle property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getNotificationTitle() {

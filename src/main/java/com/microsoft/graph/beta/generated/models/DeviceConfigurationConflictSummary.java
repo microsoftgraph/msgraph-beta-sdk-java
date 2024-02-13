@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceConfigurationConflictSummary extends Entity implements Parsable {
     /**
-     * Instantiates a new DeviceConfigurationConflictSummary and sets the default values.
+     * Instantiates a new {@link DeviceConfigurationConflictSummary} and sets the default values.
      */
     public DeviceConfigurationConflictSummary() {
         super();
@@ -20,7 +20,7 @@ public class DeviceConfigurationConflictSummary extends Entity implements Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceConfigurationConflictSummary
+     * @return a {@link DeviceConfigurationConflictSummary}
      */
     @jakarta.annotation.Nonnull
     public static DeviceConfigurationConflictSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -29,7 +29,7 @@ public class DeviceConfigurationConflictSummary extends Entity implements Parsab
     }
     /**
      * Gets the conflictingDeviceConfigurations property value. The set of policies in conflict with the given setting
-     * @return a java.util.List<SettingSource>
+     * @return a {@link java.util.List<SettingSource>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<SettingSource> getConflictingDeviceConfigurations() {
@@ -37,7 +37,7 @@ public class DeviceConfigurationConflictSummary extends Entity implements Parsab
     }
     /**
      * Gets the contributingSettings property value. The set of settings in conflict with the given policies
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getContributingSettings() {
@@ -45,7 +45,7 @@ public class DeviceConfigurationConflictSummary extends Entity implements Parsab
     }
     /**
      * Gets the deviceCheckinsImpacted property value. The count of checkins impacted by the conflicting policies and settings
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getDeviceCheckinsImpacted() {
@@ -53,7 +53,7 @@ public class DeviceConfigurationConflictSummary extends Entity implements Parsab
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

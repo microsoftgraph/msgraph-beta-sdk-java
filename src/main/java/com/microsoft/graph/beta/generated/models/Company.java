@@ -19,7 +19,7 @@ public class Company implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new Company and sets the default values.
+     * Instantiates a new {@link Company} and sets the default values.
      */
     public Company() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class Company implements AdditionalDataHolder, BackedModel, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Company
+     * @return a {@link Company}
      */
     @jakarta.annotation.Nonnull
     public static Company createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class Company implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the accounts property value. The accounts property
-     * @return a java.util.List<Account>
+     * @return a {@link java.util.List<Account>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Account> getAccounts() {
@@ -45,7 +45,7 @@ public class Company implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -58,7 +58,7 @@ public class Company implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the agedAccountsPayable property value. The agedAccountsPayable property
-     * @return a java.util.List<AgedAccountsPayable>
+     * @return a {@link java.util.List<AgedAccountsPayable>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AgedAccountsPayable> getAgedAccountsPayable() {
@@ -66,7 +66,7 @@ public class Company implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the agedAccountsReceivable property value. The agedAccountsReceivable property
-     * @return a java.util.List<AgedAccountsReceivable>
+     * @return a {@link java.util.List<AgedAccountsReceivable>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AgedAccountsReceivable> getAgedAccountsReceivable() {
@@ -74,7 +74,7 @@ public class Company implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -82,7 +82,7 @@ public class Company implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the businessProfileId property value. The businessProfileId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getBusinessProfileId() {
@@ -90,7 +90,7 @@ public class Company implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the companyInformation property value. The companyInformation property
-     * @return a java.util.List<CompanyInformation>
+     * @return a {@link java.util.List<CompanyInformation>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<CompanyInformation> getCompanyInformation() {
@@ -98,7 +98,7 @@ public class Company implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the countriesRegions property value. The countriesRegions property
-     * @return a java.util.List<CountryRegion>
+     * @return a {@link java.util.List<CountryRegion>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<CountryRegion> getCountriesRegions() {
@@ -106,7 +106,7 @@ public class Company implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the currencies property value. The currencies property
-     * @return a java.util.List<Currency>
+     * @return a {@link java.util.List<Currency>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Currency> getCurrencies() {
@@ -114,7 +114,7 @@ public class Company implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the customerPaymentJournals property value. The customerPaymentJournals property
-     * @return a java.util.List<CustomerPaymentJournal>
+     * @return a {@link java.util.List<CustomerPaymentJournal>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<CustomerPaymentJournal> getCustomerPaymentJournals() {
@@ -122,7 +122,7 @@ public class Company implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the customerPayments property value. The customerPayments property
-     * @return a java.util.List<CustomerPayment>
+     * @return a {@link java.util.List<CustomerPayment>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<CustomerPayment> getCustomerPayments() {
@@ -130,7 +130,7 @@ public class Company implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the customers property value. The customers property
-     * @return a java.util.List<Customer>
+     * @return a {@link java.util.List<Customer>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Customer> getCustomers() {
@@ -138,7 +138,7 @@ public class Company implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the dimensions property value. The dimensions property
-     * @return a java.util.List<Dimension>
+     * @return a {@link java.util.List<Dimension>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Dimension> getDimensions() {
@@ -146,7 +146,7 @@ public class Company implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the dimensionValues property value. The dimensionValues property
-     * @return a java.util.List<DimensionValue>
+     * @return a {@link java.util.List<DimensionValue>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DimensionValue> getDimensionValues() {
@@ -154,7 +154,7 @@ public class Company implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the displayName property value. The displayName property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -162,7 +162,7 @@ public class Company implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the employees property value. The employees property
-     * @return a java.util.List<Employee>
+     * @return a {@link java.util.List<Employee>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Employee> getEmployees() {
@@ -170,7 +170,7 @@ public class Company implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -220,7 +220,7 @@ public class Company implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the generalLedgerEntries property value. The generalLedgerEntries property
-     * @return a java.util.List<GeneralLedgerEntry>
+     * @return a {@link java.util.List<GeneralLedgerEntry>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<GeneralLedgerEntry> getGeneralLedgerEntries() {
@@ -228,7 +228,7 @@ public class Company implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the id property value. The id property
-     * @return a UUID
+     * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
     public UUID getId() {
@@ -236,7 +236,7 @@ public class Company implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the itemCategories property value. The itemCategories property
-     * @return a java.util.List<ItemCategory>
+     * @return a {@link java.util.List<ItemCategory>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ItemCategory> getItemCategories() {
@@ -244,7 +244,7 @@ public class Company implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the items property value. The items property
-     * @return a java.util.List<Item>
+     * @return a {@link java.util.List<Item>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Item> getItems() {
@@ -252,7 +252,7 @@ public class Company implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the journalLines property value. The journalLines property
-     * @return a java.util.List<JournalLine>
+     * @return a {@link java.util.List<JournalLine>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<JournalLine> getJournalLines() {
@@ -260,7 +260,7 @@ public class Company implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the journals property value. The journals property
-     * @return a java.util.List<Journal>
+     * @return a {@link java.util.List<Journal>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Journal> getJournals() {
@@ -268,7 +268,7 @@ public class Company implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the name property value. The name property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -276,7 +276,7 @@ public class Company implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -284,7 +284,7 @@ public class Company implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the paymentMethods property value. The paymentMethods property
-     * @return a java.util.List<PaymentMethod>
+     * @return a {@link java.util.List<PaymentMethod>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<PaymentMethod> getPaymentMethods() {
@@ -292,7 +292,7 @@ public class Company implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the paymentTerms property value. The paymentTerms property
-     * @return a java.util.List<PaymentTerm>
+     * @return a {@link java.util.List<PaymentTerm>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<PaymentTerm> getPaymentTerms() {
@@ -300,7 +300,7 @@ public class Company implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the picture property value. The picture property
-     * @return a java.util.List<Picture>
+     * @return a {@link java.util.List<Picture>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Picture> getPicture() {
@@ -308,7 +308,7 @@ public class Company implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the purchaseInvoiceLines property value. The purchaseInvoiceLines property
-     * @return a java.util.List<PurchaseInvoiceLine>
+     * @return a {@link java.util.List<PurchaseInvoiceLine>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<PurchaseInvoiceLine> getPurchaseInvoiceLines() {
@@ -316,7 +316,7 @@ public class Company implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the purchaseInvoices property value. The purchaseInvoices property
-     * @return a java.util.List<PurchaseInvoice>
+     * @return a {@link java.util.List<PurchaseInvoice>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<PurchaseInvoice> getPurchaseInvoices() {
@@ -324,7 +324,7 @@ public class Company implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the salesCreditMemoLines property value. The salesCreditMemoLines property
-     * @return a java.util.List<SalesCreditMemoLine>
+     * @return a {@link java.util.List<SalesCreditMemoLine>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<SalesCreditMemoLine> getSalesCreditMemoLines() {
@@ -332,7 +332,7 @@ public class Company implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the salesCreditMemos property value. The salesCreditMemos property
-     * @return a java.util.List<SalesCreditMemo>
+     * @return a {@link java.util.List<SalesCreditMemo>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<SalesCreditMemo> getSalesCreditMemos() {
@@ -340,7 +340,7 @@ public class Company implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the salesInvoiceLines property value. The salesInvoiceLines property
-     * @return a java.util.List<SalesInvoiceLine>
+     * @return a {@link java.util.List<SalesInvoiceLine>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<SalesInvoiceLine> getSalesInvoiceLines() {
@@ -348,7 +348,7 @@ public class Company implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the salesInvoices property value. The salesInvoices property
-     * @return a java.util.List<SalesInvoice>
+     * @return a {@link java.util.List<SalesInvoice>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<SalesInvoice> getSalesInvoices() {
@@ -356,7 +356,7 @@ public class Company implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the salesOrderLines property value. The salesOrderLines property
-     * @return a java.util.List<SalesOrderLine>
+     * @return a {@link java.util.List<SalesOrderLine>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<SalesOrderLine> getSalesOrderLines() {
@@ -364,7 +364,7 @@ public class Company implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the salesOrders property value. The salesOrders property
-     * @return a java.util.List<SalesOrder>
+     * @return a {@link java.util.List<SalesOrder>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<SalesOrder> getSalesOrders() {
@@ -372,7 +372,7 @@ public class Company implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the salesQuoteLines property value. The salesQuoteLines property
-     * @return a java.util.List<SalesQuoteLine>
+     * @return a {@link java.util.List<SalesQuoteLine>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<SalesQuoteLine> getSalesQuoteLines() {
@@ -380,7 +380,7 @@ public class Company implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the salesQuotes property value. The salesQuotes property
-     * @return a java.util.List<SalesQuote>
+     * @return a {@link java.util.List<SalesQuote>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<SalesQuote> getSalesQuotes() {
@@ -388,7 +388,7 @@ public class Company implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the shipmentMethods property value. The shipmentMethods property
-     * @return a java.util.List<ShipmentMethod>
+     * @return a {@link java.util.List<ShipmentMethod>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ShipmentMethod> getShipmentMethods() {
@@ -396,7 +396,7 @@ public class Company implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the systemVersion property value. The systemVersion property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSystemVersion() {
@@ -404,7 +404,7 @@ public class Company implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the taxAreas property value. The taxAreas property
-     * @return a java.util.List<TaxArea>
+     * @return a {@link java.util.List<TaxArea>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<TaxArea> getTaxAreas() {
@@ -412,7 +412,7 @@ public class Company implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the taxGroups property value. The taxGroups property
-     * @return a java.util.List<TaxGroup>
+     * @return a {@link java.util.List<TaxGroup>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<TaxGroup> getTaxGroups() {
@@ -420,7 +420,7 @@ public class Company implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the unitsOfMeasure property value. The unitsOfMeasure property
-     * @return a java.util.List<UnitOfMeasure>
+     * @return a {@link java.util.List<UnitOfMeasure>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnitOfMeasure> getUnitsOfMeasure() {
@@ -428,7 +428,7 @@ public class Company implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the vendors property value. The vendors property
-     * @return a java.util.List<Vendor>
+     * @return a {@link java.util.List<Vendor>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Vendor> getVendors() {

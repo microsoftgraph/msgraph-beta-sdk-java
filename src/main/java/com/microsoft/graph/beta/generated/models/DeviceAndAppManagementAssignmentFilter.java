@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceAndAppManagementAssignmentFilter extends Entity implements Parsable {
     /**
-     * Instantiates a new DeviceAndAppManagementAssignmentFilter and sets the default values.
+     * Instantiates a new {@link DeviceAndAppManagementAssignmentFilter} and sets the default values.
      */
     public DeviceAndAppManagementAssignmentFilter() {
         super();
@@ -21,7 +21,7 @@ public class DeviceAndAppManagementAssignmentFilter extends Entity implements Pa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceAndAppManagementAssignmentFilter
+     * @return a {@link DeviceAndAppManagementAssignmentFilter}
      */
     @jakarta.annotation.Nonnull
     public static DeviceAndAppManagementAssignmentFilter createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class DeviceAndAppManagementAssignmentFilter extends Entity implements Pa
     }
     /**
      * Gets the assignmentFilterManagementType property value. Supported filter management types whether its devices or apps.
-     * @return a AssignmentFilterManagementType
+     * @return a {@link AssignmentFilterManagementType}
      */
     @jakarta.annotation.Nullable
     public AssignmentFilterManagementType getAssignmentFilterManagementType() {
@@ -45,7 +45,7 @@ public class DeviceAndAppManagementAssignmentFilter extends Entity implements Pa
     }
     /**
      * Gets the createdDateTime property value. The creation time of the assignment filter. The value cannot be modified and is automatically populated during new assignment filter process. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -53,7 +53,7 @@ public class DeviceAndAppManagementAssignmentFilter extends Entity implements Pa
     }
     /**
      * Gets the description property value. Optional description of the Assignment Filter.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -61,7 +61,7 @@ public class DeviceAndAppManagementAssignmentFilter extends Entity implements Pa
     }
     /**
      * Gets the displayName property value. The name of the Assignment Filter.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -69,7 +69,7 @@ public class DeviceAndAppManagementAssignmentFilter extends Entity implements Pa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -87,7 +87,7 @@ public class DeviceAndAppManagementAssignmentFilter extends Entity implements Pa
     }
     /**
      * Gets the lastModifiedDateTime property value. Last modified time of the Assignment Filter. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -95,7 +95,7 @@ public class DeviceAndAppManagementAssignmentFilter extends Entity implements Pa
     }
     /**
      * Gets the payloads property value. Indicates associated assignments for a specific filter.
-     * @return a java.util.List<PayloadByFilter>
+     * @return a {@link java.util.List<PayloadByFilter>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<PayloadByFilter> getPayloads() {
@@ -103,7 +103,7 @@ public class DeviceAndAppManagementAssignmentFilter extends Entity implements Pa
     }
     /**
      * Gets the platform property value. Supported platform types.
-     * @return a DevicePlatformType
+     * @return a {@link DevicePlatformType}
      */
     @jakarta.annotation.Nullable
     public DevicePlatformType getPlatform() {
@@ -111,7 +111,7 @@ public class DeviceAndAppManagementAssignmentFilter extends Entity implements Pa
     }
     /**
      * Gets the roleScopeTags property value. Indicates role scope tags assigned for the assignment filter.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTags() {
@@ -119,7 +119,7 @@ public class DeviceAndAppManagementAssignmentFilter extends Entity implements Pa
     }
     /**
      * Gets the rule property value. Rule definition of the assignment filter.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRule() {

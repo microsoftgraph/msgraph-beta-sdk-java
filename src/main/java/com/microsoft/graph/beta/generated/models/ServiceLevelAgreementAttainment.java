@@ -19,7 +19,7 @@ public class ServiceLevelAgreementAttainment implements AdditionalDataHolder, Ba
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new ServiceLevelAgreementAttainment and sets the default values.
+     * Instantiates a new {@link ServiceLevelAgreementAttainment} and sets the default values.
      */
     public ServiceLevelAgreementAttainment() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class ServiceLevelAgreementAttainment implements AdditionalDataHolder, Ba
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ServiceLevelAgreementAttainment
+     * @return a {@link ServiceLevelAgreementAttainment}
      */
     @jakarta.annotation.Nonnull
     public static ServiceLevelAgreementAttainment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class ServiceLevelAgreementAttainment implements AdditionalDataHolder, Ba
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -50,7 +50,7 @@ public class ServiceLevelAgreementAttainment implements AdditionalDataHolder, Ba
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -58,7 +58,7 @@ public class ServiceLevelAgreementAttainment implements AdditionalDataHolder, Ba
     }
     /**
      * Gets the endDate property value. The end date for the calendar month for which SLA attainment is measured.
-     * @return a LocalDate
+     * @return a {@link LocalDate}
      */
     @jakarta.annotation.Nullable
     public LocalDate getEndDate() {
@@ -66,7 +66,7 @@ public class ServiceLevelAgreementAttainment implements AdditionalDataHolder, Ba
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -79,7 +79,7 @@ public class ServiceLevelAgreementAttainment implements AdditionalDataHolder, Ba
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -87,7 +87,7 @@ public class ServiceLevelAgreementAttainment implements AdditionalDataHolder, Ba
     }
     /**
      * Gets the score property value. The level of SLA attainment achieved by the tenant for the calendar month identified, as described in Microsoft Entra SLA performance. Values are truncated, not rounded, so the actual value is always equal to or higher than the displayed value. Values are expressed as a percentage of availability for the tenant.
-     * @return a Double
+     * @return a {@link Double}
      */
     @jakarta.annotation.Nullable
     public Double getScore() {
@@ -95,7 +95,7 @@ public class ServiceLevelAgreementAttainment implements AdditionalDataHolder, Ba
     }
     /**
      * Gets the startDate property value. The start date for the calendar month for which SLA attainment is measured.
-     * @return a LocalDate
+     * @return a {@link LocalDate}
      */
     @jakarta.annotation.Nullable
     public LocalDate getStartDate() {

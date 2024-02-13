@@ -25,6 +25,7 @@ import java.util.Objects;
 public class SupportedRegionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -33,7 +34,7 @@ public class SupportedRegionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the supportedRegions property of the microsoft.graph.virtualEndpoint entity.
      * @param cloudPcSupportedRegionId The unique identifier of cloudPcSupportedRegion
-     * @return a CloudPcSupportedRegionItemRequestBuilder
+     * @return a {@link CloudPcSupportedRegionItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CloudPcSupportedRegionItemRequestBuilder byCloudPcSupportedRegionId(@jakarta.annotation.Nonnull final String cloudPcSupportedRegionId) {
@@ -43,7 +44,7 @@ public class SupportedRegionsRequestBuilder extends BaseRequestBuilder {
         return new CloudPcSupportedRegionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new SupportedRegionsRequestBuilder and sets the default values.
+     * Instantiates a new {@link SupportedRegionsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -51,7 +52,7 @@ public class SupportedRegionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/supportedRegions{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new SupportedRegionsRequestBuilder and sets the default values.
+     * Instantiates a new {@link SupportedRegionsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -60,7 +61,8 @@ public class SupportedRegionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List the supported regions that are available for creating Cloud PC connections.
-     * @return a CloudPcSupportedRegionCollectionResponse
+     * @return a {@link CloudPcSupportedRegionCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-supportedregions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -70,21 +72,22 @@ public class SupportedRegionsRequestBuilder extends BaseRequestBuilder {
     /**
      * List the supported regions that are available for creating Cloud PC connections.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CloudPcSupportedRegionCollectionResponse
+     * @return a {@link CloudPcSupportedRegionCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-supportedregions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPcSupportedRegionCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, CloudPcSupportedRegionCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to supportedRegions for deviceManagement
      * @param body The request body
-     * @return a CloudPcSupportedRegion
+     * @return a {@link CloudPcSupportedRegion}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public CloudPcSupportedRegion post(@jakarta.annotation.Nonnull final CloudPcSupportedRegion body) {
@@ -94,20 +97,20 @@ public class SupportedRegionsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to supportedRegions for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CloudPcSupportedRegion
+     * @return a {@link CloudPcSupportedRegion}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public CloudPcSupportedRegion post(@jakarta.annotation.Nonnull final CloudPcSupportedRegion body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, CloudPcSupportedRegion::createFromDiscriminatorValue);
     }
     /**
      * List the supported regions that are available for creating Cloud PC connections.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -116,7 +119,7 @@ public class SupportedRegionsRequestBuilder extends BaseRequestBuilder {
     /**
      * List the supported regions that are available for creating Cloud PC connections.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -128,7 +131,7 @@ public class SupportedRegionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to supportedRegions for deviceManagement
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final CloudPcSupportedRegion body) {
@@ -138,12 +141,12 @@ public class SupportedRegionsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to supportedRegions for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final CloudPcSupportedRegion body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/deviceManagement/virtualEndpoint/supportedRegions", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -152,7 +155,7 @@ public class SupportedRegionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a SupportedRegionsRequestBuilder
+     * @return a {@link SupportedRegionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SupportedRegionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -206,7 +209,7 @@ public class SupportedRegionsRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

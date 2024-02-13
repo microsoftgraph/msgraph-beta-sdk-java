@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AndroidForWorkMobileAppConfiguration extends ManagedDeviceMobileAppConfiguration implements Parsable {
     /**
-     * Instantiates a new AndroidForWorkMobileAppConfiguration and sets the default values.
+     * Instantiates a new {@link AndroidForWorkMobileAppConfiguration} and sets the default values.
      */
     public AndroidForWorkMobileAppConfiguration() {
         super();
@@ -21,7 +21,7 @@ public class AndroidForWorkMobileAppConfiguration extends ManagedDeviceMobileApp
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AndroidForWorkMobileAppConfiguration
+     * @return a {@link AndroidForWorkMobileAppConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static AndroidForWorkMobileAppConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class AndroidForWorkMobileAppConfiguration extends ManagedDeviceMobileApp
     }
     /**
      * Gets the connectedAppsEnabled property value. Setting to specify whether to allow ConnectedApps experience for this app.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getConnectedAppsEnabled() {
@@ -38,7 +38,7 @@ public class AndroidForWorkMobileAppConfiguration extends ManagedDeviceMobileApp
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -52,7 +52,7 @@ public class AndroidForWorkMobileAppConfiguration extends ManagedDeviceMobileApp
     }
     /**
      * Gets the packageId property value. Android For Work app configuration package id.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPackageId() {
@@ -60,7 +60,7 @@ public class AndroidForWorkMobileAppConfiguration extends ManagedDeviceMobileApp
     }
     /**
      * Gets the payloadJson property value. Android For Work app configuration JSON payload.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPayloadJson() {
@@ -68,7 +68,7 @@ public class AndroidForWorkMobileAppConfiguration extends ManagedDeviceMobileApp
     }
     /**
      * Gets the permissionActions property value. List of Android app permissions and corresponding permission actions.
-     * @return a java.util.List<AndroidPermissionAction>
+     * @return a {@link java.util.List<AndroidPermissionAction>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AndroidPermissionAction> getPermissionActions() {
@@ -76,7 +76,7 @@ public class AndroidForWorkMobileAppConfiguration extends ManagedDeviceMobileApp
     }
     /**
      * Gets the profileApplicability property value. Android profile applicability
-     * @return a AndroidProfileApplicability
+     * @return a {@link AndroidProfileApplicability}
      */
     @jakarta.annotation.Nullable
     public AndroidProfileApplicability getProfileApplicability() {

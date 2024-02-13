@@ -18,7 +18,7 @@ public class DestinationSummary implements AdditionalDataHolder, BackedModel, Pa
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new DestinationSummary and sets the default values.
+     * Instantiates a new {@link DestinationSummary} and sets the default values.
      */
     public DestinationSummary() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class DestinationSummary implements AdditionalDataHolder, BackedModel, Pa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DestinationSummary
+     * @return a {@link DestinationSummary}
      */
     @jakarta.annotation.Nonnull
     public static DestinationSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class DestinationSummary implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class DestinationSummary implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class DestinationSummary implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the count property value. The number of the destinationSummary objects, aggregated by Global Secure Access service.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getCount() {
@@ -65,7 +65,7 @@ public class DestinationSummary implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the destination property value. The IP address or FQDN of the destination.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDestination() {
@@ -73,7 +73,7 @@ public class DestinationSummary implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -86,7 +86,7 @@ public class DestinationSummary implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -94,7 +94,7 @@ public class DestinationSummary implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the trafficType property value. The traffic classification. The allowed values are internet, private, microsoft365, all, and unknownFutureValue.
-     * @return a TrafficType
+     * @return a {@link TrafficType}
      */
     @jakarta.annotation.Nullable
     public TrafficType getTrafficType() {

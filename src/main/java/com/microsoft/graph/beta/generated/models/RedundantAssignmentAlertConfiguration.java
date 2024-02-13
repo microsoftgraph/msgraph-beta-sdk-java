@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class RedundantAssignmentAlertConfiguration extends UnifiedRoleManagementAlertConfiguration implements Parsable {
     /**
-     * Instantiates a new RedundantAssignmentAlertConfiguration and sets the default values.
+     * Instantiates a new {@link RedundantAssignmentAlertConfiguration} and sets the default values.
      */
     public RedundantAssignmentAlertConfiguration() {
         super();
@@ -19,7 +19,7 @@ public class RedundantAssignmentAlertConfiguration extends UnifiedRoleManagement
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a RedundantAssignmentAlertConfiguration
+     * @return a {@link RedundantAssignmentAlertConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static RedundantAssignmentAlertConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class RedundantAssignmentAlertConfiguration extends UnifiedRoleManagement
     }
     /**
      * Gets the duration property value. The number of days without activation to look back on from current timestamp.
-     * @return a PeriodAndDuration
+     * @return a {@link PeriodAndDuration}
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getDuration() {
@@ -36,7 +36,7 @@ public class RedundantAssignmentAlertConfiguration extends UnifiedRoleManagement
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

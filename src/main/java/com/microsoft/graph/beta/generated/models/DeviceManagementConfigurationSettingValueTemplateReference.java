@@ -21,7 +21,7 @@ public class DeviceManagementConfigurationSettingValueTemplateReference implemen
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new DeviceManagementConfigurationSettingValueTemplateReference and sets the default values.
+     * Instantiates a new {@link DeviceManagementConfigurationSettingValueTemplateReference} and sets the default values.
      */
     public DeviceManagementConfigurationSettingValueTemplateReference() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -30,7 +30,7 @@ public class DeviceManagementConfigurationSettingValueTemplateReference implemen
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceManagementConfigurationSettingValueTemplateReference
+     * @return a {@link DeviceManagementConfigurationSettingValueTemplateReference}
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementConfigurationSettingValueTemplateReference createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class DeviceManagementConfigurationSettingValueTemplateReference implemen
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -52,7 +52,7 @@ public class DeviceManagementConfigurationSettingValueTemplateReference implemen
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -60,7 +60,7 @@ public class DeviceManagementConfigurationSettingValueTemplateReference implemen
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -72,7 +72,7 @@ public class DeviceManagementConfigurationSettingValueTemplateReference implemen
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -80,7 +80,7 @@ public class DeviceManagementConfigurationSettingValueTemplateReference implemen
     }
     /**
      * Gets the settingValueTemplateId property value. Setting value template id
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSettingValueTemplateId() {
@@ -88,7 +88,7 @@ public class DeviceManagementConfigurationSettingValueTemplateReference implemen
     }
     /**
      * Gets the useTemplateDefault property value. Indicates whether to update policy setting value to match template setting default value
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getUseTemplateDefault() {

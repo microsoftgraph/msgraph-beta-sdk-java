@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TenantSetupInfo extends Entity implements Parsable {
     /**
-     * Instantiates a new TenantSetupInfo and sets the default values.
+     * Instantiates a new {@link TenantSetupInfo} and sets the default values.
      */
     public TenantSetupInfo() {
         super();
@@ -17,7 +17,7 @@ public class TenantSetupInfo extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TenantSetupInfo
+     * @return a {@link TenantSetupInfo}
      */
     @jakarta.annotation.Nonnull
     public static TenantSetupInfo createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class TenantSetupInfo extends Entity implements Parsable {
     }
     /**
      * Gets the defaultRolesSettings property value. The defaultRolesSettings property
-     * @return a PrivilegedRoleSettings
+     * @return a {@link PrivilegedRoleSettings}
      */
     @jakarta.annotation.Nullable
     public PrivilegedRoleSettings getDefaultRolesSettings() {
@@ -34,7 +34,7 @@ public class TenantSetupInfo extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -49,7 +49,7 @@ public class TenantSetupInfo extends Entity implements Parsable {
     }
     /**
      * Gets the firstTimeSetup property value. The firstTimeSetup property
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getFirstTimeSetup() {
@@ -57,7 +57,7 @@ public class TenantSetupInfo extends Entity implements Parsable {
     }
     /**
      * Gets the relevantRolesSettings property value. The relevantRolesSettings property
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRelevantRolesSettings() {
@@ -65,7 +65,7 @@ public class TenantSetupInfo extends Entity implements Parsable {
     }
     /**
      * Gets the setupStatus property value. The setupStatus property
-     * @return a SetupStatus
+     * @return a {@link SetupStatus}
      */
     @jakarta.annotation.Nullable
     public SetupStatus getSetupStatus() {
@@ -73,7 +73,7 @@ public class TenantSetupInfo extends Entity implements Parsable {
     }
     /**
      * Gets the skipSetup property value. The skipSetup property
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getSkipSetup() {
@@ -81,7 +81,7 @@ public class TenantSetupInfo extends Entity implements Parsable {
     }
     /**
      * Gets the userRolesActions property value. The userRolesActions property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserRolesActions() {

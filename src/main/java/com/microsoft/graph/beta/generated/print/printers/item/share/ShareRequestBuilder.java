@@ -21,7 +21,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ShareRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new ShareRequestBuilder and sets the default values.
+     * Instantiates a new {@link ShareRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -29,7 +29,7 @@ public class ShareRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/print/printers/{printer%2Did}/share{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new ShareRequestBuilder and sets the default values.
+     * Instantiates a new {@link ShareRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -38,7 +38,8 @@ public class ShareRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get share from print
-     * @return a PrinterShare
+     * @return a {@link PrinterShare}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The share navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
      */
@@ -50,7 +51,8 @@ public class ShareRequestBuilder extends BaseRequestBuilder {
     /**
      * Get share from print
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a PrinterShare
+     * @return a {@link PrinterShare}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The share navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
      */
@@ -59,13 +61,12 @@ public class ShareRequestBuilder extends BaseRequestBuilder {
     public PrinterShare get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, PrinterShare::createFromDiscriminatorValue);
     }
     /**
      * Get share from print
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      * The share navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
      */
@@ -77,7 +78,7 @@ public class ShareRequestBuilder extends BaseRequestBuilder {
     /**
      * Get share from print
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      * The share navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
      */
@@ -92,7 +93,7 @@ public class ShareRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a ShareRequestBuilder
+     * @return a {@link ShareRequestBuilder}
      * @deprecated
      * The share navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
      */
@@ -119,7 +120,7 @@ public class ShareRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

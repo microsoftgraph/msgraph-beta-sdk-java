@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MobileApp extends Entity implements Parsable {
     /**
-     * Instantiates a new MobileApp and sets the default values.
+     * Instantiates a new {@link MobileApp} and sets the default values.
      */
     public MobileApp() {
         super();
@@ -21,7 +21,7 @@ public class MobileApp extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MobileApp
+     * @return a {@link MobileApp}
      */
     @jakarta.annotation.Nonnull
     public static MobileApp createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -76,7 +76,7 @@ public class MobileApp extends Entity implements Parsable {
     }
     /**
      * Gets the assignments property value. The list of group assignments for this mobile app.
-     * @return a java.util.List<MobileAppAssignment>
+     * @return a {@link java.util.List<MobileAppAssignment>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<MobileAppAssignment> getAssignments() {
@@ -84,7 +84,7 @@ public class MobileApp extends Entity implements Parsable {
     }
     /**
      * Gets the categories property value. The list of categories for this app.
-     * @return a java.util.List<MobileAppCategory>
+     * @return a {@link java.util.List<MobileAppCategory>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<MobileAppCategory> getCategories() {
@@ -92,7 +92,7 @@ public class MobileApp extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. The date and time the app was created.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -100,7 +100,7 @@ public class MobileApp extends Entity implements Parsable {
     }
     /**
      * Gets the dependentAppCount property value. The total number of dependencies the child app has.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getDependentAppCount() {
@@ -108,7 +108,7 @@ public class MobileApp extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The description of the app.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -116,7 +116,7 @@ public class MobileApp extends Entity implements Parsable {
     }
     /**
      * Gets the developer property value. The developer of the app.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeveloper() {
@@ -124,7 +124,7 @@ public class MobileApp extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The admin provided or imported title of the app.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -132,7 +132,7 @@ public class MobileApp extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -163,7 +163,7 @@ public class MobileApp extends Entity implements Parsable {
     }
     /**
      * Gets the informationUrl property value. The more information Url.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getInformationUrl() {
@@ -171,7 +171,7 @@ public class MobileApp extends Entity implements Parsable {
     }
     /**
      * Gets the isAssigned property value. The value indicating whether the app is assigned to at least one group.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsAssigned() {
@@ -179,7 +179,7 @@ public class MobileApp extends Entity implements Parsable {
     }
     /**
      * Gets the isFeatured property value. The value indicating whether the app is marked as featured by the admin.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsFeatured() {
@@ -187,7 +187,7 @@ public class MobileApp extends Entity implements Parsable {
     }
     /**
      * Gets the largeIcon property value. The large icon, to be displayed in the app details and used for upload of the icon.
-     * @return a MimeContent
+     * @return a {@link MimeContent}
      */
     @jakarta.annotation.Nullable
     public MimeContent getLargeIcon() {
@@ -195,7 +195,7 @@ public class MobileApp extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. The date and time the app was last modified.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -203,7 +203,7 @@ public class MobileApp extends Entity implements Parsable {
     }
     /**
      * Gets the notes property value. Notes for the app.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getNotes() {
@@ -211,7 +211,7 @@ public class MobileApp extends Entity implements Parsable {
     }
     /**
      * Gets the owner property value. The owner of the app.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOwner() {
@@ -219,7 +219,7 @@ public class MobileApp extends Entity implements Parsable {
     }
     /**
      * Gets the privacyInformationUrl property value. The privacy statement Url.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPrivacyInformationUrl() {
@@ -227,7 +227,7 @@ public class MobileApp extends Entity implements Parsable {
     }
     /**
      * Gets the publisher property value. The publisher of the app.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPublisher() {
@@ -235,7 +235,7 @@ public class MobileApp extends Entity implements Parsable {
     }
     /**
      * Gets the publishingState property value. Indicates the publishing state of an app.
-     * @return a MobileAppPublishingState
+     * @return a {@link MobileAppPublishingState}
      */
     @jakarta.annotation.Nullable
     public MobileAppPublishingState getPublishingState() {
@@ -243,7 +243,7 @@ public class MobileApp extends Entity implements Parsable {
     }
     /**
      * Gets the relationships property value. List of relationships for this mobile app.
-     * @return a java.util.List<MobileAppRelationship>
+     * @return a {@link java.util.List<MobileAppRelationship>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<MobileAppRelationship> getRelationships() {
@@ -251,7 +251,7 @@ public class MobileApp extends Entity implements Parsable {
     }
     /**
      * Gets the roleScopeTagIds property value. List of scope tag ids for this mobile app.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {
@@ -259,7 +259,7 @@ public class MobileApp extends Entity implements Parsable {
     }
     /**
      * Gets the supersededAppCount property value. The total number of apps this app is directly or indirectly superseded by.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getSupersededAppCount() {
@@ -267,7 +267,7 @@ public class MobileApp extends Entity implements Parsable {
     }
     /**
      * Gets the supersedingAppCount property value. The total number of apps this app directly or indirectly supersedes.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getSupersedingAppCount() {
@@ -275,7 +275,7 @@ public class MobileApp extends Entity implements Parsable {
     }
     /**
      * Gets the uploadState property value. The upload state.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getUploadState() {

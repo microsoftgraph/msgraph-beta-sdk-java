@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AndroidDeviceOwnerGlobalProxyAutoConfig extends AndroidDeviceOwnerGlobalProxy implements Parsable {
     /**
-     * Instantiates a new AndroidDeviceOwnerGlobalProxyAutoConfig and sets the default values.
+     * Instantiates a new {@link AndroidDeviceOwnerGlobalProxyAutoConfig} and sets the default values.
      */
     public AndroidDeviceOwnerGlobalProxyAutoConfig() {
         super();
@@ -21,7 +21,7 @@ public class AndroidDeviceOwnerGlobalProxyAutoConfig extends AndroidDeviceOwnerG
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AndroidDeviceOwnerGlobalProxyAutoConfig
+     * @return a {@link AndroidDeviceOwnerGlobalProxyAutoConfig}
      */
     @jakarta.annotation.Nonnull
     public static AndroidDeviceOwnerGlobalProxyAutoConfig createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class AndroidDeviceOwnerGlobalProxyAutoConfig extends AndroidDeviceOwnerG
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -40,7 +40,7 @@ public class AndroidDeviceOwnerGlobalProxyAutoConfig extends AndroidDeviceOwnerG
     }
     /**
      * Gets the proxyAutoConfigURL property value. The proxy auto-config URL
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getProxyAutoConfigURL() {

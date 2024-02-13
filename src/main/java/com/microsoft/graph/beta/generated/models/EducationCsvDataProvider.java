@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EducationCsvDataProvider extends EducationSynchronizationDataProvider implements Parsable {
     /**
-     * Instantiates a new EducationCsvDataProvider and sets the default values.
+     * Instantiates a new {@link EducationCsvDataProvider} and sets the default values.
      */
     public EducationCsvDataProvider() {
         super();
@@ -18,7 +18,7 @@ public class EducationCsvDataProvider extends EducationSynchronizationDataProvid
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EducationCsvDataProvider
+     * @return a {@link EducationCsvDataProvider}
      */
     @jakarta.annotation.Nonnull
     public static EducationCsvDataProvider createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class EducationCsvDataProvider extends EducationSynchronizationDataProvid
     }
     /**
      * Gets the customizations property value. Optional customizations to be applied to the synchronization profile.
-     * @return a EducationSynchronizationCustomizations
+     * @return a {@link EducationSynchronizationCustomizations}
      */
     @jakarta.annotation.Nullable
     public EducationSynchronizationCustomizations getCustomizations() {
@@ -35,7 +35,7 @@ public class EducationCsvDataProvider extends EducationSynchronizationDataProvid
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

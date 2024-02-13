@@ -11,7 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagedTenantAlert extends Entity implements Parsable {
     /**
-     * Instantiates a new ManagedTenantAlert and sets the default values.
+     * Instantiates a new {@link ManagedTenantAlert} and sets the default values.
      */
     public ManagedTenantAlert() {
         super();
@@ -19,7 +19,7 @@ public class ManagedTenantAlert extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ManagedTenantAlert
+     * @return a {@link ManagedTenantAlert}
      */
     @jakarta.annotation.Nonnull
     public static ManagedTenantAlert createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class ManagedTenantAlert extends Entity implements Parsable {
     }
     /**
      * Gets the alertData property value. The alertData property
-     * @return a AlertData
+     * @return a {@link AlertData}
      */
     @jakarta.annotation.Nullable
     public AlertData getAlertData() {
@@ -36,7 +36,7 @@ public class ManagedTenantAlert extends Entity implements Parsable {
     }
     /**
      * Gets the alertDataReferenceStrings property value. The alertDataReferenceStrings property
-     * @return a java.util.List<AlertDataReferenceString>
+     * @return a {@link java.util.List<AlertDataReferenceString>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AlertDataReferenceString> getAlertDataReferenceStrings() {
@@ -44,7 +44,7 @@ public class ManagedTenantAlert extends Entity implements Parsable {
     }
     /**
      * Gets the alertLogs property value. The alertLogs property
-     * @return a java.util.List<ManagedTenantAlertLog>
+     * @return a {@link java.util.List<ManagedTenantAlertLog>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedTenantAlertLog> getAlertLogs() {
@@ -52,7 +52,7 @@ public class ManagedTenantAlert extends Entity implements Parsable {
     }
     /**
      * Gets the alertRule property value. The alertRule property
-     * @return a ManagedTenantAlertRule
+     * @return a {@link ManagedTenantAlertRule}
      */
     @jakarta.annotation.Nullable
     public ManagedTenantAlertRule getAlertRule() {
@@ -60,7 +60,7 @@ public class ManagedTenantAlert extends Entity implements Parsable {
     }
     /**
      * Gets the alertRuleDisplayName property value. The alertRuleDisplayName property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAlertRuleDisplayName() {
@@ -68,7 +68,7 @@ public class ManagedTenantAlert extends Entity implements Parsable {
     }
     /**
      * Gets the apiNotifications property value. The apiNotifications property
-     * @return a java.util.List<ManagedTenantApiNotification>
+     * @return a {@link java.util.List<ManagedTenantApiNotification>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedTenantApiNotification> getApiNotifications() {
@@ -76,7 +76,7 @@ public class ManagedTenantAlert extends Entity implements Parsable {
     }
     /**
      * Gets the assignedToUserId property value. The assignedToUserId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAssignedToUserId() {
@@ -84,7 +84,7 @@ public class ManagedTenantAlert extends Entity implements Parsable {
     }
     /**
      * Gets the correlationCount property value. The correlationCount property
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getCorrelationCount() {
@@ -92,7 +92,7 @@ public class ManagedTenantAlert extends Entity implements Parsable {
     }
     /**
      * Gets the correlationId property value. The correlationId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCorrelationId() {
@@ -100,7 +100,7 @@ public class ManagedTenantAlert extends Entity implements Parsable {
     }
     /**
      * Gets the createdByUserId property value. The createdByUserId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCreatedByUserId() {
@@ -108,7 +108,7 @@ public class ManagedTenantAlert extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. The createdDateTime property
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -116,7 +116,7 @@ public class ManagedTenantAlert extends Entity implements Parsable {
     }
     /**
      * Gets the emailNotifications property value. The emailNotifications property
-     * @return a java.util.List<ManagedTenantEmailNotification>
+     * @return a {@link java.util.List<ManagedTenantEmailNotification>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedTenantEmailNotification> getEmailNotifications() {
@@ -124,7 +124,7 @@ public class ManagedTenantAlert extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -152,7 +152,7 @@ public class ManagedTenantAlert extends Entity implements Parsable {
     }
     /**
      * Gets the lastActionByUserId property value. The lastActionByUserId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getLastActionByUserId() {
@@ -160,7 +160,7 @@ public class ManagedTenantAlert extends Entity implements Parsable {
     }
     /**
      * Gets the lastActionDateTime property value. The lastActionDateTime property
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastActionDateTime() {
@@ -168,7 +168,7 @@ public class ManagedTenantAlert extends Entity implements Parsable {
     }
     /**
      * Gets the message property value. The message property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getMessage() {
@@ -176,7 +176,7 @@ public class ManagedTenantAlert extends Entity implements Parsable {
     }
     /**
      * Gets the severity property value. The severity property
-     * @return a AlertSeverity
+     * @return a {@link AlertSeverity}
      */
     @jakarta.annotation.Nullable
     public AlertSeverity getSeverity() {
@@ -184,7 +184,7 @@ public class ManagedTenantAlert extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status property
-     * @return a AlertStatus
+     * @return a {@link AlertStatus}
      */
     @jakarta.annotation.Nullable
     public AlertStatus getStatus() {
@@ -192,7 +192,7 @@ public class ManagedTenantAlert extends Entity implements Parsable {
     }
     /**
      * Gets the tenantId property value. The tenantId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
@@ -200,7 +200,7 @@ public class ManagedTenantAlert extends Entity implements Parsable {
     }
     /**
      * Gets the title property value. The title property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTitle() {

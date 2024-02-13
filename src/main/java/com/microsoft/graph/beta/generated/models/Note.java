@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Note extends OutlookItem implements Parsable {
     /**
-     * Instantiates a new Note and sets the default values.
+     * Instantiates a new {@link Note} and sets the default values.
      */
     public Note() {
         super();
@@ -18,7 +18,7 @@ public class Note extends OutlookItem implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Note
+     * @return a {@link Note}
      */
     @jakarta.annotation.Nonnull
     public static Note createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class Note extends OutlookItem implements Parsable {
     }
     /**
      * Gets the attachments property value. The attachments property
-     * @return a java.util.List<Attachment>
+     * @return a {@link java.util.List<Attachment>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Attachment> getAttachments() {
@@ -35,7 +35,7 @@ public class Note extends OutlookItem implements Parsable {
     }
     /**
      * Gets the body property value. The body property
-     * @return a ItemBody
+     * @return a {@link ItemBody}
      */
     @jakarta.annotation.Nullable
     public ItemBody getBody() {
@@ -43,7 +43,7 @@ public class Note extends OutlookItem implements Parsable {
     }
     /**
      * Gets the extensions property value. The extensions property
-     * @return a java.util.List<Extension>
+     * @return a {@link java.util.List<Extension>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Extension> getExtensions() {
@@ -51,7 +51,7 @@ public class Note extends OutlookItem implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -68,7 +68,7 @@ public class Note extends OutlookItem implements Parsable {
     }
     /**
      * Gets the hasAttachments property value. The hasAttachments property
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getHasAttachments() {
@@ -76,7 +76,7 @@ public class Note extends OutlookItem implements Parsable {
     }
     /**
      * Gets the isDeleted property value. The isDeleted property
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDeleted() {
@@ -84,7 +84,7 @@ public class Note extends OutlookItem implements Parsable {
     }
     /**
      * Gets the multiValueExtendedProperties property value. The multiValueExtendedProperties property
-     * @return a java.util.List<MultiValueLegacyExtendedProperty>
+     * @return a {@link java.util.List<MultiValueLegacyExtendedProperty>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<MultiValueLegacyExtendedProperty> getMultiValueExtendedProperties() {
@@ -92,7 +92,7 @@ public class Note extends OutlookItem implements Parsable {
     }
     /**
      * Gets the singleValueExtendedProperties property value. The singleValueExtendedProperties property
-     * @return a java.util.List<SingleValueLegacyExtendedProperty>
+     * @return a {@link java.util.List<SingleValueLegacyExtendedProperty>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<SingleValueLegacyExtendedProperty> getSingleValueExtendedProperties() {
@@ -100,7 +100,7 @@ public class Note extends OutlookItem implements Parsable {
     }
     /**
      * Gets the subject property value. The subject property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSubject() {

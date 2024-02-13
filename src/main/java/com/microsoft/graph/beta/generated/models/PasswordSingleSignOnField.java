@@ -18,7 +18,7 @@ public class PasswordSingleSignOnField implements AdditionalDataHolder, BackedMo
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new PasswordSingleSignOnField and sets the default values.
+     * Instantiates a new {@link PasswordSingleSignOnField} and sets the default values.
      */
     public PasswordSingleSignOnField() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class PasswordSingleSignOnField implements AdditionalDataHolder, BackedMo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PasswordSingleSignOnField
+     * @return a {@link PasswordSingleSignOnField}
      */
     @jakarta.annotation.Nonnull
     public static PasswordSingleSignOnField createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class PasswordSingleSignOnField implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class PasswordSingleSignOnField implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class PasswordSingleSignOnField implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the customizedLabel property value. Title/label override for customization.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCustomizedLabel() {
@@ -65,7 +65,7 @@ public class PasswordSingleSignOnField implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the defaultLabel property value. Label that would be used if no customizedLabel is provided. Read only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDefaultLabel() {
@@ -73,7 +73,7 @@ public class PasswordSingleSignOnField implements AdditionalDataHolder, BackedMo
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -87,7 +87,7 @@ public class PasswordSingleSignOnField implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the fieldId property value. Id used to identity the field type. This is an internal ID and possible values are param1, param2, paramuserName, parampassword.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getFieldId() {
@@ -95,7 +95,7 @@ public class PasswordSingleSignOnField implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -103,7 +103,7 @@ public class PasswordSingleSignOnField implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the type property value. Type of the credential. The values can be text, password.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getType() {

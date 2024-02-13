@@ -21,7 +21,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new PlannerPlanItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link PlannerPlanItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -29,7 +29,7 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/planner/favoritePlans/{plannerPlan%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new PlannerPlanItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link PlannerPlanItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -38,7 +38,8 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read-only. Nullable. Returns the plannerPlans that the user marked as favorites.
-     * @return a PlannerPlan
+     * @return a {@link PlannerPlan}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public PlannerPlan get() {
@@ -47,19 +48,19 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read-only. Nullable. Returns the plannerPlans that the user marked as favorites.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a PlannerPlan
+     * @return a {@link PlannerPlan}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public PlannerPlan get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, PlannerPlan::createFromDiscriminatorValue);
     }
     /**
      * Read-only. Nullable. Returns the plannerPlans that the user marked as favorites.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -68,7 +69,7 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read-only. Nullable. Returns the plannerPlans that the user marked as favorites.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -80,7 +81,7 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a PlannerPlanItemRequestBuilder
+     * @return a {@link PlannerPlanItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PlannerPlanItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -104,7 +105,7 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

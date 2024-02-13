@@ -18,7 +18,7 @@ public class TeamworkNetworkConfiguration implements AdditionalDataHolder, Backe
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new TeamworkNetworkConfiguration and sets the default values.
+     * Instantiates a new {@link TeamworkNetworkConfiguration} and sets the default values.
      */
     public TeamworkNetworkConfiguration() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class TeamworkNetworkConfiguration implements AdditionalDataHolder, Backe
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TeamworkNetworkConfiguration
+     * @return a {@link TeamworkNetworkConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static TeamworkNetworkConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class TeamworkNetworkConfiguration implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class TeamworkNetworkConfiguration implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class TeamworkNetworkConfiguration implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the defaultGateway property value. The default gateway is the path used to pass information when the destination is unknown to the device.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDefaultGateway() {
@@ -65,7 +65,7 @@ public class TeamworkNetworkConfiguration implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the domainName property value. The network domain of the device, for example, contoso.com.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDomainName() {
@@ -73,7 +73,7 @@ public class TeamworkNetworkConfiguration implements AdditionalDataHolder, Backe
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -92,7 +92,7 @@ public class TeamworkNetworkConfiguration implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the hostName property value. The device name on a network.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getHostName() {
@@ -100,7 +100,7 @@ public class TeamworkNetworkConfiguration implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the ipAddress property value. The IP address is a numerical label that uniquely identifies every device connected to the internet.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getIpAddress() {
@@ -108,7 +108,7 @@ public class TeamworkNetworkConfiguration implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the isDhcpEnabled property value. True if DHCP is enabled.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDhcpEnabled() {
@@ -116,7 +116,7 @@ public class TeamworkNetworkConfiguration implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the isPCPortEnabled property value. True if the PC port is enabled.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsPCPortEnabled() {
@@ -124,7 +124,7 @@ public class TeamworkNetworkConfiguration implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -132,7 +132,7 @@ public class TeamworkNetworkConfiguration implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the primaryDns property value. A primary DNS is the first point of contact for a device that translates the hostname into an IP address.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPrimaryDns() {
@@ -140,7 +140,7 @@ public class TeamworkNetworkConfiguration implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the secondaryDns property value. A secondary DNS is used when the primary DNS is not available.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSecondaryDns() {
@@ -148,7 +148,7 @@ public class TeamworkNetworkConfiguration implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the subnetMask property value. A subnet mask is a number that distinguishes the network address and the host address within an IP address.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSubnetMask() {

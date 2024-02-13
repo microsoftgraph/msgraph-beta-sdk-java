@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Win32LobAppFileSystemDetection extends Win32LobAppDetection implements Parsable {
     /**
-     * Instantiates a new Win32LobAppFileSystemDetection and sets the default values.
+     * Instantiates a new {@link Win32LobAppFileSystemDetection} and sets the default values.
      */
     public Win32LobAppFileSystemDetection() {
         super();
@@ -22,7 +22,7 @@ public class Win32LobAppFileSystemDetection extends Win32LobAppDetection impleme
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Win32LobAppFileSystemDetection
+     * @return a {@link Win32LobAppFileSystemDetection}
      */
     @jakarta.annotation.Nonnull
     public static Win32LobAppFileSystemDetection createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -31,7 +31,7 @@ public class Win32LobAppFileSystemDetection extends Win32LobAppDetection impleme
     }
     /**
      * Gets the check32BitOn64System property value. A value indicating whether this file or folder is for checking 32-bit app on 64-bit system
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getCheck32BitOn64System() {
@@ -39,7 +39,7 @@ public class Win32LobAppFileSystemDetection extends Win32LobAppDetection impleme
     }
     /**
      * Gets the detectionType property value. Contains all supported file system detection type.
-     * @return a Win32LobAppFileSystemDetectionType
+     * @return a {@link Win32LobAppFileSystemDetectionType}
      */
     @jakarta.annotation.Nullable
     public Win32LobAppFileSystemDetectionType getDetectionType() {
@@ -47,7 +47,7 @@ public class Win32LobAppFileSystemDetection extends Win32LobAppDetection impleme
     }
     /**
      * Gets the detectionValue property value. The file or folder detection value
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDetectionValue() {
@@ -55,7 +55,7 @@ public class Win32LobAppFileSystemDetection extends Win32LobAppDetection impleme
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -70,7 +70,7 @@ public class Win32LobAppFileSystemDetection extends Win32LobAppDetection impleme
     }
     /**
      * Gets the fileOrFolderName property value. The file or folder name to detect Win32 Line of Business (LoB) app
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getFileOrFolderName() {
@@ -78,7 +78,7 @@ public class Win32LobAppFileSystemDetection extends Win32LobAppDetection impleme
     }
     /**
      * Gets the operator property value. Contains properties for detection operator.
-     * @return a EnumSet<Win32LobAppDetectionOperator>
+     * @return a {@link EnumSet<Win32LobAppDetectionOperator>}
      */
     @jakarta.annotation.Nullable
     public EnumSet<Win32LobAppDetectionOperator> getOperator() {
@@ -86,7 +86,7 @@ public class Win32LobAppFileSystemDetection extends Win32LobAppDetection impleme
     }
     /**
      * Gets the path property value. The file or folder path to detect Win32 Line of Business (LoB) app
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPath() {

@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class VirtualEventTownhall extends VirtualEvent implements Parsable {
     /**
-     * Instantiates a new VirtualEventTownhall and sets the default values.
+     * Instantiates a new {@link VirtualEventTownhall} and sets the default values.
      */
     public VirtualEventTownhall() {
         super();
@@ -18,7 +18,7 @@ public class VirtualEventTownhall extends VirtualEvent implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a VirtualEventTownhall
+     * @return a {@link VirtualEventTownhall}
      */
     @jakarta.annotation.Nonnull
     public static VirtualEventTownhall createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class VirtualEventTownhall extends VirtualEvent implements Parsable {
     }
     /**
      * Gets the audience property value. The audience property
-     * @return a MeetingAudience
+     * @return a {@link MeetingAudience}
      */
     @jakarta.annotation.Nullable
     public MeetingAudience getAudience() {
@@ -35,7 +35,7 @@ public class VirtualEventTownhall extends VirtualEvent implements Parsable {
     }
     /**
      * Gets the coOrganizers property value. The coOrganizers property
-     * @return a java.util.List<CommunicationsUserIdentity>
+     * @return a {@link java.util.List<CommunicationsUserIdentity>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<CommunicationsUserIdentity> getCoOrganizers() {
@@ -43,7 +43,7 @@ public class VirtualEventTownhall extends VirtualEvent implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -56,7 +56,7 @@ public class VirtualEventTownhall extends VirtualEvent implements Parsable {
     }
     /**
      * Gets the invitedAttendees property value. The invitedAttendees property
-     * @return a java.util.List<CommunicationsUserIdentity>
+     * @return a {@link java.util.List<CommunicationsUserIdentity>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<CommunicationsUserIdentity> getInvitedAttendees() {
@@ -64,7 +64,7 @@ public class VirtualEventTownhall extends VirtualEvent implements Parsable {
     }
     /**
      * Gets the isInviteOnly property value. The isInviteOnly property
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsInviteOnly() {

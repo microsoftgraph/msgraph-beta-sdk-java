@@ -18,7 +18,7 @@ public class AccessReviewSettings implements AdditionalDataHolder, BackedModel, 
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new AccessReviewSettings and sets the default values.
+     * Instantiates a new {@link AccessReviewSettings} and sets the default values.
      */
     public AccessReviewSettings() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class AccessReviewSettings implements AdditionalDataHolder, BackedModel, 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AccessReviewSettings
+     * @return a {@link AccessReviewSettings}
      */
     @jakarta.annotation.Nonnull
     public static AccessReviewSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,7 +43,7 @@ public class AccessReviewSettings implements AdditionalDataHolder, BackedModel, 
     }
     /**
      * Gets the accessRecommendationsEnabled property value. Indicates whether showing recommendations to reviewers is enabled.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAccessRecommendationsEnabled() {
@@ -51,7 +51,7 @@ public class AccessReviewSettings implements AdditionalDataHolder, BackedModel, 
     }
     /**
      * Gets the activityDurationInDays property value. The number of days of user activities to show to reviewers.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getActivityDurationInDays() {
@@ -59,7 +59,7 @@ public class AccessReviewSettings implements AdditionalDataHolder, BackedModel, 
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -72,7 +72,7 @@ public class AccessReviewSettings implements AdditionalDataHolder, BackedModel, 
     }
     /**
      * Gets the autoApplyReviewResultsEnabled property value. Indicates whether the auto-apply capability, to automatically change the target object access resource, is enabled.  If not enabled, a user must, after the review completes, apply the access review.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAutoApplyReviewResultsEnabled() {
@@ -80,7 +80,7 @@ public class AccessReviewSettings implements AdditionalDataHolder, BackedModel, 
     }
     /**
      * Gets the autoReviewEnabled property value. Indicates whether a decision should be set if the reviewer didn't supply one. For use when, auto-apply is enabled. If you don't want to have a review decision recorded unless the reviewer makes an explicit choice, set it to false.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAutoReviewEnabled() {
@@ -88,7 +88,7 @@ public class AccessReviewSettings implements AdditionalDataHolder, BackedModel, 
     }
     /**
      * Gets the autoReviewSettings property value. Detailed settings for how the feature should set the review decision. For use when, auto-apply is enabled.
-     * @return a AutoReviewSettings
+     * @return a {@link AutoReviewSettings}
      */
     @jakarta.annotation.Nullable
     public AutoReviewSettings getAutoReviewSettings() {
@@ -96,7 +96,7 @@ public class AccessReviewSettings implements AdditionalDataHolder, BackedModel, 
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -104,7 +104,7 @@ public class AccessReviewSettings implements AdditionalDataHolder, BackedModel, 
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -123,7 +123,7 @@ public class AccessReviewSettings implements AdditionalDataHolder, BackedModel, 
     }
     /**
      * Gets the justificationRequiredOnApproval property value. Indicates whether reviewers are required to provide a justification when reviewing access.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getJustificationRequiredOnApproval() {
@@ -131,7 +131,7 @@ public class AccessReviewSettings implements AdditionalDataHolder, BackedModel, 
     }
     /**
      * Gets the mailNotificationsEnabled property value. Indicates whether sending mails to reviewers and the review creator is enabled.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getMailNotificationsEnabled() {
@@ -139,7 +139,7 @@ public class AccessReviewSettings implements AdditionalDataHolder, BackedModel, 
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -147,7 +147,7 @@ public class AccessReviewSettings implements AdditionalDataHolder, BackedModel, 
     }
     /**
      * Gets the recurrenceSettings property value. Detailed settings for recurrence.
-     * @return a AccessReviewRecurrenceSettings
+     * @return a {@link AccessReviewRecurrenceSettings}
      */
     @jakarta.annotation.Nullable
     public AccessReviewRecurrenceSettings getRecurrenceSettings() {
@@ -155,7 +155,7 @@ public class AccessReviewSettings implements AdditionalDataHolder, BackedModel, 
     }
     /**
      * Gets the remindersEnabled property value. Indicates whether sending reminder emails to reviewers is enabled.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getRemindersEnabled() {

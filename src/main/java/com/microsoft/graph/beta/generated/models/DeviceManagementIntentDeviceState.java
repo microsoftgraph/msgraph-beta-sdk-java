@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementIntentDeviceState extends Entity implements Parsable {
     /**
-     * Instantiates a new DeviceManagementIntentDeviceState and sets the default values.
+     * Instantiates a new {@link DeviceManagementIntentDeviceState} and sets the default values.
      */
     public DeviceManagementIntentDeviceState() {
         super();
@@ -21,7 +21,7 @@ public class DeviceManagementIntentDeviceState extends Entity implements Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceManagementIntentDeviceState
+     * @return a {@link DeviceManagementIntentDeviceState}
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementIntentDeviceState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class DeviceManagementIntentDeviceState extends Entity implements Parsabl
     }
     /**
      * Gets the deviceDisplayName property value. Device name that is being reported
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceDisplayName() {
@@ -38,7 +38,7 @@ public class DeviceManagementIntentDeviceState extends Entity implements Parsabl
     }
     /**
      * Gets the deviceId property value. Device id that is being reported
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceId() {
@@ -46,7 +46,7 @@ public class DeviceManagementIntentDeviceState extends Entity implements Parsabl
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -61,7 +61,7 @@ public class DeviceManagementIntentDeviceState extends Entity implements Parsabl
     }
     /**
      * Gets the lastReportedDateTime property value. Last modified date time of an intent report
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastReportedDateTime() {
@@ -69,7 +69,7 @@ public class DeviceManagementIntentDeviceState extends Entity implements Parsabl
     }
     /**
      * Gets the state property value. The state property
-     * @return a ComplianceStatus
+     * @return a {@link ComplianceStatus}
      */
     @jakarta.annotation.Nullable
     public ComplianceStatus getState() {
@@ -77,7 +77,7 @@ public class DeviceManagementIntentDeviceState extends Entity implements Parsabl
     }
     /**
      * Gets the userName property value. The user name that is being reported on a device
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserName() {
@@ -85,7 +85,7 @@ public class DeviceManagementIntentDeviceState extends Entity implements Parsabl
     }
     /**
      * Gets the userPrincipalName property value. The user principal name that is being reported on a device
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {

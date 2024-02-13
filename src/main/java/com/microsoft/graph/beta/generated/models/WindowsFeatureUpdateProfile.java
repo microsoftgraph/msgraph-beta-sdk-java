@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
     /**
-     * Instantiates a new WindowsFeatureUpdateProfile and sets the default values.
+     * Instantiates a new {@link WindowsFeatureUpdateProfile} and sets the default values.
      */
     public WindowsFeatureUpdateProfile() {
         super();
@@ -21,7 +21,7 @@ public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WindowsFeatureUpdateProfile
+     * @return a {@link WindowsFeatureUpdateProfile}
      */
     @jakarta.annotation.Nonnull
     public static WindowsFeatureUpdateProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
     }
     /**
      * Gets the assignments property value. The list of group assignments of the profile.
-     * @return a java.util.List<WindowsFeatureUpdateProfileAssignment>
+     * @return a {@link java.util.List<WindowsFeatureUpdateProfileAssignment>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<WindowsFeatureUpdateProfileAssignment> getAssignments() {
@@ -38,7 +38,7 @@ public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. The date time that the profile was created.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -46,7 +46,7 @@ public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
     }
     /**
      * Gets the deployableContentDisplayName property value. Friendly display name of the quality update profile deployable content
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeployableContentDisplayName() {
@@ -54,7 +54,7 @@ public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The description of the profile which is specified by the user.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -62,7 +62,7 @@ public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name of the profile.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -70,7 +70,7 @@ public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
     }
     /**
      * Gets the endOfSupportDate property value. The last supported date for a feature update
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getEndOfSupportDate() {
@@ -78,7 +78,7 @@ public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
     }
     /**
      * Gets the featureUpdateVersion property value. The feature update version that will be deployed to the devices targeted by this profile. The version could be any supported version for example 1709, 1803 or 1809 and so on.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getFeatureUpdateVersion() {
@@ -86,7 +86,7 @@ public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -106,7 +106,7 @@ public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
     }
     /**
      * Gets the installLatestWindows10OnWindows11IneligibleDevice property value. If true, the latest Microsoft Windows 10 update will be installed on devices ineligible for Microsoft Windows 11
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getInstallLatestWindows10OnWindows11IneligibleDevice() {
@@ -114,7 +114,7 @@ public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. The date time that the profile was last modified.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -122,7 +122,7 @@ public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
     }
     /**
      * Gets the roleScopeTagIds property value. List of Scope Tags for this Feature Update entity.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {
@@ -130,7 +130,7 @@ public class WindowsFeatureUpdateProfile extends Entity implements Parsable {
     }
     /**
      * Gets the rolloutSettings property value. The windows update rollout settings, including offer start date time, offer end date time, and days between each set of offers.
-     * @return a WindowsUpdateRolloutSettings
+     * @return a {@link WindowsUpdateRolloutSettings}
      */
     @jakarta.annotation.Nullable
     public WindowsUpdateRolloutSettings getRolloutSettings() {

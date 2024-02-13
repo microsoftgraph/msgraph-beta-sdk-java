@@ -25,6 +25,7 @@ import java.util.Objects;
 public class MicrosoftTunnelServerLogCollectionResponsesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -33,7 +34,7 @@ public class MicrosoftTunnelServerLogCollectionResponsesRequestBuilder extends B
     /**
      * Provides operations to manage the microsoftTunnelServerLogCollectionResponses property of the microsoft.graph.deviceManagement entity.
      * @param microsoftTunnelServerLogCollectionResponseId The unique identifier of microsoftTunnelServerLogCollectionResponse
-     * @return a MicrosoftTunnelServerLogCollectionResponseItemRequestBuilder
+     * @return a {@link MicrosoftTunnelServerLogCollectionResponseItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MicrosoftTunnelServerLogCollectionResponseItemRequestBuilder byMicrosoftTunnelServerLogCollectionResponseId(@jakarta.annotation.Nonnull final String microsoftTunnelServerLogCollectionResponseId) {
@@ -43,7 +44,7 @@ public class MicrosoftTunnelServerLogCollectionResponsesRequestBuilder extends B
         return new MicrosoftTunnelServerLogCollectionResponseItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new MicrosoftTunnelServerLogCollectionResponsesRequestBuilder and sets the default values.
+     * Instantiates a new {@link MicrosoftTunnelServerLogCollectionResponsesRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -51,7 +52,7 @@ public class MicrosoftTunnelServerLogCollectionResponsesRequestBuilder extends B
         super(requestAdapter, "{+baseurl}/deviceManagement/microsoftTunnelServerLogCollectionResponses{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new MicrosoftTunnelServerLogCollectionResponsesRequestBuilder and sets the default values.
+     * Instantiates a new {@link MicrosoftTunnelServerLogCollectionResponsesRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -60,7 +61,8 @@ public class MicrosoftTunnelServerLogCollectionResponsesRequestBuilder extends B
     }
     /**
      * Collection of MicrosoftTunnelServerLogCollectionResponse settings associated with account.
-     * @return a MicrosoftTunnelServerLogCollectionResponseCollectionResponse
+     * @return a {@link MicrosoftTunnelServerLogCollectionResponseCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public MicrosoftTunnelServerLogCollectionResponseCollectionResponse get() {
@@ -69,20 +71,21 @@ public class MicrosoftTunnelServerLogCollectionResponsesRequestBuilder extends B
     /**
      * Collection of MicrosoftTunnelServerLogCollectionResponse settings associated with account.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a MicrosoftTunnelServerLogCollectionResponseCollectionResponse
+     * @return a {@link MicrosoftTunnelServerLogCollectionResponseCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public MicrosoftTunnelServerLogCollectionResponseCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, MicrosoftTunnelServerLogCollectionResponseCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to microsoftTunnelServerLogCollectionResponses for deviceManagement
      * @param body The request body
-     * @return a MicrosoftTunnelServerLogCollectionResponse
+     * @return a {@link MicrosoftTunnelServerLogCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public MicrosoftTunnelServerLogCollectionResponse post(@jakarta.annotation.Nonnull final MicrosoftTunnelServerLogCollectionResponse body) {
@@ -92,20 +95,20 @@ public class MicrosoftTunnelServerLogCollectionResponsesRequestBuilder extends B
      * Create new navigation property to microsoftTunnelServerLogCollectionResponses for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a MicrosoftTunnelServerLogCollectionResponse
+     * @return a {@link MicrosoftTunnelServerLogCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public MicrosoftTunnelServerLogCollectionResponse post(@jakarta.annotation.Nonnull final MicrosoftTunnelServerLogCollectionResponse body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, MicrosoftTunnelServerLogCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Collection of MicrosoftTunnelServerLogCollectionResponse settings associated with account.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -114,7 +117,7 @@ public class MicrosoftTunnelServerLogCollectionResponsesRequestBuilder extends B
     /**
      * Collection of MicrosoftTunnelServerLogCollectionResponse settings associated with account.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -126,7 +129,7 @@ public class MicrosoftTunnelServerLogCollectionResponsesRequestBuilder extends B
     /**
      * Create new navigation property to microsoftTunnelServerLogCollectionResponses for deviceManagement
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final MicrosoftTunnelServerLogCollectionResponse body) {
@@ -136,12 +139,12 @@ public class MicrosoftTunnelServerLogCollectionResponsesRequestBuilder extends B
      * Create new navigation property to microsoftTunnelServerLogCollectionResponses for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final MicrosoftTunnelServerLogCollectionResponse body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/deviceManagement/microsoftTunnelServerLogCollectionResponses", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -150,7 +153,7 @@ public class MicrosoftTunnelServerLogCollectionResponsesRequestBuilder extends B
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a MicrosoftTunnelServerLogCollectionResponsesRequestBuilder
+     * @return a {@link MicrosoftTunnelServerLogCollectionResponsesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MicrosoftTunnelServerLogCollectionResponsesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -204,7 +207,7 @@ public class MicrosoftTunnelServerLogCollectionResponsesRequestBuilder extends B
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

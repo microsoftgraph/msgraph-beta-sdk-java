@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
     /**
-     * Instantiates a new AccessPackageAssignmentPolicy and sets the default values.
+     * Instantiates a new {@link AccessPackageAssignmentPolicy} and sets the default values.
      */
     public AccessPackageAssignmentPolicy() {
         super();
@@ -18,7 +18,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AccessPackageAssignmentPolicy
+     * @return a {@link AccessPackageAssignmentPolicy}
      */
     @jakarta.annotation.Nonnull
     public static AccessPackageAssignmentPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the accessPackage property value. The access package with this policy. Read-only. Nullable. Supports $expand.
-     * @return a AccessPackage
+     * @return a {@link AccessPackage}
      */
     @jakarta.annotation.Nullable
     public AccessPackage getAccessPackage() {
@@ -35,7 +35,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the accessPackageCatalog property value. The accessPackageCatalog property
-     * @return a AccessPackageCatalog
+     * @return a {@link AccessPackageCatalog}
      */
     @jakarta.annotation.Nullable
     public AccessPackageCatalog getAccessPackageCatalog() {
@@ -43,7 +43,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the accessPackageId property value. Identifier of the access package.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAccessPackageId() {
@@ -51,7 +51,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the accessReviewSettings property value. Who must review, and how often, the assignments to the access package from this policy. This property is null if reviews aren't required.
-     * @return a AssignmentReviewSettings
+     * @return a {@link AssignmentReviewSettings}
      */
     @jakarta.annotation.Nullable
     public AssignmentReviewSettings getAccessReviewSettings() {
@@ -59,7 +59,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the canExtend property value. Indicates whether a user can extend the access package assignment duration after approval.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getCanExtend() {
@@ -67,7 +67,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the createdBy property value. The createdBy property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCreatedBy() {
@@ -75,7 +75,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -83,7 +83,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the customExtensionHandlers property value. The collection of stages when to execute one or more custom access package workflow extensions. Supports $expand.
-     * @return a java.util.List<CustomExtensionHandler>
+     * @return a {@link java.util.List<CustomExtensionHandler>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<CustomExtensionHandler> getCustomExtensionHandlers() {
@@ -91,7 +91,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the customExtensionStageSettings property value. The collection of stages when to execute one or more custom access package workflow extensions. Supports $expand.
-     * @return a java.util.List<CustomExtensionStageSetting>
+     * @return a {@link java.util.List<CustomExtensionStageSetting>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<CustomExtensionStageSetting> getCustomExtensionStageSettings() {
@@ -99,7 +99,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The description of the policy.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -107,7 +107,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name of the policy. Supports $filter (eq).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -115,7 +115,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the durationInDays property value. The number of days in which assignments from this policy last until they're expired.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getDurationInDays() {
@@ -123,7 +123,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the expirationDateTime property value. The expiration date for assignments created in this policy. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getExpirationDateTime() {
@@ -131,7 +131,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -159,7 +159,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the modifiedBy property value. The modifiedBy property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getModifiedBy() {
@@ -167,7 +167,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the modifiedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getModifiedDateTime() {
@@ -175,7 +175,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the questions property value. Questions that are posed to the  requestor.
-     * @return a java.util.List<AccessPackageQuestion>
+     * @return a {@link java.util.List<AccessPackageQuestion>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackageQuestion> getQuestions() {
@@ -183,7 +183,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the requestApprovalSettings property value. Who must approve requests for access package in this policy.
-     * @return a ApprovalSettings
+     * @return a {@link ApprovalSettings}
      */
     @jakarta.annotation.Nullable
     public ApprovalSettings getRequestApprovalSettings() {
@@ -191,7 +191,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the requestorSettings property value. Who can request this access package from this policy.
-     * @return a RequestorSettings
+     * @return a {@link RequestorSettings}
      */
     @jakarta.annotation.Nullable
     public RequestorSettings getRequestorSettings() {
@@ -199,7 +199,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the verifiableCredentialSettings property value. Settings for verifiable credentials set up through the Microsoft Entra Verified I D service. These settings represent the verifiable credentials that a requestor of an access package in this policy can present to be assigned the access package.
-     * @return a VerifiableCredentialSettings
+     * @return a {@link VerifiableCredentialSettings}
      */
     @jakarta.annotation.Nullable
     public VerifiableCredentialSettings getVerifiableCredentialSettings() {

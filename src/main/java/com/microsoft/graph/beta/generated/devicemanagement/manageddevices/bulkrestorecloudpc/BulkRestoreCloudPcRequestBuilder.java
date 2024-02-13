@@ -20,7 +20,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class BulkRestoreCloudPcRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new BulkRestoreCloudPcRequestBuilder and sets the default values.
+     * Instantiates a new {@link BulkRestoreCloudPcRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -28,7 +28,7 @@ public class BulkRestoreCloudPcRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/managedDevices/bulkRestoreCloudPc", pathParameters);
     }
     /**
-     * Instantiates a new BulkRestoreCloudPcRequestBuilder and sets the default values.
+     * Instantiates a new {@link BulkRestoreCloudPcRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -38,7 +38,8 @@ public class BulkRestoreCloudPcRequestBuilder extends BaseRequestBuilder {
     /**
      * Restore multiple Cloud PC devices with a single request that includes the IDs of Intune managed devices and a restore point date and time.
      * @param body The request body
-     * @return a CloudPcBulkRemoteActionResult
+     * @return a {@link CloudPcBulkRemoteActionResult}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The bulkRestoreCloudPc action is deprecated and will stop supporting on September 24, 2023. Please use bulk action entity api. as of 2023-05/bulkRestoreCloudPc
      * @see <a href="https://learn.microsoft.com/graph/api/manageddevice-bulkrestorecloudpc?view=graph-rest-1.0">Find more info here</a>
@@ -52,7 +53,8 @@ public class BulkRestoreCloudPcRequestBuilder extends BaseRequestBuilder {
      * Restore multiple Cloud PC devices with a single request that includes the IDs of Intune managed devices and a restore point date and time.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CloudPcBulkRemoteActionResult
+     * @return a {@link CloudPcBulkRemoteActionResult}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The bulkRestoreCloudPc action is deprecated and will stop supporting on September 24, 2023. Please use bulk action entity api. as of 2023-05/bulkRestoreCloudPc
      * @see <a href="https://learn.microsoft.com/graph/api/manageddevice-bulkrestorecloudpc?view=graph-rest-1.0">Find more info here</a>
@@ -63,14 +65,13 @@ public class BulkRestoreCloudPcRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, CloudPcBulkRemoteActionResult::createFromDiscriminatorValue);
     }
     /**
      * Restore multiple Cloud PC devices with a single request that includes the IDs of Intune managed devices and a restore point date and time.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      * The bulkRestoreCloudPc action is deprecated and will stop supporting on September 24, 2023. Please use bulk action entity api. as of 2023-05/bulkRestoreCloudPc
      */
@@ -83,7 +84,7 @@ public class BulkRestoreCloudPcRequestBuilder extends BaseRequestBuilder {
      * Restore multiple Cloud PC devices with a single request that includes the IDs of Intune managed devices and a restore point date and time.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      * The bulkRestoreCloudPc action is deprecated and will stop supporting on September 24, 2023. Please use bulk action entity api. as of 2023-05/bulkRestoreCloudPc
      */
@@ -100,7 +101,7 @@ public class BulkRestoreCloudPcRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a BulkRestoreCloudPcRequestBuilder
+     * @return a {@link BulkRestoreCloudPcRequestBuilder}
      * @deprecated
      * The bulkRestoreCloudPc action is deprecated and will stop supporting on September 24, 2023. Please use bulk action entity api. as of 2023-05/bulkRestoreCloudPc
      */

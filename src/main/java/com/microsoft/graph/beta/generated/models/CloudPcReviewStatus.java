@@ -19,7 +19,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, BackedModel, P
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new CloudPcReviewStatus and sets the default values.
+     * Instantiates a new {@link CloudPcReviewStatus} and sets the default values.
      */
     public CloudPcReviewStatus() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, BackedModel, P
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CloudPcReviewStatus
+     * @return a {@link CloudPcReviewStatus}
      */
     @jakarta.annotation.Nonnull
     public static CloudPcReviewStatus createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -50,7 +50,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the azureStorageAccountId property value. The resource ID of the Azure Storage account in which the Cloud PC snapshot is being saved.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAzureStorageAccountId() {
@@ -58,7 +58,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the azureStorageAccountName property value. The name of the Azure Storage account in which the Cloud PC snapshot is being saved.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAzureStorageAccountName() {
@@ -66,7 +66,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the azureStorageContainerName property value. The name of the container in an Azure Storage account in which the Cloud PC snapshot is being saved.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAzureStorageContainerName() {
@@ -74,7 +74,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -82,7 +82,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -101,7 +101,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the inReview property value. True if the Cloud PC is set to in review by the administrator.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getInReview() {
@@ -109,7 +109,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -117,7 +117,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the restorePointDateTime property value. The specific date and time of the Cloud PC snapshot that was taken and saved automatically, when the Cloud PC is set to in review. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as 2014-01-01T00:00:00Z.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getRestorePointDateTime() {
@@ -125,7 +125,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the reviewStartDateTime property value. The specific date and time when the Cloud PC was set to in review. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as 2014-01-01T00:00:00Z.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getReviewStartDateTime() {
@@ -133,7 +133,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the subscriptionId property value. The ID of the Azure subscription in which the Cloud PC snapshot is being saved, in GUID format.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSubscriptionId() {
@@ -141,7 +141,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the subscriptionName property value. The name of the Azure subscription in which the Cloud PC snapshot is being saved.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSubscriptionName() {
@@ -149,7 +149,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the userAccessLevel property value. The userAccessLevel property
-     * @return a CloudPcUserAccessLevel
+     * @return a {@link CloudPcUserAccessLevel}
      */
     @jakarta.annotation.Nullable
     public CloudPcUserAccessLevel getUserAccessLevel() {

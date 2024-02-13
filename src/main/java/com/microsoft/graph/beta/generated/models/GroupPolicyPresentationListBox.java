@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GroupPolicyPresentationListBox extends GroupPolicyUploadedPresentation implements Parsable {
     /**
-     * Instantiates a new GroupPolicyPresentationListBox and sets the default values.
+     * Instantiates a new {@link GroupPolicyPresentationListBox} and sets the default values.
      */
     public GroupPolicyPresentationListBox() {
         super();
@@ -21,7 +21,7 @@ public class GroupPolicyPresentationListBox extends GroupPolicyUploadedPresentat
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a GroupPolicyPresentationListBox
+     * @return a {@link GroupPolicyPresentationListBox}
      */
     @jakarta.annotation.Nonnull
     public static GroupPolicyPresentationListBox createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class GroupPolicyPresentationListBox extends GroupPolicyUploadedPresentat
     }
     /**
      * Gets the explicitValue property value. If this option is specified true the user must specify the registry subkey value and the registry subkey name. The list box shows two columns, one for the name and one for the data. The default value is false.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getExplicitValue() {
@@ -38,7 +38,7 @@ public class GroupPolicyPresentationListBox extends GroupPolicyUploadedPresentat
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -49,7 +49,7 @@ public class GroupPolicyPresentationListBox extends GroupPolicyUploadedPresentat
     }
     /**
      * Gets the valuePrefix property value. The valuePrefix property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getValuePrefix() {

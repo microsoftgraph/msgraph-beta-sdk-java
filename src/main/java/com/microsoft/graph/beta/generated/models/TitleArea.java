@@ -18,7 +18,7 @@ public class TitleArea implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new TitleArea and sets the default values.
+     * Instantiates a new {@link TitleArea} and sets the default values.
      */
     public TitleArea() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class TitleArea implements AdditionalDataHolder, BackedModel, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TitleArea
+     * @return a {@link TitleArea}
      */
     @jakarta.annotation.Nonnull
     public static TitleArea createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class TitleArea implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class TitleArea implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the alternativeText property value. Alternative text on the title area.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAlternativeText() {
@@ -57,7 +57,7 @@ public class TitleArea implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -65,7 +65,7 @@ public class TitleArea implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the enableGradientEffect property value. Indicates whether the title area has a gradient effect enabled.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getEnableGradientEffect() {
@@ -73,7 +73,7 @@ public class TitleArea implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -93,7 +93,7 @@ public class TitleArea implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the imageWebUrl property value. URL of the image in the title area.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getImageWebUrl() {
@@ -101,7 +101,7 @@ public class TitleArea implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the layout property value. Enumeration value that indicates the layout of the title area. The possible values are: imageAndTitle, plain, colorBlock, overlap, unknownFutureValue.
-     * @return a TitleAreaLayoutType
+     * @return a {@link TitleAreaLayoutType}
      */
     @jakarta.annotation.Nullable
     public TitleAreaLayoutType getLayout() {
@@ -109,7 +109,7 @@ public class TitleArea implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -117,7 +117,7 @@ public class TitleArea implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the serverProcessedContent property value. Contains collections of data that can be processed by server side services like search index and link fixup.
-     * @return a ServerProcessedContent
+     * @return a {@link ServerProcessedContent}
      */
     @jakarta.annotation.Nullable
     public ServerProcessedContent getServerProcessedContent() {
@@ -125,7 +125,7 @@ public class TitleArea implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the showAuthor property value. Indicates whether the author should be shown in title area.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getShowAuthor() {
@@ -133,7 +133,7 @@ public class TitleArea implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the showPublishedDate property value. Indicates whether the published date should be shown in title area.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getShowPublishedDate() {
@@ -141,7 +141,7 @@ public class TitleArea implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the showTextBlockAboveTitle property value. Indicates whether the text block above title should be shown in title area.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getShowTextBlockAboveTitle() {
@@ -149,7 +149,7 @@ public class TitleArea implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the textAboveTitle property value. The text above title line.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTextAboveTitle() {
@@ -157,7 +157,7 @@ public class TitleArea implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the textAlignment property value. Enumeration value that indicates the text alignment of the title area. The possible values are: left, center, unknownFutureValue.
-     * @return a TitleAreaTextAlignmentType
+     * @return a {@link TitleAreaTextAlignmentType}
      */
     @jakarta.annotation.Nullable
     public TitleAreaTextAlignmentType getTextAlignment() {

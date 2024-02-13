@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceHealthScriptIntegerParameter extends DeviceHealthScriptParameter implements Parsable {
     /**
-     * Instantiates a new DeviceHealthScriptIntegerParameter and sets the default values.
+     * Instantiates a new {@link DeviceHealthScriptIntegerParameter} and sets the default values.
      */
     public DeviceHealthScriptIntegerParameter() {
         super();
@@ -21,7 +21,7 @@ public class DeviceHealthScriptIntegerParameter extends DeviceHealthScriptParame
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceHealthScriptIntegerParameter
+     * @return a {@link DeviceHealthScriptIntegerParameter}
      */
     @jakarta.annotation.Nonnull
     public static DeviceHealthScriptIntegerParameter createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class DeviceHealthScriptIntegerParameter extends DeviceHealthScriptParame
     }
     /**
      * Gets the defaultValue property value. The default value of Integer param. Valid values -2147483648 to 2147483647
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getDefaultValue() {
@@ -38,7 +38,7 @@ public class DeviceHealthScriptIntegerParameter extends DeviceHealthScriptParame
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

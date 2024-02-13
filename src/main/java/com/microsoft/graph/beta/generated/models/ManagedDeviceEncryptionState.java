@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagedDeviceEncryptionState extends Entity implements Parsable {
     /**
-     * Instantiates a new ManagedDeviceEncryptionState and sets the default values.
+     * Instantiates a new {@link ManagedDeviceEncryptionState} and sets the default values.
      */
     public ManagedDeviceEncryptionState() {
         super();
@@ -21,7 +21,7 @@ public class ManagedDeviceEncryptionState extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ManagedDeviceEncryptionState
+     * @return a {@link ManagedDeviceEncryptionState}
      */
     @jakarta.annotation.Nonnull
     public static ManagedDeviceEncryptionState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class ManagedDeviceEncryptionState extends Entity implements Parsable {
     }
     /**
      * Gets the advancedBitLockerStates property value. Advanced BitLocker State. Possible values are: success, noUserConsent, osVolumeUnprotected, osVolumeTpmRequired, osVolumeTpmOnlyRequired, osVolumeTpmPinRequired, osVolumeTpmStartupKeyRequired, osVolumeTpmPinStartupKeyRequired, osVolumeEncryptionMethodMismatch, recoveryKeyBackupFailed, fixedDriveNotEncrypted, fixedDriveEncryptionMethodMismatch, loggedOnUserNonAdmin, windowsRecoveryEnvironmentNotConfigured, tpmNotAvailable, tpmNotReady, networkError.
-     * @return a EnumSet<AdvancedBitLockerState>
+     * @return a {@link EnumSet<AdvancedBitLockerState>}
      */
     @jakarta.annotation.Nullable
     public EnumSet<AdvancedBitLockerState> getAdvancedBitLockerStates() {
@@ -38,7 +38,7 @@ public class ManagedDeviceEncryptionState extends Entity implements Parsable {
     }
     /**
      * Gets the deviceName property value. Device name
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceName() {
@@ -46,7 +46,7 @@ public class ManagedDeviceEncryptionState extends Entity implements Parsable {
     }
     /**
      * Gets the deviceType property value. Device type.
-     * @return a DeviceTypes
+     * @return a {@link DeviceTypes}
      */
     @jakarta.annotation.Nullable
     public DeviceTypes getDeviceType() {
@@ -54,7 +54,7 @@ public class ManagedDeviceEncryptionState extends Entity implements Parsable {
     }
     /**
      * Gets the encryptionPolicySettingState property value. The encryptionPolicySettingState property
-     * @return a ComplianceStatus
+     * @return a {@link ComplianceStatus}
      */
     @jakarta.annotation.Nullable
     public ComplianceStatus getEncryptionPolicySettingState() {
@@ -62,7 +62,7 @@ public class ManagedDeviceEncryptionState extends Entity implements Parsable {
     }
     /**
      * Gets the encryptionReadinessState property value. Encryption readiness state
-     * @return a EncryptionReadinessState
+     * @return a {@link EncryptionReadinessState}
      */
     @jakarta.annotation.Nullable
     public EncryptionReadinessState getEncryptionReadinessState() {
@@ -70,7 +70,7 @@ public class ManagedDeviceEncryptionState extends Entity implements Parsable {
     }
     /**
      * Gets the encryptionState property value. Encryption state
-     * @return a EncryptionState
+     * @return a {@link EncryptionState}
      */
     @jakarta.annotation.Nullable
     public EncryptionState getEncryptionState() {
@@ -78,7 +78,7 @@ public class ManagedDeviceEncryptionState extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -98,7 +98,7 @@ public class ManagedDeviceEncryptionState extends Entity implements Parsable {
     }
     /**
      * Gets the fileVaultStates property value. FileVault State. Possible values are: success, driveEncryptedByUser, userDeferredEncryption, escrowNotEnabled.
-     * @return a EnumSet<FileVaultState>
+     * @return a {@link EnumSet<FileVaultState>}
      */
     @jakarta.annotation.Nullable
     public EnumSet<FileVaultState> getFileVaultStates() {
@@ -106,7 +106,7 @@ public class ManagedDeviceEncryptionState extends Entity implements Parsable {
     }
     /**
      * Gets the osVersion property value. Operating system version of the device
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOsVersion() {
@@ -114,7 +114,7 @@ public class ManagedDeviceEncryptionState extends Entity implements Parsable {
     }
     /**
      * Gets the policyDetails property value. Policy Details
-     * @return a java.util.List<EncryptionReportPolicyDetails>
+     * @return a {@link java.util.List<EncryptionReportPolicyDetails>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<EncryptionReportPolicyDetails> getPolicyDetails() {
@@ -122,7 +122,7 @@ public class ManagedDeviceEncryptionState extends Entity implements Parsable {
     }
     /**
      * Gets the tpmSpecificationVersion property value. Device TPM Version
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTpmSpecificationVersion() {
@@ -130,7 +130,7 @@ public class ManagedDeviceEncryptionState extends Entity implements Parsable {
     }
     /**
      * Gets the userPrincipalName property value. User name
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {

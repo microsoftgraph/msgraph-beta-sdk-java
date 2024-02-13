@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsAutopilotDeploymentProfileAssignment extends Entity implements Parsable {
     /**
-     * Instantiates a new WindowsAutopilotDeploymentProfileAssignment and sets the default values.
+     * Instantiates a new {@link WindowsAutopilotDeploymentProfileAssignment} and sets the default values.
      */
     public WindowsAutopilotDeploymentProfileAssignment() {
         super();
@@ -20,7 +20,7 @@ public class WindowsAutopilotDeploymentProfileAssignment extends Entity implemen
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WindowsAutopilotDeploymentProfileAssignment
+     * @return a {@link WindowsAutopilotDeploymentProfileAssignment}
      */
     @jakarta.annotation.Nonnull
     public static WindowsAutopilotDeploymentProfileAssignment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -29,7 +29,7 @@ public class WindowsAutopilotDeploymentProfileAssignment extends Entity implemen
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -41,7 +41,7 @@ public class WindowsAutopilotDeploymentProfileAssignment extends Entity implemen
     }
     /**
      * Gets the source property value. Represents source of assignment.
-     * @return a DeviceAndAppManagementAssignmentSource
+     * @return a {@link DeviceAndAppManagementAssignmentSource}
      */
     @jakarta.annotation.Nullable
     public DeviceAndAppManagementAssignmentSource getSource() {
@@ -49,7 +49,7 @@ public class WindowsAutopilotDeploymentProfileAssignment extends Entity implemen
     }
     /**
      * Gets the sourceId property value. Identifier for resource used for deployment to a group
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSourceId() {
@@ -57,7 +57,7 @@ public class WindowsAutopilotDeploymentProfileAssignment extends Entity implemen
     }
     /**
      * Gets the target property value. The assignment target for the Windows Autopilot deployment profile.
-     * @return a DeviceAndAppManagementAssignmentTarget
+     * @return a {@link DeviceAndAppManagementAssignmentTarget}
      */
     @jakarta.annotation.Nullable
     public DeviceAndAppManagementAssignmentTarget getTarget() {

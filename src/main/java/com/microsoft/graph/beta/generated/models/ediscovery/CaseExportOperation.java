@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CaseExportOperation extends CaseOperation implements Parsable {
     /**
-     * Instantiates a new CaseExportOperation and sets the default values.
+     * Instantiates a new {@link CaseExportOperation} and sets the default values.
      */
     public CaseExportOperation() {
         super();
@@ -18,7 +18,7 @@ public class CaseExportOperation extends CaseOperation implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CaseExportOperation
+     * @return a {@link CaseExportOperation}
      */
     @jakarta.annotation.Nonnull
     public static CaseExportOperation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class CaseExportOperation extends CaseOperation implements Parsable {
     }
     /**
      * Gets the azureBlobContainer property value. The name of the Azure storage location where the export will be stored. This only applies to exports stored in your own Azure storage location.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAzureBlobContainer() {
@@ -35,7 +35,7 @@ public class CaseExportOperation extends CaseOperation implements Parsable {
     }
     /**
      * Gets the azureBlobToken property value. The SAS token for the Azure storage location.  This only applies to exports stored in your own Azure storage location.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAzureBlobToken() {
@@ -43,7 +43,7 @@ public class CaseExportOperation extends CaseOperation implements Parsable {
     }
     /**
      * Gets the description property value. The description provided for the export.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -51,7 +51,7 @@ public class CaseExportOperation extends CaseOperation implements Parsable {
     }
     /**
      * Gets the exportOptions property value. The options provided for the export. For more information, see reviewSet: export. Possible values are: originalFiles, text, pdfReplacement, fileInfo, tags.
-     * @return a EnumSet<ExportOptions>
+     * @return a {@link EnumSet<ExportOptions>}
      */
     @jakarta.annotation.Nullable
     public EnumSet<ExportOptions> getExportOptions() {
@@ -59,7 +59,7 @@ public class CaseExportOperation extends CaseOperation implements Parsable {
     }
     /**
      * Gets the exportStructure property value. The options provided specify the structure of the export. For more information, see reviewSet: export. Possible values are: none, directory, pst.
-     * @return a ExportFileStructure
+     * @return a {@link ExportFileStructure}
      */
     @jakarta.annotation.Nullable
     public ExportFileStructure getExportStructure() {
@@ -67,7 +67,7 @@ public class CaseExportOperation extends CaseOperation implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -84,7 +84,7 @@ public class CaseExportOperation extends CaseOperation implements Parsable {
     }
     /**
      * Gets the outputFolderId property value. The outputFolderId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOutputFolderId() {
@@ -92,7 +92,7 @@ public class CaseExportOperation extends CaseOperation implements Parsable {
     }
     /**
      * Gets the outputName property value. The name provided for the export.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOutputName() {
@@ -100,7 +100,7 @@ public class CaseExportOperation extends CaseOperation implements Parsable {
     }
     /**
      * Gets the reviewSet property value. The review set the content is being exported from.
-     * @return a ReviewSet
+     * @return a {@link ReviewSet}
      */
     @jakarta.annotation.Nullable
     public ReviewSet getReviewSet() {

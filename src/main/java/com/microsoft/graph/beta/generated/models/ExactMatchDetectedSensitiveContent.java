@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ExactMatchDetectedSensitiveContent extends DetectedSensitiveContentBase implements Parsable {
     /**
-     * Instantiates a new ExactMatchDetectedSensitiveContent and sets the default values.
+     * Instantiates a new {@link ExactMatchDetectedSensitiveContent} and sets the default values.
      */
     public ExactMatchDetectedSensitiveContent() {
         super();
@@ -17,7 +17,7 @@ public class ExactMatchDetectedSensitiveContent extends DetectedSensitiveContent
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ExactMatchDetectedSensitiveContent
+     * @return a {@link ExactMatchDetectedSensitiveContent}
      */
     @jakarta.annotation.Nonnull
     public static ExactMatchDetectedSensitiveContent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class ExactMatchDetectedSensitiveContent extends DetectedSensitiveContent
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -36,7 +36,7 @@ public class ExactMatchDetectedSensitiveContent extends DetectedSensitiveContent
     }
     /**
      * Gets the matches property value. The matches property
-     * @return a java.util.List<SensitiveContentLocation>
+     * @return a {@link java.util.List<SensitiveContentLocation>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<SensitiveContentLocation> getMatches() {

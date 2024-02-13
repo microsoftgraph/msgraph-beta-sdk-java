@@ -21,7 +21,7 @@ public class DeliveryOptimizationGroupIdSource implements AdditionalDataHolder, 
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new DeliveryOptimizationGroupIdSource and sets the default values.
+     * Instantiates a new {@link DeliveryOptimizationGroupIdSource} and sets the default values.
      */
     public DeliveryOptimizationGroupIdSource() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -30,7 +30,7 @@ public class DeliveryOptimizationGroupIdSource implements AdditionalDataHolder, 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeliveryOptimizationGroupIdSource
+     * @return a {@link DeliveryOptimizationGroupIdSource}
      */
     @jakarta.annotation.Nonnull
     public static DeliveryOptimizationGroupIdSource createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -47,7 +47,7 @@ public class DeliveryOptimizationGroupIdSource implements AdditionalDataHolder, 
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -60,7 +60,7 @@ public class DeliveryOptimizationGroupIdSource implements AdditionalDataHolder, 
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -68,7 +68,7 @@ public class DeliveryOptimizationGroupIdSource implements AdditionalDataHolder, 
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -78,7 +78,7 @@ public class DeliveryOptimizationGroupIdSource implements AdditionalDataHolder, 
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {

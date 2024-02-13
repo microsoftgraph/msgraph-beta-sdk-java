@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CloudPcCrossCloudGovernmentOrganizationMapping extends Entity implements Parsable {
     /**
-     * Instantiates a new CloudPcCrossCloudGovernmentOrganizationMapping and sets the default values.
+     * Instantiates a new {@link CloudPcCrossCloudGovernmentOrganizationMapping} and sets the default values.
      */
     public CloudPcCrossCloudGovernmentOrganizationMapping() {
         super();
@@ -17,7 +17,7 @@ public class CloudPcCrossCloudGovernmentOrganizationMapping extends Entity imple
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CloudPcCrossCloudGovernmentOrganizationMapping
+     * @return a {@link CloudPcCrossCloudGovernmentOrganizationMapping}
      */
     @jakarta.annotation.Nonnull
     public static CloudPcCrossCloudGovernmentOrganizationMapping createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class CloudPcCrossCloudGovernmentOrganizationMapping extends Entity imple
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -36,7 +36,7 @@ public class CloudPcCrossCloudGovernmentOrganizationMapping extends Entity imple
     }
     /**
      * Gets the organizationIdsInUSGovCloud property value. The tenant ID in the Azure Government cloud corresponding to the GCC tenant in the public cloud. Currently, 1:1 mappings are supported, so this collection can only contain one tenant ID.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getOrganizationIdsInUSGovCloud() {

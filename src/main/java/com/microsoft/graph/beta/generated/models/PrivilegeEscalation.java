@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrivilegeEscalation extends Entity implements Parsable {
     /**
-     * Instantiates a new PrivilegeEscalation and sets the default values.
+     * Instantiates a new {@link PrivilegeEscalation} and sets the default values.
      */
     public PrivilegeEscalation() {
         super();
@@ -17,7 +17,7 @@ public class PrivilegeEscalation extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PrivilegeEscalation
+     * @return a {@link PrivilegeEscalation}
      */
     @jakarta.annotation.Nonnull
     public static PrivilegeEscalation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class PrivilegeEscalation extends Entity implements Parsable {
     }
     /**
      * Gets the actions property value. The list of actions that the identity could perform.
-     * @return a java.util.List<AuthorizationSystemTypeAction>
+     * @return a {@link java.util.List<AuthorizationSystemTypeAction>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthorizationSystemTypeAction> getActions() {
@@ -34,7 +34,7 @@ public class PrivilegeEscalation extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. A detailed description of the privilege escalation.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -42,7 +42,7 @@ public class PrivilegeEscalation extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The name of the policy that defines the escalation
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -50,7 +50,7 @@ public class PrivilegeEscalation extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -63,7 +63,7 @@ public class PrivilegeEscalation extends Entity implements Parsable {
     }
     /**
      * Gets the resources property value. The list of resources that the identity could perform actions on.
-     * @return a java.util.List<AuthorizationSystemResource>
+     * @return a {@link java.util.List<AuthorizationSystemResource>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthorizationSystemResource> getResources() {

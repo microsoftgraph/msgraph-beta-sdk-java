@@ -21,7 +21,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SessionsWithJoinWebUrlRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new SessionsWithJoinWebUrlRequestBuilder and sets the default values.
+     * Instantiates a new {@link SessionsWithJoinWebUrlRequestBuilder} and sets the default values.
      * @param joinWebUrl Alternate key of virtualEventSession
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
@@ -31,7 +31,7 @@ public class SessionsWithJoinWebUrlRequestBuilder extends BaseRequestBuilder {
         this.pathParameters.put("joinWebUrl", joinWebUrl);
     }
     /**
-     * Instantiates a new SessionsWithJoinWebUrlRequestBuilder and sets the default values.
+     * Instantiates a new {@link SessionsWithJoinWebUrlRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -40,7 +40,8 @@ public class SessionsWithJoinWebUrlRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get sessions from solutions
-     * @return a VirtualEventSession
+     * @return a {@link VirtualEventSession}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public VirtualEventSession get() {
@@ -49,19 +50,19 @@ public class SessionsWithJoinWebUrlRequestBuilder extends BaseRequestBuilder {
     /**
      * Get sessions from solutions
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a VirtualEventSession
+     * @return a {@link VirtualEventSession}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public VirtualEventSession get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, VirtualEventSession::createFromDiscriminatorValue);
     }
     /**
      * Get sessions from solutions
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -70,7 +71,7 @@ public class SessionsWithJoinWebUrlRequestBuilder extends BaseRequestBuilder {
     /**
      * Get sessions from solutions
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +83,7 @@ public class SessionsWithJoinWebUrlRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a SessionsWithJoinWebUrlRequestBuilder
+     * @return a {@link SessionsWithJoinWebUrlRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SessionsWithJoinWebUrlRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -106,7 +107,7 @@ public class SessionsWithJoinWebUrlRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

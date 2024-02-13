@@ -21,7 +21,7 @@ public class DeviceHealthScriptRunSchedule implements AdditionalDataHolder, Back
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new DeviceHealthScriptRunSchedule and sets the default values.
+     * Instantiates a new {@link DeviceHealthScriptRunSchedule} and sets the default values.
      */
     public DeviceHealthScriptRunSchedule() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -30,7 +30,7 @@ public class DeviceHealthScriptRunSchedule implements AdditionalDataHolder, Back
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceHealthScriptRunSchedule
+     * @return a {@link DeviceHealthScriptRunSchedule}
      */
     @jakarta.annotation.Nonnull
     public static DeviceHealthScriptRunSchedule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -49,7 +49,7 @@ public class DeviceHealthScriptRunSchedule implements AdditionalDataHolder, Back
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -62,7 +62,7 @@ public class DeviceHealthScriptRunSchedule implements AdditionalDataHolder, Back
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -70,7 +70,7 @@ public class DeviceHealthScriptRunSchedule implements AdditionalDataHolder, Back
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -81,7 +81,7 @@ public class DeviceHealthScriptRunSchedule implements AdditionalDataHolder, Back
     }
     /**
      * Gets the interval property value. The x value of every x hours for hourly schedule, every x days for Daily Schedule, every x weeks for weekly schedule, every x months for Monthly Schedule. Valid values 1 to 23
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getInterval() {
@@ -89,7 +89,7 @@ public class DeviceHealthScriptRunSchedule implements AdditionalDataHolder, Back
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {

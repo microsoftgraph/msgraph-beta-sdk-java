@@ -18,7 +18,7 @@ public class DeviceManagementConfigurationSettingDependedOnBy implements Additio
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new DeviceManagementConfigurationSettingDependedOnBy and sets the default values.
+     * Instantiates a new {@link DeviceManagementConfigurationSettingDependedOnBy} and sets the default values.
      */
     public DeviceManagementConfigurationSettingDependedOnBy() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class DeviceManagementConfigurationSettingDependedOnBy implements Additio
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceManagementConfigurationSettingDependedOnBy
+     * @return a {@link DeviceManagementConfigurationSettingDependedOnBy}
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementConfigurationSettingDependedOnBy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class DeviceManagementConfigurationSettingDependedOnBy implements Additio
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class DeviceManagementConfigurationSettingDependedOnBy implements Additio
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class DeviceManagementConfigurationSettingDependedOnBy implements Additio
     }
     /**
      * Gets the dependedOnBy property value. Identifier of child setting that is dependent on the current setting
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDependedOnBy() {
@@ -65,7 +65,7 @@ public class DeviceManagementConfigurationSettingDependedOnBy implements Additio
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -77,7 +77,7 @@ public class DeviceManagementConfigurationSettingDependedOnBy implements Additio
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -85,7 +85,7 @@ public class DeviceManagementConfigurationSettingDependedOnBy implements Additio
     }
     /**
      * Gets the required property value. Value that determines if the child setting is required based on the parent setting's selection
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getRequired() {

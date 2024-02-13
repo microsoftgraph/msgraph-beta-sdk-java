@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration implements Parsable {
     /**
-     * Instantiates a new AndroidDeviceOwnerWiFiConfiguration and sets the default values.
+     * Instantiates a new {@link AndroidDeviceOwnerWiFiConfiguration} and sets the default values.
      */
     public AndroidDeviceOwnerWiFiConfiguration() {
         super();
@@ -21,7 +21,7 @@ public class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration imp
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AndroidDeviceOwnerWiFiConfiguration
+     * @return a {@link AndroidDeviceOwnerWiFiConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static AndroidDeviceOwnerWiFiConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration imp
     }
     /**
      * Gets the connectAutomatically property value. Connect automatically when this network is in range. Setting this to true will skip the user prompt and automatically connect the device to Wi-Fi network.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getConnectAutomatically() {
@@ -45,7 +45,7 @@ public class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration imp
     }
     /**
      * Gets the connectWhenNetworkNameIsHidden property value. When set to true, this profile forces the device to connect to a network that doesn't broadcast its SSID to all devices.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getConnectWhenNetworkNameIsHidden() {
@@ -53,13 +53,14 @@ public class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration imp
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("connectAutomatically", (n) -> { this.setConnectAutomatically(n.getBooleanValue()); });
         deserializerMap.put("connectWhenNetworkNameIsHidden", (n) -> { this.setConnectWhenNetworkNameIsHidden(n.getBooleanValue()); });
+        deserializerMap.put("macAddressRandomizationMode", (n) -> { this.setMacAddressRandomizationMode(n.getEnumValue(MacAddressRandomizationMode::forValue)); });
         deserializerMap.put("networkName", (n) -> { this.setNetworkName(n.getStringValue()); });
         deserializerMap.put("preSharedKey", (n) -> { this.setPreSharedKey(n.getStringValue()); });
         deserializerMap.put("preSharedKeyIsSet", (n) -> { this.setPreSharedKeyIsSet(n.getBooleanValue()); });
@@ -73,8 +74,16 @@ public class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration imp
         return deserializerMap;
     }
     /**
+     * Gets the macAddressRandomizationMode property value. The MAC address randomization mode for Android device Wi-Fi configuration. Possible values include automatic and hardware. Default value is automatic.
+     * @return a {@link MacAddressRandomizationMode}
+     */
+    @jakarta.annotation.Nullable
+    public MacAddressRandomizationMode getMacAddressRandomizationMode() {
+        return this.backingStore.get("macAddressRandomizationMode");
+    }
+    /**
      * Gets the networkName property value. Network Name
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getNetworkName() {
@@ -82,7 +91,7 @@ public class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration imp
     }
     /**
      * Gets the preSharedKey property value. This is the pre-shared key for WPA Personal Wi-Fi network.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPreSharedKey() {
@@ -90,7 +99,7 @@ public class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration imp
     }
     /**
      * Gets the preSharedKeyIsSet property value. This is the pre-shared key for WPA Personal Wi-Fi network.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getPreSharedKeyIsSet() {
@@ -98,7 +107,7 @@ public class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration imp
     }
     /**
      * Gets the proxyAutomaticConfigurationUrl property value. Specify the proxy server configuration script URL.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getProxyAutomaticConfigurationUrl() {
@@ -106,7 +115,7 @@ public class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration imp
     }
     /**
      * Gets the proxyExclusionList property value. List of hosts to exclude using the proxy on connections for. These hosts can use wildcards such as .example.com.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getProxyExclusionList() {
@@ -114,7 +123,7 @@ public class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration imp
     }
     /**
      * Gets the proxyManualAddress property value. Specify the proxy server IP address. Android documentation does not specify IPv4 or IPv6. For example: 192.168.1.1.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getProxyManualAddress() {
@@ -122,7 +131,7 @@ public class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration imp
     }
     /**
      * Gets the proxyManualPort property value. Specify the proxy server port.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getProxyManualPort() {
@@ -130,7 +139,7 @@ public class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration imp
     }
     /**
      * Gets the proxySettings property value. Wi-Fi Proxy Settings.
-     * @return a WiFiProxySetting
+     * @return a {@link WiFiProxySetting}
      */
     @jakarta.annotation.Nullable
     public WiFiProxySetting getProxySettings() {
@@ -138,7 +147,7 @@ public class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration imp
     }
     /**
      * Gets the ssid property value. This is the name of the Wi-Fi network that is broadcast to all devices.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSsid() {
@@ -146,7 +155,7 @@ public class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration imp
     }
     /**
      * Gets the wiFiSecurityType property value. Wi-Fi Security Types for Android Device Owner.
-     * @return a AndroidDeviceOwnerWiFiSecurityType
+     * @return a {@link AndroidDeviceOwnerWiFiSecurityType}
      */
     @jakarta.annotation.Nullable
     public AndroidDeviceOwnerWiFiSecurityType getWiFiSecurityType() {
@@ -161,6 +170,7 @@ public class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration imp
         super.serialize(writer);
         writer.writeBooleanValue("connectAutomatically", this.getConnectAutomatically());
         writer.writeBooleanValue("connectWhenNetworkNameIsHidden", this.getConnectWhenNetworkNameIsHidden());
+        writer.writeEnumValue("macAddressRandomizationMode", this.getMacAddressRandomizationMode());
         writer.writeStringValue("networkName", this.getNetworkName());
         writer.writeStringValue("preSharedKey", this.getPreSharedKey());
         writer.writeBooleanValue("preSharedKeyIsSet", this.getPreSharedKeyIsSet());
@@ -185,6 +195,13 @@ public class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration imp
      */
     public void setConnectWhenNetworkNameIsHidden(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("connectWhenNetworkNameIsHidden", value);
+    }
+    /**
+     * Sets the macAddressRandomizationMode property value. The MAC address randomization mode for Android device Wi-Fi configuration. Possible values include automatic and hardware. Default value is automatic.
+     * @param value Value to set for the macAddressRandomizationMode property.
+     */
+    public void setMacAddressRandomizationMode(@jakarta.annotation.Nullable final MacAddressRandomizationMode value) {
+        this.backingStore.set("macAddressRandomizationMode", value);
     }
     /**
      * Sets the networkName property value. Network Name

@@ -14,7 +14,7 @@ import java.util.UUID;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfile implements Parsable {
     /**
-     * Instantiates a new Windows10XSCEPCertificateProfile and sets the default values.
+     * Instantiates a new {@link Windows10XSCEPCertificateProfile} and sets the default values.
      */
     public Windows10XSCEPCertificateProfile() {
         super();
@@ -23,7 +23,7 @@ public class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfi
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Windows10XSCEPCertificateProfile
+     * @return a {@link Windows10XSCEPCertificateProfile}
      */
     @jakarta.annotation.Nonnull
     public static Windows10XSCEPCertificateProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -32,7 +32,7 @@ public class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfi
     }
     /**
      * Gets the certificateStore property value. CertificateStore types
-     * @return a CertificateStore
+     * @return a {@link CertificateStore}
      */
     @jakarta.annotation.Nullable
     public CertificateStore getCertificateStore() {
@@ -40,7 +40,7 @@ public class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfi
     }
     /**
      * Gets the certificateValidityPeriodScale property value. Certificate Validity Period Options.
-     * @return a CertificateValidityPeriodScale
+     * @return a {@link CertificateValidityPeriodScale}
      */
     @jakarta.annotation.Nullable
     public CertificateValidityPeriodScale getCertificateValidityPeriodScale() {
@@ -48,7 +48,7 @@ public class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfi
     }
     /**
      * Gets the certificateValidityPeriodValue property value. Value for the Certificate Validity Period
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getCertificateValidityPeriodValue() {
@@ -56,7 +56,7 @@ public class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfi
     }
     /**
      * Gets the extendedKeyUsages property value. Extended Key Usage (EKU) settings.
-     * @return a java.util.List<ExtendedKeyUsage>
+     * @return a {@link java.util.List<ExtendedKeyUsage>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ExtendedKeyUsage> getExtendedKeyUsages() {
@@ -64,7 +64,7 @@ public class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfi
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -86,7 +86,7 @@ public class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfi
     }
     /**
      * Gets the hashAlgorithm property value. SCEP Hash Algorithm.
-     * @return a java.util.List<HashAlgorithms>
+     * @return a {@link java.util.List<HashAlgorithms>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<HashAlgorithms> getHashAlgorithm() {
@@ -94,7 +94,7 @@ public class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfi
     }
     /**
      * Gets the keySize property value. Key Size Options.
-     * @return a KeySize
+     * @return a {@link KeySize}
      */
     @jakarta.annotation.Nullable
     public KeySize getKeySize() {
@@ -102,7 +102,7 @@ public class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfi
     }
     /**
      * Gets the keyStorageProvider property value. Key Storage Provider (KSP) Import Options.
-     * @return a KeyStorageProviderOption
+     * @return a {@link KeyStorageProviderOption}
      */
     @jakarta.annotation.Nullable
     public KeyStorageProviderOption getKeyStorageProvider() {
@@ -110,7 +110,7 @@ public class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfi
     }
     /**
      * Gets the keyUsage property value. Key Usage Options.
-     * @return a EnumSet<KeyUsages>
+     * @return a {@link EnumSet<KeyUsages>}
      */
     @jakarta.annotation.Nullable
     public EnumSet<KeyUsages> getKeyUsage() {
@@ -118,7 +118,7 @@ public class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfi
     }
     /**
      * Gets the renewalThresholdPercentage property value. Certificate renewal threshold percentage
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getRenewalThresholdPercentage() {
@@ -126,7 +126,7 @@ public class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfi
     }
     /**
      * Gets the rootCertificateId property value. Trusted Root Certificate ID
-     * @return a UUID
+     * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
     public UUID getRootCertificateId() {
@@ -134,7 +134,7 @@ public class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfi
     }
     /**
      * Gets the scepServerUrls property value. SCEP Server Url(s).
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getScepServerUrls() {
@@ -142,7 +142,7 @@ public class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfi
     }
     /**
      * Gets the subjectAlternativeNameFormats property value. Custom AAD Attributes.
-     * @return a java.util.List<Windows10XCustomSubjectAlternativeName>
+     * @return a {@link java.util.List<Windows10XCustomSubjectAlternativeName>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Windows10XCustomSubjectAlternativeName> getSubjectAlternativeNameFormats() {
@@ -150,7 +150,7 @@ public class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfi
     }
     /**
      * Gets the subjectNameFormatString property value. Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSubjectNameFormatString() {

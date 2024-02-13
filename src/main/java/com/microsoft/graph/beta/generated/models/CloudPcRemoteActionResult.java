@@ -19,7 +19,7 @@ public class CloudPcRemoteActionResult implements AdditionalDataHolder, BackedMo
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new CloudPcRemoteActionResult and sets the default values.
+     * Instantiates a new {@link CloudPcRemoteActionResult} and sets the default values.
      */
     public CloudPcRemoteActionResult() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class CloudPcRemoteActionResult implements AdditionalDataHolder, BackedMo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CloudPcRemoteActionResult
+     * @return a {@link CloudPcRemoteActionResult}
      */
     @jakarta.annotation.Nonnull
     public static CloudPcRemoteActionResult createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class CloudPcRemoteActionResult implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the actionName property value. The specified action. Supported values in the Microsoft Endpoint Manager portal are: Reprovision, Resize, Restore. Supported values in enterprise Cloud PC devices are: Reboot, Rename, Reprovision, Troubleshoot.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getActionName() {
@@ -45,7 +45,7 @@ public class CloudPcRemoteActionResult implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the actionState property value. State of the action. Possible values are: None, pending, canceled, active, done, failed, notSupported. Read-only.
-     * @return a ActionState
+     * @return a {@link ActionState}
      */
     @jakarta.annotation.Nullable
     public ActionState getActionState() {
@@ -53,7 +53,7 @@ public class CloudPcRemoteActionResult implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -66,7 +66,7 @@ public class CloudPcRemoteActionResult implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -74,7 +74,7 @@ public class CloudPcRemoteActionResult implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the cloudPcId property value. The ID of the Cloud PC device on which the remote action is performed. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCloudPcId() {
@@ -82,7 +82,7 @@ public class CloudPcRemoteActionResult implements AdditionalDataHolder, BackedMo
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -99,7 +99,7 @@ public class CloudPcRemoteActionResult implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the lastUpdatedDateTime property value. Last update time for action. The Timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as'2014-01-01T00:00:00Z'.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastUpdatedDateTime() {
@@ -107,7 +107,7 @@ public class CloudPcRemoteActionResult implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the managedDeviceId property value. The ID of the Intune managed device on which the remote action is performed. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getManagedDeviceId() {
@@ -115,7 +115,7 @@ public class CloudPcRemoteActionResult implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -123,7 +123,7 @@ public class CloudPcRemoteActionResult implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the startDateTime property value. Time the action was initiated. The Timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as'2014-01-01T00:00:00Z'.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
@@ -131,7 +131,7 @@ public class CloudPcRemoteActionResult implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the statusDetails property value. The details of the Cloud PC status.
-     * @return a CloudPcStatusDetails
+     * @return a {@link CloudPcStatusDetails}
      */
     @jakarta.annotation.Nullable
     public CloudPcStatusDetails getStatusDetails() {

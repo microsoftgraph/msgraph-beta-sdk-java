@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementComplianceActionItemCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * Instantiates a new DeviceManagementComplianceActionItemCollectionResponse and sets the default values.
+     * Instantiates a new {@link DeviceManagementComplianceActionItemCollectionResponse} and sets the default values.
      */
     public DeviceManagementComplianceActionItemCollectionResponse() {
         super();
@@ -17,7 +17,7 @@ public class DeviceManagementComplianceActionItemCollectionResponse extends Base
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceManagementComplianceActionItemCollectionResponse
+     * @return a {@link DeviceManagementComplianceActionItemCollectionResponse}
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementComplianceActionItemCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class DeviceManagementComplianceActionItemCollectionResponse extends Base
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -36,7 +36,7 @@ public class DeviceManagementComplianceActionItemCollectionResponse extends Base
     }
     /**
      * Gets the value property value. The value property
-     * @return a java.util.List<DeviceManagementComplianceActionItem>
+     * @return a {@link java.util.List<DeviceManagementComplianceActionItem>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementComplianceActionItem> getValue() {

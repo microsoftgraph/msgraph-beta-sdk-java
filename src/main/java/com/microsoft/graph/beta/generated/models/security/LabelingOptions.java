@@ -18,7 +18,7 @@ public class LabelingOptions implements AdditionalDataHolder, BackedModel, Parsa
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new LabelingOptions and sets the default values.
+     * Instantiates a new {@link LabelingOptions} and sets the default values.
      */
     public LabelingOptions() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class LabelingOptions implements AdditionalDataHolder, BackedModel, Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a LabelingOptions
+     * @return a {@link LabelingOptions}
      */
     @jakarta.annotation.Nonnull
     public static LabelingOptions createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class LabelingOptions implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class LabelingOptions implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the assignmentMethod property value. The assignmentMethod property
-     * @return a AssignmentMethod
+     * @return a {@link AssignmentMethod}
      */
     @jakarta.annotation.Nullable
     public AssignmentMethod getAssignmentMethod() {
@@ -57,7 +57,7 @@ public class LabelingOptions implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -65,7 +65,7 @@ public class LabelingOptions implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the downgradeJustification property value. The downgrade justification object that indicates if downgrade was justified and, if so, the reason.
-     * @return a DowngradeJustification
+     * @return a {@link DowngradeJustification}
      */
     @jakarta.annotation.Nullable
     public DowngradeJustification getDowngradeJustification() {
@@ -73,7 +73,7 @@ public class LabelingOptions implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the extendedProperties property value. Extended properties will be parsed and returned in the standard Microsoft Purview Information Protection labeled metadata format as part of the label information.
-     * @return a java.util.List<KeyValuePair>
+     * @return a {@link java.util.List<KeyValuePair>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyValuePair> getExtendedProperties() {
@@ -81,7 +81,7 @@ public class LabelingOptions implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -95,7 +95,7 @@ public class LabelingOptions implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the labelId property value. The GUID of the label that should be applied to the information.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getLabelId() {
@@ -103,7 +103,7 @@ public class LabelingOptions implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {

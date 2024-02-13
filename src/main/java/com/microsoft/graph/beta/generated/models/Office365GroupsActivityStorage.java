@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Office365GroupsActivityStorage extends Entity implements Parsable {
     /**
-     * Instantiates a new Office365GroupsActivityStorage and sets the default values.
+     * Instantiates a new {@link Office365GroupsActivityStorage} and sets the default values.
      */
     public Office365GroupsActivityStorage() {
         super();
@@ -18,7 +18,7 @@ public class Office365GroupsActivityStorage extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Office365GroupsActivityStorage
+     * @return a {@link Office365GroupsActivityStorage}
      */
     @jakarta.annotation.Nonnull
     public static Office365GroupsActivityStorage createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class Office365GroupsActivityStorage extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -41,7 +41,7 @@ public class Office365GroupsActivityStorage extends Entity implements Parsable {
     }
     /**
      * Gets the mailboxStorageUsedInBytes property value. The storage used in group mailbox.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getMailboxStorageUsedInBytes() {
@@ -49,7 +49,7 @@ public class Office365GroupsActivityStorage extends Entity implements Parsable {
     }
     /**
      * Gets the reportDate property value. The snapshot date for Exchange and SharePoint used storage.
-     * @return a LocalDate
+     * @return a {@link LocalDate}
      */
     @jakarta.annotation.Nullable
     public LocalDate getReportDate() {
@@ -57,7 +57,7 @@ public class Office365GroupsActivityStorage extends Entity implements Parsable {
     }
     /**
      * Gets the reportPeriod property value. The number of days the report covers.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getReportPeriod() {
@@ -65,7 +65,7 @@ public class Office365GroupsActivityStorage extends Entity implements Parsable {
     }
     /**
      * Gets the reportRefreshDate property value. The latest date of the content.
-     * @return a LocalDate
+     * @return a {@link LocalDate}
      */
     @jakarta.annotation.Nullable
     public LocalDate getReportRefreshDate() {
@@ -73,7 +73,7 @@ public class Office365GroupsActivityStorage extends Entity implements Parsable {
     }
     /**
      * Gets the siteStorageUsedInBytes property value. The storage used in SharePoint document library.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getSiteStorageUsedInBytes() {

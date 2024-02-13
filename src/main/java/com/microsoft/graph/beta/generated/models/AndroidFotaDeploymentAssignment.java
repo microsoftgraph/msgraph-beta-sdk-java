@@ -21,7 +21,7 @@ public class AndroidFotaDeploymentAssignment implements AdditionalDataHolder, Ba
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new AndroidFotaDeploymentAssignment and sets the default values.
+     * Instantiates a new {@link AndroidFotaDeploymentAssignment} and sets the default values.
      */
     public AndroidFotaDeploymentAssignment() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -30,7 +30,7 @@ public class AndroidFotaDeploymentAssignment implements AdditionalDataHolder, Ba
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AndroidFotaDeploymentAssignment
+     * @return a {@link AndroidFotaDeploymentAssignment}
      */
     @jakarta.annotation.Nonnull
     public static AndroidFotaDeploymentAssignment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class AndroidFotaDeploymentAssignment implements AdditionalDataHolder, Ba
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -52,7 +52,7 @@ public class AndroidFotaDeploymentAssignment implements AdditionalDataHolder, Ba
     }
     /**
      * Gets the assignmentTarget property value. The Azure Active Directory (Azure AD) we are deploying firmware updates to (e.g.: d93c8f48-bd42-4514-ba40-bc6b84780930). NOTE: Use this property moving forward because the existing property, target, is deprecated.
-     * @return a DeviceAndAppManagementAssignmentTarget
+     * @return a {@link DeviceAndAppManagementAssignmentTarget}
      */
     @jakarta.annotation.Nullable
     public DeviceAndAppManagementAssignmentTarget getAssignmentTarget() {
@@ -60,7 +60,7 @@ public class AndroidFotaDeploymentAssignment implements AdditionalDataHolder, Ba
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -68,7 +68,7 @@ public class AndroidFotaDeploymentAssignment implements AdditionalDataHolder, Ba
     }
     /**
      * Gets the displayName property value. The display name of the Azure AD security group used for the assignment.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -76,7 +76,7 @@ public class AndroidFotaDeploymentAssignment implements AdditionalDataHolder, Ba
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -90,7 +90,7 @@ public class AndroidFotaDeploymentAssignment implements AdditionalDataHolder, Ba
     }
     /**
      * Gets the id property value. A unique identifier assigned to each Android FOTA Assignment entity
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getId() {
@@ -98,7 +98,7 @@ public class AndroidFotaDeploymentAssignment implements AdditionalDataHolder, Ba
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -106,7 +106,7 @@ public class AndroidFotaDeploymentAssignment implements AdditionalDataHolder, Ba
     }
     /**
      * Gets the target property value. The AAD Group we are deploying firmware updates to
-     * @return a AndroidFotaDeploymentAssignmentTarget
+     * @return a {@link AndroidFotaDeploymentAssignmentTarget}
      */
     @jakarta.annotation.Nullable
     public AndroidFotaDeploymentAssignmentTarget getTarget() {

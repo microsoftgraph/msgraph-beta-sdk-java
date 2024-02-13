@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PermissionsAnalyticsAggregation extends Entity implements Parsable {
     /**
-     * Instantiates a new PermissionsAnalyticsAggregation and sets the default values.
+     * Instantiates a new {@link PermissionsAnalyticsAggregation} and sets the default values.
      */
     public PermissionsAnalyticsAggregation() {
         super();
@@ -17,7 +17,7 @@ public class PermissionsAnalyticsAggregation extends Entity implements Parsable 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PermissionsAnalyticsAggregation
+     * @return a {@link PermissionsAnalyticsAggregation}
      */
     @jakarta.annotation.Nonnull
     public static PermissionsAnalyticsAggregation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class PermissionsAnalyticsAggregation extends Entity implements Parsable 
     }
     /**
      * Gets the aws property value. The aws property
-     * @return a PermissionsAnalytics
+     * @return a {@link PermissionsAnalytics}
      */
     @jakarta.annotation.Nullable
     public PermissionsAnalytics getAws() {
@@ -34,7 +34,7 @@ public class PermissionsAnalyticsAggregation extends Entity implements Parsable 
     }
     /**
      * Gets the azure property value. The azure property
-     * @return a PermissionsAnalytics
+     * @return a {@link PermissionsAnalytics}
      */
     @jakarta.annotation.Nullable
     public PermissionsAnalytics getAzure() {
@@ -42,7 +42,7 @@ public class PermissionsAnalyticsAggregation extends Entity implements Parsable 
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -54,7 +54,7 @@ public class PermissionsAnalyticsAggregation extends Entity implements Parsable 
     }
     /**
      * Gets the gcp property value. The gcp property
-     * @return a PermissionsAnalytics
+     * @return a {@link PermissionsAnalytics}
      */
     @jakarta.annotation.Nullable
     public PermissionsAnalytics getGcp() {

@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CloudPcServicePlan extends Entity implements Parsable {
     /**
-     * Instantiates a new CloudPcServicePlan and sets the default values.
+     * Instantiates a new {@link CloudPcServicePlan} and sets the default values.
      */
     public CloudPcServicePlan() {
         super();
@@ -18,7 +18,7 @@ public class CloudPcServicePlan extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CloudPcServicePlan
+     * @return a {@link CloudPcServicePlan}
      */
     @jakarta.annotation.Nonnull
     public static CloudPcServicePlan createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class CloudPcServicePlan extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The name for the service plan. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -35,7 +35,7 @@ public class CloudPcServicePlan extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -52,7 +52,7 @@ public class CloudPcServicePlan extends Entity implements Parsable {
     }
     /**
      * Gets the provisioningType property value. Specifies the type of license used when provisioning Cloud PCs. By default, the license type is dedicated. Possible values are: dedicated, shared, unknownFutureValue.
-     * @return a CloudPcProvisioningType
+     * @return a {@link CloudPcProvisioningType}
      */
     @jakarta.annotation.Nullable
     public CloudPcProvisioningType getProvisioningType() {
@@ -60,7 +60,7 @@ public class CloudPcServicePlan extends Entity implements Parsable {
     }
     /**
      * Gets the ramInGB property value. The size of the RAM in GB. Read-only.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getRamInGB() {
@@ -68,7 +68,7 @@ public class CloudPcServicePlan extends Entity implements Parsable {
     }
     /**
      * Gets the storageInGB property value. The size of the OS Disk in GB. Read-only.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getStorageInGB() {
@@ -76,7 +76,7 @@ public class CloudPcServicePlan extends Entity implements Parsable {
     }
     /**
      * Gets the supportedSolution property value. The supportedSolution property
-     * @return a EnumSet<CloudPcManagementService>
+     * @return a {@link EnumSet<CloudPcManagementService>}
      */
     @jakarta.annotation.Nullable
     public EnumSet<CloudPcManagementService> getSupportedSolution() {
@@ -84,7 +84,7 @@ public class CloudPcServicePlan extends Entity implements Parsable {
     }
     /**
      * Gets the type property value. The type of the service plan. Possible values are: enterprise, business, unknownFutureValue. Read-only.
-     * @return a CloudPcServicePlanType
+     * @return a {@link CloudPcServicePlanType}
      */
     @jakarta.annotation.Nullable
     public CloudPcServicePlanType getType() {
@@ -92,7 +92,7 @@ public class CloudPcServicePlan extends Entity implements Parsable {
     }
     /**
      * Gets the userProfileInGB property value. The size of the user profile disk in GB. Read-only.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getUserProfileInGB() {
@@ -100,7 +100,7 @@ public class CloudPcServicePlan extends Entity implements Parsable {
     }
     /**
      * Gets the vCpuCount property value. The number of vCPUs. Read-only.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getVCpuCount() {

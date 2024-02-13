@@ -20,7 +20,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Security extends Entity implements Parsable {
     /**
-     * Instantiates a new Security and sets the default values.
+     * Instantiates a new {@link Security} and sets the default values.
      */
     public Security() {
         super();
@@ -28,7 +28,7 @@ public class Security extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Security
+     * @return a {@link Security}
      */
     @jakarta.annotation.Nonnull
     public static Security createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class Security extends Entity implements Parsable {
     }
     /**
      * Gets the alerts property value. Notifications for suspicious or potential security issues in a customers tenant.
-     * @return a java.util.List<Alert>
+     * @return a {@link java.util.List<Alert>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Alert> getAlerts() {
@@ -45,7 +45,7 @@ public class Security extends Entity implements Parsable {
     }
     /**
      * Gets the alerts_v2 property value. A collection of alerts in Microsoft 365 Defender.
-     * @return a java.util.List<Alert>
+     * @return a {@link java.util.List<Alert>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Alert> getAlertsV2() {
@@ -53,7 +53,7 @@ public class Security extends Entity implements Parsable {
     }
     /**
      * Gets the attackSimulation property value. Provides tenants capability to launch a simulated and realistic phishing attack and learn from it.
-     * @return a AttackSimulationRoot
+     * @return a {@link AttackSimulationRoot}
      */
     @jakarta.annotation.Nullable
     public AttackSimulationRoot getAttackSimulation() {
@@ -61,7 +61,7 @@ public class Security extends Entity implements Parsable {
     }
     /**
      * Gets the auditLog property value. The auditLog property
-     * @return a AuditCoreRoot
+     * @return a {@link AuditCoreRoot}
      */
     @jakarta.annotation.Nullable
     public AuditCoreRoot getAuditLog() {
@@ -69,7 +69,7 @@ public class Security extends Entity implements Parsable {
     }
     /**
      * Gets the cases property value. The cases property
-     * @return a CasesRoot
+     * @return a {@link CasesRoot}
      */
     @jakarta.annotation.Nullable
     public CasesRoot getCases() {
@@ -77,7 +77,7 @@ public class Security extends Entity implements Parsable {
     }
     /**
      * Gets the cloudAppSecurityProfiles property value. The cloudAppSecurityProfiles property
-     * @return a java.util.List<CloudAppSecurityProfile>
+     * @return a {@link java.util.List<CloudAppSecurityProfile>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<CloudAppSecurityProfile> getCloudAppSecurityProfiles() {
@@ -85,7 +85,7 @@ public class Security extends Entity implements Parsable {
     }
     /**
      * Gets the collaboration property value. The collaboration property
-     * @return a CollaborationRoot
+     * @return a {@link CollaborationRoot}
      */
     @jakarta.annotation.Nullable
     public CollaborationRoot getCollaboration() {
@@ -93,7 +93,7 @@ public class Security extends Entity implements Parsable {
     }
     /**
      * Gets the domainSecurityProfiles property value. The domainSecurityProfiles property
-     * @return a java.util.List<DomainSecurityProfile>
+     * @return a {@link java.util.List<DomainSecurityProfile>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DomainSecurityProfile> getDomainSecurityProfiles() {
@@ -101,7 +101,7 @@ public class Security extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -136,7 +136,7 @@ public class Security extends Entity implements Parsable {
     }
     /**
      * Gets the fileSecurityProfiles property value. The fileSecurityProfiles property
-     * @return a java.util.List<FileSecurityProfile>
+     * @return a {@link java.util.List<FileSecurityProfile>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<FileSecurityProfile> getFileSecurityProfiles() {
@@ -144,7 +144,7 @@ public class Security extends Entity implements Parsable {
     }
     /**
      * Gets the hostSecurityProfiles property value. The hostSecurityProfiles property
-     * @return a java.util.List<HostSecurityProfile>
+     * @return a {@link java.util.List<HostSecurityProfile>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<HostSecurityProfile> getHostSecurityProfiles() {
@@ -152,7 +152,7 @@ public class Security extends Entity implements Parsable {
     }
     /**
      * Gets the incidents property value. A collection of incidents in Microsoft 365 Defender, each of which is a set of correlated alerts and associated metadata that reflects the story of an attack.
-     * @return a java.util.List<Incident>
+     * @return a {@link java.util.List<Incident>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Incident> getIncidents() {
@@ -160,7 +160,7 @@ public class Security extends Entity implements Parsable {
     }
     /**
      * Gets the informationProtection property value. The informationProtection property
-     * @return a InformationProtection
+     * @return a {@link InformationProtection}
      */
     @jakarta.annotation.Nullable
     public InformationProtection getInformationProtection() {
@@ -168,7 +168,7 @@ public class Security extends Entity implements Parsable {
     }
     /**
      * Gets the ipSecurityProfiles property value. The ipSecurityProfiles property
-     * @return a java.util.List<IpSecurityProfile>
+     * @return a {@link java.util.List<IpSecurityProfile>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<IpSecurityProfile> getIpSecurityProfiles() {
@@ -176,7 +176,7 @@ public class Security extends Entity implements Parsable {
     }
     /**
      * Gets the labels property value. The labels property
-     * @return a LabelsRoot
+     * @return a {@link LabelsRoot}
      */
     @jakarta.annotation.Nullable
     public LabelsRoot getLabels() {
@@ -184,7 +184,7 @@ public class Security extends Entity implements Parsable {
     }
     /**
      * Gets the providerStatus property value. The providerStatus property
-     * @return a java.util.List<SecurityProviderStatus>
+     * @return a {@link java.util.List<SecurityProviderStatus>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<SecurityProviderStatus> getProviderStatus() {
@@ -192,7 +192,7 @@ public class Security extends Entity implements Parsable {
     }
     /**
      * Gets the providerTenantSettings property value. The providerTenantSettings property
-     * @return a java.util.List<ProviderTenantSetting>
+     * @return a {@link java.util.List<ProviderTenantSetting>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ProviderTenantSetting> getProviderTenantSettings() {
@@ -200,7 +200,7 @@ public class Security extends Entity implements Parsable {
     }
     /**
      * Gets the secureScoreControlProfiles property value. The secureScoreControlProfiles property
-     * @return a java.util.List<SecureScoreControlProfile>
+     * @return a {@link java.util.List<SecureScoreControlProfile>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<SecureScoreControlProfile> getSecureScoreControlProfiles() {
@@ -208,7 +208,7 @@ public class Security extends Entity implements Parsable {
     }
     /**
      * Gets the secureScores property value. Measurements of tenants security posture to help protect them from threats.
-     * @return a java.util.List<SecureScore>
+     * @return a {@link java.util.List<SecureScore>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<SecureScore> getSecureScores() {
@@ -216,7 +216,7 @@ public class Security extends Entity implements Parsable {
     }
     /**
      * Gets the securityActions property value. The securityActions property
-     * @return a java.util.List<SecurityAction>
+     * @return a {@link java.util.List<SecurityAction>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<SecurityAction> getSecurityActions() {
@@ -224,7 +224,7 @@ public class Security extends Entity implements Parsable {
     }
     /**
      * Gets the subjectRightsRequests property value. The subjectRightsRequests property
-     * @return a java.util.List<SubjectRightsRequest>
+     * @return a {@link java.util.List<SubjectRightsRequest>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<SubjectRightsRequest> getSubjectRightsRequests() {
@@ -232,7 +232,7 @@ public class Security extends Entity implements Parsable {
     }
     /**
      * Gets the threatIntelligence property value. The threatIntelligence property
-     * @return a ThreatIntelligence
+     * @return a {@link ThreatIntelligence}
      */
     @jakarta.annotation.Nullable
     public ThreatIntelligence getThreatIntelligence() {
@@ -240,7 +240,7 @@ public class Security extends Entity implements Parsable {
     }
     /**
      * Gets the threatSubmission property value. A threat submission sent to Microsoft; for example, a suspicious email threat, URL threat, or file threat.
-     * @return a ThreatSubmissionRoot
+     * @return a {@link ThreatSubmissionRoot}
      */
     @jakarta.annotation.Nullable
     public ThreatSubmissionRoot getThreatSubmission() {
@@ -248,7 +248,7 @@ public class Security extends Entity implements Parsable {
     }
     /**
      * Gets the tiIndicators property value. The tiIndicators property
-     * @return a java.util.List<TiIndicator>
+     * @return a {@link java.util.List<TiIndicator>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<TiIndicator> getTiIndicators() {
@@ -256,7 +256,7 @@ public class Security extends Entity implements Parsable {
     }
     /**
      * Gets the triggers property value. The triggers property
-     * @return a TriggersRoot
+     * @return a {@link TriggersRoot}
      */
     @jakarta.annotation.Nullable
     public TriggersRoot getTriggers() {
@@ -264,7 +264,7 @@ public class Security extends Entity implements Parsable {
     }
     /**
      * Gets the triggerTypes property value. The triggerTypes property
-     * @return a TriggerTypesRoot
+     * @return a {@link TriggerTypesRoot}
      */
     @jakarta.annotation.Nullable
     public TriggerTypesRoot getTriggerTypes() {
@@ -272,7 +272,7 @@ public class Security extends Entity implements Parsable {
     }
     /**
      * Gets the userSecurityProfiles property value. The userSecurityProfiles property
-     * @return a java.util.List<UserSecurityProfile>
+     * @return a {@link java.util.List<UserSecurityProfile>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserSecurityProfile> getUserSecurityProfiles() {

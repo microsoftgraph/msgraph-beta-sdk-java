@@ -11,7 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class FindRoomListsGetResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * Instantiates a new FindRoomListsGetResponse and sets the default values.
+     * Instantiates a new {@link FindRoomListsGetResponse} and sets the default values.
      */
     public FindRoomListsGetResponse() {
         super();
@@ -19,7 +19,7 @@ public class FindRoomListsGetResponse extends BaseCollectionPaginationCountRespo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a FindRoomListsGetResponse
+     * @return a {@link FindRoomListsGetResponse}
      */
     @jakarta.annotation.Nonnull
     public static FindRoomListsGetResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class FindRoomListsGetResponse extends BaseCollectionPaginationCountRespo
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -38,7 +38,7 @@ public class FindRoomListsGetResponse extends BaseCollectionPaginationCountRespo
     }
     /**
      * Gets the value property value. The value property
-     * @return a java.util.List<EmailAddress>
+     * @return a {@link java.util.List<EmailAddress>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<EmailAddress> getValue() {

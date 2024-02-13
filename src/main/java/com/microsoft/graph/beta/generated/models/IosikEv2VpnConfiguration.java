@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Parsable {
     /**
-     * Instantiates a new IosikEv2VpnConfiguration and sets the default values.
+     * Instantiates a new {@link IosikEv2VpnConfiguration} and sets the default values.
      */
     public IosikEv2VpnConfiguration() {
         super();
@@ -21,7 +21,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a IosikEv2VpnConfiguration
+     * @return a {@link IosikEv2VpnConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static IosikEv2VpnConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Par
     }
     /**
      * Gets the allowDefaultChildSecurityAssociationParameters property value. Allows the use of child security association parameters by setting all parameters to the device's default unless explicitly specified.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowDefaultChildSecurityAssociationParameters() {
@@ -38,7 +38,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Par
     }
     /**
      * Gets the allowDefaultSecurityAssociationParameters property value. Allows the use of security association parameters by setting all parameters to the device's default unless explicitly specified.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowDefaultSecurityAssociationParameters() {
@@ -46,7 +46,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Par
     }
     /**
      * Gets the alwaysOnConfiguration property value. AlwaysOn Configuration
-     * @return a AppleVpnAlwaysOnConfiguration
+     * @return a {@link AppleVpnAlwaysOnConfiguration}
      */
     @jakarta.annotation.Nullable
     public AppleVpnAlwaysOnConfiguration getAlwaysOnConfiguration() {
@@ -54,7 +54,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Par
     }
     /**
      * Gets the childSecurityAssociationParameters property value. Child Security Association Parameters
-     * @return a IosVpnSecurityAssociationParameters
+     * @return a {@link IosVpnSecurityAssociationParameters}
      */
     @jakarta.annotation.Nullable
     public IosVpnSecurityAssociationParameters getChildSecurityAssociationParameters() {
@@ -62,7 +62,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Par
     }
     /**
      * Gets the clientAuthenticationType property value. The type of VPN client authentication type
-     * @return a VpnClientAuthenticationType
+     * @return a {@link VpnClientAuthenticationType}
      */
     @jakarta.annotation.Nullable
     public VpnClientAuthenticationType getClientAuthenticationType() {
@@ -70,7 +70,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Par
     }
     /**
      * Gets the deadPeerDetectionRate property value. Determine how often to check if a peer connection is still active. . Possible values are: medium, none, low, high.
-     * @return a VpnDeadPeerDetectionRate
+     * @return a {@link VpnDeadPeerDetectionRate}
      */
     @jakarta.annotation.Nullable
     public VpnDeadPeerDetectionRate getDeadPeerDetectionRate() {
@@ -78,7 +78,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Par
     }
     /**
      * Gets the disableMobilityAndMultihoming property value. Disable MOBIKE
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDisableMobilityAndMultihoming() {
@@ -86,7 +86,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Par
     }
     /**
      * Gets the disableRedirect property value. Disable Redirect
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDisableRedirect() {
@@ -94,7 +94,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Par
     }
     /**
      * Gets the enableAlwaysOnConfiguration property value. Determines if Always on VPN is enabled
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getEnableAlwaysOnConfiguration() {
@@ -102,7 +102,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Par
     }
     /**
      * Gets the enableCertificateRevocationCheck property value. Enables a best-effort revocation check; server response timeouts will not cause it to fail
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getEnableCertificateRevocationCheck() {
@@ -110,7 +110,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Par
     }
     /**
      * Gets the enableEAP property value. Enables EAP only authentication
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getEnableEAP() {
@@ -118,7 +118,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Par
     }
     /**
      * Gets the enablePerfectForwardSecrecy property value. Enable Perfect Forward Secrecy (PFS).
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getEnablePerfectForwardSecrecy() {
@@ -126,7 +126,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Par
     }
     /**
      * Gets the enableUseInternalSubnetAttributes property value. Enable Use Internal Subnet Attributes.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getEnableUseInternalSubnetAttributes() {
@@ -134,7 +134,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Par
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -166,7 +166,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Par
     }
     /**
      * Gets the localIdentifier property value. The type of VPN local identifier
-     * @return a VpnLocalIdentifier
+     * @return a {@link VpnLocalIdentifier}
      */
     @jakarta.annotation.Nullable
     public VpnLocalIdentifier getLocalIdentifier() {
@@ -174,7 +174,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Par
     }
     /**
      * Gets the mtuSizeInBytes property value. Maximum transmission unit. Valid values 1280 to 1400
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getMtuSizeInBytes() {
@@ -182,7 +182,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Par
     }
     /**
      * Gets the remoteIdentifier property value. Address of the IKEv2 server. Must be a FQDN, UserFQDN, network address, or ASN1DN
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRemoteIdentifier() {
@@ -190,7 +190,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Par
     }
     /**
      * Gets the securityAssociationParameters property value. Security Association Parameters
-     * @return a IosVpnSecurityAssociationParameters
+     * @return a {@link IosVpnSecurityAssociationParameters}
      */
     @jakarta.annotation.Nullable
     public IosVpnSecurityAssociationParameters getSecurityAssociationParameters() {
@@ -198,7 +198,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Par
     }
     /**
      * Gets the serverCertificateCommonName property value. Common name of the IKEv2 Server Certificate used in Server Authentication
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getServerCertificateCommonName() {
@@ -206,7 +206,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Par
     }
     /**
      * Gets the serverCertificateIssuerCommonName property value. Issuer Common name of the IKEv2 Server Certificate issuer used in Authentication
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getServerCertificateIssuerCommonName() {
@@ -214,7 +214,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Par
     }
     /**
      * Gets the serverCertificateType property value. The type of certificate the VPN server will present to the VPN client for authentication. Possible values are: rsa, ecdsa256, ecdsa384, ecdsa521.
-     * @return a VpnServerCertificateType
+     * @return a {@link VpnServerCertificateType}
      */
     @jakarta.annotation.Nullable
     public VpnServerCertificateType getServerCertificateType() {
@@ -222,7 +222,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Par
     }
     /**
      * Gets the sharedSecret property value. Used when Shared Secret Authentication is selected
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSharedSecret() {
@@ -230,7 +230,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Par
     }
     /**
      * Gets the tlsMaximumVersion property value. The maximum TLS version to be used with EAP-TLS authentication
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTlsMaximumVersion() {
@@ -238,7 +238,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Par
     }
     /**
      * Gets the tlsMinimumVersion property value. The minimum TLS version to be used with EAP-TLS authentication
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTlsMinimumVersion() {

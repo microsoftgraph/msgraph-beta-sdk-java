@@ -48,6 +48,7 @@ import java.util.Objects;
 public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the androidManagedAppProtections property of the microsoft.graph.deviceAppManagement entity.
+     * @return a {@link AndroidManagedAppProtectionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AndroidManagedAppProtectionsRequestBuilder androidManagedAppProtections() {
@@ -55,6 +56,7 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the defaultManagedAppProtections property of the microsoft.graph.deviceAppManagement entity.
+     * @return a {@link DefaultManagedAppProtectionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DefaultManagedAppProtectionsRequestBuilder defaultManagedAppProtections() {
@@ -62,6 +64,7 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the deviceAppManagementTasks property of the microsoft.graph.deviceAppManagement entity.
+     * @return a {@link DeviceAppManagementTasksRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DeviceAppManagementTasksRequestBuilder deviceAppManagementTasks() {
@@ -69,6 +72,7 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the enterpriseCodeSigningCertificates property of the microsoft.graph.deviceAppManagement entity.
+     * @return a {@link EnterpriseCodeSigningCertificatesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public EnterpriseCodeSigningCertificatesRequestBuilder enterpriseCodeSigningCertificates() {
@@ -76,6 +80,7 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the iosLobAppProvisioningConfigurations property of the microsoft.graph.deviceAppManagement entity.
+     * @return a {@link IosLobAppProvisioningConfigurationsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public IosLobAppProvisioningConfigurationsRequestBuilder iosLobAppProvisioningConfigurations() {
@@ -83,6 +88,7 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the iosManagedAppProtections property of the microsoft.graph.deviceAppManagement entity.
+     * @return a {@link IosManagedAppProtectionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public IosManagedAppProtectionsRequestBuilder iosManagedAppProtections() {
@@ -90,6 +96,7 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the managedAppPolicies property of the microsoft.graph.deviceAppManagement entity.
+     * @return a {@link ManagedAppPoliciesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ManagedAppPoliciesRequestBuilder managedAppPolicies() {
@@ -97,6 +104,7 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the managedAppRegistrations property of the microsoft.graph.deviceAppManagement entity.
+     * @return a {@link ManagedAppRegistrationsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ManagedAppRegistrationsRequestBuilder managedAppRegistrations() {
@@ -104,6 +112,7 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the managedAppStatuses property of the microsoft.graph.deviceAppManagement entity.
+     * @return a {@link ManagedAppStatusesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ManagedAppStatusesRequestBuilder managedAppStatuses() {
@@ -111,6 +120,7 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the managedEBookCategories property of the microsoft.graph.deviceAppManagement entity.
+     * @return a {@link ManagedEBookCategoriesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ManagedEBookCategoriesRequestBuilder managedEBookCategories() {
@@ -118,6 +128,7 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the managedEBooks property of the microsoft.graph.deviceAppManagement entity.
+     * @return a {@link ManagedEBooksRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ManagedEBooksRequestBuilder managedEBooks() {
@@ -125,6 +136,7 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the mdmWindowsInformationProtectionPolicies property of the microsoft.graph.deviceAppManagement entity.
+     * @return a {@link MdmWindowsInformationProtectionPoliciesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MdmWindowsInformationProtectionPoliciesRequestBuilder mdmWindowsInformationProtectionPolicies() {
@@ -132,6 +144,7 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the mobileAppCategories property of the microsoft.graph.deviceAppManagement entity.
+     * @return a {@link MobileAppCategoriesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MobileAppCategoriesRequestBuilder mobileAppCategories() {
@@ -139,6 +152,7 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the mobileAppConfigurations property of the microsoft.graph.deviceAppManagement entity.
+     * @return a {@link MobileAppConfigurationsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MobileAppConfigurationsRequestBuilder mobileAppConfigurations() {
@@ -146,6 +160,7 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the mobileApps property of the microsoft.graph.deviceAppManagement entity.
+     * @return a {@link MobileAppsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MobileAppsRequestBuilder mobileApps() {
@@ -153,6 +168,7 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the policySets property of the microsoft.graph.deviceAppManagement entity.
+     * @return a {@link PolicySetsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PolicySetsRequestBuilder policySets() {
@@ -160,6 +176,7 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the symantecCodeSigningCertificate property of the microsoft.graph.deviceAppManagement entity.
+     * @return a {@link SymantecCodeSigningCertificateRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SymantecCodeSigningCertificateRequestBuilder symantecCodeSigningCertificate() {
@@ -167,6 +184,7 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the syncMicrosoftStoreForBusinessApps method.
+     * @return a {@link SyncMicrosoftStoreForBusinessAppsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SyncMicrosoftStoreForBusinessAppsRequestBuilder syncMicrosoftStoreForBusinessApps() {
@@ -174,6 +192,7 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the targetedManagedAppConfigurations property of the microsoft.graph.deviceAppManagement entity.
+     * @return a {@link TargetedManagedAppConfigurationsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TargetedManagedAppConfigurationsRequestBuilder targetedManagedAppConfigurations() {
@@ -181,6 +200,7 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the vppTokens property of the microsoft.graph.deviceAppManagement entity.
+     * @return a {@link VppTokensRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public VppTokensRequestBuilder vppTokens() {
@@ -188,6 +208,7 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the wdacSupplementalPolicies property of the microsoft.graph.deviceAppManagement entity.
+     * @return a {@link WdacSupplementalPoliciesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public WdacSupplementalPoliciesRequestBuilder wdacSupplementalPolicies() {
@@ -195,6 +216,7 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the windowsInformationProtectionDeviceRegistrations property of the microsoft.graph.deviceAppManagement entity.
+     * @return a {@link WindowsInformationProtectionDeviceRegistrationsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public WindowsInformationProtectionDeviceRegistrationsRequestBuilder windowsInformationProtectionDeviceRegistrations() {
@@ -202,6 +224,7 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the windowsInformationProtectionPolicies property of the microsoft.graph.deviceAppManagement entity.
+     * @return a {@link WindowsInformationProtectionPoliciesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public WindowsInformationProtectionPoliciesRequestBuilder windowsInformationProtectionPolicies() {
@@ -209,6 +232,7 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the windowsInformationProtectionWipeActions property of the microsoft.graph.deviceAppManagement entity.
+     * @return a {@link WindowsInformationProtectionWipeActionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public WindowsInformationProtectionWipeActionsRequestBuilder windowsInformationProtectionWipeActions() {
@@ -216,6 +240,7 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the windowsManagedAppProtections property of the microsoft.graph.deviceAppManagement entity.
+     * @return a {@link WindowsManagedAppProtectionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public WindowsManagedAppProtectionsRequestBuilder windowsManagedAppProtections() {
@@ -223,13 +248,14 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the windowsManagementApp property of the microsoft.graph.deviceAppManagement entity.
+     * @return a {@link WindowsManagementAppRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public WindowsManagementAppRequestBuilder windowsManagementApp() {
         return new WindowsManagementAppRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new DeviceAppManagementRequestBuilder and sets the default values.
+     * Instantiates a new {@link DeviceAppManagementRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -237,7 +263,7 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceAppManagement{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new DeviceAppManagementRequestBuilder and sets the default values.
+     * Instantiates a new {@link DeviceAppManagementRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -246,7 +272,8 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get deviceAppManagement
-     * @return a DeviceAppManagement
+     * @return a {@link DeviceAppManagement}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public DeviceAppManagement get() {
@@ -255,20 +282,21 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Get deviceAppManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a DeviceAppManagement
+     * @return a {@link DeviceAppManagement}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public DeviceAppManagement get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceAppManagement::createFromDiscriminatorValue);
     }
     /**
      * Update deviceAppManagement
      * @param body The request body
-     * @return a DeviceAppManagement
+     * @return a {@link DeviceAppManagement}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public DeviceAppManagement patch(@jakarta.annotation.Nonnull final DeviceAppManagement body) {
@@ -278,20 +306,20 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder {
      * Update deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a DeviceAppManagement
+     * @return a {@link DeviceAppManagement}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public DeviceAppManagement patch(@jakarta.annotation.Nonnull final DeviceAppManagement body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceAppManagement::createFromDiscriminatorValue);
     }
     /**
      * Get deviceAppManagement
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -300,7 +328,7 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Get deviceAppManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -312,7 +340,7 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Update deviceAppManagement
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final DeviceAppManagement body) {
@@ -322,12 +350,12 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder {
      * Update deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final DeviceAppManagement body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/deviceAppManagement", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -336,7 +364,7 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a DeviceAppManagementRequestBuilder
+     * @return a {@link DeviceAppManagementRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DeviceAppManagementRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -360,7 +388,7 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

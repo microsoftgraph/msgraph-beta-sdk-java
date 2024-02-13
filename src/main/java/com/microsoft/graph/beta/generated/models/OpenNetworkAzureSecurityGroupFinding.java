@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OpenNetworkAzureSecurityGroupFinding extends Finding implements Parsable {
     /**
-     * Instantiates a new OpenNetworkAzureSecurityGroupFinding and sets the default values.
+     * Instantiates a new {@link OpenNetworkAzureSecurityGroupFinding} and sets the default values.
      */
     public OpenNetworkAzureSecurityGroupFinding() {
         super();
@@ -17,7 +17,7 @@ public class OpenNetworkAzureSecurityGroupFinding extends Finding implements Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a OpenNetworkAzureSecurityGroupFinding
+     * @return a {@link OpenNetworkAzureSecurityGroupFinding}
      */
     @jakarta.annotation.Nonnull
     public static OpenNetworkAzureSecurityGroupFinding createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class OpenNetworkAzureSecurityGroupFinding extends Finding implements Par
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -38,7 +38,7 @@ public class OpenNetworkAzureSecurityGroupFinding extends Finding implements Par
     }
     /**
      * Gets the inboundPorts property value. The inboundPorts property
-     * @return a InboundPorts
+     * @return a {@link InboundPorts}
      */
     @jakarta.annotation.Nullable
     public InboundPorts getInboundPorts() {
@@ -46,7 +46,7 @@ public class OpenNetworkAzureSecurityGroupFinding extends Finding implements Par
     }
     /**
      * Gets the securityGroup property value. The securityGroup property
-     * @return a AuthorizationSystemResource
+     * @return a {@link AuthorizationSystemResource}
      */
     @jakarta.annotation.Nullable
     public AuthorizationSystemResource getSecurityGroup() {
@@ -54,7 +54,7 @@ public class OpenNetworkAzureSecurityGroupFinding extends Finding implements Par
     }
     /**
      * Gets the virtualMachines property value. Represents a virtual machine in an authorization system.
-     * @return a java.util.List<VirtualMachineDetails>
+     * @return a {@link java.util.List<VirtualMachineDetails>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<VirtualMachineDetails> getVirtualMachines() {

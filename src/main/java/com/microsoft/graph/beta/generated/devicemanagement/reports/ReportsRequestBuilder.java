@@ -94,6 +94,7 @@ import java.util.Objects;
 public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the cachedReportConfigurations property of the microsoft.graph.deviceManagementReports entity.
+     * @return a {@link CachedReportConfigurationsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CachedReportConfigurationsRequestBuilder cachedReportConfigurations() {
@@ -101,6 +102,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the exportJobs property of the microsoft.graph.deviceManagementReports entity.
+     * @return a {@link ExportJobsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ExportJobsRequestBuilder exportJobs() {
@@ -108,6 +110,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getActiveMalwareReport method.
+     * @return a {@link GetActiveMalwareReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetActiveMalwareReportRequestBuilder getActiveMalwareReport() {
@@ -115,6 +118,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getActiveMalwareSummaryReport method.
+     * @return a {@link GetActiveMalwareSummaryReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetActiveMalwareSummaryReportRequestBuilder getActiveMalwareSummaryReport() {
@@ -122,6 +126,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getAllCertificatesReport method.
+     * @return a {@link GetAllCertificatesReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetAllCertificatesReportRequestBuilder getAllCertificatesReport() {
@@ -129,6 +134,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getAppsInstallSummaryReport method.
+     * @return a {@link GetAppsInstallSummaryReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetAppsInstallSummaryReportRequestBuilder getAppsInstallSummaryReport() {
@@ -136,6 +142,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getAppStatusOverviewReport method.
+     * @return a {@link GetAppStatusOverviewReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetAppStatusOverviewReportRequestBuilder getAppStatusOverviewReport() {
@@ -143,6 +150,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getCachedReport method.
+     * @return a {@link GetCachedReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetCachedReportRequestBuilder getCachedReport() {
@@ -150,6 +158,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getCertificatesReport method.
+     * @return a {@link GetCertificatesReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetCertificatesReportRequestBuilder getCertificatesReport() {
@@ -157,6 +166,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getCompliancePoliciesReportForDevice method.
+     * @return a {@link GetCompliancePoliciesReportForDeviceRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetCompliancePoliciesReportForDeviceRequestBuilder getCompliancePoliciesReportForDevice() {
@@ -164,6 +174,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getCompliancePolicyDevicesReport method.
+     * @return a {@link GetCompliancePolicyDevicesReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetCompliancePolicyDevicesReportRequestBuilder getCompliancePolicyDevicesReport() {
@@ -171,6 +182,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getCompliancePolicyDeviceSummaryReport method.
+     * @return a {@link GetCompliancePolicyDeviceSummaryReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetCompliancePolicyDeviceSummaryReportRequestBuilder getCompliancePolicyDeviceSummaryReport() {
@@ -178,6 +190,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getCompliancePolicyNonComplianceReport method.
+     * @return a {@link GetCompliancePolicyNonComplianceReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetCompliancePolicyNonComplianceReportRequestBuilder getCompliancePolicyNonComplianceReport() {
@@ -185,6 +198,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getCompliancePolicyNonComplianceSummaryReport method.
+     * @return a {@link GetCompliancePolicyNonComplianceSummaryReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetCompliancePolicyNonComplianceSummaryReportRequestBuilder getCompliancePolicyNonComplianceSummaryReport() {
@@ -192,6 +206,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getComplianceSettingDetailsReport method.
+     * @return a {@link GetComplianceSettingDetailsReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetComplianceSettingDetailsReportRequestBuilder getComplianceSettingDetailsReport() {
@@ -199,6 +214,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getComplianceSettingNonComplianceReport method.
+     * @return a {@link GetComplianceSettingNonComplianceReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetComplianceSettingNonComplianceReportRequestBuilder getComplianceSettingNonComplianceReport() {
@@ -206,6 +222,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getComplianceSettingsReport method.
+     * @return a {@link GetComplianceSettingsReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetComplianceSettingsReportRequestBuilder getComplianceSettingsReport() {
@@ -213,6 +230,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getConfigManagerDevicePolicyStatusReport method.
+     * @return a {@link GetConfigManagerDevicePolicyStatusReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetConfigManagerDevicePolicyStatusReportRequestBuilder getConfigManagerDevicePolicyStatusReport() {
@@ -220,6 +238,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getConfigurationPoliciesReportForDevice method.
+     * @return a {@link GetConfigurationPoliciesReportForDeviceRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetConfigurationPoliciesReportForDeviceRequestBuilder getConfigurationPoliciesReportForDevice() {
@@ -227,6 +246,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getConfigurationPolicyDevicesReport method.
+     * @return a {@link GetConfigurationPolicyDevicesReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetConfigurationPolicyDevicesReportRequestBuilder getConfigurationPolicyDevicesReport() {
@@ -234,6 +254,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getConfigurationPolicyDeviceSummaryReport method.
+     * @return a {@link GetConfigurationPolicyDeviceSummaryReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetConfigurationPolicyDeviceSummaryReportRequestBuilder getConfigurationPolicyDeviceSummaryReport() {
@@ -241,6 +262,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getConfigurationPolicyNonComplianceReport method.
+     * @return a {@link GetConfigurationPolicyNonComplianceReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetConfigurationPolicyNonComplianceReportRequestBuilder getConfigurationPolicyNonComplianceReport() {
@@ -248,6 +270,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getConfigurationPolicyNonComplianceSummaryReport method.
+     * @return a {@link GetConfigurationPolicyNonComplianceSummaryReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetConfigurationPolicyNonComplianceSummaryReportRequestBuilder getConfigurationPolicyNonComplianceSummaryReport() {
@@ -255,6 +278,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getConfigurationPolicySettingsDeviceSummaryReport method.
+     * @return a {@link GetConfigurationPolicySettingsDeviceSummaryReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetConfigurationPolicySettingsDeviceSummaryReportRequestBuilder getConfigurationPolicySettingsDeviceSummaryReport() {
@@ -262,6 +286,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getConfigurationSettingDetailsReport method.
+     * @return a {@link GetConfigurationSettingDetailsReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetConfigurationSettingDetailsReportRequestBuilder getConfigurationSettingDetailsReport() {
@@ -269,6 +294,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getConfigurationSettingNonComplianceReport method.
+     * @return a {@link GetConfigurationSettingNonComplianceReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetConfigurationSettingNonComplianceReportRequestBuilder getConfigurationSettingNonComplianceReport() {
@@ -276,6 +302,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getConfigurationSettingsReport method.
+     * @return a {@link GetConfigurationSettingsReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetConfigurationSettingsReportRequestBuilder getConfigurationSettingsReport() {
@@ -283,6 +310,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getDeviceConfigurationPolicySettingsSummaryReport method.
+     * @return a {@link GetDeviceConfigurationPolicySettingsSummaryReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetDeviceConfigurationPolicySettingsSummaryReportRequestBuilder getDeviceConfigurationPolicySettingsSummaryReport() {
@@ -290,6 +318,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getDeviceConfigurationPolicyStatusSummary method.
+     * @return a {@link GetDeviceConfigurationPolicyStatusSummaryRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetDeviceConfigurationPolicyStatusSummaryRequestBuilder getDeviceConfigurationPolicyStatusSummary() {
@@ -297,6 +326,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getDeviceInstallStatusReport method.
+     * @return a {@link GetDeviceInstallStatusReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetDeviceInstallStatusReportRequestBuilder getDeviceInstallStatusReport() {
@@ -304,6 +334,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getDeviceManagementIntentPerSettingContributingProfiles method.
+     * @return a {@link GetDeviceManagementIntentPerSettingContributingProfilesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetDeviceManagementIntentPerSettingContributingProfilesRequestBuilder getDeviceManagementIntentPerSettingContributingProfiles() {
@@ -311,6 +342,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getDeviceManagementIntentSettingsReport method.
+     * @return a {@link GetDeviceManagementIntentSettingsReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetDeviceManagementIntentSettingsReportRequestBuilder getDeviceManagementIntentSettingsReport() {
@@ -318,6 +350,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getDeviceNonComplianceReport method.
+     * @return a {@link GetDeviceNonComplianceReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetDeviceNonComplianceReportRequestBuilder getDeviceNonComplianceReport() {
@@ -325,6 +358,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getDevicePoliciesComplianceReport method.
+     * @return a {@link GetDevicePoliciesComplianceReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetDevicePoliciesComplianceReportRequestBuilder getDevicePoliciesComplianceReport() {
@@ -332,6 +366,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getDevicePolicySettingsComplianceReport method.
+     * @return a {@link GetDevicePolicySettingsComplianceReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetDevicePolicySettingsComplianceReportRequestBuilder getDevicePolicySettingsComplianceReport() {
@@ -339,6 +374,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getDevicesStatusByPolicyPlatformComplianceReport method.
+     * @return a {@link GetDevicesStatusByPolicyPlatformComplianceReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetDevicesStatusByPolicyPlatformComplianceReportRequestBuilder getDevicesStatusByPolicyPlatformComplianceReport() {
@@ -346,6 +382,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getDevicesStatusBySettingReport method.
+     * @return a {@link GetDevicesStatusBySettingReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetDevicesStatusBySettingReportRequestBuilder getDevicesStatusBySettingReport() {
@@ -353,6 +390,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getDeviceStatusByCompliacePolicyReport method.
+     * @return a {@link GetDeviceStatusByCompliacePolicyReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetDeviceStatusByCompliacePolicyReportRequestBuilder getDeviceStatusByCompliacePolicyReport() {
@@ -360,6 +398,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getDeviceStatusByCompliancePolicySettingReport method.
+     * @return a {@link GetDeviceStatusByCompliancePolicySettingReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetDeviceStatusByCompliancePolicySettingReportRequestBuilder getDeviceStatusByCompliancePolicySettingReport() {
@@ -367,6 +406,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getDeviceStatusSummaryByCompliacePolicyReport method.
+     * @return a {@link GetDeviceStatusSummaryByCompliacePolicyReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetDeviceStatusSummaryByCompliacePolicyReportRequestBuilder getDeviceStatusSummaryByCompliacePolicyReport() {
@@ -374,6 +414,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getDeviceStatusSummaryByCompliancePolicySettingsReport method.
+     * @return a {@link GetDeviceStatusSummaryByCompliancePolicySettingsReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetDeviceStatusSummaryByCompliancePolicySettingsReportRequestBuilder getDeviceStatusSummaryByCompliancePolicySettingsReport() {
@@ -381,6 +422,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getDevicesWithoutCompliancePolicyReport method.
+     * @return a {@link GetDevicesWithoutCompliancePolicyReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetDevicesWithoutCompliancePolicyReportRequestBuilder getDevicesWithoutCompliancePolicyReport() {
@@ -388,6 +430,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getEncryptionReportForDevices method.
+     * @return a {@link GetEncryptionReportForDevicesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetEncryptionReportForDevicesRequestBuilder getEncryptionReportForDevices() {
@@ -395,6 +438,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getEnrollmentConfigurationPoliciesByDevice method.
+     * @return a {@link GetEnrollmentConfigurationPoliciesByDeviceRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetEnrollmentConfigurationPoliciesByDeviceRequestBuilder getEnrollmentConfigurationPoliciesByDevice() {
@@ -402,6 +446,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getFailedMobileAppsReport method.
+     * @return a {@link GetFailedMobileAppsReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetFailedMobileAppsReportRequestBuilder getFailedMobileAppsReport() {
@@ -409,6 +454,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getFailedMobileAppsSummaryReport method.
+     * @return a {@link GetFailedMobileAppsSummaryReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetFailedMobileAppsSummaryReportRequestBuilder getFailedMobileAppsSummaryReport() {
@@ -416,6 +462,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getGroupPolicySettingsDeviceSettingsReport method.
+     * @return a {@link GetGroupPolicySettingsDeviceSettingsReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetGroupPolicySettingsDeviceSettingsReportRequestBuilder getGroupPolicySettingsDeviceSettingsReport() {
@@ -423,6 +470,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getHistoricalReport method.
+     * @return a {@link GetHistoricalReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetHistoricalReportRequestBuilder getHistoricalReport() {
@@ -430,6 +478,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getMalwareSummaryReport method.
+     * @return a {@link GetMalwareSummaryReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetMalwareSummaryReportRequestBuilder getMalwareSummaryReport() {
@@ -437,6 +486,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getMobileApplicationManagementAppConfigurationReport method.
+     * @return a {@link GetMobileApplicationManagementAppConfigurationReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetMobileApplicationManagementAppConfigurationReportRequestBuilder getMobileApplicationManagementAppConfigurationReport() {
@@ -444,6 +494,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getMobileApplicationManagementAppRegistrationSummaryReport method.
+     * @return a {@link GetMobileApplicationManagementAppRegistrationSummaryReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetMobileApplicationManagementAppRegistrationSummaryReportRequestBuilder getMobileApplicationManagementAppRegistrationSummaryReport() {
@@ -451,6 +502,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getNoncompliantDevicesAndSettingsReport method.
+     * @return a {@link GetNoncompliantDevicesAndSettingsReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetNoncompliantDevicesAndSettingsReportRequestBuilder getNoncompliantDevicesAndSettingsReport() {
@@ -458,6 +510,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getPolicyNonComplianceMetadata method.
+     * @return a {@link GetPolicyNonComplianceMetadataRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetPolicyNonComplianceMetadataRequestBuilder getPolicyNonComplianceMetadata() {
@@ -465,6 +518,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getPolicyNonComplianceReport method.
+     * @return a {@link GetPolicyNonComplianceReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetPolicyNonComplianceReportRequestBuilder getPolicyNonComplianceReport() {
@@ -472,6 +526,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getPolicyNonComplianceSummaryReport method.
+     * @return a {@link GetPolicyNonComplianceSummaryReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetPolicyNonComplianceSummaryReportRequestBuilder getPolicyNonComplianceSummaryReport() {
@@ -479,6 +534,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getQuietTimePolicyUsersReport method.
+     * @return a {@link GetQuietTimePolicyUsersReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetQuietTimePolicyUsersReportRequestBuilder getQuietTimePolicyUsersReport() {
@@ -486,6 +542,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getQuietTimePolicyUserSummaryReport method.
+     * @return a {@link GetQuietTimePolicyUserSummaryReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetQuietTimePolicyUserSummaryReportRequestBuilder getQuietTimePolicyUserSummaryReport() {
@@ -493,6 +550,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getRelatedAppsStatusReport method.
+     * @return a {@link GetRelatedAppsStatusReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetRelatedAppsStatusReportRequestBuilder getRelatedAppsStatusReport() {
@@ -500,6 +558,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getRemoteAssistanceSessionsReport method.
+     * @return a {@link GetRemoteAssistanceSessionsReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetRemoteAssistanceSessionsReportRequestBuilder getRemoteAssistanceSessionsReport() {
@@ -507,6 +566,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getReportFilters method.
+     * @return a {@link GetReportFiltersRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetReportFiltersRequestBuilder getReportFilters() {
@@ -514,6 +574,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getSettingNonComplianceReport method.
+     * @return a {@link GetSettingNonComplianceReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetSettingNonComplianceReportRequestBuilder getSettingNonComplianceReport() {
@@ -521,6 +582,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getUnhealthyDefenderAgentsReport method.
+     * @return a {@link GetUnhealthyDefenderAgentsReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetUnhealthyDefenderAgentsReportRequestBuilder getUnhealthyDefenderAgentsReport() {
@@ -528,6 +590,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getUnhealthyFirewallReport method.
+     * @return a {@link GetUnhealthyFirewallReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetUnhealthyFirewallReportRequestBuilder getUnhealthyFirewallReport() {
@@ -535,6 +598,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getUnhealthyFirewallSummaryReport method.
+     * @return a {@link GetUnhealthyFirewallSummaryReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetUnhealthyFirewallSummaryReportRequestBuilder getUnhealthyFirewallSummaryReport() {
@@ -542,6 +606,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getUserInstallStatusReport method.
+     * @return a {@link GetUserInstallStatusReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetUserInstallStatusReportRequestBuilder getUserInstallStatusReport() {
@@ -549,6 +614,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getWindowsDriverUpdateAlertsPerPolicyPerDeviceReport method.
+     * @return a {@link GetWindowsDriverUpdateAlertsPerPolicyPerDeviceReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetWindowsDriverUpdateAlertsPerPolicyPerDeviceReportRequestBuilder getWindowsDriverUpdateAlertsPerPolicyPerDeviceReport() {
@@ -556,6 +622,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getWindowsDriverUpdateAlertSummaryReport method.
+     * @return a {@link GetWindowsDriverUpdateAlertSummaryReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetWindowsDriverUpdateAlertSummaryReportRequestBuilder getWindowsDriverUpdateAlertSummaryReport() {
@@ -563,6 +630,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getWindowsQualityUpdateAlertsPerPolicyPerDeviceReport method.
+     * @return a {@link GetWindowsQualityUpdateAlertsPerPolicyPerDeviceReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetWindowsQualityUpdateAlertsPerPolicyPerDeviceReportRequestBuilder getWindowsQualityUpdateAlertsPerPolicyPerDeviceReport() {
@@ -570,6 +638,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getWindowsQualityUpdateAlertSummaryReport method.
+     * @return a {@link GetWindowsQualityUpdateAlertSummaryReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetWindowsQualityUpdateAlertSummaryReportRequestBuilder getWindowsQualityUpdateAlertSummaryReport() {
@@ -577,6 +646,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getWindowsUpdateAlertsPerPolicyPerDeviceReport method.
+     * @return a {@link GetWindowsUpdateAlertsPerPolicyPerDeviceReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetWindowsUpdateAlertsPerPolicyPerDeviceReportRequestBuilder getWindowsUpdateAlertsPerPolicyPerDeviceReport() {
@@ -584,6 +654,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getWindowsUpdateAlertSummaryReport method.
+     * @return a {@link GetWindowsUpdateAlertSummaryReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetWindowsUpdateAlertSummaryReportRequestBuilder getWindowsUpdateAlertSummaryReport() {
@@ -591,13 +662,14 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getZebraFotaDeploymentReport method.
+     * @return a {@link GetZebraFotaDeploymentReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetZebraFotaDeploymentReportRequestBuilder getZebraFotaDeploymentReport() {
         return new GetZebraFotaDeploymentReportRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new ReportsRequestBuilder and sets the default values.
+     * Instantiates a new {@link ReportsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -605,7 +677,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/reports{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new ReportsRequestBuilder and sets the default values.
+     * Instantiates a new {@link ReportsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -614,6 +686,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Delete navigation property reports for deviceManagement
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete() {
         delete(null);
@@ -621,17 +694,18 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property reports for deviceManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Reports singleton
-     * @return a DeviceManagementReports
+     * @return a {@link DeviceManagementReports}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public DeviceManagementReports get() {
@@ -640,20 +714,21 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Reports singleton
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a DeviceManagementReports
+     * @return a {@link DeviceManagementReports}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public DeviceManagementReports get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceManagementReports::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property reports in deviceManagement
      * @param body The request body
-     * @return a DeviceManagementReports
+     * @return a {@link DeviceManagementReports}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public DeviceManagementReports patch(@jakarta.annotation.Nonnull final DeviceManagementReports body) {
@@ -663,20 +738,20 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property reports in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a DeviceManagementReports
+     * @return a {@link DeviceManagementReports}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public DeviceManagementReports patch(@jakarta.annotation.Nonnull final DeviceManagementReports body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceManagementReports::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property reports for deviceManagement
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -685,18 +760,18 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property reports for deviceManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/deviceManagement/reports", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Reports singleton
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -705,7 +780,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Reports singleton
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -717,7 +792,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property reports in deviceManagement
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final DeviceManagementReports body) {
@@ -727,12 +802,12 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property reports in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final DeviceManagementReports body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/deviceManagement/reports", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -741,7 +816,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a ReportsRequestBuilder
+     * @return a {@link ReportsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ReportsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -771,7 +846,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

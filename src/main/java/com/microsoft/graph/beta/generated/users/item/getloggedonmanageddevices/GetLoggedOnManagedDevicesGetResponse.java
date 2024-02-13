@@ -11,7 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GetLoggedOnManagedDevicesGetResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * Instantiates a new GetLoggedOnManagedDevicesGetResponse and sets the default values.
+     * Instantiates a new {@link GetLoggedOnManagedDevicesGetResponse} and sets the default values.
      */
     public GetLoggedOnManagedDevicesGetResponse() {
         super();
@@ -19,7 +19,7 @@ public class GetLoggedOnManagedDevicesGetResponse extends BaseCollectionPaginati
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a GetLoggedOnManagedDevicesGetResponse
+     * @return a {@link GetLoggedOnManagedDevicesGetResponse}
      */
     @jakarta.annotation.Nonnull
     public static GetLoggedOnManagedDevicesGetResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class GetLoggedOnManagedDevicesGetResponse extends BaseCollectionPaginati
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -38,7 +38,7 @@ public class GetLoggedOnManagedDevicesGetResponse extends BaseCollectionPaginati
     }
     /**
      * Gets the value property value. The value property
-     * @return a java.util.List<ManagedDevice>
+     * @return a {@link java.util.List<ManagedDevice>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedDevice> getValue() {

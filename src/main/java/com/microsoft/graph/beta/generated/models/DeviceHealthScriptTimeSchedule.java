@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceHealthScriptTimeSchedule extends DeviceHealthScriptRunSchedule implements Parsable {
     /**
-     * Instantiates a new DeviceHealthScriptTimeSchedule and sets the default values.
+     * Instantiates a new {@link DeviceHealthScriptTimeSchedule} and sets the default values.
      */
     public DeviceHealthScriptTimeSchedule() {
         super();
@@ -22,7 +22,7 @@ public class DeviceHealthScriptTimeSchedule extends DeviceHealthScriptRunSchedul
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceHealthScriptTimeSchedule
+     * @return a {@link DeviceHealthScriptTimeSchedule}
      */
     @jakarta.annotation.Nonnull
     public static DeviceHealthScriptTimeSchedule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class DeviceHealthScriptTimeSchedule extends DeviceHealthScriptRunSchedul
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -50,7 +50,7 @@ public class DeviceHealthScriptTimeSchedule extends DeviceHealthScriptRunSchedul
     }
     /**
      * Gets the time property value. At what time the script is scheduled to run. This collection can contain a maximum of 20 elements.
-     * @return a LocalTime
+     * @return a {@link LocalTime}
      */
     @jakarta.annotation.Nullable
     public LocalTime getTime() {
@@ -58,7 +58,7 @@ public class DeviceHealthScriptTimeSchedule extends DeviceHealthScriptRunSchedul
     }
     /**
      * Gets the useUtc property value. Indicate if the time is Utc or client local time.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getUseUtc() {

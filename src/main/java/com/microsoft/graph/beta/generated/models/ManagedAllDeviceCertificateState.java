@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagedAllDeviceCertificateState extends Entity implements Parsable {
     /**
-     * Instantiates a new ManagedAllDeviceCertificateState and sets the default values.
+     * Instantiates a new {@link ManagedAllDeviceCertificateState} and sets the default values.
      */
     public ManagedAllDeviceCertificateState() {
         super();
@@ -18,7 +18,7 @@ public class ManagedAllDeviceCertificateState extends Entity implements Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ManagedAllDeviceCertificateState
+     * @return a {@link ManagedAllDeviceCertificateState}
      */
     @jakarta.annotation.Nonnull
     public static ManagedAllDeviceCertificateState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class ManagedAllDeviceCertificateState extends Entity implements Parsable
     }
     /**
      * Gets the certificateExpirationDateTime property value. Certificate expiry date
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCertificateExpirationDateTime() {
@@ -35,7 +35,7 @@ public class ManagedAllDeviceCertificateState extends Entity implements Parsable
     }
     /**
      * Gets the certificateExtendedKeyUsages property value. Enhanced Key Usage
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCertificateExtendedKeyUsages() {
@@ -43,7 +43,7 @@ public class ManagedAllDeviceCertificateState extends Entity implements Parsable
     }
     /**
      * Gets the certificateIssuanceDateTime property value. Issuance date
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCertificateIssuanceDateTime() {
@@ -51,7 +51,7 @@ public class ManagedAllDeviceCertificateState extends Entity implements Parsable
     }
     /**
      * Gets the certificateIssuerName property value. Issuer
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCertificateIssuerName() {
@@ -59,7 +59,7 @@ public class ManagedAllDeviceCertificateState extends Entity implements Parsable
     }
     /**
      * Gets the certificateKeyUsages property value. Key Usage
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getCertificateKeyUsages() {
@@ -67,7 +67,7 @@ public class ManagedAllDeviceCertificateState extends Entity implements Parsable
     }
     /**
      * Gets the certificateRevokeStatus property value. Certificate Revocation Status.
-     * @return a CertificateRevocationStatus
+     * @return a {@link CertificateRevocationStatus}
      */
     @jakarta.annotation.Nullable
     public CertificateRevocationStatus getCertificateRevokeStatus() {
@@ -75,7 +75,7 @@ public class ManagedAllDeviceCertificateState extends Entity implements Parsable
     }
     /**
      * Gets the certificateRevokeStatusLastChangeDateTime property value. The time the revoke status was last changed
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCertificateRevokeStatusLastChangeDateTime() {
@@ -83,7 +83,7 @@ public class ManagedAllDeviceCertificateState extends Entity implements Parsable
     }
     /**
      * Gets the certificateSerialNumber property value. Serial number
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCertificateSerialNumber() {
@@ -91,7 +91,7 @@ public class ManagedAllDeviceCertificateState extends Entity implements Parsable
     }
     /**
      * Gets the certificateSubjectName property value. Certificate subject name
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCertificateSubjectName() {
@@ -99,7 +99,7 @@ public class ManagedAllDeviceCertificateState extends Entity implements Parsable
     }
     /**
      * Gets the certificateThumbprint property value. Thumbprint
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCertificateThumbprint() {
@@ -107,7 +107,7 @@ public class ManagedAllDeviceCertificateState extends Entity implements Parsable
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -128,7 +128,7 @@ public class ManagedAllDeviceCertificateState extends Entity implements Parsable
     }
     /**
      * Gets the managedDeviceDisplayName property value. Device display name
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getManagedDeviceDisplayName() {
@@ -136,7 +136,7 @@ public class ManagedAllDeviceCertificateState extends Entity implements Parsable
     }
     /**
      * Gets the userPrincipalName property value. User principal name
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {

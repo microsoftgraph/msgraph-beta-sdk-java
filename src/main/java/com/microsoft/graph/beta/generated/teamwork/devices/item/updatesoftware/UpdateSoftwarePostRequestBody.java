@@ -19,7 +19,7 @@ public class UpdateSoftwarePostRequestBody implements AdditionalDataHolder, Back
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new UpdateSoftwarePostRequestBody and sets the default values.
+     * Instantiates a new {@link UpdateSoftwarePostRequestBody} and sets the default values.
      */
     public UpdateSoftwarePostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class UpdateSoftwarePostRequestBody implements AdditionalDataHolder, Back
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UpdateSoftwarePostRequestBody
+     * @return a {@link UpdateSoftwarePostRequestBody}
      */
     @jakarta.annotation.Nonnull
     public static UpdateSoftwarePostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class UpdateSoftwarePostRequestBody implements AdditionalDataHolder, Back
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -50,7 +50,7 @@ public class UpdateSoftwarePostRequestBody implements AdditionalDataHolder, Back
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -58,7 +58,7 @@ public class UpdateSoftwarePostRequestBody implements AdditionalDataHolder, Back
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -69,7 +69,7 @@ public class UpdateSoftwarePostRequestBody implements AdditionalDataHolder, Back
     }
     /**
      * Gets the softwareType property value. The softwareType property
-     * @return a TeamworkSoftwareType
+     * @return a {@link TeamworkSoftwareType}
      */
     @jakarta.annotation.Nullable
     public TeamworkSoftwareType getSoftwareType() {
@@ -77,7 +77,7 @@ public class UpdateSoftwarePostRequestBody implements AdditionalDataHolder, Back
     }
     /**
      * Gets the softwareVersion property value. The softwareVersion property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSoftwareVersion() {

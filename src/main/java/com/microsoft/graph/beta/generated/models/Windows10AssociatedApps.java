@@ -21,7 +21,7 @@ public class Windows10AssociatedApps implements AdditionalDataHolder, BackedMode
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new Windows10AssociatedApps and sets the default values.
+     * Instantiates a new {@link Windows10AssociatedApps} and sets the default values.
      */
     public Windows10AssociatedApps() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -30,7 +30,7 @@ public class Windows10AssociatedApps implements AdditionalDataHolder, BackedMode
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Windows10AssociatedApps
+     * @return a {@link Windows10AssociatedApps}
      */
     @jakarta.annotation.Nonnull
     public static Windows10AssociatedApps createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class Windows10AssociatedApps implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -52,7 +52,7 @@ public class Windows10AssociatedApps implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the appType property value. Windows 10 Application type.
-     * @return a Windows10AppType
+     * @return a {@link Windows10AppType}
      */
     @jakarta.annotation.Nullable
     public Windows10AppType getAppType() {
@@ -60,7 +60,7 @@ public class Windows10AssociatedApps implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -68,7 +68,7 @@ public class Windows10AssociatedApps implements AdditionalDataHolder, BackedMode
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -80,7 +80,7 @@ public class Windows10AssociatedApps implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the identifier property value. Identifier.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getIdentifier() {
@@ -88,7 +88,7 @@ public class Windows10AssociatedApps implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {

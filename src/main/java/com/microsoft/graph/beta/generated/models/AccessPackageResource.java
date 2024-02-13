@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessPackageResource extends Entity implements Parsable {
     /**
-     * Instantiates a new AccessPackageResource and sets the default values.
+     * Instantiates a new {@link AccessPackageResource} and sets the default values.
      */
     public AccessPackageResource() {
         super();
@@ -18,7 +18,7 @@ public class AccessPackageResource extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AccessPackageResource
+     * @return a {@link AccessPackageResource}
      */
     @jakarta.annotation.Nonnull
     public static AccessPackageResource createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class AccessPackageResource extends Entity implements Parsable {
     }
     /**
      * Gets the accessPackageResourceEnvironment property value. Contains the environment information for the resource. This environment can be set using either the @odata.bind annotation or the environment's originId. Supports $expand.
-     * @return a AccessPackageResourceEnvironment
+     * @return a {@link AccessPackageResourceEnvironment}
      */
     @jakarta.annotation.Nullable
     public AccessPackageResourceEnvironment getAccessPackageResourceEnvironment() {
@@ -35,7 +35,7 @@ public class AccessPackageResource extends Entity implements Parsable {
     }
     /**
      * Gets the accessPackageResourceRoles property value. Read-only. Nullable. Supports $expand.
-     * @return a java.util.List<AccessPackageResourceRole>
+     * @return a {@link java.util.List<AccessPackageResourceRole>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackageResourceRole> getAccessPackageResourceRoles() {
@@ -43,7 +43,7 @@ public class AccessPackageResource extends Entity implements Parsable {
     }
     /**
      * Gets the accessPackageResourceScopes property value. Read-only. Nullable. Supports $expand.
-     * @return a java.util.List<AccessPackageResourceScope>
+     * @return a {@link java.util.List<AccessPackageResourceScope>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackageResourceScope> getAccessPackageResourceScopes() {
@@ -51,7 +51,7 @@ public class AccessPackageResource extends Entity implements Parsable {
     }
     /**
      * Gets the addedBy property value. The name of the user or application that first added this resource. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAddedBy() {
@@ -59,7 +59,7 @@ public class AccessPackageResource extends Entity implements Parsable {
     }
     /**
      * Gets the addedOn property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getAddedOn() {
@@ -67,7 +67,7 @@ public class AccessPackageResource extends Entity implements Parsable {
     }
     /**
      * Gets the attributes property value. Contains information about the attributes to be collected from the requestor and sent to the resource application.
-     * @return a java.util.List<AccessPackageResourceAttribute>
+     * @return a {@link java.util.List<AccessPackageResourceAttribute>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackageResourceAttribute> getAttributes() {
@@ -75,7 +75,7 @@ public class AccessPackageResource extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. A description for the resource.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -83,7 +83,7 @@ public class AccessPackageResource extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name of the resource, such as the application name, group name, or site name.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -91,7 +91,7 @@ public class AccessPackageResource extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -113,7 +113,7 @@ public class AccessPackageResource extends Entity implements Parsable {
     }
     /**
      * Gets the isPendingOnboarding property value. True if the resource is not yet available for assignment. Read-only.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsPendingOnboarding() {
@@ -121,7 +121,7 @@ public class AccessPackageResource extends Entity implements Parsable {
     }
     /**
      * Gets the originId property value. The unique identifier of the resource in the origin system. In the case of a Microsoft Entra group, originId is the identifier of the group.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOriginId() {
@@ -129,7 +129,7 @@ public class AccessPackageResource extends Entity implements Parsable {
     }
     /**
      * Gets the originSystem property value. The type of the resource in the origin system, such as SharePointOnline, AadApplication, or AadGroup.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOriginSystem() {
@@ -137,7 +137,7 @@ public class AccessPackageResource extends Entity implements Parsable {
     }
     /**
      * Gets the resourceType property value. The type of the resource, such as Application if it is a Microsoft Entra connected application, or SharePoint Online Site for a SharePoint Online site.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getResourceType() {
@@ -145,7 +145,7 @@ public class AccessPackageResource extends Entity implements Parsable {
     }
     /**
      * Gets the url property value. A unique resource locator for the resource, such as the URL for signing a user into an application.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUrl() {

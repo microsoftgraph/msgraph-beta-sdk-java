@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GroupPolicyOperation extends Entity implements Parsable {
     /**
-     * Instantiates a new GroupPolicyOperation and sets the default values.
+     * Instantiates a new {@link GroupPolicyOperation} and sets the default values.
      */
     public GroupPolicyOperation() {
         super();
@@ -21,7 +21,7 @@ public class GroupPolicyOperation extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a GroupPolicyOperation
+     * @return a {@link GroupPolicyOperation}
      */
     @jakarta.annotation.Nonnull
     public static GroupPolicyOperation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class GroupPolicyOperation extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -43,7 +43,7 @@ public class GroupPolicyOperation extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. The date and time the entity was last modified.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -51,7 +51,7 @@ public class GroupPolicyOperation extends Entity implements Parsable {
     }
     /**
      * Gets the operationStatus property value. Type of Group Policy operation status.
-     * @return a GroupPolicyOperationStatus
+     * @return a {@link GroupPolicyOperationStatus}
      */
     @jakarta.annotation.Nullable
     public GroupPolicyOperationStatus getOperationStatus() {
@@ -59,7 +59,7 @@ public class GroupPolicyOperation extends Entity implements Parsable {
     }
     /**
      * Gets the operationType property value. Type of Group Policy operation.
-     * @return a GroupPolicyOperationType
+     * @return a {@link GroupPolicyOperationType}
      */
     @jakarta.annotation.Nullable
     public GroupPolicyOperationType getOperationType() {
@@ -67,7 +67,7 @@ public class GroupPolicyOperation extends Entity implements Parsable {
     }
     /**
      * Gets the statusDetails property value. The group policy operation status detail.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getStatusDetails() {

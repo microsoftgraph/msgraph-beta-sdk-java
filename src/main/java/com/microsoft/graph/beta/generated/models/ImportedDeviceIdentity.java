@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ImportedDeviceIdentity extends Entity implements Parsable {
     /**
-     * Instantiates a new ImportedDeviceIdentity and sets the default values.
+     * Instantiates a new {@link ImportedDeviceIdentity} and sets the default values.
      */
     public ImportedDeviceIdentity() {
         super();
@@ -21,7 +21,7 @@ public class ImportedDeviceIdentity extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ImportedDeviceIdentity
+     * @return a {@link ImportedDeviceIdentity}
      */
     @jakarta.annotation.Nonnull
     public static ImportedDeviceIdentity createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class ImportedDeviceIdentity extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. Created Date Time of the device
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -45,7 +45,7 @@ public class ImportedDeviceIdentity extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The description of the device
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -53,7 +53,7 @@ public class ImportedDeviceIdentity extends Entity implements Parsable {
     }
     /**
      * Gets the enrollmentState property value. The enrollmentState property
-     * @return a EnrollmentState
+     * @return a {@link EnrollmentState}
      */
     @jakarta.annotation.Nullable
     public EnrollmentState getEnrollmentState() {
@@ -61,7 +61,7 @@ public class ImportedDeviceIdentity extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -78,7 +78,7 @@ public class ImportedDeviceIdentity extends Entity implements Parsable {
     }
     /**
      * Gets the importedDeviceIdentifier property value. Imported Device Identifier
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getImportedDeviceIdentifier() {
@@ -86,7 +86,7 @@ public class ImportedDeviceIdentity extends Entity implements Parsable {
     }
     /**
      * Gets the importedDeviceIdentityType property value. The importedDeviceIdentityType property
-     * @return a ImportedDeviceIdentityType
+     * @return a {@link ImportedDeviceIdentityType}
      */
     @jakarta.annotation.Nullable
     public ImportedDeviceIdentityType getImportedDeviceIdentityType() {
@@ -94,7 +94,7 @@ public class ImportedDeviceIdentity extends Entity implements Parsable {
     }
     /**
      * Gets the lastContactedDateTime property value. Last Contacted Date Time of the device
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastContactedDateTime() {
@@ -102,7 +102,7 @@ public class ImportedDeviceIdentity extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. Last Modified DateTime of the description
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -110,7 +110,7 @@ public class ImportedDeviceIdentity extends Entity implements Parsable {
     }
     /**
      * Gets the platform property value. The platform property
-     * @return a Platform
+     * @return a {@link Platform}
      */
     @jakarta.annotation.Nullable
     public Platform getPlatform() {

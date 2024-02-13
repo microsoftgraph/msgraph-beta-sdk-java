@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessPackageSubject extends Entity implements Parsable {
     /**
-     * Instantiates a new AccessPackageSubject and sets the default values.
+     * Instantiates a new {@link AccessPackageSubject} and sets the default values.
      */
     public AccessPackageSubject() {
         super();
@@ -18,7 +18,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AccessPackageSubject
+     * @return a {@link AccessPackageSubject}
      */
     @jakarta.annotation.Nonnull
     public static AccessPackageSubject createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
     }
     /**
      * Gets the altSecId property value. Not Supported.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAltSecId() {
@@ -35,7 +35,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
     }
     /**
      * Gets the cleanupScheduledDateTime property value. The date and time the subject is marked to be blocked from sign in or deleted. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCleanupScheduledDateTime() {
@@ -43,7 +43,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
     }
     /**
      * Gets the connectedOrganization property value. The connected organization of the subject. Read-only. Nullable.
-     * @return a ConnectedOrganization
+     * @return a {@link ConnectedOrganization}
      */
     @jakarta.annotation.Nullable
     public ConnectedOrganization getConnectedOrganization() {
@@ -51,7 +51,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
     }
     /**
      * Gets the connectedOrganizationId property value. The identifier of the connected organization of the subject.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getConnectedOrganizationId() {
@@ -59,7 +59,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name of the subject.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -67,7 +67,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
     }
     /**
      * Gets the email property value. The email address of the subject.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getEmail() {
@@ -75,7 +75,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -95,7 +95,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
     }
     /**
      * Gets the objectId property value. The object identifier of the subject. null if the subject isn't yet a user in the tenant. Alternate key.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getObjectId() {
@@ -103,7 +103,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
     }
     /**
      * Gets the onPremisesSecurityIdentifier property value. The onPremisesSecurityIdentifier property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOnPremisesSecurityIdentifier() {
@@ -111,7 +111,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
     }
     /**
      * Gets the principalName property value. The principal name, if known, of the subject.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPrincipalName() {
@@ -119,7 +119,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
     }
     /**
      * Gets the subjectLifecycle property value. The lifecycle of the subject user, if a guest. The possible values are: notDefined, notGoverned, governed, unknownFutureValue.
-     * @return a AccessPackageSubjectLifecycle
+     * @return a {@link AccessPackageSubjectLifecycle}
      */
     @jakarta.annotation.Nullable
     public AccessPackageSubjectLifecycle getSubjectLifecycle() {
@@ -127,7 +127,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
     }
     /**
      * Gets the type property value. The resource type of the subject.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getType() {

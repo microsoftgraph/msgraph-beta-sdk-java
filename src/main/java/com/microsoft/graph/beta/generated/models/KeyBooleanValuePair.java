@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class KeyBooleanValuePair extends KeyTypedValuePair implements Parsable {
     /**
-     * Instantiates a new KeyBooleanValuePair and sets the default values.
+     * Instantiates a new {@link KeyBooleanValuePair} and sets the default values.
      */
     public KeyBooleanValuePair() {
         super();
@@ -21,7 +21,7 @@ public class KeyBooleanValuePair extends KeyTypedValuePair implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a KeyBooleanValuePair
+     * @return a {@link KeyBooleanValuePair}
      */
     @jakarta.annotation.Nonnull
     public static KeyBooleanValuePair createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class KeyBooleanValuePair extends KeyTypedValuePair implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -40,7 +40,7 @@ public class KeyBooleanValuePair extends KeyTypedValuePair implements Parsable {
     }
     /**
      * Gets the value property value. The Boolean value of the key-value pair.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getValue() {

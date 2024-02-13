@@ -11,7 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IndustryDataRoot extends Entity implements Parsable {
     /**
-     * Instantiates a new IndustryDataRoot and sets the default values.
+     * Instantiates a new {@link IndustryDataRoot} and sets the default values.
      */
     public IndustryDataRoot() {
         super();
@@ -19,7 +19,7 @@ public class IndustryDataRoot extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a IndustryDataRoot
+     * @return a {@link IndustryDataRoot}
      */
     @jakarta.annotation.Nonnull
     public static IndustryDataRoot createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class IndustryDataRoot extends Entity implements Parsable {
     }
     /**
      * Gets the dataConnectors property value. Set of connectors for importing data from source systems.
-     * @return a java.util.List<IndustryDataConnector>
+     * @return a {@link java.util.List<IndustryDataConnector>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<IndustryDataConnector> getDataConnectors() {
@@ -36,7 +36,7 @@ public class IndustryDataRoot extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -53,7 +53,7 @@ public class IndustryDataRoot extends Entity implements Parsable {
     }
     /**
      * Gets the inboundFlows property value. Set of data import flow activities to bring data into the canonical store via a connector.
-     * @return a java.util.List<InboundFlow>
+     * @return a {@link java.util.List<InboundFlow>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<InboundFlow> getInboundFlows() {
@@ -61,7 +61,7 @@ public class IndustryDataRoot extends Entity implements Parsable {
     }
     /**
      * Gets the operations property value. Set of ephemeral operations that the system runs currently. Read-only.
-     * @return a java.util.List<LongRunningOperation>
+     * @return a {@link java.util.List<LongRunningOperation>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<LongRunningOperation> getOperations() {
@@ -69,7 +69,7 @@ public class IndustryDataRoot extends Entity implements Parsable {
     }
     /**
      * Gets the referenceDefinitions property value. Set of user modifiable system picker types.
-     * @return a java.util.List<ReferenceDefinition>
+     * @return a {@link java.util.List<ReferenceDefinition>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ReferenceDefinition> getReferenceDefinitions() {
@@ -77,7 +77,7 @@ public class IndustryDataRoot extends Entity implements Parsable {
     }
     /**
      * Gets the roleGroups property value. Set of groups of individual roles that makes role-based admin simpler.
-     * @return a java.util.List<RoleGroup>
+     * @return a {@link java.util.List<RoleGroup>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<RoleGroup> getRoleGroups() {
@@ -85,7 +85,7 @@ public class IndustryDataRoot extends Entity implements Parsable {
     }
     /**
      * Gets the runs property value. Set of ephemeral runs which present the point-in-time that diagnostic state of activities performed by the system. Read-only.
-     * @return a java.util.List<IndustryDataRun>
+     * @return a {@link java.util.List<IndustryDataRun>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<IndustryDataRun> getRuns() {
@@ -93,7 +93,7 @@ public class IndustryDataRoot extends Entity implements Parsable {
     }
     /**
      * Gets the sourceSystems property value. Set of source definitions that represents real-world external systems.
-     * @return a java.util.List<SourceSystemDefinition>
+     * @return a {@link java.util.List<SourceSystemDefinition>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<SourceSystemDefinition> getSourceSystems() {
@@ -101,7 +101,7 @@ public class IndustryDataRoot extends Entity implements Parsable {
     }
     /**
      * Gets the years property value. Set of years represented in the system.
-     * @return a java.util.List<YearTimePeriodDefinition>
+     * @return a {@link java.util.List<YearTimePeriodDefinition>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<YearTimePeriodDefinition> getYears() {

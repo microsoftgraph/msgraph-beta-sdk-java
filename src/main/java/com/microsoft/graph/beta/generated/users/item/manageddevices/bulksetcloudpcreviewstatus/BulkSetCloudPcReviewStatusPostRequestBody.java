@@ -19,7 +19,7 @@ public class BulkSetCloudPcReviewStatusPostRequestBody implements AdditionalData
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new BulkSetCloudPcReviewStatusPostRequestBody and sets the default values.
+     * Instantiates a new {@link BulkSetCloudPcReviewStatusPostRequestBody} and sets the default values.
      */
     public BulkSetCloudPcReviewStatusPostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class BulkSetCloudPcReviewStatusPostRequestBody implements AdditionalData
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a BulkSetCloudPcReviewStatusPostRequestBody
+     * @return a {@link BulkSetCloudPcReviewStatusPostRequestBody}
      */
     @jakarta.annotation.Nonnull
     public static BulkSetCloudPcReviewStatusPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class BulkSetCloudPcReviewStatusPostRequestBody implements AdditionalData
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -50,7 +50,7 @@ public class BulkSetCloudPcReviewStatusPostRequestBody implements AdditionalData
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -58,7 +58,7 @@ public class BulkSetCloudPcReviewStatusPostRequestBody implements AdditionalData
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -69,7 +69,7 @@ public class BulkSetCloudPcReviewStatusPostRequestBody implements AdditionalData
     }
     /**
      * Gets the managedDeviceIds property value. The managedDeviceIds property
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getManagedDeviceIds() {
@@ -77,7 +77,7 @@ public class BulkSetCloudPcReviewStatusPostRequestBody implements AdditionalData
     }
     /**
      * Gets the reviewStatus property value. The reviewStatus property
-     * @return a CloudPcReviewStatus
+     * @return a {@link CloudPcReviewStatus}
      */
     @jakarta.annotation.Nullable
     public CloudPcReviewStatus getReviewStatus() {

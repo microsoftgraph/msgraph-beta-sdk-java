@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsQualityUpdateProfile extends Entity implements Parsable {
     /**
-     * Instantiates a new WindowsQualityUpdateProfile and sets the default values.
+     * Instantiates a new {@link WindowsQualityUpdateProfile} and sets the default values.
      */
     public WindowsQualityUpdateProfile() {
         super();
@@ -21,7 +21,7 @@ public class WindowsQualityUpdateProfile extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WindowsQualityUpdateProfile
+     * @return a {@link WindowsQualityUpdateProfile}
      */
     @jakarta.annotation.Nonnull
     public static WindowsQualityUpdateProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class WindowsQualityUpdateProfile extends Entity implements Parsable {
     }
     /**
      * Gets the assignments property value. The list of group assignments of the profile.
-     * @return a java.util.List<WindowsQualityUpdateProfileAssignment>
+     * @return a {@link java.util.List<WindowsQualityUpdateProfileAssignment>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<WindowsQualityUpdateProfileAssignment> getAssignments() {
@@ -38,7 +38,7 @@ public class WindowsQualityUpdateProfile extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. The date time that the profile was created.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -46,7 +46,7 @@ public class WindowsQualityUpdateProfile extends Entity implements Parsable {
     }
     /**
      * Gets the deployableContentDisplayName property value. Friendly display name of the quality update profile deployable content
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeployableContentDisplayName() {
@@ -54,7 +54,7 @@ public class WindowsQualityUpdateProfile extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The description of the profile which is specified by the user.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -62,7 +62,7 @@ public class WindowsQualityUpdateProfile extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name for the profile.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -70,7 +70,7 @@ public class WindowsQualityUpdateProfile extends Entity implements Parsable {
     }
     /**
      * Gets the expeditedUpdateSettings property value. Expedited update settings.
-     * @return a ExpeditedWindowsQualityUpdateSettings
+     * @return a {@link ExpeditedWindowsQualityUpdateSettings}
      */
     @jakarta.annotation.Nullable
     public ExpeditedWindowsQualityUpdateSettings getExpeditedUpdateSettings() {
@@ -78,7 +78,7 @@ public class WindowsQualityUpdateProfile extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -96,7 +96,7 @@ public class WindowsQualityUpdateProfile extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. The date time that the profile was last modified.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -104,7 +104,7 @@ public class WindowsQualityUpdateProfile extends Entity implements Parsable {
     }
     /**
      * Gets the releaseDateDisplayName property value. Friendly release date to display for a Quality Update release
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getReleaseDateDisplayName() {
@@ -112,7 +112,7 @@ public class WindowsQualityUpdateProfile extends Entity implements Parsable {
     }
     /**
      * Gets the roleScopeTagIds property value. List of Scope Tags for this Quality Update entity.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {

@@ -21,7 +21,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DataConnectorRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new DataConnectorRequestBuilder and sets the default values.
+     * Instantiates a new {@link DataConnectorRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -29,7 +29,7 @@ public class DataConnectorRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/external/industryData/inboundFlows/{inboundFlow%2Did}/dataConnector{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new DataConnectorRequestBuilder and sets the default values.
+     * Instantiates a new {@link DataConnectorRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -38,7 +38,8 @@ public class DataConnectorRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The data connector in the context of which this flow pulls in data from a source system.
-     * @return a IndustryDataConnector
+     * @return a {@link IndustryDataConnector}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public IndustryDataConnector get() {
@@ -47,19 +48,19 @@ public class DataConnectorRequestBuilder extends BaseRequestBuilder {
     /**
      * The data connector in the context of which this flow pulls in data from a source system.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a IndustryDataConnector
+     * @return a {@link IndustryDataConnector}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public IndustryDataConnector get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, IndustryDataConnector::createFromDiscriminatorValue);
     }
     /**
      * The data connector in the context of which this flow pulls in data from a source system.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -68,7 +69,7 @@ public class DataConnectorRequestBuilder extends BaseRequestBuilder {
     /**
      * The data connector in the context of which this flow pulls in data from a source system.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -80,7 +81,7 @@ public class DataConnectorRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a DataConnectorRequestBuilder
+     * @return a {@link DataConnectorRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DataConnectorRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -104,7 +105,7 @@ public class DataConnectorRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

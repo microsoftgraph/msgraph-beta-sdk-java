@@ -25,6 +25,7 @@ import java.util.Objects;
 public class JobsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      * @deprecated
      * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
      */
@@ -36,7 +37,7 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the jobs property of the microsoft.graph.printerBase entity.
      * @param printJobId The unique identifier of printJob
-     * @return a PrintJobItemRequestBuilder
+     * @return a {@link PrintJobItemRequestBuilder}
      * @deprecated
      * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
      */
@@ -49,7 +50,7 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
         return new PrintJobItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new JobsRequestBuilder and sets the default values.
+     * Instantiates a new {@link JobsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -57,7 +58,7 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/print/printerShares/{printerShare%2Did}/jobs{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new JobsRequestBuilder and sets the default values.
+     * Instantiates a new {@link JobsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -66,7 +67,8 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get jobs from print
-     * @return a PrintJobCollectionResponse
+     * @return a {@link PrintJobCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
      */
@@ -78,7 +80,8 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get jobs from print
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a PrintJobCollectionResponse
+     * @return a {@link PrintJobCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
      */
@@ -87,14 +90,14 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
     public PrintJobCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, PrintJobCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to jobs for print
      * @param body The request body
-     * @return a PrintJob
+     * @return a {@link PrintJob}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
      */
@@ -107,7 +110,8 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to jobs for print
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a PrintJob
+     * @return a {@link PrintJob}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
      */
@@ -117,13 +121,12 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, PrintJob::createFromDiscriminatorValue);
     }
     /**
      * Get jobs from print
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
      */
@@ -135,7 +138,7 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get jobs from print
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
      */
@@ -150,7 +153,7 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to jobs for print
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
      */
@@ -163,7 +166,7 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to jobs for print
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
      */
@@ -171,7 +174,7 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
     @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final PrintJob body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/print/printerShares/{printerShare%2Did}/jobs", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -180,7 +183,7 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a JobsRequestBuilder
+     * @return a {@link JobsRequestBuilder}
      * @deprecated
      * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
      */
@@ -237,7 +240,7 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

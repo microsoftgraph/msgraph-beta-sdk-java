@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EducationSynchronizationProfileStatus extends Entity implements Parsable {
     /**
-     * Instantiates a new EducationSynchronizationProfileStatus and sets the default values.
+     * Instantiates a new {@link EducationSynchronizationProfileStatus} and sets the default values.
      */
     public EducationSynchronizationProfileStatus() {
         super();
@@ -18,7 +18,7 @@ public class EducationSynchronizationProfileStatus extends Entity implements Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EducationSynchronizationProfileStatus
+     * @return a {@link EducationSynchronizationProfileStatus}
      */
     @jakarta.annotation.Nonnull
     public static EducationSynchronizationProfileStatus createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class EducationSynchronizationProfileStatus extends Entity implements Par
     }
     /**
      * Gets the errorCount property value. Number of errors during synchronization.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getErrorCount() {
@@ -35,7 +35,7 @@ public class EducationSynchronizationProfileStatus extends Entity implements Par
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -49,7 +49,7 @@ public class EducationSynchronizationProfileStatus extends Entity implements Par
     }
     /**
      * Gets the lastActivityDateTime property value. Date and time when most recent changes were observed in the profile.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastActivityDateTime() {
@@ -57,7 +57,7 @@ public class EducationSynchronizationProfileStatus extends Entity implements Par
     }
     /**
      * Gets the lastSynchronizationDateTime property value. Date and time of the most recent successful synchronization.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastSynchronizationDateTime() {
@@ -65,7 +65,7 @@ public class EducationSynchronizationProfileStatus extends Entity implements Par
     }
     /**
      * Gets the status property value. The status of a sync. The possible values are: paused, inProgress, success, error, validationError, quarantined, unknownFutureValue, extracting, validating. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: extracting, validating.
-     * @return a EducationSynchronizationStatus
+     * @return a {@link EducationSynchronizationStatus}
      */
     @jakarta.annotation.Nullable
     public EducationSynchronizationStatus getStatus() {
@@ -73,7 +73,7 @@ public class EducationSynchronizationProfileStatus extends Entity implements Par
     }
     /**
      * Gets the statusMessage property value. Status message for the synchronization stage of the current profile.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getStatusMessage() {

@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SymantecCodeSigningCertificate extends Entity implements Parsable {
     /**
-     * Instantiates a new SymantecCodeSigningCertificate and sets the default values.
+     * Instantiates a new {@link SymantecCodeSigningCertificate} and sets the default values.
      */
     public SymantecCodeSigningCertificate() {
         super();
@@ -18,7 +18,7 @@ public class SymantecCodeSigningCertificate extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SymantecCodeSigningCertificate
+     * @return a {@link SymantecCodeSigningCertificate}
      */
     @jakarta.annotation.Nonnull
     public static SymantecCodeSigningCertificate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class SymantecCodeSigningCertificate extends Entity implements Parsable {
     }
     /**
      * Gets the content property value. The Windows Symantec Code-Signing Certificate in the raw data format.
-     * @return a byte[]
+     * @return a {@link byte[]}
      */
     @jakarta.annotation.Nullable
     public byte[] getContent() {
@@ -35,7 +35,7 @@ public class SymantecCodeSigningCertificate extends Entity implements Parsable {
     }
     /**
      * Gets the expirationDateTime property value. The Cert Expiration Date.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getExpirationDateTime() {
@@ -43,7 +43,7 @@ public class SymantecCodeSigningCertificate extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -61,7 +61,7 @@ public class SymantecCodeSigningCertificate extends Entity implements Parsable {
     }
     /**
      * Gets the issuer property value. The Issuer value for the cert.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getIssuer() {
@@ -69,7 +69,7 @@ public class SymantecCodeSigningCertificate extends Entity implements Parsable {
     }
     /**
      * Gets the issuerName property value. The Issuer Name for the cert.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getIssuerName() {
@@ -77,7 +77,7 @@ public class SymantecCodeSigningCertificate extends Entity implements Parsable {
     }
     /**
      * Gets the password property value. The Password required for .pfx file.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPassword() {
@@ -85,7 +85,7 @@ public class SymantecCodeSigningCertificate extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status property
-     * @return a CertificateStatus
+     * @return a {@link CertificateStatus}
      */
     @jakarta.annotation.Nullable
     public CertificateStatus getStatus() {
@@ -93,7 +93,7 @@ public class SymantecCodeSigningCertificate extends Entity implements Parsable {
     }
     /**
      * Gets the subject property value. The Subject value for the cert.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSubject() {
@@ -101,7 +101,7 @@ public class SymantecCodeSigningCertificate extends Entity implements Parsable {
     }
     /**
      * Gets the subjectName property value. The Subject Name for the cert.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSubjectName() {
@@ -109,7 +109,7 @@ public class SymantecCodeSigningCertificate extends Entity implements Parsable {
     }
     /**
      * Gets the uploadDateTime property value. The Type of the CodeSigning Cert as Symantec Cert.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getUploadDateTime() {

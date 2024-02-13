@@ -18,7 +18,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Backe
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new PrinterDocumentConfiguration and sets the default values.
+     * Instantiates a new {@link PrinterDocumentConfiguration} and sets the default values.
      */
     public PrinterDocumentConfiguration() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Backe
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PrinterDocumentConfiguration
+     * @return a {@link PrinterDocumentConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static PrinterDocumentConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the collate property value. The collate property
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getCollate() {
@@ -65,7 +65,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the colorMode property value. The colorMode property
-     * @return a PrintColorMode
+     * @return a {@link PrintColorMode}
      */
     @jakarta.annotation.Nullable
     public PrintColorMode getColorMode() {
@@ -73,7 +73,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the copies property value. The copies property
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getCopies() {
@@ -81,7 +81,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the dpi property value. The dpi property
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getDpi() {
@@ -89,7 +89,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the duplexMode property value. The duplexMode property
-     * @return a PrintDuplexMode
+     * @return a {@link PrintDuplexMode}
      */
     @jakarta.annotation.Nullable
     public PrintDuplexMode getDuplexMode() {
@@ -97,7 +97,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the feedDirection property value. The feedDirection property
-     * @return a PrinterFeedDirection
+     * @return a {@link PrinterFeedDirection}
      */
     @jakarta.annotation.Nullable
     public PrinterFeedDirection getFeedDirection() {
@@ -105,7 +105,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the feedOrientation property value. The feedOrientation property
-     * @return a PrinterFeedOrientation
+     * @return a {@link PrinterFeedOrientation}
      */
     @jakarta.annotation.Nullable
     public PrinterFeedOrientation getFeedOrientation() {
@@ -113,7 +113,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Backe
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -143,7 +143,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the finishings property value. The finishings property
-     * @return a java.util.List<PrintFinishing>
+     * @return a {@link java.util.List<PrintFinishing>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<PrintFinishing> getFinishings() {
@@ -151,7 +151,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the fitPdfToPage property value. The fitPdfToPage property
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getFitPdfToPage() {
@@ -159,7 +159,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the inputBin property value. The inputBin property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getInputBin() {
@@ -167,7 +167,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the margin property value. The margin property
-     * @return a PrintMargin
+     * @return a {@link PrintMargin}
      */
     @jakarta.annotation.Nullable
     public PrintMargin getMargin() {
@@ -175,7 +175,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the mediaSize property value. The mediaSize property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getMediaSize() {
@@ -183,7 +183,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the mediaType property value. The mediaType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getMediaType() {
@@ -191,7 +191,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the multipageLayout property value. The multipageLayout property
-     * @return a PrintMultipageLayout
+     * @return a {@link PrintMultipageLayout}
      */
     @jakarta.annotation.Nullable
     public PrintMultipageLayout getMultipageLayout() {
@@ -199,7 +199,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -207,7 +207,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the orientation property value. The orientation property
-     * @return a PrintOrientation
+     * @return a {@link PrintOrientation}
      */
     @jakarta.annotation.Nullable
     public PrintOrientation getOrientation() {
@@ -215,7 +215,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the outputBin property value. The outputBin property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOutputBin() {
@@ -223,7 +223,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the pageRanges property value. The pageRanges property
-     * @return a java.util.List<IntegerRange>
+     * @return a {@link java.util.List<IntegerRange>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<IntegerRange> getPageRanges() {
@@ -231,7 +231,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the pagesPerSheet property value. The pagesPerSheet property
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPagesPerSheet() {
@@ -239,7 +239,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the quality property value. The quality property
-     * @return a PrintQuality
+     * @return a {@link PrintQuality}
      */
     @jakarta.annotation.Nullable
     public PrintQuality getQuality() {
@@ -247,7 +247,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the scaling property value. The scaling property
-     * @return a PrintScaling
+     * @return a {@link PrintScaling}
      */
     @jakarta.annotation.Nullable
     public PrintScaling getScaling() {

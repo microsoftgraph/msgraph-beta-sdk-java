@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class RoleDefinition extends Entity implements Parsable {
     /**
-     * Instantiates a new RoleDefinition and sets the default values.
+     * Instantiates a new {@link RoleDefinition} and sets the default values.
      */
     public RoleDefinition() {
         super();
@@ -20,7 +20,7 @@ public class RoleDefinition extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a RoleDefinition
+     * @return a {@link RoleDefinition}
      */
     @jakarta.annotation.Nonnull
     public static RoleDefinition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class RoleDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. Description of the Role definition.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -44,7 +44,7 @@ public class RoleDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. Display Name of the Role definition.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -52,7 +52,7 @@ public class RoleDefinition extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -69,7 +69,7 @@ public class RoleDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the isBuiltIn property value. Type of Role. Set to True if it is built-in, or set to False if it is a custom role definition.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsBuiltIn() {
@@ -77,7 +77,7 @@ public class RoleDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the isBuiltInRoleDefinition property value. Type of Role. Set to True if it is built-in, or set to False if it is a custom role definition.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsBuiltInRoleDefinition() {
@@ -85,7 +85,7 @@ public class RoleDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the permissions property value. List of Role Permissions this role is allowed to perform. These must match the actionName that is defined as part of the rolePermission.
-     * @return a java.util.List<RolePermission>
+     * @return a {@link java.util.List<RolePermission>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<RolePermission> getPermissions() {
@@ -93,7 +93,7 @@ public class RoleDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the roleAssignments property value. List of Role assignments for this role definition.
-     * @return a java.util.List<RoleAssignment>
+     * @return a {@link java.util.List<RoleAssignment>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<RoleAssignment> getRoleAssignments() {
@@ -101,7 +101,7 @@ public class RoleDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the rolePermissions property value. List of Role Permissions this role is allowed to perform. These must match the actionName that is defined as part of the rolePermission.
-     * @return a java.util.List<RolePermission>
+     * @return a {@link java.util.List<RolePermission>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<RolePermission> getRolePermissions() {
@@ -109,7 +109,7 @@ public class RoleDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the roleScopeTagIds property value. List of Scope Tags for this Entity instance.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {

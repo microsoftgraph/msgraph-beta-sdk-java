@@ -12,7 +12,7 @@ import java.util.UUID;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SalesOrderLine extends Entity implements Parsable {
     /**
-     * Instantiates a new SalesOrderLine and sets the default values.
+     * Instantiates a new {@link SalesOrderLine} and sets the default values.
      */
     public SalesOrderLine() {
         super();
@@ -20,7 +20,7 @@ public class SalesOrderLine extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SalesOrderLine
+     * @return a {@link SalesOrderLine}
      */
     @jakarta.annotation.Nonnull
     public static SalesOrderLine createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -29,7 +29,7 @@ public class SalesOrderLine extends Entity implements Parsable {
     }
     /**
      * Gets the account property value. The account property
-     * @return a Account
+     * @return a {@link Account}
      */
     @jakarta.annotation.Nullable
     public Account getAccount() {
@@ -37,7 +37,7 @@ public class SalesOrderLine extends Entity implements Parsable {
     }
     /**
      * Gets the accountId property value. The accountId property
-     * @return a UUID
+     * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
     public UUID getAccountId() {
@@ -45,7 +45,7 @@ public class SalesOrderLine extends Entity implements Parsable {
     }
     /**
      * Gets the amountExcludingTax property value. The amountExcludingTax property
-     * @return a BigDecimal
+     * @return a {@link BigDecimal}
      */
     @jakarta.annotation.Nullable
     public BigDecimal getAmountExcludingTax() {
@@ -53,7 +53,7 @@ public class SalesOrderLine extends Entity implements Parsable {
     }
     /**
      * Gets the amountIncludingTax property value. The amountIncludingTax property
-     * @return a BigDecimal
+     * @return a {@link BigDecimal}
      */
     @jakarta.annotation.Nullable
     public BigDecimal getAmountIncludingTax() {
@@ -61,7 +61,7 @@ public class SalesOrderLine extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The description property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -69,7 +69,7 @@ public class SalesOrderLine extends Entity implements Parsable {
     }
     /**
      * Gets the discountAmount property value. The discountAmount property
-     * @return a BigDecimal
+     * @return a {@link BigDecimal}
      */
     @jakarta.annotation.Nullable
     public BigDecimal getDiscountAmount() {
@@ -77,7 +77,7 @@ public class SalesOrderLine extends Entity implements Parsable {
     }
     /**
      * Gets the discountAppliedBeforeTax property value. The discountAppliedBeforeTax property
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDiscountAppliedBeforeTax() {
@@ -85,7 +85,7 @@ public class SalesOrderLine extends Entity implements Parsable {
     }
     /**
      * Gets the discountPercent property value. The discountPercent property
-     * @return a BigDecimal
+     * @return a {@link BigDecimal}
      */
     @jakarta.annotation.Nullable
     public BigDecimal getDiscountPercent() {
@@ -93,7 +93,7 @@ public class SalesOrderLine extends Entity implements Parsable {
     }
     /**
      * Gets the documentId property value. The documentId property
-     * @return a UUID
+     * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
     public UUID getDocumentId() {
@@ -101,7 +101,7 @@ public class SalesOrderLine extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -138,7 +138,7 @@ public class SalesOrderLine extends Entity implements Parsable {
     }
     /**
      * Gets the invoiceDiscountAllocation property value. The invoiceDiscountAllocation property
-     * @return a BigDecimal
+     * @return a {@link BigDecimal}
      */
     @jakarta.annotation.Nullable
     public BigDecimal getInvoiceDiscountAllocation() {
@@ -146,7 +146,7 @@ public class SalesOrderLine extends Entity implements Parsable {
     }
     /**
      * Gets the invoicedQuantity property value. The invoicedQuantity property
-     * @return a BigDecimal
+     * @return a {@link BigDecimal}
      */
     @jakarta.annotation.Nullable
     public BigDecimal getInvoicedQuantity() {
@@ -154,7 +154,7 @@ public class SalesOrderLine extends Entity implements Parsable {
     }
     /**
      * Gets the invoiceQuantity property value. The invoiceQuantity property
-     * @return a BigDecimal
+     * @return a {@link BigDecimal}
      */
     @jakarta.annotation.Nullable
     public BigDecimal getInvoiceQuantity() {
@@ -162,7 +162,7 @@ public class SalesOrderLine extends Entity implements Parsable {
     }
     /**
      * Gets the item property value. The item property
-     * @return a Item
+     * @return a {@link Item}
      */
     @jakarta.annotation.Nullable
     public Item getItem() {
@@ -170,7 +170,7 @@ public class SalesOrderLine extends Entity implements Parsable {
     }
     /**
      * Gets the itemId property value. The itemId property
-     * @return a UUID
+     * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
     public UUID getItemId() {
@@ -178,7 +178,7 @@ public class SalesOrderLine extends Entity implements Parsable {
     }
     /**
      * Gets the lineType property value. The lineType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getLineType() {
@@ -186,7 +186,7 @@ public class SalesOrderLine extends Entity implements Parsable {
     }
     /**
      * Gets the netAmount property value. The netAmount property
-     * @return a BigDecimal
+     * @return a {@link BigDecimal}
      */
     @jakarta.annotation.Nullable
     public BigDecimal getNetAmount() {
@@ -194,7 +194,7 @@ public class SalesOrderLine extends Entity implements Parsable {
     }
     /**
      * Gets the netAmountIncludingTax property value. The netAmountIncludingTax property
-     * @return a BigDecimal
+     * @return a {@link BigDecimal}
      */
     @jakarta.annotation.Nullable
     public BigDecimal getNetAmountIncludingTax() {
@@ -202,7 +202,7 @@ public class SalesOrderLine extends Entity implements Parsable {
     }
     /**
      * Gets the netTaxAmount property value. The netTaxAmount property
-     * @return a BigDecimal
+     * @return a {@link BigDecimal}
      */
     @jakarta.annotation.Nullable
     public BigDecimal getNetTaxAmount() {
@@ -210,7 +210,7 @@ public class SalesOrderLine extends Entity implements Parsable {
     }
     /**
      * Gets the quantity property value. The quantity property
-     * @return a BigDecimal
+     * @return a {@link BigDecimal}
      */
     @jakarta.annotation.Nullable
     public BigDecimal getQuantity() {
@@ -218,7 +218,7 @@ public class SalesOrderLine extends Entity implements Parsable {
     }
     /**
      * Gets the sequence property value. The sequence property
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getSequence() {
@@ -226,7 +226,7 @@ public class SalesOrderLine extends Entity implements Parsable {
     }
     /**
      * Gets the shipmentDate property value. The shipmentDate property
-     * @return a LocalDate
+     * @return a {@link LocalDate}
      */
     @jakarta.annotation.Nullable
     public LocalDate getShipmentDate() {
@@ -234,7 +234,7 @@ public class SalesOrderLine extends Entity implements Parsable {
     }
     /**
      * Gets the shippedQuantity property value. The shippedQuantity property
-     * @return a BigDecimal
+     * @return a {@link BigDecimal}
      */
     @jakarta.annotation.Nullable
     public BigDecimal getShippedQuantity() {
@@ -242,7 +242,7 @@ public class SalesOrderLine extends Entity implements Parsable {
     }
     /**
      * Gets the shipQuantity property value. The shipQuantity property
-     * @return a BigDecimal
+     * @return a {@link BigDecimal}
      */
     @jakarta.annotation.Nullable
     public BigDecimal getShipQuantity() {
@@ -250,7 +250,7 @@ public class SalesOrderLine extends Entity implements Parsable {
     }
     /**
      * Gets the taxCode property value. The taxCode property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTaxCode() {
@@ -258,7 +258,7 @@ public class SalesOrderLine extends Entity implements Parsable {
     }
     /**
      * Gets the taxPercent property value. The taxPercent property
-     * @return a BigDecimal
+     * @return a {@link BigDecimal}
      */
     @jakarta.annotation.Nullable
     public BigDecimal getTaxPercent() {
@@ -266,7 +266,7 @@ public class SalesOrderLine extends Entity implements Parsable {
     }
     /**
      * Gets the totalTaxAmount property value. The totalTaxAmount property
-     * @return a BigDecimal
+     * @return a {@link BigDecimal}
      */
     @jakarta.annotation.Nullable
     public BigDecimal getTotalTaxAmount() {
@@ -274,7 +274,7 @@ public class SalesOrderLine extends Entity implements Parsable {
     }
     /**
      * Gets the unitOfMeasureId property value. The unitOfMeasureId property
-     * @return a UUID
+     * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
     public UUID getUnitOfMeasureId() {
@@ -282,7 +282,7 @@ public class SalesOrderLine extends Entity implements Parsable {
     }
     /**
      * Gets the unitPrice property value. The unitPrice property
-     * @return a BigDecimal
+     * @return a {@link BigDecimal}
      */
     @jakarta.annotation.Nullable
     public BigDecimal getUnitPrice() {

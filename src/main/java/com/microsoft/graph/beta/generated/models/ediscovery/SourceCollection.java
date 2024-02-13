@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SourceCollection extends Entity implements Parsable {
     /**
-     * Instantiates a new SourceCollection and sets the default values.
+     * Instantiates a new {@link SourceCollection} and sets the default values.
      */
     public SourceCollection() {
         super();
@@ -21,7 +21,7 @@ public class SourceCollection extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SourceCollection
+     * @return a {@link SourceCollection}
      */
     @jakarta.annotation.Nonnull
     public static SourceCollection createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class SourceCollection extends Entity implements Parsable {
     }
     /**
      * Gets the additionalSources property value. Adds an additional source to the sourceCollection.
-     * @return a java.util.List<DataSource>
+     * @return a {@link java.util.List<DataSource>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DataSource> getAdditionalSources() {
@@ -38,7 +38,7 @@ public class SourceCollection extends Entity implements Parsable {
     }
     /**
      * Gets the addToReviewSetOperation property value. Adds the results of the sourceCollection to the specified reviewSet.
-     * @return a AddToReviewSetOperation
+     * @return a {@link AddToReviewSetOperation}
      */
     @jakarta.annotation.Nullable
     public AddToReviewSetOperation getAddToReviewSetOperation() {
@@ -46,7 +46,7 @@ public class SourceCollection extends Entity implements Parsable {
     }
     /**
      * Gets the contentQuery property value. The query string in KQL (Keyword Query Language) query. For details, see Keyword queries and search conditions for Content Search and eDiscovery. You can refine searches by using fields paired with values; for example, subject:'Quarterly Financials' AND Date>=06/01/2016 AND Date<=07/01/2016.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getContentQuery() {
@@ -54,7 +54,7 @@ public class SourceCollection extends Entity implements Parsable {
     }
     /**
      * Gets the createdBy property value. The user who created the sourceCollection.
-     * @return a IdentitySet
+     * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
@@ -62,7 +62,7 @@ public class SourceCollection extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. The date and time the sourceCollection was created.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -70,7 +70,7 @@ public class SourceCollection extends Entity implements Parsable {
     }
     /**
      * Gets the custodianSources property value. Custodian sources that are included in the sourceCollection.
-     * @return a java.util.List<DataSource>
+     * @return a {@link java.util.List<DataSource>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DataSource> getCustodianSources() {
@@ -78,7 +78,7 @@ public class SourceCollection extends Entity implements Parsable {
     }
     /**
      * Gets the dataSourceScopes property value. When specified, the collection spans across a service for an entire workload. Possible values are: none, allTenantMailboxes, allTenantSites, allCaseCustodians, allCaseNoncustodialDataSources.
-     * @return a EnumSet<DataSourceScopes>
+     * @return a {@link EnumSet<DataSourceScopes>}
      */
     @jakarta.annotation.Nullable
     public EnumSet<DataSourceScopes> getDataSourceScopes() {
@@ -86,7 +86,7 @@ public class SourceCollection extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The description of the sourceCollection.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -94,7 +94,7 @@ public class SourceCollection extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name of the sourceCollection.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -102,7 +102,7 @@ public class SourceCollection extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -124,7 +124,7 @@ public class SourceCollection extends Entity implements Parsable {
     }
     /**
      * Gets the lastEstimateStatisticsOperation property value. The last estimate operation associated with the sourceCollection.
-     * @return a EstimateStatisticsOperation
+     * @return a {@link EstimateStatisticsOperation}
      */
     @jakarta.annotation.Nullable
     public EstimateStatisticsOperation getLastEstimateStatisticsOperation() {
@@ -132,7 +132,7 @@ public class SourceCollection extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedBy property value. The last user who modified the sourceCollection.
-     * @return a IdentitySet
+     * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
     public IdentitySet getLastModifiedBy() {
@@ -140,7 +140,7 @@ public class SourceCollection extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. The last date and time the sourceCollection was modified.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -148,7 +148,7 @@ public class SourceCollection extends Entity implements Parsable {
     }
     /**
      * Gets the noncustodialSources property value. noncustodialDataSource sources that are included in the sourceCollection
-     * @return a java.util.List<NoncustodialDataSource>
+     * @return a {@link java.util.List<NoncustodialDataSource>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<NoncustodialDataSource> getNoncustodialSources() {

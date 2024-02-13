@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsDomainJoinConfiguration extends DeviceConfiguration implements Parsable {
     /**
-     * Instantiates a new WindowsDomainJoinConfiguration and sets the default values.
+     * Instantiates a new {@link WindowsDomainJoinConfiguration} and sets the default values.
      */
     public WindowsDomainJoinConfiguration() {
         super();
@@ -21,7 +21,7 @@ public class WindowsDomainJoinConfiguration extends DeviceConfiguration implemen
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WindowsDomainJoinConfiguration
+     * @return a {@link WindowsDomainJoinConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static WindowsDomainJoinConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class WindowsDomainJoinConfiguration extends DeviceConfiguration implemen
     }
     /**
      * Gets the activeDirectoryDomainName property value. Active Directory domain name to join.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getActiveDirectoryDomainName() {
@@ -38,7 +38,7 @@ public class WindowsDomainJoinConfiguration extends DeviceConfiguration implemen
     }
     /**
      * Gets the computerNameStaticPrefix property value. Fixed prefix to be used for computer name.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getComputerNameStaticPrefix() {
@@ -46,7 +46,7 @@ public class WindowsDomainJoinConfiguration extends DeviceConfiguration implemen
     }
     /**
      * Gets the computerNameSuffixRandomCharCount property value. Dynamically generated characters used as suffix for computer name. Valid values 3 to 14
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getComputerNameSuffixRandomCharCount() {
@@ -54,7 +54,7 @@ public class WindowsDomainJoinConfiguration extends DeviceConfiguration implemen
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -68,7 +68,7 @@ public class WindowsDomainJoinConfiguration extends DeviceConfiguration implemen
     }
     /**
      * Gets the networkAccessConfigurations property value. Reference to device configurations required for network connectivity
-     * @return a java.util.List<DeviceConfiguration>
+     * @return a {@link java.util.List<DeviceConfiguration>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceConfiguration> getNetworkAccessConfigurations() {
@@ -76,7 +76,7 @@ public class WindowsDomainJoinConfiguration extends DeviceConfiguration implemen
     }
     /**
      * Gets the organizationalUnit property value. Organizational unit (OU) where the computer account will be created. If this parameter is NULL, the well known computer object container will be used as published in the domain.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOrganizationalUnit() {

@@ -36,6 +36,7 @@ import java.util.Objects;
 public class DeviceManagementIntentItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the assign method.
+     * @return a {@link AssignRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AssignRequestBuilder assign() {
@@ -43,6 +44,7 @@ public class DeviceManagementIntentItemRequestBuilder extends BaseRequestBuilder
     }
     /**
      * Provides operations to manage the assignments property of the microsoft.graph.deviceManagementIntent entity.
+     * @return a {@link AssignmentsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AssignmentsRequestBuilder assignments() {
@@ -50,6 +52,7 @@ public class DeviceManagementIntentItemRequestBuilder extends BaseRequestBuilder
     }
     /**
      * Provides operations to manage the categories property of the microsoft.graph.deviceManagementIntent entity.
+     * @return a {@link CategoriesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CategoriesRequestBuilder categories() {
@@ -57,6 +60,7 @@ public class DeviceManagementIntentItemRequestBuilder extends BaseRequestBuilder
     }
     /**
      * Provides operations to call the createCopy method.
+     * @return a {@link CreateCopyRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CreateCopyRequestBuilder createCopy() {
@@ -64,6 +68,7 @@ public class DeviceManagementIntentItemRequestBuilder extends BaseRequestBuilder
     }
     /**
      * Provides operations to manage the deviceSettingStateSummaries property of the microsoft.graph.deviceManagementIntent entity.
+     * @return a {@link DeviceSettingStateSummariesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DeviceSettingStateSummariesRequestBuilder deviceSettingStateSummaries() {
@@ -71,6 +76,7 @@ public class DeviceManagementIntentItemRequestBuilder extends BaseRequestBuilder
     }
     /**
      * Provides operations to manage the deviceStates property of the microsoft.graph.deviceManagementIntent entity.
+     * @return a {@link DeviceStatesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DeviceStatesRequestBuilder deviceStates() {
@@ -78,6 +84,7 @@ public class DeviceManagementIntentItemRequestBuilder extends BaseRequestBuilder
     }
     /**
      * Provides operations to manage the deviceStateSummary property of the microsoft.graph.deviceManagementIntent entity.
+     * @return a {@link DeviceStateSummaryRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DeviceStateSummaryRequestBuilder deviceStateSummary() {
@@ -85,6 +92,7 @@ public class DeviceManagementIntentItemRequestBuilder extends BaseRequestBuilder
     }
     /**
      * Provides operations to call the getCustomizedSettings method.
+     * @return a {@link GetCustomizedSettingsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetCustomizedSettingsRequestBuilder getCustomizedSettings() {
@@ -92,6 +100,7 @@ public class DeviceManagementIntentItemRequestBuilder extends BaseRequestBuilder
     }
     /**
      * Provides operations to call the migrateToTemplate method.
+     * @return a {@link MigrateToTemplateRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MigrateToTemplateRequestBuilder migrateToTemplate() {
@@ -99,6 +108,7 @@ public class DeviceManagementIntentItemRequestBuilder extends BaseRequestBuilder
     }
     /**
      * Provides operations to manage the settings property of the microsoft.graph.deviceManagementIntent entity.
+     * @return a {@link SettingsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SettingsRequestBuilder settings() {
@@ -106,6 +116,7 @@ public class DeviceManagementIntentItemRequestBuilder extends BaseRequestBuilder
     }
     /**
      * Provides operations to call the updateSettings method.
+     * @return a {@link UpdateSettingsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UpdateSettingsRequestBuilder updateSettings() {
@@ -113,6 +124,7 @@ public class DeviceManagementIntentItemRequestBuilder extends BaseRequestBuilder
     }
     /**
      * Provides operations to manage the userStates property of the microsoft.graph.deviceManagementIntent entity.
+     * @return a {@link UserStatesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UserStatesRequestBuilder userStates() {
@@ -120,6 +132,7 @@ public class DeviceManagementIntentItemRequestBuilder extends BaseRequestBuilder
     }
     /**
      * Provides operations to manage the userStateSummary property of the microsoft.graph.deviceManagementIntent entity.
+     * @return a {@link UserStateSummaryRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UserStateSummaryRequestBuilder userStateSummary() {
@@ -128,7 +141,7 @@ public class DeviceManagementIntentItemRequestBuilder extends BaseRequestBuilder
     /**
      * Provides operations to call the compare method.
      * @param templateId Usage: templateId='{templateId}'
-     * @return a CompareWithTemplateIdRequestBuilder
+     * @return a {@link CompareWithTemplateIdRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CompareWithTemplateIdRequestBuilder compareWithTemplateId(@jakarta.annotation.Nonnull final String templateId) {
@@ -136,7 +149,7 @@ public class DeviceManagementIntentItemRequestBuilder extends BaseRequestBuilder
         return new CompareWithTemplateIdRequestBuilder(pathParameters, requestAdapter, templateId);
     }
     /**
-     * Instantiates a new DeviceManagementIntentItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link DeviceManagementIntentItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -144,7 +157,7 @@ public class DeviceManagementIntentItemRequestBuilder extends BaseRequestBuilder
         super(requestAdapter, "{+baseurl}/deviceManagement/intents/{deviceManagementIntent%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new DeviceManagementIntentItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link DeviceManagementIntentItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -153,6 +166,7 @@ public class DeviceManagementIntentItemRequestBuilder extends BaseRequestBuilder
     }
     /**
      * Delete navigation property intents for deviceManagement
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete() {
         delete(null);
@@ -160,17 +174,18 @@ public class DeviceManagementIntentItemRequestBuilder extends BaseRequestBuilder
     /**
      * Delete navigation property intents for deviceManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * The device management intents
-     * @return a DeviceManagementIntent
+     * @return a {@link DeviceManagementIntent}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public DeviceManagementIntent get() {
@@ -179,20 +194,21 @@ public class DeviceManagementIntentItemRequestBuilder extends BaseRequestBuilder
     /**
      * The device management intents
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a DeviceManagementIntent
+     * @return a {@link DeviceManagementIntent}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public DeviceManagementIntent get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceManagementIntent::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property intents in deviceManagement
      * @param body The request body
-     * @return a DeviceManagementIntent
+     * @return a {@link DeviceManagementIntent}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public DeviceManagementIntent patch(@jakarta.annotation.Nonnull final DeviceManagementIntent body) {
@@ -202,20 +218,20 @@ public class DeviceManagementIntentItemRequestBuilder extends BaseRequestBuilder
      * Update the navigation property intents in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a DeviceManagementIntent
+     * @return a {@link DeviceManagementIntent}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public DeviceManagementIntent patch(@jakarta.annotation.Nonnull final DeviceManagementIntent body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceManagementIntent::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property intents for deviceManagement
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -224,18 +240,18 @@ public class DeviceManagementIntentItemRequestBuilder extends BaseRequestBuilder
     /**
      * Delete navigation property intents for deviceManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/deviceManagement/intents/{deviceManagementIntent%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * The device management intents
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -244,7 +260,7 @@ public class DeviceManagementIntentItemRequestBuilder extends BaseRequestBuilder
     /**
      * The device management intents
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -256,7 +272,7 @@ public class DeviceManagementIntentItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property intents in deviceManagement
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final DeviceManagementIntent body) {
@@ -266,12 +282,12 @@ public class DeviceManagementIntentItemRequestBuilder extends BaseRequestBuilder
      * Update the navigation property intents in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final DeviceManagementIntent body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/deviceManagement/intents/{deviceManagementIntent%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -280,7 +296,7 @@ public class DeviceManagementIntentItemRequestBuilder extends BaseRequestBuilder
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a DeviceManagementIntentItemRequestBuilder
+     * @return a {@link DeviceManagementIntentItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DeviceManagementIntentItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -310,7 +326,7 @@ public class DeviceManagementIntentItemRequestBuilder extends BaseRequestBuilder
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

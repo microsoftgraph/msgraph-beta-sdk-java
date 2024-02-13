@@ -25,6 +25,7 @@ import java.util.Objects;
 public class MonthlyPrintUsageSummariesByPrinterRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      * @deprecated
      * The monthlyPrintUsageSummariesByPrinter navigation property is deprecated and will stop returning data on July 31, 2023. Please use the monthlyPrintUsageByPrinter navigation property instead of this. as of 2023-06/Tasks_And_Plans
      */
@@ -36,7 +37,7 @@ public class MonthlyPrintUsageSummariesByPrinterRequestBuilder extends BaseReque
     /**
      * Provides operations to manage the monthlyPrintUsageSummariesByPrinter property of the microsoft.graph.reportRoot entity.
      * @param printUsageByPrinterId The unique identifier of printUsageByPrinter
-     * @return a PrintUsageByPrinterItemRequestBuilder
+     * @return a {@link PrintUsageByPrinterItemRequestBuilder}
      * @deprecated
      * The monthlyPrintUsageSummariesByPrinter navigation property is deprecated and will stop returning data on July 31, 2023. Please use the monthlyPrintUsageByPrinter navigation property instead of this. as of 2023-06/Tasks_And_Plans
      */
@@ -49,7 +50,7 @@ public class MonthlyPrintUsageSummariesByPrinterRequestBuilder extends BaseReque
         return new PrintUsageByPrinterItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new MonthlyPrintUsageSummariesByPrinterRequestBuilder and sets the default values.
+     * Instantiates a new {@link MonthlyPrintUsageSummariesByPrinterRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -57,7 +58,7 @@ public class MonthlyPrintUsageSummariesByPrinterRequestBuilder extends BaseReque
         super(requestAdapter, "{+baseurl}/reports/monthlyPrintUsageSummariesByPrinter{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new MonthlyPrintUsageSummariesByPrinterRequestBuilder and sets the default values.
+     * Instantiates a new {@link MonthlyPrintUsageSummariesByPrinterRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -66,7 +67,8 @@ public class MonthlyPrintUsageSummariesByPrinterRequestBuilder extends BaseReque
     }
     /**
      * Get monthlyPrintUsageSummariesByPrinter from reports
-     * @return a PrintUsageByPrinterCollectionResponse
+     * @return a {@link PrintUsageByPrinterCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The monthlyPrintUsageSummariesByPrinter navigation property is deprecated and will stop returning data on July 31, 2023. Please use the monthlyPrintUsageByPrinter navigation property instead of this. as of 2023-06/Tasks_And_Plans
      */
@@ -78,7 +80,8 @@ public class MonthlyPrintUsageSummariesByPrinterRequestBuilder extends BaseReque
     /**
      * Get monthlyPrintUsageSummariesByPrinter from reports
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a PrintUsageByPrinterCollectionResponse
+     * @return a {@link PrintUsageByPrinterCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The monthlyPrintUsageSummariesByPrinter navigation property is deprecated and will stop returning data on July 31, 2023. Please use the monthlyPrintUsageByPrinter navigation property instead of this. as of 2023-06/Tasks_And_Plans
      */
@@ -87,14 +90,14 @@ public class MonthlyPrintUsageSummariesByPrinterRequestBuilder extends BaseReque
     public PrintUsageByPrinterCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, PrintUsageByPrinterCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to monthlyPrintUsageSummariesByPrinter for reports
      * @param body The request body
-     * @return a PrintUsageByPrinter
+     * @return a {@link PrintUsageByPrinter}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The monthlyPrintUsageSummariesByPrinter navigation property is deprecated and will stop returning data on July 31, 2023. Please use the monthlyPrintUsageByPrinter navigation property instead of this. as of 2023-06/Tasks_And_Plans
      */
@@ -107,7 +110,8 @@ public class MonthlyPrintUsageSummariesByPrinterRequestBuilder extends BaseReque
      * Create new navigation property to monthlyPrintUsageSummariesByPrinter for reports
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a PrintUsageByPrinter
+     * @return a {@link PrintUsageByPrinter}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The monthlyPrintUsageSummariesByPrinter navigation property is deprecated and will stop returning data on July 31, 2023. Please use the monthlyPrintUsageByPrinter navigation property instead of this. as of 2023-06/Tasks_And_Plans
      */
@@ -117,13 +121,12 @@ public class MonthlyPrintUsageSummariesByPrinterRequestBuilder extends BaseReque
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, PrintUsageByPrinter::createFromDiscriminatorValue);
     }
     /**
      * Get monthlyPrintUsageSummariesByPrinter from reports
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      * The monthlyPrintUsageSummariesByPrinter navigation property is deprecated and will stop returning data on July 31, 2023. Please use the monthlyPrintUsageByPrinter navigation property instead of this. as of 2023-06/Tasks_And_Plans
      */
@@ -135,7 +138,7 @@ public class MonthlyPrintUsageSummariesByPrinterRequestBuilder extends BaseReque
     /**
      * Get monthlyPrintUsageSummariesByPrinter from reports
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      * The monthlyPrintUsageSummariesByPrinter navigation property is deprecated and will stop returning data on July 31, 2023. Please use the monthlyPrintUsageByPrinter navigation property instead of this. as of 2023-06/Tasks_And_Plans
      */
@@ -150,7 +153,7 @@ public class MonthlyPrintUsageSummariesByPrinterRequestBuilder extends BaseReque
     /**
      * Create new navigation property to monthlyPrintUsageSummariesByPrinter for reports
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      * The monthlyPrintUsageSummariesByPrinter navigation property is deprecated and will stop returning data on July 31, 2023. Please use the monthlyPrintUsageByPrinter navigation property instead of this. as of 2023-06/Tasks_And_Plans
      */
@@ -163,7 +166,7 @@ public class MonthlyPrintUsageSummariesByPrinterRequestBuilder extends BaseReque
      * Create new navigation property to monthlyPrintUsageSummariesByPrinter for reports
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      * The monthlyPrintUsageSummariesByPrinter navigation property is deprecated and will stop returning data on July 31, 2023. Please use the monthlyPrintUsageByPrinter navigation property instead of this. as of 2023-06/Tasks_And_Plans
      */
@@ -171,7 +174,7 @@ public class MonthlyPrintUsageSummariesByPrinterRequestBuilder extends BaseReque
     @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final PrintUsageByPrinter body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/reports/monthlyPrintUsageSummariesByPrinter", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -180,7 +183,7 @@ public class MonthlyPrintUsageSummariesByPrinterRequestBuilder extends BaseReque
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a MonthlyPrintUsageSummariesByPrinterRequestBuilder
+     * @return a {@link MonthlyPrintUsageSummariesByPrinterRequestBuilder}
      * @deprecated
      * The monthlyPrintUsageSummariesByPrinter navigation property is deprecated and will stop returning data on July 31, 2023. Please use the monthlyPrintUsageByPrinter navigation property instead of this. as of 2023-06/Tasks_And_Plans
      */
@@ -237,7 +240,7 @@ public class MonthlyPrintUsageSummariesByPrinterRequestBuilder extends BaseReque
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

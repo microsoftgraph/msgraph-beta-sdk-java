@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementSettingInstance extends Entity implements Parsable {
     /**
-     * Instantiates a new DeviceManagementSettingInstance and sets the default values.
+     * Instantiates a new {@link DeviceManagementSettingInstance} and sets the default values.
      */
     public DeviceManagementSettingInstance() {
         super();
@@ -20,7 +20,7 @@ public class DeviceManagementSettingInstance extends Entity implements Parsable 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceManagementSettingInstance
+     * @return a {@link DeviceManagementSettingInstance}
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementSettingInstance createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class DeviceManagementSettingInstance extends Entity implements Parsable 
     }
     /**
      * Gets the definitionId property value. The ID of the setting definition for this instance
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDefinitionId() {
@@ -49,7 +49,7 @@ public class DeviceManagementSettingInstance extends Entity implements Parsable 
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -60,7 +60,7 @@ public class DeviceManagementSettingInstance extends Entity implements Parsable 
     }
     /**
      * Gets the valueJson property value. JSON representation of the value
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getValueJson() {

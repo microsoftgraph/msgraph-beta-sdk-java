@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AwsPolicyPermissionsDefinitionAction extends AwsPermissionsDefinitionAction implements Parsable {
     /**
-     * Instantiates a new AwsPolicyPermissionsDefinitionAction and sets the default values.
+     * Instantiates a new {@link AwsPolicyPermissionsDefinitionAction} and sets the default values.
      */
     public AwsPolicyPermissionsDefinitionAction() {
         super();
@@ -18,7 +18,7 @@ public class AwsPolicyPermissionsDefinitionAction extends AwsPermissionsDefiniti
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AwsPolicyPermissionsDefinitionAction
+     * @return a {@link AwsPolicyPermissionsDefinitionAction}
      */
     @jakarta.annotation.Nonnull
     public static AwsPolicyPermissionsDefinitionAction createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class AwsPolicyPermissionsDefinitionAction extends AwsPermissionsDefiniti
     }
     /**
      * Gets the assignToRoleId property value. ID for the role.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAssignToRoleId() {
@@ -35,7 +35,7 @@ public class AwsPolicyPermissionsDefinitionAction extends AwsPermissionsDefiniti
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -46,7 +46,7 @@ public class AwsPolicyPermissionsDefinitionAction extends AwsPermissionsDefiniti
     }
     /**
      * Gets the policies property value. The policies property
-     * @return a java.util.List<PermissionsDefinitionAwsPolicy>
+     * @return a {@link java.util.List<PermissionsDefinitionAwsPolicy>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<PermissionsDefinitionAwsPolicy> getPolicies() {

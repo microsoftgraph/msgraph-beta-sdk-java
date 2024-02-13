@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CustomExtensionCalloutResult extends AuthenticationEventHandlerResult implements Parsable {
     /**
-     * Instantiates a new CustomExtensionCalloutResult and sets the default values.
+     * Instantiates a new {@link CustomExtensionCalloutResult} and sets the default values.
      */
     public CustomExtensionCalloutResult() {
         super();
@@ -19,7 +19,7 @@ public class CustomExtensionCalloutResult extends AuthenticationEventHandlerResu
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CustomExtensionCalloutResult
+     * @return a {@link CustomExtensionCalloutResult}
      */
     @jakarta.annotation.Nonnull
     public static CustomExtensionCalloutResult createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class CustomExtensionCalloutResult extends AuthenticationEventHandlerResu
     }
     /**
      * Gets the calloutDateTime property value. When the API transaction was initiated, the date and time information uses ISO 8601 format and is always in UTC time. Example: midnight on Jan 1, 2014, is reported as 2014-01-01T00:00:00Z.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCalloutDateTime() {
@@ -36,7 +36,7 @@ public class CustomExtensionCalloutResult extends AuthenticationEventHandlerResu
     }
     /**
      * Gets the customExtensionId property value. Identifier of the custom extension that was called.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCustomExtensionId() {
@@ -44,7 +44,7 @@ public class CustomExtensionCalloutResult extends AuthenticationEventHandlerResu
     }
     /**
      * Gets the errorCode property value. Error code that was returned when the last API attempt failed.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getErrorCode() {
@@ -52,7 +52,7 @@ public class CustomExtensionCalloutResult extends AuthenticationEventHandlerResu
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -66,7 +66,7 @@ public class CustomExtensionCalloutResult extends AuthenticationEventHandlerResu
     }
     /**
      * Gets the httpStatus property value. The HTTP status code that was returned by the target API endpoint after the last API attempt.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getHttpStatus() {
@@ -74,7 +74,7 @@ public class CustomExtensionCalloutResult extends AuthenticationEventHandlerResu
     }
     /**
      * Gets the numberOfAttempts property value. The number of API calls to the customer's API.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getNumberOfAttempts() {

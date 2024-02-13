@@ -18,7 +18,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, BackedModel, Par
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new TrustFrameworkKey and sets the default values.
+     * Instantiates a new {@link TrustFrameworkKey} and sets the default values.
      */
     public TrustFrameworkKey() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, BackedModel, Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TrustFrameworkKey
+     * @return a {@link TrustFrameworkKey}
      */
     @jakarta.annotation.Nonnull
     public static TrustFrameworkKey createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the d property value. RSA Key - private exponent. Field can't be read back.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getD() {
@@ -65,7 +65,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the dp property value. RSA Key - first exponent. Field can't be read back.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDp() {
@@ -73,7 +73,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the dq property value. RSA Key - second exponent. Field can't be read back.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDq() {
@@ -81,7 +81,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the e property value. RSA Key - public exponent
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getE() {
@@ -89,7 +89,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the exp property value. This value is a NumericDate as defined in RFC 7519 (A JSON numeric value representing the number of seconds from 1970-01-01T00:00:00Z UTC until the specified UTC date/time, ignoring leap seconds.)
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getExp() {
@@ -97,7 +97,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -123,7 +123,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the k property value. Symmetric Key for oct key type. Field can't be read back.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getK() {
@@ -131,7 +131,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the kid property value. The unique identifier for the key.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getKid() {
@@ -139,7 +139,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the kty property value. The kty (key type) parameter identifies the cryptographic algorithm family used with the key, The valid values are rsa, oct.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getKty() {
@@ -147,7 +147,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the n property value. RSA Key - modulus
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getN() {
@@ -155,7 +155,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the nbf property value. This value is a NumericDate as defined in RFC 7519 (A JSON numeric value representing the number of seconds from 1970-01-01T00:00:00Z UTC until the specified UTC date/time, ignoring leap seconds.)
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getNbf() {
@@ -163,7 +163,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -171,7 +171,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the p property value. RSA Key - first prime. Field can't be read back.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getP() {
@@ -179,7 +179,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the q property value. RSA Key - second prime. Field can't be read back.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getQ() {
@@ -187,7 +187,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the qi property value. RSA Key - Coefficient. Field can't be read back.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getQi() {
@@ -195,7 +195,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the use property value. The use (public key use) parameter identifies the intended use of the public key.  The use parameter is employed to indicate whether a public key is used for encrypting data or verifying the signature on data. Possible values are: sig (signature), enc (encryption)
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUse() {
@@ -203,7 +203,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the x5c property value. The x5c (X.509 certificate chain) parameter contains a chain of one or more PKIX certificates RFC 5280.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getX5c() {
@@ -211,7 +211,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the x5t property value. The x5t (X.509 certificate SHA-1 thumbprint) parameter is a base64url-encoded SHA-1 thumbprint (also known as digest) of the DER encoding of an X.509 certificate RFC 5280.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getX5t() {

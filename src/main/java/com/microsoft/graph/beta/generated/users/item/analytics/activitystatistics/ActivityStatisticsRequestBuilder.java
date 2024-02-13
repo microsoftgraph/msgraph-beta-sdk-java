@@ -25,6 +25,7 @@ import java.util.Objects;
 public class ActivityStatisticsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -33,7 +34,7 @@ public class ActivityStatisticsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the activityStatistics property of the microsoft.graph.userAnalytics entity.
      * @param activityStatisticsId The unique identifier of activityStatistics
-     * @return a ActivityStatisticsItemRequestBuilder
+     * @return a {@link ActivityStatisticsItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ActivityStatisticsItemRequestBuilder byActivityStatisticsId(@jakarta.annotation.Nonnull final String activityStatisticsId) {
@@ -43,7 +44,7 @@ public class ActivityStatisticsRequestBuilder extends BaseRequestBuilder {
         return new ActivityStatisticsItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new ActivityStatisticsRequestBuilder and sets the default values.
+     * Instantiates a new {@link ActivityStatisticsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -51,7 +52,7 @@ public class ActivityStatisticsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/analytics/activityStatistics{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new ActivityStatisticsRequestBuilder and sets the default values.
+     * Instantiates a new {@link ActivityStatisticsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -60,7 +61,8 @@ public class ActivityStatisticsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The collection of work activities that a user spent time on during and outside of working hours. Read-only. Nullable.
-     * @return a ActivityStatisticsCollectionResponse
+     * @return a {@link ActivityStatisticsCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public ActivityStatisticsCollectionResponse get() {
@@ -69,20 +71,21 @@ public class ActivityStatisticsRequestBuilder extends BaseRequestBuilder {
     /**
      * The collection of work activities that a user spent time on during and outside of working hours. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a ActivityStatisticsCollectionResponse
+     * @return a {@link ActivityStatisticsCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public ActivityStatisticsCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, ActivityStatisticsCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to activityStatistics for users
      * @param body The request body
-     * @return a ActivityStatistics
+     * @return a {@link ActivityStatistics}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public ActivityStatistics post(@jakarta.annotation.Nonnull final ActivityStatistics body) {
@@ -92,20 +95,20 @@ public class ActivityStatisticsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to activityStatistics for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a ActivityStatistics
+     * @return a {@link ActivityStatistics}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public ActivityStatistics post(@jakarta.annotation.Nonnull final ActivityStatistics body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, ActivityStatistics::createFromDiscriminatorValue);
     }
     /**
      * The collection of work activities that a user spent time on during and outside of working hours. Read-only. Nullable.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -114,7 +117,7 @@ public class ActivityStatisticsRequestBuilder extends BaseRequestBuilder {
     /**
      * The collection of work activities that a user spent time on during and outside of working hours. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -126,7 +129,7 @@ public class ActivityStatisticsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to activityStatistics for users
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ActivityStatistics body) {
@@ -136,12 +139,12 @@ public class ActivityStatisticsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to activityStatistics for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ActivityStatistics body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/users/{user%2Did}/analytics/activityStatistics", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -150,7 +153,7 @@ public class ActivityStatisticsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a ActivityStatisticsRequestBuilder
+     * @return a {@link ActivityStatisticsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ActivityStatisticsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -204,7 +207,7 @@ public class ActivityStatisticsRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

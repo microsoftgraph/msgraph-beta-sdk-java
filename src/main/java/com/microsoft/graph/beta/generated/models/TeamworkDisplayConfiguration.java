@@ -18,7 +18,7 @@ public class TeamworkDisplayConfiguration implements AdditionalDataHolder, Backe
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new TeamworkDisplayConfiguration and sets the default values.
+     * Instantiates a new {@link TeamworkDisplayConfiguration} and sets the default values.
      */
     public TeamworkDisplayConfiguration() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class TeamworkDisplayConfiguration implements AdditionalDataHolder, Backe
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TeamworkDisplayConfiguration
+     * @return a {@link TeamworkDisplayConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static TeamworkDisplayConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class TeamworkDisplayConfiguration implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class TeamworkDisplayConfiguration implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class TeamworkDisplayConfiguration implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the configuredDisplays property value. The list of configured displays. Applicable only for Microsoft Teams Rooms devices.
-     * @return a java.util.List<TeamworkConfiguredPeripheral>
+     * @return a {@link java.util.List<TeamworkConfiguredPeripheral>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<TeamworkConfiguredPeripheral> getConfiguredDisplays() {
@@ -65,7 +65,7 @@ public class TeamworkDisplayConfiguration implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the displayCount property value. Total number of connected displays, including the inbuilt display. Applicable only for Teams Rooms devices.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getDisplayCount() {
@@ -73,7 +73,7 @@ public class TeamworkDisplayConfiguration implements AdditionalDataHolder, Backe
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -88,7 +88,7 @@ public class TeamworkDisplayConfiguration implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the inBuiltDisplayScreenConfiguration property value. Configuration for the inbuilt display. Not applicable for Teams Rooms devices.
-     * @return a TeamworkDisplayScreenConfiguration
+     * @return a {@link TeamworkDisplayScreenConfiguration}
      */
     @jakarta.annotation.Nullable
     public TeamworkDisplayScreenConfiguration getInBuiltDisplayScreenConfiguration() {
@@ -96,7 +96,7 @@ public class TeamworkDisplayConfiguration implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the isContentDuplicationAllowed property value. True if content duplication is allowed. Applicable only for Teams Rooms devices.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsContentDuplicationAllowed() {
@@ -104,7 +104,7 @@ public class TeamworkDisplayConfiguration implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the isDualDisplayModeEnabled property value. True if dual display mode is enabled. If isDualDisplayModeEnabled is true, then the content will be displayed on both front of room screens instead of just the one screen, when it is shared via the HDMI ingest module on the Microsoft Teams Rooms device. Applicable only for Teams Rooms devices.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDualDisplayModeEnabled() {
@@ -112,7 +112,7 @@ public class TeamworkDisplayConfiguration implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {

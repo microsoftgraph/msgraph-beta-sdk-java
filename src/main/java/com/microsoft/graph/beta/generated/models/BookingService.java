@@ -14,7 +14,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class BookingService extends BookingNamedEntity implements Parsable {
     /**
-     * Instantiates a new BookingService and sets the default values.
+     * Instantiates a new {@link BookingService} and sets the default values.
      */
     public BookingService() {
         super();
@@ -23,7 +23,7 @@ public class BookingService extends BookingNamedEntity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a BookingService
+     * @return a {@link BookingService}
      */
     @jakarta.annotation.Nonnull
     public static BookingService createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -32,15 +32,15 @@ public class BookingService extends BookingNamedEntity implements Parsable {
     }
     /**
      * Gets the additionalInformation property value. Additional information that is sent to the customer when an appointment is confirmed.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAdditionalInformation() {
         return this.backingStore.get("additionalInformation");
     }
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
-     * @return a OffsetDateTime
+     * Gets the createdDateTime property value. The date, time and timezone when the Service was created.
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -48,7 +48,7 @@ public class BookingService extends BookingNamedEntity implements Parsable {
     }
     /**
      * Gets the customQuestions property value. Contains the set of custom questions associated with a particular service.
-     * @return a java.util.List<BookingQuestionAssignment>
+     * @return a {@link java.util.List<BookingQuestionAssignment>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<BookingQuestionAssignment> getCustomQuestions() {
@@ -56,7 +56,7 @@ public class BookingService extends BookingNamedEntity implements Parsable {
     }
     /**
      * Gets the defaultDuration property value. The default length of the service, represented in numbers of days, hours, minutes, and seconds. For example, P11D23H59M59.999999999999S.
-     * @return a PeriodAndDuration
+     * @return a {@link PeriodAndDuration}
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getDefaultDuration() {
@@ -64,7 +64,7 @@ public class BookingService extends BookingNamedEntity implements Parsable {
     }
     /**
      * Gets the defaultLocation property value. The default physical location for the service.
-     * @return a Location
+     * @return a {@link Location}
      */
     @jakarta.annotation.Nullable
     public Location getDefaultLocation() {
@@ -72,7 +72,7 @@ public class BookingService extends BookingNamedEntity implements Parsable {
     }
     /**
      * Gets the defaultPrice property value. The default monetary price for the service.
-     * @return a Double
+     * @return a {@link Double}
      */
     @jakarta.annotation.Nullable
     public Double getDefaultPrice() {
@@ -80,7 +80,7 @@ public class BookingService extends BookingNamedEntity implements Parsable {
     }
     /**
      * Gets the defaultPriceType property value. Represents the type of pricing of a booking service.
-     * @return a BookingPriceType
+     * @return a {@link BookingPriceType}
      */
     @jakarta.annotation.Nullable
     public BookingPriceType getDefaultPriceType() {
@@ -88,7 +88,7 @@ public class BookingService extends BookingNamedEntity implements Parsable {
     }
     /**
      * Gets the defaultReminders property value. The default set of reminders for an appointment of this service. The value of this property is available only when reading this bookingService by its ID.
-     * @return a java.util.List<BookingReminder>
+     * @return a {@link java.util.List<BookingReminder>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<BookingReminder> getDefaultReminders() {
@@ -96,7 +96,7 @@ public class BookingService extends BookingNamedEntity implements Parsable {
     }
     /**
      * Gets the description property value. A text description for the service.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -104,7 +104,7 @@ public class BookingService extends BookingNamedEntity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -134,8 +134,8 @@ public class BookingService extends BookingNamedEntity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the isAnonymousJoinEnabled property value. True if an anonymousJoinWebUrl(webrtcUrl) will be generated for the appointment booked for this service.
-     * @return a Boolean
+     * Gets the isAnonymousJoinEnabled property value. Indicates if an anonymousJoinWebUrl(webrtcUrl) is generated for the appointment booked for this service. The default value is false.
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsAnonymousJoinEnabled() {
@@ -143,15 +143,15 @@ public class BookingService extends BookingNamedEntity implements Parsable {
     }
     /**
      * Gets the isHiddenFromCustomers property value. True means this service isn't available to customers for booking.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsHiddenFromCustomers() {
         return this.backingStore.get("isHiddenFromCustomers");
     }
     /**
-     * Gets the isLocationOnline property value. True indicates that the appointments for the service will be held online. Default value is false.
-     * @return a Boolean
+     * Gets the isLocationOnline property value. Indicates that the appointments for the service are held online. The default value is false.
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsLocationOnline() {
@@ -159,15 +159,15 @@ public class BookingService extends BookingNamedEntity implements Parsable {
     }
     /**
      * Gets the languageTag property value. The language of the self service booking page.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getLanguageTag() {
         return this.backingStore.get("languageTag");
     }
     /**
-     * Gets the lastUpdatedDateTime property value. The lastUpdatedDateTime property
-     * @return a OffsetDateTime
+     * Gets the lastUpdatedDateTime property value. The date, time and timezone when the Service  was last updated.
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastUpdatedDateTime() {
@@ -175,7 +175,7 @@ public class BookingService extends BookingNamedEntity implements Parsable {
     }
     /**
      * Gets the maximumAttendeesCount property value. The maximum number of customers allowed in a service. If maximumAttendeesCount of the service is greater than 1, pass valid customer IDs while creating or updating an appointment.  To create a customer, use the Create bookingCustomer operation.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getMaximumAttendeesCount() {
@@ -183,7 +183,7 @@ public class BookingService extends BookingNamedEntity implements Parsable {
     }
     /**
      * Gets the notes property value. Additional information about this service.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getNotes() {
@@ -191,7 +191,7 @@ public class BookingService extends BookingNamedEntity implements Parsable {
     }
     /**
      * Gets the postBuffer property value. The time to buffer after an appointment for this service ends, and before the next customer appointment can be booked.
-     * @return a PeriodAndDuration
+     * @return a {@link PeriodAndDuration}
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getPostBuffer() {
@@ -199,7 +199,7 @@ public class BookingService extends BookingNamedEntity implements Parsable {
     }
     /**
      * Gets the preBuffer property value. The time to buffer before an appointment for this service can start.
-     * @return a PeriodAndDuration
+     * @return a {@link PeriodAndDuration}
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getPreBuffer() {
@@ -207,7 +207,7 @@ public class BookingService extends BookingNamedEntity implements Parsable {
     }
     /**
      * Gets the schedulingPolicy property value. The set of policies that determine how appointments for this type of service should be created and managed.
-     * @return a BookingSchedulingPolicy
+     * @return a {@link BookingSchedulingPolicy}
      */
     @jakarta.annotation.Nullable
     public BookingSchedulingPolicy getSchedulingPolicy() {
@@ -215,7 +215,7 @@ public class BookingService extends BookingNamedEntity implements Parsable {
     }
     /**
      * Gets the smsNotificationsEnabled property value. True indicates SMS notifications can be sent to the customers for the appointment of the service. Default value is false.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getSmsNotificationsEnabled() {
@@ -223,7 +223,7 @@ public class BookingService extends BookingNamedEntity implements Parsable {
     }
     /**
      * Gets the staffMemberIds property value. Represents those staff members who provide this service.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getStaffMemberIds() {
@@ -231,7 +231,7 @@ public class BookingService extends BookingNamedEntity implements Parsable {
     }
     /**
      * Gets the webUrl property value. The URL a customer uses to access the service.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getWebUrl() {
@@ -274,7 +274,7 @@ public class BookingService extends BookingNamedEntity implements Parsable {
         this.backingStore.set("additionalInformation", value);
     }
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. The date, time and timezone when the Service was created.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -330,7 +330,7 @@ public class BookingService extends BookingNamedEntity implements Parsable {
         this.backingStore.set("description", value);
     }
     /**
-     * Sets the isAnonymousJoinEnabled property value. True if an anonymousJoinWebUrl(webrtcUrl) will be generated for the appointment booked for this service.
+     * Sets the isAnonymousJoinEnabled property value. Indicates if an anonymousJoinWebUrl(webrtcUrl) is generated for the appointment booked for this service. The default value is false.
      * @param value Value to set for the isAnonymousJoinEnabled property.
      */
     public void setIsAnonymousJoinEnabled(@jakarta.annotation.Nullable final Boolean value) {
@@ -344,7 +344,7 @@ public class BookingService extends BookingNamedEntity implements Parsable {
         this.backingStore.set("isHiddenFromCustomers", value);
     }
     /**
-     * Sets the isLocationOnline property value. True indicates that the appointments for the service will be held online. Default value is false.
+     * Sets the isLocationOnline property value. Indicates that the appointments for the service are held online. The default value is false.
      * @param value Value to set for the isLocationOnline property.
      */
     public void setIsLocationOnline(@jakarta.annotation.Nullable final Boolean value) {
@@ -358,7 +358,7 @@ public class BookingService extends BookingNamedEntity implements Parsable {
         this.backingStore.set("languageTag", value);
     }
     /**
-     * Sets the lastUpdatedDateTime property value. The lastUpdatedDateTime property
+     * Sets the lastUpdatedDateTime property value. The date, time and timezone when the Service  was last updated.
      * @param value Value to set for the lastUpdatedDateTime property.
      */
     public void setLastUpdatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

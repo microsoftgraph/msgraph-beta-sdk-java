@@ -21,7 +21,7 @@ public class Currency implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new Currency and sets the default values.
+     * Instantiates a new {@link Currency} and sets the default values.
      */
     public Currency() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -30,7 +30,7 @@ public class Currency implements AdditionalDataHolder, BackedModel, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Currency
+     * @return a {@link Currency}
      */
     @jakarta.annotation.Nonnull
     public static Currency createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class Currency implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -52,7 +52,7 @@ public class Currency implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the amountDecimalPlaces property value. The amountDecimalPlaces property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAmountDecimalPlaces() {
@@ -60,7 +60,7 @@ public class Currency implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the amountRoundingPrecision property value. The amountRoundingPrecision property
-     * @return a BigDecimal
+     * @return a {@link BigDecimal}
      */
     @jakarta.annotation.Nullable
     public BigDecimal getAmountRoundingPrecision() {
@@ -68,7 +68,7 @@ public class Currency implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -76,7 +76,7 @@ public class Currency implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the code property value. The code property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCode() {
@@ -84,7 +84,7 @@ public class Currency implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the displayName property value. The displayName property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -92,7 +92,7 @@ public class Currency implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -109,7 +109,7 @@ public class Currency implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the id property value. The id property
-     * @return a UUID
+     * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
     public UUID getId() {
@@ -117,7 +117,7 @@ public class Currency implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -125,7 +125,7 @@ public class Currency implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -133,7 +133,7 @@ public class Currency implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the symbol property value. The symbol property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSymbol() {

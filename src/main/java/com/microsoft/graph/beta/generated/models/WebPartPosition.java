@@ -18,7 +18,7 @@ public class WebPartPosition implements AdditionalDataHolder, BackedModel, Parsa
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new WebPartPosition and sets the default values.
+     * Instantiates a new {@link WebPartPosition} and sets the default values.
      */
     public WebPartPosition() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class WebPartPosition implements AdditionalDataHolder, BackedModel, Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WebPartPosition
+     * @return a {@link WebPartPosition}
      */
     @jakarta.annotation.Nonnull
     public static WebPartPosition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class WebPartPosition implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class WebPartPosition implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class WebPartPosition implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the columnId property value. Indicates the identifier of the column where the web part is located.
-     * @return a Double
+     * @return a {@link Double}
      */
     @jakarta.annotation.Nullable
     public Double getColumnId() {
@@ -65,7 +65,7 @@ public class WebPartPosition implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -79,7 +79,7 @@ public class WebPartPosition implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the horizontalSectionId property value. Indicates the horizontal section where the web part is located.
-     * @return a Double
+     * @return a {@link Double}
      */
     @jakarta.annotation.Nullable
     public Double getHorizontalSectionId() {
@@ -87,7 +87,7 @@ public class WebPartPosition implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the isInVerticalSection property value. Indicates whether the web part is located in the vertical section.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsInVerticalSection() {
@@ -95,7 +95,7 @@ public class WebPartPosition implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -103,7 +103,7 @@ public class WebPartPosition implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the webPartIndex property value. Index of the current web part. Represents the order of the web part in this column or section.
-     * @return a Double
+     * @return a {@link Double}
      */
     @jakarta.annotation.Nullable
     public Double getWebPartIndex() {

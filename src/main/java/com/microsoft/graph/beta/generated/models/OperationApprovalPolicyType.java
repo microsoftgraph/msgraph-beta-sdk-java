@@ -8,6 +8,8 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public enum OperationApprovalPolicyType implements ValuedEnum {
+    /** Default. Indicates that the configured policy type is unknown. This property is not allowed on an OperationApprovalRequest unless the PolicySet contains a different OperationApprovalPolicyType. */
+    Unknown("unknown"),
     /** Indicates that the configured policy type is for a Device Action. */
     DeviceAction("deviceAction"),
     /** Indicates that the configured policy type is for a Device Wipe Action. */
@@ -41,7 +43,7 @@ public enum OperationApprovalPolicyType implements ValuedEnum {
     /** Indicates that the configured policy type is an application type, such as mobile apps or built-in apps. */
     App("app"),
     /** Indicates that the configured policy type is a script type, such as Powershell scripts or remediation scripts. */
-    Scripts("scripts"),
+    Script("script"),
     /** Indicates that the configured policy type is for a Role. */
     Role("role"),
     /** Indicates that the configured policy type is for a Device Reset Passcode Action. */
@@ -60,6 +62,7 @@ public enum OperationApprovalPolicyType implements ValuedEnum {
     public static OperationApprovalPolicyType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
+            case "unknown": return Unknown;
             case "deviceAction": return DeviceAction;
             case "deviceWipe": return DeviceWipe;
             case "deviceRetire": return DeviceRetire;
@@ -76,7 +79,7 @@ public enum OperationApprovalPolicyType implements ValuedEnum {
             case "filter": return Filter;
             case "endpointSecurityPolicy": return EndpointSecurityPolicy;
             case "app": return App;
-            case "scripts": return Scripts;
+            case "script": return Script;
             case "role": return Role;
             case "deviceResetPasscode": return DeviceResetPasscode;
             case "customOrganizationalMessage": return CustomOrganizationalMessage;

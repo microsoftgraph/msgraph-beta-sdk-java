@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PlannerRosterMember extends Entity implements Parsable {
     /**
-     * Instantiates a new PlannerRosterMember and sets the default values.
+     * Instantiates a new {@link PlannerRosterMember} and sets the default values.
      */
     public PlannerRosterMember() {
         super();
@@ -17,7 +17,7 @@ public class PlannerRosterMember extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PlannerRosterMember
+     * @return a {@link PlannerRosterMember}
      */
     @jakarta.annotation.Nonnull
     public static PlannerRosterMember createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class PlannerRosterMember extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -38,7 +38,7 @@ public class PlannerRosterMember extends Entity implements Parsable {
     }
     /**
      * Gets the roles property value. Additional roles associated with the PlannerRosterMember, which determines permissions of the member in the plannerRoster. Currently there are no available roles to assign, and every member has full control over the contents of the plannerRoster.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRoles() {
@@ -46,7 +46,7 @@ public class PlannerRosterMember extends Entity implements Parsable {
     }
     /**
      * Gets the tenantId property value. Identifier of the tenant the user belongs to. Currently only the users from the same tenant can be added to a plannerRoster.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
@@ -54,7 +54,7 @@ public class PlannerRosterMember extends Entity implements Parsable {
     }
     /**
      * Gets the userId property value. Identifier of the user.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserId() {

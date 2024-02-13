@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementSettingDefinitionCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * Instantiates a new DeviceManagementSettingDefinitionCollectionResponse and sets the default values.
+     * Instantiates a new {@link DeviceManagementSettingDefinitionCollectionResponse} and sets the default values.
      */
     public DeviceManagementSettingDefinitionCollectionResponse() {
         super();
@@ -17,7 +17,7 @@ public class DeviceManagementSettingDefinitionCollectionResponse extends BaseCol
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceManagementSettingDefinitionCollectionResponse
+     * @return a {@link DeviceManagementSettingDefinitionCollectionResponse}
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementSettingDefinitionCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class DeviceManagementSettingDefinitionCollectionResponse extends BaseCol
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -36,7 +36,7 @@ public class DeviceManagementSettingDefinitionCollectionResponse extends BaseCol
     }
     /**
      * Gets the value property value. The value property
-     * @return a java.util.List<DeviceManagementSettingDefinition>
+     * @return a {@link java.util.List<DeviceManagementSettingDefinition>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementSettingDefinition> getValue() {

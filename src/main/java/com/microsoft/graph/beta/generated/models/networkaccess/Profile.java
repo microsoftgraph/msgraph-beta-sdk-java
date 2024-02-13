@@ -11,7 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Profile extends Entity implements Parsable {
     /**
-     * Instantiates a new Profile and sets the default values.
+     * Instantiates a new {@link Profile} and sets the default values.
      */
     public Profile() {
         super();
@@ -19,7 +19,7 @@ public class Profile extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Profile
+     * @return a {@link Profile}
      */
     @jakarta.annotation.Nonnull
     public static Profile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class Profile extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. Description.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -44,7 +44,7 @@ public class Profile extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -59,7 +59,7 @@ public class Profile extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. Profile last modified time.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -67,7 +67,7 @@ public class Profile extends Entity implements Parsable {
     }
     /**
      * Gets the name property value. Profile name.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -75,7 +75,7 @@ public class Profile extends Entity implements Parsable {
     }
     /**
      * Gets the policies property value. Traffic forwarding policies associated with this profile.
-     * @return a java.util.List<PolicyLink>
+     * @return a {@link java.util.List<PolicyLink>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<PolicyLink> getPolicies() {
@@ -83,7 +83,7 @@ public class Profile extends Entity implements Parsable {
     }
     /**
      * Gets the state property value. The state property
-     * @return a Status
+     * @return a {@link Status}
      */
     @jakarta.annotation.Nullable
     public Status getState() {
@@ -91,7 +91,7 @@ public class Profile extends Entity implements Parsable {
     }
     /**
      * Gets the version property value. Profile version.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getVersion() {

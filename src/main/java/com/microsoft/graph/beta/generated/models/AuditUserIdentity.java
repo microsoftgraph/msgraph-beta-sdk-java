@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AuditUserIdentity extends UserIdentity implements Parsable {
     /**
-     * Instantiates a new AuditUserIdentity and sets the default values.
+     * Instantiates a new {@link AuditUserIdentity} and sets the default values.
      */
     public AuditUserIdentity() {
         super();
@@ -18,7 +18,7 @@ public class AuditUserIdentity extends UserIdentity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AuditUserIdentity
+     * @return a {@link AuditUserIdentity}
      */
     @jakarta.annotation.Nonnull
     public static AuditUserIdentity createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class AuditUserIdentity extends UserIdentity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -38,7 +38,7 @@ public class AuditUserIdentity extends UserIdentity implements Parsable {
     }
     /**
      * Gets the homeTenantId property value. For user sign ins, the identifier of the tenant that the user is a member of.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getHomeTenantId() {
@@ -46,7 +46,7 @@ public class AuditUserIdentity extends UserIdentity implements Parsable {
     }
     /**
      * Gets the homeTenantName property value. For user sign ins, the name of the tenant that the user is a member of. Only populated in cases where the home tenant has provided affirmative consent to Microsoft Entra ID to show the tenant content.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getHomeTenantName() {

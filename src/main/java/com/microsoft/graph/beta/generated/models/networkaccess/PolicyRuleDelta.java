@@ -18,7 +18,7 @@ public class PolicyRuleDelta implements AdditionalDataHolder, BackedModel, Parsa
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new PolicyRuleDelta and sets the default values.
+     * Instantiates a new {@link PolicyRuleDelta} and sets the default values.
      */
     public PolicyRuleDelta() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class PolicyRuleDelta implements AdditionalDataHolder, BackedModel, Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PolicyRuleDelta
+     * @return a {@link PolicyRuleDelta}
      */
     @jakarta.annotation.Nonnull
     public static PolicyRuleDelta createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class PolicyRuleDelta implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the action property value. The action property
-     * @return a ForwardingRuleAction
+     * @return a {@link ForwardingRuleAction}
      */
     @jakarta.annotation.Nullable
     public ForwardingRuleAction getAction() {
@@ -44,7 +44,7 @@ public class PolicyRuleDelta implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -57,7 +57,7 @@ public class PolicyRuleDelta implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -65,7 +65,7 @@ public class PolicyRuleDelta implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -77,7 +77,7 @@ public class PolicyRuleDelta implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -85,7 +85,7 @@ public class PolicyRuleDelta implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the ruleId property value. The identifier of the policy rule to update.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRuleId() {

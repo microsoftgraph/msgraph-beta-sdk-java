@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ContentApproval extends ComplianceChange implements Parsable {
     /**
-     * Instantiates a new ContentApproval and sets the default values.
+     * Instantiates a new {@link ContentApproval} and sets the default values.
      */
     public ContentApproval() {
         super();
@@ -18,7 +18,7 @@ public class ContentApproval extends ComplianceChange implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ContentApproval
+     * @return a {@link ContentApproval}
      */
     @jakarta.annotation.Nonnull
     public static ContentApproval createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class ContentApproval extends ComplianceChange implements Parsable {
     }
     /**
      * Gets the content property value. The content property
-     * @return a DeployableContent
+     * @return a {@link DeployableContent}
      */
     @jakarta.annotation.Nullable
     public DeployableContent getContent() {
@@ -35,7 +35,7 @@ public class ContentApproval extends ComplianceChange implements Parsable {
     }
     /**
      * Gets the deployments property value. Deployments created as a result of applying the approval.
-     * @return a java.util.List<Deployment>
+     * @return a {@link java.util.List<Deployment>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Deployment> getDeployments() {
@@ -43,7 +43,7 @@ public class ContentApproval extends ComplianceChange implements Parsable {
     }
     /**
      * Gets the deploymentSettings property value. Settings for governing how to deploy content.
-     * @return a DeploymentSettings
+     * @return a {@link DeploymentSettings}
      */
     @jakarta.annotation.Nullable
     public DeploymentSettings getDeploymentSettings() {
@@ -51,7 +51,7 @@ public class ContentApproval extends ComplianceChange implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

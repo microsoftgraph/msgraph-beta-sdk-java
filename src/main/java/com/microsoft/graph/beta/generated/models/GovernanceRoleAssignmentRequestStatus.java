@@ -18,7 +18,7 @@ public class GovernanceRoleAssignmentRequestStatus implements AdditionalDataHold
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new GovernanceRoleAssignmentRequestStatus and sets the default values.
+     * Instantiates a new {@link GovernanceRoleAssignmentRequestStatus} and sets the default values.
      */
     public GovernanceRoleAssignmentRequestStatus() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class GovernanceRoleAssignmentRequestStatus implements AdditionalDataHold
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a GovernanceRoleAssignmentRequestStatus
+     * @return a {@link GovernanceRoleAssignmentRequestStatus}
      */
     @jakarta.annotation.Nonnull
     public static GovernanceRoleAssignmentRequestStatus createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class GovernanceRoleAssignmentRequestStatus implements AdditionalDataHold
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class GovernanceRoleAssignmentRequestStatus implements AdditionalDataHold
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class GovernanceRoleAssignmentRequestStatus implements AdditionalDataHold
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -70,7 +70,7 @@ public class GovernanceRoleAssignmentRequestStatus implements AdditionalDataHold
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -78,7 +78,7 @@ public class GovernanceRoleAssignmentRequestStatus implements AdditionalDataHold
     }
     /**
      * Gets the status property value. The status of the role assignment request. The value can be InProgress or Closed.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getStatus() {
@@ -86,7 +86,7 @@ public class GovernanceRoleAssignmentRequestStatus implements AdditionalDataHold
     }
     /**
      * Gets the statusDetails property value. The details of the status of the role assignment request. It represents the evaluation results of different rules.
-     * @return a java.util.List<KeyValue>
+     * @return a {@link java.util.List<KeyValue>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyValue> getStatusDetails() {
@@ -94,7 +94,7 @@ public class GovernanceRoleAssignmentRequestStatus implements AdditionalDataHold
     }
     /**
      * Gets the subStatus property value. The sub status of the role assignment request. The values can be Accepted, PendingEvaluation, Granted, Denied, PendingProvisioning, Provisioned, PendingRevocation, Revoked, Canceled, Failed, PendingApprovalProvisioning, PendingApproval, FailedAsResourceIsLocked, PendingAdminDecision, AdminApproved, AdminDenied, TimedOut, and ProvisioningStarted.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSubStatus() {

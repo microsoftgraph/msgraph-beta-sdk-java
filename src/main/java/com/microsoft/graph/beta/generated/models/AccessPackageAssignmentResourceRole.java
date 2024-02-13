@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessPackageAssignmentResourceRole extends Entity implements Parsable {
     /**
-     * Instantiates a new AccessPackageAssignmentResourceRole and sets the default values.
+     * Instantiates a new {@link AccessPackageAssignmentResourceRole} and sets the default values.
      */
     public AccessPackageAssignmentResourceRole() {
         super();
@@ -17,7 +17,7 @@ public class AccessPackageAssignmentResourceRole extends Entity implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AccessPackageAssignmentResourceRole
+     * @return a {@link AccessPackageAssignmentResourceRole}
      */
     @jakarta.annotation.Nonnull
     public static AccessPackageAssignmentResourceRole createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class AccessPackageAssignmentResourceRole extends Entity implements Parsa
     }
     /**
      * Gets the accessPackageAssignments property value. The access package assignments resulting in this role assignment. Read-only. Nullable.
-     * @return a java.util.List<AccessPackageAssignment>
+     * @return a {@link java.util.List<AccessPackageAssignment>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackageAssignment> getAccessPackageAssignments() {
@@ -34,7 +34,7 @@ public class AccessPackageAssignmentResourceRole extends Entity implements Parsa
     }
     /**
      * Gets the accessPackageResourceRole property value. The accessPackageResourceRole property
-     * @return a AccessPackageResourceRole
+     * @return a {@link AccessPackageResourceRole}
      */
     @jakarta.annotation.Nullable
     public AccessPackageResourceRole getAccessPackageResourceRole() {
@@ -42,7 +42,7 @@ public class AccessPackageAssignmentResourceRole extends Entity implements Parsa
     }
     /**
      * Gets the accessPackageResourceScope property value. The accessPackageResourceScope property
-     * @return a AccessPackageResourceScope
+     * @return a {@link AccessPackageResourceScope}
      */
     @jakarta.annotation.Nullable
     public AccessPackageResourceScope getAccessPackageResourceScope() {
@@ -50,7 +50,7 @@ public class AccessPackageAssignmentResourceRole extends Entity implements Parsa
     }
     /**
      * Gets the accessPackageSubject property value. Read-only. Nullable. Supports $filter (eq) on objectId and $expand query parameters.
-     * @return a AccessPackageSubject
+     * @return a {@link AccessPackageSubject}
      */
     @jakarta.annotation.Nullable
     public AccessPackageSubject getAccessPackageSubject() {
@@ -58,7 +58,7 @@ public class AccessPackageAssignmentResourceRole extends Entity implements Parsa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -74,7 +74,7 @@ public class AccessPackageAssignmentResourceRole extends Entity implements Parsa
     }
     /**
      * Gets the originId property value. A unique identifier relative to the origin system, corresponding to the originId property of the accessPackageResourceRole.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOriginId() {
@@ -82,7 +82,7 @@ public class AccessPackageAssignmentResourceRole extends Entity implements Parsa
     }
     /**
      * Gets the originSystem property value. The system where the role assignment is to be created or has been created for an access package assignment, such as SharePointOnline, AadGroup or AadApplication, corresponding to the originSystem property of the accessPackageResourceRole.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOriginSystem() {
@@ -90,7 +90,7 @@ public class AccessPackageAssignmentResourceRole extends Entity implements Parsa
     }
     /**
      * Gets the status property value. The value is PendingFulfillment when the access package assignment hasn't yet been delivered to the origin system, and Fulfilled when the access package assignment has been delivered to the origin system.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getStatus() {

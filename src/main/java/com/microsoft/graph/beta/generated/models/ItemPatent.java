@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ItemPatent extends ItemFacet implements Parsable {
     /**
-     * Instantiates a new ItemPatent and sets the default values.
+     * Instantiates a new {@link ItemPatent} and sets the default values.
      */
     public ItemPatent() {
         super();
@@ -19,7 +19,7 @@ public class ItemPatent extends ItemFacet implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ItemPatent
+     * @return a {@link ItemPatent}
      */
     @jakarta.annotation.Nonnull
     public static ItemPatent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class ItemPatent extends ItemFacet implements Parsable {
     }
     /**
      * Gets the description property value. Descpription of the patent or filing.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -36,7 +36,7 @@ public class ItemPatent extends ItemFacet implements Parsable {
     }
     /**
      * Gets the displayName property value. Title of the patent or filing.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -44,7 +44,7 @@ public class ItemPatent extends ItemFacet implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -60,7 +60,7 @@ public class ItemPatent extends ItemFacet implements Parsable {
     }
     /**
      * Gets the isPending property value. Indicates the patent is pending.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsPending() {
@@ -68,7 +68,7 @@ public class ItemPatent extends ItemFacet implements Parsable {
     }
     /**
      * Gets the issuedDate property value. The date that the patent was granted.
-     * @return a LocalDate
+     * @return a {@link LocalDate}
      */
     @jakarta.annotation.Nullable
     public LocalDate getIssuedDate() {
@@ -76,7 +76,7 @@ public class ItemPatent extends ItemFacet implements Parsable {
     }
     /**
      * Gets the issuingAuthority property value. Authority which granted the patent.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getIssuingAuthority() {
@@ -84,7 +84,7 @@ public class ItemPatent extends ItemFacet implements Parsable {
     }
     /**
      * Gets the number property value. The patent number.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getNumber() {
@@ -92,7 +92,7 @@ public class ItemPatent extends ItemFacet implements Parsable {
     }
     /**
      * Gets the webUrl property value. URL referencing the patent or filing.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getWebUrl() {

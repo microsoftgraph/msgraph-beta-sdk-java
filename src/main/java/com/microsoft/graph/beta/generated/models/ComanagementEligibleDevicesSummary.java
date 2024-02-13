@@ -18,7 +18,7 @@ public class ComanagementEligibleDevicesSummary implements AdditionalDataHolder,
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new ComanagementEligibleDevicesSummary and sets the default values.
+     * Instantiates a new {@link ComanagementEligibleDevicesSummary} and sets the default values.
      */
     public ComanagementEligibleDevicesSummary() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class ComanagementEligibleDevicesSummary implements AdditionalDataHolder,
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ComanagementEligibleDevicesSummary
+     * @return a {@link ComanagementEligibleDevicesSummary}
      */
     @jakarta.annotation.Nonnull
     public static ComanagementEligibleDevicesSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class ComanagementEligibleDevicesSummary implements AdditionalDataHolder,
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class ComanagementEligibleDevicesSummary implements AdditionalDataHolder,
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class ComanagementEligibleDevicesSummary implements AdditionalDataHolder,
     }
     /**
      * Gets the comanagedCount property value. Count of devices already Co-Managed
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getComanagedCount() {
@@ -65,7 +65,7 @@ public class ComanagementEligibleDevicesSummary implements AdditionalDataHolder,
     }
     /**
      * Gets the eligibleButNotAzureAdJoinedCount property value. Count of devices eligible for Co-Management but not yet joined to Azure Active Directory
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getEligibleButNotAzureAdJoinedCount() {
@@ -73,7 +73,7 @@ public class ComanagementEligibleDevicesSummary implements AdditionalDataHolder,
     }
     /**
      * Gets the eligibleCount property value. Count of devices fully eligible for Co-Management
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getEligibleCount() {
@@ -81,7 +81,7 @@ public class ComanagementEligibleDevicesSummary implements AdditionalDataHolder,
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -97,7 +97,7 @@ public class ComanagementEligibleDevicesSummary implements AdditionalDataHolder,
     }
     /**
      * Gets the ineligibleCount property value. Count of devices ineligible for Co-Management
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getIneligibleCount() {
@@ -105,7 +105,7 @@ public class ComanagementEligibleDevicesSummary implements AdditionalDataHolder,
     }
     /**
      * Gets the needsOsUpdateCount property value. Count of devices that will be eligible for Co-Management after an OS update
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getNeedsOsUpdateCount() {
@@ -113,7 +113,7 @@ public class ComanagementEligibleDevicesSummary implements AdditionalDataHolder,
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -121,7 +121,7 @@ public class ComanagementEligibleDevicesSummary implements AdditionalDataHolder,
     }
     /**
      * Gets the scheduledForEnrollmentCount property value. Count of devices scheduled for Co-Management enrollment. Valid values 0 to 9999999
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getScheduledForEnrollmentCount() {

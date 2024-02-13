@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class VulnerableManagedDevice extends Entity implements Parsable {
     /**
-     * Instantiates a new VulnerableManagedDevice and sets the default values.
+     * Instantiates a new {@link VulnerableManagedDevice} and sets the default values.
      */
     public VulnerableManagedDevice() {
         super();
@@ -21,7 +21,7 @@ public class VulnerableManagedDevice extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a VulnerableManagedDevice
+     * @return a {@link VulnerableManagedDevice}
      */
     @jakarta.annotation.Nonnull
     public static VulnerableManagedDevice createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class VulnerableManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The device name.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -38,7 +38,7 @@ public class VulnerableManagedDevice extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -50,7 +50,7 @@ public class VulnerableManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the lastSyncDateTime property value. The last sync date.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastSyncDateTime() {
@@ -58,7 +58,7 @@ public class VulnerableManagedDevice extends Entity implements Parsable {
     }
     /**
      * Gets the managedDeviceId property value. The Intune managed device ID.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getManagedDeviceId() {

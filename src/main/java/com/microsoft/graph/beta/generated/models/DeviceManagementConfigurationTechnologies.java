@@ -31,7 +31,9 @@ public enum DeviceManagementConfigurationTechnologies implements ValuedEnum {
     /** Setting can be deployed using the Endpoint privilege management channel */
     EndpointPrivilegeManagement("endpointPrivilegeManagement"),
     /** Evolvable enumeration sentinel value. Do not use. */
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    /** Setting can be deployed using the Operating System Recovery channel */
+    WindowsOsRecovery("windowsOsRecovery");
     public final String value;
     DeviceManagementConfigurationTechnologies(final String value) {
         this.value = value;
@@ -54,6 +56,7 @@ public enum DeviceManagementConfigurationTechnologies implements ValuedEnum {
             case "enrollment": return Enrollment;
             case "endpointPrivilegeManagement": return EndpointPrivilegeManagement;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "windowsOsRecovery": return WindowsOsRecovery;
             default: return null;
         }
     }

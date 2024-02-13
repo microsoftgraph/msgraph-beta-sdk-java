@@ -11,7 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ProductRevision extends Entity implements Parsable {
     /**
-     * Instantiates a new ProductRevision and sets the default values.
+     * Instantiates a new {@link ProductRevision} and sets the default values.
      */
     public ProductRevision() {
         super();
@@ -19,7 +19,7 @@ public class ProductRevision extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ProductRevision
+     * @return a {@link ProductRevision}
      */
     @jakarta.annotation.Nonnull
     public static ProductRevision createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class ProductRevision extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name of the content. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -36,7 +36,7 @@ public class ProductRevision extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -51,7 +51,7 @@ public class ProductRevision extends Entity implements Parsable {
     }
     /**
      * Gets the knowledgeBaseArticle property value. The knowledge base article associated with the product revision.
-     * @return a KnowledgeBaseArticle
+     * @return a {@link KnowledgeBaseArticle}
      */
     @jakarta.annotation.Nullable
     public KnowledgeBaseArticle getKnowledgeBaseArticle() {
@@ -59,7 +59,7 @@ public class ProductRevision extends Entity implements Parsable {
     }
     /**
      * Gets the osBuild property value. The osBuild property
-     * @return a BuildVersionDetails
+     * @return a {@link BuildVersionDetails}
      */
     @jakarta.annotation.Nullable
     public BuildVersionDetails getOsBuild() {
@@ -67,7 +67,7 @@ public class ProductRevision extends Entity implements Parsable {
     }
     /**
      * Gets the product property value. The product of the revision. Possible values are: Windows 10, Windows 11. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getProduct() {
@@ -75,7 +75,7 @@ public class ProductRevision extends Entity implements Parsable {
     }
     /**
      * Gets the releaseDateTime property value. The release date for the content. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getReleaseDateTime() {
@@ -83,7 +83,7 @@ public class ProductRevision extends Entity implements Parsable {
     }
     /**
      * Gets the version property value. The version of the feature update. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getVersion() {

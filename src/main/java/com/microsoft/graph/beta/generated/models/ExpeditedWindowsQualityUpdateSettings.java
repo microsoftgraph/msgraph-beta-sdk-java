@@ -21,7 +21,7 @@ public class ExpeditedWindowsQualityUpdateSettings implements AdditionalDataHold
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new ExpeditedWindowsQualityUpdateSettings and sets the default values.
+     * Instantiates a new {@link ExpeditedWindowsQualityUpdateSettings} and sets the default values.
      */
     public ExpeditedWindowsQualityUpdateSettings() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -30,7 +30,7 @@ public class ExpeditedWindowsQualityUpdateSettings implements AdditionalDataHold
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ExpeditedWindowsQualityUpdateSettings
+     * @return a {@link ExpeditedWindowsQualityUpdateSettings}
      */
     @jakarta.annotation.Nonnull
     public static ExpeditedWindowsQualityUpdateSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class ExpeditedWindowsQualityUpdateSettings implements AdditionalDataHold
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -52,7 +52,7 @@ public class ExpeditedWindowsQualityUpdateSettings implements AdditionalDataHold
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -60,7 +60,7 @@ public class ExpeditedWindowsQualityUpdateSettings implements AdditionalDataHold
     }
     /**
      * Gets the daysUntilForcedReboot property value. The number of days after installation that forced reboot will happen.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getDaysUntilForcedReboot() {
@@ -68,7 +68,7 @@ public class ExpeditedWindowsQualityUpdateSettings implements AdditionalDataHold
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -80,7 +80,7 @@ public class ExpeditedWindowsQualityUpdateSettings implements AdditionalDataHold
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -88,7 +88,7 @@ public class ExpeditedWindowsQualityUpdateSettings implements AdditionalDataHold
     }
     /**
      * Gets the qualityUpdateRelease property value. The release date to identify a quality update.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getQualityUpdateRelease() {

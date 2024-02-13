@@ -18,7 +18,7 @@ public class CloudPcDomainJoinConfiguration implements AdditionalDataHolder, Bac
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new CloudPcDomainJoinConfiguration and sets the default values.
+     * Instantiates a new {@link CloudPcDomainJoinConfiguration} and sets the default values.
      */
     public CloudPcDomainJoinConfiguration() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class CloudPcDomainJoinConfiguration implements AdditionalDataHolder, Bac
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CloudPcDomainJoinConfiguration
+     * @return a {@link CloudPcDomainJoinConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static CloudPcDomainJoinConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class CloudPcDomainJoinConfiguration implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class CloudPcDomainJoinConfiguration implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class CloudPcDomainJoinConfiguration implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the domainJoinType property value. Specifies the method by which the provisioned Cloud PC joins Microsoft Entra ID. If you choose the hybridAzureADJoin type, only provide a value for the onPremisesConnectionId property and leave the regionName property empty. If you choose the azureADJoin type, provide a value for either the onPremisesConnectionId or the regionName property. Possible values are: azureADJoin, hybridAzureADJoin, unknownFutureValue.
-     * @return a CloudPcDomainJoinType
+     * @return a {@link CloudPcDomainJoinType}
      */
     @jakarta.annotation.Nullable
     public CloudPcDomainJoinType getDomainJoinType() {
@@ -65,7 +65,7 @@ public class CloudPcDomainJoinConfiguration implements AdditionalDataHolder, Bac
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -80,7 +80,7 @@ public class CloudPcDomainJoinConfiguration implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -88,7 +88,7 @@ public class CloudPcDomainJoinConfiguration implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the onPremisesConnectionId property value. The Azure network connection ID that matches the virtual network IT admins want the provisioning policy to use when they create Cloud PCs. You can use this property in both domain join types: Azure AD joined or Hybrid Microsoft Entra joined. If you enter an onPremisesConnectionId, leave regionName as empty.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOnPremisesConnectionId() {
@@ -96,7 +96,7 @@ public class CloudPcDomainJoinConfiguration implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the regionGroup property value. The logical geographic group this region belongs to. Multiple regions can belong to one region group. A customer can select a regionGroup when provisioning a Cloud PC, and the Cloud PC will be put in one of the regions in the group based on resource status. For example, the Europe region group contains the Northern Europe and Western Europe regions. Possible values are: default, australia, canada, usCentral, usEast, usWest, france, germany, europeUnion, unitedKingdom, japan, asia, india, southAmerica, euap, usGovernment, usGovernmentDOD, unknownFutureValue, norway, switzerland, and southKorea. Read-only.
-     * @return a CloudPcRegionGroup
+     * @return a {@link CloudPcRegionGroup}
      */
     @jakarta.annotation.Nullable
     public CloudPcRegionGroup getRegionGroup() {
@@ -104,7 +104,7 @@ public class CloudPcDomainJoinConfiguration implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the regionName property value. The supported Azure region where the IT admin wants the provisioning policy to create Cloud PCs. The underlying virtual network will be created and managed by the Windows 365 service. This can only be entered if the IT admin chooses Microsoft Entra joined as the domain join type. If you enter a regionName, leave onPremisesConnectionId as empty.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRegionName() {
@@ -112,7 +112,7 @@ public class CloudPcDomainJoinConfiguration implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the type property value. The type property
-     * @return a CloudPcDomainJoinType
+     * @return a {@link CloudPcDomainJoinType}
      */
     @jakarta.annotation.Nullable
     public CloudPcDomainJoinType getType() {

@@ -11,7 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class RetrieveMyRequestsGetResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * Instantiates a new RetrieveMyRequestsGetResponse and sets the default values.
+     * Instantiates a new {@link RetrieveMyRequestsGetResponse} and sets the default values.
      */
     public RetrieveMyRequestsGetResponse() {
         super();
@@ -19,7 +19,7 @@ public class RetrieveMyRequestsGetResponse extends BaseCollectionPaginationCount
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a RetrieveMyRequestsGetResponse
+     * @return a {@link RetrieveMyRequestsGetResponse}
      */
     @jakarta.annotation.Nonnull
     public static RetrieveMyRequestsGetResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class RetrieveMyRequestsGetResponse extends BaseCollectionPaginationCount
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -38,7 +38,7 @@ public class RetrieveMyRequestsGetResponse extends BaseCollectionPaginationCount
     }
     /**
      * Gets the value property value. The value property
-     * @return a java.util.List<OperationApprovalRequest>
+     * @return a {@link java.util.List<OperationApprovalRequest>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<OperationApprovalRequest> getValue() {

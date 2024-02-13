@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class VppToken extends Entity implements Parsable {
     /**
-     * Instantiates a new VppToken and sets the default values.
+     * Instantiates a new {@link VppToken} and sets the default values.
      */
     public VppToken() {
         super();
@@ -21,7 +21,7 @@ public class VppToken extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a VppToken
+     * @return a {@link VppToken}
      */
     @jakarta.annotation.Nonnull
     public static VppToken createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class VppToken extends Entity implements Parsable {
     }
     /**
      * Gets the appleId property value. The apple Id associated with the given Apple Volume Purchase Program Token.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAppleId() {
@@ -38,7 +38,7 @@ public class VppToken extends Entity implements Parsable {
     }
     /**
      * Gets the automaticallyUpdateApps property value. Whether or not apps for the VPP token will be automatically updated.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAutomaticallyUpdateApps() {
@@ -46,7 +46,7 @@ public class VppToken extends Entity implements Parsable {
     }
     /**
      * Gets the claimTokenManagementFromExternalMdm property value. Admin consent to allow claiming token management from external MDM.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getClaimTokenManagementFromExternalMdm() {
@@ -54,7 +54,7 @@ public class VppToken extends Entity implements Parsable {
     }
     /**
      * Gets the countryOrRegion property value. Whether or not apps for the VPP token will be automatically updated.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCountryOrRegion() {
@@ -62,7 +62,7 @@ public class VppToken extends Entity implements Parsable {
     }
     /**
      * Gets the dataSharingConsentGranted property value. Consent granted for data sharing with the Apple Volume Purchase Program.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDataSharingConsentGranted() {
@@ -70,7 +70,7 @@ public class VppToken extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. An admin specified token friendly name.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -78,7 +78,7 @@ public class VppToken extends Entity implements Parsable {
     }
     /**
      * Gets the expirationDateTime property value. The expiration date time of the Apple Volume Purchase Program Token.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getExpirationDateTime() {
@@ -86,7 +86,7 @@ public class VppToken extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -112,7 +112,7 @@ public class VppToken extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. Last modification date time associated with the Apple Volume Purchase Program Token.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -120,7 +120,7 @@ public class VppToken extends Entity implements Parsable {
     }
     /**
      * Gets the lastSyncDateTime property value. The last time when an application sync was done with the Apple volume purchase program service using the the Apple Volume Purchase Program Token.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastSyncDateTime() {
@@ -128,7 +128,7 @@ public class VppToken extends Entity implements Parsable {
     }
     /**
      * Gets the lastSyncStatus property value. Possible sync statuses associated with an Apple Volume Purchase Program token.
-     * @return a VppTokenSyncStatus
+     * @return a {@link VppTokenSyncStatus}
      */
     @jakarta.annotation.Nullable
     public VppTokenSyncStatus getLastSyncStatus() {
@@ -136,7 +136,7 @@ public class VppToken extends Entity implements Parsable {
     }
     /**
      * Gets the locationName property value. Token location returned from Apple VPP.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getLocationName() {
@@ -144,7 +144,7 @@ public class VppToken extends Entity implements Parsable {
     }
     /**
      * Gets the organizationName property value. The organization associated with the Apple Volume Purchase Program Token
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOrganizationName() {
@@ -152,7 +152,7 @@ public class VppToken extends Entity implements Parsable {
     }
     /**
      * Gets the roleScopeTagIds property value. Role Scope Tags IDs assigned to this entity.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {
@@ -160,7 +160,7 @@ public class VppToken extends Entity implements Parsable {
     }
     /**
      * Gets the state property value. Possible states associated with an Apple Volume Purchase Program token.
-     * @return a VppTokenState
+     * @return a {@link VppTokenState}
      */
     @jakarta.annotation.Nullable
     public VppTokenState getState() {
@@ -168,7 +168,7 @@ public class VppToken extends Entity implements Parsable {
     }
     /**
      * Gets the token property value. The Apple Volume Purchase Program Token string downloaded from the Apple Volume Purchase Program.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getToken() {
@@ -176,7 +176,7 @@ public class VppToken extends Entity implements Parsable {
     }
     /**
      * Gets the tokenActionResults property value. The collection of statuses of the actions performed on the Apple Volume Purchase Program Token.
-     * @return a java.util.List<VppTokenActionResult>
+     * @return a {@link java.util.List<VppTokenActionResult>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<VppTokenActionResult> getTokenActionResults() {
@@ -184,7 +184,7 @@ public class VppToken extends Entity implements Parsable {
     }
     /**
      * Gets the vppTokenAccountType property value. Possible types of an Apple Volume Purchase Program token.
-     * @return a VppTokenAccountType
+     * @return a {@link VppTokenAccountType}
      */
     @jakarta.annotation.Nullable
     public VppTokenAccountType getVppTokenAccountType() {

@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EnumeratedDomains extends ValidatingDomains implements Parsable {
     /**
-     * Instantiates a new EnumeratedDomains and sets the default values.
+     * Instantiates a new {@link EnumeratedDomains} and sets the default values.
      */
     public EnumeratedDomains() {
         super();
@@ -18,7 +18,7 @@ public class EnumeratedDomains extends ValidatingDomains implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EnumeratedDomains
+     * @return a {@link EnumeratedDomains}
      */
     @jakarta.annotation.Nonnull
     public static EnumeratedDomains createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class EnumeratedDomains extends ValidatingDomains implements Parsable {
     }
     /**
      * Gets the domainNames property value. The domainNames property
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getDomainNames() {
@@ -35,7 +35,7 @@ public class EnumeratedDomains extends ValidatingDomains implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

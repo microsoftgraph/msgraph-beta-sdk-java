@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementConfigurationWindowsSettingApplicability extends DeviceManagementConfigurationSettingApplicability implements Parsable {
     /**
-     * Instantiates a new DeviceManagementConfigurationWindowsSettingApplicability and sets the default values.
+     * Instantiates a new {@link DeviceManagementConfigurationWindowsSettingApplicability} and sets the default values.
      */
     public DeviceManagementConfigurationWindowsSettingApplicability() {
         super();
@@ -18,7 +18,7 @@ public class DeviceManagementConfigurationWindowsSettingApplicability extends De
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceManagementConfigurationWindowsSettingApplicability
+     * @return a {@link DeviceManagementConfigurationWindowsSettingApplicability}
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementConfigurationWindowsSettingApplicability createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class DeviceManagementConfigurationWindowsSettingApplicability extends De
     }
     /**
      * Gets the configurationServiceProviderVersion property value. Version of CSP setting is a part of
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getConfigurationServiceProviderVersion() {
@@ -35,7 +35,7 @@ public class DeviceManagementConfigurationWindowsSettingApplicability extends De
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -50,7 +50,7 @@ public class DeviceManagementConfigurationWindowsSettingApplicability extends De
     }
     /**
      * Gets the maximumSupportedVersion property value. Maximum supported version of Windows
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getMaximumSupportedVersion() {
@@ -58,7 +58,7 @@ public class DeviceManagementConfigurationWindowsSettingApplicability extends De
     }
     /**
      * Gets the minimumSupportedVersion property value. Minimum supported version of Windows
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getMinimumSupportedVersion() {
@@ -66,7 +66,7 @@ public class DeviceManagementConfigurationWindowsSettingApplicability extends De
     }
     /**
      * Gets the requiredAzureAdTrustType property value. Required AAD Trust Type
-     * @return a DeviceManagementConfigurationAzureAdTrustType
+     * @return a {@link DeviceManagementConfigurationAzureAdTrustType}
      */
     @jakarta.annotation.Nullable
     public DeviceManagementConfigurationAzureAdTrustType getRequiredAzureAdTrustType() {
@@ -74,7 +74,7 @@ public class DeviceManagementConfigurationWindowsSettingApplicability extends De
     }
     /**
      * Gets the requiresAzureAd property value. AzureAD setting requirement
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getRequiresAzureAd() {
@@ -82,7 +82,7 @@ public class DeviceManagementConfigurationWindowsSettingApplicability extends De
     }
     /**
      * Gets the windowsSkus property value. List of Windows SKUs that the setting is applicable for
-     * @return a java.util.List<DeviceManagementConfigurationWindowsSkus>
+     * @return a {@link java.util.List<DeviceManagementConfigurationWindowsSkus>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementConfigurationWindowsSkus> getWindowsSkus() {

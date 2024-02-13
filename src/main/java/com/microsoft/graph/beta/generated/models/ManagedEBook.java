@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagedEBook extends Entity implements Parsable {
     /**
-     * Instantiates a new ManagedEBook and sets the default values.
+     * Instantiates a new {@link ManagedEBook} and sets the default values.
      */
     public ManagedEBook() {
         super();
@@ -21,7 +21,7 @@ public class ManagedEBook extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ManagedEBook
+     * @return a {@link ManagedEBook}
      */
     @jakarta.annotation.Nonnull
     public static ManagedEBook createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class ManagedEBook extends Entity implements Parsable {
     }
     /**
      * Gets the assignments property value. The list of assignments for this eBook.
-     * @return a java.util.List<ManagedEBookAssignment>
+     * @return a {@link java.util.List<ManagedEBookAssignment>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedEBookAssignment> getAssignments() {
@@ -45,7 +45,7 @@ public class ManagedEBook extends Entity implements Parsable {
     }
     /**
      * Gets the categories property value. The list of categories for this eBook.
-     * @return a java.util.List<ManagedEBookCategory>
+     * @return a {@link java.util.List<ManagedEBookCategory>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedEBookCategory> getCategories() {
@@ -53,7 +53,7 @@ public class ManagedEBook extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. The date and time when the eBook file was created.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -61,7 +61,7 @@ public class ManagedEBook extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. Description.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -69,7 +69,7 @@ public class ManagedEBook extends Entity implements Parsable {
     }
     /**
      * Gets the deviceStates property value. The list of installation states for this eBook.
-     * @return a java.util.List<DeviceInstallState>
+     * @return a {@link java.util.List<DeviceInstallState>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceInstallState> getDeviceStates() {
@@ -77,7 +77,7 @@ public class ManagedEBook extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. Name of the eBook.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -85,7 +85,7 @@ public class ManagedEBook extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -108,7 +108,7 @@ public class ManagedEBook extends Entity implements Parsable {
     }
     /**
      * Gets the informationUrl property value. The more information Url.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getInformationUrl() {
@@ -116,7 +116,7 @@ public class ManagedEBook extends Entity implements Parsable {
     }
     /**
      * Gets the installSummary property value. Mobile App Install Summary.
-     * @return a EBookInstallSummary
+     * @return a {@link EBookInstallSummary}
      */
     @jakarta.annotation.Nullable
     public EBookInstallSummary getInstallSummary() {
@@ -124,7 +124,7 @@ public class ManagedEBook extends Entity implements Parsable {
     }
     /**
      * Gets the largeCover property value. Book cover.
-     * @return a MimeContent
+     * @return a {@link MimeContent}
      */
     @jakarta.annotation.Nullable
     public MimeContent getLargeCover() {
@@ -132,7 +132,7 @@ public class ManagedEBook extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. The date and time when the eBook was last modified.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -140,7 +140,7 @@ public class ManagedEBook extends Entity implements Parsable {
     }
     /**
      * Gets the privacyInformationUrl property value. The privacy statement Url.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPrivacyInformationUrl() {
@@ -148,7 +148,7 @@ public class ManagedEBook extends Entity implements Parsable {
     }
     /**
      * Gets the publishedDateTime property value. The date and time when the eBook was published.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getPublishedDateTime() {
@@ -156,7 +156,7 @@ public class ManagedEBook extends Entity implements Parsable {
     }
     /**
      * Gets the publisher property value. Publisher.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPublisher() {
@@ -164,7 +164,7 @@ public class ManagedEBook extends Entity implements Parsable {
     }
     /**
      * Gets the userStateSummary property value. The list of installation states for this eBook.
-     * @return a java.util.List<UserInstallStateSummary>
+     * @return a {@link java.util.List<UserInstallStateSummary>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserInstallStateSummary> getUserStateSummary() {

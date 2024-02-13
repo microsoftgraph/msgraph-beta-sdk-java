@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PlannerPlan extends PlannerDelta implements Parsable {
     /**
-     * Instantiates a new PlannerPlan and sets the default values.
+     * Instantiates a new {@link PlannerPlan} and sets the default values.
      */
     public PlannerPlan() {
         super();
@@ -18,7 +18,7 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PlannerPlan
+     * @return a {@link PlannerPlan}
      */
     @jakarta.annotation.Nonnull
     public static PlannerPlan createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
     }
     /**
      * Gets the archivalInfo property value. The archivalInfo property
-     * @return a PlannerArchivalInfo
+     * @return a {@link PlannerArchivalInfo}
      */
     @jakarta.annotation.Nullable
     public PlannerArchivalInfo getArchivalInfo() {
@@ -35,7 +35,7 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
     }
     /**
      * Gets the buckets property value. Collection of buckets in the plan. Read-only. Nullable.
-     * @return a java.util.List<PlannerBucket>
+     * @return a {@link java.util.List<PlannerBucket>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<PlannerBucket> getBuckets() {
@@ -43,7 +43,7 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
     }
     /**
      * Gets the container property value. Identifies the container of the plan. Either specify all properties, or specify only the url, the containerId, and type. After it's set, this property cant be updated. It changes when a plan is moved from one container to another, using plan move to container. Required.
-     * @return a PlannerPlanContainer
+     * @return a {@link PlannerPlanContainer}
      */
     @jakarta.annotation.Nullable
     public PlannerPlanContainer getContainer() {
@@ -51,7 +51,7 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
     }
     /**
      * Gets the contexts property value. Read-only. Other user experiences in which this plan is used, represented as plannerPlanContext entries.
-     * @return a PlannerPlanContextCollection
+     * @return a {@link PlannerPlanContextCollection}
      */
     @jakarta.annotation.Nullable
     public PlannerPlanContextCollection getContexts() {
@@ -59,7 +59,7 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
     }
     /**
      * Gets the createdBy property value. Read-only. The user who created the plan.
-     * @return a IdentitySet
+     * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
@@ -67,7 +67,7 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. Read-only. Date and time at which the plan is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -75,7 +75,7 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
     }
     /**
      * Gets the creationSource property value. Contains information about the origin of the plan.
-     * @return a PlannerPlanCreation
+     * @return a {@link PlannerPlanCreation}
      */
     @jakarta.annotation.Nullable
     public PlannerPlanCreation getCreationSource() {
@@ -83,7 +83,7 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
     }
     /**
      * Gets the details property value. Extra details about the plan. Read-only. Nullable.
-     * @return a PlannerPlanDetails
+     * @return a {@link PlannerPlanDetails}
      */
     @jakarta.annotation.Nullable
     public PlannerPlanDetails getDetails() {
@@ -91,7 +91,7 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -113,7 +113,7 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
     }
     /**
      * Gets the isArchived property value. The isArchived property
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsArchived() {
@@ -121,7 +121,7 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
     }
     /**
      * Gets the owner property value. The owner property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOwner() {
@@ -129,7 +129,7 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
     }
     /**
      * Gets the sharedWithContainers property value. List of containers the plan is shared with.
-     * @return a java.util.List<PlannerSharedWithContainer>
+     * @return a {@link java.util.List<PlannerSharedWithContainer>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<PlannerSharedWithContainer> getSharedWithContainers() {
@@ -137,7 +137,7 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
     }
     /**
      * Gets the tasks property value. Collection of tasks in the plan. Read-only. Nullable.
-     * @return a java.util.List<PlannerTask>
+     * @return a {@link java.util.List<PlannerTask>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<PlannerTask> getTasks() {
@@ -145,7 +145,7 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
     }
     /**
      * Gets the title property value. Required. Title of the plan.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTitle() {

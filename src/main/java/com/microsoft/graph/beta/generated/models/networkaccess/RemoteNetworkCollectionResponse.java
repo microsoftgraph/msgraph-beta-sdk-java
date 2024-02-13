@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class RemoteNetworkCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * Instantiates a new RemoteNetworkCollectionResponse and sets the default values.
+     * Instantiates a new {@link RemoteNetworkCollectionResponse} and sets the default values.
      */
     public RemoteNetworkCollectionResponse() {
         super();
@@ -18,7 +18,7 @@ public class RemoteNetworkCollectionResponse extends BaseCollectionPaginationCou
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a RemoteNetworkCollectionResponse
+     * @return a {@link RemoteNetworkCollectionResponse}
      */
     @jakarta.annotation.Nonnull
     public static RemoteNetworkCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class RemoteNetworkCollectionResponse extends BaseCollectionPaginationCou
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -37,7 +37,7 @@ public class RemoteNetworkCollectionResponse extends BaseCollectionPaginationCou
     }
     /**
      * Gets the value property value. The value property
-     * @return a java.util.List<RemoteNetwork>
+     * @return a {@link java.util.List<RemoteNetwork>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<RemoteNetwork> getValue() {

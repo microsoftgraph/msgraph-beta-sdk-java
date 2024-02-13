@@ -18,7 +18,7 @@ public class DecryptBufferPostRequestBody implements AdditionalDataHolder, Backe
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new DecryptBufferPostRequestBody and sets the default values.
+     * Instantiates a new {@link DecryptBufferPostRequestBody} and sets the default values.
      */
     public DecryptBufferPostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class DecryptBufferPostRequestBody implements AdditionalDataHolder, Backe
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DecryptBufferPostRequestBody
+     * @return a {@link DecryptBufferPostRequestBody}
      */
     @jakarta.annotation.Nonnull
     public static DecryptBufferPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class DecryptBufferPostRequestBody implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class DecryptBufferPostRequestBody implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class DecryptBufferPostRequestBody implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the encryptedBuffer property value. The encryptedBuffer property
-     * @return a byte[]
+     * @return a {@link byte[]}
      */
     @jakarta.annotation.Nullable
     public byte[] getEncryptedBuffer() {
@@ -65,7 +65,7 @@ public class DecryptBufferPostRequestBody implements AdditionalDataHolder, Backe
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -76,7 +76,7 @@ public class DecryptBufferPostRequestBody implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the publishingLicense property value. The publishingLicense property
-     * @return a byte[]
+     * @return a {@link byte[]}
      */
     @jakarta.annotation.Nullable
     public byte[] getPublishingLicense() {

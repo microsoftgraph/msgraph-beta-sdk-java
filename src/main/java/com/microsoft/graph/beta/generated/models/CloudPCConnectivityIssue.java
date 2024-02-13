@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CloudPCConnectivityIssue extends Entity implements Parsable {
     /**
-     * Instantiates a new CloudPCConnectivityIssue and sets the default values.
+     * Instantiates a new {@link CloudPCConnectivityIssue} and sets the default values.
      */
     public CloudPCConnectivityIssue() {
         super();
@@ -21,7 +21,7 @@ public class CloudPCConnectivityIssue extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CloudPCConnectivityIssue
+     * @return a {@link CloudPCConnectivityIssue}
      */
     @jakarta.annotation.Nonnull
     public static CloudPCConnectivityIssue createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class CloudPCConnectivityIssue extends Entity implements Parsable {
     }
     /**
      * Gets the deviceId property value. The Intune DeviceId of the device the connection is associated with.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceId() {
@@ -38,7 +38,7 @@ public class CloudPCConnectivityIssue extends Entity implements Parsable {
     }
     /**
      * Gets the errorCode property value. The error code of the connectivity issue.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getErrorCode() {
@@ -46,7 +46,7 @@ public class CloudPCConnectivityIssue extends Entity implements Parsable {
     }
     /**
      * Gets the errorDateTime property value. The time that the connection initiated. The time is shown in ISO 8601 format and Coordinated Universal Time (UTC) time.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getErrorDateTime() {
@@ -54,7 +54,7 @@ public class CloudPCConnectivityIssue extends Entity implements Parsable {
     }
     /**
      * Gets the errorDescription property value. The detailed description of what went wrong.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getErrorDescription() {
@@ -62,7 +62,7 @@ public class CloudPCConnectivityIssue extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -77,7 +77,7 @@ public class CloudPCConnectivityIssue extends Entity implements Parsable {
     }
     /**
      * Gets the recommendedAction property value. The recommended action to fix the corresponding error.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRecommendedAction() {
@@ -85,7 +85,7 @@ public class CloudPCConnectivityIssue extends Entity implements Parsable {
     }
     /**
      * Gets the userId property value. The unique id of user who initialize the connection.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserId() {

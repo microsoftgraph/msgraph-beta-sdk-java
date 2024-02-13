@@ -22,7 +22,7 @@ public class IosVppAppRevokeLicensesActionResult implements AdditionalDataHolder
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new IosVppAppRevokeLicensesActionResult and sets the default values.
+     * Instantiates a new {@link IosVppAppRevokeLicensesActionResult} and sets the default values.
      */
     public IosVppAppRevokeLicensesActionResult() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -31,7 +31,7 @@ public class IosVppAppRevokeLicensesActionResult implements AdditionalDataHolder
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a IosVppAppRevokeLicensesActionResult
+     * @return a {@link IosVppAppRevokeLicensesActionResult}
      */
     @jakarta.annotation.Nonnull
     public static IosVppAppRevokeLicensesActionResult createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class IosVppAppRevokeLicensesActionResult implements AdditionalDataHolder
     }
     /**
      * Gets the actionFailureReason property value. Possible types of reasons for an Apple Volume Purchase Program token action failure.
-     * @return a VppTokenActionFailureReason
+     * @return a {@link VppTokenActionFailureReason}
      */
     @jakarta.annotation.Nullable
     public VppTokenActionFailureReason getActionFailureReason() {
@@ -48,7 +48,7 @@ public class IosVppAppRevokeLicensesActionResult implements AdditionalDataHolder
     }
     /**
      * Gets the actionName property value. Action name
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getActionName() {
@@ -56,7 +56,7 @@ public class IosVppAppRevokeLicensesActionResult implements AdditionalDataHolder
     }
     /**
      * Gets the actionState property value. The actionState property
-     * @return a ActionState
+     * @return a {@link ActionState}
      */
     @jakarta.annotation.Nullable
     public ActionState getActionState() {
@@ -64,7 +64,7 @@ public class IosVppAppRevokeLicensesActionResult implements AdditionalDataHolder
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -77,7 +77,7 @@ public class IosVppAppRevokeLicensesActionResult implements AdditionalDataHolder
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -85,7 +85,7 @@ public class IosVppAppRevokeLicensesActionResult implements AdditionalDataHolder
     }
     /**
      * Gets the failedLicensesCount property value. A count of the number of licenses for which revoke failed.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getFailedLicensesCount() {
@@ -93,7 +93,7 @@ public class IosVppAppRevokeLicensesActionResult implements AdditionalDataHolder
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -112,7 +112,7 @@ public class IosVppAppRevokeLicensesActionResult implements AdditionalDataHolder
     }
     /**
      * Gets the lastUpdatedDateTime property value. Time the action state was last updated
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastUpdatedDateTime() {
@@ -120,7 +120,7 @@ public class IosVppAppRevokeLicensesActionResult implements AdditionalDataHolder
     }
     /**
      * Gets the managedDeviceId property value. DeviceId associated with the action.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getManagedDeviceId() {
@@ -128,7 +128,7 @@ public class IosVppAppRevokeLicensesActionResult implements AdditionalDataHolder
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -136,7 +136,7 @@ public class IosVppAppRevokeLicensesActionResult implements AdditionalDataHolder
     }
     /**
      * Gets the startDateTime property value. Time the action was initiated
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
@@ -144,7 +144,7 @@ public class IosVppAppRevokeLicensesActionResult implements AdditionalDataHolder
     }
     /**
      * Gets the totalLicensesCount property value. A count of the number of licenses for which revoke was attempted.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getTotalLicensesCount() {
@@ -152,7 +152,7 @@ public class IosVppAppRevokeLicensesActionResult implements AdditionalDataHolder
     }
     /**
      * Gets the userId property value. UserId associated with the action.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserId() {

@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WinGetAppCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * Instantiates a new WinGetAppCollectionResponse and sets the default values.
+     * Instantiates a new {@link WinGetAppCollectionResponse} and sets the default values.
      */
     public WinGetAppCollectionResponse() {
         super();
@@ -17,7 +17,7 @@ public class WinGetAppCollectionResponse extends BaseCollectionPaginationCountRe
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WinGetAppCollectionResponse
+     * @return a {@link WinGetAppCollectionResponse}
      */
     @jakarta.annotation.Nonnull
     public static WinGetAppCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class WinGetAppCollectionResponse extends BaseCollectionPaginationCountRe
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -36,7 +36,7 @@ public class WinGetAppCollectionResponse extends BaseCollectionPaginationCountRe
     }
     /**
      * Gets the value property value. The value property
-     * @return a java.util.List<WinGetApp>
+     * @return a {@link java.util.List<WinGetApp>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<WinGetApp> getValue() {

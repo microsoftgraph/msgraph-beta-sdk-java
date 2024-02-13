@@ -28,6 +28,7 @@ import java.util.Objects;
 public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the archive method.
+     * @return a {@link ArchiveRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ArchiveRequestBuilder archive() {
@@ -35,6 +36,7 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the buckets property of the microsoft.graph.plannerPlan entity.
+     * @return a {@link BucketsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public BucketsRequestBuilder buckets() {
@@ -42,6 +44,7 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the details property of the microsoft.graph.plannerPlan entity.
+     * @return a {@link DetailsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DetailsRequestBuilder details() {
@@ -49,6 +52,7 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the moveToContainer method.
+     * @return a {@link MoveToContainerRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MoveToContainerRequestBuilder moveToContainer() {
@@ -56,6 +60,7 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the tasks property of the microsoft.graph.plannerPlan entity.
+     * @return a {@link TasksRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TasksRequestBuilder tasks() {
@@ -63,13 +68,14 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the unarchive method.
+     * @return a {@link UnarchiveRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UnarchiveRequestBuilder unarchive() {
         return new UnarchiveRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new PlannerPlanItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link PlannerPlanItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -77,7 +83,7 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/planner/plans/{plannerPlan%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new PlannerPlanItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link PlannerPlanItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -86,6 +92,7 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Delete a plannerPlan object.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/plannerplan-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
@@ -94,18 +101,19 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete a plannerPlan object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/plannerplan-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Retrieve the properties and relationships of a plannerplan object.
-     * @return a PlannerPlan
+     * @return a {@link PlannerPlan}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/plannerplan-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -115,21 +123,22 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of a plannerplan object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a PlannerPlan
+     * @return a {@link PlannerPlan}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/plannerplan-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PlannerPlan get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, PlannerPlan::createFromDiscriminatorValue);
     }
     /**
      * Update the properties of a plannerPlan object.
      * @param body The request body
-     * @return a PlannerPlan
+     * @return a {@link PlannerPlan}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/plannerplan-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -140,7 +149,8 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a plannerPlan object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a PlannerPlan
+     * @return a {@link PlannerPlan}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/plannerplan-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -148,13 +158,12 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, PlannerPlan::createFromDiscriminatorValue);
     }
     /**
      * Delete a plannerPlan object.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -163,18 +172,18 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete a plannerPlan object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/planner/plans/{plannerPlan%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Retrieve the properties and relationships of a plannerplan object.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -183,7 +192,7 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of a plannerplan object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -195,7 +204,7 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of a plannerPlan object.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final PlannerPlan body) {
@@ -205,12 +214,12 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a plannerPlan object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final PlannerPlan body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/planner/plans/{plannerPlan%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -219,7 +228,7 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a PlannerPlanItemRequestBuilder
+     * @return a {@link PlannerPlanItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PlannerPlanItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -249,7 +258,7 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

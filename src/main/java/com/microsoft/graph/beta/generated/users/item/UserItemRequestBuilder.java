@@ -132,6 +132,7 @@ import java.util.Objects;
 public class UserItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the activities property of the microsoft.graph.user entity.
+     * @return a {@link ActivitiesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ActivitiesRequestBuilder activities() {
@@ -139,6 +140,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the agreementAcceptances property of the microsoft.graph.user entity.
+     * @return a {@link AgreementAcceptancesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AgreementAcceptancesRequestBuilder agreementAcceptances() {
@@ -146,6 +148,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the analytics property of the microsoft.graph.user entity.
+     * @return a {@link AnalyticsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AnalyticsRequestBuilder analytics() {
@@ -153,6 +156,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the appConsentRequestsForApproval property of the microsoft.graph.user entity.
+     * @return a {@link AppConsentRequestsForApprovalRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AppConsentRequestsForApprovalRequestBuilder appConsentRequestsForApproval() {
@@ -160,6 +164,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the appRoleAssignedResources property of the microsoft.graph.user entity.
+     * @return a {@link AppRoleAssignedResourcesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AppRoleAssignedResourcesRequestBuilder appRoleAssignedResources() {
@@ -167,6 +172,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the appRoleAssignments property of the microsoft.graph.user entity.
+     * @return a {@link AppRoleAssignmentsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AppRoleAssignmentsRequestBuilder appRoleAssignments() {
@@ -174,6 +180,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the approvals property of the microsoft.graph.user entity.
+     * @return a {@link ApprovalsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ApprovalsRequestBuilder approvals() {
@@ -181,6 +188,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the assignLicense method.
+     * @return a {@link AssignLicenseRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AssignLicenseRequestBuilder assignLicense() {
@@ -188,6 +196,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the authentication property of the microsoft.graph.user entity.
+     * @return a {@link AuthenticationRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AuthenticationRequestBuilder authentication() {
@@ -195,6 +204,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the calendar property of the microsoft.graph.user entity.
+     * @return a {@link CalendarRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CalendarRequestBuilder calendar() {
@@ -202,6 +212,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the calendarGroups property of the microsoft.graph.user entity.
+     * @return a {@link CalendarGroupsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CalendarGroupsRequestBuilder calendarGroups() {
@@ -209,6 +220,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the calendars property of the microsoft.graph.user entity.
+     * @return a {@link CalendarsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CalendarsRequestBuilder calendars() {
@@ -216,6 +228,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the calendarView property of the microsoft.graph.user entity.
+     * @return a {@link CalendarViewRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CalendarViewRequestBuilder calendarView() {
@@ -223,6 +236,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the changePassword method.
+     * @return a {@link ChangePasswordRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ChangePasswordRequestBuilder changePassword() {
@@ -230,6 +244,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the chats property of the microsoft.graph.user entity.
+     * @return a {@link ChatsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ChatsRequestBuilder chats() {
@@ -237,6 +252,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the checkMemberGroups method.
+     * @return a {@link CheckMemberGroupsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CheckMemberGroupsRequestBuilder checkMemberGroups() {
@@ -244,6 +260,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the checkMemberObjects method.
+     * @return a {@link CheckMemberObjectsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CheckMemberObjectsRequestBuilder checkMemberObjects() {
@@ -251,6 +268,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the cloudPCs property of the microsoft.graph.user entity.
+     * @return a {@link CloudPCsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CloudPCsRequestBuilder cloudPCs() {
@@ -258,6 +276,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the contactFolders property of the microsoft.graph.user entity.
+     * @return a {@link ContactFoldersRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ContactFoldersRequestBuilder contactFolders() {
@@ -265,6 +284,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the contacts property of the microsoft.graph.user entity.
+     * @return a {@link ContactsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ContactsRequestBuilder contacts() {
@@ -272,6 +292,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the createdObjects property of the microsoft.graph.user entity.
+     * @return a {@link CreatedObjectsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CreatedObjectsRequestBuilder createdObjects() {
@@ -279,6 +300,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the deletePasswordSingleSignOnCredentials method.
+     * @return a {@link DeletePasswordSingleSignOnCredentialsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DeletePasswordSingleSignOnCredentialsRequestBuilder deletePasswordSingleSignOnCredentials() {
@@ -286,6 +308,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the deviceEnrollmentConfigurations property of the microsoft.graph.user entity.
+     * @return a {@link DeviceEnrollmentConfigurationsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DeviceEnrollmentConfigurationsRequestBuilder deviceEnrollmentConfigurations() {
@@ -293,6 +316,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the deviceManagementTroubleshootingEvents property of the microsoft.graph.user entity.
+     * @return a {@link DeviceManagementTroubleshootingEventsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DeviceManagementTroubleshootingEventsRequestBuilder deviceManagementTroubleshootingEvents() {
@@ -300,6 +324,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the devices property of the microsoft.graph.user entity.
+     * @return a {@link DevicesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DevicesRequestBuilder devices() {
@@ -307,6 +332,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the directReports property of the microsoft.graph.user entity.
+     * @return a {@link DirectReportsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DirectReportsRequestBuilder directReports() {
@@ -314,6 +340,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the drive property of the microsoft.graph.user entity.
+     * @return a {@link DriveRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DriveRequestBuilder drive() {
@@ -321,6 +348,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the drives property of the microsoft.graph.user entity.
+     * @return a {@link DrivesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DrivesRequestBuilder drives() {
@@ -328,6 +356,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the employeeExperience property of the microsoft.graph.user entity.
+     * @return a {@link EmployeeExperienceRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public EmployeeExperienceRequestBuilder employeeExperience() {
@@ -335,6 +364,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the events property of the microsoft.graph.user entity.
+     * @return a {@link EventsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public EventsRequestBuilder events() {
@@ -342,6 +372,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the exportDeviceAndAppManagementData method.
+     * @return a {@link ExportDeviceAndAppManagementDataRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ExportDeviceAndAppManagementDataRequestBuilder exportDeviceAndAppManagementData() {
@@ -349,6 +380,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the exportPersonalData method.
+     * @return a {@link ExportPersonalDataRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ExportPersonalDataRequestBuilder exportPersonalData() {
@@ -356,6 +388,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the extensions property of the microsoft.graph.user entity.
+     * @return a {@link ExtensionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ExtensionsRequestBuilder extensions() {
@@ -363,6 +396,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the findMeetingTimes method.
+     * @return a {@link FindMeetingTimesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public FindMeetingTimesRequestBuilder findMeetingTimes() {
@@ -370,6 +404,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the findRoomLists method.
+     * @return a {@link FindRoomListsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public FindRoomListsRequestBuilder findRoomLists() {
@@ -377,6 +412,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the findRooms method.
+     * @return a {@link FindRoomsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public FindRoomsRequestBuilder findRooms() {
@@ -384,6 +420,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the followedSites property of the microsoft.graph.user entity.
+     * @return a {@link FollowedSitesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public FollowedSitesRequestBuilder followedSites() {
@@ -391,6 +428,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getEffectiveDeviceEnrollmentConfigurations method.
+     * @return a {@link GetEffectiveDeviceEnrollmentConfigurationsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetEffectiveDeviceEnrollmentConfigurationsRequestBuilder getEffectiveDeviceEnrollmentConfigurations() {
@@ -398,6 +436,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getLoggedOnManagedDevices method.
+     * @return a {@link GetLoggedOnManagedDevicesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetLoggedOnManagedDevicesRequestBuilder getLoggedOnManagedDevices() {
@@ -405,6 +444,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getMailTips method.
+     * @return a {@link GetMailTipsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetMailTipsRequestBuilder getMailTips() {
@@ -412,6 +452,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getManagedAppDiagnosticStatuses method.
+     * @return a {@link GetManagedAppDiagnosticStatusesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetManagedAppDiagnosticStatusesRequestBuilder getManagedAppDiagnosticStatuses() {
@@ -419,6 +460,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getManagedAppPolicies method.
+     * @return a {@link GetManagedAppPoliciesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetManagedAppPoliciesRequestBuilder getManagedAppPolicies() {
@@ -426,6 +468,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getManagedDevicesWithAppFailures method.
+     * @return a {@link GetManagedDevicesWithAppFailuresRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetManagedDevicesWithAppFailuresRequestBuilder getManagedDevicesWithAppFailures() {
@@ -433,6 +476,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getManagedDevicesWithFailedOrPendingApps method.
+     * @return a {@link GetManagedDevicesWithFailedOrPendingAppsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetManagedDevicesWithFailedOrPendingAppsRequestBuilder getManagedDevicesWithFailedOrPendingApps() {
@@ -440,6 +484,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getMemberGroups method.
+     * @return a {@link GetMemberGroupsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetMemberGroupsRequestBuilder getMemberGroups() {
@@ -447,6 +492,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getMemberObjects method.
+     * @return a {@link GetMemberObjectsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetMemberObjectsRequestBuilder getMemberObjects() {
@@ -454,6 +500,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getPasswordSingleSignOnCredentials method.
+     * @return a {@link GetPasswordSingleSignOnCredentialsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetPasswordSingleSignOnCredentialsRequestBuilder getPasswordSingleSignOnCredentials() {
@@ -461,6 +508,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the inferenceClassification property of the microsoft.graph.user entity.
+     * @return a {@link InferenceClassificationRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public InferenceClassificationRequestBuilder inferenceClassification() {
@@ -468,6 +516,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the informationProtection property of the microsoft.graph.user entity.
+     * @return a {@link InformationProtectionRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public InformationProtectionRequestBuilder informationProtection() {
@@ -475,6 +524,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the insights property of the microsoft.graph.user entity.
+     * @return a {@link InsightsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public InsightsRequestBuilder insights() {
@@ -482,6 +532,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the invalidateAllRefreshTokens method.
+     * @return a {@link InvalidateAllRefreshTokensRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public InvalidateAllRefreshTokensRequestBuilder invalidateAllRefreshTokens() {
@@ -489,6 +540,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the isManagedAppUserBlocked method.
+     * @return a {@link IsManagedAppUserBlockedRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public IsManagedAppUserBlockedRequestBuilder isManagedAppUserBlocked() {
@@ -496,6 +548,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the joinedGroups property of the microsoft.graph.user entity.
+     * @return a {@link JoinedGroupsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public JoinedGroupsRequestBuilder joinedGroups() {
@@ -503,6 +556,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the joinedTeams property of the microsoft.graph.user entity.
+     * @return a {@link JoinedTeamsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public JoinedTeamsRequestBuilder joinedTeams() {
@@ -510,6 +564,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the licenseDetails property of the microsoft.graph.user entity.
+     * @return a {@link LicenseDetailsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public LicenseDetailsRequestBuilder licenseDetails() {
@@ -517,6 +572,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The mailboxSettings property
+     * @return a {@link MailboxSettingsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MailboxSettingsRequestBuilder mailboxSettings() {
@@ -524,6 +580,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the mailFolders property of the microsoft.graph.user entity.
+     * @return a {@link MailFoldersRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MailFoldersRequestBuilder mailFolders() {
@@ -531,6 +588,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the managedAppRegistrations property of the microsoft.graph.user entity.
+     * @return a {@link ManagedAppRegistrationsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ManagedAppRegistrationsRequestBuilder managedAppRegistrations() {
@@ -538,6 +596,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the managedDevices property of the microsoft.graph.user entity.
+     * @return a {@link ManagedDevicesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ManagedDevicesRequestBuilder managedDevices() {
@@ -545,6 +604,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the manager property of the microsoft.graph.user entity.
+     * @return a {@link ManagerRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ManagerRequestBuilder manager() {
@@ -552,6 +612,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the memberOf property of the microsoft.graph.user entity.
+     * @return a {@link MemberOfRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MemberOfRequestBuilder memberOf() {
@@ -559,6 +620,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the messages property of the microsoft.graph.user entity.
+     * @return a {@link MessagesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MessagesRequestBuilder messages() {
@@ -566,6 +628,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the mobileAppIntentAndStates property of the microsoft.graph.user entity.
+     * @return a {@link MobileAppIntentAndStatesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MobileAppIntentAndStatesRequestBuilder mobileAppIntentAndStates() {
@@ -573,6 +636,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the mobileAppTroubleshootingEvents property of the microsoft.graph.user entity.
+     * @return a {@link MobileAppTroubleshootingEventsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MobileAppTroubleshootingEventsRequestBuilder mobileAppTroubleshootingEvents() {
@@ -580,6 +644,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the notifications property of the microsoft.graph.user entity.
+     * @return a {@link NotificationsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public NotificationsRequestBuilder notifications() {
@@ -587,6 +652,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the oauth2PermissionGrants property of the microsoft.graph.user entity.
+     * @return a {@link Oauth2PermissionGrantsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public Oauth2PermissionGrantsRequestBuilder oauth2PermissionGrants() {
@@ -594,6 +660,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the onenote property of the microsoft.graph.user entity.
+     * @return a {@link OnenoteRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public OnenoteRequestBuilder onenote() {
@@ -601,6 +668,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the onlineMeetings property of the microsoft.graph.user entity.
+     * @return a {@link OnlineMeetingsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public OnlineMeetingsRequestBuilder onlineMeetings() {
@@ -608,6 +676,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the outlook property of the microsoft.graph.user entity.
+     * @return a {@link OutlookRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public OutlookRequestBuilder outlook() {
@@ -615,6 +684,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the ownedDevices property of the microsoft.graph.user entity.
+     * @return a {@link OwnedDevicesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public OwnedDevicesRequestBuilder ownedDevices() {
@@ -622,6 +692,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the ownedObjects property of the microsoft.graph.user entity.
+     * @return a {@link OwnedObjectsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public OwnedObjectsRequestBuilder ownedObjects() {
@@ -629,6 +700,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the pendingAccessReviewInstances property of the microsoft.graph.user entity.
+     * @return a {@link PendingAccessReviewInstancesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PendingAccessReviewInstancesRequestBuilder pendingAccessReviewInstances() {
@@ -636,6 +708,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the people property of the microsoft.graph.user entity.
+     * @return a {@link PeopleRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PeopleRequestBuilder people() {
@@ -643,6 +716,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the permissionGrants property of the microsoft.graph.user entity.
+     * @return a {@link PermissionGrantsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PermissionGrantsRequestBuilder permissionGrants() {
@@ -650,6 +724,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the photo property of the microsoft.graph.user entity.
+     * @return a {@link PhotoRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PhotoRequestBuilder photo() {
@@ -657,6 +732,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the photos property of the microsoft.graph.user entity.
+     * @return a {@link PhotosRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PhotosRequestBuilder photos() {
@@ -664,6 +740,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the planner property of the microsoft.graph.user entity.
+     * @return a {@link PlannerRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PlannerRequestBuilder planner() {
@@ -671,6 +748,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the presence property of the microsoft.graph.user entity.
+     * @return a {@link PresenceRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PresenceRequestBuilder presence() {
@@ -678,6 +756,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the profile property of the microsoft.graph.user entity.
+     * @return a {@link ProfileRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ProfileRequestBuilder profile() {
@@ -685,6 +764,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the registeredDevices property of the microsoft.graph.user entity.
+     * @return a {@link RegisteredDevicesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RegisteredDevicesRequestBuilder registeredDevices() {
@@ -692,6 +772,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the removeAllDevicesFromManagement method.
+     * @return a {@link RemoveAllDevicesFromManagementRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RemoveAllDevicesFromManagementRequestBuilder removeAllDevicesFromManagement() {
@@ -699,6 +780,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the reprocessLicenseAssignment method.
+     * @return a {@link ReprocessLicenseAssignmentRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ReprocessLicenseAssignmentRequestBuilder reprocessLicenseAssignment() {
@@ -706,6 +788,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the restore method.
+     * @return a {@link RestoreRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RestoreRequestBuilder restore() {
@@ -713,6 +796,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the retryServiceProvisioning method.
+     * @return a {@link RetryServiceProvisioningRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RetryServiceProvisioningRequestBuilder retryServiceProvisioning() {
@@ -720,6 +804,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the revokeSignInSessions method.
+     * @return a {@link RevokeSignInSessionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RevokeSignInSessionsRequestBuilder revokeSignInSessions() {
@@ -727,6 +812,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the scopedRoleMemberOf property of the microsoft.graph.user entity.
+     * @return a {@link ScopedRoleMemberOfRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ScopedRoleMemberOfRequestBuilder scopedRoleMemberOf() {
@@ -734,6 +820,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the security property of the microsoft.graph.user entity.
+     * @return a {@link SecurityRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SecurityRequestBuilder security() {
@@ -741,6 +828,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the sendMail method.
+     * @return a {@link SendMailRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SendMailRequestBuilder sendMail() {
@@ -748,6 +836,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The serviceProvisioningErrors property
+     * @return a {@link ServiceProvisioningErrorsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ServiceProvisioningErrorsRequestBuilder serviceProvisioningErrors() {
@@ -755,6 +844,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the settings property of the microsoft.graph.user entity.
+     * @return a {@link SettingsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SettingsRequestBuilder settings() {
@@ -762,6 +852,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the sponsors property of the microsoft.graph.user entity.
+     * @return a {@link SponsorsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SponsorsRequestBuilder sponsors() {
@@ -769,6 +860,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the teamwork property of the microsoft.graph.user entity.
+     * @return a {@link TeamworkRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TeamworkRequestBuilder teamwork() {
@@ -776,6 +868,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the todo property of the microsoft.graph.user entity.
+     * @return a {@link TodoRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TodoRequestBuilder todo() {
@@ -783,6 +876,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the transitiveMemberOf property of the microsoft.graph.user entity.
+     * @return a {@link TransitiveMemberOfRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TransitiveMemberOfRequestBuilder transitiveMemberOf() {
@@ -790,6 +884,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the transitiveReports property of the microsoft.graph.user entity.
+     * @return a {@link TransitiveReportsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TransitiveReportsRequestBuilder transitiveReports() {
@@ -797,6 +892,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the translateExchangeIds method.
+     * @return a {@link TranslateExchangeIdsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TranslateExchangeIdsRequestBuilder translateExchangeIds() {
@@ -804,6 +900,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the unblockManagedApps method.
+     * @return a {@link UnblockManagedAppsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UnblockManagedAppsRequestBuilder unblockManagedApps() {
@@ -811,6 +908,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the usageRights property of the microsoft.graph.user entity.
+     * @return a {@link UsageRightsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UsageRightsRequestBuilder usageRights() {
@@ -818,6 +916,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the virtualEvents property of the microsoft.graph.user entity.
+     * @return a {@link VirtualEventsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public VirtualEventsRequestBuilder virtualEvents() {
@@ -825,6 +924,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the windowsInformationProtectionDeviceRegistrations property of the microsoft.graph.user entity.
+     * @return a {@link WindowsInformationProtectionDeviceRegistrationsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public WindowsInformationProtectionDeviceRegistrationsRequestBuilder windowsInformationProtectionDeviceRegistrations() {
@@ -832,6 +932,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the wipeAndBlockManagedApps method.
+     * @return a {@link WipeAndBlockManagedAppsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public WipeAndBlockManagedAppsRequestBuilder wipeAndBlockManagedApps() {
@@ -839,6 +940,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the wipeManagedAppRegistrationByDeviceTag method.
+     * @return a {@link WipeManagedAppRegistrationByDeviceTagRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public WipeManagedAppRegistrationByDeviceTagRequestBuilder wipeManagedAppRegistrationByDeviceTag() {
@@ -846,6 +948,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the wipeManagedAppRegistrationsByAzureAdDeviceId method.
+     * @return a {@link WipeManagedAppRegistrationsByAzureAdDeviceIdRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public WipeManagedAppRegistrationsByAzureAdDeviceIdRequestBuilder wipeManagedAppRegistrationsByAzureAdDeviceId() {
@@ -853,6 +956,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the wipeManagedAppRegistrationsByDeviceTag method.
+     * @return a {@link WipeManagedAppRegistrationsByDeviceTagRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public WipeManagedAppRegistrationsByDeviceTagRequestBuilder wipeManagedAppRegistrationsByDeviceTag() {
@@ -861,7 +965,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the appRoleAssignedResources property of the microsoft.graph.user entity.
      * @param appId Alternate key of servicePrincipal
-     * @return a AppRoleAssignedResourcesWithAppIdRequestBuilder
+     * @return a {@link AppRoleAssignedResourcesWithAppIdRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AppRoleAssignedResourcesWithAppIdRequestBuilder appRoleAssignedResourcesWithAppId(@jakarta.annotation.Nonnull final String appId) {
@@ -869,7 +973,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
         return new AppRoleAssignedResourcesWithAppIdRequestBuilder(pathParameters, requestAdapter, appId);
     }
     /**
-     * Instantiates a new UserItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link UserItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -877,7 +981,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new UserItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link UserItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -886,6 +990,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Delete user.   When deleted, user resources are moved to a temporary container and can be restored within 30 days.  After that time, they are permanently deleted.  To learn more, see deletedItems.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/user-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
@@ -894,19 +999,19 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete user.   When deleted, user resources are moved to a temporary container and can be restored within 30 days.  After that time, they are permanently deleted.  To learn more, see deletedItems.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/user-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Provides operations to manage the devices property of the microsoft.graph.user entity.
      * @param deviceId Alternate key of device
-     * @return a DevicesWithDeviceIdRequestBuilder
+     * @return a {@link DevicesWithDeviceIdRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DevicesWithDeviceIdRequestBuilder devicesWithDeviceId(@jakarta.annotation.Nonnull final String deviceId) {
@@ -917,7 +1022,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the exportDeviceAndAppManagementData method.
      * @param skip Usage: skip={skip}
      * @param top Usage: top={top}
-     * @return a ExportDeviceAndAppManagementDataWithSkipWithTopRequestBuilder
+     * @return a {@link ExportDeviceAndAppManagementDataWithSkipWithTopRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ExportDeviceAndAppManagementDataWithSkipWithTopRequestBuilder exportDeviceAndAppManagementDataWithSkipWithTop(@jakarta.annotation.Nonnull final Integer skip, @jakarta.annotation.Nonnull final Integer top) {
@@ -928,7 +1033,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the findRooms method.
      * @param RoomList Usage: RoomList='{RoomList}'
-     * @return a FindRoomsWithRoomListRequestBuilder
+     * @return a {@link FindRoomsWithRoomListRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public FindRoomsWithRoomListRequestBuilder findRoomsWithRoomList(@jakarta.annotation.Nonnull final String RoomList) {
@@ -937,7 +1042,8 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the properties and relationships of user object. This operation returns by default only a subset of the more commonly used properties for each user. These default properties are noted in the Properties section. To get properties that are not returned by default, do a GET operation for the user and specify the properties in a $select OData query option. Because the user resource supports extensions, you can also use the GET operation to get custom properties and extension data in a user instance.
-     * @return a User
+     * @return a {@link User}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/user-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -947,21 +1053,21 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of user object. This operation returns by default only a subset of the more commonly used properties for each user. These default properties are noted in the Properties section. To get properties that are not returned by default, do a GET operation for the user and specify the properties in a $select OData query option. Because the user resource supports extensions, you can also use the GET operation to get custom properties and extension data in a user instance.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a User
+     * @return a {@link User}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/user-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public User get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, User::createFromDiscriminatorValue);
     }
     /**
      * Provides operations to manage the onlineMeetings property of the microsoft.graph.user entity.
      * @param joinWebUrl Alternate key of onlineMeeting
-     * @return a OnlineMeetingsWithJoinWebUrlRequestBuilder
+     * @return a {@link OnlineMeetingsWithJoinWebUrlRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public OnlineMeetingsWithJoinWebUrlRequestBuilder onlineMeetingsWithJoinWebUrl(@jakarta.annotation.Nonnull final String joinWebUrl) {
@@ -971,7 +1077,8 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of a user object. Not all properties can be updated by Member or Guest users with their default permissions without Administrator roles. Compare member and guest default permissions to see properties they can manage.
      * @param body The request body
-     * @return a User
+     * @return a {@link User}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/user-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -982,7 +1089,8 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a user object. Not all properties can be updated by Member or Guest users with their default permissions without Administrator roles. Compare member and guest default permissions to see properties they can manage.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a User
+     * @return a {@link User}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/user-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -990,15 +1098,14 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, User::createFromDiscriminatorValue);
     }
     /**
      * Provides operations to call the reminderView method.
      * @param EndDateTime Usage: EndDateTime='{EndDateTime}'
      * @param StartDateTime Usage: StartDateTime='{StartDateTime}'
-     * @return a ReminderViewWithStartDateTimeWithEndDateTimeRequestBuilder
+     * @return a {@link ReminderViewWithStartDateTimeWithEndDateTimeRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ReminderViewWithStartDateTimeWithEndDateTimeRequestBuilder reminderViewWithStartDateTimeWithEndDateTime(@jakarta.annotation.Nonnull final String EndDateTime, @jakarta.annotation.Nonnull final String StartDateTime) {
@@ -1008,7 +1115,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Delete user.   When deleted, user resources are moved to a temporary container and can be restored within 30 days.  After that time, they are permanently deleted.  To learn more, see deletedItems.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -1017,18 +1124,18 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete user.   When deleted, user resources are moved to a temporary container and can be restored within 30 days.  After that time, they are permanently deleted.  To learn more, see deletedItems.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/users/{user%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Retrieve the properties and relationships of user object. This operation returns by default only a subset of the more commonly used properties for each user. These default properties are noted in the Properties section. To get properties that are not returned by default, do a GET operation for the user and specify the properties in a $select OData query option. Because the user resource supports extensions, you can also use the GET operation to get custom properties and extension data in a user instance.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -1037,7 +1144,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of user object. This operation returns by default only a subset of the more commonly used properties for each user. These default properties are noted in the Properties section. To get properties that are not returned by default, do a GET operation for the user and specify the properties in a $select OData query option. Because the user resource supports extensions, you can also use the GET operation to get custom properties and extension data in a user instance.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -1049,7 +1156,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of a user object. Not all properties can be updated by Member or Guest users with their default permissions without Administrator roles. Compare member and guest default permissions to see properties they can manage.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final User body) {
@@ -1059,12 +1166,12 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a user object. Not all properties can be updated by Member or Guest users with their default permissions without Administrator roles. Compare member and guest default permissions to see properties they can manage.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final User body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/users/{user%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -1073,7 +1180,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a UserItemRequestBuilder
+     * @return a {@link UserItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UserItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -1103,7 +1210,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

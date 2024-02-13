@@ -19,7 +19,7 @@ public class TeamworkDateTimeConfiguration implements AdditionalDataHolder, Back
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new TeamworkDateTimeConfiguration and sets the default values.
+     * Instantiates a new {@link TeamworkDateTimeConfiguration} and sets the default values.
      */
     public TeamworkDateTimeConfiguration() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class TeamworkDateTimeConfiguration implements AdditionalDataHolder, Back
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TeamworkDateTimeConfiguration
+     * @return a {@link TeamworkDateTimeConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static TeamworkDateTimeConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class TeamworkDateTimeConfiguration implements AdditionalDataHolder, Back
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -50,7 +50,7 @@ public class TeamworkDateTimeConfiguration implements AdditionalDataHolder, Back
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -58,7 +58,7 @@ public class TeamworkDateTimeConfiguration implements AdditionalDataHolder, Back
     }
     /**
      * Gets the dateFormat property value. The date format for the device.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDateFormat() {
@@ -66,7 +66,7 @@ public class TeamworkDateTimeConfiguration implements AdditionalDataHolder, Back
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -81,7 +81,7 @@ public class TeamworkDateTimeConfiguration implements AdditionalDataHolder, Back
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -89,7 +89,7 @@ public class TeamworkDateTimeConfiguration implements AdditionalDataHolder, Back
     }
     /**
      * Gets the officeHoursEndTime property value. The time of the day when the device is turned off.
-     * @return a LocalTime
+     * @return a {@link LocalTime}
      */
     @jakarta.annotation.Nullable
     public LocalTime getOfficeHoursEndTime() {
@@ -97,7 +97,7 @@ public class TeamworkDateTimeConfiguration implements AdditionalDataHolder, Back
     }
     /**
      * Gets the officeHoursStartTime property value. The time of the day when the device is turned on.
-     * @return a LocalTime
+     * @return a {@link LocalTime}
      */
     @jakarta.annotation.Nullable
     public LocalTime getOfficeHoursStartTime() {
@@ -105,7 +105,7 @@ public class TeamworkDateTimeConfiguration implements AdditionalDataHolder, Back
     }
     /**
      * Gets the timeFormat property value. The time format for the device.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTimeFormat() {
@@ -113,7 +113,7 @@ public class TeamworkDateTimeConfiguration implements AdditionalDataHolder, Back
     }
     /**
      * Gets the timeZone property value. The time zone to which the office hours apply.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTimeZone() {

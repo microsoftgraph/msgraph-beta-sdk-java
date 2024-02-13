@@ -19,7 +19,7 @@ public class Destination implements AdditionalDataHolder, BackedModel, Parsable 
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new Destination and sets the default values.
+     * Instantiates a new {@link Destination} and sets the default values.
      */
     public Destination() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class Destination implements AdditionalDataHolder, BackedModel, Parsable 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Destination
+     * @return a {@link Destination}
      */
     @jakarta.annotation.Nonnull
     public static Destination createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class Destination implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -50,7 +50,7 @@ public class Destination implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -58,7 +58,7 @@ public class Destination implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the deviceCount property value. The number of unique devices that were seen.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getDeviceCount() {
@@ -66,7 +66,7 @@ public class Destination implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -89,7 +89,7 @@ public class Destination implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the firstAccessDateTime property value. The firstAccessDateTime property
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getFirstAccessDateTime() {
@@ -97,7 +97,7 @@ public class Destination implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the fqdn property value. The fully qualified domain name (FQDN) of the destination.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getFqdn() {
@@ -105,7 +105,7 @@ public class Destination implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the ip property value. The internet protocol (IP) used to access the destination.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getIp() {
@@ -113,7 +113,7 @@ public class Destination implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the lastAccessDateTime property value. The most recent access DateTime.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastAccessDateTime() {
@@ -121,7 +121,7 @@ public class Destination implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the networkingProtocol property value. The networkingProtocol property
-     * @return a NetworkingProtocol
+     * @return a {@link NetworkingProtocol}
      */
     @jakarta.annotation.Nullable
     public NetworkingProtocol getNetworkingProtocol() {
@@ -129,7 +129,7 @@ public class Destination implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -137,7 +137,7 @@ public class Destination implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the port property value. The numeric identifier that is associated with a specific endpoint in a network.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPort() {
@@ -145,7 +145,7 @@ public class Destination implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the threatCount property value. The threatCount property
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getThreatCount() {
@@ -153,7 +153,7 @@ public class Destination implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the totalBytesReceived property value. The totalBytesReceived property
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getTotalBytesReceived() {
@@ -161,7 +161,7 @@ public class Destination implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the totalBytesSent property value. The totalBytesSent property
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getTotalBytesSent() {
@@ -169,7 +169,7 @@ public class Destination implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the trafficType property value. The trafficType property
-     * @return a TrafficType
+     * @return a {@link TrafficType}
      */
     @jakarta.annotation.Nullable
     public TrafficType getTrafficType() {
@@ -177,7 +177,7 @@ public class Destination implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the transactionCount property value. The number of transactions.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getTransactionCount() {
@@ -185,7 +185,7 @@ public class Destination implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the userCount property value. The number of unique Microsoft Entra ID users that were seen.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getUserCount() {

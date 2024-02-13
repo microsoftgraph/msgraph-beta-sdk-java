@@ -25,6 +25,7 @@ import java.util.Objects;
 public class UrlThreatsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -33,7 +34,7 @@ public class UrlThreatsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the urlThreats property of the microsoft.graph.security.threatSubmissionRoot entity.
      * @param urlThreatSubmissionId The unique identifier of urlThreatSubmission
-     * @return a UrlThreatSubmissionItemRequestBuilder
+     * @return a {@link UrlThreatSubmissionItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UrlThreatSubmissionItemRequestBuilder byUrlThreatSubmissionId(@jakarta.annotation.Nonnull final String urlThreatSubmissionId) {
@@ -43,7 +44,7 @@ public class UrlThreatsRequestBuilder extends BaseRequestBuilder {
         return new UrlThreatSubmissionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new UrlThreatsRequestBuilder and sets the default values.
+     * Instantiates a new {@link UrlThreatsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -51,7 +52,7 @@ public class UrlThreatsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/threatSubmission/urlThreats{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new UrlThreatsRequestBuilder and sets the default values.
+     * Instantiates a new {@link UrlThreatsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -60,7 +61,8 @@ public class UrlThreatsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of the urlThreatSubmission objects and their properties.
-     * @return a UrlThreatSubmissionCollectionResponse
+     * @return a {@link UrlThreatSubmissionCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/security-urlthreatsubmission-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -70,21 +72,22 @@ public class UrlThreatsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the urlThreatSubmission objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a UrlThreatSubmissionCollectionResponse
+     * @return a {@link UrlThreatSubmissionCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/security-urlthreatsubmission-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UrlThreatSubmissionCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, UrlThreatSubmissionCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new urlThreatSubmission object.
      * @param body The request body
-     * @return a UrlThreatSubmission
+     * @return a {@link UrlThreatSubmission}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/security-urlthreatsubmission-post-urlthreats?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -95,7 +98,8 @@ public class UrlThreatsRequestBuilder extends BaseRequestBuilder {
      * Create a new urlThreatSubmission object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a UrlThreatSubmission
+     * @return a {@link UrlThreatSubmission}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/security-urlthreatsubmission-post-urlthreats?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -103,13 +107,12 @@ public class UrlThreatsRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, UrlThreatSubmission::createFromDiscriminatorValue);
     }
     /**
      * Get a list of the urlThreatSubmission objects and their properties.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -118,7 +121,7 @@ public class UrlThreatsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the urlThreatSubmission objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -130,7 +133,7 @@ public class UrlThreatsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new urlThreatSubmission object.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final UrlThreatSubmission body) {
@@ -140,12 +143,12 @@ public class UrlThreatsRequestBuilder extends BaseRequestBuilder {
      * Create a new urlThreatSubmission object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final UrlThreatSubmission body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/security/threatSubmission/urlThreats", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -154,7 +157,7 @@ public class UrlThreatsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a UrlThreatsRequestBuilder
+     * @return a {@link UrlThreatsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UrlThreatsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -208,7 +211,7 @@ public class UrlThreatsRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

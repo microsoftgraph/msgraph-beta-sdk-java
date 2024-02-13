@@ -20,7 +20,7 @@ public class EvaluateClassificationResultsPostRequestBody implements AdditionalD
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new EvaluateClassificationResultsPostRequestBody and sets the default values.
+     * Instantiates a new {@link EvaluateClassificationResultsPostRequestBody} and sets the default values.
      */
     public EvaluateClassificationResultsPostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -29,7 +29,7 @@ public class EvaluateClassificationResultsPostRequestBody implements AdditionalD
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EvaluateClassificationResultsPostRequestBody
+     * @return a {@link EvaluateClassificationResultsPostRequestBody}
      */
     @jakarta.annotation.Nonnull
     public static EvaluateClassificationResultsPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,7 +38,7 @@ public class EvaluateClassificationResultsPostRequestBody implements AdditionalD
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -51,7 +51,7 @@ public class EvaluateClassificationResultsPostRequestBody implements AdditionalD
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -59,7 +59,7 @@ public class EvaluateClassificationResultsPostRequestBody implements AdditionalD
     }
     /**
      * Gets the classificationResults property value. The classificationResults property
-     * @return a java.util.List<ClassificationResult>
+     * @return a {@link java.util.List<ClassificationResult>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ClassificationResult> getClassificationResults() {
@@ -67,7 +67,7 @@ public class EvaluateClassificationResultsPostRequestBody implements AdditionalD
     }
     /**
      * Gets the contentInfo property value. The contentInfo property
-     * @return a ContentInfo
+     * @return a {@link ContentInfo}
      */
     @jakarta.annotation.Nullable
     public ContentInfo getContentInfo() {
@@ -75,7 +75,7 @@ public class EvaluateClassificationResultsPostRequestBody implements AdditionalD
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

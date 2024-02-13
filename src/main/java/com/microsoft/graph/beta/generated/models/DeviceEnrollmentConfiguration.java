@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
     /**
-     * Instantiates a new DeviceEnrollmentConfiguration and sets the default values.
+     * Instantiates a new {@link DeviceEnrollmentConfiguration} and sets the default values.
      */
     public DeviceEnrollmentConfiguration() {
         super();
@@ -21,7 +21,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceEnrollmentConfiguration
+     * @return a {@link DeviceEnrollmentConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static DeviceEnrollmentConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,7 +43,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
     }
     /**
      * Gets the assignments property value. The list of group assignments for the device configuration profile
-     * @return a java.util.List<EnrollmentConfigurationAssignment>
+     * @return a {@link java.util.List<EnrollmentConfigurationAssignment>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<EnrollmentConfigurationAssignment> getAssignments() {
@@ -51,7 +51,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. Created date time in UTC of the device enrollment configuration
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -59,7 +59,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The description of the device enrollment configuration
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -67,7 +67,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
     }
     /**
      * Gets the deviceEnrollmentConfigurationType property value. Describes the TemplateFamily for the Template entity
-     * @return a DeviceEnrollmentConfigurationType
+     * @return a {@link DeviceEnrollmentConfigurationType}
      */
     @jakarta.annotation.Nullable
     public DeviceEnrollmentConfigurationType getDeviceEnrollmentConfigurationType() {
@@ -75,7 +75,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name of the device enrollment configuration
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -83,7 +83,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -101,7 +101,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. Last modified date time in UTC of the device enrollment configuration
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -109,7 +109,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
     }
     /**
      * Gets the priority property value. Priority is used when a user exists in multiple groups that are assigned enrollment configuration. Users are subject only to the configuration with the lowest priority value.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPriority() {
@@ -117,7 +117,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
     }
     /**
      * Gets the roleScopeTagIds property value. Optional role scope tags for the enrollment restrictions.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {
@@ -125,7 +125,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
     }
     /**
      * Gets the version property value. The version of the device enrollment configuration
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getVersion() {

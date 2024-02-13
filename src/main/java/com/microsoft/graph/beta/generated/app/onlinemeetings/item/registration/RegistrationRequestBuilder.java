@@ -24,6 +24,7 @@ import java.util.Objects;
 public class RegistrationRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the customQuestions property of the microsoft.graph.meetingRegistration entity.
+     * @return a {@link CustomQuestionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CustomQuestionsRequestBuilder customQuestions() {
@@ -31,13 +32,14 @@ public class RegistrationRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the registrants property of the microsoft.graph.meetingRegistrationBase entity.
+     * @return a {@link RegistrantsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RegistrantsRequestBuilder registrants() {
         return new RegistrantsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new RegistrationRequestBuilder and sets the default values.
+     * Instantiates a new {@link RegistrationRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -45,7 +47,7 @@ public class RegistrationRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/app/onlineMeetings/{onlineMeeting%2Did}/registration{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new RegistrationRequestBuilder and sets the default values.
+     * Instantiates a new {@link RegistrationRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -54,6 +56,7 @@ public class RegistrationRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Disable and delete the meetingRegistration of an onlineMeeting on behalf of the organizer.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/meetingregistration-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
@@ -62,18 +65,19 @@ public class RegistrationRequestBuilder extends BaseRequestBuilder {
     /**
      * Disable and delete the meetingRegistration of an onlineMeeting on behalf of the organizer.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/meetingregistration-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Get the meetingRegistration details associated with an onlineMeeting on behalf of the organizer.
-     * @return a MeetingRegistration
+     * @return a {@link MeetingRegistration}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/meetingregistration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -83,21 +87,22 @@ public class RegistrationRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the meetingRegistration details associated with an onlineMeeting on behalf of the organizer.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a MeetingRegistration
+     * @return a {@link MeetingRegistration}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/meetingregistration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MeetingRegistration get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, MeetingRegistration::createFromDiscriminatorValue);
     }
     /**
      * Update the details of a meetingRegistration object assciated with an onlineMeeting on behalf of the organizer.
      * @param body The request body
-     * @return a MeetingRegistration
+     * @return a {@link MeetingRegistration}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/meetingregistration-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -108,7 +113,8 @@ public class RegistrationRequestBuilder extends BaseRequestBuilder {
      * Update the details of a meetingRegistration object assciated with an onlineMeeting on behalf of the organizer.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a MeetingRegistration
+     * @return a {@link MeetingRegistration}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/meetingregistration-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -116,13 +122,12 @@ public class RegistrationRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, MeetingRegistration::createFromDiscriminatorValue);
     }
     /**
      * Disable and delete the meetingRegistration of an onlineMeeting on behalf of the organizer.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -131,18 +136,18 @@ public class RegistrationRequestBuilder extends BaseRequestBuilder {
     /**
      * Disable and delete the meetingRegistration of an onlineMeeting on behalf of the organizer.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/app/onlineMeetings/{onlineMeeting%2Did}/registration", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Get the meetingRegistration details associated with an onlineMeeting on behalf of the organizer.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -151,7 +156,7 @@ public class RegistrationRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the meetingRegistration details associated with an onlineMeeting on behalf of the organizer.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -163,7 +168,7 @@ public class RegistrationRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the details of a meetingRegistration object assciated with an onlineMeeting on behalf of the organizer.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final MeetingRegistration body) {
@@ -173,12 +178,12 @@ public class RegistrationRequestBuilder extends BaseRequestBuilder {
      * Update the details of a meetingRegistration object assciated with an onlineMeeting on behalf of the organizer.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final MeetingRegistration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/app/onlineMeetings/{onlineMeeting%2Did}/registration", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -187,7 +192,7 @@ public class RegistrationRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a RegistrationRequestBuilder
+     * @return a {@link RegistrationRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RegistrationRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -217,7 +222,7 @@ public class RegistrationRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IosWiFiConfiguration extends DeviceConfiguration implements Parsable {
     /**
-     * Instantiates a new IosWiFiConfiguration and sets the default values.
+     * Instantiates a new {@link IosWiFiConfiguration} and sets the default values.
      */
     public IosWiFiConfiguration() {
         super();
@@ -21,7 +21,7 @@ public class IosWiFiConfiguration extends DeviceConfiguration implements Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a IosWiFiConfiguration
+     * @return a {@link IosWiFiConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static IosWiFiConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class IosWiFiConfiguration extends DeviceConfiguration implements Parsabl
     }
     /**
      * Gets the connectAutomatically property value. Connect automatically when this network is in range. Setting this to true will skip the user prompt and automatically connect the device to Wi-Fi network.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getConnectAutomatically() {
@@ -45,7 +45,7 @@ public class IosWiFiConfiguration extends DeviceConfiguration implements Parsabl
     }
     /**
      * Gets the connectWhenNetworkNameIsHidden property value. Connect when the network is not broadcasting its name (SSID). When set to true, this profile forces the device to connect to a network that doesn't broadcast its SSID to all devices.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getConnectWhenNetworkNameIsHidden() {
@@ -53,7 +53,7 @@ public class IosWiFiConfiguration extends DeviceConfiguration implements Parsabl
     }
     /**
      * Gets the disableMacAddressRandomization property value. If set to true, forces devices connecting using this Wi-Fi profile to present their actual Wi-Fi MAC address instead of a random MAC address. Applies to iOS 14 and later.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDisableMacAddressRandomization() {
@@ -61,7 +61,7 @@ public class IosWiFiConfiguration extends DeviceConfiguration implements Parsabl
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -81,7 +81,7 @@ public class IosWiFiConfiguration extends DeviceConfiguration implements Parsabl
     }
     /**
      * Gets the networkName property value. Network Name
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getNetworkName() {
@@ -89,7 +89,7 @@ public class IosWiFiConfiguration extends DeviceConfiguration implements Parsabl
     }
     /**
      * Gets the preSharedKey property value. This is the pre-shared key for WPA Personal Wi-Fi network.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPreSharedKey() {
@@ -97,7 +97,7 @@ public class IosWiFiConfiguration extends DeviceConfiguration implements Parsabl
     }
     /**
      * Gets the proxyAutomaticConfigurationUrl property value. URL of the proxy server automatic configuration script when automatic configuration is selected. This URL is typically the location of PAC (Proxy Auto Configuration) file.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getProxyAutomaticConfigurationUrl() {
@@ -105,7 +105,7 @@ public class IosWiFiConfiguration extends DeviceConfiguration implements Parsabl
     }
     /**
      * Gets the proxyManualAddress property value. IP Address or DNS hostname of the proxy server when manual configuration is selected.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getProxyManualAddress() {
@@ -113,7 +113,7 @@ public class IosWiFiConfiguration extends DeviceConfiguration implements Parsabl
     }
     /**
      * Gets the proxyManualPort property value. Port of the proxy server when manual configuration is selected.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getProxyManualPort() {
@@ -121,7 +121,7 @@ public class IosWiFiConfiguration extends DeviceConfiguration implements Parsabl
     }
     /**
      * Gets the proxySettings property value. Wi-Fi Proxy Settings.
-     * @return a WiFiProxySetting
+     * @return a {@link WiFiProxySetting}
      */
     @jakarta.annotation.Nullable
     public WiFiProxySetting getProxySettings() {
@@ -129,7 +129,7 @@ public class IosWiFiConfiguration extends DeviceConfiguration implements Parsabl
     }
     /**
      * Gets the ssid property value. This is the name of the Wi-Fi network that is broadcast to all devices.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSsid() {
@@ -137,7 +137,7 @@ public class IosWiFiConfiguration extends DeviceConfiguration implements Parsabl
     }
     /**
      * Gets the wiFiSecurityType property value. Wi-Fi Security Types.
-     * @return a WiFiSecurityType
+     * @return a {@link WiFiSecurityType}
      */
     @jakarta.annotation.Nullable
     public WiFiSecurityType getWiFiSecurityType() {

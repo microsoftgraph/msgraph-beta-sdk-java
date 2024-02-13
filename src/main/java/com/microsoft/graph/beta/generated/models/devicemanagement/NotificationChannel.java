@@ -18,7 +18,7 @@ public class NotificationChannel implements AdditionalDataHolder, BackedModel, P
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new NotificationChannel and sets the default values.
+     * Instantiates a new {@link NotificationChannel} and sets the default values.
      */
     public NotificationChannel() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class NotificationChannel implements AdditionalDataHolder, BackedModel, P
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a NotificationChannel
+     * @return a {@link NotificationChannel}
      */
     @jakarta.annotation.Nonnull
     public static NotificationChannel createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class NotificationChannel implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class NotificationChannel implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class NotificationChannel implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -69,7 +69,7 @@ public class NotificationChannel implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the notificationChannelType property value. The type of the notification channel. The possible values are: portal, email, phoneCall, sms, unknownFutureValue.
-     * @return a NotificationChannelType
+     * @return a {@link NotificationChannelType}
      */
     @jakarta.annotation.Nullable
     public NotificationChannelType getNotificationChannelType() {
@@ -77,7 +77,7 @@ public class NotificationChannel implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the notificationReceivers property value. Information about the notification receivers, such as locale and contact information. For example, en-us for locale and serena.davis@contoso.com for contact information.
-     * @return a java.util.List<NotificationReceiver>
+     * @return a {@link java.util.List<NotificationReceiver>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<NotificationReceiver> getNotificationReceivers() {
@@ -85,7 +85,7 @@ public class NotificationChannel implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {

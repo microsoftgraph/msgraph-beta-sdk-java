@@ -25,6 +25,7 @@ import java.util.Objects;
 public class BookingCurrenciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -33,7 +34,7 @@ public class BookingCurrenciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the collection of bookingCurrency entities.
      * @param bookingCurrencyId The unique identifier of bookingCurrency
-     * @return a BookingCurrencyItemRequestBuilder
+     * @return a {@link BookingCurrencyItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public BookingCurrencyItemRequestBuilder byBookingCurrencyId(@jakarta.annotation.Nonnull final String bookingCurrencyId) {
@@ -43,7 +44,7 @@ public class BookingCurrenciesRequestBuilder extends BaseRequestBuilder {
         return new BookingCurrencyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new BookingCurrenciesRequestBuilder and sets the default values.
+     * Instantiates a new {@link BookingCurrenciesRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -51,7 +52,7 @@ public class BookingCurrenciesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/bookingCurrencies{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new BookingCurrenciesRequestBuilder and sets the default values.
+     * Instantiates a new {@link BookingCurrenciesRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -59,32 +60,32 @@ public class BookingCurrenciesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/bookingCurrencies{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a list of bookingCurrency objects available to a Microsoft Bookings business.
-     * @return a BookingCurrencyCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/bookingcurrency-list?view=graph-rest-1.0">Find more info here</a>
+     * Get entities from bookingCurrencies
+     * @return a {@link BookingCurrencyCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public BookingCurrencyCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a list of bookingCurrency objects available to a Microsoft Bookings business.
+     * Get entities from bookingCurrencies
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a BookingCurrencyCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/bookingcurrency-list?view=graph-rest-1.0">Find more info here</a>
+     * @return a {@link BookingCurrencyCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public BookingCurrencyCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, BookingCurrencyCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Add new entity to bookingCurrencies
      * @param body The request body
-     * @return a BookingCurrency
+     * @return a {@link BookingCurrency}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public BookingCurrency post(@jakarta.annotation.Nonnull final BookingCurrency body) {
@@ -94,29 +95,29 @@ public class BookingCurrenciesRequestBuilder extends BaseRequestBuilder {
      * Add new entity to bookingCurrencies
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a BookingCurrency
+     * @return a {@link BookingCurrency}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public BookingCurrency post(@jakarta.annotation.Nonnull final BookingCurrency body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, BookingCurrency::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of bookingCurrency objects available to a Microsoft Bookings business.
-     * @return a RequestInformation
+     * Get entities from bookingCurrencies
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of bookingCurrency objects available to a Microsoft Bookings business.
+     * Get entities from bookingCurrencies
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -128,7 +129,7 @@ public class BookingCurrenciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Add new entity to bookingCurrencies
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final BookingCurrency body) {
@@ -138,12 +139,12 @@ public class BookingCurrenciesRequestBuilder extends BaseRequestBuilder {
      * Add new entity to bookingCurrencies
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final BookingCurrency body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/bookingCurrencies", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -152,7 +153,7 @@ public class BookingCurrenciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a BookingCurrenciesRequestBuilder
+     * @return a {@link BookingCurrenciesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public BookingCurrenciesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -160,7 +161,7 @@ public class BookingCurrenciesRequestBuilder extends BaseRequestBuilder {
         return new BookingCurrenciesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of bookingCurrency objects available to a Microsoft Bookings business.
+     * Get entities from bookingCurrencies
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
@@ -206,7 +207,7 @@ public class BookingCurrenciesRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

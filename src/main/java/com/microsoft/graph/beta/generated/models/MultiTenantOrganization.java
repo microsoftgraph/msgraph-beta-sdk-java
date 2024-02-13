@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MultiTenantOrganization extends Entity implements Parsable {
     /**
-     * Instantiates a new MultiTenantOrganization and sets the default values.
+     * Instantiates a new {@link MultiTenantOrganization} and sets the default values.
      */
     public MultiTenantOrganization() {
         super();
@@ -18,7 +18,7 @@ public class MultiTenantOrganization extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MultiTenantOrganization
+     * @return a {@link MultiTenantOrganization}
      */
     @jakarta.annotation.Nonnull
     public static MultiTenantOrganization createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class MultiTenantOrganization extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. Date when multitenant organization was created. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -35,7 +35,7 @@ public class MultiTenantOrganization extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. Description of the multitenant organization.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -43,7 +43,7 @@ public class MultiTenantOrganization extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. Display name of the multitenant organization.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -51,7 +51,7 @@ public class MultiTenantOrganization extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -66,7 +66,7 @@ public class MultiTenantOrganization extends Entity implements Parsable {
     }
     /**
      * Gets the joinRequest property value. Defines the status of a tenant joining a multitenant organization.
-     * @return a MultiTenantOrganizationJoinRequestRecord
+     * @return a {@link MultiTenantOrganizationJoinRequestRecord}
      */
     @jakarta.annotation.Nullable
     public MultiTenantOrganizationJoinRequestRecord getJoinRequest() {
@@ -74,7 +74,7 @@ public class MultiTenantOrganization extends Entity implements Parsable {
     }
     /**
      * Gets the state property value. State of the multitenant organization. The possible values are: active, inactive, unknownFutureValue. active indicates the multitenant organization is created. inactive indicates the multitenant organization isn't created. Read-only.
-     * @return a MultiTenantOrganizationState
+     * @return a {@link MultiTenantOrganizationState}
      */
     @jakarta.annotation.Nullable
     public MultiTenantOrganizationState getState() {
@@ -82,7 +82,7 @@ public class MultiTenantOrganization extends Entity implements Parsable {
     }
     /**
      * Gets the tenants property value. Defines tenants added to a multitenant organization.
-     * @return a java.util.List<MultiTenantOrganizationMember>
+     * @return a {@link java.util.List<MultiTenantOrganizationMember>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<MultiTenantOrganizationMember> getTenants() {

@@ -30,6 +30,7 @@ import java.util.Objects;
 public class GroupsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -37,6 +38,7 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the delta method.
+     * @return a {@link DeltaRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DeltaRequestBuilder delta() {
@@ -44,6 +46,7 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the evaluateDynamicMembership method.
+     * @return a {@link EvaluateDynamicMembershipRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public EvaluateDynamicMembershipRequestBuilder evaluateDynamicMembership() {
@@ -51,6 +54,7 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getByIds method.
+     * @return a {@link GetByIdsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetByIdsRequestBuilder getByIds() {
@@ -58,6 +62,7 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getUserOwnedObjects method.
+     * @return a {@link GetUserOwnedObjectsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetUserOwnedObjectsRequestBuilder getUserOwnedObjects() {
@@ -65,6 +70,7 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the validateProperties method.
+     * @return a {@link ValidatePropertiesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ValidatePropertiesRequestBuilder validateProperties() {
@@ -73,7 +79,7 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the collection of group entities.
      * @param groupId The unique identifier of group
-     * @return a GroupItemRequestBuilder
+     * @return a {@link GroupItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GroupItemRequestBuilder byGroupId(@jakarta.annotation.Nonnull final String groupId) {
@@ -83,7 +89,7 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
         return new GroupItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new GroupsRequestBuilder and sets the default values.
+     * Instantiates a new {@link GroupsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -91,7 +97,7 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new GroupsRequestBuilder and sets the default values.
+     * Instantiates a new {@link GroupsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -100,7 +106,8 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List all the groups available in an organization, excluding dynamic distribution groups. To retrieve dynamic distribution groups, use the Exchange admin center. This operation returns by default only a subset of the more commonly used properties for each group. These default properties are noted in the Properties section. To get properties that are not returned by default, do a GET operation for the group and specify the properties in a $select OData query option. The hasMembersWithLicenseErrors and isArchived properties are an exception and are not returned in the $select query.
-     * @return a GroupCollectionResponse
+     * @return a {@link GroupCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/group-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -110,21 +117,22 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
     /**
      * List all the groups available in an organization, excluding dynamic distribution groups. To retrieve dynamic distribution groups, use the Exchange admin center. This operation returns by default only a subset of the more commonly used properties for each group. These default properties are noted in the Properties section. To get properties that are not returned by default, do a GET operation for the group and specify the properties in a $select OData query option. The hasMembersWithLicenseErrors and isArchived properties are an exception and are not returned in the $select query.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a GroupCollectionResponse
+     * @return a {@link GroupCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/group-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GroupCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, GroupCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new group as specified in the request body. You can create one of the following groups: This operation returns by default only a subset of the properties for each group. These default properties are noted in the Properties section. To get properties that are not returned by default, do a GET operation and specify the properties in a $select OData query option. Note: To create a team, first create a group then add a team to it, see create team.
      * @param body The request body
-     * @return a Group
+     * @return a {@link Group}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/group-post-groups?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -135,7 +143,8 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
      * Create a new group as specified in the request body. You can create one of the following groups: This operation returns by default only a subset of the properties for each group. These default properties are noted in the Properties section. To get properties that are not returned by default, do a GET operation and specify the properties in a $select OData query option. Note: To create a team, first create a group then add a team to it, see create team.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a Group
+     * @return a {@link Group}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/group-post-groups?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -143,13 +152,12 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, Group::createFromDiscriminatorValue);
     }
     /**
      * List all the groups available in an organization, excluding dynamic distribution groups. To retrieve dynamic distribution groups, use the Exchange admin center. This operation returns by default only a subset of the more commonly used properties for each group. These default properties are noted in the Properties section. To get properties that are not returned by default, do a GET operation for the group and specify the properties in a $select OData query option. The hasMembersWithLicenseErrors and isArchived properties are an exception and are not returned in the $select query.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -158,7 +166,7 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
     /**
      * List all the groups available in an organization, excluding dynamic distribution groups. To retrieve dynamic distribution groups, use the Exchange admin center. This operation returns by default only a subset of the more commonly used properties for each group. These default properties are noted in the Properties section. To get properties that are not returned by default, do a GET operation for the group and specify the properties in a $select OData query option. The hasMembersWithLicenseErrors and isArchived properties are an exception and are not returned in the $select query.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -170,7 +178,7 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new group as specified in the request body. You can create one of the following groups: This operation returns by default only a subset of the properties for each group. These default properties are noted in the Properties section. To get properties that are not returned by default, do a GET operation and specify the properties in a $select OData query option. Note: To create a team, first create a group then add a team to it, see create team.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final Group body) {
@@ -180,12 +188,12 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
      * Create a new group as specified in the request body. You can create one of the following groups: This operation returns by default only a subset of the properties for each group. These default properties are noted in the Properties section. To get properties that are not returned by default, do a GET operation and specify the properties in a $select OData query option. Note: To create a team, first create a group then add a team to it, see create team.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final Group body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/groups", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -194,7 +202,7 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a GroupsRequestBuilder
+     * @return a {@link GroupsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GroupsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -248,7 +256,7 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

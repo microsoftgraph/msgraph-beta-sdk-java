@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AndroidEnterpriseWiFiConfiguration extends AndroidWiFiConfiguration implements Parsable {
     /**
-     * Instantiates a new AndroidEnterpriseWiFiConfiguration and sets the default values.
+     * Instantiates a new {@link AndroidEnterpriseWiFiConfiguration} and sets the default values.
      */
     public AndroidEnterpriseWiFiConfiguration() {
         super();
@@ -21,7 +21,7 @@ public class AndroidEnterpriseWiFiConfiguration extends AndroidWiFiConfiguration
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AndroidEnterpriseWiFiConfiguration
+     * @return a {@link AndroidEnterpriseWiFiConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static AndroidEnterpriseWiFiConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class AndroidEnterpriseWiFiConfiguration extends AndroidWiFiConfiguration
     }
     /**
      * Gets the authenticationMethod property value. Indicates the Authentication Method the client (device) needs to use when the EAP Type is configured to PEAP or EAP-TTLS. Possible values are: certificate, usernameAndPassword, derivedCredential.
-     * @return a WiFiAuthenticationMethod
+     * @return a {@link WiFiAuthenticationMethod}
      */
     @jakarta.annotation.Nullable
     public WiFiAuthenticationMethod getAuthenticationMethod() {
@@ -38,7 +38,7 @@ public class AndroidEnterpriseWiFiConfiguration extends AndroidWiFiConfiguration
     }
     /**
      * Gets the eapType property value. Extensible Authentication Protocol (EAP) Configuration Types.
-     * @return a AndroidEapType
+     * @return a {@link AndroidEapType}
      */
     @jakarta.annotation.Nullable
     public AndroidEapType getEapType() {
@@ -46,7 +46,7 @@ public class AndroidEnterpriseWiFiConfiguration extends AndroidWiFiConfiguration
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -66,7 +66,7 @@ public class AndroidEnterpriseWiFiConfiguration extends AndroidWiFiConfiguration
     }
     /**
      * Gets the identityCertificateForClientAuthentication property value. Identity Certificate for client authentication when EAP Type is configured to EAP-TLS, EAP-TTLS (with Certificate Authentication), or PEAP (with Certificate Authentication). This is the certificate presented by client to the Wi-Fi endpoint. The authentication server sitting behind the Wi-Fi endpoint must accept this certificate to successfully establish a Wi-Fi connection.
-     * @return a AndroidCertificateProfileBase
+     * @return a {@link AndroidCertificateProfileBase}
      */
     @jakarta.annotation.Nullable
     public AndroidCertificateProfileBase getIdentityCertificateForClientAuthentication() {
@@ -74,7 +74,7 @@ public class AndroidEnterpriseWiFiConfiguration extends AndroidWiFiConfiguration
     }
     /**
      * Gets the innerAuthenticationProtocolForEapTtls property value. Non-EAP Method for Authentication (Inner Identity) when EAP Type is EAP-TTLS and Authenticationmethod is Username and Password. Possible values are: unencryptedPassword, challengeHandshakeAuthenticationProtocol, microsoftChap, microsoftChapVersionTwo.
-     * @return a NonEapAuthenticationMethodForEapTtlsType
+     * @return a {@link NonEapAuthenticationMethodForEapTtlsType}
      */
     @jakarta.annotation.Nullable
     public NonEapAuthenticationMethodForEapTtlsType getInnerAuthenticationProtocolForEapTtls() {
@@ -82,7 +82,7 @@ public class AndroidEnterpriseWiFiConfiguration extends AndroidWiFiConfiguration
     }
     /**
      * Gets the innerAuthenticationProtocolForPeap property value. Non-EAP Method for Authentication (Inner Identity) when EAP Type is PEAP and Authenticationmethod is Username and Password. Possible values are: none, microsoftChapVersionTwo.
-     * @return a NonEapAuthenticationMethodForPeap
+     * @return a {@link NonEapAuthenticationMethodForPeap}
      */
     @jakarta.annotation.Nullable
     public NonEapAuthenticationMethodForPeap getInnerAuthenticationProtocolForPeap() {
@@ -90,7 +90,7 @@ public class AndroidEnterpriseWiFiConfiguration extends AndroidWiFiConfiguration
     }
     /**
      * Gets the outerIdentityPrivacyTemporaryValue property value. Enable identity privacy (Outer Identity) when EAP Type is configured to EAP-TTLS or PEAP. The String provided here is used to mask the username of individual users when they attempt to connect to Wi-Fi network.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOuterIdentityPrivacyTemporaryValue() {
@@ -98,7 +98,7 @@ public class AndroidEnterpriseWiFiConfiguration extends AndroidWiFiConfiguration
     }
     /**
      * Gets the passwordFormatString property value. Password format string used to build the password to connect to wifi
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPasswordFormatString() {
@@ -106,7 +106,7 @@ public class AndroidEnterpriseWiFiConfiguration extends AndroidWiFiConfiguration
     }
     /**
      * Gets the preSharedKey property value. PreSharedKey used to build the password to connect to wifi
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPreSharedKey() {
@@ -114,7 +114,7 @@ public class AndroidEnterpriseWiFiConfiguration extends AndroidWiFiConfiguration
     }
     /**
      * Gets the rootCertificateForServerValidation property value. Trusted Root Certificate for Server Validation when EAP Type is configured to EAP-TLS, EAP-TTLS or PEAP. This is the certificate presented by the Wi-Fi endpoint when the device attempts to connect to Wi-Fi endpoint. The device (or user) must accept this certificate to continue the connection attempt.
-     * @return a AndroidTrustedRootCertificate
+     * @return a {@link AndroidTrustedRootCertificate}
      */
     @jakarta.annotation.Nullable
     public AndroidTrustedRootCertificate getRootCertificateForServerValidation() {
@@ -122,7 +122,7 @@ public class AndroidEnterpriseWiFiConfiguration extends AndroidWiFiConfiguration
     }
     /**
      * Gets the trustedServerCertificateNames property value. Trusted server certificate names when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. This is the common name used in the certificates issued by your trusted certificate authority (CA). If you provide this information, you can bypass the dynamic trust dialog that is displayed on end users' devices when they connect to this Wi-Fi network.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getTrustedServerCertificateNames() {
@@ -130,7 +130,7 @@ public class AndroidEnterpriseWiFiConfiguration extends AndroidWiFiConfiguration
     }
     /**
      * Gets the usernameFormatString property value. Username format string used to build the username to connect to wifi
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUsernameFormatString() {

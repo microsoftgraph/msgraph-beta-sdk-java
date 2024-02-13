@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SensitiveType extends Entity implements Parsable {
     /**
-     * Instantiates a new SensitiveType and sets the default values.
+     * Instantiates a new {@link SensitiveType} and sets the default values.
      */
     public SensitiveType() {
         super();
@@ -18,7 +18,7 @@ public class SensitiveType extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SensitiveType
+     * @return a {@link SensitiveType}
      */
     @jakarta.annotation.Nonnull
     public static SensitiveType createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class SensitiveType extends Entity implements Parsable {
     }
     /**
      * Gets the classificationMethod property value. The classificationMethod property
-     * @return a ClassificationMethod
+     * @return a {@link ClassificationMethod}
      */
     @jakarta.annotation.Nullable
     public ClassificationMethod getClassificationMethod() {
@@ -35,7 +35,7 @@ public class SensitiveType extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The description property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -43,7 +43,7 @@ public class SensitiveType extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -61,7 +61,7 @@ public class SensitiveType extends Entity implements Parsable {
     }
     /**
      * Gets the name property value. The name property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -69,7 +69,7 @@ public class SensitiveType extends Entity implements Parsable {
     }
     /**
      * Gets the publisherName property value. The publisherName property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPublisherName() {
@@ -77,7 +77,7 @@ public class SensitiveType extends Entity implements Parsable {
     }
     /**
      * Gets the rulePackageId property value. The rulePackageId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRulePackageId() {
@@ -85,7 +85,7 @@ public class SensitiveType extends Entity implements Parsable {
     }
     /**
      * Gets the rulePackageType property value. The rulePackageType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRulePackageType() {
@@ -93,7 +93,7 @@ public class SensitiveType extends Entity implements Parsable {
     }
     /**
      * Gets the scope property value. The scope property
-     * @return a EnumSet<SensitiveTypeScope>
+     * @return a {@link EnumSet<SensitiveTypeScope>}
      */
     @jakarta.annotation.Nullable
     public EnumSet<SensitiveTypeScope> getScope() {
@@ -101,7 +101,7 @@ public class SensitiveType extends Entity implements Parsable {
     }
     /**
      * Gets the sensitiveTypeSource property value. The sensitiveTypeSource property
-     * @return a SensitiveTypeSource
+     * @return a {@link SensitiveTypeSource}
      */
     @jakarta.annotation.Nullable
     public SensitiveTypeSource getSensitiveTypeSource() {
@@ -109,7 +109,7 @@ public class SensitiveType extends Entity implements Parsable {
     }
     /**
      * Gets the state property value. The state property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getState() {

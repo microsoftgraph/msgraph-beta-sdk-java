@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DetectedSensitiveContent extends DetectedSensitiveContentBase implements Parsable {
     /**
-     * Instantiates a new DetectedSensitiveContent and sets the default values.
+     * Instantiates a new {@link DetectedSensitiveContent} and sets the default values.
      */
     public DetectedSensitiveContent() {
         super();
@@ -18,7 +18,7 @@ public class DetectedSensitiveContent extends DetectedSensitiveContentBase imple
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DetectedSensitiveContent
+     * @return a {@link DetectedSensitiveContent}
      */
     @jakarta.annotation.Nonnull
     public static DetectedSensitiveContent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -34,7 +34,7 @@ public class DetectedSensitiveContent extends DetectedSensitiveContentBase imple
     }
     /**
      * Gets the classificationAttributes property value. The classificationAttributes property
-     * @return a java.util.List<ClassificationAttribute>
+     * @return a {@link java.util.List<ClassificationAttribute>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ClassificationAttribute> getClassificationAttributes() {
@@ -42,7 +42,7 @@ public class DetectedSensitiveContent extends DetectedSensitiveContentBase imple
     }
     /**
      * Gets the classificationMethod property value. The classificationMethod property
-     * @return a ClassificationMethod
+     * @return a {@link ClassificationMethod}
      */
     @jakarta.annotation.Nullable
     public ClassificationMethod getClassificationMethod() {
@@ -50,7 +50,7 @@ public class DetectedSensitiveContent extends DetectedSensitiveContentBase imple
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -64,7 +64,7 @@ public class DetectedSensitiveContent extends DetectedSensitiveContentBase imple
     }
     /**
      * Gets the matches property value. The matches property
-     * @return a java.util.List<SensitiveContentLocation>
+     * @return a {@link java.util.List<SensitiveContentLocation>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<SensitiveContentLocation> getMatches() {
@@ -72,7 +72,7 @@ public class DetectedSensitiveContent extends DetectedSensitiveContentBase imple
     }
     /**
      * Gets the scope property value. The scope property
-     * @return a EnumSet<SensitiveTypeScope>
+     * @return a {@link EnumSet<SensitiveTypeScope>}
      */
     @jakarta.annotation.Nullable
     public EnumSet<SensitiveTypeScope> getScope() {
@@ -80,7 +80,7 @@ public class DetectedSensitiveContent extends DetectedSensitiveContentBase imple
     }
     /**
      * Gets the sensitiveTypeSource property value. The sensitiveTypeSource property
-     * @return a SensitiveTypeSource
+     * @return a {@link SensitiveTypeSource}
      */
     @jakarta.annotation.Nullable
     public SensitiveTypeSource getSensitiveTypeSource() {

@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EducationalActivity extends ItemFacet implements Parsable {
     /**
-     * Instantiates a new EducationalActivity and sets the default values.
+     * Instantiates a new {@link EducationalActivity} and sets the default values.
      */
     public EducationalActivity() {
         super();
@@ -19,7 +19,7 @@ public class EducationalActivity extends ItemFacet implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EducationalActivity
+     * @return a {@link EducationalActivity}
      */
     @jakarta.annotation.Nonnull
     public static EducationalActivity createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class EducationalActivity extends ItemFacet implements Parsable {
     }
     /**
      * Gets the completionMonthYear property value. The month and year the user graduated or completed the activity.
-     * @return a LocalDate
+     * @return a {@link LocalDate}
      */
     @jakarta.annotation.Nullable
     public LocalDate getCompletionMonthYear() {
@@ -36,7 +36,7 @@ public class EducationalActivity extends ItemFacet implements Parsable {
     }
     /**
      * Gets the endMonthYear property value. The month and year the user completed the educational activity referenced.
-     * @return a LocalDate
+     * @return a {@link LocalDate}
      */
     @jakarta.annotation.Nullable
     public LocalDate getEndMonthYear() {
@@ -44,7 +44,7 @@ public class EducationalActivity extends ItemFacet implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -58,7 +58,7 @@ public class EducationalActivity extends ItemFacet implements Parsable {
     }
     /**
      * Gets the institution property value. The institution property
-     * @return a InstitutionData
+     * @return a {@link InstitutionData}
      */
     @jakarta.annotation.Nullable
     public InstitutionData getInstitution() {
@@ -66,7 +66,7 @@ public class EducationalActivity extends ItemFacet implements Parsable {
     }
     /**
      * Gets the program property value. The program property
-     * @return a EducationalActivityDetail
+     * @return a {@link EducationalActivityDetail}
      */
     @jakarta.annotation.Nullable
     public EducationalActivityDetail getProgram() {
@@ -74,7 +74,7 @@ public class EducationalActivity extends ItemFacet implements Parsable {
     }
     /**
      * Gets the startMonthYear property value. The month and year the user commenced the activity referenced.
-     * @return a LocalDate
+     * @return a {@link LocalDate}
      */
     @jakarta.annotation.Nullable
     public LocalDate getStartMonthYear() {

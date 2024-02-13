@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementComplianceActionItem extends Entity implements Parsable {
     /**
-     * Instantiates a new DeviceManagementComplianceActionItem and sets the default values.
+     * Instantiates a new {@link DeviceManagementComplianceActionItem} and sets the default values.
      */
     public DeviceManagementComplianceActionItem() {
         super();
@@ -20,7 +20,7 @@ public class DeviceManagementComplianceActionItem extends Entity implements Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceManagementComplianceActionItem
+     * @return a {@link DeviceManagementComplianceActionItem}
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementComplianceActionItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -29,7 +29,7 @@ public class DeviceManagementComplianceActionItem extends Entity implements Pars
     }
     /**
      * Gets the actionType property value. Scheduled Action Type Enum
-     * @return a DeviceManagementComplianceActionType
+     * @return a {@link DeviceManagementComplianceActionType}
      */
     @jakarta.annotation.Nullable
     public DeviceManagementComplianceActionType getActionType() {
@@ -37,7 +37,7 @@ public class DeviceManagementComplianceActionItem extends Entity implements Pars
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -50,7 +50,7 @@ public class DeviceManagementComplianceActionItem extends Entity implements Pars
     }
     /**
      * Gets the gracePeriodHours property value. Number of hours to wait till the action will be enforced. Valid values 0 to 8760
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getGracePeriodHours() {
@@ -58,7 +58,7 @@ public class DeviceManagementComplianceActionItem extends Entity implements Pars
     }
     /**
      * Gets the notificationMessageCCList property value. A list of group IDs to speicify who to CC this notification message to. This collection can contain a maximum of 100 elements.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getNotificationMessageCCList() {
@@ -66,7 +66,7 @@ public class DeviceManagementComplianceActionItem extends Entity implements Pars
     }
     /**
      * Gets the notificationTemplateId property value. What notification Message template to use
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getNotificationTemplateId() {

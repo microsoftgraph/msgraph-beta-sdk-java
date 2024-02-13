@@ -18,7 +18,7 @@ public class ApprovalStage implements AdditionalDataHolder, BackedModel, Parsabl
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new ApprovalStage and sets the default values.
+     * Instantiates a new {@link ApprovalStage} and sets the default values.
      */
     public ApprovalStage() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class ApprovalStage implements AdditionalDataHolder, BackedModel, Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ApprovalStage
+     * @return a {@link ApprovalStage}
      */
     @jakarta.annotation.Nonnull
     public static ApprovalStage createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class ApprovalStage implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class ApprovalStage implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the approvalStageTimeOutInDays property value. The number of days that a request can be pending a response before it's automatically denied.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getApprovalStageTimeOutInDays() {
@@ -57,7 +57,7 @@ public class ApprovalStage implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -65,7 +65,7 @@ public class ApprovalStage implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the escalationApprovers property value. If escalation is enabled and the primary approvers don't respond before the escalation time, the escalationApprovers are the users who will be asked to approve requests. This can be a collection of singleUser, groupMembers, requestorManager, internalSponsors and externalSponsors.  When creating or updating a policy, if there are no escalation approvers, or escalation approvers aren't required for the stage, the value of this property should be an empty collection.
-     * @return a java.util.List<UserSet>
+     * @return a {@link java.util.List<UserSet>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserSet> getEscalationApprovers() {
@@ -73,7 +73,7 @@ public class ApprovalStage implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the escalationTimeInMinutes property value. If escalation is required, the time a request can be pending a response from a primary approver.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getEscalationTimeInMinutes() {
@@ -81,7 +81,7 @@ public class ApprovalStage implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -97,7 +97,7 @@ public class ApprovalStage implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the isApproverJustificationRequired property value. Indicates whether the approver is required to provide a justification for approving a request.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsApproverJustificationRequired() {
@@ -105,7 +105,7 @@ public class ApprovalStage implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the isEscalationEnabled property value. If true, then one or more escalation approvers are configured in this approval stage.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEscalationEnabled() {
@@ -113,7 +113,7 @@ public class ApprovalStage implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -121,7 +121,7 @@ public class ApprovalStage implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the primaryApprovers property value. The users who are asked to approve requests. A collection of singleUser, groupMembers, requestorManager, internalSponsors, externalSponsors and targetUserSponsors. When creating or updating a policy, include at least one userSet in this collection.
-     * @return a java.util.List<UserSet>
+     * @return a {@link java.util.List<UserSet>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserSet> getPrimaryApprovers() {

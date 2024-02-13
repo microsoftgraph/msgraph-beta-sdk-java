@@ -18,7 +18,7 @@ public class WindowsKioskProfile implements AdditionalDataHolder, BackedModel, P
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new WindowsKioskProfile and sets the default values.
+     * Instantiates a new {@link WindowsKioskProfile} and sets the default values.
      */
     public WindowsKioskProfile() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class WindowsKioskProfile implements AdditionalDataHolder, BackedModel, P
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WindowsKioskProfile
+     * @return a {@link WindowsKioskProfile}
      */
     @jakarta.annotation.Nonnull
     public static WindowsKioskProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class WindowsKioskProfile implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class WindowsKioskProfile implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the appConfiguration property value. The app base class used to identify the application info for the kiosk configuration
-     * @return a WindowsKioskAppConfiguration
+     * @return a {@link WindowsKioskAppConfiguration}
      */
     @jakarta.annotation.Nullable
     public WindowsKioskAppConfiguration getAppConfiguration() {
@@ -57,7 +57,7 @@ public class WindowsKioskProfile implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -65,7 +65,7 @@ public class WindowsKioskProfile implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -79,7 +79,7 @@ public class WindowsKioskProfile implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -87,7 +87,7 @@ public class WindowsKioskProfile implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the profileId property value. Key of the entity.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getProfileId() {
@@ -95,7 +95,7 @@ public class WindowsKioskProfile implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the profileName property value. This is a friendly nameused to identify a group of applications, the layout of these apps on the start menu and the users to whom this kiosk configuration is assigned.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getProfileName() {
@@ -103,7 +103,7 @@ public class WindowsKioskProfile implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the userAccountsConfiguration property value. The user accounts that will be locked to this kiosk configuration. This collection can contain a maximum of 100 elements.
-     * @return a java.util.List<WindowsKioskUser>
+     * @return a {@link java.util.List<WindowsKioskUser>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<WindowsKioskUser> getUserAccountsConfiguration() {

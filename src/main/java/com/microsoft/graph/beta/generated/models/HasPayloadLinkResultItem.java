@@ -21,7 +21,7 @@ public class HasPayloadLinkResultItem implements AdditionalDataHolder, BackedMod
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new HasPayloadLinkResultItem and sets the default values.
+     * Instantiates a new {@link HasPayloadLinkResultItem} and sets the default values.
      */
     public HasPayloadLinkResultItem() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -30,7 +30,7 @@ public class HasPayloadLinkResultItem implements AdditionalDataHolder, BackedMod
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a HasPayloadLinkResultItem
+     * @return a {@link HasPayloadLinkResultItem}
      */
     @jakarta.annotation.Nonnull
     public static HasPayloadLinkResultItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class HasPayloadLinkResultItem implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -52,7 +52,7 @@ public class HasPayloadLinkResultItem implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -60,7 +60,7 @@ public class HasPayloadLinkResultItem implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the error property value. Exception information indicates if check for this item was successful or not.Empty string for no error.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getError() {
@@ -68,7 +68,7 @@ public class HasPayloadLinkResultItem implements AdditionalDataHolder, BackedMod
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -82,7 +82,7 @@ public class HasPayloadLinkResultItem implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the hasLink property value. Indicate whether a payload has any link or not.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getHasLink() {
@@ -90,7 +90,7 @@ public class HasPayloadLinkResultItem implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -98,7 +98,7 @@ public class HasPayloadLinkResultItem implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the payloadId property value. Key of the Payload, In the format of Guid.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPayloadId() {
@@ -106,7 +106,7 @@ public class HasPayloadLinkResultItem implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the sources property value. The reason where the link comes from.
-     * @return a java.util.List<DeviceAndAppManagementAssignmentSource>
+     * @return a {@link java.util.List<DeviceAndAppManagementAssignmentSource>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceAndAppManagementAssignmentSource> getSources() {

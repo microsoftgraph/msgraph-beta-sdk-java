@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AwsAuthorizationSystem extends AuthorizationSystem implements Parsable {
     /**
-     * Instantiates a new AwsAuthorizationSystem and sets the default values.
+     * Instantiates a new {@link AwsAuthorizationSystem} and sets the default values.
      */
     public AwsAuthorizationSystem() {
         super();
@@ -18,7 +18,7 @@ public class AwsAuthorizationSystem extends AuthorizationSystem implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AwsAuthorizationSystem
+     * @return a {@link AwsAuthorizationSystem}
      */
     @jakarta.annotation.Nonnull
     public static AwsAuthorizationSystem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class AwsAuthorizationSystem extends AuthorizationSystem implements Parsa
     }
     /**
      * Gets the actions property value. List of actions for service in authorization system.
-     * @return a java.util.List<AwsAuthorizationSystemTypeAction>
+     * @return a {@link java.util.List<AwsAuthorizationSystemTypeAction>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AwsAuthorizationSystemTypeAction> getActions() {
@@ -35,7 +35,7 @@ public class AwsAuthorizationSystem extends AuthorizationSystem implements Parsa
     }
     /**
      * Gets the associatedIdentities property value. Identities in the authorization system.
-     * @return a AwsAssociatedIdentities
+     * @return a {@link AwsAssociatedIdentities}
      */
     @jakarta.annotation.Nullable
     public AwsAssociatedIdentities getAssociatedIdentities() {
@@ -43,7 +43,7 @@ public class AwsAuthorizationSystem extends AuthorizationSystem implements Parsa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -57,7 +57,7 @@ public class AwsAuthorizationSystem extends AuthorizationSystem implements Parsa
     }
     /**
      * Gets the policies property value. Policies associated with the AWS authorization system type.
-     * @return a java.util.List<AwsPolicy>
+     * @return a {@link java.util.List<AwsPolicy>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AwsPolicy> getPolicies() {
@@ -65,7 +65,7 @@ public class AwsAuthorizationSystem extends AuthorizationSystem implements Parsa
     }
     /**
      * Gets the resources property value. Resources associated with the authorization system type.
-     * @return a java.util.List<AwsAuthorizationSystemResource>
+     * @return a {@link java.util.List<AwsAuthorizationSystemResource>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AwsAuthorizationSystemResource> getResources() {
@@ -73,7 +73,7 @@ public class AwsAuthorizationSystem extends AuthorizationSystem implements Parsa
     }
     /**
      * Gets the services property value. Services associated with the authorization system type.
-     * @return a java.util.List<AuthorizationSystemTypeService>
+     * @return a {@link java.util.List<AuthorizationSystemTypeService>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthorizationSystemTypeService> getServices() {

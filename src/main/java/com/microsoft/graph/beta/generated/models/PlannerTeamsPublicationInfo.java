@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PlannerTeamsPublicationInfo extends PlannerTaskCreation implements Parsable {
     /**
-     * Instantiates a new PlannerTeamsPublicationInfo and sets the default values.
+     * Instantiates a new {@link PlannerTeamsPublicationInfo} and sets the default values.
      */
     public PlannerTeamsPublicationInfo() {
         super();
@@ -19,7 +19,7 @@ public class PlannerTeamsPublicationInfo extends PlannerTaskCreation implements 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PlannerTeamsPublicationInfo
+     * @return a {@link PlannerTeamsPublicationInfo}
      */
     @jakarta.annotation.Nonnull
     public static PlannerTeamsPublicationInfo createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class PlannerTeamsPublicationInfo extends PlannerTaskCreation implements 
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -43,7 +43,7 @@ public class PlannerTeamsPublicationInfo extends PlannerTaskCreation implements 
     }
     /**
      * Gets the lastModifiedDateTime property value. The date and time when this task was last modified by the publication process. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -51,7 +51,7 @@ public class PlannerTeamsPublicationInfo extends PlannerTaskCreation implements 
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -59,7 +59,7 @@ public class PlannerTeamsPublicationInfo extends PlannerTaskCreation implements 
     }
     /**
      * Gets the publicationId property value. The identifier of the publication. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPublicationId() {
@@ -67,7 +67,7 @@ public class PlannerTeamsPublicationInfo extends PlannerTaskCreation implements 
     }
     /**
      * Gets the publishedToPlanId property value. The identifier of the plannerPlan this task was originally placed in. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPublishedToPlanId() {
@@ -75,7 +75,7 @@ public class PlannerTeamsPublicationInfo extends PlannerTaskCreation implements 
     }
     /**
      * Gets the publishingTeamId property value. The identifier of the team that initiated the publication process. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPublishingTeamId() {
@@ -83,7 +83,7 @@ public class PlannerTeamsPublicationInfo extends PlannerTaskCreation implements 
     }
     /**
      * Gets the publishingTeamName property value. The display name of the team that initiated the publication process. This display name is for reference only, and might not represent the most up-to-date name of the team. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPublishingTeamName() {

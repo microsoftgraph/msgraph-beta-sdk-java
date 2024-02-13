@@ -18,7 +18,7 @@ public class DeviceManagementApplicabilityRuleDeviceMode implements AdditionalDa
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new DeviceManagementApplicabilityRuleDeviceMode and sets the default values.
+     * Instantiates a new {@link DeviceManagementApplicabilityRuleDeviceMode} and sets the default values.
      */
     public DeviceManagementApplicabilityRuleDeviceMode() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class DeviceManagementApplicabilityRuleDeviceMode implements AdditionalDa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceManagementApplicabilityRuleDeviceMode
+     * @return a {@link DeviceManagementApplicabilityRuleDeviceMode}
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementApplicabilityRuleDeviceMode createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class DeviceManagementApplicabilityRuleDeviceMode implements AdditionalDa
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class DeviceManagementApplicabilityRuleDeviceMode implements AdditionalDa
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class DeviceManagementApplicabilityRuleDeviceMode implements AdditionalDa
     }
     /**
      * Gets the deviceMode property value. Windows 10 Device Mode type.
-     * @return a Windows10DeviceModeType
+     * @return a {@link Windows10DeviceModeType}
      */
     @jakarta.annotation.Nullable
     public Windows10DeviceModeType getDeviceMode() {
@@ -65,7 +65,7 @@ public class DeviceManagementApplicabilityRuleDeviceMode implements AdditionalDa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -78,7 +78,7 @@ public class DeviceManagementApplicabilityRuleDeviceMode implements AdditionalDa
     }
     /**
      * Gets the name property value. Name for object.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -86,7 +86,7 @@ public class DeviceManagementApplicabilityRuleDeviceMode implements AdditionalDa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -94,7 +94,7 @@ public class DeviceManagementApplicabilityRuleDeviceMode implements AdditionalDa
     }
     /**
      * Gets the ruleType property value. Supported Applicability rule types for Device Configuration
-     * @return a DeviceManagementApplicabilityRuleType
+     * @return a {@link DeviceManagementApplicabilityRuleType}
      */
     @jakarta.annotation.Nullable
     public DeviceManagementApplicabilityRuleType getRuleType() {

@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IosVppAppAssignedUserLicense extends IosVppAppAssignedLicense implements Parsable {
     /**
-     * Instantiates a new IosVppAppAssignedUserLicense and sets the default values.
+     * Instantiates a new {@link IosVppAppAssignedUserLicense} and sets the default values.
      */
     public IosVppAppAssignedUserLicense() {
         super();
@@ -20,7 +20,7 @@ public class IosVppAppAssignedUserLicense extends IosVppAppAssignedLicense imple
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a IosVppAppAssignedUserLicense
+     * @return a {@link IosVppAppAssignedUserLicense}
      */
     @jakarta.annotation.Nonnull
     public static IosVppAppAssignedUserLicense createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -29,7 +29,7 @@ public class IosVppAppAssignedUserLicense extends IosVppAppAssignedLicense imple
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

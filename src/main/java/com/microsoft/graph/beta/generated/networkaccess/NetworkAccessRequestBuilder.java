@@ -32,6 +32,7 @@ import java.util.Objects;
 public class NetworkAccessRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the connectivity property of the microsoft.graph.networkaccess.networkAccessRoot entity.
+     * @return a {@link ConnectivityRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ConnectivityRequestBuilder connectivity() {
@@ -39,6 +40,7 @@ public class NetworkAccessRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the filteringPolicies property of the microsoft.graph.networkaccess.networkAccessRoot entity.
+     * @return a {@link FilteringPoliciesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public FilteringPoliciesRequestBuilder filteringPolicies() {
@@ -46,6 +48,7 @@ public class NetworkAccessRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the filteringProfiles property of the microsoft.graph.networkaccess.networkAccessRoot entity.
+     * @return a {@link FilteringProfilesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public FilteringProfilesRequestBuilder filteringProfiles() {
@@ -53,6 +56,7 @@ public class NetworkAccessRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the forwardingPolicies property of the microsoft.graph.networkaccess.networkAccessRoot entity.
+     * @return a {@link ForwardingPoliciesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ForwardingPoliciesRequestBuilder forwardingPolicies() {
@@ -60,6 +64,7 @@ public class NetworkAccessRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the forwardingProfiles property of the microsoft.graph.networkaccess.networkAccessRoot entity.
+     * @return a {@link ForwardingProfilesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ForwardingProfilesRequestBuilder forwardingProfiles() {
@@ -67,6 +72,7 @@ public class NetworkAccessRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the logs property of the microsoft.graph.networkaccess.networkAccessRoot entity.
+     * @return a {@link LogsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public LogsRequestBuilder logs() {
@@ -74,6 +80,7 @@ public class NetworkAccessRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the onboard method.
+     * @return a {@link MicrosoftGraphNetworkaccessOnboardRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MicrosoftGraphNetworkaccessOnboardRequestBuilder microsoftGraphNetworkaccessOnboard() {
@@ -81,6 +88,7 @@ public class NetworkAccessRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the reports property of the microsoft.graph.networkaccess.networkAccessRoot entity.
+     * @return a {@link ReportsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ReportsRequestBuilder reports() {
@@ -88,6 +96,7 @@ public class NetworkAccessRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the settings property of the microsoft.graph.networkaccess.networkAccessRoot entity.
+     * @return a {@link SettingsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SettingsRequestBuilder settings() {
@@ -95,13 +104,14 @@ public class NetworkAccessRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the tenantStatus property of the microsoft.graph.networkaccess.networkAccessRoot entity.
+     * @return a {@link TenantStatusRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TenantStatusRequestBuilder tenantStatus() {
         return new TenantStatusRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new NetworkAccessRequestBuilder and sets the default values.
+     * Instantiates a new {@link NetworkAccessRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -109,7 +119,7 @@ public class NetworkAccessRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/networkAccess{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new NetworkAccessRequestBuilder and sets the default values.
+     * Instantiates a new {@link NetworkAccessRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -118,7 +128,8 @@ public class NetworkAccessRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get networkAccess
-     * @return a NetworkAccessRoot
+     * @return a {@link NetworkAccessRoot}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public NetworkAccessRoot get() {
@@ -127,20 +138,21 @@ public class NetworkAccessRequestBuilder extends BaseRequestBuilder {
     /**
      * Get networkAccess
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a NetworkAccessRoot
+     * @return a {@link NetworkAccessRoot}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public NetworkAccessRoot get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, NetworkAccessRoot::createFromDiscriminatorValue);
     }
     /**
      * Update networkAccess
      * @param body The request body
-     * @return a NetworkAccessRoot
+     * @return a {@link NetworkAccessRoot}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public NetworkAccessRoot patch(@jakarta.annotation.Nonnull final NetworkAccessRoot body) {
@@ -150,20 +162,20 @@ public class NetworkAccessRequestBuilder extends BaseRequestBuilder {
      * Update networkAccess
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a NetworkAccessRoot
+     * @return a {@link NetworkAccessRoot}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public NetworkAccessRoot patch(@jakarta.annotation.Nonnull final NetworkAccessRoot body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, NetworkAccessRoot::createFromDiscriminatorValue);
     }
     /**
      * Get networkAccess
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -172,7 +184,7 @@ public class NetworkAccessRequestBuilder extends BaseRequestBuilder {
     /**
      * Get networkAccess
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -184,7 +196,7 @@ public class NetworkAccessRequestBuilder extends BaseRequestBuilder {
     /**
      * Update networkAccess
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final NetworkAccessRoot body) {
@@ -194,12 +206,12 @@ public class NetworkAccessRequestBuilder extends BaseRequestBuilder {
      * Update networkAccess
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final NetworkAccessRoot body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/networkAccess", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -208,7 +220,7 @@ public class NetworkAccessRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a NetworkAccessRequestBuilder
+     * @return a {@link NetworkAccessRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public NetworkAccessRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -232,7 +244,7 @@ public class NetworkAccessRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class VirtualEventRegistrationQuestionBase extends Entity implements Parsable {
     /**
-     * Instantiates a new VirtualEventRegistrationQuestionBase and sets the default values.
+     * Instantiates a new {@link VirtualEventRegistrationQuestionBase} and sets the default values.
      */
     public VirtualEventRegistrationQuestionBase() {
         super();
@@ -17,7 +17,7 @@ public class VirtualEventRegistrationQuestionBase extends Entity implements Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a VirtualEventRegistrationQuestionBase
+     * @return a {@link VirtualEventRegistrationQuestionBase}
      */
     @jakarta.annotation.Nonnull
     public static VirtualEventRegistrationQuestionBase createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -34,7 +34,7 @@ public class VirtualEventRegistrationQuestionBase extends Entity implements Pars
     }
     /**
      * Gets the displayName property value. The displayName property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -42,7 +42,7 @@ public class VirtualEventRegistrationQuestionBase extends Entity implements Pars
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -53,7 +53,7 @@ public class VirtualEventRegistrationQuestionBase extends Entity implements Pars
     }
     /**
      * Gets the isRequired property value. The isRequired property
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsRequired() {

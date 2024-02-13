@@ -20,7 +20,7 @@ public class ValidateAuthenticationConfigurationPostRequestBody implements Addit
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new ValidateAuthenticationConfigurationPostRequestBody and sets the default values.
+     * Instantiates a new {@link ValidateAuthenticationConfigurationPostRequestBody} and sets the default values.
      */
     public ValidateAuthenticationConfigurationPostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -29,7 +29,7 @@ public class ValidateAuthenticationConfigurationPostRequestBody implements Addit
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ValidateAuthenticationConfigurationPostRequestBody
+     * @return a {@link ValidateAuthenticationConfigurationPostRequestBody}
      */
     @jakarta.annotation.Nonnull
     public static ValidateAuthenticationConfigurationPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,7 +38,7 @@ public class ValidateAuthenticationConfigurationPostRequestBody implements Addit
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -51,7 +51,7 @@ public class ValidateAuthenticationConfigurationPostRequestBody implements Addit
     }
     /**
      * Gets the authenticationConfiguration property value. The authenticationConfiguration property
-     * @return a CustomExtensionAuthenticationConfiguration
+     * @return a {@link CustomExtensionAuthenticationConfiguration}
      */
     @jakarta.annotation.Nullable
     public CustomExtensionAuthenticationConfiguration getAuthenticationConfiguration() {
@@ -59,7 +59,7 @@ public class ValidateAuthenticationConfigurationPostRequestBody implements Addit
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -67,7 +67,7 @@ public class ValidateAuthenticationConfigurationPostRequestBody implements Addit
     }
     /**
      * Gets the endpointConfiguration property value. The endpointConfiguration property
-     * @return a CustomExtensionEndpointConfiguration
+     * @return a {@link CustomExtensionEndpointConfiguration}
      */
     @jakarta.annotation.Nullable
     public CustomExtensionEndpointConfiguration getEndpointConfiguration() {
@@ -75,7 +75,7 @@ public class ValidateAuthenticationConfigurationPostRequestBody implements Addit
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

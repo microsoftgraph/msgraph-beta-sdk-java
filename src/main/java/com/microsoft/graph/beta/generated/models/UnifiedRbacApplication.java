@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UnifiedRbacApplication extends Entity implements Parsable {
     /**
-     * Instantiates a new UnifiedRbacApplication and sets the default values.
+     * Instantiates a new {@link UnifiedRbacApplication} and sets the default values.
      */
     public UnifiedRbacApplication() {
         super();
@@ -17,7 +17,7 @@ public class UnifiedRbacApplication extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UnifiedRbacApplication
+     * @return a {@link UnifiedRbacApplication}
      */
     @jakarta.annotation.Nonnull
     public static UnifiedRbacApplication createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class UnifiedRbacApplication extends Entity implements Parsable {
     }
     /**
      * Gets the customAppScopes property value. Workload-specific scope object that represents the resources for which the principal has been granted access.
-     * @return a java.util.List<CustomAppScope>
+     * @return a {@link java.util.List<CustomAppScope>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<CustomAppScope> getCustomAppScopes() {
@@ -34,7 +34,7 @@ public class UnifiedRbacApplication extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -48,7 +48,7 @@ public class UnifiedRbacApplication extends Entity implements Parsable {
     }
     /**
      * Gets the resourceNamespaces property value. Resource that represents a collection of related actions.
-     * @return a java.util.List<UnifiedRbacResourceNamespace>
+     * @return a {@link java.util.List<UnifiedRbacResourceNamespace>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnifiedRbacResourceNamespace> getResourceNamespaces() {
@@ -56,7 +56,7 @@ public class UnifiedRbacApplication extends Entity implements Parsable {
     }
     /**
      * Gets the roleAssignments property value. Resource to grant access to users or groups.
-     * @return a java.util.List<UnifiedRoleAssignment>
+     * @return a {@link java.util.List<UnifiedRoleAssignment>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnifiedRoleAssignment> getRoleAssignments() {
@@ -64,7 +64,7 @@ public class UnifiedRbacApplication extends Entity implements Parsable {
     }
     /**
      * Gets the roleDefinitions property value. The roles allowed by RBAC providers and the permissions assigned to the roles.
-     * @return a java.util.List<UnifiedRoleDefinition>
+     * @return a {@link java.util.List<UnifiedRoleDefinition>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnifiedRoleDefinition> getRoleDefinitions() {
@@ -72,7 +72,7 @@ public class UnifiedRbacApplication extends Entity implements Parsable {
     }
     /**
      * Gets the transitiveRoleAssignments property value. Resource to grant access to users or groups that are transitive.
-     * @return a java.util.List<UnifiedRoleAssignment>
+     * @return a {@link java.util.List<UnifiedRoleAssignment>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnifiedRoleAssignment> getTransitiveRoleAssignments() {

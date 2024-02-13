@@ -20,7 +20,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GetSharedUseLicenseUsageReportRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new GetSharedUseLicenseUsageReportRequestBuilder and sets the default values.
+     * Instantiates a new {@link GetSharedUseLicenseUsageReportRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -28,7 +28,7 @@ public class GetSharedUseLicenseUsageReportRequestBuilder extends BaseRequestBui
         super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/reports/getSharedUseLicenseUsageReport", pathParameters);
     }
     /**
-     * Instantiates a new GetSharedUseLicenseUsageReportRequestBuilder and sets the default values.
+     * Instantiates a new {@link GetSharedUseLicenseUsageReportRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -38,7 +38,8 @@ public class GetSharedUseLicenseUsageReportRequestBuilder extends BaseRequestBui
     /**
      * Get a usage report on shared-use licenses, such as servicePlanId, licenseCount, and claimedLicenseCount, for real-time, 7 days, or 28 days trend.
      * @param body The request body
-     * @return a InputStream
+     * @return a {@link InputStream}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The getSharedUseLicenseUsageReport API is deprecated and will stop returning on Oct 17, 2023. Please use getFrontlineReport instead. as of 2023-05/getSharedUseLicenseUsageReport
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpcreports-getshareduselicenseusagereport?view=graph-rest-1.0">Find more info here</a>
@@ -52,7 +53,8 @@ public class GetSharedUseLicenseUsageReportRequestBuilder extends BaseRequestBui
      * Get a usage report on shared-use licenses, such as servicePlanId, licenseCount, and claimedLicenseCount, for real-time, 7 days, or 28 days trend.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a InputStream
+     * @return a {@link InputStream}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The getSharedUseLicenseUsageReport API is deprecated and will stop returning on Oct 17, 2023. Please use getFrontlineReport instead. as of 2023-05/getSharedUseLicenseUsageReport
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpcreports-getshareduselicenseusagereport?view=graph-rest-1.0">Find more info here</a>
@@ -63,14 +65,13 @@ public class GetSharedUseLicenseUsageReportRequestBuilder extends BaseRequestBui
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.sendPrimitive(requestInfo, errorMapping, InputStream.class);
     }
     /**
      * Get a usage report on shared-use licenses, such as servicePlanId, licenseCount, and claimedLicenseCount, for real-time, 7 days, or 28 days trend.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      * The getSharedUseLicenseUsageReport API is deprecated and will stop returning on Oct 17, 2023. Please use getFrontlineReport instead. as of 2023-05/getSharedUseLicenseUsageReport
      */
@@ -83,7 +84,7 @@ public class GetSharedUseLicenseUsageReportRequestBuilder extends BaseRequestBui
      * Get a usage report on shared-use licenses, such as servicePlanId, licenseCount, and claimedLicenseCount, for real-time, 7 days, or 28 days trend.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      * The getSharedUseLicenseUsageReport API is deprecated and will stop returning on Oct 17, 2023. Please use getFrontlineReport instead. as of 2023-05/getSharedUseLicenseUsageReport
      */
@@ -100,7 +101,7 @@ public class GetSharedUseLicenseUsageReportRequestBuilder extends BaseRequestBui
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a GetSharedUseLicenseUsageReportRequestBuilder
+     * @return a {@link GetSharedUseLicenseUsageReportRequestBuilder}
      * @deprecated
      * The getSharedUseLicenseUsageReport API is deprecated and will stop returning on Oct 17, 2023. Please use getFrontlineReport instead. as of 2023-05/getSharedUseLicenseUsageReport
      */

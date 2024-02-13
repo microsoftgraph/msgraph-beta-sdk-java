@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SecurityConfigurationTask extends DeviceAppManagementTask implements Parsable {
     /**
-     * Instantiates a new SecurityConfigurationTask and sets the default values.
+     * Instantiates a new {@link SecurityConfigurationTask} and sets the default values.
      */
     public SecurityConfigurationTask() {
         super();
@@ -21,7 +21,7 @@ public class SecurityConfigurationTask extends DeviceAppManagementTask implement
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SecurityConfigurationTask
+     * @return a {@link SecurityConfigurationTask}
      */
     @jakarta.annotation.Nonnull
     public static SecurityConfigurationTask createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class SecurityConfigurationTask extends DeviceAppManagementTask implement
     }
     /**
      * Gets the applicablePlatform property value. The endpoint security configuration applicable platform.
-     * @return a EndpointSecurityConfigurationApplicablePlatform
+     * @return a {@link EndpointSecurityConfigurationApplicablePlatform}
      */
     @jakarta.annotation.Nullable
     public EndpointSecurityConfigurationApplicablePlatform getApplicablePlatform() {
@@ -38,7 +38,7 @@ public class SecurityConfigurationTask extends DeviceAppManagementTask implement
     }
     /**
      * Gets the endpointSecurityPolicy property value. The endpoint security policy type.
-     * @return a EndpointSecurityConfigurationType
+     * @return a {@link EndpointSecurityConfigurationType}
      */
     @jakarta.annotation.Nullable
     public EndpointSecurityConfigurationType getEndpointSecurityPolicy() {
@@ -46,7 +46,7 @@ public class SecurityConfigurationTask extends DeviceAppManagementTask implement
     }
     /**
      * Gets the endpointSecurityPolicyProfile property value. The endpoint security policy profile type.
-     * @return a EndpointSecurityConfigurationProfileType
+     * @return a {@link EndpointSecurityConfigurationProfileType}
      */
     @jakarta.annotation.Nullable
     public EndpointSecurityConfigurationProfileType getEndpointSecurityPolicyProfile() {
@@ -54,7 +54,7 @@ public class SecurityConfigurationTask extends DeviceAppManagementTask implement
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -70,7 +70,7 @@ public class SecurityConfigurationTask extends DeviceAppManagementTask implement
     }
     /**
      * Gets the insights property value. Information about the mitigation.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getInsights() {
@@ -78,7 +78,7 @@ public class SecurityConfigurationTask extends DeviceAppManagementTask implement
     }
     /**
      * Gets the intendedSettings property value. The intended settings and their values.
-     * @return a java.util.List<KeyValuePair>
+     * @return a {@link java.util.List<KeyValuePair>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyValuePair> getIntendedSettings() {
@@ -86,7 +86,7 @@ public class SecurityConfigurationTask extends DeviceAppManagementTask implement
     }
     /**
      * Gets the managedDeviceCount property value. The number of vulnerable devices. Valid values 0 to 65536
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getManagedDeviceCount() {
@@ -94,7 +94,7 @@ public class SecurityConfigurationTask extends DeviceAppManagementTask implement
     }
     /**
      * Gets the managedDevices property value. The vulnerable managed devices.
-     * @return a java.util.List<VulnerableManagedDevice>
+     * @return a {@link java.util.List<VulnerableManagedDevice>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<VulnerableManagedDevice> getManagedDevices() {

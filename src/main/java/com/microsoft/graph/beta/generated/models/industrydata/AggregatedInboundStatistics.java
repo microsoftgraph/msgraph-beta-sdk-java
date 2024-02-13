@@ -18,7 +18,7 @@ public class AggregatedInboundStatistics implements AdditionalDataHolder, Backed
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new AggregatedInboundStatistics and sets the default values.
+     * Instantiates a new {@link AggregatedInboundStatistics} and sets the default values.
      */
     public AggregatedInboundStatistics() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class AggregatedInboundStatistics implements AdditionalDataHolder, Backed
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AggregatedInboundStatistics
+     * @return a {@link AggregatedInboundStatistics}
      */
     @jakarta.annotation.Nonnull
     public static AggregatedInboundStatistics createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class AggregatedInboundStatistics implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class AggregatedInboundStatistics implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class AggregatedInboundStatistics implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the errors property value. The aggregate count of errors encountered by activities during this run.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getErrors() {
@@ -65,7 +65,7 @@ public class AggregatedInboundStatistics implements AdditionalDataHolder, Backed
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -83,7 +83,7 @@ public class AggregatedInboundStatistics implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the groups property value. The aggregate count of active inbound groups processed during the run.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getGroups() {
@@ -91,7 +91,7 @@ public class AggregatedInboundStatistics implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the matchedPeopleByRole property value. The aggregate count of active people matched to a Microsoft Entra user, by role.
-     * @return a java.util.List<IndustryDataRunRoleCountMetric>
+     * @return a {@link java.util.List<IndustryDataRunRoleCountMetric>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<IndustryDataRunRoleCountMetric> getMatchedPeopleByRole() {
@@ -99,7 +99,7 @@ public class AggregatedInboundStatistics implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the memberships property value. The aggregate count of active inbound memberships processed during the run.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getMemberships() {
@@ -107,7 +107,7 @@ public class AggregatedInboundStatistics implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -115,7 +115,7 @@ public class AggregatedInboundStatistics implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the organizations property value. The aggregate count of active inbound organizations processed during the run.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getOrganizations() {
@@ -123,7 +123,7 @@ public class AggregatedInboundStatistics implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the people property value. The aggregate count of active inbound people processed during the run.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPeople() {
@@ -131,7 +131,7 @@ public class AggregatedInboundStatistics implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the unmatchedPeopleByRole property value. The aggregate count of active people not matched to a Microsoft Entra user, by role.
-     * @return a java.util.List<IndustryDataRunRoleCountMetric>
+     * @return a {@link java.util.List<IndustryDataRunRoleCountMetric>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<IndustryDataRunRoleCountMetric> getUnmatchedPeopleByRole() {
@@ -139,7 +139,7 @@ public class AggregatedInboundStatistics implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the warnings property value. The aggregate count of warnings generated by activities during this run.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getWarnings() {

@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Invitation extends Entity implements Parsable {
     /**
-     * Instantiates a new Invitation and sets the default values.
+     * Instantiates a new {@link Invitation} and sets the default values.
      */
     public Invitation() {
         super();
@@ -17,7 +17,7 @@ public class Invitation extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Invitation
+     * @return a {@link Invitation}
      */
     @jakarta.annotation.Nonnull
     public static Invitation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class Invitation extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -46,7 +46,7 @@ public class Invitation extends Entity implements Parsable {
     }
     /**
      * Gets the invitedUser property value. The user created as part of the invitation creation. Read-Only
-     * @return a User
+     * @return a {@link User}
      */
     @jakarta.annotation.Nullable
     public User getInvitedUser() {
@@ -54,7 +54,7 @@ public class Invitation extends Entity implements Parsable {
     }
     /**
      * Gets the invitedUserDisplayName property value. The display name of the user being invited.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getInvitedUserDisplayName() {
@@ -62,7 +62,7 @@ public class Invitation extends Entity implements Parsable {
     }
     /**
      * Gets the invitedUserEmailAddress property value. The email address of the user being invited. Required. The following special characters aren't permitted in the email address:Tilde (~)Exclamation point (!)At sign (@)Number sign (#)Dollar sign ($)Percent (%)Circumflex (^)Ampersand (&)Asterisk (*)Parentheses (( ))Hyphen (-)Plus sign (+)Equal sign (=)Brackets ([ ])Braces ({ })Backslash (/)Slash mark (/)Pipe (`
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getInvitedUserEmailAddress() {
@@ -70,7 +70,7 @@ public class Invitation extends Entity implements Parsable {
     }
     /**
      * Gets the invitedUserMessageInfo property value. Additional configuration for the message being sent to the invited user, including customizing message text, language and cc recipient list.
-     * @return a InvitedUserMessageInfo
+     * @return a {@link InvitedUserMessageInfo}
      */
     @jakarta.annotation.Nullable
     public InvitedUserMessageInfo getInvitedUserMessageInfo() {
@@ -78,7 +78,7 @@ public class Invitation extends Entity implements Parsable {
     }
     /**
      * Gets the invitedUserSponsors property value. The users or groups who are sponsors of the invited user. Sponsors are users and groups that are responsible for guest users' privileges in the tenant and for keeping the guest users' information and access up to date.
-     * @return a java.util.List<DirectoryObject>
+     * @return a {@link java.util.List<DirectoryObject>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getInvitedUserSponsors() {
@@ -86,7 +86,7 @@ public class Invitation extends Entity implements Parsable {
     }
     /**
      * Gets the invitedUserType property value. The userType of the user being invited. By default, this is Guest. You can invite as Member if you're a company administrator. The default is false.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getInvitedUserType() {
@@ -94,7 +94,7 @@ public class Invitation extends Entity implements Parsable {
     }
     /**
      * Gets the inviteRedeemUrl property value. The URL the user can use to redeem their invitation. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getInviteRedeemUrl() {
@@ -102,7 +102,7 @@ public class Invitation extends Entity implements Parsable {
     }
     /**
      * Gets the inviteRedirectUrl property value. The URL user should be redirected to once the invitation is redeemed. Required.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getInviteRedirectUrl() {
@@ -110,7 +110,7 @@ public class Invitation extends Entity implements Parsable {
     }
     /**
      * Gets the resetRedemption property value. Reset the user's redemption status and reinvite a user while retaining their user identifier, group memberships, and app assignments. This property allows you to enable a user to sign-in using a different email address from the one in the previous invitation. For more information about using this property, see Reset redemption status for a guest user (Preview).
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getResetRedemption() {
@@ -118,7 +118,7 @@ public class Invitation extends Entity implements Parsable {
     }
     /**
      * Gets the sendInvitationMessage property value. Indicates whether an email should be sent to the user being invited. The default is false.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getSendInvitationMessage() {
@@ -126,7 +126,7 @@ public class Invitation extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status of the invitation. Possible values: PendingAcceptance, Completed, InProgress, and Error
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getStatus() {

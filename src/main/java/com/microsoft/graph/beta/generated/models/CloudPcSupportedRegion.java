@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CloudPcSupportedRegion extends Entity implements Parsable {
     /**
-     * Instantiates a new CloudPcSupportedRegion and sets the default values.
+     * Instantiates a new {@link CloudPcSupportedRegion} and sets the default values.
      */
     public CloudPcSupportedRegion() {
         super();
@@ -18,7 +18,7 @@ public class CloudPcSupportedRegion extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CloudPcSupportedRegion
+     * @return a {@link CloudPcSupportedRegion}
      */
     @jakarta.annotation.Nonnull
     public static CloudPcSupportedRegion createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class CloudPcSupportedRegion extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The name for the supported region. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -35,7 +35,7 @@ public class CloudPcSupportedRegion extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -48,7 +48,7 @@ public class CloudPcSupportedRegion extends Entity implements Parsable {
     }
     /**
      * Gets the regionGroup property value. The regionGroup property
-     * @return a CloudPcRegionGroup
+     * @return a {@link CloudPcRegionGroup}
      */
     @jakarta.annotation.Nullable
     public CloudPcRegionGroup getRegionGroup() {
@@ -56,7 +56,7 @@ public class CloudPcSupportedRegion extends Entity implements Parsable {
     }
     /**
      * Gets the regionStatus property value. The status of the supported region. Possible values are: available, restricted, unavailable, unknownFutureValue. Read-only.
-     * @return a CloudPcSupportedRegionStatus
+     * @return a {@link CloudPcSupportedRegionStatus}
      */
     @jakarta.annotation.Nullable
     public CloudPcSupportedRegionStatus getRegionStatus() {
@@ -64,7 +64,7 @@ public class CloudPcSupportedRegion extends Entity implements Parsable {
     }
     /**
      * Gets the supportedSolution property value. The supportedSolution property
-     * @return a EnumSet<CloudPcManagementService>
+     * @return a {@link EnumSet<CloudPcManagementService>}
      */
     @jakarta.annotation.Nullable
     public EnumSet<CloudPcManagementService> getSupportedSolution() {

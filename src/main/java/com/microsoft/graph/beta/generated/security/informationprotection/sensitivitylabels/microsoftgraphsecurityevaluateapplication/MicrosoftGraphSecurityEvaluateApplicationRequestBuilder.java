@@ -19,7 +19,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MicrosoftGraphSecurityEvaluateApplicationRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new MicrosoftGraphSecurityEvaluateApplicationRequestBuilder and sets the default values.
+     * Instantiates a new {@link MicrosoftGraphSecurityEvaluateApplicationRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -27,7 +27,7 @@ public class MicrosoftGraphSecurityEvaluateApplicationRequestBuilder extends Bas
         super(requestAdapter, "{+baseurl}/security/informationProtection/sensitivityLabels/microsoft.graph.security.evaluateApplication", pathParameters);
     }
     /**
-     * Instantiates a new MicrosoftGraphSecurityEvaluateApplicationRequestBuilder and sets the default values.
+     * Instantiates a new {@link MicrosoftGraphSecurityEvaluateApplicationRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -37,7 +37,8 @@ public class MicrosoftGraphSecurityEvaluateApplicationRequestBuilder extends Bas
     /**
      * Compute the sensitivity label that should be applied and return the set of actions that must be taken to correctly label the information. This API is useful when a label should be set manually or explicitly by a user or service, rather than automatically based on file contents. Given contentInfo, which includes existing content metadata key-value pairs, and labelingOptions as an input, the API returns an informationProtectionAction object that contains one of more of the following: 
      * @param body The request body
-     * @return a EvaluateApplicationPostResponse
+     * @return a {@link EvaluateApplicationPostResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/security-sensitivitylabel-evaluateapplication?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -48,7 +49,8 @@ public class MicrosoftGraphSecurityEvaluateApplicationRequestBuilder extends Bas
      * Compute the sensitivity label that should be applied and return the set of actions that must be taken to correctly label the information. This API is useful when a label should be set manually or explicitly by a user or service, rather than automatically based on file contents. Given contentInfo, which includes existing content metadata key-value pairs, and labelingOptions as an input, the API returns an informationProtectionAction object that contains one of more of the following: 
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a EvaluateApplicationPostResponse
+     * @return a {@link EvaluateApplicationPostResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/security-sensitivitylabel-evaluateapplication?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -56,14 +58,13 @@ public class MicrosoftGraphSecurityEvaluateApplicationRequestBuilder extends Bas
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, EvaluateApplicationPostResponse::createFromDiscriminatorValue);
     }
     /**
      * Compute the sensitivity label that should be applied and return the set of actions that must be taken to correctly label the information. This API is useful when a label should be set manually or explicitly by a user or service, rather than automatically based on file contents. Given contentInfo, which includes existing content metadata key-value pairs, and labelingOptions as an input, the API returns an informationProtectionAction object that contains one of more of the following: 
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final EvaluateApplicationPostRequestBody body) {
@@ -73,7 +74,7 @@ public class MicrosoftGraphSecurityEvaluateApplicationRequestBuilder extends Bas
      * Compute the sensitivity label that should be applied and return the set of actions that must be taken to correctly label the information. This API is useful when a label should be set manually or explicitly by a user or service, rather than automatically based on file contents. Given contentInfo, which includes existing content metadata key-value pairs, and labelingOptions as an input, the API returns an informationProtectionAction object that contains one of more of the following: 
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final EvaluateApplicationPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -87,7 +88,7 @@ public class MicrosoftGraphSecurityEvaluateApplicationRequestBuilder extends Bas
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a MicrosoftGraphSecurityEvaluateApplicationRequestBuilder
+     * @return a {@link MicrosoftGraphSecurityEvaluateApplicationRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MicrosoftGraphSecurityEvaluateApplicationRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

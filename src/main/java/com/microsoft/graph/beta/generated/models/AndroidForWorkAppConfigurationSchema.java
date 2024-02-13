@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AndroidForWorkAppConfigurationSchema extends Entity implements Parsable {
     /**
-     * Instantiates a new AndroidForWorkAppConfigurationSchema and sets the default values.
+     * Instantiates a new {@link AndroidForWorkAppConfigurationSchema} and sets the default values.
      */
     public AndroidForWorkAppConfigurationSchema() {
         super();
@@ -20,7 +20,7 @@ public class AndroidForWorkAppConfigurationSchema extends Entity implements Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AndroidForWorkAppConfigurationSchema
+     * @return a {@link AndroidForWorkAppConfigurationSchema}
      */
     @jakarta.annotation.Nonnull
     public static AndroidForWorkAppConfigurationSchema createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -29,7 +29,7 @@ public class AndroidForWorkAppConfigurationSchema extends Entity implements Pars
     }
     /**
      * Gets the exampleJson property value. UTF8 encoded byte array containing example JSON string conforming to this schema that demonstrates how to set the configuration for this app
-     * @return a byte[]
+     * @return a {@link byte[]}
      */
     @jakarta.annotation.Nullable
     public byte[] getExampleJson() {
@@ -37,7 +37,7 @@ public class AndroidForWorkAppConfigurationSchema extends Entity implements Pars
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -48,7 +48,7 @@ public class AndroidForWorkAppConfigurationSchema extends Entity implements Pars
     }
     /**
      * Gets the schemaItems property value. Collection of items each representing a named configuration option in the schema
-     * @return a java.util.List<AndroidForWorkAppConfigurationSchemaItem>
+     * @return a {@link java.util.List<AndroidForWorkAppConfigurationSchemaItem>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AndroidForWorkAppConfigurationSchemaItem> getSchemaItems() {

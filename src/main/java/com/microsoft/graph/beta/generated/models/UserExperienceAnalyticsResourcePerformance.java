@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsResourcePerformance extends Entity implements Parsable {
     /**
-     * Instantiates a new UserExperienceAnalyticsResourcePerformance and sets the default values.
+     * Instantiates a new {@link UserExperienceAnalyticsResourcePerformance} and sets the default values.
      */
     public UserExperienceAnalyticsResourcePerformance() {
         super();
@@ -20,7 +20,7 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserExperienceAnalyticsResourcePerformance
+     * @return a {@link UserExperienceAnalyticsResourcePerformance}
      */
     @jakarta.annotation.Nonnull
     public static UserExperienceAnalyticsResourcePerformance createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -29,7 +29,7 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
     }
     /**
      * Gets the averageSpikeTimeScore property value. AverageSpikeTimeScore of a device or a model type. Valid values 0 to 100
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getAverageSpikeTimeScore() {
@@ -37,7 +37,7 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
     }
     /**
      * Gets the cpuClockSpeedInMHz property value. The clock speed of the processor, in MHz. Valid values 0 to 1000000
-     * @return a Double
+     * @return a {@link Double}
      */
     @jakarta.annotation.Nullable
     public Double getCpuClockSpeedInMHz() {
@@ -45,7 +45,7 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
     }
     /**
      * Gets the cpuDisplayName property value. The name of the processor on the device, For example, 11th Gen Intel(R) Core(TM) i7.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCpuDisplayName() {
@@ -53,7 +53,7 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
     }
     /**
      * Gets the cpuSpikeTimePercentage property value. CPU spike time in percentage. Valid values 0 to 100
-     * @return a Double
+     * @return a {@link Double}
      */
     @jakarta.annotation.Nullable
     public Double getCpuSpikeTimePercentage() {
@@ -61,7 +61,7 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
     }
     /**
      * Gets the cpuSpikeTimePercentageThreshold property value. Threshold of cpuSpikeTimeScore. Valid values 0 to 100
-     * @return a Double
+     * @return a {@link Double}
      */
     @jakarta.annotation.Nullable
     public Double getCpuSpikeTimePercentageThreshold() {
@@ -69,7 +69,7 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
     }
     /**
      * Gets the cpuSpikeTimeScore property value. The user experience analytics device CPU spike time score. Valid values 0 to 100
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getCpuSpikeTimeScore() {
@@ -77,7 +77,7 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
     }
     /**
      * Gets the deviceCount property value. User experience analytics summarized device count.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getDeviceCount() {
@@ -85,7 +85,7 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
     }
     /**
      * Gets the deviceId property value. The id of the device.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceId() {
@@ -93,7 +93,7 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
     }
     /**
      * Gets the deviceName property value. The name of the device.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceName() {
@@ -101,7 +101,7 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
     }
     /**
      * Gets the deviceResourcePerformanceScore property value. Resource performance score of a specific device. Valid values 0 to 100
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getDeviceResourcePerformanceScore() {
@@ -109,7 +109,7 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
     }
     /**
      * Gets the diskType property value. The diskType property
-     * @return a DiskType
+     * @return a {@link DiskType}
      */
     @jakarta.annotation.Nullable
     public DiskType getDiskType() {
@@ -117,7 +117,7 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -146,7 +146,7 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
     }
     /**
      * Gets the healthStatus property value. The healthStatus property
-     * @return a UserExperienceAnalyticsHealthState
+     * @return a {@link UserExperienceAnalyticsHealthState}
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsHealthState getHealthStatus() {
@@ -154,7 +154,7 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
     }
     /**
      * Gets the machineType property value. Indicates if machine is physical or virtual. Possible values are: physical or virtual
-     * @return a UserExperienceAnalyticsMachineType
+     * @return a {@link UserExperienceAnalyticsMachineType}
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsMachineType getMachineType() {
@@ -162,7 +162,7 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
     }
     /**
      * Gets the manufacturer property value. The user experience analytics device manufacturer.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getManufacturer() {
@@ -170,7 +170,7 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
     }
     /**
      * Gets the model property value. The user experience analytics device model.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getModel() {
@@ -178,7 +178,7 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
     }
     /**
      * Gets the ramSpikeTimePercentage property value. RAM spike time in percentage. Valid values 0 to 100
-     * @return a Double
+     * @return a {@link Double}
      */
     @jakarta.annotation.Nullable
     public Double getRamSpikeTimePercentage() {
@@ -186,7 +186,7 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
     }
     /**
      * Gets the ramSpikeTimePercentageThreshold property value. Threshold of ramSpikeTimeScore. Valid values 0 to 100
-     * @return a Double
+     * @return a {@link Double}
      */
     @jakarta.annotation.Nullable
     public Double getRamSpikeTimePercentageThreshold() {
@@ -194,7 +194,7 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
     }
     /**
      * Gets the ramSpikeTimeScore property value. The user experience analytics device RAM spike time score. Valid values 0 to 100
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getRamSpikeTimeScore() {
@@ -202,7 +202,7 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
     }
     /**
      * Gets the totalProcessorCoreCount property value. The count of cores of the processor of device. Valid values 0 to 512
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getTotalProcessorCoreCount() {
@@ -210,7 +210,7 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
     }
     /**
      * Gets the totalRamInMB property value. The total RAM of the device, in MB. Valid values 0 to 1000000
-     * @return a Double
+     * @return a {@link Double}
      */
     @jakarta.annotation.Nullable
     public Double getTotalRamInMB() {

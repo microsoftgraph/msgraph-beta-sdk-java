@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ReviewSetQuery extends Entity implements Parsable {
     /**
-     * Instantiates a new ReviewSetQuery and sets the default values.
+     * Instantiates a new {@link ReviewSetQuery} and sets the default values.
      */
     public ReviewSetQuery() {
         super();
@@ -20,7 +20,7 @@ public class ReviewSetQuery extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ReviewSetQuery
+     * @return a {@link ReviewSetQuery}
      */
     @jakarta.annotation.Nonnull
     public static ReviewSetQuery createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -29,7 +29,7 @@ public class ReviewSetQuery extends Entity implements Parsable {
     }
     /**
      * Gets the createdBy property value. The user who created the query.
-     * @return a IdentitySet
+     * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
@@ -37,7 +37,7 @@ public class ReviewSetQuery extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. The time and date when the query was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -45,7 +45,7 @@ public class ReviewSetQuery extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The name of the query.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -53,7 +53,7 @@ public class ReviewSetQuery extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -68,7 +68,7 @@ public class ReviewSetQuery extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedBy property value. The user who last modified the query.
-     * @return a IdentitySet
+     * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
     public IdentitySet getLastModifiedBy() {
@@ -76,7 +76,7 @@ public class ReviewSetQuery extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. The date and time the query was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -84,7 +84,7 @@ public class ReviewSetQuery extends Entity implements Parsable {
     }
     /**
      * Gets the query property value. The query string in KQL (Keyword Query Language) query. For details, see Document metadata fields in Advanced eDiscovery.  This field maps directly to the keywords condition.  You can refine searches by using fields listed in the searchable field name paired with values; for example, subject:'Quarterly Financials' AND Date>=06/01/2016 AND Date<=07/01/2016.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getQuery() {

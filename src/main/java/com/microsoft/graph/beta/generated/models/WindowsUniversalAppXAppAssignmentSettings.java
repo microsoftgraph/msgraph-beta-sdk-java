@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsUniversalAppXAppAssignmentSettings extends MobileAppAssignmentSettings implements Parsable {
     /**
-     * Instantiates a new WindowsUniversalAppXAppAssignmentSettings and sets the default values.
+     * Instantiates a new {@link WindowsUniversalAppXAppAssignmentSettings} and sets the default values.
      */
     public WindowsUniversalAppXAppAssignmentSettings() {
         super();
@@ -21,7 +21,7 @@ public class WindowsUniversalAppXAppAssignmentSettings extends MobileAppAssignme
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WindowsUniversalAppXAppAssignmentSettings
+     * @return a {@link WindowsUniversalAppXAppAssignmentSettings}
      */
     @jakarta.annotation.Nonnull
     public static WindowsUniversalAppXAppAssignmentSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class WindowsUniversalAppXAppAssignmentSettings extends MobileAppAssignme
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -39,8 +39,8 @@ public class WindowsUniversalAppXAppAssignmentSettings extends MobileAppAssignme
         return deserializerMap;
     }
     /**
-     * Gets the useDeviceContext property value. If true, uses device execution context for Windows Universal AppX mobile app. Device-context install is not allowed when this type of app is targeted with Available intent. Defaults to false.
-     * @return a Boolean
+     * Gets the useDeviceContext property value. Whether or not to use device execution context for Windows Universal AppX mobile app.
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getUseDeviceContext() {
@@ -56,7 +56,7 @@ public class WindowsUniversalAppXAppAssignmentSettings extends MobileAppAssignme
         writer.writeBooleanValue("useDeviceContext", this.getUseDeviceContext());
     }
     /**
-     * Sets the useDeviceContext property value. If true, uses device execution context for Windows Universal AppX mobile app. Device-context install is not allowed when this type of app is targeted with Available intent. Defaults to false.
+     * Sets the useDeviceContext property value. Whether or not to use device execution context for Windows Universal AppX mobile app.
      * @param value Value to set for the useDeviceContext property.
      */
     public void setUseDeviceContext(@jakarta.annotation.Nullable final Boolean value) {

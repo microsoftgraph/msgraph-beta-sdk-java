@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class VirtualEventRegistrationCustomQuestion extends VirtualEventRegistrationQuestionBase implements Parsable {
     /**
-     * Instantiates a new VirtualEventRegistrationCustomQuestion and sets the default values.
+     * Instantiates a new {@link VirtualEventRegistrationCustomQuestion} and sets the default values.
      */
     public VirtualEventRegistrationCustomQuestion() {
         super();
@@ -18,7 +18,7 @@ public class VirtualEventRegistrationCustomQuestion extends VirtualEventRegistra
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a VirtualEventRegistrationCustomQuestion
+     * @return a {@link VirtualEventRegistrationCustomQuestion}
      */
     @jakarta.annotation.Nonnull
     public static VirtualEventRegistrationCustomQuestion createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class VirtualEventRegistrationCustomQuestion extends VirtualEventRegistra
     }
     /**
      * Gets the answerChoices property value. The answerChoices property
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAnswerChoices() {
@@ -35,7 +35,7 @@ public class VirtualEventRegistrationCustomQuestion extends VirtualEventRegistra
     }
     /**
      * Gets the answerInputType property value. The answerInputType property
-     * @return a VirtualEventRegistrationQuestionAnswerInputType
+     * @return a {@link VirtualEventRegistrationQuestionAnswerInputType}
      */
     @jakarta.annotation.Nullable
     public VirtualEventRegistrationQuestionAnswerInputType getAnswerInputType() {
@@ -43,7 +43,7 @@ public class VirtualEventRegistrationCustomQuestion extends VirtualEventRegistra
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

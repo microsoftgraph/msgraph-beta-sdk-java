@@ -18,7 +18,7 @@ public class CloudPcBulkActionSummary implements AdditionalDataHolder, BackedMod
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new CloudPcBulkActionSummary and sets the default values.
+     * Instantiates a new {@link CloudPcBulkActionSummary} and sets the default values.
      */
     public CloudPcBulkActionSummary() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class CloudPcBulkActionSummary implements AdditionalDataHolder, BackedMod
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CloudPcBulkActionSummary
+     * @return a {@link CloudPcBulkActionSummary}
      */
     @jakarta.annotation.Nonnull
     public static CloudPcBulkActionSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class CloudPcBulkActionSummary implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class CloudPcBulkActionSummary implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class CloudPcBulkActionSummary implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the failedCount property value. The failedCount property
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getFailedCount() {
@@ -65,7 +65,7 @@ public class CloudPcBulkActionSummary implements AdditionalDataHolder, BackedMod
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -80,7 +80,7 @@ public class CloudPcBulkActionSummary implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the inProgressCount property value. The inProgressCount property
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getInProgressCount() {
@@ -88,7 +88,7 @@ public class CloudPcBulkActionSummary implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the notSupportedCount property value. The notSupportedCount property
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getNotSupportedCount() {
@@ -96,7 +96,7 @@ public class CloudPcBulkActionSummary implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -104,7 +104,7 @@ public class CloudPcBulkActionSummary implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the pendingCount property value. The pendingCount property
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPendingCount() {
@@ -112,7 +112,7 @@ public class CloudPcBulkActionSummary implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the successfulCount property value. The successfulCount property
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getSuccessfulCount() {

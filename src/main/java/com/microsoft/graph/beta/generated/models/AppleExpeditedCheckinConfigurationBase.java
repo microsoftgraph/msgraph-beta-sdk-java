@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AppleExpeditedCheckinConfigurationBase extends DeviceConfiguration implements Parsable {
     /**
-     * Instantiates a new AppleExpeditedCheckinConfigurationBase and sets the default values.
+     * Instantiates a new {@link AppleExpeditedCheckinConfigurationBase} and sets the default values.
      */
     public AppleExpeditedCheckinConfigurationBase() {
         super();
@@ -21,7 +21,7 @@ public class AppleExpeditedCheckinConfigurationBase extends DeviceConfiguration 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AppleExpeditedCheckinConfigurationBase
+     * @return a {@link AppleExpeditedCheckinConfigurationBase}
      */
     @jakarta.annotation.Nonnull
     public static AppleExpeditedCheckinConfigurationBase createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class AppleExpeditedCheckinConfigurationBase extends DeviceConfiguration 
     }
     /**
      * Gets the enableExpeditedCheckin property value. Gets or sets whether to enable expedited device check-ins.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getEnableExpeditedCheckin() {
@@ -45,7 +45,7 @@ public class AppleExpeditedCheckinConfigurationBase extends DeviceConfiguration 
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

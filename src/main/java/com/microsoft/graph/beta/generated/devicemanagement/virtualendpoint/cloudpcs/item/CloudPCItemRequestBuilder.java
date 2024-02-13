@@ -41,6 +41,7 @@ import java.util.Objects;
 public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the changeUserAccountType method.
+     * @return a {@link ChangeUserAccountTypeRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ChangeUserAccountTypeRequestBuilder changeUserAccountType() {
@@ -48,6 +49,7 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the createSnapshot method.
+     * @return a {@link CreateSnapshotRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CreateSnapshotRequestBuilder createSnapshot() {
@@ -55,6 +57,7 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the endGracePeriod method.
+     * @return a {@link EndGracePeriodRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public EndGracePeriodRequestBuilder endGracePeriod() {
@@ -62,6 +65,7 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getCloudPcConnectivityHistory method.
+     * @return a {@link GetCloudPcConnectivityHistoryRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetCloudPcConnectivityHistoryRequestBuilder getCloudPcConnectivityHistory() {
@@ -69,6 +73,7 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getCloudPcLaunchInfo method.
+     * @return a {@link GetCloudPcLaunchInfoRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetCloudPcLaunchInfoRequestBuilder getCloudPcLaunchInfo() {
@@ -76,6 +81,7 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getFrontlineCloudPcAccessState method.
+     * @return a {@link GetFrontlineCloudPcAccessStateRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetFrontlineCloudPcAccessStateRequestBuilder getFrontlineCloudPcAccessState() {
@@ -83,6 +89,7 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getShiftWorkCloudPcAccessState method.
+     * @return a {@link GetShiftWorkCloudPcAccessStateRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetShiftWorkCloudPcAccessStateRequestBuilder getShiftWorkCloudPcAccessState() {
@@ -90,6 +97,7 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getSupportedCloudPcRemoteActions method.
+     * @return a {@link GetSupportedCloudPcRemoteActionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetSupportedCloudPcRemoteActionsRequestBuilder getSupportedCloudPcRemoteActions() {
@@ -97,6 +105,7 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the powerOff method.
+     * @return a {@link PowerOffRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PowerOffRequestBuilder powerOff() {
@@ -104,6 +113,7 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the powerOn method.
+     * @return a {@link PowerOnRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PowerOnRequestBuilder powerOn() {
@@ -111,6 +121,7 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the reboot method.
+     * @return a {@link RebootRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RebootRequestBuilder reboot() {
@@ -118,6 +129,7 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the rename method.
+     * @return a {@link RenameRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RenameRequestBuilder rename() {
@@ -125,6 +137,7 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the reprovision method.
+     * @return a {@link ReprovisionRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ReprovisionRequestBuilder reprovision() {
@@ -132,6 +145,7 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the resize method.
+     * @return a {@link ResizeRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ResizeRequestBuilder resize() {
@@ -139,6 +153,7 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the restore method.
+     * @return a {@link RestoreRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RestoreRequestBuilder restore() {
@@ -146,6 +161,7 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the retryPartnerAgentInstallation method.
+     * @return a {@link RetryPartnerAgentInstallationRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RetryPartnerAgentInstallationRequestBuilder retryPartnerAgentInstallation() {
@@ -153,6 +169,7 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the start method.
+     * @return a {@link StartRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public StartRequestBuilder start() {
@@ -160,6 +177,7 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the stop method.
+     * @return a {@link StopRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public StopRequestBuilder stop() {
@@ -167,13 +185,14 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the troubleshoot method.
+     * @return a {@link TroubleshootRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TroubleshootRequestBuilder troubleshoot() {
         return new TroubleshootRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new CloudPCItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link CloudPCItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -181,7 +200,7 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/cloudPCs/{cloudPC%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new CloudPCItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link CloudPCItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -190,6 +209,7 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Delete navigation property cloudPCs for deviceManagement
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete() {
         delete(null);
@@ -197,17 +217,18 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property cloudPCs for deviceManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Read the properties and relationships of a specific cloudPC object.
-     * @return a CloudPC
+     * @return a {@link CloudPC}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpc-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -217,21 +238,22 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of a specific cloudPC object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CloudPC
+     * @return a {@link CloudPC}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpc-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPC get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, CloudPC::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property cloudPCs in deviceManagement
      * @param body The request body
-     * @return a CloudPC
+     * @return a {@link CloudPC}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public CloudPC patch(@jakarta.annotation.Nonnull final CloudPC body) {
@@ -241,20 +263,20 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property cloudPCs in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CloudPC
+     * @return a {@link CloudPC}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public CloudPC patch(@jakarta.annotation.Nonnull final CloudPC body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, CloudPC::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property cloudPCs for deviceManagement
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -263,18 +285,18 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property cloudPCs for deviceManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/deviceManagement/virtualEndpoint/cloudPCs/{cloudPC%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Read the properties and relationships of a specific cloudPC object.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -283,7 +305,7 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of a specific cloudPC object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -295,7 +317,7 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property cloudPCs in deviceManagement
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final CloudPC body) {
@@ -305,12 +327,12 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property cloudPCs in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final CloudPC body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/deviceManagement/virtualEndpoint/cloudPCs/{cloudPC%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -319,7 +341,7 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a CloudPCItemRequestBuilder
+     * @return a {@link CloudPCItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CloudPCItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -349,7 +371,7 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

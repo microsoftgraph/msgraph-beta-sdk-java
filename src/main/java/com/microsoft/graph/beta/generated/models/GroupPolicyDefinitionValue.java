@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GroupPolicyDefinitionValue extends Entity implements Parsable {
     /**
-     * Instantiates a new GroupPolicyDefinitionValue and sets the default values.
+     * Instantiates a new {@link GroupPolicyDefinitionValue} and sets the default values.
      */
     public GroupPolicyDefinitionValue() {
         super();
@@ -21,7 +21,7 @@ public class GroupPolicyDefinitionValue extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a GroupPolicyDefinitionValue
+     * @return a {@link GroupPolicyDefinitionValue}
      */
     @jakarta.annotation.Nonnull
     public static GroupPolicyDefinitionValue createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class GroupPolicyDefinitionValue extends Entity implements Parsable {
     }
     /**
      * Gets the configurationType property value. Group Policy Configuration Type
-     * @return a GroupPolicyConfigurationType
+     * @return a {@link GroupPolicyConfigurationType}
      */
     @jakarta.annotation.Nullable
     public GroupPolicyConfigurationType getConfigurationType() {
@@ -38,7 +38,7 @@ public class GroupPolicyDefinitionValue extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. The date and time the object was created.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -46,7 +46,7 @@ public class GroupPolicyDefinitionValue extends Entity implements Parsable {
     }
     /**
      * Gets the definition property value. The associated group policy definition with the value.
-     * @return a GroupPolicyDefinition
+     * @return a {@link GroupPolicyDefinition}
      */
     @jakarta.annotation.Nullable
     public GroupPolicyDefinition getDefinition() {
@@ -54,7 +54,7 @@ public class GroupPolicyDefinitionValue extends Entity implements Parsable {
     }
     /**
      * Gets the enabled property value. Enables or disables the associated group policy definition.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getEnabled() {
@@ -62,7 +62,7 @@ public class GroupPolicyDefinitionValue extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -77,7 +77,7 @@ public class GroupPolicyDefinitionValue extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. The date and time the entity was last modified.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -85,7 +85,7 @@ public class GroupPolicyDefinitionValue extends Entity implements Parsable {
     }
     /**
      * Gets the presentationValues property value. The associated group policy presentation values with the definition value.
-     * @return a java.util.List<GroupPolicyPresentationValue>
+     * @return a {@link java.util.List<GroupPolicyPresentationValue>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<GroupPolicyPresentationValue> getPresentationValues() {

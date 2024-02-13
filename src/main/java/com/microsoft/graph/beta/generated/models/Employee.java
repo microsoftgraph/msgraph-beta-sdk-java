@@ -21,7 +21,7 @@ public class Employee implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new Employee and sets the default values.
+     * Instantiates a new {@link Employee} and sets the default values.
      */
     public Employee() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -30,7 +30,7 @@ public class Employee implements AdditionalDataHolder, BackedModel, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Employee
+     * @return a {@link Employee}
      */
     @jakarta.annotation.Nonnull
     public static Employee createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class Employee implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -52,7 +52,7 @@ public class Employee implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the address property value. The address property
-     * @return a PostalAddressType
+     * @return a {@link PostalAddressType}
      */
     @jakarta.annotation.Nullable
     public PostalAddressType getAddress() {
@@ -60,7 +60,7 @@ public class Employee implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -68,7 +68,7 @@ public class Employee implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the birthDate property value. The birthDate property
-     * @return a LocalDate
+     * @return a {@link LocalDate}
      */
     @jakarta.annotation.Nullable
     public LocalDate getBirthDate() {
@@ -76,7 +76,7 @@ public class Employee implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the displayName property value. The displayName property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -84,7 +84,7 @@ public class Employee implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the email property value. The email property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getEmail() {
@@ -92,7 +92,7 @@ public class Employee implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the employmentDate property value. The employmentDate property
-     * @return a LocalDate
+     * @return a {@link LocalDate}
      */
     @jakarta.annotation.Nullable
     public LocalDate getEmploymentDate() {
@@ -100,7 +100,7 @@ public class Employee implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -129,7 +129,7 @@ public class Employee implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the givenName property value. The givenName property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getGivenName() {
@@ -137,7 +137,7 @@ public class Employee implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the id property value. The id property
-     * @return a UUID
+     * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
     public UUID getId() {
@@ -145,7 +145,7 @@ public class Employee implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the jobTitle property value. The jobTitle property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getJobTitle() {
@@ -153,7 +153,7 @@ public class Employee implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -161,7 +161,7 @@ public class Employee implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the middleName property value. The middleName property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getMiddleName() {
@@ -169,7 +169,7 @@ public class Employee implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the mobilePhone property value. The mobilePhone property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getMobilePhone() {
@@ -177,7 +177,7 @@ public class Employee implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the number property value. The number property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getNumber() {
@@ -185,7 +185,7 @@ public class Employee implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -193,7 +193,7 @@ public class Employee implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the personalEmail property value. The personalEmail property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPersonalEmail() {
@@ -201,7 +201,7 @@ public class Employee implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the phoneNumber property value. The phoneNumber property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPhoneNumber() {
@@ -209,7 +209,7 @@ public class Employee implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the picture property value. The picture property
-     * @return a java.util.List<Picture>
+     * @return a {@link java.util.List<Picture>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Picture> getPicture() {
@@ -217,7 +217,7 @@ public class Employee implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the statisticsGroupCode property value. The statisticsGroupCode property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getStatisticsGroupCode() {
@@ -225,7 +225,7 @@ public class Employee implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the status property value. The status property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getStatus() {
@@ -233,7 +233,7 @@ public class Employee implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the surname property value. The surname property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSurname() {
@@ -241,7 +241,7 @@ public class Employee implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the terminationDate property value. The terminationDate property
-     * @return a LocalDate
+     * @return a {@link LocalDate}
      */
     @jakarta.annotation.Nullable
     public LocalDate getTerminationDate() {

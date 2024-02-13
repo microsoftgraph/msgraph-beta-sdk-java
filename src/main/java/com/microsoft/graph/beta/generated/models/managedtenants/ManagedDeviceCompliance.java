@@ -11,7 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagedDeviceCompliance extends Entity implements Parsable {
     /**
-     * Instantiates a new ManagedDeviceCompliance and sets the default values.
+     * Instantiates a new {@link ManagedDeviceCompliance} and sets the default values.
      */
     public ManagedDeviceCompliance() {
         super();
@@ -19,7 +19,7 @@ public class ManagedDeviceCompliance extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ManagedDeviceCompliance
+     * @return a {@link ManagedDeviceCompliance}
      */
     @jakarta.annotation.Nonnull
     public static ManagedDeviceCompliance createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class ManagedDeviceCompliance extends Entity implements Parsable {
     }
     /**
      * Gets the complianceStatus property value. Compliance state of the device. This property is read-only. Possible values are: unknown, compliant, noncompliant, conflict, error, inGracePeriod, configManager. Optional. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getComplianceStatus() {
@@ -36,7 +36,7 @@ public class ManagedDeviceCompliance extends Entity implements Parsable {
     }
     /**
      * Gets the deviceType property value. Platform of the device. This property is read-only. Possible values are: desktop, windowsRT, winMO6, nokia, windowsPhone, mac, winCE, winEmbedded, iPhone, iPad, iPod, android, iSocConsumer, unix, macMDM, holoLens, surfaceHub, androidForWork, androidEnterprise, windows10x, androidnGMS, chromeOS, linux, blackberry, palm, unknown, cloudPC.  Optional. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceType() {
@@ -44,7 +44,7 @@ public class ManagedDeviceCompliance extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -67,7 +67,7 @@ public class ManagedDeviceCompliance extends Entity implements Parsable {
     }
     /**
      * Gets the inGracePeriodUntilDateTime property value. The date and time when the grace period will expire. Optional. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getInGracePeriodUntilDateTime() {
@@ -75,7 +75,7 @@ public class ManagedDeviceCompliance extends Entity implements Parsable {
     }
     /**
      * Gets the lastRefreshedDateTime property value. Date and time the entity was last updated in the multi-tenant management platform. Optional. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastRefreshedDateTime() {
@@ -83,7 +83,7 @@ public class ManagedDeviceCompliance extends Entity implements Parsable {
     }
     /**
      * Gets the lastSyncDateTime property value. The date and time that the device last completed a successful sync with Microsoft Endpoint Manager. Optional. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastSyncDateTime() {
@@ -91,7 +91,7 @@ public class ManagedDeviceCompliance extends Entity implements Parsable {
     }
     /**
      * Gets the managedDeviceId property value. The identifier for the managed device in Microsoft Endpoint Manager. Optional. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getManagedDeviceId() {
@@ -99,7 +99,7 @@ public class ManagedDeviceCompliance extends Entity implements Parsable {
     }
     /**
      * Gets the managedDeviceName property value. The display name for the managed device. Optional. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getManagedDeviceName() {
@@ -107,7 +107,7 @@ public class ManagedDeviceCompliance extends Entity implements Parsable {
     }
     /**
      * Gets the manufacturer property value. The manufacture for the device. Optional. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getManufacturer() {
@@ -115,7 +115,7 @@ public class ManagedDeviceCompliance extends Entity implements Parsable {
     }
     /**
      * Gets the model property value. The model for the device. Optional. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getModel() {
@@ -123,7 +123,7 @@ public class ManagedDeviceCompliance extends Entity implements Parsable {
     }
     /**
      * Gets the osDescription property value. The description of the operating system for the managed device. Optional. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOsDescription() {
@@ -131,7 +131,7 @@ public class ManagedDeviceCompliance extends Entity implements Parsable {
     }
     /**
      * Gets the osVersion property value. The version of the operating system for the managed device. Optional. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOsVersion() {
@@ -139,7 +139,7 @@ public class ManagedDeviceCompliance extends Entity implements Parsable {
     }
     /**
      * Gets the ownerType property value. The type of owner for the managed device. Optional. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOwnerType() {
@@ -147,7 +147,7 @@ public class ManagedDeviceCompliance extends Entity implements Parsable {
     }
     /**
      * Gets the tenantDisplayName property value. The display name for the managed tenant. Optional. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTenantDisplayName() {
@@ -155,7 +155,7 @@ public class ManagedDeviceCompliance extends Entity implements Parsable {
     }
     /**
      * Gets the tenantId property value. The Microsoft Entra tenant identifier for the managed tenant. Optional. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {

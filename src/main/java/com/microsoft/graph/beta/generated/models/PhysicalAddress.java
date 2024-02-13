@@ -18,7 +18,7 @@ public class PhysicalAddress implements AdditionalDataHolder, BackedModel, Parsa
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new PhysicalAddress and sets the default values.
+     * Instantiates a new {@link PhysicalAddress} and sets the default values.
      */
     public PhysicalAddress() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class PhysicalAddress implements AdditionalDataHolder, BackedModel, Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PhysicalAddress
+     * @return a {@link PhysicalAddress}
      */
     @jakarta.annotation.Nonnull
     public static PhysicalAddress createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class PhysicalAddress implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class PhysicalAddress implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class PhysicalAddress implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the city property value. The city.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCity() {
@@ -65,7 +65,7 @@ public class PhysicalAddress implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the countryOrRegion property value. The country or region. It's a free-format string value, for example, 'United States'.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCountryOrRegion() {
@@ -73,7 +73,7 @@ public class PhysicalAddress implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -90,7 +90,7 @@ public class PhysicalAddress implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -98,7 +98,7 @@ public class PhysicalAddress implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the postalCode property value. The postal code.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPostalCode() {
@@ -106,7 +106,7 @@ public class PhysicalAddress implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the postOfficeBox property value. The post office box number.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPostOfficeBox() {
@@ -114,7 +114,7 @@ public class PhysicalAddress implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the state property value. The state.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getState() {
@@ -122,7 +122,7 @@ public class PhysicalAddress implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the street property value. The street.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getStreet() {
@@ -130,7 +130,7 @@ public class PhysicalAddress implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the type property value. The type of address. Possible values are: unknown, home, business, other.
-     * @return a PhysicalAddressType
+     * @return a {@link PhysicalAddressType}
      */
     @jakarta.annotation.Nullable
     public PhysicalAddressType getType() {

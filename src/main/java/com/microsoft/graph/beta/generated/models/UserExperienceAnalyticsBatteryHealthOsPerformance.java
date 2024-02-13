@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsBatteryHealthOsPerformance extends Entity implements Parsable {
     /**
-     * Instantiates a new UserExperienceAnalyticsBatteryHealthOsPerformance and sets the default values.
+     * Instantiates a new {@link UserExperienceAnalyticsBatteryHealthOsPerformance} and sets the default values.
      */
     public UserExperienceAnalyticsBatteryHealthOsPerformance() {
         super();
@@ -20,7 +20,7 @@ public class UserExperienceAnalyticsBatteryHealthOsPerformance extends Entity im
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserExperienceAnalyticsBatteryHealthOsPerformance
+     * @return a {@link UserExperienceAnalyticsBatteryHealthOsPerformance}
      */
     @jakarta.annotation.Nonnull
     public static UserExperienceAnalyticsBatteryHealthOsPerformance createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -29,7 +29,7 @@ public class UserExperienceAnalyticsBatteryHealthOsPerformance extends Entity im
     }
     /**
      * Gets the activeDevices property value. Number of active devices for that os version. Valid values 0 to 2147483647
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getActiveDevices() {
@@ -37,7 +37,7 @@ public class UserExperienceAnalyticsBatteryHealthOsPerformance extends Entity im
     }
     /**
      * Gets the averageBatteryAgeInDays property value. The mean of the battery age for all devices running a particular operating system version in a tenant. Unit in days. Valid values 0 to 2147483647
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getAverageBatteryAgeInDays() {
@@ -45,7 +45,7 @@ public class UserExperienceAnalyticsBatteryHealthOsPerformance extends Entity im
     }
     /**
      * Gets the averageEstimatedRuntimeInMinutes property value. The mean of the estimated runtimes on full charge for all devices running a particular operating system version. Unit in minutes. Valid values 0 to 2147483647
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getAverageEstimatedRuntimeInMinutes() {
@@ -53,7 +53,7 @@ public class UserExperienceAnalyticsBatteryHealthOsPerformance extends Entity im
     }
     /**
      * Gets the averageMaxCapacityPercentage property value. The mean of the maximum capacity for all devices running a particular operating system version. Maximum capacity measures the full charge vs. design capacity for a devices batteries.. Valid values 0 to 2147483647
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getAverageMaxCapacityPercentage() {
@@ -61,7 +61,7 @@ public class UserExperienceAnalyticsBatteryHealthOsPerformance extends Entity im
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -82,7 +82,7 @@ public class UserExperienceAnalyticsBatteryHealthOsPerformance extends Entity im
     }
     /**
      * Gets the meanFullBatteryDrainCount property value. The mean of number of times the battery has been discharged an amount that equals 100% of its capacity for all devices running a particular operating system version in a tenant. Valid values 0 to 2147483647
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getMeanFullBatteryDrainCount() {
@@ -90,7 +90,7 @@ public class UserExperienceAnalyticsBatteryHealthOsPerformance extends Entity im
     }
     /**
      * Gets the medianEstimatedRuntimeInMinutes property value. The median of the estimated runtimes on full charge for all devices running a particular operating system version. Unit in minutes. Valid values 0 to 2147483647
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getMedianEstimatedRuntimeInMinutes() {
@@ -98,7 +98,7 @@ public class UserExperienceAnalyticsBatteryHealthOsPerformance extends Entity im
     }
     /**
      * Gets the medianFullBatteryDrainCount property value. The median of number of times the battery has been discharged an amount that equals 100% of its capacity for all devices running a particular operating system version in a tenant. Valid values 0 to 2147483647
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getMedianFullBatteryDrainCount() {
@@ -106,7 +106,7 @@ public class UserExperienceAnalyticsBatteryHealthOsPerformance extends Entity im
     }
     /**
      * Gets the medianMaxCapacityPercentage property value. The median of the maximum capacity for all devices running a particular operating system version. Maximum capacity measures the full charge vs. design capacity for a devices batteries.. Valid values 0 to 2147483647
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getMedianMaxCapacityPercentage() {
@@ -114,7 +114,7 @@ public class UserExperienceAnalyticsBatteryHealthOsPerformance extends Entity im
     }
     /**
      * Gets the osBatteryHealthScore property value. A weighted average of battery health score across all devices running a particular operating system version. Values range from 0-100. Valid values 0 to 2147483647
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getOsBatteryHealthScore() {
@@ -122,7 +122,7 @@ public class UserExperienceAnalyticsBatteryHealthOsPerformance extends Entity im
     }
     /**
      * Gets the osBuildNumber property value. Build number of the operating system.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOsBuildNumber() {
@@ -130,7 +130,7 @@ public class UserExperienceAnalyticsBatteryHealthOsPerformance extends Entity im
     }
     /**
      * Gets the osHealthStatus property value. The osHealthStatus property
-     * @return a UserExperienceAnalyticsHealthState
+     * @return a {@link UserExperienceAnalyticsHealthState}
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsHealthState getOsHealthStatus() {
@@ -138,7 +138,7 @@ public class UserExperienceAnalyticsBatteryHealthOsPerformance extends Entity im
     }
     /**
      * Gets the osVersion property value. Version of the operating system.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOsVersion() {

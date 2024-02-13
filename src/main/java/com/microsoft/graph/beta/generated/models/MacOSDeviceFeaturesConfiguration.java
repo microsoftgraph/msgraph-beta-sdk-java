@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBase implements Parsable {
     /**
-     * Instantiates a new MacOSDeviceFeaturesConfiguration and sets the default values.
+     * Instantiates a new {@link MacOSDeviceFeaturesConfiguration} and sets the default values.
      */
     public MacOSDeviceFeaturesConfiguration() {
         super();
@@ -21,7 +21,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MacOSDeviceFeaturesConfiguration
+     * @return a {@link MacOSDeviceFeaturesConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static MacOSDeviceFeaturesConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
     }
     /**
      * Gets the adminShowHostInfo property value. Whether to show admin host information on the login window.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAdminShowHostInfo() {
@@ -38,7 +38,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
     }
     /**
      * Gets the appAssociatedDomains property value. Gets or sets a list that maps apps to their associated domains. Application identifiers must be unique. This collection can contain a maximum of 500 elements.
-     * @return a java.util.List<MacOSAssociatedDomainsItem>
+     * @return a {@link java.util.List<MacOSAssociatedDomainsItem>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<MacOSAssociatedDomainsItem> getAppAssociatedDomains() {
@@ -46,7 +46,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
     }
     /**
      * Gets the associatedDomains property value. DEPRECATED: use appAssociatedDomains instead. Gets or sets a list that maps apps to their associated domains. The key should match the app's ID, and the value should be a string in the form of 'service:domain' where domain is a fully qualified hostname (e.g. webcredentials:example.com). This collection can contain a maximum of 500 elements.
-     * @return a java.util.List<KeyValuePair>
+     * @return a {@link java.util.List<KeyValuePair>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyValuePair> getAssociatedDomains() {
@@ -54,7 +54,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
     }
     /**
      * Gets the authorizedUsersListHidden property value. Whether to show the name and password dialog or a list of users on the login window.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAuthorizedUsersListHidden() {
@@ -62,7 +62,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
     }
     /**
      * Gets the authorizedUsersListHideAdminUsers property value. Whether to hide admin users in the authorized users list on the login window.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAuthorizedUsersListHideAdminUsers() {
@@ -70,7 +70,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
     }
     /**
      * Gets the authorizedUsersListHideLocalUsers property value. Whether to show only network and system users in the authorized users list on the login window.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAuthorizedUsersListHideLocalUsers() {
@@ -78,7 +78,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
     }
     /**
      * Gets the authorizedUsersListHideMobileAccounts property value. Whether to hide mobile users in the authorized users list on the login window.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAuthorizedUsersListHideMobileAccounts() {
@@ -86,7 +86,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
     }
     /**
      * Gets the authorizedUsersListIncludeNetworkUsers property value. Whether to show network users in the authorized users list on the login window.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAuthorizedUsersListIncludeNetworkUsers() {
@@ -94,7 +94,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
     }
     /**
      * Gets the authorizedUsersListShowOtherManagedUsers property value. Whether to show other users in the authorized users list on the login window.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAuthorizedUsersListShowOtherManagedUsers() {
@@ -102,7 +102,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
     }
     /**
      * Gets the autoLaunchItems property value. List of applications, files, folders, and other items to launch when the user logs in. This collection can contain a maximum of 500 elements.
-     * @return a java.util.List<MacOSLaunchItem>
+     * @return a {@link java.util.List<MacOSLaunchItem>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<MacOSLaunchItem> getAutoLaunchItems() {
@@ -110,7 +110,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
     }
     /**
      * Gets the consoleAccessDisabled property value. Whether the Other user will disregard use of the console special user name.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getConsoleAccessDisabled() {
@@ -118,7 +118,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
     }
     /**
      * Gets the contentCachingBlockDeletion property value. Prevents content caches from purging content to free up disk space for other apps.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getContentCachingBlockDeletion() {
@@ -126,7 +126,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
     }
     /**
      * Gets the contentCachingClientListenRanges property value. A list of custom IP ranges content caches will use to listen for clients. This collection can contain a maximum of 500 elements.
-     * @return a java.util.List<IpRange>
+     * @return a {@link java.util.List<IpRange>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<IpRange> getContentCachingClientListenRanges() {
@@ -134,7 +134,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
     }
     /**
      * Gets the contentCachingClientPolicy property value. Determines which clients a content cache will serve.
-     * @return a MacOSContentCachingClientPolicy
+     * @return a {@link MacOSContentCachingClientPolicy}
      */
     @jakarta.annotation.Nullable
     public MacOSContentCachingClientPolicy getContentCachingClientPolicy() {
@@ -142,7 +142,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
     }
     /**
      * Gets the contentCachingDataPath property value. The path to the directory used to store cached content. The value must be (or end with) /Library/Application Support/Apple/AssetCache/Data
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getContentCachingDataPath() {
@@ -150,7 +150,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
     }
     /**
      * Gets the contentCachingDisableConnectionSharing property value. Disables internet connection sharing.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getContentCachingDisableConnectionSharing() {
@@ -158,7 +158,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
     }
     /**
      * Gets the contentCachingEnabled property value. Enables content caching and prevents it from being disabled by the user.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getContentCachingEnabled() {
@@ -166,7 +166,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
     }
     /**
      * Gets the contentCachingForceConnectionSharing property value. Forces internet connection sharing. contentCachingDisableConnectionSharing overrides this setting.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getContentCachingForceConnectionSharing() {
@@ -174,7 +174,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
     }
     /**
      * Gets the contentCachingKeepAwake property value. Prevent the device from sleeping if content caching is enabled.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getContentCachingKeepAwake() {
@@ -182,7 +182,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
     }
     /**
      * Gets the contentCachingLogClientIdentities property value. Enables logging of IP addresses and ports of clients that request cached content.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getContentCachingLogClientIdentities() {
@@ -190,7 +190,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
     }
     /**
      * Gets the contentCachingMaxSizeBytes property value. The maximum number of bytes of disk space that will be used for the content cache. A value of 0 (default) indicates unlimited disk space.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getContentCachingMaxSizeBytes() {
@@ -198,7 +198,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
     }
     /**
      * Gets the contentCachingParents property value. A list of IP addresses representing parent content caches.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getContentCachingParents() {
@@ -206,7 +206,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
     }
     /**
      * Gets the contentCachingParentSelectionPolicy property value. Determines how content caches select a parent cache.
-     * @return a MacOSContentCachingParentSelectionPolicy
+     * @return a {@link MacOSContentCachingParentSelectionPolicy}
      */
     @jakarta.annotation.Nullable
     public MacOSContentCachingParentSelectionPolicy getContentCachingParentSelectionPolicy() {
@@ -214,7 +214,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
     }
     /**
      * Gets the contentCachingPeerFilterRanges property value. A list of custom IP ranges content caches will use to query for content from peers caches. This collection can contain a maximum of 500 elements.
-     * @return a java.util.List<IpRange>
+     * @return a {@link java.util.List<IpRange>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<IpRange> getContentCachingPeerFilterRanges() {
@@ -222,7 +222,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
     }
     /**
      * Gets the contentCachingPeerListenRanges property value. A list of custom IP ranges content caches will use to listen for peer caches. This collection can contain a maximum of 500 elements.
-     * @return a java.util.List<IpRange>
+     * @return a {@link java.util.List<IpRange>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<IpRange> getContentCachingPeerListenRanges() {
@@ -230,7 +230,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
     }
     /**
      * Gets the contentCachingPeerPolicy property value. Determines which content caches other content caches will peer with.
-     * @return a MacOSContentCachingPeerPolicy
+     * @return a {@link MacOSContentCachingPeerPolicy}
      */
     @jakarta.annotation.Nullable
     public MacOSContentCachingPeerPolicy getContentCachingPeerPolicy() {
@@ -238,7 +238,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
     }
     /**
      * Gets the contentCachingPort property value. Sets the port used for content caching. If the value is 0, a random available port will be selected. Valid values 0 to 65535
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getContentCachingPort() {
@@ -246,7 +246,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
     }
     /**
      * Gets the contentCachingPublicRanges property value. A list of custom IP ranges that Apple's content caching service should use to match clients to content caches. This collection can contain a maximum of 500 elements.
-     * @return a java.util.List<IpRange>
+     * @return a {@link java.util.List<IpRange>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<IpRange> getContentCachingPublicRanges() {
@@ -254,7 +254,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
     }
     /**
      * Gets the contentCachingShowAlerts property value. Display content caching alerts as system notifications.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getContentCachingShowAlerts() {
@@ -262,7 +262,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
     }
     /**
      * Gets the contentCachingType property value. Indicates the type of content allowed to be cached by Apple's content caching service.
-     * @return a MacOSContentCachingType
+     * @return a {@link MacOSContentCachingType}
      */
     @jakarta.annotation.Nullable
     public MacOSContentCachingType getContentCachingType() {
@@ -270,7 +270,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -321,7 +321,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
     }
     /**
      * Gets the loginWindowText property value. Custom text to be displayed on the login window.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getLoginWindowText() {
@@ -329,7 +329,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
     }
     /**
      * Gets the logOutDisabledWhileLoggedIn property value. Whether the Log Out menu item on the login window will be disabled while the user is logged in.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getLogOutDisabledWhileLoggedIn() {
@@ -337,7 +337,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
     }
     /**
      * Gets the macOSSingleSignOnExtension property value. Gets or sets a single sign-on extension profile.
-     * @return a MacOSSingleSignOnExtension
+     * @return a {@link MacOSSingleSignOnExtension}
      */
     @jakarta.annotation.Nullable
     public MacOSSingleSignOnExtension getMacOSSingleSignOnExtension() {
@@ -345,7 +345,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
     }
     /**
      * Gets the powerOffDisabledWhileLoggedIn property value. Whether the Power Off menu item on the login window will be disabled while the user is logged in.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getPowerOffDisabledWhileLoggedIn() {
@@ -353,7 +353,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
     }
     /**
      * Gets the restartDisabled property value. Whether to hide the Restart button item on the login window.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getRestartDisabled() {
@@ -361,7 +361,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
     }
     /**
      * Gets the restartDisabledWhileLoggedIn property value. Whether the Restart menu item on the login window will be disabled while the user is logged in.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getRestartDisabledWhileLoggedIn() {
@@ -369,7 +369,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
     }
     /**
      * Gets the screenLockDisableImmediate property value. Whether to disable the immediate screen lock functions.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getScreenLockDisableImmediate() {
@@ -377,7 +377,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
     }
     /**
      * Gets the shutDownDisabled property value. Whether to hide the Shut Down button item on the login window.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getShutDownDisabled() {
@@ -385,7 +385,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
     }
     /**
      * Gets the shutDownDisabledWhileLoggedIn property value. Whether the Shut Down menu item on the login window will be disabled while the user is logged in.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getShutDownDisabledWhileLoggedIn() {
@@ -393,7 +393,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
     }
     /**
      * Gets the singleSignOnExtension property value. Gets or sets a single sign-on extension profile. Deprecated: use MacOSSingleSignOnExtension instead.
-     * @return a SingleSignOnExtension
+     * @return a {@link SingleSignOnExtension}
      */
     @jakarta.annotation.Nullable
     public SingleSignOnExtension getSingleSignOnExtension() {
@@ -401,7 +401,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
     }
     /**
      * Gets the singleSignOnExtensionPkinitCertificate property value. PKINIT Certificate for the authentication with single sign-on extensions.
-     * @return a MacOSCertificateProfileBase
+     * @return a {@link MacOSCertificateProfileBase}
      */
     @jakarta.annotation.Nullable
     public MacOSCertificateProfileBase getSingleSignOnExtensionPkinitCertificate() {
@@ -409,7 +409,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
     }
     /**
      * Gets the sleepDisabled property value. Whether to hide the Sleep menu item on the login window.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getSleepDisabled() {

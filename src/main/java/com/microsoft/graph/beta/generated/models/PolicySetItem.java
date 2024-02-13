@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PolicySetItem extends Entity implements Parsable {
     /**
-     * Instantiates a new PolicySetItem and sets the default values.
+     * Instantiates a new {@link PolicySetItem} and sets the default values.
      */
     public PolicySetItem() {
         super();
@@ -21,7 +21,7 @@ public class PolicySetItem extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PolicySetItem
+     * @return a {@link PolicySetItem}
      */
     @jakarta.annotation.Nonnull
     public static PolicySetItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -49,7 +49,7 @@ public class PolicySetItem extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. Creation time of the PolicySetItem.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -57,7 +57,7 @@ public class PolicySetItem extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. DisplayName of the PolicySetItem.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -65,7 +65,7 @@ public class PolicySetItem extends Entity implements Parsable {
     }
     /**
      * Gets the errorCode property value. The errorCode property
-     * @return a ErrorCode
+     * @return a {@link ErrorCode}
      */
     @jakarta.annotation.Nullable
     public ErrorCode getErrorCode() {
@@ -73,7 +73,7 @@ public class PolicySetItem extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -90,7 +90,7 @@ public class PolicySetItem extends Entity implements Parsable {
     }
     /**
      * Gets the guidedDeploymentTags property value. Tags of the guided deployment
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getGuidedDeploymentTags() {
@@ -98,7 +98,7 @@ public class PolicySetItem extends Entity implements Parsable {
     }
     /**
      * Gets the itemType property value. policySetType of the PolicySetItem.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getItemType() {
@@ -106,7 +106,7 @@ public class PolicySetItem extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. Last modified time of the PolicySetItem.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -114,7 +114,7 @@ public class PolicySetItem extends Entity implements Parsable {
     }
     /**
      * Gets the payloadId property value. PayloadId of the PolicySetItem.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPayloadId() {
@@ -122,7 +122,7 @@ public class PolicySetItem extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The enum to specify the status of PolicySet.
-     * @return a PolicySetStatus
+     * @return a {@link PolicySetStatus}
      */
     @jakarta.annotation.Nullable
     public PolicySetStatus getStatus() {

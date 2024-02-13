@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Windows81VpnConfiguration extends WindowsVpnConfiguration implements Parsable {
     /**
-     * Instantiates a new Windows81VpnConfiguration and sets the default values.
+     * Instantiates a new {@link Windows81VpnConfiguration} and sets the default values.
      */
     public Windows81VpnConfiguration() {
         super();
@@ -21,7 +21,7 @@ public class Windows81VpnConfiguration extends WindowsVpnConfiguration implement
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Windows81VpnConfiguration
+     * @return a {@link Windows81VpnConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static Windows81VpnConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class Windows81VpnConfiguration extends WindowsVpnConfiguration implement
     }
     /**
      * Gets the applyOnlyToWindows81 property value. Value indicating whether this policy only applies to Windows 8.1. This property is read-only.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getApplyOnlyToWindows81() {
@@ -45,7 +45,7 @@ public class Windows81VpnConfiguration extends WindowsVpnConfiguration implement
     }
     /**
      * Gets the connectionType property value. Windows VPN connection type.
-     * @return a WindowsVpnConnectionType
+     * @return a {@link WindowsVpnConnectionType}
      */
     @jakarta.annotation.Nullable
     public WindowsVpnConnectionType getConnectionType() {
@@ -53,7 +53,7 @@ public class Windows81VpnConfiguration extends WindowsVpnConfiguration implement
     }
     /**
      * Gets the enableSplitTunneling property value. Enable split tunneling for the VPN.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getEnableSplitTunneling() {
@@ -61,7 +61,7 @@ public class Windows81VpnConfiguration extends WindowsVpnConfiguration implement
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -75,7 +75,7 @@ public class Windows81VpnConfiguration extends WindowsVpnConfiguration implement
     }
     /**
      * Gets the loginGroupOrDomain property value. Login group or domain when connection type is set to Dell SonicWALL Mobile Connection.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getLoginGroupOrDomain() {
@@ -83,7 +83,7 @@ public class Windows81VpnConfiguration extends WindowsVpnConfiguration implement
     }
     /**
      * Gets the proxyServer property value. Proxy Server.
-     * @return a Windows81VpnProxyServer
+     * @return a {@link Windows81VpnProxyServer}
      */
     @jakarta.annotation.Nullable
     public Windows81VpnProxyServer getProxyServer() {

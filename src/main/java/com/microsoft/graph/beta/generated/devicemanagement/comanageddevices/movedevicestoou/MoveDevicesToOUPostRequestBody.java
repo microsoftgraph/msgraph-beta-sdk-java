@@ -19,7 +19,7 @@ public class MoveDevicesToOUPostRequestBody implements AdditionalDataHolder, Bac
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new MoveDevicesToOUPostRequestBody and sets the default values.
+     * Instantiates a new {@link MoveDevicesToOUPostRequestBody} and sets the default values.
      */
     public MoveDevicesToOUPostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class MoveDevicesToOUPostRequestBody implements AdditionalDataHolder, Bac
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MoveDevicesToOUPostRequestBody
+     * @return a {@link MoveDevicesToOUPostRequestBody}
      */
     @jakarta.annotation.Nonnull
     public static MoveDevicesToOUPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class MoveDevicesToOUPostRequestBody implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -50,7 +50,7 @@ public class MoveDevicesToOUPostRequestBody implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -58,7 +58,7 @@ public class MoveDevicesToOUPostRequestBody implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the deviceIds property value. The deviceIds property
-     * @return a java.util.List<UUID>
+     * @return a {@link java.util.List<UUID>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<UUID> getDeviceIds() {
@@ -66,7 +66,7 @@ public class MoveDevicesToOUPostRequestBody implements AdditionalDataHolder, Bac
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -77,7 +77,7 @@ public class MoveDevicesToOUPostRequestBody implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the organizationalUnitPath property value. The organizationalUnitPath property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOrganizationalUnitPath() {

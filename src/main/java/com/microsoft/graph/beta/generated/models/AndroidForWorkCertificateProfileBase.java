@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AndroidForWorkCertificateProfileBase extends DeviceConfiguration implements Parsable {
     /**
-     * Instantiates a new AndroidForWorkCertificateProfileBase and sets the default values.
+     * Instantiates a new {@link AndroidForWorkCertificateProfileBase} and sets the default values.
      */
     public AndroidForWorkCertificateProfileBase() {
         super();
@@ -22,7 +22,7 @@ public class AndroidForWorkCertificateProfileBase extends DeviceConfiguration im
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AndroidForWorkCertificateProfileBase
+     * @return a {@link AndroidForWorkCertificateProfileBase}
      */
     @jakarta.annotation.Nonnull
     public static AndroidForWorkCertificateProfileBase createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class AndroidForWorkCertificateProfileBase extends DeviceConfiguration im
     }
     /**
      * Gets the certificateValidityPeriodScale property value. Certificate Validity Period Options.
-     * @return a CertificateValidityPeriodScale
+     * @return a {@link CertificateValidityPeriodScale}
      */
     @jakarta.annotation.Nullable
     public CertificateValidityPeriodScale getCertificateValidityPeriodScale() {
@@ -47,7 +47,7 @@ public class AndroidForWorkCertificateProfileBase extends DeviceConfiguration im
     }
     /**
      * Gets the certificateValidityPeriodValue property value. Value for the Certificate Validity Period.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getCertificateValidityPeriodValue() {
@@ -55,7 +55,7 @@ public class AndroidForWorkCertificateProfileBase extends DeviceConfiguration im
     }
     /**
      * Gets the extendedKeyUsages property value. Extended Key Usage (EKU) settings. This collection can contain a maximum of 500 elements.
-     * @return a java.util.List<ExtendedKeyUsage>
+     * @return a {@link java.util.List<ExtendedKeyUsage>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ExtendedKeyUsage> getExtendedKeyUsages() {
@@ -63,7 +63,7 @@ public class AndroidForWorkCertificateProfileBase extends DeviceConfiguration im
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -79,7 +79,7 @@ public class AndroidForWorkCertificateProfileBase extends DeviceConfiguration im
     }
     /**
      * Gets the renewalThresholdPercentage property value. Certificate renewal threshold percentage. Valid values 1 to 99
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getRenewalThresholdPercentage() {
@@ -87,7 +87,7 @@ public class AndroidForWorkCertificateProfileBase extends DeviceConfiguration im
     }
     /**
      * Gets the rootCertificate property value. Trusted Root Certificate.
-     * @return a AndroidForWorkTrustedRootCertificate
+     * @return a {@link AndroidForWorkTrustedRootCertificate}
      */
     @jakarta.annotation.Nullable
     public AndroidForWorkTrustedRootCertificate getRootCertificate() {
@@ -95,7 +95,7 @@ public class AndroidForWorkCertificateProfileBase extends DeviceConfiguration im
     }
     /**
      * Gets the subjectAlternativeNameType property value. Certificate Subject Alternative Name Type. Possible values are: none, emailAddress, userPrincipalName, customAzureADAttribute, domainNameService, universalResourceIdentifier.
-     * @return a EnumSet<SubjectAlternativeNameType>
+     * @return a {@link EnumSet<SubjectAlternativeNameType>}
      */
     @jakarta.annotation.Nullable
     public EnumSet<SubjectAlternativeNameType> getSubjectAlternativeNameType() {
@@ -103,7 +103,7 @@ public class AndroidForWorkCertificateProfileBase extends DeviceConfiguration im
     }
     /**
      * Gets the subjectNameFormat property value. Subject Name Format Options.
-     * @return a SubjectNameFormat
+     * @return a {@link SubjectNameFormat}
      */
     @jakarta.annotation.Nullable
     public SubjectNameFormat getSubjectNameFormat() {

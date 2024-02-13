@@ -24,6 +24,7 @@ import java.util.Objects;
 public class PrintDocumentItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the media for the print entity.
+     * @return a {@link ContentRequestBuilder}
      * @deprecated
      * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
      */
@@ -34,6 +35,7 @@ public class PrintDocumentItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the createUploadSession method.
+     * @return a {@link CreateUploadSessionRequestBuilder}
      * @deprecated
      * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
      */
@@ -43,7 +45,7 @@ public class PrintDocumentItemRequestBuilder extends BaseRequestBuilder {
         return new CreateUploadSessionRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new PrintDocumentItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link PrintDocumentItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -51,7 +53,7 @@ public class PrintDocumentItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/print/printerShares/{printerShare%2Did}/jobs/{printJob%2Did}/documents/{printDocument%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new PrintDocumentItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link PrintDocumentItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -60,6 +62,7 @@ public class PrintDocumentItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Delete navigation property documents for print
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
      */
@@ -70,6 +73,7 @@ public class PrintDocumentItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property documents for print
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
      */
@@ -77,13 +81,13 @@ public class PrintDocumentItemRequestBuilder extends BaseRequestBuilder {
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Get documents from print
-     * @return a PrintDocument
+     * @return a {@link PrintDocument}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
      */
@@ -95,7 +99,8 @@ public class PrintDocumentItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get documents from print
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a PrintDocument
+     * @return a {@link PrintDocument}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
      */
@@ -104,14 +109,14 @@ public class PrintDocumentItemRequestBuilder extends BaseRequestBuilder {
     public PrintDocument get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, PrintDocument::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property documents in print
      * @param body The request body
-     * @return a PrintDocument
+     * @return a {@link PrintDocument}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
      */
@@ -124,7 +129,8 @@ public class PrintDocumentItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property documents in print
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a PrintDocument
+     * @return a {@link PrintDocument}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
      */
@@ -134,13 +140,12 @@ public class PrintDocumentItemRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, PrintDocument::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property documents for print
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
      */
@@ -152,21 +157,21 @@ public class PrintDocumentItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property documents for print
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
      */
     @jakarta.annotation.Nonnull
     @Deprecated
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/print/printerShares/{printerShare%2Did}/jobs/{printJob%2Did}/documents/{printDocument%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Get documents from print
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
      */
@@ -178,7 +183,7 @@ public class PrintDocumentItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get documents from print
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
      */
@@ -193,7 +198,7 @@ public class PrintDocumentItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property documents in print
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
      */
@@ -206,7 +211,7 @@ public class PrintDocumentItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property documents in print
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
      */
@@ -214,7 +219,7 @@ public class PrintDocumentItemRequestBuilder extends BaseRequestBuilder {
     @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final PrintDocument body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/print/printerShares/{printerShare%2Did}/jobs/{printJob%2Did}/documents/{printDocument%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -223,7 +228,7 @@ public class PrintDocumentItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a PrintDocumentItemRequestBuilder
+     * @return a {@link PrintDocumentItemRequestBuilder}
      * @deprecated
      * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
      */
@@ -256,7 +261,7 @@ public class PrintDocumentItemRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

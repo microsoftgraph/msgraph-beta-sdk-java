@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EdiscoverySearchExportOperation extends CaseOperation implements Parsable {
     /**
-     * Instantiates a new EdiscoverySearchExportOperation and sets the default values.
+     * Instantiates a new {@link EdiscoverySearchExportOperation} and sets the default values.
      */
     public EdiscoverySearchExportOperation() {
         super();
@@ -18,7 +18,7 @@ public class EdiscoverySearchExportOperation extends CaseOperation implements Pa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EdiscoverySearchExportOperation
+     * @return a {@link EdiscoverySearchExportOperation}
      */
     @jakarta.annotation.Nonnull
     public static EdiscoverySearchExportOperation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class EdiscoverySearchExportOperation extends CaseOperation implements Pa
     }
     /**
      * Gets the additionalOptions property value. The additionalOptions property
-     * @return a EnumSet<AdditionalOptions>
+     * @return a {@link EnumSet<AdditionalOptions>}
      */
     @jakarta.annotation.Nullable
     public EnumSet<AdditionalOptions> getAdditionalOptions() {
@@ -35,7 +35,7 @@ public class EdiscoverySearchExportOperation extends CaseOperation implements Pa
     }
     /**
      * Gets the description property value. The description property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -43,7 +43,7 @@ public class EdiscoverySearchExportOperation extends CaseOperation implements Pa
     }
     /**
      * Gets the displayName property value. The displayName property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -51,7 +51,7 @@ public class EdiscoverySearchExportOperation extends CaseOperation implements Pa
     }
     /**
      * Gets the exportCriteria property value. The exportCriteria property
-     * @return a EnumSet<ExportCriteria>
+     * @return a {@link EnumSet<ExportCriteria>}
      */
     @jakarta.annotation.Nullable
     public EnumSet<ExportCriteria> getExportCriteria() {
@@ -59,7 +59,7 @@ public class EdiscoverySearchExportOperation extends CaseOperation implements Pa
     }
     /**
      * Gets the exportFileMetadata property value. The exportFileMetadata property
-     * @return a java.util.List<ExportFileMetadata>
+     * @return a {@link java.util.List<ExportFileMetadata>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ExportFileMetadata> getExportFileMetadata() {
@@ -67,7 +67,7 @@ public class EdiscoverySearchExportOperation extends CaseOperation implements Pa
     }
     /**
      * Gets the exportFormat property value. The exportFormat property
-     * @return a ExportFormat
+     * @return a {@link ExportFormat}
      */
     @jakarta.annotation.Nullable
     public ExportFormat getExportFormat() {
@@ -75,7 +75,7 @@ public class EdiscoverySearchExportOperation extends CaseOperation implements Pa
     }
     /**
      * Gets the exportLocation property value. The exportLocation property
-     * @return a EnumSet<ExportLocation>
+     * @return a {@link EnumSet<ExportLocation>}
      */
     @jakarta.annotation.Nullable
     public EnumSet<ExportLocation> getExportLocation() {
@@ -83,7 +83,7 @@ public class EdiscoverySearchExportOperation extends CaseOperation implements Pa
     }
     /**
      * Gets the exportSingleItems property value. The exportSingleItems property
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getExportSingleItems() {
@@ -91,7 +91,7 @@ public class EdiscoverySearchExportOperation extends CaseOperation implements Pa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -109,7 +109,7 @@ public class EdiscoverySearchExportOperation extends CaseOperation implements Pa
     }
     /**
      * Gets the search property value. The search property
-     * @return a EdiscoverySearch
+     * @return a {@link EdiscoverySearch}
      */
     @jakarta.annotation.Nullable
     public EdiscoverySearch getSearch() {

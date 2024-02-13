@@ -19,7 +19,7 @@ public class LogonUser implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new LogonUser and sets the default values.
+     * Instantiates a new {@link LogonUser} and sets the default values.
      */
     public LogonUser() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class LogonUser implements AdditionalDataHolder, BackedModel, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a LogonUser
+     * @return a {@link LogonUser}
      */
     @jakarta.annotation.Nonnull
     public static LogonUser createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class LogonUser implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the accountDomain property value. Domain of user account used to logon.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAccountDomain() {
@@ -45,7 +45,7 @@ public class LogonUser implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the accountName property value. Account name of user account used to logon.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAccountName() {
@@ -53,7 +53,7 @@ public class LogonUser implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the accountType property value. User Account type, per Windows definition. Possible values are: unknown, standard, power, administrator.
-     * @return a UserAccountSecurityType
+     * @return a {@link UserAccountSecurityType}
      */
     @jakarta.annotation.Nullable
     public UserAccountSecurityType getAccountType() {
@@ -61,7 +61,7 @@ public class LogonUser implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -74,7 +74,7 @@ public class LogonUser implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -82,7 +82,7 @@ public class LogonUser implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -99,7 +99,7 @@ public class LogonUser implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the firstSeenDateTime property value. DateTime at which the earliest logon by this user account occurred (provider-determined period). The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getFirstSeenDateTime() {
@@ -107,7 +107,7 @@ public class LogonUser implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the lastSeenDateTime property value. DateTime at which the latest logon by this user account occurred. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastSeenDateTime() {
@@ -115,7 +115,7 @@ public class LogonUser implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the logonId property value. User logon ID.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getLogonId() {
@@ -123,7 +123,7 @@ public class LogonUser implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the logonTypes property value. Collection of the logon types observed for the logged on user from when first to last seen. Possible values are: unknown, interactive, remoteInteractive, network, batch, service.
-     * @return a java.util.List<LogonType>
+     * @return a {@link java.util.List<LogonType>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<LogonType> getLogonTypes() {
@@ -131,7 +131,7 @@ public class LogonUser implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {

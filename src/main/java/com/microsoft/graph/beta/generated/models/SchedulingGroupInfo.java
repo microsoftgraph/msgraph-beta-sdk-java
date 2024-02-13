@@ -18,7 +18,7 @@ public class SchedulingGroupInfo implements AdditionalDataHolder, BackedModel, P
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new SchedulingGroupInfo and sets the default values.
+     * Instantiates a new {@link SchedulingGroupInfo} and sets the default values.
      */
     public SchedulingGroupInfo() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class SchedulingGroupInfo implements AdditionalDataHolder, BackedModel, P
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SchedulingGroupInfo
+     * @return a {@link SchedulingGroupInfo}
      */
     @jakarta.annotation.Nonnull
     public static SchedulingGroupInfo createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class SchedulingGroupInfo implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,23 +49,23 @@ public class SchedulingGroupInfo implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
         return this.backingStore;
     }
     /**
-     * Gets the code property value. The code property
-     * @return a String
+     * Gets the code property value. The code for the schedulingGroup.
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCode() {
         return this.backingStore.get("code");
     }
     /**
-     * Gets the displayName property value. The displayName property
-     * @return a String
+     * Gets the displayName property value. The display name for the schedulingGroup. Required.
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -73,7 +73,7 @@ public class SchedulingGroupInfo implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -86,15 +86,15 @@ public class SchedulingGroupInfo implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the schedulingGroupId property value. The schedulingGroupId property
-     * @return a String
+     * Gets the schedulingGroupId property value. ID of the schedulingGroup.
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSchedulingGroupId() {
@@ -128,14 +128,14 @@ public class SchedulingGroupInfo implements AdditionalDataHolder, BackedModel, P
         this.backingStore = value;
     }
     /**
-     * Sets the code property value. The code property
+     * Sets the code property value. The code for the schedulingGroup.
      * @param value Value to set for the code property.
      */
     public void setCode(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("code", value);
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The display name for the schedulingGroup. Required.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
@@ -149,7 +149,7 @@ public class SchedulingGroupInfo implements AdditionalDataHolder, BackedModel, P
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the schedulingGroupId property value. The schedulingGroupId property
+     * Sets the schedulingGroupId property value. ID of the schedulingGroup.
      * @param value Value to set for the schedulingGroupId property.
      */
     public void setSchedulingGroupId(@jakarta.annotation.Nullable final String value) {

@@ -24,6 +24,7 @@ import java.util.Objects;
 public class ConditionalAccessPoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -32,7 +33,7 @@ public class ConditionalAccessPoliciesRequestBuilder extends BaseRequestBuilder 
     /**
      * Provides operations to manage the conditionalAccessPolicies property of the microsoft.graph.networkaccess.filteringProfile entity.
      * @param conditionalAccessPolicyId The unique identifier of conditionalAccessPolicy
-     * @return a ConditionalAccessPolicyItemRequestBuilder
+     * @return a {@link ConditionalAccessPolicyItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ConditionalAccessPolicyItemRequestBuilder byConditionalAccessPolicyId(@jakarta.annotation.Nonnull final String conditionalAccessPolicyId) {
@@ -42,7 +43,7 @@ public class ConditionalAccessPoliciesRequestBuilder extends BaseRequestBuilder 
         return new ConditionalAccessPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new ConditionalAccessPoliciesRequestBuilder and sets the default values.
+     * Instantiates a new {@link ConditionalAccessPoliciesRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -50,7 +51,7 @@ public class ConditionalAccessPoliciesRequestBuilder extends BaseRequestBuilder 
         super(requestAdapter, "{+baseurl}/networkAccess/filteringProfiles/{filteringProfile%2Did}/conditionalAccessPolicies{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new ConditionalAccessPoliciesRequestBuilder and sets the default values.
+     * Instantiates a new {@link ConditionalAccessPoliciesRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -59,7 +60,8 @@ public class ConditionalAccessPoliciesRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * A set of associated policies defined to regulate access to resources or systems based on specific conditions. Automatically expanded.
-     * @return a ConditionalAccessPolicyCollectionResponse
+     * @return a {@link ConditionalAccessPolicyCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public ConditionalAccessPolicyCollectionResponse get() {
@@ -68,19 +70,19 @@ public class ConditionalAccessPoliciesRequestBuilder extends BaseRequestBuilder 
     /**
      * A set of associated policies defined to regulate access to resources or systems based on specific conditions. Automatically expanded.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a ConditionalAccessPolicyCollectionResponse
+     * @return a {@link ConditionalAccessPolicyCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public ConditionalAccessPolicyCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, ConditionalAccessPolicyCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * A set of associated policies defined to regulate access to resources or systems based on specific conditions. Automatically expanded.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -89,7 +91,7 @@ public class ConditionalAccessPoliciesRequestBuilder extends BaseRequestBuilder 
     /**
      * A set of associated policies defined to regulate access to resources or systems based on specific conditions. Automatically expanded.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -101,7 +103,7 @@ public class ConditionalAccessPoliciesRequestBuilder extends BaseRequestBuilder 
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a ConditionalAccessPoliciesRequestBuilder
+     * @return a {@link ConditionalAccessPoliciesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ConditionalAccessPoliciesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -155,7 +157,7 @@ public class ConditionalAccessPoliciesRequestBuilder extends BaseRequestBuilder 
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

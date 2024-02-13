@@ -18,7 +18,7 @@ public class ChangeDeploymentStatusPostRequestBody implements AdditionalDataHold
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new ChangeDeploymentStatusPostRequestBody and sets the default values.
+     * Instantiates a new {@link ChangeDeploymentStatusPostRequestBody} and sets the default values.
      */
     public ChangeDeploymentStatusPostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class ChangeDeploymentStatusPostRequestBody implements AdditionalDataHold
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ChangeDeploymentStatusPostRequestBody
+     * @return a {@link ChangeDeploymentStatusPostRequestBody}
      */
     @jakarta.annotation.Nonnull
     public static ChangeDeploymentStatusPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class ChangeDeploymentStatusPostRequestBody implements AdditionalDataHold
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class ChangeDeploymentStatusPostRequestBody implements AdditionalDataHold
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class ChangeDeploymentStatusPostRequestBody implements AdditionalDataHold
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -72,7 +72,7 @@ public class ChangeDeploymentStatusPostRequestBody implements AdditionalDataHold
     }
     /**
      * Gets the managementActionId property value. The managementActionId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getManagementActionId() {
@@ -80,7 +80,7 @@ public class ChangeDeploymentStatusPostRequestBody implements AdditionalDataHold
     }
     /**
      * Gets the managementTemplateId property value. The managementTemplateId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getManagementTemplateId() {
@@ -88,7 +88,7 @@ public class ChangeDeploymentStatusPostRequestBody implements AdditionalDataHold
     }
     /**
      * Gets the managementTemplateVersion property value. The managementTemplateVersion property
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getManagementTemplateVersion() {
@@ -96,7 +96,7 @@ public class ChangeDeploymentStatusPostRequestBody implements AdditionalDataHold
     }
     /**
      * Gets the status property value. The status property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getStatus() {
@@ -104,7 +104,7 @@ public class ChangeDeploymentStatusPostRequestBody implements AdditionalDataHold
     }
     /**
      * Gets the tenantGroupId property value. The tenantGroupId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTenantGroupId() {
@@ -112,7 +112,7 @@ public class ChangeDeploymentStatusPostRequestBody implements AdditionalDataHold
     }
     /**
      * Gets the tenantId property value. The tenantId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {

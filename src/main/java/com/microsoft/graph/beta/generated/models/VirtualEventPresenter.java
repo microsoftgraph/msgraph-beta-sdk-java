@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class VirtualEventPresenter extends Entity implements Parsable {
     /**
-     * Instantiates a new VirtualEventPresenter and sets the default values.
+     * Instantiates a new {@link VirtualEventPresenter} and sets the default values.
      */
     public VirtualEventPresenter() {
         super();
@@ -17,7 +17,7 @@ public class VirtualEventPresenter extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a VirtualEventPresenter
+     * @return a {@link VirtualEventPresenter}
      */
     @jakarta.annotation.Nonnull
     public static VirtualEventPresenter createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class VirtualEventPresenter extends Entity implements Parsable {
     }
     /**
      * Gets the email property value. Email address of the presenter.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getEmail() {
@@ -34,7 +34,7 @@ public class VirtualEventPresenter extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -48,7 +48,7 @@ public class VirtualEventPresenter extends Entity implements Parsable {
     }
     /**
      * Gets the identity property value. Identity information of the presenter.
-     * @return a CommunicationsUserIdentity
+     * @return a {@link CommunicationsUserIdentity}
      */
     @jakarta.annotation.Nullable
     public CommunicationsUserIdentity getIdentity() {
@@ -56,7 +56,7 @@ public class VirtualEventPresenter extends Entity implements Parsable {
     }
     /**
      * Gets the presenterDetails property value. Other detail information of the presenter.
-     * @return a VirtualEventPresenterDetails
+     * @return a {@link VirtualEventPresenterDetails}
      */
     @jakarta.annotation.Nullable
     public VirtualEventPresenterDetails getPresenterDetails() {
@@ -64,7 +64,7 @@ public class VirtualEventPresenter extends Entity implements Parsable {
     }
     /**
      * Gets the profilePhoto property value. The profilePhoto property
-     * @return a byte[]
+     * @return a {@link byte[]}
      */
     @jakarta.annotation.Nullable
     public byte[] getProfilePhoto() {
@@ -72,7 +72,7 @@ public class VirtualEventPresenter extends Entity implements Parsable {
     }
     /**
      * Gets the sessions property value. The sessions property
-     * @return a java.util.List<VirtualEventSession>
+     * @return a {@link java.util.List<VirtualEventSession>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<VirtualEventSession> getSessions() {

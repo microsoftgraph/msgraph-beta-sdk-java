@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EmailThreatSubmissionCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * Instantiates a new EmailThreatSubmissionCollectionResponse and sets the default values.
+     * Instantiates a new {@link EmailThreatSubmissionCollectionResponse} and sets the default values.
      */
     public EmailThreatSubmissionCollectionResponse() {
         super();
@@ -18,7 +18,7 @@ public class EmailThreatSubmissionCollectionResponse extends BaseCollectionPagin
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EmailThreatSubmissionCollectionResponse
+     * @return a {@link EmailThreatSubmissionCollectionResponse}
      */
     @jakarta.annotation.Nonnull
     public static EmailThreatSubmissionCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class EmailThreatSubmissionCollectionResponse extends BaseCollectionPagin
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -37,7 +37,7 @@ public class EmailThreatSubmissionCollectionResponse extends BaseCollectionPagin
     }
     /**
      * Gets the value property value. The value property
-     * @return a java.util.List<EmailThreatSubmission>
+     * @return a {@link java.util.List<EmailThreatSubmission>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<EmailThreatSubmission> getValue() {

@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MicrosoftTunnelServerLogCollectionResponse extends Entity implements Parsable {
     /**
-     * Instantiates a new MicrosoftTunnelServerLogCollectionResponse and sets the default values.
+     * Instantiates a new {@link MicrosoftTunnelServerLogCollectionResponse} and sets the default values.
      */
     public MicrosoftTunnelServerLogCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class MicrosoftTunnelServerLogCollectionResponse extends Entity implement
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MicrosoftTunnelServerLogCollectionResponse
+     * @return a {@link MicrosoftTunnelServerLogCollectionResponse}
      */
     @jakarta.annotation.Nonnull
     public static MicrosoftTunnelServerLogCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class MicrosoftTunnelServerLogCollectionResponse extends Entity implement
     }
     /**
      * Gets the endDateTime property value. The end time of the logs collected
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getEndDateTime() {
@@ -38,7 +38,7 @@ public class MicrosoftTunnelServerLogCollectionResponse extends Entity implement
     }
     /**
      * Gets the expiryDateTime property value. The time when the log collection is expired
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getExpiryDateTime() {
@@ -46,7 +46,7 @@ public class MicrosoftTunnelServerLogCollectionResponse extends Entity implement
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -62,7 +62,7 @@ public class MicrosoftTunnelServerLogCollectionResponse extends Entity implement
     }
     /**
      * Gets the requestDateTime property value. The time when the log collection was requested
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getRequestDateTime() {
@@ -70,7 +70,7 @@ public class MicrosoftTunnelServerLogCollectionResponse extends Entity implement
     }
     /**
      * Gets the serverId property value. ID of the server the log collection is requested upon
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getServerId() {
@@ -78,7 +78,7 @@ public class MicrosoftTunnelServerLogCollectionResponse extends Entity implement
     }
     /**
      * Gets the sizeInBytes property value. The size of the logs in bytes
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getSizeInBytes() {
@@ -86,7 +86,7 @@ public class MicrosoftTunnelServerLogCollectionResponse extends Entity implement
     }
     /**
      * Gets the startDateTime property value. The start time of the logs collected
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
@@ -94,7 +94,7 @@ public class MicrosoftTunnelServerLogCollectionResponse extends Entity implement
     }
     /**
      * Gets the status property value. Enum type that represent the status of log collection
-     * @return a MicrosoftTunnelLogCollectionStatus
+     * @return a {@link MicrosoftTunnelLogCollectionStatus}
      */
     @jakarta.annotation.Nullable
     public MicrosoftTunnelLogCollectionStatus getStatus() {

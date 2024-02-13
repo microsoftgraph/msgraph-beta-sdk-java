@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration implements Parsable {
     /**
-     * Instantiates a new AndroidDeviceOwnerVpnConfiguration and sets the default values.
+     * Instantiates a new {@link AndroidDeviceOwnerVpnConfiguration} and sets the default values.
      */
     public AndroidDeviceOwnerVpnConfiguration() {
         super();
@@ -21,7 +21,7 @@ public class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration impleme
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AndroidDeviceOwnerVpnConfiguration
+     * @return a {@link AndroidDeviceOwnerVpnConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static AndroidDeviceOwnerVpnConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration impleme
     }
     /**
      * Gets the alwaysOn property value. Whether or not to enable always-on VPN connection.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAlwaysOn() {
@@ -38,7 +38,7 @@ public class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration impleme
     }
     /**
      * Gets the alwaysOnLockdown property value. If always-on VPN connection is enabled, whether or not to lock network traffic when that VPN is disconnected.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAlwaysOnLockdown() {
@@ -46,7 +46,7 @@ public class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration impleme
     }
     /**
      * Gets the connectionType property value. Android VPN connection type.
-     * @return a AndroidVpnConnectionType
+     * @return a {@link AndroidVpnConnectionType}
      */
     @jakarta.annotation.Nullable
     public AndroidVpnConnectionType getConnectionType() {
@@ -54,7 +54,7 @@ public class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration impleme
     }
     /**
      * Gets the customData property value. Custom data to define key/value pairs specific to a VPN provider. This collection can contain a maximum of 25 elements.
-     * @return a java.util.List<KeyValue>
+     * @return a {@link java.util.List<KeyValue>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyValue> getCustomData() {
@@ -62,7 +62,7 @@ public class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration impleme
     }
     /**
      * Gets the customKeyValueData property value. Custom data to define key/value pairs specific to a VPN provider. This collection can contain a maximum of 25 elements.
-     * @return a java.util.List<KeyValuePair>
+     * @return a {@link java.util.List<KeyValuePair>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyValuePair> getCustomKeyValueData() {
@@ -70,7 +70,7 @@ public class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration impleme
     }
     /**
      * Gets the derivedCredentialSettings property value. Tenant level settings for the Derived Credentials to be used for authentication.
-     * @return a DeviceManagementDerivedCredentialSettings
+     * @return a {@link DeviceManagementDerivedCredentialSettings}
      */
     @jakarta.annotation.Nullable
     public DeviceManagementDerivedCredentialSettings getDerivedCredentialSettings() {
@@ -78,7 +78,7 @@ public class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration impleme
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -99,7 +99,7 @@ public class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration impleme
     }
     /**
      * Gets the identityCertificate property value. Identity certificate for client authentication when authentication method is certificate.
-     * @return a AndroidDeviceOwnerCertificateProfileBase
+     * @return a {@link AndroidDeviceOwnerCertificateProfileBase}
      */
     @jakarta.annotation.Nullable
     public AndroidDeviceOwnerCertificateProfileBase getIdentityCertificate() {
@@ -107,7 +107,7 @@ public class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration impleme
     }
     /**
      * Gets the microsoftTunnelSiteId property value. Microsoft Tunnel site ID.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getMicrosoftTunnelSiteId() {
@@ -115,7 +115,7 @@ public class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration impleme
     }
     /**
      * Gets the proxyExclusionList property value. List of hosts to exclude using the proxy on connections for. These hosts can use wildcards such as .example.com.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getProxyExclusionList() {
@@ -123,7 +123,7 @@ public class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration impleme
     }
     /**
      * Gets the proxyServer property value. Proxy server.
-     * @return a VpnProxyServer
+     * @return a {@link VpnProxyServer}
      */
     @jakarta.annotation.Nullable
     public VpnProxyServer getProxyServer() {
@@ -131,7 +131,7 @@ public class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration impleme
     }
     /**
      * Gets the targetedMobileApps property value. Targeted mobile apps. This collection can contain a maximum of 500 elements.
-     * @return a java.util.List<AppListItem>
+     * @return a {@link java.util.List<AppListItem>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AppListItem> getTargetedMobileApps() {
@@ -139,7 +139,7 @@ public class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration impleme
     }
     /**
      * Gets the targetedPackageIds property value. Targeted App package IDs.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getTargetedPackageIds() {

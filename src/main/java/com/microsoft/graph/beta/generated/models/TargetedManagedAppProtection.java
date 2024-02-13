@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TargetedManagedAppProtection extends ManagedAppProtection implements Parsable {
     /**
-     * Instantiates a new TargetedManagedAppProtection and sets the default values.
+     * Instantiates a new {@link TargetedManagedAppProtection} and sets the default values.
      */
     public TargetedManagedAppProtection() {
         super();
@@ -22,7 +22,7 @@ public class TargetedManagedAppProtection extends ManagedAppProtection implement
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TargetedManagedAppProtection
+     * @return a {@link TargetedManagedAppProtection}
      */
     @jakarta.annotation.Nonnull
     public static TargetedManagedAppProtection createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class TargetedManagedAppProtection extends ManagedAppProtection implement
     }
     /**
      * Gets the appGroupType property value. Indicates a collection of apps to target which can be one of several pre-defined lists of apps or a manually selected list of apps
-     * @return a TargetedManagedAppGroupType
+     * @return a {@link TargetedManagedAppGroupType}
      */
     @jakarta.annotation.Nullable
     public TargetedManagedAppGroupType getAppGroupType() {
@@ -47,7 +47,7 @@ public class TargetedManagedAppProtection extends ManagedAppProtection implement
     }
     /**
      * Gets the assignments property value. Navigation property to list of inclusion and exclusion groups to which the policy is deployed.
-     * @return a java.util.List<TargetedManagedAppPolicyAssignment>
+     * @return a {@link java.util.List<TargetedManagedAppPolicyAssignment>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<TargetedManagedAppPolicyAssignment> getAssignments() {
@@ -55,7 +55,7 @@ public class TargetedManagedAppProtection extends ManagedAppProtection implement
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -68,7 +68,7 @@ public class TargetedManagedAppProtection extends ManagedAppProtection implement
     }
     /**
      * Gets the isAssigned property value. Indicates if the policy is deployed to any inclusion groups or not.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsAssigned() {
@@ -76,7 +76,7 @@ public class TargetedManagedAppProtection extends ManagedAppProtection implement
     }
     /**
      * Gets the targetedAppManagementLevels property value. Management levels for apps
-     * @return a EnumSet<AppManagementLevel>
+     * @return a {@link EnumSet<AppManagementLevel>}
      */
     @jakarta.annotation.Nullable
     public EnumSet<AppManagementLevel> getTargetedAppManagementLevels() {

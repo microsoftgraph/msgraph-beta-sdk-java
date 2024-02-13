@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MacOSCredentialSingleSignOnExtension extends MacOSSingleSignOnExtension implements Parsable {
     /**
-     * Instantiates a new MacOSCredentialSingleSignOnExtension and sets the default values.
+     * Instantiates a new {@link MacOSCredentialSingleSignOnExtension} and sets the default values.
      */
     public MacOSCredentialSingleSignOnExtension() {
         super();
@@ -21,7 +21,7 @@ public class MacOSCredentialSingleSignOnExtension extends MacOSSingleSignOnExten
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MacOSCredentialSingleSignOnExtension
+     * @return a {@link MacOSCredentialSingleSignOnExtension}
      */
     @jakarta.annotation.Nonnull
     public static MacOSCredentialSingleSignOnExtension createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class MacOSCredentialSingleSignOnExtension extends MacOSSingleSignOnExten
     }
     /**
      * Gets the configurations property value. Gets or sets a list of typed key-value pairs used to configure Credential-type profiles. This collection can contain a maximum of 500 elements.
-     * @return a java.util.List<KeyTypedValuePair>
+     * @return a {@link java.util.List<KeyTypedValuePair>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyTypedValuePair> getConfigurations() {
@@ -38,7 +38,7 @@ public class MacOSCredentialSingleSignOnExtension extends MacOSSingleSignOnExten
     }
     /**
      * Gets the domains property value. Gets or sets a list of hosts or domain names for which the app extension performs SSO.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getDomains() {
@@ -46,7 +46,7 @@ public class MacOSCredentialSingleSignOnExtension extends MacOSSingleSignOnExten
     }
     /**
      * Gets the extensionIdentifier property value. Gets or sets the bundle ID of the app extension that performs SSO for the specified URLs.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getExtensionIdentifier() {
@@ -54,7 +54,7 @@ public class MacOSCredentialSingleSignOnExtension extends MacOSSingleSignOnExten
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -68,7 +68,7 @@ public class MacOSCredentialSingleSignOnExtension extends MacOSSingleSignOnExten
     }
     /**
      * Gets the realm property value. Gets or sets the case-sensitive realm name for this profile.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRealm() {
@@ -76,7 +76,7 @@ public class MacOSCredentialSingleSignOnExtension extends MacOSSingleSignOnExten
     }
     /**
      * Gets the teamIdentifier property value. Gets or sets the team ID of the app extension that performs SSO for the specified URLs.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTeamIdentifier() {

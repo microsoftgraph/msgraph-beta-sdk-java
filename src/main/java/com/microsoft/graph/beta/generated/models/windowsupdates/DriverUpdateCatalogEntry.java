@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DriverUpdateCatalogEntry extends SoftwareUpdateCatalogEntry implements Parsable {
     /**
-     * Instantiates a new DriverUpdateCatalogEntry and sets the default values.
+     * Instantiates a new {@link DriverUpdateCatalogEntry} and sets the default values.
      */
     public DriverUpdateCatalogEntry() {
         super();
@@ -19,7 +19,7 @@ public class DriverUpdateCatalogEntry extends SoftwareUpdateCatalogEntry impleme
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DriverUpdateCatalogEntry
+     * @return a {@link DriverUpdateCatalogEntry}
      */
     @jakarta.annotation.Nonnull
     public static DriverUpdateCatalogEntry createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class DriverUpdateCatalogEntry extends SoftwareUpdateCatalogEntry impleme
     }
     /**
      * Gets the description property value. The description of the content.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -36,7 +36,7 @@ public class DriverUpdateCatalogEntry extends SoftwareUpdateCatalogEntry impleme
     }
     /**
      * Gets the driverClass property value. The classification of the driver.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDriverClass() {
@@ -44,7 +44,7 @@ public class DriverUpdateCatalogEntry extends SoftwareUpdateCatalogEntry impleme
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -60,7 +60,7 @@ public class DriverUpdateCatalogEntry extends SoftwareUpdateCatalogEntry impleme
     }
     /**
      * Gets the manufacturer property value. The manufacturer of the driver.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getManufacturer() {
@@ -68,7 +68,7 @@ public class DriverUpdateCatalogEntry extends SoftwareUpdateCatalogEntry impleme
     }
     /**
      * Gets the provider property value. The provider of the driver.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getProvider() {
@@ -76,7 +76,7 @@ public class DriverUpdateCatalogEntry extends SoftwareUpdateCatalogEntry impleme
     }
     /**
      * Gets the setupInformationFile property value. The setup information file of the driver.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSetupInformationFile() {
@@ -84,7 +84,7 @@ public class DriverUpdateCatalogEntry extends SoftwareUpdateCatalogEntry impleme
     }
     /**
      * Gets the version property value. The unique version of the content.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getVersion() {
@@ -92,7 +92,7 @@ public class DriverUpdateCatalogEntry extends SoftwareUpdateCatalogEntry impleme
     }
     /**
      * Gets the versionDateTime property value. The date and time when a new version of content was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getVersionDateTime() {

@@ -26,6 +26,7 @@ import java.util.Objects;
 public class ChangesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the count method.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -34,7 +35,7 @@ public class ChangesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the changes property of the microsoft.graph.workbookDocumentTask entity.
      * @param workbookDocumentTaskChangeId The unique identifier of workbookDocumentTaskChange
-     * @return a WorkbookDocumentTaskChangeItemRequestBuilder
+     * @return a {@link WorkbookDocumentTaskChangeItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public WorkbookDocumentTaskChangeItemRequestBuilder byWorkbookDocumentTaskChangeId(@jakarta.annotation.Nonnull final String workbookDocumentTaskChangeId) {
@@ -44,7 +45,7 @@ public class ChangesRequestBuilder extends BaseRequestBuilder {
         return new WorkbookDocumentTaskChangeItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new ChangesRequestBuilder and sets the default values.
+     * Instantiates a new {@link ChangesRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -52,7 +53,7 @@ public class ChangesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/comments/{workbookComment%2Did}/replies/{workbookCommentReply%2Did}/task/changes{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new ChangesRequestBuilder and sets the default values.
+     * Instantiates a new {@link ChangesRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -61,7 +62,8 @@ public class ChangesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * A collection of task change histories.
-     * @return a WorkbookDocumentTaskChangeCollectionResponse
+     * @return a {@link WorkbookDocumentTaskChangeCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public WorkbookDocumentTaskChangeCollectionResponse get() {
@@ -70,20 +72,20 @@ public class ChangesRequestBuilder extends BaseRequestBuilder {
     /**
      * A collection of task change histories.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a WorkbookDocumentTaskChangeCollectionResponse
+     * @return a {@link WorkbookDocumentTaskChangeCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public WorkbookDocumentTaskChangeCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, WorkbookDocumentTaskChangeCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Provides operations to call the itemAt method.
      * @param index Usage: index={index}
-     * @return a ItemAtWithIndexRequestBuilder
+     * @return a {@link ItemAtWithIndexRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ItemAtWithIndexRequestBuilder itemAtWithIndex(@jakarta.annotation.Nonnull final Integer index) {
@@ -93,7 +95,8 @@ public class ChangesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to changes for drives
      * @param body The request body
-     * @return a WorkbookDocumentTaskChange
+     * @return a {@link WorkbookDocumentTaskChange}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public WorkbookDocumentTaskChange post(@jakarta.annotation.Nonnull final WorkbookDocumentTaskChange body) {
@@ -103,20 +106,20 @@ public class ChangesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to changes for drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a WorkbookDocumentTaskChange
+     * @return a {@link WorkbookDocumentTaskChange}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public WorkbookDocumentTaskChange post(@jakarta.annotation.Nonnull final WorkbookDocumentTaskChange body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, WorkbookDocumentTaskChange::createFromDiscriminatorValue);
     }
     /**
      * A collection of task change histories.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -125,7 +128,7 @@ public class ChangesRequestBuilder extends BaseRequestBuilder {
     /**
      * A collection of task change histories.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -137,7 +140,7 @@ public class ChangesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to changes for drives
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final WorkbookDocumentTaskChange body) {
@@ -147,12 +150,12 @@ public class ChangesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to changes for drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final WorkbookDocumentTaskChange body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/comments/{workbookComment%2Did}/replies/{workbookCommentReply%2Did}/task/changes", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -161,7 +164,7 @@ public class ChangesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a ChangesRequestBuilder
+     * @return a {@link ChangesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ChangesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -215,7 +218,7 @@ public class ChangesRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

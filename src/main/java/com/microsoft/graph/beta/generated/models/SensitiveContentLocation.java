@@ -18,7 +18,7 @@ public class SensitiveContentLocation implements AdditionalDataHolder, BackedMod
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new SensitiveContentLocation and sets the default values.
+     * Instantiates a new {@link SensitiveContentLocation} and sets the default values.
      */
     public SensitiveContentLocation() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class SensitiveContentLocation implements AdditionalDataHolder, BackedMod
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SensitiveContentLocation
+     * @return a {@link SensitiveContentLocation}
      */
     @jakarta.annotation.Nonnull
     public static SensitiveContentLocation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class SensitiveContentLocation implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class SensitiveContentLocation implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class SensitiveContentLocation implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the confidence property value. The confidence property
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getConfidence() {
@@ -65,7 +65,7 @@ public class SensitiveContentLocation implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the evidences property value. The evidences property
-     * @return a java.util.List<SensitiveContentEvidence>
+     * @return a {@link java.util.List<SensitiveContentEvidence>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<SensitiveContentEvidence> getEvidences() {
@@ -73,7 +73,7 @@ public class SensitiveContentLocation implements AdditionalDataHolder, BackedMod
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -88,7 +88,7 @@ public class SensitiveContentLocation implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the idMatch property value. The idMatch property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getIdMatch() {
@@ -96,7 +96,7 @@ public class SensitiveContentLocation implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the length property value. The length property
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getLength() {
@@ -104,7 +104,7 @@ public class SensitiveContentLocation implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -112,7 +112,7 @@ public class SensitiveContentLocation implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the offset property value. The offset property
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getOffset() {

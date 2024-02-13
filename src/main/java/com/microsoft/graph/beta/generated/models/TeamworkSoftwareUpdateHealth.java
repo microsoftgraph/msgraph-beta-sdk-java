@@ -18,7 +18,7 @@ public class TeamworkSoftwareUpdateHealth implements AdditionalDataHolder, Backe
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new TeamworkSoftwareUpdateHealth and sets the default values.
+     * Instantiates a new {@link TeamworkSoftwareUpdateHealth} and sets the default values.
      */
     public TeamworkSoftwareUpdateHealth() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class TeamworkSoftwareUpdateHealth implements AdditionalDataHolder, Backe
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TeamworkSoftwareUpdateHealth
+     * @return a {@link TeamworkSoftwareUpdateHealth}
      */
     @jakarta.annotation.Nonnull
     public static TeamworkSoftwareUpdateHealth createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class TeamworkSoftwareUpdateHealth implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class TeamworkSoftwareUpdateHealth implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the adminAgentSoftwareUpdateStatus property value. The software update available for the admin agent.
-     * @return a TeamworkSoftwareUpdateStatus
+     * @return a {@link TeamworkSoftwareUpdateStatus}
      */
     @jakarta.annotation.Nullable
     public TeamworkSoftwareUpdateStatus getAdminAgentSoftwareUpdateStatus() {
@@ -57,7 +57,7 @@ public class TeamworkSoftwareUpdateHealth implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -65,7 +65,7 @@ public class TeamworkSoftwareUpdateHealth implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the companyPortalSoftwareUpdateStatus property value. The software update available for the company portal.
-     * @return a TeamworkSoftwareUpdateStatus
+     * @return a {@link TeamworkSoftwareUpdateStatus}
      */
     @jakarta.annotation.Nullable
     public TeamworkSoftwareUpdateStatus getCompanyPortalSoftwareUpdateStatus() {
@@ -73,7 +73,7 @@ public class TeamworkSoftwareUpdateHealth implements AdditionalDataHolder, Backe
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -89,7 +89,7 @@ public class TeamworkSoftwareUpdateHealth implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the firmwareSoftwareUpdateStatus property value. The software update available for the firmware.
-     * @return a TeamworkSoftwareUpdateStatus
+     * @return a {@link TeamworkSoftwareUpdateStatus}
      */
     @jakarta.annotation.Nullable
     public TeamworkSoftwareUpdateStatus getFirmwareSoftwareUpdateStatus() {
@@ -97,7 +97,7 @@ public class TeamworkSoftwareUpdateHealth implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -105,7 +105,7 @@ public class TeamworkSoftwareUpdateHealth implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the operatingSystemSoftwareUpdateStatus property value. The software update available for the operating system.
-     * @return a TeamworkSoftwareUpdateStatus
+     * @return a {@link TeamworkSoftwareUpdateStatus}
      */
     @jakarta.annotation.Nullable
     public TeamworkSoftwareUpdateStatus getOperatingSystemSoftwareUpdateStatus() {
@@ -113,7 +113,7 @@ public class TeamworkSoftwareUpdateHealth implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the partnerAgentSoftwareUpdateStatus property value. The software update available for the partner agent.
-     * @return a TeamworkSoftwareUpdateStatus
+     * @return a {@link TeamworkSoftwareUpdateStatus}
      */
     @jakarta.annotation.Nullable
     public TeamworkSoftwareUpdateStatus getPartnerAgentSoftwareUpdateStatus() {
@@ -121,7 +121,7 @@ public class TeamworkSoftwareUpdateHealth implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the teamsClientSoftwareUpdateStatus property value. The software update available for the Teams client.
-     * @return a TeamworkSoftwareUpdateStatus
+     * @return a {@link TeamworkSoftwareUpdateStatus}
      */
     @jakarta.annotation.Nullable
     public TeamworkSoftwareUpdateStatus getTeamsClientSoftwareUpdateStatus() {

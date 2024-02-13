@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Schema extends Entity implements Parsable {
     /**
-     * Instantiates a new Schema and sets the default values.
+     * Instantiates a new {@link Schema} and sets the default values.
      */
     public Schema() {
         super();
@@ -17,7 +17,7 @@ public class Schema extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Schema
+     * @return a {@link Schema}
      */
     @jakarta.annotation.Nonnull
     public static Schema createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class Schema extends Entity implements Parsable {
     }
     /**
      * Gets the baseType property value. The baseType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getBaseType() {
@@ -34,7 +34,7 @@ public class Schema extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -45,7 +45,7 @@ public class Schema extends Entity implements Parsable {
     }
     /**
      * Gets the properties property value. The properties property
-     * @return a java.util.List<Property>
+     * @return a {@link java.util.List<Property>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Property> getProperties() {

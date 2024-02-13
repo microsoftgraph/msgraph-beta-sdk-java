@@ -3,6 +3,7 @@ package com.microsoft.graph.beta.networkaccess.connectivity.remotenetworks.item.
 import com.microsoft.graph.beta.models.networkaccess.ForwardingProfile;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.networkaccess.connectivity.remotenetworks.item.forwardingprofiles.item.policies.PoliciesRequestBuilder;
+import com.microsoft.graph.beta.networkaccess.connectivity.remotenetworks.item.forwardingprofiles.item.serviceprincipal.ServicePrincipalRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -23,13 +24,22 @@ import java.util.Objects;
 public class ForwardingProfileItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the policies property of the microsoft.graph.networkaccess.profile entity.
+     * @return a {@link PoliciesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PoliciesRequestBuilder policies() {
         return new PoliciesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new ForwardingProfileItemRequestBuilder and sets the default values.
+     * Provides operations to manage the servicePrincipal property of the microsoft.graph.networkaccess.forwardingProfile entity.
+     * @return a {@link ServicePrincipalRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ServicePrincipalRequestBuilder servicePrincipal() {
+        return new ServicePrincipalRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Instantiates a new {@link ForwardingProfileItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -37,7 +47,7 @@ public class ForwardingProfileItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/networkAccess/connectivity/remoteNetworks/{remoteNetwork%2Did}/forwardingProfiles/{forwardingProfile%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new ForwardingProfileItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link ForwardingProfileItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -46,6 +56,7 @@ public class ForwardingProfileItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Delete navigation property forwardingProfiles for networkAccess
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete() {
         delete(null);
@@ -53,17 +64,18 @@ public class ForwardingProfileItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property forwardingProfiles for networkAccess
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Get forwardingProfiles from networkAccess
-     * @return a ForwardingProfile
+     * @return a {@link ForwardingProfile}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public ForwardingProfile get() {
@@ -72,20 +84,21 @@ public class ForwardingProfileItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get forwardingProfiles from networkAccess
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a ForwardingProfile
+     * @return a {@link ForwardingProfile}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public ForwardingProfile get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, ForwardingProfile::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property forwardingProfiles in networkAccess
      * @param body The request body
-     * @return a ForwardingProfile
+     * @return a {@link ForwardingProfile}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public ForwardingProfile patch(@jakarta.annotation.Nonnull final ForwardingProfile body) {
@@ -95,20 +108,20 @@ public class ForwardingProfileItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property forwardingProfiles in networkAccess
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a ForwardingProfile
+     * @return a {@link ForwardingProfile}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public ForwardingProfile patch(@jakarta.annotation.Nonnull final ForwardingProfile body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, ForwardingProfile::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property forwardingProfiles for networkAccess
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -117,18 +130,18 @@ public class ForwardingProfileItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property forwardingProfiles for networkAccess
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/networkAccess/connectivity/remoteNetworks/{remoteNetwork%2Did}/forwardingProfiles/{forwardingProfile%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Get forwardingProfiles from networkAccess
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -137,7 +150,7 @@ public class ForwardingProfileItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get forwardingProfiles from networkAccess
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -149,7 +162,7 @@ public class ForwardingProfileItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property forwardingProfiles in networkAccess
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final ForwardingProfile body) {
@@ -159,12 +172,12 @@ public class ForwardingProfileItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property forwardingProfiles in networkAccess
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final ForwardingProfile body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/networkAccess/connectivity/remoteNetworks/{remoteNetwork%2Did}/forwardingProfiles/{forwardingProfile%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -173,7 +186,7 @@ public class ForwardingProfileItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a ForwardingProfileItemRequestBuilder
+     * @return a {@link ForwardingProfileItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ForwardingProfileItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -203,7 +216,7 @@ public class ForwardingProfileItemRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

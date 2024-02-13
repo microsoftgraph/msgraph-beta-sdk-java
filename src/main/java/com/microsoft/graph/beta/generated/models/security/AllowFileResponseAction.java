@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AllowFileResponseAction extends ResponseAction implements Parsable {
     /**
-     * Instantiates a new AllowFileResponseAction and sets the default values.
+     * Instantiates a new {@link AllowFileResponseAction} and sets the default values.
      */
     public AllowFileResponseAction() {
         super();
@@ -19,7 +19,7 @@ public class AllowFileResponseAction extends ResponseAction implements Parsable 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AllowFileResponseAction
+     * @return a {@link AllowFileResponseAction}
      */
     @jakarta.annotation.Nonnull
     public static AllowFileResponseAction createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class AllowFileResponseAction extends ResponseAction implements Parsable 
     }
     /**
      * Gets the deviceGroupNames property value. Device groups to which the actions set in the custom detection rule are applied. More information
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getDeviceGroupNames() {
@@ -36,7 +36,7 @@ public class AllowFileResponseAction extends ResponseAction implements Parsable 
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -47,7 +47,7 @@ public class AllowFileResponseAction extends ResponseAction implements Parsable 
     }
     /**
      * Gets the identifier property value. The identifier property
-     * @return a EnumSet<FileEntityIdentifier>
+     * @return a {@link EnumSet<FileEntityIdentifier>}
      */
     @jakarta.annotation.Nullable
     public EnumSet<FileEntityIdentifier> getIdentifier() {

@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Windows10EndpointProtectionConfiguration extends DeviceConfiguration implements Parsable {
     /**
-     * Instantiates a new Windows10EndpointProtectionConfiguration and sets the default values.
+     * Instantiates a new {@link Windows10EndpointProtectionConfiguration} and sets the default values.
      */
     public Windows10EndpointProtectionConfiguration() {
         super();
@@ -22,7 +22,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Windows10EndpointProtectionConfiguration
+     * @return a {@link Windows10EndpointProtectionConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static Windows10EndpointProtectionConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -31,7 +31,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the applicationGuardAllowCameraMicrophoneRedirection property value. Gets or sets whether applications inside Microsoft Defender Application Guard can access the devices camera and microphone.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getApplicationGuardAllowCameraMicrophoneRedirection() {
@@ -39,7 +39,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the applicationGuardAllowFileSaveOnHost property value. Allow users to download files from Edge in the application guard container and save them on the host file system
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getApplicationGuardAllowFileSaveOnHost() {
@@ -47,7 +47,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the applicationGuardAllowPersistence property value. Allow persisting user generated data inside the App Guard Containter (favorites, cookies, web passwords, etc.)
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getApplicationGuardAllowPersistence() {
@@ -55,7 +55,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the applicationGuardAllowPrintToLocalPrinters property value. Allow printing to Local Printers from Container
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getApplicationGuardAllowPrintToLocalPrinters() {
@@ -63,7 +63,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the applicationGuardAllowPrintToNetworkPrinters property value. Allow printing to Network Printers from Container
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getApplicationGuardAllowPrintToNetworkPrinters() {
@@ -71,7 +71,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the applicationGuardAllowPrintToPDF property value. Allow printing to PDF from Container
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getApplicationGuardAllowPrintToPDF() {
@@ -79,7 +79,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the applicationGuardAllowPrintToXPS property value. Allow printing to XPS from Container
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getApplicationGuardAllowPrintToXPS() {
@@ -87,7 +87,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the applicationGuardAllowVirtualGPU property value. Allow application guard to use virtual GPU
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getApplicationGuardAllowVirtualGPU() {
@@ -95,7 +95,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the applicationGuardBlockClipboardSharing property value. Possible values for applicationGuardBlockClipboardSharingType
-     * @return a ApplicationGuardBlockClipboardSharingType
+     * @return a {@link ApplicationGuardBlockClipboardSharingType}
      */
     @jakarta.annotation.Nullable
     public ApplicationGuardBlockClipboardSharingType getApplicationGuardBlockClipboardSharing() {
@@ -103,7 +103,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the applicationGuardBlockFileTransfer property value. Possible values for applicationGuardBlockFileTransfer
-     * @return a ApplicationGuardBlockFileTransferType
+     * @return a {@link ApplicationGuardBlockFileTransferType}
      */
     @jakarta.annotation.Nullable
     public ApplicationGuardBlockFileTransferType getApplicationGuardBlockFileTransfer() {
@@ -111,7 +111,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the applicationGuardBlockNonEnterpriseContent property value. Block enterprise sites to load non-enterprise content, such as third party plug-ins
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getApplicationGuardBlockNonEnterpriseContent() {
@@ -119,7 +119,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the applicationGuardCertificateThumbprints property value. Allows certain device level Root Certificates to be shared with the Microsoft Defender Application Guard container.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getApplicationGuardCertificateThumbprints() {
@@ -127,7 +127,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the applicationGuardEnabled property value. Enable Windows Defender Application Guard
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getApplicationGuardEnabled() {
@@ -135,7 +135,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the applicationGuardEnabledOptions property value. Possible values for ApplicationGuardEnabledOptions
-     * @return a ApplicationGuardEnabledOptions
+     * @return a {@link ApplicationGuardEnabledOptions}
      */
     @jakarta.annotation.Nullable
     public ApplicationGuardEnabledOptions getApplicationGuardEnabledOptions() {
@@ -143,7 +143,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the applicationGuardForceAuditing property value. Force auditing will persist Windows logs and events to meet security/compliance criteria (sample events are user login-logoff, use of privilege rights, software installation, system changes, etc.)
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getApplicationGuardForceAuditing() {
@@ -151,7 +151,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the appLockerApplicationControl property value. Possible values of AppLocker Application Control Types
-     * @return a AppLockerApplicationControlType
+     * @return a {@link AppLockerApplicationControlType}
      */
     @jakarta.annotation.Nullable
     public AppLockerApplicationControlType getAppLockerApplicationControl() {
@@ -159,7 +159,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the bitLockerAllowStandardUserEncryption property value. Allows the admin to allow standard users to enable encrpytion during Azure AD Join.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getBitLockerAllowStandardUserEncryption() {
@@ -167,7 +167,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the bitLockerDisableWarningForOtherDiskEncryption property value. Allows the Admin to disable the warning prompt for other disk encryption on the user machines.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getBitLockerDisableWarningForOtherDiskEncryption() {
@@ -175,7 +175,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the bitLockerEnableStorageCardEncryptionOnMobile property value. Allows the admin to require encryption to be turned on using BitLocker. This policy is valid only for a mobile SKU.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getBitLockerEnableStorageCardEncryptionOnMobile() {
@@ -183,7 +183,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the bitLockerEncryptDevice property value. Allows the admin to require encryption to be turned on using BitLocker.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getBitLockerEncryptDevice() {
@@ -191,7 +191,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the bitLockerFixedDrivePolicy property value. BitLocker Fixed Drive Policy.
-     * @return a BitLockerFixedDrivePolicy
+     * @return a {@link BitLockerFixedDrivePolicy}
      */
     @jakarta.annotation.Nullable
     public BitLockerFixedDrivePolicy getBitLockerFixedDrivePolicy() {
@@ -199,7 +199,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the bitLockerRecoveryPasswordRotation property value. BitLocker recovery password rotation type
-     * @return a BitLockerRecoveryPasswordRotationType
+     * @return a {@link BitLockerRecoveryPasswordRotationType}
      */
     @jakarta.annotation.Nullable
     public BitLockerRecoveryPasswordRotationType getBitLockerRecoveryPasswordRotation() {
@@ -207,7 +207,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the bitLockerRemovableDrivePolicy property value. BitLocker Removable Drive Policy.
-     * @return a BitLockerRemovableDrivePolicy
+     * @return a {@link BitLockerRemovableDrivePolicy}
      */
     @jakarta.annotation.Nullable
     public BitLockerRemovableDrivePolicy getBitLockerRemovableDrivePolicy() {
@@ -215,7 +215,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the bitLockerSystemDrivePolicy property value. BitLocker System Drive Policy.
-     * @return a BitLockerSystemDrivePolicy
+     * @return a {@link BitLockerSystemDrivePolicy}
      */
     @jakarta.annotation.Nullable
     public BitLockerSystemDrivePolicy getBitLockerSystemDrivePolicy() {
@@ -223,7 +223,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderAdditionalGuardedFolders property value. List of folder paths to be added to the list of protected folders
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getDefenderAdditionalGuardedFolders() {
@@ -231,7 +231,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderAdobeReaderLaunchChildProcess property value. Possible values of Defender PUA Protection
-     * @return a DefenderProtectionType
+     * @return a {@link DefenderProtectionType}
      */
     @jakarta.annotation.Nullable
     public DefenderProtectionType getDefenderAdobeReaderLaunchChildProcess() {
@@ -239,7 +239,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderAdvancedRansomewareProtectionType property value. Possible values of Defender PUA Protection
-     * @return a DefenderProtectionType
+     * @return a {@link DefenderProtectionType}
      */
     @jakarta.annotation.Nullable
     public DefenderProtectionType getDefenderAdvancedRansomewareProtectionType() {
@@ -247,7 +247,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderAllowBehaviorMonitoring property value. Allows or disallows Windows Defender Behavior Monitoring functionality.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDefenderAllowBehaviorMonitoring() {
@@ -255,7 +255,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderAllowCloudProtection property value. To best protect your PC, Windows Defender will send information to Microsoft about any problems it finds. Microsoft will analyze that information, learn more about problems affecting you and other customers, and offer improved solutions.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDefenderAllowCloudProtection() {
@@ -263,7 +263,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderAllowEndUserAccess property value. Allows or disallows user access to the Windows Defender UI. If disallowed, all Windows Defender notifications will also be suppressed.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDefenderAllowEndUserAccess() {
@@ -271,7 +271,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderAllowIntrusionPreventionSystem property value. Allows or disallows Windows Defender Intrusion Prevention functionality.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDefenderAllowIntrusionPreventionSystem() {
@@ -279,7 +279,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderAllowOnAccessProtection property value. Allows or disallows Windows Defender On Access Protection functionality.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDefenderAllowOnAccessProtection() {
@@ -287,7 +287,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderAllowRealTimeMonitoring property value. Allows or disallows Windows Defender Realtime Monitoring functionality.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDefenderAllowRealTimeMonitoring() {
@@ -295,7 +295,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderAllowScanArchiveFiles property value. Allows or disallows scanning of archives.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDefenderAllowScanArchiveFiles() {
@@ -303,7 +303,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderAllowScanDownloads property value. Allows or disallows Windows Defender IOAVP Protection functionality.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDefenderAllowScanDownloads() {
@@ -311,7 +311,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderAllowScanNetworkFiles property value. Allows or disallows a scanning of network files.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDefenderAllowScanNetworkFiles() {
@@ -319,7 +319,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderAllowScanRemovableDrivesDuringFullScan property value. Allows or disallows a full scan of removable drives. During a quick scan, removable drives may still be scanned.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDefenderAllowScanRemovableDrivesDuringFullScan() {
@@ -327,7 +327,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderAllowScanScriptsLoadedInInternetExplorer property value. Allows or disallows Windows Defender Script Scanning functionality.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDefenderAllowScanScriptsLoadedInInternetExplorer() {
@@ -335,7 +335,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderAttackSurfaceReductionExcludedPaths property value. List of exe files and folders to be excluded from attack surface reduction rules
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getDefenderAttackSurfaceReductionExcludedPaths() {
@@ -343,7 +343,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderBlockEndUserAccess property value. Allows or disallows user access to the Windows Defender UI. If disallowed, all Windows Defender notifications will also be suppressed.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDefenderBlockEndUserAccess() {
@@ -351,7 +351,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderBlockPersistenceThroughWmiType property value. Possible values of Defender Attack Surface Reduction Rules
-     * @return a DefenderAttackSurfaceType
+     * @return a {@link DefenderAttackSurfaceType}
      */
     @jakarta.annotation.Nullable
     public DefenderAttackSurfaceType getDefenderBlockPersistenceThroughWmiType() {
@@ -359,7 +359,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderCheckForSignaturesBeforeRunningScan property value. This policy setting allows you to manage whether a check for new virus and spyware definitions will occur before running a scan.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDefenderCheckForSignaturesBeforeRunningScan() {
@@ -367,7 +367,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderCloudBlockLevel property value. Added in Windows 10, version 1709. This policy setting determines how aggressive Windows Defender Antivirus will be in blocking and scanning suspicious files. Value type is integer. This feature requires the 'Join Microsoft MAPS' setting enabled in order to function. Possible values are: notConfigured, high, highPlus, zeroTolerance.
-     * @return a DefenderCloudBlockLevelType
+     * @return a {@link DefenderCloudBlockLevelType}
      */
     @jakarta.annotation.Nullable
     public DefenderCloudBlockLevelType getDefenderCloudBlockLevel() {
@@ -375,7 +375,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderCloudExtendedTimeoutInSeconds property value. Added in Windows 10, version 1709. This feature allows Windows Defender Antivirus to block a suspicious file for up to 60 seconds, and scan it in the cloud to make sure it's safe. Value type is integer, range is 0 - 50. This feature depends on three other MAPS settings the must all be enabled- 'Configure the 'Block at First Sight' feature; 'Join Microsoft MAPS'; 'Send file samples when further analysis is required'. Valid values 0 to 50
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getDefenderCloudExtendedTimeoutInSeconds() {
@@ -383,7 +383,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderDaysBeforeDeletingQuarantinedMalware property value. Time period (in days) that quarantine items will be stored on the system. Valid values 0 to 90
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getDefenderDaysBeforeDeletingQuarantinedMalware() {
@@ -391,7 +391,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderDetectedMalwareActions property value. Allows an administrator to specify any valid threat severity levels and the corresponding default action ID to take.
-     * @return a DefenderDetectedMalwareActions
+     * @return a {@link DefenderDetectedMalwareActions}
      */
     @jakarta.annotation.Nullable
     public DefenderDetectedMalwareActions getDefenderDetectedMalwareActions() {
@@ -399,7 +399,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderDisableBehaviorMonitoring property value. Allows or disallows Windows Defender Behavior Monitoring functionality.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDefenderDisableBehaviorMonitoring() {
@@ -407,7 +407,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderDisableCatchupFullScan property value. This policy setting allows you to configure catch-up scans for scheduled full scans. A catch-up scan is a scan that is initiated because a regularly scheduled scan was missed. Usually these scheduled scans are missed because the computer was turned off at the scheduled time.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDefenderDisableCatchupFullScan() {
@@ -415,7 +415,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderDisableCatchupQuickScan property value. This policy setting allows you to configure catch-up scans for scheduled quick scans. A catch-up scan is a scan that is initiated because a regularly scheduled scan was missed. Usually these scheduled scans are missed because the computer was turned off at the scheduled time.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDefenderDisableCatchupQuickScan() {
@@ -423,7 +423,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderDisableCloudProtection property value. To best protect your PC, Windows Defender will send information to Microsoft about any problems it finds. Microsoft will analyze that information, learn more about problems affecting you and other customers, and offer improved solutions.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDefenderDisableCloudProtection() {
@@ -431,7 +431,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderDisableIntrusionPreventionSystem property value. Allows or disallows Windows Defender Intrusion Prevention functionality.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDefenderDisableIntrusionPreventionSystem() {
@@ -439,7 +439,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderDisableOnAccessProtection property value. Allows or disallows Windows Defender On Access Protection functionality.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDefenderDisableOnAccessProtection() {
@@ -447,7 +447,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderDisableRealTimeMonitoring property value. Allows or disallows Windows Defender Realtime Monitoring functionality.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDefenderDisableRealTimeMonitoring() {
@@ -455,7 +455,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderDisableScanArchiveFiles property value. Allows or disallows scanning of archives.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDefenderDisableScanArchiveFiles() {
@@ -463,7 +463,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderDisableScanDownloads property value. Allows or disallows Windows Defender IOAVP Protection functionality.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDefenderDisableScanDownloads() {
@@ -471,7 +471,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderDisableScanNetworkFiles property value. Allows or disallows a scanning of network files.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDefenderDisableScanNetworkFiles() {
@@ -479,7 +479,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderDisableScanRemovableDrivesDuringFullScan property value. Allows or disallows a full scan of removable drives. During a quick scan, removable drives may still be scanned.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDefenderDisableScanRemovableDrivesDuringFullScan() {
@@ -487,7 +487,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderDisableScanScriptsLoadedInInternetExplorer property value. Allows or disallows Windows Defender Script Scanning functionality.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDefenderDisableScanScriptsLoadedInInternetExplorer() {
@@ -495,7 +495,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderEmailContentExecution property value. Possible values of Defender PUA Protection
-     * @return a DefenderProtectionType
+     * @return a {@link DefenderProtectionType}
      */
     @jakarta.annotation.Nullable
     public DefenderProtectionType getDefenderEmailContentExecution() {
@@ -503,7 +503,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderEmailContentExecutionType property value. Possible values of Defender Attack Surface Reduction Rules
-     * @return a DefenderAttackSurfaceType
+     * @return a {@link DefenderAttackSurfaceType}
      */
     @jakarta.annotation.Nullable
     public DefenderAttackSurfaceType getDefenderEmailContentExecutionType() {
@@ -511,7 +511,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderEnableLowCpuPriority property value. This policy setting allows you to enable or disable low CPU priority for scheduled scans.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDefenderEnableLowCpuPriority() {
@@ -519,7 +519,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderEnableScanIncomingMail property value. Allows or disallows scanning of email.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDefenderEnableScanIncomingMail() {
@@ -527,7 +527,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderEnableScanMappedNetworkDrivesDuringFullScan property value. Allows or disallows a full scan of mapped network drives.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDefenderEnableScanMappedNetworkDrivesDuringFullScan() {
@@ -535,7 +535,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderExploitProtectionXml property value. Xml content containing information regarding exploit protection details.
-     * @return a byte[]
+     * @return a {@link byte[]}
      */
     @jakarta.annotation.Nullable
     public byte[] getDefenderExploitProtectionXml() {
@@ -543,7 +543,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderExploitProtectionXmlFileName property value. Name of the file from which DefenderExploitProtectionXml was obtained.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDefenderExploitProtectionXmlFileName() {
@@ -551,7 +551,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderFileExtensionsToExclude property value. File extensions to exclude from scans and real time protection.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getDefenderFileExtensionsToExclude() {
@@ -559,7 +559,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderFilesAndFoldersToExclude property value. Files and folder to exclude from scans and real time protection.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getDefenderFilesAndFoldersToExclude() {
@@ -567,7 +567,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderGuardedFoldersAllowedAppPaths property value. List of paths to exe that are allowed to access protected folders
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getDefenderGuardedFoldersAllowedAppPaths() {
@@ -575,7 +575,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderGuardMyFoldersType property value. Possible values of Folder Protection
-     * @return a FolderProtectionType
+     * @return a {@link FolderProtectionType}
      */
     @jakarta.annotation.Nullable
     public FolderProtectionType getDefenderGuardMyFoldersType() {
@@ -583,7 +583,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderNetworkProtectionType property value. Possible values of Defender PUA Protection
-     * @return a DefenderProtectionType
+     * @return a {@link DefenderProtectionType}
      */
     @jakarta.annotation.Nullable
     public DefenderProtectionType getDefenderNetworkProtectionType() {
@@ -591,7 +591,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderOfficeAppsExecutableContentCreationOrLaunch property value. Possible values of Defender PUA Protection
-     * @return a DefenderProtectionType
+     * @return a {@link DefenderProtectionType}
      */
     @jakarta.annotation.Nullable
     public DefenderProtectionType getDefenderOfficeAppsExecutableContentCreationOrLaunch() {
@@ -599,7 +599,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderOfficeAppsExecutableContentCreationOrLaunchType property value. Possible values of Defender Attack Surface Reduction Rules
-     * @return a DefenderAttackSurfaceType
+     * @return a {@link DefenderAttackSurfaceType}
      */
     @jakarta.annotation.Nullable
     public DefenderAttackSurfaceType getDefenderOfficeAppsExecutableContentCreationOrLaunchType() {
@@ -607,7 +607,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderOfficeAppsLaunchChildProcess property value. Possible values of Defender PUA Protection
-     * @return a DefenderProtectionType
+     * @return a {@link DefenderProtectionType}
      */
     @jakarta.annotation.Nullable
     public DefenderProtectionType getDefenderOfficeAppsLaunchChildProcess() {
@@ -615,7 +615,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderOfficeAppsLaunchChildProcessType property value. Possible values of Defender Attack Surface Reduction Rules
-     * @return a DefenderAttackSurfaceType
+     * @return a {@link DefenderAttackSurfaceType}
      */
     @jakarta.annotation.Nullable
     public DefenderAttackSurfaceType getDefenderOfficeAppsLaunchChildProcessType() {
@@ -623,7 +623,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderOfficeAppsOtherProcessInjection property value. Possible values of Defender PUA Protection
-     * @return a DefenderProtectionType
+     * @return a {@link DefenderProtectionType}
      */
     @jakarta.annotation.Nullable
     public DefenderProtectionType getDefenderOfficeAppsOtherProcessInjection() {
@@ -631,7 +631,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderOfficeAppsOtherProcessInjectionType property value. Possible values of Defender Attack Surface Reduction Rules
-     * @return a DefenderAttackSurfaceType
+     * @return a {@link DefenderAttackSurfaceType}
      */
     @jakarta.annotation.Nullable
     public DefenderAttackSurfaceType getDefenderOfficeAppsOtherProcessInjectionType() {
@@ -639,7 +639,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderOfficeCommunicationAppsLaunchChildProcess property value. Possible values of Defender PUA Protection
-     * @return a DefenderProtectionType
+     * @return a {@link DefenderProtectionType}
      */
     @jakarta.annotation.Nullable
     public DefenderProtectionType getDefenderOfficeCommunicationAppsLaunchChildProcess() {
@@ -647,7 +647,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderOfficeMacroCodeAllowWin32Imports property value. Possible values of Defender PUA Protection
-     * @return a DefenderProtectionType
+     * @return a {@link DefenderProtectionType}
      */
     @jakarta.annotation.Nullable
     public DefenderProtectionType getDefenderOfficeMacroCodeAllowWin32Imports() {
@@ -655,7 +655,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderOfficeMacroCodeAllowWin32ImportsType property value. Possible values of Defender Attack Surface Reduction Rules
-     * @return a DefenderAttackSurfaceType
+     * @return a {@link DefenderAttackSurfaceType}
      */
     @jakarta.annotation.Nullable
     public DefenderAttackSurfaceType getDefenderOfficeMacroCodeAllowWin32ImportsType() {
@@ -663,7 +663,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderPotentiallyUnwantedAppAction property value. Added in Windows 10, version 1607. Specifies the level of detection for potentially unwanted applications (PUAs). Windows Defender alerts you when potentially unwanted software is being downloaded or attempts to install itself on your computer. Possible values are: userDefined, enable, auditMode, warn, notConfigured.
-     * @return a DefenderProtectionType
+     * @return a {@link DefenderProtectionType}
      */
     @jakarta.annotation.Nullable
     public DefenderProtectionType getDefenderPotentiallyUnwantedAppAction() {
@@ -671,7 +671,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderPreventCredentialStealingType property value. Possible values of Defender PUA Protection
-     * @return a DefenderProtectionType
+     * @return a {@link DefenderProtectionType}
      */
     @jakarta.annotation.Nullable
     public DefenderProtectionType getDefenderPreventCredentialStealingType() {
@@ -679,7 +679,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderProcessCreation property value. Possible values of Defender PUA Protection
-     * @return a DefenderProtectionType
+     * @return a {@link DefenderProtectionType}
      */
     @jakarta.annotation.Nullable
     public DefenderProtectionType getDefenderProcessCreation() {
@@ -687,7 +687,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderProcessCreationType property value. Possible values of Defender Attack Surface Reduction Rules
-     * @return a DefenderAttackSurfaceType
+     * @return a {@link DefenderAttackSurfaceType}
      */
     @jakarta.annotation.Nullable
     public DefenderAttackSurfaceType getDefenderProcessCreationType() {
@@ -695,7 +695,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderProcessesToExclude property value. Processes to exclude from scans and real time protection.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getDefenderProcessesToExclude() {
@@ -703,7 +703,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderScanDirection property value. Controls which sets of files should be monitored. Possible values are: monitorAllFiles, monitorIncomingFilesOnly, monitorOutgoingFilesOnly.
-     * @return a DefenderRealtimeScanDirection
+     * @return a {@link DefenderRealtimeScanDirection}
      */
     @jakarta.annotation.Nullable
     public DefenderRealtimeScanDirection getDefenderScanDirection() {
@@ -711,7 +711,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderScanMaxCpuPercentage property value. Represents the average CPU load factor for the Windows Defender scan (in percent). The default value is 50. Valid values 0 to 100
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getDefenderScanMaxCpuPercentage() {
@@ -719,7 +719,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderScanType property value. Selects whether to perform a quick scan or full scan. Possible values are: userDefined, disabled, quick, full.
-     * @return a DefenderScanType
+     * @return a {@link DefenderScanType}
      */
     @jakarta.annotation.Nullable
     public DefenderScanType getDefenderScanType() {
@@ -727,7 +727,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderScheduledQuickScanTime property value. Selects the time of day that the Windows Defender quick scan should run. For example, a value of 0=12:00AM, a value of 60=1:00AM, a value of 120=2:00, and so on, up to a value of 1380=11:00PM. The default value is 120
-     * @return a LocalTime
+     * @return a {@link LocalTime}
      */
     @jakarta.annotation.Nullable
     public LocalTime getDefenderScheduledQuickScanTime() {
@@ -735,7 +735,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderScheduledScanDay property value. Selects the day that the Windows Defender scan should run. Possible values are: userDefined, everyday, sunday, monday, tuesday, wednesday, thursday, friday, saturday, noScheduledScan.
-     * @return a WeeklySchedule
+     * @return a {@link WeeklySchedule}
      */
     @jakarta.annotation.Nullable
     public WeeklySchedule getDefenderScheduledScanDay() {
@@ -743,7 +743,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderScheduledScanTime property value. Selects the time of day that the Windows Defender scan should run.
-     * @return a LocalTime
+     * @return a {@link LocalTime}
      */
     @jakarta.annotation.Nullable
     public LocalTime getDefenderScheduledScanTime() {
@@ -751,7 +751,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderScriptDownloadedPayloadExecution property value. Possible values of Defender PUA Protection
-     * @return a DefenderProtectionType
+     * @return a {@link DefenderProtectionType}
      */
     @jakarta.annotation.Nullable
     public DefenderProtectionType getDefenderScriptDownloadedPayloadExecution() {
@@ -759,7 +759,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderScriptDownloadedPayloadExecutionType property value. Possible values of Defender Attack Surface Reduction Rules
-     * @return a DefenderAttackSurfaceType
+     * @return a {@link DefenderAttackSurfaceType}
      */
     @jakarta.annotation.Nullable
     public DefenderAttackSurfaceType getDefenderScriptDownloadedPayloadExecutionType() {
@@ -767,7 +767,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderScriptObfuscatedMacroCode property value. Possible values of Defender PUA Protection
-     * @return a DefenderProtectionType
+     * @return a {@link DefenderProtectionType}
      */
     @jakarta.annotation.Nullable
     public DefenderProtectionType getDefenderScriptObfuscatedMacroCode() {
@@ -775,7 +775,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderScriptObfuscatedMacroCodeType property value. Possible values of Defender Attack Surface Reduction Rules
-     * @return a DefenderAttackSurfaceType
+     * @return a {@link DefenderAttackSurfaceType}
      */
     @jakarta.annotation.Nullable
     public DefenderAttackSurfaceType getDefenderScriptObfuscatedMacroCodeType() {
@@ -783,7 +783,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderSecurityCenterBlockExploitProtectionOverride property value. Indicates whether or not to block user from overriding Exploit Protection settings.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDefenderSecurityCenterBlockExploitProtectionOverride() {
@@ -791,7 +791,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderSecurityCenterDisableAccountUI property value. Used to disable the display of the account protection area.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDefenderSecurityCenterDisableAccountUI() {
@@ -799,7 +799,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderSecurityCenterDisableAppBrowserUI property value. Used to disable the display of the app and browser protection area.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDefenderSecurityCenterDisableAppBrowserUI() {
@@ -807,7 +807,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderSecurityCenterDisableClearTpmUI property value. Used to disable the display of the Clear TPM button.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDefenderSecurityCenterDisableClearTpmUI() {
@@ -815,7 +815,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderSecurityCenterDisableFamilyUI property value. Used to disable the display of the family options area.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDefenderSecurityCenterDisableFamilyUI() {
@@ -823,7 +823,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderSecurityCenterDisableHardwareUI property value. Used to disable the display of the hardware protection area.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDefenderSecurityCenterDisableHardwareUI() {
@@ -831,7 +831,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderSecurityCenterDisableHealthUI property value. Used to disable the display of the device performance and health area.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDefenderSecurityCenterDisableHealthUI() {
@@ -839,7 +839,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderSecurityCenterDisableNetworkUI property value. Used to disable the display of the firewall and network protection area.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDefenderSecurityCenterDisableNetworkUI() {
@@ -847,7 +847,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderSecurityCenterDisableNotificationAreaUI property value. Used to disable the display of the notification area control. The user needs to either sign out and sign in or reboot the computer for this setting to take effect.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDefenderSecurityCenterDisableNotificationAreaUI() {
@@ -855,7 +855,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderSecurityCenterDisableRansomwareUI property value. Used to disable the display of the ransomware protection area.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDefenderSecurityCenterDisableRansomwareUI() {
@@ -863,7 +863,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderSecurityCenterDisableSecureBootUI property value. Used to disable the display of the secure boot area under Device security.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDefenderSecurityCenterDisableSecureBootUI() {
@@ -871,7 +871,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderSecurityCenterDisableTroubleshootingUI property value. Used to disable the display of the security process troubleshooting under Device security.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDefenderSecurityCenterDisableTroubleshootingUI() {
@@ -879,7 +879,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderSecurityCenterDisableVirusUI property value. Used to disable the display of the virus and threat protection area.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDefenderSecurityCenterDisableVirusUI() {
@@ -887,7 +887,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderSecurityCenterDisableVulnerableTpmFirmwareUpdateUI property value. Used to disable the display of update TPM Firmware when a vulnerable firmware is detected.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDefenderSecurityCenterDisableVulnerableTpmFirmwareUpdateUI() {
@@ -895,7 +895,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderSecurityCenterHelpEmail property value. The email address that is displayed to users.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDefenderSecurityCenterHelpEmail() {
@@ -903,7 +903,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderSecurityCenterHelpPhone property value. The phone number or Skype ID that is displayed to users.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDefenderSecurityCenterHelpPhone() {
@@ -911,7 +911,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderSecurityCenterHelpURL property value. The help portal URL this is displayed to users.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDefenderSecurityCenterHelpURL() {
@@ -919,7 +919,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderSecurityCenterITContactDisplay property value. Possible values for defenderSecurityCenterITContactDisplay
-     * @return a DefenderSecurityCenterITContactDisplayType
+     * @return a {@link DefenderSecurityCenterITContactDisplayType}
      */
     @jakarta.annotation.Nullable
     public DefenderSecurityCenterITContactDisplayType getDefenderSecurityCenterITContactDisplay() {
@@ -927,7 +927,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderSecurityCenterNotificationsFromApp property value. Possible values for defenderSecurityCenterNotificationsFromApp
-     * @return a DefenderSecurityCenterNotificationsFromAppType
+     * @return a {@link DefenderSecurityCenterNotificationsFromAppType}
      */
     @jakarta.annotation.Nullable
     public DefenderSecurityCenterNotificationsFromAppType getDefenderSecurityCenterNotificationsFromApp() {
@@ -935,7 +935,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderSecurityCenterOrganizationDisplayName property value. The company name that is displayed to the users.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDefenderSecurityCenterOrganizationDisplayName() {
@@ -943,7 +943,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderSignatureUpdateIntervalInHours property value. Specifies the interval (in hours) that will be used to check for signatures, so instead of using the ScheduleDay and ScheduleTime the check for new signatures will be set according to the interval. Valid values 0 to 24
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getDefenderSignatureUpdateIntervalInHours() {
@@ -951,7 +951,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderSubmitSamplesConsentType property value. Checks for the user consent level in Windows Defender to send data. Possible values are: sendSafeSamplesAutomatically, alwaysPrompt, neverSend, sendAllSamplesAutomatically.
-     * @return a DefenderSubmitSamplesConsentType
+     * @return a {@link DefenderSubmitSamplesConsentType}
      */
     @jakarta.annotation.Nullable
     public DefenderSubmitSamplesConsentType getDefenderSubmitSamplesConsentType() {
@@ -959,7 +959,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderUntrustedExecutable property value. Possible values of Defender PUA Protection
-     * @return a DefenderProtectionType
+     * @return a {@link DefenderProtectionType}
      */
     @jakarta.annotation.Nullable
     public DefenderProtectionType getDefenderUntrustedExecutable() {
@@ -967,7 +967,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderUntrustedExecutableType property value. Possible values of Defender Attack Surface Reduction Rules
-     * @return a DefenderAttackSurfaceType
+     * @return a {@link DefenderAttackSurfaceType}
      */
     @jakarta.annotation.Nullable
     public DefenderAttackSurfaceType getDefenderUntrustedExecutableType() {
@@ -975,7 +975,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderUntrustedUSBProcess property value. Possible values of Defender PUA Protection
-     * @return a DefenderProtectionType
+     * @return a {@link DefenderProtectionType}
      */
     @jakarta.annotation.Nullable
     public DefenderProtectionType getDefenderUntrustedUSBProcess() {
@@ -983,7 +983,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the defenderUntrustedUSBProcessType property value. Possible values of Defender Attack Surface Reduction Rules
-     * @return a DefenderAttackSurfaceType
+     * @return a {@link DefenderAttackSurfaceType}
      */
     @jakarta.annotation.Nullable
     public DefenderAttackSurfaceType getDefenderUntrustedUSBProcessType() {
@@ -991,7 +991,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the deviceGuardEnableSecureBootWithDMA property value. This property will be deprecated in May 2019 and will be replaced with property DeviceGuardSecureBootWithDMA. Specifies whether Platform Security Level is enabled at next reboot.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDeviceGuardEnableSecureBootWithDMA() {
@@ -999,7 +999,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the deviceGuardEnableVirtualizationBasedSecurity property value. Turns On Virtualization Based Security(VBS).
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDeviceGuardEnableVirtualizationBasedSecurity() {
@@ -1007,7 +1007,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the deviceGuardLaunchSystemGuard property value. Possible values of a property
-     * @return a Enablement
+     * @return a {@link Enablement}
      */
     @jakarta.annotation.Nullable
     public Enablement getDeviceGuardLaunchSystemGuard() {
@@ -1015,7 +1015,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the deviceGuardLocalSystemAuthorityCredentialGuardSettings property value. Possible values of Credential Guard settings.
-     * @return a DeviceGuardLocalSystemAuthorityCredentialGuardType
+     * @return a {@link DeviceGuardLocalSystemAuthorityCredentialGuardType}
      */
     @jakarta.annotation.Nullable
     public DeviceGuardLocalSystemAuthorityCredentialGuardType getDeviceGuardLocalSystemAuthorityCredentialGuardSettings() {
@@ -1023,7 +1023,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the deviceGuardSecureBootWithDMA property value. Possible values of Secure Boot with DMA
-     * @return a SecureBootWithDMAType
+     * @return a {@link SecureBootWithDMAType}
      */
     @jakarta.annotation.Nullable
     public SecureBootWithDMAType getDeviceGuardSecureBootWithDMA() {
@@ -1031,7 +1031,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the dmaGuardDeviceEnumerationPolicy property value. Possible values of the DmaGuardDeviceEnumerationPolicy.
-     * @return a DmaGuardDeviceEnumerationPolicyType
+     * @return a {@link DmaGuardDeviceEnumerationPolicyType}
      */
     @jakarta.annotation.Nullable
     public DmaGuardDeviceEnumerationPolicyType getDmaGuardDeviceEnumerationPolicy() {
@@ -1039,7 +1039,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -1274,7 +1274,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the firewallBlockStatefulFTP property value. Blocks stateful FTP connections to the device
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getFirewallBlockStatefulFTP() {
@@ -1282,7 +1282,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the firewallCertificateRevocationListCheckMethod property value. Possible values for firewallCertificateRevocationListCheckMethod
-     * @return a FirewallCertificateRevocationListCheckMethodType
+     * @return a {@link FirewallCertificateRevocationListCheckMethodType}
      */
     @jakarta.annotation.Nullable
     public FirewallCertificateRevocationListCheckMethodType getFirewallCertificateRevocationListCheckMethod() {
@@ -1290,7 +1290,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the firewallIdleTimeoutForSecurityAssociationInSeconds property value. Configures the idle timeout for security associations, in seconds, from 300 to 3600 inclusive. This is the period after which security associations will expire and be deleted. Valid values 300 to 3600
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getFirewallIdleTimeoutForSecurityAssociationInSeconds() {
@@ -1298,7 +1298,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the firewallIPSecExemptionsAllowDHCP property value. Configures IPSec exemptions to allow both IPv4 and IPv6 DHCP traffic
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getFirewallIPSecExemptionsAllowDHCP() {
@@ -1306,7 +1306,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the firewallIPSecExemptionsAllowICMP property value. Configures IPSec exemptions to allow ICMP
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getFirewallIPSecExemptionsAllowICMP() {
@@ -1314,7 +1314,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the firewallIPSecExemptionsAllowNeighborDiscovery property value. Configures IPSec exemptions to allow neighbor discovery IPv6 ICMP type-codes
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getFirewallIPSecExemptionsAllowNeighborDiscovery() {
@@ -1322,7 +1322,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the firewallIPSecExemptionsAllowRouterDiscovery property value. Configures IPSec exemptions to allow router discovery IPv6 ICMP type-codes
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getFirewallIPSecExemptionsAllowRouterDiscovery() {
@@ -1330,7 +1330,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the firewallIPSecExemptionsNone property value. Configures IPSec exemptions to no exemptions
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getFirewallIPSecExemptionsNone() {
@@ -1338,7 +1338,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the firewallMergeKeyingModuleSettings property value. If an authentication set is not fully supported by a keying module, direct the module to ignore only unsupported authentication suites rather than the entire set
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getFirewallMergeKeyingModuleSettings() {
@@ -1346,7 +1346,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the firewallPacketQueueingMethod property value. Possible values for firewallPacketQueueingMethod
-     * @return a FirewallPacketQueueingMethodType
+     * @return a {@link FirewallPacketQueueingMethodType}
      */
     @jakarta.annotation.Nullable
     public FirewallPacketQueueingMethodType getFirewallPacketQueueingMethod() {
@@ -1354,7 +1354,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the firewallPreSharedKeyEncodingMethod property value. Possible values for firewallPreSharedKeyEncodingMethod
-     * @return a FirewallPreSharedKeyEncodingMethodType
+     * @return a {@link FirewallPreSharedKeyEncodingMethodType}
      */
     @jakarta.annotation.Nullable
     public FirewallPreSharedKeyEncodingMethodType getFirewallPreSharedKeyEncodingMethod() {
@@ -1362,7 +1362,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the firewallProfileDomain property value. Configures the firewall profile settings for domain networks
-     * @return a WindowsFirewallNetworkProfile
+     * @return a {@link WindowsFirewallNetworkProfile}
      */
     @jakarta.annotation.Nullable
     public WindowsFirewallNetworkProfile getFirewallProfileDomain() {
@@ -1370,7 +1370,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the firewallProfilePrivate property value. Configures the firewall profile settings for private networks
-     * @return a WindowsFirewallNetworkProfile
+     * @return a {@link WindowsFirewallNetworkProfile}
      */
     @jakarta.annotation.Nullable
     public WindowsFirewallNetworkProfile getFirewallProfilePrivate() {
@@ -1378,7 +1378,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the firewallProfilePublic property value. Configures the firewall profile settings for public networks
-     * @return a WindowsFirewallNetworkProfile
+     * @return a {@link WindowsFirewallNetworkProfile}
      */
     @jakarta.annotation.Nullable
     public WindowsFirewallNetworkProfile getFirewallProfilePublic() {
@@ -1386,7 +1386,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the firewallRules property value. Configures the firewall rule settings. This collection can contain a maximum of 150 elements.
-     * @return a java.util.List<WindowsFirewallRule>
+     * @return a {@link java.util.List<WindowsFirewallRule>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<WindowsFirewallRule> getFirewallRules() {
@@ -1394,7 +1394,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the lanManagerAuthenticationLevel property value. Possible values for LanManagerAuthenticationLevel
-     * @return a LanManagerAuthenticationLevel
+     * @return a {@link LanManagerAuthenticationLevel}
      */
     @jakarta.annotation.Nullable
     public LanManagerAuthenticationLevel getLanManagerAuthenticationLevel() {
@@ -1402,7 +1402,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the lanManagerWorkstationDisableInsecureGuestLogons property value. If enabled,the SMB client will allow insecure guest logons. If not configured, the SMB client will reject insecure guest logons.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getLanManagerWorkstationDisableInsecureGuestLogons() {
@@ -1410,7 +1410,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the localSecurityOptionsAdministratorAccountName property value. Define a different account name to be associated with the security identifier (SID) for the account 'Administrator'.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getLocalSecurityOptionsAdministratorAccountName() {
@@ -1418,7 +1418,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the localSecurityOptionsAdministratorElevationPromptBehavior property value. Possible values for LocalSecurityOptionsAdministratorElevationPromptBehavior
-     * @return a LocalSecurityOptionsAdministratorElevationPromptBehaviorType
+     * @return a {@link LocalSecurityOptionsAdministratorElevationPromptBehaviorType}
      */
     @jakarta.annotation.Nullable
     public LocalSecurityOptionsAdministratorElevationPromptBehaviorType getLocalSecurityOptionsAdministratorElevationPromptBehavior() {
@@ -1426,7 +1426,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the localSecurityOptionsAllowAnonymousEnumerationOfSAMAccountsAndShares property value. This security setting determines whether to allows anonymous users to perform certain activities, such as enumerating the names of domain accounts and network shares.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getLocalSecurityOptionsAllowAnonymousEnumerationOfSAMAccountsAndShares() {
@@ -1434,7 +1434,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the localSecurityOptionsAllowPKU2UAuthenticationRequests property value. Block PKU2U authentication requests to this device to use online identities.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getLocalSecurityOptionsAllowPKU2UAuthenticationRequests() {
@@ -1442,7 +1442,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the localSecurityOptionsAllowRemoteCallsToSecurityAccountsManager property value. Edit the default Security Descriptor Definition Language string to allow or deny users and groups to make remote calls to the SAM.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getLocalSecurityOptionsAllowRemoteCallsToSecurityAccountsManager() {
@@ -1450,7 +1450,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the localSecurityOptionsAllowRemoteCallsToSecurityAccountsManagerHelperBool property value. UI helper boolean for LocalSecurityOptionsAllowRemoteCallsToSecurityAccountsManager entity
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getLocalSecurityOptionsAllowRemoteCallsToSecurityAccountsManagerHelperBool() {
@@ -1458,7 +1458,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the localSecurityOptionsAllowSystemToBeShutDownWithoutHavingToLogOn property value. This security setting determines whether a computer can be shut down without having to log on to Windows.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getLocalSecurityOptionsAllowSystemToBeShutDownWithoutHavingToLogOn() {
@@ -1466,7 +1466,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the localSecurityOptionsAllowUIAccessApplicationElevation property value. Allow UIAccess apps to prompt for elevation without using the secure desktop.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getLocalSecurityOptionsAllowUIAccessApplicationElevation() {
@@ -1474,7 +1474,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the localSecurityOptionsAllowUIAccessApplicationsForSecureLocations property value. Allow UIAccess apps to prompt for elevation without using the secure desktop.Default is enabled
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getLocalSecurityOptionsAllowUIAccessApplicationsForSecureLocations() {
@@ -1482,7 +1482,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the localSecurityOptionsAllowUndockWithoutHavingToLogon property value. Prevent a portable computer from being undocked without having to log in.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getLocalSecurityOptionsAllowUndockWithoutHavingToLogon() {
@@ -1490,7 +1490,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the localSecurityOptionsBlockMicrosoftAccounts property value. Prevent users from adding new Microsoft accounts to this computer.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getLocalSecurityOptionsBlockMicrosoftAccounts() {
@@ -1498,7 +1498,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the localSecurityOptionsBlockRemoteLogonWithBlankPassword property value. Enable Local accounts that are not password protected to log on from locations other than the physical device.Default is enabled
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getLocalSecurityOptionsBlockRemoteLogonWithBlankPassword() {
@@ -1506,7 +1506,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the localSecurityOptionsBlockRemoteOpticalDriveAccess property value. Enabling this settings allows only interactively logged on user to access CD-ROM media.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getLocalSecurityOptionsBlockRemoteOpticalDriveAccess() {
@@ -1514,7 +1514,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the localSecurityOptionsBlockUsersInstallingPrinterDrivers property value. Restrict installing printer drivers as part of connecting to a shared printer to admins only.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getLocalSecurityOptionsBlockUsersInstallingPrinterDrivers() {
@@ -1522,7 +1522,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the localSecurityOptionsClearVirtualMemoryPageFile property value. This security setting determines whether the virtual memory pagefile is cleared when the system is shut down.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getLocalSecurityOptionsClearVirtualMemoryPageFile() {
@@ -1530,7 +1530,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the localSecurityOptionsClientDigitallySignCommunicationsAlways property value. This security setting determines whether packet signing is required by the SMB client component.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getLocalSecurityOptionsClientDigitallySignCommunicationsAlways() {
@@ -1538,7 +1538,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the localSecurityOptionsClientSendUnencryptedPasswordToThirdPartySMBServers property value. If this security setting is enabled, the Server Message Block (SMB) redirector is allowed to send plaintext passwords to non-Microsoft SMB servers that do not support password encryption during authentication.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getLocalSecurityOptionsClientSendUnencryptedPasswordToThirdPartySMBServers() {
@@ -1546,7 +1546,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the localSecurityOptionsDetectApplicationInstallationsAndPromptForElevation property value. App installations requiring elevated privileges will prompt for admin credentials.Default is enabled
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getLocalSecurityOptionsDetectApplicationInstallationsAndPromptForElevation() {
@@ -1554,7 +1554,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the localSecurityOptionsDisableAdministratorAccount property value. Determines whether the Local Administrator account is enabled or disabled.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getLocalSecurityOptionsDisableAdministratorAccount() {
@@ -1562,7 +1562,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the localSecurityOptionsDisableClientDigitallySignCommunicationsIfServerAgrees property value. This security setting determines whether the SMB client attempts to negotiate SMB packet signing.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getLocalSecurityOptionsDisableClientDigitallySignCommunicationsIfServerAgrees() {
@@ -1570,7 +1570,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the localSecurityOptionsDisableGuestAccount property value. Determines if the Guest account is enabled or disabled.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getLocalSecurityOptionsDisableGuestAccount() {
@@ -1578,7 +1578,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the localSecurityOptionsDisableServerDigitallySignCommunicationsAlways property value. This security setting determines whether packet signing is required by the SMB server component.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getLocalSecurityOptionsDisableServerDigitallySignCommunicationsAlways() {
@@ -1586,7 +1586,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the localSecurityOptionsDisableServerDigitallySignCommunicationsIfClientAgrees property value. This security setting determines whether the SMB server will negotiate SMB packet signing with clients that request it.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getLocalSecurityOptionsDisableServerDigitallySignCommunicationsIfClientAgrees() {
@@ -1594,7 +1594,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the localSecurityOptionsDoNotAllowAnonymousEnumerationOfSAMAccounts property value. This security setting determines what additional permissions will be granted for anonymous connections to the computer.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getLocalSecurityOptionsDoNotAllowAnonymousEnumerationOfSAMAccounts() {
@@ -1602,7 +1602,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the localSecurityOptionsDoNotRequireCtrlAltDel property value. Require CTRL+ALT+DEL to be pressed before a user can log on.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getLocalSecurityOptionsDoNotRequireCtrlAltDel() {
@@ -1610,7 +1610,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the localSecurityOptionsDoNotStoreLANManagerHashValueOnNextPasswordChange property value. This security setting determines if, at the next password change, the LAN Manager (LM) hash value for the new password is stored. Its not stored by default.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getLocalSecurityOptionsDoNotStoreLANManagerHashValueOnNextPasswordChange() {
@@ -1618,7 +1618,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the localSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUser property value. Possible values for LocalSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUser
-     * @return a LocalSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUserType
+     * @return a {@link LocalSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUserType}
      */
     @jakarta.annotation.Nullable
     public LocalSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUserType getLocalSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUser() {
@@ -1626,7 +1626,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the localSecurityOptionsGuestAccountName property value. Define a different account name to be associated with the security identifier (SID) for the account 'Guest'.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getLocalSecurityOptionsGuestAccountName() {
@@ -1634,7 +1634,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the localSecurityOptionsHideLastSignedInUser property value. Do not display the username of the last person who signed in on this device.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getLocalSecurityOptionsHideLastSignedInUser() {
@@ -1642,7 +1642,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the localSecurityOptionsHideUsernameAtSignIn property value. Do not display the username of the person signing in to this device after credentials are entered and before the devices desktop is shown.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getLocalSecurityOptionsHideUsernameAtSignIn() {
@@ -1650,7 +1650,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the localSecurityOptionsInformationDisplayedOnLockScreen property value. Possible values for LocalSecurityOptionsInformationDisplayedOnLockScreen
-     * @return a LocalSecurityOptionsInformationDisplayedOnLockScreenType
+     * @return a {@link LocalSecurityOptionsInformationDisplayedOnLockScreenType}
      */
     @jakarta.annotation.Nullable
     public LocalSecurityOptionsInformationDisplayedOnLockScreenType getLocalSecurityOptionsInformationDisplayedOnLockScreen() {
@@ -1658,7 +1658,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the localSecurityOptionsInformationShownOnLockScreen property value. Possible values for LocalSecurityOptionsInformationShownOnLockScreenType
-     * @return a LocalSecurityOptionsInformationShownOnLockScreenType
+     * @return a {@link LocalSecurityOptionsInformationShownOnLockScreenType}
      */
     @jakarta.annotation.Nullable
     public LocalSecurityOptionsInformationShownOnLockScreenType getLocalSecurityOptionsInformationShownOnLockScreen() {
@@ -1666,7 +1666,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the localSecurityOptionsLogOnMessageText property value. Set message text for users attempting to log in.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getLocalSecurityOptionsLogOnMessageText() {
@@ -1674,7 +1674,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the localSecurityOptionsLogOnMessageTitle property value. Set message title for users attempting to log in.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getLocalSecurityOptionsLogOnMessageTitle() {
@@ -1682,7 +1682,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the localSecurityOptionsMachineInactivityLimit property value. Define maximum minutes of inactivity on the interactive desktops login screen until the screen saver runs. Valid values 0 to 9999
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getLocalSecurityOptionsMachineInactivityLimit() {
@@ -1690,7 +1690,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the localSecurityOptionsMachineInactivityLimitInMinutes property value. Define maximum minutes of inactivity on the interactive desktops login screen until the screen saver runs. Valid values 0 to 9999
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getLocalSecurityOptionsMachineInactivityLimitInMinutes() {
@@ -1698,7 +1698,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the localSecurityOptionsMinimumSessionSecurityForNtlmSspBasedClients property value. Possible values for LocalSecurityOptionsMinimumSessionSecurity
-     * @return a LocalSecurityOptionsMinimumSessionSecurity
+     * @return a {@link LocalSecurityOptionsMinimumSessionSecurity}
      */
     @jakarta.annotation.Nullable
     public LocalSecurityOptionsMinimumSessionSecurity getLocalSecurityOptionsMinimumSessionSecurityForNtlmSspBasedClients() {
@@ -1706,7 +1706,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the localSecurityOptionsMinimumSessionSecurityForNtlmSspBasedServers property value. Possible values for LocalSecurityOptionsMinimumSessionSecurity
-     * @return a LocalSecurityOptionsMinimumSessionSecurity
+     * @return a {@link LocalSecurityOptionsMinimumSessionSecurity}
      */
     @jakarta.annotation.Nullable
     public LocalSecurityOptionsMinimumSessionSecurity getLocalSecurityOptionsMinimumSessionSecurityForNtlmSspBasedServers() {
@@ -1714,7 +1714,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the localSecurityOptionsOnlyElevateSignedExecutables property value. Enforce PKI certification path validation for a given executable file before it is permitted to run.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getLocalSecurityOptionsOnlyElevateSignedExecutables() {
@@ -1722,7 +1722,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the localSecurityOptionsRestrictAnonymousAccessToNamedPipesAndShares property value. By default, this security setting restricts anonymous access to shares and pipes to the settings for named pipes that can be accessed anonymously and Shares that can be accessed anonymously
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getLocalSecurityOptionsRestrictAnonymousAccessToNamedPipesAndShares() {
@@ -1730,7 +1730,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the localSecurityOptionsSmartCardRemovalBehavior property value. Possible values for LocalSecurityOptionsSmartCardRemovalBehaviorType
-     * @return a LocalSecurityOptionsSmartCardRemovalBehaviorType
+     * @return a {@link LocalSecurityOptionsSmartCardRemovalBehaviorType}
      */
     @jakarta.annotation.Nullable
     public LocalSecurityOptionsSmartCardRemovalBehaviorType getLocalSecurityOptionsSmartCardRemovalBehavior() {
@@ -1738,7 +1738,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the localSecurityOptionsStandardUserElevationPromptBehavior property value. Possible values for LocalSecurityOptionsStandardUserElevationPromptBehavior
-     * @return a LocalSecurityOptionsStandardUserElevationPromptBehaviorType
+     * @return a {@link LocalSecurityOptionsStandardUserElevationPromptBehaviorType}
      */
     @jakarta.annotation.Nullable
     public LocalSecurityOptionsStandardUserElevationPromptBehaviorType getLocalSecurityOptionsStandardUserElevationPromptBehavior() {
@@ -1746,7 +1746,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the localSecurityOptionsSwitchToSecureDesktopWhenPromptingForElevation property value. Enable all elevation requests to go to the interactive user's desktop rather than the secure desktop. Prompt behavior policy settings for admins and standard users are used.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getLocalSecurityOptionsSwitchToSecureDesktopWhenPromptingForElevation() {
@@ -1754,7 +1754,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the localSecurityOptionsUseAdminApprovalMode property value. Defines whether the built-in admin account uses Admin Approval Mode or runs all apps with full admin privileges.Default is enabled
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getLocalSecurityOptionsUseAdminApprovalMode() {
@@ -1762,7 +1762,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the localSecurityOptionsUseAdminApprovalModeForAdministrators property value. Define whether Admin Approval Mode and all UAC policy settings are enabled, default is enabled
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getLocalSecurityOptionsUseAdminApprovalModeForAdministrators() {
@@ -1770,7 +1770,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the localSecurityOptionsVirtualizeFileAndRegistryWriteFailuresToPerUserLocations property value. Virtualize file and registry write failures to per user locations
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getLocalSecurityOptionsVirtualizeFileAndRegistryWriteFailuresToPerUserLocations() {
@@ -1778,7 +1778,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the smartScreenBlockOverrideForFiles property value. Allows IT Admins to control whether users can can ignore SmartScreen warnings and run malicious files.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getSmartScreenBlockOverrideForFiles() {
@@ -1786,7 +1786,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the smartScreenEnableInShell property value. Allows IT Admins to configure SmartScreen for Windows.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getSmartScreenEnableInShell() {
@@ -1794,7 +1794,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the userRightsAccessCredentialManagerAsTrustedCaller property value. This user right is used by Credential Manager during Backup/Restore. Users' saved credentials might be compromised if this privilege is given to other entities. Only states NotConfigured and Allowed are supported
-     * @return a DeviceManagementUserRightsSetting
+     * @return a {@link DeviceManagementUserRightsSetting}
      */
     @jakarta.annotation.Nullable
     public DeviceManagementUserRightsSetting getUserRightsAccessCredentialManagerAsTrustedCaller() {
@@ -1802,7 +1802,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the userRightsActAsPartOfTheOperatingSystem property value. This user right allows a process to impersonate any user without authentication. The process can therefore gain access to the same local resources as that user. Only states NotConfigured and Allowed are supported
-     * @return a DeviceManagementUserRightsSetting
+     * @return a {@link DeviceManagementUserRightsSetting}
      */
     @jakarta.annotation.Nullable
     public DeviceManagementUserRightsSetting getUserRightsActAsPartOfTheOperatingSystem() {
@@ -1810,7 +1810,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the userRightsAllowAccessFromNetwork property value. This user right determines which users and groups are allowed to connect to the computer over the network. State Allowed is supported.
-     * @return a DeviceManagementUserRightsSetting
+     * @return a {@link DeviceManagementUserRightsSetting}
      */
     @jakarta.annotation.Nullable
     public DeviceManagementUserRightsSetting getUserRightsAllowAccessFromNetwork() {
@@ -1818,7 +1818,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the userRightsBackupData property value. This user right determines which users can bypass file, directory, registry, and other persistent objects permissions when backing up files and directories. Only states NotConfigured and Allowed are supported
-     * @return a DeviceManagementUserRightsSetting
+     * @return a {@link DeviceManagementUserRightsSetting}
      */
     @jakarta.annotation.Nullable
     public DeviceManagementUserRightsSetting getUserRightsBackupData() {
@@ -1826,7 +1826,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the userRightsBlockAccessFromNetwork property value. This user right determines which users and groups are block from connecting to the computer over the network. State Block is supported.
-     * @return a DeviceManagementUserRightsSetting
+     * @return a {@link DeviceManagementUserRightsSetting}
      */
     @jakarta.annotation.Nullable
     public DeviceManagementUserRightsSetting getUserRightsBlockAccessFromNetwork() {
@@ -1834,7 +1834,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the userRightsChangeSystemTime property value. This user right determines which users and groups can change the time and date on the internal clock of the computer. Only states NotConfigured and Allowed are supported
-     * @return a DeviceManagementUserRightsSetting
+     * @return a {@link DeviceManagementUserRightsSetting}
      */
     @jakarta.annotation.Nullable
     public DeviceManagementUserRightsSetting getUserRightsChangeSystemTime() {
@@ -1842,7 +1842,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the userRightsCreateGlobalObjects property value. This security setting determines whether users can create global objects that are available to all sessions. Users who can create global objects could affect processes that run under other users' sessions, which could lead to application failure or data corruption. Only states NotConfigured and Allowed are supported
-     * @return a DeviceManagementUserRightsSetting
+     * @return a {@link DeviceManagementUserRightsSetting}
      */
     @jakarta.annotation.Nullable
     public DeviceManagementUserRightsSetting getUserRightsCreateGlobalObjects() {
@@ -1850,7 +1850,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the userRightsCreatePageFile property value. This user right determines which users and groups can call an internal API to create and change the size of a page file. Only states NotConfigured and Allowed are supported
-     * @return a DeviceManagementUserRightsSetting
+     * @return a {@link DeviceManagementUserRightsSetting}
      */
     @jakarta.annotation.Nullable
     public DeviceManagementUserRightsSetting getUserRightsCreatePageFile() {
@@ -1858,7 +1858,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the userRightsCreatePermanentSharedObjects property value. This user right determines which accounts can be used by processes to create a directory object using the object manager. Only states NotConfigured and Allowed are supported
-     * @return a DeviceManagementUserRightsSetting
+     * @return a {@link DeviceManagementUserRightsSetting}
      */
     @jakarta.annotation.Nullable
     public DeviceManagementUserRightsSetting getUserRightsCreatePermanentSharedObjects() {
@@ -1866,7 +1866,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the userRightsCreateSymbolicLinks property value. This user right determines if the user can create a symbolic link from the computer to which they are logged on. Only states NotConfigured and Allowed are supported
-     * @return a DeviceManagementUserRightsSetting
+     * @return a {@link DeviceManagementUserRightsSetting}
      */
     @jakarta.annotation.Nullable
     public DeviceManagementUserRightsSetting getUserRightsCreateSymbolicLinks() {
@@ -1874,7 +1874,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the userRightsCreateToken property value. This user right determines which users/groups can be used by processes to create a token that can then be used to get access to any local resources when the process uses an internal API to create an access token. Only states NotConfigured and Allowed are supported
-     * @return a DeviceManagementUserRightsSetting
+     * @return a {@link DeviceManagementUserRightsSetting}
      */
     @jakarta.annotation.Nullable
     public DeviceManagementUserRightsSetting getUserRightsCreateToken() {
@@ -1882,7 +1882,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the userRightsDebugPrograms property value. This user right determines which users can attach a debugger to any process or to the kernel. Only states NotConfigured and Allowed are supported
-     * @return a DeviceManagementUserRightsSetting
+     * @return a {@link DeviceManagementUserRightsSetting}
      */
     @jakarta.annotation.Nullable
     public DeviceManagementUserRightsSetting getUserRightsDebugPrograms() {
@@ -1890,7 +1890,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the userRightsDelegation property value. This user right determines which users can set the Trusted for Delegation setting on a user or computer object. Only states NotConfigured and Allowed are supported.
-     * @return a DeviceManagementUserRightsSetting
+     * @return a {@link DeviceManagementUserRightsSetting}
      */
     @jakarta.annotation.Nullable
     public DeviceManagementUserRightsSetting getUserRightsDelegation() {
@@ -1898,7 +1898,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the userRightsDenyLocalLogOn property value. This user right determines which users cannot log on to the computer. States NotConfigured, Blocked are supported
-     * @return a DeviceManagementUserRightsSetting
+     * @return a {@link DeviceManagementUserRightsSetting}
      */
     @jakarta.annotation.Nullable
     public DeviceManagementUserRightsSetting getUserRightsDenyLocalLogOn() {
@@ -1906,7 +1906,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the userRightsGenerateSecurityAudits property value. This user right determines which accounts can be used by a process to add entries to the security log. The security log is used to trace unauthorized system access.  Only states NotConfigured and Allowed are supported.
-     * @return a DeviceManagementUserRightsSetting
+     * @return a {@link DeviceManagementUserRightsSetting}
      */
     @jakarta.annotation.Nullable
     public DeviceManagementUserRightsSetting getUserRightsGenerateSecurityAudits() {
@@ -1914,7 +1914,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the userRightsImpersonateClient property value. Assigning this user right to a user allows programs running on behalf of that user to impersonate a client. Requiring this user right for this kind of impersonation prevents an unauthorized user from convincing a client to connect to a service that they have created and then impersonating that client, which can elevate the unauthorized user's permissions to administrative or system levels. Only states NotConfigured and Allowed are supported.
-     * @return a DeviceManagementUserRightsSetting
+     * @return a {@link DeviceManagementUserRightsSetting}
      */
     @jakarta.annotation.Nullable
     public DeviceManagementUserRightsSetting getUserRightsImpersonateClient() {
@@ -1922,7 +1922,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the userRightsIncreaseSchedulingPriority property value. This user right determines which accounts can use a process with Write Property access to another process to increase the execution priority assigned to the other process. Only states NotConfigured and Allowed are supported.
-     * @return a DeviceManagementUserRightsSetting
+     * @return a {@link DeviceManagementUserRightsSetting}
      */
     @jakarta.annotation.Nullable
     public DeviceManagementUserRightsSetting getUserRightsIncreaseSchedulingPriority() {
@@ -1930,7 +1930,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the userRightsLoadUnloadDrivers property value. This user right determines which users can dynamically load and unload device drivers or other code in to kernel mode. Only states NotConfigured and Allowed are supported.
-     * @return a DeviceManagementUserRightsSetting
+     * @return a {@link DeviceManagementUserRightsSetting}
      */
     @jakarta.annotation.Nullable
     public DeviceManagementUserRightsSetting getUserRightsLoadUnloadDrivers() {
@@ -1938,7 +1938,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the userRightsLocalLogOn property value. This user right determines which users can log on to the computer. States NotConfigured, Allowed are supported
-     * @return a DeviceManagementUserRightsSetting
+     * @return a {@link DeviceManagementUserRightsSetting}
      */
     @jakarta.annotation.Nullable
     public DeviceManagementUserRightsSetting getUserRightsLocalLogOn() {
@@ -1946,7 +1946,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the userRightsLockMemory property value. This user right determines which accounts can use a process to keep data in physical memory, which prevents the system from paging the data to virtual memory on disk. Only states NotConfigured and Allowed are supported.
-     * @return a DeviceManagementUserRightsSetting
+     * @return a {@link DeviceManagementUserRightsSetting}
      */
     @jakarta.annotation.Nullable
     public DeviceManagementUserRightsSetting getUserRightsLockMemory() {
@@ -1954,7 +1954,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the userRightsManageAuditingAndSecurityLogs property value. This user right determines which users can specify object access auditing options for individual resources, such as files, Active Directory objects, and registry keys. Only states NotConfigured and Allowed are supported.
-     * @return a DeviceManagementUserRightsSetting
+     * @return a {@link DeviceManagementUserRightsSetting}
      */
     @jakarta.annotation.Nullable
     public DeviceManagementUserRightsSetting getUserRightsManageAuditingAndSecurityLogs() {
@@ -1962,7 +1962,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the userRightsManageVolumes property value. This user right determines which users and groups can run maintenance tasks on a volume, such as remote defragmentation. Only states NotConfigured and Allowed are supported.
-     * @return a DeviceManagementUserRightsSetting
+     * @return a {@link DeviceManagementUserRightsSetting}
      */
     @jakarta.annotation.Nullable
     public DeviceManagementUserRightsSetting getUserRightsManageVolumes() {
@@ -1970,7 +1970,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the userRightsModifyFirmwareEnvironment property value. This user right determines who can modify firmware environment values. Only states NotConfigured and Allowed are supported.
-     * @return a DeviceManagementUserRightsSetting
+     * @return a {@link DeviceManagementUserRightsSetting}
      */
     @jakarta.annotation.Nullable
     public DeviceManagementUserRightsSetting getUserRightsModifyFirmwareEnvironment() {
@@ -1978,7 +1978,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the userRightsModifyObjectLabels property value. This user right determines which user accounts can modify the integrity label of objects, such as files, registry keys, or processes owned by other users. Only states NotConfigured and Allowed are supported.
-     * @return a DeviceManagementUserRightsSetting
+     * @return a {@link DeviceManagementUserRightsSetting}
      */
     @jakarta.annotation.Nullable
     public DeviceManagementUserRightsSetting getUserRightsModifyObjectLabels() {
@@ -1986,7 +1986,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the userRightsProfileSingleProcess property value. This user right determines which users can use performance monitoring tools to monitor the performance of system processes. Only states NotConfigured and Allowed are supported.
-     * @return a DeviceManagementUserRightsSetting
+     * @return a {@link DeviceManagementUserRightsSetting}
      */
     @jakarta.annotation.Nullable
     public DeviceManagementUserRightsSetting getUserRightsProfileSingleProcess() {
@@ -1994,7 +1994,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the userRightsRemoteDesktopServicesLogOn property value. This user right determines which users and groups are prohibited from logging on as a Remote Desktop Services client. Only states NotConfigured and Blocked are supported
-     * @return a DeviceManagementUserRightsSetting
+     * @return a {@link DeviceManagementUserRightsSetting}
      */
     @jakarta.annotation.Nullable
     public DeviceManagementUserRightsSetting getUserRightsRemoteDesktopServicesLogOn() {
@@ -2002,7 +2002,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the userRightsRemoteShutdown property value. This user right determines which users are allowed to shut down a computer from a remote location on the network. Misuse of this user right can result in a denial of service. Only states NotConfigured and Allowed are supported.
-     * @return a DeviceManagementUserRightsSetting
+     * @return a {@link DeviceManagementUserRightsSetting}
      */
     @jakarta.annotation.Nullable
     public DeviceManagementUserRightsSetting getUserRightsRemoteShutdown() {
@@ -2010,7 +2010,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the userRightsRestoreData property value. This user right determines which users can bypass file, directory, registry, and other persistent objects permissions when restoring backed up files and directories, and determines which users can set any valid security principal as the owner of an object. Only states NotConfigured and Allowed are supported.
-     * @return a DeviceManagementUserRightsSetting
+     * @return a {@link DeviceManagementUserRightsSetting}
      */
     @jakarta.annotation.Nullable
     public DeviceManagementUserRightsSetting getUserRightsRestoreData() {
@@ -2018,7 +2018,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the userRightsTakeOwnership property value. This user right determines which users can take ownership of any securable object in the system, including Active Directory objects, files and folders, printers, registry keys, processes, and threads. Only states NotConfigured and Allowed are supported.
-     * @return a DeviceManagementUserRightsSetting
+     * @return a {@link DeviceManagementUserRightsSetting}
      */
     @jakarta.annotation.Nullable
     public DeviceManagementUserRightsSetting getUserRightsTakeOwnership() {
@@ -2026,7 +2026,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the windowsDefenderTamperProtection property value. Defender TamperProtection setting options
-     * @return a WindowsDefenderTamperProtectionOptions
+     * @return a {@link WindowsDefenderTamperProtectionOptions}
      */
     @jakarta.annotation.Nullable
     public WindowsDefenderTamperProtectionOptions getWindowsDefenderTamperProtection() {
@@ -2034,7 +2034,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the xboxServicesAccessoryManagementServiceStartupMode property value. Possible values of xbox service start type
-     * @return a ServiceStartType
+     * @return a {@link ServiceStartType}
      */
     @jakarta.annotation.Nullable
     public ServiceStartType getXboxServicesAccessoryManagementServiceStartupMode() {
@@ -2042,7 +2042,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the xboxServicesEnableXboxGameSaveTask property value. This setting determines whether xbox game save is enabled (1) or disabled (0).
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getXboxServicesEnableXboxGameSaveTask() {
@@ -2050,7 +2050,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the xboxServicesLiveAuthManagerServiceStartupMode property value. Possible values of xbox service start type
-     * @return a ServiceStartType
+     * @return a {@link ServiceStartType}
      */
     @jakarta.annotation.Nullable
     public ServiceStartType getXboxServicesLiveAuthManagerServiceStartupMode() {
@@ -2058,7 +2058,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the xboxServicesLiveGameSaveServiceStartupMode property value. Possible values of xbox service start type
-     * @return a ServiceStartType
+     * @return a {@link ServiceStartType}
      */
     @jakarta.annotation.Nullable
     public ServiceStartType getXboxServicesLiveGameSaveServiceStartupMode() {
@@ -2066,7 +2066,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the xboxServicesLiveNetworkingServiceStartupMode property value. Possible values of xbox service start type
-     * @return a ServiceStartType
+     * @return a {@link ServiceStartType}
      */
     @jakarta.annotation.Nullable
     public ServiceStartType getXboxServicesLiveNetworkingServiceStartupMode() {

@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ChannelSharingUpdatedEventMessageDetail extends EventMessageDetail implements Parsable {
     /**
-     * Instantiates a new ChannelSharingUpdatedEventMessageDetail and sets the default values.
+     * Instantiates a new {@link ChannelSharingUpdatedEventMessageDetail} and sets the default values.
      */
     public ChannelSharingUpdatedEventMessageDetail() {
         super();
@@ -18,7 +18,7 @@ public class ChannelSharingUpdatedEventMessageDetail extends EventMessageDetail 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ChannelSharingUpdatedEventMessageDetail
+     * @return a {@link ChannelSharingUpdatedEventMessageDetail}
      */
     @jakarta.annotation.Nonnull
     public static ChannelSharingUpdatedEventMessageDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class ChannelSharingUpdatedEventMessageDetail extends EventMessageDetail 
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -40,7 +40,7 @@ public class ChannelSharingUpdatedEventMessageDetail extends EventMessageDetail 
     }
     /**
      * Gets the initiator property value. Initiator of the event.
-     * @return a IdentitySet
+     * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
     public IdentitySet getInitiator() {
@@ -48,7 +48,7 @@ public class ChannelSharingUpdatedEventMessageDetail extends EventMessageDetail 
     }
     /**
      * Gets the ownerTeamId property value. The ID of the team to which the shared channel belongs.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOwnerTeamId() {
@@ -56,7 +56,7 @@ public class ChannelSharingUpdatedEventMessageDetail extends EventMessageDetail 
     }
     /**
      * Gets the ownerTenantId property value. The ID of the tenant to which the shared channel belongs.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOwnerTenantId() {
@@ -64,7 +64,7 @@ public class ChannelSharingUpdatedEventMessageDetail extends EventMessageDetail 
     }
     /**
      * Gets the sharedChannelId property value. The ID of the shared channel.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSharedChannelId() {

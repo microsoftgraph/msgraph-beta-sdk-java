@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ServicePrincipalSignInActivity extends Entity implements Parsable {
     /**
-     * Instantiates a new ServicePrincipalSignInActivity and sets the default values.
+     * Instantiates a new {@link ServicePrincipalSignInActivity} and sets the default values.
      */
     public ServicePrincipalSignInActivity() {
         super();
@@ -17,7 +17,7 @@ public class ServicePrincipalSignInActivity extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ServicePrincipalSignInActivity
+     * @return a {@link ServicePrincipalSignInActivity}
      */
     @jakarta.annotation.Nonnull
     public static ServicePrincipalSignInActivity createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class ServicePrincipalSignInActivity extends Entity implements Parsable {
     }
     /**
      * Gets the appId property value. The application ID of the resource.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAppId() {
@@ -34,7 +34,7 @@ public class ServicePrincipalSignInActivity extends Entity implements Parsable {
     }
     /**
      * Gets the applicationAuthenticationClientSignInActivity property value. The sign-in activity of the application in a app-only authentication flow (app-to-app tokens) where the application acts like a client.
-     * @return a SignInActivity
+     * @return a {@link SignInActivity}
      */
     @jakarta.annotation.Nullable
     public SignInActivity getApplicationAuthenticationClientSignInActivity() {
@@ -42,7 +42,7 @@ public class ServicePrincipalSignInActivity extends Entity implements Parsable {
     }
     /**
      * Gets the applicationAuthenticationResourceSignInActivity property value. The sign-in activity of the application in a app-only authentication flow (app-to-app tokens) where the application acts like a resource.
-     * @return a SignInActivity
+     * @return a {@link SignInActivity}
      */
     @jakarta.annotation.Nullable
     public SignInActivity getApplicationAuthenticationResourceSignInActivity() {
@@ -50,7 +50,7 @@ public class ServicePrincipalSignInActivity extends Entity implements Parsable {
     }
     /**
      * Gets the delegatedClientSignInActivity property value. The sign-in activity of the application in a delegated flow (user sign-in) where the application acts like a client.
-     * @return a SignInActivity
+     * @return a {@link SignInActivity}
      */
     @jakarta.annotation.Nullable
     public SignInActivity getDelegatedClientSignInActivity() {
@@ -58,7 +58,7 @@ public class ServicePrincipalSignInActivity extends Entity implements Parsable {
     }
     /**
      * Gets the delegatedResourceSignInActivity property value. The sign-in activity of the application in a delegated flow (user sign-in) where the application acts like a resource.
-     * @return a SignInActivity
+     * @return a {@link SignInActivity}
      */
     @jakarta.annotation.Nullable
     public SignInActivity getDelegatedResourceSignInActivity() {
@@ -66,7 +66,7 @@ public class ServicePrincipalSignInActivity extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -81,7 +81,7 @@ public class ServicePrincipalSignInActivity extends Entity implements Parsable {
     }
     /**
      * Gets the lastSignInActivity property value. The most recent sign-in activity of the application across delegated or app-only flows where the application is used either as a client or resource.
-     * @return a SignInActivity
+     * @return a {@link SignInActivity}
      */
     @jakarta.annotation.Nullable
     public SignInActivity getLastSignInActivity() {

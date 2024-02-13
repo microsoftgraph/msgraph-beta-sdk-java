@@ -22,7 +22,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Backe
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new RetireScheduledManagedDevice and sets the default values.
+     * Instantiates a new {@link RetireScheduledManagedDevice} and sets the default values.
      */
     public RetireScheduledManagedDevice() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -31,7 +31,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Backe
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a RetireScheduledManagedDevice
+     * @return a {@link RetireScheduledManagedDevice}
      */
     @jakarta.annotation.Nonnull
     public static RetireScheduledManagedDevice createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -53,7 +53,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -61,7 +61,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the complianceState property value. The complianceState property
-     * @return a ComplianceStatus
+     * @return a {@link ComplianceStatus}
      */
     @jakarta.annotation.Nullable
     public ComplianceStatus getComplianceState() {
@@ -69,7 +69,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the deviceCompliancePolicyId property value. Device Compliance PolicyId
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceCompliancePolicyId() {
@@ -77,7 +77,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the deviceCompliancePolicyName property value. Device Compliance Policy Name
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceCompliancePolicyName() {
@@ -85,7 +85,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the deviceType property value. Device type.
-     * @return a DeviceType
+     * @return a {@link DeviceType}
      */
     @jakarta.annotation.Nullable
     public DeviceType getDeviceType() {
@@ -93,7 +93,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Backe
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -114,7 +114,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the id property value. Key of the entity.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getId() {
@@ -122,7 +122,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the managedDeviceId property value. Managed DeviceId
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getManagedDeviceId() {
@@ -130,7 +130,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the managedDeviceName property value. Managed Device Name
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getManagedDeviceName() {
@@ -138,7 +138,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the managementAgent property value. Management agent type.
-     * @return a ManagementAgentType
+     * @return a {@link ManagementAgentType}
      */
     @jakarta.annotation.Nullable
     public ManagementAgentType getManagementAgent() {
@@ -146,7 +146,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -154,7 +154,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the ownerType property value. Owner type of device.
-     * @return a ManagedDeviceOwnerType
+     * @return a {@link ManagedDeviceOwnerType}
      */
     @jakarta.annotation.Nullable
     public ManagedDeviceOwnerType getOwnerType() {
@@ -162,7 +162,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the retireAfterDateTime property value. Managed Device Retire After DateTime
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getRetireAfterDateTime() {
@@ -170,7 +170,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the roleScopeTagIds property value. List of Scope Tags for this Entity instance.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {

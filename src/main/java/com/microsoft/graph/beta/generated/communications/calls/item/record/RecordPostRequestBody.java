@@ -19,7 +19,7 @@ public class RecordPostRequestBody implements AdditionalDataHolder, BackedModel,
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new RecordPostRequestBody and sets the default values.
+     * Instantiates a new {@link RecordPostRequestBody} and sets the default values.
      */
     public RecordPostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class RecordPostRequestBody implements AdditionalDataHolder, BackedModel,
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a RecordPostRequestBody
+     * @return a {@link RecordPostRequestBody}
      */
     @jakarta.annotation.Nonnull
     public static RecordPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class RecordPostRequestBody implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -50,7 +50,7 @@ public class RecordPostRequestBody implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -58,7 +58,7 @@ public class RecordPostRequestBody implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the bargeInAllowed property value. The bargeInAllowed property
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getBargeInAllowed() {
@@ -66,7 +66,7 @@ public class RecordPostRequestBody implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the clientContext property value. The clientContext property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getClientContext() {
@@ -74,7 +74,7 @@ public class RecordPostRequestBody implements AdditionalDataHolder, BackedModel,
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -92,7 +92,7 @@ public class RecordPostRequestBody implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the initialSilenceTimeoutInSeconds property value. The initialSilenceTimeoutInSeconds property
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getInitialSilenceTimeoutInSeconds() {
@@ -100,7 +100,7 @@ public class RecordPostRequestBody implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the maxRecordDurationInSeconds property value. The maxRecordDurationInSeconds property
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getMaxRecordDurationInSeconds() {
@@ -108,7 +108,7 @@ public class RecordPostRequestBody implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the maxSilenceTimeoutInSeconds property value. The maxSilenceTimeoutInSeconds property
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getMaxSilenceTimeoutInSeconds() {
@@ -116,7 +116,7 @@ public class RecordPostRequestBody implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the playBeep property value. The playBeep property
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getPlayBeep() {
@@ -124,7 +124,7 @@ public class RecordPostRequestBody implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the prompts property value. The prompts property
-     * @return a java.util.List<Prompt>
+     * @return a {@link java.util.List<Prompt>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Prompt> getPrompts() {
@@ -132,7 +132,7 @@ public class RecordPostRequestBody implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the stopTones property value. The stopTones property
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getStopTones() {
@@ -140,7 +140,7 @@ public class RecordPostRequestBody implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the streamWhileRecording property value. The streamWhileRecording property
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getStreamWhileRecording() {

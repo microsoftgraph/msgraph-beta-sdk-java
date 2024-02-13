@@ -43,6 +43,7 @@ import java.util.Objects;
 public class SiteItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the analytics property of the microsoft.graph.site entity.
+     * @return a {@link AnalyticsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AnalyticsRequestBuilder analytics() {
@@ -50,6 +51,7 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the columns property of the microsoft.graph.site entity.
+     * @return a {@link ColumnsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ColumnsRequestBuilder columns() {
@@ -57,6 +59,7 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the contentTypes property of the microsoft.graph.site entity.
+     * @return a {@link ContentTypesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ContentTypesRequestBuilder contentTypes() {
@@ -64,6 +67,7 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the createdByUser property of the microsoft.graph.baseItem entity.
+     * @return a {@link CreatedByUserRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CreatedByUserRequestBuilder createdByUser() {
@@ -71,6 +75,7 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the drive property of the microsoft.graph.site entity.
+     * @return a {@link DriveRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DriveRequestBuilder drive() {
@@ -78,6 +83,7 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the drives property of the microsoft.graph.site entity.
+     * @return a {@link DrivesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DrivesRequestBuilder drives() {
@@ -85,6 +91,7 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the externalColumns property of the microsoft.graph.site entity.
+     * @return a {@link ExternalColumnsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ExternalColumnsRequestBuilder externalColumns() {
@@ -92,6 +99,7 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the informationProtection property of the microsoft.graph.site entity.
+     * @return a {@link InformationProtectionRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public InformationProtectionRequestBuilder informationProtection() {
@@ -99,6 +107,7 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the items property of the microsoft.graph.site entity.
+     * @return a {@link ItemsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ItemsRequestBuilder items() {
@@ -106,6 +115,7 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the lastModifiedByUser property of the microsoft.graph.baseItem entity.
+     * @return a {@link LastModifiedByUserRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public LastModifiedByUserRequestBuilder lastModifiedByUser() {
@@ -113,6 +123,7 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the lists property of the microsoft.graph.site entity.
+     * @return a {@link ListsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ListsRequestBuilder lists() {
@@ -120,6 +131,7 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the onenote property of the microsoft.graph.site entity.
+     * @return a {@link OnenoteRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public OnenoteRequestBuilder onenote() {
@@ -127,6 +139,7 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the operations property of the microsoft.graph.site entity.
+     * @return a {@link OperationsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public OperationsRequestBuilder operations() {
@@ -134,6 +147,7 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the pages property of the microsoft.graph.site entity.
+     * @return a {@link PagesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PagesRequestBuilder pages() {
@@ -141,6 +155,7 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the permissions property of the microsoft.graph.site entity.
+     * @return a {@link PermissionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PermissionsRequestBuilder permissions() {
@@ -148,6 +163,7 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the recycleBin property of the microsoft.graph.site entity.
+     * @return a {@link RecycleBinRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RecycleBinRequestBuilder recycleBin() {
@@ -155,6 +171,7 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the sites property of the microsoft.graph.site entity.
+     * @return a {@link SitesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SitesRequestBuilder sites() {
@@ -162,13 +179,14 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the termStore property of the microsoft.graph.site entity.
+     * @return a {@link TermStoreRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TermStoreRequestBuilder termStore() {
         return new TermStoreRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new SiteItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link SiteItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -176,7 +194,7 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/sites/{site%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new SiteItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link SiteItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -185,7 +203,8 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The list of SharePoint sites in this group. Access the default site with /sites/root.
-     * @return a Site
+     * @return a {@link Site}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public Site get() {
@@ -194,14 +213,14 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The list of SharePoint sites in this group. Access the default site with /sites/root.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a Site
+     * @return a {@link Site}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public Site get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, Site::createFromDiscriminatorValue);
     }
     /**
@@ -209,7 +228,7 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
      * @param endDateTime Usage: endDateTime='{endDateTime}'
      * @param interval Usage: interval='{interval}'
      * @param startDateTime Usage: startDateTime='{startDateTime}'
-     * @return a GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder
+     * @return a {@link GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder getActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval(@jakarta.annotation.Nonnull final String endDateTime, @jakarta.annotation.Nonnull final String interval, @jakarta.annotation.Nonnull final String startDateTime) {
@@ -221,7 +240,7 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getApplicableContentTypesForList method.
      * @param listId Usage: listId='{listId}'
-     * @return a GetApplicableContentTypesForListWithListIdRequestBuilder
+     * @return a {@link GetApplicableContentTypesForListWithListIdRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetApplicableContentTypesForListWithListIdRequestBuilder getApplicableContentTypesForListWithListId(@jakarta.annotation.Nonnull final String listId) {
@@ -231,7 +250,7 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getByPath method.
      * @param path Usage: path='{path}'
-     * @return a GetByPathWithPathRequestBuilder
+     * @return a {@link GetByPathWithPathRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetByPathWithPathRequestBuilder getByPathWithPath(@jakarta.annotation.Nonnull final String path) {
@@ -241,7 +260,8 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property sites in groups
      * @param body The request body
-     * @return a Site
+     * @return a {@link Site}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public Site patch(@jakarta.annotation.Nonnull final Site body) {
@@ -251,20 +271,20 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property sites in groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a Site
+     * @return a {@link Site}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public Site patch(@jakarta.annotation.Nonnull final Site body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, Site::createFromDiscriminatorValue);
     }
     /**
      * The list of SharePoint sites in this group. Access the default site with /sites/root.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -273,7 +293,7 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The list of SharePoint sites in this group. Access the default site with /sites/root.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -285,7 +305,7 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property sites in groups
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final Site body) {
@@ -295,12 +315,12 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property sites in groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final Site body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/groups/{group%2Did}/sites/{site%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -309,7 +329,7 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a SiteItemRequestBuilder
+     * @return a {@link SiteItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SiteItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -333,7 +353,7 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

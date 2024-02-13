@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrivilegeEscalationFinding extends Finding implements Parsable {
     /**
-     * Instantiates a new PrivilegeEscalationFinding and sets the default values.
+     * Instantiates a new {@link PrivilegeEscalationFinding} and sets the default values.
      */
     public PrivilegeEscalationFinding() {
         super();
@@ -17,7 +17,7 @@ public class PrivilegeEscalationFinding extends Finding implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PrivilegeEscalationFinding
+     * @return a {@link PrivilegeEscalationFinding}
      */
     @jakarta.annotation.Nonnull
     public static PrivilegeEscalationFinding createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class PrivilegeEscalationFinding extends Finding implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -49,7 +49,7 @@ public class PrivilegeEscalationFinding extends Finding implements Parsable {
     }
     /**
      * Gets the identity property value. The identity property
-     * @return a AuthorizationSystemIdentity
+     * @return a {@link AuthorizationSystemIdentity}
      */
     @jakarta.annotation.Nullable
     public AuthorizationSystemIdentity getIdentity() {
@@ -57,7 +57,7 @@ public class PrivilegeEscalationFinding extends Finding implements Parsable {
     }
     /**
      * Gets the identityDetails property value. An identity's information details. Inherited from finding.
-     * @return a IdentityDetails
+     * @return a {@link IdentityDetails}
      */
     @jakarta.annotation.Nullable
     public IdentityDetails getIdentityDetails() {
@@ -65,7 +65,7 @@ public class PrivilegeEscalationFinding extends Finding implements Parsable {
     }
     /**
      * Gets the permissionsCreepIndex property value. The permissionsCreepIndex property
-     * @return a PermissionsCreepIndex
+     * @return a {@link PermissionsCreepIndex}
      */
     @jakarta.annotation.Nullable
     public PermissionsCreepIndex getPermissionsCreepIndex() {
@@ -73,7 +73,7 @@ public class PrivilegeEscalationFinding extends Finding implements Parsable {
     }
     /**
      * Gets the privilegeEscalationDetails property value. The list of escalations that the identity is capable of performing.
-     * @return a java.util.List<PrivilegeEscalation>
+     * @return a {@link java.util.List<PrivilegeEscalation>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<PrivilegeEscalation> getPrivilegeEscalationDetails() {

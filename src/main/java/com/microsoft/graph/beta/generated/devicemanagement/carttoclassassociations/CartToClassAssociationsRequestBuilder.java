@@ -25,6 +25,7 @@ import java.util.Objects;
 public class CartToClassAssociationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -33,7 +34,7 @@ public class CartToClassAssociationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the cartToClassAssociations property of the microsoft.graph.deviceManagement entity.
      * @param cartToClassAssociationId The unique identifier of cartToClassAssociation
-     * @return a CartToClassAssociationItemRequestBuilder
+     * @return a {@link CartToClassAssociationItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CartToClassAssociationItemRequestBuilder byCartToClassAssociationId(@jakarta.annotation.Nonnull final String cartToClassAssociationId) {
@@ -43,7 +44,7 @@ public class CartToClassAssociationsRequestBuilder extends BaseRequestBuilder {
         return new CartToClassAssociationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new CartToClassAssociationsRequestBuilder and sets the default values.
+     * Instantiates a new {@link CartToClassAssociationsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -51,7 +52,7 @@ public class CartToClassAssociationsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/cartToClassAssociations{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new CartToClassAssociationsRequestBuilder and sets the default values.
+     * Instantiates a new {@link CartToClassAssociationsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -60,7 +61,8 @@ public class CartToClassAssociationsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The Cart To Class Associations.
-     * @return a CartToClassAssociationCollectionResponse
+     * @return a {@link CartToClassAssociationCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public CartToClassAssociationCollectionResponse get() {
@@ -69,20 +71,21 @@ public class CartToClassAssociationsRequestBuilder extends BaseRequestBuilder {
     /**
      * The Cart To Class Associations.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CartToClassAssociationCollectionResponse
+     * @return a {@link CartToClassAssociationCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public CartToClassAssociationCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, CartToClassAssociationCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to cartToClassAssociations for deviceManagement
      * @param body The request body
-     * @return a CartToClassAssociation
+     * @return a {@link CartToClassAssociation}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public CartToClassAssociation post(@jakarta.annotation.Nonnull final CartToClassAssociation body) {
@@ -92,20 +95,20 @@ public class CartToClassAssociationsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to cartToClassAssociations for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CartToClassAssociation
+     * @return a {@link CartToClassAssociation}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public CartToClassAssociation post(@jakarta.annotation.Nonnull final CartToClassAssociation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, CartToClassAssociation::createFromDiscriminatorValue);
     }
     /**
      * The Cart To Class Associations.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -114,7 +117,7 @@ public class CartToClassAssociationsRequestBuilder extends BaseRequestBuilder {
     /**
      * The Cart To Class Associations.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -126,7 +129,7 @@ public class CartToClassAssociationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to cartToClassAssociations for deviceManagement
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final CartToClassAssociation body) {
@@ -136,12 +139,12 @@ public class CartToClassAssociationsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to cartToClassAssociations for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final CartToClassAssociation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/deviceManagement/cartToClassAssociations", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -150,7 +153,7 @@ public class CartToClassAssociationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a CartToClassAssociationsRequestBuilder
+     * @return a {@link CartToClassAssociationsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CartToClassAssociationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -204,7 +207,7 @@ public class CartToClassAssociationsRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

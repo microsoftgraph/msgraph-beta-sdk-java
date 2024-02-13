@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CustomAction extends InformationProtectionAction implements Parsable {
     /**
-     * Instantiates a new CustomAction and sets the default values.
+     * Instantiates a new {@link CustomAction} and sets the default values.
      */
     public CustomAction() {
         super();
@@ -18,7 +18,7 @@ public class CustomAction extends InformationProtectionAction implements Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CustomAction
+     * @return a {@link CustomAction}
      */
     @jakarta.annotation.Nonnull
     public static CustomAction createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class CustomAction extends InformationProtectionAction implements Parsabl
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -38,7 +38,7 @@ public class CustomAction extends InformationProtectionAction implements Parsabl
     }
     /**
      * Gets the name property value. Name of the custom action.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -46,7 +46,7 @@ public class CustomAction extends InformationProtectionAction implements Parsabl
     }
     /**
      * Gets the properties property value. Properties, in key-value pair format, of the action.
-     * @return a java.util.List<KeyValuePair>
+     * @return a {@link java.util.List<KeyValuePair>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyValuePair> getProperties() {

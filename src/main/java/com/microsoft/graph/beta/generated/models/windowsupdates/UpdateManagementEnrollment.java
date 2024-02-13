@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UpdateManagementEnrollment extends UpdatableAssetEnrollment implements Parsable {
     /**
-     * Instantiates a new UpdateManagementEnrollment and sets the default values.
+     * Instantiates a new {@link UpdateManagementEnrollment} and sets the default values.
      */
     public UpdateManagementEnrollment() {
         super();
@@ -18,7 +18,7 @@ public class UpdateManagementEnrollment extends UpdatableAssetEnrollment impleme
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UpdateManagementEnrollment
+     * @return a {@link UpdateManagementEnrollment}
      */
     @jakarta.annotation.Nonnull
     public static UpdateManagementEnrollment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class UpdateManagementEnrollment extends UpdatableAssetEnrollment impleme
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -37,7 +37,7 @@ public class UpdateManagementEnrollment extends UpdatableAssetEnrollment impleme
     }
     /**
      * Gets the updateCategory property value. The updateCategory property
-     * @return a UpdateCategory
+     * @return a {@link UpdateCategory}
      */
     @jakarta.annotation.Nullable
     public UpdateCategory getUpdateCategory() {

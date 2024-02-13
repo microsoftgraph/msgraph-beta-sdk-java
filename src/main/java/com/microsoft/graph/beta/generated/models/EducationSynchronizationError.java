@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EducationSynchronizationError extends Entity implements Parsable {
     /**
-     * Instantiates a new EducationSynchronizationError and sets the default values.
+     * Instantiates a new {@link EducationSynchronizationError} and sets the default values.
      */
     public EducationSynchronizationError() {
         super();
@@ -18,7 +18,7 @@ public class EducationSynchronizationError extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EducationSynchronizationError
+     * @return a {@link EducationSynchronizationError}
      */
     @jakarta.annotation.Nonnull
     public static EducationSynchronizationError createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class EducationSynchronizationError extends Entity implements Parsable {
     }
     /**
      * Gets the entryType property value. Represents the sync entity (school, section, student, teacher).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getEntryType() {
@@ -35,7 +35,7 @@ public class EducationSynchronizationError extends Entity implements Parsable {
     }
     /**
      * Gets the errorCode property value. Represents the error code for this error.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getErrorCode() {
@@ -43,7 +43,7 @@ public class EducationSynchronizationError extends Entity implements Parsable {
     }
     /**
      * Gets the errorMessage property value. Contains a description of the error.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getErrorMessage() {
@@ -51,7 +51,7 @@ public class EducationSynchronizationError extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -66,7 +66,7 @@ public class EducationSynchronizationError extends Entity implements Parsable {
     }
     /**
      * Gets the joiningValue property value. The unique identifier for the entry.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getJoiningValue() {
@@ -74,7 +74,7 @@ public class EducationSynchronizationError extends Entity implements Parsable {
     }
     /**
      * Gets the recordedDateTime property value. The time of occurrence of this error.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getRecordedDateTime() {
@@ -82,7 +82,7 @@ public class EducationSynchronizationError extends Entity implements Parsable {
     }
     /**
      * Gets the reportableIdentifier property value. The identifier of this error entry.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getReportableIdentifier() {

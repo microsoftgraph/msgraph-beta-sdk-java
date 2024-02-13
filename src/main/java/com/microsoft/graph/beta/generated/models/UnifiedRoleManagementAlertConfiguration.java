@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UnifiedRoleManagementAlertConfiguration extends Entity implements Parsable {
     /**
-     * Instantiates a new UnifiedRoleManagementAlertConfiguration and sets the default values.
+     * Instantiates a new {@link UnifiedRoleManagementAlertConfiguration} and sets the default values.
      */
     public UnifiedRoleManagementAlertConfiguration() {
         super();
@@ -17,7 +17,7 @@ public class UnifiedRoleManagementAlertConfiguration extends Entity implements P
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UnifiedRoleManagementAlertConfiguration
+     * @return a {@link UnifiedRoleManagementAlertConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static UnifiedRoleManagementAlertConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class UnifiedRoleManagementAlertConfiguration extends Entity implements P
     }
     /**
      * Gets the alertDefinition property value. The definition of the alert that contains its description, impact, and measures to mitigate or prevent it. Supports $expand.
-     * @return a UnifiedRoleManagementAlertDefinition
+     * @return a {@link UnifiedRoleManagementAlertDefinition}
      */
     @jakarta.annotation.Nullable
     public UnifiedRoleManagementAlertDefinition getAlertDefinition() {
@@ -47,7 +47,7 @@ public class UnifiedRoleManagementAlertConfiguration extends Entity implements P
     }
     /**
      * Gets the alertDefinitionId property value. The identifier of an alert definition. Supports $filter (eq, ne).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAlertDefinitionId() {
@@ -55,7 +55,7 @@ public class UnifiedRoleManagementAlertConfiguration extends Entity implements P
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -69,7 +69,7 @@ public class UnifiedRoleManagementAlertConfiguration extends Entity implements P
     }
     /**
      * Gets the isEnabled property value. true if the alert is enabled. Setting it to false disables PIM scanning the tenant to identify instances that trigger the alert.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEnabled() {
@@ -77,7 +77,7 @@ public class UnifiedRoleManagementAlertConfiguration extends Entity implements P
     }
     /**
      * Gets the scopeId property value. The identifier of the scope to which the alert is related. Only / is supported to represent the tenant scope. Supports $filter (eq, ne).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getScopeId() {
@@ -85,7 +85,7 @@ public class UnifiedRoleManagementAlertConfiguration extends Entity implements P
     }
     /**
      * Gets the scopeType property value. The type of scope where the alert is created. DirectoryRole is the only currently supported scope type for Microsoft Entra roles.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getScopeType() {

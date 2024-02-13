@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IdentityFinding extends Finding implements Parsable {
     /**
-     * Instantiates a new IdentityFinding and sets the default values.
+     * Instantiates a new {@link IdentityFinding} and sets the default values.
      */
     public IdentityFinding() {
         super();
@@ -17,7 +17,7 @@ public class IdentityFinding extends Finding implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a IdentityFinding
+     * @return a {@link IdentityFinding}
      */
     @jakarta.annotation.Nonnull
     public static IdentityFinding createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -51,7 +51,7 @@ public class IdentityFinding extends Finding implements Parsable {
     }
     /**
      * Gets the actionSummary property value. The actionSummary property
-     * @return a ActionSummary
+     * @return a {@link ActionSummary}
      */
     @jakarta.annotation.Nullable
     public ActionSummary getActionSummary() {
@@ -59,7 +59,7 @@ public class IdentityFinding extends Finding implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -72,7 +72,7 @@ public class IdentityFinding extends Finding implements Parsable {
     }
     /**
      * Gets the identity property value. The identity property
-     * @return a AuthorizationSystemIdentity
+     * @return a {@link AuthorizationSystemIdentity}
      */
     @jakarta.annotation.Nullable
     public AuthorizationSystemIdentity getIdentity() {
@@ -80,7 +80,7 @@ public class IdentityFinding extends Finding implements Parsable {
     }
     /**
      * Gets the identityDetails property value. An identity's information details.
-     * @return a IdentityDetails
+     * @return a {@link IdentityDetails}
      */
     @jakarta.annotation.Nullable
     public IdentityDetails getIdentityDetails() {
@@ -88,7 +88,7 @@ public class IdentityFinding extends Finding implements Parsable {
     }
     /**
      * Gets the permissionsCreepIndex property value. The permissionsCreepIndex property
-     * @return a PermissionsCreepIndex
+     * @return a {@link PermissionsCreepIndex}
      */
     @jakarta.annotation.Nullable
     public PermissionsCreepIndex getPermissionsCreepIndex() {

@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AwsAccessKey extends AwsIdentity implements Parsable {
     /**
-     * Instantiates a new AwsAccessKey and sets the default values.
+     * Instantiates a new {@link AwsAccessKey} and sets the default values.
      */
     public AwsAccessKey() {
         super();
@@ -18,7 +18,7 @@ public class AwsAccessKey extends AwsIdentity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AwsAccessKey
+     * @return a {@link AwsAccessKey}
      */
     @jakarta.annotation.Nonnull
     public static AwsAccessKey createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class AwsAccessKey extends AwsIdentity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -37,7 +37,7 @@ public class AwsAccessKey extends AwsIdentity implements Parsable {
     }
     /**
      * Gets the owner property value. Represents the owner of the access key.
-     * @return a AwsUser
+     * @return a {@link AwsUser}
      */
     @jakarta.annotation.Nullable
     public AwsUser getOwner() {

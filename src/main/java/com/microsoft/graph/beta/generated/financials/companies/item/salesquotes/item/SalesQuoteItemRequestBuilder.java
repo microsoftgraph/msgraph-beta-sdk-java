@@ -29,6 +29,7 @@ import java.util.Objects;
 public class SalesQuoteItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the currency property of the microsoft.graph.salesQuote entity.
+     * @return a {@link CurrencyRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CurrencyRequestBuilder currency() {
@@ -36,6 +37,7 @@ public class SalesQuoteItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the customer property of the microsoft.graph.salesQuote entity.
+     * @return a {@link CustomerRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CustomerRequestBuilder customer() {
@@ -43,6 +45,7 @@ public class SalesQuoteItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the makeInvoice method.
+     * @return a {@link MakeInvoiceRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MakeInvoiceRequestBuilder makeInvoice() {
@@ -50,6 +53,7 @@ public class SalesQuoteItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the paymentTerm property of the microsoft.graph.salesQuote entity.
+     * @return a {@link PaymentTermRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PaymentTermRequestBuilder paymentTerm() {
@@ -57,6 +61,7 @@ public class SalesQuoteItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the salesQuoteLines property of the microsoft.graph.salesQuote entity.
+     * @return a {@link SalesQuoteLinesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SalesQuoteLinesRequestBuilder salesQuoteLines() {
@@ -64,6 +69,7 @@ public class SalesQuoteItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the send method.
+     * @return a {@link SendRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SendRequestBuilder send() {
@@ -71,13 +77,14 @@ public class SalesQuoteItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the shipmentMethod property of the microsoft.graph.salesQuote entity.
+     * @return a {@link ShipmentMethodRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ShipmentMethodRequestBuilder shipmentMethod() {
         return new ShipmentMethodRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new SalesQuoteItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link SalesQuoteItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -85,7 +92,7 @@ public class SalesQuoteItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/financials/companies/{company%2Did}/salesQuotes/{salesQuote%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new SalesQuoteItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link SalesQuoteItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -94,7 +101,8 @@ public class SalesQuoteItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get salesQuotes from financials
-     * @return a SalesQuote
+     * @return a {@link SalesQuote}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public SalesQuote get() {
@@ -103,20 +111,21 @@ public class SalesQuoteItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get salesQuotes from financials
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a SalesQuote
+     * @return a {@link SalesQuote}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public SalesQuote get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, SalesQuote::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property salesQuotes in financials
      * @param body The request body
-     * @return a SalesQuote
+     * @return a {@link SalesQuote}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public SalesQuote patch(@jakarta.annotation.Nonnull final SalesQuote body) {
@@ -126,20 +135,20 @@ public class SalesQuoteItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property salesQuotes in financials
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a SalesQuote
+     * @return a {@link SalesQuote}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public SalesQuote patch(@jakarta.annotation.Nonnull final SalesQuote body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, SalesQuote::createFromDiscriminatorValue);
     }
     /**
      * Get salesQuotes from financials
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -148,7 +157,7 @@ public class SalesQuoteItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get salesQuotes from financials
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -160,7 +169,7 @@ public class SalesQuoteItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property salesQuotes in financials
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final SalesQuote body) {
@@ -170,12 +179,12 @@ public class SalesQuoteItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property salesQuotes in financials
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final SalesQuote body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/financials/companies/{company%2Did}/salesQuotes/{salesQuote%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -184,7 +193,7 @@ public class SalesQuoteItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a SalesQuoteItemRequestBuilder
+     * @return a {@link SalesQuoteItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SalesQuoteItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -208,7 +217,7 @@ public class SalesQuoteItemRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

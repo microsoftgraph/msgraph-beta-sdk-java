@@ -18,7 +18,7 @@ public class CrossTenantSummary implements AdditionalDataHolder, BackedModel, Pa
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new CrossTenantSummary and sets the default values.
+     * Instantiates a new {@link CrossTenantSummary} and sets the default values.
      */
     public CrossTenantSummary() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class CrossTenantSummary implements AdditionalDataHolder, BackedModel, Pa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CrossTenantSummary
+     * @return a {@link CrossTenantSummary}
      */
     @jakarta.annotation.Nonnull
     public static CrossTenantSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class CrossTenantSummary implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class CrossTenantSummary implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the authTransactionCount property value. The total number of authentication sessions between startDateTime and endDateTime.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getAuthTransactionCount() {
@@ -57,7 +57,7 @@ public class CrossTenantSummary implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -65,7 +65,7 @@ public class CrossTenantSummary implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the deviceCount property value. The number of unique devices that performed cross-tenant access.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getDeviceCount() {
@@ -73,7 +73,7 @@ public class CrossTenantSummary implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -89,7 +89,7 @@ public class CrossTenantSummary implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the newTenantCount property value. The number of unique tenants that were accessed between endDateTime and discoveryPivotDateTime, but weren't accessed between discoveryPivotDateTime and startDateTime.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getNewTenantCount() {
@@ -97,7 +97,7 @@ public class CrossTenantSummary implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -105,7 +105,7 @@ public class CrossTenantSummary implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the rarelyUsedTenantCount property value. The rarelyUsedTenantCount property
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getRarelyUsedTenantCount() {
@@ -113,7 +113,7 @@ public class CrossTenantSummary implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the tenantCount property value. The number of unique tenants that were accessed, not including the device's tenant.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getTenantCount() {
@@ -121,7 +121,7 @@ public class CrossTenantSummary implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the userCount property value. The number of unique users that performed cross-tenant access.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getUserCount() {

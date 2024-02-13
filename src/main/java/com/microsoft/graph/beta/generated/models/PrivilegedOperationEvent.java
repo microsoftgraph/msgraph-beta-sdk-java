@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrivilegedOperationEvent extends Entity implements Parsable {
     /**
-     * Instantiates a new PrivilegedOperationEvent and sets the default values.
+     * Instantiates a new {@link PrivilegedOperationEvent} and sets the default values.
      */
     public PrivilegedOperationEvent() {
         super();
@@ -18,7 +18,7 @@ public class PrivilegedOperationEvent extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PrivilegedOperationEvent
+     * @return a {@link PrivilegedOperationEvent}
      */
     @jakarta.annotation.Nonnull
     public static PrivilegedOperationEvent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class PrivilegedOperationEvent extends Entity implements Parsable {
     }
     /**
      * Gets the additionalInformation property value. The additionalInformation property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAdditionalInformation() {
@@ -35,7 +35,7 @@ public class PrivilegedOperationEvent extends Entity implements Parsable {
     }
     /**
      * Gets the creationDateTime property value. The creationDateTime property
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreationDateTime() {
@@ -43,7 +43,7 @@ public class PrivilegedOperationEvent extends Entity implements Parsable {
     }
     /**
      * Gets the expirationDateTime property value. The expirationDateTime property
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getExpirationDateTime() {
@@ -51,7 +51,7 @@ public class PrivilegedOperationEvent extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -74,7 +74,7 @@ public class PrivilegedOperationEvent extends Entity implements Parsable {
     }
     /**
      * Gets the referenceKey property value. The referenceKey property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getReferenceKey() {
@@ -82,7 +82,7 @@ public class PrivilegedOperationEvent extends Entity implements Parsable {
     }
     /**
      * Gets the referenceSystem property value. The referenceSystem property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getReferenceSystem() {
@@ -90,7 +90,7 @@ public class PrivilegedOperationEvent extends Entity implements Parsable {
     }
     /**
      * Gets the requestorId property value. The requestorId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRequestorId() {
@@ -98,7 +98,7 @@ public class PrivilegedOperationEvent extends Entity implements Parsable {
     }
     /**
      * Gets the requestorName property value. The requestorName property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRequestorName() {
@@ -106,7 +106,7 @@ public class PrivilegedOperationEvent extends Entity implements Parsable {
     }
     /**
      * Gets the requestType property value. The requestType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRequestType() {
@@ -114,7 +114,7 @@ public class PrivilegedOperationEvent extends Entity implements Parsable {
     }
     /**
      * Gets the roleId property value. The roleId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRoleId() {
@@ -122,7 +122,7 @@ public class PrivilegedOperationEvent extends Entity implements Parsable {
     }
     /**
      * Gets the roleName property value. The roleName property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRoleName() {
@@ -130,7 +130,7 @@ public class PrivilegedOperationEvent extends Entity implements Parsable {
     }
     /**
      * Gets the tenantId property value. The tenantId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
@@ -138,7 +138,7 @@ public class PrivilegedOperationEvent extends Entity implements Parsable {
     }
     /**
      * Gets the userId property value. The userId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
@@ -146,7 +146,7 @@ public class PrivilegedOperationEvent extends Entity implements Parsable {
     }
     /**
      * Gets the userMail property value. The userMail property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserMail() {
@@ -154,7 +154,7 @@ public class PrivilegedOperationEvent extends Entity implements Parsable {
     }
     /**
      * Gets the userName property value. The userName property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserName() {

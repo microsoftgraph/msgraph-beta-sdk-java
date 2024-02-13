@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WinGetAppAssignmentSettings extends MobileAppAssignmentSettings implements Parsable {
     /**
-     * Instantiates a new WinGetAppAssignmentSettings and sets the default values.
+     * Instantiates a new {@link WinGetAppAssignmentSettings} and sets the default values.
      */
     public WinGetAppAssignmentSettings() {
         super();
@@ -21,7 +21,7 @@ public class WinGetAppAssignmentSettings extends MobileAppAssignmentSettings imp
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WinGetAppAssignmentSettings
+     * @return a {@link WinGetAppAssignmentSettings}
      */
     @jakarta.annotation.Nonnull
     public static WinGetAppAssignmentSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class WinGetAppAssignmentSettings extends MobileAppAssignmentSettings imp
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -42,7 +42,7 @@ public class WinGetAppAssignmentSettings extends MobileAppAssignmentSettings imp
     }
     /**
      * Gets the installTimeSettings property value. The install time settings to apply for this app assignment.
-     * @return a WinGetAppInstallTimeSettings
+     * @return a {@link WinGetAppInstallTimeSettings}
      */
     @jakarta.annotation.Nullable
     public WinGetAppInstallTimeSettings getInstallTimeSettings() {
@@ -50,7 +50,7 @@ public class WinGetAppAssignmentSettings extends MobileAppAssignmentSettings imp
     }
     /**
      * Gets the notifications property value. Contains value for notification status.
-     * @return a WinGetAppNotification
+     * @return a {@link WinGetAppNotification}
      */
     @jakarta.annotation.Nullable
     public WinGetAppNotification getNotifications() {
@@ -58,7 +58,7 @@ public class WinGetAppAssignmentSettings extends MobileAppAssignmentSettings imp
     }
     /**
      * Gets the restartSettings property value. The reboot settings to apply for this app assignment.
-     * @return a WinGetAppRestartSettings
+     * @return a {@link WinGetAppRestartSettings}
      */
     @jakarta.annotation.Nullable
     public WinGetAppRestartSettings getRestartSettings() {

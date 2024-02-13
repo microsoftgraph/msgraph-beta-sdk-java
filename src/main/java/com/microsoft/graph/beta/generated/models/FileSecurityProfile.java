@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class FileSecurityProfile extends Entity implements Parsable {
     /**
-     * Instantiates a new FileSecurityProfile and sets the default values.
+     * Instantiates a new {@link FileSecurityProfile} and sets the default values.
      */
     public FileSecurityProfile() {
         super();
@@ -18,7 +18,7 @@ public class FileSecurityProfile extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a FileSecurityProfile
+     * @return a {@link FileSecurityProfile}
      */
     @jakarta.annotation.Nonnull
     public static FileSecurityProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class FileSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the activityGroupNames property value. The activityGroupNames property
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getActivityGroupNames() {
@@ -35,7 +35,7 @@ public class FileSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the azureSubscriptionId property value. The azureSubscriptionId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAzureSubscriptionId() {
@@ -43,7 +43,7 @@ public class FileSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the azureTenantId property value. The azureTenantId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAzureTenantId() {
@@ -51,7 +51,7 @@ public class FileSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the certificateThumbprint property value. The certificateThumbprint property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCertificateThumbprint() {
@@ -59,7 +59,7 @@ public class FileSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the extensions property value. The extensions property
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getExtensions() {
@@ -67,7 +67,7 @@ public class FileSecurityProfile extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -92,7 +92,7 @@ public class FileSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the fileType property value. The fileType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getFileType() {
@@ -100,7 +100,7 @@ public class FileSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the firstSeenDateTime property value. The firstSeenDateTime property
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getFirstSeenDateTime() {
@@ -108,7 +108,7 @@ public class FileSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the hashes property value. The hashes property
-     * @return a java.util.List<FileHash>
+     * @return a {@link java.util.List<FileHash>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<FileHash> getHashes() {
@@ -116,7 +116,7 @@ public class FileSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the lastSeenDateTime property value. The lastSeenDateTime property
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastSeenDateTime() {
@@ -124,7 +124,7 @@ public class FileSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the malwareStates property value. The malwareStates property
-     * @return a java.util.List<MalwareState>
+     * @return a {@link java.util.List<MalwareState>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<MalwareState> getMalwareStates() {
@@ -132,7 +132,7 @@ public class FileSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the names property value. The names property
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getNames() {
@@ -140,7 +140,7 @@ public class FileSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the riskScore property value. The riskScore property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRiskScore() {
@@ -148,7 +148,7 @@ public class FileSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the size property value. The size property
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getSize() {
@@ -156,7 +156,7 @@ public class FileSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the tags property value. The tags property
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getTags() {
@@ -164,7 +164,7 @@ public class FileSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the vendorInformation property value. The vendorInformation property
-     * @return a SecurityVendorInformation
+     * @return a {@link SecurityVendorInformation}
      */
     @jakarta.annotation.Nullable
     public SecurityVendorInformation getVendorInformation() {
@@ -172,7 +172,7 @@ public class FileSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the vulnerabilityStates property value. The vulnerabilityStates property
-     * @return a java.util.List<VulnerabilityState>
+     * @return a {@link java.util.List<VulnerabilityState>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<VulnerabilityState> getVulnerabilityStates() {

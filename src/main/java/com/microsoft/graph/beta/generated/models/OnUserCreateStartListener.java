@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OnUserCreateStartListener extends AuthenticationEventListener implements Parsable {
     /**
-     * Instantiates a new OnUserCreateStartListener and sets the default values.
+     * Instantiates a new {@link OnUserCreateStartListener} and sets the default values.
      */
     public OnUserCreateStartListener() {
         super();
@@ -18,7 +18,7 @@ public class OnUserCreateStartListener extends AuthenticationEventListener imple
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a OnUserCreateStartListener
+     * @return a {@link OnUserCreateStartListener}
      */
     @jakarta.annotation.Nonnull
     public static OnUserCreateStartListener createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class OnUserCreateStartListener extends AuthenticationEventListener imple
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -37,7 +37,7 @@ public class OnUserCreateStartListener extends AuthenticationEventListener imple
     }
     /**
      * Gets the handler property value. Required. Configuration for what to invoke if the event resolves to this listener. This lets us define potential handler configurations per-event.
-     * @return a OnUserCreateStartHandler
+     * @return a {@link OnUserCreateStartHandler}
      */
     @jakarta.annotation.Nullable
     public OnUserCreateStartHandler getHandler() {

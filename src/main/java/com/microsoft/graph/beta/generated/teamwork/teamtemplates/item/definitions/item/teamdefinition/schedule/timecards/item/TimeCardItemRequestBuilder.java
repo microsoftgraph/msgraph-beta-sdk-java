@@ -26,6 +26,7 @@ import java.util.Objects;
 public class TimeCardItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the clockOut method.
+     * @return a {@link ClockOutRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ClockOutRequestBuilder clockOut() {
@@ -33,6 +34,7 @@ public class TimeCardItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the confirm method.
+     * @return a {@link ConfirmRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ConfirmRequestBuilder confirm() {
@@ -40,6 +42,7 @@ public class TimeCardItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the endBreak method.
+     * @return a {@link EndBreakRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public EndBreakRequestBuilder endBreak() {
@@ -47,13 +50,14 @@ public class TimeCardItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the startBreak method.
+     * @return a {@link StartBreakRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public StartBreakRequestBuilder startBreak() {
         return new StartBreakRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new TimeCardItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link TimeCardItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -61,7 +65,7 @@ public class TimeCardItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/teamwork/teamTemplates/{teamTemplate%2Did}/definitions/{teamTemplateDefinition%2Did}/teamDefinition/schedule/timeCards/{timeCard%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new TimeCardItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link TimeCardItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -70,6 +74,7 @@ public class TimeCardItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Delete a timeCard instance in a schedule.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/timecard-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
@@ -78,18 +83,19 @@ public class TimeCardItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete a timeCard instance in a schedule.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/timecard-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Get the properties and relationships of a timeCard object by ID.
-     * @return a TimeCard
+     * @return a {@link TimeCard}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/timecard-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -99,21 +105,22 @@ public class TimeCardItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the properties and relationships of a timeCard object by ID.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a TimeCard
+     * @return a {@link TimeCard}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/timecard-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TimeCard get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, TimeCard::createFromDiscriminatorValue);
     }
     /**
      * Replace an existing timeCard with updated values.
      * @param body The request body
-     * @return a TimeCard
+     * @return a {@link TimeCard}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/timecard-replace?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -124,7 +131,8 @@ public class TimeCardItemRequestBuilder extends BaseRequestBuilder {
      * Replace an existing timeCard with updated values.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a TimeCard
+     * @return a {@link TimeCard}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/timecard-replace?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -132,13 +140,12 @@ public class TimeCardItemRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, TimeCard::createFromDiscriminatorValue);
     }
     /**
      * Delete a timeCard instance in a schedule.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -147,18 +154,18 @@ public class TimeCardItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete a timeCard instance in a schedule.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/teamwork/teamTemplates/{teamTemplate%2Did}/definitions/{teamTemplateDefinition%2Did}/teamDefinition/schedule/timeCards/{timeCard%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Get the properties and relationships of a timeCard object by ID.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -167,7 +174,7 @@ public class TimeCardItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the properties and relationships of a timeCard object by ID.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -179,7 +186,7 @@ public class TimeCardItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Replace an existing timeCard with updated values.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final TimeCard body) {
@@ -189,12 +196,12 @@ public class TimeCardItemRequestBuilder extends BaseRequestBuilder {
      * Replace an existing timeCard with updated values.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final TimeCard body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/teamwork/teamTemplates/{teamTemplate%2Did}/definitions/{teamTemplateDefinition%2Did}/teamDefinition/schedule/timeCards/{timeCard%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -203,7 +210,7 @@ public class TimeCardItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a TimeCardItemRequestBuilder
+     * @return a {@link TimeCardItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TimeCardItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -233,7 +240,7 @@ public class TimeCardItemRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

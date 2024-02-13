@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GroupPolicyPresentationMultiTextBox extends GroupPolicyUploadedPresentation implements Parsable {
     /**
-     * Instantiates a new GroupPolicyPresentationMultiTextBox and sets the default values.
+     * Instantiates a new {@link GroupPolicyPresentationMultiTextBox} and sets the default values.
      */
     public GroupPolicyPresentationMultiTextBox() {
         super();
@@ -21,7 +21,7 @@ public class GroupPolicyPresentationMultiTextBox extends GroupPolicyUploadedPres
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a GroupPolicyPresentationMultiTextBox
+     * @return a {@link GroupPolicyPresentationMultiTextBox}
      */
     @jakarta.annotation.Nonnull
     public static GroupPolicyPresentationMultiTextBox createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class GroupPolicyPresentationMultiTextBox extends GroupPolicyUploadedPres
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -42,7 +42,7 @@ public class GroupPolicyPresentationMultiTextBox extends GroupPolicyUploadedPres
     }
     /**
      * Gets the maxLength property value. An unsigned integer that specifies the maximum number of text characters. Default value is 1023.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getMaxLength() {
@@ -50,7 +50,7 @@ public class GroupPolicyPresentationMultiTextBox extends GroupPolicyUploadedPres
     }
     /**
      * Gets the maxStrings property value. An unsigned integer that specifies the maximum number of strings. Default value is 0.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getMaxStrings() {
@@ -58,7 +58,7 @@ public class GroupPolicyPresentationMultiTextBox extends GroupPolicyUploadedPres
     }
     /**
      * Gets the required property value. Requirement to enter a value in the text box. Default value is false.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getRequired() {

@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EncryptWithUserDefinedRights extends EncryptContent implements Parsable {
     /**
-     * Instantiates a new EncryptWithUserDefinedRights and sets the default values.
+     * Instantiates a new {@link EncryptWithUserDefinedRights} and sets the default values.
      */
     public EncryptWithUserDefinedRights() {
         super();
@@ -18,7 +18,7 @@ public class EncryptWithUserDefinedRights extends EncryptContent implements Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EncryptWithUserDefinedRights
+     * @return a {@link EncryptWithUserDefinedRights}
      */
     @jakarta.annotation.Nonnull
     public static EncryptWithUserDefinedRights createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class EncryptWithUserDefinedRights extends EncryptContent implements Pars
     }
     /**
      * Gets the allowAdHocPermissions property value. The allowAdHocPermissions property
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowAdHocPermissions() {
@@ -35,7 +35,7 @@ public class EncryptWithUserDefinedRights extends EncryptContent implements Pars
     }
     /**
      * Gets the allowMailForwarding property value. The allowMailForwarding property
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowMailForwarding() {
@@ -43,7 +43,7 @@ public class EncryptWithUserDefinedRights extends EncryptContent implements Pars
     }
     /**
      * Gets the decryptionRightsManagementTemplateId property value. The decryptionRightsManagementTemplateId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDecryptionRightsManagementTemplateId() {
@@ -51,7 +51,7 @@ public class EncryptWithUserDefinedRights extends EncryptContent implements Pars
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

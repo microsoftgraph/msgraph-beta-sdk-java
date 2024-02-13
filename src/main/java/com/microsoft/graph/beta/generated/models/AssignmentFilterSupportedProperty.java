@@ -21,7 +21,7 @@ public class AssignmentFilterSupportedProperty implements AdditionalDataHolder, 
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new AssignmentFilterSupportedProperty and sets the default values.
+     * Instantiates a new {@link AssignmentFilterSupportedProperty} and sets the default values.
      */
     public AssignmentFilterSupportedProperty() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -30,7 +30,7 @@ public class AssignmentFilterSupportedProperty implements AdditionalDataHolder, 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AssignmentFilterSupportedProperty
+     * @return a {@link AssignmentFilterSupportedProperty}
      */
     @jakarta.annotation.Nonnull
     public static AssignmentFilterSupportedProperty createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class AssignmentFilterSupportedProperty implements AdditionalDataHolder, 
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -52,7 +52,7 @@ public class AssignmentFilterSupportedProperty implements AdditionalDataHolder, 
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -60,7 +60,7 @@ public class AssignmentFilterSupportedProperty implements AdditionalDataHolder, 
     }
     /**
      * Gets the dataType property value. The data type of the property.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDataType() {
@@ -68,7 +68,7 @@ public class AssignmentFilterSupportedProperty implements AdditionalDataHolder, 
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -84,7 +84,7 @@ public class AssignmentFilterSupportedProperty implements AdditionalDataHolder, 
     }
     /**
      * Gets the isCollection property value. Indicates whether the property is a collection type or not.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsCollection() {
@@ -92,7 +92,7 @@ public class AssignmentFilterSupportedProperty implements AdditionalDataHolder, 
     }
     /**
      * Gets the name property value. Name of the property.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -100,7 +100,7 @@ public class AssignmentFilterSupportedProperty implements AdditionalDataHolder, 
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -108,7 +108,7 @@ public class AssignmentFilterSupportedProperty implements AdditionalDataHolder, 
     }
     /**
      * Gets the propertyRegexConstraint property value. Regex string to do validation on the property value.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPropertyRegexConstraint() {
@@ -116,7 +116,7 @@ public class AssignmentFilterSupportedProperty implements AdditionalDataHolder, 
     }
     /**
      * Gets the supportedOperators property value. List of all supported operators on this property.
-     * @return a java.util.List<AssignmentFilterOperator>
+     * @return a {@link java.util.List<AssignmentFilterOperator>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AssignmentFilterOperator> getSupportedOperators() {
@@ -124,7 +124,7 @@ public class AssignmentFilterSupportedProperty implements AdditionalDataHolder, 
     }
     /**
      * Gets the supportedValues property value. List of all supported values for this property, empty if everything is supported.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSupportedValues() {

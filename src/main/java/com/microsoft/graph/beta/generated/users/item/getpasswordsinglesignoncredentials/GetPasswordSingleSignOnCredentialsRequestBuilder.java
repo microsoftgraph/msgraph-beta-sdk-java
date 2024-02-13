@@ -19,7 +19,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GetPasswordSingleSignOnCredentialsRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new GetPasswordSingleSignOnCredentialsRequestBuilder and sets the default values.
+     * Instantiates a new {@link GetPasswordSingleSignOnCredentialsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -27,7 +27,7 @@ public class GetPasswordSingleSignOnCredentialsRequestBuilder extends BaseReques
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/getPasswordSingleSignOnCredentials", pathParameters);
     }
     /**
-     * Instantiates a new GetPasswordSingleSignOnCredentialsRequestBuilder and sets the default values.
+     * Instantiates a new {@link GetPasswordSingleSignOnCredentialsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -36,7 +36,8 @@ public class GetPasswordSingleSignOnCredentialsRequestBuilder extends BaseReques
     }
     /**
      * Get the list of password-based single sign-on credentials for a given user. This API returns the encrypted passwords as null or empty strings.
-     * @return a GetPasswordSingleSignOnCredentialsPostResponse
+     * @return a {@link GetPasswordSingleSignOnCredentialsPostResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/user-getpasswordsinglesignoncredentials?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -46,20 +47,20 @@ public class GetPasswordSingleSignOnCredentialsRequestBuilder extends BaseReques
     /**
      * Get the list of password-based single sign-on credentials for a given user. This API returns the encrypted passwords as null or empty strings.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a GetPasswordSingleSignOnCredentialsPostResponse
+     * @return a {@link GetPasswordSingleSignOnCredentialsPostResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/user-getpasswordsinglesignoncredentials?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetPasswordSingleSignOnCredentialsPostResponse post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toPostRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, GetPasswordSingleSignOnCredentialsPostResponse::createFromDiscriminatorValue);
     }
     /**
      * Get the list of password-based single sign-on credentials for a given user. This API returns the encrypted passwords as null or empty strings.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation() {
@@ -68,7 +69,7 @@ public class GetPasswordSingleSignOnCredentialsRequestBuilder extends BaseReques
     /**
      * Get the list of password-based single sign-on credentials for a given user. This API returns the encrypted passwords as null or empty strings.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -80,7 +81,7 @@ public class GetPasswordSingleSignOnCredentialsRequestBuilder extends BaseReques
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a GetPasswordSingleSignOnCredentialsRequestBuilder
+     * @return a {@link GetPasswordSingleSignOnCredentialsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetPasswordSingleSignOnCredentialsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

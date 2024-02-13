@@ -23,13 +23,14 @@ import java.util.Objects;
 public class OnAuthenticationMethodLoadStartRequestBuilder extends BaseRequestBuilder {
     /**
      * Casts the previous resource to onAuthenticationMethodLoadStartExternalUsersSelfServiceSignUp.
+     * @return a {@link GraphOnAuthenticationMethodLoadStartExternalUsersSelfServiceSignUpRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GraphOnAuthenticationMethodLoadStartExternalUsersSelfServiceSignUpRequestBuilder graphOnAuthenticationMethodLoadStartExternalUsersSelfServiceSignUp() {
         return new GraphOnAuthenticationMethodLoadStartExternalUsersSelfServiceSignUpRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new OnAuthenticationMethodLoadStartRequestBuilder and sets the default values.
+     * Instantiates a new {@link OnAuthenticationMethodLoadStartRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -37,7 +38,7 @@ public class OnAuthenticationMethodLoadStartRequestBuilder extends BaseRequestBu
         super(requestAdapter, "{+baseurl}/identity/authenticationEventsFlows/{authenticationEventsFlow%2Did}/graph.externalUsersSelfServiceSignUpEventsFlow/onAuthenticationMethodLoadStart{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new OnAuthenticationMethodLoadStartRequestBuilder and sets the default values.
+     * Instantiates a new {@link OnAuthenticationMethodLoadStartRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -46,7 +47,8 @@ public class OnAuthenticationMethodLoadStartRequestBuilder extends BaseRequestBu
     }
     /**
      * Required. The configuration for what to invoke when authentication methods are ready to be presented to the user. Must have at least one identity provider linked.
-     * @return a OnAuthenticationMethodLoadStartHandler
+     * @return a {@link OnAuthenticationMethodLoadStartHandler}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public OnAuthenticationMethodLoadStartHandler get() {
@@ -55,19 +57,19 @@ public class OnAuthenticationMethodLoadStartRequestBuilder extends BaseRequestBu
     /**
      * Required. The configuration for what to invoke when authentication methods are ready to be presented to the user. Must have at least one identity provider linked.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a OnAuthenticationMethodLoadStartHandler
+     * @return a {@link OnAuthenticationMethodLoadStartHandler}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public OnAuthenticationMethodLoadStartHandler get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, OnAuthenticationMethodLoadStartHandler::createFromDiscriminatorValue);
     }
     /**
      * Required. The configuration for what to invoke when authentication methods are ready to be presented to the user. Must have at least one identity provider linked.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -76,7 +78,7 @@ public class OnAuthenticationMethodLoadStartRequestBuilder extends BaseRequestBu
     /**
      * Required. The configuration for what to invoke when authentication methods are ready to be presented to the user. Must have at least one identity provider linked.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -88,7 +90,7 @@ public class OnAuthenticationMethodLoadStartRequestBuilder extends BaseRequestBu
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a OnAuthenticationMethodLoadStartRequestBuilder
+     * @return a {@link OnAuthenticationMethodLoadStartRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public OnAuthenticationMethodLoadStartRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -112,7 +114,7 @@ public class OnAuthenticationMethodLoadStartRequestBuilder extends BaseRequestBu
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

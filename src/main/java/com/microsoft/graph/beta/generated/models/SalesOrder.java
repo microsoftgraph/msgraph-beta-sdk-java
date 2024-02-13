@@ -22,7 +22,7 @@ public class SalesOrder implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new SalesOrder and sets the default values.
+     * Instantiates a new {@link SalesOrder} and sets the default values.
      */
     public SalesOrder() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -31,7 +31,7 @@ public class SalesOrder implements AdditionalDataHolder, BackedModel, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SalesOrder
+     * @return a {@link SalesOrder}
      */
     @jakarta.annotation.Nonnull
     public static SalesOrder createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class SalesOrder implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -53,7 +53,7 @@ public class SalesOrder implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -61,7 +61,7 @@ public class SalesOrder implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the billingPostalAddress property value. The billingPostalAddress property
-     * @return a PostalAddressType
+     * @return a {@link PostalAddressType}
      */
     @jakarta.annotation.Nullable
     public PostalAddressType getBillingPostalAddress() {
@@ -69,7 +69,7 @@ public class SalesOrder implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the billToCustomerId property value. The billToCustomerId property
-     * @return a UUID
+     * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
     public UUID getBillToCustomerId() {
@@ -77,7 +77,7 @@ public class SalesOrder implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the billToCustomerNumber property value. The billToCustomerNumber property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getBillToCustomerNumber() {
@@ -85,7 +85,7 @@ public class SalesOrder implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the billToName property value. The billToName property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getBillToName() {
@@ -93,7 +93,7 @@ public class SalesOrder implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the currency property value. The currency property
-     * @return a Currency
+     * @return a {@link Currency}
      */
     @jakarta.annotation.Nullable
     public Currency getCurrency() {
@@ -101,7 +101,7 @@ public class SalesOrder implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the currencyCode property value. The currencyCode property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCurrencyCode() {
@@ -109,7 +109,7 @@ public class SalesOrder implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the currencyId property value. The currencyId property
-     * @return a UUID
+     * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
     public UUID getCurrencyId() {
@@ -117,7 +117,7 @@ public class SalesOrder implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the customer property value. The customer property
-     * @return a Customer
+     * @return a {@link Customer}
      */
     @jakarta.annotation.Nullable
     public Customer getCustomer() {
@@ -125,7 +125,7 @@ public class SalesOrder implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the customerId property value. The customerId property
-     * @return a UUID
+     * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
     public UUID getCustomerId() {
@@ -133,7 +133,7 @@ public class SalesOrder implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the customerName property value. The customerName property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCustomerName() {
@@ -141,7 +141,7 @@ public class SalesOrder implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the customerNumber property value. The customerNumber property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCustomerNumber() {
@@ -149,7 +149,7 @@ public class SalesOrder implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the discountAmount property value. The discountAmount property
-     * @return a BigDecimal
+     * @return a {@link BigDecimal}
      */
     @jakarta.annotation.Nullable
     public BigDecimal getDiscountAmount() {
@@ -157,7 +157,7 @@ public class SalesOrder implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the discountAppliedBeforeTax property value. The discountAppliedBeforeTax property
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDiscountAppliedBeforeTax() {
@@ -165,7 +165,7 @@ public class SalesOrder implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the email property value. The email property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getEmail() {
@@ -173,7 +173,7 @@ public class SalesOrder implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the externalDocumentNumber property value. The externalDocumentNumber property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getExternalDocumentNumber() {
@@ -181,7 +181,7 @@ public class SalesOrder implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -227,7 +227,7 @@ public class SalesOrder implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the fullyShipped property value. The fullyShipped property
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getFullyShipped() {
@@ -235,7 +235,7 @@ public class SalesOrder implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the id property value. The id property
-     * @return a UUID
+     * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
     public UUID getId() {
@@ -243,7 +243,7 @@ public class SalesOrder implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -251,7 +251,7 @@ public class SalesOrder implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the number property value. The number property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getNumber() {
@@ -259,7 +259,7 @@ public class SalesOrder implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -267,7 +267,7 @@ public class SalesOrder implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the orderDate property value. The orderDate property
-     * @return a LocalDate
+     * @return a {@link LocalDate}
      */
     @jakarta.annotation.Nullable
     public LocalDate getOrderDate() {
@@ -275,7 +275,7 @@ public class SalesOrder implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the partialShipping property value. The partialShipping property
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getPartialShipping() {
@@ -283,7 +283,7 @@ public class SalesOrder implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the paymentTerm property value. The paymentTerm property
-     * @return a PaymentTerm
+     * @return a {@link PaymentTerm}
      */
     @jakarta.annotation.Nullable
     public PaymentTerm getPaymentTerm() {
@@ -291,7 +291,7 @@ public class SalesOrder implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the paymentTermsId property value. The paymentTermsId property
-     * @return a UUID
+     * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
     public UUID getPaymentTermsId() {
@@ -299,7 +299,7 @@ public class SalesOrder implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the phoneNumber property value. The phoneNumber property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPhoneNumber() {
@@ -307,7 +307,7 @@ public class SalesOrder implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the pricesIncludeTax property value. The pricesIncludeTax property
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getPricesIncludeTax() {
@@ -315,7 +315,7 @@ public class SalesOrder implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the requestedDeliveryDate property value. The requestedDeliveryDate property
-     * @return a LocalDate
+     * @return a {@link LocalDate}
      */
     @jakarta.annotation.Nullable
     public LocalDate getRequestedDeliveryDate() {
@@ -323,7 +323,7 @@ public class SalesOrder implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the salesOrderLines property value. The salesOrderLines property
-     * @return a java.util.List<SalesOrderLine>
+     * @return a {@link java.util.List<SalesOrderLine>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<SalesOrderLine> getSalesOrderLines() {
@@ -331,7 +331,7 @@ public class SalesOrder implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the salesperson property value. The salesperson property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSalesperson() {
@@ -339,7 +339,7 @@ public class SalesOrder implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the sellingPostalAddress property value. The sellingPostalAddress property
-     * @return a PostalAddressType
+     * @return a {@link PostalAddressType}
      */
     @jakarta.annotation.Nullable
     public PostalAddressType getSellingPostalAddress() {
@@ -347,7 +347,7 @@ public class SalesOrder implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the shippingPostalAddress property value. The shippingPostalAddress property
-     * @return a PostalAddressType
+     * @return a {@link PostalAddressType}
      */
     @jakarta.annotation.Nullable
     public PostalAddressType getShippingPostalAddress() {
@@ -355,7 +355,7 @@ public class SalesOrder implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the shipToContact property value. The shipToContact property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getShipToContact() {
@@ -363,7 +363,7 @@ public class SalesOrder implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the shipToName property value. The shipToName property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getShipToName() {
@@ -371,7 +371,7 @@ public class SalesOrder implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the status property value. The status property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getStatus() {
@@ -379,7 +379,7 @@ public class SalesOrder implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the totalAmountExcludingTax property value. The totalAmountExcludingTax property
-     * @return a BigDecimal
+     * @return a {@link BigDecimal}
      */
     @jakarta.annotation.Nullable
     public BigDecimal getTotalAmountExcludingTax() {
@@ -387,7 +387,7 @@ public class SalesOrder implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the totalAmountIncludingTax property value. The totalAmountIncludingTax property
-     * @return a BigDecimal
+     * @return a {@link BigDecimal}
      */
     @jakarta.annotation.Nullable
     public BigDecimal getTotalAmountIncludingTax() {
@@ -395,7 +395,7 @@ public class SalesOrder implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the totalTaxAmount property value. The totalTaxAmount property
-     * @return a BigDecimal
+     * @return a {@link BigDecimal}
      */
     @jakarta.annotation.Nullable
     public BigDecimal getTotalTaxAmount() {

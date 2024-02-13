@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PlatformCredentialAuthenticationMethodCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * Instantiates a new PlatformCredentialAuthenticationMethodCollectionResponse and sets the default values.
+     * Instantiates a new {@link PlatformCredentialAuthenticationMethodCollectionResponse} and sets the default values.
      */
     public PlatformCredentialAuthenticationMethodCollectionResponse() {
         super();
@@ -17,7 +17,7 @@ public class PlatformCredentialAuthenticationMethodCollectionResponse extends Ba
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PlatformCredentialAuthenticationMethodCollectionResponse
+     * @return a {@link PlatformCredentialAuthenticationMethodCollectionResponse}
      */
     @jakarta.annotation.Nonnull
     public static PlatformCredentialAuthenticationMethodCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class PlatformCredentialAuthenticationMethodCollectionResponse extends Ba
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -36,7 +36,7 @@ public class PlatformCredentialAuthenticationMethodCollectionResponse extends Ba
     }
     /**
      * Gets the value property value. The value property
-     * @return a java.util.List<PlatformCredentialAuthenticationMethod>
+     * @return a {@link java.util.List<PlatformCredentialAuthenticationMethod>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<PlatformCredentialAuthenticationMethod> getValue() {

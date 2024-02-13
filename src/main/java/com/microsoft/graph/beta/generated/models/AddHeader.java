@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AddHeader extends MarkContent implements Parsable {
     /**
-     * Instantiates a new AddHeader and sets the default values.
+     * Instantiates a new {@link AddHeader} and sets the default values.
      */
     public AddHeader() {
         super();
@@ -18,7 +18,7 @@ public class AddHeader extends MarkContent implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AddHeader
+     * @return a {@link AddHeader}
      */
     @jakarta.annotation.Nonnull
     public static AddHeader createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class AddHeader extends MarkContent implements Parsable {
     }
     /**
      * Gets the alignment property value. The alignment property
-     * @return a Alignment
+     * @return a {@link Alignment}
      */
     @jakarta.annotation.Nullable
     public Alignment getAlignment() {
@@ -35,7 +35,7 @@ public class AddHeader extends MarkContent implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -46,7 +46,7 @@ public class AddHeader extends MarkContent implements Parsable {
     }
     /**
      * Gets the margin property value. The margin property
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getMargin() {

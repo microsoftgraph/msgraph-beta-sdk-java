@@ -42,6 +42,7 @@ import java.util.Objects;
 public class TeamDefinitionRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the allChannels property of the microsoft.graph.team entity.
+     * @return a {@link AllChannelsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AllChannelsRequestBuilder allChannels() {
@@ -49,6 +50,7 @@ public class TeamDefinitionRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the archive method.
+     * @return a {@link ArchiveRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ArchiveRequestBuilder archive() {
@@ -56,6 +58,7 @@ public class TeamDefinitionRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the channels property of the microsoft.graph.team entity.
+     * @return a {@link ChannelsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ChannelsRequestBuilder channels() {
@@ -63,6 +66,7 @@ public class TeamDefinitionRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the clone method.
+     * @return a {@link CloneRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CloneRequestBuilder clone() {
@@ -70,6 +74,7 @@ public class TeamDefinitionRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the completeMigration method.
+     * @return a {@link CompleteMigrationRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CompleteMigrationRequestBuilder completeMigration() {
@@ -77,6 +82,7 @@ public class TeamDefinitionRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the group property of the microsoft.graph.team entity.
+     * @return a {@link GroupRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GroupRequestBuilder group() {
@@ -84,6 +90,7 @@ public class TeamDefinitionRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the incomingChannels property of the microsoft.graph.team entity.
+     * @return a {@link IncomingChannelsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public IncomingChannelsRequestBuilder incomingChannels() {
@@ -91,6 +98,7 @@ public class TeamDefinitionRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the installedApps property of the microsoft.graph.team entity.
+     * @return a {@link InstalledAppsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public InstalledAppsRequestBuilder installedApps() {
@@ -98,6 +106,7 @@ public class TeamDefinitionRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the members property of the microsoft.graph.team entity.
+     * @return a {@link MembersRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MembersRequestBuilder members() {
@@ -105,6 +114,7 @@ public class TeamDefinitionRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the operations property of the microsoft.graph.team entity.
+     * @return a {@link OperationsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public OperationsRequestBuilder operations() {
@@ -112,6 +122,7 @@ public class TeamDefinitionRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the owners property of the microsoft.graph.team entity.
+     * @return a {@link OwnersRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public OwnersRequestBuilder owners() {
@@ -119,6 +130,7 @@ public class TeamDefinitionRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the permissionGrants property of the microsoft.graph.team entity.
+     * @return a {@link PermissionGrantsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PermissionGrantsRequestBuilder permissionGrants() {
@@ -126,6 +138,7 @@ public class TeamDefinitionRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the photo property of the microsoft.graph.team entity.
+     * @return a {@link PhotoRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PhotoRequestBuilder photo() {
@@ -133,6 +146,7 @@ public class TeamDefinitionRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the primaryChannel property of the microsoft.graph.team entity.
+     * @return a {@link PrimaryChannelRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PrimaryChannelRequestBuilder primaryChannel() {
@@ -140,6 +154,7 @@ public class TeamDefinitionRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the schedule property of the microsoft.graph.team entity.
+     * @return a {@link ScheduleRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ScheduleRequestBuilder schedule() {
@@ -147,6 +162,7 @@ public class TeamDefinitionRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the sendActivityNotification method.
+     * @return a {@link SendActivityNotificationRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SendActivityNotificationRequestBuilder sendActivityNotification() {
@@ -154,6 +170,7 @@ public class TeamDefinitionRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the tags property of the microsoft.graph.team entity.
+     * @return a {@link TagsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TagsRequestBuilder tags() {
@@ -161,6 +178,7 @@ public class TeamDefinitionRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the template property of the microsoft.graph.team entity.
+     * @return a {@link TemplateRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TemplateRequestBuilder template() {
@@ -168,6 +186,7 @@ public class TeamDefinitionRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the templateDefinition property of the microsoft.graph.team entity.
+     * @return a {@link TemplateDefinitionRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TemplateDefinitionRequestBuilder templateDefinition() {
@@ -175,13 +194,14 @@ public class TeamDefinitionRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the unarchive method.
+     * @return a {@link UnarchiveRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UnarchiveRequestBuilder unarchive() {
         return new UnarchiveRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new TeamDefinitionRequestBuilder and sets the default values.
+     * Instantiates a new {@link TeamDefinitionRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -189,7 +209,7 @@ public class TeamDefinitionRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/teamwork/teamTemplates/{teamTemplate%2Did}/definitions/{teamTemplateDefinition%2Did}/teamDefinition{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new TeamDefinitionRequestBuilder and sets the default values.
+     * Instantiates a new {@link TeamDefinitionRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -198,6 +218,7 @@ public class TeamDefinitionRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Delete navigation property teamDefinition for teamwork
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete() {
         delete(null);
@@ -205,17 +226,18 @@ public class TeamDefinitionRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property teamDefinition for teamwork
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Get the properties of the team associated with a teamTemplateDefinition object.
-     * @return a Team
+     * @return a {@link Team}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/teamtemplatedefinition-get-teamdefinition?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -225,21 +247,22 @@ public class TeamDefinitionRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the properties of the team associated with a teamTemplateDefinition object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a Team
+     * @return a {@link Team}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/teamtemplatedefinition-get-teamdefinition?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Team get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, Team::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property teamDefinition in teamwork
      * @param body The request body
-     * @return a Team
+     * @return a {@link Team}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public Team patch(@jakarta.annotation.Nonnull final Team body) {
@@ -249,20 +272,20 @@ public class TeamDefinitionRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property teamDefinition in teamwork
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a Team
+     * @return a {@link Team}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public Team patch(@jakarta.annotation.Nonnull final Team body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, Team::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property teamDefinition for teamwork
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -271,18 +294,18 @@ public class TeamDefinitionRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property teamDefinition for teamwork
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/teamwork/teamTemplates/{teamTemplate%2Did}/definitions/{teamTemplateDefinition%2Did}/teamDefinition", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Get the properties of the team associated with a teamTemplateDefinition object.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -291,7 +314,7 @@ public class TeamDefinitionRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the properties of the team associated with a teamTemplateDefinition object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -303,7 +326,7 @@ public class TeamDefinitionRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property teamDefinition in teamwork
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final Team body) {
@@ -313,12 +336,12 @@ public class TeamDefinitionRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property teamDefinition in teamwork
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final Team body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/teamwork/teamTemplates/{teamTemplate%2Did}/definitions/{teamTemplateDefinition%2Did}/teamDefinition", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -327,7 +350,7 @@ public class TeamDefinitionRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a TeamDefinitionRequestBuilder
+     * @return a {@link TeamDefinitionRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TeamDefinitionRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -357,7 +380,7 @@ public class TeamDefinitionRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

@@ -25,6 +25,7 @@ import java.util.Objects;
 public class AdditionalSourcesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
      */
@@ -36,7 +37,7 @@ public class AdditionalSourcesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the additionalSources property of the microsoft.graph.ediscovery.sourceCollection entity.
      * @param dataSourceId The unique identifier of dataSource
-     * @return a DataSourceItemRequestBuilder
+     * @return a {@link DataSourceItemRequestBuilder}
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
      */
@@ -49,7 +50,7 @@ public class AdditionalSourcesRequestBuilder extends BaseRequestBuilder {
         return new DataSourceItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new AdditionalSourcesRequestBuilder and sets the default values.
+     * Instantiates a new {@link AdditionalSourcesRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -57,7 +58,7 @@ public class AdditionalSourcesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/compliance/ediscovery/cases/{case%2Did}/sourceCollections/{sourceCollection%2Did}/additionalSources{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new AdditionalSourcesRequestBuilder and sets the default values.
+     * Instantiates a new {@link AdditionalSourcesRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -66,7 +67,8 @@ public class AdditionalSourcesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of additional dataSource objects associated with a source collection.
-     * @return a DataSourceCollectionResponse
+     * @return a {@link DataSourceCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
      * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-sourcecollection-list-additionalsources?view=graph-rest-1.0">Find more info here</a>
@@ -79,7 +81,8 @@ public class AdditionalSourcesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of additional dataSource objects associated with a source collection.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a DataSourceCollectionResponse
+     * @return a {@link DataSourceCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
      * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-sourcecollection-list-additionalsources?view=graph-rest-1.0">Find more info here</a>
@@ -89,14 +92,14 @@ public class AdditionalSourcesRequestBuilder extends BaseRequestBuilder {
     public DataSourceCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, DataSourceCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to additionalSources for compliance
      * @param body The request body
-     * @return a DataSource
+     * @return a {@link DataSource}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
      */
@@ -109,7 +112,8 @@ public class AdditionalSourcesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to additionalSources for compliance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a DataSource
+     * @return a {@link DataSource}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
      */
@@ -119,13 +123,12 @@ public class AdditionalSourcesRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, DataSource::createFromDiscriminatorValue);
     }
     /**
      * Get a list of additional dataSource objects associated with a source collection.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
      */
@@ -137,7 +140,7 @@ public class AdditionalSourcesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of additional dataSource objects associated with a source collection.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
      */
@@ -152,7 +155,7 @@ public class AdditionalSourcesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to additionalSources for compliance
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
      */
@@ -165,7 +168,7 @@ public class AdditionalSourcesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to additionalSources for compliance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
      */
@@ -173,7 +176,7 @@ public class AdditionalSourcesRequestBuilder extends BaseRequestBuilder {
     @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final DataSource body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/compliance/ediscovery/cases/{case%2Did}/sourceCollections/{sourceCollection%2Did}/additionalSources", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -182,7 +185,7 @@ public class AdditionalSourcesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a AdditionalSourcesRequestBuilder
+     * @return a {@link AdditionalSourcesRequestBuilder}
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
      */
@@ -239,7 +242,7 @@ public class AdditionalSourcesRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

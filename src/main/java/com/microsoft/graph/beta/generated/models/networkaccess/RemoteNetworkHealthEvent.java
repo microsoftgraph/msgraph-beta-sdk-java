@@ -11,7 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class RemoteNetworkHealthEvent extends Entity implements Parsable {
     /**
-     * Instantiates a new RemoteNetworkHealthEvent and sets the default values.
+     * Instantiates a new {@link RemoteNetworkHealthEvent} and sets the default values.
      */
     public RemoteNetworkHealthEvent() {
         super();
@@ -19,7 +19,7 @@ public class RemoteNetworkHealthEvent extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a RemoteNetworkHealthEvent
+     * @return a {@link RemoteNetworkHealthEvent}
      */
     @jakarta.annotation.Nonnull
     public static RemoteNetworkHealthEvent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class RemoteNetworkHealthEvent extends Entity implements Parsable {
     }
     /**
      * Gets the bgpRoutesAdvertisedCount property value. The number of BGP routes advertised through tunnel.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getBgpRoutesAdvertisedCount() {
@@ -36,7 +36,7 @@ public class RemoteNetworkHealthEvent extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. The time of the original event generation in UTC. Supports $filter (ge, le) and $orderby.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -44,7 +44,7 @@ public class RemoteNetworkHealthEvent extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The description of the event.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -52,7 +52,7 @@ public class RemoteNetworkHealthEvent extends Entity implements Parsable {
     }
     /**
      * Gets the destinationIp property value. The IP address of the destination.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDestinationIp() {
@@ -60,7 +60,7 @@ public class RemoteNetworkHealthEvent extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -78,7 +78,7 @@ public class RemoteNetworkHealthEvent extends Entity implements Parsable {
     }
     /**
      * Gets the receivedBytes property value. The number of bytes sent from the destination to the source.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getReceivedBytes() {
@@ -86,7 +86,7 @@ public class RemoteNetworkHealthEvent extends Entity implements Parsable {
     }
     /**
      * Gets the remoteNetworkId property value. A unique identifier for each remoteNetwork site. Supports $filter (eq).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRemoteNetworkId() {
@@ -94,7 +94,7 @@ public class RemoteNetworkHealthEvent extends Entity implements Parsable {
     }
     /**
      * Gets the sentBytes property value. The number of bytes sent from the source to the destination for the connection or session.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getSentBytes() {
@@ -102,7 +102,7 @@ public class RemoteNetworkHealthEvent extends Entity implements Parsable {
     }
     /**
      * Gets the sourceIp property value. The public IP address.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSourceIp() {
@@ -110,7 +110,7 @@ public class RemoteNetworkHealthEvent extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status property
-     * @return a RemoteNetworkStatus
+     * @return a {@link RemoteNetworkStatus}
      */
     @jakarta.annotation.Nullable
     public RemoteNetworkStatus getStatus() {

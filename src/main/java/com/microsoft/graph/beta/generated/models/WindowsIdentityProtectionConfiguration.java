@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsIdentityProtectionConfiguration extends DeviceConfiguration implements Parsable {
     /**
-     * Instantiates a new WindowsIdentityProtectionConfiguration and sets the default values.
+     * Instantiates a new {@link WindowsIdentityProtectionConfiguration} and sets the default values.
      */
     public WindowsIdentityProtectionConfiguration() {
         super();
@@ -21,7 +21,7 @@ public class WindowsIdentityProtectionConfiguration extends DeviceConfiguration 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WindowsIdentityProtectionConfiguration
+     * @return a {@link WindowsIdentityProtectionConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static WindowsIdentityProtectionConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class WindowsIdentityProtectionConfiguration extends DeviceConfiguration 
     }
     /**
      * Gets the enhancedAntiSpoofingForFacialFeaturesEnabled property value. Boolean value used to enable enhanced anti-spoofing for facial feature recognition on Windows Hello face authentication.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getEnhancedAntiSpoofingForFacialFeaturesEnabled() {
@@ -38,7 +38,7 @@ public class WindowsIdentityProtectionConfiguration extends DeviceConfiguration 
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -61,7 +61,7 @@ public class WindowsIdentityProtectionConfiguration extends DeviceConfiguration 
     }
     /**
      * Gets the pinExpirationInDays property value. Integer value specifies the period (in days) that a PIN can be used before the system requires the user to change it. Valid values are 0 to 730 inclusive. Valid values 0 to 730
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPinExpirationInDays() {
@@ -69,7 +69,7 @@ public class WindowsIdentityProtectionConfiguration extends DeviceConfiguration 
     }
     /**
      * Gets the pinLowercaseCharactersUsage property value. Possible values of the ConfigurationUsage list.
-     * @return a ConfigurationUsage
+     * @return a {@link ConfigurationUsage}
      */
     @jakarta.annotation.Nullable
     public ConfigurationUsage getPinLowercaseCharactersUsage() {
@@ -77,7 +77,7 @@ public class WindowsIdentityProtectionConfiguration extends DeviceConfiguration 
     }
     /**
      * Gets the pinMaximumLength property value. Integer value that sets the maximum number of characters allowed for the work PIN. Valid values are 4 to 127 inclusive and greater than or equal to the value set for the minimum PIN. Valid values 4 to 127
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPinMaximumLength() {
@@ -85,7 +85,7 @@ public class WindowsIdentityProtectionConfiguration extends DeviceConfiguration 
     }
     /**
      * Gets the pinMinimumLength property value. Integer value that sets the minimum number of characters required for the Windows Hello for Business PIN. Valid values are 4 to 127 inclusive and less than or equal to the value set for the maximum PIN. Valid values 4 to 127
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPinMinimumLength() {
@@ -93,7 +93,7 @@ public class WindowsIdentityProtectionConfiguration extends DeviceConfiguration 
     }
     /**
      * Gets the pinPreviousBlockCount property value. Controls the ability to prevent users from using past PINs. This must be set between 0 and 50, inclusive, and the current PIN of the user is included in that count. If set to 0, previous PINs are not stored. PIN history is not preserved through a PIN reset. Valid values 0 to 50
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPinPreviousBlockCount() {
@@ -101,7 +101,7 @@ public class WindowsIdentityProtectionConfiguration extends DeviceConfiguration 
     }
     /**
      * Gets the pinRecoveryEnabled property value. Boolean value that enables a user to change their PIN by using the Windows Hello for Business PIN recovery service.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getPinRecoveryEnabled() {
@@ -109,7 +109,7 @@ public class WindowsIdentityProtectionConfiguration extends DeviceConfiguration 
     }
     /**
      * Gets the pinSpecialCharactersUsage property value. Possible values of the ConfigurationUsage list.
-     * @return a ConfigurationUsage
+     * @return a {@link ConfigurationUsage}
      */
     @jakarta.annotation.Nullable
     public ConfigurationUsage getPinSpecialCharactersUsage() {
@@ -117,7 +117,7 @@ public class WindowsIdentityProtectionConfiguration extends DeviceConfiguration 
     }
     /**
      * Gets the pinUppercaseCharactersUsage property value. Possible values of the ConfigurationUsage list.
-     * @return a ConfigurationUsage
+     * @return a {@link ConfigurationUsage}
      */
     @jakarta.annotation.Nullable
     public ConfigurationUsage getPinUppercaseCharactersUsage() {
@@ -125,7 +125,7 @@ public class WindowsIdentityProtectionConfiguration extends DeviceConfiguration 
     }
     /**
      * Gets the securityDeviceRequired property value. Controls whether to require a Trusted Platform Module (TPM) for provisioning Windows Hello for Business. A TPM provides an additional security benefit in that data stored on it cannot be used on other devices. If set to False, all devices can provision Windows Hello for Business even if there is not a usable TPM.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getSecurityDeviceRequired() {
@@ -133,7 +133,7 @@ public class WindowsIdentityProtectionConfiguration extends DeviceConfiguration 
     }
     /**
      * Gets the unlockWithBiometricsEnabled property value. Controls the use of biometric gestures, such as face and fingerprint, as an alternative to the Windows Hello for Business PIN.  If set to False, biometric gestures are not allowed. Users must still configure a PIN as a backup in case of failures.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getUnlockWithBiometricsEnabled() {
@@ -141,7 +141,7 @@ public class WindowsIdentityProtectionConfiguration extends DeviceConfiguration 
     }
     /**
      * Gets the useCertificatesForOnPremisesAuthEnabled property value. Boolean value that enables Windows Hello for Business to use certificates to authenticate on-premise resources.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getUseCertificatesForOnPremisesAuthEnabled() {
@@ -149,7 +149,7 @@ public class WindowsIdentityProtectionConfiguration extends DeviceConfiguration 
     }
     /**
      * Gets the useSecurityKeyForSignin property value. Boolean value used to enable the Windows Hello security key as a logon credential.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getUseSecurityKeyForSignin() {
@@ -157,7 +157,7 @@ public class WindowsIdentityProtectionConfiguration extends DeviceConfiguration 
     }
     /**
      * Gets the windowsHelloForBusinessBlocked property value. Boolean value that blocks Windows Hello for Business as a method for signing into Windows.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getWindowsHelloForBusinessBlocked() {

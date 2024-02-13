@@ -22,7 +22,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, BackedModel, P
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new WindowsFirewallRule and sets the default values.
+     * Instantiates a new {@link WindowsFirewallRule} and sets the default values.
      */
     public WindowsFirewallRule() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -31,7 +31,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, BackedModel, P
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WindowsFirewallRule
+     * @return a {@link WindowsFirewallRule}
      */
     @jakarta.annotation.Nonnull
     public static WindowsFirewallRule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the action property value. State Management Setting.
-     * @return a StateManagementSetting
+     * @return a {@link StateManagementSetting}
      */
     @jakarta.annotation.Nullable
     public StateManagementSetting getAction() {
@@ -48,7 +48,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -61,7 +61,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -69,7 +69,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the description property value. The description of the rule.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -77,7 +77,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the displayName property value. The display name of the rule. Does not need to be unique.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -85,7 +85,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the edgeTraversal property value. State Management Setting.
-     * @return a StateManagementSetting
+     * @return a {@link StateManagementSetting}
      */
     @jakarta.annotation.Nullable
     public StateManagementSetting getEdgeTraversal() {
@@ -93,7 +93,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -119,7 +119,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the filePath property value. The full file path of an app that's affected by the firewall rule.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getFilePath() {
@@ -127,7 +127,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the interfaceTypes property value. Flags representing firewall rule interface types.
-     * @return a EnumSet<WindowsFirewallRuleInterfaceTypes>
+     * @return a {@link EnumSet<WindowsFirewallRuleInterfaceTypes>}
      */
     @jakarta.annotation.Nullable
     public EnumSet<WindowsFirewallRuleInterfaceTypes> getInterfaceTypes() {
@@ -135,7 +135,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the localAddressRanges property value. List of local addresses covered by the rule. Default is any address. Valid tokens include:'' indicates any local address. If present, this must be the only token included.A subnet can be specified using either the subnet mask or network prefix notation. If neither a subnet mask nor a network prefix is specified, the subnet mask defaults to 255.255.255.255.A valid IPv6 address.An IPv4 address range in the format of 'start address - end address' with no spaces included.An IPv6 address range in the format of 'start address - end address' with no spaces included.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getLocalAddressRanges() {
@@ -143,7 +143,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the localPortRanges property value. List of local port ranges. For example, '100-120', '200', '300-320'. If not specified, the default is All.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getLocalPortRanges() {
@@ -151,7 +151,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the localUserAuthorizations property value. Specifies the list of authorized local users for the app container. This is a string in Security Descriptor Definition Language (SDDL) format.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getLocalUserAuthorizations() {
@@ -159,7 +159,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -167,7 +167,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the packageFamilyName property value. The package family name of a Microsoft Store application that's affected by the firewall rule.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPackageFamilyName() {
@@ -175,7 +175,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the profileTypes property value. Flags representing which network profile types apply to a firewall rule.
-     * @return a EnumSet<WindowsFirewallRuleNetworkProfileTypes>
+     * @return a {@link EnumSet<WindowsFirewallRuleNetworkProfileTypes>}
      */
     @jakarta.annotation.Nullable
     public EnumSet<WindowsFirewallRuleNetworkProfileTypes> getProfileTypes() {
@@ -183,7 +183,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the protocol property value. 0-255 number representing the IP protocol (TCP = 6, UDP = 17). If not specified, the default is All. Valid values 0 to 255
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getProtocol() {
@@ -191,7 +191,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the remoteAddressRanges property value. List of tokens specifying the remote addresses covered by the rule. Tokens are case insensitive. Default is any address. Valid tokens include:'' indicates any remote address. If present, this must be the only token included.'Defaultgateway''DHCP''DNS''WINS''Intranet' (supported on Windows versions 1809+)'RmtIntranet' (supported on Windows versions 1809+)'Internet' (supported on Windows versions 1809+)'Ply2Renders' (supported on Windows versions 1809+)'LocalSubnet' indicates any local address on the local subnet.A subnet can be specified using either the subnet mask or network prefix notation. If neither a subnet mask nor a network prefix is specified, the subnet mask defaults to 255.255.255.255.A valid IPv6 address.An IPv4 address range in the format of 'start address - end address' with no spaces included.An IPv6 address range in the format of 'start address - end address' with no spaces included.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRemoteAddressRanges() {
@@ -199,7 +199,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the remotePortRanges property value. List of remote port ranges. For example, '100-120', '200', '300-320'. If not specified, the default is All.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRemotePortRanges() {
@@ -207,7 +207,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the serviceName property value. The name used in cases when a service, not an application, is sending or receiving traffic.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getServiceName() {
@@ -215,7 +215,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the trafficDirection property value. Firewall rule traffic directions.
-     * @return a WindowsFirewallRuleTrafficDirectionType
+     * @return a {@link WindowsFirewallRuleTrafficDirectionType}
      */
     @jakarta.annotation.Nullable
     public WindowsFirewallRuleTrafficDirectionType getTrafficDirection() {

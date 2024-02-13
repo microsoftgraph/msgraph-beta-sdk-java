@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class VerticalSection extends Entity implements Parsable {
     /**
-     * Instantiates a new VerticalSection and sets the default values.
+     * Instantiates a new {@link VerticalSection} and sets the default values.
      */
     public VerticalSection() {
         super();
@@ -17,7 +17,7 @@ public class VerticalSection extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a VerticalSection
+     * @return a {@link VerticalSection}
      */
     @jakarta.annotation.Nonnull
     public static VerticalSection createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class VerticalSection extends Entity implements Parsable {
     }
     /**
      * Gets the emphasis property value. Enumeration value that indicates the emphasis of the section background. The possible values are: none, netural, soft, strong, unknownFutureValue.
-     * @return a SectionEmphasisType
+     * @return a {@link SectionEmphasisType}
      */
     @jakarta.annotation.Nullable
     public SectionEmphasisType getEmphasis() {
@@ -34,7 +34,7 @@ public class VerticalSection extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -45,7 +45,7 @@ public class VerticalSection extends Entity implements Parsable {
     }
     /**
      * Gets the webparts property value. The set of web parts in this section.
-     * @return a java.util.List<WebPart>
+     * @return a {@link java.util.List<WebPart>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<WebPart> getWebparts() {

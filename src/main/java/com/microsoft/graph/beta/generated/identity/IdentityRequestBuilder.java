@@ -33,6 +33,7 @@ import java.util.Objects;
 public class IdentityRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the apiConnectors property of the microsoft.graph.identityContainer entity.
+     * @return a {@link ApiConnectorsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ApiConnectorsRequestBuilder apiConnectors() {
@@ -40,6 +41,7 @@ public class IdentityRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the authenticationEventListeners property of the microsoft.graph.identityContainer entity.
+     * @return a {@link AuthenticationEventListenersRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AuthenticationEventListenersRequestBuilder authenticationEventListeners() {
@@ -47,6 +49,7 @@ public class IdentityRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the authenticationEventsFlows property of the microsoft.graph.identityContainer entity.
+     * @return a {@link AuthenticationEventsFlowsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AuthenticationEventsFlowsRequestBuilder authenticationEventsFlows() {
@@ -54,6 +57,7 @@ public class IdentityRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the b2cUserFlows property of the microsoft.graph.identityContainer entity.
+     * @return a {@link B2cUserFlowsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public B2cUserFlowsRequestBuilder b2cUserFlows() {
@@ -61,6 +65,7 @@ public class IdentityRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the b2xUserFlows property of the microsoft.graph.identityContainer entity.
+     * @return a {@link B2xUserFlowsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public B2xUserFlowsRequestBuilder b2xUserFlows() {
@@ -68,6 +73,7 @@ public class IdentityRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The conditionalAccess property
+     * @return a {@link ConditionalAccessRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ConditionalAccessRequestBuilder conditionalAccess() {
@@ -75,6 +81,7 @@ public class IdentityRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the continuousAccessEvaluationPolicy property of the microsoft.graph.identityContainer entity.
+     * @return a {@link ContinuousAccessEvaluationPolicyRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ContinuousAccessEvaluationPolicyRequestBuilder continuousAccessEvaluationPolicy() {
@@ -82,6 +89,7 @@ public class IdentityRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the customAuthenticationExtensions property of the microsoft.graph.identityContainer entity.
+     * @return a {@link CustomAuthenticationExtensionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CustomAuthenticationExtensionsRequestBuilder customAuthenticationExtensions() {
@@ -89,6 +97,7 @@ public class IdentityRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the identityProviders property of the microsoft.graph.identityContainer entity.
+     * @return a {@link IdentityProvidersRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public IdentityProvidersRequestBuilder identityProviders() {
@@ -96,6 +105,7 @@ public class IdentityRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the userFlowAttributes property of the microsoft.graph.identityContainer entity.
+     * @return a {@link UserFlowAttributesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UserFlowAttributesRequestBuilder userFlowAttributes() {
@@ -103,13 +113,14 @@ public class IdentityRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the userFlows property of the microsoft.graph.identityContainer entity.
+     * @return a {@link UserFlowsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UserFlowsRequestBuilder userFlows() {
         return new UserFlowsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new IdentityRequestBuilder and sets the default values.
+     * Instantiates a new {@link IdentityRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -117,7 +128,7 @@ public class IdentityRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identity{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new IdentityRequestBuilder and sets the default values.
+     * Instantiates a new {@link IdentityRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -126,7 +137,8 @@ public class IdentityRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get identity
-     * @return a IdentityContainer
+     * @return a {@link IdentityContainer}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public IdentityContainer get() {
@@ -135,20 +147,21 @@ public class IdentityRequestBuilder extends BaseRequestBuilder {
     /**
      * Get identity
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a IdentityContainer
+     * @return a {@link IdentityContainer}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public IdentityContainer get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, IdentityContainer::createFromDiscriminatorValue);
     }
     /**
      * Update identity
      * @param body The request body
-     * @return a IdentityContainer
+     * @return a {@link IdentityContainer}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public IdentityContainer patch(@jakarta.annotation.Nonnull final IdentityContainer body) {
@@ -158,20 +171,20 @@ public class IdentityRequestBuilder extends BaseRequestBuilder {
      * Update identity
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a IdentityContainer
+     * @return a {@link IdentityContainer}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public IdentityContainer patch(@jakarta.annotation.Nonnull final IdentityContainer body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, IdentityContainer::createFromDiscriminatorValue);
     }
     /**
      * Get identity
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -180,7 +193,7 @@ public class IdentityRequestBuilder extends BaseRequestBuilder {
     /**
      * Get identity
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -192,7 +205,7 @@ public class IdentityRequestBuilder extends BaseRequestBuilder {
     /**
      * Update identity
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final IdentityContainer body) {
@@ -202,12 +215,12 @@ public class IdentityRequestBuilder extends BaseRequestBuilder {
      * Update identity
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final IdentityContainer body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/identity", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -216,7 +229,7 @@ public class IdentityRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a IdentityRequestBuilder
+     * @return a {@link IdentityRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public IdentityRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -240,7 +253,7 @@ public class IdentityRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

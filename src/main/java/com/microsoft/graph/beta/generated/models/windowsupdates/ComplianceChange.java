@@ -11,7 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ComplianceChange extends Entity implements Parsable {
     /**
-     * Instantiates a new ComplianceChange and sets the default values.
+     * Instantiates a new {@link ComplianceChange} and sets the default values.
      */
     public ComplianceChange() {
         super();
@@ -19,7 +19,7 @@ public class ComplianceChange extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ComplianceChange
+     * @return a {@link ComplianceChange}
      */
     @jakarta.annotation.Nonnull
     public static ComplianceChange createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -35,7 +35,7 @@ public class ComplianceChange extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. The date and time when a compliance change was created.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -43,7 +43,7 @@ public class ComplianceChange extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -56,7 +56,7 @@ public class ComplianceChange extends Entity implements Parsable {
     }
     /**
      * Gets the isRevoked property value. True indicates that a compliance change is revoked, preventing further application. Revoking a compliance change is a final action.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsRevoked() {
@@ -64,7 +64,7 @@ public class ComplianceChange extends Entity implements Parsable {
     }
     /**
      * Gets the revokedDateTime property value. The date and time when the compliance change was revoked.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getRevokedDateTime() {
@@ -72,7 +72,7 @@ public class ComplianceChange extends Entity implements Parsable {
     }
     /**
      * Gets the updatePolicy property value. The policy this compliance change is a member of.
-     * @return a UpdatePolicy
+     * @return a {@link UpdatePolicy}
      */
     @jakarta.annotation.Nullable
     public UpdatePolicy getUpdatePolicy() {

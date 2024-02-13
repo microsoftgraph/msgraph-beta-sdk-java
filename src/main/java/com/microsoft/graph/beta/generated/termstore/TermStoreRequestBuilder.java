@@ -24,6 +24,7 @@ import java.util.Objects;
 public class TermStoreRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the groups property of the microsoft.graph.termStore.store entity.
+     * @return a {@link GroupsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GroupsRequestBuilder groups() {
@@ -31,13 +32,14 @@ public class TermStoreRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the sets property of the microsoft.graph.termStore.store entity.
+     * @return a {@link SetsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SetsRequestBuilder sets() {
         return new SetsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new TermStoreRequestBuilder and sets the default values.
+     * Instantiates a new {@link TermStoreRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -45,7 +47,7 @@ public class TermStoreRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/termStore{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new TermStoreRequestBuilder and sets the default values.
+     * Instantiates a new {@link TermStoreRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -54,7 +56,8 @@ public class TermStoreRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read the properties and relationships of a store object.
-     * @return a Store
+     * @return a {@link Store}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/termstore-store-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -64,21 +67,22 @@ public class TermStoreRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of a store object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a Store
+     * @return a {@link Store}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/termstore-store-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Store get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, Store::createFromDiscriminatorValue);
     }
     /**
      * Update the properties of a store object.
      * @param body The request body
-     * @return a Store
+     * @return a {@link Store}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/termstore-store-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -89,7 +93,8 @@ public class TermStoreRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a store object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a Store
+     * @return a {@link Store}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/termstore-store-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -97,13 +102,12 @@ public class TermStoreRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, Store::createFromDiscriminatorValue);
     }
     /**
      * Read the properties and relationships of a store object.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -112,7 +116,7 @@ public class TermStoreRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of a store object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -124,7 +128,7 @@ public class TermStoreRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of a store object.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final Store body) {
@@ -134,12 +138,12 @@ public class TermStoreRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a store object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final Store body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/termStore", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -148,7 +152,7 @@ public class TermStoreRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a TermStoreRequestBuilder
+     * @return a {@link TermStoreRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TermStoreRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -172,7 +176,7 @@ public class TermStoreRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

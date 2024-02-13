@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AospDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy implements Parsable {
     /**
-     * Instantiates a new AospDeviceOwnerCompliancePolicy and sets the default values.
+     * Instantiates a new {@link AospDeviceOwnerCompliancePolicy} and sets the default values.
      */
     public AospDeviceOwnerCompliancePolicy() {
         super();
@@ -21,7 +21,7 @@ public class AospDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy impl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AospDeviceOwnerCompliancePolicy
+     * @return a {@link AospDeviceOwnerCompliancePolicy}
      */
     @jakarta.annotation.Nonnull
     public static AospDeviceOwnerCompliancePolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class AospDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy impl
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -48,7 +48,7 @@ public class AospDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy impl
     }
     /**
      * Gets the minAndroidSecurityPatchLevel property value. Minimum Android security patch level.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getMinAndroidSecurityPatchLevel() {
@@ -56,7 +56,7 @@ public class AospDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy impl
     }
     /**
      * Gets the osMaximumVersion property value. Maximum Android version.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOsMaximumVersion() {
@@ -64,7 +64,7 @@ public class AospDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy impl
     }
     /**
      * Gets the osMinimumVersion property value. Minimum Android version.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOsMinimumVersion() {
@@ -72,7 +72,7 @@ public class AospDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy impl
     }
     /**
      * Gets the passwordMinimumLength property value. Minimum password length. Valid values 4 to 16
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordMinimumLength() {
@@ -80,7 +80,7 @@ public class AospDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy impl
     }
     /**
      * Gets the passwordMinutesOfInactivityBeforeLock property value. Minutes of inactivity before a password is required. Valid values 1 to 8640
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordMinutesOfInactivityBeforeLock() {
@@ -88,7 +88,7 @@ public class AospDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy impl
     }
     /**
      * Gets the passwordRequired property value. Require a password to unlock device.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getPasswordRequired() {
@@ -96,7 +96,7 @@ public class AospDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy impl
     }
     /**
      * Gets the passwordRequiredType property value. Type of characters in password. Possible values are: deviceDefault, required, numeric, numericComplex, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, customPassword.
-     * @return a AndroidDeviceOwnerRequiredPasswordType
+     * @return a {@link AndroidDeviceOwnerRequiredPasswordType}
      */
     @jakarta.annotation.Nullable
     public AndroidDeviceOwnerRequiredPasswordType getPasswordRequiredType() {
@@ -104,7 +104,7 @@ public class AospDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy impl
     }
     /**
      * Gets the securityBlockJailbrokenDevices property value. Devices must not be jailbroken or rooted.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getSecurityBlockJailbrokenDevices() {
@@ -112,7 +112,7 @@ public class AospDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy impl
     }
     /**
      * Gets the storageRequireEncryption property value. Require encryption on Android devices.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getStorageRequireEncryption() {

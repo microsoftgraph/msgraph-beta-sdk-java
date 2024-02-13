@@ -25,6 +25,7 @@ import java.util.Objects;
 public class PolicyStatusDetailsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -33,7 +34,7 @@ public class PolicyStatusDetailsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the policyStatusDetails property of the microsoft.graph.deviceManagementAutopilotEvent entity.
      * @param deviceManagementAutopilotPolicyStatusDetailId The unique identifier of deviceManagementAutopilotPolicyStatusDetail
-     * @return a DeviceManagementAutopilotPolicyStatusDetailItemRequestBuilder
+     * @return a {@link DeviceManagementAutopilotPolicyStatusDetailItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DeviceManagementAutopilotPolicyStatusDetailItemRequestBuilder byDeviceManagementAutopilotPolicyStatusDetailId(@jakarta.annotation.Nonnull final String deviceManagementAutopilotPolicyStatusDetailId) {
@@ -43,7 +44,7 @@ public class PolicyStatusDetailsRequestBuilder extends BaseRequestBuilder {
         return new DeviceManagementAutopilotPolicyStatusDetailItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new PolicyStatusDetailsRequestBuilder and sets the default values.
+     * Instantiates a new {@link PolicyStatusDetailsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -51,7 +52,7 @@ public class PolicyStatusDetailsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/autopilotEvents/{deviceManagementAutopilotEvent%2Did}/policyStatusDetails{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new PolicyStatusDetailsRequestBuilder and sets the default values.
+     * Instantiates a new {@link PolicyStatusDetailsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -60,7 +61,8 @@ public class PolicyStatusDetailsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Policy and application status details for this device.
-     * @return a DeviceManagementAutopilotPolicyStatusDetailCollectionResponse
+     * @return a {@link DeviceManagementAutopilotPolicyStatusDetailCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public DeviceManagementAutopilotPolicyStatusDetailCollectionResponse get() {
@@ -69,20 +71,21 @@ public class PolicyStatusDetailsRequestBuilder extends BaseRequestBuilder {
     /**
      * Policy and application status details for this device.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a DeviceManagementAutopilotPolicyStatusDetailCollectionResponse
+     * @return a {@link DeviceManagementAutopilotPolicyStatusDetailCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public DeviceManagementAutopilotPolicyStatusDetailCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceManagementAutopilotPolicyStatusDetailCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to policyStatusDetails for deviceManagement
      * @param body The request body
-     * @return a DeviceManagementAutopilotPolicyStatusDetail
+     * @return a {@link DeviceManagementAutopilotPolicyStatusDetail}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public DeviceManagementAutopilotPolicyStatusDetail post(@jakarta.annotation.Nonnull final DeviceManagementAutopilotPolicyStatusDetail body) {
@@ -92,20 +95,20 @@ public class PolicyStatusDetailsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to policyStatusDetails for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a DeviceManagementAutopilotPolicyStatusDetail
+     * @return a {@link DeviceManagementAutopilotPolicyStatusDetail}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public DeviceManagementAutopilotPolicyStatusDetail post(@jakarta.annotation.Nonnull final DeviceManagementAutopilotPolicyStatusDetail body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceManagementAutopilotPolicyStatusDetail::createFromDiscriminatorValue);
     }
     /**
      * Policy and application status details for this device.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -114,7 +117,7 @@ public class PolicyStatusDetailsRequestBuilder extends BaseRequestBuilder {
     /**
      * Policy and application status details for this device.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -126,7 +129,7 @@ public class PolicyStatusDetailsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to policyStatusDetails for deviceManagement
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final DeviceManagementAutopilotPolicyStatusDetail body) {
@@ -136,12 +139,12 @@ public class PolicyStatusDetailsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to policyStatusDetails for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final DeviceManagementAutopilotPolicyStatusDetail body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/deviceManagement/autopilotEvents/{deviceManagementAutopilotEvent%2Did}/policyStatusDetails", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -150,7 +153,7 @@ public class PolicyStatusDetailsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a PolicyStatusDetailsRequestBuilder
+     * @return a {@link PolicyStatusDetailsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PolicyStatusDetailsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -204,7 +207,7 @@ public class PolicyStatusDetailsRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

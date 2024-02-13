@@ -44,6 +44,7 @@ import java.util.Objects;
 public class ApplicationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the addKey method.
+     * @return a {@link AddKeyRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AddKeyRequestBuilder addKey() {
@@ -51,6 +52,7 @@ public class ApplicationItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the addPassword method.
+     * @return a {@link AddPasswordRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AddPasswordRequestBuilder addPassword() {
@@ -58,6 +60,7 @@ public class ApplicationItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the appManagementPolicies property of the microsoft.graph.application entity.
+     * @return a {@link AppManagementPoliciesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AppManagementPoliciesRequestBuilder appManagementPolicies() {
@@ -65,6 +68,7 @@ public class ApplicationItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the checkMemberGroups method.
+     * @return a {@link CheckMemberGroupsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CheckMemberGroupsRequestBuilder checkMemberGroups() {
@@ -72,6 +76,7 @@ public class ApplicationItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the checkMemberObjects method.
+     * @return a {@link CheckMemberObjectsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CheckMemberObjectsRequestBuilder checkMemberObjects() {
@@ -79,6 +84,7 @@ public class ApplicationItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the connectorGroup property of the microsoft.graph.application entity.
+     * @return a {@link ConnectorGroupRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ConnectorGroupRequestBuilder connectorGroup() {
@@ -86,6 +92,7 @@ public class ApplicationItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the createdOnBehalfOf property of the microsoft.graph.application entity.
+     * @return a {@link CreatedOnBehalfOfRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CreatedOnBehalfOfRequestBuilder createdOnBehalfOf() {
@@ -93,6 +100,7 @@ public class ApplicationItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the extensionProperties property of the microsoft.graph.application entity.
+     * @return a {@link ExtensionPropertiesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ExtensionPropertiesRequestBuilder extensionProperties() {
@@ -100,6 +108,7 @@ public class ApplicationItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the federatedIdentityCredentials property of the microsoft.graph.application entity.
+     * @return a {@link FederatedIdentityCredentialsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public FederatedIdentityCredentialsRequestBuilder federatedIdentityCredentials() {
@@ -107,6 +116,7 @@ public class ApplicationItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getMemberGroups method.
+     * @return a {@link GetMemberGroupsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetMemberGroupsRequestBuilder getMemberGroups() {
@@ -114,6 +124,7 @@ public class ApplicationItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getMemberObjects method.
+     * @return a {@link GetMemberObjectsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetMemberObjectsRequestBuilder getMemberObjects() {
@@ -121,6 +132,7 @@ public class ApplicationItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the homeRealmDiscoveryPolicies property of the microsoft.graph.application entity.
+     * @return a {@link HomeRealmDiscoveryPoliciesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public HomeRealmDiscoveryPoliciesRequestBuilder homeRealmDiscoveryPolicies() {
@@ -128,6 +140,7 @@ public class ApplicationItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the media for the application entity.
+     * @return a {@link LogoRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public LogoRequestBuilder logo() {
@@ -135,6 +148,7 @@ public class ApplicationItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the owners property of the microsoft.graph.application entity.
+     * @return a {@link OwnersRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public OwnersRequestBuilder owners() {
@@ -142,6 +156,7 @@ public class ApplicationItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the removeKey method.
+     * @return a {@link RemoveKeyRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RemoveKeyRequestBuilder removeKey() {
@@ -149,6 +164,7 @@ public class ApplicationItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the removePassword method.
+     * @return a {@link RemovePasswordRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RemovePasswordRequestBuilder removePassword() {
@@ -156,6 +172,7 @@ public class ApplicationItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the restore method.
+     * @return a {@link RestoreRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RestoreRequestBuilder restore() {
@@ -163,6 +180,7 @@ public class ApplicationItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the setVerifiedPublisher method.
+     * @return a {@link SetVerifiedPublisherRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SetVerifiedPublisherRequestBuilder setVerifiedPublisher() {
@@ -170,6 +188,7 @@ public class ApplicationItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the synchronization property of the microsoft.graph.application entity.
+     * @return a {@link SynchronizationRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SynchronizationRequestBuilder synchronization() {
@@ -177,6 +196,7 @@ public class ApplicationItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the tokenIssuancePolicies property of the microsoft.graph.application entity.
+     * @return a {@link TokenIssuancePoliciesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TokenIssuancePoliciesRequestBuilder tokenIssuancePolicies() {
@@ -184,6 +204,7 @@ public class ApplicationItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the tokenLifetimePolicies property of the microsoft.graph.application entity.
+     * @return a {@link TokenLifetimePoliciesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TokenLifetimePoliciesRequestBuilder tokenLifetimePolicies() {
@@ -191,13 +212,14 @@ public class ApplicationItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the unsetVerifiedPublisher method.
+     * @return a {@link UnsetVerifiedPublisherRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UnsetVerifiedPublisherRequestBuilder unsetVerifiedPublisher() {
         return new UnsetVerifiedPublisherRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new ApplicationItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link ApplicationItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -205,7 +227,7 @@ public class ApplicationItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/applications/{application%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new ApplicationItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link ApplicationItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -214,6 +236,7 @@ public class ApplicationItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Deletes an application. When deleted, apps are moved to a temporary container and can be restored within 30 days. After that time, they are permanently deleted.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/application-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
@@ -222,18 +245,19 @@ public class ApplicationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Deletes an application. When deleted, apps are moved to a temporary container and can be restored within 30 days. After that time, they are permanently deleted.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/application-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Get the properties and relationships of an application object.
-     * @return a Application
+     * @return a {@link Application}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/application-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -243,21 +267,22 @@ public class ApplicationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the properties and relationships of an application object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a Application
+     * @return a {@link Application}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/application-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Application get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, Application::createFromDiscriminatorValue);
     }
     /**
      * Update the properties of an application object.
      * @param body The request body
-     * @return a Application
+     * @return a {@link Application}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/application-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -268,7 +293,8 @@ public class ApplicationItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of an application object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a Application
+     * @return a {@link Application}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/application-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -276,13 +302,12 @@ public class ApplicationItemRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, Application::createFromDiscriminatorValue);
     }
     /**
      * Deletes an application. When deleted, apps are moved to a temporary container and can be restored within 30 days. After that time, they are permanently deleted.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -291,18 +316,18 @@ public class ApplicationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Deletes an application. When deleted, apps are moved to a temporary container and can be restored within 30 days. After that time, they are permanently deleted.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/applications/{application%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Get the properties and relationships of an application object.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -311,7 +336,7 @@ public class ApplicationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the properties and relationships of an application object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -323,7 +348,7 @@ public class ApplicationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of an application object.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final Application body) {
@@ -333,12 +358,12 @@ public class ApplicationItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of an application object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final Application body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/applications/{application%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -347,7 +372,7 @@ public class ApplicationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a ApplicationItemRequestBuilder
+     * @return a {@link ApplicationItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ApplicationItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -377,7 +402,7 @@ public class ApplicationItemRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

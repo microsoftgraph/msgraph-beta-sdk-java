@@ -11,7 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AggregatedPolicyCompliance extends Entity implements Parsable {
     /**
-     * Instantiates a new AggregatedPolicyCompliance and sets the default values.
+     * Instantiates a new {@link AggregatedPolicyCompliance} and sets the default values.
      */
     public AggregatedPolicyCompliance() {
         super();
@@ -19,7 +19,7 @@ public class AggregatedPolicyCompliance extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AggregatedPolicyCompliance
+     * @return a {@link AggregatedPolicyCompliance}
      */
     @jakarta.annotation.Nonnull
     public static AggregatedPolicyCompliance createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class AggregatedPolicyCompliance extends Entity implements Parsable {
     }
     /**
      * Gets the compliancePolicyId property value. Identifier for the device compliance policy. Optional. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCompliancePolicyId() {
@@ -36,7 +36,7 @@ public class AggregatedPolicyCompliance extends Entity implements Parsable {
     }
     /**
      * Gets the compliancePolicyName property value. Name of the device compliance policy. Optional. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCompliancePolicyName() {
@@ -44,7 +44,7 @@ public class AggregatedPolicyCompliance extends Entity implements Parsable {
     }
     /**
      * Gets the compliancePolicyPlatform property value. Platform for the device compliance policy. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, androidAOSP, all. Optional. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCompliancePolicyPlatform() {
@@ -52,7 +52,7 @@ public class AggregatedPolicyCompliance extends Entity implements Parsable {
     }
     /**
      * Gets the compliancePolicyType property value. The type of compliance policy. Optional. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCompliancePolicyType() {
@@ -60,7 +60,7 @@ public class AggregatedPolicyCompliance extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -80,7 +80,7 @@ public class AggregatedPolicyCompliance extends Entity implements Parsable {
     }
     /**
      * Gets the lastRefreshedDateTime property value. Date and time the entity was last updated in the multi-tenant management platform. Optional. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastRefreshedDateTime() {
@@ -88,7 +88,7 @@ public class AggregatedPolicyCompliance extends Entity implements Parsable {
     }
     /**
      * Gets the numberOfCompliantDevices property value. The number of devices that are in a compliant status. Optional. Read-only.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getNumberOfCompliantDevices() {
@@ -96,7 +96,7 @@ public class AggregatedPolicyCompliance extends Entity implements Parsable {
     }
     /**
      * Gets the numberOfErrorDevices property value. The number of devices that are in an error status. Optional. Read-only.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getNumberOfErrorDevices() {
@@ -104,7 +104,7 @@ public class AggregatedPolicyCompliance extends Entity implements Parsable {
     }
     /**
      * Gets the numberOfNonCompliantDevices property value. The number of device that are in a non-compliant status. Optional. Read-only.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getNumberOfNonCompliantDevices() {
@@ -112,7 +112,7 @@ public class AggregatedPolicyCompliance extends Entity implements Parsable {
     }
     /**
      * Gets the policyModifiedDateTime property value. The date and time the device policy was last modified. Optional. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getPolicyModifiedDateTime() {
@@ -120,7 +120,7 @@ public class AggregatedPolicyCompliance extends Entity implements Parsable {
     }
     /**
      * Gets the tenantDisplayName property value. The display name for the managed tenant. Optional. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTenantDisplayName() {
@@ -128,7 +128,7 @@ public class AggregatedPolicyCompliance extends Entity implements Parsable {
     }
     /**
      * Gets the tenantId property value. The Microsoft Entra tenant identifier for the managed tenant. Optional. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {

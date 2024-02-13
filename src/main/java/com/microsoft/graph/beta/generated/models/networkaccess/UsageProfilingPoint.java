@@ -19,7 +19,7 @@ public class UsageProfilingPoint implements AdditionalDataHolder, BackedModel, P
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new UsageProfilingPoint and sets the default values.
+     * Instantiates a new {@link UsageProfilingPoint} and sets the default values.
      */
     public UsageProfilingPoint() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class UsageProfilingPoint implements AdditionalDataHolder, BackedModel, P
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UsageProfilingPoint
+     * @return a {@link UsageProfilingPoint}
      */
     @jakarta.annotation.Nonnull
     public static UsageProfilingPoint createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class UsageProfilingPoint implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -50,7 +50,7 @@ public class UsageProfilingPoint implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -58,7 +58,7 @@ public class UsageProfilingPoint implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -73,7 +73,7 @@ public class UsageProfilingPoint implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the internetAccessTrafficCount property value. The internetAccessTrafficCount property
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getInternetAccessTrafficCount() {
@@ -81,7 +81,7 @@ public class UsageProfilingPoint implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the microsoft365AccessTrafficCount property value. The microsoft365AccessTrafficCount property
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getMicrosoft365AccessTrafficCount() {
@@ -89,7 +89,7 @@ public class UsageProfilingPoint implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -97,7 +97,7 @@ public class UsageProfilingPoint implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the privateAccessTrafficCount property value. The privateAccessTrafficCount property
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getPrivateAccessTrafficCount() {
@@ -105,7 +105,7 @@ public class UsageProfilingPoint implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the timeStampDateTime property value. The timeStampDateTime property
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getTimeStampDateTime() {
@@ -113,7 +113,7 @@ public class UsageProfilingPoint implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the totalTrafficCount property value. The totalTrafficCount property
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getTotalTrafficCount() {

@@ -25,6 +25,7 @@ import java.util.Objects;
 public class UserStatusesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -33,7 +34,7 @@ public class UserStatusesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the userStatuses property of the microsoft.graph.deviceCompliancePolicy entity.
      * @param deviceComplianceUserStatusId The unique identifier of deviceComplianceUserStatus
-     * @return a DeviceComplianceUserStatusItemRequestBuilder
+     * @return a {@link DeviceComplianceUserStatusItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DeviceComplianceUserStatusItemRequestBuilder byDeviceComplianceUserStatusId(@jakarta.annotation.Nonnull final String deviceComplianceUserStatusId) {
@@ -43,7 +44,7 @@ public class UserStatusesRequestBuilder extends BaseRequestBuilder {
         return new DeviceComplianceUserStatusItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new UserStatusesRequestBuilder and sets the default values.
+     * Instantiates a new {@link UserStatusesRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -51,7 +52,7 @@ public class UserStatusesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/deviceCompliancePolicies/{deviceCompliancePolicy%2Did}/userStatuses{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new UserStatusesRequestBuilder and sets the default values.
+     * Instantiates a new {@link UserStatusesRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -60,7 +61,8 @@ public class UserStatusesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List of DeviceComplianceUserStatus.
-     * @return a DeviceComplianceUserStatusCollectionResponse
+     * @return a {@link DeviceComplianceUserStatusCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public DeviceComplianceUserStatusCollectionResponse get() {
@@ -69,20 +71,21 @@ public class UserStatusesRequestBuilder extends BaseRequestBuilder {
     /**
      * List of DeviceComplianceUserStatus.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a DeviceComplianceUserStatusCollectionResponse
+     * @return a {@link DeviceComplianceUserStatusCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public DeviceComplianceUserStatusCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceComplianceUserStatusCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to userStatuses for deviceManagement
      * @param body The request body
-     * @return a DeviceComplianceUserStatus
+     * @return a {@link DeviceComplianceUserStatus}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public DeviceComplianceUserStatus post(@jakarta.annotation.Nonnull final DeviceComplianceUserStatus body) {
@@ -92,20 +95,20 @@ public class UserStatusesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to userStatuses for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a DeviceComplianceUserStatus
+     * @return a {@link DeviceComplianceUserStatus}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public DeviceComplianceUserStatus post(@jakarta.annotation.Nonnull final DeviceComplianceUserStatus body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceComplianceUserStatus::createFromDiscriminatorValue);
     }
     /**
      * List of DeviceComplianceUserStatus.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -114,7 +117,7 @@ public class UserStatusesRequestBuilder extends BaseRequestBuilder {
     /**
      * List of DeviceComplianceUserStatus.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -126,7 +129,7 @@ public class UserStatusesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to userStatuses for deviceManagement
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final DeviceComplianceUserStatus body) {
@@ -136,12 +139,12 @@ public class UserStatusesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to userStatuses for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final DeviceComplianceUserStatus body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/deviceManagement/deviceCompliancePolicies/{deviceCompliancePolicy%2Did}/userStatuses", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -150,7 +153,7 @@ public class UserStatusesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a UserStatusesRequestBuilder
+     * @return a {@link UserStatusesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UserStatusesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -204,7 +207,7 @@ public class UserStatusesRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ConnectorGroup extends Entity implements Parsable {
     /**
-     * Instantiates a new ConnectorGroup and sets the default values.
+     * Instantiates a new {@link ConnectorGroup} and sets the default values.
      */
     public ConnectorGroup() {
         super();
@@ -17,7 +17,7 @@ public class ConnectorGroup extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ConnectorGroup
+     * @return a {@link ConnectorGroup}
      */
     @jakarta.annotation.Nonnull
     public static ConnectorGroup createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class ConnectorGroup extends Entity implements Parsable {
     }
     /**
      * Gets the applications property value. The applications property
-     * @return a java.util.List<Application>
+     * @return a {@link java.util.List<Application>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Application> getApplications() {
@@ -34,7 +34,7 @@ public class ConnectorGroup extends Entity implements Parsable {
     }
     /**
      * Gets the connectorGroupType property value. The connectorGroupType property
-     * @return a ConnectorGroupType
+     * @return a {@link ConnectorGroupType}
      */
     @jakarta.annotation.Nullable
     public ConnectorGroupType getConnectorGroupType() {
@@ -42,7 +42,7 @@ public class ConnectorGroup extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -57,7 +57,7 @@ public class ConnectorGroup extends Entity implements Parsable {
     }
     /**
      * Gets the isDefault property value. Indicates if the connectorGroup is the default connectorGroup. Only a single connector group can be the default connectorGroup and this is pre-set by the system. Read-only.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDefault() {
@@ -65,7 +65,7 @@ public class ConnectorGroup extends Entity implements Parsable {
     }
     /**
      * Gets the members property value. The members property
-     * @return a java.util.List<Connector>
+     * @return a {@link java.util.List<Connector>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Connector> getMembers() {
@@ -73,7 +73,7 @@ public class ConnectorGroup extends Entity implements Parsable {
     }
     /**
      * Gets the name property value. The name associated with the connectorGroup.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -81,7 +81,7 @@ public class ConnectorGroup extends Entity implements Parsable {
     }
     /**
      * Gets the region property value. The region the connectorGroup is assigned to and will optimize traffic for. This region can only be set if no connectors or applications are assigned to the connectorGroup. The possible values are: nam (for North America), eur (for Europe), aus (for Australia), asia (for Asia), ind (for India), and unknownFutureValue.
-     * @return a ConnectorGroupRegion
+     * @return a {@link ConnectorGroupRegion}
      */
     @jakarta.annotation.Nullable
     public ConnectorGroupRegion getRegion() {

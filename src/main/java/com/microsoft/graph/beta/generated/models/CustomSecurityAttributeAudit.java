@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CustomSecurityAttributeAudit extends Entity implements Parsable {
     /**
-     * Instantiates a new CustomSecurityAttributeAudit and sets the default values.
+     * Instantiates a new {@link CustomSecurityAttributeAudit} and sets the default values.
      */
     public CustomSecurityAttributeAudit() {
         super();
@@ -18,7 +18,7 @@ public class CustomSecurityAttributeAudit extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CustomSecurityAttributeAudit
+     * @return a {@link CustomSecurityAttributeAudit}
      */
     @jakarta.annotation.Nonnull
     public static CustomSecurityAttributeAudit createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class CustomSecurityAttributeAudit extends Entity implements Parsable {
     }
     /**
      * Gets the activityDateTime property value. The activityDateTime property
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getActivityDateTime() {
@@ -35,7 +35,7 @@ public class CustomSecurityAttributeAudit extends Entity implements Parsable {
     }
     /**
      * Gets the activityDisplayName property value. The activityDisplayName property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getActivityDisplayName() {
@@ -43,7 +43,7 @@ public class CustomSecurityAttributeAudit extends Entity implements Parsable {
     }
     /**
      * Gets the additionalDetails property value. The additionalDetails property
-     * @return a java.util.List<KeyValue>
+     * @return a {@link java.util.List<KeyValue>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyValue> getAdditionalDetails() {
@@ -51,7 +51,7 @@ public class CustomSecurityAttributeAudit extends Entity implements Parsable {
     }
     /**
      * Gets the category property value. The category property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCategory() {
@@ -59,7 +59,7 @@ public class CustomSecurityAttributeAudit extends Entity implements Parsable {
     }
     /**
      * Gets the correlationId property value. The correlationId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCorrelationId() {
@@ -67,7 +67,7 @@ public class CustomSecurityAttributeAudit extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -88,7 +88,7 @@ public class CustomSecurityAttributeAudit extends Entity implements Parsable {
     }
     /**
      * Gets the initiatedBy property value. The initiatedBy property
-     * @return a AuditActivityInitiator
+     * @return a {@link AuditActivityInitiator}
      */
     @jakarta.annotation.Nullable
     public AuditActivityInitiator getInitiatedBy() {
@@ -96,7 +96,7 @@ public class CustomSecurityAttributeAudit extends Entity implements Parsable {
     }
     /**
      * Gets the loggedByService property value. The loggedByService property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getLoggedByService() {
@@ -104,7 +104,7 @@ public class CustomSecurityAttributeAudit extends Entity implements Parsable {
     }
     /**
      * Gets the operationType property value. The operationType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOperationType() {
@@ -112,7 +112,7 @@ public class CustomSecurityAttributeAudit extends Entity implements Parsable {
     }
     /**
      * Gets the result property value. The result property
-     * @return a OperationResult
+     * @return a {@link OperationResult}
      */
     @jakarta.annotation.Nullable
     public OperationResult getResult() {
@@ -120,7 +120,7 @@ public class CustomSecurityAttributeAudit extends Entity implements Parsable {
     }
     /**
      * Gets the resultReason property value. The resultReason property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getResultReason() {
@@ -128,7 +128,7 @@ public class CustomSecurityAttributeAudit extends Entity implements Parsable {
     }
     /**
      * Gets the targetResources property value. The targetResources property
-     * @return a java.util.List<TargetResource>
+     * @return a {@link java.util.List<TargetResource>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<TargetResource> getTargetResources() {
@@ -136,7 +136,7 @@ public class CustomSecurityAttributeAudit extends Entity implements Parsable {
     }
     /**
      * Gets the userAgent property value. The userAgent property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserAgent() {

@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MobilityManagementPolicy extends Entity implements Parsable {
     /**
-     * Instantiates a new MobilityManagementPolicy and sets the default values.
+     * Instantiates a new {@link MobilityManagementPolicy} and sets the default values.
      */
     public MobilityManagementPolicy() {
         super();
@@ -17,7 +17,7 @@ public class MobilityManagementPolicy extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MobilityManagementPolicy
+     * @return a {@link MobilityManagementPolicy}
      */
     @jakarta.annotation.Nonnull
     public static MobilityManagementPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class MobilityManagementPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the appliesTo property value. Indicates the user scope of the mobility management policy. Possible values are: none, all, selected.
-     * @return a PolicyScope
+     * @return a {@link PolicyScope}
      */
     @jakarta.annotation.Nullable
     public PolicyScope getAppliesTo() {
@@ -34,7 +34,7 @@ public class MobilityManagementPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the complianceUrl property value. Compliance URL of the mobility management application.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getComplianceUrl() {
@@ -42,7 +42,7 @@ public class MobilityManagementPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. Description of the mobility management application.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -50,7 +50,7 @@ public class MobilityManagementPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the discoveryUrl property value. Discovery URL of the mobility management application.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDiscoveryUrl() {
@@ -58,7 +58,7 @@ public class MobilityManagementPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. Display name of the mobility management application.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -66,7 +66,7 @@ public class MobilityManagementPolicy extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -83,7 +83,7 @@ public class MobilityManagementPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the includedGroups property value. Microsoft Entra groups under the scope of the mobility management application if appliesTo is selected
-     * @return a java.util.List<Group>
+     * @return a {@link java.util.List<Group>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Group> getIncludedGroups() {
@@ -91,7 +91,7 @@ public class MobilityManagementPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the isValid property value. Whether policy is valid. Invalid policies may not be updated and should be deleted.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsValid() {
@@ -99,7 +99,7 @@ public class MobilityManagementPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the termsOfUseUrl property value. Terms of Use URL of the mobility management application.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTermsOfUseUrl() {

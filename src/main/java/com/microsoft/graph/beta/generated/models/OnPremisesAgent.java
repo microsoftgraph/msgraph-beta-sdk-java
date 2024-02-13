@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OnPremisesAgent extends Entity implements Parsable {
     /**
-     * Instantiates a new OnPremisesAgent and sets the default values.
+     * Instantiates a new {@link OnPremisesAgent} and sets the default values.
      */
     public OnPremisesAgent() {
         super();
@@ -17,7 +17,7 @@ public class OnPremisesAgent extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a OnPremisesAgent
+     * @return a {@link OnPremisesAgent}
      */
     @jakarta.annotation.Nonnull
     public static OnPremisesAgent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class OnPremisesAgent extends Entity implements Parsable {
     }
     /**
      * Gets the agentGroups property value. List of onPremisesAgentGroups that an onPremisesAgent is assigned to. Read-only. Nullable.
-     * @return a java.util.List<OnPremisesAgentGroup>
+     * @return a {@link java.util.List<OnPremisesAgentGroup>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<OnPremisesAgentGroup> getAgentGroups() {
@@ -34,7 +34,7 @@ public class OnPremisesAgent extends Entity implements Parsable {
     }
     /**
      * Gets the externalIp property value. The external IP address as detected by the service for the agent machine. Read-only
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getExternalIp() {
@@ -42,7 +42,7 @@ public class OnPremisesAgent extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -56,7 +56,7 @@ public class OnPremisesAgent extends Entity implements Parsable {
     }
     /**
      * Gets the machineName property value. The name of the machine that the agent is running on. Read-only
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getMachineName() {
@@ -64,7 +64,7 @@ public class OnPremisesAgent extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status property
-     * @return a AgentStatus
+     * @return a {@link AgentStatus}
      */
     @jakarta.annotation.Nullable
     public AgentStatus getStatus() {
@@ -72,7 +72,7 @@ public class OnPremisesAgent extends Entity implements Parsable {
     }
     /**
      * Gets the supportedPublishingTypes property value. The supportedPublishingTypes property
-     * @return a java.util.List<OnPremisesPublishingType>
+     * @return a {@link java.util.List<OnPremisesPublishingType>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<OnPremisesPublishingType> getSupportedPublishingTypes() {

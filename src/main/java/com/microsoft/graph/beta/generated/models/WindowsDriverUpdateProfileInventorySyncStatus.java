@@ -22,7 +22,7 @@ public class WindowsDriverUpdateProfileInventorySyncStatus implements Additional
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new WindowsDriverUpdateProfileInventorySyncStatus and sets the default values.
+     * Instantiates a new {@link WindowsDriverUpdateProfileInventorySyncStatus} and sets the default values.
      */
     public WindowsDriverUpdateProfileInventorySyncStatus() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -31,7 +31,7 @@ public class WindowsDriverUpdateProfileInventorySyncStatus implements Additional
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WindowsDriverUpdateProfileInventorySyncStatus
+     * @return a {@link WindowsDriverUpdateProfileInventorySyncStatus}
      */
     @jakarta.annotation.Nonnull
     public static WindowsDriverUpdateProfileInventorySyncStatus createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class WindowsDriverUpdateProfileInventorySyncStatus implements Additional
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -53,7 +53,7 @@ public class WindowsDriverUpdateProfileInventorySyncStatus implements Additional
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -61,7 +61,7 @@ public class WindowsDriverUpdateProfileInventorySyncStatus implements Additional
     }
     /**
      * Gets the driverInventorySyncState property value. Windows DnF update inventory sync state.
-     * @return a WindowsDriverUpdateProfileInventorySyncState
+     * @return a {@link WindowsDriverUpdateProfileInventorySyncState}
      */
     @jakarta.annotation.Nullable
     public WindowsDriverUpdateProfileInventorySyncState getDriverInventorySyncState() {
@@ -69,7 +69,7 @@ public class WindowsDriverUpdateProfileInventorySyncStatus implements Additional
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -81,7 +81,7 @@ public class WindowsDriverUpdateProfileInventorySyncStatus implements Additional
     }
     /**
      * Gets the lastSuccessfulSyncDateTime property value. The last successful sync date and time in UTC.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastSuccessfulSyncDateTime() {
@@ -89,7 +89,7 @@ public class WindowsDriverUpdateProfileInventorySyncStatus implements Additional
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {

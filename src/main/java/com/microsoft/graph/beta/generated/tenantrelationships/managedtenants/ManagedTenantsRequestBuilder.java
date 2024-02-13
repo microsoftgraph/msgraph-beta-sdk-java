@@ -59,6 +59,7 @@ import java.util.Objects;
 public class ManagedTenantsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the aggregatedPolicyCompliances property of the microsoft.graph.managedTenants.managedTenant entity.
+     * @return a {@link AggregatedPolicyCompliancesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AggregatedPolicyCompliancesRequestBuilder aggregatedPolicyCompliances() {
@@ -66,6 +67,7 @@ public class ManagedTenantsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the appPerformances property of the microsoft.graph.managedTenants.managedTenant entity.
+     * @return a {@link AppPerformancesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AppPerformancesRequestBuilder appPerformances() {
@@ -73,6 +75,7 @@ public class ManagedTenantsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the auditEvents property of the microsoft.graph.managedTenants.managedTenant entity.
+     * @return a {@link AuditEventsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AuditEventsRequestBuilder auditEvents() {
@@ -80,6 +83,7 @@ public class ManagedTenantsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the cloudPcConnections property of the microsoft.graph.managedTenants.managedTenant entity.
+     * @return a {@link CloudPcConnectionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CloudPcConnectionsRequestBuilder cloudPcConnections() {
@@ -87,6 +91,7 @@ public class ManagedTenantsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the cloudPcDevices property of the microsoft.graph.managedTenants.managedTenant entity.
+     * @return a {@link CloudPcDevicesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CloudPcDevicesRequestBuilder cloudPcDevices() {
@@ -94,6 +99,7 @@ public class ManagedTenantsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the cloudPcsOverview property of the microsoft.graph.managedTenants.managedTenant entity.
+     * @return a {@link CloudPcsOverviewRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CloudPcsOverviewRequestBuilder cloudPcsOverview() {
@@ -101,6 +107,7 @@ public class ManagedTenantsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the conditionalAccessPolicyCoverages property of the microsoft.graph.managedTenants.managedTenant entity.
+     * @return a {@link ConditionalAccessPolicyCoveragesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ConditionalAccessPolicyCoveragesRequestBuilder conditionalAccessPolicyCoverages() {
@@ -108,6 +115,7 @@ public class ManagedTenantsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the credentialUserRegistrationsSummaries property of the microsoft.graph.managedTenants.managedTenant entity.
+     * @return a {@link CredentialUserRegistrationsSummariesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CredentialUserRegistrationsSummariesRequestBuilder credentialUserRegistrationsSummaries() {
@@ -115,6 +123,7 @@ public class ManagedTenantsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the deviceAppPerformances property of the microsoft.graph.managedTenants.managedTenant entity.
+     * @return a {@link DeviceAppPerformancesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DeviceAppPerformancesRequestBuilder deviceAppPerformances() {
@@ -122,6 +131,7 @@ public class ManagedTenantsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the deviceCompliancePolicySettingStateSummaries property of the microsoft.graph.managedTenants.managedTenant entity.
+     * @return a {@link DeviceCompliancePolicySettingStateSummariesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DeviceCompliancePolicySettingStateSummariesRequestBuilder deviceCompliancePolicySettingStateSummaries() {
@@ -129,6 +139,7 @@ public class ManagedTenantsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the deviceHealthStatuses property of the microsoft.graph.managedTenants.managedTenant entity.
+     * @return a {@link DeviceHealthStatusesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DeviceHealthStatusesRequestBuilder deviceHealthStatuses() {
@@ -136,6 +147,7 @@ public class ManagedTenantsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the managedDeviceCompliances property of the microsoft.graph.managedTenants.managedTenant entity.
+     * @return a {@link ManagedDeviceCompliancesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ManagedDeviceCompliancesRequestBuilder managedDeviceCompliances() {
@@ -143,6 +155,7 @@ public class ManagedTenantsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the managedDeviceComplianceTrends property of the microsoft.graph.managedTenants.managedTenant entity.
+     * @return a {@link ManagedDeviceComplianceTrendsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ManagedDeviceComplianceTrendsRequestBuilder managedDeviceComplianceTrends() {
@@ -150,6 +163,7 @@ public class ManagedTenantsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the managedTenantAlertLogs property of the microsoft.graph.managedTenants.managedTenant entity.
+     * @return a {@link ManagedTenantAlertLogsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ManagedTenantAlertLogsRequestBuilder managedTenantAlertLogs() {
@@ -157,6 +171,7 @@ public class ManagedTenantsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the managedTenantAlertRuleDefinitions property of the microsoft.graph.managedTenants.managedTenant entity.
+     * @return a {@link ManagedTenantAlertRuleDefinitionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ManagedTenantAlertRuleDefinitionsRequestBuilder managedTenantAlertRuleDefinitions() {
@@ -164,6 +179,7 @@ public class ManagedTenantsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the managedTenantAlertRules property of the microsoft.graph.managedTenants.managedTenant entity.
+     * @return a {@link ManagedTenantAlertRulesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ManagedTenantAlertRulesRequestBuilder managedTenantAlertRules() {
@@ -171,6 +187,7 @@ public class ManagedTenantsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the managedTenantAlerts property of the microsoft.graph.managedTenants.managedTenant entity.
+     * @return a {@link ManagedTenantAlertsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ManagedTenantAlertsRequestBuilder managedTenantAlerts() {
@@ -178,6 +195,7 @@ public class ManagedTenantsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the managedTenantApiNotifications property of the microsoft.graph.managedTenants.managedTenant entity.
+     * @return a {@link ManagedTenantApiNotificationsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ManagedTenantApiNotificationsRequestBuilder managedTenantApiNotifications() {
@@ -185,6 +203,7 @@ public class ManagedTenantsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the managedTenantEmailNotifications property of the microsoft.graph.managedTenants.managedTenant entity.
+     * @return a {@link ManagedTenantEmailNotificationsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ManagedTenantEmailNotificationsRequestBuilder managedTenantEmailNotifications() {
@@ -192,6 +211,7 @@ public class ManagedTenantsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the managedTenantTicketingEndpoints property of the microsoft.graph.managedTenants.managedTenant entity.
+     * @return a {@link ManagedTenantTicketingEndpointsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ManagedTenantTicketingEndpointsRequestBuilder managedTenantTicketingEndpoints() {
@@ -199,6 +219,7 @@ public class ManagedTenantsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the managementActions property of the microsoft.graph.managedTenants.managedTenant entity.
+     * @return a {@link ManagementActionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ManagementActionsRequestBuilder managementActions() {
@@ -206,6 +227,7 @@ public class ManagedTenantsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the managementActionTenantDeploymentStatuses property of the microsoft.graph.managedTenants.managedTenant entity.
+     * @return a {@link ManagementActionTenantDeploymentStatusesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ManagementActionTenantDeploymentStatusesRequestBuilder managementActionTenantDeploymentStatuses() {
@@ -213,6 +235,7 @@ public class ManagedTenantsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the managementIntents property of the microsoft.graph.managedTenants.managedTenant entity.
+     * @return a {@link ManagementIntentsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ManagementIntentsRequestBuilder managementIntents() {
@@ -220,6 +243,7 @@ public class ManagedTenantsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the managementTemplateCollections property of the microsoft.graph.managedTenants.managedTenant entity.
+     * @return a {@link ManagementTemplateCollectionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ManagementTemplateCollectionsRequestBuilder managementTemplateCollections() {
@@ -227,6 +251,7 @@ public class ManagedTenantsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the managementTemplateCollectionTenantSummaries property of the microsoft.graph.managedTenants.managedTenant entity.
+     * @return a {@link ManagementTemplateCollectionTenantSummariesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ManagementTemplateCollectionTenantSummariesRequestBuilder managementTemplateCollectionTenantSummaries() {
@@ -234,6 +259,7 @@ public class ManagedTenantsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the managementTemplates property of the microsoft.graph.managedTenants.managedTenant entity.
+     * @return a {@link ManagementTemplatesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ManagementTemplatesRequestBuilder managementTemplates() {
@@ -241,6 +267,7 @@ public class ManagedTenantsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the managementTemplateSteps property of the microsoft.graph.managedTenants.managedTenant entity.
+     * @return a {@link ManagementTemplateStepsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ManagementTemplateStepsRequestBuilder managementTemplateSteps() {
@@ -248,6 +275,7 @@ public class ManagedTenantsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the managementTemplateStepTenantSummaries property of the microsoft.graph.managedTenants.managedTenant entity.
+     * @return a {@link ManagementTemplateStepTenantSummariesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ManagementTemplateStepTenantSummariesRequestBuilder managementTemplateStepTenantSummaries() {
@@ -255,6 +283,7 @@ public class ManagedTenantsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the managementTemplateStepVersions property of the microsoft.graph.managedTenants.managedTenant entity.
+     * @return a {@link ManagementTemplateStepVersionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ManagementTemplateStepVersionsRequestBuilder managementTemplateStepVersions() {
@@ -262,6 +291,7 @@ public class ManagedTenantsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the myRoles property of the microsoft.graph.managedTenants.managedTenant entity.
+     * @return a {@link MyRolesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MyRolesRequestBuilder myRoles() {
@@ -269,6 +299,7 @@ public class ManagedTenantsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the tenantGroups property of the microsoft.graph.managedTenants.managedTenant entity.
+     * @return a {@link TenantGroupsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TenantGroupsRequestBuilder tenantGroups() {
@@ -276,6 +307,7 @@ public class ManagedTenantsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the tenants property of the microsoft.graph.managedTenants.managedTenant entity.
+     * @return a {@link TenantsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TenantsRequestBuilder tenants() {
@@ -283,6 +315,7 @@ public class ManagedTenantsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the tenantsCustomizedInformation property of the microsoft.graph.managedTenants.managedTenant entity.
+     * @return a {@link TenantsCustomizedInformationRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TenantsCustomizedInformationRequestBuilder tenantsCustomizedInformation() {
@@ -290,6 +323,7 @@ public class ManagedTenantsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the tenantsDetailedInformation property of the microsoft.graph.managedTenants.managedTenant entity.
+     * @return a {@link TenantsDetailedInformationRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TenantsDetailedInformationRequestBuilder tenantsDetailedInformation() {
@@ -297,6 +331,7 @@ public class ManagedTenantsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the tenantTags property of the microsoft.graph.managedTenants.managedTenant entity.
+     * @return a {@link TenantTagsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TenantTagsRequestBuilder tenantTags() {
@@ -304,6 +339,7 @@ public class ManagedTenantsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the windowsDeviceMalwareStates property of the microsoft.graph.managedTenants.managedTenant entity.
+     * @return a {@link WindowsDeviceMalwareStatesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public WindowsDeviceMalwareStatesRequestBuilder windowsDeviceMalwareStates() {
@@ -311,13 +347,14 @@ public class ManagedTenantsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the windowsProtectionStates property of the microsoft.graph.managedTenants.managedTenant entity.
+     * @return a {@link WindowsProtectionStatesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public WindowsProtectionStatesRequestBuilder windowsProtectionStates() {
         return new WindowsProtectionStatesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new ManagedTenantsRequestBuilder and sets the default values.
+     * Instantiates a new {@link ManagedTenantsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -325,7 +362,7 @@ public class ManagedTenantsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/tenantRelationships/managedTenants{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new ManagedTenantsRequestBuilder and sets the default values.
+     * Instantiates a new {@link ManagedTenantsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -334,6 +371,7 @@ public class ManagedTenantsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Delete navigation property managedTenants for tenantRelationships
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete() {
         delete(null);
@@ -341,17 +379,18 @@ public class ManagedTenantsRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property managedTenants for tenantRelationships
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * The operations available to interact with the multi-tenant management platform.
-     * @return a ManagedTenant
+     * @return a {@link ManagedTenant}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public ManagedTenant get() {
@@ -360,20 +399,21 @@ public class ManagedTenantsRequestBuilder extends BaseRequestBuilder {
     /**
      * The operations available to interact with the multi-tenant management platform.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a ManagedTenant
+     * @return a {@link ManagedTenant}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public ManagedTenant get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, ManagedTenant::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property managedTenants in tenantRelationships
      * @param body The request body
-     * @return a ManagedTenant
+     * @return a {@link ManagedTenant}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public ManagedTenant patch(@jakarta.annotation.Nonnull final ManagedTenant body) {
@@ -383,20 +423,20 @@ public class ManagedTenantsRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property managedTenants in tenantRelationships
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a ManagedTenant
+     * @return a {@link ManagedTenant}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public ManagedTenant patch(@jakarta.annotation.Nonnull final ManagedTenant body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, ManagedTenant::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property managedTenants for tenantRelationships
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -405,18 +445,18 @@ public class ManagedTenantsRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property managedTenants for tenantRelationships
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/tenantRelationships/managedTenants", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * The operations available to interact with the multi-tenant management platform.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -425,7 +465,7 @@ public class ManagedTenantsRequestBuilder extends BaseRequestBuilder {
     /**
      * The operations available to interact with the multi-tenant management platform.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -437,7 +477,7 @@ public class ManagedTenantsRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property managedTenants in tenantRelationships
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final ManagedTenant body) {
@@ -447,12 +487,12 @@ public class ManagedTenantsRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property managedTenants in tenantRelationships
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final ManagedTenant body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/tenantRelationships/managedTenants", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -461,7 +501,7 @@ public class ManagedTenantsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a ManagedTenantsRequestBuilder
+     * @return a {@link ManagedTenantsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ManagedTenantsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -491,7 +531,7 @@ public class ManagedTenantsRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

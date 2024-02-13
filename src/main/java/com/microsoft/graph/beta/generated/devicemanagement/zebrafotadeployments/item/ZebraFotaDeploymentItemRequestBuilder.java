@@ -23,13 +23,14 @@ import java.util.Objects;
 public class ZebraFotaDeploymentItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the cancel method.
+     * @return a {@link CancelRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CancelRequestBuilder cancel() {
         return new CancelRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new ZebraFotaDeploymentItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link ZebraFotaDeploymentItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -37,7 +38,7 @@ public class ZebraFotaDeploymentItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/zebraFotaDeployments/{zebraFotaDeployment%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new ZebraFotaDeploymentItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link ZebraFotaDeploymentItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -46,6 +47,7 @@ public class ZebraFotaDeploymentItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Delete navigation property zebraFotaDeployments for deviceManagement
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete() {
         delete(null);
@@ -53,17 +55,18 @@ public class ZebraFotaDeploymentItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property zebraFotaDeployments for deviceManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Collection of ZebraFotaDeployments associated with account.
-     * @return a ZebraFotaDeployment
+     * @return a {@link ZebraFotaDeployment}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public ZebraFotaDeployment get() {
@@ -72,20 +75,21 @@ public class ZebraFotaDeploymentItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Collection of ZebraFotaDeployments associated with account.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a ZebraFotaDeployment
+     * @return a {@link ZebraFotaDeployment}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public ZebraFotaDeployment get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, ZebraFotaDeployment::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property zebraFotaDeployments in deviceManagement
      * @param body The request body
-     * @return a ZebraFotaDeployment
+     * @return a {@link ZebraFotaDeployment}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public ZebraFotaDeployment patch(@jakarta.annotation.Nonnull final ZebraFotaDeployment body) {
@@ -95,20 +99,20 @@ public class ZebraFotaDeploymentItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property zebraFotaDeployments in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a ZebraFotaDeployment
+     * @return a {@link ZebraFotaDeployment}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public ZebraFotaDeployment patch(@jakarta.annotation.Nonnull final ZebraFotaDeployment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, ZebraFotaDeployment::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property zebraFotaDeployments for deviceManagement
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -117,18 +121,18 @@ public class ZebraFotaDeploymentItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property zebraFotaDeployments for deviceManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/deviceManagement/zebraFotaDeployments/{zebraFotaDeployment%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Collection of ZebraFotaDeployments associated with account.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -137,7 +141,7 @@ public class ZebraFotaDeploymentItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Collection of ZebraFotaDeployments associated with account.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -149,7 +153,7 @@ public class ZebraFotaDeploymentItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property zebraFotaDeployments in deviceManagement
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final ZebraFotaDeployment body) {
@@ -159,12 +163,12 @@ public class ZebraFotaDeploymentItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property zebraFotaDeployments in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final ZebraFotaDeployment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/deviceManagement/zebraFotaDeployments/{zebraFotaDeployment%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -173,7 +177,7 @@ public class ZebraFotaDeploymentItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a ZebraFotaDeploymentItemRequestBuilder
+     * @return a {@link ZebraFotaDeploymentItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ZebraFotaDeploymentItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -203,7 +207,7 @@ public class ZebraFotaDeploymentItemRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {
