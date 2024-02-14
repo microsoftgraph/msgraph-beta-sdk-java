@@ -47,8 +47,8 @@ configuration:
     restrictsReviewDismissals: false
   
   - branchNamePattern: support/5.x.x
-    # This branch pattern applies to the following branches as of 06/09/2023 14:08:44:
-    # dev
+    # This branch pattern applies to the following branches as of 02/14/2024 12:25
+    # support/5.x.x
 
     # Specifies whether this branch can be deleted. boolean
     allowsDeletions: false
