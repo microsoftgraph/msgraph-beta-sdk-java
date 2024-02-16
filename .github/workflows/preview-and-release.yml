@@ -2,7 +2,7 @@ name: Maven Preview and Github Release
 
 on:
   push:
-    branches: [ dev ]
+    branches: [dev, support/5.x.x]
     paths-ignore:
      - '.gradle/wrapper'
      - '.gitignore'
