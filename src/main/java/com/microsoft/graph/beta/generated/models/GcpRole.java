@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GcpRole extends Entity implements Parsable {
     /**
-     * Instantiates a new GcpRole and sets the default values.
+     * Instantiates a new {@link GcpRole} and sets the default values.
      */
     public GcpRole() {
         super();
@@ -17,7 +17,7 @@ public class GcpRole extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a GcpRole
+     * @return a {@link GcpRole}
      */
     @jakarta.annotation.Nonnull
     public static GcpRole createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class GcpRole extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The name of the GCP role. Supports $filter and (eq,contains).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -34,7 +34,7 @@ public class GcpRole extends Entity implements Parsable {
     }
     /**
      * Gets the externalId property value. The ID of the GCP role as defined by GCP. Alternate key.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getExternalId() {
@@ -42,7 +42,7 @@ public class GcpRole extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -55,7 +55,7 @@ public class GcpRole extends Entity implements Parsable {
     }
     /**
      * Gets the gcpRoleType property value. The gcpRoleType property
-     * @return a GcpRoleType
+     * @return a {@link GcpRoleType}
      */
     @jakarta.annotation.Nullable
     public GcpRoleType getGcpRoleType() {
@@ -63,7 +63,7 @@ public class GcpRole extends Entity implements Parsable {
     }
     /**
      * Gets the scopes property value. Resources that an identity assigned this GCP role can perform actions on. Supports $filter and (eq).
-     * @return a java.util.List<GcpScope>
+     * @return a {@link java.util.List<GcpScope>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<GcpScope> getScopes() {

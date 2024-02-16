@@ -19,7 +19,7 @@ public class PositionDetail implements AdditionalDataHolder, BackedModel, Parsab
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new PositionDetail and sets the default values.
+     * Instantiates a new {@link PositionDetail} and sets the default values.
      */
     public PositionDetail() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class PositionDetail implements AdditionalDataHolder, BackedModel, Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PositionDetail
+     * @return a {@link PositionDetail}
      */
     @jakarta.annotation.Nonnull
     public static PositionDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class PositionDetail implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -50,7 +50,7 @@ public class PositionDetail implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -58,7 +58,7 @@ public class PositionDetail implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the company property value. Detail about the company or employer.
-     * @return a CompanyDetail
+     * @return a {@link CompanyDetail}
      */
     @jakarta.annotation.Nullable
     public CompanyDetail getCompany() {
@@ -66,7 +66,7 @@ public class PositionDetail implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the description property value. Description of the position in question.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -74,7 +74,7 @@ public class PositionDetail implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the endMonthYear property value. When the position ended.
-     * @return a LocalDate
+     * @return a {@link LocalDate}
      */
     @jakarta.annotation.Nullable
     public LocalDate getEndMonthYear() {
@@ -82,7 +82,7 @@ public class PositionDetail implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -101,7 +101,7 @@ public class PositionDetail implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the jobTitle property value. The title held when in that position.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getJobTitle() {
@@ -109,7 +109,7 @@ public class PositionDetail implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the layer property value. The place where the employee is within the organizational hierarchy.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getLayer() {
@@ -117,7 +117,7 @@ public class PositionDetail implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the level property value. The employees experience or management level.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getLevel() {
@@ -125,7 +125,7 @@ public class PositionDetail implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -133,7 +133,7 @@ public class PositionDetail implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the role property value. The role the position entailed.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRole() {
@@ -141,7 +141,7 @@ public class PositionDetail implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the startMonthYear property value. The start month and year of the position.
-     * @return a LocalDate
+     * @return a {@link LocalDate}
      */
     @jakarta.annotation.Nullable
     public LocalDate getStartMonthYear() {
@@ -149,7 +149,7 @@ public class PositionDetail implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the summary property value. summary of the position.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSummary() {

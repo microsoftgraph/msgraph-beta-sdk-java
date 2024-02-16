@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EducationIdentityMatchingConfiguration extends EducationIdentitySynchronizationConfiguration implements Parsable {
     /**
-     * Instantiates a new EducationIdentityMatchingConfiguration and sets the default values.
+     * Instantiates a new {@link EducationIdentityMatchingConfiguration} and sets the default values.
      */
     public EducationIdentityMatchingConfiguration() {
         super();
@@ -18,7 +18,7 @@ public class EducationIdentityMatchingConfiguration extends EducationIdentitySyn
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EducationIdentityMatchingConfiguration
+     * @return a {@link EducationIdentityMatchingConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static EducationIdentityMatchingConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class EducationIdentityMatchingConfiguration extends EducationIdentitySyn
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -37,7 +37,7 @@ public class EducationIdentityMatchingConfiguration extends EducationIdentitySyn
     }
     /**
      * Gets the matchingOptions property value. Mapping between the user account and the options to use to uniquely identify the user to update.
-     * @return a java.util.List<EducationIdentityMatchingOptions>
+     * @return a {@link java.util.List<EducationIdentityMatchingOptions>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<EducationIdentityMatchingOptions> getMatchingOptions() {

@@ -33,7 +33,9 @@ public enum DevicePlatformType implements ValuedEnum {
     /** Indicates Mobile Application Management (MAM) for iOS devices */
     IOSMobileApplicationManagement("iOSMobileApplicationManagement"),
     /** Evolvable enumeration sentinel value. Do not use */
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    /** Indicates Mobile Application Management (MAM) for Windows devices. */
+    WindowsMobileApplicationManagement("windowsMobileApplicationManagement");
     public final String value;
     DevicePlatformType(final String value) {
         this.value = value;
@@ -57,6 +59,7 @@ public enum DevicePlatformType implements ValuedEnum {
             case "androidMobileApplicationManagement": return AndroidMobileApplicationManagement;
             case "iOSMobileApplicationManagement": return IOSMobileApplicationManagement;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "windowsMobileApplicationManagement": return WindowsMobileApplicationManagement;
             default: return null;
         }
     }

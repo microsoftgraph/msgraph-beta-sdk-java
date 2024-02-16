@@ -18,7 +18,7 @@ public class TeamworkConfiguredPeripheral implements AdditionalDataHolder, Backe
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new TeamworkConfiguredPeripheral and sets the default values.
+     * Instantiates a new {@link TeamworkConfiguredPeripheral} and sets the default values.
      */
     public TeamworkConfiguredPeripheral() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class TeamworkConfiguredPeripheral implements AdditionalDataHolder, Backe
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TeamworkConfiguredPeripheral
+     * @return a {@link TeamworkConfiguredPeripheral}
      */
     @jakarta.annotation.Nonnull
     public static TeamworkConfiguredPeripheral createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class TeamworkConfiguredPeripheral implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class TeamworkConfiguredPeripheral implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class TeamworkConfiguredPeripheral implements AdditionalDataHolder, Backe
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -69,7 +69,7 @@ public class TeamworkConfiguredPeripheral implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the isOptional property value. True if the current peripheral is optional. If set to false, this property is also used as part of the calculation of the health state for the device.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsOptional() {
@@ -77,7 +77,7 @@ public class TeamworkConfiguredPeripheral implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -85,7 +85,7 @@ public class TeamworkConfiguredPeripheral implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the peripheral property value. The peripheral property
-     * @return a TeamworkPeripheral
+     * @return a {@link TeamworkPeripheral}
      */
     @jakarta.annotation.Nullable
     public TeamworkPeripheral getPeripheral() {

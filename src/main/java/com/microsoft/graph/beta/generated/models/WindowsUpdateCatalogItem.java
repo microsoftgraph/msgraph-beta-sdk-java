@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsUpdateCatalogItem extends Entity implements Parsable {
     /**
-     * Instantiates a new WindowsUpdateCatalogItem and sets the default values.
+     * Instantiates a new {@link WindowsUpdateCatalogItem} and sets the default values.
      */
     public WindowsUpdateCatalogItem() {
         super();
@@ -21,7 +21,7 @@ public class WindowsUpdateCatalogItem extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WindowsUpdateCatalogItem
+     * @return a {@link WindowsUpdateCatalogItem}
      */
     @jakarta.annotation.Nonnull
     public static WindowsUpdateCatalogItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,7 +38,7 @@ public class WindowsUpdateCatalogItem extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name for the catalog item.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -46,7 +46,7 @@ public class WindowsUpdateCatalogItem extends Entity implements Parsable {
     }
     /**
      * Gets the endOfSupportDate property value. The last supported date for a catalog item
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getEndOfSupportDate() {
@@ -54,7 +54,7 @@ public class WindowsUpdateCatalogItem extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -66,7 +66,7 @@ public class WindowsUpdateCatalogItem extends Entity implements Parsable {
     }
     /**
      * Gets the releaseDateTime property value. The date the catalog item was released
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getReleaseDateTime() {

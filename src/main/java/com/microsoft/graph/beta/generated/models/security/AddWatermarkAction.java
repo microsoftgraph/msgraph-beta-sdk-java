@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AddWatermarkAction extends InformationProtectionAction implements Parsable {
     /**
-     * Instantiates a new AddWatermarkAction and sets the default values.
+     * Instantiates a new {@link AddWatermarkAction} and sets the default values.
      */
     public AddWatermarkAction() {
         super();
@@ -18,7 +18,7 @@ public class AddWatermarkAction extends InformationProtectionAction implements P
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AddWatermarkAction
+     * @return a {@link AddWatermarkAction}
      */
     @jakarta.annotation.Nonnull
     public static AddWatermarkAction createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class AddWatermarkAction extends InformationProtectionAction implements P
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -42,7 +42,7 @@ public class AddWatermarkAction extends InformationProtectionAction implements P
     }
     /**
      * Gets the fontColor property value. Color of the font to use for the watermark.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getFontColor() {
@@ -50,7 +50,7 @@ public class AddWatermarkAction extends InformationProtectionAction implements P
     }
     /**
      * Gets the fontName property value. Name of the font to use for the watermark.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getFontName() {
@@ -58,7 +58,7 @@ public class AddWatermarkAction extends InformationProtectionAction implements P
     }
     /**
      * Gets the fontSize property value. Font size to use for the watermark.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getFontSize() {
@@ -66,7 +66,7 @@ public class AddWatermarkAction extends InformationProtectionAction implements P
     }
     /**
      * Gets the layout property value. The layout property
-     * @return a WatermarkLayout
+     * @return a {@link WatermarkLayout}
      */
     @jakarta.annotation.Nullable
     public WatermarkLayout getLayout() {
@@ -74,7 +74,7 @@ public class AddWatermarkAction extends InformationProtectionAction implements P
     }
     /**
      * Gets the text property value. The contents of the watermark itself.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getText() {
@@ -82,7 +82,7 @@ public class AddWatermarkAction extends InformationProtectionAction implements P
     }
     /**
      * Gets the uiElementName property value. The name of the UI element where the watermark should be placed.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUiElementName() {

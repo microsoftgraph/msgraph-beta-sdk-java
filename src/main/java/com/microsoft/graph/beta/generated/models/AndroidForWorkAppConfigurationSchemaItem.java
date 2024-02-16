@@ -21,7 +21,7 @@ public class AndroidForWorkAppConfigurationSchemaItem implements AdditionalDataH
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new AndroidForWorkAppConfigurationSchemaItem and sets the default values.
+     * Instantiates a new {@link AndroidForWorkAppConfigurationSchemaItem} and sets the default values.
      */
     public AndroidForWorkAppConfigurationSchemaItem() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -30,7 +30,7 @@ public class AndroidForWorkAppConfigurationSchemaItem implements AdditionalDataH
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AndroidForWorkAppConfigurationSchemaItem
+     * @return a {@link AndroidForWorkAppConfigurationSchemaItem}
      */
     @jakarta.annotation.Nonnull
     public static AndroidForWorkAppConfigurationSchemaItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class AndroidForWorkAppConfigurationSchemaItem implements AdditionalDataH
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -52,7 +52,7 @@ public class AndroidForWorkAppConfigurationSchemaItem implements AdditionalDataH
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -60,7 +60,7 @@ public class AndroidForWorkAppConfigurationSchemaItem implements AdditionalDataH
     }
     /**
      * Gets the dataType property value. Data type for a configuration item inside an Android for Work application's custom configuration schema
-     * @return a AndroidForWorkAppConfigurationSchemaItemDataType
+     * @return a {@link AndroidForWorkAppConfigurationSchemaItemDataType}
      */
     @jakarta.annotation.Nullable
     public AndroidForWorkAppConfigurationSchemaItemDataType getDataType() {
@@ -68,7 +68,7 @@ public class AndroidForWorkAppConfigurationSchemaItem implements AdditionalDataH
     }
     /**
      * Gets the defaultBoolValue property value. Default value for boolean type items, if specified by the app developer
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDefaultBoolValue() {
@@ -76,7 +76,7 @@ public class AndroidForWorkAppConfigurationSchemaItem implements AdditionalDataH
     }
     /**
      * Gets the defaultIntValue property value. Default value for integer type items, if specified by the app developer
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getDefaultIntValue() {
@@ -84,7 +84,7 @@ public class AndroidForWorkAppConfigurationSchemaItem implements AdditionalDataH
     }
     /**
      * Gets the defaultStringArrayValue property value. Default value for string array type items, if specified by the app developer
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getDefaultStringArrayValue() {
@@ -92,7 +92,7 @@ public class AndroidForWorkAppConfigurationSchemaItem implements AdditionalDataH
     }
     /**
      * Gets the defaultStringValue property value. Default value for string type items, if specified by the app developer
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDefaultStringValue() {
@@ -100,7 +100,7 @@ public class AndroidForWorkAppConfigurationSchemaItem implements AdditionalDataH
     }
     /**
      * Gets the description property value. Description of what the item controls within the application
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -108,7 +108,7 @@ public class AndroidForWorkAppConfigurationSchemaItem implements AdditionalDataH
     }
     /**
      * Gets the displayName property value. Human readable name
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -116,7 +116,7 @@ public class AndroidForWorkAppConfigurationSchemaItem implements AdditionalDataH
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -135,7 +135,7 @@ public class AndroidForWorkAppConfigurationSchemaItem implements AdditionalDataH
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -143,7 +143,7 @@ public class AndroidForWorkAppConfigurationSchemaItem implements AdditionalDataH
     }
     /**
      * Gets the schemaItemKey property value. Unique key the application uses to identify the item
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSchemaItemKey() {
@@ -151,7 +151,7 @@ public class AndroidForWorkAppConfigurationSchemaItem implements AdditionalDataH
     }
     /**
      * Gets the selections property value. List of human readable name/value pairs for the valid values that can be set for this item (Choice and Multiselect items only)
-     * @return a java.util.List<KeyValuePair>
+     * @return a {@link java.util.List<KeyValuePair>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyValuePair> getSelections() {

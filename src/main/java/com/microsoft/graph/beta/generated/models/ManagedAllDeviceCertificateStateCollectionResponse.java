@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagedAllDeviceCertificateStateCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * Instantiates a new ManagedAllDeviceCertificateStateCollectionResponse and sets the default values.
+     * Instantiates a new {@link ManagedAllDeviceCertificateStateCollectionResponse} and sets the default values.
      */
     public ManagedAllDeviceCertificateStateCollectionResponse() {
         super();
@@ -17,7 +17,7 @@ public class ManagedAllDeviceCertificateStateCollectionResponse extends BaseColl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ManagedAllDeviceCertificateStateCollectionResponse
+     * @return a {@link ManagedAllDeviceCertificateStateCollectionResponse}
      */
     @jakarta.annotation.Nonnull
     public static ManagedAllDeviceCertificateStateCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class ManagedAllDeviceCertificateStateCollectionResponse extends BaseColl
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -36,7 +36,7 @@ public class ManagedAllDeviceCertificateStateCollectionResponse extends BaseColl
     }
     /**
      * Gets the value property value. The value property
-     * @return a java.util.List<ManagedAllDeviceCertificateState>
+     * @return a {@link java.util.List<ManagedAllDeviceCertificateState>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedAllDeviceCertificateState> getValue() {

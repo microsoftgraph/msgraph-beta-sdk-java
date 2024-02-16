@@ -20,7 +20,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GetShiftWorkCloudPcAccessStateRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new GetShiftWorkCloudPcAccessStateRequestBuilder and sets the default values.
+     * Instantiates a new {@link GetShiftWorkCloudPcAccessStateRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -28,7 +28,7 @@ public class GetShiftWorkCloudPcAccessStateRequestBuilder extends BaseRequestBui
         super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/cloudPCs/{cloudPC%2Did}/getShiftWorkCloudPcAccessState()", pathParameters);
     }
     /**
-     * Instantiates a new GetShiftWorkCloudPcAccessStateRequestBuilder and sets the default values.
+     * Instantiates a new {@link GetShiftWorkCloudPcAccessStateRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -37,7 +37,8 @@ public class GetShiftWorkCloudPcAccessStateRequestBuilder extends BaseRequestBui
     }
     /**
      * Invoke function getShiftWorkCloudPcAccessState
-     * @return a ShiftWorkCloudPcAccessState
+     * @return a {@link ShiftWorkCloudPcAccessState}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The getShiftWorkCloudPcAccessState API is deprecated and will stop returning data on Dec 31, 2023. Please use the new getFrontlineCloudPcAccessState API as of 2023-08/getShiftWorkCloudPcAccessState
      */
@@ -49,7 +50,8 @@ public class GetShiftWorkCloudPcAccessStateRequestBuilder extends BaseRequestBui
     /**
      * Invoke function getShiftWorkCloudPcAccessState
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a ShiftWorkCloudPcAccessState
+     * @return a {@link ShiftWorkCloudPcAccessState}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The getShiftWorkCloudPcAccessState API is deprecated and will stop returning data on Dec 31, 2023. Please use the new getFrontlineCloudPcAccessState API as of 2023-08/getShiftWorkCloudPcAccessState
      */
@@ -58,13 +60,12 @@ public class GetShiftWorkCloudPcAccessStateRequestBuilder extends BaseRequestBui
     public ShiftWorkCloudPcAccessState get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.sendEnum(requestInfo, errorMapping, ShiftWorkCloudPcAccessState::forValue);
     }
     /**
      * Invoke function getShiftWorkCloudPcAccessState
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      * The getShiftWorkCloudPcAccessState API is deprecated and will stop returning data on Dec 31, 2023. Please use the new getFrontlineCloudPcAccessState API as of 2023-08/getShiftWorkCloudPcAccessState
      */
@@ -76,7 +77,7 @@ public class GetShiftWorkCloudPcAccessStateRequestBuilder extends BaseRequestBui
     /**
      * Invoke function getShiftWorkCloudPcAccessState
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      * The getShiftWorkCloudPcAccessState API is deprecated and will stop returning data on Dec 31, 2023. Please use the new getFrontlineCloudPcAccessState API as of 2023-08/getShiftWorkCloudPcAccessState
      */
@@ -91,7 +92,7 @@ public class GetShiftWorkCloudPcAccessStateRequestBuilder extends BaseRequestBui
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a GetShiftWorkCloudPcAccessStateRequestBuilder
+     * @return a {@link GetShiftWorkCloudPcAccessStateRequestBuilder}
      * @deprecated
      * The getShiftWorkCloudPcAccessState API is deprecated and will stop returning data on Dec 31, 2023. Please use the new getFrontlineCloudPcAccessState API as of 2023-08/getShiftWorkCloudPcAccessState
      */

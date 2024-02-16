@@ -26,6 +26,7 @@ import java.util.Objects;
 public class ImpactedResourceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the complete method.
+     * @return a {@link CompleteRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CompleteRequestBuilder complete() {
@@ -33,6 +34,7 @@ public class ImpactedResourceItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the dismiss method.
+     * @return a {@link DismissRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DismissRequestBuilder dismiss() {
@@ -40,6 +42,7 @@ public class ImpactedResourceItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the postpone method.
+     * @return a {@link PostponeRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PostponeRequestBuilder postpone() {
@@ -47,13 +50,14 @@ public class ImpactedResourceItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the reactivate method.
+     * @return a {@link ReactivateRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ReactivateRequestBuilder reactivate() {
         return new ReactivateRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new ImpactedResourceItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link ImpactedResourceItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -61,7 +65,7 @@ public class ImpactedResourceItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/directory/impactedResources/{impactedResource%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new ImpactedResourceItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link ImpactedResourceItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -70,6 +74,7 @@ public class ImpactedResourceItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Delete navigation property impactedResources for directory
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete() {
         delete(null);
@@ -77,17 +82,18 @@ public class ImpactedResourceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property impactedResources for directory
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Get impactedResources from directory
-     * @return a ImpactedResource
+     * @return a {@link ImpactedResource}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public ImpactedResource get() {
@@ -96,20 +102,21 @@ public class ImpactedResourceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get impactedResources from directory
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a ImpactedResource
+     * @return a {@link ImpactedResource}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public ImpactedResource get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, ImpactedResource::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property impactedResources in directory
      * @param body The request body
-     * @return a ImpactedResource
+     * @return a {@link ImpactedResource}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public ImpactedResource patch(@jakarta.annotation.Nonnull final ImpactedResource body) {
@@ -119,20 +126,20 @@ public class ImpactedResourceItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property impactedResources in directory
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a ImpactedResource
+     * @return a {@link ImpactedResource}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public ImpactedResource patch(@jakarta.annotation.Nonnull final ImpactedResource body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, ImpactedResource::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property impactedResources for directory
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -141,18 +148,18 @@ public class ImpactedResourceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property impactedResources for directory
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/directory/impactedResources/{impactedResource%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Get impactedResources from directory
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -161,7 +168,7 @@ public class ImpactedResourceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get impactedResources from directory
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -173,7 +180,7 @@ public class ImpactedResourceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property impactedResources in directory
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final ImpactedResource body) {
@@ -183,12 +190,12 @@ public class ImpactedResourceItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property impactedResources in directory
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final ImpactedResource body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/directory/impactedResources/{impactedResource%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -197,7 +204,7 @@ public class ImpactedResourceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a ImpactedResourceItemRequestBuilder
+     * @return a {@link ImpactedResourceItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ImpactedResourceItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -227,7 +234,7 @@ public class ImpactedResourceItemRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

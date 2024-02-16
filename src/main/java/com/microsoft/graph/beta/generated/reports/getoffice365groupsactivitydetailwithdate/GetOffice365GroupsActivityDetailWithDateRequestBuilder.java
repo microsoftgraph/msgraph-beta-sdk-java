@@ -21,7 +21,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GetOffice365GroupsActivityDetailWithDateRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new GetOffice365GroupsActivityDetailWithDateRequestBuilder and sets the default values.
+     * Instantiates a new {@link GetOffice365GroupsActivityDetailWithDateRequestBuilder} and sets the default values.
      * @param date Usage: date={date}
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
@@ -31,7 +31,7 @@ public class GetOffice365GroupsActivityDetailWithDateRequestBuilder extends Base
         this.pathParameters.put("date", date);
     }
     /**
-     * Instantiates a new GetOffice365GroupsActivityDetailWithDateRequestBuilder and sets the default values.
+     * Instantiates a new {@link GetOffice365GroupsActivityDetailWithDateRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -40,7 +40,8 @@ public class GetOffice365GroupsActivityDetailWithDateRequestBuilder extends Base
     }
     /**
      * Invoke function getOffice365GroupsActivityDetail
-     * @return a GetOffice365GroupsActivityDetailWithDateGetResponse
+     * @return a {@link GetOffice365GroupsActivityDetailWithDateGetResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public GetOffice365GroupsActivityDetailWithDateGetResponse get() {
@@ -49,19 +50,19 @@ public class GetOffice365GroupsActivityDetailWithDateRequestBuilder extends Base
     /**
      * Invoke function getOffice365GroupsActivityDetail
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a GetOffice365GroupsActivityDetailWithDateGetResponse
+     * @return a {@link GetOffice365GroupsActivityDetailWithDateGetResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public GetOffice365GroupsActivityDetailWithDateGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, GetOffice365GroupsActivityDetailWithDateGetResponse::createFromDiscriminatorValue);
     }
     /**
      * Invoke function getOffice365GroupsActivityDetail
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -70,7 +71,7 @@ public class GetOffice365GroupsActivityDetailWithDateRequestBuilder extends Base
     /**
      * Invoke function getOffice365GroupsActivityDetail
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +83,7 @@ public class GetOffice365GroupsActivityDetailWithDateRequestBuilder extends Base
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a GetOffice365GroupsActivityDetailWithDateRequestBuilder
+     * @return a {@link GetOffice365GroupsActivityDetailWithDateRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetOffice365GroupsActivityDetailWithDateRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -136,7 +137,7 @@ public class GetOffice365GroupsActivityDetailWithDateRequestBuilder extends Base
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GovernanceRoleAssignmentRequest extends Entity implements Parsable {
     /**
-     * Instantiates a new GovernanceRoleAssignmentRequest and sets the default values.
+     * Instantiates a new {@link GovernanceRoleAssignmentRequest} and sets the default values.
      */
     public GovernanceRoleAssignmentRequest() {
         super();
@@ -18,7 +18,7 @@ public class GovernanceRoleAssignmentRequest extends Entity implements Parsable 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a GovernanceRoleAssignmentRequest
+     * @return a {@link GovernanceRoleAssignmentRequest}
      */
     @jakarta.annotation.Nonnull
     public static GovernanceRoleAssignmentRequest createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class GovernanceRoleAssignmentRequest extends Entity implements Parsable 
     }
     /**
      * Gets the assignmentState property value. Required. The state of the assignment. The possible values are: Eligible (for eligible assignment),  Active (if it is directly assigned), Active (by administrators, or activated on an eligible assignment by the users).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAssignmentState() {
@@ -35,7 +35,7 @@ public class GovernanceRoleAssignmentRequest extends Entity implements Parsable 
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -57,7 +57,7 @@ public class GovernanceRoleAssignmentRequest extends Entity implements Parsable 
     }
     /**
      * Gets the linkedEligibleRoleAssignmentId property value. If this is a request for role activation, it represents the id of the eligible assignment being referred; Otherwise, the value is null.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getLinkedEligibleRoleAssignmentId() {
@@ -65,7 +65,7 @@ public class GovernanceRoleAssignmentRequest extends Entity implements Parsable 
     }
     /**
      * Gets the reason property value. A message provided by users and administrators when create the request about why it is needed.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getReason() {
@@ -73,7 +73,7 @@ public class GovernanceRoleAssignmentRequest extends Entity implements Parsable 
     }
     /**
      * Gets the requestedDateTime property value. Read-only. The request create time. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getRequestedDateTime() {
@@ -81,7 +81,7 @@ public class GovernanceRoleAssignmentRequest extends Entity implements Parsable 
     }
     /**
      * Gets the resource property value. Read-only. The resource that the request aims to.
-     * @return a GovernanceResource
+     * @return a {@link GovernanceResource}
      */
     @jakarta.annotation.Nullable
     public GovernanceResource getResource() {
@@ -89,7 +89,7 @@ public class GovernanceRoleAssignmentRequest extends Entity implements Parsable 
     }
     /**
      * Gets the resourceId property value. Required. The unique identifier of the Azure resource that is associated with the role assignment request. Azure resources can include subscriptions, resource groups, virtual machines, and SQL databases.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getResourceId() {
@@ -97,7 +97,7 @@ public class GovernanceRoleAssignmentRequest extends Entity implements Parsable 
     }
     /**
      * Gets the roleDefinition property value. Read-only. The role definition that the request aims to.
-     * @return a GovernanceRoleDefinition
+     * @return a {@link GovernanceRoleDefinition}
      */
     @jakarta.annotation.Nullable
     public GovernanceRoleDefinition getRoleDefinition() {
@@ -105,7 +105,7 @@ public class GovernanceRoleAssignmentRequest extends Entity implements Parsable 
     }
     /**
      * Gets the roleDefinitionId property value. Required. The identifier of the Azure role definition that the role assignment request is associated with.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRoleDefinitionId() {
@@ -113,7 +113,7 @@ public class GovernanceRoleAssignmentRequest extends Entity implements Parsable 
     }
     /**
      * Gets the schedule property value. The schedule object of the role assignment request.
-     * @return a GovernanceSchedule
+     * @return a {@link GovernanceSchedule}
      */
     @jakarta.annotation.Nullable
     public GovernanceSchedule getSchedule() {
@@ -121,7 +121,7 @@ public class GovernanceRoleAssignmentRequest extends Entity implements Parsable 
     }
     /**
      * Gets the status property value. The status of the role assignment request.
-     * @return a GovernanceRoleAssignmentRequestStatus
+     * @return a {@link GovernanceRoleAssignmentRequestStatus}
      */
     @jakarta.annotation.Nullable
     public GovernanceRoleAssignmentRequestStatus getStatus() {
@@ -129,7 +129,7 @@ public class GovernanceRoleAssignmentRequest extends Entity implements Parsable 
     }
     /**
      * Gets the subject property value. Read-only. The user/group principal.
-     * @return a GovernanceSubject
+     * @return a {@link GovernanceSubject}
      */
     @jakarta.annotation.Nullable
     public GovernanceSubject getSubject() {
@@ -137,7 +137,7 @@ public class GovernanceRoleAssignmentRequest extends Entity implements Parsable 
     }
     /**
      * Gets the subjectId property value. Required. The unique identifier of the principal or subject that the role assignment request is associated with. Principals can be users, groups, or service principals.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSubjectId() {
@@ -145,7 +145,7 @@ public class GovernanceRoleAssignmentRequest extends Entity implements Parsable 
     }
     /**
      * Gets the type property value. Required. Representing the type of the operation on the role assignment. The possible values are: AdminAdd , UserAdd , AdminUpdate , AdminRemove , UserRemove , UserExtend , AdminExtend , UserRenew , AdminRenew.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getType() {

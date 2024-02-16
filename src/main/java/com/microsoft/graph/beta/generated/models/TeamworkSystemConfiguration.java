@@ -19,7 +19,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Backed
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new TeamworkSystemConfiguration and sets the default values.
+     * Instantiates a new {@link TeamworkSystemConfiguration} and sets the default values.
      */
     public TeamworkSystemConfiguration() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Backed
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TeamworkSystemConfiguration
+     * @return a {@link TeamworkSystemConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static TeamworkSystemConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -50,7 +50,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -58,7 +58,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the dateTimeConfiguration property value. The date and time configurations for a device.
-     * @return a TeamworkDateTimeConfiguration
+     * @return a {@link TeamworkDateTimeConfiguration}
      */
     @jakarta.annotation.Nullable
     public TeamworkDateTimeConfiguration getDateTimeConfiguration() {
@@ -66,7 +66,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the defaultPassword property value. The default password for the device. Write-Only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDefaultPassword() {
@@ -74,7 +74,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the deviceLockTimeout property value. The device lock timeout in seconds.
-     * @return a PeriodAndDuration
+     * @return a {@link PeriodAndDuration}
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getDeviceLockTimeout() {
@@ -82,7 +82,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Backed
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -104,7 +104,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the isDeviceLockEnabled property value. True if the device lock is enabled.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDeviceLockEnabled() {
@@ -112,7 +112,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the isLoggingEnabled property value. True if logging is enabled.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsLoggingEnabled() {
@@ -120,7 +120,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the isPowerSavingEnabled property value. True if power saving is enabled.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsPowerSavingEnabled() {
@@ -128,7 +128,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the isScreenCaptureEnabled property value. True if screen capture is enabled.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsScreenCaptureEnabled() {
@@ -136,7 +136,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the isSilentModeEnabled property value. True if silent mode is enabled.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsSilentModeEnabled() {
@@ -144,7 +144,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the language property value. The language option for the device.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getLanguage() {
@@ -152,7 +152,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the lockPin property value. The pin that unlocks the device. Write-Only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getLockPin() {
@@ -160,7 +160,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the loggingLevel property value. The logging level for the device.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getLoggingLevel() {
@@ -168,7 +168,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the networkConfiguration property value. The network configuration for the device.
-     * @return a TeamworkNetworkConfiguration
+     * @return a {@link TeamworkNetworkConfiguration}
      */
     @jakarta.annotation.Nullable
     public TeamworkNetworkConfiguration getNetworkConfiguration() {
@@ -176,7 +176,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {

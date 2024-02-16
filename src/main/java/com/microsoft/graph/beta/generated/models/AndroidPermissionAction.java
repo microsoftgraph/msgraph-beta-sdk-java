@@ -21,7 +21,7 @@ public class AndroidPermissionAction implements AdditionalDataHolder, BackedMode
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new AndroidPermissionAction and sets the default values.
+     * Instantiates a new {@link AndroidPermissionAction} and sets the default values.
      */
     public AndroidPermissionAction() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -30,7 +30,7 @@ public class AndroidPermissionAction implements AdditionalDataHolder, BackedMode
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AndroidPermissionAction
+     * @return a {@link AndroidPermissionAction}
      */
     @jakarta.annotation.Nonnull
     public static AndroidPermissionAction createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class AndroidPermissionAction implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the action property value. Android action taken when an app requests a dangerous permission.
-     * @return a AndroidPermissionActionType
+     * @return a {@link AndroidPermissionActionType}
      */
     @jakarta.annotation.Nullable
     public AndroidPermissionActionType getAction() {
@@ -47,7 +47,7 @@ public class AndroidPermissionAction implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -60,7 +60,7 @@ public class AndroidPermissionAction implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -68,7 +68,7 @@ public class AndroidPermissionAction implements AdditionalDataHolder, BackedMode
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -80,7 +80,7 @@ public class AndroidPermissionAction implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -88,7 +88,7 @@ public class AndroidPermissionAction implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the permission property value. Android permission string, defined in the official Android documentation.  Example 'android.permission.READ_CONTACTS'.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPermission() {

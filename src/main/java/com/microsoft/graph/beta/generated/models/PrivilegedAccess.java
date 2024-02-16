@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrivilegedAccess extends Entity implements Parsable {
     /**
-     * Instantiates a new PrivilegedAccess and sets the default values.
+     * Instantiates a new {@link PrivilegedAccess} and sets the default values.
      */
     public PrivilegedAccess() {
         super();
@@ -17,7 +17,7 @@ public class PrivilegedAccess extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PrivilegedAccess
+     * @return a {@link PrivilegedAccess}
      */
     @jakarta.annotation.Nonnull
     public static PrivilegedAccess createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class PrivilegedAccess extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name of the provider managed by PIM.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -34,7 +34,7 @@ public class PrivilegedAccess extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -49,7 +49,7 @@ public class PrivilegedAccess extends Entity implements Parsable {
     }
     /**
      * Gets the resources property value. A collection of resources for the provider.
-     * @return a java.util.List<GovernanceResource>
+     * @return a {@link java.util.List<GovernanceResource>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<GovernanceResource> getResources() {
@@ -57,7 +57,7 @@ public class PrivilegedAccess extends Entity implements Parsable {
     }
     /**
      * Gets the roleAssignmentRequests property value. A collection of role assignment requests for the provider.
-     * @return a java.util.List<GovernanceRoleAssignmentRequest>
+     * @return a {@link java.util.List<GovernanceRoleAssignmentRequest>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<GovernanceRoleAssignmentRequest> getRoleAssignmentRequests() {
@@ -65,7 +65,7 @@ public class PrivilegedAccess extends Entity implements Parsable {
     }
     /**
      * Gets the roleAssignments property value. A collection of role assignments for the provider.
-     * @return a java.util.List<GovernanceRoleAssignment>
+     * @return a {@link java.util.List<GovernanceRoleAssignment>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<GovernanceRoleAssignment> getRoleAssignments() {
@@ -73,7 +73,7 @@ public class PrivilegedAccess extends Entity implements Parsable {
     }
     /**
      * Gets the roleDefinitions property value. A collection of role definitions for the provider.
-     * @return a java.util.List<GovernanceRoleDefinition>
+     * @return a {@link java.util.List<GovernanceRoleDefinition>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<GovernanceRoleDefinition> getRoleDefinitions() {
@@ -81,7 +81,7 @@ public class PrivilegedAccess extends Entity implements Parsable {
     }
     /**
      * Gets the roleSettings property value. A collection of role settings for the provider.
-     * @return a java.util.List<GovernanceRoleSetting>
+     * @return a {@link java.util.List<GovernanceRoleSetting>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<GovernanceRoleSetting> getRoleSettings() {

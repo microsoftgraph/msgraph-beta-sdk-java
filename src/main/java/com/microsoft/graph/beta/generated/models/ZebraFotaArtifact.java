@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ZebraFotaArtifact extends Entity implements Parsable {
     /**
-     * Instantiates a new ZebraFotaArtifact and sets the default values.
+     * Instantiates a new {@link ZebraFotaArtifact} and sets the default values.
      */
     public ZebraFotaArtifact() {
         super();
@@ -20,7 +20,7 @@ public class ZebraFotaArtifact extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ZebraFotaArtifact
+     * @return a {@link ZebraFotaArtifact}
      */
     @jakarta.annotation.Nonnull
     public static ZebraFotaArtifact createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -29,7 +29,7 @@ public class ZebraFotaArtifact extends Entity implements Parsable {
     }
     /**
      * Gets the boardSupportPackageVersion property value. The version of the Board Support Package (BSP. E.g.: 01.18.02.00)
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getBoardSupportPackageVersion() {
@@ -37,7 +37,7 @@ public class ZebraFotaArtifact extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. Artifact description. (e.g.: `LifeGuard Update 98 (released 24-September-2021)
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -45,7 +45,7 @@ public class ZebraFotaArtifact extends Entity implements Parsable {
     }
     /**
      * Gets the deviceModel property value. Applicable device model (e.g.: TC8300)
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceModel() {
@@ -53,7 +53,7 @@ public class ZebraFotaArtifact extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -68,7 +68,7 @@ public class ZebraFotaArtifact extends Entity implements Parsable {
     }
     /**
      * Gets the osVersion property value. Artifact OS version (e.g.: 8.1.0)
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOsVersion() {
@@ -76,7 +76,7 @@ public class ZebraFotaArtifact extends Entity implements Parsable {
     }
     /**
      * Gets the patchVersion property value. Artifact patch version (e.g.: U00)
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPatchVersion() {
@@ -84,7 +84,7 @@ public class ZebraFotaArtifact extends Entity implements Parsable {
     }
     /**
      * Gets the releaseNotesUrl property value. Artifact release notes URL (e.g.: https://www.zebra.com/<filename.pdf>)
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getReleaseNotesUrl() {

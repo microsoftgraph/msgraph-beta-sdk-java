@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementIntentUserStateSummary extends Entity implements Parsable {
     /**
-     * Instantiates a new DeviceManagementIntentUserStateSummary and sets the default values.
+     * Instantiates a new {@link DeviceManagementIntentUserStateSummary} and sets the default values.
      */
     public DeviceManagementIntentUserStateSummary() {
         super();
@@ -20,7 +20,7 @@ public class DeviceManagementIntentUserStateSummary extends Entity implements Pa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceManagementIntentUserStateSummary
+     * @return a {@link DeviceManagementIntentUserStateSummary}
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementIntentUserStateSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -29,7 +29,7 @@ public class DeviceManagementIntentUserStateSummary extends Entity implements Pa
     }
     /**
      * Gets the conflictCount property value. Number of users in conflict
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getConflictCount() {
@@ -37,7 +37,7 @@ public class DeviceManagementIntentUserStateSummary extends Entity implements Pa
     }
     /**
      * Gets the errorCount property value. Number of error users
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getErrorCount() {
@@ -45,7 +45,7 @@ public class DeviceManagementIntentUserStateSummary extends Entity implements Pa
     }
     /**
      * Gets the failedCount property value. Number of failed users
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getFailedCount() {
@@ -53,7 +53,7 @@ public class DeviceManagementIntentUserStateSummary extends Entity implements Pa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -67,7 +67,7 @@ public class DeviceManagementIntentUserStateSummary extends Entity implements Pa
     }
     /**
      * Gets the notApplicableCount property value. Number of not applicable users
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getNotApplicableCount() {
@@ -75,7 +75,7 @@ public class DeviceManagementIntentUserStateSummary extends Entity implements Pa
     }
     /**
      * Gets the successCount property value. Number of succeeded users
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getSuccessCount() {

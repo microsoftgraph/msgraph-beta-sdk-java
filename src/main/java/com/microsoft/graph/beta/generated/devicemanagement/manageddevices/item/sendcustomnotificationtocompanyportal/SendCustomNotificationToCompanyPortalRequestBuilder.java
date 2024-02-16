@@ -19,7 +19,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SendCustomNotificationToCompanyPortalRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new SendCustomNotificationToCompanyPortalRequestBuilder and sets the default values.
+     * Instantiates a new {@link SendCustomNotificationToCompanyPortalRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -27,7 +27,7 @@ public class SendCustomNotificationToCompanyPortalRequestBuilder extends BaseReq
         super(requestAdapter, "{+baseurl}/deviceManagement/managedDevices/{managedDevice%2Did}/sendCustomNotificationToCompanyPortal", pathParameters);
     }
     /**
-     * Instantiates a new SendCustomNotificationToCompanyPortalRequestBuilder and sets the default values.
+     * Instantiates a new {@link SendCustomNotificationToCompanyPortalRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -37,6 +37,7 @@ public class SendCustomNotificationToCompanyPortalRequestBuilder extends BaseReq
     /**
      * Invoke action sendCustomNotificationToCompanyPortal
      * @param body The request body
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void post(@jakarta.annotation.Nonnull final SendCustomNotificationToCompanyPortalPostRequestBody body) {
         post(body, null);
@@ -45,19 +46,19 @@ public class SendCustomNotificationToCompanyPortalRequestBuilder extends BaseReq
      * Invoke action sendCustomNotificationToCompanyPortal
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void post(@jakarta.annotation.Nonnull final SendCustomNotificationToCompanyPortalPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Invoke action sendCustomNotificationToCompanyPortal
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final SendCustomNotificationToCompanyPortalPostRequestBody body) {
@@ -67,7 +68,7 @@ public class SendCustomNotificationToCompanyPortalRequestBuilder extends BaseReq
      * Invoke action sendCustomNotificationToCompanyPortal
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final SendCustomNotificationToCompanyPortalPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -81,7 +82,7 @@ public class SendCustomNotificationToCompanyPortalRequestBuilder extends BaseReq
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a SendCustomNotificationToCompanyPortalRequestBuilder
+     * @return a {@link SendCustomNotificationToCompanyPortalRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SendCustomNotificationToCompanyPortalRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

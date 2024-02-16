@@ -11,7 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UpdatePolicy extends Entity implements Parsable {
     /**
-     * Instantiates a new UpdatePolicy and sets the default values.
+     * Instantiates a new {@link UpdatePolicy} and sets the default values.
      */
     public UpdatePolicy() {
         super();
@@ -19,7 +19,7 @@ public class UpdatePolicy extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UpdatePolicy
+     * @return a {@link UpdatePolicy}
      */
     @jakarta.annotation.Nonnull
     public static UpdatePolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class UpdatePolicy extends Entity implements Parsable {
     }
     /**
      * Gets the audience property value. Specifies the audience to target.
-     * @return a DeploymentAudience
+     * @return a {@link DeploymentAudience}
      */
     @jakarta.annotation.Nullable
     public DeploymentAudience getAudience() {
@@ -36,7 +36,7 @@ public class UpdatePolicy extends Entity implements Parsable {
     }
     /**
      * Gets the complianceChangeRules property value. Rules for governing the automatic creation of compliance changes.
-     * @return a java.util.List<ComplianceChangeRule>
+     * @return a {@link java.util.List<ComplianceChangeRule>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ComplianceChangeRule> getComplianceChangeRules() {
@@ -44,7 +44,7 @@ public class UpdatePolicy extends Entity implements Parsable {
     }
     /**
      * Gets the complianceChanges property value. Compliance changes like content approvals which result in the automatic creation of deployments using the audience and deploymentSettings of the policy.
-     * @return a java.util.List<ComplianceChange>
+     * @return a {@link java.util.List<ComplianceChange>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ComplianceChange> getComplianceChanges() {
@@ -52,7 +52,7 @@ public class UpdatePolicy extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. The date and time when the update policy was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -60,7 +60,7 @@ public class UpdatePolicy extends Entity implements Parsable {
     }
     /**
      * Gets the deploymentSettings property value. Settings for governing how to deploy content.
-     * @return a DeploymentSettings
+     * @return a {@link DeploymentSettings}
      */
     @jakarta.annotation.Nullable
     public DeploymentSettings getDeploymentSettings() {
@@ -68,7 +68,7 @@ public class UpdatePolicy extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

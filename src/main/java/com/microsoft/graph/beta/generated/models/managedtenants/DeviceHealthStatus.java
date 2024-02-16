@@ -11,7 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceHealthStatus extends Entity implements Parsable {
     /**
-     * Instantiates a new DeviceHealthStatus and sets the default values.
+     * Instantiates a new {@link DeviceHealthStatus} and sets the default values.
      */
     public DeviceHealthStatus() {
         super();
@@ -19,7 +19,7 @@ public class DeviceHealthStatus extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceHealthStatus
+     * @return a {@link DeviceHealthStatus}
      */
     @jakarta.annotation.Nonnull
     public static DeviceHealthStatus createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class DeviceHealthStatus extends Entity implements Parsable {
     }
     /**
      * Gets the blueScreenCount property value. The blueScreenCount property
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getBlueScreenCount() {
@@ -36,7 +36,7 @@ public class DeviceHealthStatus extends Entity implements Parsable {
     }
     /**
      * Gets the bootTotalDurationInSeconds property value. The bootTotalDurationInSeconds property
-     * @return a Double
+     * @return a {@link Double}
      */
     @jakarta.annotation.Nullable
     public Double getBootTotalDurationInSeconds() {
@@ -44,7 +44,7 @@ public class DeviceHealthStatus extends Entity implements Parsable {
     }
     /**
      * Gets the deviceId property value. The deviceId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceId() {
@@ -52,7 +52,7 @@ public class DeviceHealthStatus extends Entity implements Parsable {
     }
     /**
      * Gets the deviceMake property value. The deviceMake property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceMake() {
@@ -60,7 +60,7 @@ public class DeviceHealthStatus extends Entity implements Parsable {
     }
     /**
      * Gets the deviceModel property value. The deviceModel property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceModel() {
@@ -68,7 +68,7 @@ public class DeviceHealthStatus extends Entity implements Parsable {
     }
     /**
      * Gets the deviceName property value. The deviceName property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceName() {
@@ -76,7 +76,7 @@ public class DeviceHealthStatus extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -100,7 +100,7 @@ public class DeviceHealthStatus extends Entity implements Parsable {
     }
     /**
      * Gets the healthStatus property value. The healthStatus property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getHealthStatus() {
@@ -108,7 +108,7 @@ public class DeviceHealthStatus extends Entity implements Parsable {
     }
     /**
      * Gets the lastUpdatedDateTime property value. The lastUpdatedDateTime property
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastUpdatedDateTime() {
@@ -116,7 +116,7 @@ public class DeviceHealthStatus extends Entity implements Parsable {
     }
     /**
      * Gets the osVersion property value. The osVersion property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOsVersion() {
@@ -124,7 +124,7 @@ public class DeviceHealthStatus extends Entity implements Parsable {
     }
     /**
      * Gets the primaryDiskType property value. The primaryDiskType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPrimaryDiskType() {
@@ -132,7 +132,7 @@ public class DeviceHealthStatus extends Entity implements Parsable {
     }
     /**
      * Gets the restartCount property value. The restartCount property
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getRestartCount() {
@@ -140,7 +140,7 @@ public class DeviceHealthStatus extends Entity implements Parsable {
     }
     /**
      * Gets the startupPerformanceScore property value. The startupPerformanceScore property
-     * @return a Double
+     * @return a {@link Double}
      */
     @jakarta.annotation.Nullable
     public Double getStartupPerformanceScore() {
@@ -148,7 +148,7 @@ public class DeviceHealthStatus extends Entity implements Parsable {
     }
     /**
      * Gets the tenantDisplayName property value. The tenantDisplayName property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTenantDisplayName() {
@@ -156,7 +156,7 @@ public class DeviceHealthStatus extends Entity implements Parsable {
     }
     /**
      * Gets the tenantId property value. The tenantId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
@@ -164,7 +164,7 @@ public class DeviceHealthStatus extends Entity implements Parsable {
     }
     /**
      * Gets the topProcesses property value. The topProcesses property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTopProcesses() {

@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AndroidManagedStoreAppConfigurationSchema extends Entity implements Parsable {
     /**
-     * Instantiates a new AndroidManagedStoreAppConfigurationSchema and sets the default values.
+     * Instantiates a new {@link AndroidManagedStoreAppConfigurationSchema} and sets the default values.
      */
     public AndroidManagedStoreAppConfigurationSchema() {
         super();
@@ -20,7 +20,7 @@ public class AndroidManagedStoreAppConfigurationSchema extends Entity implements
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AndroidManagedStoreAppConfigurationSchema
+     * @return a {@link AndroidManagedStoreAppConfigurationSchema}
      */
     @jakarta.annotation.Nonnull
     public static AndroidManagedStoreAppConfigurationSchema createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -29,7 +29,7 @@ public class AndroidManagedStoreAppConfigurationSchema extends Entity implements
     }
     /**
      * Gets the exampleJson property value. UTF8 encoded byte array containing example JSON string conforming to this schema that demonstrates how to set the configuration for this app
-     * @return a byte[]
+     * @return a {@link byte[]}
      */
     @jakarta.annotation.Nullable
     public byte[] getExampleJson() {
@@ -37,7 +37,7 @@ public class AndroidManagedStoreAppConfigurationSchema extends Entity implements
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -49,7 +49,7 @@ public class AndroidManagedStoreAppConfigurationSchema extends Entity implements
     }
     /**
      * Gets the nestedSchemaItems property value. Collection of items each representing a named configuration option in the schema. It contains a flat list of all configuration.
-     * @return a java.util.List<AndroidManagedStoreAppConfigurationSchemaItem>
+     * @return a {@link java.util.List<AndroidManagedStoreAppConfigurationSchemaItem>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AndroidManagedStoreAppConfigurationSchemaItem> getNestedSchemaItems() {
@@ -57,7 +57,7 @@ public class AndroidManagedStoreAppConfigurationSchema extends Entity implements
     }
     /**
      * Gets the schemaItems property value. Collection of items each representing a named configuration option in the schema. It only contains the root-level configuration.
-     * @return a java.util.List<AndroidManagedStoreAppConfigurationSchemaItem>
+     * @return a {@link java.util.List<AndroidManagedStoreAppConfigurationSchemaItem>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AndroidManagedStoreAppConfigurationSchemaItem> getSchemaItems() {

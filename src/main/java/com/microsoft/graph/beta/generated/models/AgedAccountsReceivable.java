@@ -21,7 +21,7 @@ public class AgedAccountsReceivable implements AdditionalDataHolder, BackedModel
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new AgedAccountsReceivable and sets the default values.
+     * Instantiates a new {@link AgedAccountsReceivable} and sets the default values.
      */
     public AgedAccountsReceivable() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -30,7 +30,7 @@ public class AgedAccountsReceivable implements AdditionalDataHolder, BackedModel
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AgedAccountsReceivable
+     * @return a {@link AgedAccountsReceivable}
      */
     @jakarta.annotation.Nonnull
     public static AgedAccountsReceivable createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class AgedAccountsReceivable implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -52,7 +52,7 @@ public class AgedAccountsReceivable implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the agedAsOfDate property value. The agedAsOfDate property
-     * @return a LocalDate
+     * @return a {@link LocalDate}
      */
     @jakarta.annotation.Nullable
     public LocalDate getAgedAsOfDate() {
@@ -60,7 +60,7 @@ public class AgedAccountsReceivable implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -68,7 +68,7 @@ public class AgedAccountsReceivable implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the balanceDue property value. The balanceDue property
-     * @return a BigDecimal
+     * @return a {@link BigDecimal}
      */
     @jakarta.annotation.Nullable
     public BigDecimal getBalanceDue() {
@@ -76,7 +76,7 @@ public class AgedAccountsReceivable implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the currencyCode property value. The currencyCode property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCurrencyCode() {
@@ -84,7 +84,7 @@ public class AgedAccountsReceivable implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the currentAmount property value. The currentAmount property
-     * @return a BigDecimal
+     * @return a {@link BigDecimal}
      */
     @jakarta.annotation.Nullable
     public BigDecimal getCurrentAmount() {
@@ -92,7 +92,7 @@ public class AgedAccountsReceivable implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the customerId property value. The customerId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCustomerId() {
@@ -100,7 +100,7 @@ public class AgedAccountsReceivable implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the customerNumber property value. The customerNumber property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCustomerNumber() {
@@ -108,7 +108,7 @@ public class AgedAccountsReceivable implements AdditionalDataHolder, BackedModel
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -130,7 +130,7 @@ public class AgedAccountsReceivable implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the id property value. The id property
-     * @return a UUID
+     * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
     public UUID getId() {
@@ -138,7 +138,7 @@ public class AgedAccountsReceivable implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the name property value. The name property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -146,7 +146,7 @@ public class AgedAccountsReceivable implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -154,7 +154,7 @@ public class AgedAccountsReceivable implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the period1Amount property value. The period1Amount property
-     * @return a BigDecimal
+     * @return a {@link BigDecimal}
      */
     @jakarta.annotation.Nullable
     public BigDecimal getPeriod1Amount() {
@@ -162,7 +162,7 @@ public class AgedAccountsReceivable implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the period2Amount property value. The period2Amount property
-     * @return a BigDecimal
+     * @return a {@link BigDecimal}
      */
     @jakarta.annotation.Nullable
     public BigDecimal getPeriod2Amount() {
@@ -170,7 +170,7 @@ public class AgedAccountsReceivable implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the period3Amount property value. The period3Amount property
-     * @return a BigDecimal
+     * @return a {@link BigDecimal}
      */
     @jakarta.annotation.Nullable
     public BigDecimal getPeriod3Amount() {
@@ -178,7 +178,7 @@ public class AgedAccountsReceivable implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the periodLengthFilter property value. The periodLengthFilter property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPeriodLengthFilter() {

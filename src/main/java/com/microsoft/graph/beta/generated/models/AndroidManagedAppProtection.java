@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AndroidManagedAppProtection extends TargetedManagedAppProtection implements Parsable {
     /**
-     * Instantiates a new AndroidManagedAppProtection and sets the default values.
+     * Instantiates a new {@link AndroidManagedAppProtection} and sets the default values.
      */
     public AndroidManagedAppProtection() {
         super();
@@ -21,7 +21,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AndroidManagedAppProtection
+     * @return a {@link AndroidManagedAppProtection}
      */
     @jakarta.annotation.Nonnull
     public static AndroidManagedAppProtection createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     }
     /**
      * Gets the allowedAndroidDeviceManufacturers property value. Semicolon seperated list of device manufacturers allowed, as a string, for the managed app to work.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAllowedAndroidDeviceManufacturers() {
@@ -38,7 +38,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     }
     /**
      * Gets the allowedAndroidDeviceModels property value. List of device models allowed, as a string, for the managed app to work.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAllowedAndroidDeviceModels() {
@@ -46,7 +46,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     }
     /**
      * Gets the appActionIfAccountIsClockedOut property value. Defines a managed app behavior, either block or warn, if the user is clocked out (non-working time).
-     * @return a ManagedAppRemediationAction
+     * @return a {@link ManagedAppRemediationAction}
      */
     @jakarta.annotation.Nullable
     public ManagedAppRemediationAction getAppActionIfAccountIsClockedOut() {
@@ -54,7 +54,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     }
     /**
      * Gets the appActionIfAndroidDeviceManufacturerNotAllowed property value. An admin initiated action to be applied on a managed app.
-     * @return a ManagedAppRemediationAction
+     * @return a {@link ManagedAppRemediationAction}
      */
     @jakarta.annotation.Nullable
     public ManagedAppRemediationAction getAppActionIfAndroidDeviceManufacturerNotAllowed() {
@@ -62,7 +62,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     }
     /**
      * Gets the appActionIfAndroidDeviceModelNotAllowed property value. An admin initiated action to be applied on a managed app.
-     * @return a ManagedAppRemediationAction
+     * @return a {@link ManagedAppRemediationAction}
      */
     @jakarta.annotation.Nullable
     public ManagedAppRemediationAction getAppActionIfAndroidDeviceModelNotAllowed() {
@@ -70,7 +70,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     }
     /**
      * Gets the appActionIfAndroidSafetyNetAppsVerificationFailed property value. An admin initiated action to be applied on a managed app.
-     * @return a ManagedAppRemediationAction
+     * @return a {@link ManagedAppRemediationAction}
      */
     @jakarta.annotation.Nullable
     public ManagedAppRemediationAction getAppActionIfAndroidSafetyNetAppsVerificationFailed() {
@@ -78,7 +78,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     }
     /**
      * Gets the appActionIfAndroidSafetyNetDeviceAttestationFailed property value. An admin initiated action to be applied on a managed app.
-     * @return a ManagedAppRemediationAction
+     * @return a {@link ManagedAppRemediationAction}
      */
     @jakarta.annotation.Nullable
     public ManagedAppRemediationAction getAppActionIfAndroidSafetyNetDeviceAttestationFailed() {
@@ -86,7 +86,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     }
     /**
      * Gets the appActionIfDeviceLockNotSet property value. An admin initiated action to be applied on a managed app.
-     * @return a ManagedAppRemediationAction
+     * @return a {@link ManagedAppRemediationAction}
      */
     @jakarta.annotation.Nullable
     public ManagedAppRemediationAction getAppActionIfDeviceLockNotSet() {
@@ -94,7 +94,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     }
     /**
      * Gets the appActionIfDevicePasscodeComplexityLessThanHigh property value. If the device does not have a passcode of high complexity or higher, trigger the stored action.
-     * @return a ManagedAppRemediationAction
+     * @return a {@link ManagedAppRemediationAction}
      */
     @jakarta.annotation.Nullable
     public ManagedAppRemediationAction getAppActionIfDevicePasscodeComplexityLessThanHigh() {
@@ -102,7 +102,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     }
     /**
      * Gets the appActionIfDevicePasscodeComplexityLessThanLow property value. If the device does not have a passcode of low complexity or higher, trigger the stored action.
-     * @return a ManagedAppRemediationAction
+     * @return a {@link ManagedAppRemediationAction}
      */
     @jakarta.annotation.Nullable
     public ManagedAppRemediationAction getAppActionIfDevicePasscodeComplexityLessThanLow() {
@@ -110,7 +110,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     }
     /**
      * Gets the appActionIfDevicePasscodeComplexityLessThanMedium property value. If the device does not have a passcode of medium complexity or higher, trigger the stored action.
-     * @return a ManagedAppRemediationAction
+     * @return a {@link ManagedAppRemediationAction}
      */
     @jakarta.annotation.Nullable
     public ManagedAppRemediationAction getAppActionIfDevicePasscodeComplexityLessThanMedium() {
@@ -118,7 +118,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     }
     /**
      * Gets the appActionIfSamsungKnoxAttestationRequired property value. Defines the behavior of a managed app when Samsung Knox Attestation is required. Possible values are null, warn, block & wipe. If the admin does not set this action, the default is null, which indicates this setting is not configured.
-     * @return a ManagedAppRemediationAction
+     * @return a {@link ManagedAppRemediationAction}
      */
     @jakarta.annotation.Nullable
     public ManagedAppRemediationAction getAppActionIfSamsungKnoxAttestationRequired() {
@@ -126,7 +126,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     }
     /**
      * Gets the approvedKeyboards property value. If Keyboard Restriction is enabled, only keyboards in this approved list will be allowed. A key should be Android package id for a keyboard and value should be a friendly name
-     * @return a java.util.List<KeyValuePair>
+     * @return a {@link java.util.List<KeyValuePair>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyValuePair> getApprovedKeyboards() {
@@ -134,7 +134,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     }
     /**
      * Gets the apps property value. List of apps to which the policy is deployed.
-     * @return a java.util.List<ManagedMobileApp>
+     * @return a {@link java.util.List<ManagedMobileApp>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedMobileApp> getApps() {
@@ -142,7 +142,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     }
     /**
      * Gets the biometricAuthenticationBlocked property value. Indicates whether use of the biometric authentication is allowed in place of a pin if PinRequired is set to True.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getBiometricAuthenticationBlocked() {
@@ -150,7 +150,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     }
     /**
      * Gets the blockAfterCompanyPortalUpdateDeferralInDays property value. Maximum number of days Company Portal update can be deferred on the device or app access will be blocked.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getBlockAfterCompanyPortalUpdateDeferralInDays() {
@@ -158,7 +158,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     }
     /**
      * Gets the connectToVpnOnLaunch property value. Whether the app should connect to the configured VPN on launch.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getConnectToVpnOnLaunch() {
@@ -166,7 +166,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     }
     /**
      * Gets the customBrowserDisplayName property value. Friendly name of the preferred custom browser to open weblink on Android.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCustomBrowserDisplayName() {
@@ -174,7 +174,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     }
     /**
      * Gets the customBrowserPackageId property value. Unique identifier of a custom browser to open weblink on Android.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCustomBrowserPackageId() {
@@ -182,7 +182,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     }
     /**
      * Gets the customDialerAppDisplayName property value. Friendly name of a custom dialer app to click-to-open a phone number on Android.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCustomDialerAppDisplayName() {
@@ -190,7 +190,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     }
     /**
      * Gets the customDialerAppPackageId property value. PackageId of a custom dialer app to click-to-open a phone number on Android.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCustomDialerAppPackageId() {
@@ -198,7 +198,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     }
     /**
      * Gets the deployedAppCount property value. Count of apps to which the current policy is deployed.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getDeployedAppCount() {
@@ -206,7 +206,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     }
     /**
      * Gets the deploymentSummary property value. Navigation property to deployment summary of the configuration.
-     * @return a ManagedAppPolicyDeploymentSummary
+     * @return a {@link ManagedAppPolicyDeploymentSummary}
      */
     @jakarta.annotation.Nullable
     public ManagedAppPolicyDeploymentSummary getDeploymentSummary() {
@@ -214,7 +214,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     }
     /**
      * Gets the deviceLockRequired property value. Defines if any kind of lock must be required on android device
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDeviceLockRequired() {
@@ -222,7 +222,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     }
     /**
      * Gets the disableAppEncryptionIfDeviceEncryptionIsEnabled property value. When this setting is enabled, app level encryption is disabled if device level encryption is enabled
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDisableAppEncryptionIfDeviceEncryptionIsEnabled() {
@@ -230,7 +230,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     }
     /**
      * Gets the encryptAppData property value. Indicates whether application data for managed apps should be encrypted
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getEncryptAppData() {
@@ -238,7 +238,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     }
     /**
      * Gets the exemptedAppPackages property value. App packages in this list will be exempt from the policy and will be able to receive data from managed apps.
-     * @return a java.util.List<KeyValuePair>
+     * @return a {@link java.util.List<KeyValuePair>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyValuePair> getExemptedAppPackages() {
@@ -246,7 +246,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -300,7 +300,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     }
     /**
      * Gets the fingerprintAndBiometricEnabled property value. If null, this setting will be ignored. If false both fingerprints and biometrics will not be enabled. If true, both fingerprints and biometrics will be enabled.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getFingerprintAndBiometricEnabled() {
@@ -308,7 +308,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     }
     /**
      * Gets the keyboardsRestricted property value. Indicates if keyboard restriction is enabled. If enabled list of approved keyboards must be provided as well.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getKeyboardsRestricted() {
@@ -316,7 +316,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     }
     /**
      * Gets the messagingRedirectAppDisplayName property value. When a specific app redirection is enforced by protectedMessagingRedirectAppType in an App Protection Policy, this value defines the app name which is allowed to be used.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getMessagingRedirectAppDisplayName() {
@@ -324,7 +324,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     }
     /**
      * Gets the messagingRedirectAppPackageId property value. When a specific app redirection is enforced by protectedMessagingRedirectAppType in an App Protection Policy, this value defines the app package id which is allowed to be used.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getMessagingRedirectAppPackageId() {
@@ -332,7 +332,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     }
     /**
      * Gets the minimumRequiredCompanyPortalVersion property value. Minimum version of the Company portal that must be installed on the device or app access will be blocked
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getMinimumRequiredCompanyPortalVersion() {
@@ -340,7 +340,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     }
     /**
      * Gets the minimumRequiredPatchVersion property value. Define the oldest required Android security patch level a user can have to gain secure access to the app.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getMinimumRequiredPatchVersion() {
@@ -348,7 +348,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     }
     /**
      * Gets the minimumWarningCompanyPortalVersion property value. Minimum version of the Company portal that must be installed on the device or the user will receive a warning
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getMinimumWarningCompanyPortalVersion() {
@@ -356,7 +356,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     }
     /**
      * Gets the minimumWarningPatchVersion property value. Define the oldest recommended Android security patch level a user can have for secure access to the app.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getMinimumWarningPatchVersion() {
@@ -364,7 +364,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     }
     /**
      * Gets the minimumWipeCompanyPortalVersion property value. Minimum version of the Company portal that must be installed on the device or the company data on the app will be wiped
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getMinimumWipeCompanyPortalVersion() {
@@ -372,7 +372,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     }
     /**
      * Gets the minimumWipePatchVersion property value. Android security patch level  less than or equal to the specified value will wipe the managed app and the associated company data.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getMinimumWipePatchVersion() {
@@ -380,7 +380,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     }
     /**
      * Gets the requireClass3Biometrics property value. Require user to apply Class 3 Biometrics on their Android device.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getRequireClass3Biometrics() {
@@ -388,7 +388,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     }
     /**
      * Gets the requiredAndroidSafetyNetAppsVerificationType property value. An admin enforced Android SafetyNet Device Attestation requirement on a managed app.
-     * @return a AndroidManagedAppSafetyNetAppsVerificationType
+     * @return a {@link AndroidManagedAppSafetyNetAppsVerificationType}
      */
     @jakarta.annotation.Nullable
     public AndroidManagedAppSafetyNetAppsVerificationType getRequiredAndroidSafetyNetAppsVerificationType() {
@@ -396,7 +396,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     }
     /**
      * Gets the requiredAndroidSafetyNetDeviceAttestationType property value. An admin enforced Android SafetyNet Device Attestation requirement on a managed app.
-     * @return a AndroidManagedAppSafetyNetDeviceAttestationType
+     * @return a {@link AndroidManagedAppSafetyNetDeviceAttestationType}
      */
     @jakarta.annotation.Nullable
     public AndroidManagedAppSafetyNetDeviceAttestationType getRequiredAndroidSafetyNetDeviceAttestationType() {
@@ -404,7 +404,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     }
     /**
      * Gets the requiredAndroidSafetyNetEvaluationType property value. An admin enforced Android SafetyNet evaluation type requirement on a managed app.
-     * @return a AndroidManagedAppSafetyNetEvaluationType
+     * @return a {@link AndroidManagedAppSafetyNetEvaluationType}
      */
     @jakarta.annotation.Nullable
     public AndroidManagedAppSafetyNetEvaluationType getRequiredAndroidSafetyNetEvaluationType() {
@@ -412,7 +412,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     }
     /**
      * Gets the requirePinAfterBiometricChange property value. A PIN prompt will override biometric prompts if class 3 biometrics are updated on the device.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getRequirePinAfterBiometricChange() {
@@ -420,7 +420,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     }
     /**
      * Gets the screenCaptureBlocked property value. Indicates whether a managed user can take screen captures of managed apps
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getScreenCaptureBlocked() {
@@ -428,7 +428,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     }
     /**
      * Gets the warnAfterCompanyPortalUpdateDeferralInDays property value. Maximum number of days Company Portal update can be deferred on the device or the user will receive the warning
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getWarnAfterCompanyPortalUpdateDeferralInDays() {
@@ -436,7 +436,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     }
     /**
      * Gets the wipeAfterCompanyPortalUpdateDeferralInDays property value. Maximum number of days Company Portal update can be deferred on the device or the company data on the app will be wiped
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getWipeAfterCompanyPortalUpdateDeferralInDays() {

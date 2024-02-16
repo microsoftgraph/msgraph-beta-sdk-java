@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WebAccount extends ItemFacet implements Parsable {
     /**
-     * Instantiates a new WebAccount and sets the default values.
+     * Instantiates a new {@link WebAccount} and sets the default values.
      */
     public WebAccount() {
         super();
@@ -18,7 +18,7 @@ public class WebAccount extends ItemFacet implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WebAccount
+     * @return a {@link WebAccount}
      */
     @jakarta.annotation.Nonnull
     public static WebAccount createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class WebAccount extends ItemFacet implements Parsable {
     }
     /**
      * Gets the description property value. Contains the description the user has provided for the account on the service being referenced.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -35,7 +35,7 @@ public class WebAccount extends ItemFacet implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -50,7 +50,7 @@ public class WebAccount extends ItemFacet implements Parsable {
     }
     /**
      * Gets the service property value. The service property
-     * @return a ServiceInformation
+     * @return a {@link ServiceInformation}
      */
     @jakarta.annotation.Nullable
     public ServiceInformation getService() {
@@ -58,7 +58,7 @@ public class WebAccount extends ItemFacet implements Parsable {
     }
     /**
      * Gets the statusMessage property value. Contains a status message from the cloud service if provided or synchronized.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getStatusMessage() {
@@ -66,7 +66,7 @@ public class WebAccount extends ItemFacet implements Parsable {
     }
     /**
      * Gets the thumbnailUrl property value. The thumbnailUrl property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getThumbnailUrl() {
@@ -74,7 +74,7 @@ public class WebAccount extends ItemFacet implements Parsable {
     }
     /**
      * Gets the userId property value. The user name  displayed for the webaccount.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
@@ -82,7 +82,7 @@ public class WebAccount extends ItemFacet implements Parsable {
     }
     /**
      * Gets the webUrl property value. Contains a link to the user's profile on the cloud service if one exists.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getWebUrl() {

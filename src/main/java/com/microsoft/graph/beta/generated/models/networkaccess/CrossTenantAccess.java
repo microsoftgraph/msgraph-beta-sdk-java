@@ -19,7 +19,7 @@ public class CrossTenantAccess implements AdditionalDataHolder, BackedModel, Par
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new CrossTenantAccess and sets the default values.
+     * Instantiates a new {@link CrossTenantAccess} and sets the default values.
      */
     public CrossTenantAccess() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class CrossTenantAccess implements AdditionalDataHolder, BackedModel, Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CrossTenantAccess
+     * @return a {@link CrossTenantAccess}
      */
     @jakarta.annotation.Nonnull
     public static CrossTenantAccess createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class CrossTenantAccess implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -50,7 +50,7 @@ public class CrossTenantAccess implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -58,7 +58,7 @@ public class CrossTenantAccess implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the deviceCount property value. The number of devices that accessed the external tenant.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getDeviceCount() {
@@ -66,7 +66,7 @@ public class CrossTenantAccess implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -83,7 +83,7 @@ public class CrossTenantAccess implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the lastAccessDateTime property value. The timestamp of the most recent access to the external tenant.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastAccessDateTime() {
@@ -91,7 +91,7 @@ public class CrossTenantAccess implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -99,7 +99,7 @@ public class CrossTenantAccess implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the resourceTenantId property value. The tenant ID of the external tenant.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getResourceTenantId() {
@@ -107,7 +107,7 @@ public class CrossTenantAccess implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the resourceTenantName property value. The name of the external tenant.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getResourceTenantName() {
@@ -115,7 +115,7 @@ public class CrossTenantAccess implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the resourceTenantPrimaryDomain property value. The domain of the external tenant.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getResourceTenantPrimaryDomain() {
@@ -123,7 +123,7 @@ public class CrossTenantAccess implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the usageStatus property value. The usageStatus property
-     * @return a UsageStatus
+     * @return a {@link UsageStatus}
      */
     @jakarta.annotation.Nullable
     public UsageStatus getUsageStatus() {
@@ -131,7 +131,7 @@ public class CrossTenantAccess implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the userCount property value. The number of users that accessed the external tenant.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getUserCount() {

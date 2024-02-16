@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class RbacApplication extends Entity implements Parsable {
     /**
-     * Instantiates a new RbacApplication and sets the default values.
+     * Instantiates a new {@link RbacApplication} and sets the default values.
      */
     public RbacApplication() {
         super();
@@ -17,7 +17,7 @@ public class RbacApplication extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a RbacApplication
+     * @return a {@link RbacApplication}
      */
     @jakarta.annotation.Nonnull
     public static RbacApplication createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class RbacApplication extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -46,7 +46,7 @@ public class RbacApplication extends Entity implements Parsable {
     }
     /**
      * Gets the resourceNamespaces property value. The resourceNamespaces property
-     * @return a java.util.List<UnifiedRbacResourceNamespace>
+     * @return a {@link java.util.List<UnifiedRbacResourceNamespace>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnifiedRbacResourceNamespace> getResourceNamespaces() {
@@ -54,7 +54,7 @@ public class RbacApplication extends Entity implements Parsable {
     }
     /**
      * Gets the roleAssignmentApprovals property value. The roleAssignmentApprovals property
-     * @return a java.util.List<Approval>
+     * @return a {@link java.util.List<Approval>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Approval> getRoleAssignmentApprovals() {
@@ -62,7 +62,7 @@ public class RbacApplication extends Entity implements Parsable {
     }
     /**
      * Gets the roleAssignments property value. The roleAssignments property
-     * @return a java.util.List<UnifiedRoleAssignment>
+     * @return a {@link java.util.List<UnifiedRoleAssignment>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnifiedRoleAssignment> getRoleAssignments() {
@@ -70,7 +70,7 @@ public class RbacApplication extends Entity implements Parsable {
     }
     /**
      * Gets the roleAssignmentScheduleInstances property value. The roleAssignmentScheduleInstances property
-     * @return a java.util.List<UnifiedRoleAssignmentScheduleInstance>
+     * @return a {@link java.util.List<UnifiedRoleAssignmentScheduleInstance>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnifiedRoleAssignmentScheduleInstance> getRoleAssignmentScheduleInstances() {
@@ -78,7 +78,7 @@ public class RbacApplication extends Entity implements Parsable {
     }
     /**
      * Gets the roleAssignmentScheduleRequests property value. The roleAssignmentScheduleRequests property
-     * @return a java.util.List<UnifiedRoleAssignmentScheduleRequest>
+     * @return a {@link java.util.List<UnifiedRoleAssignmentScheduleRequest>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnifiedRoleAssignmentScheduleRequest> getRoleAssignmentScheduleRequests() {
@@ -86,7 +86,7 @@ public class RbacApplication extends Entity implements Parsable {
     }
     /**
      * Gets the roleAssignmentSchedules property value. The roleAssignmentSchedules property
-     * @return a java.util.List<UnifiedRoleAssignmentSchedule>
+     * @return a {@link java.util.List<UnifiedRoleAssignmentSchedule>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnifiedRoleAssignmentSchedule> getRoleAssignmentSchedules() {
@@ -94,7 +94,7 @@ public class RbacApplication extends Entity implements Parsable {
     }
     /**
      * Gets the roleDefinitions property value. The roleDefinitions property
-     * @return a java.util.List<UnifiedRoleDefinition>
+     * @return a {@link java.util.List<UnifiedRoleDefinition>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnifiedRoleDefinition> getRoleDefinitions() {
@@ -102,7 +102,7 @@ public class RbacApplication extends Entity implements Parsable {
     }
     /**
      * Gets the roleEligibilityScheduleInstances property value. The roleEligibilityScheduleInstances property
-     * @return a java.util.List<UnifiedRoleEligibilityScheduleInstance>
+     * @return a {@link java.util.List<UnifiedRoleEligibilityScheduleInstance>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnifiedRoleEligibilityScheduleInstance> getRoleEligibilityScheduleInstances() {
@@ -110,7 +110,7 @@ public class RbacApplication extends Entity implements Parsable {
     }
     /**
      * Gets the roleEligibilityScheduleRequests property value. The roleEligibilityScheduleRequests property
-     * @return a java.util.List<UnifiedRoleEligibilityScheduleRequest>
+     * @return a {@link java.util.List<UnifiedRoleEligibilityScheduleRequest>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnifiedRoleEligibilityScheduleRequest> getRoleEligibilityScheduleRequests() {
@@ -118,7 +118,7 @@ public class RbacApplication extends Entity implements Parsable {
     }
     /**
      * Gets the roleEligibilitySchedules property value. The roleEligibilitySchedules property
-     * @return a java.util.List<UnifiedRoleEligibilitySchedule>
+     * @return a {@link java.util.List<UnifiedRoleEligibilitySchedule>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnifiedRoleEligibilitySchedule> getRoleEligibilitySchedules() {
@@ -126,7 +126,7 @@ public class RbacApplication extends Entity implements Parsable {
     }
     /**
      * Gets the transitiveRoleAssignments property value. The transitiveRoleAssignments property
-     * @return a java.util.List<UnifiedRoleAssignment>
+     * @return a {@link java.util.List<UnifiedRoleAssignment>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnifiedRoleAssignment> getTransitiveRoleAssignments() {

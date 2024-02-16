@@ -34,6 +34,7 @@ import java.util.Objects;
 public class EventItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the accept method.
+     * @return a {@link AcceptRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AcceptRequestBuilder accept() {
@@ -41,6 +42,7 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the attachments property of the microsoft.graph.event entity.
+     * @return a {@link AttachmentsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AttachmentsRequestBuilder attachments() {
@@ -48,6 +50,7 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the calendar property of the microsoft.graph.event entity.
+     * @return a {@link CalendarRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CalendarRequestBuilder calendar() {
@@ -55,6 +58,7 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the cancel method.
+     * @return a {@link CancelRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CancelRequestBuilder cancel() {
@@ -62,6 +66,7 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the decline method.
+     * @return a {@link DeclineRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DeclineRequestBuilder decline() {
@@ -69,6 +74,7 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the dismissReminder method.
+     * @return a {@link DismissReminderRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DismissReminderRequestBuilder dismissReminder() {
@@ -76,6 +82,7 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the exceptionOccurrences property of the microsoft.graph.event entity.
+     * @return a {@link ExceptionOccurrencesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ExceptionOccurrencesRequestBuilder exceptionOccurrences() {
@@ -83,6 +90,7 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the extensions property of the microsoft.graph.event entity.
+     * @return a {@link ExtensionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ExtensionsRequestBuilder extensions() {
@@ -90,6 +98,7 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the forward method.
+     * @return a {@link ForwardRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ForwardRequestBuilder forward() {
@@ -97,6 +106,7 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the instances property of the microsoft.graph.event entity.
+     * @return a {@link InstancesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public InstancesRequestBuilder instances() {
@@ -104,6 +114,7 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the snoozeReminder method.
+     * @return a {@link SnoozeReminderRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SnoozeReminderRequestBuilder snoozeReminder() {
@@ -111,13 +122,14 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the tentativelyAccept method.
+     * @return a {@link TentativelyAcceptRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TentativelyAcceptRequestBuilder tentativelyAccept() {
         return new TentativelyAcceptRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new EventItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link EventItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -125,7 +137,7 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/calendarView/{event%2Did}?endDateTime={endDateTime}&startDateTime={startDateTime}{&%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new EventItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link EventItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -134,7 +146,8 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The calendar view for the calendar. Read-only. Nullable.
-     * @return a Event
+     * @return a {@link Event}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public Event get() {
@@ -143,19 +156,19 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The calendar view for the calendar. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a Event
+     * @return a {@link Event}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public Event get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, Event::createFromDiscriminatorValue);
     }
     /**
      * The calendar view for the calendar. Read-only. Nullable.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -164,7 +177,7 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The calendar view for the calendar. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -176,7 +189,7 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a EventItemRequestBuilder
+     * @return a {@link EventItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public EventItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -210,7 +223,7 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
         public String startDateTime;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

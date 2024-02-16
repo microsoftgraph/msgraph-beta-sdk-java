@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsKioskConfiguration extends DeviceConfiguration implements Parsable {
     /**
-     * Instantiates a new WindowsKioskConfiguration and sets the default values.
+     * Instantiates a new {@link WindowsKioskConfiguration} and sets the default values.
      */
     public WindowsKioskConfiguration() {
         super();
@@ -21,7 +21,7 @@ public class WindowsKioskConfiguration extends DeviceConfiguration implements Pa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WindowsKioskConfiguration
+     * @return a {@link WindowsKioskConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static WindowsKioskConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class WindowsKioskConfiguration extends DeviceConfiguration implements Pa
     }
     /**
      * Gets the edgeKioskEnablePublicBrowsing property value. Enable public browsing kiosk mode for the Microsoft Edge browser. The Default is false.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getEdgeKioskEnablePublicBrowsing() {
@@ -38,7 +38,7 @@ public class WindowsKioskConfiguration extends DeviceConfiguration implements Pa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -57,7 +57,7 @@ public class WindowsKioskConfiguration extends DeviceConfiguration implements Pa
     }
     /**
      * Gets the kioskBrowserBlockedUrlExceptions property value. Specify URLs that the kiosk browser is allowed to navigate to
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getKioskBrowserBlockedUrlExceptions() {
@@ -65,7 +65,7 @@ public class WindowsKioskConfiguration extends DeviceConfiguration implements Pa
     }
     /**
      * Gets the kioskBrowserBlockedURLs property value. Specify URLs that the kiosk browsers should not navigate to
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getKioskBrowserBlockedURLs() {
@@ -73,7 +73,7 @@ public class WindowsKioskConfiguration extends DeviceConfiguration implements Pa
     }
     /**
      * Gets the kioskBrowserDefaultUrl property value. Specify the default URL the browser should navigate to on launch.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getKioskBrowserDefaultUrl() {
@@ -81,7 +81,7 @@ public class WindowsKioskConfiguration extends DeviceConfiguration implements Pa
     }
     /**
      * Gets the kioskBrowserEnableEndSessionButton property value. Enable the kiosk browser's end session button. By default, the end session button is disabled.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getKioskBrowserEnableEndSessionButton() {
@@ -89,7 +89,7 @@ public class WindowsKioskConfiguration extends DeviceConfiguration implements Pa
     }
     /**
      * Gets the kioskBrowserEnableHomeButton property value. Enable the kiosk browser's home button. By default, the home button is disabled.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getKioskBrowserEnableHomeButton() {
@@ -97,7 +97,7 @@ public class WindowsKioskConfiguration extends DeviceConfiguration implements Pa
     }
     /**
      * Gets the kioskBrowserEnableNavigationButtons property value. Enable the kiosk browser's navigation buttons(forward/back). By default, the navigation buttons are disabled.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getKioskBrowserEnableNavigationButtons() {
@@ -105,7 +105,7 @@ public class WindowsKioskConfiguration extends DeviceConfiguration implements Pa
     }
     /**
      * Gets the kioskBrowserRestartOnIdleTimeInMinutes property value. Specify the number of minutes the session is idle until the kiosk browser restarts in a fresh state.  Valid values are 1-1440. Valid values 1 to 1440
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getKioskBrowserRestartOnIdleTimeInMinutes() {
@@ -113,7 +113,7 @@ public class WindowsKioskConfiguration extends DeviceConfiguration implements Pa
     }
     /**
      * Gets the kioskProfiles property value. This policy setting allows to define a list of Kiosk profiles for a Kiosk configuration. This collection can contain a maximum of 3 elements.
-     * @return a java.util.List<WindowsKioskProfile>
+     * @return a {@link java.util.List<WindowsKioskProfile>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<WindowsKioskProfile> getKioskProfiles() {
@@ -121,7 +121,7 @@ public class WindowsKioskConfiguration extends DeviceConfiguration implements Pa
     }
     /**
      * Gets the windowsKioskForceUpdateSchedule property value. force update schedule for Kiosk devices.
-     * @return a WindowsKioskForceUpdateSchedule
+     * @return a {@link WindowsKioskForceUpdateSchedule}
      */
     @jakarta.annotation.Nullable
     public WindowsKioskForceUpdateSchedule getWindowsKioskForceUpdateSchedule() {

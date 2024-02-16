@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Office365ActiveUserDetail extends Entity implements Parsable {
     /**
-     * Instantiates a new Office365ActiveUserDetail and sets the default values.
+     * Instantiates a new {@link Office365ActiveUserDetail} and sets the default values.
      */
     public Office365ActiveUserDetail() {
         super();
@@ -18,7 +18,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Office365ActiveUserDetail
+     * @return a {@link Office365ActiveUserDetail}
      */
     @jakarta.annotation.Nonnull
     public static Office365ActiveUserDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
     }
     /**
      * Gets the assignedProducts property value. All the products assigned for the user.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAssignedProducts() {
@@ -35,7 +35,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
     }
     /**
      * Gets the deletedDate property value. The date when the delete operation happened. Default value is 'null' when the user hasn't been deleted.
-     * @return a LocalDate
+     * @return a {@link LocalDate}
      */
     @jakarta.annotation.Nullable
     public LocalDate getDeletedDate() {
@@ -43,7 +43,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The name displayed in the address book for the user. This is usually the combination of the user's first name, middle initial, and last name. This property is required when a user is created and it can't be cleared during updates.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -51,7 +51,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
     }
     /**
      * Gets the exchangeLastActivityDate property value. The date when user last read or sent email.
-     * @return a LocalDate
+     * @return a {@link LocalDate}
      */
     @jakarta.annotation.Nullable
     public LocalDate getExchangeLastActivityDate() {
@@ -59,7 +59,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
     }
     /**
      * Gets the exchangeLicenseAssignDate property value. The last date when the user was assigned an Exchange license.
-     * @return a LocalDate
+     * @return a {@link LocalDate}
      */
     @jakarta.annotation.Nullable
     public LocalDate getExchangeLicenseAssignDate() {
@@ -67,7 +67,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -100,7 +100,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
     }
     /**
      * Gets the hasExchangeLicense property value. Whether the user has been assigned an Exchange license.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getHasExchangeLicense() {
@@ -108,7 +108,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
     }
     /**
      * Gets the hasOneDriveLicense property value. Whether the user has been assigned a OneDrive license.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getHasOneDriveLicense() {
@@ -116,7 +116,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
     }
     /**
      * Gets the hasSharePointLicense property value. Whether the user has been assigned a SharePoint license.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getHasSharePointLicense() {
@@ -124,7 +124,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
     }
     /**
      * Gets the hasSkypeForBusinessLicense property value. Whether the user has been assigned a Skype For Business license.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getHasSkypeForBusinessLicense() {
@@ -132,7 +132,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
     }
     /**
      * Gets the hasTeamsLicense property value. Whether the user has been assigned a Teams license.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getHasTeamsLicense() {
@@ -140,7 +140,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
     }
     /**
      * Gets the hasYammerLicense property value. Whether the user has been assigned a Yammer license.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getHasYammerLicense() {
@@ -148,7 +148,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
     }
     /**
      * Gets the isDeleted property value. Whether this user has been deleted or soft deleted.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDeleted() {
@@ -156,7 +156,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
     }
     /**
      * Gets the oneDriveLastActivityDate property value. The date when user last viewed or edited files, shared files internally or externally, or synced files.
-     * @return a LocalDate
+     * @return a {@link LocalDate}
      */
     @jakarta.annotation.Nullable
     public LocalDate getOneDriveLastActivityDate() {
@@ -164,7 +164,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
     }
     /**
      * Gets the oneDriveLicenseAssignDate property value. The last date when the user was assigned a OneDrive license.
-     * @return a LocalDate
+     * @return a {@link LocalDate}
      */
     @jakarta.annotation.Nullable
     public LocalDate getOneDriveLicenseAssignDate() {
@@ -172,7 +172,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
     }
     /**
      * Gets the reportRefreshDate property value. The latest date of the content.
-     * @return a LocalDate
+     * @return a {@link LocalDate}
      */
     @jakarta.annotation.Nullable
     public LocalDate getReportRefreshDate() {
@@ -180,7 +180,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
     }
     /**
      * Gets the sharePointLastActivityDate property value. The date when user last viewed or edited files, shared files internally or externally, synced files, or viewed SharePoint pages.
-     * @return a LocalDate
+     * @return a {@link LocalDate}
      */
     @jakarta.annotation.Nullable
     public LocalDate getSharePointLastActivityDate() {
@@ -188,7 +188,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
     }
     /**
      * Gets the sharePointLicenseAssignDate property value. The last date when the user was assigned a SharePoint license.
-     * @return a LocalDate
+     * @return a {@link LocalDate}
      */
     @jakarta.annotation.Nullable
     public LocalDate getSharePointLicenseAssignDate() {
@@ -196,7 +196,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
     }
     /**
      * Gets the skypeForBusinessLastActivityDate property value. The date when user last organized or participated in conferences, or joined peer-to-peer sessions.
-     * @return a LocalDate
+     * @return a {@link LocalDate}
      */
     @jakarta.annotation.Nullable
     public LocalDate getSkypeForBusinessLastActivityDate() {
@@ -204,7 +204,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
     }
     /**
      * Gets the skypeForBusinessLicenseAssignDate property value. The last date when the user was assigned a Skype For Business license.
-     * @return a LocalDate
+     * @return a {@link LocalDate}
      */
     @jakarta.annotation.Nullable
     public LocalDate getSkypeForBusinessLicenseAssignDate() {
@@ -212,7 +212,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
     }
     /**
      * Gets the teamsLastActivityDate property value. The date when user last posted messages in team channels, sent messages in private chat sessions, or participated in meetings or calls.
-     * @return a LocalDate
+     * @return a {@link LocalDate}
      */
     @jakarta.annotation.Nullable
     public LocalDate getTeamsLastActivityDate() {
@@ -220,7 +220,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
     }
     /**
      * Gets the teamsLicenseAssignDate property value. The last date when the user was assigned a Teams license.
-     * @return a LocalDate
+     * @return a {@link LocalDate}
      */
     @jakarta.annotation.Nullable
     public LocalDate getTeamsLicenseAssignDate() {
@@ -228,7 +228,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
     }
     /**
      * Gets the userPrincipalName property value. The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenants collection of verified domains. This property is required when a user is created.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
@@ -236,7 +236,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
     }
     /**
      * Gets the yammerLastActivityDate property value. The date when user last posted, read, or liked message.
-     * @return a LocalDate
+     * @return a {@link LocalDate}
      */
     @jakarta.annotation.Nullable
     public LocalDate getYammerLastActivityDate() {
@@ -244,7 +244,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
     }
     /**
      * Gets the yammerLicenseAssignDate property value. The last date when the user was assigned a Yammer license.
-     * @return a LocalDate
+     * @return a {@link LocalDate}
      */
     @jakarta.annotation.Nullable
     public LocalDate getYammerLicenseAssignDate() {

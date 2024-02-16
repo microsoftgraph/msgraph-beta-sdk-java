@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ThreatSubmissionRoot extends Entity implements Parsable {
     /**
-     * Instantiates a new ThreatSubmissionRoot and sets the default values.
+     * Instantiates a new {@link ThreatSubmissionRoot} and sets the default values.
      */
     public ThreatSubmissionRoot() {
         super();
@@ -18,7 +18,7 @@ public class ThreatSubmissionRoot extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ThreatSubmissionRoot
+     * @return a {@link ThreatSubmissionRoot}
      */
     @jakarta.annotation.Nonnull
     public static ThreatSubmissionRoot createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class ThreatSubmissionRoot extends Entity implements Parsable {
     }
     /**
      * Gets the emailThreats property value. The emailThreats property
-     * @return a java.util.List<EmailThreatSubmission>
+     * @return a {@link java.util.List<EmailThreatSubmission>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<EmailThreatSubmission> getEmailThreats() {
@@ -35,7 +35,7 @@ public class ThreatSubmissionRoot extends Entity implements Parsable {
     }
     /**
      * Gets the emailThreatSubmissionPolicies property value. The emailThreatSubmissionPolicies property
-     * @return a java.util.List<EmailThreatSubmissionPolicy>
+     * @return a {@link java.util.List<EmailThreatSubmissionPolicy>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<EmailThreatSubmissionPolicy> getEmailThreatSubmissionPolicies() {
@@ -43,7 +43,7 @@ public class ThreatSubmissionRoot extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -56,7 +56,7 @@ public class ThreatSubmissionRoot extends Entity implements Parsable {
     }
     /**
      * Gets the fileThreats property value. The fileThreats property
-     * @return a java.util.List<FileThreatSubmission>
+     * @return a {@link java.util.List<FileThreatSubmission>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<FileThreatSubmission> getFileThreats() {
@@ -64,7 +64,7 @@ public class ThreatSubmissionRoot extends Entity implements Parsable {
     }
     /**
      * Gets the urlThreats property value. The urlThreats property
-     * @return a java.util.List<UrlThreatSubmission>
+     * @return a {@link java.util.List<UrlThreatSubmission>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<UrlThreatSubmission> getUrlThreats() {

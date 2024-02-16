@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AwsActionsPermissionsDefinitionAction extends AwsPermissionsDefinitionAction implements Parsable {
     /**
-     * Instantiates a new AwsActionsPermissionsDefinitionAction and sets the default values.
+     * Instantiates a new {@link AwsActionsPermissionsDefinitionAction} and sets the default values.
      */
     public AwsActionsPermissionsDefinitionAction() {
         super();
@@ -18,7 +18,7 @@ public class AwsActionsPermissionsDefinitionAction extends AwsPermissionsDefinit
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AwsActionsPermissionsDefinitionAction
+     * @return a {@link AwsActionsPermissionsDefinitionAction}
      */
     @jakarta.annotation.Nonnull
     public static AwsActionsPermissionsDefinitionAction createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class AwsActionsPermissionsDefinitionAction extends AwsPermissionsDefinit
     }
     /**
      * Gets the assignToRoleId property value. Defines AWS statements.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAssignToRoleId() {
@@ -35,7 +35,7 @@ public class AwsActionsPermissionsDefinitionAction extends AwsPermissionsDefinit
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -46,7 +46,7 @@ public class AwsActionsPermissionsDefinitionAction extends AwsPermissionsDefinit
     }
     /**
      * Gets the statements property value. The statements property
-     * @return a java.util.List<AwsStatement>
+     * @return a {@link java.util.List<AwsStatement>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AwsStatement> getStatements() {

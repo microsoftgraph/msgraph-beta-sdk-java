@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBase implements Parsable {
     /**
-     * Instantiates a new IosDeviceFeaturesConfiguration and sets the default values.
+     * Instantiates a new {@link IosDeviceFeaturesConfiguration} and sets the default values.
      */
     public IosDeviceFeaturesConfiguration() {
         super();
@@ -21,7 +21,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a IosDeviceFeaturesConfiguration
+     * @return a {@link IosDeviceFeaturesConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static IosDeviceFeaturesConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
     }
     /**
      * Gets the assetTagTemplate property value. Asset tag information for the device, displayed on the login window and lock screen.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAssetTagTemplate() {
@@ -38,7 +38,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
     }
     /**
      * Gets the contentFilterSettings property value. Gets or sets iOS Web Content Filter settings, supervised mode only
-     * @return a IosWebContentFilterBase
+     * @return a {@link IosWebContentFilterBase}
      */
     @jakarta.annotation.Nullable
     public IosWebContentFilterBase getContentFilterSettings() {
@@ -46,7 +46,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -70,7 +70,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
     }
     /**
      * Gets the homeScreenDockIcons property value. A list of app and folders to appear on the Home Screen Dock. This collection can contain a maximum of 500 elements.
-     * @return a java.util.List<IosHomeScreenItem>
+     * @return a {@link java.util.List<IosHomeScreenItem>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<IosHomeScreenItem> getHomeScreenDockIcons() {
@@ -78,7 +78,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
     }
     /**
      * Gets the homeScreenGridHeight property value. Gets or sets the number of rows to render when configuring iOS home screen layout settings. If this value is configured, homeScreenGridWidth must be configured as well.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getHomeScreenGridHeight() {
@@ -86,7 +86,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
     }
     /**
      * Gets the homeScreenGridWidth property value. Gets or sets the number of columns to render when configuring iOS home screen layout settings. If this value is configured, homeScreenGridHeight must be configured as well.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getHomeScreenGridWidth() {
@@ -94,7 +94,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
     }
     /**
      * Gets the homeScreenPages property value. A list of pages on the Home Screen. This collection can contain a maximum of 500 elements.
-     * @return a java.util.List<IosHomeScreenPage>
+     * @return a {@link java.util.List<IosHomeScreenPage>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<IosHomeScreenPage> getHomeScreenPages() {
@@ -102,7 +102,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
     }
     /**
      * Gets the identityCertificateForClientAuthentication property value. Identity Certificate for the renewal of Kerberos ticket used in single sign-on settings.
-     * @return a IosCertificateProfileBase
+     * @return a {@link IosCertificateProfileBase}
      */
     @jakarta.annotation.Nullable
     public IosCertificateProfileBase getIdentityCertificateForClientAuthentication() {
@@ -110,7 +110,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
     }
     /**
      * Gets the iosSingleSignOnExtension property value. Gets or sets a single sign-on extension profile.
-     * @return a IosSingleSignOnExtension
+     * @return a {@link IosSingleSignOnExtension}
      */
     @jakarta.annotation.Nullable
     public IosSingleSignOnExtension getIosSingleSignOnExtension() {
@@ -118,7 +118,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
     }
     /**
      * Gets the lockScreenFootnote property value. A footnote displayed on the login window and lock screen. Available in iOS 9.3.1 and later.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getLockScreenFootnote() {
@@ -126,7 +126,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
     }
     /**
      * Gets the notificationSettings property value. Notification settings for each bundle id. Applicable to devices in supervised mode only (iOS 9.3 and later). This collection can contain a maximum of 500 elements.
-     * @return a java.util.List<IosNotificationSettings>
+     * @return a {@link java.util.List<IosNotificationSettings>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<IosNotificationSettings> getNotificationSettings() {
@@ -134,7 +134,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
     }
     /**
      * Gets the singleSignOnExtension property value. Gets or sets a single sign-on extension profile. Deprecated: use IOSSingleSignOnExtension instead.
-     * @return a SingleSignOnExtension
+     * @return a {@link SingleSignOnExtension}
      */
     @jakarta.annotation.Nullable
     public SingleSignOnExtension getSingleSignOnExtension() {
@@ -142,7 +142,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
     }
     /**
      * Gets the singleSignOnExtensionPkinitCertificate property value. PKINIT Certificate for the authentication with single sign-on extension settings.
-     * @return a IosCertificateProfileBase
+     * @return a {@link IosCertificateProfileBase}
      */
     @jakarta.annotation.Nullable
     public IosCertificateProfileBase getSingleSignOnExtensionPkinitCertificate() {
@@ -150,7 +150,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
     }
     /**
      * Gets the singleSignOnSettings property value. The Kerberos login settings that enable apps on receiving devices to authenticate smoothly.
-     * @return a IosSingleSignOnSettings
+     * @return a {@link IosSingleSignOnSettings}
      */
     @jakarta.annotation.Nullable
     public IosSingleSignOnSettings getSingleSignOnSettings() {
@@ -158,7 +158,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
     }
     /**
      * Gets the wallpaperDisplayLocation property value. An enum type for wallpaper display location specifier.
-     * @return a IosWallpaperDisplayLocation
+     * @return a {@link IosWallpaperDisplayLocation}
      */
     @jakarta.annotation.Nullable
     public IosWallpaperDisplayLocation getWallpaperDisplayLocation() {
@@ -166,7 +166,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
     }
     /**
      * Gets the wallpaperImage property value. A wallpaper image must be in either PNG or JPEG format. It requires a supervised device with iOS 8 or later version.
-     * @return a MimeContent
+     * @return a {@link MimeContent}
      */
     @jakarta.annotation.Nullable
     public MimeContent getWallpaperImage() {

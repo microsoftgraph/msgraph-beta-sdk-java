@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PlannerTaskPropertyRule extends PlannerPropertyRule implements Parsable {
     /**
-     * Instantiates a new PlannerTaskPropertyRule and sets the default values.
+     * Instantiates a new {@link PlannerTaskPropertyRule} and sets the default values.
      */
     public PlannerTaskPropertyRule() {
         super();
@@ -18,7 +18,7 @@ public class PlannerTaskPropertyRule extends PlannerPropertyRule implements Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PlannerTaskPropertyRule
+     * @return a {@link PlannerTaskPropertyRule}
      */
     @jakarta.annotation.Nonnull
     public static PlannerTaskPropertyRule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class PlannerTaskPropertyRule extends PlannerPropertyRule implements Pars
     }
     /**
      * Gets the appliedCategories property value. Rules and restrictions for applied categories. This value does not currently support overrides. Accepted values for the default rule and individual overrides are allow, block.
-     * @return a PlannerFieldRules
+     * @return a {@link PlannerFieldRules}
      */
     @jakarta.annotation.Nullable
     public PlannerFieldRules getAppliedCategories() {
@@ -35,7 +35,7 @@ public class PlannerTaskPropertyRule extends PlannerPropertyRule implements Pars
     }
     /**
      * Gets the approvalAttachment property value. The approvalAttachment property
-     * @return a PlannerFieldRules
+     * @return a {@link PlannerFieldRules}
      */
     @jakarta.annotation.Nullable
     public PlannerFieldRules getApprovalAttachment() {
@@ -43,7 +43,7 @@ public class PlannerTaskPropertyRule extends PlannerPropertyRule implements Pars
     }
     /**
      * Gets the assignments property value. Rules and restrictions for assignments. Allowed overrides are userCreated and applicationCreated. Accepted values for the default rule and individual overrides are allow, add, addSelf, addOther, remove, removeSelf, removeOther, block.
-     * @return a PlannerFieldRules
+     * @return a {@link PlannerFieldRules}
      */
     @jakarta.annotation.Nullable
     public PlannerFieldRules getAssignments() {
@@ -51,7 +51,7 @@ public class PlannerTaskPropertyRule extends PlannerPropertyRule implements Pars
     }
     /**
      * Gets the checkLists property value. Rules and restrictions for checklist. Allowed overrides are userCreated and applicationCreated. Accepted values for the default rule and individual overrides are allow, add, remove, update, check, reorder, block.
-     * @return a PlannerFieldRules
+     * @return a {@link PlannerFieldRules}
      */
     @jakarta.annotation.Nullable
     public PlannerFieldRules getCheckLists() {
@@ -59,7 +59,7 @@ public class PlannerTaskPropertyRule extends PlannerPropertyRule implements Pars
     }
     /**
      * Gets the completionRequirements property value. Rules and restrictions for completion requirements of the task. Accepted values are allow, add, remove, edit, and block.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getCompletionRequirements() {
@@ -67,7 +67,7 @@ public class PlannerTaskPropertyRule extends PlannerPropertyRule implements Pars
     }
     /**
      * Gets the delete property value. Rules and restrictions for deleting the task. Accepted values are allow and block.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getDelete() {
@@ -75,7 +75,7 @@ public class PlannerTaskPropertyRule extends PlannerPropertyRule implements Pars
     }
     /**
      * Gets the dueDate property value. Rules and restrictions for changing the due date of the task. Accepted values are allow and block.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getDueDate() {
@@ -83,7 +83,7 @@ public class PlannerTaskPropertyRule extends PlannerPropertyRule implements Pars
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -109,7 +109,7 @@ public class PlannerTaskPropertyRule extends PlannerPropertyRule implements Pars
     }
     /**
      * Gets the forms property value. The forms property
-     * @return a PlannerFieldRules
+     * @return a {@link PlannerFieldRules}
      */
     @jakarta.annotation.Nullable
     public PlannerFieldRules getForms() {
@@ -117,7 +117,7 @@ public class PlannerTaskPropertyRule extends PlannerPropertyRule implements Pars
     }
     /**
      * Gets the move property value. Rules and restrictions for moving the task between buckets or plans. Accepted values are allow, moveBetweenPlans, moveBetweenBuckets, and block.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getMove() {
@@ -125,7 +125,7 @@ public class PlannerTaskPropertyRule extends PlannerPropertyRule implements Pars
     }
     /**
      * Gets the notes property value. Rules and restrictions for changing the notes of the task. Accepted values are allow and block.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getNotes() {
@@ -133,7 +133,7 @@ public class PlannerTaskPropertyRule extends PlannerPropertyRule implements Pars
     }
     /**
      * Gets the order property value. Rules and restrictions for changing the order of the task. Accepted values are allow and block.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getOrder() {
@@ -141,7 +141,7 @@ public class PlannerTaskPropertyRule extends PlannerPropertyRule implements Pars
     }
     /**
      * Gets the percentComplete property value. Rules and restrictions for changing the completion percentage of the task. Accepted values are allow, setToComplete, overrideRequirements, setToNotStarted, setToInProgress, and block.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getPercentComplete() {
@@ -149,7 +149,7 @@ public class PlannerTaskPropertyRule extends PlannerPropertyRule implements Pars
     }
     /**
      * Gets the previewType property value. Rules and restrictions for changing the preview type of the task. Accepted values are allow and block.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getPreviewType() {
@@ -157,7 +157,7 @@ public class PlannerTaskPropertyRule extends PlannerPropertyRule implements Pars
     }
     /**
      * Gets the priority property value. Rules and restrictions for changing the priority of the task. Accepted values are allow and block.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getPriority() {
@@ -165,7 +165,7 @@ public class PlannerTaskPropertyRule extends PlannerPropertyRule implements Pars
     }
     /**
      * Gets the references property value. Rules and restrictions for references. Allowed overrides are userCreated and applicationCreated. Accepted values for the default rule and individual overrides are allow, add, remove, block.
-     * @return a PlannerFieldRules
+     * @return a {@link PlannerFieldRules}
      */
     @jakarta.annotation.Nullable
     public PlannerFieldRules getReferences() {
@@ -173,7 +173,7 @@ public class PlannerTaskPropertyRule extends PlannerPropertyRule implements Pars
     }
     /**
      * Gets the startDate property value. Rules and restrictions for changing the start date of the task. Accepted values are allow and block.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getStartDate() {
@@ -181,7 +181,7 @@ public class PlannerTaskPropertyRule extends PlannerPropertyRule implements Pars
     }
     /**
      * Gets the title property value. Rules and restrictions for changing the title of the task. Accepted values are allow and block.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getTitle() {

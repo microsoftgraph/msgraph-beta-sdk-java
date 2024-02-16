@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PlannerExternalTaskSource extends PlannerTaskCreation implements Parsable {
     /**
-     * Instantiates a new PlannerExternalTaskSource and sets the default values.
+     * Instantiates a new {@link PlannerExternalTaskSource} and sets the default values.
      */
     public PlannerExternalTaskSource() {
         super();
@@ -18,7 +18,7 @@ public class PlannerExternalTaskSource extends PlannerTaskCreation implements Pa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PlannerExternalTaskSource
+     * @return a {@link PlannerExternalTaskSource}
      */
     @jakarta.annotation.Nonnull
     public static PlannerExternalTaskSource createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class PlannerExternalTaskSource extends PlannerTaskCreation implements Pa
     }
     /**
      * Gets the contextScenarioId property value. Nullable. An identifier for the scenario associated with this external source. This should be in reverse DNS format. For example, Contoso company owned application for customer support would have a value like 'com.constoso.customerSupport'.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getContextScenarioId() {
@@ -35,7 +35,7 @@ public class PlannerExternalTaskSource extends PlannerTaskCreation implements Pa
     }
     /**
      * Gets the displayLinkType property value. Specifies how an application should display the link to the associated plannerExternalTaskSource. The possible values are: none, default.
-     * @return a PlannerExternalTaskSourceDisplayType
+     * @return a {@link PlannerExternalTaskSourceDisplayType}
      */
     @jakarta.annotation.Nullable
     public PlannerExternalTaskSourceDisplayType getDisplayLinkType() {
@@ -43,7 +43,7 @@ public class PlannerExternalTaskSource extends PlannerTaskCreation implements Pa
     }
     /**
      * Gets the displayNameSegments property value. The segments of the name of the external experience. Segments represent a hierarchical structure that allows other apps to display the relationship.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getDisplayNameSegments() {
@@ -51,7 +51,7 @@ public class PlannerExternalTaskSource extends PlannerTaskCreation implements Pa
     }
     /**
      * Gets the externalContextId property value. Nullable. The id of the external entity's containing entity or context.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getExternalContextId() {
@@ -59,7 +59,7 @@ public class PlannerExternalTaskSource extends PlannerTaskCreation implements Pa
     }
     /**
      * Gets the externalObjectId property value. Nullable. The id of the entity that an external service associates with a task.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getExternalObjectId() {
@@ -67,7 +67,7 @@ public class PlannerExternalTaskSource extends PlannerTaskCreation implements Pa
     }
     /**
      * Gets the externalObjectVersion property value. Nullable. The external Item Version for the object specified by the externalObjectId.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getExternalObjectVersion() {
@@ -75,7 +75,7 @@ public class PlannerExternalTaskSource extends PlannerTaskCreation implements Pa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -91,7 +91,7 @@ public class PlannerExternalTaskSource extends PlannerTaskCreation implements Pa
     }
     /**
      * Gets the webUrl property value. Nullable. URL of the user experience represented by the associated plannerExternalTaskSource.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getWebUrl() {

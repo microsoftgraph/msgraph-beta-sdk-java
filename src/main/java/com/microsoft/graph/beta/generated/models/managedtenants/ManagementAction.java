@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagementAction extends Entity implements Parsable {
     /**
-     * Instantiates a new ManagementAction and sets the default values.
+     * Instantiates a new {@link ManagementAction} and sets the default values.
      */
     public ManagementAction() {
         super();
@@ -18,7 +18,7 @@ public class ManagementAction extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ManagementAction
+     * @return a {@link ManagementAction}
      */
     @jakarta.annotation.Nonnull
     public static ManagementAction createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class ManagementAction extends Entity implements Parsable {
     }
     /**
      * Gets the category property value. The category property
-     * @return a ManagementCategory
+     * @return a {@link ManagementCategory}
      */
     @jakarta.annotation.Nullable
     public ManagementCategory getCategory() {
@@ -35,7 +35,7 @@ public class ManagementAction extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The description for the management action. Optional. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -43,7 +43,7 @@ public class ManagementAction extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name for the management action. Optional. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -51,7 +51,7 @@ public class ManagementAction extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -66,7 +66,7 @@ public class ManagementAction extends Entity implements Parsable {
     }
     /**
      * Gets the referenceTemplateId property value. The reference for the management template used to generate the management action. Required. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getReferenceTemplateId() {
@@ -74,7 +74,7 @@ public class ManagementAction extends Entity implements Parsable {
     }
     /**
      * Gets the referenceTemplateVersion property value. The referenceTemplateVersion property
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getReferenceTemplateVersion() {
@@ -82,7 +82,7 @@ public class ManagementAction extends Entity implements Parsable {
     }
     /**
      * Gets the workloadActions property value. The collection of workload actions associated with the management action. Required. Read-only.
-     * @return a java.util.List<WorkloadAction>
+     * @return a {@link java.util.List<WorkloadAction>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<WorkloadAction> getWorkloadActions() {

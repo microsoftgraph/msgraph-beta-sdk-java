@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GcpAuthorizationSystemResource extends AuthorizationSystemResource implements Parsable {
     /**
-     * Instantiates a new GcpAuthorizationSystemResource and sets the default values.
+     * Instantiates a new {@link GcpAuthorizationSystemResource} and sets the default values.
      */
     public GcpAuthorizationSystemResource() {
         super();
@@ -18,7 +18,7 @@ public class GcpAuthorizationSystemResource extends AuthorizationSystemResource 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a GcpAuthorizationSystemResource
+     * @return a {@link GcpAuthorizationSystemResource}
      */
     @jakarta.annotation.Nonnull
     public static GcpAuthorizationSystemResource createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class GcpAuthorizationSystemResource extends AuthorizationSystemResource 
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -37,7 +37,7 @@ public class GcpAuthorizationSystemResource extends AuthorizationSystemResource 
     }
     /**
      * Gets the service property value. The service associated with the resource in an GCP authorization system. This object is auto-expanded.
-     * @return a AuthorizationSystemTypeService
+     * @return a {@link AuthorizationSystemTypeService}
      */
     @jakarta.annotation.Nullable
     public AuthorizationSystemTypeService getService() {

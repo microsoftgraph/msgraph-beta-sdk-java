@@ -11,7 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CloudPcDeviceImage extends Entity implements Parsable {
     /**
-     * Instantiates a new CloudPcDeviceImage and sets the default values.
+     * Instantiates a new {@link CloudPcDeviceImage} and sets the default values.
      */
     public CloudPcDeviceImage() {
         super();
@@ -19,7 +19,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CloudPcDeviceImage
+     * @return a {@link CloudPcDeviceImage}
      */
     @jakarta.annotation.Nonnull
     public static CloudPcDeviceImage createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name of the associated device image. The device image display name and the version are used to uniquely identify the Cloud PC device image. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -36,7 +36,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
     }
     /**
      * Gets the errorCode property value. The error code of the status of the image that indicates why the upload failed, if applicable. Possible values are: internalServerError, sourceImageNotFound, osVersionNotSupported, sourceImageInvalid, sourceImageNotGeneralized, unknownFutureValue, vmAlreadyAzureAdJoined, paidSourceImageNotSupport, sourceImageNotSupportCustomizeVMName, sourceImageSizeExceedsLimitation. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: vmAlreadyAzureAdJoined, paidSourceImageNotSupport, sourceImageNotSupportCustomizeVMName, sourceImageSizeExceedsLimitation. Read-only.
-     * @return a CloudPcDeviceImageErrorCode
+     * @return a {@link CloudPcDeviceImageErrorCode}
      */
     @jakarta.annotation.Nullable
     public CloudPcDeviceImageErrorCode getErrorCode() {
@@ -44,7 +44,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
     }
     /**
      * Gets the expirationDate property value. The date when the image became unavailable. Read-only.
-     * @return a LocalDate
+     * @return a {@link LocalDate}
      */
     @jakarta.annotation.Nullable
     public LocalDate getExpirationDate() {
@@ -52,7 +52,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -73,7 +73,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. The data and time when the image was last modified. The timestamp represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -81,7 +81,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
     }
     /**
      * Gets the operatingSystem property value. The operating system of the image. For example, Windows 10 Enterprise. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOperatingSystem() {
@@ -89,7 +89,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
     }
     /**
      * Gets the osBuildNumber property value. The OS build version of the image. For example, 1909. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOsBuildNumber() {
@@ -97,7 +97,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
     }
     /**
      * Gets the osStatus property value. The OS status of this image. Possible values are: supported, supportedWithWarning, unknown, unknownFutureValue. The default value is unknown. Read-only.
-     * @return a CloudPcDeviceImageOsStatus
+     * @return a {@link CloudPcDeviceImageOsStatus}
      */
     @jakarta.annotation.Nullable
     public CloudPcDeviceImageOsStatus getOsStatus() {
@@ -105,7 +105,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
     }
     /**
      * Gets the scopeIds property value. The scopeIds property
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getScopeIds() {
@@ -113,7 +113,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
     }
     /**
      * Gets the sourceImageResourceId property value. The unique identifier (ID) of the source image resource on Azure. The required ID format is: '/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/images/{imageName}'. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSourceImageResourceId() {
@@ -121,7 +121,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status of the image on the Cloud PC. Possible values are: pending, ready, failed, unknownFutureValue. Read-only.
-     * @return a CloudPcDeviceImageStatus
+     * @return a {@link CloudPcDeviceImageStatus}
      */
     @jakarta.annotation.Nullable
     public CloudPcDeviceImageStatus getStatus() {
@@ -129,7 +129,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
     }
     /**
      * Gets the statusDetails property value. The statusDetails property
-     * @return a CloudPcDeviceImageStatusDetails
+     * @return a {@link CloudPcDeviceImageStatusDetails}
      */
     @jakarta.annotation.Nullable
     public CloudPcDeviceImageStatusDetails getStatusDetails() {
@@ -137,7 +137,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
     }
     /**
      * Gets the version property value. The image version. For example, 0.0.1 and 1.5.13. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getVersion() {

@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DispositionReviewStage extends Entity implements Parsable {
     /**
-     * Instantiates a new DispositionReviewStage and sets the default values.
+     * Instantiates a new {@link DispositionReviewStage} and sets the default values.
      */
     public DispositionReviewStage() {
         super();
@@ -18,7 +18,7 @@ public class DispositionReviewStage extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DispositionReviewStage
+     * @return a {@link DispositionReviewStage}
      */
     @jakarta.annotation.Nonnull
     public static DispositionReviewStage createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class DispositionReviewStage extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -39,7 +39,7 @@ public class DispositionReviewStage extends Entity implements Parsable {
     }
     /**
      * Gets the name property value. Name representing each stage within a collection.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -47,7 +47,7 @@ public class DispositionReviewStage extends Entity implements Parsable {
     }
     /**
      * Gets the reviewersEmailAddresses property value. A collection of reviewers at each stage.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getReviewersEmailAddresses() {
@@ -55,7 +55,7 @@ public class DispositionReviewStage extends Entity implements Parsable {
     }
     /**
      * Gets the stageNumber property value. The sequence number for each stage of the disposition review.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getStageNumber() {

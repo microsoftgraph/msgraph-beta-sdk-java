@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AndroidDeviceComplianceLocalActionBase extends Entity implements Parsable {
     /**
-     * Instantiates a new AndroidDeviceComplianceLocalActionBase and sets the default values.
+     * Instantiates a new {@link AndroidDeviceComplianceLocalActionBase} and sets the default values.
      */
     public AndroidDeviceComplianceLocalActionBase() {
         super();
@@ -20,7 +20,7 @@ public class AndroidDeviceComplianceLocalActionBase extends Entity implements Pa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AndroidDeviceComplianceLocalActionBase
+     * @return a {@link AndroidDeviceComplianceLocalActionBase}
      */
     @jakarta.annotation.Nonnull
     public static AndroidDeviceComplianceLocalActionBase createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class AndroidDeviceComplianceLocalActionBase extends Entity implements Pa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -47,7 +47,7 @@ public class AndroidDeviceComplianceLocalActionBase extends Entity implements Pa
     }
     /**
      * Gets the gracePeriodInMinutes property value. Number of minutes to wait till a local action is enforced. Valid values 0 to 2147483647
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getGracePeriodInMinutes() {

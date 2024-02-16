@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CartToClassAssociation extends Entity implements Parsable {
     /**
-     * Instantiates a new CartToClassAssociation and sets the default values.
+     * Instantiates a new {@link CartToClassAssociation} and sets the default values.
      */
     public CartToClassAssociation() {
         super();
@@ -21,7 +21,7 @@ public class CartToClassAssociation extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CartToClassAssociation
+     * @return a {@link CartToClassAssociation}
      */
     @jakarta.annotation.Nonnull
     public static CartToClassAssociation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class CartToClassAssociation extends Entity implements Parsable {
     }
     /**
      * Gets the classroomIds property value. Identifiers of classrooms to be associated with device carts.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getClassroomIds() {
@@ -38,7 +38,7 @@ public class CartToClassAssociation extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. DateTime the object was created.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -46,7 +46,7 @@ public class CartToClassAssociation extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. Admin provided description of the CartToClassAssociation.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -54,7 +54,7 @@ public class CartToClassAssociation extends Entity implements Parsable {
     }
     /**
      * Gets the deviceCartIds property value. Identifiers of device carts to be associated with classes.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getDeviceCartIds() {
@@ -62,7 +62,7 @@ public class CartToClassAssociation extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. Admin provided name of the device configuration.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -70,7 +70,7 @@ public class CartToClassAssociation extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -86,7 +86,7 @@ public class CartToClassAssociation extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. DateTime the object was last modified.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -94,7 +94,7 @@ public class CartToClassAssociation extends Entity implements Parsable {
     }
     /**
      * Gets the version property value. Version of the CartToClassAssociation.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getVersion() {

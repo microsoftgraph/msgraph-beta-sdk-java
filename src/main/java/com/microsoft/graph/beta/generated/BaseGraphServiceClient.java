@@ -141,6 +141,7 @@ import java.util.Objects;
 public class BaseGraphServiceClient extends BaseRequestBuilder {
     /**
      * Provides operations to manage the collection of accessReviewDecision entities.
+     * @return a {@link AccessReviewDecisionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AccessReviewDecisionsRequestBuilder accessReviewDecisions() {
@@ -148,6 +149,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of accessReview entities.
+     * @return a {@link AccessReviewsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AccessReviewsRequestBuilder accessReviews() {
@@ -155,6 +157,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of activityStatistics entities.
+     * @return a {@link ActivitystatisticsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ActivitystatisticsRequestBuilder activitystatistics() {
@@ -162,6 +165,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the admin singleton.
+     * @return a {@link AdminRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AdminRequestBuilder admin() {
@@ -169,6 +173,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of administrativeUnit entities.
+     * @return a {@link AdministrativeUnitsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AdministrativeUnitsRequestBuilder administrativeUnits() {
@@ -176,6 +181,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of agreementAcceptance entities.
+     * @return a {@link AgreementAcceptancesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AgreementAcceptancesRequestBuilder agreementAcceptances() {
@@ -183,6 +189,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of agreement entities.
+     * @return a {@link AgreementsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AgreementsRequestBuilder agreements() {
@@ -190,6 +197,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of allowedDataLocation entities.
+     * @return a {@link AllowedDataLocationsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AllowedDataLocationsRequestBuilder allowedDataLocations() {
@@ -197,6 +205,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the commsApplication singleton.
+     * @return a {@link AppRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AppRequestBuilder app() {
@@ -204,6 +213,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the appCatalogs singleton.
+     * @return a {@link AppCatalogsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AppCatalogsRequestBuilder appCatalogs() {
@@ -211,6 +221,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of application entities.
+     * @return a {@link ApplicationsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ApplicationsRequestBuilder applications() {
@@ -218,6 +229,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of applicationTemplate entities.
+     * @return a {@link ApplicationTemplatesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ApplicationTemplatesRequestBuilder applicationTemplates() {
@@ -225,6 +237,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of appRoleAssignment entities.
+     * @return a {@link AppRoleAssignmentsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AppRoleAssignmentsRequestBuilder appRoleAssignments() {
@@ -232,6 +245,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of approvalWorkflowProvider entities.
+     * @return a {@link ApprovalWorkflowProvidersRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ApprovalWorkflowProvidersRequestBuilder approvalWorkflowProviders() {
@@ -239,6 +253,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the auditLogRoot singleton.
+     * @return a {@link AuditLogsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AuditLogsRequestBuilder auditLogs() {
@@ -246,6 +261,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of authenticationMethodConfiguration entities.
+     * @return a {@link AuthenticationMethodConfigurationsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AuthenticationMethodConfigurationsRequestBuilder authenticationMethodConfigurations() {
@@ -253,6 +269,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the authenticationMethodsPolicy singleton.
+     * @return a {@link AuthenticationMethodsPolicyRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AuthenticationMethodsPolicyRequestBuilder authenticationMethodsPolicy() {
@@ -260,6 +277,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of bookingBusiness entities.
+     * @return a {@link BookingBusinessesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public BookingBusinessesRequestBuilder bookingBusinesses() {
@@ -267,6 +285,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of bookingCurrency entities.
+     * @return a {@link BookingCurrenciesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public BookingCurrenciesRequestBuilder bookingCurrencies() {
@@ -274,6 +293,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of businessFlowTemplate entities.
+     * @return a {@link BusinessFlowTemplatesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public BusinessFlowTemplatesRequestBuilder businessFlowTemplates() {
@@ -281,6 +301,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of certificateBasedAuthConfiguration entities.
+     * @return a {@link CertificateBasedAuthConfigurationRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CertificateBasedAuthConfigurationRequestBuilder certificateBasedAuthConfiguration() {
@@ -288,6 +309,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of chat entities.
+     * @return a {@link ChatsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ChatsRequestBuilder chats() {
@@ -295,6 +317,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of command entities.
+     * @return a {@link CommandsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CommandsRequestBuilder commands() {
@@ -302,6 +325,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the cloudCommunications singleton.
+     * @return a {@link CommunicationsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CommunicationsRequestBuilder communications() {
@@ -309,6 +333,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the compliance singleton.
+     * @return a {@link ComplianceRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ComplianceRequestBuilder compliance() {
@@ -316,6 +341,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of externalConnection entities.
+     * @return a {@link ConnectionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ConnectionsRequestBuilder connections() {
@@ -323,6 +349,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of orgContact entities.
+     * @return a {@link ContactsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ContactsRequestBuilder contacts() {
@@ -330,6 +357,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of contract entities.
+     * @return a {@link ContractsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ContractsRequestBuilder contracts() {
@@ -337,6 +365,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the dataClassificationService singleton.
+     * @return a {@link DataClassificationRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DataClassificationRequestBuilder dataClassification() {
@@ -344,6 +373,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of dataPolicyOperation entities.
+     * @return a {@link DataPolicyOperationsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DataPolicyOperationsRequestBuilder dataPolicyOperations() {
@@ -351,6 +381,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the deviceAppManagement singleton.
+     * @return a {@link DeviceAppManagementRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DeviceAppManagementRequestBuilder deviceAppManagement() {
@@ -358,6 +389,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of deviceLocalCredentialInfo entities.
+     * @return a {@link DeviceLocalCredentialsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DeviceLocalCredentialsRequestBuilder deviceLocalCredentials() {
@@ -365,6 +397,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the deviceManagement singleton.
+     * @return a {@link DeviceManagementRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DeviceManagementRequestBuilder deviceManagement() {
@@ -372,6 +405,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of device entities.
+     * @return a {@link DevicesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DevicesRequestBuilder devices() {
@@ -379,6 +413,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the directory singleton.
+     * @return a {@link DirectoryRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DirectoryRequestBuilder directory() {
@@ -386,6 +421,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of directoryObject entities.
+     * @return a {@link DirectoryObjectsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DirectoryObjectsRequestBuilder directoryObjects() {
@@ -393,6 +429,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of directoryRole entities.
+     * @return a {@link DirectoryRolesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DirectoryRolesRequestBuilder directoryRoles() {
@@ -400,6 +437,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of directoryRoleTemplate entities.
+     * @return a {@link DirectoryRoleTemplatesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DirectoryRoleTemplatesRequestBuilder directoryRoleTemplates() {
@@ -407,6 +445,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of directorySettingTemplate entities.
+     * @return a {@link DirectorySettingTemplatesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DirectorySettingTemplatesRequestBuilder directorySettingTemplates() {
@@ -414,6 +453,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of domainDnsRecord entities.
+     * @return a {@link DomainDnsRecordsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DomainDnsRecordsRequestBuilder domainDnsRecords() {
@@ -421,6 +461,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of domain entities.
+     * @return a {@link DomainsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DomainsRequestBuilder domains() {
@@ -428,6 +469,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of drive entities.
+     * @return a {@link DrivesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DrivesRequestBuilder drives() {
@@ -435,6 +477,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the educationRoot singleton.
+     * @return a {@link EducationRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public EducationRequestBuilder education() {
@@ -442,6 +485,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the employeeExperience singleton.
+     * @return a {@link EmployeeExperienceRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public EmployeeExperienceRequestBuilder employeeExperience() {
@@ -449,6 +493,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the external singleton.
+     * @return a {@link ExternalRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ExternalRequestBuilder external() {
@@ -456,6 +501,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of filterOperatorSchema entities.
+     * @return a {@link FilterOperatorsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public FilterOperatorsRequestBuilder filterOperators() {
@@ -463,6 +509,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the financials singleton.
+     * @return a {@link FinancialsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public FinancialsRequestBuilder financials() {
@@ -470,6 +517,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of attributeMappingFunctionSchema entities.
+     * @return a {@link FunctionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public FunctionsRequestBuilder functions() {
@@ -477,6 +525,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of governanceResource entities.
+     * @return a {@link GovernanceResourcesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GovernanceResourcesRequestBuilder governanceResources() {
@@ -484,6 +533,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of governanceRoleAssignmentRequest entities.
+     * @return a {@link GovernanceRoleAssignmentRequestsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GovernanceRoleAssignmentRequestsRequestBuilder governanceRoleAssignmentRequests() {
@@ -491,6 +541,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of governanceRoleAssignment entities.
+     * @return a {@link GovernanceRoleAssignmentsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GovernanceRoleAssignmentsRequestBuilder governanceRoleAssignments() {
@@ -498,6 +549,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of governanceRoleDefinition entities.
+     * @return a {@link GovernanceRoleDefinitionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GovernanceRoleDefinitionsRequestBuilder governanceRoleDefinitions() {
@@ -505,6 +557,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of governanceRoleSetting entities.
+     * @return a {@link GovernanceRoleSettingsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GovernanceRoleSettingsRequestBuilder governanceRoleSettings() {
@@ -512,6 +565,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of governanceSubject entities.
+     * @return a {@link GovernanceSubjectsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GovernanceSubjectsRequestBuilder governanceSubjects() {
@@ -519,6 +573,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of groupLifecyclePolicy entities.
+     * @return a {@link GroupLifecyclePoliciesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GroupLifecyclePoliciesRequestBuilder groupLifecyclePolicies() {
@@ -526,6 +581,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of group entities.
+     * @return a {@link GroupsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GroupsRequestBuilder groups() {
@@ -533,6 +589,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the identityContainer singleton.
+     * @return a {@link IdentityRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public IdentityRequestBuilder identity() {
@@ -540,6 +597,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the identityGovernance singleton.
+     * @return a {@link IdentityGovernanceRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public IdentityGovernanceRequestBuilder identityGovernance() {
@@ -547,6 +605,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the identityProtectionRoot singleton.
+     * @return a {@link IdentityProtectionRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public IdentityProtectionRequestBuilder identityProtection() {
@@ -554,6 +613,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of identityProvider entities.
+     * @return a {@link IdentityProvidersRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public IdentityProvidersRequestBuilder identityProviders() {
@@ -561,6 +621,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the informationProtection singleton.
+     * @return a {@link InformationProtectionRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public InformationProtectionRequestBuilder informationProtection() {
@@ -568,6 +629,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of invitation entities.
+     * @return a {@link InvitationsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public InvitationsRequestBuilder invitations() {
@@ -575,6 +637,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of messageEvent entities.
+     * @return a {@link MessageEventsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MessageEventsRequestBuilder messageEvents() {
@@ -582,6 +645,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of messageRecipient entities.
+     * @return a {@link MessageRecipientsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MessageRecipientsRequestBuilder messageRecipients() {
@@ -589,6 +653,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of messageTrace entities.
+     * @return a {@link MessageTracesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MessageTracesRequestBuilder messageTraces() {
@@ -596,6 +661,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of mobilityManagementPolicy entities.
+     * @return a {@link MobilityManagementPoliciesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MobilityManagementPoliciesRequestBuilder mobilityManagementPolicies() {
@@ -603,6 +669,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the monitoring singleton.
+     * @return a {@link MonitoringRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MonitoringRequestBuilder monitoring() {
@@ -610,6 +677,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the networkAccessRoot singleton.
+     * @return a {@link NetworkAccessRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public NetworkAccessRequestBuilder networkAccess() {
@@ -617,6 +685,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of oAuth2PermissionGrant entities.
+     * @return a {@link Oauth2PermissionGrantsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public Oauth2PermissionGrantsRequestBuilder oauth2PermissionGrants() {
@@ -624,6 +693,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of onPremisesPublishingProfile entities.
+     * @return a {@link OnPremisesPublishingProfilesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public OnPremisesPublishingProfilesRequestBuilder onPremisesPublishingProfiles() {
@@ -631,6 +701,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of organization entities.
+     * @return a {@link OrganizationRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public OrganizationRequestBuilder organization() {
@@ -638,6 +709,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of payloadResponse entities.
+     * @return a {@link PayloadResponseRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PayloadResponseRequestBuilder payloadResponse() {
@@ -645,6 +717,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of resourceSpecificPermissionGrant entities.
+     * @return a {@link PermissionGrantsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PermissionGrantsRequestBuilder permissionGrants() {
@@ -652,6 +725,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * The places property
+     * @return a {@link PlacesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PlacesRequestBuilder places() {
@@ -659,6 +733,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the planner singleton.
+     * @return a {@link PlannerRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PlannerRequestBuilder planner() {
@@ -666,6 +741,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the policyRoot singleton.
+     * @return a {@link PoliciesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PoliciesRequestBuilder policies() {
@@ -673,6 +749,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the print singleton.
+     * @return a {@link PrintRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PrintRequestBuilder print() {
@@ -680,6 +757,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the privacy singleton.
+     * @return a {@link PrivacyRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PrivacyRequestBuilder privacy() {
@@ -687,6 +765,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of privilegedAccess entities.
+     * @return a {@link PrivilegedAccessRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PrivilegedAccessRequestBuilder privilegedAccess() {
@@ -694,6 +773,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of privilegedApproval entities.
+     * @return a {@link PrivilegedApprovalRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PrivilegedApprovalRequestBuilder privilegedApproval() {
@@ -701,6 +781,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of privilegedOperationEvent entities.
+     * @return a {@link PrivilegedOperationEventsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PrivilegedOperationEventsRequestBuilder privilegedOperationEvents() {
@@ -708,6 +789,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of privilegedRoleAssignmentRequest entities.
+     * @return a {@link PrivilegedRoleAssignmentRequestsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PrivilegedRoleAssignmentRequestsRequestBuilder privilegedRoleAssignmentRequests() {
@@ -715,6 +797,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of privilegedRoleAssignment entities.
+     * @return a {@link PrivilegedRoleAssignmentsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PrivilegedRoleAssignmentsRequestBuilder privilegedRoleAssignments() {
@@ -722,6 +805,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of privilegedRole entities.
+     * @return a {@link PrivilegedRolesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PrivilegedRolesRequestBuilder privilegedRoles() {
@@ -729,6 +813,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of privilegedSignupStatus entities.
+     * @return a {@link PrivilegedSignupStatusRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PrivilegedSignupStatusRequestBuilder privilegedSignupStatus() {
@@ -736,6 +821,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of programControl entities.
+     * @return a {@link ProgramControlsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ProgramControlsRequestBuilder programControls() {
@@ -743,6 +829,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of programControlType entities.
+     * @return a {@link ProgramControlTypesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ProgramControlTypesRequestBuilder programControlTypes() {
@@ -750,6 +837,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of program entities.
+     * @return a {@link ProgramsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ProgramsRequestBuilder programs() {
@@ -757,6 +845,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the reportRoot singleton.
+     * @return a {@link ReportsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ReportsRequestBuilder reports() {
@@ -764,6 +853,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of riskDetection entities.
+     * @return a {@link RiskDetectionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RiskDetectionsRequestBuilder riskDetections() {
@@ -771,6 +861,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of riskyUser entities.
+     * @return a {@link RiskyUsersRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RiskyUsersRequestBuilder riskyUsers() {
@@ -778,6 +869,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the roleManagement singleton.
+     * @return a {@link RoleManagementRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RoleManagementRequestBuilder roleManagement() {
@@ -785,6 +877,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of schemaExtension entities.
+     * @return a {@link SchemaExtensionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SchemaExtensionsRequestBuilder schemaExtensions() {
@@ -792,6 +885,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of scopedRoleMembership entities.
+     * @return a {@link ScopedRoleMembershipsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ScopedRoleMembershipsRequestBuilder scopedRoleMemberships() {
@@ -799,6 +893,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the searchEntity singleton.
+     * @return a {@link SearchRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SearchRequestBuilder search() {
@@ -806,6 +901,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the security singleton.
+     * @return a {@link SecurityRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SecurityRequestBuilder security() {
@@ -813,6 +909,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of servicePrincipal entities.
+     * @return a {@link ServicePrincipalsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ServicePrincipalsRequestBuilder servicePrincipals() {
@@ -820,6 +917,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of directorySetting entities.
+     * @return a {@link SettingsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SettingsRequestBuilder settings() {
@@ -827,6 +925,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of sharedDriveItem entities.
+     * @return a {@link SharesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SharesRequestBuilder shares() {
@@ -834,6 +933,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of site entities.
+     * @return a {@link SitesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SitesRequestBuilder sites() {
@@ -841,6 +941,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the solutionsRoot singleton.
+     * @return a {@link SolutionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SolutionsRequestBuilder solutions() {
@@ -848,6 +949,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of subscribedSku entities.
+     * @return a {@link SubscribedSkusRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SubscribedSkusRequestBuilder subscribedSkus() {
@@ -855,6 +957,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of subscription entities.
+     * @return a {@link SubscriptionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SubscriptionsRequestBuilder subscriptions() {
@@ -862,6 +965,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of team entities.
+     * @return a {@link TeamsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TeamsRequestBuilder teams() {
@@ -869,6 +973,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of teamsTemplate entities.
+     * @return a {@link TeamsTemplatesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TeamsTemplatesRequestBuilder teamsTemplates() {
@@ -876,6 +981,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of teamTemplateDefinition entities.
+     * @return a {@link TeamTemplateDefinitionRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TeamTemplateDefinitionRequestBuilder teamTemplateDefinition() {
@@ -883,6 +989,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the teamwork singleton.
+     * @return a {@link TeamworkRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TeamworkRequestBuilder teamwork() {
@@ -890,6 +997,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the tenantRelationship singleton.
+     * @return a {@link TenantRelationshipsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TenantRelationshipsRequestBuilder tenantRelationships() {
@@ -897,6 +1005,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the store singleton.
+     * @return a {@link TermStoreRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TermStoreRequestBuilder termStore() {
@@ -904,6 +1013,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the threatSubmissionRoot singleton.
+     * @return a {@link ThreatSubmissionRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ThreatSubmissionRequestBuilder threatSubmission() {
@@ -911,6 +1021,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the trustFramework singleton.
+     * @return a {@link TrustFrameworkRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TrustFrameworkRequestBuilder trustFramework() {
@@ -918,6 +1029,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collection of user entities.
+     * @return a {@link UsersRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UsersRequestBuilder users() {
@@ -926,7 +1038,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     /**
      * Provides operations to manage the collection of application entities.
      * @param appId Alternate key of application
-     * @return a ApplicationsWithAppIdRequestBuilder
+     * @return a {@link ApplicationsWithAppIdRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ApplicationsWithAppIdRequestBuilder applicationsWithAppId(@jakarta.annotation.Nonnull final String appId) {
@@ -936,7 +1048,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     /**
      * Provides operations to manage the collection of application entities.
      * @param uniqueName Alternate key of application
-     * @return a ApplicationsWithUniqueNameRequestBuilder
+     * @return a {@link ApplicationsWithUniqueNameRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ApplicationsWithUniqueNameRequestBuilder applicationsWithUniqueName(@jakarta.annotation.Nonnull final String uniqueName) {
@@ -944,7 +1056,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
         return new ApplicationsWithUniqueNameRequestBuilder(pathParameters, requestAdapter, uniqueName);
     }
     /**
-     * Instantiates a new BaseGraphServiceClient and sets the default values.
+     * Instantiates a new {@link BaseGraphServiceClient} and sets the default values.
      * @param backingStore The backing store to use for the models.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -967,7 +1079,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     /**
      * Provides operations to manage the collection of device entities.
      * @param deviceId Alternate key of device
-     * @return a DevicesWithDeviceIdRequestBuilder
+     * @return a {@link DevicesWithDeviceIdRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DevicesWithDeviceIdRequestBuilder devicesWithDeviceId(@jakarta.annotation.Nonnull final String deviceId) {
@@ -977,7 +1089,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     /**
      * Provides operations to manage the collection of directoryRole entities.
      * @param roleTemplateId Alternate key of directoryRole
-     * @return a DirectoryRolesWithRoleTemplateIdRequestBuilder
+     * @return a {@link DirectoryRolesWithRoleTemplateIdRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DirectoryRolesWithRoleTemplateIdRequestBuilder directoryRolesWithRoleTemplateId(@jakarta.annotation.Nonnull final String roleTemplateId) {
@@ -987,7 +1099,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     /**
      * Provides operations to manage the collection of group entities.
      * @param uniqueName Alternate key of group
-     * @return a GroupsWithUniqueNameRequestBuilder
+     * @return a {@link GroupsWithUniqueNameRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GroupsWithUniqueNameRequestBuilder groupsWithUniqueName(@jakarta.annotation.Nonnull final String uniqueName) {
@@ -997,7 +1109,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     /**
      * Provides operations to manage the collection of servicePrincipal entities.
      * @param appId Alternate key of servicePrincipal
-     * @return a ServicePrincipalsWithAppIdRequestBuilder
+     * @return a {@link ServicePrincipalsWithAppIdRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ServicePrincipalsWithAppIdRequestBuilder servicePrincipalsWithAppId(@jakarta.annotation.Nonnull final String appId) {

@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MailFolder extends Entity implements Parsable {
     /**
-     * Instantiates a new MailFolder and sets the default values.
+     * Instantiates a new {@link MailFolder} and sets the default values.
      */
     public MailFolder() {
         super();
@@ -17,7 +17,7 @@ public class MailFolder extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MailFolder
+     * @return a {@link MailFolder}
      */
     @jakarta.annotation.Nonnull
     public static MailFolder createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -33,7 +33,7 @@ public class MailFolder extends Entity implements Parsable {
     }
     /**
      * Gets the childFolderCount property value. The number of immediate child mailFolders in the current mailFolder.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getChildFolderCount() {
@@ -41,7 +41,7 @@ public class MailFolder extends Entity implements Parsable {
     }
     /**
      * Gets the childFolders property value. The collection of child folders in the mailFolder.
-     * @return a java.util.List<MailFolder>
+     * @return a {@link java.util.List<MailFolder>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<MailFolder> getChildFolders() {
@@ -49,7 +49,7 @@ public class MailFolder extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The mailFolder's display name.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -57,7 +57,7 @@ public class MailFolder extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -79,7 +79,7 @@ public class MailFolder extends Entity implements Parsable {
     }
     /**
      * Gets the isHidden property value. Indicates whether the mailFolder is hidden. This property can be set only when creating the folder. Find more information in Hidden mail folders.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsHidden() {
@@ -87,7 +87,7 @@ public class MailFolder extends Entity implements Parsable {
     }
     /**
      * Gets the messageRules property value. The collection of rules that apply to the user's Inbox folder.
-     * @return a java.util.List<MessageRule>
+     * @return a {@link java.util.List<MessageRule>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<MessageRule> getMessageRules() {
@@ -95,7 +95,7 @@ public class MailFolder extends Entity implements Parsable {
     }
     /**
      * Gets the messages property value. The collection of messages in the mailFolder.
-     * @return a java.util.List<Message>
+     * @return a {@link java.util.List<Message>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Message> getMessages() {
@@ -103,7 +103,7 @@ public class MailFolder extends Entity implements Parsable {
     }
     /**
      * Gets the multiValueExtendedProperties property value. The collection of multi-value extended properties defined for the mailFolder. Read-only. Nullable.
-     * @return a java.util.List<MultiValueLegacyExtendedProperty>
+     * @return a {@link java.util.List<MultiValueLegacyExtendedProperty>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<MultiValueLegacyExtendedProperty> getMultiValueExtendedProperties() {
@@ -111,7 +111,7 @@ public class MailFolder extends Entity implements Parsable {
     }
     /**
      * Gets the parentFolderId property value. The unique identifier for the mailFolder's parent mailFolder.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getParentFolderId() {
@@ -119,7 +119,7 @@ public class MailFolder extends Entity implements Parsable {
     }
     /**
      * Gets the singleValueExtendedProperties property value. The collection of single-value extended properties defined for the mailFolder. Read-only. Nullable.
-     * @return a java.util.List<SingleValueLegacyExtendedProperty>
+     * @return a {@link java.util.List<SingleValueLegacyExtendedProperty>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<SingleValueLegacyExtendedProperty> getSingleValueExtendedProperties() {
@@ -127,7 +127,7 @@ public class MailFolder extends Entity implements Parsable {
     }
     /**
      * Gets the totalItemCount property value. The number of items in the mailFolder.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getTotalItemCount() {
@@ -135,7 +135,7 @@ public class MailFolder extends Entity implements Parsable {
     }
     /**
      * Gets the unreadItemCount property value. The number of items in the mailFolder marked as unread.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getUnreadItemCount() {
@@ -143,7 +143,7 @@ public class MailFolder extends Entity implements Parsable {
     }
     /**
      * Gets the userConfigurations property value. The userConfigurations property
-     * @return a java.util.List<UserConfiguration>
+     * @return a {@link java.util.List<UserConfiguration>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserConfiguration> getUserConfigurations() {
@@ -151,7 +151,7 @@ public class MailFolder extends Entity implements Parsable {
     }
     /**
      * Gets the wellKnownName property value. The well-known folder name for the folder. The possible values are listed above. This property is only set for default folders created by Outlook. For other folders, this property is null.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getWellKnownName() {

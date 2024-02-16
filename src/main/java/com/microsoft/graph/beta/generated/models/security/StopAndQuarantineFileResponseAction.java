@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class StopAndQuarantineFileResponseAction extends ResponseAction implements Parsable {
     /**
-     * Instantiates a new StopAndQuarantineFileResponseAction and sets the default values.
+     * Instantiates a new {@link StopAndQuarantineFileResponseAction} and sets the default values.
      */
     public StopAndQuarantineFileResponseAction() {
         super();
@@ -19,7 +19,7 @@ public class StopAndQuarantineFileResponseAction extends ResponseAction implemen
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a StopAndQuarantineFileResponseAction
+     * @return a {@link StopAndQuarantineFileResponseAction}
      */
     @jakarta.annotation.Nonnull
     public static StopAndQuarantineFileResponseAction createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class StopAndQuarantineFileResponseAction extends ResponseAction implemen
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -38,7 +38,7 @@ public class StopAndQuarantineFileResponseAction extends ResponseAction implemen
     }
     /**
      * Gets the identifier property value. The identifier property
-     * @return a EnumSet<StopAndQuarantineFileEntityIdentifier>
+     * @return a {@link EnumSet<StopAndQuarantineFileEntityIdentifier>}
      */
     @jakarta.annotation.Nullable
     public EnumSet<StopAndQuarantineFileEntityIdentifier> getIdentifier() {

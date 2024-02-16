@@ -18,7 +18,7 @@ public class AuthenticationAttributeCollectionPageViewConfiguration implements A
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new AuthenticationAttributeCollectionPageViewConfiguration and sets the default values.
+     * Instantiates a new {@link AuthenticationAttributeCollectionPageViewConfiguration} and sets the default values.
      */
     public AuthenticationAttributeCollectionPageViewConfiguration() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class AuthenticationAttributeCollectionPageViewConfiguration implements A
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AuthenticationAttributeCollectionPageViewConfiguration
+     * @return a {@link AuthenticationAttributeCollectionPageViewConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static AuthenticationAttributeCollectionPageViewConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class AuthenticationAttributeCollectionPageViewConfiguration implements A
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class AuthenticationAttributeCollectionPageViewConfiguration implements A
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class AuthenticationAttributeCollectionPageViewConfiguration implements A
     }
     /**
      * Gets the description property value. The description of the page.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -65,7 +65,7 @@ public class AuthenticationAttributeCollectionPageViewConfiguration implements A
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -78,7 +78,7 @@ public class AuthenticationAttributeCollectionPageViewConfiguration implements A
     }
     /**
      * Gets the inputs property value. The display configuration of attributes being collected on the attribute collection page.
-     * @return a java.util.List<AuthenticationAttributeCollectionInputConfiguration>
+     * @return a {@link java.util.List<AuthenticationAttributeCollectionInputConfiguration>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthenticationAttributeCollectionInputConfiguration> getInputs() {
@@ -86,7 +86,7 @@ public class AuthenticationAttributeCollectionPageViewConfiguration implements A
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -94,7 +94,7 @@ public class AuthenticationAttributeCollectionPageViewConfiguration implements A
     }
     /**
      * Gets the title property value. The title of the attribute collection page.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTitle() {

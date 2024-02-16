@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UnifiedRoleManagementAlertDefinition extends Entity implements Parsable {
     /**
-     * Instantiates a new UnifiedRoleManagementAlertDefinition and sets the default values.
+     * Instantiates a new {@link UnifiedRoleManagementAlertDefinition} and sets the default values.
      */
     public UnifiedRoleManagementAlertDefinition() {
         super();
@@ -17,7 +17,7 @@ public class UnifiedRoleManagementAlertDefinition extends Entity implements Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UnifiedRoleManagementAlertDefinition
+     * @return a {@link UnifiedRoleManagementAlertDefinition}
      */
     @jakarta.annotation.Nonnull
     public static UnifiedRoleManagementAlertDefinition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class UnifiedRoleManagementAlertDefinition extends Entity implements Pars
     }
     /**
      * Gets the description property value. The description of the alert.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -34,7 +34,7 @@ public class UnifiedRoleManagementAlertDefinition extends Entity implements Pars
     }
     /**
      * Gets the displayName property value. The friendly display name that renders in Privileged Identity Management (PIM) alerts in the Microsoft Entra admin center.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -42,7 +42,7 @@ public class UnifiedRoleManagementAlertDefinition extends Entity implements Pars
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -61,7 +61,7 @@ public class UnifiedRoleManagementAlertDefinition extends Entity implements Pars
     }
     /**
      * Gets the howToPrevent property value. Long-form text that indicates the ways to prevent the alert from being triggered in your tenant.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getHowToPrevent() {
@@ -69,7 +69,7 @@ public class UnifiedRoleManagementAlertDefinition extends Entity implements Pars
     }
     /**
      * Gets the isConfigurable property value. true if the alert configuration can be customized in the tenant, and false otherwise. For example, the number and percentage thresholds of the 'There are too many global administrators' alert can be configured by users, while the 'This organization doesn't have Microsoft Entra ID P2' can't be configured, because the criteria are restricted.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsConfigurable() {
@@ -77,7 +77,7 @@ public class UnifiedRoleManagementAlertDefinition extends Entity implements Pars
     }
     /**
      * Gets the isRemediatable property value. true if the alert can be remediated, and false otherwise.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsRemediatable() {
@@ -85,7 +85,7 @@ public class UnifiedRoleManagementAlertDefinition extends Entity implements Pars
     }
     /**
      * Gets the mitigationSteps property value. The methods to mitigate the alert when it's triggered in the tenant. For example, to mitigate the 'There are too many global administrators', you could remove redundant privileged role assignments.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getMitigationSteps() {
@@ -93,7 +93,7 @@ public class UnifiedRoleManagementAlertDefinition extends Entity implements Pars
     }
     /**
      * Gets the scopeId property value. The identifier of the scope where the alert is related. / is the only supported one for the tenant. Supports $filter (eq, ne).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getScopeId() {
@@ -101,7 +101,7 @@ public class UnifiedRoleManagementAlertDefinition extends Entity implements Pars
     }
     /**
      * Gets the scopeType property value. The type of scope where the alert is created. DirectoryRole is the only currently supported scope type for Microsoft Entra roles.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getScopeType() {
@@ -109,7 +109,7 @@ public class UnifiedRoleManagementAlertDefinition extends Entity implements Pars
     }
     /**
      * Gets the securityImpact property value. Security impact of the alert. For example, it could be information leaks or unauthorized access.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSecurityImpact() {
@@ -117,7 +117,7 @@ public class UnifiedRoleManagementAlertDefinition extends Entity implements Pars
     }
     /**
      * Gets the severityLevel property value. Severity level of the alert. The possible values are: unknown, informational, low, medium, high, unknownFutureValue.
-     * @return a AlertSeverity
+     * @return a {@link AlertSeverity}
      */
     @jakarta.annotation.Nullable
     public AlertSeverity getSeverityLevel() {

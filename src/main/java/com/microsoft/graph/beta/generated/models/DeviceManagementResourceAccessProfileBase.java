@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementResourceAccessProfileBase extends Entity implements Parsable {
     /**
-     * Instantiates a new DeviceManagementResourceAccessProfileBase and sets the default values.
+     * Instantiates a new {@link DeviceManagementResourceAccessProfileBase} and sets the default values.
      */
     public DeviceManagementResourceAccessProfileBase() {
         super();
@@ -21,7 +21,7 @@ public class DeviceManagementResourceAccessProfileBase extends Entity implements
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceManagementResourceAccessProfileBase
+     * @return a {@link DeviceManagementResourceAccessProfileBase}
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementResourceAccessProfileBase createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class DeviceManagementResourceAccessProfileBase extends Entity implements
     }
     /**
      * Gets the assignments property value. The list of assignments for the device configuration profile.
-     * @return a java.util.List<DeviceManagementResourceAccessProfileAssignment>
+     * @return a {@link java.util.List<DeviceManagementResourceAccessProfileAssignment>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementResourceAccessProfileAssignment> getAssignments() {
@@ -49,7 +49,7 @@ public class DeviceManagementResourceAccessProfileBase extends Entity implements
     }
     /**
      * Gets the creationDateTime property value. DateTime profile was created
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreationDateTime() {
@@ -57,7 +57,7 @@ public class DeviceManagementResourceAccessProfileBase extends Entity implements
     }
     /**
      * Gets the description property value. Profile description
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -65,7 +65,7 @@ public class DeviceManagementResourceAccessProfileBase extends Entity implements
     }
     /**
      * Gets the displayName property value. Profile display name
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -73,7 +73,7 @@ public class DeviceManagementResourceAccessProfileBase extends Entity implements
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -89,7 +89,7 @@ public class DeviceManagementResourceAccessProfileBase extends Entity implements
     }
     /**
      * Gets the lastModifiedDateTime property value. DateTime profile was last modified
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -97,7 +97,7 @@ public class DeviceManagementResourceAccessProfileBase extends Entity implements
     }
     /**
      * Gets the roleScopeTagIds property value. Scope Tags
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {
@@ -105,7 +105,7 @@ public class DeviceManagementResourceAccessProfileBase extends Entity implements
     }
     /**
      * Gets the version property value. Version of the profile
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getVersion() {

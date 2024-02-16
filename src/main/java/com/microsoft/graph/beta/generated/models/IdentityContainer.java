@@ -18,7 +18,7 @@ public class IdentityContainer implements AdditionalDataHolder, BackedModel, Par
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new IdentityContainer and sets the default values.
+     * Instantiates a new {@link IdentityContainer} and sets the default values.
      */
     public IdentityContainer() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class IdentityContainer implements AdditionalDataHolder, BackedModel, Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a IdentityContainer
+     * @return a {@link IdentityContainer}
      */
     @jakarta.annotation.Nonnull
     public static IdentityContainer createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class IdentityContainer implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class IdentityContainer implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the apiConnectors property value. Represents entry point for API connectors.
-     * @return a java.util.List<IdentityApiConnector>
+     * @return a {@link java.util.List<IdentityApiConnector>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<IdentityApiConnector> getApiConnectors() {
@@ -57,7 +57,7 @@ public class IdentityContainer implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the authenticationEventListeners property value. The authenticationEventListeners property
-     * @return a java.util.List<AuthenticationEventListener>
+     * @return a {@link java.util.List<AuthenticationEventListener>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthenticationEventListener> getAuthenticationEventListeners() {
@@ -65,7 +65,7 @@ public class IdentityContainer implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the authenticationEventsFlows property value. Represents the entry point for self-service sign up and sign in user flows in both Microsoft Entra workforce and customer tenants.
-     * @return a java.util.List<AuthenticationEventsFlow>
+     * @return a {@link java.util.List<AuthenticationEventsFlow>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthenticationEventsFlow> getAuthenticationEventsFlows() {
@@ -73,7 +73,7 @@ public class IdentityContainer implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the b2cUserFlows property value. Represents entry point for B2C identity userflows.
-     * @return a java.util.List<B2cIdentityUserFlow>
+     * @return a {@link java.util.List<B2cIdentityUserFlow>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<B2cIdentityUserFlow> getB2cUserFlows() {
@@ -81,7 +81,7 @@ public class IdentityContainer implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the b2xUserFlows property value. Represents entry point for B2X and self-service sign-up identity userflows.
-     * @return a java.util.List<B2xIdentityUserFlow>
+     * @return a {@link java.util.List<B2xIdentityUserFlow>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<B2xIdentityUserFlow> getB2xUserFlows() {
@@ -89,7 +89,7 @@ public class IdentityContainer implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -97,7 +97,7 @@ public class IdentityContainer implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the conditionalAccess property value. the entry point for the Conditional Access (CA) object model.
-     * @return a ConditionalAccessRoot
+     * @return a {@link ConditionalAccessRoot}
      */
     @jakarta.annotation.Nullable
     public ConditionalAccessRoot getConditionalAccess() {
@@ -105,7 +105,7 @@ public class IdentityContainer implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the continuousAccessEvaluationPolicy property value. Represents entry point for continuous access evaluation policy.
-     * @return a ContinuousAccessEvaluationPolicy
+     * @return a {@link ContinuousAccessEvaluationPolicy}
      */
     @jakarta.annotation.Nullable
     public ContinuousAccessEvaluationPolicy getContinuousAccessEvaluationPolicy() {
@@ -113,7 +113,7 @@ public class IdentityContainer implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the customAuthenticationExtensions property value. The customAuthenticationExtensions property
-     * @return a java.util.List<CustomAuthenticationExtension>
+     * @return a {@link java.util.List<CustomAuthenticationExtension>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<CustomAuthenticationExtension> getCustomAuthenticationExtensions() {
@@ -121,7 +121,7 @@ public class IdentityContainer implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -142,7 +142,7 @@ public class IdentityContainer implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the identityProviders property value. Represents entry point for identity provider base.
-     * @return a java.util.List<IdentityProviderBase>
+     * @return a {@link java.util.List<IdentityProviderBase>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<IdentityProviderBase> getIdentityProviders() {
@@ -150,7 +150,7 @@ public class IdentityContainer implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -158,7 +158,7 @@ public class IdentityContainer implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the userFlowAttributes property value. Represents entry point for identity userflow attributes.
-     * @return a java.util.List<IdentityUserFlowAttribute>
+     * @return a {@link java.util.List<IdentityUserFlowAttribute>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<IdentityUserFlowAttribute> getUserFlowAttributes() {
@@ -166,7 +166,7 @@ public class IdentityContainer implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the userFlows property value. The userFlows property
-     * @return a java.util.List<IdentityUserFlow>
+     * @return a {@link java.util.List<IdentityUserFlow>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<IdentityUserFlow> getUserFlows() {

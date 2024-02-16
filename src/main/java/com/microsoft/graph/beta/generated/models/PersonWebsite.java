@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PersonWebsite extends ItemFacet implements Parsable {
     /**
-     * Instantiates a new PersonWebsite and sets the default values.
+     * Instantiates a new {@link PersonWebsite} and sets the default values.
      */
     public PersonWebsite() {
         super();
@@ -18,7 +18,7 @@ public class PersonWebsite extends ItemFacet implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PersonWebsite
+     * @return a {@link PersonWebsite}
      */
     @jakarta.annotation.Nonnull
     public static PersonWebsite createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class PersonWebsite extends ItemFacet implements Parsable {
     }
     /**
      * Gets the categories property value. Contains categories a user has associated with the website (for example, personal, recipes).
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getCategories() {
@@ -35,7 +35,7 @@ public class PersonWebsite extends ItemFacet implements Parsable {
     }
     /**
      * Gets the description property value. Contains a description of the website.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -43,7 +43,7 @@ public class PersonWebsite extends ItemFacet implements Parsable {
     }
     /**
      * Gets the displayName property value. Contains a friendly name for the website.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -51,7 +51,7 @@ public class PersonWebsite extends ItemFacet implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -65,7 +65,7 @@ public class PersonWebsite extends ItemFacet implements Parsable {
     }
     /**
      * Gets the thumbnailUrl property value. The thumbnailUrl property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getThumbnailUrl() {
@@ -73,7 +73,7 @@ public class PersonWebsite extends ItemFacet implements Parsable {
     }
     /**
      * Gets the webUrl property value. Contains a link to the website itself.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getWebUrl() {

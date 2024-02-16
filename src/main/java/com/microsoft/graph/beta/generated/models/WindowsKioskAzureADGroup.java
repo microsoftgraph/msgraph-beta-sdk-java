@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsKioskAzureADGroup extends WindowsKioskUser implements Parsable {
     /**
-     * Instantiates a new WindowsKioskAzureADGroup and sets the default values.
+     * Instantiates a new {@link WindowsKioskAzureADGroup} and sets the default values.
      */
     public WindowsKioskAzureADGroup() {
         super();
@@ -21,7 +21,7 @@ public class WindowsKioskAzureADGroup extends WindowsKioskUser implements Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WindowsKioskAzureADGroup
+     * @return a {@link WindowsKioskAzureADGroup}
      */
     @jakarta.annotation.Nonnull
     public static WindowsKioskAzureADGroup createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class WindowsKioskAzureADGroup extends WindowsKioskUser implements Parsab
     }
     /**
      * Gets the displayName property value. The display name of the AzureAD group that will be locked to this kiosk configuration
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -38,7 +38,7 @@ public class WindowsKioskAzureADGroup extends WindowsKioskUser implements Parsab
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -49,7 +49,7 @@ public class WindowsKioskAzureADGroup extends WindowsKioskUser implements Parsab
     }
     /**
      * Gets the groupId property value. The ID of the AzureAD group that will be locked to this kiosk configuration
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getGroupId() {

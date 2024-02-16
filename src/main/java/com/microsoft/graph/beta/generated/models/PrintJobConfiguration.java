@@ -18,7 +18,7 @@ public class PrintJobConfiguration implements AdditionalDataHolder, BackedModel,
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new PrintJobConfiguration and sets the default values.
+     * Instantiates a new {@link PrintJobConfiguration} and sets the default values.
      */
     public PrintJobConfiguration() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class PrintJobConfiguration implements AdditionalDataHolder, BackedModel,
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PrintJobConfiguration
+     * @return a {@link PrintJobConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static PrintJobConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class PrintJobConfiguration implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class PrintJobConfiguration implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class PrintJobConfiguration implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the collate property value. Whether the printer should collate pages when printing multiple copies of a multi-page document.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getCollate() {
@@ -65,7 +65,7 @@ public class PrintJobConfiguration implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the colorMode property value. The color mode the printer should use to print the job. Valid values are described in the table below. Read-only.
-     * @return a PrintColorMode
+     * @return a {@link PrintColorMode}
      */
     @jakarta.annotation.Nullable
     public PrintColorMode getColorMode() {
@@ -73,7 +73,7 @@ public class PrintJobConfiguration implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the copies property value. The number of copies that should be printed. Read-only.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getCopies() {
@@ -81,7 +81,7 @@ public class PrintJobConfiguration implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the dpi property value. The resolution to use when printing the job, expressed in dots per inch (DPI). Read-only.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getDpi() {
@@ -89,7 +89,7 @@ public class PrintJobConfiguration implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the duplexMode property value. The duplex mode the printer should use when printing the job. Valid values are described in the table below. Read-only.
-     * @return a PrintDuplexMode
+     * @return a {@link PrintDuplexMode}
      */
     @jakarta.annotation.Nullable
     public PrintDuplexMode getDuplexMode() {
@@ -97,7 +97,7 @@ public class PrintJobConfiguration implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the feedOrientation property value. The orientation to use when feeding media into the printer. Valid values are described in the following table. Read-only.
-     * @return a PrinterFeedOrientation
+     * @return a {@link PrinterFeedOrientation}
      */
     @jakarta.annotation.Nullable
     public PrinterFeedOrientation getFeedOrientation() {
@@ -105,7 +105,7 @@ public class PrintJobConfiguration implements AdditionalDataHolder, BackedModel,
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -134,7 +134,7 @@ public class PrintJobConfiguration implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the finishings property value. Finishing processes to use when printing.
-     * @return a java.util.List<PrintFinishing>
+     * @return a {@link java.util.List<PrintFinishing>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<PrintFinishing> getFinishings() {
@@ -142,7 +142,7 @@ public class PrintJobConfiguration implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the fitPdfToPage property value. The fitPdfToPage property
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getFitPdfToPage() {
@@ -150,7 +150,7 @@ public class PrintJobConfiguration implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the inputBin property value. The input bin (tray) to use when printing. See the printer's capabilities for a list of supported input bins.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getInputBin() {
@@ -158,7 +158,7 @@ public class PrintJobConfiguration implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the margin property value. The margin settings to use when printing.
-     * @return a PrintMargin
+     * @return a {@link PrintMargin}
      */
     @jakarta.annotation.Nullable
     public PrintMargin getMargin() {
@@ -166,7 +166,7 @@ public class PrintJobConfiguration implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the mediaSize property value. The media sizeto use when printing. Supports standard size names for ISO and ANSI media sizes. Valid values are listed in the printerCapabilities topic.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getMediaSize() {
@@ -174,7 +174,7 @@ public class PrintJobConfiguration implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the mediaType property value. The default media (such as paper) type to print the document on.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getMediaType() {
@@ -182,7 +182,7 @@ public class PrintJobConfiguration implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the multipageLayout property value. The direction to lay out pages when multiple pages are being printed per sheet. Valid values are described in the following table.
-     * @return a PrintMultipageLayout
+     * @return a {@link PrintMultipageLayout}
      */
     @jakarta.annotation.Nullable
     public PrintMultipageLayout getMultipageLayout() {
@@ -190,7 +190,7 @@ public class PrintJobConfiguration implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -198,7 +198,7 @@ public class PrintJobConfiguration implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the orientation property value. The orientation setting the printer should use when printing the job. Valid values are described in the following table.
-     * @return a PrintOrientation
+     * @return a {@link PrintOrientation}
      */
     @jakarta.annotation.Nullable
     public PrintOrientation getOrientation() {
@@ -206,7 +206,7 @@ public class PrintJobConfiguration implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the outputBin property value. The output bin to place completed prints into. See the printer's capabilities for a list of supported output bins.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOutputBin() {
@@ -214,7 +214,7 @@ public class PrintJobConfiguration implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the pageRanges property value. The page ranges to print. Read-only.
-     * @return a java.util.List<IntegerRange>
+     * @return a {@link java.util.List<IntegerRange>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<IntegerRange> getPageRanges() {
@@ -222,7 +222,7 @@ public class PrintJobConfiguration implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the pagesPerSheet property value. The number of document pages to print on each sheet.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPagesPerSheet() {
@@ -230,7 +230,7 @@ public class PrintJobConfiguration implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the quality property value. The print quality to use when printing the job. Valid values are described in the table below. Read-only.
-     * @return a PrintQuality
+     * @return a {@link PrintQuality}
      */
     @jakarta.annotation.Nullable
     public PrintQuality getQuality() {
@@ -238,7 +238,7 @@ public class PrintJobConfiguration implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the scaling property value. Specifies how the printer should scale the document data to fit the requested media. Valid values are described in the following table.
-     * @return a PrintScaling
+     * @return a {@link PrintScaling}
      */
     @jakarta.annotation.Nullable
     public PrintScaling getScaling() {

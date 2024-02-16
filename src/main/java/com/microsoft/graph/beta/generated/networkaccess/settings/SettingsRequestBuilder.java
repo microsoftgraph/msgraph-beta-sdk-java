@@ -26,6 +26,7 @@ import java.util.Objects;
 public class SettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the conditionalAccess property of the microsoft.graph.networkaccess.settings entity.
+     * @return a {@link ConditionalAccessRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ConditionalAccessRequestBuilder conditionalAccess() {
@@ -33,6 +34,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the crossTenantAccess property of the microsoft.graph.networkaccess.settings entity.
+     * @return a {@link CrossTenantAccessRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CrossTenantAccessRequestBuilder crossTenantAccess() {
@@ -40,6 +42,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the enrichedAuditLogs property of the microsoft.graph.networkaccess.settings entity.
+     * @return a {@link EnrichedAuditLogsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public EnrichedAuditLogsRequestBuilder enrichedAuditLogs() {
@@ -47,13 +50,14 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the forwardingOptions property of the microsoft.graph.networkaccess.settings entity.
+     * @return a {@link ForwardingOptionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ForwardingOptionsRequestBuilder forwardingOptions() {
         return new ForwardingOptionsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new SettingsRequestBuilder and sets the default values.
+     * Instantiates a new {@link SettingsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -61,7 +65,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/networkAccess/settings{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new SettingsRequestBuilder and sets the default values.
+     * Instantiates a new {@link SettingsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -70,6 +74,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Delete navigation property settings for networkAccess
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete() {
         delete(null);
@@ -77,17 +82,18 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property settings for networkAccess
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Global Secure Access settings.
-     * @return a Settings
+     * @return a {@link Settings}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public Settings get() {
@@ -96,20 +102,21 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Global Secure Access settings.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a Settings
+     * @return a {@link Settings}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public Settings get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, Settings::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property settings in networkAccess
      * @param body The request body
-     * @return a Settings
+     * @return a {@link Settings}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public Settings patch(@jakarta.annotation.Nonnull final Settings body) {
@@ -119,20 +126,20 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property settings in networkAccess
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a Settings
+     * @return a {@link Settings}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public Settings patch(@jakarta.annotation.Nonnull final Settings body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, Settings::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property settings for networkAccess
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -141,18 +148,18 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property settings for networkAccess
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/networkAccess/settings", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Global Secure Access settings.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -161,7 +168,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Global Secure Access settings.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -173,7 +180,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property settings in networkAccess
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final Settings body) {
@@ -183,12 +190,12 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property settings in networkAccess
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final Settings body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/networkAccess/settings", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -197,7 +204,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a SettingsRequestBuilder
+     * @return a {@link SettingsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SettingsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -227,7 +234,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

@@ -11,7 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ConditionalAccessPolicyCoverage extends Entity implements Parsable {
     /**
-     * Instantiates a new ConditionalAccessPolicyCoverage and sets the default values.
+     * Instantiates a new {@link ConditionalAccessPolicyCoverage} and sets the default values.
      */
     public ConditionalAccessPolicyCoverage() {
         super();
@@ -19,7 +19,7 @@ public class ConditionalAccessPolicyCoverage extends Entity implements Parsable 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ConditionalAccessPolicyCoverage
+     * @return a {@link ConditionalAccessPolicyCoverage}
      */
     @jakarta.annotation.Nonnull
     public static ConditionalAccessPolicyCoverage createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class ConditionalAccessPolicyCoverage extends Entity implements Parsable 
     }
     /**
      * Gets the conditionalAccessPolicyState property value. The state for the conditional access policy. Possible values are: enabled, disabled, enabledForReportingButNotEnforced. Required. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getConditionalAccessPolicyState() {
@@ -36,7 +36,7 @@ public class ConditionalAccessPolicyCoverage extends Entity implements Parsable 
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -49,7 +49,7 @@ public class ConditionalAccessPolicyCoverage extends Entity implements Parsable 
     }
     /**
      * Gets the latestPolicyModifiedDateTime property value. The date and time the conditional access policy was last modified. Required. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLatestPolicyModifiedDateTime() {
@@ -57,7 +57,7 @@ public class ConditionalAccessPolicyCoverage extends Entity implements Parsable 
     }
     /**
      * Gets the requiresDeviceCompliance property value. A flag indicating whether the conditional access policy requires device compliance. Required. Read-only.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getRequiresDeviceCompliance() {
@@ -65,7 +65,7 @@ public class ConditionalAccessPolicyCoverage extends Entity implements Parsable 
     }
     /**
      * Gets the tenantDisplayName property value. The display name for the managed tenant. Required. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTenantDisplayName() {

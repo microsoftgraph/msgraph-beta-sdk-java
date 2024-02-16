@@ -21,7 +21,7 @@ public class UserExperienceAnalyticsDeviceScopeSummary implements AdditionalData
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new UserExperienceAnalyticsDeviceScopeSummary and sets the default values.
+     * Instantiates a new {@link UserExperienceAnalyticsDeviceScopeSummary} and sets the default values.
      */
     public UserExperienceAnalyticsDeviceScopeSummary() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -30,7 +30,7 @@ public class UserExperienceAnalyticsDeviceScopeSummary implements AdditionalData
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserExperienceAnalyticsDeviceScopeSummary
+     * @return a {@link UserExperienceAnalyticsDeviceScopeSummary}
      */
     @jakarta.annotation.Nonnull
     public static UserExperienceAnalyticsDeviceScopeSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class UserExperienceAnalyticsDeviceScopeSummary implements AdditionalData
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -52,7 +52,7 @@ public class UserExperienceAnalyticsDeviceScopeSummary implements AdditionalData
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -60,7 +60,7 @@ public class UserExperienceAnalyticsDeviceScopeSummary implements AdditionalData
     }
     /**
      * Gets the completedDeviceScopeIds property value. A collection of the user experience analytics device scope Unique Identifiers that are enabled and finished recalculating the report metric.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getCompletedDeviceScopeIds() {
@@ -68,7 +68,7 @@ public class UserExperienceAnalyticsDeviceScopeSummary implements AdditionalData
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -82,7 +82,7 @@ public class UserExperienceAnalyticsDeviceScopeSummary implements AdditionalData
     }
     /**
      * Gets the insufficientDataDeviceScopeIds property value. A collection of user experience analytics device scope Unique Identitfiers that are enabled but there is insufficient data to calculate results.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getInsufficientDataDeviceScopeIds() {
@@ -90,7 +90,7 @@ public class UserExperienceAnalyticsDeviceScopeSummary implements AdditionalData
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -98,7 +98,7 @@ public class UserExperienceAnalyticsDeviceScopeSummary implements AdditionalData
     }
     /**
      * Gets the totalDeviceScopes property value. The total number of user experience analytics device scopes. Valid values -2147483648 to 2147483647
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getTotalDeviceScopes() {
@@ -106,7 +106,7 @@ public class UserExperienceAnalyticsDeviceScopeSummary implements AdditionalData
     }
     /**
      * Gets the totalDeviceScopesEnabled property value. The total number of user experience analytics device scopes that are enabled. Valid values -2147483648 to 2147483647
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getTotalDeviceScopesEnabled() {

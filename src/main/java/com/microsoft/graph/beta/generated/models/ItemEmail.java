@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ItemEmail extends ItemFacet implements Parsable {
     /**
-     * Instantiates a new ItemEmail and sets the default values.
+     * Instantiates a new {@link ItemEmail} and sets the default values.
      */
     public ItemEmail() {
         super();
@@ -18,7 +18,7 @@ public class ItemEmail extends ItemFacet implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ItemEmail
+     * @return a {@link ItemEmail}
      */
     @jakarta.annotation.Nonnull
     public static ItemEmail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class ItemEmail extends ItemFacet implements Parsable {
     }
     /**
      * Gets the address property value. The email address itself.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAddress() {
@@ -35,7 +35,7 @@ public class ItemEmail extends ItemFacet implements Parsable {
     }
     /**
      * Gets the displayName property value. The name or label a user has associated with a particular email address.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -43,7 +43,7 @@ public class ItemEmail extends ItemFacet implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -55,7 +55,7 @@ public class ItemEmail extends ItemFacet implements Parsable {
     }
     /**
      * Gets the type property value. The type property
-     * @return a EmailType
+     * @return a {@link EmailType}
      */
     @jakarta.annotation.Nullable
     public EmailType getType() {

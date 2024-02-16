@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TeamsAppIcon extends Entity implements Parsable {
     /**
-     * Instantiates a new TeamsAppIcon and sets the default values.
+     * Instantiates a new {@link TeamsAppIcon} and sets the default values.
      */
     public TeamsAppIcon() {
         super();
@@ -17,7 +17,7 @@ public class TeamsAppIcon extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TeamsAppIcon
+     * @return a {@link TeamsAppIcon}
      */
     @jakarta.annotation.Nonnull
     public static TeamsAppIcon createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class TeamsAppIcon extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -37,7 +37,7 @@ public class TeamsAppIcon extends Entity implements Parsable {
     }
     /**
      * Gets the hostedContent property value. The contents of the app icon if the icon is hosted within the Teams infrastructure.
-     * @return a TeamworkHostedContent
+     * @return a {@link TeamworkHostedContent}
      */
     @jakarta.annotation.Nullable
     public TeamworkHostedContent getHostedContent() {
@@ -45,7 +45,7 @@ public class TeamsAppIcon extends Entity implements Parsable {
     }
     /**
      * Gets the webUrl property value. The web URL that can be used for downloading the image.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getWebUrl() {

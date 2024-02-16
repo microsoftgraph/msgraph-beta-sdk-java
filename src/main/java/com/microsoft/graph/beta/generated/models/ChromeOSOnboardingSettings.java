@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ChromeOSOnboardingSettings extends Entity implements Parsable {
     /**
-     * Instantiates a new ChromeOSOnboardingSettings and sets the default values.
+     * Instantiates a new {@link ChromeOSOnboardingSettings} and sets the default values.
      */
     public ChromeOSOnboardingSettings() {
         super();
@@ -21,7 +21,7 @@ public class ChromeOSOnboardingSettings extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ChromeOSOnboardingSettings
+     * @return a {@link ChromeOSOnboardingSettings}
      */
     @jakarta.annotation.Nonnull
     public static ChromeOSOnboardingSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class ChromeOSOnboardingSettings extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -43,7 +43,7 @@ public class ChromeOSOnboardingSettings extends Entity implements Parsable {
     }
     /**
      * Gets the lastDirectorySyncDateTime property value. The ChromebookTenant's LastDirectorySyncDateTime
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastDirectorySyncDateTime() {
@@ -51,7 +51,7 @@ public class ChromeOSOnboardingSettings extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. The ChromebookTenant's LastModifiedDateTime
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -59,7 +59,7 @@ public class ChromeOSOnboardingSettings extends Entity implements Parsable {
     }
     /**
      * Gets the onboardingStatus property value. The onboarding status of the tenant.
-     * @return a OnboardingStatus
+     * @return a {@link OnboardingStatus}
      */
     @jakarta.annotation.Nullable
     public OnboardingStatus getOnboardingStatus() {
@@ -67,7 +67,7 @@ public class ChromeOSOnboardingSettings extends Entity implements Parsable {
     }
     /**
      * Gets the ownerUserPrincipalName property value. The ChromebookTenant's OwnerUserPrincipalName
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOwnerUserPrincipalName() {

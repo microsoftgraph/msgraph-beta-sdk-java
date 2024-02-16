@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Citation extends FilePlanDescriptorBase implements Parsable {
     /**
-     * Instantiates a new Citation and sets the default values.
+     * Instantiates a new {@link Citation} and sets the default values.
      */
     public Citation() {
         super();
@@ -17,7 +17,7 @@ public class Citation extends FilePlanDescriptorBase implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Citation
+     * @return a {@link Citation}
      */
     @jakarta.annotation.Nonnull
     public static Citation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class Citation extends FilePlanDescriptorBase implements Parsable {
     }
     /**
      * Gets the citationJurisdiction property value. Represents the jurisdiction or agency that published the citation.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCitationJurisdiction() {
@@ -34,7 +34,7 @@ public class Citation extends FilePlanDescriptorBase implements Parsable {
     }
     /**
      * Gets the citationUrl property value. Represents the URL to the published citation.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCitationUrl() {
@@ -42,7 +42,7 @@ public class Citation extends FilePlanDescriptorBase implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

@@ -18,7 +18,7 @@ public class AuthenticationAppPolicyDetails implements AdditionalDataHolder, Bac
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new AuthenticationAppPolicyDetails and sets the default values.
+     * Instantiates a new {@link AuthenticationAppPolicyDetails} and sets the default values.
      */
     public AuthenticationAppPolicyDetails() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class AuthenticationAppPolicyDetails implements AdditionalDataHolder, Bac
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AuthenticationAppPolicyDetails
+     * @return a {@link AuthenticationAppPolicyDetails}
      */
     @jakarta.annotation.Nonnull
     public static AuthenticationAppPolicyDetails createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class AuthenticationAppPolicyDetails implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class AuthenticationAppPolicyDetails implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the adminConfiguration property value. The admin configuration of the policy on the user's authentication app. For a policy that does not impact the success/failure of the authentication, the evaluation defaults to notApplicable. The possible values are: notApplicable, enabled, disabled, unknownFutureValue.
-     * @return a AuthenticationAppAdminConfiguration
+     * @return a {@link AuthenticationAppAdminConfiguration}
      */
     @jakarta.annotation.Nullable
     public AuthenticationAppAdminConfiguration getAdminConfiguration() {
@@ -57,7 +57,7 @@ public class AuthenticationAppPolicyDetails implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the authenticationEvaluation property value. Evaluates the success/failure of the authentication based on the admin configuration of the policy on the user's client authentication app. The possible values are: success, failure, unknownFutureValue.
-     * @return a AuthenticationAppEvaluation
+     * @return a {@link AuthenticationAppEvaluation}
      */
     @jakarta.annotation.Nullable
     public AuthenticationAppEvaluation getAuthenticationEvaluation() {
@@ -65,7 +65,7 @@ public class AuthenticationAppPolicyDetails implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -73,7 +73,7 @@ public class AuthenticationAppPolicyDetails implements AdditionalDataHolder, Bac
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -87,7 +87,7 @@ public class AuthenticationAppPolicyDetails implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -95,7 +95,7 @@ public class AuthenticationAppPolicyDetails implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the policyName property value. The name of the policy enforced on the user's authentication app.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPolicyName() {
@@ -103,7 +103,7 @@ public class AuthenticationAppPolicyDetails implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the status property value. Refers to whether the policy executed as expected on the user's client authentication app. The possible values are: unknown, appLockOutOfDate, appLockEnabled, appLockDisabled, appContextOutOfDate, appContextShown, appContextNotShown, locationContextOutOfDate, locationContextShown, locationContextNotShown, numberMatchOutOfDate, numberMatchCorrectNumberEntered, numberMatchIncorrectNumberEntered, numberMatchDeny, tamperResistantHardwareOutOfDate, tamperResistantHardwareUsed, tamperResistantHardwareNotUsed, unknownFutureValue.
-     * @return a AuthenticationAppPolicyStatus
+     * @return a {@link AuthenticationAppPolicyStatus}
      */
     @jakarta.annotation.Nullable
     public AuthenticationAppPolicyStatus getStatus() {

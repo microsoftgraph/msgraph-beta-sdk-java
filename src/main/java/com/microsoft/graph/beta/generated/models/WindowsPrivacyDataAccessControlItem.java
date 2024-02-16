@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsPrivacyDataAccessControlItem extends Entity implements Parsable {
     /**
-     * Instantiates a new WindowsPrivacyDataAccessControlItem and sets the default values.
+     * Instantiates a new {@link WindowsPrivacyDataAccessControlItem} and sets the default values.
      */
     public WindowsPrivacyDataAccessControlItem() {
         super();
@@ -20,7 +20,7 @@ public class WindowsPrivacyDataAccessControlItem extends Entity implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WindowsPrivacyDataAccessControlItem
+     * @return a {@link WindowsPrivacyDataAccessControlItem}
      */
     @jakarta.annotation.Nonnull
     public static WindowsPrivacyDataAccessControlItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -29,7 +29,7 @@ public class WindowsPrivacyDataAccessControlItem extends Entity implements Parsa
     }
     /**
      * Gets the accessLevel property value. Determine the access level to specific Windows privacy data category.
-     * @return a WindowsPrivacyDataAccessLevel
+     * @return a {@link WindowsPrivacyDataAccessLevel}
      */
     @jakarta.annotation.Nullable
     public WindowsPrivacyDataAccessLevel getAccessLevel() {
@@ -37,7 +37,7 @@ public class WindowsPrivacyDataAccessControlItem extends Entity implements Parsa
     }
     /**
      * Gets the appDisplayName property value. The Package Family Name of a Windows app. When set, the access level applies to the specified application.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAppDisplayName() {
@@ -45,7 +45,7 @@ public class WindowsPrivacyDataAccessControlItem extends Entity implements Parsa
     }
     /**
      * Gets the appPackageFamilyName property value. The Package Family Name of a Windows app. When set, the access level applies to the specified application.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAppPackageFamilyName() {
@@ -53,7 +53,7 @@ public class WindowsPrivacyDataAccessControlItem extends Entity implements Parsa
     }
     /**
      * Gets the dataCategory property value. Windows privacy data category specifier for privacy data access.
-     * @return a WindowsPrivacyDataCategory
+     * @return a {@link WindowsPrivacyDataCategory}
      */
     @jakarta.annotation.Nullable
     public WindowsPrivacyDataCategory getDataCategory() {
@@ -61,7 +61,7 @@ public class WindowsPrivacyDataAccessControlItem extends Entity implements Parsa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

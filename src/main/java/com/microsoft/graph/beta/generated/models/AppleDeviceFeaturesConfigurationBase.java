@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AppleDeviceFeaturesConfigurationBase extends DeviceConfiguration implements Parsable {
     /**
-     * Instantiates a new AppleDeviceFeaturesConfigurationBase and sets the default values.
+     * Instantiates a new {@link AppleDeviceFeaturesConfigurationBase} and sets the default values.
      */
     public AppleDeviceFeaturesConfigurationBase() {
         super();
@@ -21,7 +21,7 @@ public class AppleDeviceFeaturesConfigurationBase extends DeviceConfiguration im
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AppleDeviceFeaturesConfigurationBase
+     * @return a {@link AppleDeviceFeaturesConfigurationBase}
      */
     @jakarta.annotation.Nonnull
     public static AppleDeviceFeaturesConfigurationBase createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,7 +38,7 @@ public class AppleDeviceFeaturesConfigurationBase extends DeviceConfiguration im
     }
     /**
      * Gets the airPrintDestinations property value. An array of AirPrint printers that should always be shown. This collection can contain a maximum of 500 elements.
-     * @return a java.util.List<AirPrintDestination>
+     * @return a {@link java.util.List<AirPrintDestination>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AirPrintDestination> getAirPrintDestinations() {
@@ -46,7 +46,7 @@ public class AppleDeviceFeaturesConfigurationBase extends DeviceConfiguration im
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

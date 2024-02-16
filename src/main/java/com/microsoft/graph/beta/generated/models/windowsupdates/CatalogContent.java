@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CatalogContent extends DeployableContent implements Parsable {
     /**
-     * Instantiates a new CatalogContent and sets the default values.
+     * Instantiates a new {@link CatalogContent} and sets the default values.
      */
     public CatalogContent() {
         super();
@@ -18,7 +18,7 @@ public class CatalogContent extends DeployableContent implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CatalogContent
+     * @return a {@link CatalogContent}
      */
     @jakarta.annotation.Nonnull
     public static CatalogContent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class CatalogContent extends DeployableContent implements Parsable {
     }
     /**
      * Gets the catalogEntry property value. The catalogEntry property
-     * @return a CatalogEntry
+     * @return a {@link CatalogEntry}
      */
     @jakarta.annotation.Nullable
     public CatalogEntry getCatalogEntry() {
@@ -35,7 +35,7 @@ public class CatalogContent extends DeployableContent implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

@@ -22,7 +22,7 @@ public class WindowsPackageInformation implements AdditionalDataHolder, BackedMo
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new WindowsPackageInformation and sets the default values.
+     * Instantiates a new {@link WindowsPackageInformation} and sets the default values.
      */
     public WindowsPackageInformation() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -31,7 +31,7 @@ public class WindowsPackageInformation implements AdditionalDataHolder, BackedMo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WindowsPackageInformation
+     * @return a {@link WindowsPackageInformation}
      */
     @jakarta.annotation.Nonnull
     public static WindowsPackageInformation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class WindowsPackageInformation implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -53,7 +53,7 @@ public class WindowsPackageInformation implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the applicableArchitecture property value. Contains properties for Windows architecture.
-     * @return a EnumSet<WindowsArchitecture>
+     * @return a {@link EnumSet<WindowsArchitecture>}
      */
     @jakarta.annotation.Nullable
     public EnumSet<WindowsArchitecture> getApplicableArchitecture() {
@@ -61,7 +61,7 @@ public class WindowsPackageInformation implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -69,7 +69,7 @@ public class WindowsPackageInformation implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the displayName property value. The Display Name.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -77,7 +77,7 @@ public class WindowsPackageInformation implements AdditionalDataHolder, BackedMo
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -94,7 +94,7 @@ public class WindowsPackageInformation implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the identityName property value. The Identity Name.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getIdentityName() {
@@ -102,7 +102,7 @@ public class WindowsPackageInformation implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the identityPublisher property value. The Identity Publisher.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getIdentityPublisher() {
@@ -110,7 +110,7 @@ public class WindowsPackageInformation implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the identityResourceIdentifier property value. The Identity Resource Identifier.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getIdentityResourceIdentifier() {
@@ -118,7 +118,7 @@ public class WindowsPackageInformation implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the identityVersion property value. The Identity Version.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getIdentityVersion() {
@@ -126,7 +126,7 @@ public class WindowsPackageInformation implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the minimumSupportedOperatingSystem property value. The value for the minimum applicable operating system.
-     * @return a WindowsMinimumOperatingSystem
+     * @return a {@link WindowsMinimumOperatingSystem}
      */
     @jakarta.annotation.Nullable
     public WindowsMinimumOperatingSystem getMinimumSupportedOperatingSystem() {
@@ -134,7 +134,7 @@ public class WindowsPackageInformation implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {

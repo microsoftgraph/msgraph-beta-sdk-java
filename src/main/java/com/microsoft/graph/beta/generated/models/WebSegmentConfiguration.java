@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WebSegmentConfiguration extends SegmentConfiguration implements Parsable {
     /**
-     * Instantiates a new WebSegmentConfiguration and sets the default values.
+     * Instantiates a new {@link WebSegmentConfiguration} and sets the default values.
      */
     public WebSegmentConfiguration() {
         super();
@@ -18,7 +18,7 @@ public class WebSegmentConfiguration extends SegmentConfiguration implements Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WebSegmentConfiguration
+     * @return a {@link WebSegmentConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static WebSegmentConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class WebSegmentConfiguration extends SegmentConfiguration implements Par
     }
     /**
      * Gets the applicationSegments property value. The applicationSegments property
-     * @return a java.util.List<WebApplicationSegment>
+     * @return a {@link java.util.List<WebApplicationSegment>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<WebApplicationSegment> getApplicationSegments() {
@@ -35,7 +35,7 @@ public class WebSegmentConfiguration extends SegmentConfiguration implements Par
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

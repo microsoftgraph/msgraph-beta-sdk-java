@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessPackageResourceRequest extends Entity implements Parsable {
     /**
-     * Instantiates a new AccessPackageResourceRequest and sets the default values.
+     * Instantiates a new {@link AccessPackageResourceRequest} and sets the default values.
      */
     public AccessPackageResourceRequest() {
         super();
@@ -18,7 +18,7 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AccessPackageResourceRequest
+     * @return a {@link AccessPackageResourceRequest}
      */
     @jakarta.annotation.Nonnull
     public static AccessPackageResourceRequest createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
     }
     /**
      * Gets the accessPackageResource property value. The accessPackageResource property
-     * @return a AccessPackageResource
+     * @return a {@link AccessPackageResource}
      */
     @jakarta.annotation.Nullable
     public AccessPackageResource getAccessPackageResource() {
@@ -35,7 +35,7 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
     }
     /**
      * Gets the catalogId property value. The unique ID of the access package catalog.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCatalogId() {
@@ -43,7 +43,7 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
     }
     /**
      * Gets the executeImmediately property value. The executeImmediately property
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getExecuteImmediately() {
@@ -51,7 +51,7 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
     }
     /**
      * Gets the expirationDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getExpirationDateTime() {
@@ -59,7 +59,7 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -78,7 +78,7 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
     }
     /**
      * Gets the isValidationOnly property value. If set, does not add the resource.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsValidationOnly() {
@@ -86,7 +86,7 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
     }
     /**
      * Gets the justification property value. The requestor's justification for adding or removing the resource.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getJustification() {
@@ -94,7 +94,7 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
     }
     /**
      * Gets the requestor property value. Read-only. Nullable. Supports $expand.
-     * @return a AccessPackageSubject
+     * @return a {@link AccessPackageSubject}
      */
     @jakarta.annotation.Nullable
     public AccessPackageSubject getRequestor() {
@@ -102,7 +102,7 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
     }
     /**
      * Gets the requestState property value. The outcome of whether the service was able to add the resource to the catalog.  The value is Delivered if the resource was added or removed. Read-Only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRequestState() {
@@ -110,7 +110,7 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
     }
     /**
      * Gets the requestStatus property value. The requestStatus property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRequestStatus() {
@@ -118,7 +118,7 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
     }
     /**
      * Gets the requestType property value. Use AdminAdd to add a resource, if the caller is an administrator or resource owner, AdminUpdate to update a resource, or AdminRemove to remove a resource.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRequestType() {

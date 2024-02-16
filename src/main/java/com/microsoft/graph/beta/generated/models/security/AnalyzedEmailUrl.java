@@ -18,7 +18,7 @@ public class AnalyzedEmailUrl implements AdditionalDataHolder, BackedModel, Pars
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new AnalyzedEmailUrl and sets the default values.
+     * Instantiates a new {@link AnalyzedEmailUrl} and sets the default values.
      */
     public AnalyzedEmailUrl() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class AnalyzedEmailUrl implements AdditionalDataHolder, BackedModel, Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AnalyzedEmailUrl
+     * @return a {@link AnalyzedEmailUrl}
      */
     @jakarta.annotation.Nonnull
     public static AnalyzedEmailUrl createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class AnalyzedEmailUrl implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class AnalyzedEmailUrl implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class AnalyzedEmailUrl implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the detectionMethod property value. The detectionMethod property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDetectionMethod() {
@@ -65,7 +65,7 @@ public class AnalyzedEmailUrl implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the detonationDetails property value. The detonationDetails property
-     * @return a DetonationDetails
+     * @return a {@link DetonationDetails}
      */
     @jakarta.annotation.Nullable
     public DetonationDetails getDetonationDetails() {
@@ -73,7 +73,7 @@ public class AnalyzedEmailUrl implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -87,7 +87,7 @@ public class AnalyzedEmailUrl implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -95,7 +95,7 @@ public class AnalyzedEmailUrl implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the threatType property value. The threatType property
-     * @return a ThreatType
+     * @return a {@link ThreatType}
      */
     @jakarta.annotation.Nullable
     public ThreatType getThreatType() {
@@ -103,7 +103,7 @@ public class AnalyzedEmailUrl implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the url property value. The url property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUrl() {

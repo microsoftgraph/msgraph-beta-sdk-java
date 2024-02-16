@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PlannerTaskConfiguration extends Entity implements Parsable {
     /**
-     * Instantiates a new PlannerTaskConfiguration and sets the default values.
+     * Instantiates a new {@link PlannerTaskConfiguration} and sets the default values.
      */
     public PlannerTaskConfiguration() {
         super();
@@ -17,7 +17,7 @@ public class PlannerTaskConfiguration extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PlannerTaskConfiguration
+     * @return a {@link PlannerTaskConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static PlannerTaskConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class PlannerTaskConfiguration extends Entity implements Parsable {
     }
     /**
      * Gets the editPolicy property value. Policy configuration for tasks created for the businessScenario when they're being changed outside of the scenario.
-     * @return a PlannerTaskPolicy
+     * @return a {@link PlannerTaskPolicy}
      */
     @jakarta.annotation.Nullable
     public PlannerTaskPolicy getEditPolicy() {
@@ -34,7 +34,7 @@ public class PlannerTaskConfiguration extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

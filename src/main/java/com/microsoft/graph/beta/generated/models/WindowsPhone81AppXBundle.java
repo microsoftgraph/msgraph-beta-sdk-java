@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsPhone81AppXBundle extends WindowsPhone81AppX implements Parsable {
     /**
-     * Instantiates a new WindowsPhone81AppXBundle and sets the default values.
+     * Instantiates a new {@link WindowsPhone81AppXBundle} and sets the default values.
      */
     public WindowsPhone81AppXBundle() {
         super();
@@ -21,7 +21,7 @@ public class WindowsPhone81AppXBundle extends WindowsPhone81AppX implements Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WindowsPhone81AppXBundle
+     * @return a {@link WindowsPhone81AppXBundle}
      */
     @jakarta.annotation.Nonnull
     public static WindowsPhone81AppXBundle createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class WindowsPhone81AppXBundle extends WindowsPhone81AppX implements Pars
     }
     /**
      * Gets the appXPackageInformationList property value. The list of AppX Package Information.
-     * @return a java.util.List<WindowsPackageInformation>
+     * @return a {@link java.util.List<WindowsPackageInformation>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<WindowsPackageInformation> getAppXPackageInformationList() {
@@ -38,7 +38,7 @@ public class WindowsPhone81AppXBundle extends WindowsPhone81AppX implements Pars
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

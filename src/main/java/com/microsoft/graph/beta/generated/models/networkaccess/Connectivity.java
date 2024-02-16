@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Connectivity extends Entity implements Parsable {
     /**
-     * Instantiates a new Connectivity and sets the default values.
+     * Instantiates a new {@link Connectivity} and sets the default values.
      */
     public Connectivity() {
         super();
@@ -18,7 +18,7 @@ public class Connectivity extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Connectivity
+     * @return a {@link Connectivity}
      */
     @jakarta.annotation.Nonnull
     public static Connectivity createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class Connectivity extends Entity implements Parsable {
     }
     /**
      * Gets the branches property value. Branches represent locations for connectivity.
-     * @return a java.util.List<BranchSite>
+     * @return a {@link java.util.List<BranchSite>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<BranchSite> getBranches() {
@@ -35,7 +35,7 @@ public class Connectivity extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -47,7 +47,7 @@ public class Connectivity extends Entity implements Parsable {
     }
     /**
      * Gets the remoteNetworks property value. The remoteNetworks property
-     * @return a java.util.List<RemoteNetwork>
+     * @return a {@link java.util.List<RemoteNetwork>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<RemoteNetwork> getRemoteNetworks() {
@@ -55,7 +55,7 @@ public class Connectivity extends Entity implements Parsable {
     }
     /**
      * Gets the webCategories property value. The webCategories property
-     * @return a java.util.List<WebCategory>
+     * @return a {@link java.util.List<WebCategory>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<WebCategory> getWebCategories() {

@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementSettingDefinition extends Entity implements Parsable {
     /**
-     * Instantiates a new DeviceManagementSettingDefinition and sets the default values.
+     * Instantiates a new {@link DeviceManagementSettingDefinition} and sets the default values.
      */
     public DeviceManagementSettingDefinition() {
         super();
@@ -20,7 +20,7 @@ public class DeviceManagementSettingDefinition extends Entity implements Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceManagementSettingDefinition
+     * @return a {@link DeviceManagementSettingDefinition}
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementSettingDefinition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,7 +38,7 @@ public class DeviceManagementSettingDefinition extends Entity implements Parsabl
     }
     /**
      * Gets the constraints property value. Collection of constraints for the setting value
-     * @return a java.util.List<DeviceManagementConstraint>
+     * @return a {@link java.util.List<DeviceManagementConstraint>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementConstraint> getConstraints() {
@@ -46,7 +46,7 @@ public class DeviceManagementSettingDefinition extends Entity implements Parsabl
     }
     /**
      * Gets the dependencies property value. Collection of dependencies on other settings
-     * @return a java.util.List<DeviceManagementSettingDependency>
+     * @return a {@link java.util.List<DeviceManagementSettingDependency>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementSettingDependency> getDependencies() {
@@ -54,7 +54,7 @@ public class DeviceManagementSettingDefinition extends Entity implements Parsabl
     }
     /**
      * Gets the description property value. The setting's description
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -62,7 +62,7 @@ public class DeviceManagementSettingDefinition extends Entity implements Parsabl
     }
     /**
      * Gets the displayName property value. The setting's display name
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -70,7 +70,7 @@ public class DeviceManagementSettingDefinition extends Entity implements Parsabl
     }
     /**
      * Gets the documentationUrl property value. Url to setting documentation
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDocumentationUrl() {
@@ -78,7 +78,7 @@ public class DeviceManagementSettingDefinition extends Entity implements Parsabl
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -98,7 +98,7 @@ public class DeviceManagementSettingDefinition extends Entity implements Parsabl
     }
     /**
      * Gets the headerSubtitle property value. subtitle of the setting header for more details about the category/section
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getHeaderSubtitle() {
@@ -106,7 +106,7 @@ public class DeviceManagementSettingDefinition extends Entity implements Parsabl
     }
     /**
      * Gets the headerTitle property value. title of the setting header represents a category/section of a setting/settings
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getHeaderTitle() {
@@ -114,7 +114,7 @@ public class DeviceManagementSettingDefinition extends Entity implements Parsabl
     }
     /**
      * Gets the isTopLevel property value. If the setting is top level, it can be configured without the need to be wrapped in a collection or complex setting
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsTopLevel() {
@@ -122,7 +122,7 @@ public class DeviceManagementSettingDefinition extends Entity implements Parsabl
     }
     /**
      * Gets the keywords property value. Keywords associated with the setting
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getKeywords() {
@@ -130,7 +130,7 @@ public class DeviceManagementSettingDefinition extends Entity implements Parsabl
     }
     /**
      * Gets the placeholderText property value. Placeholder text as an example of valid input
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPlaceholderText() {
@@ -138,7 +138,7 @@ public class DeviceManagementSettingDefinition extends Entity implements Parsabl
     }
     /**
      * Gets the valueType property value. The valueType property
-     * @return a DeviceManangementIntentValueType
+     * @return a {@link DeviceManangementIntentValueType}
      */
     @jakarta.annotation.Nullable
     public DeviceManangementIntentValueType getValueType() {

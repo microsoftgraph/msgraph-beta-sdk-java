@@ -18,7 +18,7 @@ public class CloudPcAuditActor implements AdditionalDataHolder, BackedModel, Par
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new CloudPcAuditActor and sets the default values.
+     * Instantiates a new {@link CloudPcAuditActor} and sets the default values.
      */
     public CloudPcAuditActor() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class CloudPcAuditActor implements AdditionalDataHolder, BackedModel, Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CloudPcAuditActor
+     * @return a {@link CloudPcAuditActor}
      */
     @jakarta.annotation.Nonnull
     public static CloudPcAuditActor createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class CloudPcAuditActor implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class CloudPcAuditActor implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the applicationDisplayName property value. Name of the application.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getApplicationDisplayName() {
@@ -57,7 +57,7 @@ public class CloudPcAuditActor implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the applicationId property value. Microsoft Entra application ID.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getApplicationId() {
@@ -65,7 +65,7 @@ public class CloudPcAuditActor implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -73,7 +73,7 @@ public class CloudPcAuditActor implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -94,7 +94,7 @@ public class CloudPcAuditActor implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the ipAddress property value. IP address.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getIpAddress() {
@@ -102,7 +102,7 @@ public class CloudPcAuditActor implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -110,7 +110,7 @@ public class CloudPcAuditActor implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the remoteTenantId property value. The delegated partner tenant ID.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRemoteTenantId() {
@@ -118,7 +118,7 @@ public class CloudPcAuditActor implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the remoteUserId property value. The delegated partner user ID.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRemoteUserId() {
@@ -126,7 +126,7 @@ public class CloudPcAuditActor implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the servicePrincipalName property value. Service Principal Name (SPN).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getServicePrincipalName() {
@@ -134,7 +134,7 @@ public class CloudPcAuditActor implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the type property value. The type property
-     * @return a CloudPcAuditActorType
+     * @return a {@link CloudPcAuditActorType}
      */
     @jakarta.annotation.Nullable
     public CloudPcAuditActorType getType() {
@@ -142,7 +142,7 @@ public class CloudPcAuditActor implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the userId property value. Microsoft Entra user ID.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
@@ -150,7 +150,7 @@ public class CloudPcAuditActor implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the userPermissions property value. List of user permissions and application permissions when the audit event was performed.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getUserPermissions() {
@@ -158,7 +158,7 @@ public class CloudPcAuditActor implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the userPrincipalName property value. User Principal Name (UPN).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
@@ -166,7 +166,7 @@ public class CloudPcAuditActor implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the userRoleScopeTags property value. List of role scope tags.
-     * @return a java.util.List<CloudPcUserRoleScopeTagInfo>
+     * @return a {@link java.util.List<CloudPcUserRoleScopeTagInfo>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<CloudPcUserRoleScopeTagInfo> getUserRoleScopeTags() {

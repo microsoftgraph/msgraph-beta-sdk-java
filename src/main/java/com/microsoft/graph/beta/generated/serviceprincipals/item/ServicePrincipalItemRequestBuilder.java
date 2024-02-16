@@ -51,6 +51,7 @@ import java.util.Objects;
 public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the addTokenSigningCertificate method.
+     * @return a {@link AddTokenSigningCertificateRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AddTokenSigningCertificateRequestBuilder addTokenSigningCertificate() {
@@ -58,6 +59,7 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the appManagementPolicies property of the microsoft.graph.servicePrincipal entity.
+     * @return a {@link AppManagementPoliciesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AppManagementPoliciesRequestBuilder appManagementPolicies() {
@@ -65,6 +67,7 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the appRoleAssignedTo property of the microsoft.graph.servicePrincipal entity.
+     * @return a {@link AppRoleAssignedToRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AppRoleAssignedToRequestBuilder appRoleAssignedTo() {
@@ -72,6 +75,7 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the appRoleAssignments property of the microsoft.graph.servicePrincipal entity.
+     * @return a {@link AppRoleAssignmentsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AppRoleAssignmentsRequestBuilder appRoleAssignments() {
@@ -79,6 +83,7 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the checkMemberGroups method.
+     * @return a {@link CheckMemberGroupsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CheckMemberGroupsRequestBuilder checkMemberGroups() {
@@ -86,6 +91,7 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the checkMemberObjects method.
+     * @return a {@link CheckMemberObjectsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CheckMemberObjectsRequestBuilder checkMemberObjects() {
@@ -93,6 +99,7 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the claimsMappingPolicies property of the microsoft.graph.servicePrincipal entity.
+     * @return a {@link ClaimsMappingPoliciesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ClaimsMappingPoliciesRequestBuilder claimsMappingPolicies() {
@@ -100,6 +107,7 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the createdObjects property of the microsoft.graph.servicePrincipal entity.
+     * @return a {@link CreatedObjectsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CreatedObjectsRequestBuilder createdObjects() {
@@ -107,6 +115,7 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the createPasswordSingleSignOnCredentials method.
+     * @return a {@link CreatePasswordSingleSignOnCredentialsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CreatePasswordSingleSignOnCredentialsRequestBuilder createPasswordSingleSignOnCredentials() {
@@ -114,6 +123,7 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the delegatedPermissionClassifications property of the microsoft.graph.servicePrincipal entity.
+     * @return a {@link DelegatedPermissionClassificationsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DelegatedPermissionClassificationsRequestBuilder delegatedPermissionClassifications() {
@@ -121,6 +131,7 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the deletePasswordSingleSignOnCredentials method.
+     * @return a {@link DeletePasswordSingleSignOnCredentialsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DeletePasswordSingleSignOnCredentialsRequestBuilder deletePasswordSingleSignOnCredentials() {
@@ -128,6 +139,7 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the endpoints property of the microsoft.graph.servicePrincipal entity.
+     * @return a {@link EndpointsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public EndpointsRequestBuilder endpoints() {
@@ -135,6 +147,7 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the federatedIdentityCredentials property of the microsoft.graph.servicePrincipal entity.
+     * @return a {@link FederatedIdentityCredentialsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public FederatedIdentityCredentialsRequestBuilder federatedIdentityCredentials() {
@@ -142,6 +155,7 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getMemberGroups method.
+     * @return a {@link GetMemberGroupsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetMemberGroupsRequestBuilder getMemberGroups() {
@@ -149,6 +163,7 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getMemberObjects method.
+     * @return a {@link GetMemberObjectsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetMemberObjectsRequestBuilder getMemberObjects() {
@@ -156,6 +171,7 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getPasswordSingleSignOnCredentials method.
+     * @return a {@link GetPasswordSingleSignOnCredentialsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetPasswordSingleSignOnCredentialsRequestBuilder getPasswordSingleSignOnCredentials() {
@@ -163,6 +179,7 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the homeRealmDiscoveryPolicies property of the microsoft.graph.servicePrincipal entity.
+     * @return a {@link HomeRealmDiscoveryPoliciesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public HomeRealmDiscoveryPoliciesRequestBuilder homeRealmDiscoveryPolicies() {
@@ -170,6 +187,7 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the licenseDetails property of the microsoft.graph.servicePrincipal entity.
+     * @return a {@link LicenseDetailsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public LicenseDetailsRequestBuilder licenseDetails() {
@@ -177,6 +195,7 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the memberOf property of the microsoft.graph.servicePrincipal entity.
+     * @return a {@link MemberOfRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MemberOfRequestBuilder memberOf() {
@@ -184,6 +203,7 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the oauth2PermissionGrants property of the microsoft.graph.servicePrincipal entity.
+     * @return a {@link Oauth2PermissionGrantsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public Oauth2PermissionGrantsRequestBuilder oauth2PermissionGrants() {
@@ -191,6 +211,7 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the ownedObjects property of the microsoft.graph.servicePrincipal entity.
+     * @return a {@link OwnedObjectsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public OwnedObjectsRequestBuilder ownedObjects() {
@@ -198,6 +219,7 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the owners property of the microsoft.graph.servicePrincipal entity.
+     * @return a {@link OwnersRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public OwnersRequestBuilder owners() {
@@ -205,6 +227,7 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the remoteDesktopSecurityConfiguration property of the microsoft.graph.servicePrincipal entity.
+     * @return a {@link RemoteDesktopSecurityConfigurationRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RemoteDesktopSecurityConfigurationRequestBuilder remoteDesktopSecurityConfiguration() {
@@ -212,6 +235,7 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the restore method.
+     * @return a {@link RestoreRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RestoreRequestBuilder restore() {
@@ -219,6 +243,7 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the synchronization property of the microsoft.graph.servicePrincipal entity.
+     * @return a {@link SynchronizationRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SynchronizationRequestBuilder synchronization() {
@@ -226,6 +251,7 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the tokenIssuancePolicies property of the microsoft.graph.servicePrincipal entity.
+     * @return a {@link TokenIssuancePoliciesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TokenIssuancePoliciesRequestBuilder tokenIssuancePolicies() {
@@ -233,6 +259,7 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the tokenLifetimePolicies property of the microsoft.graph.servicePrincipal entity.
+     * @return a {@link TokenLifetimePoliciesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TokenLifetimePoliciesRequestBuilder tokenLifetimePolicies() {
@@ -240,6 +267,7 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the transitiveMemberOf property of the microsoft.graph.servicePrincipal entity.
+     * @return a {@link TransitiveMemberOfRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TransitiveMemberOfRequestBuilder transitiveMemberOf() {
@@ -247,13 +275,14 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the updatePasswordSingleSignOnCredentials method.
+     * @return a {@link UpdatePasswordSingleSignOnCredentialsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UpdatePasswordSingleSignOnCredentialsRequestBuilder updatePasswordSingleSignOnCredentials() {
         return new UpdatePasswordSingleSignOnCredentialsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new ServicePrincipalItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link ServicePrincipalItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -261,7 +290,7 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/servicePrincipals/{servicePrincipal%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new ServicePrincipalItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link ServicePrincipalItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -270,6 +299,7 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Delete a servicePrincipal object.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
@@ -278,18 +308,19 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete a servicePrincipal object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Retrieve the properties and relationships of a servicePrincipal object.
-     * @return a ServicePrincipal
+     * @return a {@link ServicePrincipal}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -299,21 +330,22 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of a servicePrincipal object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a ServicePrincipal
+     * @return a {@link ServicePrincipal}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ServicePrincipal get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, ServicePrincipal::createFromDiscriminatorValue);
     }
     /**
      * Update the properties of servicePrincipal object.
      * @param body The request body
-     * @return a ServicePrincipal
+     * @return a {@link ServicePrincipal}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -324,7 +356,8 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of servicePrincipal object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a ServicePrincipal
+     * @return a {@link ServicePrincipal}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -332,13 +365,12 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, ServicePrincipal::createFromDiscriminatorValue);
     }
     /**
      * Delete a servicePrincipal object.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -347,18 +379,18 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete a servicePrincipal object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/servicePrincipals/{servicePrincipal%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Retrieve the properties and relationships of a servicePrincipal object.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -367,7 +399,7 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of a servicePrincipal object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -379,7 +411,7 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of servicePrincipal object.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final ServicePrincipal body) {
@@ -389,12 +421,12 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of servicePrincipal object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final ServicePrincipal body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/servicePrincipals/{servicePrincipal%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -403,7 +435,7 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a ServicePrincipalItemRequestBuilder
+     * @return a {@link ServicePrincipalItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ServicePrincipalItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -433,7 +465,7 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

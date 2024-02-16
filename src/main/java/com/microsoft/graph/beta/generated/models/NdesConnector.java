@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class NdesConnector extends Entity implements Parsable {
     /**
-     * Instantiates a new NdesConnector and sets the default values.
+     * Instantiates a new {@link NdesConnector} and sets the default values.
      */
     public NdesConnector() {
         super();
@@ -21,7 +21,7 @@ public class NdesConnector extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a NdesConnector
+     * @return a {@link NdesConnector}
      */
     @jakarta.annotation.Nonnull
     public static NdesConnector createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class NdesConnector extends Entity implements Parsable {
     }
     /**
      * Gets the connectorVersion property value. The build version of the Ndes Connector.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getConnectorVersion() {
@@ -38,7 +38,7 @@ public class NdesConnector extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The friendly name of the Ndes Connector.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -46,7 +46,7 @@ public class NdesConnector extends Entity implements Parsable {
     }
     /**
      * Gets the enrolledDateTime property value. Timestamp when on-prem certificate connector was enrolled in Intune.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getEnrolledDateTime() {
@@ -54,7 +54,7 @@ public class NdesConnector extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -70,7 +70,7 @@ public class NdesConnector extends Entity implements Parsable {
     }
     /**
      * Gets the lastConnectionDateTime property value. Last connection time for the Ndes Connector
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastConnectionDateTime() {
@@ -78,7 +78,7 @@ public class NdesConnector extends Entity implements Parsable {
     }
     /**
      * Gets the machineName property value. Name of the machine running on-prem certificate connector service.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getMachineName() {
@@ -86,7 +86,7 @@ public class NdesConnector extends Entity implements Parsable {
     }
     /**
      * Gets the roleScopeTagIds property value. List of Scope Tags for this Entity instance.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {
@@ -94,7 +94,7 @@ public class NdesConnector extends Entity implements Parsable {
     }
     /**
      * Gets the state property value. The current status of the Ndes Connector.
-     * @return a NdesConnectorState
+     * @return a {@link NdesConnectorState}
      */
     @jakarta.annotation.Nullable
     public NdesConnectorState getState() {

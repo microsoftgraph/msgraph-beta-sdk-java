@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MacOSSoftwareUpdateCategorySummary extends Entity implements Parsable {
     /**
-     * Instantiates a new MacOSSoftwareUpdateCategorySummary and sets the default values.
+     * Instantiates a new {@link MacOSSoftwareUpdateCategorySummary} and sets the default values.
      */
     public MacOSSoftwareUpdateCategorySummary() {
         super();
@@ -21,7 +21,7 @@ public class MacOSSoftwareUpdateCategorySummary extends Entity implements Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MacOSSoftwareUpdateCategorySummary
+     * @return a {@link MacOSSoftwareUpdateCategorySummary}
      */
     @jakarta.annotation.Nonnull
     public static MacOSSoftwareUpdateCategorySummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class MacOSSoftwareUpdateCategorySummary extends Entity implements Parsab
     }
     /**
      * Gets the deviceId property value. The device ID.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceId() {
@@ -38,7 +38,7 @@ public class MacOSSoftwareUpdateCategorySummary extends Entity implements Parsab
     }
     /**
      * Gets the displayName property value. The name of the report
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -46,7 +46,7 @@ public class MacOSSoftwareUpdateCategorySummary extends Entity implements Parsab
     }
     /**
      * Gets the failedUpdateCount property value. Number of failed updates on the device
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getFailedUpdateCount() {
@@ -54,7 +54,7 @@ public class MacOSSoftwareUpdateCategorySummary extends Entity implements Parsab
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -72,7 +72,7 @@ public class MacOSSoftwareUpdateCategorySummary extends Entity implements Parsab
     }
     /**
      * Gets the lastUpdatedDateTime property value. Last date time the report for this device was updated.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastUpdatedDateTime() {
@@ -80,7 +80,7 @@ public class MacOSSoftwareUpdateCategorySummary extends Entity implements Parsab
     }
     /**
      * Gets the successfulUpdateCount property value. Number of successful updates on the device
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getSuccessfulUpdateCount() {
@@ -88,7 +88,7 @@ public class MacOSSoftwareUpdateCategorySummary extends Entity implements Parsab
     }
     /**
      * Gets the totalUpdateCount property value. Number of total updates on the device
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getTotalUpdateCount() {
@@ -96,7 +96,7 @@ public class MacOSSoftwareUpdateCategorySummary extends Entity implements Parsab
     }
     /**
      * Gets the updateCategory property value. MacOS Software Update Category
-     * @return a MacOSSoftwareUpdateCategory
+     * @return a {@link MacOSSoftwareUpdateCategory}
      */
     @jakarta.annotation.Nullable
     public MacOSSoftwareUpdateCategory getUpdateCategory() {
@@ -104,7 +104,7 @@ public class MacOSSoftwareUpdateCategorySummary extends Entity implements Parsab
     }
     /**
      * Gets the updateStateSummaries property value. Summary of the update states.
-     * @return a java.util.List<MacOSSoftwareUpdateStateSummary>
+     * @return a {@link java.util.List<MacOSSoftwareUpdateStateSummary>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<MacOSSoftwareUpdateStateSummary> getUpdateStateSummaries() {
@@ -112,7 +112,7 @@ public class MacOSSoftwareUpdateCategorySummary extends Entity implements Parsab
     }
     /**
      * Gets the userId property value. The user ID.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserId() {

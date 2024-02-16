@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class VpnConfiguration extends DeviceConfiguration implements Parsable {
     /**
-     * Instantiates a new VpnConfiguration and sets the default values.
+     * Instantiates a new {@link VpnConfiguration} and sets the default values.
      */
     public VpnConfiguration() {
         super();
@@ -21,7 +21,7 @@ public class VpnConfiguration extends DeviceConfiguration implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a VpnConfiguration
+     * @return a {@link VpnConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static VpnConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class VpnConfiguration extends DeviceConfiguration implements Parsable {
     }
     /**
      * Gets the authenticationMethod property value. VPN Authentication Method.
-     * @return a VpnAuthenticationMethod
+     * @return a {@link VpnAuthenticationMethod}
      */
     @jakarta.annotation.Nullable
     public VpnAuthenticationMethod getAuthenticationMethod() {
@@ -45,7 +45,7 @@ public class VpnConfiguration extends DeviceConfiguration implements Parsable {
     }
     /**
      * Gets the connectionName property value. Connection name displayed to the user.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getConnectionName() {
@@ -53,7 +53,7 @@ public class VpnConfiguration extends DeviceConfiguration implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -67,7 +67,7 @@ public class VpnConfiguration extends DeviceConfiguration implements Parsable {
     }
     /**
      * Gets the realm property value. Realm when connection type is set to Pulse Secure.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRealm() {
@@ -75,7 +75,7 @@ public class VpnConfiguration extends DeviceConfiguration implements Parsable {
     }
     /**
      * Gets the role property value. Role when connection type is set to Pulse Secure.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRole() {
@@ -83,7 +83,7 @@ public class VpnConfiguration extends DeviceConfiguration implements Parsable {
     }
     /**
      * Gets the servers property value. List of VPN Servers on the network. Make sure end users can access these network locations. This collection can contain a maximum of 500 elements.
-     * @return a java.util.List<VpnServer>
+     * @return a {@link java.util.List<VpnServer>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<VpnServer> getServers() {

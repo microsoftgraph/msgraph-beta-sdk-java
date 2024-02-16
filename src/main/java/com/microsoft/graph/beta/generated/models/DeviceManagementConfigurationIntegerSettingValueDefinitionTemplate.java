@@ -21,7 +21,7 @@ public class DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate 
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate and sets the default values.
+     * Instantiates a new {@link DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate} and sets the default values.
      */
     public DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -30,7 +30,7 @@ public class DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate
+     * @return a {@link DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate}
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate 
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -52,7 +52,7 @@ public class DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate 
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -60,7 +60,7 @@ public class DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate 
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -72,7 +72,7 @@ public class DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate 
     }
     /**
      * Gets the maxValue property value. Integer Setting Maximum Value. Valid values -2147483648 to 2147483647
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getMaxValue() {
@@ -80,7 +80,7 @@ public class DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate 
     }
     /**
      * Gets the minValue property value. Integer Setting Minimum Value. Valid values -2147483648 to 2147483647
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getMinValue() {
@@ -88,7 +88,7 @@ public class DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate 
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {

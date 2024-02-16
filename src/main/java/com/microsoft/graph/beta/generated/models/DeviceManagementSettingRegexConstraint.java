@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementSettingRegexConstraint extends DeviceManagementConstraint implements Parsable {
     /**
-     * Instantiates a new DeviceManagementSettingRegexConstraint and sets the default values.
+     * Instantiates a new {@link DeviceManagementSettingRegexConstraint} and sets the default values.
      */
     public DeviceManagementSettingRegexConstraint() {
         super();
@@ -21,7 +21,7 @@ public class DeviceManagementSettingRegexConstraint extends DeviceManagementCons
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceManagementSettingRegexConstraint
+     * @return a {@link DeviceManagementSettingRegexConstraint}
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementSettingRegexConstraint createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class DeviceManagementSettingRegexConstraint extends DeviceManagementCons
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -40,7 +40,7 @@ public class DeviceManagementSettingRegexConstraint extends DeviceManagementCons
     }
     /**
      * Gets the regex property value. The RegEx pattern to match against
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRegex() {

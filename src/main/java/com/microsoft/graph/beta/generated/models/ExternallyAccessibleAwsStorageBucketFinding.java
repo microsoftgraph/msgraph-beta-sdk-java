@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ExternallyAccessibleAwsStorageBucketFinding extends Finding implements Parsable {
     /**
-     * Instantiates a new ExternallyAccessibleAwsStorageBucketFinding and sets the default values.
+     * Instantiates a new {@link ExternallyAccessibleAwsStorageBucketFinding} and sets the default values.
      */
     public ExternallyAccessibleAwsStorageBucketFinding() {
         super();
@@ -17,7 +17,7 @@ public class ExternallyAccessibleAwsStorageBucketFinding extends Finding impleme
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ExternallyAccessibleAwsStorageBucketFinding
+     * @return a {@link ExternallyAccessibleAwsStorageBucketFinding}
      */
     @jakarta.annotation.Nonnull
     public static ExternallyAccessibleAwsStorageBucketFinding createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class ExternallyAccessibleAwsStorageBucketFinding extends Finding impleme
     }
     /**
      * Gets the accessibility property value. The accessibility property
-     * @return a AwsAccessType
+     * @return a {@link AwsAccessType}
      */
     @jakarta.annotation.Nullable
     public AwsAccessType getAccessibility() {
@@ -34,7 +34,7 @@ public class ExternallyAccessibleAwsStorageBucketFinding extends Finding impleme
     }
     /**
      * Gets the accountsWithAccess property value. The accountsWithAccess property
-     * @return a AccountsWithAccess
+     * @return a {@link AccountsWithAccess}
      */
     @jakarta.annotation.Nullable
     public AccountsWithAccess getAccountsWithAccess() {
@@ -42,7 +42,7 @@ public class ExternallyAccessibleAwsStorageBucketFinding extends Finding impleme
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -54,7 +54,7 @@ public class ExternallyAccessibleAwsStorageBucketFinding extends Finding impleme
     }
     /**
      * Gets the storageBucket property value. The storageBucket property
-     * @return a AuthorizationSystemResource
+     * @return a {@link AuthorizationSystemResource}
      */
     @jakarta.annotation.Nullable
     public AuthorizationSystemResource getStorageBucket() {

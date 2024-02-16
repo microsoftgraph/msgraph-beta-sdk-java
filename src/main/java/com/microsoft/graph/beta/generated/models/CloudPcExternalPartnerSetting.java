@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CloudPcExternalPartnerSetting extends Entity implements Parsable {
     /**
-     * Instantiates a new CloudPcExternalPartnerSetting and sets the default values.
+     * Instantiates a new {@link CloudPcExternalPartnerSetting} and sets the default values.
      */
     public CloudPcExternalPartnerSetting() {
         super();
@@ -18,7 +18,7 @@ public class CloudPcExternalPartnerSetting extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CloudPcExternalPartnerSetting
+     * @return a {@link CloudPcExternalPartnerSetting}
      */
     @jakarta.annotation.Nonnull
     public static CloudPcExternalPartnerSetting createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class CloudPcExternalPartnerSetting extends Entity implements Parsable {
     }
     /**
      * Gets the enableConnection property value. Enable or disable the connection to an external partner. If true, an external partner API will accept incoming calls from external partners. Required. Supports $filter (eq).
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getEnableConnection() {
@@ -35,7 +35,7 @@ public class CloudPcExternalPartnerSetting extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -49,7 +49,7 @@ public class CloudPcExternalPartnerSetting extends Entity implements Parsable {
     }
     /**
      * Gets the lastSyncDateTime property value. Last data sync time for this external partner. The Timestamp type represents the date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 looks like this: '2014-01-01T00:00:00Z'.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastSyncDateTime() {
@@ -57,7 +57,7 @@ public class CloudPcExternalPartnerSetting extends Entity implements Parsable {
     }
     /**
      * Gets the partnerId property value. The external partner ID.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPartnerId() {
@@ -65,7 +65,7 @@ public class CloudPcExternalPartnerSetting extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status property
-     * @return a CloudPcExternalPartnerStatus
+     * @return a {@link CloudPcExternalPartnerStatus}
      */
     @jakarta.annotation.Nullable
     public CloudPcExternalPartnerStatus getStatus() {
@@ -73,7 +73,7 @@ public class CloudPcExternalPartnerSetting extends Entity implements Parsable {
     }
     /**
      * Gets the statusDetails property value. Status details message.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getStatusDetails() {

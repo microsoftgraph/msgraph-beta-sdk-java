@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OverprovisionedAzureServicePrincipalFinding extends IdentityFinding implements Parsable {
     /**
-     * Instantiates a new OverprovisionedAzureServicePrincipalFinding and sets the default values.
+     * Instantiates a new {@link OverprovisionedAzureServicePrincipalFinding} and sets the default values.
      */
     public OverprovisionedAzureServicePrincipalFinding() {
         super();
@@ -17,7 +17,7 @@ public class OverprovisionedAzureServicePrincipalFinding extends IdentityFinding
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a OverprovisionedAzureServicePrincipalFinding
+     * @return a {@link OverprovisionedAzureServicePrincipalFinding}
      */
     @jakarta.annotation.Nonnull
     public static OverprovisionedAzureServicePrincipalFinding createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class OverprovisionedAzureServicePrincipalFinding extends IdentityFinding
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

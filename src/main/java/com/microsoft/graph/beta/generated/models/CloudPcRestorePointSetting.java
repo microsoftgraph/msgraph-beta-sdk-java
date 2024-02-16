@@ -18,7 +18,7 @@ public class CloudPcRestorePointSetting implements AdditionalDataHolder, BackedM
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new CloudPcRestorePointSetting and sets the default values.
+     * Instantiates a new {@link CloudPcRestorePointSetting} and sets the default values.
      */
     public CloudPcRestorePointSetting() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class CloudPcRestorePointSetting implements AdditionalDataHolder, BackedM
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CloudPcRestorePointSetting
+     * @return a {@link CloudPcRestorePointSetting}
      */
     @jakarta.annotation.Nonnull
     public static CloudPcRestorePointSetting createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class CloudPcRestorePointSetting implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class CloudPcRestorePointSetting implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class CloudPcRestorePointSetting implements AdditionalDataHolder, BackedM
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -70,7 +70,7 @@ public class CloudPcRestorePointSetting implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the frequencyInHours property value. The frequencyInHours property
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getFrequencyInHours() {
@@ -78,7 +78,7 @@ public class CloudPcRestorePointSetting implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the frequencyType property value. The time interval in hours to take snapshots (restore points) of a Cloud PC automatically. Possible values are: default, fourHours, sixHours, twelveHours, sixteenHours, twentyFourHours, unknownFutureValue. The default value is default that indicates that the time interval for automatic capturing of restore point snapshots is set to 12 hours.
-     * @return a CloudPcRestorePointFrequencyType
+     * @return a {@link CloudPcRestorePointFrequencyType}
      */
     @jakarta.annotation.Nullable
     public CloudPcRestorePointFrequencyType getFrequencyType() {
@@ -86,7 +86,7 @@ public class CloudPcRestorePointSetting implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -94,7 +94,7 @@ public class CloudPcRestorePointSetting implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the userRestoreEnabled property value. If true, the user has the ability to use snapshots to restore Cloud PCs. If false, non-admin users can't use snapshots to restore the Cloud PC.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getUserRestoreEnabled() {

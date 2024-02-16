@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class StatusDetails extends StatusBase implements Parsable {
     /**
-     * Instantiates a new StatusDetails and sets the default values.
+     * Instantiates a new {@link StatusDetails} and sets the default values.
      */
     public StatusDetails() {
         super();
@@ -18,7 +18,7 @@ public class StatusDetails extends StatusBase implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a StatusDetails
+     * @return a {@link StatusDetails}
      */
     @jakarta.annotation.Nonnull
     public static StatusDetails createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class StatusDetails extends StatusBase implements Parsable {
     }
     /**
      * Gets the additionalDetails property value. Additional details if there is an error.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAdditionalDetails() {
@@ -35,7 +35,7 @@ public class StatusDetails extends StatusBase implements Parsable {
     }
     /**
      * Gets the errorCategory property value. Categorizes the error code. Possible values are Failure, NonServiceFailure, Success.
-     * @return a ProvisioningStatusErrorCategory
+     * @return a {@link ProvisioningStatusErrorCategory}
      */
     @jakarta.annotation.Nullable
     public ProvisioningStatusErrorCategory getErrorCategory() {
@@ -43,7 +43,7 @@ public class StatusDetails extends StatusBase implements Parsable {
     }
     /**
      * Gets the errorCode property value. Unique error code if any occurred. Learn more
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getErrorCode() {
@@ -51,7 +51,7 @@ public class StatusDetails extends StatusBase implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -65,7 +65,7 @@ public class StatusDetails extends StatusBase implements Parsable {
     }
     /**
      * Gets the reason property value. Summarizes the status and describes why the status happened.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getReason() {
@@ -73,7 +73,7 @@ public class StatusDetails extends StatusBase implements Parsable {
     }
     /**
      * Gets the recommendedAction property value. Provides the resolution for the corresponding error.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRecommendedAction() {

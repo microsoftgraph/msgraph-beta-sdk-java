@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class InactiveUsersMetricBase extends Entity implements Parsable {
     /**
-     * Instantiates a new InactiveUsersMetricBase and sets the default values.
+     * Instantiates a new {@link InactiveUsersMetricBase} and sets the default values.
      */
     public InactiveUsersMetricBase() {
         super();
@@ -18,7 +18,7 @@ public class InactiveUsersMetricBase extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a InactiveUsersMetricBase
+     * @return a {@link InactiveUsersMetricBase}
      */
     @jakarta.annotation.Nonnull
     public static InactiveUsersMetricBase createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -35,7 +35,7 @@ public class InactiveUsersMetricBase extends Entity implements Parsable {
     }
     /**
      * Gets the factDate property value. The factDate property
-     * @return a LocalDate
+     * @return a {@link LocalDate}
      */
     @jakarta.annotation.Nullable
     public LocalDate getFactDate() {
@@ -43,7 +43,7 @@ public class InactiveUsersMetricBase extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -56,7 +56,7 @@ public class InactiveUsersMetricBase extends Entity implements Parsable {
     }
     /**
      * Gets the inactive30DayCount property value. The inactive30DayCount property
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getInactive30DayCount() {
@@ -64,7 +64,7 @@ public class InactiveUsersMetricBase extends Entity implements Parsable {
     }
     /**
      * Gets the inactive60DayCount property value. The inactive60DayCount property
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getInactive60DayCount() {
@@ -72,7 +72,7 @@ public class InactiveUsersMetricBase extends Entity implements Parsable {
     }
     /**
      * Gets the inactive90DayCount property value. The inactive90DayCount property
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getInactive90DayCount() {

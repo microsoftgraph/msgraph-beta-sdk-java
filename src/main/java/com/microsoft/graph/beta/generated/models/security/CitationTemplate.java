@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CitationTemplate extends FilePlanDescriptorTemplate implements Parsable {
     /**
-     * Instantiates a new CitationTemplate and sets the default values.
+     * Instantiates a new {@link CitationTemplate} and sets the default values.
      */
     public CitationTemplate() {
         super();
@@ -17,7 +17,7 @@ public class CitationTemplate extends FilePlanDescriptorTemplate implements Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CitationTemplate
+     * @return a {@link CitationTemplate}
      */
     @jakarta.annotation.Nonnull
     public static CitationTemplate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class CitationTemplate extends FilePlanDescriptorTemplate implements Pars
     }
     /**
      * Gets the citationJurisdiction property value. Represents the jurisdiction or agency that published the citation.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCitationJurisdiction() {
@@ -34,7 +34,7 @@ public class CitationTemplate extends FilePlanDescriptorTemplate implements Pars
     }
     /**
      * Gets the citationUrl property value. Represents the URL to the published citation.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCitationUrl() {
@@ -42,7 +42,7 @@ public class CitationTemplate extends FilePlanDescriptorTemplate implements Pars
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

@@ -11,7 +11,7 @@ import java.util.UUID;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MultiTenantOrganizationMember extends DirectoryObject implements Parsable {
     /**
-     * Instantiates a new MultiTenantOrganizationMember and sets the default values.
+     * Instantiates a new {@link MultiTenantOrganizationMember} and sets the default values.
      */
     public MultiTenantOrganizationMember() {
         super();
@@ -20,7 +20,7 @@ public class MultiTenantOrganizationMember extends DirectoryObject implements Pa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MultiTenantOrganizationMember
+     * @return a {@link MultiTenantOrganizationMember}
      */
     @jakarta.annotation.Nonnull
     public static MultiTenantOrganizationMember createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -29,7 +29,7 @@ public class MultiTenantOrganizationMember extends DirectoryObject implements Pa
     }
     /**
      * Gets the addedByTenantId property value. Tenant ID of the tenant that added the tenant to the multitenant organization. Read-only.
-     * @return a UUID
+     * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
     public UUID getAddedByTenantId() {
@@ -37,7 +37,7 @@ public class MultiTenantOrganizationMember extends DirectoryObject implements Pa
     }
     /**
      * Gets the addedDateTime property value. Date and time when the tenant was added to the multitenant organization. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getAddedDateTime() {
@@ -45,7 +45,7 @@ public class MultiTenantOrganizationMember extends DirectoryObject implements Pa
     }
     /**
      * Gets the displayName property value. Display name of the tenant added to the multitenant organization.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -53,7 +53,7 @@ public class MultiTenantOrganizationMember extends DirectoryObject implements Pa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -70,7 +70,7 @@ public class MultiTenantOrganizationMember extends DirectoryObject implements Pa
     }
     /**
      * Gets the joinedDateTime property value. Date and time when the tenant joined the multitenant organization. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getJoinedDateTime() {
@@ -78,7 +78,7 @@ public class MultiTenantOrganizationMember extends DirectoryObject implements Pa
     }
     /**
      * Gets the role property value. Role of the tenant in the multitenant organization. The possible values are: owner, member (default), unknownFutureValue. Tenants with the owner role can manage the multitenant organization but tenants with the member role can only participate in a multitenant organization. There can be multiple tenants with the owner role in a multitenant organization.
-     * @return a MultiTenantOrganizationMemberRole
+     * @return a {@link MultiTenantOrganizationMemberRole}
      */
     @jakarta.annotation.Nullable
     public MultiTenantOrganizationMemberRole getRole() {
@@ -86,7 +86,7 @@ public class MultiTenantOrganizationMember extends DirectoryObject implements Pa
     }
     /**
      * Gets the state property value. State of the tenant in the multitenant organization. The possible values are: pending, active, removed, unknownFutureValue. Tenants in the pending state must join the multitenant organization to participate in the multitenant organization. Tenants in the active state can participate in the multitenant organization. Tenants in the removed state are in the process of being removed from the multitenant organization. Read-only.
-     * @return a MultiTenantOrganizationMemberState
+     * @return a {@link MultiTenantOrganizationMemberState}
      */
     @jakarta.annotation.Nullable
     public MultiTenantOrganizationMemberState getState() {
@@ -94,7 +94,7 @@ public class MultiTenantOrganizationMember extends DirectoryObject implements Pa
     }
     /**
      * Gets the tenantId property value. Tenant ID of the Microsoft Entra tenant added to the multitenant organization. Set at the time tenant is added.Supports $filter. Key.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
@@ -102,7 +102,7 @@ public class MultiTenantOrganizationMember extends DirectoryObject implements Pa
     }
     /**
      * Gets the transitionDetails property value. Details of the processing status for a tenant in a multitenant organization. Read-only. Nullable.
-     * @return a MultiTenantOrganizationMemberTransitionDetails
+     * @return a {@link MultiTenantOrganizationMemberTransitionDetails}
      */
     @jakarta.annotation.Nullable
     public MultiTenantOrganizationMemberTransitionDetails getTransitionDetails() {

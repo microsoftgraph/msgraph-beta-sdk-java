@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class BookingCustomer extends BookingPerson implements Parsable {
     /**
-     * Instantiates a new BookingCustomer and sets the default values.
+     * Instantiates a new {@link BookingCustomer} and sets the default values.
      */
     public BookingCustomer() {
         super();
@@ -21,7 +21,7 @@ public class BookingCustomer extends BookingPerson implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a BookingCustomer
+     * @return a {@link BookingCustomer}
      */
     @jakarta.annotation.Nonnull
     public static BookingCustomer createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,15 +30,15 @@ public class BookingCustomer extends BookingPerson implements Parsable {
     }
     /**
      * Gets the addresses property value. Addresses associated with the customer, including home, business and other addresses.
-     * @return a java.util.List<PhysicalAddress>
+     * @return a {@link java.util.List<PhysicalAddress>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<PhysicalAddress> getAddresses() {
         return this.backingStore.get("addresses");
     }
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
-     * @return a OffsetDateTime
+     * Gets the createdDateTime property value. The date, time and timezone when the customer was created.
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -46,7 +46,7 @@ public class BookingCustomer extends BookingPerson implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -58,8 +58,8 @@ public class BookingCustomer extends BookingPerson implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the lastUpdatedDateTime property value. The lastUpdatedDateTime property
-     * @return a OffsetDateTime
+     * Gets the lastUpdatedDateTime property value. The date, time and timezone when the customer was last updated.
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastUpdatedDateTime() {
@@ -67,7 +67,7 @@ public class BookingCustomer extends BookingPerson implements Parsable {
     }
     /**
      * Gets the phones property value. Phone numbers associated with the customer, including home, business and mobile numbers.
-     * @return a java.util.List<Phone>
+     * @return a {@link java.util.List<Phone>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Phone> getPhones() {
@@ -93,14 +93,14 @@ public class BookingCustomer extends BookingPerson implements Parsable {
         this.backingStore.set("addresses", value);
     }
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. The date, time and timezone when the customer was created.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the lastUpdatedDateTime property value. The lastUpdatedDateTime property
+     * Sets the lastUpdatedDateTime property value. The date, time and timezone when the customer was last updated.
      * @param value Value to set for the lastUpdatedDateTime property.
      */
     public void setLastUpdatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

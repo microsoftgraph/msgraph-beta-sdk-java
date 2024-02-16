@@ -1,5 +1,6 @@
 package com.microsoft.graph.beta.models.networkaccess;
 
+import com.microsoft.graph.beta.models.ServicePrincipal;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -9,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ForwardingProfile extends Profile implements Parsable {
     /**
-     * Instantiates a new ForwardingProfile and sets the default values.
+     * Instantiates a new {@link ForwardingProfile} and sets the default values.
      */
     public ForwardingProfile() {
         super();
@@ -18,7 +19,7 @@ public class ForwardingProfile extends Profile implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ForwardingProfile
+     * @return a {@link ForwardingProfile}
      */
     @jakarta.annotation.Nonnull
     public static ForwardingProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +28,7 @@ public class ForwardingProfile extends Profile implements Parsable {
     }
     /**
      * Gets the associations property value. Specifies the users, groups, devices, and branch locations whose traffic is associated with the given traffic forwarding profile.
-     * @return a java.util.List<Association>
+     * @return a {@link java.util.List<Association>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Association> getAssociations() {
@@ -35,27 +36,36 @@ public class ForwardingProfile extends Profile implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("associations", (n) -> { this.setAssociations(n.getCollectionOfObjectValues(Association::createFromDiscriminatorValue)); });
         deserializerMap.put("priority", (n) -> { this.setPriority(n.getIntegerValue()); });
+        deserializerMap.put("servicePrincipal", (n) -> { this.setServicePrincipal(n.getObjectValue(ServicePrincipal::createFromDiscriminatorValue)); });
         deserializerMap.put("trafficForwardingType", (n) -> { this.setTrafficForwardingType(n.getEnumValue(TrafficForwardingType::forValue)); });
         return deserializerMap;
     }
     /**
      * Gets the priority property value. Profile priority.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPriority() {
         return this.backingStore.get("priority");
     }
     /**
+     * Gets the servicePrincipal property value. The servicePrincipal property
+     * @return a {@link ServicePrincipal}
+     */
+    @jakarta.annotation.Nullable
+    public ServicePrincipal getServicePrincipal() {
+        return this.backingStore.get("servicePrincipal");
+    }
+    /**
      * Gets the trafficForwardingType property value. The trafficForwardingType property
-     * @return a TrafficForwardingType
+     * @return a {@link TrafficForwardingType}
      */
     @jakarta.annotation.Nullable
     public TrafficForwardingType getTrafficForwardingType() {
@@ -70,6 +80,7 @@ public class ForwardingProfile extends Profile implements Parsable {
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("associations", this.getAssociations());
         writer.writeIntegerValue("priority", this.getPriority());
+        writer.writeObjectValue("servicePrincipal", this.getServicePrincipal());
         writer.writeEnumValue("trafficForwardingType", this.getTrafficForwardingType());
     }
     /**
@@ -85,6 +96,13 @@ public class ForwardingProfile extends Profile implements Parsable {
      */
     public void setPriority(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("priority", value);
+    }
+    /**
+     * Sets the servicePrincipal property value. The servicePrincipal property
+     * @param value Value to set for the servicePrincipal property.
+     */
+    public void setServicePrincipal(@jakarta.annotation.Nullable final ServicePrincipal value) {
+        this.backingStore.set("servicePrincipal", value);
     }
     /**
      * Sets the trafficForwardingType property value. The trafficForwardingType property

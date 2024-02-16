@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GovernanceRoleAssignmentCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * Instantiates a new GovernanceRoleAssignmentCollectionResponse and sets the default values.
+     * Instantiates a new {@link GovernanceRoleAssignmentCollectionResponse} and sets the default values.
      */
     public GovernanceRoleAssignmentCollectionResponse() {
         super();
@@ -17,7 +17,7 @@ public class GovernanceRoleAssignmentCollectionResponse extends BaseCollectionPa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a GovernanceRoleAssignmentCollectionResponse
+     * @return a {@link GovernanceRoleAssignmentCollectionResponse}
      */
     @jakarta.annotation.Nonnull
     public static GovernanceRoleAssignmentCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class GovernanceRoleAssignmentCollectionResponse extends BaseCollectionPa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -36,7 +36,7 @@ public class GovernanceRoleAssignmentCollectionResponse extends BaseCollectionPa
     }
     /**
      * Gets the value property value. The value property
-     * @return a java.util.List<GovernanceRoleAssignment>
+     * @return a {@link java.util.List<GovernanceRoleAssignment>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<GovernanceRoleAssignment> getValue() {

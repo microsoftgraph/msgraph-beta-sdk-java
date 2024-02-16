@@ -18,7 +18,7 @@ public class PortalNotification implements AdditionalDataHolder, BackedModel, Pa
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new PortalNotification and sets the default values.
+     * Instantiates a new {@link PortalNotification} and sets the default values.
      */
     public PortalNotification() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class PortalNotification implements AdditionalDataHolder, BackedModel, Pa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PortalNotification
+     * @return a {@link PortalNotification}
      */
     @jakarta.annotation.Nonnull
     public static PortalNotification createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class PortalNotification implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class PortalNotification implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the alertImpact property value. The associated alert impact.
-     * @return a AlertImpact
+     * @return a {@link AlertImpact}
      */
     @jakarta.annotation.Nullable
     public AlertImpact getAlertImpact() {
@@ -57,7 +57,7 @@ public class PortalNotification implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the alertRecordId property value. The associated alert record ID.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAlertRecordId() {
@@ -65,7 +65,7 @@ public class PortalNotification implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the alertRuleId property value. The associated alert rule ID.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAlertRuleId() {
@@ -73,7 +73,7 @@ public class PortalNotification implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the alertRuleName property value. The associated alert rule name.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAlertRuleName() {
@@ -81,7 +81,7 @@ public class PortalNotification implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the alertRuleTemplate property value. The associated alert rule template. The possible values are: cloudPcProvisionScenario, cloudPcImageUploadScenario, cloudPcOnPremiseNetworkConnectionCheckScenario, unknownFutureValue, cloudPcInGracePeriodScenario. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: cloudPcInGracePeriodScenario.
-     * @return a AlertRuleTemplate
+     * @return a {@link AlertRuleTemplate}
      */
     @jakarta.annotation.Nullable
     public AlertRuleTemplate getAlertRuleTemplate() {
@@ -89,7 +89,7 @@ public class PortalNotification implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -97,7 +97,7 @@ public class PortalNotification implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -115,7 +115,7 @@ public class PortalNotification implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the id property value. The unique identifier for the portal notification.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getId() {
@@ -123,7 +123,7 @@ public class PortalNotification implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the isPortalNotificationSent property value. true if the portal notification has already been sent to the user; false otherwise.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsPortalNotificationSent() {
@@ -131,7 +131,7 @@ public class PortalNotification implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -139,7 +139,7 @@ public class PortalNotification implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the severity property value. The associated alert rule severity. The possible values are: unknown, informational, warning, critical, unknownFutureValue.
-     * @return a RuleSeverityType
+     * @return a {@link RuleSeverityType}
      */
     @jakarta.annotation.Nullable
     public RuleSeverityType getSeverity() {

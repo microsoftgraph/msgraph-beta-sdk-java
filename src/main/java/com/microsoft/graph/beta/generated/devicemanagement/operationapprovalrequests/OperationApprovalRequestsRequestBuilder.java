@@ -29,6 +29,7 @@ import java.util.Objects;
 public class OperationApprovalRequestsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the cancelMyRequest method.
+     * @return a {@link CancelMyRequestRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CancelMyRequestRequestBuilder cancelMyRequest() {
@@ -36,6 +37,7 @@ public class OperationApprovalRequestsRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -43,6 +45,7 @@ public class OperationApprovalRequestsRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * Provides operations to call the retrieveMyRequests method.
+     * @return a {@link RetrieveMyRequestsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RetrieveMyRequestsRequestBuilder retrieveMyRequests() {
@@ -50,6 +53,7 @@ public class OperationApprovalRequestsRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * Provides operations to call the retrieveRequestStatus method.
+     * @return a {@link RetrieveRequestStatusRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RetrieveRequestStatusRequestBuilder retrieveRequestStatus() {
@@ -58,7 +62,7 @@ public class OperationApprovalRequestsRequestBuilder extends BaseRequestBuilder 
     /**
      * Provides operations to manage the operationApprovalRequests property of the microsoft.graph.deviceManagement entity.
      * @param operationApprovalRequestId The unique identifier of operationApprovalRequest
-     * @return a OperationApprovalRequestItemRequestBuilder
+     * @return a {@link OperationApprovalRequestItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public OperationApprovalRequestItemRequestBuilder byOperationApprovalRequestId(@jakarta.annotation.Nonnull final String operationApprovalRequestId) {
@@ -68,7 +72,7 @@ public class OperationApprovalRequestsRequestBuilder extends BaseRequestBuilder 
         return new OperationApprovalRequestItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new OperationApprovalRequestsRequestBuilder and sets the default values.
+     * Instantiates a new {@link OperationApprovalRequestsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -76,7 +80,7 @@ public class OperationApprovalRequestsRequestBuilder extends BaseRequestBuilder 
         super(requestAdapter, "{+baseurl}/deviceManagement/operationApprovalRequests{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new OperationApprovalRequestsRequestBuilder and sets the default values.
+     * Instantiates a new {@link OperationApprovalRequestsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -85,7 +89,8 @@ public class OperationApprovalRequestsRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * The Operation Approval Requests
-     * @return a OperationApprovalRequestCollectionResponse
+     * @return a {@link OperationApprovalRequestCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public OperationApprovalRequestCollectionResponse get() {
@@ -94,20 +99,21 @@ public class OperationApprovalRequestsRequestBuilder extends BaseRequestBuilder 
     /**
      * The Operation Approval Requests
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a OperationApprovalRequestCollectionResponse
+     * @return a {@link OperationApprovalRequestCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public OperationApprovalRequestCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, OperationApprovalRequestCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to operationApprovalRequests for deviceManagement
      * @param body The request body
-     * @return a OperationApprovalRequest
+     * @return a {@link OperationApprovalRequest}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public OperationApprovalRequest post(@jakarta.annotation.Nonnull final OperationApprovalRequest body) {
@@ -117,21 +123,21 @@ public class OperationApprovalRequestsRequestBuilder extends BaseRequestBuilder 
      * Create new navigation property to operationApprovalRequests for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a OperationApprovalRequest
+     * @return a {@link OperationApprovalRequest}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public OperationApprovalRequest post(@jakarta.annotation.Nonnull final OperationApprovalRequest body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, OperationApprovalRequest::createFromDiscriminatorValue);
     }
     /**
      * Provides operations to call the retrieveMyRequestById method.
      * @param id Usage: id='{id}'
-     * @return a RetrieveMyRequestByIdWithIdRequestBuilder
+     * @return a {@link RetrieveMyRequestByIdWithIdRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RetrieveMyRequestByIdWithIdRequestBuilder retrieveMyRequestByIdWithId(@jakarta.annotation.Nonnull final String id) {
@@ -140,7 +146,7 @@ public class OperationApprovalRequestsRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * The Operation Approval Requests
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -149,7 +155,7 @@ public class OperationApprovalRequestsRequestBuilder extends BaseRequestBuilder 
     /**
      * The Operation Approval Requests
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -161,7 +167,7 @@ public class OperationApprovalRequestsRequestBuilder extends BaseRequestBuilder 
     /**
      * Create new navigation property to operationApprovalRequests for deviceManagement
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final OperationApprovalRequest body) {
@@ -171,12 +177,12 @@ public class OperationApprovalRequestsRequestBuilder extends BaseRequestBuilder 
      * Create new navigation property to operationApprovalRequests for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final OperationApprovalRequest body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/deviceManagement/operationApprovalRequests", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -185,7 +191,7 @@ public class OperationApprovalRequestsRequestBuilder extends BaseRequestBuilder 
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a OperationApprovalRequestsRequestBuilder
+     * @return a {@link OperationApprovalRequestsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public OperationApprovalRequestsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -239,7 +245,7 @@ public class OperationApprovalRequestsRequestBuilder extends BaseRequestBuilder 
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

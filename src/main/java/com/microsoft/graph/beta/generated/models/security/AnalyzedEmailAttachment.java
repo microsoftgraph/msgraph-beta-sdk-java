@@ -18,7 +18,7 @@ public class AnalyzedEmailAttachment implements AdditionalDataHolder, BackedMode
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new AnalyzedEmailAttachment and sets the default values.
+     * Instantiates a new {@link AnalyzedEmailAttachment} and sets the default values.
      */
     public AnalyzedEmailAttachment() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class AnalyzedEmailAttachment implements AdditionalDataHolder, BackedMode
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AnalyzedEmailAttachment
+     * @return a {@link AnalyzedEmailAttachment}
      */
     @jakarta.annotation.Nonnull
     public static AnalyzedEmailAttachment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class AnalyzedEmailAttachment implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class AnalyzedEmailAttachment implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class AnalyzedEmailAttachment implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the detonationDetails property value. The detonationDetails property
-     * @return a DetonationDetails
+     * @return a {@link DetonationDetails}
      */
     @jakarta.annotation.Nullable
     public DetonationDetails getDetonationDetails() {
@@ -65,7 +65,7 @@ public class AnalyzedEmailAttachment implements AdditionalDataHolder, BackedMode
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -81,7 +81,7 @@ public class AnalyzedEmailAttachment implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the fileName property value. The fileName property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getFileName() {
@@ -89,7 +89,7 @@ public class AnalyzedEmailAttachment implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the fileType property value. The fileType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getFileType() {
@@ -97,7 +97,7 @@ public class AnalyzedEmailAttachment implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -105,7 +105,7 @@ public class AnalyzedEmailAttachment implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the sha256 property value. The sha256 property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSha256() {
@@ -113,7 +113,7 @@ public class AnalyzedEmailAttachment implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the threatName property value. The threatName property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getThreatName() {
@@ -121,7 +121,7 @@ public class AnalyzedEmailAttachment implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the threatType property value. The threatType property
-     * @return a ThreatType
+     * @return a {@link ThreatType}
      */
     @jakarta.annotation.Nullable
     public ThreatType getThreatType() {

@@ -18,7 +18,7 @@ public class RetrieveRequestStatusPostRequestBody implements AdditionalDataHolde
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new RetrieveRequestStatusPostRequestBody and sets the default values.
+     * Instantiates a new {@link RetrieveRequestStatusPostRequestBody} and sets the default values.
      */
     public RetrieveRequestStatusPostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class RetrieveRequestStatusPostRequestBody implements AdditionalDataHolde
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a RetrieveRequestStatusPostRequestBody
+     * @return a {@link RetrieveRequestStatusPostRequestBody}
      */
     @jakarta.annotation.Nonnull
     public static RetrieveRequestStatusPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class RetrieveRequestStatusPostRequestBody implements AdditionalDataHolde
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class RetrieveRequestStatusPostRequestBody implements AdditionalDataHolde
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class RetrieveRequestStatusPostRequestBody implements AdditionalDataHolde
     }
     /**
      * Gets the entityId property value. The entityId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getEntityId() {
@@ -65,7 +65,7 @@ public class RetrieveRequestStatusPostRequestBody implements AdditionalDataHolde
     }
     /**
      * Gets the entityType property value. The entityType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getEntityType() {
@@ -73,7 +73,7 @@ public class RetrieveRequestStatusPostRequestBody implements AdditionalDataHolde
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

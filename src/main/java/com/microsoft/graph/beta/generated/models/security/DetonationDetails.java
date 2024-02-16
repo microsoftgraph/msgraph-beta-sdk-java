@@ -19,7 +19,7 @@ public class DetonationDetails implements AdditionalDataHolder, BackedModel, Par
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new DetonationDetails and sets the default values.
+     * Instantiates a new {@link DetonationDetails} and sets the default values.
      */
     public DetonationDetails() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class DetonationDetails implements AdditionalDataHolder, BackedModel, Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DetonationDetails
+     * @return a {@link DetonationDetails}
      */
     @jakarta.annotation.Nonnull
     public static DetonationDetails createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class DetonationDetails implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -50,7 +50,7 @@ public class DetonationDetails implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the analysisDateTime property value. The analysisDateTime property
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getAnalysisDateTime() {
@@ -58,7 +58,7 @@ public class DetonationDetails implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -66,7 +66,7 @@ public class DetonationDetails implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the detonationChain property value. The detonationChain property
-     * @return a DetonationChain
+     * @return a {@link DetonationChain}
      */
     @jakarta.annotation.Nullable
     public DetonationChain getDetonationChain() {
@@ -74,7 +74,7 @@ public class DetonationDetails implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the detonationObservables property value. The detonationObservables property
-     * @return a DetonationObservables
+     * @return a {@link DetonationObservables}
      */
     @jakarta.annotation.Nullable
     public DetonationObservables getDetonationObservables() {
@@ -82,7 +82,7 @@ public class DetonationDetails implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the detonationVerdict property value. The detonationVerdict property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDetonationVerdict() {
@@ -90,7 +90,7 @@ public class DetonationDetails implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the detonationVerdictReason property value. The detonationVerdictReason property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDetonationVerdictReason() {
@@ -98,7 +98,7 @@ public class DetonationDetails implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -113,7 +113,7 @@ public class DetonationDetails implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {

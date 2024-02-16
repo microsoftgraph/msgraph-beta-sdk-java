@@ -19,7 +19,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class RemoveAllDevicesFromManagementRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new RemoveAllDevicesFromManagementRequestBuilder and sets the default values.
+     * Instantiates a new {@link RemoveAllDevicesFromManagementRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -27,7 +27,7 @@ public class RemoveAllDevicesFromManagementRequestBuilder extends BaseRequestBui
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/removeAllDevicesFromManagement", pathParameters);
     }
     /**
-     * Instantiates a new RemoveAllDevicesFromManagementRequestBuilder and sets the default values.
+     * Instantiates a new {@link RemoveAllDevicesFromManagementRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -36,6 +36,7 @@ public class RemoveAllDevicesFromManagementRequestBuilder extends BaseRequestBui
     }
     /**
      * Retire all devices from management for this user
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void post() {
         post(null);
@@ -43,17 +44,17 @@ public class RemoveAllDevicesFromManagementRequestBuilder extends BaseRequestBui
     /**
      * Retire all devices from management for this user
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toPostRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Retire all devices from management for this user
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation() {
@@ -62,7 +63,7 @@ public class RemoveAllDevicesFromManagementRequestBuilder extends BaseRequestBui
     /**
      * Retire all devices from management for this user
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -74,7 +75,7 @@ public class RemoveAllDevicesFromManagementRequestBuilder extends BaseRequestBui
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a RemoveAllDevicesFromManagementRequestBuilder
+     * @return a {@link RemoveAllDevicesFromManagementRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RemoveAllDevicesFromManagementRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

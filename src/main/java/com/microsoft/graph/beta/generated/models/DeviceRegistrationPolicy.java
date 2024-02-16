@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceRegistrationPolicy extends Entity implements Parsable {
     /**
-     * Instantiates a new DeviceRegistrationPolicy and sets the default values.
+     * Instantiates a new {@link DeviceRegistrationPolicy} and sets the default values.
      */
     public DeviceRegistrationPolicy() {
         super();
@@ -17,7 +17,7 @@ public class DeviceRegistrationPolicy extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceRegistrationPolicy
+     * @return a {@link DeviceRegistrationPolicy}
      */
     @jakarta.annotation.Nonnull
     public static DeviceRegistrationPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class DeviceRegistrationPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the azureADJoin property value. Specifies the authorization policy for controlling registration of new devices using Microsoft Entra join within your organization. Required. For more information, see What is a device identity?.
-     * @return a AzureADJoinPolicy
+     * @return a {@link AzureADJoinPolicy}
      */
     @jakarta.annotation.Nullable
     public AzureADJoinPolicy getAzureADJoin() {
@@ -34,7 +34,7 @@ public class DeviceRegistrationPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the azureADRegistration property value. Specifies the authorization policy for controlling registration of new devices using Microsoft Entra registered within your organization. Required. For more information, see What is a device identity?.
-     * @return a AzureADRegistrationPolicy
+     * @return a {@link AzureADRegistrationPolicy}
      */
     @jakarta.annotation.Nullable
     public AzureADRegistrationPolicy getAzureADRegistration() {
@@ -42,7 +42,7 @@ public class DeviceRegistrationPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The description of the device registration policy. It's always set to Tenant-wide policy that manages intial provisioning controls using quota restrictions, additional authentication and authorization checks. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -50,7 +50,7 @@ public class DeviceRegistrationPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The name of the device registration policy. It's always set to Device Registration Policy. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -58,7 +58,7 @@ public class DeviceRegistrationPolicy extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -74,7 +74,7 @@ public class DeviceRegistrationPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the localAdminPassword property value. Specifies the setting for Local Admin Password Solution (LAPS) within your organization.
-     * @return a LocalAdminPasswordSettings
+     * @return a {@link LocalAdminPasswordSettings}
      */
     @jakarta.annotation.Nullable
     public LocalAdminPasswordSettings getLocalAdminPassword() {
@@ -82,7 +82,7 @@ public class DeviceRegistrationPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the multiFactorAuthConfiguration property value. The multiFactorAuthConfiguration property
-     * @return a MultiFactorAuthConfiguration
+     * @return a {@link MultiFactorAuthConfiguration}
      */
     @jakarta.annotation.Nullable
     public MultiFactorAuthConfiguration getMultiFactorAuthConfiguration() {
@@ -90,7 +90,7 @@ public class DeviceRegistrationPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the userDeviceQuota property value. Specifies the maximum number of devices that a user can have within your organization before blocking new device registrations. The default value is set to 50. If this property isn't specified during the policy update operation, it's automatically reset to 0 to indicate that users aren't allowed to join any devices.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getUserDeviceQuota() {

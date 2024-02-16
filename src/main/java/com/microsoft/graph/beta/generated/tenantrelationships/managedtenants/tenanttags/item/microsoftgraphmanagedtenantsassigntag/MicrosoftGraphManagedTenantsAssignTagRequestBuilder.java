@@ -20,7 +20,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MicrosoftGraphManagedTenantsAssignTagRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new MicrosoftGraphManagedTenantsAssignTagRequestBuilder and sets the default values.
+     * Instantiates a new {@link MicrosoftGraphManagedTenantsAssignTagRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -28,7 +28,7 @@ public class MicrosoftGraphManagedTenantsAssignTagRequestBuilder extends BaseReq
         super(requestAdapter, "{+baseurl}/tenantRelationships/managedTenants/tenantTags/{tenantTag%2Did}/microsoft.graph.managedTenants.assignTag", pathParameters);
     }
     /**
-     * Instantiates a new MicrosoftGraphManagedTenantsAssignTagRequestBuilder and sets the default values.
+     * Instantiates a new {@link MicrosoftGraphManagedTenantsAssignTagRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -38,7 +38,8 @@ public class MicrosoftGraphManagedTenantsAssignTagRequestBuilder extends BaseReq
     /**
      * Assign the tenant tag to the specified managed tenants.
      * @param body The request body
-     * @return a TenantTag
+     * @return a {@link TenantTag}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-tenanttag-assigntag?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -49,7 +50,8 @@ public class MicrosoftGraphManagedTenantsAssignTagRequestBuilder extends BaseReq
      * Assign the tenant tag to the specified managed tenants.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a TenantTag
+     * @return a {@link TenantTag}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-tenanttag-assigntag?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -57,14 +59,13 @@ public class MicrosoftGraphManagedTenantsAssignTagRequestBuilder extends BaseReq
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, TenantTag::createFromDiscriminatorValue);
     }
     /**
      * Assign the tenant tag to the specified managed tenants.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final AssignTagPostRequestBody body) {
@@ -74,7 +75,7 @@ public class MicrosoftGraphManagedTenantsAssignTagRequestBuilder extends BaseReq
      * Assign the tenant tag to the specified managed tenants.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final AssignTagPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -88,7 +89,7 @@ public class MicrosoftGraphManagedTenantsAssignTagRequestBuilder extends BaseReq
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a MicrosoftGraphManagedTenantsAssignTagRequestBuilder
+     * @return a {@link MicrosoftGraphManagedTenantsAssignTagRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MicrosoftGraphManagedTenantsAssignTagRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

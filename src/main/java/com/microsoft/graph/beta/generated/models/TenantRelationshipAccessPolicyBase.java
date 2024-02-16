@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TenantRelationshipAccessPolicyBase extends PolicyBase implements Parsable {
     /**
-     * Instantiates a new TenantRelationshipAccessPolicyBase and sets the default values.
+     * Instantiates a new {@link TenantRelationshipAccessPolicyBase} and sets the default values.
      */
     public TenantRelationshipAccessPolicyBase() {
         super();
@@ -18,7 +18,7 @@ public class TenantRelationshipAccessPolicyBase extends PolicyBase implements Pa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TenantRelationshipAccessPolicyBase
+     * @return a {@link TenantRelationshipAccessPolicyBase}
      */
     @jakarta.annotation.Nonnull
     public static TenantRelationshipAccessPolicyBase createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -34,7 +34,7 @@ public class TenantRelationshipAccessPolicyBase extends PolicyBase implements Pa
     }
     /**
      * Gets the definition property value. The definition property
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getDefinition() {
@@ -42,7 +42,7 @@ public class TenantRelationshipAccessPolicyBase extends PolicyBase implements Pa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

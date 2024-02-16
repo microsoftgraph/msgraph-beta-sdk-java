@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementComplexSettingInstance extends DeviceManagementSettingInstance implements Parsable {
     /**
-     * Instantiates a new DeviceManagementComplexSettingInstance and sets the default values.
+     * Instantiates a new {@link DeviceManagementComplexSettingInstance} and sets the default values.
      */
     public DeviceManagementComplexSettingInstance() {
         super();
@@ -21,7 +21,7 @@ public class DeviceManagementComplexSettingInstance extends DeviceManagementSett
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceManagementComplexSettingInstance
+     * @return a {@link DeviceManagementComplexSettingInstance}
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementComplexSettingInstance createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class DeviceManagementComplexSettingInstance extends DeviceManagementSett
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -40,7 +40,7 @@ public class DeviceManagementComplexSettingInstance extends DeviceManagementSett
     }
     /**
      * Gets the value property value. The values that make up the complex setting
-     * @return a java.util.List<DeviceManagementSettingInstance>
+     * @return a {@link java.util.List<DeviceManagementSettingInstance>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementSettingInstance> getValue() {

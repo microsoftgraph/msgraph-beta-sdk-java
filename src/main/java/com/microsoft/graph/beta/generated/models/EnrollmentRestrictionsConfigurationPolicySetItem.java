@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EnrollmentRestrictionsConfigurationPolicySetItem extends PolicySetItem implements Parsable {
     /**
-     * Instantiates a new EnrollmentRestrictionsConfigurationPolicySetItem and sets the default values.
+     * Instantiates a new {@link EnrollmentRestrictionsConfigurationPolicySetItem} and sets the default values.
      */
     public EnrollmentRestrictionsConfigurationPolicySetItem() {
         super();
@@ -21,7 +21,7 @@ public class EnrollmentRestrictionsConfigurationPolicySetItem extends PolicySetI
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EnrollmentRestrictionsConfigurationPolicySetItem
+     * @return a {@link EnrollmentRestrictionsConfigurationPolicySetItem}
      */
     @jakarta.annotation.Nonnull
     public static EnrollmentRestrictionsConfigurationPolicySetItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class EnrollmentRestrictionsConfigurationPolicySetItem extends PolicySetI
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -41,7 +41,7 @@ public class EnrollmentRestrictionsConfigurationPolicySetItem extends PolicySetI
     }
     /**
      * Gets the limit property value. Limit of the EnrollmentRestrictionsConfigurationPolicySetItem.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getLimit() {
@@ -49,7 +49,7 @@ public class EnrollmentRestrictionsConfigurationPolicySetItem extends PolicySetI
     }
     /**
      * Gets the priority property value. Priority of the EnrollmentRestrictionsConfigurationPolicySetItem.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPriority() {

@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EstimateStatisticsOperation extends CaseOperation implements Parsable {
     /**
-     * Instantiates a new EstimateStatisticsOperation and sets the default values.
+     * Instantiates a new {@link EstimateStatisticsOperation} and sets the default values.
      */
     public EstimateStatisticsOperation() {
         super();
@@ -17,7 +17,7 @@ public class EstimateStatisticsOperation extends CaseOperation implements Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EstimateStatisticsOperation
+     * @return a {@link EstimateStatisticsOperation}
      */
     @jakarta.annotation.Nonnull
     public static EstimateStatisticsOperation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class EstimateStatisticsOperation extends CaseOperation implements Parsab
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -42,7 +42,7 @@ public class EstimateStatisticsOperation extends CaseOperation implements Parsab
     }
     /**
      * Gets the indexedItemCount property value. The estimated count of items for the sourceCollection that matched the content query.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getIndexedItemCount() {
@@ -50,7 +50,7 @@ public class EstimateStatisticsOperation extends CaseOperation implements Parsab
     }
     /**
      * Gets the indexedItemsSize property value. The estimated size of items for the sourceCollection that matched the content query.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getIndexedItemsSize() {
@@ -58,7 +58,7 @@ public class EstimateStatisticsOperation extends CaseOperation implements Parsab
     }
     /**
      * Gets the mailboxCount property value. The number of mailboxes that had search hits.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getMailboxCount() {
@@ -66,7 +66,7 @@ public class EstimateStatisticsOperation extends CaseOperation implements Parsab
     }
     /**
      * Gets the siteCount property value. The number of mailboxes that had search hits.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getSiteCount() {
@@ -74,7 +74,7 @@ public class EstimateStatisticsOperation extends CaseOperation implements Parsab
     }
     /**
      * Gets the sourceCollection property value. eDiscovery collection, commonly known as a search.
-     * @return a SourceCollection
+     * @return a {@link SourceCollection}
      */
     @jakarta.annotation.Nullable
     public SourceCollection getSourceCollection() {
@@ -82,7 +82,7 @@ public class EstimateStatisticsOperation extends CaseOperation implements Parsab
     }
     /**
      * Gets the unindexedItemCount property value. The estimated count of unindexed items for the collection.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getUnindexedItemCount() {
@@ -90,7 +90,7 @@ public class EstimateStatisticsOperation extends CaseOperation implements Parsab
     }
     /**
      * Gets the unindexedItemsSize property value. The estimated size of unindexed items for the collection.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getUnindexedItemsSize() {

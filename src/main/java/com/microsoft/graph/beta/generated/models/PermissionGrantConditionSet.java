@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PermissionGrantConditionSet extends Entity implements Parsable {
     /**
-     * Instantiates a new PermissionGrantConditionSet and sets the default values.
+     * Instantiates a new {@link PermissionGrantConditionSet} and sets the default values.
      */
     public PermissionGrantConditionSet() {
         super();
@@ -17,7 +17,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PermissionGrantConditionSet
+     * @return a {@link PermissionGrantConditionSet}
      */
     @jakarta.annotation.Nonnull
     public static PermissionGrantConditionSet createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
     }
     /**
      * Gets the certifiedClientApplicationsOnly property value. Set to true to only match on client applications that are Microsoft 365 certified. Set to false to match on any other client app. Default is false.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getCertifiedClientApplicationsOnly() {
@@ -34,7 +34,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
     }
     /**
      * Gets the clientApplicationIds property value. A list of appId values for the client applications to match with, or a list with the single value all to match any client application. Default is the single value all.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getClientApplicationIds() {
@@ -42,7 +42,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
     }
     /**
      * Gets the clientApplicationPublisherIds property value. A list of Microsoft Partner Network (MPN) IDs for verified publishers of the client application, or a list with the single value all to match with client apps from any publisher. Default is the single value all.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getClientApplicationPublisherIds() {
@@ -50,7 +50,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
     }
     /**
      * Gets the clientApplicationsFromVerifiedPublisherOnly property value. Set to true to only match on client applications with a verified publisher. Set to false to match on any client app, even if it does not have a verified publisher. Default is false.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getClientApplicationsFromVerifiedPublisherOnly() {
@@ -58,7 +58,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
     }
     /**
      * Gets the clientApplicationTenantIds property value. A list of Microsoft Entra tenant IDs in which the client application is registered, or a list with the single value all to match with client apps registered in any tenant. Default is the single value all.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getClientApplicationTenantIds() {
@@ -66,7 +66,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -84,7 +84,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
     }
     /**
      * Gets the permissionClassification property value. The permission classification for the permission being granted, or all to match with any permission classification (including permissions which are not classified). Default is all.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPermissionClassification() {
@@ -92,7 +92,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
     }
     /**
      * Gets the permissions property value. The list of id values for the specific permissions to match with, or a list with the single value all to match with any permission. The id of delegated permissions can be found in the publishedPermissionScopes property of the API's servicePrincipal object. The id of application permissions can be found in the appRoles property of the API's servicePrincipal object. The id of resource-specific application permissions can be found in the resourceSpecificApplicationPermissions property of the API's servicePrincipal object. Default is the single value all.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getPermissions() {
@@ -100,7 +100,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
     }
     /**
      * Gets the permissionType property value. The permission type of the permission being granted. Possible values: application for application permissions (e.g. app roles), or delegated for delegated permissions. The value delegatedUserConsentable indicates delegated permissions which have not been configured by the API publisher to require admin consentthis value may be used in built-in permission grant policies, but cannot be used in custom permission grant policies. Required.
-     * @return a PermissionType
+     * @return a {@link PermissionType}
      */
     @jakarta.annotation.Nullable
     public PermissionType getPermissionType() {
@@ -108,7 +108,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
     }
     /**
      * Gets the resourceApplication property value. The appId of the resource application (e.g. the API) for which a permission is being granted, or any to match with any resource application or API. Default is any.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getResourceApplication() {

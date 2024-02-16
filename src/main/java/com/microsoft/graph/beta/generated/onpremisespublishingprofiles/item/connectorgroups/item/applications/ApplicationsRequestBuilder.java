@@ -24,6 +24,7 @@ import java.util.Objects;
 public class ApplicationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -32,7 +33,7 @@ public class ApplicationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the applications property of the microsoft.graph.connectorGroup entity.
      * @param applicationId The unique identifier of application
-     * @return a ApplicationItemRequestBuilder
+     * @return a {@link ApplicationItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ApplicationItemRequestBuilder byApplicationId(@jakarta.annotation.Nonnull final String applicationId) {
@@ -42,7 +43,7 @@ public class ApplicationsRequestBuilder extends BaseRequestBuilder {
         return new ApplicationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new ApplicationsRequestBuilder and sets the default values.
+     * Instantiates a new {@link ApplicationsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -50,7 +51,7 @@ public class ApplicationsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/onPremisesPublishingProfiles/{onPremisesPublishingProfile%2Did}/connectorGroups/{connectorGroup%2Did}/applications{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new ApplicationsRequestBuilder and sets the default values.
+     * Instantiates a new {@link ApplicationsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -59,7 +60,8 @@ public class ApplicationsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get applications from onPremisesPublishingProfiles
-     * @return a ApplicationCollectionResponse
+     * @return a {@link ApplicationCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public ApplicationCollectionResponse get() {
@@ -68,19 +70,19 @@ public class ApplicationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get applications from onPremisesPublishingProfiles
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a ApplicationCollectionResponse
+     * @return a {@link ApplicationCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public ApplicationCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, ApplicationCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Get applications from onPremisesPublishingProfiles
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -89,7 +91,7 @@ public class ApplicationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get applications from onPremisesPublishingProfiles
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -101,7 +103,7 @@ public class ApplicationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a ApplicationsRequestBuilder
+     * @return a {@link ApplicationsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ApplicationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -155,7 +157,7 @@ public class ApplicationsRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

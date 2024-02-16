@@ -29,6 +29,7 @@ import java.util.Objects;
 public class GroupPolicyUploadedDefinitionFileItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the addLanguageFiles method.
+     * @return a {@link AddLanguageFilesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AddLanguageFilesRequestBuilder addLanguageFiles() {
@@ -36,6 +37,7 @@ public class GroupPolicyUploadedDefinitionFileItemRequestBuilder extends BaseReq
     }
     /**
      * Provides operations to manage the definitions property of the microsoft.graph.groupPolicyDefinitionFile entity.
+     * @return a {@link DefinitionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DefinitionsRequestBuilder definitions() {
@@ -43,6 +45,7 @@ public class GroupPolicyUploadedDefinitionFileItemRequestBuilder extends BaseReq
     }
     /**
      * Provides operations to manage the groupPolicyOperations property of the microsoft.graph.groupPolicyUploadedDefinitionFile entity.
+     * @return a {@link GroupPolicyOperationsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GroupPolicyOperationsRequestBuilder groupPolicyOperations() {
@@ -50,6 +53,7 @@ public class GroupPolicyUploadedDefinitionFileItemRequestBuilder extends BaseReq
     }
     /**
      * Provides operations to call the remove method.
+     * @return a {@link RemoveRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RemoveRequestBuilder remove() {
@@ -57,6 +61,7 @@ public class GroupPolicyUploadedDefinitionFileItemRequestBuilder extends BaseReq
     }
     /**
      * Provides operations to call the removeLanguageFiles method.
+     * @return a {@link RemoveLanguageFilesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RemoveLanguageFilesRequestBuilder removeLanguageFiles() {
@@ -64,6 +69,7 @@ public class GroupPolicyUploadedDefinitionFileItemRequestBuilder extends BaseReq
     }
     /**
      * Provides operations to call the updateLanguageFiles method.
+     * @return a {@link UpdateLanguageFilesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UpdateLanguageFilesRequestBuilder updateLanguageFiles() {
@@ -71,13 +77,14 @@ public class GroupPolicyUploadedDefinitionFileItemRequestBuilder extends BaseReq
     }
     /**
      * Provides operations to call the uploadNewVersion method.
+     * @return a {@link UploadNewVersionRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UploadNewVersionRequestBuilder uploadNewVersion() {
         return new UploadNewVersionRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new GroupPolicyUploadedDefinitionFileItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link GroupPolicyUploadedDefinitionFileItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -85,7 +92,7 @@ public class GroupPolicyUploadedDefinitionFileItemRequestBuilder extends BaseReq
         super(requestAdapter, "{+baseurl}/deviceManagement/groupPolicyUploadedDefinitionFiles/{groupPolicyUploadedDefinitionFile%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new GroupPolicyUploadedDefinitionFileItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link GroupPolicyUploadedDefinitionFileItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -94,6 +101,7 @@ public class GroupPolicyUploadedDefinitionFileItemRequestBuilder extends BaseReq
     }
     /**
      * Delete navigation property groupPolicyUploadedDefinitionFiles for deviceManagement
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete() {
         delete(null);
@@ -101,17 +109,18 @@ public class GroupPolicyUploadedDefinitionFileItemRequestBuilder extends BaseReq
     /**
      * Delete navigation property groupPolicyUploadedDefinitionFiles for deviceManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * The available group policy uploaded definition files for this account.
-     * @return a GroupPolicyUploadedDefinitionFile
+     * @return a {@link GroupPolicyUploadedDefinitionFile}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public GroupPolicyUploadedDefinitionFile get() {
@@ -120,20 +129,21 @@ public class GroupPolicyUploadedDefinitionFileItemRequestBuilder extends BaseReq
     /**
      * The available group policy uploaded definition files for this account.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a GroupPolicyUploadedDefinitionFile
+     * @return a {@link GroupPolicyUploadedDefinitionFile}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public GroupPolicyUploadedDefinitionFile get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, GroupPolicyUploadedDefinitionFile::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property groupPolicyUploadedDefinitionFiles in deviceManagement
      * @param body The request body
-     * @return a GroupPolicyUploadedDefinitionFile
+     * @return a {@link GroupPolicyUploadedDefinitionFile}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public GroupPolicyUploadedDefinitionFile patch(@jakarta.annotation.Nonnull final GroupPolicyUploadedDefinitionFile body) {
@@ -143,20 +153,20 @@ public class GroupPolicyUploadedDefinitionFileItemRequestBuilder extends BaseReq
      * Update the navigation property groupPolicyUploadedDefinitionFiles in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a GroupPolicyUploadedDefinitionFile
+     * @return a {@link GroupPolicyUploadedDefinitionFile}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public GroupPolicyUploadedDefinitionFile patch(@jakarta.annotation.Nonnull final GroupPolicyUploadedDefinitionFile body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, GroupPolicyUploadedDefinitionFile::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property groupPolicyUploadedDefinitionFiles for deviceManagement
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -165,18 +175,18 @@ public class GroupPolicyUploadedDefinitionFileItemRequestBuilder extends BaseReq
     /**
      * Delete navigation property groupPolicyUploadedDefinitionFiles for deviceManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/deviceManagement/groupPolicyUploadedDefinitionFiles/{groupPolicyUploadedDefinitionFile%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * The available group policy uploaded definition files for this account.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -185,7 +195,7 @@ public class GroupPolicyUploadedDefinitionFileItemRequestBuilder extends BaseReq
     /**
      * The available group policy uploaded definition files for this account.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -197,7 +207,7 @@ public class GroupPolicyUploadedDefinitionFileItemRequestBuilder extends BaseReq
     /**
      * Update the navigation property groupPolicyUploadedDefinitionFiles in deviceManagement
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final GroupPolicyUploadedDefinitionFile body) {
@@ -207,12 +217,12 @@ public class GroupPolicyUploadedDefinitionFileItemRequestBuilder extends BaseReq
      * Update the navigation property groupPolicyUploadedDefinitionFiles in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final GroupPolicyUploadedDefinitionFile body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/deviceManagement/groupPolicyUploadedDefinitionFiles/{groupPolicyUploadedDefinitionFile%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -221,7 +231,7 @@ public class GroupPolicyUploadedDefinitionFileItemRequestBuilder extends BaseReq
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a GroupPolicyUploadedDefinitionFileItemRequestBuilder
+     * @return a {@link GroupPolicyUploadedDefinitionFileItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GroupPolicyUploadedDefinitionFileItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -251,7 +261,7 @@ public class GroupPolicyUploadedDefinitionFileItemRequestBuilder extends BaseReq
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

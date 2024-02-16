@@ -18,7 +18,7 @@ public class TeamworkCameraConfiguration implements AdditionalDataHolder, Backed
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new TeamworkCameraConfiguration and sets the default values.
+     * Instantiates a new {@link TeamworkCameraConfiguration} and sets the default values.
      */
     public TeamworkCameraConfiguration() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class TeamworkCameraConfiguration implements AdditionalDataHolder, Backed
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TeamworkCameraConfiguration
+     * @return a {@link TeamworkCameraConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static TeamworkCameraConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class TeamworkCameraConfiguration implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class TeamworkCameraConfiguration implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class TeamworkCameraConfiguration implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the cameras property value. The cameras property
-     * @return a java.util.List<TeamworkPeripheral>
+     * @return a {@link java.util.List<TeamworkPeripheral>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<TeamworkPeripheral> getCameras() {
@@ -65,7 +65,7 @@ public class TeamworkCameraConfiguration implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the contentCameraConfiguration property value. The configuration for the content camera.
-     * @return a TeamworkContentCameraConfiguration
+     * @return a {@link TeamworkContentCameraConfiguration}
      */
     @jakarta.annotation.Nullable
     public TeamworkContentCameraConfiguration getContentCameraConfiguration() {
@@ -73,7 +73,7 @@ public class TeamworkCameraConfiguration implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the defaultContentCamera property value. The defaultContentCamera property
-     * @return a TeamworkPeripheral
+     * @return a {@link TeamworkPeripheral}
      */
     @jakarta.annotation.Nullable
     public TeamworkPeripheral getDefaultContentCamera() {
@@ -81,7 +81,7 @@ public class TeamworkCameraConfiguration implements AdditionalDataHolder, Backed
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -94,7 +94,7 @@ public class TeamworkCameraConfiguration implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {

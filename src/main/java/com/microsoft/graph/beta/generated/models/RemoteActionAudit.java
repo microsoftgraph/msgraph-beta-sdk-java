@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class RemoteActionAudit extends Entity implements Parsable {
     /**
-     * Instantiates a new RemoteActionAudit and sets the default values.
+     * Instantiates a new {@link RemoteActionAudit} and sets the default values.
      */
     public RemoteActionAudit() {
         super();
@@ -21,7 +21,7 @@ public class RemoteActionAudit extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a RemoteActionAudit
+     * @return a {@link RemoteActionAudit}
      */
     @jakarta.annotation.Nonnull
     public static RemoteActionAudit createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class RemoteActionAudit extends Entity implements Parsable {
     }
     /**
      * Gets the action property value. Remote actions Intune supports.
-     * @return a RemoteAction
+     * @return a {@link RemoteAction}
      */
     @jakarta.annotation.Nullable
     public RemoteAction getAction() {
@@ -38,7 +38,7 @@ public class RemoteActionAudit extends Entity implements Parsable {
     }
     /**
      * Gets the actionState property value. The actionState property
-     * @return a ActionState
+     * @return a {@link ActionState}
      */
     @jakarta.annotation.Nullable
     public ActionState getActionState() {
@@ -46,7 +46,7 @@ public class RemoteActionAudit extends Entity implements Parsable {
     }
     /**
      * Gets the deviceDisplayName property value. Intune device name.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceDisplayName() {
@@ -54,7 +54,7 @@ public class RemoteActionAudit extends Entity implements Parsable {
     }
     /**
      * Gets the deviceIMEI property value. IMEI of the device.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceIMEI() {
@@ -62,7 +62,7 @@ public class RemoteActionAudit extends Entity implements Parsable {
     }
     /**
      * Gets the deviceOwnerUserPrincipalName property value. Upn of the device owner.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceOwnerUserPrincipalName() {
@@ -70,7 +70,7 @@ public class RemoteActionAudit extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -88,7 +88,7 @@ public class RemoteActionAudit extends Entity implements Parsable {
     }
     /**
      * Gets the initiatedByUserPrincipalName property value. User who initiated the device action, format is UPN.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getInitiatedByUserPrincipalName() {
@@ -96,7 +96,7 @@ public class RemoteActionAudit extends Entity implements Parsable {
     }
     /**
      * Gets the managedDeviceId property value. Action target.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getManagedDeviceId() {
@@ -104,7 +104,7 @@ public class RemoteActionAudit extends Entity implements Parsable {
     }
     /**
      * Gets the requestDateTime property value. Time when the action was issued, given in UTC.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getRequestDateTime() {
@@ -112,7 +112,7 @@ public class RemoteActionAudit extends Entity implements Parsable {
     }
     /**
      * Gets the userName property value. [deprecated] Please use InitiatedByUserPrincipalName instead.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserName() {

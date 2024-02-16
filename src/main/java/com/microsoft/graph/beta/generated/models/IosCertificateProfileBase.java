@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IosCertificateProfileBase extends IosCertificateProfile implements Parsable {
     /**
-     * Instantiates a new IosCertificateProfileBase and sets the default values.
+     * Instantiates a new {@link IosCertificateProfileBase} and sets the default values.
      */
     public IosCertificateProfileBase() {
         super();
@@ -22,7 +22,7 @@ public class IosCertificateProfileBase extends IosCertificateProfile implements 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a IosCertificateProfileBase
+     * @return a {@link IosCertificateProfileBase}
      */
     @jakarta.annotation.Nonnull
     public static IosCertificateProfileBase createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class IosCertificateProfileBase extends IosCertificateProfile implements 
     }
     /**
      * Gets the certificateValidityPeriodScale property value. Certificate Validity Period Options.
-     * @return a CertificateValidityPeriodScale
+     * @return a {@link CertificateValidityPeriodScale}
      */
     @jakarta.annotation.Nullable
     public CertificateValidityPeriodScale getCertificateValidityPeriodScale() {
@@ -47,7 +47,7 @@ public class IosCertificateProfileBase extends IosCertificateProfile implements 
     }
     /**
      * Gets the certificateValidityPeriodValue property value. Value for the Certificate Validity Period.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getCertificateValidityPeriodValue() {
@@ -55,7 +55,7 @@ public class IosCertificateProfileBase extends IosCertificateProfile implements 
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -69,7 +69,7 @@ public class IosCertificateProfileBase extends IosCertificateProfile implements 
     }
     /**
      * Gets the renewalThresholdPercentage property value. Certificate renewal threshold percentage. Valid values 1 to 99
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getRenewalThresholdPercentage() {
@@ -77,7 +77,7 @@ public class IosCertificateProfileBase extends IosCertificateProfile implements 
     }
     /**
      * Gets the subjectAlternativeNameType property value. Certificate Subject Alternative Name type. Possible values are: none, emailAddress, userPrincipalName, customAzureADAttribute, domainNameService, universalResourceIdentifier.
-     * @return a EnumSet<SubjectAlternativeNameType>
+     * @return a {@link EnumSet<SubjectAlternativeNameType>}
      */
     @jakarta.annotation.Nullable
     public EnumSet<SubjectAlternativeNameType> getSubjectAlternativeNameType() {
@@ -85,7 +85,7 @@ public class IosCertificateProfileBase extends IosCertificateProfile implements 
     }
     /**
      * Gets the subjectNameFormat property value. Subject Name Format Options for Apple devices.
-     * @return a AppleSubjectNameFormat
+     * @return a {@link AppleSubjectNameFormat}
      */
     @jakarta.annotation.Nullable
     public AppleSubjectNameFormat getSubjectNameFormat() {

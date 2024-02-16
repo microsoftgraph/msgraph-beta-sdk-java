@@ -11,7 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AnalyzedEmail extends Entity implements Parsable {
     /**
-     * Instantiates a new AnalyzedEmail and sets the default values.
+     * Instantiates a new {@link AnalyzedEmail} and sets the default values.
      */
     public AnalyzedEmail() {
         super();
@@ -19,7 +19,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AnalyzedEmail
+     * @return a {@link AnalyzedEmail}
      */
     @jakarta.annotation.Nonnull
     public static AnalyzedEmail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
     }
     /**
      * Gets the alertIds property value. The alertIds property
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAlertIds() {
@@ -36,7 +36,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
     }
     /**
      * Gets the attachments property value. The attachments property
-     * @return a java.util.List<AnalyzedEmailAttachment>
+     * @return a {@link java.util.List<AnalyzedEmailAttachment>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AnalyzedEmailAttachment> getAttachments() {
@@ -44,7 +44,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
     }
     /**
      * Gets the attachmentsCount property value. The attachmentsCount property
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getAttachmentsCount() {
@@ -52,7 +52,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
     }
     /**
      * Gets the authenticationDetails property value. The authenticationDetails property
-     * @return a AnalyzedEmailAuthenticationDetail
+     * @return a {@link AnalyzedEmailAuthenticationDetail}
      */
     @jakarta.annotation.Nullable
     public AnalyzedEmailAuthenticationDetail getAuthenticationDetails() {
@@ -60,7 +60,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
     }
     /**
      * Gets the bulkComplaintLevel property value. The bulkComplaintLevel property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getBulkComplaintLevel() {
@@ -68,7 +68,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
     }
     /**
      * Gets the contexts property value. The contexts property
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getContexts() {
@@ -76,7 +76,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
     }
     /**
      * Gets the detectionMethods property value. The detectionMethods property
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getDetectionMethods() {
@@ -84,7 +84,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
     }
     /**
      * Gets the directionality property value. The directionality property
-     * @return a AntispamDirectionality
+     * @return a {@link AntispamDirectionality}
      */
     @jakarta.annotation.Nullable
     public AntispamDirectionality getDirectionality() {
@@ -92,7 +92,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
     }
     /**
      * Gets the distributionList property value. The distributionList property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDistributionList() {
@@ -100,7 +100,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
     }
     /**
      * Gets the emailClusterId property value. The emailClusterId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getEmailClusterId() {
@@ -108,7 +108,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
     }
     /**
      * Gets the exchangeTransportRules property value. The exchangeTransportRules property
-     * @return a java.util.List<AnalyzedEmailExchangeTransportRuleInfo>
+     * @return a {@link java.util.List<AnalyzedEmailExchangeTransportRuleInfo>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AnalyzedEmailExchangeTransportRuleInfo> getExchangeTransportRules() {
@@ -116,7 +116,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -155,7 +155,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
     }
     /**
      * Gets the internetMessageId property value. The internetMessageId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getInternetMessageId() {
@@ -163,7 +163,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
     }
     /**
      * Gets the language property value. The language property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getLanguage() {
@@ -171,7 +171,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
     }
     /**
      * Gets the latestDelivery property value. The latestDelivery property
-     * @return a AnalyzedEmailDeliveryDetail
+     * @return a {@link AnalyzedEmailDeliveryDetail}
      */
     @jakarta.annotation.Nullable
     public AnalyzedEmailDeliveryDetail getLatestDelivery() {
@@ -179,7 +179,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
     }
     /**
      * Gets the loggedDateTime property value. The loggedDateTime property
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLoggedDateTime() {
@@ -187,7 +187,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
     }
     /**
      * Gets the networkMessageId property value. The networkMessageId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getNetworkMessageId() {
@@ -195,7 +195,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
     }
     /**
      * Gets the originalDelivery property value. The originalDelivery property
-     * @return a AnalyzedEmailDeliveryDetail
+     * @return a {@link AnalyzedEmailDeliveryDetail}
      */
     @jakarta.annotation.Nullable
     public AnalyzedEmailDeliveryDetail getOriginalDelivery() {
@@ -203,7 +203,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
     }
     /**
      * Gets the overrideSources property value. The overrideSources property
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getOverrideSources() {
@@ -211,7 +211,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
     }
     /**
      * Gets the phishConfidenceLevel property value. The phishConfidenceLevel property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPhishConfidenceLevel() {
@@ -219,7 +219,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
     }
     /**
      * Gets the policy property value. The policy property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPolicy() {
@@ -227,7 +227,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
     }
     /**
      * Gets the policyAction property value. The policyAction property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPolicyAction() {
@@ -235,7 +235,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
     }
     /**
      * Gets the recipientEmailAddresses property value. The recipientEmailAddresses property
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRecipientEmailAddresses() {
@@ -243,7 +243,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
     }
     /**
      * Gets the returnPath property value. The returnPath property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getReturnPath() {
@@ -251,7 +251,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
     }
     /**
      * Gets the senderDetail property value. The senderDetail property
-     * @return a AnalyzedEmailSenderDetail
+     * @return a {@link AnalyzedEmailSenderDetail}
      */
     @jakarta.annotation.Nullable
     public AnalyzedEmailSenderDetail getSenderDetail() {
@@ -259,7 +259,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
     }
     /**
      * Gets the sizeInBytes property value. The sizeInBytes property
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getSizeInBytes() {
@@ -267,7 +267,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
     }
     /**
      * Gets the spamConfidenceLevel property value. The spamConfidenceLevel property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSpamConfidenceLevel() {
@@ -275,7 +275,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
     }
     /**
      * Gets the subject property value. The subject property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSubject() {
@@ -283,7 +283,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
     }
     /**
      * Gets the threatType property value. The threatType property
-     * @return a ThreatType
+     * @return a {@link ThreatType}
      */
     @jakarta.annotation.Nullable
     public ThreatType getThreatType() {
@@ -291,7 +291,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
     }
     /**
      * Gets the urls property value. The urls property
-     * @return a java.util.List<AnalyzedEmailUrl>
+     * @return a {@link java.util.List<AnalyzedEmailUrl>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AnalyzedEmailUrl> getUrls() {
@@ -299,7 +299,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
     }
     /**
      * Gets the urlsCount property value. The urlsCount property
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getUrlsCount() {

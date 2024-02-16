@@ -18,7 +18,7 @@ public class VerifiedCredentialData implements AdditionalDataHolder, BackedModel
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new VerifiedCredentialData and sets the default values.
+     * Instantiates a new {@link VerifiedCredentialData} and sets the default values.
      */
     public VerifiedCredentialData() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class VerifiedCredentialData implements AdditionalDataHolder, BackedModel
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a VerifiedCredentialData
+     * @return a {@link VerifiedCredentialData}
      */
     @jakarta.annotation.Nonnull
     public static VerifiedCredentialData createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class VerifiedCredentialData implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class VerifiedCredentialData implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the authority property value. The authority ID for the issuer.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAuthority() {
@@ -57,7 +57,7 @@ public class VerifiedCredentialData implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -65,7 +65,7 @@ public class VerifiedCredentialData implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the claims property value. Key-value pair of claims retrieved from the credential that the user presented, and the service verified.
-     * @return a VerifiedCredentialClaims
+     * @return a {@link VerifiedCredentialClaims}
      */
     @jakarta.annotation.Nullable
     public VerifiedCredentialClaims getClaims() {
@@ -73,7 +73,7 @@ public class VerifiedCredentialData implements AdditionalDataHolder, BackedModel
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -86,7 +86,7 @@ public class VerifiedCredentialData implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -94,7 +94,7 @@ public class VerifiedCredentialData implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the type property value. The list of credential types provided by the issuer.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getType() {

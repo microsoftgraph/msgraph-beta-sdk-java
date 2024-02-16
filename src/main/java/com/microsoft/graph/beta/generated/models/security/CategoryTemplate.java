@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CategoryTemplate extends FilePlanDescriptorTemplate implements Parsable {
     /**
-     * Instantiates a new CategoryTemplate and sets the default values.
+     * Instantiates a new {@link CategoryTemplate} and sets the default values.
      */
     public CategoryTemplate() {
         super();
@@ -17,7 +17,7 @@ public class CategoryTemplate extends FilePlanDescriptorTemplate implements Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CategoryTemplate
+     * @return a {@link CategoryTemplate}
      */
     @jakarta.annotation.Nonnull
     public static CategoryTemplate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class CategoryTemplate extends FilePlanDescriptorTemplate implements Pars
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -36,7 +36,7 @@ public class CategoryTemplate extends FilePlanDescriptorTemplate implements Pars
     }
     /**
      * Gets the subCategories property value. Represents all subcategories under a particular category.
-     * @return a java.util.List<SubCategoryTemplate>
+     * @return a {@link java.util.List<SubCategoryTemplate>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<SubCategoryTemplate> getSubCategories() {

@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementConfigurationPolicyTemplate extends Entity implements Parsable {
     /**
-     * Instantiates a new DeviceManagementConfigurationPolicyTemplate and sets the default values.
+     * Instantiates a new {@link DeviceManagementConfigurationPolicyTemplate} and sets the default values.
      */
     public DeviceManagementConfigurationPolicyTemplate() {
         super();
@@ -21,7 +21,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceManagementConfigurationPolicyTemplate
+     * @return a {@link DeviceManagementConfigurationPolicyTemplate}
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementConfigurationPolicyTemplate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
     }
     /**
      * Gets the allowUnmanagedSettings property value. Allow unmanaged setting templates
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowUnmanagedSettings() {
@@ -38,7 +38,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
     }
     /**
      * Gets the baseId property value. Template base identifier
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getBaseId() {
@@ -46,7 +46,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
     }
     /**
      * Gets the description property value. Template description
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -54,7 +54,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
     }
     /**
      * Gets the displayName property value. Template display name
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -62,7 +62,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
     }
     /**
      * Gets the displayVersion property value. Description of template version
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayVersion() {
@@ -70,7 +70,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -91,7 +91,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
     }
     /**
      * Gets the lifecycleState property value. Describes current lifecycle state of a template
-     * @return a DeviceManagementTemplateLifecycleState
+     * @return a {@link DeviceManagementTemplateLifecycleState}
      */
     @jakarta.annotation.Nullable
     public DeviceManagementTemplateLifecycleState getLifecycleState() {
@@ -99,7 +99,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
     }
     /**
      * Gets the platforms property value. Supported platform types.
-     * @return a EnumSet<DeviceManagementConfigurationPlatforms>
+     * @return a {@link EnumSet<DeviceManagementConfigurationPlatforms>}
      */
     @jakarta.annotation.Nullable
     public EnumSet<DeviceManagementConfigurationPlatforms> getPlatforms() {
@@ -107,7 +107,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
     }
     /**
      * Gets the settingTemplateCount property value. Number of setting templates. Valid values 0 to 2147483647. This property is read-only.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getSettingTemplateCount() {
@@ -115,7 +115,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
     }
     /**
      * Gets the settingTemplates property value. Setting templates
-     * @return a java.util.List<DeviceManagementConfigurationSettingTemplate>
+     * @return a {@link java.util.List<DeviceManagementConfigurationSettingTemplate>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementConfigurationSettingTemplate> getSettingTemplates() {
@@ -123,7 +123,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
     }
     /**
      * Gets the technologies property value. Describes which technology this setting can be deployed with
-     * @return a EnumSet<DeviceManagementConfigurationTechnologies>
+     * @return a {@link EnumSet<DeviceManagementConfigurationTechnologies>}
      */
     @jakarta.annotation.Nullable
     public EnumSet<DeviceManagementConfigurationTechnologies> getTechnologies() {
@@ -131,7 +131,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
     }
     /**
      * Gets the templateFamily property value. Describes the TemplateFamily for the Template entity
-     * @return a DeviceManagementConfigurationTemplateFamily
+     * @return a {@link DeviceManagementConfigurationTemplateFamily}
      */
     @jakarta.annotation.Nullable
     public DeviceManagementConfigurationTemplateFamily getTemplateFamily() {
@@ -139,7 +139,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
     }
     /**
      * Gets the version property value. Template version. Valid values 1 to 2147483647. This property is read-only.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getVersion() {

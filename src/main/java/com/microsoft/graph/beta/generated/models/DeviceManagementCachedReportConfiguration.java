@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementCachedReportConfiguration extends Entity implements Parsable {
     /**
-     * Instantiates a new DeviceManagementCachedReportConfiguration and sets the default values.
+     * Instantiates a new {@link DeviceManagementCachedReportConfiguration} and sets the default values.
      */
     public DeviceManagementCachedReportConfiguration() {
         super();
@@ -21,7 +21,7 @@ public class DeviceManagementCachedReportConfiguration extends Entity implements
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceManagementCachedReportConfiguration
+     * @return a {@link DeviceManagementCachedReportConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementCachedReportConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class DeviceManagementCachedReportConfiguration extends Entity implements
     }
     /**
      * Gets the expirationDateTime property value. Time that the cached report expires.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getExpirationDateTime() {
@@ -38,7 +38,7 @@ public class DeviceManagementCachedReportConfiguration extends Entity implements
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -55,7 +55,7 @@ public class DeviceManagementCachedReportConfiguration extends Entity implements
     }
     /**
      * Gets the filter property value. Filters applied on report creation.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getFilter() {
@@ -63,7 +63,7 @@ public class DeviceManagementCachedReportConfiguration extends Entity implements
     }
     /**
      * Gets the lastRefreshDateTime property value. Time that the cached report was last refreshed.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastRefreshDateTime() {
@@ -71,7 +71,7 @@ public class DeviceManagementCachedReportConfiguration extends Entity implements
     }
     /**
      * Gets the metadata property value. Caller-managed metadata associated with the report.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getMetadata() {
@@ -79,7 +79,7 @@ public class DeviceManagementCachedReportConfiguration extends Entity implements
     }
     /**
      * Gets the orderBy property value. Ordering of columns in the report.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getOrderBy() {
@@ -87,7 +87,7 @@ public class DeviceManagementCachedReportConfiguration extends Entity implements
     }
     /**
      * Gets the reportName property value. Name of the report.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getReportName() {
@@ -95,7 +95,7 @@ public class DeviceManagementCachedReportConfiguration extends Entity implements
     }
     /**
      * Gets the select property value. Columns selected from the report.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSelect() {
@@ -103,7 +103,7 @@ public class DeviceManagementCachedReportConfiguration extends Entity implements
     }
     /**
      * Gets the status property value. Possible statuses associated with a generated report.
-     * @return a DeviceManagementReportStatus
+     * @return a {@link DeviceManagementReportStatus}
      */
     @jakarta.annotation.Nullable
     public DeviceManagementReportStatus getStatus() {

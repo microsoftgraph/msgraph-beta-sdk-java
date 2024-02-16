@@ -20,7 +20,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GetRoleScopeTagsByResourceWithResourceRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new GetRoleScopeTagsByResourceWithResourceRequestBuilder and sets the default values.
+     * Instantiates a new {@link GetRoleScopeTagsByResourceWithResourceRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      * @param resource Usage: resource='{resource}'
@@ -30,7 +30,7 @@ public class GetRoleScopeTagsByResourceWithResourceRequestBuilder extends BaseRe
         this.pathParameters.put("resource", resource);
     }
     /**
-     * Instantiates a new GetRoleScopeTagsByResourceWithResourceRequestBuilder and sets the default values.
+     * Instantiates a new {@link GetRoleScopeTagsByResourceWithResourceRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -39,7 +39,8 @@ public class GetRoleScopeTagsByResourceWithResourceRequestBuilder extends BaseRe
     }
     /**
      * Invoke function getRoleScopeTagsByResource
-     * @return a GetRoleScopeTagsByResourceWithResourceGetResponse
+     * @return a {@link GetRoleScopeTagsByResourceWithResourceGetResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public GetRoleScopeTagsByResourceWithResourceGetResponse get() {
@@ -48,19 +49,19 @@ public class GetRoleScopeTagsByResourceWithResourceRequestBuilder extends BaseRe
     /**
      * Invoke function getRoleScopeTagsByResource
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a GetRoleScopeTagsByResourceWithResourceGetResponse
+     * @return a {@link GetRoleScopeTagsByResourceWithResourceGetResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public GetRoleScopeTagsByResourceWithResourceGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, GetRoleScopeTagsByResourceWithResourceGetResponse::createFromDiscriminatorValue);
     }
     /**
      * Invoke function getRoleScopeTagsByResource
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -69,7 +70,7 @@ public class GetRoleScopeTagsByResourceWithResourceRequestBuilder extends BaseRe
     /**
      * Invoke function getRoleScopeTagsByResource
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -81,7 +82,7 @@ public class GetRoleScopeTagsByResourceWithResourceRequestBuilder extends BaseRe
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a GetRoleScopeTagsByResourceWithResourceRequestBuilder
+     * @return a {@link GetRoleScopeTagsByResourceWithResourceRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetRoleScopeTagsByResourceWithResourceRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -135,7 +136,7 @@ public class GetRoleScopeTagsByResourceWithResourceRequestBuilder extends BaseRe
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

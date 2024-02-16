@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ConnectionQuota extends Entity implements Parsable {
     /**
-     * Instantiates a new ConnectionQuota and sets the default values.
+     * Instantiates a new {@link ConnectionQuota} and sets the default values.
      */
     public ConnectionQuota() {
         super();
@@ -18,7 +18,7 @@ public class ConnectionQuota extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ConnectionQuota
+     * @return a {@link ConnectionQuota}
      */
     @jakarta.annotation.Nonnull
     public static ConnectionQuota createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class ConnectionQuota extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -37,7 +37,7 @@ public class ConnectionQuota extends Entity implements Parsable {
     }
     /**
      * Gets the itemsRemaining property value. The minimum of two values, one representing the items remaining in the connection and the other remaining items at tenant-level. The following equation represents the formula used to calculate the minimum number: min ({max capacity in the connection}  {number of items in the connection}, {tenant quota}  {number of items indexed in all connections}). If the connection is not monetized, such as in a preview connector or preview content experience, then this property is simply the number of remaining items in the connection.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getItemsRemaining() {

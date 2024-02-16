@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OpenAwsSecurityGroupFinding extends Finding implements Parsable {
     /**
-     * Instantiates a new OpenAwsSecurityGroupFinding and sets the default values.
+     * Instantiates a new {@link OpenAwsSecurityGroupFinding} and sets the default values.
      */
     public OpenAwsSecurityGroupFinding() {
         super();
@@ -17,7 +17,7 @@ public class OpenAwsSecurityGroupFinding extends Finding implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a OpenAwsSecurityGroupFinding
+     * @return a {@link OpenAwsSecurityGroupFinding}
      */
     @jakarta.annotation.Nonnull
     public static OpenAwsSecurityGroupFinding createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class OpenAwsSecurityGroupFinding extends Finding implements Parsable {
     }
     /**
      * Gets the assignedComputeInstancesDetails property value. A set of AWS EC2 compute instances related to this open security group.
-     * @return a java.util.List<AssignedComputeInstanceDetails>
+     * @return a {@link java.util.List<AssignedComputeInstanceDetails>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AssignedComputeInstanceDetails> getAssignedComputeInstancesDetails() {
@@ -34,7 +34,7 @@ public class OpenAwsSecurityGroupFinding extends Finding implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -47,7 +47,7 @@ public class OpenAwsSecurityGroupFinding extends Finding implements Parsable {
     }
     /**
      * Gets the inboundPorts property value. The inboundPorts property
-     * @return a InboundPorts
+     * @return a {@link InboundPorts}
      */
     @jakarta.annotation.Nullable
     public InboundPorts getInboundPorts() {
@@ -55,7 +55,7 @@ public class OpenAwsSecurityGroupFinding extends Finding implements Parsable {
     }
     /**
      * Gets the securityGroup property value. The securityGroup property
-     * @return a AwsAuthorizationSystemResource
+     * @return a {@link AwsAuthorizationSystemResource}
      */
     @jakarta.annotation.Nullable
     public AwsAuthorizationSystemResource getSecurityGroup() {
@@ -63,7 +63,7 @@ public class OpenAwsSecurityGroupFinding extends Finding implements Parsable {
     }
     /**
      * Gets the totalStorageBucketCount property value. The number of storage buckets accessed by the assigned compute instances.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getTotalStorageBucketCount() {

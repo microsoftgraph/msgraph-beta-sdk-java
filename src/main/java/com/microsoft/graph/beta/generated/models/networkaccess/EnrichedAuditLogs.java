@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EnrichedAuditLogs extends Entity implements Parsable {
     /**
-     * Instantiates a new EnrichedAuditLogs and sets the default values.
+     * Instantiates a new {@link EnrichedAuditLogs} and sets the default values.
      */
     public EnrichedAuditLogs() {
         super();
@@ -18,7 +18,7 @@ public class EnrichedAuditLogs extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EnrichedAuditLogs
+     * @return a {@link EnrichedAuditLogs}
      */
     @jakarta.annotation.Nonnull
     public static EnrichedAuditLogs createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class EnrichedAuditLogs extends Entity implements Parsable {
     }
     /**
      * Gets the exchange property value. Exchange Online enriched audit logs settings.
-     * @return a EnrichedAuditLogsSettings
+     * @return a {@link EnrichedAuditLogsSettings}
      */
     @jakarta.annotation.Nullable
     public EnrichedAuditLogsSettings getExchange() {
@@ -35,7 +35,7 @@ public class EnrichedAuditLogs extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -47,7 +47,7 @@ public class EnrichedAuditLogs extends Entity implements Parsable {
     }
     /**
      * Gets the sharepoint property value. SharePoint Online enriched audit logs settings.
-     * @return a EnrichedAuditLogsSettings
+     * @return a {@link EnrichedAuditLogsSettings}
      */
     @jakarta.annotation.Nullable
     public EnrichedAuditLogsSettings getSharepoint() {
@@ -55,7 +55,7 @@ public class EnrichedAuditLogs extends Entity implements Parsable {
     }
     /**
      * Gets the teams property value. Teams enriched audit logs settings.
-     * @return a EnrichedAuditLogsSettings
+     * @return a {@link EnrichedAuditLogsSettings}
      */
     @jakarta.annotation.Nullable
     public EnrichedAuditLogsSettings getTeams() {

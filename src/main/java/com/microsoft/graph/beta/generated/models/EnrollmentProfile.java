@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EnrollmentProfile extends Entity implements Parsable {
     /**
-     * Instantiates a new EnrollmentProfile and sets the default values.
+     * Instantiates a new {@link EnrollmentProfile} and sets the default values.
      */
     public EnrollmentProfile() {
         super();
@@ -20,7 +20,7 @@ public class EnrollmentProfile extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EnrollmentProfile
+     * @return a {@link EnrollmentProfile}
      */
     @jakarta.annotation.Nonnull
     public static EnrollmentProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class EnrollmentProfile extends Entity implements Parsable {
     }
     /**
      * Gets the configurationEndpointUrl property value. Configuration endpoint url to use for Enrollment
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getConfigurationEndpointUrl() {
@@ -47,7 +47,7 @@ public class EnrollmentProfile extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. Description of the profile
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -55,7 +55,7 @@ public class EnrollmentProfile extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. Name of the profile
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -63,7 +63,7 @@ public class EnrollmentProfile extends Entity implements Parsable {
     }
     /**
      * Gets the enableAuthenticationViaCompanyPortal property value. Indicates to authenticate with Apple Setup Assistant instead of Company Portal.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getEnableAuthenticationViaCompanyPortal() {
@@ -71,7 +71,7 @@ public class EnrollmentProfile extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -86,7 +86,7 @@ public class EnrollmentProfile extends Entity implements Parsable {
     }
     /**
      * Gets the requireCompanyPortalOnSetupAssistantEnrolledDevices property value. Indicates that Company Portal is required on setup assistant enrolled devices
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getRequireCompanyPortalOnSetupAssistantEnrolledDevices() {
@@ -94,7 +94,7 @@ public class EnrollmentProfile extends Entity implements Parsable {
     }
     /**
      * Gets the requiresUserAuthentication property value. Indicates if the profile requires user authentication
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getRequiresUserAuthentication() {

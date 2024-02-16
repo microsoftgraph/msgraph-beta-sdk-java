@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MeetingRegistration extends MeetingRegistrationBase implements Parsable {
     /**
-     * Instantiates a new MeetingRegistration and sets the default values.
+     * Instantiates a new {@link MeetingRegistration} and sets the default values.
      */
     public MeetingRegistration() {
         super();
@@ -19,7 +19,7 @@ public class MeetingRegistration extends MeetingRegistrationBase implements Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MeetingRegistration
+     * @return a {@link MeetingRegistration}
      */
     @jakarta.annotation.Nonnull
     public static MeetingRegistration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class MeetingRegistration extends MeetingRegistrationBase implements Pars
     }
     /**
      * Gets the customQuestions property value. Custom registration questions.
-     * @return a java.util.List<MeetingRegistrationQuestion>
+     * @return a {@link java.util.List<MeetingRegistrationQuestion>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<MeetingRegistrationQuestion> getCustomQuestions() {
@@ -36,7 +36,7 @@ public class MeetingRegistration extends MeetingRegistrationBase implements Pars
     }
     /**
      * Gets the description property value. The description of the meeting.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -44,7 +44,7 @@ public class MeetingRegistration extends MeetingRegistrationBase implements Pars
     }
     /**
      * Gets the endDateTime property value. The meeting end time in UTC.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getEndDateTime() {
@@ -52,7 +52,7 @@ public class MeetingRegistration extends MeetingRegistrationBase implements Pars
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -69,7 +69,7 @@ public class MeetingRegistration extends MeetingRegistrationBase implements Pars
     }
     /**
      * Gets the registrationPageViewCount property value. The number of times the registration page has been visited. Read-only.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getRegistrationPageViewCount() {
@@ -77,7 +77,7 @@ public class MeetingRegistration extends MeetingRegistrationBase implements Pars
     }
     /**
      * Gets the registrationPageWebUrl property value. The URL of the registration page. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRegistrationPageWebUrl() {
@@ -85,7 +85,7 @@ public class MeetingRegistration extends MeetingRegistrationBase implements Pars
     }
     /**
      * Gets the speakers property value. The meeting speaker's information.
-     * @return a java.util.List<MeetingSpeaker>
+     * @return a {@link java.util.List<MeetingSpeaker>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<MeetingSpeaker> getSpeakers() {
@@ -93,7 +93,7 @@ public class MeetingRegistration extends MeetingRegistrationBase implements Pars
     }
     /**
      * Gets the startDateTime property value. The meeting start time in UTC.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
@@ -101,7 +101,7 @@ public class MeetingRegistration extends MeetingRegistrationBase implements Pars
     }
     /**
      * Gets the subject property value. The subject of the meeting.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSubject() {

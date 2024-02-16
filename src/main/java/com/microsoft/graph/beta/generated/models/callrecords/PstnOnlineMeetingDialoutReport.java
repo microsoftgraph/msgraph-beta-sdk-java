@@ -19,7 +19,7 @@ public class PstnOnlineMeetingDialoutReport implements AdditionalDataHolder, Bac
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new PstnOnlineMeetingDialoutReport and sets the default values.
+     * Instantiates a new {@link PstnOnlineMeetingDialoutReport} and sets the default values.
      */
     public PstnOnlineMeetingDialoutReport() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class PstnOnlineMeetingDialoutReport implements AdditionalDataHolder, Bac
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PstnOnlineMeetingDialoutReport
+     * @return a {@link PstnOnlineMeetingDialoutReport}
      */
     @jakarta.annotation.Nonnull
     public static PstnOnlineMeetingDialoutReport createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class PstnOnlineMeetingDialoutReport implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -50,7 +50,7 @@ public class PstnOnlineMeetingDialoutReport implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -58,7 +58,7 @@ public class PstnOnlineMeetingDialoutReport implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the currency property value. Currency used to calculate the cost of the call. For details, see ISO 4217.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCurrency() {
@@ -66,7 +66,7 @@ public class PstnOnlineMeetingDialoutReport implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the destinationContext property value. Indicates whether the call was Domestic (within a country or region) or International (outside a country or region) based on the user's location.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDestinationContext() {
@@ -74,7 +74,7 @@ public class PstnOnlineMeetingDialoutReport implements AdditionalDataHolder, Bac
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -93,7 +93,7 @@ public class PstnOnlineMeetingDialoutReport implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -101,7 +101,7 @@ public class PstnOnlineMeetingDialoutReport implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the totalCallCharge property value. Total costs of all the calls within the selected time range, including call charges and connection fees.
-     * @return a BigDecimal
+     * @return a {@link BigDecimal}
      */
     @jakarta.annotation.Nullable
     public BigDecimal getTotalCallCharge() {
@@ -109,7 +109,7 @@ public class PstnOnlineMeetingDialoutReport implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the totalCalls property value. Total number of dial-out calls within the selected time range.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getTotalCalls() {
@@ -117,7 +117,7 @@ public class PstnOnlineMeetingDialoutReport implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the totalCallSeconds property value. Total duration of all the calls within the selected time range, in seconds.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getTotalCallSeconds() {
@@ -125,7 +125,7 @@ public class PstnOnlineMeetingDialoutReport implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the usageLocation property value. Country code of the user. For details, see ISO 3166-1 alpha-2.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUsageLocation() {
@@ -133,7 +133,7 @@ public class PstnOnlineMeetingDialoutReport implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the userDisplayName property value. Display name of the user.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserDisplayName() {
@@ -141,7 +141,7 @@ public class PstnOnlineMeetingDialoutReport implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the userId property value. The unique identifier (GUID) of the user in Microsoft Entra ID.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
@@ -149,7 +149,7 @@ public class PstnOnlineMeetingDialoutReport implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the userPrincipalName property value. The user principal name (sign-in name) in Microsoft Entra ID. This is usually the same as the user's SIP address, and can be same as the user's e-mail address.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {

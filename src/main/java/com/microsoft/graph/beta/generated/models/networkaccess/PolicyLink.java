@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PolicyLink extends Entity implements Parsable {
     /**
-     * Instantiates a new PolicyLink and sets the default values.
+     * Instantiates a new {@link PolicyLink} and sets the default values.
      */
     public PolicyLink() {
         super();
@@ -18,7 +18,7 @@ public class PolicyLink extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PolicyLink
+     * @return a {@link PolicyLink}
      */
     @jakarta.annotation.Nonnull
     public static PolicyLink createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -35,7 +35,7 @@ public class PolicyLink extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -47,7 +47,7 @@ public class PolicyLink extends Entity implements Parsable {
     }
     /**
      * Gets the policy property value. The policy property
-     * @return a Policy
+     * @return a {@link Policy}
      */
     @jakarta.annotation.Nullable
     public Policy getPolicy() {
@@ -55,7 +55,7 @@ public class PolicyLink extends Entity implements Parsable {
     }
     /**
      * Gets the state property value. The state property
-     * @return a Status
+     * @return a {@link Status}
      */
     @jakarta.annotation.Nullable
     public Status getState() {
@@ -63,7 +63,7 @@ public class PolicyLink extends Entity implements Parsable {
     }
     /**
      * Gets the version property value. Version.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getVersion() {

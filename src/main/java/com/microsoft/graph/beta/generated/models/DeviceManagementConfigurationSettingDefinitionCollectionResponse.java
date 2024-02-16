@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementConfigurationSettingDefinitionCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * Instantiates a new DeviceManagementConfigurationSettingDefinitionCollectionResponse and sets the default values.
+     * Instantiates a new {@link DeviceManagementConfigurationSettingDefinitionCollectionResponse} and sets the default values.
      */
     public DeviceManagementConfigurationSettingDefinitionCollectionResponse() {
         super();
@@ -17,7 +17,7 @@ public class DeviceManagementConfigurationSettingDefinitionCollectionResponse ex
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceManagementConfigurationSettingDefinitionCollectionResponse
+     * @return a {@link DeviceManagementConfigurationSettingDefinitionCollectionResponse}
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementConfigurationSettingDefinitionCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class DeviceManagementConfigurationSettingDefinitionCollectionResponse ex
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -36,7 +36,7 @@ public class DeviceManagementConfigurationSettingDefinitionCollectionResponse ex
     }
     /**
      * Gets the value property value. The value property
-     * @return a java.util.List<DeviceManagementConfigurationSettingDefinition>
+     * @return a {@link java.util.List<DeviceManagementConfigurationSettingDefinition>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementConfigurationSettingDefinition> getValue() {

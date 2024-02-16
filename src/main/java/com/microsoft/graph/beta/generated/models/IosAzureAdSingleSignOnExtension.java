@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IosAzureAdSingleSignOnExtension extends IosSingleSignOnExtension implements Parsable {
     /**
-     * Instantiates a new IosAzureAdSingleSignOnExtension and sets the default values.
+     * Instantiates a new {@link IosAzureAdSingleSignOnExtension} and sets the default values.
      */
     public IosAzureAdSingleSignOnExtension() {
         super();
@@ -21,7 +21,7 @@ public class IosAzureAdSingleSignOnExtension extends IosSingleSignOnExtension im
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a IosAzureAdSingleSignOnExtension
+     * @return a {@link IosAzureAdSingleSignOnExtension}
      */
     @jakarta.annotation.Nonnull
     public static IosAzureAdSingleSignOnExtension createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class IosAzureAdSingleSignOnExtension extends IosSingleSignOnExtension im
     }
     /**
      * Gets the bundleIdAccessControlList property value. An optional list of additional bundle IDs allowed to use the AAD extension for single sign-on.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getBundleIdAccessControlList() {
@@ -38,7 +38,7 @@ public class IosAzureAdSingleSignOnExtension extends IosSingleSignOnExtension im
     }
     /**
      * Gets the configurations property value. Gets or sets a list of typed key-value pairs used to configure Credential-type profiles. This collection can contain a maximum of 500 elements.
-     * @return a java.util.List<KeyTypedValuePair>
+     * @return a {@link java.util.List<KeyTypedValuePair>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyTypedValuePair> getConfigurations() {
@@ -46,7 +46,7 @@ public class IosAzureAdSingleSignOnExtension extends IosSingleSignOnExtension im
     }
     /**
      * Gets the enableSharedDeviceMode property value. Enables or disables shared device mode.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getEnableSharedDeviceMode() {
@@ -54,7 +54,7 @@ public class IosAzureAdSingleSignOnExtension extends IosSingleSignOnExtension im
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

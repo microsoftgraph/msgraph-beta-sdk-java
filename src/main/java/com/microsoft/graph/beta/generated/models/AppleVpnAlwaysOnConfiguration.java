@@ -21,7 +21,7 @@ public class AppleVpnAlwaysOnConfiguration implements AdditionalDataHolder, Back
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new AppleVpnAlwaysOnConfiguration and sets the default values.
+     * Instantiates a new {@link AppleVpnAlwaysOnConfiguration} and sets the default values.
      */
     public AppleVpnAlwaysOnConfiguration() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -30,7 +30,7 @@ public class AppleVpnAlwaysOnConfiguration implements AdditionalDataHolder, Back
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AppleVpnAlwaysOnConfiguration
+     * @return a {@link AppleVpnAlwaysOnConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static AppleVpnAlwaysOnConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class AppleVpnAlwaysOnConfiguration implements AdditionalDataHolder, Back
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -52,7 +52,7 @@ public class AppleVpnAlwaysOnConfiguration implements AdditionalDataHolder, Back
     }
     /**
      * Gets the airPrintExceptionAction property value. Determine whether AirPrint service will be exempt from the always-on VPN connection. Possible values are: forceTrafficViaVPN, allowTrafficOutside, dropTraffic.
-     * @return a VpnServiceExceptionAction
+     * @return a {@link VpnServiceExceptionAction}
      */
     @jakarta.annotation.Nullable
     public VpnServiceExceptionAction getAirPrintExceptionAction() {
@@ -60,7 +60,7 @@ public class AppleVpnAlwaysOnConfiguration implements AdditionalDataHolder, Back
     }
     /**
      * Gets the allowAllCaptiveNetworkPlugins property value. Specifies whether traffic from all captive network plugins should be allowed outside the vpn
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowAllCaptiveNetworkPlugins() {
@@ -68,7 +68,7 @@ public class AppleVpnAlwaysOnConfiguration implements AdditionalDataHolder, Back
     }
     /**
      * Gets the allowCaptiveWebSheet property value. Determines whether traffic from the Websheet app is allowed outside of the VPN
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowCaptiveWebSheet() {
@@ -76,7 +76,7 @@ public class AppleVpnAlwaysOnConfiguration implements AdditionalDataHolder, Back
     }
     /**
      * Gets the allowedCaptiveNetworkPlugins property value. Determines whether all, some, or no non-native captive networking apps are allowed
-     * @return a SpecifiedCaptiveNetworkPlugins
+     * @return a {@link SpecifiedCaptiveNetworkPlugins}
      */
     @jakarta.annotation.Nullable
     public SpecifiedCaptiveNetworkPlugins getAllowedCaptiveNetworkPlugins() {
@@ -84,7 +84,7 @@ public class AppleVpnAlwaysOnConfiguration implements AdditionalDataHolder, Back
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -92,7 +92,7 @@ public class AppleVpnAlwaysOnConfiguration implements AdditionalDataHolder, Back
     }
     /**
      * Gets the cellularExceptionAction property value. Determine whether Cellular service will be exempt from the always-on VPN connection. Possible values are: forceTrafficViaVPN, allowTrafficOutside, dropTraffic.
-     * @return a VpnServiceExceptionAction
+     * @return a {@link VpnServiceExceptionAction}
      */
     @jakarta.annotation.Nullable
     public VpnServiceExceptionAction getCellularExceptionAction() {
@@ -100,7 +100,7 @@ public class AppleVpnAlwaysOnConfiguration implements AdditionalDataHolder, Back
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -120,7 +120,7 @@ public class AppleVpnAlwaysOnConfiguration implements AdditionalDataHolder, Back
     }
     /**
      * Gets the natKeepAliveIntervalInSeconds property value. Specifies how often in seconds to send a network address translation keepalive package through the VPN
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getNatKeepAliveIntervalInSeconds() {
@@ -128,7 +128,7 @@ public class AppleVpnAlwaysOnConfiguration implements AdditionalDataHolder, Back
     }
     /**
      * Gets the natKeepAliveOffloadEnable property value. Enable hardware offloading of NAT keepalive signals when the device is asleep
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getNatKeepAliveOffloadEnable() {
@@ -136,7 +136,7 @@ public class AppleVpnAlwaysOnConfiguration implements AdditionalDataHolder, Back
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -144,7 +144,7 @@ public class AppleVpnAlwaysOnConfiguration implements AdditionalDataHolder, Back
     }
     /**
      * Gets the tunnelConfiguration property value. The type of tunnels that will be present to the VPN client for configuration
-     * @return a VpnTunnelConfigurationType
+     * @return a {@link VpnTunnelConfigurationType}
      */
     @jakarta.annotation.Nullable
     public VpnTunnelConfigurationType getTunnelConfiguration() {
@@ -152,7 +152,7 @@ public class AppleVpnAlwaysOnConfiguration implements AdditionalDataHolder, Back
     }
     /**
      * Gets the userToggleEnabled property value. Allow the user to toggle the VPN configuration using the UI
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getUserToggleEnabled() {
@@ -160,7 +160,7 @@ public class AppleVpnAlwaysOnConfiguration implements AdditionalDataHolder, Back
     }
     /**
      * Gets the voicemailExceptionAction property value. Determine whether voicemail service will be exempt from the always-on VPN connection. Possible values are: forceTrafficViaVPN, allowTrafficOutside, dropTraffic.
-     * @return a VpnServiceExceptionAction
+     * @return a {@link VpnServiceExceptionAction}
      */
     @jakarta.annotation.Nullable
     public VpnServiceExceptionAction getVoicemailExceptionAction() {

@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CloudPC extends Entity implements Parsable {
     /**
-     * Instantiates a new CloudPC and sets the default values.
+     * Instantiates a new {@link CloudPC} and sets the default values.
      */
     public CloudPC() {
         super();
@@ -18,7 +18,7 @@ public class CloudPC extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CloudPC
+     * @return a {@link CloudPC}
      */
     @jakarta.annotation.Nonnull
     public static CloudPC createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class CloudPC extends Entity implements Parsable {
     }
     /**
      * Gets the aadDeviceId property value. The Microsoft Entra device ID of the Cloud PC.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAadDeviceId() {
@@ -35,7 +35,7 @@ public class CloudPC extends Entity implements Parsable {
     }
     /**
      * Gets the connectionSettings property value. The connectionSettings property
-     * @return a CloudPcConnectionSettings
+     * @return a {@link CloudPcConnectionSettings}
      */
     @jakarta.annotation.Nullable
     public CloudPcConnectionSettings getConnectionSettings() {
@@ -43,7 +43,7 @@ public class CloudPC extends Entity implements Parsable {
     }
     /**
      * Gets the connectivityResult property value. The connectivity health check result of a Cloud PC, including the updated timestamp and whether the Cloud PC can be connected.
-     * @return a CloudPcConnectivityResult
+     * @return a {@link CloudPcConnectivityResult}
      */
     @jakarta.annotation.Nullable
     public CloudPcConnectivityResult getConnectivityResult() {
@@ -51,7 +51,7 @@ public class CloudPC extends Entity implements Parsable {
     }
     /**
      * Gets the disasterRecoveryCapability property value. The disasterRecoveryCapability property
-     * @return a CloudPcDisasterRecoveryCapability
+     * @return a {@link CloudPcDisasterRecoveryCapability}
      */
     @jakarta.annotation.Nullable
     public CloudPcDisasterRecoveryCapability getDisasterRecoveryCapability() {
@@ -59,7 +59,7 @@ public class CloudPC extends Entity implements Parsable {
     }
     /**
      * Gets the diskEncryptionState property value. The disk encryption applied to the Cloud PC. Possible values: notAvailable, notEncrypted, encryptedUsingPlatformManagedKey, encryptedUsingCustomerManagedKey, and unknownFutureValue.
-     * @return a CloudPcDiskEncryptionState
+     * @return a {@link CloudPcDiskEncryptionState}
      */
     @jakarta.annotation.Nullable
     public CloudPcDiskEncryptionState getDiskEncryptionState() {
@@ -67,7 +67,7 @@ public class CloudPC extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name of the Cloud PC.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -75,7 +75,7 @@ public class CloudPC extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -112,7 +112,7 @@ public class CloudPC extends Entity implements Parsable {
     }
     /**
      * Gets the gracePeriodEndDateTime property value. The date and time when the grace period ends and reprovisioning or deprovisioning happen. Required only if the status is inGracePeriod. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getGracePeriodEndDateTime() {
@@ -120,7 +120,7 @@ public class CloudPC extends Entity implements Parsable {
     }
     /**
      * Gets the imageDisplayName property value. Name of the OS image that's on the Cloud PC.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getImageDisplayName() {
@@ -128,7 +128,7 @@ public class CloudPC extends Entity implements Parsable {
     }
     /**
      * Gets the lastLoginResult property value. The last login result of the Cloud PC. For example, { 'time': '2014-01-01T00:00:00Z'}.
-     * @return a CloudPcLoginResult
+     * @return a {@link CloudPcLoginResult}
      */
     @jakarta.annotation.Nullable
     public CloudPcLoginResult getLastLoginResult() {
@@ -136,7 +136,7 @@ public class CloudPC extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. The last modified date and time of the Cloud PC. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -144,7 +144,7 @@ public class CloudPC extends Entity implements Parsable {
     }
     /**
      * Gets the lastRemoteActionResult property value. The last remote action result of the enterprise Cloud PCs. The supported remote actions are: Reboot, Rename, Reprovision, Restore, and Troubleshoot.
-     * @return a CloudPcRemoteActionResult
+     * @return a {@link CloudPcRemoteActionResult}
      */
     @jakarta.annotation.Nullable
     public CloudPcRemoteActionResult getLastRemoteActionResult() {
@@ -152,7 +152,7 @@ public class CloudPC extends Entity implements Parsable {
     }
     /**
      * Gets the managedDeviceId property value. The Intune device ID of the Cloud PC.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getManagedDeviceId() {
@@ -160,7 +160,7 @@ public class CloudPC extends Entity implements Parsable {
     }
     /**
      * Gets the managedDeviceName property value. The Intune device name of the Cloud PC.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getManagedDeviceName() {
@@ -168,7 +168,7 @@ public class CloudPC extends Entity implements Parsable {
     }
     /**
      * Gets the onPremisesConnectionName property value. The Azure network connection that is applied during the provisioning of Cloud PCs.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOnPremisesConnectionName() {
@@ -176,7 +176,7 @@ public class CloudPC extends Entity implements Parsable {
     }
     /**
      * Gets the osVersion property value. The version of the operating system (OS) to provision on Cloud PCs. Possible values are: windows10, windows11, and unknownFutureValue.
-     * @return a CloudPcOperatingSystem
+     * @return a {@link CloudPcOperatingSystem}
      */
     @jakarta.annotation.Nullable
     public CloudPcOperatingSystem getOsVersion() {
@@ -184,7 +184,7 @@ public class CloudPC extends Entity implements Parsable {
     }
     /**
      * Gets the partnerAgentInstallResults property value. The results of every partner agent's installation status on Cloud PC.
-     * @return a java.util.List<CloudPcPartnerAgentInstallResult>
+     * @return a {@link java.util.List<CloudPcPartnerAgentInstallResult>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<CloudPcPartnerAgentInstallResult> getPartnerAgentInstallResults() {
@@ -192,7 +192,7 @@ public class CloudPC extends Entity implements Parsable {
     }
     /**
      * Gets the powerState property value. The power state of a Cloud PC. The possible values are: running, poweredOff and unknown. This property only supports shift work Cloud PCs.
-     * @return a CloudPcPowerState
+     * @return a {@link CloudPcPowerState}
      */
     @jakarta.annotation.Nullable
     public CloudPcPowerState getPowerState() {
@@ -200,7 +200,7 @@ public class CloudPC extends Entity implements Parsable {
     }
     /**
      * Gets the provisioningPolicyId property value. The provisioning policy ID of the Cloud PC.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getProvisioningPolicyId() {
@@ -208,7 +208,7 @@ public class CloudPC extends Entity implements Parsable {
     }
     /**
      * Gets the provisioningPolicyName property value. The provisioning policy that is applied during the provisioning of Cloud PCs.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getProvisioningPolicyName() {
@@ -216,7 +216,7 @@ public class CloudPC extends Entity implements Parsable {
     }
     /**
      * Gets the provisioningType property value. The type of licenses to be used when provisioning Cloud PCs using this policy. Possible values are: dedicated, shared, unknownFutureValue. Default value is dedicated.
-     * @return a CloudPcProvisioningType
+     * @return a {@link CloudPcProvisioningType}
      */
     @jakarta.annotation.Nullable
     public CloudPcProvisioningType getProvisioningType() {
@@ -224,7 +224,7 @@ public class CloudPC extends Entity implements Parsable {
     }
     /**
      * Gets the scopeIds property value. The scopeIds property
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getScopeIds() {
@@ -232,7 +232,7 @@ public class CloudPC extends Entity implements Parsable {
     }
     /**
      * Gets the servicePlanId property value. The service plan ID of the Cloud PC.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getServicePlanId() {
@@ -240,7 +240,7 @@ public class CloudPC extends Entity implements Parsable {
     }
     /**
      * Gets the servicePlanName property value. The service plan name of the Cloud PC.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getServicePlanName() {
@@ -248,7 +248,7 @@ public class CloudPC extends Entity implements Parsable {
     }
     /**
      * Gets the servicePlanType property value. The service plan type of the Cloud PC.
-     * @return a CloudPcServicePlanType
+     * @return a {@link CloudPcServicePlanType}
      */
     @jakarta.annotation.Nullable
     public CloudPcServicePlanType getServicePlanType() {
@@ -256,7 +256,7 @@ public class CloudPC extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status property
-     * @return a CloudPcStatus
+     * @return a {@link CloudPcStatus}
      */
     @jakarta.annotation.Nullable
     public CloudPcStatus getStatus() {
@@ -264,7 +264,7 @@ public class CloudPC extends Entity implements Parsable {
     }
     /**
      * Gets the statusDetails property value. The details of the Cloud PC status.
-     * @return a CloudPcStatusDetails
+     * @return a {@link CloudPcStatusDetails}
      */
     @jakarta.annotation.Nullable
     public CloudPcStatusDetails getStatusDetails() {
@@ -272,7 +272,7 @@ public class CloudPC extends Entity implements Parsable {
     }
     /**
      * Gets the userAccountType property value. The account type of the user on provisioned Cloud PCs. Possible values are: standardUser, administrator, and unknownFutureValue.
-     * @return a CloudPcUserAccountType
+     * @return a {@link CloudPcUserAccountType}
      */
     @jakarta.annotation.Nullable
     public CloudPcUserAccountType getUserAccountType() {
@@ -280,7 +280,7 @@ public class CloudPC extends Entity implements Parsable {
     }
     /**
      * Gets the userPrincipalName property value. The user principal name (UPN) of the user assigned to the Cloud PC.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {

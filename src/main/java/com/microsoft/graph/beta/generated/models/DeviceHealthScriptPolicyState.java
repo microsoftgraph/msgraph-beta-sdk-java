@@ -22,7 +22,7 @@ public class DeviceHealthScriptPolicyState implements AdditionalDataHolder, Back
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new DeviceHealthScriptPolicyState and sets the default values.
+     * Instantiates a new {@link DeviceHealthScriptPolicyState} and sets the default values.
      */
     public DeviceHealthScriptPolicyState() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -31,7 +31,7 @@ public class DeviceHealthScriptPolicyState implements AdditionalDataHolder, Back
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceHealthScriptPolicyState
+     * @return a {@link DeviceHealthScriptPolicyState}
      */
     @jakarta.annotation.Nonnull
     public static DeviceHealthScriptPolicyState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class DeviceHealthScriptPolicyState implements AdditionalDataHolder, Back
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -53,7 +53,7 @@ public class DeviceHealthScriptPolicyState implements AdditionalDataHolder, Back
     }
     /**
      * Gets the assignmentFilterIds property value. A list of the assignment filter ids used for health script applicability evaluation
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAssignmentFilterIds() {
@@ -61,7 +61,7 @@ public class DeviceHealthScriptPolicyState implements AdditionalDataHolder, Back
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -69,7 +69,7 @@ public class DeviceHealthScriptPolicyState implements AdditionalDataHolder, Back
     }
     /**
      * Gets the detectionState property value. Indicates the type of execution status of the device management script.
-     * @return a RunState
+     * @return a {@link RunState}
      */
     @jakarta.annotation.Nullable
     public RunState getDetectionState() {
@@ -77,7 +77,7 @@ public class DeviceHealthScriptPolicyState implements AdditionalDataHolder, Back
     }
     /**
      * Gets the deviceId property value. The Intune device Id
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceId() {
@@ -85,7 +85,7 @@ public class DeviceHealthScriptPolicyState implements AdditionalDataHolder, Back
     }
     /**
      * Gets the deviceName property value. Display name of the device
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceName() {
@@ -93,7 +93,7 @@ public class DeviceHealthScriptPolicyState implements AdditionalDataHolder, Back
     }
     /**
      * Gets the expectedStateUpdateDateTime property value. The next timestamp of when the device health script is expected to execute
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getExpectedStateUpdateDateTime() {
@@ -101,7 +101,7 @@ public class DeviceHealthScriptPolicyState implements AdditionalDataHolder, Back
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -129,7 +129,7 @@ public class DeviceHealthScriptPolicyState implements AdditionalDataHolder, Back
     }
     /**
      * Gets the id property value. Key of the device health script policy state is a concatenation of the MT sideCar policy Id and Intune device Id
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getId() {
@@ -137,7 +137,7 @@ public class DeviceHealthScriptPolicyState implements AdditionalDataHolder, Back
     }
     /**
      * Gets the lastStateUpdateDateTime property value. The last timestamp of when the device health script executed
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastStateUpdateDateTime() {
@@ -145,7 +145,7 @@ public class DeviceHealthScriptPolicyState implements AdditionalDataHolder, Back
     }
     /**
      * Gets the lastSyncDateTime property value. The last time that Intune Managment Extension synced with Intune
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastSyncDateTime() {
@@ -153,7 +153,7 @@ public class DeviceHealthScriptPolicyState implements AdditionalDataHolder, Back
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -161,7 +161,7 @@ public class DeviceHealthScriptPolicyState implements AdditionalDataHolder, Back
     }
     /**
      * Gets the osVersion property value. Value of the OS Version in string
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOsVersion() {
@@ -169,7 +169,7 @@ public class DeviceHealthScriptPolicyState implements AdditionalDataHolder, Back
     }
     /**
      * Gets the policyId property value. The MT sideCar policy Id
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPolicyId() {
@@ -177,7 +177,7 @@ public class DeviceHealthScriptPolicyState implements AdditionalDataHolder, Back
     }
     /**
      * Gets the policyName property value. Display name of the device health script
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPolicyName() {
@@ -185,7 +185,7 @@ public class DeviceHealthScriptPolicyState implements AdditionalDataHolder, Back
     }
     /**
      * Gets the postRemediationDetectionScriptError property value. Error from the detection script after remediation
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPostRemediationDetectionScriptError() {
@@ -193,7 +193,7 @@ public class DeviceHealthScriptPolicyState implements AdditionalDataHolder, Back
     }
     /**
      * Gets the postRemediationDetectionScriptOutput property value. Detection script output after remediation
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPostRemediationDetectionScriptOutput() {
@@ -201,7 +201,7 @@ public class DeviceHealthScriptPolicyState implements AdditionalDataHolder, Back
     }
     /**
      * Gets the preRemediationDetectionScriptError property value. Error from the detection script before remediation
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPreRemediationDetectionScriptError() {
@@ -209,7 +209,7 @@ public class DeviceHealthScriptPolicyState implements AdditionalDataHolder, Back
     }
     /**
      * Gets the preRemediationDetectionScriptOutput property value. Output of the detection script before remediation
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPreRemediationDetectionScriptOutput() {
@@ -217,7 +217,7 @@ public class DeviceHealthScriptPolicyState implements AdditionalDataHolder, Back
     }
     /**
      * Gets the remediationScriptError property value. Error output of the remediation script
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRemediationScriptError() {
@@ -225,7 +225,7 @@ public class DeviceHealthScriptPolicyState implements AdditionalDataHolder, Back
     }
     /**
      * Gets the remediationState property value. Indicates the type of execution status of the device management script.
-     * @return a RemediationState
+     * @return a {@link RemediationState}
      */
     @jakarta.annotation.Nullable
     public RemediationState getRemediationState() {
@@ -233,7 +233,7 @@ public class DeviceHealthScriptPolicyState implements AdditionalDataHolder, Back
     }
     /**
      * Gets the userName property value. Name of the user whom ran the device health script
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserName() {

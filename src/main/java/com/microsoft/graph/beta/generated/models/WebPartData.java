@@ -18,7 +18,7 @@ public class WebPartData implements AdditionalDataHolder, BackedModel, Parsable 
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new WebPartData and sets the default values.
+     * Instantiates a new {@link WebPartData} and sets the default values.
      */
     public WebPartData() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class WebPartData implements AdditionalDataHolder, BackedModel, Parsable 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WebPartData
+     * @return a {@link WebPartData}
      */
     @jakarta.annotation.Nonnull
     public static WebPartData createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class WebPartData implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class WebPartData implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the audiences property value. Audience information of the web part. By using this property, specific content is prioritized to specific audiences.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAudiences() {
@@ -57,7 +57,7 @@ public class WebPartData implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -65,7 +65,7 @@ public class WebPartData implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the dataVersion property value. Data version of the web part. The value is defined by the web part developer. Different dataVersions usually refers to a different property structure.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDataVersion() {
@@ -73,7 +73,7 @@ public class WebPartData implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the description property value. Description of the web part.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -81,7 +81,7 @@ public class WebPartData implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -97,7 +97,7 @@ public class WebPartData implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -105,7 +105,7 @@ public class WebPartData implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the properties property value. Properties bag of the web part.
-     * @return a Json
+     * @return a {@link Json}
      */
     @jakarta.annotation.Nullable
     public Json getProperties() {
@@ -113,7 +113,7 @@ public class WebPartData implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the serverProcessedContent property value. Contains collections of data that can be processed by server side services like search index and link fixup.
-     * @return a ServerProcessedContent
+     * @return a {@link ServerProcessedContent}
      */
     @jakarta.annotation.Nullable
     public ServerProcessedContent getServerProcessedContent() {
@@ -121,7 +121,7 @@ public class WebPartData implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the title property value. Title of the web part.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTitle() {

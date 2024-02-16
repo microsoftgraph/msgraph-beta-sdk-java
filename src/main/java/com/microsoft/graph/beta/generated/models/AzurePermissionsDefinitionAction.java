@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AzurePermissionsDefinitionAction extends PermissionsDefinitionAction implements Parsable {
     /**
-     * Instantiates a new AzurePermissionsDefinitionAction and sets the default values.
+     * Instantiates a new {@link AzurePermissionsDefinitionAction} and sets the default values.
      */
     public AzurePermissionsDefinitionAction() {
         super();
@@ -18,7 +18,7 @@ public class AzurePermissionsDefinitionAction extends PermissionsDefinitionActio
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AzurePermissionsDefinitionAction
+     * @return a {@link AzurePermissionsDefinitionAction}
      */
     @jakarta.annotation.Nonnull
     public static AzurePermissionsDefinitionAction createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -35,7 +35,7 @@ public class AzurePermissionsDefinitionAction extends PermissionsDefinitionActio
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

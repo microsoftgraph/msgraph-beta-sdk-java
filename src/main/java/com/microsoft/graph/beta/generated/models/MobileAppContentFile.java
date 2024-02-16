@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MobileAppContentFile extends Entity implements Parsable {
     /**
-     * Instantiates a new MobileAppContentFile and sets the default values.
+     * Instantiates a new {@link MobileAppContentFile} and sets the default values.
      */
     public MobileAppContentFile() {
         super();
@@ -21,7 +21,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MobileAppContentFile
+     * @return a {@link MobileAppContentFile}
      */
     @jakarta.annotation.Nonnull
     public static MobileAppContentFile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
     }
     /**
      * Gets the azureStorageUri property value. Indicates the Azure Storage URI that the file is uploaded to. Created by the service upon receiving a valid mobileAppContentFile. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAzureStorageUri() {
@@ -38,7 +38,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
     }
     /**
      * Gets the azureStorageUriExpirationDateTime property value. Indicates the date and time when the Azure storage URI expires, in ISO 8601 format. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getAzureStorageUriExpirationDateTime() {
@@ -46,7 +46,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. Indicates created date and time associated with app content file, in ISO 8601 format. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -54,7 +54,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -76,7 +76,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
     }
     /**
      * Gets the isCommitted property value. A value indicating whether the file is committed. A committed app content file has been fully uploaded and validated by the Intune service. TRUE means that app content file is committed, FALSE means that app content file is not committed. Defaults to FALSE. Read-only.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsCommitted() {
@@ -84,7 +84,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
     }
     /**
      * Gets the isDependency property value. Indicates whether this content file is a dependency for the main content file. TRUE means that the content file is a dependency, FALSE means that the content file is not a dependency and is the main content file. Defaults to FALSE.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDependency() {
@@ -92,7 +92,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
     }
     /**
      * Gets the isFrameworkFile property value. A value indicating whether the file is a framework file. To be deprecated.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsFrameworkFile() {
@@ -100,7 +100,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
     }
     /**
      * Gets the manifest property value. Indicates the manifest information, containing file metadata.
-     * @return a byte[]
+     * @return a {@link byte[]}
      */
     @jakarta.annotation.Nullable
     public byte[] getManifest() {
@@ -108,7 +108,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
     }
     /**
      * Gets the name property value. Indicates the name of the file.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -116,7 +116,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
     }
     /**
      * Gets the size property value. The size of the file prior to encryption. To be deprecated, please use sizeInBytes property instead.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getSize() {
@@ -124,7 +124,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
     }
     /**
      * Gets the sizeEncrypted property value. The size of the file after encryption. To be deprecated, please use sizeEncryptedInBytes property instead.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getSizeEncrypted() {
@@ -132,7 +132,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
     }
     /**
      * Gets the sizeEncryptedInBytes property value. Indicates the size of the file after encryption, in bytes.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getSizeEncryptedInBytes() {
@@ -140,7 +140,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
     }
     /**
      * Gets the sizeInBytes property value. Indicates the original size of the file, in bytes.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getSizeInBytes() {
@@ -148,7 +148,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
     }
     /**
      * Gets the uploadState property value. Contains properties for upload request states.
-     * @return a MobileAppContentFileUploadState
+     * @return a {@link MobileAppContentFileUploadState}
      */
     @jakarta.annotation.Nullable
     public MobileAppContentFileUploadState getUploadState() {

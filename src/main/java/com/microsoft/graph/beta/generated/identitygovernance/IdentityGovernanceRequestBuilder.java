@@ -31,6 +31,7 @@ import java.util.Objects;
 public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the accessReviews property of the microsoft.graph.identityGovernance entity.
+     * @return a {@link AccessReviewsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AccessReviewsRequestBuilder accessReviews() {
@@ -38,6 +39,7 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the appConsent property of the microsoft.graph.identityGovernance entity.
+     * @return a {@link AppConsentRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AppConsentRequestBuilder appConsent() {
@@ -45,6 +47,7 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the entitlementManagement property of the microsoft.graph.identityGovernance entity.
+     * @return a {@link EntitlementManagementRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public EntitlementManagementRequestBuilder entitlementManagement() {
@@ -52,6 +55,7 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the lifecycleWorkflows property of the microsoft.graph.identityGovernance entity.
+     * @return a {@link LifecycleWorkflowsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public LifecycleWorkflowsRequestBuilder lifecycleWorkflows() {
@@ -59,6 +63,7 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the permissionsAnalytics property of the microsoft.graph.identityGovernance entity.
+     * @return a {@link PermissionsAnalyticsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PermissionsAnalyticsRequestBuilder permissionsAnalytics() {
@@ -66,6 +71,7 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the permissionsManagement property of the microsoft.graph.identityGovernance entity.
+     * @return a {@link PermissionsManagementRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PermissionsManagementRequestBuilder permissionsManagement() {
@@ -73,6 +79,7 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the privilegedAccess property of the microsoft.graph.identityGovernance entity.
+     * @return a {@link PrivilegedAccessRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PrivilegedAccessRequestBuilder privilegedAccess() {
@@ -80,6 +87,7 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the roleManagementAlerts property of the microsoft.graph.identityGovernance entity.
+     * @return a {@link RoleManagementAlertsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RoleManagementAlertsRequestBuilder roleManagementAlerts() {
@@ -87,13 +95,14 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the termsOfUse property of the microsoft.graph.identityGovernance entity.
+     * @return a {@link TermsOfUseRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TermsOfUseRequestBuilder termsOfUse() {
         return new TermsOfUseRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new IdentityGovernanceRequestBuilder and sets the default values.
+     * Instantiates a new {@link IdentityGovernanceRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -101,7 +110,7 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new IdentityGovernanceRequestBuilder and sets the default values.
+     * Instantiates a new {@link IdentityGovernanceRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -110,7 +119,8 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get identityGovernance
-     * @return a IdentityGovernance
+     * @return a {@link IdentityGovernance}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public IdentityGovernance get() {
@@ -119,20 +129,21 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder {
     /**
      * Get identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a IdentityGovernance
+     * @return a {@link IdentityGovernance}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public IdentityGovernance get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, IdentityGovernance::createFromDiscriminatorValue);
     }
     /**
      * Update identityGovernance
      * @param body The request body
-     * @return a IdentityGovernance
+     * @return a {@link IdentityGovernance}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public IdentityGovernance patch(@jakarta.annotation.Nonnull final IdentityGovernance body) {
@@ -142,20 +153,20 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder {
      * Update identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a IdentityGovernance
+     * @return a {@link IdentityGovernance}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public IdentityGovernance patch(@jakarta.annotation.Nonnull final IdentityGovernance body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, IdentityGovernance::createFromDiscriminatorValue);
     }
     /**
      * Get identityGovernance
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -164,7 +175,7 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder {
     /**
      * Get identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -176,7 +187,7 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder {
     /**
      * Update identityGovernance
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final IdentityGovernance body) {
@@ -186,12 +197,12 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder {
      * Update identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final IdentityGovernance body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/identityGovernance", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -200,7 +211,7 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a IdentityGovernanceRequestBuilder
+     * @return a {@link IdentityGovernanceRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public IdentityGovernanceRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -224,7 +235,7 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

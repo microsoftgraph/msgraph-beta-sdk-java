@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsPhone81AppX extends MobileLobApp implements Parsable {
     /**
-     * Instantiates a new WindowsPhone81AppX and sets the default values.
+     * Instantiates a new {@link WindowsPhone81AppX} and sets the default values.
      */
     public WindowsPhone81AppX() {
         super();
@@ -22,7 +22,7 @@ public class WindowsPhone81AppX extends MobileLobApp implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WindowsPhone81AppX
+     * @return a {@link WindowsPhone81AppX}
      */
     @jakarta.annotation.Nonnull
     public static WindowsPhone81AppX createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,7 +38,7 @@ public class WindowsPhone81AppX extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the applicableArchitectures property value. Contains properties for Windows architecture.
-     * @return a EnumSet<WindowsArchitecture>
+     * @return a {@link EnumSet<WindowsArchitecture>}
      */
     @jakarta.annotation.Nullable
     public EnumSet<WindowsArchitecture> getApplicableArchitectures() {
@@ -46,7 +46,7 @@ public class WindowsPhone81AppX extends MobileLobApp implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -63,7 +63,7 @@ public class WindowsPhone81AppX extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the identityName property value. The Identity Name.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getIdentityName() {
@@ -71,7 +71,7 @@ public class WindowsPhone81AppX extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the identityPublisherHash property value. The Identity Publisher Hash.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getIdentityPublisherHash() {
@@ -79,7 +79,7 @@ public class WindowsPhone81AppX extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the identityResourceIdentifier property value. The Identity Resource Identifier.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getIdentityResourceIdentifier() {
@@ -87,7 +87,7 @@ public class WindowsPhone81AppX extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the identityVersion property value. The identity version.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getIdentityVersion() {
@@ -95,7 +95,7 @@ public class WindowsPhone81AppX extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the minimumSupportedOperatingSystem property value. The minimum operating system required for a Windows mobile app.
-     * @return a WindowsMinimumOperatingSystem
+     * @return a {@link WindowsMinimumOperatingSystem}
      */
     @jakarta.annotation.Nullable
     public WindowsMinimumOperatingSystem getMinimumSupportedOperatingSystem() {
@@ -103,7 +103,7 @@ public class WindowsPhone81AppX extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the phoneProductIdentifier property value. The Phone Product Identifier.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPhoneProductIdentifier() {
@@ -111,7 +111,7 @@ public class WindowsPhone81AppX extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the phonePublisherId property value. The Phone Publisher Id.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPhonePublisherId() {

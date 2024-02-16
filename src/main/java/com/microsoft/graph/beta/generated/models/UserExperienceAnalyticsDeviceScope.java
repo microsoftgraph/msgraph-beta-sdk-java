@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsDeviceScope extends Entity implements Parsable {
     /**
-     * Instantiates a new UserExperienceAnalyticsDeviceScope and sets the default values.
+     * Instantiates a new {@link UserExperienceAnalyticsDeviceScope} and sets the default values.
      */
     public UserExperienceAnalyticsDeviceScope() {
         super();
@@ -21,7 +21,7 @@ public class UserExperienceAnalyticsDeviceScope extends Entity implements Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserExperienceAnalyticsDeviceScope
+     * @return a {@link UserExperienceAnalyticsDeviceScope}
      */
     @jakarta.annotation.Nonnull
     public static UserExperienceAnalyticsDeviceScope createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class UserExperienceAnalyticsDeviceScope extends Entity implements Parsab
     }
     /**
      * Gets the createdDateTime property value. Indicates the creation date and time for the custom device scope.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -38,7 +38,7 @@ public class UserExperienceAnalyticsDeviceScope extends Entity implements Parsab
     }
     /**
      * Gets the deviceScopeName property value. The name of the user experience analytics device Scope configuration.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceScopeName() {
@@ -46,7 +46,7 @@ public class UserExperienceAnalyticsDeviceScope extends Entity implements Parsab
     }
     /**
      * Gets the enabled property value. Indicates whether a device scope is enabled or disabled. When TRUE, the device scope is enabled. When FALSE, the device scope is disabled. Default value is FALSE.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getEnabled() {
@@ -54,7 +54,7 @@ public class UserExperienceAnalyticsDeviceScope extends Entity implements Parsab
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -74,7 +74,7 @@ public class UserExperienceAnalyticsDeviceScope extends Entity implements Parsab
     }
     /**
      * Gets the isBuiltIn property value. Indicates whether the device scope configuration is built-in or custom. When TRUE, the device scope configuration is built-in. When FALSE, the device scope configuration is custom. Default value is FALSE.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsBuiltIn() {
@@ -82,7 +82,7 @@ public class UserExperienceAnalyticsDeviceScope extends Entity implements Parsab
     }
     /**
      * Gets the lastModifiedDateTime property value. Indicates the last updated date and time for the custom device scope.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -90,7 +90,7 @@ public class UserExperienceAnalyticsDeviceScope extends Entity implements Parsab
     }
     /**
      * Gets the operator property value. Device scope configuration query operator. Possible values are: equals, notEquals, contains, notContains, greaterThan, lessThan. Default value: equals.
-     * @return a DeviceScopeOperator
+     * @return a {@link DeviceScopeOperator}
      */
     @jakarta.annotation.Nullable
     public DeviceScopeOperator getOperator() {
@@ -98,7 +98,7 @@ public class UserExperienceAnalyticsDeviceScope extends Entity implements Parsab
     }
     /**
      * Gets the ownerId property value. The unique identifier of the person (admin) who created the device scope configuration.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOwnerId() {
@@ -106,7 +106,7 @@ public class UserExperienceAnalyticsDeviceScope extends Entity implements Parsab
     }
     /**
      * Gets the parameter property value. Device scope configuration parameter. It will be expend in future to add more parameter. Eg: device scope parameter can be OS version, Disk Type, Device manufacturer, device model or Scope tag. Default value: scopeTag.
-     * @return a DeviceScopeParameter
+     * @return a {@link DeviceScopeParameter}
      */
     @jakarta.annotation.Nullable
     public DeviceScopeParameter getParameter() {
@@ -114,7 +114,7 @@ public class UserExperienceAnalyticsDeviceScope extends Entity implements Parsab
     }
     /**
      * Gets the status property value. Indicates the device scope status after the device scope has been enabled. Possible values are: none, computing, insufficientData or completed. Default value is none.
-     * @return a DeviceScopeStatus
+     * @return a {@link DeviceScopeStatus}
      */
     @jakarta.annotation.Nullable
     public DeviceScopeStatus getStatus() {
@@ -122,7 +122,7 @@ public class UserExperienceAnalyticsDeviceScope extends Entity implements Parsab
     }
     /**
      * Gets the value property value. The device scope configuration query clause value.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getValue() {
@@ -130,7 +130,7 @@ public class UserExperienceAnalyticsDeviceScope extends Entity implements Parsab
     }
     /**
      * Gets the valueObjectId property value. The unique identifier for a user device scope tag Id used for the creation of device scope configuration.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getValueObjectId() {

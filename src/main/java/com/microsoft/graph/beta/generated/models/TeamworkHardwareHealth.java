@@ -18,7 +18,7 @@ public class TeamworkHardwareHealth implements AdditionalDataHolder, BackedModel
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new TeamworkHardwareHealth and sets the default values.
+     * Instantiates a new {@link TeamworkHardwareHealth} and sets the default values.
      */
     public TeamworkHardwareHealth() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class TeamworkHardwareHealth implements AdditionalDataHolder, BackedModel
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TeamworkHardwareHealth
+     * @return a {@link TeamworkHardwareHealth}
      */
     @jakarta.annotation.Nonnull
     public static TeamworkHardwareHealth createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class TeamworkHardwareHealth implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class TeamworkHardwareHealth implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class TeamworkHardwareHealth implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the computeHealth property value. The system health details for a teamworkDevice.
-     * @return a TeamworkPeripheralHealth
+     * @return a {@link TeamworkPeripheralHealth}
      */
     @jakarta.annotation.Nullable
     public TeamworkPeripheralHealth getComputeHealth() {
@@ -65,7 +65,7 @@ public class TeamworkHardwareHealth implements AdditionalDataHolder, BackedModel
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -77,7 +77,7 @@ public class TeamworkHardwareHealth implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the hdmiIngestHealth property value. The health details about the HDMI ingest of a device.
-     * @return a TeamworkPeripheralHealth
+     * @return a {@link TeamworkPeripheralHealth}
      */
     @jakarta.annotation.Nullable
     public TeamworkPeripheralHealth getHdmiIngestHealth() {
@@ -85,7 +85,7 @@ public class TeamworkHardwareHealth implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {

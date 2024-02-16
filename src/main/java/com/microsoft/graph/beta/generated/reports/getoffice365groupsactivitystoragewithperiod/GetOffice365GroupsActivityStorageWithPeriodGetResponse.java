@@ -11,7 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GetOffice365GroupsActivityStorageWithPeriodGetResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * Instantiates a new GetOffice365GroupsActivityStorageWithPeriodGetResponse and sets the default values.
+     * Instantiates a new {@link GetOffice365GroupsActivityStorageWithPeriodGetResponse} and sets the default values.
      */
     public GetOffice365GroupsActivityStorageWithPeriodGetResponse() {
         super();
@@ -19,7 +19,7 @@ public class GetOffice365GroupsActivityStorageWithPeriodGetResponse extends Base
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a GetOffice365GroupsActivityStorageWithPeriodGetResponse
+     * @return a {@link GetOffice365GroupsActivityStorageWithPeriodGetResponse}
      */
     @jakarta.annotation.Nonnull
     public static GetOffice365GroupsActivityStorageWithPeriodGetResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class GetOffice365GroupsActivityStorageWithPeriodGetResponse extends Base
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -38,7 +38,7 @@ public class GetOffice365GroupsActivityStorageWithPeriodGetResponse extends Base
     }
     /**
      * Gets the value property value. The value property
-     * @return a java.util.List<Office365GroupsActivityStorage>
+     * @return a {@link java.util.List<Office365GroupsActivityStorage>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Office365GroupsActivityStorage> getValue() {

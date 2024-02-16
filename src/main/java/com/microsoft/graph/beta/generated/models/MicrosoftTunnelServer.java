@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MicrosoftTunnelServer extends Entity implements Parsable {
     /**
-     * Instantiates a new MicrosoftTunnelServer and sets the default values.
+     * Instantiates a new {@link MicrosoftTunnelServer} and sets the default values.
      */
     public MicrosoftTunnelServer() {
         super();
@@ -21,7 +21,7 @@ public class MicrosoftTunnelServer extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MicrosoftTunnelServer
+     * @return a {@link MicrosoftTunnelServer}
      */
     @jakarta.annotation.Nonnull
     public static MicrosoftTunnelServer createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class MicrosoftTunnelServer extends Entity implements Parsable {
     }
     /**
      * Gets the agentImageDigest property value. The digest of the current agent image running on this server
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAgentImageDigest() {
@@ -38,7 +38,7 @@ public class MicrosoftTunnelServer extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name for the server. This property is required when a server is created and cannot be cleared during updates.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -46,7 +46,7 @@ public class MicrosoftTunnelServer extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -60,7 +60,7 @@ public class MicrosoftTunnelServer extends Entity implements Parsable {
     }
     /**
      * Gets the lastCheckinDateTime property value. Indicates when the server last checked in
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastCheckinDateTime() {
@@ -68,7 +68,7 @@ public class MicrosoftTunnelServer extends Entity implements Parsable {
     }
     /**
      * Gets the serverImageDigest property value. The digest of the current server image running on this server
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getServerImageDigest() {
@@ -76,7 +76,7 @@ public class MicrosoftTunnelServer extends Entity implements Parsable {
     }
     /**
      * Gets the tunnelServerHealthStatus property value. Enum of possible MicrosoftTunnelServer health status types
-     * @return a MicrosoftTunnelServerHealthStatus
+     * @return a {@link MicrosoftTunnelServerHealthStatus}
      */
     @jakarta.annotation.Nullable
     public MicrosoftTunnelServerHealthStatus getTunnelServerHealthStatus() {

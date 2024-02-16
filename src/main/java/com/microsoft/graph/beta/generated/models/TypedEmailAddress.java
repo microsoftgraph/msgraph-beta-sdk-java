@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TypedEmailAddress extends EmailAddress implements Parsable {
     /**
-     * Instantiates a new TypedEmailAddress and sets the default values.
+     * Instantiates a new {@link TypedEmailAddress} and sets the default values.
      */
     public TypedEmailAddress() {
         super();
@@ -18,7 +18,7 @@ public class TypedEmailAddress extends EmailAddress implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TypedEmailAddress
+     * @return a {@link TypedEmailAddress}
      */
     @jakarta.annotation.Nonnull
     public static TypedEmailAddress createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class TypedEmailAddress extends EmailAddress implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -38,7 +38,7 @@ public class TypedEmailAddress extends EmailAddress implements Parsable {
     }
     /**
      * Gets the otherLabel property value. To specify a custom type of email address, set type to other, and assign otherLabel to a custom string. For example, you may use a specific email address for your volunteer activities. Set type to other, and set otherLabel to a custom string such as Volunteer work.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOtherLabel() {
@@ -46,7 +46,7 @@ public class TypedEmailAddress extends EmailAddress implements Parsable {
     }
     /**
      * Gets the type property value. The type of email address. Possible values are: unknown, work, personal, main, other. The default value is unknown, which means address has not been set as a specific type.
-     * @return a EmailType
+     * @return a {@link EmailType}
      */
     @jakarta.annotation.Nullable
     public EmailType getType() {

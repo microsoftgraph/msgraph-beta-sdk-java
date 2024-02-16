@@ -18,7 +18,7 @@ public class ItemActionSet implements AdditionalDataHolder, BackedModel, Parsabl
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new ItemActionSet and sets the default values.
+     * Instantiates a new {@link ItemActionSet} and sets the default values.
      */
     public ItemActionSet() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class ItemActionSet implements AdditionalDataHolder, BackedModel, Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ItemActionSet
+     * @return a {@link ItemActionSet}
      */
     @jakarta.annotation.Nonnull
     public static ItemActionSet createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class ItemActionSet implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class ItemActionSet implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class ItemActionSet implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the comment property value. A comment was added to the item.
-     * @return a CommentAction
+     * @return a {@link CommentAction}
      */
     @jakarta.annotation.Nullable
     public CommentAction getComment() {
@@ -65,7 +65,7 @@ public class ItemActionSet implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the create property value. An item was created.
-     * @return a CreateAction
+     * @return a {@link CreateAction}
      */
     @jakarta.annotation.Nullable
     public CreateAction getCreate() {
@@ -73,7 +73,7 @@ public class ItemActionSet implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the delete property value. An item was deleted.
-     * @return a DeleteAction
+     * @return a {@link DeleteAction}
      */
     @jakarta.annotation.Nullable
     public DeleteAction getDelete() {
@@ -81,7 +81,7 @@ public class ItemActionSet implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the edit property value. An item was edited.
-     * @return a EditAction
+     * @return a {@link EditAction}
      */
     @jakarta.annotation.Nullable
     public EditAction getEdit() {
@@ -89,7 +89,7 @@ public class ItemActionSet implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -109,7 +109,7 @@ public class ItemActionSet implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the mention property value. A user was mentioned in the item.
-     * @return a MentionAction
+     * @return a {@link MentionAction}
      */
     @jakarta.annotation.Nullable
     public MentionAction getMention() {
@@ -117,7 +117,7 @@ public class ItemActionSet implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the move property value. An item was moved.
-     * @return a MoveAction
+     * @return a {@link MoveAction}
      */
     @jakarta.annotation.Nullable
     public MoveAction getMove() {
@@ -125,7 +125,7 @@ public class ItemActionSet implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -133,7 +133,7 @@ public class ItemActionSet implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the rename property value. An item was renamed.
-     * @return a RenameAction
+     * @return a {@link RenameAction}
      */
     @jakarta.annotation.Nullable
     public RenameAction getRename() {
@@ -141,7 +141,7 @@ public class ItemActionSet implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the restore property value. An item was restored.
-     * @return a RestoreAction
+     * @return a {@link RestoreAction}
      */
     @jakarta.annotation.Nullable
     public RestoreAction getRestore() {
@@ -149,7 +149,7 @@ public class ItemActionSet implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the share property value. An item was shared.
-     * @return a ShareAction
+     * @return a {@link ShareAction}
      */
     @jakarta.annotation.Nullable
     public ShareAction getShare() {
@@ -157,7 +157,7 @@ public class ItemActionSet implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the version property value. An item was versioned.
-     * @return a VersionAction
+     * @return a {@link VersionAction}
      */
     @jakarta.annotation.Nullable
     public VersionAction getVersion() {

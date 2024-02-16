@@ -21,7 +21,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class LastEstimateStatisticsOperationRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new LastEstimateStatisticsOperationRequestBuilder and sets the default values.
+     * Instantiates a new {@link LastEstimateStatisticsOperationRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -29,7 +29,7 @@ public class LastEstimateStatisticsOperationRequestBuilder extends BaseRequestBu
         super(requestAdapter, "{+baseurl}/compliance/ediscovery/cases/{case%2Did}/sourceCollections/{sourceCollection%2Did}/lastEstimateStatisticsOperation{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new LastEstimateStatisticsOperationRequestBuilder and sets the default values.
+     * Instantiates a new {@link LastEstimateStatisticsOperationRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -38,7 +38,8 @@ public class LastEstimateStatisticsOperationRequestBuilder extends BaseRequestBu
     }
     /**
      * Get the last estimateStatisticsOperation object associated with a source collection. 
-     * @return a EstimateStatisticsOperation
+     * @return a {@link EstimateStatisticsOperation}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
      * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-sourcecollection-list-lastestimatestatisticsoperation?view=graph-rest-1.0">Find more info here</a>
@@ -51,7 +52,8 @@ public class LastEstimateStatisticsOperationRequestBuilder extends BaseRequestBu
     /**
      * Get the last estimateStatisticsOperation object associated with a source collection. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a EstimateStatisticsOperation
+     * @return a {@link EstimateStatisticsOperation}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
      * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-sourcecollection-list-lastestimatestatisticsoperation?view=graph-rest-1.0">Find more info here</a>
@@ -61,13 +63,12 @@ public class LastEstimateStatisticsOperationRequestBuilder extends BaseRequestBu
     public EstimateStatisticsOperation get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, EstimateStatisticsOperation::createFromDiscriminatorValue);
     }
     /**
      * Get the last estimateStatisticsOperation object associated with a source collection. 
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
      */
@@ -79,7 +80,7 @@ public class LastEstimateStatisticsOperationRequestBuilder extends BaseRequestBu
     /**
      * Get the last estimateStatisticsOperation object associated with a source collection. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
      */
@@ -94,7 +95,7 @@ public class LastEstimateStatisticsOperationRequestBuilder extends BaseRequestBu
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a LastEstimateStatisticsOperationRequestBuilder
+     * @return a {@link LastEstimateStatisticsOperationRequestBuilder}
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
      */
@@ -121,7 +122,7 @@ public class LastEstimateStatisticsOperationRequestBuilder extends BaseRequestBu
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

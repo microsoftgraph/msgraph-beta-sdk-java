@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Connector extends Entity implements Parsable {
     /**
-     * Instantiates a new Connector and sets the default values.
+     * Instantiates a new {@link Connector} and sets the default values.
      */
     public Connector() {
         super();
@@ -17,7 +17,7 @@ public class Connector extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Connector
+     * @return a {@link Connector}
      */
     @jakarta.annotation.Nonnull
     public static Connector createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class Connector extends Entity implements Parsable {
     }
     /**
      * Gets the externalIp property value. The external IP address as detected by the the connector server. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getExternalIp() {
@@ -34,7 +34,7 @@ public class Connector extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -48,7 +48,7 @@ public class Connector extends Entity implements Parsable {
     }
     /**
      * Gets the machineName property value. The machine name the connector is installed and running on.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getMachineName() {
@@ -56,7 +56,7 @@ public class Connector extends Entity implements Parsable {
     }
     /**
      * Gets the memberOf property value. The connectorGroup that the connector is a member of. Read-only.
-     * @return a java.util.List<ConnectorGroup>
+     * @return a {@link java.util.List<ConnectorGroup>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ConnectorGroup> getMemberOf() {
@@ -64,7 +64,7 @@ public class Connector extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status property
-     * @return a ConnectorStatus
+     * @return a {@link ConnectorStatus}
      */
     @jakarta.annotation.Nullable
     public ConnectorStatus getStatus() {
@@ -72,7 +72,7 @@ public class Connector extends Entity implements Parsable {
     }
     /**
      * Gets the version property value. The version property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getVersion() {

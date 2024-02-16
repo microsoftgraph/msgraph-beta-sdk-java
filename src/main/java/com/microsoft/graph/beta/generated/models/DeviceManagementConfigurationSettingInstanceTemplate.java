@@ -21,7 +21,7 @@ public class DeviceManagementConfigurationSettingInstanceTemplate implements Add
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new DeviceManagementConfigurationSettingInstanceTemplate and sets the default values.
+     * Instantiates a new {@link DeviceManagementConfigurationSettingInstanceTemplate} and sets the default values.
      */
     public DeviceManagementConfigurationSettingInstanceTemplate() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -30,7 +30,7 @@ public class DeviceManagementConfigurationSettingInstanceTemplate implements Add
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceManagementConfigurationSettingInstanceTemplate
+     * @return a {@link DeviceManagementConfigurationSettingInstanceTemplate}
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementConfigurationSettingInstanceTemplate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -51,7 +51,7 @@ public class DeviceManagementConfigurationSettingInstanceTemplate implements Add
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -64,7 +64,7 @@ public class DeviceManagementConfigurationSettingInstanceTemplate implements Add
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -72,7 +72,7 @@ public class DeviceManagementConfigurationSettingInstanceTemplate implements Add
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -85,7 +85,7 @@ public class DeviceManagementConfigurationSettingInstanceTemplate implements Add
     }
     /**
      * Gets the isRequired property value. Indicates if a policy must specify this setting.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsRequired() {
@@ -93,7 +93,7 @@ public class DeviceManagementConfigurationSettingInstanceTemplate implements Add
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -101,7 +101,7 @@ public class DeviceManagementConfigurationSettingInstanceTemplate implements Add
     }
     /**
      * Gets the settingDefinitionId property value. Setting Definition Id
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSettingDefinitionId() {
@@ -109,7 +109,7 @@ public class DeviceManagementConfigurationSettingInstanceTemplate implements Add
     }
     /**
      * Gets the settingInstanceTemplateId property value. Setting Instance Template Id
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSettingInstanceTemplateId() {

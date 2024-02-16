@@ -18,7 +18,7 @@ public class TeamworkActivePeripherals implements AdditionalDataHolder, BackedMo
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new TeamworkActivePeripherals and sets the default values.
+     * Instantiates a new {@link TeamworkActivePeripherals} and sets the default values.
      */
     public TeamworkActivePeripherals() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class TeamworkActivePeripherals implements AdditionalDataHolder, BackedMo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TeamworkActivePeripherals
+     * @return a {@link TeamworkActivePeripherals}
      */
     @jakarta.annotation.Nonnull
     public static TeamworkActivePeripherals createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class TeamworkActivePeripherals implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class TeamworkActivePeripherals implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class TeamworkActivePeripherals implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the communicationSpeaker property value. The communicationSpeaker property
-     * @return a TeamworkPeripheral
+     * @return a {@link TeamworkPeripheral}
      */
     @jakarta.annotation.Nullable
     public TeamworkPeripheral getCommunicationSpeaker() {
@@ -65,7 +65,7 @@ public class TeamworkActivePeripherals implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the contentCamera property value. The contentCamera property
-     * @return a TeamworkPeripheral
+     * @return a {@link TeamworkPeripheral}
      */
     @jakarta.annotation.Nullable
     public TeamworkPeripheral getContentCamera() {
@@ -73,7 +73,7 @@ public class TeamworkActivePeripherals implements AdditionalDataHolder, BackedMo
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -88,7 +88,7 @@ public class TeamworkActivePeripherals implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the microphone property value. The microphone property
-     * @return a TeamworkPeripheral
+     * @return a {@link TeamworkPeripheral}
      */
     @jakarta.annotation.Nullable
     public TeamworkPeripheral getMicrophone() {
@@ -96,7 +96,7 @@ public class TeamworkActivePeripherals implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -104,7 +104,7 @@ public class TeamworkActivePeripherals implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the roomCamera property value. The roomCamera property
-     * @return a TeamworkPeripheral
+     * @return a {@link TeamworkPeripheral}
      */
     @jakarta.annotation.Nullable
     public TeamworkPeripheral getRoomCamera() {
@@ -112,7 +112,7 @@ public class TeamworkActivePeripherals implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the speaker property value. The speaker property
-     * @return a TeamworkPeripheral
+     * @return a {@link TeamworkPeripheral}
      */
     @jakarta.annotation.Nullable
     public TeamworkPeripheral getSpeaker() {

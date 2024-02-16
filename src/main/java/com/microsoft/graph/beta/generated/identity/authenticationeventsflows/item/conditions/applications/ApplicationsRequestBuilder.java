@@ -12,13 +12,14 @@ import java.util.Objects;
 public class ApplicationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the includeApplications property of the microsoft.graph.authenticationConditionsApplications entity.
+     * @return a {@link IncludeApplicationsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public IncludeApplicationsRequestBuilder includeApplications() {
         return new IncludeApplicationsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new ApplicationsRequestBuilder and sets the default values.
+     * Instantiates a new {@link ApplicationsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -26,7 +27,7 @@ public class ApplicationsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identity/authenticationEventsFlows/{authenticationEventsFlow%2Did}/conditions/applications", pathParameters);
     }
     /**
-     * Instantiates a new ApplicationsRequestBuilder and sets the default values.
+     * Instantiates a new {@link ApplicationsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */

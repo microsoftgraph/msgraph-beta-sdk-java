@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsHealthMonitoringConfiguration extends DeviceConfiguration implements Parsable {
     /**
-     * Instantiates a new WindowsHealthMonitoringConfiguration and sets the default values.
+     * Instantiates a new {@link WindowsHealthMonitoringConfiguration} and sets the default values.
      */
     public WindowsHealthMonitoringConfiguration() {
         super();
@@ -22,7 +22,7 @@ public class WindowsHealthMonitoringConfiguration extends DeviceConfiguration im
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WindowsHealthMonitoringConfiguration
+     * @return a {@link WindowsHealthMonitoringConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static WindowsHealthMonitoringConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -31,7 +31,7 @@ public class WindowsHealthMonitoringConfiguration extends DeviceConfiguration im
     }
     /**
      * Gets the allowDeviceHealthMonitoring property value. Possible values of a property
-     * @return a Enablement
+     * @return a {@link Enablement}
      */
     @jakarta.annotation.Nullable
     public Enablement getAllowDeviceHealthMonitoring() {
@@ -39,7 +39,7 @@ public class WindowsHealthMonitoringConfiguration extends DeviceConfiguration im
     }
     /**
      * Gets the configDeviceHealthMonitoringCustomScope property value. Specifies custom set of events collected from the device where health monitoring is enabled
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getConfigDeviceHealthMonitoringCustomScope() {
@@ -47,7 +47,7 @@ public class WindowsHealthMonitoringConfiguration extends DeviceConfiguration im
     }
     /**
      * Gets the configDeviceHealthMonitoringScope property value. Device health monitoring scope
-     * @return a EnumSet<WindowsHealthMonitoringScope>
+     * @return a {@link EnumSet<WindowsHealthMonitoringScope>}
      */
     @jakarta.annotation.Nullable
     public EnumSet<WindowsHealthMonitoringScope> getConfigDeviceHealthMonitoringScope() {
@@ -55,7 +55,7 @@ public class WindowsHealthMonitoringConfiguration extends DeviceConfiguration im
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

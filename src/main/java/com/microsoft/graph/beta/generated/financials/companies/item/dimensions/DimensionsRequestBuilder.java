@@ -25,6 +25,7 @@ import java.util.UUID;
 public class DimensionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -33,7 +34,7 @@ public class DimensionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the dimensions property of the microsoft.graph.company entity.
      * @param dimensionId The unique identifier of dimension
-     * @return a DimensionItemRequestBuilder
+     * @return a {@link DimensionItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DimensionItemRequestBuilder byDimensionId(@jakarta.annotation.Nonnull final UUID dimensionId) {
@@ -43,7 +44,7 @@ public class DimensionsRequestBuilder extends BaseRequestBuilder {
         return new DimensionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new DimensionsRequestBuilder and sets the default values.
+     * Instantiates a new {@link DimensionsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -51,7 +52,7 @@ public class DimensionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/financials/companies/{company%2Did}/dimensions{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new DimensionsRequestBuilder and sets the default values.
+     * Instantiates a new {@link DimensionsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -60,7 +61,8 @@ public class DimensionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get dimensions from financials
-     * @return a DimensionCollectionResponse
+     * @return a {@link DimensionCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public DimensionCollectionResponse get() {
@@ -69,19 +71,19 @@ public class DimensionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get dimensions from financials
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a DimensionCollectionResponse
+     * @return a {@link DimensionCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public DimensionCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, DimensionCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Get dimensions from financials
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -90,7 +92,7 @@ public class DimensionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get dimensions from financials
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -102,7 +104,7 @@ public class DimensionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a DimensionsRequestBuilder
+     * @return a {@link DimensionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DimensionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -156,7 +158,7 @@ public class DimensionsRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

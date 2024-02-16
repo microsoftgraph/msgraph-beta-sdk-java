@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AndroidForWorkEnrollmentProfile extends Entity implements Parsable {
     /**
-     * Instantiates a new AndroidForWorkEnrollmentProfile and sets the default values.
+     * Instantiates a new {@link AndroidForWorkEnrollmentProfile} and sets the default values.
      */
     public AndroidForWorkEnrollmentProfile() {
         super();
@@ -21,7 +21,7 @@ public class AndroidForWorkEnrollmentProfile extends Entity implements Parsable 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AndroidForWorkEnrollmentProfile
+     * @return a {@link AndroidForWorkEnrollmentProfile}
      */
     @jakarta.annotation.Nonnull
     public static AndroidForWorkEnrollmentProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class AndroidForWorkEnrollmentProfile extends Entity implements Parsable 
     }
     /**
      * Gets the accountId property value. Tenant GUID the enrollment profile belongs to.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAccountId() {
@@ -38,7 +38,7 @@ public class AndroidForWorkEnrollmentProfile extends Entity implements Parsable 
     }
     /**
      * Gets the createdDateTime property value. Date time the enrollment profile was created.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -46,7 +46,7 @@ public class AndroidForWorkEnrollmentProfile extends Entity implements Parsable 
     }
     /**
      * Gets the description property value. Description for the enrollment profile.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -54,7 +54,7 @@ public class AndroidForWorkEnrollmentProfile extends Entity implements Parsable 
     }
     /**
      * Gets the displayName property value. Display name for the enrollment profile.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -62,7 +62,7 @@ public class AndroidForWorkEnrollmentProfile extends Entity implements Parsable 
     }
     /**
      * Gets the enrolledDeviceCount property value. Total number of Android devices that have enrolled using this enrollment profile.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getEnrolledDeviceCount() {
@@ -70,7 +70,7 @@ public class AndroidForWorkEnrollmentProfile extends Entity implements Parsable 
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -89,7 +89,7 @@ public class AndroidForWorkEnrollmentProfile extends Entity implements Parsable 
     }
     /**
      * Gets the lastModifiedDateTime property value. Date time the enrollment profile was last modified.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -97,7 +97,7 @@ public class AndroidForWorkEnrollmentProfile extends Entity implements Parsable 
     }
     /**
      * Gets the qrCodeContent property value. String used to generate a QR code for the token.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getQrCodeContent() {
@@ -105,7 +105,7 @@ public class AndroidForWorkEnrollmentProfile extends Entity implements Parsable 
     }
     /**
      * Gets the qrCodeImage property value. String used to generate a QR code for the token.
-     * @return a MimeContent
+     * @return a {@link MimeContent}
      */
     @jakarta.annotation.Nullable
     public MimeContent getQrCodeImage() {
@@ -113,7 +113,7 @@ public class AndroidForWorkEnrollmentProfile extends Entity implements Parsable 
     }
     /**
      * Gets the tokenExpirationDateTime property value. Date time the most recently created token will expire.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getTokenExpirationDateTime() {
@@ -121,7 +121,7 @@ public class AndroidForWorkEnrollmentProfile extends Entity implements Parsable 
     }
     /**
      * Gets the tokenValue property value. Value of the most recently created token for this enrollment profile.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTokenValue() {

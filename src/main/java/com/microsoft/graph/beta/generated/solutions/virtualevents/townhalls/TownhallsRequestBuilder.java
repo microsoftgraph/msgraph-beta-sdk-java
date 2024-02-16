@@ -27,6 +27,7 @@ import java.util.Objects;
 public class TownhallsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -35,7 +36,7 @@ public class TownhallsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the townhalls property of the microsoft.graph.virtualEventsRoot entity.
      * @param virtualEventTownhallId The unique identifier of virtualEventTownhall
-     * @return a VirtualEventTownhallItemRequestBuilder
+     * @return a {@link VirtualEventTownhallItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public VirtualEventTownhallItemRequestBuilder byVirtualEventTownhallId(@jakarta.annotation.Nonnull final String virtualEventTownhallId) {
@@ -45,7 +46,7 @@ public class TownhallsRequestBuilder extends BaseRequestBuilder {
         return new VirtualEventTownhallItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new TownhallsRequestBuilder and sets the default values.
+     * Instantiates a new {@link TownhallsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -53,7 +54,7 @@ public class TownhallsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/solutions/virtualEvents/townhalls{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new TownhallsRequestBuilder and sets the default values.
+     * Instantiates a new {@link TownhallsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -62,7 +63,8 @@ public class TownhallsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get townhalls from solutions
-     * @return a VirtualEventTownhallCollectionResponse
+     * @return a {@link VirtualEventTownhallCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public VirtualEventTownhallCollectionResponse get() {
@@ -71,21 +73,21 @@ public class TownhallsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get townhalls from solutions
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a VirtualEventTownhallCollectionResponse
+     * @return a {@link VirtualEventTownhallCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public VirtualEventTownhallCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, VirtualEventTownhallCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Provides operations to call the getByUserIdAndRole method.
      * @param role Usage: role='{role}'
      * @param userId Usage: userId='{userId}'
-     * @return a GetByUserIdAndRoleWithUserIdWithRoleRequestBuilder
+     * @return a {@link GetByUserIdAndRoleWithUserIdWithRoleRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetByUserIdAndRoleWithUserIdWithRoleRequestBuilder getByUserIdAndRoleWithUserIdWithRole(@jakarta.annotation.Nonnull final String role, @jakarta.annotation.Nonnull final String userId) {
@@ -96,7 +98,7 @@ public class TownhallsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getByUserRole method.
      * @param role Usage: role='{role}'
-     * @return a GetByUserRoleWithRoleRequestBuilder
+     * @return a {@link GetByUserRoleWithRoleRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetByUserRoleWithRoleRequestBuilder getByUserRoleWithRole(@jakarta.annotation.Nonnull final String role) {
@@ -106,7 +108,8 @@ public class TownhallsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to townhalls for solutions
      * @param body The request body
-     * @return a VirtualEventTownhall
+     * @return a {@link VirtualEventTownhall}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public VirtualEventTownhall post(@jakarta.annotation.Nonnull final VirtualEventTownhall body) {
@@ -116,20 +119,20 @@ public class TownhallsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to townhalls for solutions
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a VirtualEventTownhall
+     * @return a {@link VirtualEventTownhall}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public VirtualEventTownhall post(@jakarta.annotation.Nonnull final VirtualEventTownhall body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, VirtualEventTownhall::createFromDiscriminatorValue);
     }
     /**
      * Get townhalls from solutions
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -138,7 +141,7 @@ public class TownhallsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get townhalls from solutions
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -150,7 +153,7 @@ public class TownhallsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to townhalls for solutions
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final VirtualEventTownhall body) {
@@ -160,12 +163,12 @@ public class TownhallsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to townhalls for solutions
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final VirtualEventTownhall body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/solutions/virtualEvents/townhalls", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -174,7 +177,7 @@ public class TownhallsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a TownhallsRequestBuilder
+     * @return a {@link TownhallsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TownhallsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -228,7 +231,7 @@ public class TownhallsRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

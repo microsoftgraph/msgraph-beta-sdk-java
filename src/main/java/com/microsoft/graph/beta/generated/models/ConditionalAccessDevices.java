@@ -18,7 +18,7 @@ public class ConditionalAccessDevices implements AdditionalDataHolder, BackedMod
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new ConditionalAccessDevices and sets the default values.
+     * Instantiates a new {@link ConditionalAccessDevices} and sets the default values.
      */
     public ConditionalAccessDevices() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class ConditionalAccessDevices implements AdditionalDataHolder, BackedMod
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ConditionalAccessDevices
+     * @return a {@link ConditionalAccessDevices}
      */
     @jakarta.annotation.Nonnull
     public static ConditionalAccessDevices createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class ConditionalAccessDevices implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class ConditionalAccessDevices implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class ConditionalAccessDevices implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the deviceFilter property value. Filter that defines the dynamic-device-syntax rule to include/exclude devices. A filter can use device properties (such as extension attributes) to include/exclude them. Cannot be set if includeDevices or excludeDevices is set.
-     * @return a ConditionalAccessFilter
+     * @return a {@link ConditionalAccessFilter}
      */
     @jakarta.annotation.Nullable
     public ConditionalAccessFilter getDeviceFilter() {
@@ -65,7 +65,7 @@ public class ConditionalAccessDevices implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the excludeDevices property value. States excluded from the scope of the policy. Possible values: Compliant, DomainJoined. Cannot be set if deviceFIlter is set.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getExcludeDevices() {
@@ -73,7 +73,7 @@ public class ConditionalAccessDevices implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the excludeDeviceStates property value. The excludeDeviceStates property
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getExcludeDeviceStates() {
@@ -81,7 +81,7 @@ public class ConditionalAccessDevices implements AdditionalDataHolder, BackedMod
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -96,7 +96,7 @@ public class ConditionalAccessDevices implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the includeDevices property value. States in the scope of the policy. All is the only allowed value. Cannot be set if deviceFilter is set.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getIncludeDevices() {
@@ -104,7 +104,7 @@ public class ConditionalAccessDevices implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the includeDeviceStates property value. The includeDeviceStates property
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getIncludeDeviceStates() {
@@ -112,7 +112,7 @@ public class ConditionalAccessDevices implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {

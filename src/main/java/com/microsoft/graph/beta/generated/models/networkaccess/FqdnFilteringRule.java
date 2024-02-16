@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class FqdnFilteringRule extends FilteringRule implements Parsable {
     /**
-     * Instantiates a new FqdnFilteringRule and sets the default values.
+     * Instantiates a new {@link FqdnFilteringRule} and sets the default values.
      */
     public FqdnFilteringRule() {
         super();
@@ -18,7 +18,7 @@ public class FqdnFilteringRule extends FilteringRule implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a FqdnFilteringRule
+     * @return a {@link FqdnFilteringRule}
      */
     @jakarta.annotation.Nonnull
     public static FqdnFilteringRule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class FqdnFilteringRule extends FilteringRule implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

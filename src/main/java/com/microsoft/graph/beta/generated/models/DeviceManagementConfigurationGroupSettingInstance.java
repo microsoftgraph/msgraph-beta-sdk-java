@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementConfigurationGroupSettingInstance extends DeviceManagementConfigurationSettingInstance implements Parsable {
     /**
-     * Instantiates a new DeviceManagementConfigurationGroupSettingInstance and sets the default values.
+     * Instantiates a new {@link DeviceManagementConfigurationGroupSettingInstance} and sets the default values.
      */
     public DeviceManagementConfigurationGroupSettingInstance() {
         super();
@@ -21,7 +21,7 @@ public class DeviceManagementConfigurationGroupSettingInstance extends DeviceMan
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceManagementConfigurationGroupSettingInstance
+     * @return a {@link DeviceManagementConfigurationGroupSettingInstance}
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementConfigurationGroupSettingInstance createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class DeviceManagementConfigurationGroupSettingInstance extends DeviceMan
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -40,7 +40,7 @@ public class DeviceManagementConfigurationGroupSettingInstance extends DeviceMan
     }
     /**
      * Gets the groupSettingValue property value. The groupSettingValue property
-     * @return a DeviceManagementConfigurationGroupSettingValue
+     * @return a {@link DeviceManagementConfigurationGroupSettingValue}
      */
     @jakarta.annotation.Nullable
     public DeviceManagementConfigurationGroupSettingValue getGroupSettingValue() {

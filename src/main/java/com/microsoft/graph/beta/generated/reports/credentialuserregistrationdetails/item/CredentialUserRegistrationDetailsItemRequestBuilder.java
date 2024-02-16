@@ -21,7 +21,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CredentialUserRegistrationDetailsItemRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new CredentialUserRegistrationDetailsItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link CredentialUserRegistrationDetailsItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -29,7 +29,7 @@ public class CredentialUserRegistrationDetailsItemRequestBuilder extends BaseReq
         super(requestAdapter, "{+baseurl}/reports/credentialUserRegistrationDetails/{credentialUserRegistrationDetails%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new CredentialUserRegistrationDetailsItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link CredentialUserRegistrationDetailsItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -38,6 +38,7 @@ public class CredentialUserRegistrationDetailsItemRequestBuilder extends BaseReq
     }
     /**
      * Delete navigation property credentialUserRegistrationDetails for reports
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails
      */
@@ -48,6 +49,7 @@ public class CredentialUserRegistrationDetailsItemRequestBuilder extends BaseReq
     /**
      * Delete navigation property credentialUserRegistrationDetails for reports
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails
      */
@@ -55,13 +57,13 @@ public class CredentialUserRegistrationDetailsItemRequestBuilder extends BaseReq
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Details of the usage of self-service password reset and multifactor authentication (MFA) for all registered users.
-     * @return a CredentialUserRegistrationDetails
+     * @return a {@link CredentialUserRegistrationDetails}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails
      */
@@ -73,7 +75,8 @@ public class CredentialUserRegistrationDetailsItemRequestBuilder extends BaseReq
     /**
      * Details of the usage of self-service password reset and multifactor authentication (MFA) for all registered users.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CredentialUserRegistrationDetails
+     * @return a {@link CredentialUserRegistrationDetails}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails
      */
@@ -82,14 +85,14 @@ public class CredentialUserRegistrationDetailsItemRequestBuilder extends BaseReq
     public CredentialUserRegistrationDetails get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, CredentialUserRegistrationDetails::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property credentialUserRegistrationDetails in reports
      * @param body The request body
-     * @return a CredentialUserRegistrationDetails
+     * @return a {@link CredentialUserRegistrationDetails}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails
      */
@@ -102,7 +105,8 @@ public class CredentialUserRegistrationDetailsItemRequestBuilder extends BaseReq
      * Update the navigation property credentialUserRegistrationDetails in reports
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CredentialUserRegistrationDetails
+     * @return a {@link CredentialUserRegistrationDetails}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails
      */
@@ -112,13 +116,12 @@ public class CredentialUserRegistrationDetailsItemRequestBuilder extends BaseReq
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, CredentialUserRegistrationDetails::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property credentialUserRegistrationDetails for reports
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails
      */
@@ -130,21 +133,21 @@ public class CredentialUserRegistrationDetailsItemRequestBuilder extends BaseReq
     /**
      * Delete navigation property credentialUserRegistrationDetails for reports
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails
      */
     @jakarta.annotation.Nonnull
     @Deprecated
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/reports/credentialUserRegistrationDetails/{credentialUserRegistrationDetails%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Details of the usage of self-service password reset and multifactor authentication (MFA) for all registered users.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails
      */
@@ -156,7 +159,7 @@ public class CredentialUserRegistrationDetailsItemRequestBuilder extends BaseReq
     /**
      * Details of the usage of self-service password reset and multifactor authentication (MFA) for all registered users.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails
      */
@@ -171,7 +174,7 @@ public class CredentialUserRegistrationDetailsItemRequestBuilder extends BaseReq
     /**
      * Update the navigation property credentialUserRegistrationDetails in reports
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails
      */
@@ -184,7 +187,7 @@ public class CredentialUserRegistrationDetailsItemRequestBuilder extends BaseReq
      * Update the navigation property credentialUserRegistrationDetails in reports
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails
      */
@@ -192,7 +195,7 @@ public class CredentialUserRegistrationDetailsItemRequestBuilder extends BaseReq
     @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final CredentialUserRegistrationDetails body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/reports/credentialUserRegistrationDetails/{credentialUserRegistrationDetails%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -201,7 +204,7 @@ public class CredentialUserRegistrationDetailsItemRequestBuilder extends BaseReq
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a CredentialUserRegistrationDetailsItemRequestBuilder
+     * @return a {@link CredentialUserRegistrationDetailsItemRequestBuilder}
      * @deprecated
      * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails
      */
@@ -234,7 +237,7 @@ public class CredentialUserRegistrationDetailsItemRequestBuilder extends BaseReq
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

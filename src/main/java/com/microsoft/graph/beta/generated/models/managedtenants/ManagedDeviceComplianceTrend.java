@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagedDeviceComplianceTrend extends Entity implements Parsable {
     /**
-     * Instantiates a new ManagedDeviceComplianceTrend and sets the default values.
+     * Instantiates a new {@link ManagedDeviceComplianceTrend} and sets the default values.
      */
     public ManagedDeviceComplianceTrend() {
         super();
@@ -18,7 +18,7 @@ public class ManagedDeviceComplianceTrend extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ManagedDeviceComplianceTrend
+     * @return a {@link ManagedDeviceComplianceTrend}
      */
     @jakarta.annotation.Nonnull
     public static ManagedDeviceComplianceTrend createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class ManagedDeviceComplianceTrend extends Entity implements Parsable {
     }
     /**
      * Gets the compliantDeviceCount property value. The number of devices with a compliant status. Required. Read-only.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getCompliantDeviceCount() {
@@ -35,7 +35,7 @@ public class ManagedDeviceComplianceTrend extends Entity implements Parsable {
     }
     /**
      * Gets the configManagerDeviceCount property value. The number of devices manged by Configuration Manager. Required. Read-only.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getConfigManagerDeviceCount() {
@@ -43,7 +43,7 @@ public class ManagedDeviceComplianceTrend extends Entity implements Parsable {
     }
     /**
      * Gets the countDateTime property value. The date and time compliance snapshot was performed. Required. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCountDateTime() {
@@ -51,7 +51,7 @@ public class ManagedDeviceComplianceTrend extends Entity implements Parsable {
     }
     /**
      * Gets the errorDeviceCount property value. The number of devices with an error status. Required. Read-only.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getErrorDeviceCount() {
@@ -59,7 +59,7 @@ public class ManagedDeviceComplianceTrend extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -77,7 +77,7 @@ public class ManagedDeviceComplianceTrend extends Entity implements Parsable {
     }
     /**
      * Gets the inGracePeriodDeviceCount property value. The number of devices that are in a grace period status. Required. Read-only.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getInGracePeriodDeviceCount() {
@@ -85,7 +85,7 @@ public class ManagedDeviceComplianceTrend extends Entity implements Parsable {
     }
     /**
      * Gets the noncompliantDeviceCount property value. The number of devices that are in a non-compliant status. Required. Read-only.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getNoncompliantDeviceCount() {
@@ -93,7 +93,7 @@ public class ManagedDeviceComplianceTrend extends Entity implements Parsable {
     }
     /**
      * Gets the tenantDisplayName property value. The display name for the managed tenant. Optional. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTenantDisplayName() {
@@ -101,7 +101,7 @@ public class ManagedDeviceComplianceTrend extends Entity implements Parsable {
     }
     /**
      * Gets the tenantId property value. The Microsoft Entra tenant identifier for the managed tenant. Optional. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
@@ -109,7 +109,7 @@ public class ManagedDeviceComplianceTrend extends Entity implements Parsable {
     }
     /**
      * Gets the unknownDeviceCount property value. The number of devices in an unknown status. Required. Read-only.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getUnknownDeviceCount() {

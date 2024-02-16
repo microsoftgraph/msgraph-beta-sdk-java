@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessReviewInstanceDecisionItemUserTarget extends AccessReviewInstanceDecisionItemTarget implements Parsable {
     /**
-     * Instantiates a new AccessReviewInstanceDecisionItemUserTarget and sets the default values.
+     * Instantiates a new {@link AccessReviewInstanceDecisionItemUserTarget} and sets the default values.
      */
     public AccessReviewInstanceDecisionItemUserTarget() {
         super();
@@ -18,7 +18,7 @@ public class AccessReviewInstanceDecisionItemUserTarget extends AccessReviewInst
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AccessReviewInstanceDecisionItemUserTarget
+     * @return a {@link AccessReviewInstanceDecisionItemUserTarget}
      */
     @jakarta.annotation.Nonnull
     public static AccessReviewInstanceDecisionItemUserTarget createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class AccessReviewInstanceDecisionItemUserTarget extends AccessReviewInst
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -39,7 +39,7 @@ public class AccessReviewInstanceDecisionItemUserTarget extends AccessReviewInst
     }
     /**
      * Gets the userDisplayName property value. The name of user.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserDisplayName() {
@@ -47,7 +47,7 @@ public class AccessReviewInstanceDecisionItemUserTarget extends AccessReviewInst
     }
     /**
      * Gets the userId property value. The identifier of user.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
@@ -55,7 +55,7 @@ public class AccessReviewInstanceDecisionItemUserTarget extends AccessReviewInst
     }
     /**
      * Gets the userPrincipalName property value. The user principal name.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {

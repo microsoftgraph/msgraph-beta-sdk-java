@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class RegionalAndLanguageSettings extends Entity implements Parsable {
     /**
-     * Instantiates a new RegionalAndLanguageSettings and sets the default values.
+     * Instantiates a new {@link RegionalAndLanguageSettings} and sets the default values.
      */
     public RegionalAndLanguageSettings() {
         super();
@@ -17,7 +17,7 @@ public class RegionalAndLanguageSettings extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a RegionalAndLanguageSettings
+     * @return a {@link RegionalAndLanguageSettings}
      */
     @jakarta.annotation.Nonnull
     public static RegionalAndLanguageSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class RegionalAndLanguageSettings extends Entity implements Parsable {
     }
     /**
      * Gets the authoringLanguages property value. Prioritized list of languages the user reads and authors in.Returned by default. Not nullable.
-     * @return a java.util.List<LocaleInfo>
+     * @return a {@link java.util.List<LocaleInfo>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<LocaleInfo> getAuthoringLanguages() {
@@ -34,7 +34,7 @@ public class RegionalAndLanguageSettings extends Entity implements Parsable {
     }
     /**
      * Gets the defaultDisplayLanguage property value. The  user's preferred user interface language (menus, buttons, ribbons, warning messages) for Microsoft web applications.Returned by default. Not nullable.
-     * @return a LocaleInfo
+     * @return a {@link LocaleInfo}
      */
     @jakarta.annotation.Nullable
     public LocaleInfo getDefaultDisplayLanguage() {
@@ -42,7 +42,7 @@ public class RegionalAndLanguageSettings extends Entity implements Parsable {
     }
     /**
      * Gets the defaultRegionalFormat property value. The locale that drives the default date, time, and calendar formatting.Returned by default.
-     * @return a LocaleInfo
+     * @return a {@link LocaleInfo}
      */
     @jakarta.annotation.Nullable
     public LocaleInfo getDefaultRegionalFormat() {
@@ -50,7 +50,7 @@ public class RegionalAndLanguageSettings extends Entity implements Parsable {
     }
     /**
      * Gets the defaultSpeechInputLanguage property value. The language a user expected to use as input for text to speech scenarios.Returned by default.
-     * @return a LocaleInfo
+     * @return a {@link LocaleInfo}
      */
     @jakarta.annotation.Nullable
     public LocaleInfo getDefaultSpeechInputLanguage() {
@@ -58,7 +58,7 @@ public class RegionalAndLanguageSettings extends Entity implements Parsable {
     }
     /**
      * Gets the defaultTranslationLanguage property value. The language a user expects to have documents, emails, and messages translated into.Returned by default.
-     * @return a LocaleInfo
+     * @return a {@link LocaleInfo}
      */
     @jakarta.annotation.Nullable
     public LocaleInfo getDefaultTranslationLanguage() {
@@ -66,7 +66,7 @@ public class RegionalAndLanguageSettings extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -82,7 +82,7 @@ public class RegionalAndLanguageSettings extends Entity implements Parsable {
     }
     /**
      * Gets the regionalFormatOverrides property value. Allows a user to override their defaultRegionalFormat with field specific formats.Returned by default.
-     * @return a RegionalFormatOverrides
+     * @return a {@link RegionalFormatOverrides}
      */
     @jakarta.annotation.Nullable
     public RegionalFormatOverrides getRegionalFormatOverrides() {
@@ -90,7 +90,7 @@ public class RegionalAndLanguageSettings extends Entity implements Parsable {
     }
     /**
      * Gets the translationPreferences property value. The user's preferred settings when consuming translated documents, emails, messages, and websites.Returned by default. Not nullable.
-     * @return a TranslationPreferences
+     * @return a {@link TranslationPreferences}
      */
     @jakarta.annotation.Nullable
     public TranslationPreferences getTranslationPreferences() {

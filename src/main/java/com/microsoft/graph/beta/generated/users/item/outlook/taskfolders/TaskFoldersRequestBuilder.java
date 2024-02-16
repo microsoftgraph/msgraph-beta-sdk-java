@@ -25,6 +25,7 @@ import java.util.Objects;
 public class TaskFoldersRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      * @deprecated
      * The Outlook tasks API is deprecated and will stop returning data on February 20, 2023. Please use the new To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/ as of 2020-08/Outlook_Tasks
      */
@@ -36,7 +37,7 @@ public class TaskFoldersRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the taskFolders property of the microsoft.graph.outlookUser entity.
      * @param outlookTaskFolderId The unique identifier of outlookTaskFolder
-     * @return a OutlookTaskFolderItemRequestBuilder
+     * @return a {@link OutlookTaskFolderItemRequestBuilder}
      * @deprecated
      * The Outlook tasks API is deprecated and will stop returning data on February 20, 2023. Please use the new To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/ as of 2020-08/Outlook_Tasks
      */
@@ -49,7 +50,7 @@ public class TaskFoldersRequestBuilder extends BaseRequestBuilder {
         return new OutlookTaskFolderItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new TaskFoldersRequestBuilder and sets the default values.
+     * Instantiates a new {@link TaskFoldersRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -57,7 +58,7 @@ public class TaskFoldersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/outlook/taskFolders{?%24count,%24filter,%24orderby,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new TaskFoldersRequestBuilder and sets the default values.
+     * Instantiates a new {@link TaskFoldersRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -66,7 +67,8 @@ public class TaskFoldersRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get all the Outlook task folders in the user's mailbox.
-     * @return a OutlookTaskFolderCollectionResponse
+     * @return a {@link OutlookTaskFolderCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The Outlook tasks API is deprecated and will stop returning data on February 20, 2023. Please use the new To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/ as of 2020-08/Outlook_Tasks
      * @see <a href="https://learn.microsoft.com/graph/api/outlookuser-list-taskfolders?view=graph-rest-1.0">Find more info here</a>
@@ -79,7 +81,8 @@ public class TaskFoldersRequestBuilder extends BaseRequestBuilder {
     /**
      * Get all the Outlook task folders in the user's mailbox.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a OutlookTaskFolderCollectionResponse
+     * @return a {@link OutlookTaskFolderCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The Outlook tasks API is deprecated and will stop returning data on February 20, 2023. Please use the new To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/ as of 2020-08/Outlook_Tasks
      * @see <a href="https://learn.microsoft.com/graph/api/outlookuser-list-taskfolders?view=graph-rest-1.0">Find more info here</a>
@@ -89,14 +92,14 @@ public class TaskFoldersRequestBuilder extends BaseRequestBuilder {
     public OutlookTaskFolderCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, OutlookTaskFolderCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a task folder in the default task group (My Tasks) of the user's mailbox.
      * @param body The request body
-     * @return a OutlookTaskFolder
+     * @return a {@link OutlookTaskFolder}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The Outlook tasks API is deprecated and will stop returning data on February 20, 2023. Please use the new To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/ as of 2020-08/Outlook_Tasks
      * @see <a href="https://learn.microsoft.com/graph/api/outlookuser-post-taskfolders?view=graph-rest-1.0">Find more info here</a>
@@ -110,7 +113,8 @@ public class TaskFoldersRequestBuilder extends BaseRequestBuilder {
      * Create a task folder in the default task group (My Tasks) of the user's mailbox.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a OutlookTaskFolder
+     * @return a {@link OutlookTaskFolder}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The Outlook tasks API is deprecated and will stop returning data on February 20, 2023. Please use the new To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/ as of 2020-08/Outlook_Tasks
      * @see <a href="https://learn.microsoft.com/graph/api/outlookuser-post-taskfolders?view=graph-rest-1.0">Find more info here</a>
@@ -121,13 +125,12 @@ public class TaskFoldersRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, OutlookTaskFolder::createFromDiscriminatorValue);
     }
     /**
      * Get all the Outlook task folders in the user's mailbox.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      * The Outlook tasks API is deprecated and will stop returning data on February 20, 2023. Please use the new To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/ as of 2020-08/Outlook_Tasks
      */
@@ -139,7 +142,7 @@ public class TaskFoldersRequestBuilder extends BaseRequestBuilder {
     /**
      * Get all the Outlook task folders in the user's mailbox.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      * The Outlook tasks API is deprecated and will stop returning data on February 20, 2023. Please use the new To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/ as of 2020-08/Outlook_Tasks
      */
@@ -154,7 +157,7 @@ public class TaskFoldersRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a task folder in the default task group (My Tasks) of the user's mailbox.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      * The Outlook tasks API is deprecated and will stop returning data on February 20, 2023. Please use the new To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/ as of 2020-08/Outlook_Tasks
      */
@@ -167,7 +170,7 @@ public class TaskFoldersRequestBuilder extends BaseRequestBuilder {
      * Create a task folder in the default task group (My Tasks) of the user's mailbox.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      * The Outlook tasks API is deprecated and will stop returning data on February 20, 2023. Please use the new To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/ as of 2020-08/Outlook_Tasks
      */
@@ -175,7 +178,7 @@ public class TaskFoldersRequestBuilder extends BaseRequestBuilder {
     @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final OutlookTaskFolder body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/users/{user%2Did}/outlook/taskFolders", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -184,7 +187,7 @@ public class TaskFoldersRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a TaskFoldersRequestBuilder
+     * @return a {@link TaskFoldersRequestBuilder}
      * @deprecated
      * The Outlook tasks API is deprecated and will stop returning data on February 20, 2023. Please use the new To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/ as of 2020-08/Outlook_Tasks
      */
@@ -231,7 +234,7 @@ public class TaskFoldersRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

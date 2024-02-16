@@ -14,7 +14,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceAppManagement extends Entity implements Parsable {
     /**
-     * Instantiates a new DeviceAppManagement and sets the default values.
+     * Instantiates a new {@link DeviceAppManagement} and sets the default values.
      */
     public DeviceAppManagement() {
         super();
@@ -22,7 +22,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceAppManagement
+     * @return a {@link DeviceAppManagement}
      */
     @jakarta.annotation.Nonnull
     public static DeviceAppManagement createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -31,7 +31,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
     }
     /**
      * Gets the androidManagedAppProtections property value. Android managed app policies.
-     * @return a java.util.List<AndroidManagedAppProtection>
+     * @return a {@link java.util.List<AndroidManagedAppProtection>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AndroidManagedAppProtection> getAndroidManagedAppProtections() {
@@ -39,7 +39,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
     }
     /**
      * Gets the defaultManagedAppProtections property value. Default managed app policies.
-     * @return a java.util.List<DefaultManagedAppProtection>
+     * @return a {@link java.util.List<DefaultManagedAppProtection>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DefaultManagedAppProtection> getDefaultManagedAppProtections() {
@@ -47,7 +47,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
     }
     /**
      * Gets the deviceAppManagementTasks property value. Device app management tasks.
-     * @return a java.util.List<DeviceAppManagementTask>
+     * @return a {@link java.util.List<DeviceAppManagementTask>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceAppManagementTask> getDeviceAppManagementTasks() {
@@ -55,7 +55,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
     }
     /**
      * Gets the enterpriseCodeSigningCertificates property value. The Windows Enterprise Code Signing Certificate.
-     * @return a java.util.List<EnterpriseCodeSigningCertificate>
+     * @return a {@link java.util.List<EnterpriseCodeSigningCertificate>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<EnterpriseCodeSigningCertificate> getEnterpriseCodeSigningCertificates() {
@@ -63,7 +63,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -102,7 +102,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
     }
     /**
      * Gets the iosLobAppProvisioningConfigurations property value. The IOS Lob App Provisioning Configurations.
-     * @return a java.util.List<IosLobAppProvisioningConfiguration>
+     * @return a {@link java.util.List<IosLobAppProvisioningConfiguration>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<IosLobAppProvisioningConfiguration> getIosLobAppProvisioningConfigurations() {
@@ -110,7 +110,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
     }
     /**
      * Gets the iosManagedAppProtections property value. iOS managed app policies.
-     * @return a java.util.List<IosManagedAppProtection>
+     * @return a {@link java.util.List<IosManagedAppProtection>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<IosManagedAppProtection> getIosManagedAppProtections() {
@@ -118,7 +118,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
     }
     /**
      * Gets the isEnabledForMicrosoftStoreForBusiness property value. Whether the account is enabled for syncing applications from the Microsoft Store for Business.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEnabledForMicrosoftStoreForBusiness() {
@@ -126,7 +126,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
     }
     /**
      * Gets the managedAppPolicies property value. Managed app policies.
-     * @return a java.util.List<ManagedAppPolicy>
+     * @return a {@link java.util.List<ManagedAppPolicy>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedAppPolicy> getManagedAppPolicies() {
@@ -134,7 +134,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
     }
     /**
      * Gets the managedAppRegistrations property value. The managed app registrations.
-     * @return a java.util.List<ManagedAppRegistration>
+     * @return a {@link java.util.List<ManagedAppRegistration>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedAppRegistration> getManagedAppRegistrations() {
@@ -142,7 +142,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
     }
     /**
      * Gets the managedAppStatuses property value. The managed app statuses.
-     * @return a java.util.List<ManagedAppStatus>
+     * @return a {@link java.util.List<ManagedAppStatus>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedAppStatus> getManagedAppStatuses() {
@@ -150,7 +150,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
     }
     /**
      * Gets the managedEBookCategories property value. The mobile eBook categories.
-     * @return a java.util.List<ManagedEBookCategory>
+     * @return a {@link java.util.List<ManagedEBookCategory>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedEBookCategory> getManagedEBookCategories() {
@@ -158,7 +158,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
     }
     /**
      * Gets the managedEBooks property value. The Managed eBook.
-     * @return a java.util.List<ManagedEBook>
+     * @return a {@link java.util.List<ManagedEBook>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedEBook> getManagedEBooks() {
@@ -166,7 +166,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
     }
     /**
      * Gets the mdmWindowsInformationProtectionPolicies property value. Windows information protection for apps running on devices which are MDM enrolled.
-     * @return a java.util.List<MdmWindowsInformationProtectionPolicy>
+     * @return a {@link java.util.List<MdmWindowsInformationProtectionPolicy>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<MdmWindowsInformationProtectionPolicy> getMdmWindowsInformationProtectionPolicies() {
@@ -174,7 +174,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
     }
     /**
      * Gets the microsoftStoreForBusinessLanguage property value. The locale information used to sync applications from the Microsoft Store for Business. Cultures that are specific to a country/region. The names of these cultures follow RFC 4646 (Windows Vista and later). The format is -<country/regioncode2>, where  is a lowercase two-letter code derived from ISO 639-1 and <country/regioncode2> is an uppercase two-letter code derived from ISO 3166. For example, en-US for English (United States) is a specific culture.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getMicrosoftStoreForBusinessLanguage() {
@@ -182,7 +182,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
     }
     /**
      * Gets the microsoftStoreForBusinessLastCompletedApplicationSyncTime property value. The last time an application sync from the Microsoft Store for Business was completed.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getMicrosoftStoreForBusinessLastCompletedApplicationSyncTime() {
@@ -190,7 +190,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
     }
     /**
      * Gets the microsoftStoreForBusinessLastSuccessfulSyncDateTime property value. The last time the apps from the Microsoft Store for Business were synced successfully for the account.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getMicrosoftStoreForBusinessLastSuccessfulSyncDateTime() {
@@ -198,7 +198,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
     }
     /**
      * Gets the microsoftStoreForBusinessPortalSelection property value. Portal to which admin syncs available Microsoft Store for Business apps. This is available in the Intune Admin Console.
-     * @return a EnumSet<MicrosoftStoreForBusinessPortalSelectionOptions>
+     * @return a {@link EnumSet<MicrosoftStoreForBusinessPortalSelectionOptions>}
      */
     @jakarta.annotation.Nullable
     public EnumSet<MicrosoftStoreForBusinessPortalSelectionOptions> getMicrosoftStoreForBusinessPortalSelection() {
@@ -206,7 +206,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
     }
     /**
      * Gets the mobileAppCategories property value. The mobile app categories.
-     * @return a java.util.List<MobileAppCategory>
+     * @return a {@link java.util.List<MobileAppCategory>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<MobileAppCategory> getMobileAppCategories() {
@@ -214,7 +214,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
     }
     /**
      * Gets the mobileAppConfigurations property value. The Managed Device Mobile Application Configurations.
-     * @return a java.util.List<ManagedDeviceMobileAppConfiguration>
+     * @return a {@link java.util.List<ManagedDeviceMobileAppConfiguration>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedDeviceMobileAppConfiguration> getMobileAppConfigurations() {
@@ -222,7 +222,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
     }
     /**
      * Gets the mobileApps property value. The mobile apps.
-     * @return a java.util.List<MobileApp>
+     * @return a {@link java.util.List<MobileApp>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<MobileApp> getMobileApps() {
@@ -230,7 +230,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
     }
     /**
      * Gets the policySets property value. The PolicySet of Policies and Applications
-     * @return a java.util.List<PolicySet>
+     * @return a {@link java.util.List<PolicySet>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<PolicySet> getPolicySets() {
@@ -238,7 +238,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
     }
     /**
      * Gets the symantecCodeSigningCertificate property value. The WinPhone Symantec Code Signing Certificate.
-     * @return a SymantecCodeSigningCertificate
+     * @return a {@link SymantecCodeSigningCertificate}
      */
     @jakarta.annotation.Nullable
     public SymantecCodeSigningCertificate getSymantecCodeSigningCertificate() {
@@ -246,7 +246,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
     }
     /**
      * Gets the targetedManagedAppConfigurations property value. Targeted managed app configurations.
-     * @return a java.util.List<TargetedManagedAppConfiguration>
+     * @return a {@link java.util.List<TargetedManagedAppConfiguration>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<TargetedManagedAppConfiguration> getTargetedManagedAppConfigurations() {
@@ -254,7 +254,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
     }
     /**
      * Gets the vppTokens property value. List of Vpp tokens for this organization.
-     * @return a java.util.List<VppToken>
+     * @return a {@link java.util.List<VppToken>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<VppToken> getVppTokens() {
@@ -262,7 +262,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
     }
     /**
      * Gets the wdacSupplementalPolicies property value. The collection of Windows Defender Application Control Supplemental Policies.
-     * @return a java.util.List<WindowsDefenderApplicationControlSupplementalPolicy>
+     * @return a {@link java.util.List<WindowsDefenderApplicationControlSupplementalPolicy>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<WindowsDefenderApplicationControlSupplementalPolicy> getWdacSupplementalPolicies() {
@@ -270,7 +270,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
     }
     /**
      * Gets the windowsInformationProtectionDeviceRegistrations property value. Windows information protection device registrations that are not MDM enrolled.
-     * @return a java.util.List<WindowsInformationProtectionDeviceRegistration>
+     * @return a {@link java.util.List<WindowsInformationProtectionDeviceRegistration>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<WindowsInformationProtectionDeviceRegistration> getWindowsInformationProtectionDeviceRegistrations() {
@@ -278,7 +278,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
     }
     /**
      * Gets the windowsInformationProtectionPolicies property value. Windows information protection for apps running on devices which are not MDM enrolled.
-     * @return a java.util.List<WindowsInformationProtectionPolicy>
+     * @return a {@link java.util.List<WindowsInformationProtectionPolicy>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<WindowsInformationProtectionPolicy> getWindowsInformationProtectionPolicies() {
@@ -286,7 +286,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
     }
     /**
      * Gets the windowsInformationProtectionWipeActions property value. Windows information protection wipe actions.
-     * @return a java.util.List<WindowsInformationProtectionWipeAction>
+     * @return a {@link java.util.List<WindowsInformationProtectionWipeAction>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<WindowsInformationProtectionWipeAction> getWindowsInformationProtectionWipeActions() {
@@ -294,7 +294,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
     }
     /**
      * Gets the windowsManagedAppProtections property value. Windows managed app policies.
-     * @return a java.util.List<WindowsManagedAppProtection>
+     * @return a {@link java.util.List<WindowsManagedAppProtection>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<WindowsManagedAppProtection> getWindowsManagedAppProtections() {
@@ -302,7 +302,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
     }
     /**
      * Gets the windowsManagementApp property value. Windows management app.
-     * @return a WindowsManagementApp
+     * @return a {@link WindowsManagementApp}
      */
     @jakarta.annotation.Nullable
     public WindowsManagementApp getWindowsManagementApp() {

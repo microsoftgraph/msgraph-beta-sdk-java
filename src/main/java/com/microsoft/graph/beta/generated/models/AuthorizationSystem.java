@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AuthorizationSystem extends Entity implements Parsable {
     /**
-     * Instantiates a new AuthorizationSystem and sets the default values.
+     * Instantiates a new {@link AuthorizationSystem} and sets the default values.
      */
     public AuthorizationSystem() {
         super();
@@ -17,7 +17,7 @@ public class AuthorizationSystem extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AuthorizationSystem
+     * @return a {@link AuthorizationSystem}
      */
     @jakarta.annotation.Nonnull
     public static AuthorizationSystem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -35,7 +35,7 @@ public class AuthorizationSystem extends Entity implements Parsable {
     }
     /**
      * Gets the authorizationSystemId property value. ID of the authorization system retrieved from the customer cloud environment. Supports $filter(eq, contains) and $orderBy.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAuthorizationSystemId() {
@@ -43,7 +43,7 @@ public class AuthorizationSystem extends Entity implements Parsable {
     }
     /**
      * Gets the authorizationSystemName property value. Name of the authorization system detected after onboarding. Supports $filter(eq,contains) and $orderBy.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAuthorizationSystemName() {
@@ -51,7 +51,7 @@ public class AuthorizationSystem extends Entity implements Parsable {
     }
     /**
      * Gets the authorizationSystemType property value. The type of authorization system. Can be gcp, azure, or aws. Supports $filter(eq).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAuthorizationSystemType() {
@@ -59,7 +59,7 @@ public class AuthorizationSystem extends Entity implements Parsable {
     }
     /**
      * Gets the dataCollectionInfo property value. Defines how and whether Permissions Management collects data from the onboarded authorization system. Supports $filter (eq) as follows:  $filter=dataCollectionInfo/entitlements/permissionsModificationCapability and $filter=dataCollectionInfo/entitlements/status.
-     * @return a DataCollectionInfo
+     * @return a {@link DataCollectionInfo}
      */
     @jakarta.annotation.Nullable
     public DataCollectionInfo getDataCollectionInfo() {
@@ -67,7 +67,7 @@ public class AuthorizationSystem extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

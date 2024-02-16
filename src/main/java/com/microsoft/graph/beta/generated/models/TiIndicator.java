@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TiIndicator extends Entity implements Parsable {
     /**
-     * Instantiates a new TiIndicator and sets the default values.
+     * Instantiates a new {@link TiIndicator} and sets the default values.
      */
     public TiIndicator() {
         super();
@@ -18,7 +18,7 @@ public class TiIndicator extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TiIndicator
+     * @return a {@link TiIndicator}
      */
     @jakarta.annotation.Nonnull
     public static TiIndicator createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class TiIndicator extends Entity implements Parsable {
     }
     /**
      * Gets the action property value. The action to apply if the indicator is matched from within the targetProduct security tool. Possible values are: unknown, allow, block, alert. Required.
-     * @return a TiAction
+     * @return a {@link TiAction}
      */
     @jakarta.annotation.Nullable
     public TiAction getAction() {
@@ -35,7 +35,7 @@ public class TiIndicator extends Entity implements Parsable {
     }
     /**
      * Gets the activityGroupNames property value. The cyber threat intelligence name(s) for the parties responsible for the malicious activity covered by the threat indicator.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getActivityGroupNames() {
@@ -43,7 +43,7 @@ public class TiIndicator extends Entity implements Parsable {
     }
     /**
      * Gets the additionalInformation property value. A catchall area for extra data from the indicator that is not specifically covered by other tiIndicator properties. The security tool specified by targetProduct typically does not utilize this data.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAdditionalInformation() {
@@ -51,7 +51,7 @@ public class TiIndicator extends Entity implements Parsable {
     }
     /**
      * Gets the azureTenantId property value. Stamped by the system when the indicator is ingested. The Microsoft Entra tenant id of submitting client. Required.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAzureTenantId() {
@@ -59,7 +59,7 @@ public class TiIndicator extends Entity implements Parsable {
     }
     /**
      * Gets the confidence property value. An integer representing the confidence the data within the indicator accurately identifies malicious behavior. Acceptable values are 0  100 with 100 being the highest.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getConfidence() {
@@ -67,7 +67,7 @@ public class TiIndicator extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. Brief description (100 characters or less) of the threat represented by the indicator. Required.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -75,7 +75,7 @@ public class TiIndicator extends Entity implements Parsable {
     }
     /**
      * Gets the diamondModel property value. The area of the Diamond Model in which this indicator exists. Possible values are: unknown, adversary, capability, infrastructure, victim.
-     * @return a DiamondModel
+     * @return a {@link DiamondModel}
      */
     @jakarta.annotation.Nullable
     public DiamondModel getDiamondModel() {
@@ -83,7 +83,7 @@ public class TiIndicator extends Entity implements Parsable {
     }
     /**
      * Gets the domainName property value. The domainName property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDomainName() {
@@ -91,7 +91,7 @@ public class TiIndicator extends Entity implements Parsable {
     }
     /**
      * Gets the emailEncoding property value. The emailEncoding property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getEmailEncoding() {
@@ -99,7 +99,7 @@ public class TiIndicator extends Entity implements Parsable {
     }
     /**
      * Gets the emailLanguage property value. The emailLanguage property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getEmailLanguage() {
@@ -107,7 +107,7 @@ public class TiIndicator extends Entity implements Parsable {
     }
     /**
      * Gets the emailRecipient property value. The emailRecipient property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getEmailRecipient() {
@@ -115,7 +115,7 @@ public class TiIndicator extends Entity implements Parsable {
     }
     /**
      * Gets the emailSenderAddress property value. The emailSenderAddress property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getEmailSenderAddress() {
@@ -123,7 +123,7 @@ public class TiIndicator extends Entity implements Parsable {
     }
     /**
      * Gets the emailSenderName property value. The emailSenderName property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getEmailSenderName() {
@@ -131,7 +131,7 @@ public class TiIndicator extends Entity implements Parsable {
     }
     /**
      * Gets the emailSourceDomain property value. The emailSourceDomain property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getEmailSourceDomain() {
@@ -139,7 +139,7 @@ public class TiIndicator extends Entity implements Parsable {
     }
     /**
      * Gets the emailSourceIpAddress property value. The emailSourceIpAddress property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getEmailSourceIpAddress() {
@@ -147,7 +147,7 @@ public class TiIndicator extends Entity implements Parsable {
     }
     /**
      * Gets the emailSubject property value. The emailSubject property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getEmailSubject() {
@@ -155,7 +155,7 @@ public class TiIndicator extends Entity implements Parsable {
     }
     /**
      * Gets the emailXMailer property value. The emailXMailer property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getEmailXMailer() {
@@ -163,7 +163,7 @@ public class TiIndicator extends Entity implements Parsable {
     }
     /**
      * Gets the expirationDateTime property value. DateTime string indicating when the Indicator expires. All indicators must have an expiration date to avoid stale indicators persisting in the system. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Required.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getExpirationDateTime() {
@@ -171,7 +171,7 @@ public class TiIndicator extends Entity implements Parsable {
     }
     /**
      * Gets the externalId property value. An identification number that ties the indicator back to the indicator providers system (for example, a foreign key).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getExternalId() {
@@ -179,7 +179,7 @@ public class TiIndicator extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -246,7 +246,7 @@ public class TiIndicator extends Entity implements Parsable {
     }
     /**
      * Gets the fileCompileDateTime property value. The fileCompileDateTime property
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getFileCompileDateTime() {
@@ -254,7 +254,7 @@ public class TiIndicator extends Entity implements Parsable {
     }
     /**
      * Gets the fileCreatedDateTime property value. The fileCreatedDateTime property
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getFileCreatedDateTime() {
@@ -262,7 +262,7 @@ public class TiIndicator extends Entity implements Parsable {
     }
     /**
      * Gets the fileHashType property value. The fileHashType property
-     * @return a FileHashType
+     * @return a {@link FileHashType}
      */
     @jakarta.annotation.Nullable
     public FileHashType getFileHashType() {
@@ -270,7 +270,7 @@ public class TiIndicator extends Entity implements Parsable {
     }
     /**
      * Gets the fileHashValue property value. The fileHashValue property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getFileHashValue() {
@@ -278,7 +278,7 @@ public class TiIndicator extends Entity implements Parsable {
     }
     /**
      * Gets the fileMutexName property value. The fileMutexName property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getFileMutexName() {
@@ -286,7 +286,7 @@ public class TiIndicator extends Entity implements Parsable {
     }
     /**
      * Gets the fileName property value. The fileName property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getFileName() {
@@ -294,7 +294,7 @@ public class TiIndicator extends Entity implements Parsable {
     }
     /**
      * Gets the filePacker property value. The filePacker property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getFilePacker() {
@@ -302,7 +302,7 @@ public class TiIndicator extends Entity implements Parsable {
     }
     /**
      * Gets the filePath property value. The filePath property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getFilePath() {
@@ -310,7 +310,7 @@ public class TiIndicator extends Entity implements Parsable {
     }
     /**
      * Gets the fileSize property value. The fileSize property
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getFileSize() {
@@ -318,7 +318,7 @@ public class TiIndicator extends Entity implements Parsable {
     }
     /**
      * Gets the fileType property value. The fileType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getFileType() {
@@ -326,7 +326,7 @@ public class TiIndicator extends Entity implements Parsable {
     }
     /**
      * Gets the ingestedDateTime property value. Stamped by the system when the indicator is ingested. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getIngestedDateTime() {
@@ -334,7 +334,7 @@ public class TiIndicator extends Entity implements Parsable {
     }
     /**
      * Gets the isActive property value. Used to deactivate indicators within system. By default, any indicator submitted is set as active. However, providers may submit existing indicators with this set to False to deactivate indicators in the system.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsActive() {
@@ -342,7 +342,7 @@ public class TiIndicator extends Entity implements Parsable {
     }
     /**
      * Gets the killChain property value. A JSON array of strings that describes which point or points on the Kill Chain this indicator targets. See killChain values below for exact values.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getKillChain() {
@@ -350,7 +350,7 @@ public class TiIndicator extends Entity implements Parsable {
     }
     /**
      * Gets the knownFalsePositives property value. Scenarios in which the indicator may cause false positives. This should be human-readable text.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getKnownFalsePositives() {
@@ -358,7 +358,7 @@ public class TiIndicator extends Entity implements Parsable {
     }
     /**
      * Gets the lastReportedDateTime property value. The last time the indicator was seen. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastReportedDateTime() {
@@ -366,7 +366,7 @@ public class TiIndicator extends Entity implements Parsable {
     }
     /**
      * Gets the malwareFamilyNames property value. The malware family name associated with an indicator if it exists. Microsoft prefers the Microsoft malware family name if at all possible that can be found via the Windows Defender Security Intelligence threat encyclopedia.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getMalwareFamilyNames() {
@@ -374,7 +374,7 @@ public class TiIndicator extends Entity implements Parsable {
     }
     /**
      * Gets the networkCidrBlock property value. The networkCidrBlock property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getNetworkCidrBlock() {
@@ -382,7 +382,7 @@ public class TiIndicator extends Entity implements Parsable {
     }
     /**
      * Gets the networkDestinationAsn property value. The networkDestinationAsn property
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getNetworkDestinationAsn() {
@@ -390,7 +390,7 @@ public class TiIndicator extends Entity implements Parsable {
     }
     /**
      * Gets the networkDestinationCidrBlock property value. The networkDestinationCidrBlock property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getNetworkDestinationCidrBlock() {
@@ -398,7 +398,7 @@ public class TiIndicator extends Entity implements Parsable {
     }
     /**
      * Gets the networkDestinationIPv4 property value. The networkDestinationIPv4 property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getNetworkDestinationIPv4() {
@@ -406,7 +406,7 @@ public class TiIndicator extends Entity implements Parsable {
     }
     /**
      * Gets the networkDestinationIPv6 property value. The networkDestinationIPv6 property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getNetworkDestinationIPv6() {
@@ -414,7 +414,7 @@ public class TiIndicator extends Entity implements Parsable {
     }
     /**
      * Gets the networkDestinationPort property value. The networkDestinationPort property
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getNetworkDestinationPort() {
@@ -422,7 +422,7 @@ public class TiIndicator extends Entity implements Parsable {
     }
     /**
      * Gets the networkIPv4 property value. The networkIPv4 property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getNetworkIPv4() {
@@ -430,7 +430,7 @@ public class TiIndicator extends Entity implements Parsable {
     }
     /**
      * Gets the networkIPv6 property value. The networkIPv6 property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getNetworkIPv6() {
@@ -438,7 +438,7 @@ public class TiIndicator extends Entity implements Parsable {
     }
     /**
      * Gets the networkPort property value. The networkPort property
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getNetworkPort() {
@@ -446,7 +446,7 @@ public class TiIndicator extends Entity implements Parsable {
     }
     /**
      * Gets the networkProtocol property value. The networkProtocol property
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getNetworkProtocol() {
@@ -454,7 +454,7 @@ public class TiIndicator extends Entity implements Parsable {
     }
     /**
      * Gets the networkSourceAsn property value. The networkSourceAsn property
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getNetworkSourceAsn() {
@@ -462,7 +462,7 @@ public class TiIndicator extends Entity implements Parsable {
     }
     /**
      * Gets the networkSourceCidrBlock property value. The networkSourceCidrBlock property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getNetworkSourceCidrBlock() {
@@ -470,7 +470,7 @@ public class TiIndicator extends Entity implements Parsable {
     }
     /**
      * Gets the networkSourceIPv4 property value. The networkSourceIPv4 property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getNetworkSourceIPv4() {
@@ -478,7 +478,7 @@ public class TiIndicator extends Entity implements Parsable {
     }
     /**
      * Gets the networkSourceIPv6 property value. The networkSourceIPv6 property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getNetworkSourceIPv6() {
@@ -486,7 +486,7 @@ public class TiIndicator extends Entity implements Parsable {
     }
     /**
      * Gets the networkSourcePort property value. The networkSourcePort property
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getNetworkSourcePort() {
@@ -494,7 +494,7 @@ public class TiIndicator extends Entity implements Parsable {
     }
     /**
      * Gets the passiveOnly property value. Determines if the indicator should trigger an event that is visible to an end-user. When set to true, security tools won't notify the end user that a hit has occurred. This is most often treated as audit or silent mode by security products where they'll simply log that a match occurred but won't perform the action. Default value is false.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getPassiveOnly() {
@@ -502,7 +502,7 @@ public class TiIndicator extends Entity implements Parsable {
     }
     /**
      * Gets the severity property value. An integer representing the severity of the malicious behavior identified by the data within the indicator. Acceptable values are 0  5 where 5 is the most severe and zero isn't severe at all. Default value is 3.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getSeverity() {
@@ -510,7 +510,7 @@ public class TiIndicator extends Entity implements Parsable {
     }
     /**
      * Gets the tags property value. A JSON array of strings that stores arbitrary tags/keywords.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getTags() {
@@ -518,7 +518,7 @@ public class TiIndicator extends Entity implements Parsable {
     }
     /**
      * Gets the targetProduct property value. A string value representing a single security product to which the indicator should be applied. Acceptable values are: Azure Sentinel, Microsoft Defender ATP. Required
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTargetProduct() {
@@ -526,7 +526,7 @@ public class TiIndicator extends Entity implements Parsable {
     }
     /**
      * Gets the threatType property value. Each indicator must have a valid Indicator Threat Type. Possible values are: Botnet, C2, CryptoMining, Darknet, DDoS, MaliciousUrl, Malware, Phishing, Proxy, PUA, WatchList. Required.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getThreatType() {
@@ -534,7 +534,7 @@ public class TiIndicator extends Entity implements Parsable {
     }
     /**
      * Gets the tlpLevel property value. Traffic Light Protocol value for the indicator. Possible values are: unknown, white, green, amber, red. Required.
-     * @return a TlpLevel
+     * @return a {@link TlpLevel}
      */
     @jakarta.annotation.Nullable
     public TlpLevel getTlpLevel() {
@@ -542,7 +542,7 @@ public class TiIndicator extends Entity implements Parsable {
     }
     /**
      * Gets the url property value. The url property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUrl() {
@@ -550,7 +550,7 @@ public class TiIndicator extends Entity implements Parsable {
     }
     /**
      * Gets the userAgent property value. The userAgent property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserAgent() {

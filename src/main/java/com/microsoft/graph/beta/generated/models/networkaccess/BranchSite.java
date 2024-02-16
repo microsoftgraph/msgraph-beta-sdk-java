@@ -11,7 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class BranchSite extends Entity implements Parsable {
     /**
-     * Instantiates a new BranchSite and sets the default values.
+     * Instantiates a new {@link BranchSite} and sets the default values.
      */
     public BranchSite() {
         super();
@@ -19,7 +19,7 @@ public class BranchSite extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a BranchSite
+     * @return a {@link BranchSite}
      */
     @jakarta.annotation.Nonnull
     public static BranchSite createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class BranchSite extends Entity implements Parsable {
     }
     /**
      * Gets the bandwidthCapacity property value. Determines the maximum allowed Mbps (megabits per second) bandwidth from a branch site. The possible values are:250,500,750,1000.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getBandwidthCapacity() {
@@ -36,7 +36,7 @@ public class BranchSite extends Entity implements Parsable {
     }
     /**
      * Gets the connectivityConfiguration property value. Specifies the connectivity details of all device links associated with a branch.
-     * @return a BranchConnectivityConfiguration
+     * @return a {@link BranchConnectivityConfiguration}
      */
     @jakarta.annotation.Nullable
     public BranchConnectivityConfiguration getConnectivityConfiguration() {
@@ -44,7 +44,7 @@ public class BranchSite extends Entity implements Parsable {
     }
     /**
      * Gets the connectivityState property value. Determines the branch site status. The possible values are: pending, connected, inactive, error.
-     * @return a ConnectivityState
+     * @return a {@link ConnectivityState}
      */
     @jakarta.annotation.Nullable
     public ConnectivityState getConnectivityState() {
@@ -52,7 +52,7 @@ public class BranchSite extends Entity implements Parsable {
     }
     /**
      * Gets the country property value. The country property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCountry() {
@@ -60,7 +60,7 @@ public class BranchSite extends Entity implements Parsable {
     }
     /**
      * Gets the deviceLinks property value. Each unique CPE device associated with a branch is specified. Supports $expand.
-     * @return a java.util.List<DeviceLink>
+     * @return a {@link java.util.List<DeviceLink>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceLink> getDeviceLinks() {
@@ -68,7 +68,7 @@ public class BranchSite extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -87,7 +87,7 @@ public class BranchSite extends Entity implements Parsable {
     }
     /**
      * Gets the forwardingProfiles property value. Each forwarding profile associated with a branch site is specified. Supports $expand.
-     * @return a java.util.List<ForwardingProfile>
+     * @return a {@link java.util.List<ForwardingProfile>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ForwardingProfile> getForwardingProfiles() {
@@ -95,7 +95,7 @@ public class BranchSite extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. last modified time.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -103,7 +103,7 @@ public class BranchSite extends Entity implements Parsable {
     }
     /**
      * Gets the name property value. Name.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -111,7 +111,7 @@ public class BranchSite extends Entity implements Parsable {
     }
     /**
      * Gets the region property value. The region property
-     * @return a Region
+     * @return a {@link Region}
      */
     @jakarta.annotation.Nullable
     public Region getRegion() {
@@ -119,7 +119,7 @@ public class BranchSite extends Entity implements Parsable {
     }
     /**
      * Gets the version property value. The branch version.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getVersion() {

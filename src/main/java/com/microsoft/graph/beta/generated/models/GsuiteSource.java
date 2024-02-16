@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GsuiteSource extends AuthorizationSystemIdentitySource implements Parsable {
     /**
-     * Instantiates a new GsuiteSource and sets the default values.
+     * Instantiates a new {@link GsuiteSource} and sets the default values.
      */
     public GsuiteSource() {
         super();
@@ -18,7 +18,7 @@ public class GsuiteSource extends AuthorizationSystemIdentitySource implements P
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a GsuiteSource
+     * @return a {@link GsuiteSource}
      */
     @jakarta.annotation.Nonnull
     public static GsuiteSource createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class GsuiteSource extends AuthorizationSystemIdentitySource implements P
     }
     /**
      * Gets the domain property value. Domain name
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDomain() {
@@ -35,7 +35,7 @@ public class GsuiteSource extends AuthorizationSystemIdentitySource implements P
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

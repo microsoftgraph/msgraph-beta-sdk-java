@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ExternalUsersSelfServiceSignUpEventsFlow extends AuthenticationEventsFlow implements Parsable {
     /**
-     * Instantiates a new ExternalUsersSelfServiceSignUpEventsFlow and sets the default values.
+     * Instantiates a new {@link ExternalUsersSelfServiceSignUpEventsFlow} and sets the default values.
      */
     public ExternalUsersSelfServiceSignUpEventsFlow() {
         super();
@@ -18,7 +18,7 @@ public class ExternalUsersSelfServiceSignUpEventsFlow extends AuthenticationEven
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ExternalUsersSelfServiceSignUpEventsFlow
+     * @return a {@link ExternalUsersSelfServiceSignUpEventsFlow}
      */
     @jakarta.annotation.Nonnull
     public static ExternalUsersSelfServiceSignUpEventsFlow createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class ExternalUsersSelfServiceSignUpEventsFlow extends AuthenticationEven
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -42,7 +42,7 @@ public class ExternalUsersSelfServiceSignUpEventsFlow extends AuthenticationEven
     }
     /**
      * Gets the onAttributeCollection property value. The configuration for what to invoke when attributes are ready to be collected from the user.
-     * @return a OnAttributeCollectionHandler
+     * @return a {@link OnAttributeCollectionHandler}
      */
     @jakarta.annotation.Nullable
     public OnAttributeCollectionHandler getOnAttributeCollection() {
@@ -50,7 +50,7 @@ public class ExternalUsersSelfServiceSignUpEventsFlow extends AuthenticationEven
     }
     /**
      * Gets the onAttributeCollectionStart property value. The configuration for what to invoke when attribution collection has started.
-     * @return a OnAttributeCollectionStartHandler
+     * @return a {@link OnAttributeCollectionStartHandler}
      */
     @jakarta.annotation.Nullable
     public OnAttributeCollectionStartHandler getOnAttributeCollectionStart() {
@@ -58,7 +58,7 @@ public class ExternalUsersSelfServiceSignUpEventsFlow extends AuthenticationEven
     }
     /**
      * Gets the onAttributeCollectionSubmit property value. The configuration for what to invoke when attributes have been submitted at the end of attribution collection.
-     * @return a OnAttributeCollectionSubmitHandler
+     * @return a {@link OnAttributeCollectionSubmitHandler}
      */
     @jakarta.annotation.Nullable
     public OnAttributeCollectionSubmitHandler getOnAttributeCollectionSubmit() {
@@ -66,7 +66,7 @@ public class ExternalUsersSelfServiceSignUpEventsFlow extends AuthenticationEven
     }
     /**
      * Gets the onAuthenticationMethodLoadStart property value. Required. The configuration for what to invoke when authentication methods are ready to be presented to the user. Must have at least one identity provider linked.
-     * @return a OnAuthenticationMethodLoadStartHandler
+     * @return a {@link OnAuthenticationMethodLoadStartHandler}
      */
     @jakarta.annotation.Nullable
     public OnAuthenticationMethodLoadStartHandler getOnAuthenticationMethodLoadStart() {
@@ -74,7 +74,7 @@ public class ExternalUsersSelfServiceSignUpEventsFlow extends AuthenticationEven
     }
     /**
      * Gets the onInteractiveAuthFlowStart property value. Required. The configuration for what to invoke when an authentication flow is ready to be initiated.
-     * @return a OnInteractiveAuthFlowStartHandler
+     * @return a {@link OnInteractiveAuthFlowStartHandler}
      */
     @jakarta.annotation.Nullable
     public OnInteractiveAuthFlowStartHandler getOnInteractiveAuthFlowStart() {
@@ -82,7 +82,7 @@ public class ExternalUsersSelfServiceSignUpEventsFlow extends AuthenticationEven
     }
     /**
      * Gets the onUserCreateStart property value. The configuration for what to invoke during user creation.
-     * @return a OnUserCreateStartHandler
+     * @return a {@link OnUserCreateStartHandler}
      */
     @jakarta.annotation.Nullable
     public OnUserCreateStartHandler getOnUserCreateStart() {

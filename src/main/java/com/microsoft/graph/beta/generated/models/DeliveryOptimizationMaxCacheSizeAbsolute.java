@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeliveryOptimizationMaxCacheSizeAbsolute extends DeliveryOptimizationMaxCacheSize implements Parsable {
     /**
-     * Instantiates a new DeliveryOptimizationMaxCacheSizeAbsolute and sets the default values.
+     * Instantiates a new {@link DeliveryOptimizationMaxCacheSizeAbsolute} and sets the default values.
      */
     public DeliveryOptimizationMaxCacheSizeAbsolute() {
         super();
@@ -21,7 +21,7 @@ public class DeliveryOptimizationMaxCacheSizeAbsolute extends DeliveryOptimizati
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeliveryOptimizationMaxCacheSizeAbsolute
+     * @return a {@link DeliveryOptimizationMaxCacheSizeAbsolute}
      */
     @jakarta.annotation.Nonnull
     public static DeliveryOptimizationMaxCacheSizeAbsolute createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class DeliveryOptimizationMaxCacheSizeAbsolute extends DeliveryOptimizati
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -40,7 +40,7 @@ public class DeliveryOptimizationMaxCacheSizeAbsolute extends DeliveryOptimizati
     }
     /**
      * Gets the maximumCacheSizeInGigabytes property value. Specifies the maximum size in GB of Delivery Optimization cache. Valid values 0 to 4294967295
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getMaximumCacheSizeInGigabytes() {

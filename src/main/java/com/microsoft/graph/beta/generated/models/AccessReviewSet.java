@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessReviewSet extends Entity implements Parsable {
     /**
-     * Instantiates a new AccessReviewSet and sets the default values.
+     * Instantiates a new {@link AccessReviewSet} and sets the default values.
      */
     public AccessReviewSet() {
         super();
@@ -17,7 +17,7 @@ public class AccessReviewSet extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AccessReviewSet
+     * @return a {@link AccessReviewSet}
      */
     @jakarta.annotation.Nonnull
     public static AccessReviewSet createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class AccessReviewSet extends Entity implements Parsable {
     }
     /**
      * Gets the decisions property value. Represents a Microsoft Entra access review decision on an instance of a review.
-     * @return a java.util.List<AccessReviewInstanceDecisionItem>
+     * @return a {@link java.util.List<AccessReviewInstanceDecisionItem>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessReviewInstanceDecisionItem> getDecisions() {
@@ -34,7 +34,7 @@ public class AccessReviewSet extends Entity implements Parsable {
     }
     /**
      * Gets the definitions property value. Represents the template and scheduling for an access review.
-     * @return a java.util.List<AccessReviewScheduleDefinition>
+     * @return a {@link java.util.List<AccessReviewScheduleDefinition>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessReviewScheduleDefinition> getDefinitions() {
@@ -42,7 +42,7 @@ public class AccessReviewSet extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -55,7 +55,7 @@ public class AccessReviewSet extends Entity implements Parsable {
     }
     /**
      * Gets the historyDefinitions property value. Represents a collection of access review history data and the scopes used to collect that data.
-     * @return a java.util.List<AccessReviewHistoryDefinition>
+     * @return a {@link java.util.List<AccessReviewHistoryDefinition>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessReviewHistoryDefinition> getHistoryDefinitions() {
@@ -63,7 +63,7 @@ public class AccessReviewSet extends Entity implements Parsable {
     }
     /**
      * Gets the policy property value. Resource that enables administrators to manage directory-level access review policies in their tenant.
-     * @return a AccessReviewPolicy
+     * @return a {@link AccessReviewPolicy}
      */
     @jakarta.annotation.Nullable
     public AccessReviewPolicy getPolicy() {

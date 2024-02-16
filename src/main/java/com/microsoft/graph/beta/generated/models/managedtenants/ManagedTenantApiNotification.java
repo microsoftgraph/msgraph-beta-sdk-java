@@ -11,7 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagedTenantApiNotification extends Entity implements Parsable {
     /**
-     * Instantiates a new ManagedTenantApiNotification and sets the default values.
+     * Instantiates a new {@link ManagedTenantApiNotification} and sets the default values.
      */
     public ManagedTenantApiNotification() {
         super();
@@ -19,7 +19,7 @@ public class ManagedTenantApiNotification extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ManagedTenantApiNotification
+     * @return a {@link ManagedTenantApiNotification}
      */
     @jakarta.annotation.Nonnull
     public static ManagedTenantApiNotification createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class ManagedTenantApiNotification extends Entity implements Parsable {
     }
     /**
      * Gets the alert property value. The alert property
-     * @return a ManagedTenantAlert
+     * @return a {@link ManagedTenantAlert}
      */
     @jakarta.annotation.Nullable
     public ManagedTenantAlert getAlert() {
@@ -36,7 +36,7 @@ public class ManagedTenantApiNotification extends Entity implements Parsable {
     }
     /**
      * Gets the createdByUserId property value. The createdByUserId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCreatedByUserId() {
@@ -44,7 +44,7 @@ public class ManagedTenantApiNotification extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. The createdDateTime property
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -52,7 +52,7 @@ public class ManagedTenantApiNotification extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -70,7 +70,7 @@ public class ManagedTenantApiNotification extends Entity implements Parsable {
     }
     /**
      * Gets the isAcknowledged property value. The isAcknowledged property
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsAcknowledged() {
@@ -78,7 +78,7 @@ public class ManagedTenantApiNotification extends Entity implements Parsable {
     }
     /**
      * Gets the lastActionByUserId property value. The lastActionByUserId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getLastActionByUserId() {
@@ -86,7 +86,7 @@ public class ManagedTenantApiNotification extends Entity implements Parsable {
     }
     /**
      * Gets the lastActionDateTime property value. The lastActionDateTime property
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastActionDateTime() {
@@ -94,7 +94,7 @@ public class ManagedTenantApiNotification extends Entity implements Parsable {
     }
     /**
      * Gets the message property value. The message property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getMessage() {
@@ -102,7 +102,7 @@ public class ManagedTenantApiNotification extends Entity implements Parsable {
     }
     /**
      * Gets the title property value. The title property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTitle() {
@@ -110,7 +110,7 @@ public class ManagedTenantApiNotification extends Entity implements Parsable {
     }
     /**
      * Gets the userId property value. The userId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserId() {

@@ -25,6 +25,7 @@ import java.util.Objects;
 public class ManagedTenantAlertLogsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -33,7 +34,7 @@ public class ManagedTenantAlertLogsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the managedTenantAlertLogs property of the microsoft.graph.managedTenants.managedTenant entity.
      * @param managedTenantAlertLogId The unique identifier of managedTenantAlertLog
-     * @return a ManagedTenantAlertLogItemRequestBuilder
+     * @return a {@link ManagedTenantAlertLogItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ManagedTenantAlertLogItemRequestBuilder byManagedTenantAlertLogId(@jakarta.annotation.Nonnull final String managedTenantAlertLogId) {
@@ -43,7 +44,7 @@ public class ManagedTenantAlertLogsRequestBuilder extends BaseRequestBuilder {
         return new ManagedTenantAlertLogItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new ManagedTenantAlertLogsRequestBuilder and sets the default values.
+     * Instantiates a new {@link ManagedTenantAlertLogsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -51,7 +52,7 @@ public class ManagedTenantAlertLogsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/tenantRelationships/managedTenants/managedTenantAlertLogs{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new ManagedTenantAlertLogsRequestBuilder and sets the default values.
+     * Instantiates a new {@link ManagedTenantAlertLogsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -60,7 +61,8 @@ public class ManagedTenantAlertLogsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get managedTenantAlertLogs from tenantRelationships
-     * @return a ManagedTenantAlertLogCollectionResponse
+     * @return a {@link ManagedTenantAlertLogCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public ManagedTenantAlertLogCollectionResponse get() {
@@ -69,20 +71,21 @@ public class ManagedTenantAlertLogsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get managedTenantAlertLogs from tenantRelationships
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a ManagedTenantAlertLogCollectionResponse
+     * @return a {@link ManagedTenantAlertLogCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public ManagedTenantAlertLogCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, ManagedTenantAlertLogCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to managedTenantAlertLogs for tenantRelationships
      * @param body The request body
-     * @return a ManagedTenantAlertLog
+     * @return a {@link ManagedTenantAlertLog}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public ManagedTenantAlertLog post(@jakarta.annotation.Nonnull final ManagedTenantAlertLog body) {
@@ -92,20 +95,20 @@ public class ManagedTenantAlertLogsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to managedTenantAlertLogs for tenantRelationships
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a ManagedTenantAlertLog
+     * @return a {@link ManagedTenantAlertLog}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public ManagedTenantAlertLog post(@jakarta.annotation.Nonnull final ManagedTenantAlertLog body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, ManagedTenantAlertLog::createFromDiscriminatorValue);
     }
     /**
      * Get managedTenantAlertLogs from tenantRelationships
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -114,7 +117,7 @@ public class ManagedTenantAlertLogsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get managedTenantAlertLogs from tenantRelationships
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -126,7 +129,7 @@ public class ManagedTenantAlertLogsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to managedTenantAlertLogs for tenantRelationships
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ManagedTenantAlertLog body) {
@@ -136,12 +139,12 @@ public class ManagedTenantAlertLogsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to managedTenantAlertLogs for tenantRelationships
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ManagedTenantAlertLog body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/tenantRelationships/managedTenants/managedTenantAlertLogs", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -150,7 +153,7 @@ public class ManagedTenantAlertLogsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a ManagedTenantAlertLogsRequestBuilder
+     * @return a {@link ManagedTenantAlertLogsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ManagedTenantAlertLogsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -204,7 +207,7 @@ public class ManagedTenantAlertLogsRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

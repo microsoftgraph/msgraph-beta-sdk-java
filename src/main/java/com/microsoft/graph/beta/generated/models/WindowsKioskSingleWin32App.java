@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsKioskSingleWin32App extends WindowsKioskAppConfiguration implements Parsable {
     /**
-     * Instantiates a new WindowsKioskSingleWin32App and sets the default values.
+     * Instantiates a new {@link WindowsKioskSingleWin32App} and sets the default values.
      */
     public WindowsKioskSingleWin32App() {
         super();
@@ -21,7 +21,7 @@ public class WindowsKioskSingleWin32App extends WindowsKioskAppConfiguration imp
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WindowsKioskSingleWin32App
+     * @return a {@link WindowsKioskSingleWin32App}
      */
     @jakarta.annotation.Nonnull
     public static WindowsKioskSingleWin32App createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class WindowsKioskSingleWin32App extends WindowsKioskAppConfiguration imp
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -40,7 +40,7 @@ public class WindowsKioskSingleWin32App extends WindowsKioskAppConfiguration imp
     }
     /**
      * Gets the win32App property value. The win32App property
-     * @return a WindowsKioskWin32App
+     * @return a {@link WindowsKioskWin32App}
      */
     @jakarta.annotation.Nullable
     public WindowsKioskWin32App getWin32App() {

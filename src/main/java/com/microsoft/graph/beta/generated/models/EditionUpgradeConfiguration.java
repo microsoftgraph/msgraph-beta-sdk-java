@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EditionUpgradeConfiguration extends DeviceConfiguration implements Parsable {
     /**
-     * Instantiates a new EditionUpgradeConfiguration and sets the default values.
+     * Instantiates a new {@link EditionUpgradeConfiguration} and sets the default values.
      */
     public EditionUpgradeConfiguration() {
         super();
@@ -21,7 +21,7 @@ public class EditionUpgradeConfiguration extends DeviceConfiguration implements 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EditionUpgradeConfiguration
+     * @return a {@link EditionUpgradeConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static EditionUpgradeConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class EditionUpgradeConfiguration extends DeviceConfiguration implements 
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -44,7 +44,7 @@ public class EditionUpgradeConfiguration extends DeviceConfiguration implements 
     }
     /**
      * Gets the license property value. Edition Upgrade License File Content.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getLicense() {
@@ -52,7 +52,7 @@ public class EditionUpgradeConfiguration extends DeviceConfiguration implements 
     }
     /**
      * Gets the licenseType property value. Edition Upgrade License type
-     * @return a EditionUpgradeLicenseType
+     * @return a {@link EditionUpgradeLicenseType}
      */
     @jakarta.annotation.Nullable
     public EditionUpgradeLicenseType getLicenseType() {
@@ -60,7 +60,7 @@ public class EditionUpgradeConfiguration extends DeviceConfiguration implements 
     }
     /**
      * Gets the productKey property value. Edition Upgrade Product Key.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getProductKey() {
@@ -68,7 +68,7 @@ public class EditionUpgradeConfiguration extends DeviceConfiguration implements 
     }
     /**
      * Gets the targetEdition property value. Windows 10 Edition type.
-     * @return a Windows10EditionType
+     * @return a {@link Windows10EditionType}
      */
     @jakarta.annotation.Nullable
     public Windows10EditionType getTargetEdition() {
@@ -76,7 +76,7 @@ public class EditionUpgradeConfiguration extends DeviceConfiguration implements 
     }
     /**
      * Gets the windowsSMode property value. The possible options to configure S mode unlock
-     * @return a WindowsSModeConfiguration
+     * @return a {@link WindowsSModeConfiguration}
      */
     @jakarta.annotation.Nullable
     public WindowsSModeConfiguration getWindowsSMode() {

@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ServiceNowConnectionCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * Instantiates a new ServiceNowConnectionCollectionResponse and sets the default values.
+     * Instantiates a new {@link ServiceNowConnectionCollectionResponse} and sets the default values.
      */
     public ServiceNowConnectionCollectionResponse() {
         super();
@@ -17,7 +17,7 @@ public class ServiceNowConnectionCollectionResponse extends BaseCollectionPagina
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ServiceNowConnectionCollectionResponse
+     * @return a {@link ServiceNowConnectionCollectionResponse}
      */
     @jakarta.annotation.Nonnull
     public static ServiceNowConnectionCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class ServiceNowConnectionCollectionResponse extends BaseCollectionPagina
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -36,7 +36,7 @@ public class ServiceNowConnectionCollectionResponse extends BaseCollectionPagina
     }
     /**
      * Gets the value property value. The value property
-     * @return a java.util.List<ServiceNowConnection>
+     * @return a {@link java.util.List<ServiceNowConnection>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ServiceNowConnection> getValue() {

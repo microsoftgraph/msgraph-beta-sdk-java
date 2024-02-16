@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Shift extends ChangeTrackedEntity implements Parsable {
     /**
-     * Instantiates a new Shift and sets the default values.
+     * Instantiates a new {@link Shift} and sets the default values.
      */
     public Shift() {
         super();
@@ -18,7 +18,7 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Shift
+     * @return a {@link Shift}
      */
     @jakarta.annotation.Nonnull
     public static Shift createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,8 +26,8 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
         return new Shift();
     }
     /**
-     * Gets the draftShift property value. Draft changes in the shift. Draft changes are only visible to managers. The changes are visible to employees when they are shared, which copies the changes from the draftShift to the sharedShift property.
-     * @return a ShiftItem
+     * Gets the draftShift property value. Draft changes in the shift. Draft changes are only visible to managers. The changes are visible to employees when they're shared, which copies the changes from the draftShift to the sharedShift property.
+     * @return a {@link ShiftItem}
      */
     @jakarta.annotation.Nullable
     public ShiftItem getDraftShift() {
@@ -35,7 +35,7 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -52,7 +52,7 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
     }
     /**
      * Gets the isStagedForDeletion property value. The shift is marked for deletion, a process that is finalized when the schedule is shared.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsStagedForDeletion() {
@@ -60,15 +60,15 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
     }
     /**
      * Gets the schedulingGroupId property value. ID of the scheduling group the shift is part of. Required.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSchedulingGroupId() {
         return this.backingStore.get("schedulingGroupId");
     }
     /**
-     * Gets the schedulingGroupInfo property value. The schedulingGroupInfo property
-     * @return a SchedulingGroupInfo
+     * Gets the schedulingGroupInfo property value. Information of the scheduling group the shift is part of.
+     * @return a {@link SchedulingGroupInfo}
      */
     @jakarta.annotation.Nullable
     public SchedulingGroupInfo getSchedulingGroupInfo() {
@@ -76,15 +76,15 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
     }
     /**
      * Gets the sharedShift property value. The shared version of this shift that is viewable by both employees and managers. Updates to the sharedShift property send notifications to users in the Teams client.
-     * @return a ShiftItem
+     * @return a {@link ShiftItem}
      */
     @jakarta.annotation.Nullable
     public ShiftItem getSharedShift() {
         return this.backingStore.get("sharedShift");
     }
     /**
-     * Gets the teamInfo property value. The teamInfo property
-     * @return a ShiftsTeamInfo
+     * Gets the teamInfo property value. Information of the team that the shift is in.
+     * @return a {@link ShiftsTeamInfo}
      */
     @jakarta.annotation.Nullable
     public ShiftsTeamInfo getTeamInfo() {
@@ -92,15 +92,15 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
     }
     /**
      * Gets the userId property value. ID of the user assigned to the shift. Required.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
         return this.backingStore.get("userId");
     }
     /**
-     * Gets the userInfo property value. The userInfo property
-     * @return a ShiftsUserInfo
+     * Gets the userInfo property value. Information of the user assigned to the shift.
+     * @return a {@link ShiftsUserInfo}
      */
     @jakarta.annotation.Nullable
     public ShiftsUserInfo getUserInfo() {
@@ -120,7 +120,7 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
         writer.writeStringValue("userId", this.getUserId());
     }
     /**
-     * Sets the draftShift property value. Draft changes in the shift. Draft changes are only visible to managers. The changes are visible to employees when they are shared, which copies the changes from the draftShift to the sharedShift property.
+     * Sets the draftShift property value. Draft changes in the shift. Draft changes are only visible to managers. The changes are visible to employees when they're shared, which copies the changes from the draftShift to the sharedShift property.
      * @param value Value to set for the draftShift property.
      */
     public void setDraftShift(@jakarta.annotation.Nullable final ShiftItem value) {
@@ -141,7 +141,7 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
         this.backingStore.set("schedulingGroupId", value);
     }
     /**
-     * Sets the schedulingGroupInfo property value. The schedulingGroupInfo property
+     * Sets the schedulingGroupInfo property value. Information of the scheduling group the shift is part of.
      * @param value Value to set for the schedulingGroupInfo property.
      */
     public void setSchedulingGroupInfo(@jakarta.annotation.Nullable final SchedulingGroupInfo value) {
@@ -155,7 +155,7 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
         this.backingStore.set("sharedShift", value);
     }
     /**
-     * Sets the teamInfo property value. The teamInfo property
+     * Sets the teamInfo property value. Information of the team that the shift is in.
      * @param value Value to set for the teamInfo property.
      */
     public void setTeamInfo(@jakarta.annotation.Nullable final ShiftsTeamInfo value) {
@@ -169,7 +169,7 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
         this.backingStore.set("userId", value);
     }
     /**
-     * Sets the userInfo property value. The userInfo property
+     * Sets the userInfo property value. Information of the user assigned to the shift.
      * @param value Value to set for the userInfo property.
      */
     public void setUserInfo(@jakarta.annotation.Nullable final ShiftsUserInfo value) {

@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UnmanagedDeviceDiscoveryTask extends DeviceAppManagementTask implements Parsable {
     /**
-     * Instantiates a new UnmanagedDeviceDiscoveryTask and sets the default values.
+     * Instantiates a new {@link UnmanagedDeviceDiscoveryTask} and sets the default values.
      */
     public UnmanagedDeviceDiscoveryTask() {
         super();
@@ -21,7 +21,7 @@ public class UnmanagedDeviceDiscoveryTask extends DeviceAppManagementTask implem
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UnmanagedDeviceDiscoveryTask
+     * @return a {@link UnmanagedDeviceDiscoveryTask}
      */
     @jakarta.annotation.Nonnull
     public static UnmanagedDeviceDiscoveryTask createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class UnmanagedDeviceDiscoveryTask extends DeviceAppManagementTask implem
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -40,7 +40,7 @@ public class UnmanagedDeviceDiscoveryTask extends DeviceAppManagementTask implem
     }
     /**
      * Gets the unmanagedDevices property value. Unmanaged devices discovered in the network.
-     * @return a java.util.List<UnmanagedDevice>
+     * @return a {@link java.util.List<UnmanagedDevice>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnmanagedDevice> getUnmanagedDevices() {

@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceHealthScriptRunSummary extends Entity implements Parsable {
     /**
-     * Instantiates a new DeviceHealthScriptRunSummary and sets the default values.
+     * Instantiates a new {@link DeviceHealthScriptRunSummary} and sets the default values.
      */
     public DeviceHealthScriptRunSummary() {
         super();
@@ -21,7 +21,7 @@ public class DeviceHealthScriptRunSummary extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceHealthScriptRunSummary
+     * @return a {@link DeviceHealthScriptRunSummary}
      */
     @jakarta.annotation.Nonnull
     public static DeviceHealthScriptRunSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class DeviceHealthScriptRunSummary extends Entity implements Parsable {
     }
     /**
      * Gets the detectionScriptErrorDeviceCount property value. Number of devices on which the detection script execution encountered an error and did not complete
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getDetectionScriptErrorDeviceCount() {
@@ -38,7 +38,7 @@ public class DeviceHealthScriptRunSummary extends Entity implements Parsable {
     }
     /**
      * Gets the detectionScriptNotApplicableDeviceCount property value. Number of devices for which the detection script was not applicable
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getDetectionScriptNotApplicableDeviceCount() {
@@ -46,7 +46,7 @@ public class DeviceHealthScriptRunSummary extends Entity implements Parsable {
     }
     /**
      * Gets the detectionScriptPendingDeviceCount property value. Number of devices which have not yet run the latest version of the device health script
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getDetectionScriptPendingDeviceCount() {
@@ -54,7 +54,7 @@ public class DeviceHealthScriptRunSummary extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -74,7 +74,7 @@ public class DeviceHealthScriptRunSummary extends Entity implements Parsable {
     }
     /**
      * Gets the issueDetectedDeviceCount property value. Number of devices for which the detection script found an issue
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getIssueDetectedDeviceCount() {
@@ -82,7 +82,7 @@ public class DeviceHealthScriptRunSummary extends Entity implements Parsable {
     }
     /**
      * Gets the issueRemediatedCumulativeDeviceCount property value. Number of devices that were remediated over the last 30 days
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getIssueRemediatedCumulativeDeviceCount() {
@@ -90,7 +90,7 @@ public class DeviceHealthScriptRunSummary extends Entity implements Parsable {
     }
     /**
      * Gets the issueRemediatedDeviceCount property value. Number of devices for which the remediation script was able to resolve the detected issue
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getIssueRemediatedDeviceCount() {
@@ -98,7 +98,7 @@ public class DeviceHealthScriptRunSummary extends Entity implements Parsable {
     }
     /**
      * Gets the issueReoccurredDeviceCount property value. Number of devices for which the remediation script executed successfully but failed to resolve the detected issue
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getIssueReoccurredDeviceCount() {
@@ -106,7 +106,7 @@ public class DeviceHealthScriptRunSummary extends Entity implements Parsable {
     }
     /**
      * Gets the lastScriptRunDateTime property value. Last run time for the script across all devices
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastScriptRunDateTime() {
@@ -114,7 +114,7 @@ public class DeviceHealthScriptRunSummary extends Entity implements Parsable {
     }
     /**
      * Gets the noIssueDetectedDeviceCount property value. Number of devices for which the detection script did not find an issue and the device is healthy
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getNoIssueDetectedDeviceCount() {
@@ -122,7 +122,7 @@ public class DeviceHealthScriptRunSummary extends Entity implements Parsable {
     }
     /**
      * Gets the remediationScriptErrorDeviceCount property value. Number of devices for which the remediation script execution encountered an error and did not complete
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getRemediationScriptErrorDeviceCount() {
@@ -130,7 +130,7 @@ public class DeviceHealthScriptRunSummary extends Entity implements Parsable {
     }
     /**
      * Gets the remediationSkippedDeviceCount property value. Number of devices for which remediation was skipped
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getRemediationSkippedDeviceCount() {

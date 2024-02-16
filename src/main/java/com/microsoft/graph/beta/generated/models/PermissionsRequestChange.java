@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PermissionsRequestChange extends Entity implements Parsable {
     /**
-     * Instantiates a new PermissionsRequestChange and sets the default values.
+     * Instantiates a new {@link PermissionsRequestChange} and sets the default values.
      */
     public PermissionsRequestChange() {
         super();
@@ -18,7 +18,7 @@ public class PermissionsRequestChange extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PermissionsRequestChange
+     * @return a {@link PermissionsRequestChange}
      */
     @jakarta.annotation.Nonnull
     public static PermissionsRequestChange createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class PermissionsRequestChange extends Entity implements Parsable {
     }
     /**
      * Gets the activeOccurrenceStatus property value. The status of the active occurence of the schedule if one exists. The possible values are: grantingFailed, granted, granting, revoked, revoking, revokingFailed, unknownFutureValue.
-     * @return a PermissionsRequestOccurrenceStatus
+     * @return a {@link PermissionsRequestOccurrenceStatus}
      */
     @jakarta.annotation.Nullable
     public PermissionsRequestOccurrenceStatus getActiveOccurrenceStatus() {
@@ -35,7 +35,7 @@ public class PermissionsRequestChange extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -49,7 +49,7 @@ public class PermissionsRequestChange extends Entity implements Parsable {
     }
     /**
      * Gets the modificationDateTime property value. Time when the change occurred.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getModificationDateTime() {
@@ -57,7 +57,7 @@ public class PermissionsRequestChange extends Entity implements Parsable {
     }
     /**
      * Gets the permissionsRequestId property value. The ID of the scheduledPermissionsRequest object.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPermissionsRequestId() {
@@ -65,7 +65,7 @@ public class PermissionsRequestChange extends Entity implements Parsable {
     }
     /**
      * Gets the statusDetail property value. The statusDetail property
-     * @return a StatusDetail
+     * @return a {@link StatusDetail}
      */
     @jakarta.annotation.Nullable
     public StatusDetail getStatusDetail() {
@@ -73,7 +73,7 @@ public class PermissionsRequestChange extends Entity implements Parsable {
     }
     /**
      * Gets the ticketId property value. Represents the ticketing system identifier.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTicketId() {

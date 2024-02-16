@@ -21,7 +21,7 @@ public class MobileAppIntentAndStateDetail implements AdditionalDataHolder, Back
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new MobileAppIntentAndStateDetail and sets the default values.
+     * Instantiates a new {@link MobileAppIntentAndStateDetail} and sets the default values.
      */
     public MobileAppIntentAndStateDetail() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -30,7 +30,7 @@ public class MobileAppIntentAndStateDetail implements AdditionalDataHolder, Back
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MobileAppIntentAndStateDetail
+     * @return a {@link MobileAppIntentAndStateDetail}
      */
     @jakarta.annotation.Nonnull
     public static MobileAppIntentAndStateDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class MobileAppIntentAndStateDetail implements AdditionalDataHolder, Back
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -52,7 +52,7 @@ public class MobileAppIntentAndStateDetail implements AdditionalDataHolder, Back
     }
     /**
      * Gets the applicationId property value. MobieApp identifier.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getApplicationId() {
@@ -60,7 +60,7 @@ public class MobileAppIntentAndStateDetail implements AdditionalDataHolder, Back
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -68,7 +68,7 @@ public class MobileAppIntentAndStateDetail implements AdditionalDataHolder, Back
     }
     /**
      * Gets the displayName property value. The admin provided or imported title of the app.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -76,7 +76,7 @@ public class MobileAppIntentAndStateDetail implements AdditionalDataHolder, Back
     }
     /**
      * Gets the displayVersion property value. Human readable version of the application
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayVersion() {
@@ -84,7 +84,7 @@ public class MobileAppIntentAndStateDetail implements AdditionalDataHolder, Back
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -100,7 +100,7 @@ public class MobileAppIntentAndStateDetail implements AdditionalDataHolder, Back
     }
     /**
      * Gets the installState property value. A list of possible states for application status on an individual device. When devices contact the Intune service and find targeted application enforcement intent, the status of the enforcement is recorded and becomes accessible in the Graph API. Since the application status is identified during device interaction with the Intune service, status records do not immediately appear upon application group assignment; it is created only after the assignment is evaluated in the service and devices start receiving the policy during check-ins.
-     * @return a ResultantAppState
+     * @return a {@link ResultantAppState}
      */
     @jakarta.annotation.Nullable
     public ResultantAppState getInstallState() {
@@ -108,7 +108,7 @@ public class MobileAppIntentAndStateDetail implements AdditionalDataHolder, Back
     }
     /**
      * Gets the mobileAppIntent property value. Indicates the status of the mobile app on the device.
-     * @return a MobileAppIntent
+     * @return a {@link MobileAppIntent}
      */
     @jakarta.annotation.Nullable
     public MobileAppIntent getMobileAppIntent() {
@@ -116,7 +116,7 @@ public class MobileAppIntentAndStateDetail implements AdditionalDataHolder, Back
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -124,7 +124,7 @@ public class MobileAppIntentAndStateDetail implements AdditionalDataHolder, Back
     }
     /**
      * Gets the supportedDeviceTypes property value. The supported platforms for the app.
-     * @return a java.util.List<MobileAppSupportedDeviceType>
+     * @return a {@link java.util.List<MobileAppSupportedDeviceType>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<MobileAppSupportedDeviceType> getSupportedDeviceTypes() {

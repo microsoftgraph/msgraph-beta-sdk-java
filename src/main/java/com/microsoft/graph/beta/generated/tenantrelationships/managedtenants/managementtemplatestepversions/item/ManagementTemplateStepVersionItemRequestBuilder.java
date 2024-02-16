@@ -25,6 +25,7 @@ import java.util.Objects;
 public class ManagementTemplateStepVersionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the acceptedFor property of the microsoft.graph.managedTenants.managementTemplateStepVersion entity.
+     * @return a {@link AcceptedForRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AcceptedForRequestBuilder acceptedFor() {
@@ -32,6 +33,7 @@ public class ManagementTemplateStepVersionItemRequestBuilder extends BaseRequest
     }
     /**
      * Provides operations to manage the deployments property of the microsoft.graph.managedTenants.managementTemplateStepVersion entity.
+     * @return a {@link DeploymentsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DeploymentsRequestBuilder deployments() {
@@ -39,13 +41,14 @@ public class ManagementTemplateStepVersionItemRequestBuilder extends BaseRequest
     }
     /**
      * Provides operations to manage the templateStep property of the microsoft.graph.managedTenants.managementTemplateStepVersion entity.
+     * @return a {@link TemplateStepRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TemplateStepRequestBuilder templateStep() {
         return new TemplateStepRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new ManagementTemplateStepVersionItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link ManagementTemplateStepVersionItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -53,7 +56,7 @@ public class ManagementTemplateStepVersionItemRequestBuilder extends BaseRequest
         super(requestAdapter, "{+baseurl}/tenantRelationships/managedTenants/managementTemplateStepVersions/{managementTemplateStepVersion%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new ManagementTemplateStepVersionItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link ManagementTemplateStepVersionItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -62,6 +65,7 @@ public class ManagementTemplateStepVersionItemRequestBuilder extends BaseRequest
     }
     /**
      * Delete navigation property managementTemplateStepVersions for tenantRelationships
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete() {
         delete(null);
@@ -69,17 +73,18 @@ public class ManagementTemplateStepVersionItemRequestBuilder extends BaseRequest
     /**
      * Delete navigation property managementTemplateStepVersions for tenantRelationships
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Get managementTemplateStepVersions from tenantRelationships
-     * @return a ManagementTemplateStepVersion
+     * @return a {@link ManagementTemplateStepVersion}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public ManagementTemplateStepVersion get() {
@@ -88,20 +93,21 @@ public class ManagementTemplateStepVersionItemRequestBuilder extends BaseRequest
     /**
      * Get managementTemplateStepVersions from tenantRelationships
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a ManagementTemplateStepVersion
+     * @return a {@link ManagementTemplateStepVersion}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public ManagementTemplateStepVersion get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, ManagementTemplateStepVersion::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property managementTemplateStepVersions in tenantRelationships
      * @param body The request body
-     * @return a ManagementTemplateStepVersion
+     * @return a {@link ManagementTemplateStepVersion}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public ManagementTemplateStepVersion patch(@jakarta.annotation.Nonnull final ManagementTemplateStepVersion body) {
@@ -111,20 +117,20 @@ public class ManagementTemplateStepVersionItemRequestBuilder extends BaseRequest
      * Update the navigation property managementTemplateStepVersions in tenantRelationships
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a ManagementTemplateStepVersion
+     * @return a {@link ManagementTemplateStepVersion}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public ManagementTemplateStepVersion patch(@jakarta.annotation.Nonnull final ManagementTemplateStepVersion body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, ManagementTemplateStepVersion::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property managementTemplateStepVersions for tenantRelationships
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -133,18 +139,18 @@ public class ManagementTemplateStepVersionItemRequestBuilder extends BaseRequest
     /**
      * Delete navigation property managementTemplateStepVersions for tenantRelationships
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/tenantRelationships/managedTenants/managementTemplateStepVersions/{managementTemplateStepVersion%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Get managementTemplateStepVersions from tenantRelationships
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -153,7 +159,7 @@ public class ManagementTemplateStepVersionItemRequestBuilder extends BaseRequest
     /**
      * Get managementTemplateStepVersions from tenantRelationships
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -165,7 +171,7 @@ public class ManagementTemplateStepVersionItemRequestBuilder extends BaseRequest
     /**
      * Update the navigation property managementTemplateStepVersions in tenantRelationships
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final ManagementTemplateStepVersion body) {
@@ -175,12 +181,12 @@ public class ManagementTemplateStepVersionItemRequestBuilder extends BaseRequest
      * Update the navigation property managementTemplateStepVersions in tenantRelationships
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final ManagementTemplateStepVersion body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/tenantRelationships/managedTenants/managementTemplateStepVersions/{managementTemplateStepVersion%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -189,7 +195,7 @@ public class ManagementTemplateStepVersionItemRequestBuilder extends BaseRequest
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a ManagementTemplateStepVersionItemRequestBuilder
+     * @return a {@link ManagementTemplateStepVersionItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ManagementTemplateStepVersionItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -219,7 +225,7 @@ public class ManagementTemplateStepVersionItemRequestBuilder extends BaseRequest
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

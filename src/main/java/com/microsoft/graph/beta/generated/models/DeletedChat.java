@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeletedChat extends Entity implements Parsable {
     /**
-     * Instantiates a new DeletedChat and sets the default values.
+     * Instantiates a new {@link DeletedChat} and sets the default values.
      */
     public DeletedChat() {
         super();
@@ -17,7 +17,7 @@ public class DeletedChat extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeletedChat
+     * @return a {@link DeletedChat}
      */
     @jakarta.annotation.Nonnull
     public static DeletedChat createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class DeletedChat extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

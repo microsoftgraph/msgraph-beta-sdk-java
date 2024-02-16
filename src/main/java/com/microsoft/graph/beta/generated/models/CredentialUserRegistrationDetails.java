@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CredentialUserRegistrationDetails extends Entity implements Parsable {
     /**
-     * Instantiates a new CredentialUserRegistrationDetails and sets the default values.
+     * Instantiates a new {@link CredentialUserRegistrationDetails} and sets the default values.
      */
     public CredentialUserRegistrationDetails() {
         super();
@@ -17,7 +17,7 @@ public class CredentialUserRegistrationDetails extends Entity implements Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CredentialUserRegistrationDetails
+     * @return a {@link CredentialUserRegistrationDetails}
      */
     @jakarta.annotation.Nonnull
     public static CredentialUserRegistrationDetails createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class CredentialUserRegistrationDetails extends Entity implements Parsabl
     }
     /**
      * Gets the authMethods property value. Represents the authentication method that the user has registered. Possible values are: email, mobilePhone, officePhone,  securityQuestion (only used for self-service password reset), appNotification,  appCode, alternateMobilePhone (supported only in registration),  fido,  appPassword,  unknownFutureValue.
-     * @return a java.util.List<RegistrationAuthMethod>
+     * @return a {@link java.util.List<RegistrationAuthMethod>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<RegistrationAuthMethod> getAuthMethods() {
@@ -34,7 +34,7 @@ public class CredentialUserRegistrationDetails extends Entity implements Parsabl
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -50,7 +50,7 @@ public class CredentialUserRegistrationDetails extends Entity implements Parsabl
     }
     /**
      * Gets the isCapable property value. Indicates whether the user is ready to perform self-service password reset or MFA.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsCapable() {
@@ -58,7 +58,7 @@ public class CredentialUserRegistrationDetails extends Entity implements Parsabl
     }
     /**
      * Gets the isEnabled property value. Indicates whether the user enabled to perform self-service password reset.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEnabled() {
@@ -66,7 +66,7 @@ public class CredentialUserRegistrationDetails extends Entity implements Parsabl
     }
     /**
      * Gets the isMfaRegistered property value. Indicates whether the user is registered for MFA.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsMfaRegistered() {
@@ -74,7 +74,7 @@ public class CredentialUserRegistrationDetails extends Entity implements Parsabl
     }
     /**
      * Gets the isRegistered property value. Indicates whether the user has registered any authentication methods for self-service password reset.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsRegistered() {
@@ -82,7 +82,7 @@ public class CredentialUserRegistrationDetails extends Entity implements Parsabl
     }
     /**
      * Gets the userDisplayName property value. Provides the user name of the corresponding user.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserDisplayName() {
@@ -90,7 +90,7 @@ public class CredentialUserRegistrationDetails extends Entity implements Parsabl
     }
     /**
      * Gets the userPrincipalName property value. Provides the user principal name of the corresponding user.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {

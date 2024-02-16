@@ -19,7 +19,7 @@ public class SubmissionAdminReview implements AdditionalDataHolder, BackedModel,
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new SubmissionAdminReview and sets the default values.
+     * Instantiates a new {@link SubmissionAdminReview} and sets the default values.
      */
     public SubmissionAdminReview() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class SubmissionAdminReview implements AdditionalDataHolder, BackedModel,
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SubmissionAdminReview
+     * @return a {@link SubmissionAdminReview}
      */
     @jakarta.annotation.Nonnull
     public static SubmissionAdminReview createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class SubmissionAdminReview implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -50,7 +50,7 @@ public class SubmissionAdminReview implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -58,7 +58,7 @@ public class SubmissionAdminReview implements AdditionalDataHolder, BackedModel,
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -71,7 +71,7 @@ public class SubmissionAdminReview implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -79,7 +79,7 @@ public class SubmissionAdminReview implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the reviewBy property value. Specifies who reviewed the email. The identification is an email ID or other identity strings.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getReviewBy() {
@@ -87,7 +87,7 @@ public class SubmissionAdminReview implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the reviewDateTime property value. Specifies the date time when the review occurred.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getReviewDateTime() {
@@ -95,7 +95,7 @@ public class SubmissionAdminReview implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the reviewResult property value. Specifies what the review result was. The possible values are: notJunk, spam, phishing, malware, allowedByPolicy, blockedByPolicy, spoof, unknown, noResultAvailable, and unknownFutureValue.
-     * @return a SubmissionResultCategory
+     * @return a {@link SubmissionResultCategory}
      */
     @jakarta.annotation.Nullable
     public SubmissionResultCategory getReviewResult() {

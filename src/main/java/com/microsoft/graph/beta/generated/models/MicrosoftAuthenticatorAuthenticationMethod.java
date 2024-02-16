@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMethod implements Parsable {
     /**
-     * Instantiates a new MicrosoftAuthenticatorAuthenticationMethod and sets the default values.
+     * Instantiates a new {@link MicrosoftAuthenticatorAuthenticationMethod} and sets the default values.
      */
     public MicrosoftAuthenticatorAuthenticationMethod() {
         super();
@@ -19,7 +19,7 @@ public class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMe
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MicrosoftAuthenticatorAuthenticationMethod
+     * @return a {@link MicrosoftAuthenticatorAuthenticationMethod}
      */
     @jakarta.annotation.Nonnull
     public static MicrosoftAuthenticatorAuthenticationMethod createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMe
     }
     /**
      * Gets the clientAppName property value. The app that the user has registered to use to approve push notifications. The possible values are: microsoftAuthenticator, outlookMobile, unknownFutureValue.
-     * @return a MicrosoftAuthenticatorAuthenticationMethodClientAppName
+     * @return a {@link MicrosoftAuthenticatorAuthenticationMethodClientAppName}
      */
     @jakarta.annotation.Nullable
     public MicrosoftAuthenticatorAuthenticationMethodClientAppName getClientAppName() {
@@ -36,7 +36,7 @@ public class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMe
     }
     /**
      * Gets the createdDateTime property value. The date and time that this app was registered. This property is null if the device is not registered for passwordless Phone Sign-In.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -44,7 +44,7 @@ public class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMe
     }
     /**
      * Gets the device property value. The registered device on which Microsoft Authenticator resides. This property is null if the device is not registered for passwordless Phone Sign-In.
-     * @return a Device
+     * @return a {@link Device}
      */
     @jakarta.annotation.Nullable
     public Device getDevice() {
@@ -52,7 +52,7 @@ public class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMe
     }
     /**
      * Gets the deviceTag property value. Tags containing app metadata.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceTag() {
@@ -60,7 +60,7 @@ public class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMe
     }
     /**
      * Gets the displayName property value. The name of the device on which this app is registered.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -68,7 +68,7 @@ public class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMe
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -83,7 +83,7 @@ public class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMe
     }
     /**
      * Gets the phoneAppVersion property value. Numerical version of this instance of the Authenticator app.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPhoneAppVersion() {

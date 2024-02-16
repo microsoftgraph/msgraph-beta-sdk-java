@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable {
     /**
-     * Instantiates a new MicrosoftStoreForBusinessApp and sets the default values.
+     * Instantiates a new {@link MicrosoftStoreForBusinessApp} and sets the default values.
      */
     public MicrosoftStoreForBusinessApp() {
         super();
@@ -21,7 +21,7 @@ public class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MicrosoftStoreForBusinessApp
+     * @return a {@link MicrosoftStoreForBusinessApp}
      */
     @jakarta.annotation.Nonnull
     public static MicrosoftStoreForBusinessApp createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable 
     }
     /**
      * Gets the containedApps property value. The collection of contained apps in a mobileApp acting as a package.
-     * @return a java.util.List<MobileContainedApp>
+     * @return a {@link java.util.List<MobileContainedApp>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<MobileContainedApp> getContainedApps() {
@@ -38,7 +38,7 @@ public class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable 
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -54,7 +54,7 @@ public class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable 
     }
     /**
      * Gets the licenseType property value. The licenseType property
-     * @return a MicrosoftStoreForBusinessLicenseType
+     * @return a {@link MicrosoftStoreForBusinessLicenseType}
      */
     @jakarta.annotation.Nullable
     public MicrosoftStoreForBusinessLicenseType getLicenseType() {
@@ -62,7 +62,7 @@ public class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable 
     }
     /**
      * Gets the licensingType property value. The supported License Type.
-     * @return a VppLicensingType
+     * @return a {@link VppLicensingType}
      */
     @jakarta.annotation.Nullable
     public VppLicensingType getLicensingType() {
@@ -70,7 +70,7 @@ public class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable 
     }
     /**
      * Gets the packageIdentityName property value. The app package identifier
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPackageIdentityName() {
@@ -78,7 +78,7 @@ public class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable 
     }
     /**
      * Gets the productKey property value. The app product key
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getProductKey() {
@@ -86,7 +86,7 @@ public class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable 
     }
     /**
      * Gets the totalLicenseCount property value. The total number of Microsoft Store for Business licenses.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getTotalLicenseCount() {
@@ -94,7 +94,7 @@ public class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable 
     }
     /**
      * Gets the usedLicenseCount property value. The number of Microsoft Store for Business licenses in use.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getUsedLicenseCount() {

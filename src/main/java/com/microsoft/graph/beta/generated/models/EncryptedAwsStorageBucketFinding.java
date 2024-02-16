@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EncryptedAwsStorageBucketFinding extends Finding implements Parsable {
     /**
-     * Instantiates a new EncryptedAwsStorageBucketFinding and sets the default values.
+     * Instantiates a new {@link EncryptedAwsStorageBucketFinding} and sets the default values.
      */
     public EncryptedAwsStorageBucketFinding() {
         super();
@@ -17,7 +17,7 @@ public class EncryptedAwsStorageBucketFinding extends Finding implements Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EncryptedAwsStorageBucketFinding
+     * @return a {@link EncryptedAwsStorageBucketFinding}
      */
     @jakarta.annotation.Nonnull
     public static EncryptedAwsStorageBucketFinding createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class EncryptedAwsStorageBucketFinding extends Finding implements Parsabl
     }
     /**
      * Gets the accessibility property value. The accessibility property
-     * @return a AwsAccessType
+     * @return a {@link AwsAccessType}
      */
     @jakarta.annotation.Nullable
     public AwsAccessType getAccessibility() {
@@ -34,7 +34,7 @@ public class EncryptedAwsStorageBucketFinding extends Finding implements Parsabl
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -45,7 +45,7 @@ public class EncryptedAwsStorageBucketFinding extends Finding implements Parsabl
     }
     /**
      * Gets the storageBucket property value. The storageBucket property
-     * @return a AuthorizationSystemResource
+     * @return a {@link AuthorizationSystemResource}
      */
     @jakarta.annotation.Nullable
     public AuthorizationSystemResource getStorageBucket() {

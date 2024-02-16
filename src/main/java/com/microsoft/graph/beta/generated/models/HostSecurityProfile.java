@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class HostSecurityProfile extends Entity implements Parsable {
     /**
-     * Instantiates a new HostSecurityProfile and sets the default values.
+     * Instantiates a new {@link HostSecurityProfile} and sets the default values.
      */
     public HostSecurityProfile() {
         super();
@@ -18,7 +18,7 @@ public class HostSecurityProfile extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a HostSecurityProfile
+     * @return a {@link HostSecurityProfile}
      */
     @jakarta.annotation.Nonnull
     public static HostSecurityProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class HostSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the azureSubscriptionId property value. The azureSubscriptionId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAzureSubscriptionId() {
@@ -35,7 +35,7 @@ public class HostSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the azureTenantId property value. The azureTenantId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAzureTenantId() {
@@ -43,7 +43,7 @@ public class HostSecurityProfile extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -70,7 +70,7 @@ public class HostSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the firstSeenDateTime property value. The firstSeenDateTime property
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getFirstSeenDateTime() {
@@ -78,7 +78,7 @@ public class HostSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the fqdn property value. The fqdn property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getFqdn() {
@@ -86,7 +86,7 @@ public class HostSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the isAzureAdJoined property value. The isAzureAdJoined property
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsAzureAdJoined() {
@@ -94,7 +94,7 @@ public class HostSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the isAzureAdRegistered property value. The isAzureAdRegistered property
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsAzureAdRegistered() {
@@ -102,7 +102,7 @@ public class HostSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the isHybridAzureDomainJoined property value. The isHybridAzureDomainJoined property
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsHybridAzureDomainJoined() {
@@ -110,7 +110,7 @@ public class HostSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the lastSeenDateTime property value. The lastSeenDateTime property
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastSeenDateTime() {
@@ -118,7 +118,7 @@ public class HostSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the logonUsers property value. The logonUsers property
-     * @return a java.util.List<LogonUser>
+     * @return a {@link java.util.List<LogonUser>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<LogonUser> getLogonUsers() {
@@ -126,7 +126,7 @@ public class HostSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the netBiosName property value. The netBiosName property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getNetBiosName() {
@@ -134,7 +134,7 @@ public class HostSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the networkInterfaces property value. The networkInterfaces property
-     * @return a java.util.List<NetworkInterface>
+     * @return a {@link java.util.List<NetworkInterface>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<NetworkInterface> getNetworkInterfaces() {
@@ -142,7 +142,7 @@ public class HostSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the os property value. The os property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOs() {
@@ -150,7 +150,7 @@ public class HostSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the osVersion property value. The osVersion property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOsVersion() {
@@ -158,7 +158,7 @@ public class HostSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the parentHost property value. The parentHost property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getParentHost() {
@@ -166,7 +166,7 @@ public class HostSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the relatedHostIds property value. The relatedHostIds property
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRelatedHostIds() {
@@ -174,7 +174,7 @@ public class HostSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the riskScore property value. The riskScore property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRiskScore() {
@@ -182,7 +182,7 @@ public class HostSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the tags property value. The tags property
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getTags() {
@@ -190,7 +190,7 @@ public class HostSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the vendorInformation property value. The vendorInformation property
-     * @return a SecurityVendorInformation
+     * @return a {@link SecurityVendorInformation}
      */
     @jakarta.annotation.Nullable
     public SecurityVendorInformation getVendorInformation() {

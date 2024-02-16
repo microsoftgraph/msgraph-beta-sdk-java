@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CallEvent extends Entity implements Parsable {
     /**
-     * Instantiates a new CallEvent and sets the default values.
+     * Instantiates a new {@link CallEvent} and sets the default values.
      */
     public CallEvent() {
         super();
@@ -18,7 +18,7 @@ public class CallEvent extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CallEvent
+     * @return a {@link CallEvent}
      */
     @jakarta.annotation.Nonnull
     public static CallEvent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class CallEvent extends Entity implements Parsable {
     }
     /**
      * Gets the callEventType property value. The callEventType property
-     * @return a CallEventType
+     * @return a {@link CallEventType}
      */
     @jakarta.annotation.Nullable
     public CallEventType getCallEventType() {
@@ -35,7 +35,7 @@ public class CallEvent extends Entity implements Parsable {
     }
     /**
      * Gets the eventDateTime property value. The eventDateTime property
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getEventDateTime() {
@@ -43,7 +43,7 @@ public class CallEvent extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -55,7 +55,7 @@ public class CallEvent extends Entity implements Parsable {
     }
     /**
      * Gets the participants property value. The participants property
-     * @return a java.util.List<Participant>
+     * @return a {@link java.util.List<Participant>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Participant> getParticipants() {

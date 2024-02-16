@@ -18,7 +18,7 @@ public class OnPremisesApplicationSegment implements AdditionalDataHolder, Backe
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new OnPremisesApplicationSegment and sets the default values.
+     * Instantiates a new {@link OnPremisesApplicationSegment} and sets the default values.
      */
     public OnPremisesApplicationSegment() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class OnPremisesApplicationSegment implements AdditionalDataHolder, Backe
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a OnPremisesApplicationSegment
+     * @return a {@link OnPremisesApplicationSegment}
      */
     @jakarta.annotation.Nonnull
     public static OnPremisesApplicationSegment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class OnPremisesApplicationSegment implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class OnPremisesApplicationSegment implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the alternateUrl property value. If you're configuring a traffic manager in front of multiple App Proxy application segments, contains the user-friendly URL that will point to the traffic manager.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAlternateUrl() {
@@ -57,7 +57,7 @@ public class OnPremisesApplicationSegment implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -65,7 +65,7 @@ public class OnPremisesApplicationSegment implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the corsConfigurations property value. CORS Rule definition for a particular application segment.
-     * @return a java.util.List<CorsConfiguration>
+     * @return a {@link java.util.List<CorsConfiguration>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<CorsConfiguration> getCorsConfigurations() {
@@ -73,7 +73,7 @@ public class OnPremisesApplicationSegment implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the externalUrl property value. The published external URL for the application segment; for example, https://intranet.contoso.com./
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getExternalUrl() {
@@ -81,7 +81,7 @@ public class OnPremisesApplicationSegment implements AdditionalDataHolder, Backe
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -95,7 +95,7 @@ public class OnPremisesApplicationSegment implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the internalUrl property value. The internal URL of the application segment; for example, https://intranet/.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getInternalUrl() {
@@ -103,7 +103,7 @@ public class OnPremisesApplicationSegment implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {

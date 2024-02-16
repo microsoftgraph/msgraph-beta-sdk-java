@@ -26,6 +26,7 @@ import java.util.Objects;
 public class WindowsAutopilotDeploymentProfilesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -33,6 +34,7 @@ public class WindowsAutopilotDeploymentProfilesRequestBuilder extends BaseReques
     }
     /**
      * Provides operations to call the hasPayloadLinks method.
+     * @return a {@link HasPayloadLinksRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public HasPayloadLinksRequestBuilder hasPayloadLinks() {
@@ -41,7 +43,7 @@ public class WindowsAutopilotDeploymentProfilesRequestBuilder extends BaseReques
     /**
      * Provides operations to manage the windowsAutopilotDeploymentProfiles property of the microsoft.graph.deviceManagement entity.
      * @param windowsAutopilotDeploymentProfileId The unique identifier of windowsAutopilotDeploymentProfile
-     * @return a WindowsAutopilotDeploymentProfileItemRequestBuilder
+     * @return a {@link WindowsAutopilotDeploymentProfileItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public WindowsAutopilotDeploymentProfileItemRequestBuilder byWindowsAutopilotDeploymentProfileId(@jakarta.annotation.Nonnull final String windowsAutopilotDeploymentProfileId) {
@@ -51,7 +53,7 @@ public class WindowsAutopilotDeploymentProfilesRequestBuilder extends BaseReques
         return new WindowsAutopilotDeploymentProfileItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new WindowsAutopilotDeploymentProfilesRequestBuilder and sets the default values.
+     * Instantiates a new {@link WindowsAutopilotDeploymentProfilesRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -59,7 +61,7 @@ public class WindowsAutopilotDeploymentProfilesRequestBuilder extends BaseReques
         super(requestAdapter, "{+baseurl}/deviceManagement/windowsAutopilotDeploymentProfiles{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new WindowsAutopilotDeploymentProfilesRequestBuilder and sets the default values.
+     * Instantiates a new {@link WindowsAutopilotDeploymentProfilesRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -68,7 +70,8 @@ public class WindowsAutopilotDeploymentProfilesRequestBuilder extends BaseReques
     }
     /**
      * Windows auto pilot deployment profiles
-     * @return a WindowsAutopilotDeploymentProfileCollectionResponse
+     * @return a {@link WindowsAutopilotDeploymentProfileCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public WindowsAutopilotDeploymentProfileCollectionResponse get() {
@@ -77,20 +80,21 @@ public class WindowsAutopilotDeploymentProfilesRequestBuilder extends BaseReques
     /**
      * Windows auto pilot deployment profiles
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a WindowsAutopilotDeploymentProfileCollectionResponse
+     * @return a {@link WindowsAutopilotDeploymentProfileCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public WindowsAutopilotDeploymentProfileCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, WindowsAutopilotDeploymentProfileCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to windowsAutopilotDeploymentProfiles for deviceManagement
      * @param body The request body
-     * @return a WindowsAutopilotDeploymentProfile
+     * @return a {@link WindowsAutopilotDeploymentProfile}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public WindowsAutopilotDeploymentProfile post(@jakarta.annotation.Nonnull final WindowsAutopilotDeploymentProfile body) {
@@ -100,20 +104,20 @@ public class WindowsAutopilotDeploymentProfilesRequestBuilder extends BaseReques
      * Create new navigation property to windowsAutopilotDeploymentProfiles for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a WindowsAutopilotDeploymentProfile
+     * @return a {@link WindowsAutopilotDeploymentProfile}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public WindowsAutopilotDeploymentProfile post(@jakarta.annotation.Nonnull final WindowsAutopilotDeploymentProfile body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, WindowsAutopilotDeploymentProfile::createFromDiscriminatorValue);
     }
     /**
      * Windows auto pilot deployment profiles
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -122,7 +126,7 @@ public class WindowsAutopilotDeploymentProfilesRequestBuilder extends BaseReques
     /**
      * Windows auto pilot deployment profiles
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -134,7 +138,7 @@ public class WindowsAutopilotDeploymentProfilesRequestBuilder extends BaseReques
     /**
      * Create new navigation property to windowsAutopilotDeploymentProfiles for deviceManagement
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final WindowsAutopilotDeploymentProfile body) {
@@ -144,12 +148,12 @@ public class WindowsAutopilotDeploymentProfilesRequestBuilder extends BaseReques
      * Create new navigation property to windowsAutopilotDeploymentProfiles for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final WindowsAutopilotDeploymentProfile body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/deviceManagement/windowsAutopilotDeploymentProfiles", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -158,7 +162,7 @@ public class WindowsAutopilotDeploymentProfilesRequestBuilder extends BaseReques
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a WindowsAutopilotDeploymentProfilesRequestBuilder
+     * @return a {@link WindowsAutopilotDeploymentProfilesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public WindowsAutopilotDeploymentProfilesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -212,7 +216,7 @@ public class WindowsAutopilotDeploymentProfilesRequestBuilder extends BaseReques
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

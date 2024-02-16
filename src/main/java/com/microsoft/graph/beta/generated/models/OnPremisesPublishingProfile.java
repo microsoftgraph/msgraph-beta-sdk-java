@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OnPremisesPublishingProfile extends Entity implements Parsable {
     /**
-     * Instantiates a new OnPremisesPublishingProfile and sets the default values.
+     * Instantiates a new {@link OnPremisesPublishingProfile} and sets the default values.
      */
     public OnPremisesPublishingProfile() {
         super();
@@ -17,7 +17,7 @@ public class OnPremisesPublishingProfile extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a OnPremisesPublishingProfile
+     * @return a {@link OnPremisesPublishingProfile}
      */
     @jakarta.annotation.Nonnull
     public static OnPremisesPublishingProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class OnPremisesPublishingProfile extends Entity implements Parsable {
     }
     /**
      * Gets the agentGroups property value. List of existing onPremisesAgentGroup objects. Read-only. Nullable.
-     * @return a java.util.List<OnPremisesAgentGroup>
+     * @return a {@link java.util.List<OnPremisesAgentGroup>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<OnPremisesAgentGroup> getAgentGroups() {
@@ -34,7 +34,7 @@ public class OnPremisesPublishingProfile extends Entity implements Parsable {
     }
     /**
      * Gets the agents property value. List of existing onPremisesAgent objects. Read-only. Nullable.
-     * @return a java.util.List<OnPremisesAgent>
+     * @return a {@link java.util.List<OnPremisesAgent>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<OnPremisesAgent> getAgents() {
@@ -42,7 +42,7 @@ public class OnPremisesPublishingProfile extends Entity implements Parsable {
     }
     /**
      * Gets the connectorGroups property value. List of existing connectorGroup objects for applications published through Application Proxy. Read-only. Nullable.
-     * @return a java.util.List<ConnectorGroup>
+     * @return a {@link java.util.List<ConnectorGroup>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ConnectorGroup> getConnectorGroups() {
@@ -50,7 +50,7 @@ public class OnPremisesPublishingProfile extends Entity implements Parsable {
     }
     /**
      * Gets the connectors property value. List of existing connector objects for applications published through Application Proxy. Read-only. Nullable.
-     * @return a java.util.List<Connector>
+     * @return a {@link java.util.List<Connector>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Connector> getConnectors() {
@@ -58,7 +58,7 @@ public class OnPremisesPublishingProfile extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -75,7 +75,7 @@ public class OnPremisesPublishingProfile extends Entity implements Parsable {
     }
     /**
      * Gets the hybridAgentUpdaterConfiguration property value. Represents a hybridAgentUpdaterConfiguration object.
-     * @return a HybridAgentUpdaterConfiguration
+     * @return a {@link HybridAgentUpdaterConfiguration}
      */
     @jakarta.annotation.Nullable
     public HybridAgentUpdaterConfiguration getHybridAgentUpdaterConfiguration() {
@@ -83,7 +83,7 @@ public class OnPremisesPublishingProfile extends Entity implements Parsable {
     }
     /**
      * Gets the isDefaultAccessEnabled property value. The isDefaultAccessEnabled property
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDefaultAccessEnabled() {
@@ -91,7 +91,7 @@ public class OnPremisesPublishingProfile extends Entity implements Parsable {
     }
     /**
      * Gets the isEnabled property value. Represents if Microsoft Entra application proxy is enabled for the tenant.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEnabled() {
@@ -99,7 +99,7 @@ public class OnPremisesPublishingProfile extends Entity implements Parsable {
     }
     /**
      * Gets the publishedResources property value. List of existing publishedResource objects. Read-only. Nullable.
-     * @return a java.util.List<PublishedResource>
+     * @return a {@link java.util.List<PublishedResource>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<PublishedResource> getPublishedResources() {

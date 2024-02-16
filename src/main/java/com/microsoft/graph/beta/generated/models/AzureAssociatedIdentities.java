@@ -18,7 +18,7 @@ public class AzureAssociatedIdentities implements AdditionalDataHolder, BackedMo
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new AzureAssociatedIdentities and sets the default values.
+     * Instantiates a new {@link AzureAssociatedIdentities} and sets the default values.
      */
     public AzureAssociatedIdentities() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class AzureAssociatedIdentities implements AdditionalDataHolder, BackedMo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AzureAssociatedIdentities
+     * @return a {@link AzureAssociatedIdentities}
      */
     @jakarta.annotation.Nonnull
     public static AzureAssociatedIdentities createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class AzureAssociatedIdentities implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class AzureAssociatedIdentities implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the all property value. The all property
-     * @return a java.util.List<AzureIdentity>
+     * @return a {@link java.util.List<AzureIdentity>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AzureIdentity> getAll() {
@@ -57,7 +57,7 @@ public class AzureAssociatedIdentities implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -65,7 +65,7 @@ public class AzureAssociatedIdentities implements AdditionalDataHolder, BackedMo
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -79,7 +79,7 @@ public class AzureAssociatedIdentities implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the managedIdentities property value. The managedIdentities property
-     * @return a java.util.List<AzureManagedIdentity>
+     * @return a {@link java.util.List<AzureManagedIdentity>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AzureManagedIdentity> getManagedIdentities() {
@@ -87,7 +87,7 @@ public class AzureAssociatedIdentities implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -95,7 +95,7 @@ public class AzureAssociatedIdentities implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the servicePrincipals property value. The servicePrincipals property
-     * @return a java.util.List<AzureServicePrincipal>
+     * @return a {@link java.util.List<AzureServicePrincipal>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AzureServicePrincipal> getServicePrincipals() {
@@ -103,7 +103,7 @@ public class AzureAssociatedIdentities implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the users property value. The users property
-     * @return a java.util.List<AzureUser>
+     * @return a {@link java.util.List<AzureUser>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AzureUser> getUsers() {

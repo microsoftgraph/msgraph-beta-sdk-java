@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PlannerTaskDetails extends PlannerDelta implements Parsable {
     /**
-     * Instantiates a new PlannerTaskDetails and sets the default values.
+     * Instantiates a new {@link PlannerTaskDetails} and sets the default values.
      */
     public PlannerTaskDetails() {
         super();
@@ -17,7 +17,7 @@ public class PlannerTaskDetails extends PlannerDelta implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PlannerTaskDetails
+     * @return a {@link PlannerTaskDetails}
      */
     @jakarta.annotation.Nonnull
     public static PlannerTaskDetails createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class PlannerTaskDetails extends PlannerDelta implements Parsable {
     }
     /**
      * Gets the approvalAttachment property value. The approvalAttachment property
-     * @return a PlannerBaseApprovalAttachment
+     * @return a {@link PlannerBaseApprovalAttachment}
      */
     @jakarta.annotation.Nullable
     public PlannerBaseApprovalAttachment getApprovalAttachment() {
@@ -34,7 +34,7 @@ public class PlannerTaskDetails extends PlannerDelta implements Parsable {
     }
     /**
      * Gets the checklist property value. The collection of checklist items on the task.
-     * @return a PlannerChecklistItems
+     * @return a {@link PlannerChecklistItems}
      */
     @jakarta.annotation.Nullable
     public PlannerChecklistItems getChecklist() {
@@ -42,7 +42,7 @@ public class PlannerTaskDetails extends PlannerDelta implements Parsable {
     }
     /**
      * Gets the completionRequirements property value. Contains detailed information about requirements on the task.
-     * @return a PlannerTaskCompletionRequirementDetails
+     * @return a {@link PlannerTaskCompletionRequirementDetails}
      */
     @jakarta.annotation.Nullable
     public PlannerTaskCompletionRequirementDetails getCompletionRequirements() {
@@ -50,7 +50,7 @@ public class PlannerTaskDetails extends PlannerDelta implements Parsable {
     }
     /**
      * Gets the description property value. Description of the task.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -58,7 +58,7 @@ public class PlannerTaskDetails extends PlannerDelta implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -75,7 +75,7 @@ public class PlannerTaskDetails extends PlannerDelta implements Parsable {
     }
     /**
      * Gets the forms property value. The forms property
-     * @return a PlannerFormsDictionary
+     * @return a {@link PlannerFormsDictionary}
      */
     @jakarta.annotation.Nullable
     public PlannerFormsDictionary getForms() {
@@ -83,7 +83,7 @@ public class PlannerTaskDetails extends PlannerDelta implements Parsable {
     }
     /**
      * Gets the notes property value. Rich text description of the task. To be used by HTML-aware clients. For backwards compatibility, a plain-text version of the HTML description will be synced to the 'description' field. If this field hasn't previously been set but 'description' has been, the existing description is synchronized to 'notes' with minimal whitespace-preserving HTML markup. Setting both 'description' and 'notes' is an error and will result in an exception.
-     * @return a ItemBody
+     * @return a {@link ItemBody}
      */
     @jakarta.annotation.Nullable
     public ItemBody getNotes() {
@@ -91,7 +91,7 @@ public class PlannerTaskDetails extends PlannerDelta implements Parsable {
     }
     /**
      * Gets the previewType property value. This sets the type of preview that shows up on the task. Possible values are: automatic, noPreview, checklist, description, reference. When set to automatic the displayed preview is chosen by the app viewing the task.
-     * @return a PlannerPreviewType
+     * @return a {@link PlannerPreviewType}
      */
     @jakarta.annotation.Nullable
     public PlannerPreviewType getPreviewType() {
@@ -99,7 +99,7 @@ public class PlannerTaskDetails extends PlannerDelta implements Parsable {
     }
     /**
      * Gets the references property value. The collection of references on the task.
-     * @return a PlannerExternalReferences
+     * @return a {@link PlannerExternalReferences}
      */
     @jakarta.annotation.Nullable
     public PlannerExternalReferences getReferences() {

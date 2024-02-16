@@ -18,7 +18,7 @@ public class CloudPcResizeValidationResult implements AdditionalDataHolder, Back
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new CloudPcResizeValidationResult and sets the default values.
+     * Instantiates a new {@link CloudPcResizeValidationResult} and sets the default values.
      */
     public CloudPcResizeValidationResult() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class CloudPcResizeValidationResult implements AdditionalDataHolder, Back
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CloudPcResizeValidationResult
+     * @return a {@link CloudPcResizeValidationResult}
      */
     @jakarta.annotation.Nonnull
     public static CloudPcResizeValidationResult createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class CloudPcResizeValidationResult implements AdditionalDataHolder, Back
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class CloudPcResizeValidationResult implements AdditionalDataHolder, Back
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class CloudPcResizeValidationResult implements AdditionalDataHolder, Back
     }
     /**
      * Gets the cloudPcId property value. The cloudPC ID that corresponds to its unique identifier.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCloudPcId() {
@@ -65,7 +65,7 @@ public class CloudPcResizeValidationResult implements AdditionalDataHolder, Back
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -77,7 +77,7 @@ public class CloudPcResizeValidationResult implements AdditionalDataHolder, Back
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -85,7 +85,7 @@ public class CloudPcResizeValidationResult implements AdditionalDataHolder, Back
     }
     /**
      * Gets the validationResult property value. Describes a list of the validation result for the Cloud PC resize action. The possible values are: success, cloudPcNotFound, operationCnflict, operationNotSupported, targetLicenseHasAssigned, internalServerError, and unknownFutureValue.
-     * @return a CloudPcResizeValidationCode
+     * @return a {@link CloudPcResizeValidationCode}
      */
     @jakarta.annotation.Nullable
     public CloudPcResizeValidationCode getValidationResult() {

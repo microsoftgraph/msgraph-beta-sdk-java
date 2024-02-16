@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EncryptedGcpStorageBucketFinding extends Finding implements Parsable {
     /**
-     * Instantiates a new EncryptedGcpStorageBucketFinding and sets the default values.
+     * Instantiates a new {@link EncryptedGcpStorageBucketFinding} and sets the default values.
      */
     public EncryptedGcpStorageBucketFinding() {
         super();
@@ -17,7 +17,7 @@ public class EncryptedGcpStorageBucketFinding extends Finding implements Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EncryptedGcpStorageBucketFinding
+     * @return a {@link EncryptedGcpStorageBucketFinding}
      */
     @jakarta.annotation.Nonnull
     public static EncryptedGcpStorageBucketFinding createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class EncryptedGcpStorageBucketFinding extends Finding implements Parsabl
     }
     /**
      * Gets the accessibility property value. The accessibility property
-     * @return a GcpAccessType
+     * @return a {@link GcpAccessType}
      */
     @jakarta.annotation.Nullable
     public GcpAccessType getAccessibility() {
@@ -34,7 +34,7 @@ public class EncryptedGcpStorageBucketFinding extends Finding implements Parsabl
     }
     /**
      * Gets the encryptionManagedBy property value. The encryptionManagedBy property
-     * @return a GcpEncryption
+     * @return a {@link GcpEncryption}
      */
     @jakarta.annotation.Nullable
     public GcpEncryption getEncryptionManagedBy() {
@@ -42,7 +42,7 @@ public class EncryptedGcpStorageBucketFinding extends Finding implements Parsabl
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -54,7 +54,7 @@ public class EncryptedGcpStorageBucketFinding extends Finding implements Parsabl
     }
     /**
      * Gets the storageBucket property value. The storageBucket property
-     * @return a AuthorizationSystemResource
+     * @return a {@link AuthorizationSystemResource}
      */
     @jakarta.annotation.Nullable
     public AuthorizationSystemResource getStorageBucket() {

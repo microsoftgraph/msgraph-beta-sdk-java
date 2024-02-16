@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IpSecurityProfile extends Entity implements Parsable {
     /**
-     * Instantiates a new IpSecurityProfile and sets the default values.
+     * Instantiates a new {@link IpSecurityProfile} and sets the default values.
      */
     public IpSecurityProfile() {
         super();
@@ -18,7 +18,7 @@ public class IpSecurityProfile extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a IpSecurityProfile
+     * @return a {@link IpSecurityProfile}
      */
     @jakarta.annotation.Nonnull
     public static IpSecurityProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class IpSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the activityGroupNames property value. The activityGroupNames property
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getActivityGroupNames() {
@@ -35,7 +35,7 @@ public class IpSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the address property value. The address property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAddress() {
@@ -43,7 +43,7 @@ public class IpSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the azureSubscriptionId property value. The azureSubscriptionId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAzureSubscriptionId() {
@@ -51,7 +51,7 @@ public class IpSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the azureTenantId property value. The azureTenantId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAzureTenantId() {
@@ -59,7 +59,7 @@ public class IpSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the countHits property value. The countHits property
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getCountHits() {
@@ -67,7 +67,7 @@ public class IpSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the countHosts property value. The countHosts property
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getCountHosts() {
@@ -75,7 +75,7 @@ public class IpSecurityProfile extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -97,7 +97,7 @@ public class IpSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the firstSeenDateTime property value. The firstSeenDateTime property
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getFirstSeenDateTime() {
@@ -105,7 +105,7 @@ public class IpSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the ipCategories property value. The ipCategories property
-     * @return a java.util.List<IpCategory>
+     * @return a {@link java.util.List<IpCategory>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<IpCategory> getIpCategories() {
@@ -113,7 +113,7 @@ public class IpSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the ipReferenceData property value. The ipReferenceData property
-     * @return a java.util.List<IpReferenceData>
+     * @return a {@link java.util.List<IpReferenceData>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<IpReferenceData> getIpReferenceData() {
@@ -121,7 +121,7 @@ public class IpSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the lastSeenDateTime property value. The lastSeenDateTime property
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastSeenDateTime() {
@@ -129,7 +129,7 @@ public class IpSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the riskScore property value. The riskScore property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRiskScore() {
@@ -137,7 +137,7 @@ public class IpSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the tags property value. The tags property
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getTags() {
@@ -145,7 +145,7 @@ public class IpSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the vendorInformation property value. The vendorInformation property
-     * @return a SecurityVendorInformation
+     * @return a {@link SecurityVendorInformation}
      */
     @jakarta.annotation.Nullable
     public SecurityVendorInformation getVendorInformation() {

@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CaseEscaped extends Entity implements Parsable {
     /**
-     * Instantiates a new CaseEscaped and sets the default values.
+     * Instantiates a new {@link CaseEscaped} and sets the default values.
      */
     public CaseEscaped() {
         super();
@@ -20,7 +20,7 @@ public class CaseEscaped extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CaseEscaped
+     * @return a {@link CaseEscaped}
      */
     @jakarta.annotation.Nonnull
     public static CaseEscaped createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -29,7 +29,7 @@ public class CaseEscaped extends Entity implements Parsable {
     }
     /**
      * Gets the closedBy property value. The user who closed the case.
-     * @return a IdentitySet
+     * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
     public IdentitySet getClosedBy() {
@@ -37,7 +37,7 @@ public class CaseEscaped extends Entity implements Parsable {
     }
     /**
      * Gets the closedDateTime property value. The date and time when the case was closed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getClosedDateTime() {
@@ -45,7 +45,7 @@ public class CaseEscaped extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. The date and time when the entity was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -53,7 +53,7 @@ public class CaseEscaped extends Entity implements Parsable {
     }
     /**
      * Gets the custodians property value. Returns a list of case custodian objects for this case.  Nullable.
-     * @return a java.util.List<Custodian>
+     * @return a {@link java.util.List<Custodian>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Custodian> getCustodians() {
@@ -61,7 +61,7 @@ public class CaseEscaped extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The case description.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -69,7 +69,7 @@ public class CaseEscaped extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The case name.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -77,7 +77,7 @@ public class CaseEscaped extends Entity implements Parsable {
     }
     /**
      * Gets the externalId property value. The external case number for customer reference.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getExternalId() {
@@ -85,7 +85,7 @@ public class CaseEscaped extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -111,7 +111,7 @@ public class CaseEscaped extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedBy property value. The last user who modified the entity.
-     * @return a IdentitySet
+     * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
     public IdentitySet getLastModifiedBy() {
@@ -119,7 +119,7 @@ public class CaseEscaped extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. The latest date and time when the case was modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -127,7 +127,7 @@ public class CaseEscaped extends Entity implements Parsable {
     }
     /**
      * Gets the legalHolds property value. Returns a list of case legalHold objects for this case.  Nullable.
-     * @return a java.util.List<LegalHold>
+     * @return a {@link java.util.List<LegalHold>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<LegalHold> getLegalHolds() {
@@ -135,7 +135,7 @@ public class CaseEscaped extends Entity implements Parsable {
     }
     /**
      * Gets the noncustodialDataSources property value. Returns a list of case noncustodialDataSource objects for this case.  Nullable.
-     * @return a java.util.List<NoncustodialDataSource>
+     * @return a {@link java.util.List<NoncustodialDataSource>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<NoncustodialDataSource> getNoncustodialDataSources() {
@@ -143,7 +143,7 @@ public class CaseEscaped extends Entity implements Parsable {
     }
     /**
      * Gets the operations property value. Returns a list of case operation objects for this case. Nullable.
-     * @return a java.util.List<CaseOperation>
+     * @return a {@link java.util.List<CaseOperation>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<CaseOperation> getOperations() {
@@ -151,7 +151,7 @@ public class CaseEscaped extends Entity implements Parsable {
     }
     /**
      * Gets the reviewSets property value. Returns a list of reviewSet objects in the case. Read-only. Nullable.
-     * @return a java.util.List<ReviewSet>
+     * @return a {@link java.util.List<ReviewSet>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ReviewSet> getReviewSets() {
@@ -159,7 +159,7 @@ public class CaseEscaped extends Entity implements Parsable {
     }
     /**
      * Gets the settings property value. The settings property
-     * @return a CaseSettings
+     * @return a {@link CaseSettings}
      */
     @jakarta.annotation.Nullable
     public CaseSettings getSettings() {
@@ -167,7 +167,7 @@ public class CaseEscaped extends Entity implements Parsable {
     }
     /**
      * Gets the sourceCollections property value. Returns a list of sourceCollection objects associated with this case.
-     * @return a java.util.List<SourceCollection>
+     * @return a {@link java.util.List<SourceCollection>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<SourceCollection> getSourceCollections() {
@@ -175,7 +175,7 @@ public class CaseEscaped extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The case status. Possible values are unknown, active, pendingDelete, closing, closed, and closedWithError. For details, see the following table.
-     * @return a CaseStatus
+     * @return a {@link CaseStatus}
      */
     @jakarta.annotation.Nullable
     public CaseStatus getStatus() {
@@ -183,7 +183,7 @@ public class CaseEscaped extends Entity implements Parsable {
     }
     /**
      * Gets the tags property value. Returns a list of tag objects associated to this case.
-     * @return a java.util.List<Tag>
+     * @return a {@link java.util.List<Tag>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Tag> getTags() {

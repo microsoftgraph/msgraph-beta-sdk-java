@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WebPartCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * Instantiates a new WebPartCollectionResponse and sets the default values.
+     * Instantiates a new {@link WebPartCollectionResponse} and sets the default values.
      */
     public WebPartCollectionResponse() {
         super();
@@ -17,7 +17,7 @@ public class WebPartCollectionResponse extends BaseCollectionPaginationCountResp
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WebPartCollectionResponse
+     * @return a {@link WebPartCollectionResponse}
      */
     @jakarta.annotation.Nonnull
     public static WebPartCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class WebPartCollectionResponse extends BaseCollectionPaginationCountResp
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -36,7 +36,7 @@ public class WebPartCollectionResponse extends BaseCollectionPaginationCountResp
     }
     /**
      * Gets the value property value. The value property
-     * @return a java.util.List<WebPart>
+     * @return a {@link java.util.List<WebPart>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<WebPart> getValue() {

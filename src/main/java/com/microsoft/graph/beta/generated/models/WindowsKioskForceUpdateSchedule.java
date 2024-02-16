@@ -22,7 +22,7 @@ public class WindowsKioskForceUpdateSchedule implements AdditionalDataHolder, Ba
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new WindowsKioskForceUpdateSchedule and sets the default values.
+     * Instantiates a new {@link WindowsKioskForceUpdateSchedule} and sets the default values.
      */
     public WindowsKioskForceUpdateSchedule() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -31,7 +31,7 @@ public class WindowsKioskForceUpdateSchedule implements AdditionalDataHolder, Ba
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WindowsKioskForceUpdateSchedule
+     * @return a {@link WindowsKioskForceUpdateSchedule}
      */
     @jakarta.annotation.Nonnull
     public static WindowsKioskForceUpdateSchedule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class WindowsKioskForceUpdateSchedule implements AdditionalDataHolder, Ba
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -53,7 +53,7 @@ public class WindowsKioskForceUpdateSchedule implements AdditionalDataHolder, Ba
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -61,7 +61,7 @@ public class WindowsKioskForceUpdateSchedule implements AdditionalDataHolder, Ba
     }
     /**
      * Gets the dayofMonth property value. Day of month. Valid values 1 to 31
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getDayofMonth() {
@@ -69,7 +69,7 @@ public class WindowsKioskForceUpdateSchedule implements AdditionalDataHolder, Ba
     }
     /**
      * Gets the dayofWeek property value. The dayofWeek property
-     * @return a DayOfWeek
+     * @return a {@link DayOfWeek}
      */
     @jakarta.annotation.Nullable
     public DayOfWeek getDayofWeek() {
@@ -77,7 +77,7 @@ public class WindowsKioskForceUpdateSchedule implements AdditionalDataHolder, Ba
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -92,7 +92,7 @@ public class WindowsKioskForceUpdateSchedule implements AdditionalDataHolder, Ba
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -100,7 +100,7 @@ public class WindowsKioskForceUpdateSchedule implements AdditionalDataHolder, Ba
     }
     /**
      * Gets the recurrence property value. Possible values for App update on Windows10 recurrence.
-     * @return a Windows10AppsUpdateRecurrence
+     * @return a {@link Windows10AppsUpdateRecurrence}
      */
     @jakarta.annotation.Nullable
     public Windows10AppsUpdateRecurrence getRecurrence() {
@@ -108,7 +108,7 @@ public class WindowsKioskForceUpdateSchedule implements AdditionalDataHolder, Ba
     }
     /**
      * Gets the runImmediatelyIfAfterStartDateTime property value. If true, runs the task immediately if StartDateTime is in the past, else, runs at the next recurrence.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getRunImmediatelyIfAfterStartDateTime() {
@@ -116,7 +116,7 @@ public class WindowsKioskForceUpdateSchedule implements AdditionalDataHolder, Ba
     }
     /**
      * Gets the startDateTime property value. The start time for the force restart.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getStartDateTime() {

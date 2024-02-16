@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsUpdateState extends Entity implements Parsable {
     /**
-     * Instantiates a new WindowsUpdateState and sets the default values.
+     * Instantiates a new {@link WindowsUpdateState} and sets the default values.
      */
     public WindowsUpdateState() {
         super();
@@ -18,7 +18,7 @@ public class WindowsUpdateState extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WindowsUpdateState
+     * @return a {@link WindowsUpdateState}
      */
     @jakarta.annotation.Nonnull
     public static WindowsUpdateState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class WindowsUpdateState extends Entity implements Parsable {
     }
     /**
      * Gets the deviceDisplayName property value. Device display name.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceDisplayName() {
@@ -35,7 +35,7 @@ public class WindowsUpdateState extends Entity implements Parsable {
     }
     /**
      * Gets the deviceId property value. The id of the device.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceId() {
@@ -43,7 +43,7 @@ public class WindowsUpdateState extends Entity implements Parsable {
     }
     /**
      * Gets the featureUpdateVersion property value. The current feature update version of the device.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getFeatureUpdateVersion() {
@@ -51,7 +51,7 @@ public class WindowsUpdateState extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -69,7 +69,7 @@ public class WindowsUpdateState extends Entity implements Parsable {
     }
     /**
      * Gets the lastScanDateTime property value. The date time that the Windows Update Agent did a successful scan.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastScanDateTime() {
@@ -77,7 +77,7 @@ public class WindowsUpdateState extends Entity implements Parsable {
     }
     /**
      * Gets the lastSyncDateTime property value. Last date time that the device sync with with Microsoft Intune.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastSyncDateTime() {
@@ -85,7 +85,7 @@ public class WindowsUpdateState extends Entity implements Parsable {
     }
     /**
      * Gets the qualityUpdateVersion property value. The Quality Update Version of the device.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getQualityUpdateVersion() {
@@ -93,7 +93,7 @@ public class WindowsUpdateState extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. Windows update for business configuration device states
-     * @return a WindowsUpdateStatus
+     * @return a {@link WindowsUpdateStatus}
      */
     @jakarta.annotation.Nullable
     public WindowsUpdateStatus getStatus() {
@@ -101,7 +101,7 @@ public class WindowsUpdateState extends Entity implements Parsable {
     }
     /**
      * Gets the userId property value. The id of the user.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
@@ -109,7 +109,7 @@ public class WindowsUpdateState extends Entity implements Parsable {
     }
     /**
      * Gets the userPrincipalName property value. User principal name.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {

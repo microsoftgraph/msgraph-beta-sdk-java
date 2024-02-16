@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EnrollmentProfileCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * Instantiates a new EnrollmentProfileCollectionResponse and sets the default values.
+     * Instantiates a new {@link EnrollmentProfileCollectionResponse} and sets the default values.
      */
     public EnrollmentProfileCollectionResponse() {
         super();
@@ -17,7 +17,7 @@ public class EnrollmentProfileCollectionResponse extends BaseCollectionPaginatio
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EnrollmentProfileCollectionResponse
+     * @return a {@link EnrollmentProfileCollectionResponse}
      */
     @jakarta.annotation.Nonnull
     public static EnrollmentProfileCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class EnrollmentProfileCollectionResponse extends BaseCollectionPaginatio
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -36,7 +36,7 @@ public class EnrollmentProfileCollectionResponse extends BaseCollectionPaginatio
     }
     /**
      * Gets the value property value. The value property
-     * @return a java.util.List<EnrollmentProfile>
+     * @return a {@link java.util.List<EnrollmentProfile>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<EnrollmentProfile> getValue() {

@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Windows81CertificateProfileBase extends WindowsCertificateProfileBase implements Parsable {
     /**
-     * Instantiates a new Windows81CertificateProfileBase and sets the default values.
+     * Instantiates a new {@link Windows81CertificateProfileBase} and sets the default values.
      */
     public Windows81CertificateProfileBase() {
         super();
@@ -21,7 +21,7 @@ public class Windows81CertificateProfileBase extends WindowsCertificateProfileBa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Windows81CertificateProfileBase
+     * @return a {@link Windows81CertificateProfileBase}
      */
     @jakarta.annotation.Nonnull
     public static Windows81CertificateProfileBase createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class Windows81CertificateProfileBase extends WindowsCertificateProfileBa
     }
     /**
      * Gets the customSubjectAlternativeNames property value. Custom Subject Alternative Name Settings. This collection can contain a maximum of 500 elements.
-     * @return a java.util.List<CustomSubjectAlternativeName>
+     * @return a {@link java.util.List<CustomSubjectAlternativeName>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<CustomSubjectAlternativeName> getCustomSubjectAlternativeNames() {
@@ -45,7 +45,7 @@ public class Windows81CertificateProfileBase extends WindowsCertificateProfileBa
     }
     /**
      * Gets the extendedKeyUsages property value. Extended Key Usage (EKU) settings. This collection can contain a maximum of 500 elements.
-     * @return a java.util.List<ExtendedKeyUsage>
+     * @return a {@link java.util.List<ExtendedKeyUsage>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ExtendedKeyUsage> getExtendedKeyUsages() {
@@ -53,7 +53,7 @@ public class Windows81CertificateProfileBase extends WindowsCertificateProfileBa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

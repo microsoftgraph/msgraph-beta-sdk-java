@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MultiTenantOrganizationPartnerConfigurationTemplate extends Entity implements Parsable {
     /**
-     * Instantiates a new MultiTenantOrganizationPartnerConfigurationTemplate and sets the default values.
+     * Instantiates a new {@link MultiTenantOrganizationPartnerConfigurationTemplate} and sets the default values.
      */
     public MultiTenantOrganizationPartnerConfigurationTemplate() {
         super();
@@ -18,7 +18,7 @@ public class MultiTenantOrganizationPartnerConfigurationTemplate extends Entity 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MultiTenantOrganizationPartnerConfigurationTemplate
+     * @return a {@link MultiTenantOrganizationPartnerConfigurationTemplate}
      */
     @jakarta.annotation.Nonnull
     public static MultiTenantOrganizationPartnerConfigurationTemplate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class MultiTenantOrganizationPartnerConfigurationTemplate extends Entity 
     }
     /**
      * Gets the automaticUserConsentSettings property value. Determines the partner-specific configuration for automatic user consent settings. Unless configured, the inboundAllowed and outboundAllowed properties are null and inherit from the default settings, which is always false.
-     * @return a InboundOutboundPolicyConfiguration
+     * @return a {@link InboundOutboundPolicyConfiguration}
      */
     @jakarta.annotation.Nullable
     public InboundOutboundPolicyConfiguration getAutomaticUserConsentSettings() {
@@ -35,7 +35,7 @@ public class MultiTenantOrganizationPartnerConfigurationTemplate extends Entity 
     }
     /**
      * Gets the b2bCollaborationInbound property value. Defines your partner-specific configuration for users from other organizations accessing your resources via Microsoft Entra B2B collaboration.
-     * @return a CrossTenantAccessPolicyB2BSetting
+     * @return a {@link CrossTenantAccessPolicyB2BSetting}
      */
     @jakarta.annotation.Nullable
     public CrossTenantAccessPolicyB2BSetting getB2bCollaborationInbound() {
@@ -43,7 +43,7 @@ public class MultiTenantOrganizationPartnerConfigurationTemplate extends Entity 
     }
     /**
      * Gets the b2bCollaborationOutbound property value. Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Microsoft Entra B2B collaboration.
-     * @return a CrossTenantAccessPolicyB2BSetting
+     * @return a {@link CrossTenantAccessPolicyB2BSetting}
      */
     @jakarta.annotation.Nullable
     public CrossTenantAccessPolicyB2BSetting getB2bCollaborationOutbound() {
@@ -51,7 +51,7 @@ public class MultiTenantOrganizationPartnerConfigurationTemplate extends Entity 
     }
     /**
      * Gets the b2bDirectConnectInbound property value. Defines your partner-specific configuration for users from other organizations accessing your resources via Azure B2B direct connect.
-     * @return a CrossTenantAccessPolicyB2BSetting
+     * @return a {@link CrossTenantAccessPolicyB2BSetting}
      */
     @jakarta.annotation.Nullable
     public CrossTenantAccessPolicyB2BSetting getB2bDirectConnectInbound() {
@@ -59,7 +59,7 @@ public class MultiTenantOrganizationPartnerConfigurationTemplate extends Entity 
     }
     /**
      * Gets the b2bDirectConnectOutbound property value. Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Microsoft Entra B2B direct connect.
-     * @return a CrossTenantAccessPolicyB2BSetting
+     * @return a {@link CrossTenantAccessPolicyB2BSetting}
      */
     @jakarta.annotation.Nullable
     public CrossTenantAccessPolicyB2BSetting getB2bDirectConnectOutbound() {
@@ -67,7 +67,7 @@ public class MultiTenantOrganizationPartnerConfigurationTemplate extends Entity 
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -83,7 +83,7 @@ public class MultiTenantOrganizationPartnerConfigurationTemplate extends Entity 
     }
     /**
      * Gets the inboundTrust property value. Determines the partner-specific configuration for trusting other Conditional Access claims from external Microsoft Entra organizations.
-     * @return a CrossTenantAccessPolicyInboundTrust
+     * @return a {@link CrossTenantAccessPolicyInboundTrust}
      */
     @jakarta.annotation.Nullable
     public CrossTenantAccessPolicyInboundTrust getInboundTrust() {
@@ -91,7 +91,7 @@ public class MultiTenantOrganizationPartnerConfigurationTemplate extends Entity 
     }
     /**
      * Gets the templateApplicationLevel property value. The templateApplicationLevel property
-     * @return a EnumSet<TemplateApplicationLevel>
+     * @return a {@link EnumSet<TemplateApplicationLevel>}
      */
     @jakarta.annotation.Nullable
     public EnumSet<TemplateApplicationLevel> getTemplateApplicationLevel() {

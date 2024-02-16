@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IosUpdateDeviceStatus extends Entity implements Parsable {
     /**
-     * Instantiates a new IosUpdateDeviceStatus and sets the default values.
+     * Instantiates a new {@link IosUpdateDeviceStatus} and sets the default values.
      */
     public IosUpdateDeviceStatus() {
         super();
@@ -18,7 +18,7 @@ public class IosUpdateDeviceStatus extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a IosUpdateDeviceStatus
+     * @return a {@link IosUpdateDeviceStatus}
      */
     @jakarta.annotation.Nonnull
     public static IosUpdateDeviceStatus createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class IosUpdateDeviceStatus extends Entity implements Parsable {
     }
     /**
      * Gets the complianceGracePeriodExpirationDateTime property value. The DateTime when device compliance grace period expires
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getComplianceGracePeriodExpirationDateTime() {
@@ -35,7 +35,7 @@ public class IosUpdateDeviceStatus extends Entity implements Parsable {
     }
     /**
      * Gets the deviceDisplayName property value. Device name of the DevicePolicyStatus.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceDisplayName() {
@@ -43,7 +43,7 @@ public class IosUpdateDeviceStatus extends Entity implements Parsable {
     }
     /**
      * Gets the deviceId property value. The device id that is being reported.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceId() {
@@ -51,7 +51,7 @@ public class IosUpdateDeviceStatus extends Entity implements Parsable {
     }
     /**
      * Gets the deviceModel property value. The device model that is being reported
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceModel() {
@@ -59,7 +59,7 @@ public class IosUpdateDeviceStatus extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -80,7 +80,7 @@ public class IosUpdateDeviceStatus extends Entity implements Parsable {
     }
     /**
      * Gets the installStatus property value. The installStatus property
-     * @return a IosUpdatesInstallStatus
+     * @return a {@link IosUpdatesInstallStatus}
      */
     @jakarta.annotation.Nullable
     public IosUpdatesInstallStatus getInstallStatus() {
@@ -88,7 +88,7 @@ public class IosUpdateDeviceStatus extends Entity implements Parsable {
     }
     /**
      * Gets the lastReportedDateTime property value. Last modified date time of the policy report.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastReportedDateTime() {
@@ -96,7 +96,7 @@ public class IosUpdateDeviceStatus extends Entity implements Parsable {
     }
     /**
      * Gets the osVersion property value. The device version that is being reported.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOsVersion() {
@@ -104,7 +104,7 @@ public class IosUpdateDeviceStatus extends Entity implements Parsable {
     }
     /**
      * Gets the platform property value. Platform of the device that is being reported
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPlatform() {
@@ -112,7 +112,7 @@ public class IosUpdateDeviceStatus extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status property
-     * @return a ComplianceStatus
+     * @return a {@link ComplianceStatus}
      */
     @jakarta.annotation.Nullable
     public ComplianceStatus getStatus() {
@@ -120,7 +120,7 @@ public class IosUpdateDeviceStatus extends Entity implements Parsable {
     }
     /**
      * Gets the userId property value. The User id that is being reported.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
@@ -128,7 +128,7 @@ public class IosUpdateDeviceStatus extends Entity implements Parsable {
     }
     /**
      * Gets the userName property value. The User Name that is being reported
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserName() {
@@ -136,7 +136,7 @@ public class IosUpdateDeviceStatus extends Entity implements Parsable {
     }
     /**
      * Gets the userPrincipalName property value. UserPrincipalName.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {

@@ -11,7 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagementTemplateCollectionTenantSummary extends Entity implements Parsable {
     /**
-     * Instantiates a new ManagementTemplateCollectionTenantSummary and sets the default values.
+     * Instantiates a new {@link ManagementTemplateCollectionTenantSummary} and sets the default values.
      */
     public ManagementTemplateCollectionTenantSummary() {
         super();
@@ -19,7 +19,7 @@ public class ManagementTemplateCollectionTenantSummary extends Entity implements
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ManagementTemplateCollectionTenantSummary
+     * @return a {@link ManagementTemplateCollectionTenantSummary}
      */
     @jakarta.annotation.Nonnull
     public static ManagementTemplateCollectionTenantSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class ManagementTemplateCollectionTenantSummary extends Entity implements
     }
     /**
      * Gets the completeStepsCount property value. The completeStepsCount property
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getCompleteStepsCount() {
@@ -36,7 +36,7 @@ public class ManagementTemplateCollectionTenantSummary extends Entity implements
     }
     /**
      * Gets the completeUsersCount property value. The completeUsersCount property
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getCompleteUsersCount() {
@@ -44,7 +44,7 @@ public class ManagementTemplateCollectionTenantSummary extends Entity implements
     }
     /**
      * Gets the createdByUserId property value. The createdByUserId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCreatedByUserId() {
@@ -52,7 +52,7 @@ public class ManagementTemplateCollectionTenantSummary extends Entity implements
     }
     /**
      * Gets the createdDateTime property value. The createdDateTime property
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -60,7 +60,7 @@ public class ManagementTemplateCollectionTenantSummary extends Entity implements
     }
     /**
      * Gets the dismissedStepsCount property value. The dismissedStepsCount property
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getDismissedStepsCount() {
@@ -68,7 +68,7 @@ public class ManagementTemplateCollectionTenantSummary extends Entity implements
     }
     /**
      * Gets the excludedUsersCount property value. The excludedUsersCount property
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getExcludedUsersCount() {
@@ -76,7 +76,7 @@ public class ManagementTemplateCollectionTenantSummary extends Entity implements
     }
     /**
      * Gets the excludedUsersDistinctCount property value. The excludedUsersDistinctCount property
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getExcludedUsersDistinctCount() {
@@ -84,7 +84,7 @@ public class ManagementTemplateCollectionTenantSummary extends Entity implements
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -112,7 +112,7 @@ public class ManagementTemplateCollectionTenantSummary extends Entity implements
     }
     /**
      * Gets the incompleteStepsCount property value. The incompleteStepsCount property
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getIncompleteStepsCount() {
@@ -120,7 +120,7 @@ public class ManagementTemplateCollectionTenantSummary extends Entity implements
     }
     /**
      * Gets the incompleteUsersCount property value. The incompleteUsersCount property
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getIncompleteUsersCount() {
@@ -128,7 +128,7 @@ public class ManagementTemplateCollectionTenantSummary extends Entity implements
     }
     /**
      * Gets the ineligibleStepsCount property value. The ineligibleStepsCount property
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getIneligibleStepsCount() {
@@ -136,7 +136,7 @@ public class ManagementTemplateCollectionTenantSummary extends Entity implements
     }
     /**
      * Gets the isComplete property value. The isComplete property
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsComplete() {
@@ -144,7 +144,7 @@ public class ManagementTemplateCollectionTenantSummary extends Entity implements
     }
     /**
      * Gets the lastActionByUserId property value. The lastActionByUserId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getLastActionByUserId() {
@@ -152,7 +152,7 @@ public class ManagementTemplateCollectionTenantSummary extends Entity implements
     }
     /**
      * Gets the lastActionDateTime property value. The lastActionDateTime property
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastActionDateTime() {
@@ -160,7 +160,7 @@ public class ManagementTemplateCollectionTenantSummary extends Entity implements
     }
     /**
      * Gets the managementTemplateCollectionDisplayName property value. The managementTemplateCollectionDisplayName property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getManagementTemplateCollectionDisplayName() {
@@ -168,7 +168,7 @@ public class ManagementTemplateCollectionTenantSummary extends Entity implements
     }
     /**
      * Gets the managementTemplateCollectionId property value. The managementTemplateCollectionId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getManagementTemplateCollectionId() {
@@ -176,7 +176,7 @@ public class ManagementTemplateCollectionTenantSummary extends Entity implements
     }
     /**
      * Gets the regressedStepsCount property value. The regressedStepsCount property
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getRegressedStepsCount() {
@@ -184,7 +184,7 @@ public class ManagementTemplateCollectionTenantSummary extends Entity implements
     }
     /**
      * Gets the regressedUsersCount property value. The regressedUsersCount property
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getRegressedUsersCount() {
@@ -192,7 +192,7 @@ public class ManagementTemplateCollectionTenantSummary extends Entity implements
     }
     /**
      * Gets the tenantId property value. The tenantId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
@@ -200,7 +200,7 @@ public class ManagementTemplateCollectionTenantSummary extends Entity implements
     }
     /**
      * Gets the unlicensedUsersCount property value. The unlicensedUsersCount property
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getUnlicensedUsersCount() {

@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MobileAppTroubleshootingAppStateHistory extends MobileAppTroubleshootingHistoryItem implements Parsable {
     /**
-     * Instantiates a new MobileAppTroubleshootingAppStateHistory and sets the default values.
+     * Instantiates a new {@link MobileAppTroubleshootingAppStateHistory} and sets the default values.
      */
     public MobileAppTroubleshootingAppStateHistory() {
         super();
@@ -20,7 +20,7 @@ public class MobileAppTroubleshootingAppStateHistory extends MobileAppTroublesho
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MobileAppTroubleshootingAppStateHistory
+     * @return a {@link MobileAppTroubleshootingAppStateHistory}
      */
     @jakarta.annotation.Nonnull
     public static MobileAppTroubleshootingAppStateHistory createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -29,7 +29,7 @@ public class MobileAppTroubleshootingAppStateHistory extends MobileAppTroublesho
     }
     /**
      * Gets the actionType property value. Defines the Action Types for an Intune Application.
-     * @return a MobileAppActionType
+     * @return a {@link MobileAppActionType}
      */
     @jakarta.annotation.Nullable
     public MobileAppActionType getActionType() {
@@ -37,7 +37,7 @@ public class MobileAppTroubleshootingAppStateHistory extends MobileAppTroublesho
     }
     /**
      * Gets the errorCode property value. Error code for the failure, empty if no failure.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getErrorCode() {
@@ -45,7 +45,7 @@ public class MobileAppTroubleshootingAppStateHistory extends MobileAppTroublesho
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -57,7 +57,7 @@ public class MobileAppTroubleshootingAppStateHistory extends MobileAppTroublesho
     }
     /**
      * Gets the runState property value. Indicates the type of execution status of the device management script.
-     * @return a RunState
+     * @return a {@link RunState}
      */
     @jakarta.annotation.Nullable
     public RunState getRunState() {

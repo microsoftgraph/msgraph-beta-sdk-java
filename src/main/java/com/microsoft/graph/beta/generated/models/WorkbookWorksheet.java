@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookWorksheet extends Entity implements Parsable {
     /**
-     * Instantiates a new WorkbookWorksheet and sets the default values.
+     * Instantiates a new {@link WorkbookWorksheet} and sets the default values.
      */
     public WorkbookWorksheet() {
         super();
@@ -17,7 +17,7 @@ public class WorkbookWorksheet extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WorkbookWorksheet
+     * @return a {@link WorkbookWorksheet}
      */
     @jakarta.annotation.Nonnull
     public static WorkbookWorksheet createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class WorkbookWorksheet extends Entity implements Parsable {
     }
     /**
      * Gets the charts property value. Returns collection of charts that are part of the worksheet. Read-only.
-     * @return a java.util.List<WorkbookChart>
+     * @return a {@link java.util.List<WorkbookChart>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<WorkbookChart> getCharts() {
@@ -34,7 +34,7 @@ public class WorkbookWorksheet extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -52,7 +52,7 @@ public class WorkbookWorksheet extends Entity implements Parsable {
     }
     /**
      * Gets the name property value. The display name of the worksheet.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -60,7 +60,7 @@ public class WorkbookWorksheet extends Entity implements Parsable {
     }
     /**
      * Gets the names property value. Returns collection of names that are associated with the worksheet. Read-only.
-     * @return a java.util.List<WorkbookNamedItem>
+     * @return a {@link java.util.List<WorkbookNamedItem>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<WorkbookNamedItem> getNames() {
@@ -68,7 +68,7 @@ public class WorkbookWorksheet extends Entity implements Parsable {
     }
     /**
      * Gets the pivotTables property value. Collection of PivotTables that are part of the worksheet.
-     * @return a java.util.List<WorkbookPivotTable>
+     * @return a {@link java.util.List<WorkbookPivotTable>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<WorkbookPivotTable> getPivotTables() {
@@ -76,7 +76,7 @@ public class WorkbookWorksheet extends Entity implements Parsable {
     }
     /**
      * Gets the position property value. The zero-based position of the worksheet within the workbook.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPosition() {
@@ -84,7 +84,7 @@ public class WorkbookWorksheet extends Entity implements Parsable {
     }
     /**
      * Gets the protection property value. Returns sheet protection object for a worksheet. Read-only.
-     * @return a WorkbookWorksheetProtection
+     * @return a {@link WorkbookWorksheetProtection}
      */
     @jakarta.annotation.Nullable
     public WorkbookWorksheetProtection getProtection() {
@@ -92,7 +92,7 @@ public class WorkbookWorksheet extends Entity implements Parsable {
     }
     /**
      * Gets the tables property value. Collection of tables that are part of the worksheet. Read-only.
-     * @return a java.util.List<WorkbookTable>
+     * @return a {@link java.util.List<WorkbookTable>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<WorkbookTable> getTables() {
@@ -100,7 +100,7 @@ public class WorkbookWorksheet extends Entity implements Parsable {
     }
     /**
      * Gets the tasks property value. Collection of document tasks on this worksheet. Read-only.
-     * @return a java.util.List<WorkbookDocumentTask>
+     * @return a {@link java.util.List<WorkbookDocumentTask>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<WorkbookDocumentTask> getTasks() {
@@ -108,7 +108,7 @@ public class WorkbookWorksheet extends Entity implements Parsable {
     }
     /**
      * Gets the visibility property value. The visibility of the worksheet. The possible values are: Visible, Hidden, VeryHidden.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getVisibility() {

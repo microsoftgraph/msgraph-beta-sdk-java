@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GcpAuthorizationSystem extends AuthorizationSystem implements Parsable {
     /**
-     * Instantiates a new GcpAuthorizationSystem and sets the default values.
+     * Instantiates a new {@link GcpAuthorizationSystem} and sets the default values.
      */
     public GcpAuthorizationSystem() {
         super();
@@ -18,7 +18,7 @@ public class GcpAuthorizationSystem extends AuthorizationSystem implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a GcpAuthorizationSystem
+     * @return a {@link GcpAuthorizationSystem}
      */
     @jakarta.annotation.Nonnull
     public static GcpAuthorizationSystem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class GcpAuthorizationSystem extends AuthorizationSystem implements Parsa
     }
     /**
      * Gets the actions property value. List of actions for service in authorization system.
-     * @return a java.util.List<GcpAuthorizationSystemTypeAction>
+     * @return a {@link java.util.List<GcpAuthorizationSystemTypeAction>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<GcpAuthorizationSystemTypeAction> getActions() {
@@ -35,7 +35,7 @@ public class GcpAuthorizationSystem extends AuthorizationSystem implements Parsa
     }
     /**
      * Gets the associatedIdentities property value. Identities in the authorization system.
-     * @return a GcpAssociatedIdentities
+     * @return a {@link GcpAssociatedIdentities}
      */
     @jakarta.annotation.Nullable
     public GcpAssociatedIdentities getAssociatedIdentities() {
@@ -43,7 +43,7 @@ public class GcpAuthorizationSystem extends AuthorizationSystem implements Parsa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -57,7 +57,7 @@ public class GcpAuthorizationSystem extends AuthorizationSystem implements Parsa
     }
     /**
      * Gets the resources property value. Resources associated with the authorization system type.
-     * @return a java.util.List<GcpAuthorizationSystemResource>
+     * @return a {@link java.util.List<GcpAuthorizationSystemResource>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<GcpAuthorizationSystemResource> getResources() {
@@ -65,7 +65,7 @@ public class GcpAuthorizationSystem extends AuthorizationSystem implements Parsa
     }
     /**
      * Gets the roles property value. Roles associated with the authorization system type.
-     * @return a java.util.List<GcpRole>
+     * @return a {@link java.util.List<GcpRole>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<GcpRole> getRoles() {
@@ -73,7 +73,7 @@ public class GcpAuthorizationSystem extends AuthorizationSystem implements Parsa
     }
     /**
      * Gets the services property value. Services associated with the authorization system type.
-     * @return a java.util.List<AuthorizationSystemTypeService>
+     * @return a {@link java.util.List<AuthorizationSystemTypeService>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthorizationSystemTypeService> getServices() {

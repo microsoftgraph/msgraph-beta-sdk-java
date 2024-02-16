@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CompanyCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * Instantiates a new CompanyCollectionResponse and sets the default values.
+     * Instantiates a new {@link CompanyCollectionResponse} and sets the default values.
      */
     public CompanyCollectionResponse() {
         super();
@@ -17,7 +17,7 @@ public class CompanyCollectionResponse extends BaseCollectionPaginationCountResp
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CompanyCollectionResponse
+     * @return a {@link CompanyCollectionResponse}
      */
     @jakarta.annotation.Nonnull
     public static CompanyCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class CompanyCollectionResponse extends BaseCollectionPaginationCountResp
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -36,7 +36,7 @@ public class CompanyCollectionResponse extends BaseCollectionPaginationCountResp
     }
     /**
      * Gets the value property value. The value property
-     * @return a java.util.List<Company>
+     * @return a {@link java.util.List<Company>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Company> getValue() {

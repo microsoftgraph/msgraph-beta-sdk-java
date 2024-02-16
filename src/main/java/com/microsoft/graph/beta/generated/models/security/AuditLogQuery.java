@@ -11,7 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AuditLogQuery extends Entity implements Parsable {
     /**
-     * Instantiates a new AuditLogQuery and sets the default values.
+     * Instantiates a new {@link AuditLogQuery} and sets the default values.
      */
     public AuditLogQuery() {
         super();
@@ -19,7 +19,7 @@ public class AuditLogQuery extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AuditLogQuery
+     * @return a {@link AuditLogQuery}
      */
     @jakarta.annotation.Nonnull
     public static AuditLogQuery createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class AuditLogQuery extends Entity implements Parsable {
     }
     /**
      * Gets the administrativeUnitIdFilters property value. The administrative units tagged to an audit log record.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAdministrativeUnitIdFilters() {
@@ -36,7 +36,7 @@ public class AuditLogQuery extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name of the saved audit log query.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -44,7 +44,7 @@ public class AuditLogQuery extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -66,7 +66,7 @@ public class AuditLogQuery extends Entity implements Parsable {
     }
     /**
      * Gets the filterEndDateTime property value. The end date of the date range in the query.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getFilterEndDateTime() {
@@ -74,7 +74,7 @@ public class AuditLogQuery extends Entity implements Parsable {
     }
     /**
      * Gets the filterStartDateTime property value. The start date of the date range in the query.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getFilterStartDateTime() {
@@ -82,7 +82,7 @@ public class AuditLogQuery extends Entity implements Parsable {
     }
     /**
      * Gets the ipAddressFilters property value. The IP address of the device that was used when the activity was logged.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getIpAddressFilters() {
@@ -90,7 +90,7 @@ public class AuditLogQuery extends Entity implements Parsable {
     }
     /**
      * Gets the keywordFilter property value. Free text field to search non-indexed properties of the audit log.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getKeywordFilter() {
@@ -98,7 +98,7 @@ public class AuditLogQuery extends Entity implements Parsable {
     }
     /**
      * Gets the objectIdFilters property value. For SharePoint and OneDrive for Business activity, the full path name of the file or folder accessed by the user. For Exchange admin audit logging, the name of the object that was modified by the cmdlet.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getObjectIdFilters() {
@@ -106,7 +106,7 @@ public class AuditLogQuery extends Entity implements Parsable {
     }
     /**
      * Gets the operationFilters property value. The name of the user or admin activity. For a description of the most common operations/activities, see Search the audit log in the Office 365 Protection Center.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getOperationFilters() {
@@ -114,7 +114,7 @@ public class AuditLogQuery extends Entity implements Parsable {
     }
     /**
      * Gets the records property value. An individual audit log record.
-     * @return a java.util.List<AuditLogRecord>
+     * @return a {@link java.util.List<AuditLogRecord>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuditLogRecord> getRecords() {
@@ -122,7 +122,7 @@ public class AuditLogQuery extends Entity implements Parsable {
     }
     /**
      * Gets the recordTypeFilters property value. The recordTypeFilters property
-     * @return a java.util.List<AuditLogRecordType>
+     * @return a {@link java.util.List<AuditLogRecordType>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuditLogRecordType> getRecordTypeFilters() {
@@ -130,7 +130,7 @@ public class AuditLogQuery extends Entity implements Parsable {
     }
     /**
      * Gets the serviceFilters property value. The serviceFilters property
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getServiceFilters() {
@@ -138,7 +138,7 @@ public class AuditLogQuery extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. Describes the current status of the query. The possible values are: notStarted, running, succeeded, failed, cancelled, unknownFutureValue.
-     * @return a AuditLogQueryStatus
+     * @return a {@link AuditLogQueryStatus}
      */
     @jakarta.annotation.Nullable
     public AuditLogQueryStatus getStatus() {
@@ -146,7 +146,7 @@ public class AuditLogQuery extends Entity implements Parsable {
     }
     /**
      * Gets the userPrincipalNameFilters property value. The UPN (user principal name) of the user who performed the action (specified in the operation property) that resulted in the record being logged; for example, myname@mydomain_name.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getUserPrincipalNameFilters() {

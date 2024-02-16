@@ -23,13 +23,14 @@ import java.util.Objects;
 public class MobilityManagementPolicyItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the includedGroups property of the microsoft.graph.mobilityManagementPolicy entity.
+     * @return a {@link IncludedGroupsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public IncludedGroupsRequestBuilder includedGroups() {
         return new IncludedGroupsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new MobilityManagementPolicyItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link MobilityManagementPolicyItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -37,7 +38,7 @@ public class MobilityManagementPolicyItemRequestBuilder extends BaseRequestBuild
         super(requestAdapter, "{+baseurl}/mobilityManagementPolicies/{mobilityManagementPolicy%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new MobilityManagementPolicyItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link MobilityManagementPolicyItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -46,6 +47,7 @@ public class MobilityManagementPolicyItemRequestBuilder extends BaseRequestBuild
     }
     /**
      * Delete entity from mobilityManagementPolicies
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete() {
         delete(null);
@@ -53,17 +55,18 @@ public class MobilityManagementPolicyItemRequestBuilder extends BaseRequestBuild
     /**
      * Delete entity from mobilityManagementPolicies
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Get entity from mobilityManagementPolicies by key
-     * @return a MobilityManagementPolicy
+     * @return a {@link MobilityManagementPolicy}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public MobilityManagementPolicy get() {
@@ -72,20 +75,21 @@ public class MobilityManagementPolicyItemRequestBuilder extends BaseRequestBuild
     /**
      * Get entity from mobilityManagementPolicies by key
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a MobilityManagementPolicy
+     * @return a {@link MobilityManagementPolicy}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public MobilityManagementPolicy get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, MobilityManagementPolicy::createFromDiscriminatorValue);
     }
     /**
      * Update entity in mobilityManagementPolicies
      * @param body The request body
-     * @return a MobilityManagementPolicy
+     * @return a {@link MobilityManagementPolicy}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public MobilityManagementPolicy patch(@jakarta.annotation.Nonnull final MobilityManagementPolicy body) {
@@ -95,20 +99,20 @@ public class MobilityManagementPolicyItemRequestBuilder extends BaseRequestBuild
      * Update entity in mobilityManagementPolicies
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a MobilityManagementPolicy
+     * @return a {@link MobilityManagementPolicy}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public MobilityManagementPolicy patch(@jakarta.annotation.Nonnull final MobilityManagementPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, MobilityManagementPolicy::createFromDiscriminatorValue);
     }
     /**
      * Delete entity from mobilityManagementPolicies
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -117,18 +121,18 @@ public class MobilityManagementPolicyItemRequestBuilder extends BaseRequestBuild
     /**
      * Delete entity from mobilityManagementPolicies
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/mobilityManagementPolicies/{mobilityManagementPolicy%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Get entity from mobilityManagementPolicies by key
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -137,7 +141,7 @@ public class MobilityManagementPolicyItemRequestBuilder extends BaseRequestBuild
     /**
      * Get entity from mobilityManagementPolicies by key
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -149,7 +153,7 @@ public class MobilityManagementPolicyItemRequestBuilder extends BaseRequestBuild
     /**
      * Update entity in mobilityManagementPolicies
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final MobilityManagementPolicy body) {
@@ -159,12 +163,12 @@ public class MobilityManagementPolicyItemRequestBuilder extends BaseRequestBuild
      * Update entity in mobilityManagementPolicies
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final MobilityManagementPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/mobilityManagementPolicies/{mobilityManagementPolicy%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -173,7 +177,7 @@ public class MobilityManagementPolicyItemRequestBuilder extends BaseRequestBuild
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a MobilityManagementPolicyItemRequestBuilder
+     * @return a {@link MobilityManagementPolicyItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MobilityManagementPolicyItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -203,7 +207,7 @@ public class MobilityManagementPolicyItemRequestBuilder extends BaseRequestBuild
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

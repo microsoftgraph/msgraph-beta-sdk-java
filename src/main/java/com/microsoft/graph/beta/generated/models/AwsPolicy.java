@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AwsPolicy extends Entity implements Parsable {
     /**
-     * Instantiates a new AwsPolicy and sets the default values.
+     * Instantiates a new {@link AwsPolicy} and sets the default values.
      */
     public AwsPolicy() {
         super();
@@ -17,7 +17,7 @@ public class AwsPolicy extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AwsPolicy
+     * @return a {@link AwsPolicy}
      */
     @jakarta.annotation.Nonnull
     public static AwsPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class AwsPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the awsPolicyType property value. The awsPolicyType property
-     * @return a AwsPolicyType
+     * @return a {@link AwsPolicyType}
      */
     @jakarta.annotation.Nullable
     public AwsPolicyType getAwsPolicyType() {
@@ -34,7 +34,7 @@ public class AwsPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name for the AWS policy. Read-only. Supports $filter and (eq,contains).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -42,7 +42,7 @@ public class AwsPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the externalId property value. The base64 encoded identifier for the AWS policy as defined by AWS. Read-only. Alternate key. Supports $filter and eq.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getExternalId() {
@@ -50,7 +50,7 @@ public class AwsPolicy extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementResourceAccessProfileAssignment extends Entity implements Parsable {
     /**
-     * Instantiates a new DeviceManagementResourceAccessProfileAssignment and sets the default values.
+     * Instantiates a new {@link DeviceManagementResourceAccessProfileAssignment} and sets the default values.
      */
     public DeviceManagementResourceAccessProfileAssignment() {
         super();
@@ -20,7 +20,7 @@ public class DeviceManagementResourceAccessProfileAssignment extends Entity impl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceManagementResourceAccessProfileAssignment
+     * @return a {@link DeviceManagementResourceAccessProfileAssignment}
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementResourceAccessProfileAssignment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -29,7 +29,7 @@ public class DeviceManagementResourceAccessProfileAssignment extends Entity impl
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -41,7 +41,7 @@ public class DeviceManagementResourceAccessProfileAssignment extends Entity impl
     }
     /**
      * Gets the intent property value. The administrator intent for the assignment of the profile.
-     * @return a DeviceManagementResourceAccessProfileIntent
+     * @return a {@link DeviceManagementResourceAccessProfileIntent}
      */
     @jakarta.annotation.Nullable
     public DeviceManagementResourceAccessProfileIntent getIntent() {
@@ -49,7 +49,7 @@ public class DeviceManagementResourceAccessProfileAssignment extends Entity impl
     }
     /**
      * Gets the sourceId property value. The identifier of the source of the assignment.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSourceId() {
@@ -57,7 +57,7 @@ public class DeviceManagementResourceAccessProfileAssignment extends Entity impl
     }
     /**
      * Gets the target property value. Base type for assignment targets.
-     * @return a DeviceAndAppManagementAssignmentTarget
+     * @return a {@link DeviceAndAppManagementAssignmentTarget}
      */
     @jakarta.annotation.Nullable
     public DeviceAndAppManagementAssignmentTarget getTarget() {

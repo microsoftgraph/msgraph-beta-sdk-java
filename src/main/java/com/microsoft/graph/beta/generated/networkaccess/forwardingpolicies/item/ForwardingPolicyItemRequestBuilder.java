@@ -24,6 +24,7 @@ import java.util.Objects;
 public class ForwardingPolicyItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the updatePolicyRules method.
+     * @return a {@link MicrosoftGraphNetworkaccessUpdatePolicyRulesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MicrosoftGraphNetworkaccessUpdatePolicyRulesRequestBuilder microsoftGraphNetworkaccessUpdatePolicyRules() {
@@ -31,13 +32,14 @@ public class ForwardingPolicyItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the policyRules property of the microsoft.graph.networkaccess.policy entity.
+     * @return a {@link PolicyRulesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PolicyRulesRequestBuilder policyRules() {
         return new PolicyRulesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new ForwardingPolicyItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link ForwardingPolicyItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -45,7 +47,7 @@ public class ForwardingPolicyItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/networkAccess/forwardingPolicies/{forwardingPolicy%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new ForwardingPolicyItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link ForwardingPolicyItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -54,6 +56,7 @@ public class ForwardingPolicyItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Delete navigation property forwardingPolicies for networkAccess
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete() {
         delete(null);
@@ -61,17 +64,18 @@ public class ForwardingPolicyItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property forwardingPolicies for networkAccess
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Retrieve information about a specific forwarding policy.
-     * @return a ForwardingPolicy
+     * @return a {@link ForwardingPolicy}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-forwardingpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -81,21 +85,22 @@ public class ForwardingPolicyItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve information about a specific forwarding policy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a ForwardingPolicy
+     * @return a {@link ForwardingPolicy}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-forwardingpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ForwardingPolicy get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, ForwardingPolicy::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property forwardingPolicies in networkAccess
      * @param body The request body
-     * @return a ForwardingPolicy
+     * @return a {@link ForwardingPolicy}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public ForwardingPolicy patch(@jakarta.annotation.Nonnull final ForwardingPolicy body) {
@@ -105,20 +110,20 @@ public class ForwardingPolicyItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property forwardingPolicies in networkAccess
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a ForwardingPolicy
+     * @return a {@link ForwardingPolicy}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public ForwardingPolicy patch(@jakarta.annotation.Nonnull final ForwardingPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, ForwardingPolicy::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property forwardingPolicies for networkAccess
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -127,18 +132,18 @@ public class ForwardingPolicyItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property forwardingPolicies for networkAccess
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/networkAccess/forwardingPolicies/{forwardingPolicy%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Retrieve information about a specific forwarding policy.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -147,7 +152,7 @@ public class ForwardingPolicyItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve information about a specific forwarding policy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -159,7 +164,7 @@ public class ForwardingPolicyItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property forwardingPolicies in networkAccess
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final ForwardingPolicy body) {
@@ -169,12 +174,12 @@ public class ForwardingPolicyItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property forwardingPolicies in networkAccess
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final ForwardingPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/networkAccess/forwardingPolicies/{forwardingPolicy%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -183,7 +188,7 @@ public class ForwardingPolicyItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a ForwardingPolicyItemRequestBuilder
+     * @return a {@link ForwardingPolicyItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ForwardingPolicyItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -213,7 +218,7 @@ public class ForwardingPolicyItemRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

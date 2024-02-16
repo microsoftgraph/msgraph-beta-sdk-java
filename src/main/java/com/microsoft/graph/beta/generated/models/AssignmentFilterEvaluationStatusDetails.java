@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AssignmentFilterEvaluationStatusDetails extends Entity implements Parsable {
     /**
-     * Instantiates a new AssignmentFilterEvaluationStatusDetails and sets the default values.
+     * Instantiates a new {@link AssignmentFilterEvaluationStatusDetails} and sets the default values.
      */
     public AssignmentFilterEvaluationStatusDetails() {
         super();
@@ -20,7 +20,7 @@ public class AssignmentFilterEvaluationStatusDetails extends Entity implements P
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AssignmentFilterEvaluationStatusDetails
+     * @return a {@link AssignmentFilterEvaluationStatusDetails}
      */
     @jakarta.annotation.Nonnull
     public static AssignmentFilterEvaluationStatusDetails createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -29,7 +29,7 @@ public class AssignmentFilterEvaluationStatusDetails extends Entity implements P
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -39,7 +39,7 @@ public class AssignmentFilterEvaluationStatusDetails extends Entity implements P
     }
     /**
      * Gets the payloadId property value. PayloadId on which filter has been applied.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPayloadId() {

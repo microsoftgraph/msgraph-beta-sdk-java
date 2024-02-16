@@ -18,7 +18,7 @@ public class InvitationRedemptionIdentityProviderConfiguration implements Additi
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new InvitationRedemptionIdentityProviderConfiguration and sets the default values.
+     * Instantiates a new {@link InvitationRedemptionIdentityProviderConfiguration} and sets the default values.
      */
     public InvitationRedemptionIdentityProviderConfiguration() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class InvitationRedemptionIdentityProviderConfiguration implements Additi
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a InvitationRedemptionIdentityProviderConfiguration
+     * @return a {@link InvitationRedemptionIdentityProviderConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static InvitationRedemptionIdentityProviderConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,7 +43,7 @@ public class InvitationRedemptionIdentityProviderConfiguration implements Additi
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -56,7 +56,7 @@ public class InvitationRedemptionIdentityProviderConfiguration implements Additi
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -64,7 +64,7 @@ public class InvitationRedemptionIdentityProviderConfiguration implements Additi
     }
     /**
      * Gets the fallbackIdentityProvider property value. The fallback identity provider to be used in case no primary identity provider can be used for guest invitation redemption. Possible values are: defaultConfiguredIdp, emailOneTimePasscode, or microsoftAccount.
-     * @return a B2bIdentityProvidersType
+     * @return a {@link B2bIdentityProvidersType}
      */
     @jakarta.annotation.Nullable
     public B2bIdentityProvidersType getFallbackIdentityProvider() {
@@ -72,7 +72,7 @@ public class InvitationRedemptionIdentityProviderConfiguration implements Additi
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -84,7 +84,7 @@ public class InvitationRedemptionIdentityProviderConfiguration implements Additi
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -92,7 +92,7 @@ public class InvitationRedemptionIdentityProviderConfiguration implements Additi
     }
     /**
      * Gets the primaryIdentityProviderPrecedenceOrder property value. Collection of identity providers in priority order of preference to be used for guest invitation redemption. Possible values are: azureActiveDirectory, externalFederation, or socialIdentityProviders.
-     * @return a java.util.List<B2bIdentityProvidersType>
+     * @return a {@link java.util.List<B2bIdentityProvidersType>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<B2bIdentityProvidersType> getPrimaryIdentityProviderPrecedenceOrder() {

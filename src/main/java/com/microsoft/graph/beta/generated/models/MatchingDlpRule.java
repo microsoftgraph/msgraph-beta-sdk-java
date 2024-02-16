@@ -18,7 +18,7 @@ public class MatchingDlpRule implements AdditionalDataHolder, BackedModel, Parsa
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new MatchingDlpRule and sets the default values.
+     * Instantiates a new {@link MatchingDlpRule} and sets the default values.
      */
     public MatchingDlpRule() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class MatchingDlpRule implements AdditionalDataHolder, BackedModel, Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MatchingDlpRule
+     * @return a {@link MatchingDlpRule}
      */
     @jakarta.annotation.Nonnull
     public static MatchingDlpRule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class MatchingDlpRule implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the actions property value. The actions property
-     * @return a java.util.List<DlpActionInfo>
+     * @return a {@link java.util.List<DlpActionInfo>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DlpActionInfo> getActions() {
@@ -44,7 +44,7 @@ public class MatchingDlpRule implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -57,7 +57,7 @@ public class MatchingDlpRule implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -65,7 +65,7 @@ public class MatchingDlpRule implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -83,7 +83,7 @@ public class MatchingDlpRule implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the isMostRestrictive property value. The isMostRestrictive property
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsMostRestrictive() {
@@ -91,7 +91,7 @@ public class MatchingDlpRule implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -99,7 +99,7 @@ public class MatchingDlpRule implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the policyId property value. The policyId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPolicyId() {
@@ -107,7 +107,7 @@ public class MatchingDlpRule implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the policyName property value. The policyName property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPolicyName() {
@@ -115,7 +115,7 @@ public class MatchingDlpRule implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the priority property value. The priority property
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPriority() {
@@ -123,7 +123,7 @@ public class MatchingDlpRule implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the ruleId property value. The ruleId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRuleId() {
@@ -131,7 +131,7 @@ public class MatchingDlpRule implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the ruleMode property value. The ruleMode property
-     * @return a RuleMode
+     * @return a {@link RuleMode}
      */
     @jakarta.annotation.Nullable
     public RuleMode getRuleMode() {
@@ -139,7 +139,7 @@ public class MatchingDlpRule implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the ruleName property value. The ruleName property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRuleName() {

@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OnAttributeCollectionSubmitCustomExtensionHandler extends OnAttributeCollectionSubmitHandler implements Parsable {
     /**
-     * Instantiates a new OnAttributeCollectionSubmitCustomExtensionHandler and sets the default values.
+     * Instantiates a new {@link OnAttributeCollectionSubmitCustomExtensionHandler} and sets the default values.
      */
     public OnAttributeCollectionSubmitCustomExtensionHandler() {
         super();
@@ -18,7 +18,7 @@ public class OnAttributeCollectionSubmitCustomExtensionHandler extends OnAttribu
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a OnAttributeCollectionSubmitCustomExtensionHandler
+     * @return a {@link OnAttributeCollectionSubmitCustomExtensionHandler}
      */
     @jakarta.annotation.Nonnull
     public static OnAttributeCollectionSubmitCustomExtensionHandler createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class OnAttributeCollectionSubmitCustomExtensionHandler extends OnAttribu
     }
     /**
      * Gets the configuration property value. Configuration regarding properties of the custom extension that can be overwritten per event listener.
-     * @return a CustomExtensionOverwriteConfiguration
+     * @return a {@link CustomExtensionOverwriteConfiguration}
      */
     @jakarta.annotation.Nullable
     public CustomExtensionOverwriteConfiguration getConfiguration() {
@@ -35,7 +35,7 @@ public class OnAttributeCollectionSubmitCustomExtensionHandler extends OnAttribu
     }
     /**
      * Gets the customExtension property value. The customExtension property
-     * @return a OnAttributeCollectionSubmitCustomExtension
+     * @return a {@link OnAttributeCollectionSubmitCustomExtension}
      */
     @jakarta.annotation.Nullable
     public OnAttributeCollectionSubmitCustomExtension getCustomExtension() {
@@ -43,7 +43,7 @@ public class OnAttributeCollectionSubmitCustomExtensionHandler extends OnAttribu
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

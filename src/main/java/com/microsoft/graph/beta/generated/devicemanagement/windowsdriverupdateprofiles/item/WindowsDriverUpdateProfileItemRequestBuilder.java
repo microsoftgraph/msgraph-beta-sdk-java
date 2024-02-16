@@ -27,6 +27,7 @@ import java.util.Objects;
 public class WindowsDriverUpdateProfileItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the assign method.
+     * @return a {@link AssignRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AssignRequestBuilder assign() {
@@ -34,6 +35,7 @@ public class WindowsDriverUpdateProfileItemRequestBuilder extends BaseRequestBui
     }
     /**
      * Provides operations to manage the assignments property of the microsoft.graph.windowsDriverUpdateProfile entity.
+     * @return a {@link AssignmentsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AssignmentsRequestBuilder assignments() {
@@ -41,6 +43,7 @@ public class WindowsDriverUpdateProfileItemRequestBuilder extends BaseRequestBui
     }
     /**
      * Provides operations to manage the driverInventories property of the microsoft.graph.windowsDriverUpdateProfile entity.
+     * @return a {@link DriverInventoriesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DriverInventoriesRequestBuilder driverInventories() {
@@ -48,6 +51,7 @@ public class WindowsDriverUpdateProfileItemRequestBuilder extends BaseRequestBui
     }
     /**
      * Provides operations to call the executeAction method.
+     * @return a {@link ExecuteActionRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ExecuteActionRequestBuilder executeAction() {
@@ -55,13 +59,14 @@ public class WindowsDriverUpdateProfileItemRequestBuilder extends BaseRequestBui
     }
     /**
      * Provides operations to call the syncInventory method.
+     * @return a {@link SyncInventoryRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SyncInventoryRequestBuilder syncInventory() {
         return new SyncInventoryRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new WindowsDriverUpdateProfileItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link WindowsDriverUpdateProfileItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -69,7 +74,7 @@ public class WindowsDriverUpdateProfileItemRequestBuilder extends BaseRequestBui
         super(requestAdapter, "{+baseurl}/deviceManagement/windowsDriverUpdateProfiles/{windowsDriverUpdateProfile%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new WindowsDriverUpdateProfileItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link WindowsDriverUpdateProfileItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -78,6 +83,7 @@ public class WindowsDriverUpdateProfileItemRequestBuilder extends BaseRequestBui
     }
     /**
      * Delete navigation property windowsDriverUpdateProfiles for deviceManagement
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete() {
         delete(null);
@@ -85,17 +91,18 @@ public class WindowsDriverUpdateProfileItemRequestBuilder extends BaseRequestBui
     /**
      * Delete navigation property windowsDriverUpdateProfiles for deviceManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * A collection of windows driver update profiles
-     * @return a WindowsDriverUpdateProfile
+     * @return a {@link WindowsDriverUpdateProfile}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public WindowsDriverUpdateProfile get() {
@@ -104,20 +111,21 @@ public class WindowsDriverUpdateProfileItemRequestBuilder extends BaseRequestBui
     /**
      * A collection of windows driver update profiles
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a WindowsDriverUpdateProfile
+     * @return a {@link WindowsDriverUpdateProfile}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public WindowsDriverUpdateProfile get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, WindowsDriverUpdateProfile::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property windowsDriverUpdateProfiles in deviceManagement
      * @param body The request body
-     * @return a WindowsDriverUpdateProfile
+     * @return a {@link WindowsDriverUpdateProfile}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public WindowsDriverUpdateProfile patch(@jakarta.annotation.Nonnull final WindowsDriverUpdateProfile body) {
@@ -127,20 +135,20 @@ public class WindowsDriverUpdateProfileItemRequestBuilder extends BaseRequestBui
      * Update the navigation property windowsDriverUpdateProfiles in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a WindowsDriverUpdateProfile
+     * @return a {@link WindowsDriverUpdateProfile}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public WindowsDriverUpdateProfile patch(@jakarta.annotation.Nonnull final WindowsDriverUpdateProfile body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, WindowsDriverUpdateProfile::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property windowsDriverUpdateProfiles for deviceManagement
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -149,18 +157,18 @@ public class WindowsDriverUpdateProfileItemRequestBuilder extends BaseRequestBui
     /**
      * Delete navigation property windowsDriverUpdateProfiles for deviceManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/deviceManagement/windowsDriverUpdateProfiles/{windowsDriverUpdateProfile%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * A collection of windows driver update profiles
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -169,7 +177,7 @@ public class WindowsDriverUpdateProfileItemRequestBuilder extends BaseRequestBui
     /**
      * A collection of windows driver update profiles
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -181,7 +189,7 @@ public class WindowsDriverUpdateProfileItemRequestBuilder extends BaseRequestBui
     /**
      * Update the navigation property windowsDriverUpdateProfiles in deviceManagement
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final WindowsDriverUpdateProfile body) {
@@ -191,12 +199,12 @@ public class WindowsDriverUpdateProfileItemRequestBuilder extends BaseRequestBui
      * Update the navigation property windowsDriverUpdateProfiles in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final WindowsDriverUpdateProfile body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/deviceManagement/windowsDriverUpdateProfiles/{windowsDriverUpdateProfile%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -205,7 +213,7 @@ public class WindowsDriverUpdateProfileItemRequestBuilder extends BaseRequestBui
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a WindowsDriverUpdateProfileItemRequestBuilder
+     * @return a {@link WindowsDriverUpdateProfileItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public WindowsDriverUpdateProfileItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -235,7 +243,7 @@ public class WindowsDriverUpdateProfileItemRequestBuilder extends BaseRequestBui
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {
