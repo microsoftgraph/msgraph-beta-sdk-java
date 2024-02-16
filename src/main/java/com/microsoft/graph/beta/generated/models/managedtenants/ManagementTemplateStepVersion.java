@@ -11,7 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagementTemplateStepVersion extends Entity implements Parsable {
     /**
-     * Instantiates a new ManagementTemplateStepVersion and sets the default values.
+     * Instantiates a new {@link ManagementTemplateStepVersion} and sets the default values.
      */
     public ManagementTemplateStepVersion() {
         super();
@@ -19,7 +19,7 @@ public class ManagementTemplateStepVersion extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ManagementTemplateStepVersion
+     * @return a {@link ManagementTemplateStepVersion}
      */
     @jakarta.annotation.Nonnull
     public static ManagementTemplateStepVersion createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class ManagementTemplateStepVersion extends Entity implements Parsable {
     }
     /**
      * Gets the acceptedFor property value. The acceptedFor property
-     * @return a ManagementTemplateStep
+     * @return a {@link ManagementTemplateStep}
      */
     @jakarta.annotation.Nullable
     public ManagementTemplateStep getAcceptedFor() {
@@ -36,7 +36,7 @@ public class ManagementTemplateStepVersion extends Entity implements Parsable {
     }
     /**
      * Gets the contentMarkdown property value. The contentMarkdown property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getContentMarkdown() {
@@ -44,7 +44,7 @@ public class ManagementTemplateStepVersion extends Entity implements Parsable {
     }
     /**
      * Gets the createdByUserId property value. The createdByUserId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCreatedByUserId() {
@@ -52,7 +52,7 @@ public class ManagementTemplateStepVersion extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. The createdDateTime property
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -60,7 +60,7 @@ public class ManagementTemplateStepVersion extends Entity implements Parsable {
     }
     /**
      * Gets the deployments property value. The deployments property
-     * @return a java.util.List<ManagementTemplateStepDeployment>
+     * @return a {@link java.util.List<ManagementTemplateStepDeployment>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagementTemplateStepDeployment> getDeployments() {
@@ -68,7 +68,7 @@ public class ManagementTemplateStepVersion extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -88,7 +88,7 @@ public class ManagementTemplateStepVersion extends Entity implements Parsable {
     }
     /**
      * Gets the lastActionByUserId property value. The lastActionByUserId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getLastActionByUserId() {
@@ -96,7 +96,7 @@ public class ManagementTemplateStepVersion extends Entity implements Parsable {
     }
     /**
      * Gets the lastActionDateTime property value. The lastActionDateTime property
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastActionDateTime() {
@@ -104,7 +104,7 @@ public class ManagementTemplateStepVersion extends Entity implements Parsable {
     }
     /**
      * Gets the name property value. The name property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -112,7 +112,7 @@ public class ManagementTemplateStepVersion extends Entity implements Parsable {
     }
     /**
      * Gets the templateStep property value. The templateStep property
-     * @return a ManagementTemplateStep
+     * @return a {@link ManagementTemplateStep}
      */
     @jakarta.annotation.Nullable
     public ManagementTemplateStep getTemplateStep() {
@@ -120,7 +120,7 @@ public class ManagementTemplateStepVersion extends Entity implements Parsable {
     }
     /**
      * Gets the version property value. The version property
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getVersion() {
@@ -128,7 +128,7 @@ public class ManagementTemplateStepVersion extends Entity implements Parsable {
     }
     /**
      * Gets the versionInformation property value. The versionInformation property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getVersionInformation() {

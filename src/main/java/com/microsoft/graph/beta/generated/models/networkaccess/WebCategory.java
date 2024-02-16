@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WebCategory extends RuleDestination implements Parsable {
     /**
-     * Instantiates a new WebCategory and sets the default values.
+     * Instantiates a new {@link WebCategory} and sets the default values.
      */
     public WebCategory() {
         super();
@@ -18,7 +18,7 @@ public class WebCategory extends RuleDestination implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WebCategory
+     * @return a {@link WebCategory}
      */
     @jakarta.annotation.Nonnull
     public static WebCategory createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class WebCategory extends RuleDestination implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name for the web category.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -35,7 +35,7 @@ public class WebCategory extends RuleDestination implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -47,7 +47,7 @@ public class WebCategory extends RuleDestination implements Parsable {
     }
     /**
      * Gets the group property value. The group or category to which the web category belongs.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getGroup() {
@@ -55,7 +55,7 @@ public class WebCategory extends RuleDestination implements Parsable {
     }
     /**
      * Gets the name property value. The unique name that is associated with the web category.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getName() {

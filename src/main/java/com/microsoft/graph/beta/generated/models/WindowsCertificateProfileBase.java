@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsCertificateProfileBase extends DeviceConfiguration implements Parsable {
     /**
-     * Instantiates a new WindowsCertificateProfileBase and sets the default values.
+     * Instantiates a new {@link WindowsCertificateProfileBase} and sets the default values.
      */
     public WindowsCertificateProfileBase() {
         super();
@@ -22,7 +22,7 @@ public class WindowsCertificateProfileBase extends DeviceConfiguration implement
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WindowsCertificateProfileBase
+     * @return a {@link WindowsCertificateProfileBase}
      */
     @jakarta.annotation.Nonnull
     public static WindowsCertificateProfileBase createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,7 +43,7 @@ public class WindowsCertificateProfileBase extends DeviceConfiguration implement
     }
     /**
      * Gets the certificateValidityPeriodScale property value. Certificate Validity Period Options.
-     * @return a CertificateValidityPeriodScale
+     * @return a {@link CertificateValidityPeriodScale}
      */
     @jakarta.annotation.Nullable
     public CertificateValidityPeriodScale getCertificateValidityPeriodScale() {
@@ -51,7 +51,7 @@ public class WindowsCertificateProfileBase extends DeviceConfiguration implement
     }
     /**
      * Gets the certificateValidityPeriodValue property value. Value for the Certificate Validity Period
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getCertificateValidityPeriodValue() {
@@ -59,7 +59,7 @@ public class WindowsCertificateProfileBase extends DeviceConfiguration implement
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -74,7 +74,7 @@ public class WindowsCertificateProfileBase extends DeviceConfiguration implement
     }
     /**
      * Gets the keyStorageProvider property value. Key Storage Provider (KSP) Import Options.
-     * @return a KeyStorageProviderOption
+     * @return a {@link KeyStorageProviderOption}
      */
     @jakarta.annotation.Nullable
     public KeyStorageProviderOption getKeyStorageProvider() {
@@ -82,7 +82,7 @@ public class WindowsCertificateProfileBase extends DeviceConfiguration implement
     }
     /**
      * Gets the renewalThresholdPercentage property value. Certificate renewal threshold percentage. Valid values 1 to 99
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getRenewalThresholdPercentage() {
@@ -90,7 +90,7 @@ public class WindowsCertificateProfileBase extends DeviceConfiguration implement
     }
     /**
      * Gets the subjectAlternativeNameType property value. Certificate Subject Alternative Name Type. Possible values are: none, emailAddress, userPrincipalName, customAzureADAttribute, domainNameService, universalResourceIdentifier.
-     * @return a EnumSet<SubjectAlternativeNameType>
+     * @return a {@link EnumSet<SubjectAlternativeNameType>}
      */
     @jakarta.annotation.Nullable
     public EnumSet<SubjectAlternativeNameType> getSubjectAlternativeNameType() {
@@ -98,7 +98,7 @@ public class WindowsCertificateProfileBase extends DeviceConfiguration implement
     }
     /**
      * Gets the subjectNameFormat property value. Subject Name Format Options.
-     * @return a SubjectNameFormat
+     * @return a {@link SubjectNameFormat}
      */
     @jakarta.annotation.Nullable
     public SubjectNameFormat getSubjectNameFormat() {

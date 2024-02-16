@@ -21,7 +21,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CustomExtensionRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new CustomExtensionRequestBuilder and sets the default values.
+     * Instantiates a new {@link CustomExtensionRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -29,7 +29,7 @@ public class CustomExtensionRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/accessPackageAssignmentPolicies/{accessPackageAssignmentPolicy%2Did}/customExtensionStageSettings/{customExtensionStageSetting%2Did}/customExtension{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new CustomExtensionRequestBuilder and sets the default values.
+     * Instantiates a new {@link CustomExtensionRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -38,7 +38,8 @@ public class CustomExtensionRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Indicates the custom workflow extension that is executed at this stage. Nullable. Supports $expand.
-     * @return a CustomCalloutExtension
+     * @return a {@link CustomCalloutExtension}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
      */
@@ -50,7 +51,8 @@ public class CustomExtensionRequestBuilder extends BaseRequestBuilder {
     /**
      * Indicates the custom workflow extension that is executed at this stage. Nullable. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CustomCalloutExtension
+     * @return a {@link CustomCalloutExtension}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
      */
@@ -59,13 +61,12 @@ public class CustomExtensionRequestBuilder extends BaseRequestBuilder {
     public CustomCalloutExtension get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, CustomCalloutExtension::createFromDiscriminatorValue);
     }
     /**
      * Indicates the custom workflow extension that is executed at this stage. Nullable. Supports $expand.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
      */
@@ -77,7 +78,7 @@ public class CustomExtensionRequestBuilder extends BaseRequestBuilder {
     /**
      * Indicates the custom workflow extension that is executed at this stage. Nullable. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
      */
@@ -92,7 +93,7 @@ public class CustomExtensionRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a CustomExtensionRequestBuilder
+     * @return a {@link CustomExtensionRequestBuilder}
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
      */
@@ -119,7 +120,7 @@ public class CustomExtensionRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

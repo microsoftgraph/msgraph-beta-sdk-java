@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class HorizontalSection extends Entity implements Parsable {
     /**
-     * Instantiates a new HorizontalSection and sets the default values.
+     * Instantiates a new {@link HorizontalSection} and sets the default values.
      */
     public HorizontalSection() {
         super();
@@ -17,7 +17,7 @@ public class HorizontalSection extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a HorizontalSection
+     * @return a {@link HorizontalSection}
      */
     @jakarta.annotation.Nonnull
     public static HorizontalSection createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class HorizontalSection extends Entity implements Parsable {
     }
     /**
      * Gets the columns property value. The set of vertical columns in this section.
-     * @return a java.util.List<HorizontalSectionColumn>
+     * @return a {@link java.util.List<HorizontalSectionColumn>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<HorizontalSectionColumn> getColumns() {
@@ -34,7 +34,7 @@ public class HorizontalSection extends Entity implements Parsable {
     }
     /**
      * Gets the emphasis property value. Enumeration value that indicates the emphasis of the section background. The possible values are: none, netural, soft, strong, unknownFutureValue.
-     * @return a SectionEmphasisType
+     * @return a {@link SectionEmphasisType}
      */
     @jakarta.annotation.Nullable
     public SectionEmphasisType getEmphasis() {
@@ -42,7 +42,7 @@ public class HorizontalSection extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -54,7 +54,7 @@ public class HorizontalSection extends Entity implements Parsable {
     }
     /**
      * Gets the layout property value. Layout type of the section. The possible values are: none, oneColumn, twoColumns, threeColumns, oneThirdLeftColumn, oneThirdRightColumn, fullWidth, unknownFutureValue.
-     * @return a HorizontalSectionLayoutType
+     * @return a {@link HorizontalSectionLayoutType}
      */
     @jakarta.annotation.Nullable
     public HorizontalSectionLayoutType getLayout() {

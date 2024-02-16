@@ -11,7 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagedTenantAlertLog extends Entity implements Parsable {
     /**
-     * Instantiates a new ManagedTenantAlertLog and sets the default values.
+     * Instantiates a new {@link ManagedTenantAlertLog} and sets the default values.
      */
     public ManagedTenantAlertLog() {
         super();
@@ -19,7 +19,7 @@ public class ManagedTenantAlertLog extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ManagedTenantAlertLog
+     * @return a {@link ManagedTenantAlertLog}
      */
     @jakarta.annotation.Nonnull
     public static ManagedTenantAlertLog createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class ManagedTenantAlertLog extends Entity implements Parsable {
     }
     /**
      * Gets the alert property value. The alert property
-     * @return a ManagedTenantAlert
+     * @return a {@link ManagedTenantAlert}
      */
     @jakarta.annotation.Nullable
     public ManagedTenantAlert getAlert() {
@@ -36,7 +36,7 @@ public class ManagedTenantAlertLog extends Entity implements Parsable {
     }
     /**
      * Gets the content property value. The content property
-     * @return a AlertLogContent
+     * @return a {@link AlertLogContent}
      */
     @jakarta.annotation.Nullable
     public AlertLogContent getContent() {
@@ -44,7 +44,7 @@ public class ManagedTenantAlertLog extends Entity implements Parsable {
     }
     /**
      * Gets the createdByUserId property value. The createdByUserId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCreatedByUserId() {
@@ -52,7 +52,7 @@ public class ManagedTenantAlertLog extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. The createdDateTime property
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -60,7 +60,7 @@ public class ManagedTenantAlertLog extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -75,7 +75,7 @@ public class ManagedTenantAlertLog extends Entity implements Parsable {
     }
     /**
      * Gets the lastActionByUserId property value. The lastActionByUserId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getLastActionByUserId() {
@@ -83,7 +83,7 @@ public class ManagedTenantAlertLog extends Entity implements Parsable {
     }
     /**
      * Gets the lastActionDateTime property value. The lastActionDateTime property
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastActionDateTime() {

@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class StaleSignInAlertConfiguration extends UnifiedRoleManagementAlertConfiguration implements Parsable {
     /**
-     * Instantiates a new StaleSignInAlertConfiguration and sets the default values.
+     * Instantiates a new {@link StaleSignInAlertConfiguration} and sets the default values.
      */
     public StaleSignInAlertConfiguration() {
         super();
@@ -19,7 +19,7 @@ public class StaleSignInAlertConfiguration extends UnifiedRoleManagementAlertCon
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a StaleSignInAlertConfiguration
+     * @return a {@link StaleSignInAlertConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static StaleSignInAlertConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class StaleSignInAlertConfiguration extends UnifiedRoleManagementAlertCon
     }
     /**
      * Gets the duration property value. The number of days to look back from current timestamp within which the account hasn't signed in.
-     * @return a PeriodAndDuration
+     * @return a {@link PeriodAndDuration}
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getDuration() {
@@ -36,7 +36,7 @@ public class StaleSignInAlertConfiguration extends UnifiedRoleManagementAlertCon
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementConfigurationGroupSettingCollectionInstanceTemplate extends DeviceManagementConfigurationSettingInstanceTemplate implements Parsable {
     /**
-     * Instantiates a new DeviceManagementConfigurationGroupSettingCollectionInstanceTemplate and sets the default values.
+     * Instantiates a new {@link DeviceManagementConfigurationGroupSettingCollectionInstanceTemplate} and sets the default values.
      */
     public DeviceManagementConfigurationGroupSettingCollectionInstanceTemplate() {
         super();
@@ -21,7 +21,7 @@ public class DeviceManagementConfigurationGroupSettingCollectionInstanceTemplate
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceManagementConfigurationGroupSettingCollectionInstanceTemplate
+     * @return a {@link DeviceManagementConfigurationGroupSettingCollectionInstanceTemplate}
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementConfigurationGroupSettingCollectionInstanceTemplate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class DeviceManagementConfigurationGroupSettingCollectionInstanceTemplate
     }
     /**
      * Gets the allowUnmanagedValues property value. Linked policy may append values which are not present in the template.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowUnmanagedValues() {
@@ -38,7 +38,7 @@ public class DeviceManagementConfigurationGroupSettingCollectionInstanceTemplate
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -49,7 +49,7 @@ public class DeviceManagementConfigurationGroupSettingCollectionInstanceTemplate
     }
     /**
      * Gets the groupSettingCollectionValueTemplate property value. Group Setting Collection Value Template
-     * @return a java.util.List<DeviceManagementConfigurationGroupSettingValueTemplate>
+     * @return a {@link java.util.List<DeviceManagementConfigurationGroupSettingValueTemplate>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementConfigurationGroupSettingValueTemplate> getGroupSettingCollectionValueTemplate() {

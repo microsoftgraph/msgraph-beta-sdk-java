@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AssignedComputeInstanceDetails extends Entity implements Parsable {
     /**
-     * Instantiates a new AssignedComputeInstanceDetails and sets the default values.
+     * Instantiates a new {@link AssignedComputeInstanceDetails} and sets the default values.
      */
     public AssignedComputeInstanceDetails() {
         super();
@@ -17,7 +17,7 @@ public class AssignedComputeInstanceDetails extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AssignedComputeInstanceDetails
+     * @return a {@link AssignedComputeInstanceDetails}
      */
     @jakarta.annotation.Nonnull
     public static AssignedComputeInstanceDetails createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class AssignedComputeInstanceDetails extends Entity implements Parsable {
     }
     /**
      * Gets the accessedStorageBuckets property value. Represents a set of S3 buckets accessed by this EC2 instance.
-     * @return a java.util.List<AuthorizationSystemResource>
+     * @return a {@link java.util.List<AuthorizationSystemResource>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthorizationSystemResource> getAccessedStorageBuckets() {
@@ -34,7 +34,7 @@ public class AssignedComputeInstanceDetails extends Entity implements Parsable {
     }
     /**
      * Gets the assignedComputeInstance property value. assigned EC2 instance.
-     * @return a AuthorizationSystemResource
+     * @return a {@link AuthorizationSystemResource}
      */
     @jakarta.annotation.Nullable
     public AuthorizationSystemResource getAssignedComputeInstance() {
@@ -42,7 +42,7 @@ public class AssignedComputeInstanceDetails extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

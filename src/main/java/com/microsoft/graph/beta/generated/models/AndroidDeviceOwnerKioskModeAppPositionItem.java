@@ -21,7 +21,7 @@ public class AndroidDeviceOwnerKioskModeAppPositionItem implements AdditionalDat
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new AndroidDeviceOwnerKioskModeAppPositionItem and sets the default values.
+     * Instantiates a new {@link AndroidDeviceOwnerKioskModeAppPositionItem} and sets the default values.
      */
     public AndroidDeviceOwnerKioskModeAppPositionItem() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -30,7 +30,7 @@ public class AndroidDeviceOwnerKioskModeAppPositionItem implements AdditionalDat
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AndroidDeviceOwnerKioskModeAppPositionItem
+     * @return a {@link AndroidDeviceOwnerKioskModeAppPositionItem}
      */
     @jakarta.annotation.Nonnull
     public static AndroidDeviceOwnerKioskModeAppPositionItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class AndroidDeviceOwnerKioskModeAppPositionItem implements AdditionalDat
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -52,7 +52,7 @@ public class AndroidDeviceOwnerKioskModeAppPositionItem implements AdditionalDat
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -60,7 +60,7 @@ public class AndroidDeviceOwnerKioskModeAppPositionItem implements AdditionalDat
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -72,7 +72,7 @@ public class AndroidDeviceOwnerKioskModeAppPositionItem implements AdditionalDat
     }
     /**
      * Gets the item property value. Represents an item on the Android Device Owner Managed Home Screen (application, weblink or folder
-     * @return a AndroidDeviceOwnerKioskModeHomeScreenItem
+     * @return a {@link AndroidDeviceOwnerKioskModeHomeScreenItem}
      */
     @jakarta.annotation.Nullable
     public AndroidDeviceOwnerKioskModeHomeScreenItem getItem() {
@@ -80,7 +80,7 @@ public class AndroidDeviceOwnerKioskModeAppPositionItem implements AdditionalDat
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -88,7 +88,7 @@ public class AndroidDeviceOwnerKioskModeAppPositionItem implements AdditionalDat
     }
     /**
      * Gets the position property value. Position of the item on the grid. Valid values 0 to 9999999
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPosition() {

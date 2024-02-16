@@ -11,7 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceLink extends Entity implements Parsable {
     /**
-     * Instantiates a new DeviceLink and sets the default values.
+     * Instantiates a new {@link DeviceLink} and sets the default values.
      */
     public DeviceLink() {
         super();
@@ -19,7 +19,7 @@ public class DeviceLink extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceLink
+     * @return a {@link DeviceLink}
      */
     @jakarta.annotation.Nonnull
     public static DeviceLink createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class DeviceLink extends Entity implements Parsable {
     }
     /**
      * Gets the bandwidthCapacityInMbps property value. Determines the maximum allowed Mbps (megabits per second) bandwidth from a branch site. The possible values are:250,500,750,1000.
-     * @return a BandwidthCapacityInMbps
+     * @return a {@link BandwidthCapacityInMbps}
      */
     @jakarta.annotation.Nullable
     public BandwidthCapacityInMbps getBandwidthCapacityInMbps() {
@@ -36,7 +36,7 @@ public class DeviceLink extends Entity implements Parsable {
     }
     /**
      * Gets the bgpConfiguration property value. The bgpConfiguration property
-     * @return a BgpConfiguration
+     * @return a {@link BgpConfiguration}
      */
     @jakarta.annotation.Nullable
     public BgpConfiguration getBgpConfiguration() {
@@ -44,7 +44,7 @@ public class DeviceLink extends Entity implements Parsable {
     }
     /**
      * Gets the deviceVendor property value. The deviceVendor property
-     * @return a DeviceVendor
+     * @return a {@link DeviceVendor}
      */
     @jakarta.annotation.Nullable
     public DeviceVendor getDeviceVendor() {
@@ -52,7 +52,7 @@ public class DeviceLink extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -69,7 +69,7 @@ public class DeviceLink extends Entity implements Parsable {
     }
     /**
      * Gets the ipAddress property value. Specifies the client IPv4 of the link
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getIpAddress() {
@@ -77,7 +77,7 @@ public class DeviceLink extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. last modified time.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -85,7 +85,7 @@ public class DeviceLink extends Entity implements Parsable {
     }
     /**
      * Gets the name property value. Name.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -93,7 +93,7 @@ public class DeviceLink extends Entity implements Parsable {
     }
     /**
      * Gets the redundancyConfiguration property value. The redundancyConfiguration property
-     * @return a RedundancyConfiguration
+     * @return a {@link RedundancyConfiguration}
      */
     @jakarta.annotation.Nullable
     public RedundancyConfiguration getRedundancyConfiguration() {
@@ -101,7 +101,7 @@ public class DeviceLink extends Entity implements Parsable {
     }
     /**
      * Gets the tunnelConfiguration property value. The tunnelConfiguration property
-     * @return a TunnelConfiguration
+     * @return a {@link TunnelConfiguration}
      */
     @jakarta.annotation.Nullable
     public TunnelConfiguration getTunnelConfiguration() {

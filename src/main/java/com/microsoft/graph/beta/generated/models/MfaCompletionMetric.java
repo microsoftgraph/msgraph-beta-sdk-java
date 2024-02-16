@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MfaCompletionMetric extends Entity implements Parsable {
     /**
-     * Instantiates a new MfaCompletionMetric and sets the default values.
+     * Instantiates a new {@link MfaCompletionMetric} and sets the default values.
      */
     public MfaCompletionMetric() {
         super();
@@ -18,7 +18,7 @@ public class MfaCompletionMetric extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MfaCompletionMetric
+     * @return a {@link MfaCompletionMetric}
      */
     @jakarta.annotation.Nonnull
     public static MfaCompletionMetric createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class MfaCompletionMetric extends Entity implements Parsable {
     }
     /**
      * Gets the appId property value. The ID of the Microsoft Entra application. Supports $filter (eq).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAppId() {
@@ -35,7 +35,7 @@ public class MfaCompletionMetric extends Entity implements Parsable {
     }
     /**
      * Gets the attemptsCount property value. Number of users who attempted to sign up. Supports $filter (eq).
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getAttemptsCount() {
@@ -43,7 +43,7 @@ public class MfaCompletionMetric extends Entity implements Parsable {
     }
     /**
      * Gets the factDate property value. The date of the user insight.
-     * @return a LocalDate
+     * @return a {@link LocalDate}
      */
     @jakarta.annotation.Nullable
     public LocalDate getFactDate() {
@@ -51,7 +51,7 @@ public class MfaCompletionMetric extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -66,7 +66,7 @@ public class MfaCompletionMetric extends Entity implements Parsable {
     }
     /**
      * Gets the mfaMethod property value. The MFA authentication method used by the customers. Supports $filter (eq).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getMfaMethod() {
@@ -74,7 +74,7 @@ public class MfaCompletionMetric extends Entity implements Parsable {
     }
     /**
      * Gets the os property value. The platform of the device that the customers used. Supports $filter (eq).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOs() {
@@ -82,7 +82,7 @@ public class MfaCompletionMetric extends Entity implements Parsable {
     }
     /**
      * Gets the successCount property value. Number of users who signed up successfully. Supports $filter (eq).
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getSuccessCount() {

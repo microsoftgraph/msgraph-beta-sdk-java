@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TenantDetailedInformation extends Entity implements Parsable {
     /**
-     * Instantiates a new TenantDetailedInformation and sets the default values.
+     * Instantiates a new {@link TenantDetailedInformation} and sets the default values.
      */
     public TenantDetailedInformation() {
         super();
@@ -18,7 +18,7 @@ public class TenantDetailedInformation extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TenantDetailedInformation
+     * @return a {@link TenantDetailedInformation}
      */
     @jakarta.annotation.Nonnull
     public static TenantDetailedInformation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class TenantDetailedInformation extends Entity implements Parsable {
     }
     /**
      * Gets the city property value. The city where the managed tenant is located. Optional. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCity() {
@@ -35,7 +35,7 @@ public class TenantDetailedInformation extends Entity implements Parsable {
     }
     /**
      * Gets the countryCode property value. The code for the country where the managed tenant is located. Optional. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCountryCode() {
@@ -43,7 +43,7 @@ public class TenantDetailedInformation extends Entity implements Parsable {
     }
     /**
      * Gets the countryName property value. The name for the country where the managed tenant is located. Optional. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCountryName() {
@@ -51,7 +51,7 @@ public class TenantDetailedInformation extends Entity implements Parsable {
     }
     /**
      * Gets the defaultDomainName property value. The default domain name for the managed tenant. Optional. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDefaultDomainName() {
@@ -59,7 +59,7 @@ public class TenantDetailedInformation extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name for the managed tenant.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -67,7 +67,7 @@ public class TenantDetailedInformation extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -86,7 +86,7 @@ public class TenantDetailedInformation extends Entity implements Parsable {
     }
     /**
      * Gets the industryName property value. The business industry associated with the managed tenant. Optional. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getIndustryName() {
@@ -94,7 +94,7 @@ public class TenantDetailedInformation extends Entity implements Parsable {
     }
     /**
      * Gets the region property value. The region where the managed tenant is located. Optional. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRegion() {
@@ -102,7 +102,7 @@ public class TenantDetailedInformation extends Entity implements Parsable {
     }
     /**
      * Gets the segmentName property value. The business segment associated with the managed tenant. Optional. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSegmentName() {
@@ -110,7 +110,7 @@ public class TenantDetailedInformation extends Entity implements Parsable {
     }
     /**
      * Gets the tenantId property value. The Microsoft Entra tenant identifier for the managed tenant.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
@@ -118,7 +118,7 @@ public class TenantDetailedInformation extends Entity implements Parsable {
     }
     /**
      * Gets the verticalName property value. The vertical associated with the managed tenant. Optional. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getVerticalName() {

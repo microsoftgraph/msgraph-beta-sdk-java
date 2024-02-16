@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkbookDocumentTask extends Entity implements Parsable {
     /**
-     * Instantiates a new WorkbookDocumentTask and sets the default values.
+     * Instantiates a new {@link WorkbookDocumentTask} and sets the default values.
      */
     public WorkbookDocumentTask() {
         super();
@@ -18,7 +18,7 @@ public class WorkbookDocumentTask extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WorkbookDocumentTask
+     * @return a {@link WorkbookDocumentTask}
      */
     @jakarta.annotation.Nonnull
     public static WorkbookDocumentTask createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class WorkbookDocumentTask extends Entity implements Parsable {
     }
     /**
      * Gets the assignees property value. A collection of user identities the task is assigned to.
-     * @return a java.util.List<WorkbookEmailIdentity>
+     * @return a {@link java.util.List<WorkbookEmailIdentity>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<WorkbookEmailIdentity> getAssignees() {
@@ -35,7 +35,7 @@ public class WorkbookDocumentTask extends Entity implements Parsable {
     }
     /**
      * Gets the changes property value. A collection of task change histories.
-     * @return a java.util.List<WorkbookDocumentTaskChange>
+     * @return a {@link java.util.List<WorkbookDocumentTaskChange>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<WorkbookDocumentTaskChange> getChanges() {
@@ -43,7 +43,7 @@ public class WorkbookDocumentTask extends Entity implements Parsable {
     }
     /**
      * Gets the comment property value. The comment that the task is associated with.
-     * @return a WorkbookComment
+     * @return a {@link WorkbookComment}
      */
     @jakarta.annotation.Nullable
     public WorkbookComment getComment() {
@@ -51,7 +51,7 @@ public class WorkbookDocumentTask extends Entity implements Parsable {
     }
     /**
      * Gets the completedBy property value. The identity of the user who completed the task. Nullable.
-     * @return a WorkbookEmailIdentity
+     * @return a {@link WorkbookEmailIdentity}
      */
     @jakarta.annotation.Nullable
     public WorkbookEmailIdentity getCompletedBy() {
@@ -59,7 +59,7 @@ public class WorkbookDocumentTask extends Entity implements Parsable {
     }
     /**
      * Gets the completedDateTime property value. Date and time when the task was completed. Nullable. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCompletedDateTime() {
@@ -67,7 +67,7 @@ public class WorkbookDocumentTask extends Entity implements Parsable {
     }
     /**
      * Gets the createdBy property value. A user identity that creates the task. Nullable.
-     * @return a WorkbookEmailIdentity
+     * @return a {@link WorkbookEmailIdentity}
      */
     @jakarta.annotation.Nullable
     public WorkbookEmailIdentity getCreatedBy() {
@@ -75,7 +75,7 @@ public class WorkbookDocumentTask extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. Date and time when the task was created. Nullable. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -83,7 +83,7 @@ public class WorkbookDocumentTask extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -103,7 +103,7 @@ public class WorkbookDocumentTask extends Entity implements Parsable {
     }
     /**
      * Gets the percentComplete property value. An integer value from 0 to 100 that represents the percentage of the completion of the task. 100 means that the task is completed. Nullable.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPercentComplete() {
@@ -111,7 +111,7 @@ public class WorkbookDocumentTask extends Entity implements Parsable {
     }
     /**
      * Gets the priority property value. An integer value from 0 to 10 that represents the priority of the task. A lower value indicates a higher priority. Nullable.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPriority() {
@@ -119,7 +119,7 @@ public class WorkbookDocumentTask extends Entity implements Parsable {
     }
     /**
      * Gets the startAndDueDateTime property value. Start and due date of the task. Nullable.
-     * @return a WorkbookDocumentTaskSchedule
+     * @return a {@link WorkbookDocumentTaskSchedule}
      */
     @jakarta.annotation.Nullable
     public WorkbookDocumentTaskSchedule getStartAndDueDateTime() {
@@ -127,7 +127,7 @@ public class WorkbookDocumentTask extends Entity implements Parsable {
     }
     /**
      * Gets the title property value. The title of the task.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTitle() {

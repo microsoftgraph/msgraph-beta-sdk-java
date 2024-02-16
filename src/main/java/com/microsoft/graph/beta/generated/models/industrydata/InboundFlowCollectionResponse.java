@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class InboundFlowCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * Instantiates a new InboundFlowCollectionResponse and sets the default values.
+     * Instantiates a new {@link InboundFlowCollectionResponse} and sets the default values.
      */
     public InboundFlowCollectionResponse() {
         super();
@@ -18,7 +18,7 @@ public class InboundFlowCollectionResponse extends BaseCollectionPaginationCount
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a InboundFlowCollectionResponse
+     * @return a {@link InboundFlowCollectionResponse}
      */
     @jakarta.annotation.Nonnull
     public static InboundFlowCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class InboundFlowCollectionResponse extends BaseCollectionPaginationCount
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -37,7 +37,7 @@ public class InboundFlowCollectionResponse extends BaseCollectionPaginationCount
     }
     /**
      * Gets the value property value. The value property
-     * @return a java.util.List<InboundFlow>
+     * @return a {@link java.util.List<InboundFlow>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<InboundFlow> getValue() {

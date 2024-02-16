@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AwsPermissionsDefinition extends PermissionsDefinition implements Parsable {
     /**
-     * Instantiates a new AwsPermissionsDefinition and sets the default values.
+     * Instantiates a new {@link AwsPermissionsDefinition} and sets the default values.
      */
     public AwsPermissionsDefinition() {
         super();
@@ -18,7 +18,7 @@ public class AwsPermissionsDefinition extends PermissionsDefinition implements P
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AwsPermissionsDefinition
+     * @return a {@link AwsPermissionsDefinition}
      */
     @jakarta.annotation.Nonnull
     public static AwsPermissionsDefinition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class AwsPermissionsDefinition extends PermissionsDefinition implements P
     }
     /**
      * Gets the actionInfo property value. The actionInfo property
-     * @return a AwsPermissionsDefinitionAction
+     * @return a {@link AwsPermissionsDefinitionAction}
      */
     @jakarta.annotation.Nullable
     public AwsPermissionsDefinitionAction getActionInfo() {
@@ -35,7 +35,7 @@ public class AwsPermissionsDefinition extends PermissionsDefinition implements P
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Settings extends Entity implements Parsable {
     /**
-     * Instantiates a new Settings and sets the default values.
+     * Instantiates a new {@link Settings} and sets the default values.
      */
     public Settings() {
         super();
@@ -18,7 +18,7 @@ public class Settings extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Settings
+     * @return a {@link Settings}
      */
     @jakarta.annotation.Nonnull
     public static Settings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class Settings extends Entity implements Parsable {
     }
     /**
      * Gets the conditionalAccess property value. The conditionalAccess property
-     * @return a ConditionalAccessSettings
+     * @return a {@link ConditionalAccessSettings}
      */
     @jakarta.annotation.Nullable
     public ConditionalAccessSettings getConditionalAccess() {
@@ -35,7 +35,7 @@ public class Settings extends Entity implements Parsable {
     }
     /**
      * Gets the crossTenantAccess property value. The crossTenantAccess property
-     * @return a CrossTenantAccessSettings
+     * @return a {@link CrossTenantAccessSettings}
      */
     @jakarta.annotation.Nullable
     public CrossTenantAccessSettings getCrossTenantAccess() {
@@ -43,7 +43,7 @@ public class Settings extends Entity implements Parsable {
     }
     /**
      * Gets the enrichedAuditLogs property value. The enrichedAuditLogs property
-     * @return a EnrichedAuditLogs
+     * @return a {@link EnrichedAuditLogs}
      */
     @jakarta.annotation.Nullable
     public EnrichedAuditLogs getEnrichedAuditLogs() {
@@ -51,7 +51,7 @@ public class Settings extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -64,7 +64,7 @@ public class Settings extends Entity implements Parsable {
     }
     /**
      * Gets the forwardingOptions property value. The forwardingOptions property
-     * @return a ForwardingOptions
+     * @return a {@link ForwardingOptions}
      */
     @jakarta.annotation.Nullable
     public ForwardingOptions getForwardingOptions() {

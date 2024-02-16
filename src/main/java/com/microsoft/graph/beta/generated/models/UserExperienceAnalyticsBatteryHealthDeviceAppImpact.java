@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsBatteryHealthDeviceAppImpact extends Entity implements Parsable {
     /**
-     * Instantiates a new UserExperienceAnalyticsBatteryHealthDeviceAppImpact and sets the default values.
+     * Instantiates a new {@link UserExperienceAnalyticsBatteryHealthDeviceAppImpact} and sets the default values.
      */
     public UserExperienceAnalyticsBatteryHealthDeviceAppImpact() {
         super();
@@ -20,7 +20,7 @@ public class UserExperienceAnalyticsBatteryHealthDeviceAppImpact extends Entity 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserExperienceAnalyticsBatteryHealthDeviceAppImpact
+     * @return a {@link UserExperienceAnalyticsBatteryHealthDeviceAppImpact}
      */
     @jakarta.annotation.Nonnull
     public static UserExperienceAnalyticsBatteryHealthDeviceAppImpact createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -29,7 +29,7 @@ public class UserExperienceAnalyticsBatteryHealthDeviceAppImpact extends Entity 
     }
     /**
      * Gets the appDisplayName property value. User friendly display name for the app. Eg: Outlook
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAppDisplayName() {
@@ -37,7 +37,7 @@ public class UserExperienceAnalyticsBatteryHealthDeviceAppImpact extends Entity 
     }
     /**
      * Gets the appName property value. App name. Eg: oltk.exe
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAppName() {
@@ -45,7 +45,7 @@ public class UserExperienceAnalyticsBatteryHealthDeviceAppImpact extends Entity 
     }
     /**
      * Gets the appPublisher property value. App publisher. Eg: Microsoft Corporation
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAppPublisher() {
@@ -53,7 +53,7 @@ public class UserExperienceAnalyticsBatteryHealthDeviceAppImpact extends Entity 
     }
     /**
      * Gets the batteryUsagePercentage property value. The percent of total battery power used by this application when the device was not plugged into AC power, over 14 days. Unit in percentage. Valid values 0 to 1.79769313486232E+308
-     * @return a Double
+     * @return a {@link Double}
      */
     @jakarta.annotation.Nullable
     public Double getBatteryUsagePercentage() {
@@ -61,7 +61,7 @@ public class UserExperienceAnalyticsBatteryHealthDeviceAppImpact extends Entity 
     }
     /**
      * Gets the deviceId property value. The unique identifier of the device, Intune DeviceID or SCCM device id.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceId() {
@@ -69,7 +69,7 @@ public class UserExperienceAnalyticsBatteryHealthDeviceAppImpact extends Entity 
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -84,7 +84,7 @@ public class UserExperienceAnalyticsBatteryHealthDeviceAppImpact extends Entity 
     }
     /**
      * Gets the isForegroundApp property value. true if the user had active interaction with the app.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsForegroundApp() {

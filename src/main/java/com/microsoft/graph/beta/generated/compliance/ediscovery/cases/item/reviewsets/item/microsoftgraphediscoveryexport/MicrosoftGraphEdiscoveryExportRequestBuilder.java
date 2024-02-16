@@ -19,7 +19,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MicrosoftGraphEdiscoveryExportRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new MicrosoftGraphEdiscoveryExportRequestBuilder and sets the default values.
+     * Instantiates a new {@link MicrosoftGraphEdiscoveryExportRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -27,7 +27,7 @@ public class MicrosoftGraphEdiscoveryExportRequestBuilder extends BaseRequestBui
         super(requestAdapter, "{+baseurl}/compliance/ediscovery/cases/{case%2Did}/reviewSets/{reviewSet%2Did}/microsoft.graph.ediscovery.export", pathParameters);
     }
     /**
-     * Instantiates a new MicrosoftGraphEdiscoveryExportRequestBuilder and sets the default values.
+     * Instantiates a new {@link MicrosoftGraphEdiscoveryExportRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -37,6 +37,7 @@ public class MicrosoftGraphEdiscoveryExportRequestBuilder extends BaseRequestBui
     /**
      * Initiate an export from a reviewSet.  For details, see Export documents from a review set in Advanced eDiscovery.
      * @param body The request body
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
      * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-reviewset-export?view=graph-rest-1.0">Find more info here</a>
@@ -49,6 +50,7 @@ public class MicrosoftGraphEdiscoveryExportRequestBuilder extends BaseRequestBui
      * Initiate an export from a reviewSet.  For details, see Export documents from a review set in Advanced eDiscovery.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
      * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-reviewset-export?view=graph-rest-1.0">Find more info here</a>
@@ -58,14 +60,13 @@ public class MicrosoftGraphEdiscoveryExportRequestBuilder extends BaseRequestBui
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Initiate an export from a reviewSet.  For details, see Export documents from a review set in Advanced eDiscovery.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
      */
@@ -78,7 +79,7 @@ public class MicrosoftGraphEdiscoveryExportRequestBuilder extends BaseRequestBui
      * Initiate an export from a reviewSet.  For details, see Export documents from a review set in Advanced eDiscovery.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
      */
@@ -95,7 +96,7 @@ public class MicrosoftGraphEdiscoveryExportRequestBuilder extends BaseRequestBui
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a MicrosoftGraphEdiscoveryExportRequestBuilder
+     * @return a {@link MicrosoftGraphEdiscoveryExportRequestBuilder}
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
      */

@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TenantStatus extends Entity implements Parsable {
     /**
-     * Instantiates a new TenantStatus and sets the default values.
+     * Instantiates a new {@link TenantStatus} and sets the default values.
      */
     public TenantStatus() {
         super();
@@ -18,7 +18,7 @@ public class TenantStatus extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TenantStatus
+     * @return a {@link TenantStatus}
      */
     @jakarta.annotation.Nonnull
     public static TenantStatus createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class TenantStatus extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -38,7 +38,7 @@ public class TenantStatus extends Entity implements Parsable {
     }
     /**
      * Gets the onboardingErrorMessage property value. Reflects a message to the user if there's an error.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOnboardingErrorMessage() {
@@ -46,7 +46,7 @@ public class TenantStatus extends Entity implements Parsable {
     }
     /**
      * Gets the onboardingStatus property value. The onboardingStatus property
-     * @return a OnboardingStatus
+     * @return a {@link OnboardingStatus}
      */
     @jakarta.annotation.Nullable
     public OnboardingStatus getOnboardingStatus() {

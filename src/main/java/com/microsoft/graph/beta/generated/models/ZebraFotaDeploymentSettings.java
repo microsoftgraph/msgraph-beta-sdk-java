@@ -23,7 +23,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Backed
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new ZebraFotaDeploymentSettings and sets the default values.
+     * Instantiates a new {@link ZebraFotaDeploymentSettings} and sets the default values.
      */
     public ZebraFotaDeploymentSettings() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -32,7 +32,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Backed
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ZebraFotaDeploymentSettings
+     * @return a {@link ZebraFotaDeploymentSettings}
      */
     @jakarta.annotation.Nonnull
     public static ZebraFotaDeploymentSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -54,7 +54,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -62,7 +62,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the batteryRuleMinimumBatteryLevelPercentage property value. Minimum battery level (%) required for both download and installation. Default: -1 (System defaults). Maximum is 100.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getBatteryRuleMinimumBatteryLevelPercentage() {
@@ -70,7 +70,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the batteryRuleRequireCharger property value. Flag indicating if charger is required. When set to false, the client can install updates whether the device is in or out of the charger. Applied only for installation. Defaults to false.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getBatteryRuleRequireCharger() {
@@ -78,7 +78,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the deviceModel property value. Deploy update for devices with this model only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceModel() {
@@ -86,7 +86,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the downloadRuleNetworkType property value. Represents various network types for Zebra FOTA deployment.
-     * @return a ZebraFotaNetworkType
+     * @return a {@link ZebraFotaNetworkType}
      */
     @jakarta.annotation.Nullable
     public ZebraFotaNetworkType getDownloadRuleNetworkType() {
@@ -94,7 +94,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the downloadRuleStartDateTime property value. Date and time in the device time zone when the download will start (e.g., 2018-07-25T10:20:32). The default value is UTC now and the maximum is 10 days from deployment creation.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getDownloadRuleStartDateTime() {
@@ -102,7 +102,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Backed
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -128,7 +128,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the firmwareTargetArtifactDescription property value. A description provided by Zebra for the the firmware artifact to update the device to (e.g.: LifeGuard Update 120 (released 29-June-2022).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getFirmwareTargetArtifactDescription() {
@@ -136,7 +136,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the firmwareTargetBoardSupportPackageVersion property value. Deployment's Board Support Package (BSP. E.g.: '01.18.02.00'). Required only for custom update type.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getFirmwareTargetBoardSupportPackageVersion() {
@@ -144,7 +144,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the firmwareTargetOsVersion property value. Target OS Version (e.g.: '8.1.0'). Required only for custom update type.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getFirmwareTargetOsVersion() {
@@ -152,7 +152,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the firmwareTargetPatch property value. Target patch name (e.g.: 'U06'). Required only for custom update type.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getFirmwareTargetPatch() {
@@ -160,7 +160,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the installRuleStartDateTime property value. Date and time in device time zone when the install will start. Default - download startDate if configured, otherwise defaults to NOW. Ignored when deployment update type was set to auto.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getInstallRuleStartDateTime() {
@@ -168,7 +168,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the installRuleWindowEndTime property value. Time of day after which the install cannot start. Possible range is 00:30:00 to 23:59:59. Should be greater than 'installRuleWindowStartTime' by 30 mins. The time is expressed in a 24-hour format, as hh:mm, and is in the device time zone. Default - 23:59:59. Respected for all values of update type, including AUTO.
-     * @return a LocalTime
+     * @return a {@link LocalTime}
      */
     @jakarta.annotation.Nullable
     public LocalTime getInstallRuleWindowEndTime() {
@@ -176,7 +176,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the installRuleWindowStartTime property value. Time of day (00:00:00 - 23:30:00) when installation should begin. The time is expressed in a 24-hour format, as hh:mm, and is in the device time zone. Default - 00:00:00. Respected for all values of update type, including AUTO.
-     * @return a LocalTime
+     * @return a {@link LocalTime}
      */
     @jakarta.annotation.Nullable
     public LocalTime getInstallRuleWindowStartTime() {
@@ -184,7 +184,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -192,7 +192,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the scheduleDurationInDays property value. Maximum 28 days. Default is 28 days. Sequence of dates are: 1) Download start date. 2) Install start date. 3) Schedule end date. If any of the values are not provided, the date provided in the preceding step of the sequence is used. If no values are provided, the string value of the current UTC is used.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getScheduleDurationInDays() {
@@ -200,7 +200,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the scheduleMode property value. Represents various schedule modes for Zebra FOTA deployment.
-     * @return a ZebraFotaScheduleMode
+     * @return a {@link ZebraFotaScheduleMode}
      */
     @jakarta.annotation.Nullable
     public ZebraFotaScheduleMode getScheduleMode() {
@@ -208,7 +208,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the timeZoneOffsetInMinutes property value. This attribute indicates the deployment time offset (e.g.180 represents an offset of +03:00, and -270 represents an offset of -04:30). The time offset is the time timezone where the devices are located. The deployment start and end data uses this timezone
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getTimeZoneOffsetInMinutes() {
@@ -216,7 +216,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Backed
     }
     /**
      * Gets the updateType property value. Represents various update types for Zebra FOTA deployment.
-     * @return a ZebraFotaUpdateType
+     * @return a {@link ZebraFotaUpdateType}
      */
     @jakarta.annotation.Nullable
     public ZebraFotaUpdateType getUpdateType() {

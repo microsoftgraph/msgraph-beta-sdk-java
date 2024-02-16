@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity implements Parsable {
     /**
-     * Instantiates a new WindowsDefenderApplicationControlSupplementalPolicy and sets the default values.
+     * Instantiates a new {@link WindowsDefenderApplicationControlSupplementalPolicy} and sets the default values.
      */
     public WindowsDefenderApplicationControlSupplementalPolicy() {
         super();
@@ -18,7 +18,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WindowsDefenderApplicationControlSupplementalPolicy
+     * @return a {@link WindowsDefenderApplicationControlSupplementalPolicy}
      */
     @jakarta.annotation.Nonnull
     public static WindowsDefenderApplicationControlSupplementalPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
     }
     /**
      * Gets the assignments property value. The associated group assignments for the Windows Defender Application Control Supplemental Policy.
-     * @return a java.util.List<WindowsDefenderApplicationControlSupplementalPolicyAssignment>
+     * @return a {@link java.util.List<WindowsDefenderApplicationControlSupplementalPolicyAssignment>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<WindowsDefenderApplicationControlSupplementalPolicyAssignment> getAssignments() {
@@ -35,7 +35,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
     }
     /**
      * Gets the content property value. Indicates the content of the Windows Defender Application Control Supplemental Policy in byte array format.
-     * @return a byte[]
+     * @return a {@link byte[]}
      */
     @jakarta.annotation.Nullable
     public byte[] getContent() {
@@ -43,7 +43,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
     }
     /**
      * Gets the contentFileName property value. Indicates the file name associated with the content of the Windows Defender Application Control Supplemental Policy.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getContentFileName() {
@@ -51,7 +51,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
     }
     /**
      * Gets the creationDateTime property value. Indicates the created date and time when the Windows Defender Application Control Supplemental Policy was uploaded.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreationDateTime() {
@@ -59,7 +59,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
     }
     /**
      * Gets the deploySummary property value. WindowsDefenderApplicationControl supplemental policy deployment summary.
-     * @return a WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary
+     * @return a {@link WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary}
      */
     @jakarta.annotation.Nullable
     public WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary getDeploySummary() {
@@ -67,7 +67,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
     }
     /**
      * Gets the description property value. The description of the Windows Defender Application Control Supplemental Policy.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -75,7 +75,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
     }
     /**
      * Gets the deviceStatuses property value. The list of device deployment states for this WindowsDefenderApplicationControl supplemental policy.
-     * @return a java.util.List<WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus>
+     * @return a {@link java.util.List<WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus> getDeviceStatuses() {
@@ -83,7 +83,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
     }
     /**
      * Gets the displayName property value. The display name of the Windows Defender Application Control Supplemental Policy.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -91,7 +91,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -111,7 +111,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
     }
     /**
      * Gets the lastModifiedDateTime property value. Indicates the last modified date and time of the Windows Defender Application Control Supplemental Policy.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -119,7 +119,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
     }
     /**
      * Gets the roleScopeTagIds property value. List of Scope Tags for the Windows Defender Application Control Supplemental Policy entity.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {
@@ -127,7 +127,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
     }
     /**
      * Gets the version property value. Indicates the Windows Defender Application Control Supplemental Policy's version.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getVersion() {

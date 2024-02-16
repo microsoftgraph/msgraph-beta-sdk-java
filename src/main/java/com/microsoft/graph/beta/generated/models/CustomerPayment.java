@@ -22,7 +22,7 @@ public class CustomerPayment implements AdditionalDataHolder, BackedModel, Parsa
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new CustomerPayment and sets the default values.
+     * Instantiates a new {@link CustomerPayment} and sets the default values.
      */
     public CustomerPayment() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -31,7 +31,7 @@ public class CustomerPayment implements AdditionalDataHolder, BackedModel, Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CustomerPayment
+     * @return a {@link CustomerPayment}
      */
     @jakarta.annotation.Nonnull
     public static CustomerPayment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class CustomerPayment implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -53,7 +53,7 @@ public class CustomerPayment implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the amount property value. The amount property
-     * @return a BigDecimal
+     * @return a {@link BigDecimal}
      */
     @jakarta.annotation.Nullable
     public BigDecimal getAmount() {
@@ -61,7 +61,7 @@ public class CustomerPayment implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the appliesToInvoiceId property value. The appliesToInvoiceId property
-     * @return a UUID
+     * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
     public UUID getAppliesToInvoiceId() {
@@ -69,7 +69,7 @@ public class CustomerPayment implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the appliesToInvoiceNumber property value. The appliesToInvoiceNumber property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAppliesToInvoiceNumber() {
@@ -77,7 +77,7 @@ public class CustomerPayment implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -85,7 +85,7 @@ public class CustomerPayment implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the comment property value. The comment property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getComment() {
@@ -93,7 +93,7 @@ public class CustomerPayment implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the contactId property value. The contactId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getContactId() {
@@ -101,7 +101,7 @@ public class CustomerPayment implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the customer property value. The customer property
-     * @return a Customer
+     * @return a {@link Customer}
      */
     @jakarta.annotation.Nullable
     public Customer getCustomer() {
@@ -109,7 +109,7 @@ public class CustomerPayment implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the customerId property value. The customerId property
-     * @return a UUID
+     * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
     public UUID getCustomerId() {
@@ -117,7 +117,7 @@ public class CustomerPayment implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the customerNumber property value. The customerNumber property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCustomerNumber() {
@@ -125,7 +125,7 @@ public class CustomerPayment implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the description property value. The description property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -133,7 +133,7 @@ public class CustomerPayment implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the documentNumber property value. The documentNumber property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDocumentNumber() {
@@ -141,7 +141,7 @@ public class CustomerPayment implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the externalDocumentNumber property value. The externalDocumentNumber property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getExternalDocumentNumber() {
@@ -149,7 +149,7 @@ public class CustomerPayment implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -175,7 +175,7 @@ public class CustomerPayment implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the id property value. The id property
-     * @return a UUID
+     * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
     public UUID getId() {
@@ -183,7 +183,7 @@ public class CustomerPayment implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the journalDisplayName property value. The journalDisplayName property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getJournalDisplayName() {
@@ -191,7 +191,7 @@ public class CustomerPayment implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -199,7 +199,7 @@ public class CustomerPayment implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the lineNumber property value. The lineNumber property
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getLineNumber() {
@@ -207,7 +207,7 @@ public class CustomerPayment implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -215,7 +215,7 @@ public class CustomerPayment implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the postingDate property value. The postingDate property
-     * @return a LocalDate
+     * @return a {@link LocalDate}
      */
     @jakarta.annotation.Nullable
     public LocalDate getPostingDate() {

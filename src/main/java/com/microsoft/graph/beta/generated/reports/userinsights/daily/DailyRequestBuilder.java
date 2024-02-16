@@ -31,6 +31,7 @@ import java.util.Objects;
 public class DailyRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the activeUsers property of the microsoft.graph.dailyUserInsightMetricsRoot entity.
+     * @return a {@link ActiveUsersRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ActiveUsersRequestBuilder activeUsers() {
@@ -38,6 +39,7 @@ public class DailyRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the activeUsersBreakdown property of the microsoft.graph.dailyUserInsightMetricsRoot entity.
+     * @return a {@link ActiveUsersBreakdownRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ActiveUsersBreakdownRequestBuilder activeUsersBreakdown() {
@@ -45,6 +47,7 @@ public class DailyRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the authentications property of the microsoft.graph.dailyUserInsightMetricsRoot entity.
+     * @return a {@link AuthenticationsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AuthenticationsRequestBuilder authentications() {
@@ -52,6 +55,7 @@ public class DailyRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the inactiveUsers property of the microsoft.graph.dailyUserInsightMetricsRoot entity.
+     * @return a {@link InactiveUsersRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public InactiveUsersRequestBuilder inactiveUsers() {
@@ -59,6 +63,7 @@ public class DailyRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the inactiveUsersByApplication property of the microsoft.graph.dailyUserInsightMetricsRoot entity.
+     * @return a {@link InactiveUsersByApplicationRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public InactiveUsersByApplicationRequestBuilder inactiveUsersByApplication() {
@@ -66,6 +71,7 @@ public class DailyRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the mfaCompletions property of the microsoft.graph.dailyUserInsightMetricsRoot entity.
+     * @return a {@link MfaCompletionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MfaCompletionsRequestBuilder mfaCompletions() {
@@ -73,6 +79,7 @@ public class DailyRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the signUps property of the microsoft.graph.dailyUserInsightMetricsRoot entity.
+     * @return a {@link SignUpsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SignUpsRequestBuilder signUps() {
@@ -80,6 +87,7 @@ public class DailyRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the summary property of the microsoft.graph.dailyUserInsightMetricsRoot entity.
+     * @return a {@link SummaryRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SummaryRequestBuilder summary() {
@@ -87,13 +95,14 @@ public class DailyRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the userCount property of the microsoft.graph.dailyUserInsightMetricsRoot entity.
+     * @return a {@link UserCountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UserCountRequestBuilder userCount() {
         return new UserCountRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new DailyRequestBuilder and sets the default values.
+     * Instantiates a new {@link DailyRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -101,7 +110,7 @@ public class DailyRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/reports/userInsights/daily{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new DailyRequestBuilder and sets the default values.
+     * Instantiates a new {@link DailyRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -110,6 +119,7 @@ public class DailyRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Delete navigation property daily for reports
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete() {
         delete(null);
@@ -117,17 +127,18 @@ public class DailyRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property daily for reports
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Summaries of daily user activities on apps registered in your tenant that is configured for Microsoft Entra External ID for customers.
-     * @return a DailyUserInsightMetricsRoot
+     * @return a {@link DailyUserInsightMetricsRoot}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public DailyUserInsightMetricsRoot get() {
@@ -136,20 +147,21 @@ public class DailyRequestBuilder extends BaseRequestBuilder {
     /**
      * Summaries of daily user activities on apps registered in your tenant that is configured for Microsoft Entra External ID for customers.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a DailyUserInsightMetricsRoot
+     * @return a {@link DailyUserInsightMetricsRoot}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public DailyUserInsightMetricsRoot get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, DailyUserInsightMetricsRoot::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property daily in reports
      * @param body The request body
-     * @return a DailyUserInsightMetricsRoot
+     * @return a {@link DailyUserInsightMetricsRoot}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public DailyUserInsightMetricsRoot patch(@jakarta.annotation.Nonnull final DailyUserInsightMetricsRoot body) {
@@ -159,20 +171,20 @@ public class DailyRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property daily in reports
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a DailyUserInsightMetricsRoot
+     * @return a {@link DailyUserInsightMetricsRoot}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public DailyUserInsightMetricsRoot patch(@jakarta.annotation.Nonnull final DailyUserInsightMetricsRoot body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, DailyUserInsightMetricsRoot::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property daily for reports
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -181,18 +193,18 @@ public class DailyRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property daily for reports
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/reports/userInsights/daily", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Summaries of daily user activities on apps registered in your tenant that is configured for Microsoft Entra External ID for customers.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -201,7 +213,7 @@ public class DailyRequestBuilder extends BaseRequestBuilder {
     /**
      * Summaries of daily user activities on apps registered in your tenant that is configured for Microsoft Entra External ID for customers.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -213,7 +225,7 @@ public class DailyRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property daily in reports
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final DailyUserInsightMetricsRoot body) {
@@ -223,12 +235,12 @@ public class DailyRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property daily in reports
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final DailyUserInsightMetricsRoot body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/reports/userInsights/daily", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -237,7 +249,7 @@ public class DailyRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a DailyRequestBuilder
+     * @return a {@link DailyRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DailyRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -267,7 +279,7 @@ public class DailyRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

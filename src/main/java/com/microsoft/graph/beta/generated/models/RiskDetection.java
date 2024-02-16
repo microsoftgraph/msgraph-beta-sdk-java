@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class RiskDetection extends Entity implements Parsable {
     /**
-     * Instantiates a new RiskDetection and sets the default values.
+     * Instantiates a new {@link RiskDetection} and sets the default values.
      */
     public RiskDetection() {
         super();
@@ -18,7 +18,7 @@ public class RiskDetection extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a RiskDetection
+     * @return a {@link RiskDetection}
      */
     @jakarta.annotation.Nonnull
     public static RiskDetection createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class RiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the activity property value. Indicates the activity type the detected risk is linked to. The possible values are signin, user, unknownFutureValue.
-     * @return a ActivityType
+     * @return a {@link ActivityType}
      */
     @jakarta.annotation.Nullable
     public ActivityType getActivity() {
@@ -35,7 +35,7 @@ public class RiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the activityDateTime property value. Date and time that the risky activity occurred. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getActivityDateTime() {
@@ -43,7 +43,7 @@ public class RiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the additionalInfo property value. Additional information associated with the risk detection in JSON format.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAdditionalInfo() {
@@ -51,7 +51,7 @@ public class RiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the correlationId property value. Correlation ID of the sign-in associated with the risk detection. This property is null if the risk detection is not associated with a sign-in.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCorrelationId() {
@@ -59,7 +59,7 @@ public class RiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the detectedDateTime property value. Date and time that the risk was detected. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getDetectedDateTime() {
@@ -67,7 +67,7 @@ public class RiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the detectionTimingType property value. Timing of the detected risk (real-time/offline). The possible values are notDefined, realtime, nearRealtime, offline, unknownFutureValue.
-     * @return a RiskDetectionTimingType
+     * @return a {@link RiskDetectionTimingType}
      */
     @jakarta.annotation.Nullable
     public RiskDetectionTimingType getDetectionTimingType() {
@@ -75,7 +75,7 @@ public class RiskDetection extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -105,7 +105,7 @@ public class RiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the ipAddress property value. Provides the IP address of the client from where the risk occurred.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getIpAddress() {
@@ -113,7 +113,7 @@ public class RiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the lastUpdatedDateTime property value. Date and time that the risk detection was last updated.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastUpdatedDateTime() {
@@ -121,7 +121,7 @@ public class RiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the location property value. Location of the sign-in.
-     * @return a SignInLocation
+     * @return a {@link SignInLocation}
      */
     @jakarta.annotation.Nullable
     public SignInLocation getLocation() {
@@ -129,7 +129,7 @@ public class RiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the mitreTechniqueId property value. The mitreTechniqueId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getMitreTechniqueId() {
@@ -137,7 +137,7 @@ public class RiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the requestId property value. Request ID of the sign-in associated with the risk detection. This property is null if the risk detection is not associated with a sign-in.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRequestId() {
@@ -145,7 +145,7 @@ public class RiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the riskDetail property value. Details of the detected risk. The possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue, adminConfirmedServicePrincipalCompromised, adminDismissedAllRiskForServicePrincipal, m365DAdminDismissedDetection. Note that you must use the Prefer: include - unknown -enum-members request header to get the following value(s) in this evolvable enum: adminConfirmedServicePrincipalCompromised , adminDismissedAllRiskForServicePrincipal , m365DAdminDismissedDetection. Note: Details for this property are only available for Microsoft Entra ID P2 customers. P1 customers will be returned hidden.
-     * @return a RiskDetail
+     * @return a {@link RiskDetail}
      */
     @jakarta.annotation.Nullable
     public RiskDetail getRiskDetail() {
@@ -153,7 +153,7 @@ public class RiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the riskEventType property value. The type of risk event detected. The possible values are adminConfirmedUserCompromised, anomalousUserActivity, anonymizedIPAddress, generic, investigationsThreatIntelligence, investigationsThreatIntelligenceSigninLinked,leakedCredentials, maliciousIPAddress, maliciousIPAddressValidCredentialsBlockedIP, malwareInfectedIPAddress, mcasImpossibleTravel, mcasSuspiciousInboxManipulationRules, suspiciousAPITraffic, suspiciousIPAddress,   unfamiliarFeatures, unlikelyTravel, userReportedSuspiciousActivity.  For more information about each value, see riskEventType values.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRiskEventType() {
@@ -161,7 +161,7 @@ public class RiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the riskLevel property value. Level of the detected risk. The possible values are low, medium, high, hidden, none, unknownFutureValue. Note: Details for this property are only available for Microsoft Entra ID P2 customers. P1 customers will be returned hidden.
-     * @return a RiskLevel
+     * @return a {@link RiskLevel}
      */
     @jakarta.annotation.Nullable
     public RiskLevel getRiskLevel() {
@@ -169,7 +169,7 @@ public class RiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the riskState property value. The state of a detected risky user or sign-in. The possible values are none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, and unknownFutureValue.
-     * @return a RiskState
+     * @return a {@link RiskState}
      */
     @jakarta.annotation.Nullable
     public RiskState getRiskState() {
@@ -177,7 +177,7 @@ public class RiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the riskType property value. The riskType property
-     * @return a RiskEventType
+     * @return a {@link RiskEventType}
      */
     @jakarta.annotation.Nullable
     public RiskEventType getRiskType() {
@@ -185,7 +185,7 @@ public class RiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the source property value. Source of the risk detection. For example, activeDirectory.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSource() {
@@ -193,7 +193,7 @@ public class RiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the tokenIssuerType property value. Indicates the type of token issuer for the detected sign-in risk. The possible values are AzureAD, ADFederationServices, and unknownFutureValue.
-     * @return a TokenIssuerType
+     * @return a {@link TokenIssuerType}
      */
     @jakarta.annotation.Nullable
     public TokenIssuerType getTokenIssuerType() {
@@ -201,7 +201,7 @@ public class RiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the userDisplayName property value. Name of the user.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserDisplayName() {
@@ -209,7 +209,7 @@ public class RiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the userId property value. Unique ID of the user.  The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
@@ -217,7 +217,7 @@ public class RiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the userPrincipalName property value. The user principal name (UPN) of the user.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {

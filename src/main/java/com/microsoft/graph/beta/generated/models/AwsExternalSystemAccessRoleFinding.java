@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AwsExternalSystemAccessRoleFinding extends Finding implements Parsable {
     /**
-     * Instantiates a new AwsExternalSystemAccessRoleFinding and sets the default values.
+     * Instantiates a new {@link AwsExternalSystemAccessRoleFinding} and sets the default values.
      */
     public AwsExternalSystemAccessRoleFinding() {
         super();
@@ -17,7 +17,7 @@ public class AwsExternalSystemAccessRoleFinding extends Finding implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AwsExternalSystemAccessRoleFinding
+     * @return a {@link AwsExternalSystemAccessRoleFinding}
      */
     @jakarta.annotation.Nonnull
     public static AwsExternalSystemAccessRoleFinding createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class AwsExternalSystemAccessRoleFinding extends Finding implements Parsa
     }
     /**
      * Gets the accessibleSystemIds property value. The IDs of the accounts that this role is able to access.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAccessibleSystemIds() {
@@ -34,7 +34,7 @@ public class AwsExternalSystemAccessRoleFinding extends Finding implements Parsa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -46,7 +46,7 @@ public class AwsExternalSystemAccessRoleFinding extends Finding implements Parsa
     }
     /**
      * Gets the permissionsCreepIndex property value. The permissionsCreepIndex property
-     * @return a PermissionsCreepIndex
+     * @return a {@link PermissionsCreepIndex}
      */
     @jakarta.annotation.Nullable
     public PermissionsCreepIndex getPermissionsCreepIndex() {
@@ -54,7 +54,7 @@ public class AwsExternalSystemAccessRoleFinding extends Finding implements Parsa
     }
     /**
      * Gets the role property value. The role property
-     * @return a AwsRole
+     * @return a {@link AwsRole}
      */
     @jakarta.annotation.Nullable
     public AwsRole getRole() {

@@ -21,7 +21,7 @@ public class BitLockerRecoveryOptions implements AdditionalDataHolder, BackedMod
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new BitLockerRecoveryOptions and sets the default values.
+     * Instantiates a new {@link BitLockerRecoveryOptions} and sets the default values.
      */
     public BitLockerRecoveryOptions() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -30,7 +30,7 @@ public class BitLockerRecoveryOptions implements AdditionalDataHolder, BackedMod
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a BitLockerRecoveryOptions
+     * @return a {@link BitLockerRecoveryOptions}
      */
     @jakarta.annotation.Nonnull
     public static BitLockerRecoveryOptions createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class BitLockerRecoveryOptions implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -52,7 +52,7 @@ public class BitLockerRecoveryOptions implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -60,7 +60,7 @@ public class BitLockerRecoveryOptions implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the blockDataRecoveryAgent property value. Indicates whether to block certificate-based data recovery agent.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getBlockDataRecoveryAgent() {
@@ -68,7 +68,7 @@ public class BitLockerRecoveryOptions implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the enableBitLockerAfterRecoveryInformationToStore property value. Indicates whether or not to enable BitLocker until recovery information is stored in AD DS.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getEnableBitLockerAfterRecoveryInformationToStore() {
@@ -76,7 +76,7 @@ public class BitLockerRecoveryOptions implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the enableRecoveryInformationSaveToStore property value. Indicates whether or not to allow BitLocker recovery information to store in AD DS.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getEnableRecoveryInformationSaveToStore() {
@@ -84,7 +84,7 @@ public class BitLockerRecoveryOptions implements AdditionalDataHolder, BackedMod
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -101,7 +101,7 @@ public class BitLockerRecoveryOptions implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the hideRecoveryOptions property value. Indicates whether or not to allow showing recovery options in BitLocker Setup Wizard for fixed or system disk.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getHideRecoveryOptions() {
@@ -109,7 +109,7 @@ public class BitLockerRecoveryOptions implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -117,7 +117,7 @@ public class BitLockerRecoveryOptions implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the recoveryInformationToStore property value. BitLockerRecoveryInformationType types
-     * @return a BitLockerRecoveryInformationType
+     * @return a {@link BitLockerRecoveryInformationType}
      */
     @jakarta.annotation.Nullable
     public BitLockerRecoveryInformationType getRecoveryInformationToStore() {
@@ -125,7 +125,7 @@ public class BitLockerRecoveryOptions implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the recoveryKeyUsage property value. Possible values of the ConfigurationUsage list.
-     * @return a ConfigurationUsage
+     * @return a {@link ConfigurationUsage}
      */
     @jakarta.annotation.Nullable
     public ConfigurationUsage getRecoveryKeyUsage() {
@@ -133,7 +133,7 @@ public class BitLockerRecoveryOptions implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the recoveryPasswordUsage property value. Possible values of the ConfigurationUsage list.
-     * @return a ConfigurationUsage
+     * @return a {@link ConfigurationUsage}
      */
     @jakarta.annotation.Nullable
     public ConfigurationUsage getRecoveryPasswordUsage() {

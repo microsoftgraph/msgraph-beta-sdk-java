@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrivilegedRole extends Entity implements Parsable {
     /**
-     * Instantiates a new PrivilegedRole and sets the default values.
+     * Instantiates a new {@link PrivilegedRole} and sets the default values.
      */
     public PrivilegedRole() {
         super();
@@ -17,7 +17,7 @@ public class PrivilegedRole extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PrivilegedRole
+     * @return a {@link PrivilegedRole}
      */
     @jakarta.annotation.Nonnull
     public static PrivilegedRole createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class PrivilegedRole extends Entity implements Parsable {
     }
     /**
      * Gets the assignments property value. The assignments property
-     * @return a java.util.List<PrivilegedRoleAssignment>
+     * @return a {@link java.util.List<PrivilegedRoleAssignment>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<PrivilegedRoleAssignment> getAssignments() {
@@ -34,7 +34,7 @@ public class PrivilegedRole extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -47,7 +47,7 @@ public class PrivilegedRole extends Entity implements Parsable {
     }
     /**
      * Gets the name property value. The name property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -55,7 +55,7 @@ public class PrivilegedRole extends Entity implements Parsable {
     }
     /**
      * Gets the settings property value. The settings property
-     * @return a PrivilegedRoleSettings
+     * @return a {@link PrivilegedRoleSettings}
      */
     @jakarta.annotation.Nullable
     public PrivilegedRoleSettings getSettings() {
@@ -63,7 +63,7 @@ public class PrivilegedRole extends Entity implements Parsable {
     }
     /**
      * Gets the summary property value. The summary property
-     * @return a PrivilegedRoleSummary
+     * @return a {@link PrivilegedRoleSummary}
      */
     @jakarta.annotation.Nullable
     public PrivilegedRoleSummary getSummary() {

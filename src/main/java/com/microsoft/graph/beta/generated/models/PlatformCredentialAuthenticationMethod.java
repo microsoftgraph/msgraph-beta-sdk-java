@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PlatformCredentialAuthenticationMethod extends AuthenticationMethod implements Parsable {
     /**
-     * Instantiates a new PlatformCredentialAuthenticationMethod and sets the default values.
+     * Instantiates a new {@link PlatformCredentialAuthenticationMethod} and sets the default values.
      */
     public PlatformCredentialAuthenticationMethod() {
         super();
@@ -19,7 +19,7 @@ public class PlatformCredentialAuthenticationMethod extends AuthenticationMethod
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PlatformCredentialAuthenticationMethod
+     * @return a {@link PlatformCredentialAuthenticationMethod}
      */
     @jakarta.annotation.Nonnull
     public static PlatformCredentialAuthenticationMethod createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class PlatformCredentialAuthenticationMethod extends AuthenticationMethod
     }
     /**
      * Gets the createdDateTime property value. The date and time that this Platform Credential Key was registered.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -36,7 +36,7 @@ public class PlatformCredentialAuthenticationMethod extends AuthenticationMethod
     }
     /**
      * Gets the device property value. The registered device on which this Platform Credential resides. Supports $expand. When you get a user's Platform Credential registration information, this property is returned only on a single GET and when you specify ?$expand. For example, GET /users/admin@contoso.com/authentication/platformCredentialAuthenticationMethod/_jpuR-TGZtk6aQCLF3BQjA2?$expand=device.
-     * @return a Device
+     * @return a {@link Device}
      */
     @jakarta.annotation.Nullable
     public Device getDevice() {
@@ -44,7 +44,7 @@ public class PlatformCredentialAuthenticationMethod extends AuthenticationMethod
     }
     /**
      * Gets the displayName property value. The name of the device on which Platform Credential is registered.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -52,7 +52,7 @@ public class PlatformCredentialAuthenticationMethod extends AuthenticationMethod
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -66,7 +66,7 @@ public class PlatformCredentialAuthenticationMethod extends AuthenticationMethod
     }
     /**
      * Gets the keyStrength property value. Key strength of this Platform Credential key. Possible values are: normal, weak, unknown.
-     * @return a AuthenticationMethodKeyStrength
+     * @return a {@link AuthenticationMethodKeyStrength}
      */
     @jakarta.annotation.Nullable
     public AuthenticationMethodKeyStrength getKeyStrength() {
@@ -74,7 +74,7 @@ public class PlatformCredentialAuthenticationMethod extends AuthenticationMethod
     }
     /**
      * Gets the platform property value. Platform on which this Platform Credential key is present. Possible values are: unknown, windows, macOS,iOS, android, linux.
-     * @return a AuthenticationMethodPlatform
+     * @return a {@link AuthenticationMethodPlatform}
      */
     @jakarta.annotation.Nullable
     public AuthenticationMethodPlatform getPlatform() {

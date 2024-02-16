@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementConfigurationRedirectSettingDefinition extends DeviceManagementConfigurationSettingDefinition implements Parsable {
     /**
-     * Instantiates a new DeviceManagementConfigurationRedirectSettingDefinition and sets the default values.
+     * Instantiates a new {@link DeviceManagementConfigurationRedirectSettingDefinition} and sets the default values.
      */
     public DeviceManagementConfigurationRedirectSettingDefinition() {
         super();
@@ -17,7 +17,7 @@ public class DeviceManagementConfigurationRedirectSettingDefinition extends Devi
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceManagementConfigurationRedirectSettingDefinition
+     * @return a {@link DeviceManagementConfigurationRedirectSettingDefinition}
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementConfigurationRedirectSettingDefinition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class DeviceManagementConfigurationRedirectSettingDefinition extends Devi
     }
     /**
      * Gets the deepLink property value. A deep link that points to the specific location in the Intune console where feature support must be managed from.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeepLink() {
@@ -34,7 +34,7 @@ public class DeviceManagementConfigurationRedirectSettingDefinition extends Devi
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -46,7 +46,7 @@ public class DeviceManagementConfigurationRedirectSettingDefinition extends Devi
     }
     /**
      * Gets the redirectMessage property value. A message that explains that clicking the link will redirect the user to a supported page to manage the settings.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRedirectMessage() {
@@ -54,7 +54,7 @@ public class DeviceManagementConfigurationRedirectSettingDefinition extends Devi
     }
     /**
      * Gets the redirectReason property value. Indicates the reason for redirecting the user to an alternative location in the console.  For example: WiFi profiles are not supported in the settings catalog and must be created with a template policy.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRedirectReason() {

@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementScriptDeviceState extends Entity implements Parsable {
     /**
-     * Instantiates a new DeviceManagementScriptDeviceState and sets the default values.
+     * Instantiates a new {@link DeviceManagementScriptDeviceState} and sets the default values.
      */
     public DeviceManagementScriptDeviceState() {
         super();
@@ -21,7 +21,7 @@ public class DeviceManagementScriptDeviceState extends Entity implements Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceManagementScriptDeviceState
+     * @return a {@link DeviceManagementScriptDeviceState}
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementScriptDeviceState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class DeviceManagementScriptDeviceState extends Entity implements Parsabl
     }
     /**
      * Gets the errorCode property value. Error code corresponding to erroneous execution of the device management script.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getErrorCode() {
@@ -38,7 +38,7 @@ public class DeviceManagementScriptDeviceState extends Entity implements Parsabl
     }
     /**
      * Gets the errorDescription property value. Error description corresponding to erroneous execution of the device management script.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getErrorDescription() {
@@ -46,7 +46,7 @@ public class DeviceManagementScriptDeviceState extends Entity implements Parsabl
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -61,7 +61,7 @@ public class DeviceManagementScriptDeviceState extends Entity implements Parsabl
     }
     /**
      * Gets the lastStateUpdateDateTime property value. Latest time the device management script executes.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastStateUpdateDateTime() {
@@ -69,7 +69,7 @@ public class DeviceManagementScriptDeviceState extends Entity implements Parsabl
     }
     /**
      * Gets the managedDevice property value. The managed devices that executes the device management script.
-     * @return a ManagedDevice
+     * @return a {@link ManagedDevice}
      */
     @jakarta.annotation.Nullable
     public ManagedDevice getManagedDevice() {
@@ -77,7 +77,7 @@ public class DeviceManagementScriptDeviceState extends Entity implements Parsabl
     }
     /**
      * Gets the resultMessage property value. Details of execution output.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getResultMessage() {
@@ -85,7 +85,7 @@ public class DeviceManagementScriptDeviceState extends Entity implements Parsabl
     }
     /**
      * Gets the runState property value. Indicates the type of execution status of the device management script.
-     * @return a RunState
+     * @return a {@link RunState}
      */
     @jakarta.annotation.Nullable
     public RunState getRunState() {

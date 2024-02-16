@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MeetingActivityStatistics extends ActivityStatistics implements Parsable {
     /**
-     * Instantiates a new MeetingActivityStatistics and sets the default values.
+     * Instantiates a new {@link MeetingActivityStatistics} and sets the default values.
      */
     public MeetingActivityStatistics() {
         super();
@@ -19,7 +19,7 @@ public class MeetingActivityStatistics extends ActivityStatistics implements Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MeetingActivityStatistics
+     * @return a {@link MeetingActivityStatistics}
      */
     @jakarta.annotation.Nonnull
     public static MeetingActivityStatistics createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class MeetingActivityStatistics extends ActivityStatistics implements Par
     }
     /**
      * Gets the afterHours property value. Time spent on meetings outside of working hours, which is based on the user's Outlook calendar setting for work hours. The value is represented in ISO 8601 format for durations.
-     * @return a PeriodAndDuration
+     * @return a {@link PeriodAndDuration}
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getAfterHours() {
@@ -36,7 +36,7 @@ public class MeetingActivityStatistics extends ActivityStatistics implements Par
     }
     /**
      * Gets the conflicting property value. Time spent in conflicting meetings (meetings that overlap with other meetings that the person accepted and where the persons status is set to Busy). The value is represented in ISO 8601 format for durations.
-     * @return a PeriodAndDuration
+     * @return a {@link PeriodAndDuration}
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getConflicting() {
@@ -44,7 +44,7 @@ public class MeetingActivityStatistics extends ActivityStatistics implements Par
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -59,7 +59,7 @@ public class MeetingActivityStatistics extends ActivityStatistics implements Par
     }
     /**
      * Gets the long property value. Time spent in long meetings (more than an hour in duration). The value is represented in ISO 8601 format for durations.
-     * @return a PeriodAndDuration
+     * @return a {@link PeriodAndDuration}
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getLong() {
@@ -67,7 +67,7 @@ public class MeetingActivityStatistics extends ActivityStatistics implements Par
     }
     /**
      * Gets the multitasking property value. Time spent in meetings where the person was multitasking (read/sent more than a minimum number of emails and/or sent more than a minimum number of messages in Teams or in Skype for Business). The value is represented in ISO 8601 format for durations.
-     * @return a PeriodAndDuration
+     * @return a {@link PeriodAndDuration}
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getMultitasking() {
@@ -75,7 +75,7 @@ public class MeetingActivityStatistics extends ActivityStatistics implements Par
     }
     /**
      * Gets the organized property value. Time spent in meetings organized by the user. The value is represented in ISO 8601 format for durations.
-     * @return a PeriodAndDuration
+     * @return a {@link PeriodAndDuration}
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getOrganized() {
@@ -83,7 +83,7 @@ public class MeetingActivityStatistics extends ActivityStatistics implements Par
     }
     /**
      * Gets the recurring property value. Time spent on recurring meetings. The value is represented in ISO 8601 format for durations.
-     * @return a PeriodAndDuration
+     * @return a {@link PeriodAndDuration}
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getRecurring() {

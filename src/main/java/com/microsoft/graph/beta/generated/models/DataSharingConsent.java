@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DataSharingConsent extends Entity implements Parsable {
     /**
-     * Instantiates a new DataSharingConsent and sets the default values.
+     * Instantiates a new {@link DataSharingConsent} and sets the default values.
      */
     public DataSharingConsent() {
         super();
@@ -21,7 +21,7 @@ public class DataSharingConsent extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DataSharingConsent
+     * @return a {@link DataSharingConsent}
      */
     @jakarta.annotation.Nonnull
     public static DataSharingConsent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class DataSharingConsent extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -45,7 +45,7 @@ public class DataSharingConsent extends Entity implements Parsable {
     }
     /**
      * Gets the grantDateTime property value. The time consent was granted for this account
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getGrantDateTime() {
@@ -53,7 +53,7 @@ public class DataSharingConsent extends Entity implements Parsable {
     }
     /**
      * Gets the granted property value. The granted state for the data sharing consent
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getGranted() {
@@ -61,7 +61,7 @@ public class DataSharingConsent extends Entity implements Parsable {
     }
     /**
      * Gets the grantedByUpn property value. The Upn of the user that granted consent for this account
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getGrantedByUpn() {
@@ -69,7 +69,7 @@ public class DataSharingConsent extends Entity implements Parsable {
     }
     /**
      * Gets the grantedByUserId property value. The UserId of the user that granted consent for this account
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getGrantedByUserId() {
@@ -77,7 +77,7 @@ public class DataSharingConsent extends Entity implements Parsable {
     }
     /**
      * Gets the serviceDisplayName property value. The display name of the service work flow
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getServiceDisplayName() {
@@ -85,7 +85,7 @@ public class DataSharingConsent extends Entity implements Parsable {
     }
     /**
      * Gets the termsUrl property value. The TermsUrl for the data sharing consent
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTermsUrl() {

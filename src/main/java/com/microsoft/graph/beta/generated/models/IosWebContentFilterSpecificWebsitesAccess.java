@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IosWebContentFilterSpecificWebsitesAccess extends IosWebContentFilterBase implements Parsable {
     /**
-     * Instantiates a new IosWebContentFilterSpecificWebsitesAccess and sets the default values.
+     * Instantiates a new {@link IosWebContentFilterSpecificWebsitesAccess} and sets the default values.
      */
     public IosWebContentFilterSpecificWebsitesAccess() {
         super();
@@ -21,7 +21,7 @@ public class IosWebContentFilterSpecificWebsitesAccess extends IosWebContentFilt
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a IosWebContentFilterSpecificWebsitesAccess
+     * @return a {@link IosWebContentFilterSpecificWebsitesAccess}
      */
     @jakarta.annotation.Nonnull
     public static IosWebContentFilterSpecificWebsitesAccess createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class IosWebContentFilterSpecificWebsitesAccess extends IosWebContentFilt
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -41,7 +41,7 @@ public class IosWebContentFilterSpecificWebsitesAccess extends IosWebContentFilt
     }
     /**
      * Gets the specificWebsitesOnly property value. URL bookmarks which will be installed into built-in browser and user is only allowed to access websites through bookmarks. This collection can contain a maximum of 500 elements.
-     * @return a java.util.List<IosBookmark>
+     * @return a {@link java.util.List<IosBookmark>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<IosBookmark> getSpecificWebsitesOnly() {
@@ -49,7 +49,7 @@ public class IosWebContentFilterSpecificWebsitesAccess extends IosWebContentFilt
     }
     /**
      * Gets the websiteList property value. URL bookmarks which will be installed into built-in browser and user is only allowed to access websites through bookmarks. This collection can contain a maximum of 500 elements.
-     * @return a java.util.List<IosBookmark>
+     * @return a {@link java.util.List<IosBookmark>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<IosBookmark> getWebsiteList() {

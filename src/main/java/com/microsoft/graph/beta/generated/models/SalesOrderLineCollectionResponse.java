@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SalesOrderLineCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * Instantiates a new SalesOrderLineCollectionResponse and sets the default values.
+     * Instantiates a new {@link SalesOrderLineCollectionResponse} and sets the default values.
      */
     public SalesOrderLineCollectionResponse() {
         super();
@@ -17,7 +17,7 @@ public class SalesOrderLineCollectionResponse extends BaseCollectionPaginationCo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SalesOrderLineCollectionResponse
+     * @return a {@link SalesOrderLineCollectionResponse}
      */
     @jakarta.annotation.Nonnull
     public static SalesOrderLineCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class SalesOrderLineCollectionResponse extends BaseCollectionPaginationCo
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -36,7 +36,7 @@ public class SalesOrderLineCollectionResponse extends BaseCollectionPaginationCo
     }
     /**
      * Gets the value property value. The value property
-     * @return a java.util.List<SalesOrderLine>
+     * @return a {@link java.util.List<SalesOrderLine>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<SalesOrderLine> getValue() {

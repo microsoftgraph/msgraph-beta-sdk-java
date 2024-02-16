@@ -20,7 +20,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GetProvisionedCloudPCsWithGroupIdWithServicePlanIdRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new GetProvisionedCloudPCsWithGroupIdWithServicePlanIdRequestBuilder and sets the default values.
+     * Instantiates a new {@link GetProvisionedCloudPCsWithGroupIdWithServicePlanIdRequestBuilder} and sets the default values.
      * @param groupId Usage: groupId='{groupId}'
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
@@ -32,7 +32,7 @@ public class GetProvisionedCloudPCsWithGroupIdWithServicePlanIdRequestBuilder ex
         this.pathParameters.put("servicePlanId", servicePlanId);
     }
     /**
-     * Instantiates a new GetProvisionedCloudPCsWithGroupIdWithServicePlanIdRequestBuilder and sets the default values.
+     * Instantiates a new {@link GetProvisionedCloudPCsWithGroupIdWithServicePlanIdRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -41,7 +41,8 @@ public class GetProvisionedCloudPCsWithGroupIdWithServicePlanIdRequestBuilder ex
     }
     /**
      * Invoke function getProvisionedCloudPCs
-     * @return a GetProvisionedCloudPCsWithGroupIdWithServicePlanIdGetResponse
+     * @return a {@link GetProvisionedCloudPCsWithGroupIdWithServicePlanIdGetResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public GetProvisionedCloudPCsWithGroupIdWithServicePlanIdGetResponse get() {
@@ -50,19 +51,19 @@ public class GetProvisionedCloudPCsWithGroupIdWithServicePlanIdRequestBuilder ex
     /**
      * Invoke function getProvisionedCloudPCs
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a GetProvisionedCloudPCsWithGroupIdWithServicePlanIdGetResponse
+     * @return a {@link GetProvisionedCloudPCsWithGroupIdWithServicePlanIdGetResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public GetProvisionedCloudPCsWithGroupIdWithServicePlanIdGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, GetProvisionedCloudPCsWithGroupIdWithServicePlanIdGetResponse::createFromDiscriminatorValue);
     }
     /**
      * Invoke function getProvisionedCloudPCs
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -71,7 +72,7 @@ public class GetProvisionedCloudPCsWithGroupIdWithServicePlanIdRequestBuilder ex
     /**
      * Invoke function getProvisionedCloudPCs
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -83,7 +84,7 @@ public class GetProvisionedCloudPCsWithGroupIdWithServicePlanIdRequestBuilder ex
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a GetProvisionedCloudPCsWithGroupIdWithServicePlanIdRequestBuilder
+     * @return a {@link GetProvisionedCloudPCsWithGroupIdWithServicePlanIdRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetProvisionedCloudPCsWithGroupIdWithServicePlanIdRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -137,7 +138,7 @@ public class GetProvisionedCloudPCsWithGroupIdWithServicePlanIdRequestBuilder ex
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

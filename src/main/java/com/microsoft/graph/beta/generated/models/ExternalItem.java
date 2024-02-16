@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ExternalItem extends Entity implements Parsable {
     /**
-     * Instantiates a new ExternalItem and sets the default values.
+     * Instantiates a new {@link ExternalItem} and sets the default values.
      */
     public ExternalItem() {
         super();
@@ -17,7 +17,7 @@ public class ExternalItem extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ExternalItem
+     * @return a {@link ExternalItem}
      */
     @jakarta.annotation.Nonnull
     public static ExternalItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class ExternalItem extends Entity implements Parsable {
     }
     /**
      * Gets the acl property value. The acl property
-     * @return a java.util.List<Acl>
+     * @return a {@link java.util.List<Acl>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Acl> getAcl() {
@@ -34,7 +34,7 @@ public class ExternalItem extends Entity implements Parsable {
     }
     /**
      * Gets the content property value. The content property
-     * @return a ExternalItemContent
+     * @return a {@link ExternalItemContent}
      */
     @jakarta.annotation.Nullable
     public ExternalItemContent getContent() {
@@ -42,7 +42,7 @@ public class ExternalItem extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -54,7 +54,7 @@ public class ExternalItem extends Entity implements Parsable {
     }
     /**
      * Gets the properties property value. The properties property
-     * @return a Properties
+     * @return a {@link Properties}
      */
     @jakarta.annotation.Nullable
     public Properties getProperties() {

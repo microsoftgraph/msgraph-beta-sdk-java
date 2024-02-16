@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ImpactedResource extends Entity implements Parsable {
     /**
-     * Instantiates a new ImpactedResource and sets the default values.
+     * Instantiates a new {@link ImpactedResource} and sets the default values.
      */
     public ImpactedResource() {
         super();
@@ -18,7 +18,7 @@ public class ImpactedResource extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ImpactedResource
+     * @return a {@link ImpactedResource}
      */
     @jakarta.annotation.Nonnull
     public static ImpactedResource createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class ImpactedResource extends Entity implements Parsable {
     }
     /**
      * Gets the addedDateTime property value. The date and time when the impactedResource object was initially associated with the recommendation.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getAddedDateTime() {
@@ -35,7 +35,7 @@ public class ImpactedResource extends Entity implements Parsable {
     }
     /**
      * Gets the additionalDetails property value. Additional information unique to the impactedResource to help contextualize the recommendation.
-     * @return a java.util.List<KeyValue>
+     * @return a {@link java.util.List<KeyValue>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyValue> getAdditionalDetails() {
@@ -43,7 +43,7 @@ public class ImpactedResource extends Entity implements Parsable {
     }
     /**
      * Gets the apiUrl property value. The URL link to the corresponding Microsoft Entra resource.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getApiUrl() {
@@ -51,7 +51,7 @@ public class ImpactedResource extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. Friendly name of the Microsoft Entra resource.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -59,7 +59,7 @@ public class ImpactedResource extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -82,7 +82,7 @@ public class ImpactedResource extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedBy property value. Name of the user or service that last updated the status.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getLastModifiedBy() {
@@ -90,7 +90,7 @@ public class ImpactedResource extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. The date and time when the status was last updated.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getLastModifiedDateTime() {
@@ -98,7 +98,7 @@ public class ImpactedResource extends Entity implements Parsable {
     }
     /**
      * Gets the owner property value. The user responsible for maintaining the resource.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOwner() {
@@ -106,7 +106,7 @@ public class ImpactedResource extends Entity implements Parsable {
     }
     /**
      * Gets the portalUrl property value. The URL link to the corresponding Microsoft Entra admin center page of the resource.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPortalUrl() {
@@ -114,7 +114,7 @@ public class ImpactedResource extends Entity implements Parsable {
     }
     /**
      * Gets the postponeUntilDateTime property value. The future date and time when the status of a postponed impactedResource will be active again.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getPostponeUntilDateTime() {
@@ -122,7 +122,7 @@ public class ImpactedResource extends Entity implements Parsable {
     }
     /**
      * Gets the rank property value. Indicates the importance of the resource. A resource with a rank equal to 1 is of the highest importance.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getRank() {
@@ -130,7 +130,7 @@ public class ImpactedResource extends Entity implements Parsable {
     }
     /**
      * Gets the recommendationId property value. The unique identifier of the recommendation that the resource is associated with.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRecommendationId() {
@@ -138,7 +138,7 @@ public class ImpactedResource extends Entity implements Parsable {
     }
     /**
      * Gets the resourceType property value. Indicates the type of Microsoft Entra resource. Examples include user, application.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getResourceType() {
@@ -146,7 +146,7 @@ public class ImpactedResource extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status property
-     * @return a RecommendationStatus
+     * @return a {@link RecommendationStatus}
      */
     @jakarta.annotation.Nullable
     public RecommendationStatus getStatus() {
@@ -154,7 +154,7 @@ public class ImpactedResource extends Entity implements Parsable {
     }
     /**
      * Gets the subjectId property value. The related unique identifier, depending on the resourceType. For example, this property is set to the applicationId if the resourceType is an application.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSubjectId() {

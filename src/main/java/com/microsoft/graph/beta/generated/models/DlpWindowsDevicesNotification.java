@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DlpWindowsDevicesNotification extends DlpNotification implements Parsable {
     /**
-     * Instantiates a new DlpWindowsDevicesNotification and sets the default values.
+     * Instantiates a new {@link DlpWindowsDevicesNotification} and sets the default values.
      */
     public DlpWindowsDevicesNotification() {
         super();
@@ -18,7 +18,7 @@ public class DlpWindowsDevicesNotification extends DlpNotification implements Pa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DlpWindowsDevicesNotification
+     * @return a {@link DlpWindowsDevicesNotification}
      */
     @jakarta.annotation.Nonnull
     public static DlpWindowsDevicesNotification createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class DlpWindowsDevicesNotification extends DlpNotification implements Pa
     }
     /**
      * Gets the contentName property value. The contentName property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getContentName() {
@@ -35,7 +35,7 @@ public class DlpWindowsDevicesNotification extends DlpNotification implements Pa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -46,7 +46,7 @@ public class DlpWindowsDevicesNotification extends DlpNotification implements Pa
     }
     /**
      * Gets the lastModfiedBy property value. The lastModfiedBy property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getLastModfiedBy() {

@@ -21,7 +21,7 @@ public class CryptographySuite implements AdditionalDataHolder, BackedModel, Par
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new CryptographySuite and sets the default values.
+     * Instantiates a new {@link CryptographySuite} and sets the default values.
      */
     public CryptographySuite() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -30,7 +30,7 @@ public class CryptographySuite implements AdditionalDataHolder, BackedModel, Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CryptographySuite
+     * @return a {@link CryptographySuite}
      */
     @jakarta.annotation.Nonnull
     public static CryptographySuite createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class CryptographySuite implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -52,7 +52,7 @@ public class CryptographySuite implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the authenticationTransformConstants property value. Authentication Transform Constants. Possible values are: md596, sha196, sha256128, aes128Gcm, aes192Gcm, aes256Gcm.
-     * @return a AuthenticationTransformConstant
+     * @return a {@link AuthenticationTransformConstant}
      */
     @jakarta.annotation.Nullable
     public AuthenticationTransformConstant getAuthenticationTransformConstants() {
@@ -60,7 +60,7 @@ public class CryptographySuite implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -68,7 +68,7 @@ public class CryptographySuite implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the cipherTransformConstants property value. Cipher Transform Constants. Possible values are: aes256, des, tripleDes, aes128, aes128Gcm, aes256Gcm, aes192, aes192Gcm, chaCha20Poly1305.
-     * @return a VpnEncryptionAlgorithmType
+     * @return a {@link VpnEncryptionAlgorithmType}
      */
     @jakarta.annotation.Nullable
     public VpnEncryptionAlgorithmType getCipherTransformConstants() {
@@ -76,7 +76,7 @@ public class CryptographySuite implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the dhGroup property value. Diffie Hellman Group. Possible values are: group1, group2, group14, ecp256, ecp384, group24.
-     * @return a DiffieHellmanGroup
+     * @return a {@link DiffieHellmanGroup}
      */
     @jakarta.annotation.Nullable
     public DiffieHellmanGroup getDhGroup() {
@@ -84,7 +84,7 @@ public class CryptographySuite implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the encryptionMethod property value. Encryption Method. Possible values are: aes256, des, tripleDes, aes128, aes128Gcm, aes256Gcm, aes192, aes192Gcm, chaCha20Poly1305.
-     * @return a VpnEncryptionAlgorithmType
+     * @return a {@link VpnEncryptionAlgorithmType}
      */
     @jakarta.annotation.Nullable
     public VpnEncryptionAlgorithmType getEncryptionMethod() {
@@ -92,7 +92,7 @@ public class CryptographySuite implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -108,7 +108,7 @@ public class CryptographySuite implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the integrityCheckMethod property value. Integrity Check Method. Possible values are: sha2256, sha196, sha1160, sha2384, sha2_512, md5.
-     * @return a VpnIntegrityAlgorithmType
+     * @return a {@link VpnIntegrityAlgorithmType}
      */
     @jakarta.annotation.Nullable
     public VpnIntegrityAlgorithmType getIntegrityCheckMethod() {
@@ -116,7 +116,7 @@ public class CryptographySuite implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -124,7 +124,7 @@ public class CryptographySuite implements AdditionalDataHolder, BackedModel, Par
     }
     /**
      * Gets the pfsGroup property value. Perfect Forward Secrecy Group. Possible values are: pfs1, pfs2, pfs2048, ecp256, ecp384, pfsMM, pfs24.
-     * @return a PerfectForwardSecrecyGroup
+     * @return a {@link PerfectForwardSecrecyGroup}
      */
     @jakarta.annotation.Nullable
     public PerfectForwardSecrecyGroup getPfsGroup() {

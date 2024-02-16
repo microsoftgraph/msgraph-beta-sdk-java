@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IpSegmentConfiguration extends SegmentConfiguration implements Parsable {
     /**
-     * Instantiates a new IpSegmentConfiguration and sets the default values.
+     * Instantiates a new {@link IpSegmentConfiguration} and sets the default values.
      */
     public IpSegmentConfiguration() {
         super();
@@ -18,7 +18,7 @@ public class IpSegmentConfiguration extends SegmentConfiguration implements Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a IpSegmentConfiguration
+     * @return a {@link IpSegmentConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static IpSegmentConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class IpSegmentConfiguration extends SegmentConfiguration implements Pars
     }
     /**
      * Gets the applicationSegments property value. The applicationSegments property
-     * @return a java.util.List<IpApplicationSegment>
+     * @return a {@link java.util.List<IpApplicationSegment>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<IpApplicationSegment> getApplicationSegments() {
@@ -35,7 +35,7 @@ public class IpSegmentConfiguration extends SegmentConfiguration implements Pars
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

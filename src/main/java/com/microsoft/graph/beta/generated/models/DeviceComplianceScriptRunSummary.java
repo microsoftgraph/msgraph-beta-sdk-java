@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceComplianceScriptRunSummary extends Entity implements Parsable {
     /**
-     * Instantiates a new DeviceComplianceScriptRunSummary and sets the default values.
+     * Instantiates a new {@link DeviceComplianceScriptRunSummary} and sets the default values.
      */
     public DeviceComplianceScriptRunSummary() {
         super();
@@ -21,7 +21,7 @@ public class DeviceComplianceScriptRunSummary extends Entity implements Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceComplianceScriptRunSummary
+     * @return a {@link DeviceComplianceScriptRunSummary}
      */
     @jakarta.annotation.Nonnull
     public static DeviceComplianceScriptRunSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class DeviceComplianceScriptRunSummary extends Entity implements Parsable
     }
     /**
      * Gets the detectionScriptErrorDeviceCount property value. Number of devices on which the detection script execution encountered an error and did not complete. Valid values -2147483648 to 2147483647
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getDetectionScriptErrorDeviceCount() {
@@ -38,7 +38,7 @@ public class DeviceComplianceScriptRunSummary extends Entity implements Parsable
     }
     /**
      * Gets the detectionScriptPendingDeviceCount property value. Number of devices which have not yet run the latest version of the device compliance script. Valid values -2147483648 to 2147483647
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getDetectionScriptPendingDeviceCount() {
@@ -46,7 +46,7 @@ public class DeviceComplianceScriptRunSummary extends Entity implements Parsable
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -60,7 +60,7 @@ public class DeviceComplianceScriptRunSummary extends Entity implements Parsable
     }
     /**
      * Gets the issueDetectedDeviceCount property value. Number of devices for which the detection script found an issue. Valid values -2147483648 to 2147483647
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getIssueDetectedDeviceCount() {
@@ -68,7 +68,7 @@ public class DeviceComplianceScriptRunSummary extends Entity implements Parsable
     }
     /**
      * Gets the lastScriptRunDateTime property value. Last run time for the script across all devices
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastScriptRunDateTime() {
@@ -76,7 +76,7 @@ public class DeviceComplianceScriptRunSummary extends Entity implements Parsable
     }
     /**
      * Gets the noIssueDetectedDeviceCount property value. Number of devices for which the detection script did not find an issue and the device is healthy. Valid values -2147483648 to 2147483647
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getNoIssueDetectedDeviceCount() {

@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrivilegedRoleSummary extends Entity implements Parsable {
     /**
-     * Instantiates a new PrivilegedRoleSummary and sets the default values.
+     * Instantiates a new {@link PrivilegedRoleSummary} and sets the default values.
      */
     public PrivilegedRoleSummary() {
         super();
@@ -17,7 +17,7 @@ public class PrivilegedRoleSummary extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PrivilegedRoleSummary
+     * @return a {@link PrivilegedRoleSummary}
      */
     @jakarta.annotation.Nonnull
     public static PrivilegedRoleSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class PrivilegedRoleSummary extends Entity implements Parsable {
     }
     /**
      * Gets the elevatedCount property value. The elevatedCount property
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getElevatedCount() {
@@ -34,7 +34,7 @@ public class PrivilegedRoleSummary extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -48,7 +48,7 @@ public class PrivilegedRoleSummary extends Entity implements Parsable {
     }
     /**
      * Gets the managedCount property value. The managedCount property
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getManagedCount() {
@@ -56,7 +56,7 @@ public class PrivilegedRoleSummary extends Entity implements Parsable {
     }
     /**
      * Gets the mfaEnabled property value. The mfaEnabled property
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getMfaEnabled() {
@@ -64,7 +64,7 @@ public class PrivilegedRoleSummary extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status property
-     * @return a RoleSummaryStatus
+     * @return a {@link RoleSummaryStatus}
      */
     @jakarta.annotation.Nullable
     public RoleSummaryStatus getStatus() {
@@ -72,7 +72,7 @@ public class PrivilegedRoleSummary extends Entity implements Parsable {
     }
     /**
      * Gets the usersCount property value. The usersCount property
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getUsersCount() {

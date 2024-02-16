@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GovernanceResource extends Entity implements Parsable {
     /**
-     * Instantiates a new GovernanceResource and sets the default values.
+     * Instantiates a new {@link GovernanceResource} and sets the default values.
      */
     public GovernanceResource() {
         super();
@@ -18,7 +18,7 @@ public class GovernanceResource extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a GovernanceResource
+     * @return a {@link GovernanceResource}
      */
     @jakarta.annotation.Nonnull
     public static GovernanceResource createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class GovernanceResource extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name of the resource.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -35,7 +35,7 @@ public class GovernanceResource extends Entity implements Parsable {
     }
     /**
      * Gets the externalId property value. The external id of the resource, representing its original id in the external system. For example, a subscription resource's external id can be '/subscriptions/c14ae696-5e0c-4e5d-88cc-bef6637737ac'.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getExternalId() {
@@ -43,7 +43,7 @@ public class GovernanceResource extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -63,7 +63,7 @@ public class GovernanceResource extends Entity implements Parsable {
     }
     /**
      * Gets the parent property value. Read-only. The parent resource. for pimforazurerbac scenario, it can represent the subscription the resource belongs to.
-     * @return a GovernanceResource
+     * @return a {@link GovernanceResource}
      */
     @jakarta.annotation.Nullable
     public GovernanceResource getParent() {
@@ -71,7 +71,7 @@ public class GovernanceResource extends Entity implements Parsable {
     }
     /**
      * Gets the registeredDateTime property value. Represents the date time when the resource is registered in PIM.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getRegisteredDateTime() {
@@ -79,7 +79,7 @@ public class GovernanceResource extends Entity implements Parsable {
     }
     /**
      * Gets the registeredRoot property value. The externalId of the resource's root scope that is registered in PIM. The root scope can be the parent, grandparent, or higher ancestor resources.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRegisteredRoot() {
@@ -87,7 +87,7 @@ public class GovernanceResource extends Entity implements Parsable {
     }
     /**
      * Gets the roleAssignmentRequests property value. The collection of role assignment requests for the resource.
-     * @return a java.util.List<GovernanceRoleAssignmentRequest>
+     * @return a {@link java.util.List<GovernanceRoleAssignmentRequest>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<GovernanceRoleAssignmentRequest> getRoleAssignmentRequests() {
@@ -95,7 +95,7 @@ public class GovernanceResource extends Entity implements Parsable {
     }
     /**
      * Gets the roleAssignments property value. The collection of role assignments for the resource.
-     * @return a java.util.List<GovernanceRoleAssignment>
+     * @return a {@link java.util.List<GovernanceRoleAssignment>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<GovernanceRoleAssignment> getRoleAssignments() {
@@ -103,7 +103,7 @@ public class GovernanceResource extends Entity implements Parsable {
     }
     /**
      * Gets the roleDefinitions property value. The collection of role definitions for the resource.
-     * @return a java.util.List<GovernanceRoleDefinition>
+     * @return a {@link java.util.List<GovernanceRoleDefinition>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<GovernanceRoleDefinition> getRoleDefinitions() {
@@ -111,7 +111,7 @@ public class GovernanceResource extends Entity implements Parsable {
     }
     /**
      * Gets the roleSettings property value. The collection of role settings for the resource.
-     * @return a java.util.List<GovernanceRoleSetting>
+     * @return a {@link java.util.List<GovernanceRoleSetting>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<GovernanceRoleSetting> getRoleSettings() {
@@ -119,7 +119,7 @@ public class GovernanceResource extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status of a given resource. For example, it could represent whether the resource is locked or not (values: Active/Locked). Note: This property may be extended in the future to support more scenarios.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getStatus() {
@@ -127,7 +127,7 @@ public class GovernanceResource extends Entity implements Parsable {
     }
     /**
      * Gets the type property value. Required. Resource type. For example, for Azure resources, the type could be 'Subscription', 'ResourceGroup', 'Microsoft.Sql/server', etc.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getType() {

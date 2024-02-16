@@ -20,7 +20,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MakeEligibleRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new MakeEligibleRequestBuilder and sets the default values.
+     * Instantiates a new {@link MakeEligibleRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -28,7 +28,7 @@ public class MakeEligibleRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/privilegedRoleAssignments/{privilegedRoleAssignment%2Did}/makeEligible", pathParameters);
     }
     /**
-     * Instantiates a new MakeEligibleRequestBuilder and sets the default values.
+     * Instantiates a new {@link MakeEligibleRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -37,7 +37,8 @@ public class MakeEligibleRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Invoke action makeEligible
-     * @return a PrivilegedRoleAssignment
+     * @return a {@link PrivilegedRoleAssignment}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public PrivilegedRoleAssignment post() {
@@ -46,19 +47,19 @@ public class MakeEligibleRequestBuilder extends BaseRequestBuilder {
     /**
      * Invoke action makeEligible
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a PrivilegedRoleAssignment
+     * @return a {@link PrivilegedRoleAssignment}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public PrivilegedRoleAssignment post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toPostRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, PrivilegedRoleAssignment::createFromDiscriminatorValue);
     }
     /**
      * Invoke action makeEligible
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation() {
@@ -67,7 +68,7 @@ public class MakeEligibleRequestBuilder extends BaseRequestBuilder {
     /**
      * Invoke action makeEligible
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -79,7 +80,7 @@ public class MakeEligibleRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a MakeEligibleRequestBuilder
+     * @return a {@link MakeEligibleRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MakeEligibleRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

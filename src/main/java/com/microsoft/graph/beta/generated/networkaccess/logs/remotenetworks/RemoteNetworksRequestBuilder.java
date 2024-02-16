@@ -25,6 +25,7 @@ import java.util.Objects;
 public class RemoteNetworksRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -33,7 +34,7 @@ public class RemoteNetworksRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the remoteNetworks property of the microsoft.graph.networkaccess.logs entity.
      * @param remoteNetworkHealthEventId The unique identifier of remoteNetworkHealthEvent
-     * @return a RemoteNetworkHealthEventItemRequestBuilder
+     * @return a {@link RemoteNetworkHealthEventItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RemoteNetworkHealthEventItemRequestBuilder byRemoteNetworkHealthEventId(@jakarta.annotation.Nonnull final String remoteNetworkHealthEventId) {
@@ -43,7 +44,7 @@ public class RemoteNetworksRequestBuilder extends BaseRequestBuilder {
         return new RemoteNetworkHealthEventItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new RemoteNetworksRequestBuilder and sets the default values.
+     * Instantiates a new {@link RemoteNetworksRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -51,7 +52,7 @@ public class RemoteNetworksRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/networkAccess/logs/remoteNetworks{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new RemoteNetworksRequestBuilder and sets the default values.
+     * Instantiates a new {@link RemoteNetworksRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -60,7 +61,8 @@ public class RemoteNetworksRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of remote network health status microsoft.graph.networkaccess.remoteNetworkHealthStatusEvent events, providing insights into the health and status of remote networks.
-     * @return a RemoteNetworkHealthEventCollectionResponse
+     * @return a {@link RemoteNetworkHealthEventCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-remotenetworkhealthstatusevent-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -70,21 +72,22 @@ public class RemoteNetworksRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of remote network health status microsoft.graph.networkaccess.remoteNetworkHealthStatusEvent events, providing insights into the health and status of remote networks.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RemoteNetworkHealthEventCollectionResponse
+     * @return a {@link RemoteNetworkHealthEventCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-remotenetworkhealthstatusevent-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RemoteNetworkHealthEventCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, RemoteNetworkHealthEventCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to remoteNetworks for networkAccess
      * @param body The request body
-     * @return a RemoteNetworkHealthEvent
+     * @return a {@link RemoteNetworkHealthEvent}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public RemoteNetworkHealthEvent post(@jakarta.annotation.Nonnull final RemoteNetworkHealthEvent body) {
@@ -94,20 +97,20 @@ public class RemoteNetworksRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to remoteNetworks for networkAccess
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RemoteNetworkHealthEvent
+     * @return a {@link RemoteNetworkHealthEvent}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public RemoteNetworkHealthEvent post(@jakarta.annotation.Nonnull final RemoteNetworkHealthEvent body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, RemoteNetworkHealthEvent::createFromDiscriminatorValue);
     }
     /**
      * Retrieve a list of remote network health status microsoft.graph.networkaccess.remoteNetworkHealthStatusEvent events, providing insights into the health and status of remote networks.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -116,7 +119,7 @@ public class RemoteNetworksRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of remote network health status microsoft.graph.networkaccess.remoteNetworkHealthStatusEvent events, providing insights into the health and status of remote networks.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -128,7 +131,7 @@ public class RemoteNetworksRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to remoteNetworks for networkAccess
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final RemoteNetworkHealthEvent body) {
@@ -138,12 +141,12 @@ public class RemoteNetworksRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to remoteNetworks for networkAccess
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final RemoteNetworkHealthEvent body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/networkAccess/logs/remoteNetworks", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -152,7 +155,7 @@ public class RemoteNetworksRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a RemoteNetworksRequestBuilder
+     * @return a {@link RemoteNetworksRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RemoteNetworksRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -206,7 +209,7 @@ public class RemoteNetworksRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

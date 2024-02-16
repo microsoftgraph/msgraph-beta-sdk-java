@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CloudPcBulkModifyDiskEncryptionType extends CloudPcBulkAction implements Parsable {
     /**
-     * Instantiates a new CloudPcBulkModifyDiskEncryptionType and sets the default values.
+     * Instantiates a new {@link CloudPcBulkModifyDiskEncryptionType} and sets the default values.
      */
     public CloudPcBulkModifyDiskEncryptionType() {
         super();
@@ -18,7 +18,7 @@ public class CloudPcBulkModifyDiskEncryptionType extends CloudPcBulkAction imple
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CloudPcBulkModifyDiskEncryptionType
+     * @return a {@link CloudPcBulkModifyDiskEncryptionType}
      */
     @jakarta.annotation.Nonnull
     public static CloudPcBulkModifyDiskEncryptionType createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class CloudPcBulkModifyDiskEncryptionType extends CloudPcBulkAction imple
     }
     /**
      * Gets the diskEncryptionType property value. The diskEncryptionType property
-     * @return a CloudPcDiskEncryptionType
+     * @return a {@link CloudPcDiskEncryptionType}
      */
     @jakarta.annotation.Nullable
     public CloudPcDiskEncryptionType getDiskEncryptionType() {
@@ -35,7 +35,7 @@ public class CloudPcBulkModifyDiskEncryptionType extends CloudPcBulkAction imple
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

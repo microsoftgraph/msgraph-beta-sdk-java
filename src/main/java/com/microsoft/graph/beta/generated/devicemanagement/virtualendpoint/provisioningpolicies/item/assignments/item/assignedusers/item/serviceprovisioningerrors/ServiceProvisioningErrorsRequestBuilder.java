@@ -23,6 +23,7 @@ import java.util.Objects;
 public class ServiceProvisioningErrorsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      * @deprecated
      * The onPremisesConnectionId property is deprecated and will stop returning on July 30, 2023. as of 2023-03/onPremisesConnectionId
      */
@@ -32,7 +33,7 @@ public class ServiceProvisioningErrorsRequestBuilder extends BaseRequestBuilder 
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new ServiceProvisioningErrorsRequestBuilder and sets the default values.
+     * Instantiates a new {@link ServiceProvisioningErrorsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -40,7 +41,7 @@ public class ServiceProvisioningErrorsRequestBuilder extends BaseRequestBuilder 
         super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/provisioningPolicies/{cloudPcProvisioningPolicy%2Did}/assignments/{cloudPcProvisioningPolicyAssignment%2Did}/assignedUsers/{user%2Did}/serviceProvisioningErrors{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new ServiceProvisioningErrorsRequestBuilder and sets the default values.
+     * Instantiates a new {@link ServiceProvisioningErrorsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -49,7 +50,8 @@ public class ServiceProvisioningErrorsRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * Errors published by a federated service describing a nontransient, service-specific error regarding the properties or link from a user object.
-     * @return a ServiceProvisioningErrorCollectionResponse
+     * @return a {@link ServiceProvisioningErrorCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The onPremisesConnectionId property is deprecated and will stop returning on July 30, 2023. as of 2023-03/onPremisesConnectionId
      */
@@ -61,7 +63,8 @@ public class ServiceProvisioningErrorsRequestBuilder extends BaseRequestBuilder 
     /**
      * Errors published by a federated service describing a nontransient, service-specific error regarding the properties or link from a user object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a ServiceProvisioningErrorCollectionResponse
+     * @return a {@link ServiceProvisioningErrorCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The onPremisesConnectionId property is deprecated and will stop returning on July 30, 2023. as of 2023-03/onPremisesConnectionId
      */
@@ -70,13 +73,12 @@ public class ServiceProvisioningErrorsRequestBuilder extends BaseRequestBuilder 
     public ServiceProvisioningErrorCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, ServiceProvisioningErrorCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Errors published by a federated service describing a nontransient, service-specific error regarding the properties or link from a user object.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      * The onPremisesConnectionId property is deprecated and will stop returning on July 30, 2023. as of 2023-03/onPremisesConnectionId
      */
@@ -88,7 +90,7 @@ public class ServiceProvisioningErrorsRequestBuilder extends BaseRequestBuilder 
     /**
      * Errors published by a federated service describing a nontransient, service-specific error regarding the properties or link from a user object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      * The onPremisesConnectionId property is deprecated and will stop returning on July 30, 2023. as of 2023-03/onPremisesConnectionId
      */
@@ -103,7 +105,7 @@ public class ServiceProvisioningErrorsRequestBuilder extends BaseRequestBuilder 
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a ServiceProvisioningErrorsRequestBuilder
+     * @return a {@link ServiceProvisioningErrorsRequestBuilder}
      * @deprecated
      * The onPremisesConnectionId property is deprecated and will stop returning on July 30, 2023. as of 2023-03/onPremisesConnectionId
      */
@@ -160,7 +162,7 @@ public class ServiceProvisioningErrorsRequestBuilder extends BaseRequestBuilder 
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

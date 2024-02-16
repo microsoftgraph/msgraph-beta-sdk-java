@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AllDomains extends ValidatingDomains implements Parsable {
     /**
-     * Instantiates a new AllDomains and sets the default values.
+     * Instantiates a new {@link AllDomains} and sets the default values.
      */
     public AllDomains() {
         super();
@@ -18,7 +18,7 @@ public class AllDomains extends ValidatingDomains implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AllDomains
+     * @return a {@link AllDomains}
      */
     @jakarta.annotation.Nonnull
     public static AllDomains createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class AllDomains extends ValidatingDomains implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

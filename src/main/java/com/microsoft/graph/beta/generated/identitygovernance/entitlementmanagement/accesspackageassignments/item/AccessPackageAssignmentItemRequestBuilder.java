@@ -28,6 +28,7 @@ import java.util.Objects;
 public class AccessPackageAssignmentItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the accessPackage property of the microsoft.graph.accessPackageAssignment entity.
+     * @return a {@link AccessPackageRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AccessPackageRequestBuilder accessPackage() {
@@ -35,6 +36,7 @@ public class AccessPackageAssignmentItemRequestBuilder extends BaseRequestBuilde
     }
     /**
      * Provides operations to manage the accessPackageAssignmentPolicy property of the microsoft.graph.accessPackageAssignment entity.
+     * @return a {@link AccessPackageAssignmentPolicyRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AccessPackageAssignmentPolicyRequestBuilder accessPackageAssignmentPolicy() {
@@ -42,6 +44,7 @@ public class AccessPackageAssignmentItemRequestBuilder extends BaseRequestBuilde
     }
     /**
      * Provides operations to manage the accessPackageAssignmentRequests property of the microsoft.graph.accessPackageAssignment entity.
+     * @return a {@link AccessPackageAssignmentRequestsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AccessPackageAssignmentRequestsRequestBuilder accessPackageAssignmentRequests() {
@@ -49,6 +52,7 @@ public class AccessPackageAssignmentItemRequestBuilder extends BaseRequestBuilde
     }
     /**
      * Provides operations to manage the accessPackageAssignmentResourceRoles property of the microsoft.graph.accessPackageAssignment entity.
+     * @return a {@link AccessPackageAssignmentResourceRolesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AccessPackageAssignmentResourceRolesRequestBuilder accessPackageAssignmentResourceRoles() {
@@ -56,6 +60,7 @@ public class AccessPackageAssignmentItemRequestBuilder extends BaseRequestBuilde
     }
     /**
      * Provides operations to call the reprocess method.
+     * @return a {@link ReprocessRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ReprocessRequestBuilder reprocess() {
@@ -63,13 +68,14 @@ public class AccessPackageAssignmentItemRequestBuilder extends BaseRequestBuilde
     }
     /**
      * Provides operations to manage the target property of the microsoft.graph.accessPackageAssignment entity.
+     * @return a {@link TargetRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TargetRequestBuilder target() {
         return new TargetRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new AccessPackageAssignmentItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link AccessPackageAssignmentItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -77,7 +83,7 @@ public class AccessPackageAssignmentItemRequestBuilder extends BaseRequestBuilde
         super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/accessPackageAssignments/{accessPackageAssignment%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new AccessPackageAssignmentItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link AccessPackageAssignmentItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -86,6 +92,7 @@ public class AccessPackageAssignmentItemRequestBuilder extends BaseRequestBuilde
     }
     /**
      * Delete navigation property accessPackageAssignments for identityGovernance
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete() {
         delete(null);
@@ -93,17 +100,18 @@ public class AccessPackageAssignmentItemRequestBuilder extends BaseRequestBuilde
     /**
      * Delete navigation property accessPackageAssignments for identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * The assignment of an access package to a subject for a period of time.
-     * @return a AccessPackageAssignment
+     * @return a {@link AccessPackageAssignment}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public AccessPackageAssignment get() {
@@ -112,20 +120,21 @@ public class AccessPackageAssignmentItemRequestBuilder extends BaseRequestBuilde
     /**
      * The assignment of an access package to a subject for a period of time.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a AccessPackageAssignment
+     * @return a {@link AccessPackageAssignment}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public AccessPackageAssignment get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, AccessPackageAssignment::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property accessPackageAssignments in identityGovernance
      * @param body The request body
-     * @return a AccessPackageAssignment
+     * @return a {@link AccessPackageAssignment}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public AccessPackageAssignment patch(@jakarta.annotation.Nonnull final AccessPackageAssignment body) {
@@ -135,20 +144,20 @@ public class AccessPackageAssignmentItemRequestBuilder extends BaseRequestBuilde
      * Update the navigation property accessPackageAssignments in identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a AccessPackageAssignment
+     * @return a {@link AccessPackageAssignment}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public AccessPackageAssignment patch(@jakarta.annotation.Nonnull final AccessPackageAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, AccessPackageAssignment::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property accessPackageAssignments for identityGovernance
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -157,18 +166,18 @@ public class AccessPackageAssignmentItemRequestBuilder extends BaseRequestBuilde
     /**
      * Delete navigation property accessPackageAssignments for identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/identityGovernance/entitlementManagement/accessPackageAssignments/{accessPackageAssignment%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * The assignment of an access package to a subject for a period of time.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -177,7 +186,7 @@ public class AccessPackageAssignmentItemRequestBuilder extends BaseRequestBuilde
     /**
      * The assignment of an access package to a subject for a period of time.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -189,7 +198,7 @@ public class AccessPackageAssignmentItemRequestBuilder extends BaseRequestBuilde
     /**
      * Update the navigation property accessPackageAssignments in identityGovernance
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final AccessPackageAssignment body) {
@@ -199,12 +208,12 @@ public class AccessPackageAssignmentItemRequestBuilder extends BaseRequestBuilde
      * Update the navigation property accessPackageAssignments in identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final AccessPackageAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/identityGovernance/entitlementManagement/accessPackageAssignments/{accessPackageAssignment%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -213,7 +222,7 @@ public class AccessPackageAssignmentItemRequestBuilder extends BaseRequestBuilde
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a AccessPackageAssignmentItemRequestBuilder
+     * @return a {@link AccessPackageAssignmentItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AccessPackageAssignmentItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -243,7 +252,7 @@ public class AccessPackageAssignmentItemRequestBuilder extends BaseRequestBuilde
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

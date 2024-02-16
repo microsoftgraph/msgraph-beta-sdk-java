@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class VirtualMachineWithAwsStorageBucketAccessFinding extends Finding implements Parsable {
     /**
-     * Instantiates a new VirtualMachineWithAwsStorageBucketAccessFinding and sets the default values.
+     * Instantiates a new {@link VirtualMachineWithAwsStorageBucketAccessFinding} and sets the default values.
      */
     public VirtualMachineWithAwsStorageBucketAccessFinding() {
         super();
@@ -17,7 +17,7 @@ public class VirtualMachineWithAwsStorageBucketAccessFinding extends Finding imp
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a VirtualMachineWithAwsStorageBucketAccessFinding
+     * @return a {@link VirtualMachineWithAwsStorageBucketAccessFinding}
      */
     @jakarta.annotation.Nonnull
     public static VirtualMachineWithAwsStorageBucketAccessFinding createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class VirtualMachineWithAwsStorageBucketAccessFinding extends Finding imp
     }
     /**
      * Gets the accessibleCount property value. The total number of storage buckets that the EC2 instance can access using the role.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getAccessibleCount() {
@@ -34,7 +34,7 @@ public class VirtualMachineWithAwsStorageBucketAccessFinding extends Finding imp
     }
     /**
      * Gets the bucketCount property value. The total number of storage buckets in the authorization system that hosts the EC2 instance.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getBucketCount() {
@@ -42,7 +42,7 @@ public class VirtualMachineWithAwsStorageBucketAccessFinding extends Finding imp
     }
     /**
      * Gets the ec2Instance property value. The ec2Instance property
-     * @return a AuthorizationSystemResource
+     * @return a {@link AuthorizationSystemResource}
      */
     @jakarta.annotation.Nullable
     public AuthorizationSystemResource getEc2Instance() {
@@ -50,7 +50,7 @@ public class VirtualMachineWithAwsStorageBucketAccessFinding extends Finding imp
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -64,7 +64,7 @@ public class VirtualMachineWithAwsStorageBucketAccessFinding extends Finding imp
     }
     /**
      * Gets the permissionsCreepIndex property value. The permissionsCreepIndex property
-     * @return a PermissionsCreepIndex
+     * @return a {@link PermissionsCreepIndex}
      */
     @jakarta.annotation.Nullable
     public PermissionsCreepIndex getPermissionsCreepIndex() {
@@ -72,7 +72,7 @@ public class VirtualMachineWithAwsStorageBucketAccessFinding extends Finding imp
     }
     /**
      * Gets the role property value. The role property
-     * @return a AwsRole
+     * @return a {@link AwsRole}
      */
     @jakarta.annotation.Nullable
     public AwsRole getRole() {

@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OnAuthenticationMethodLoadStartListener extends AuthenticationEventListener implements Parsable {
     /**
-     * Instantiates a new OnAuthenticationMethodLoadStartListener and sets the default values.
+     * Instantiates a new {@link OnAuthenticationMethodLoadStartListener} and sets the default values.
      */
     public OnAuthenticationMethodLoadStartListener() {
         super();
@@ -18,7 +18,7 @@ public class OnAuthenticationMethodLoadStartListener extends AuthenticationEvent
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a OnAuthenticationMethodLoadStartListener
+     * @return a {@link OnAuthenticationMethodLoadStartListener}
      */
     @jakarta.annotation.Nonnull
     public static OnAuthenticationMethodLoadStartListener createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class OnAuthenticationMethodLoadStartListener extends AuthenticationEvent
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -37,7 +37,7 @@ public class OnAuthenticationMethodLoadStartListener extends AuthenticationEvent
     }
     /**
      * Gets the handler property value. Required. Configuration for what to invoke if the event resolves to this listener. This lets us define potential handler configurations per-event.
-     * @return a OnAuthenticationMethodLoadStartHandler
+     * @return a {@link OnAuthenticationMethodLoadStartHandler}
      */
     @jakarta.annotation.Nullable
     public OnAuthenticationMethodLoadStartHandler getHandler() {

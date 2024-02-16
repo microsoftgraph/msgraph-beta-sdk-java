@@ -18,7 +18,7 @@ public class DeviceManagementConfigurationOptionDefinition implements Additional
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new DeviceManagementConfigurationOptionDefinition and sets the default values.
+     * Instantiates a new {@link DeviceManagementConfigurationOptionDefinition} and sets the default values.
      */
     public DeviceManagementConfigurationOptionDefinition() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class DeviceManagementConfigurationOptionDefinition implements Additional
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceManagementConfigurationOptionDefinition
+     * @return a {@link DeviceManagementConfigurationOptionDefinition}
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementConfigurationOptionDefinition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class DeviceManagementConfigurationOptionDefinition implements Additional
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class DeviceManagementConfigurationOptionDefinition implements Additional
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class DeviceManagementConfigurationOptionDefinition implements Additional
     }
     /**
      * Gets the dependedOnBy property value. List of Settings that depends on this option
-     * @return a java.util.List<DeviceManagementConfigurationSettingDependedOnBy>
+     * @return a {@link java.util.List<DeviceManagementConfigurationSettingDependedOnBy>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementConfigurationSettingDependedOnBy> getDependedOnBy() {
@@ -65,7 +65,7 @@ public class DeviceManagementConfigurationOptionDefinition implements Additional
     }
     /**
      * Gets the dependentOn property value. List of dependent settings for this option
-     * @return a java.util.List<DeviceManagementConfigurationDependentOn>
+     * @return a {@link java.util.List<DeviceManagementConfigurationDependentOn>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementConfigurationDependentOn> getDependentOn() {
@@ -73,7 +73,7 @@ public class DeviceManagementConfigurationOptionDefinition implements Additional
     }
     /**
      * Gets the description property value. Description of the option
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -81,7 +81,7 @@ public class DeviceManagementConfigurationOptionDefinition implements Additional
     }
     /**
      * Gets the displayName property value. Friendly name of the option
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -89,7 +89,7 @@ public class DeviceManagementConfigurationOptionDefinition implements Additional
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -107,7 +107,7 @@ public class DeviceManagementConfigurationOptionDefinition implements Additional
     }
     /**
      * Gets the helpText property value. Help text of the option
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getHelpText() {
@@ -115,7 +115,7 @@ public class DeviceManagementConfigurationOptionDefinition implements Additional
     }
     /**
      * Gets the itemId property value. Identifier of option
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getItemId() {
@@ -123,7 +123,7 @@ public class DeviceManagementConfigurationOptionDefinition implements Additional
     }
     /**
      * Gets the name property value. Name of the option
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -131,7 +131,7 @@ public class DeviceManagementConfigurationOptionDefinition implements Additional
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -139,7 +139,7 @@ public class DeviceManagementConfigurationOptionDefinition implements Additional
     }
     /**
      * Gets the optionValue property value. Value of the option
-     * @return a DeviceManagementConfigurationSettingValue
+     * @return a {@link DeviceManagementConfigurationSettingValue}
      */
     @jakarta.annotation.Nullable
     public DeviceManagementConfigurationSettingValue getOptionValue() {

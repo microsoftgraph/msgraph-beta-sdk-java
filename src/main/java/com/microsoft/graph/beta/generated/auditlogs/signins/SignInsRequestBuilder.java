@@ -27,6 +27,7 @@ import java.util.Objects;
 public class SignInsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the confirmCompromised method.
+     * @return a {@link ConfirmCompromisedRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ConfirmCompromisedRequestBuilder confirmCompromised() {
@@ -34,6 +35,7 @@ public class SignInsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the confirmSafe method.
+     * @return a {@link ConfirmSafeRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ConfirmSafeRequestBuilder confirmSafe() {
@@ -41,6 +43,7 @@ public class SignInsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -49,7 +52,7 @@ public class SignInsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the signIns property of the microsoft.graph.auditLogRoot entity.
      * @param signInId The unique identifier of signIn
-     * @return a SignInItemRequestBuilder
+     * @return a {@link SignInItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SignInItemRequestBuilder bySignInId(@jakarta.annotation.Nonnull final String signInId) {
@@ -59,7 +62,7 @@ public class SignInsRequestBuilder extends BaseRequestBuilder {
         return new SignInItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new SignInsRequestBuilder and sets the default values.
+     * Instantiates a new {@link SignInsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -67,7 +70,7 @@ public class SignInsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/auditLogs/signIns{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new SignInsRequestBuilder and sets the default values.
+     * Instantiates a new {@link SignInsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -76,7 +79,8 @@ public class SignInsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of signIn objects. The list contains the user sign-ins for your Microsoft Entra tenant. Sign-ins where a username and password are passed as part of authorization token, and successful federated sign-ins are currently included in the sign-in logs. The maximum and default page size is 1,000 objects and by default, the most recent sign-ins are returned first. Only sign-in events that occurred within the Microsoft Entra ID default retention period are available.
-     * @return a SignInCollectionResponse
+     * @return a {@link SignInCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/signin-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -86,21 +90,22 @@ public class SignInsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of signIn objects. The list contains the user sign-ins for your Microsoft Entra tenant. Sign-ins where a username and password are passed as part of authorization token, and successful federated sign-ins are currently included in the sign-in logs. The maximum and default page size is 1,000 objects and by default, the most recent sign-ins are returned first. Only sign-in events that occurred within the Microsoft Entra ID default retention period are available.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a SignInCollectionResponse
+     * @return a {@link SignInCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/signin-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SignInCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, SignInCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to signIns for auditLogs
      * @param body The request body
-     * @return a SignIn
+     * @return a {@link SignIn}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public SignIn post(@jakarta.annotation.Nonnull final SignIn body) {
@@ -110,20 +115,20 @@ public class SignInsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to signIns for auditLogs
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a SignIn
+     * @return a {@link SignIn}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public SignIn post(@jakarta.annotation.Nonnull final SignIn body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, SignIn::createFromDiscriminatorValue);
     }
     /**
      * Get a list of signIn objects. The list contains the user sign-ins for your Microsoft Entra tenant. Sign-ins where a username and password are passed as part of authorization token, and successful federated sign-ins are currently included in the sign-in logs. The maximum and default page size is 1,000 objects and by default, the most recent sign-ins are returned first. Only sign-in events that occurred within the Microsoft Entra ID default retention period are available.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -132,7 +137,7 @@ public class SignInsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of signIn objects. The list contains the user sign-ins for your Microsoft Entra tenant. Sign-ins where a username and password are passed as part of authorization token, and successful federated sign-ins are currently included in the sign-in logs. The maximum and default page size is 1,000 objects and by default, the most recent sign-ins are returned first. Only sign-in events that occurred within the Microsoft Entra ID default retention period are available.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -144,7 +149,7 @@ public class SignInsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to signIns for auditLogs
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final SignIn body) {
@@ -154,12 +159,12 @@ public class SignInsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to signIns for auditLogs
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final SignIn body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/auditLogs/signIns", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -168,7 +173,7 @@ public class SignInsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a SignInsRequestBuilder
+     * @return a {@link SignInsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SignInsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -222,7 +227,7 @@ public class SignInsRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

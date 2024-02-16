@@ -24,6 +24,7 @@ import java.util.Objects;
 public class RoleScopeTagsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -32,7 +33,7 @@ public class RoleScopeTagsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the roleScopeTags property of the microsoft.graph.deviceAndAppManagementRoleAssignment entity.
      * @param roleScopeTagId The unique identifier of roleScopeTag
-     * @return a RoleScopeTagItemRequestBuilder
+     * @return a {@link RoleScopeTagItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RoleScopeTagItemRequestBuilder byRoleScopeTagId(@jakarta.annotation.Nonnull final String roleScopeTagId) {
@@ -42,7 +43,7 @@ public class RoleScopeTagsRequestBuilder extends BaseRequestBuilder {
         return new RoleScopeTagItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new RoleScopeTagsRequestBuilder and sets the default values.
+     * Instantiates a new {@link RoleScopeTagsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -50,7 +51,7 @@ public class RoleScopeTagsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/roleAssignments/{deviceAndAppManagementRoleAssignment%2Did}/roleScopeTags{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new RoleScopeTagsRequestBuilder and sets the default values.
+     * Instantiates a new {@link RoleScopeTagsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -59,7 +60,8 @@ public class RoleScopeTagsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The set of Role Scope Tags defined on the Role Assignment.
-     * @return a RoleScopeTagCollectionResponse
+     * @return a {@link RoleScopeTagCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public RoleScopeTagCollectionResponse get() {
@@ -68,19 +70,19 @@ public class RoleScopeTagsRequestBuilder extends BaseRequestBuilder {
     /**
      * The set of Role Scope Tags defined on the Role Assignment.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RoleScopeTagCollectionResponse
+     * @return a {@link RoleScopeTagCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public RoleScopeTagCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, RoleScopeTagCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * The set of Role Scope Tags defined on the Role Assignment.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -89,7 +91,7 @@ public class RoleScopeTagsRequestBuilder extends BaseRequestBuilder {
     /**
      * The set of Role Scope Tags defined on the Role Assignment.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -101,7 +103,7 @@ public class RoleScopeTagsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a RoleScopeTagsRequestBuilder
+     * @return a {@link RoleScopeTagsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RoleScopeTagsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -155,7 +157,7 @@ public class RoleScopeTagsRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

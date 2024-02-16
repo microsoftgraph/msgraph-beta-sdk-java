@@ -31,6 +31,7 @@ import java.util.Objects;
 public class DomainItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the domainNameReferences property of the microsoft.graph.domain entity.
+     * @return a {@link DomainNameReferencesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DomainNameReferencesRequestBuilder domainNameReferences() {
@@ -38,6 +39,7 @@ public class DomainItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the federationConfiguration property of the microsoft.graph.domain entity.
+     * @return a {@link FederationConfigurationRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public FederationConfigurationRequestBuilder federationConfiguration() {
@@ -45,6 +47,7 @@ public class DomainItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the forceDelete method.
+     * @return a {@link ForceDeleteRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ForceDeleteRequestBuilder forceDelete() {
@@ -52,6 +55,7 @@ public class DomainItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the promote method.
+     * @return a {@link PromoteRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PromoteRequestBuilder promote() {
@@ -59,6 +63,7 @@ public class DomainItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the promoteToInitial method.
+     * @return a {@link PromoteToInitialRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PromoteToInitialRequestBuilder promoteToInitial() {
@@ -66,6 +71,7 @@ public class DomainItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the serviceConfigurationRecords property of the microsoft.graph.domain entity.
+     * @return a {@link ServiceConfigurationRecordsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ServiceConfigurationRecordsRequestBuilder serviceConfigurationRecords() {
@@ -73,6 +79,7 @@ public class DomainItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the sharedEmailDomainInvitations property of the microsoft.graph.domain entity.
+     * @return a {@link SharedEmailDomainInvitationsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SharedEmailDomainInvitationsRequestBuilder sharedEmailDomainInvitations() {
@@ -80,6 +87,7 @@ public class DomainItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the verificationDnsRecords property of the microsoft.graph.domain entity.
+     * @return a {@link VerificationDnsRecordsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public VerificationDnsRecordsRequestBuilder verificationDnsRecords() {
@@ -87,13 +95,14 @@ public class DomainItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the verify method.
+     * @return a {@link VerifyRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public VerifyRequestBuilder verify() {
         return new VerifyRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new DomainItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link DomainItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -101,7 +110,7 @@ public class DomainItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/domains/{domain%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new DomainItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link DomainItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -110,6 +119,7 @@ public class DomainItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Deletes a domain from a tenant.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/domain-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
@@ -118,18 +128,19 @@ public class DomainItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Deletes a domain from a tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/domain-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Retrieve the properties and relationships of domain object.
-     * @return a Domain
+     * @return a {@link Domain}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/domain-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -139,21 +150,22 @@ public class DomainItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of domain object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a Domain
+     * @return a {@link Domain}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/domain-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Domain get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, Domain::createFromDiscriminatorValue);
     }
     /**
      * Update the properties of domain object.
      * @param body The request body
-     * @return a Domain
+     * @return a {@link Domain}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/domain-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -164,7 +176,8 @@ public class DomainItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of domain object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a Domain
+     * @return a {@link Domain}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/domain-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -172,13 +185,12 @@ public class DomainItemRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, Domain::createFromDiscriminatorValue);
     }
     /**
      * Deletes a domain from a tenant.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -187,18 +199,18 @@ public class DomainItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Deletes a domain from a tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/domains/{domain%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Retrieve the properties and relationships of domain object.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -207,7 +219,7 @@ public class DomainItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of domain object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -219,7 +231,7 @@ public class DomainItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of domain object.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final Domain body) {
@@ -229,12 +241,12 @@ public class DomainItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of domain object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final Domain body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/domains/{domain%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -243,7 +255,7 @@ public class DomainItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a DomainItemRequestBuilder
+     * @return a {@link DomainItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DomainItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -273,7 +285,7 @@ public class DomainItemRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

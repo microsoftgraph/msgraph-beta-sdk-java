@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GroupPolicySettingMapping extends Entity implements Parsable {
     /**
-     * Instantiates a new GroupPolicySettingMapping and sets the default values.
+     * Instantiates a new {@link GroupPolicySettingMapping} and sets the default values.
      */
     public GroupPolicySettingMapping() {
         super();
@@ -20,7 +20,7 @@ public class GroupPolicySettingMapping extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a GroupPolicySettingMapping
+     * @return a {@link GroupPolicySettingMapping}
      */
     @jakarta.annotation.Nonnull
     public static GroupPolicySettingMapping createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -29,7 +29,7 @@ public class GroupPolicySettingMapping extends Entity implements Parsable {
     }
     /**
      * Gets the admxSettingDefinitionId property value. Admx Group Policy Id
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAdmxSettingDefinitionId() {
@@ -37,7 +37,7 @@ public class GroupPolicySettingMapping extends Entity implements Parsable {
     }
     /**
      * Gets the childIdList property value. List of Child Ids of the group policy setting.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getChildIdList() {
@@ -45,7 +45,7 @@ public class GroupPolicySettingMapping extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -74,7 +74,7 @@ public class GroupPolicySettingMapping extends Entity implements Parsable {
     }
     /**
      * Gets the intuneSettingDefinitionId property value. The Intune Setting Definition Id
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getIntuneSettingDefinitionId() {
@@ -82,7 +82,7 @@ public class GroupPolicySettingMapping extends Entity implements Parsable {
     }
     /**
      * Gets the intuneSettingUriList property value. The list of Intune Setting URIs this group policy setting maps to
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getIntuneSettingUriList() {
@@ -90,7 +90,7 @@ public class GroupPolicySettingMapping extends Entity implements Parsable {
     }
     /**
      * Gets the isMdmSupported property value. Indicates if the setting is supported by Intune or not
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsMdmSupported() {
@@ -98,7 +98,7 @@ public class GroupPolicySettingMapping extends Entity implements Parsable {
     }
     /**
      * Gets the mdmCspName property value. The CSP name this group policy setting maps to.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getMdmCspName() {
@@ -106,7 +106,7 @@ public class GroupPolicySettingMapping extends Entity implements Parsable {
     }
     /**
      * Gets the mdmMinimumOSVersion property value. The minimum OS version this mdm setting supports.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getMdmMinimumOSVersion() {
@@ -114,7 +114,7 @@ public class GroupPolicySettingMapping extends Entity implements Parsable {
     }
     /**
      * Gets the mdmSettingUri property value. The MDM CSP URI this group policy setting maps to.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getMdmSettingUri() {
@@ -122,7 +122,7 @@ public class GroupPolicySettingMapping extends Entity implements Parsable {
     }
     /**
      * Gets the mdmSupportedState property value. Mdm Support Status of the setting.
-     * @return a MdmSupportedState
+     * @return a {@link MdmSupportedState}
      */
     @jakarta.annotation.Nullable
     public MdmSupportedState getMdmSupportedState() {
@@ -130,7 +130,7 @@ public class GroupPolicySettingMapping extends Entity implements Parsable {
     }
     /**
      * Gets the parentId property value. Parent Id of the group policy setting.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getParentId() {
@@ -138,7 +138,7 @@ public class GroupPolicySettingMapping extends Entity implements Parsable {
     }
     /**
      * Gets the settingCategory property value. The category the group policy setting is in.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSettingCategory() {
@@ -146,7 +146,7 @@ public class GroupPolicySettingMapping extends Entity implements Parsable {
     }
     /**
      * Gets the settingDisplayName property value. The display name of this group policy setting.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSettingDisplayName() {
@@ -154,7 +154,7 @@ public class GroupPolicySettingMapping extends Entity implements Parsable {
     }
     /**
      * Gets the settingDisplayValue property value. The display value of this group policy setting.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSettingDisplayValue() {
@@ -162,7 +162,7 @@ public class GroupPolicySettingMapping extends Entity implements Parsable {
     }
     /**
      * Gets the settingDisplayValueType property value. The display value type of this group policy setting.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSettingDisplayValueType() {
@@ -170,7 +170,7 @@ public class GroupPolicySettingMapping extends Entity implements Parsable {
     }
     /**
      * Gets the settingName property value. The name of this group policy setting.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSettingName() {
@@ -178,7 +178,7 @@ public class GroupPolicySettingMapping extends Entity implements Parsable {
     }
     /**
      * Gets the settingScope property value. Scope of the group policy setting.
-     * @return a GroupPolicySettingScope
+     * @return a {@link GroupPolicySettingScope}
      */
     @jakarta.annotation.Nullable
     public GroupPolicySettingScope getSettingScope() {
@@ -186,7 +186,7 @@ public class GroupPolicySettingMapping extends Entity implements Parsable {
     }
     /**
      * Gets the settingType property value. Setting type of the group policy.
-     * @return a GroupPolicySettingType
+     * @return a {@link GroupPolicySettingType}
      */
     @jakarta.annotation.Nullable
     public GroupPolicySettingType getSettingType() {
@@ -194,7 +194,7 @@ public class GroupPolicySettingMapping extends Entity implements Parsable {
     }
     /**
      * Gets the settingValue property value. The value of this group policy setting.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSettingValue() {
@@ -202,7 +202,7 @@ public class GroupPolicySettingMapping extends Entity implements Parsable {
     }
     /**
      * Gets the settingValueDisplayUnits property value. The display units of this group policy setting value
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSettingValueDisplayUnits() {
@@ -210,7 +210,7 @@ public class GroupPolicySettingMapping extends Entity implements Parsable {
     }
     /**
      * Gets the settingValueType property value. The value type of this group policy setting.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSettingValueType() {

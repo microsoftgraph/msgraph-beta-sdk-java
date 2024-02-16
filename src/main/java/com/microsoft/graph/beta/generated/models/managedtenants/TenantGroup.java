@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TenantGroup extends Entity implements Parsable {
     /**
-     * Instantiates a new TenantGroup and sets the default values.
+     * Instantiates a new {@link TenantGroup} and sets the default values.
      */
     public TenantGroup() {
         super();
@@ -18,7 +18,7 @@ public class TenantGroup extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TenantGroup
+     * @return a {@link TenantGroup}
      */
     @jakarta.annotation.Nonnull
     public static TenantGroup createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class TenantGroup extends Entity implements Parsable {
     }
     /**
      * Gets the allTenantsIncluded property value. A flag indicating whether all managed tenant are included in the tenant group. Required. Read-only.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAllTenantsIncluded() {
@@ -35,7 +35,7 @@ public class TenantGroup extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name for the tenant group. Optional. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -43,7 +43,7 @@ public class TenantGroup extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -57,7 +57,7 @@ public class TenantGroup extends Entity implements Parsable {
     }
     /**
      * Gets the managementActions property value. The collection of management action associated with the tenant group. Optional. Read-only.
-     * @return a java.util.List<ManagementActionInfo>
+     * @return a {@link java.util.List<ManagementActionInfo>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagementActionInfo> getManagementActions() {
@@ -65,7 +65,7 @@ public class TenantGroup extends Entity implements Parsable {
     }
     /**
      * Gets the managementIntents property value. The collection of management intents associated with the tenant group. Optional. Read-only.
-     * @return a java.util.List<ManagementIntentInfo>
+     * @return a {@link java.util.List<ManagementIntentInfo>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagementIntentInfo> getManagementIntents() {
@@ -73,7 +73,7 @@ public class TenantGroup extends Entity implements Parsable {
     }
     /**
      * Gets the tenantIds property value. The collection of managed tenant identifiers include in the tenant group. Optional. Read-only.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getTenantIds() {

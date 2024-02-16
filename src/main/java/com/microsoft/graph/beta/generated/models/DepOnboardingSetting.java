@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DepOnboardingSetting extends Entity implements Parsable {
     /**
-     * Instantiates a new DepOnboardingSetting and sets the default values.
+     * Instantiates a new {@link DepOnboardingSetting} and sets the default values.
      */
     public DepOnboardingSetting() {
         super();
@@ -21,7 +21,7 @@ public class DepOnboardingSetting extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DepOnboardingSetting
+     * @return a {@link DepOnboardingSetting}
      */
     @jakarta.annotation.Nonnull
     public static DepOnboardingSetting createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class DepOnboardingSetting extends Entity implements Parsable {
     }
     /**
      * Gets the appleIdentifier property value. The Apple ID used to obtain the current token.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAppleIdentifier() {
@@ -38,7 +38,7 @@ public class DepOnboardingSetting extends Entity implements Parsable {
     }
     /**
      * Gets the dataSharingConsentGranted property value. Consent granted for data sharing with Apple Dep Service
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDataSharingConsentGranted() {
@@ -46,7 +46,7 @@ public class DepOnboardingSetting extends Entity implements Parsable {
     }
     /**
      * Gets the defaultIosEnrollmentProfile property value. Default iOS Enrollment Profile
-     * @return a DepIOSEnrollmentProfile
+     * @return a {@link DepIOSEnrollmentProfile}
      */
     @jakarta.annotation.Nullable
     public DepIOSEnrollmentProfile getDefaultIosEnrollmentProfile() {
@@ -54,7 +54,7 @@ public class DepOnboardingSetting extends Entity implements Parsable {
     }
     /**
      * Gets the defaultMacOsEnrollmentProfile property value. Default MacOs Enrollment Profile
-     * @return a DepMacOSEnrollmentProfile
+     * @return a {@link DepMacOSEnrollmentProfile}
      */
     @jakarta.annotation.Nullable
     public DepMacOSEnrollmentProfile getDefaultMacOsEnrollmentProfile() {
@@ -62,7 +62,7 @@ public class DepOnboardingSetting extends Entity implements Parsable {
     }
     /**
      * Gets the enrollmentProfiles property value. The enrollment profiles.
-     * @return a java.util.List<EnrollmentProfile>
+     * @return a {@link java.util.List<EnrollmentProfile>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<EnrollmentProfile> getEnrollmentProfiles() {
@@ -70,7 +70,7 @@ public class DepOnboardingSetting extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -95,7 +95,7 @@ public class DepOnboardingSetting extends Entity implements Parsable {
     }
     /**
      * Gets the importedAppleDeviceIdentities property value. The imported Apple device identities.
-     * @return a java.util.List<ImportedAppleDeviceIdentity>
+     * @return a {@link java.util.List<ImportedAppleDeviceIdentity>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ImportedAppleDeviceIdentity> getImportedAppleDeviceIdentities() {
@@ -103,7 +103,7 @@ public class DepOnboardingSetting extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. When the service was onboarded.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -111,7 +111,7 @@ public class DepOnboardingSetting extends Entity implements Parsable {
     }
     /**
      * Gets the lastSuccessfulSyncDateTime property value. When the service last syned with Intune
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastSuccessfulSyncDateTime() {
@@ -119,7 +119,7 @@ public class DepOnboardingSetting extends Entity implements Parsable {
     }
     /**
      * Gets the lastSyncErrorCode property value. Error code reported by Apple during last dep sync.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getLastSyncErrorCode() {
@@ -127,7 +127,7 @@ public class DepOnboardingSetting extends Entity implements Parsable {
     }
     /**
      * Gets the lastSyncTriggeredDateTime property value. When Intune last requested a sync.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastSyncTriggeredDateTime() {
@@ -135,7 +135,7 @@ public class DepOnboardingSetting extends Entity implements Parsable {
     }
     /**
      * Gets the roleScopeTagIds property value. List of Scope Tags for this Entity instance.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {
@@ -143,7 +143,7 @@ public class DepOnboardingSetting extends Entity implements Parsable {
     }
     /**
      * Gets the shareTokenWithSchoolDataSyncService property value. Whether or not the Dep token sharing is enabled with the School Data Sync service.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getShareTokenWithSchoolDataSyncService() {
@@ -151,7 +151,7 @@ public class DepOnboardingSetting extends Entity implements Parsable {
     }
     /**
      * Gets the syncedDeviceCount property value. Gets synced device count
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getSyncedDeviceCount() {
@@ -159,7 +159,7 @@ public class DepOnboardingSetting extends Entity implements Parsable {
     }
     /**
      * Gets the tokenExpirationDateTime property value. When the token will expire.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getTokenExpirationDateTime() {
@@ -167,7 +167,7 @@ public class DepOnboardingSetting extends Entity implements Parsable {
     }
     /**
      * Gets the tokenName property value. Friendly Name for Dep Token
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTokenName() {
@@ -175,7 +175,7 @@ public class DepOnboardingSetting extends Entity implements Parsable {
     }
     /**
      * Gets the tokenType property value. The tokenType property
-     * @return a DepTokenType
+     * @return a {@link DepTokenType}
      */
     @jakarta.annotation.Nullable
     public DepTokenType getTokenType() {

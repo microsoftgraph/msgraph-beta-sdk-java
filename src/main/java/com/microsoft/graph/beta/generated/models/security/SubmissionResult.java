@@ -19,7 +19,7 @@ public class SubmissionResult implements AdditionalDataHolder, BackedModel, Pars
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new SubmissionResult and sets the default values.
+     * Instantiates a new {@link SubmissionResult} and sets the default values.
      */
     public SubmissionResult() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class SubmissionResult implements AdditionalDataHolder, BackedModel, Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SubmissionResult
+     * @return a {@link SubmissionResult}
      */
     @jakarta.annotation.Nonnull
     public static SubmissionResult createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class SubmissionResult implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -50,7 +50,7 @@ public class SubmissionResult implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -58,7 +58,7 @@ public class SubmissionResult implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the category property value. The submission result category. The possible values are: notJunk, spam, phishing, malware, allowedByPolicy, blockedByPolicy, spoof, unknown, noResultAvailable and unkownFutureValue.
-     * @return a SubmissionResultCategory
+     * @return a {@link SubmissionResultCategory}
      */
     @jakarta.annotation.Nullable
     public SubmissionResultCategory getCategory() {
@@ -66,7 +66,7 @@ public class SubmissionResult implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the detail property value. Specifies the extra details provided by Microsoft to substantiate their analysis result.
-     * @return a SubmissionResultDetail
+     * @return a {@link SubmissionResultDetail}
      */
     @jakarta.annotation.Nullable
     public SubmissionResultDetail getDetail() {
@@ -74,7 +74,7 @@ public class SubmissionResult implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the detectedFiles property value. Specifies the files detected by Microsoft in the submitted emails.
-     * @return a java.util.List<SubmissionDetectedFile>
+     * @return a {@link java.util.List<SubmissionDetectedFile>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<SubmissionDetectedFile> getDetectedFiles() {
@@ -82,7 +82,7 @@ public class SubmissionResult implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the detectedUrls property value. Specifies the URLs detected by Microsoft in the submitted email.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getDetectedUrls() {
@@ -90,7 +90,7 @@ public class SubmissionResult implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -105,7 +105,7 @@ public class SubmissionResult implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -113,7 +113,7 @@ public class SubmissionResult implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the userMailboxSetting property value. Specifies the setting for user mailbox denoted by a comma-separated string.
-     * @return a EnumSet<UserMailboxSetting>
+     * @return a {@link EnumSet<UserMailboxSetting>}
      */
     @jakarta.annotation.Nullable
     public EnumSet<UserMailboxSetting> getUserMailboxSetting() {

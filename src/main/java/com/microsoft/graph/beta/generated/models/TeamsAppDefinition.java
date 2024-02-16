@@ -11,7 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TeamsAppDefinition extends Entity implements Parsable {
     /**
-     * Instantiates a new TeamsAppDefinition and sets the default values.
+     * Instantiates a new {@link TeamsAppDefinition} and sets the default values.
      */
     public TeamsAppDefinition() {
         super();
@@ -19,7 +19,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TeamsAppDefinition
+     * @return a {@link TeamsAppDefinition}
      */
     @jakarta.annotation.Nonnull
     public static TeamsAppDefinition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the allowedInstallationScopes property value. A collection of scopes where the Teams app can be installed. Possible values are:teamIndicates that the Teams app can be installed within a team and is authorized to access that team's data. groupChatIndicates that the Teams app can be installed within a group chat and is authorized to access that group chat's data.  personalIndicates that the Teams app can be installed in the personal scope of a user and is authorized to access that user's data.
-     * @return a EnumSet<TeamsAppInstallationScopes>
+     * @return a {@link EnumSet<TeamsAppInstallationScopes>}
      */
     @jakarta.annotation.Nullable
     public EnumSet<TeamsAppInstallationScopes> getAllowedInstallationScopes() {
@@ -36,7 +36,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the authorization property value. Authorization requirements specified in the Teams app manifest.
-     * @return a TeamsAppAuthorization
+     * @return a {@link TeamsAppAuthorization}
      */
     @jakarta.annotation.Nullable
     public TeamsAppAuthorization getAuthorization() {
@@ -44,7 +44,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the azureADAppId property value. The WebApplicationInfo.Id from the Teams app manifest.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAzureADAppId() {
@@ -52,7 +52,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the bot property value. The details of the bot specified in the Teams app manifest.
-     * @return a TeamworkBot
+     * @return a {@link TeamworkBot}
      */
     @jakarta.annotation.Nullable
     public TeamworkBot getBot() {
@@ -60,7 +60,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the colorIcon property value. The color version of the Teams app's icon.
-     * @return a TeamsAppIcon
+     * @return a {@link TeamsAppIcon}
      */
     @jakarta.annotation.Nullable
     public TeamsAppIcon getColorIcon() {
@@ -68,7 +68,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the createdBy property value. The createdBy property
-     * @return a IdentitySet
+     * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
@@ -76,7 +76,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the dashboardCards property value. The dashboardCards property
-     * @return a java.util.List<TeamsAppDashboardCardDefinition>
+     * @return a {@link java.util.List<TeamsAppDashboardCardDefinition>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<TeamsAppDashboardCardDefinition> getDashboardCards() {
@@ -84,7 +84,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The description property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -92,7 +92,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The name of the app provided by the app developer.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -100,7 +100,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -124,7 +124,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -132,7 +132,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the outlineIcon property value. The outline version of the Teams app's icon.
-     * @return a TeamsAppIcon
+     * @return a {@link TeamsAppIcon}
      */
     @jakarta.annotation.Nullable
     public TeamsAppIcon getOutlineIcon() {
@@ -140,7 +140,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the publishingState property value. The published status of a specific version of a Teams app. Possible values are:submittedThe specific version of the Teams app has been submitted and is under review. publishedThe request to publish the specific version of the Teams app has been approved by the admin and the app is published.  rejected  The request to publish the specific version of the Teams app was rejected by the admin.
-     * @return a TeamsAppPublishingState
+     * @return a {@link TeamsAppPublishingState}
      */
     @jakarta.annotation.Nullable
     public TeamsAppPublishingState getPublishingState() {
@@ -148,7 +148,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the shortdescription property value. The shortdescription property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getShortdescription() {
@@ -156,7 +156,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the teamsAppId property value. The ID from the Teams app manifest.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTeamsAppId() {
@@ -164,7 +164,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the version property value. The version number of the application.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getVersion() {

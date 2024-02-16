@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessReviewInstanceDecisionItemServicePrincipalTarget extends AccessReviewInstanceDecisionItemTarget implements Parsable {
     /**
-     * Instantiates a new AccessReviewInstanceDecisionItemServicePrincipalTarget and sets the default values.
+     * Instantiates a new {@link AccessReviewInstanceDecisionItemServicePrincipalTarget} and sets the default values.
      */
     public AccessReviewInstanceDecisionItemServicePrincipalTarget() {
         super();
@@ -18,7 +18,7 @@ public class AccessReviewInstanceDecisionItemServicePrincipalTarget extends Acce
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AccessReviewInstanceDecisionItemServicePrincipalTarget
+     * @return a {@link AccessReviewInstanceDecisionItemServicePrincipalTarget}
      */
     @jakarta.annotation.Nonnull
     public static AccessReviewInstanceDecisionItemServicePrincipalTarget createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class AccessReviewInstanceDecisionItemServicePrincipalTarget extends Acce
     }
     /**
      * Gets the appId property value. The appId for the service principal entity being reviewed.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAppId() {
@@ -35,7 +35,7 @@ public class AccessReviewInstanceDecisionItemServicePrincipalTarget extends Acce
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -47,7 +47,7 @@ public class AccessReviewInstanceDecisionItemServicePrincipalTarget extends Acce
     }
     /**
      * Gets the servicePrincipalDisplayName property value. The display name of the service principal whose access is being reviewed.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getServicePrincipalDisplayName() {
@@ -55,7 +55,7 @@ public class AccessReviewInstanceDecisionItemServicePrincipalTarget extends Acce
     }
     /**
      * Gets the servicePrincipalId property value. The servicePrincipalId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getServicePrincipalId() {

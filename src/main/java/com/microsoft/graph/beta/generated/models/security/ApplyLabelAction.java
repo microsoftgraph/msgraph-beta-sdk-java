@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ApplyLabelAction extends InformationProtectionAction implements Parsable {
     /**
-     * Instantiates a new ApplyLabelAction and sets the default values.
+     * Instantiates a new {@link ApplyLabelAction} and sets the default values.
      */
     public ApplyLabelAction() {
         super();
@@ -18,7 +18,7 @@ public class ApplyLabelAction extends InformationProtectionAction implements Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ApplyLabelAction
+     * @return a {@link ApplyLabelAction}
      */
     @jakarta.annotation.Nonnull
     public static ApplyLabelAction createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class ApplyLabelAction extends InformationProtectionAction implements Par
     }
     /**
      * Gets the actions property value. The collection of actions that should be implemented by the caller.
-     * @return a java.util.List<InformationProtectionAction>
+     * @return a {@link java.util.List<InformationProtectionAction>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<InformationProtectionAction> getActions() {
@@ -35,7 +35,7 @@ public class ApplyLabelAction extends InformationProtectionAction implements Par
     }
     /**
      * Gets the actionSource property value. The actionSource property
-     * @return a ActionSource
+     * @return a {@link ActionSource}
      */
     @jakarta.annotation.Nullable
     public ActionSource getActionSource() {
@@ -43,7 +43,7 @@ public class ApplyLabelAction extends InformationProtectionAction implements Par
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -56,7 +56,7 @@ public class ApplyLabelAction extends InformationProtectionAction implements Par
     }
     /**
      * Gets the responsibleSensitiveTypeIds property value. If the label was the result of an automatic classification, supply the list of sensitive info type GUIDs that resulted in the returned label.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getResponsibleSensitiveTypeIds() {
@@ -64,7 +64,7 @@ public class ApplyLabelAction extends InformationProtectionAction implements Par
     }
     /**
      * Gets the sensitivityLabelId property value. The sensitivityLabelId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSensitivityLabelId() {

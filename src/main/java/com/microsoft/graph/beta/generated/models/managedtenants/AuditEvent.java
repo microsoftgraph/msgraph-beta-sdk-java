@@ -11,7 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AuditEvent extends Entity implements Parsable {
     /**
-     * Instantiates a new AuditEvent and sets the default values.
+     * Instantiates a new {@link AuditEvent} and sets the default values.
      */
     public AuditEvent() {
         super();
@@ -19,7 +19,7 @@ public class AuditEvent extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AuditEvent
+     * @return a {@link AuditEvent}
      */
     @jakarta.annotation.Nonnull
     public static AuditEvent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class AuditEvent extends Entity implements Parsable {
     }
     /**
      * Gets the activity property value. A string that uniquely represents the operation that occurred. Required. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getActivity() {
@@ -36,7 +36,7 @@ public class AuditEvent extends Entity implements Parsable {
     }
     /**
      * Gets the activityDateTime property value. The time when the activity occurred. Required. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getActivityDateTime() {
@@ -44,7 +44,7 @@ public class AuditEvent extends Entity implements Parsable {
     }
     /**
      * Gets the activityId property value. The identifier of the activity request that made the audit event. Required. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getActivityId() {
@@ -52,7 +52,7 @@ public class AuditEvent extends Entity implements Parsable {
     }
     /**
      * Gets the category property value. A category that represents a logical grouping of activities. Required. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCategory() {
@@ -60,7 +60,7 @@ public class AuditEvent extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -82,7 +82,7 @@ public class AuditEvent extends Entity implements Parsable {
     }
     /**
      * Gets the httpVerb property value. The HTTP verb that was used when making the API request. Required. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getHttpVerb() {
@@ -90,7 +90,7 @@ public class AuditEvent extends Entity implements Parsable {
     }
     /**
      * Gets the initiatedByAppId property value. The identifier of the app that was used to make the request. Required. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getInitiatedByAppId() {
@@ -98,7 +98,7 @@ public class AuditEvent extends Entity implements Parsable {
     }
     /**
      * Gets the initiatedByUpn property value. The UPN of the user who initiated the activity. Required. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getInitiatedByUpn() {
@@ -106,7 +106,7 @@ public class AuditEvent extends Entity implements Parsable {
     }
     /**
      * Gets the initiatedByUserId property value. The identifier of the user who initiated the activity. Required. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getInitiatedByUserId() {
@@ -114,7 +114,7 @@ public class AuditEvent extends Entity implements Parsable {
     }
     /**
      * Gets the ipAddress property value. The IP address of where the activity was initiated. This may be an IPv4 or IPv6 address. Required. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getIpAddress() {
@@ -122,7 +122,7 @@ public class AuditEvent extends Entity implements Parsable {
     }
     /**
      * Gets the requestBody property value. The raw HTTP request body. Some sensitive information may be removed.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRequestBody() {
@@ -130,7 +130,7 @@ public class AuditEvent extends Entity implements Parsable {
     }
     /**
      * Gets the requestUrl property value. The raw HTTP request URL. Required. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRequestUrl() {
@@ -138,7 +138,7 @@ public class AuditEvent extends Entity implements Parsable {
     }
     /**
      * Gets the tenantIds property value. The collection of Microsoft Entra tenant identifiers for the managed tenants that were affected by a change, and is formatted as a list of comma-separated values. Required. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTenantIds() {
@@ -146,7 +146,7 @@ public class AuditEvent extends Entity implements Parsable {
     }
     /**
      * Gets the tenantNames property value. The collection of tenant names that were affected by a change, and is formatted as a list of comma-separated values. Required. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTenantNames() {

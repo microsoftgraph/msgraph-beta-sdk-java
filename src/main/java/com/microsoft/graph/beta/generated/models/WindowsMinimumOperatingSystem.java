@@ -21,7 +21,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Back
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new WindowsMinimumOperatingSystem and sets the default values.
+     * Instantiates a new {@link WindowsMinimumOperatingSystem} and sets the default values.
      */
     public WindowsMinimumOperatingSystem() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -30,7 +30,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Back
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WindowsMinimumOperatingSystem
+     * @return a {@link WindowsMinimumOperatingSystem}
      */
     @jakarta.annotation.Nonnull
     public static WindowsMinimumOperatingSystem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Back
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -52,7 +52,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Back
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -60,7 +60,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Back
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -83,7 +83,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Back
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -91,7 +91,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Back
     }
     /**
      * Gets the v10_0 property value. Windows version 10.0 or later.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getV100() {
@@ -99,7 +99,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Back
     }
     /**
      * Gets the v10_1607 property value. Windows 10 1607 or later.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getV101607() {
@@ -107,7 +107,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Back
     }
     /**
      * Gets the v10_1703 property value. Windows 10 1703 or later.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getV101703() {
@@ -115,7 +115,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Back
     }
     /**
      * Gets the v10_1709 property value. Windows 10 1709 or later.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getV101709() {
@@ -123,7 +123,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Back
     }
     /**
      * Gets the v10_1803 property value. Windows 10 1803 or later.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getV101803() {
@@ -131,7 +131,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Back
     }
     /**
      * Gets the v10_1809 property value. Windows 10 1809 or later.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getV101809() {
@@ -139,7 +139,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Back
     }
     /**
      * Gets the v10_1903 property value. Windows 10 1903 or later.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getV101903() {
@@ -147,7 +147,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Back
     }
     /**
      * Gets the v10_1909 property value. Windows 10 1909 or later.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getV101909() {
@@ -155,7 +155,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Back
     }
     /**
      * Gets the v10_2004 property value. Windows 10 2004 or later.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getV102004() {
@@ -163,7 +163,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Back
     }
     /**
      * Gets the v10_21H1 property value. Windows 10 21H1 or later.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getV1021H1() {
@@ -171,7 +171,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Back
     }
     /**
      * Gets the v10_2H20 property value. Windows 10 2H20 or later.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getV102H20() {
@@ -179,7 +179,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Back
     }
     /**
      * Gets the v8_0 property value. Windows version 8.0 or later.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getV80() {
@@ -187,7 +187,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Back
     }
     /**
      * Gets the v8_1 property value. Windows version 8.1 or later.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getV81() {

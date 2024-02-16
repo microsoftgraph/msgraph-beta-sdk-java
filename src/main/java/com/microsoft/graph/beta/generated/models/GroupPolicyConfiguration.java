@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GroupPolicyConfiguration extends Entity implements Parsable {
     /**
-     * Instantiates a new GroupPolicyConfiguration and sets the default values.
+     * Instantiates a new {@link GroupPolicyConfiguration} and sets the default values.
      */
     public GroupPolicyConfiguration() {
         super();
@@ -21,7 +21,7 @@ public class GroupPolicyConfiguration extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a GroupPolicyConfiguration
+     * @return a {@link GroupPolicyConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static GroupPolicyConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class GroupPolicyConfiguration extends Entity implements Parsable {
     }
     /**
      * Gets the assignments property value. The list of group assignments for the configuration.
-     * @return a java.util.List<GroupPolicyConfigurationAssignment>
+     * @return a {@link java.util.List<GroupPolicyConfigurationAssignment>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<GroupPolicyConfigurationAssignment> getAssignments() {
@@ -38,7 +38,7 @@ public class GroupPolicyConfiguration extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. The date and time the object was created.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -46,7 +46,7 @@ public class GroupPolicyConfiguration extends Entity implements Parsable {
     }
     /**
      * Gets the definitionValues property value. The list of enabled or disabled group policy definition values for the configuration.
-     * @return a java.util.List<GroupPolicyDefinitionValue>
+     * @return a {@link java.util.List<GroupPolicyDefinitionValue>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<GroupPolicyDefinitionValue> getDefinitionValues() {
@@ -54,7 +54,7 @@ public class GroupPolicyConfiguration extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. User provided description for the resource object.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -62,7 +62,7 @@ public class GroupPolicyConfiguration extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. User provided name for the resource object.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -70,7 +70,7 @@ public class GroupPolicyConfiguration extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -87,7 +87,7 @@ public class GroupPolicyConfiguration extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. The date and time the entity was last modified.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -95,7 +95,7 @@ public class GroupPolicyConfiguration extends Entity implements Parsable {
     }
     /**
      * Gets the policyConfigurationIngestionType property value. Group Policy Configuration Ingestion Type
-     * @return a GroupPolicyConfigurationIngestionType
+     * @return a {@link GroupPolicyConfigurationIngestionType}
      */
     @jakarta.annotation.Nullable
     public GroupPolicyConfigurationIngestionType getPolicyConfigurationIngestionType() {
@@ -103,7 +103,7 @@ public class GroupPolicyConfiguration extends Entity implements Parsable {
     }
     /**
      * Gets the roleScopeTagIds property value. The list of scope tags for the configuration.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {

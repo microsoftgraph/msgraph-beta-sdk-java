@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OnInteractiveAuthFlowStartListener extends AuthenticationEventListener implements Parsable {
     /**
-     * Instantiates a new OnInteractiveAuthFlowStartListener and sets the default values.
+     * Instantiates a new {@link OnInteractiveAuthFlowStartListener} and sets the default values.
      */
     public OnInteractiveAuthFlowStartListener() {
         super();
@@ -18,7 +18,7 @@ public class OnInteractiveAuthFlowStartListener extends AuthenticationEventListe
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a OnInteractiveAuthFlowStartListener
+     * @return a {@link OnInteractiveAuthFlowStartListener}
      */
     @jakarta.annotation.Nonnull
     public static OnInteractiveAuthFlowStartListener createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class OnInteractiveAuthFlowStartListener extends AuthenticationEventListe
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -37,7 +37,7 @@ public class OnInteractiveAuthFlowStartListener extends AuthenticationEventListe
     }
     /**
      * Gets the handler property value. Required. Configuration for what to invoke if the event resolves to this listener. This lets us define potential handler configurations per-event.
-     * @return a OnInteractiveAuthFlowStartHandler
+     * @return a {@link OnInteractiveAuthFlowStartHandler}
      */
     @jakarta.annotation.Nullable
     public OnInteractiveAuthFlowStartHandler getHandler() {

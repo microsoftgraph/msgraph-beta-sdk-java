@@ -18,7 +18,7 @@ public class TeamworkDeviceSoftwareVersions implements AdditionalDataHolder, Bac
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new TeamworkDeviceSoftwareVersions and sets the default values.
+     * Instantiates a new {@link TeamworkDeviceSoftwareVersions} and sets the default values.
      */
     public TeamworkDeviceSoftwareVersions() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class TeamworkDeviceSoftwareVersions implements AdditionalDataHolder, Bac
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TeamworkDeviceSoftwareVersions
+     * @return a {@link TeamworkDeviceSoftwareVersions}
      */
     @jakarta.annotation.Nonnull
     public static TeamworkDeviceSoftwareVersions createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class TeamworkDeviceSoftwareVersions implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class TeamworkDeviceSoftwareVersions implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the adminAgentSoftwareVersion property value. The software version for the admin agent running on the device.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAdminAgentSoftwareVersion() {
@@ -57,7 +57,7 @@ public class TeamworkDeviceSoftwareVersions implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -65,7 +65,7 @@ public class TeamworkDeviceSoftwareVersions implements AdditionalDataHolder, Bac
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -80,7 +80,7 @@ public class TeamworkDeviceSoftwareVersions implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the firmwareSoftwareVersion property value. The software version for the firmware running on the device.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getFirmwareSoftwareVersion() {
@@ -88,7 +88,7 @@ public class TeamworkDeviceSoftwareVersions implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -96,7 +96,7 @@ public class TeamworkDeviceSoftwareVersions implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the operatingSystemSoftwareVersion property value. The software version for the operating system on the device.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOperatingSystemSoftwareVersion() {
@@ -104,7 +104,7 @@ public class TeamworkDeviceSoftwareVersions implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the partnerAgentSoftwareVersion property value. The software version for the partner agent running on the device.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPartnerAgentSoftwareVersion() {
@@ -112,7 +112,7 @@ public class TeamworkDeviceSoftwareVersions implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the teamsClientSoftwareVersion property value. The software version for the Teams client running on the device.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTeamsClientSoftwareVersion() {

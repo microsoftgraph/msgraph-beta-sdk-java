@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CustomAuthenticationExtension extends CustomCalloutExtension implements Parsable {
     /**
-     * Instantiates a new CustomAuthenticationExtension and sets the default values.
+     * Instantiates a new {@link CustomAuthenticationExtension} and sets the default values.
      */
     public CustomAuthenticationExtension() {
         super();
@@ -18,7 +18,7 @@ public class CustomAuthenticationExtension extends CustomCalloutExtension implem
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CustomAuthenticationExtension
+     * @return a {@link CustomAuthenticationExtension}
      */
     @jakarta.annotation.Nonnull
     public static CustomAuthenticationExtension createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class CustomAuthenticationExtension extends CustomCalloutExtension implem
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

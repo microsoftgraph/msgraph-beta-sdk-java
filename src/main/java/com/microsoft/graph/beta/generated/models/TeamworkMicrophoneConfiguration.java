@@ -18,7 +18,7 @@ public class TeamworkMicrophoneConfiguration implements AdditionalDataHolder, Ba
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new TeamworkMicrophoneConfiguration and sets the default values.
+     * Instantiates a new {@link TeamworkMicrophoneConfiguration} and sets the default values.
      */
     public TeamworkMicrophoneConfiguration() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class TeamworkMicrophoneConfiguration implements AdditionalDataHolder, Ba
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TeamworkMicrophoneConfiguration
+     * @return a {@link TeamworkMicrophoneConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static TeamworkMicrophoneConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class TeamworkMicrophoneConfiguration implements AdditionalDataHolder, Ba
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class TeamworkMicrophoneConfiguration implements AdditionalDataHolder, Ba
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class TeamworkMicrophoneConfiguration implements AdditionalDataHolder, Ba
     }
     /**
      * Gets the defaultMicrophone property value. The defaultMicrophone property
-     * @return a TeamworkPeripheral
+     * @return a {@link TeamworkPeripheral}
      */
     @jakarta.annotation.Nullable
     public TeamworkPeripheral getDefaultMicrophone() {
@@ -65,7 +65,7 @@ public class TeamworkMicrophoneConfiguration implements AdditionalDataHolder, Ba
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -78,7 +78,7 @@ public class TeamworkMicrophoneConfiguration implements AdditionalDataHolder, Ba
     }
     /**
      * Gets the isMicrophoneOptional property value. True if the configured microphone is optional. False if the microphone is not optional and the health state of the device should be computed.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsMicrophoneOptional() {
@@ -86,7 +86,7 @@ public class TeamworkMicrophoneConfiguration implements AdditionalDataHolder, Ba
     }
     /**
      * Gets the microphones property value. The microphones property
-     * @return a java.util.List<TeamworkPeripheral>
+     * @return a {@link java.util.List<TeamworkPeripheral>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<TeamworkPeripheral> getMicrophones() {
@@ -94,7 +94,7 @@ public class TeamworkMicrophoneConfiguration implements AdditionalDataHolder, Ba
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {

@@ -25,6 +25,7 @@ import java.util.Objects;
 public class WindowsQualityUpdateProfilesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -33,7 +34,7 @@ public class WindowsQualityUpdateProfilesRequestBuilder extends BaseRequestBuild
     /**
      * Provides operations to manage the windowsQualityUpdateProfiles property of the microsoft.graph.deviceManagement entity.
      * @param windowsQualityUpdateProfileId The unique identifier of windowsQualityUpdateProfile
-     * @return a WindowsQualityUpdateProfileItemRequestBuilder
+     * @return a {@link WindowsQualityUpdateProfileItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public WindowsQualityUpdateProfileItemRequestBuilder byWindowsQualityUpdateProfileId(@jakarta.annotation.Nonnull final String windowsQualityUpdateProfileId) {
@@ -43,7 +44,7 @@ public class WindowsQualityUpdateProfilesRequestBuilder extends BaseRequestBuild
         return new WindowsQualityUpdateProfileItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new WindowsQualityUpdateProfilesRequestBuilder and sets the default values.
+     * Instantiates a new {@link WindowsQualityUpdateProfilesRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -51,7 +52,7 @@ public class WindowsQualityUpdateProfilesRequestBuilder extends BaseRequestBuild
         super(requestAdapter, "{+baseurl}/deviceManagement/windowsQualityUpdateProfiles{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new WindowsQualityUpdateProfilesRequestBuilder and sets the default values.
+     * Instantiates a new {@link WindowsQualityUpdateProfilesRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -60,7 +61,8 @@ public class WindowsQualityUpdateProfilesRequestBuilder extends BaseRequestBuild
     }
     /**
      * A collection of windows quality update profiles
-     * @return a WindowsQualityUpdateProfileCollectionResponse
+     * @return a {@link WindowsQualityUpdateProfileCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public WindowsQualityUpdateProfileCollectionResponse get() {
@@ -69,20 +71,21 @@ public class WindowsQualityUpdateProfilesRequestBuilder extends BaseRequestBuild
     /**
      * A collection of windows quality update profiles
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a WindowsQualityUpdateProfileCollectionResponse
+     * @return a {@link WindowsQualityUpdateProfileCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public WindowsQualityUpdateProfileCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, WindowsQualityUpdateProfileCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to windowsQualityUpdateProfiles for deviceManagement
      * @param body The request body
-     * @return a WindowsQualityUpdateProfile
+     * @return a {@link WindowsQualityUpdateProfile}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public WindowsQualityUpdateProfile post(@jakarta.annotation.Nonnull final WindowsQualityUpdateProfile body) {
@@ -92,20 +95,20 @@ public class WindowsQualityUpdateProfilesRequestBuilder extends BaseRequestBuild
      * Create new navigation property to windowsQualityUpdateProfiles for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a WindowsQualityUpdateProfile
+     * @return a {@link WindowsQualityUpdateProfile}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public WindowsQualityUpdateProfile post(@jakarta.annotation.Nonnull final WindowsQualityUpdateProfile body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, WindowsQualityUpdateProfile::createFromDiscriminatorValue);
     }
     /**
      * A collection of windows quality update profiles
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -114,7 +117,7 @@ public class WindowsQualityUpdateProfilesRequestBuilder extends BaseRequestBuild
     /**
      * A collection of windows quality update profiles
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -126,7 +129,7 @@ public class WindowsQualityUpdateProfilesRequestBuilder extends BaseRequestBuild
     /**
      * Create new navigation property to windowsQualityUpdateProfiles for deviceManagement
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final WindowsQualityUpdateProfile body) {
@@ -136,12 +139,12 @@ public class WindowsQualityUpdateProfilesRequestBuilder extends BaseRequestBuild
      * Create new navigation property to windowsQualityUpdateProfiles for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final WindowsQualityUpdateProfile body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/deviceManagement/windowsQualityUpdateProfiles", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -150,7 +153,7 @@ public class WindowsQualityUpdateProfilesRequestBuilder extends BaseRequestBuild
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a WindowsQualityUpdateProfilesRequestBuilder
+     * @return a {@link WindowsQualityUpdateProfilesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public WindowsQualityUpdateProfilesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -204,7 +207,7 @@ public class WindowsQualityUpdateProfilesRequestBuilder extends BaseRequestBuild
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

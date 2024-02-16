@@ -11,7 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CredentialUserRegistrationsSummary extends Entity implements Parsable {
     /**
-     * Instantiates a new CredentialUserRegistrationsSummary and sets the default values.
+     * Instantiates a new {@link CredentialUserRegistrationsSummary} and sets the default values.
      */
     public CredentialUserRegistrationsSummary() {
         super();
@@ -19,7 +19,7 @@ public class CredentialUserRegistrationsSummary extends Entity implements Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CredentialUserRegistrationsSummary
+     * @return a {@link CredentialUserRegistrationsSummary}
      */
     @jakarta.annotation.Nonnull
     public static CredentialUserRegistrationsSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class CredentialUserRegistrationsSummary extends Entity implements Parsab
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -49,7 +49,7 @@ public class CredentialUserRegistrationsSummary extends Entity implements Parsab
     }
     /**
      * Gets the lastRefreshedDateTime property value. Date and time the entity was last updated in the multi-tenant management platform. Optional. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastRefreshedDateTime() {
@@ -57,7 +57,7 @@ public class CredentialUserRegistrationsSummary extends Entity implements Parsab
     }
     /**
      * Gets the mfaAndSsprCapableUserCount property value. The number of users that are capable of performing multi-factor authentication or self service password reset. Optional. Read-only.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getMfaAndSsprCapableUserCount() {
@@ -65,7 +65,7 @@ public class CredentialUserRegistrationsSummary extends Entity implements Parsab
     }
     /**
      * Gets the mfaConditionalAccessPolicyState property value. The state of a conditional access policy that enforces multi-factor authentication. Optional. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getMfaConditionalAccessPolicyState() {
@@ -73,7 +73,7 @@ public class CredentialUserRegistrationsSummary extends Entity implements Parsab
     }
     /**
      * Gets the mfaExcludedUserCount property value. The number of users in the multi-factor authentication exclusion security group (Microsoft 365 Lighthouse - MFA exclusions). Optional. Read-only.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getMfaExcludedUserCount() {
@@ -81,7 +81,7 @@ public class CredentialUserRegistrationsSummary extends Entity implements Parsab
     }
     /**
      * Gets the mfaRegisteredUserCount property value. The number of users registered for multi-factor authentication. Optional. Read-only.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getMfaRegisteredUserCount() {
@@ -89,7 +89,7 @@ public class CredentialUserRegistrationsSummary extends Entity implements Parsab
     }
     /**
      * Gets the securityDefaultsEnabled property value. A flag indicating whether Identity Security Defaults is enabled. Optional. Read-only.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getSecurityDefaultsEnabled() {
@@ -97,7 +97,7 @@ public class CredentialUserRegistrationsSummary extends Entity implements Parsab
     }
     /**
      * Gets the ssprEnabledUserCount property value. The number of users enabled for self service password reset. Optional. Read-only.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getSsprEnabledUserCount() {
@@ -105,7 +105,7 @@ public class CredentialUserRegistrationsSummary extends Entity implements Parsab
     }
     /**
      * Gets the ssprRegisteredUserCount property value. The number of users registered for self service password reset. Optional. Read-only.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getSsprRegisteredUserCount() {
@@ -113,7 +113,7 @@ public class CredentialUserRegistrationsSummary extends Entity implements Parsab
     }
     /**
      * Gets the tenantDisplayName property value. The display name for the managed tenant. Required. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTenantDisplayName() {
@@ -121,7 +121,7 @@ public class CredentialUserRegistrationsSummary extends Entity implements Parsab
     }
     /**
      * Gets the tenantId property value. The Microsoft Entra tenant identifier for the managed tenant. Required. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
@@ -129,7 +129,7 @@ public class CredentialUserRegistrationsSummary extends Entity implements Parsab
     }
     /**
      * Gets the tenantLicenseType property value. The license type associated with the tenant; for example, AADFree, AADPremium1, AADPremium2.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTenantLicenseType() {
@@ -137,7 +137,7 @@ public class CredentialUserRegistrationsSummary extends Entity implements Parsab
     }
     /**
      * Gets the totalUserCount property value. The total number of users in the given managed tenant. Optional. Read-only.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getTotalUserCount() {

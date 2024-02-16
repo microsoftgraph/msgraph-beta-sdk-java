@@ -29,6 +29,7 @@ import java.util.Objects;
 public class TargetedManagedAppConfigurationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the apps property of the microsoft.graph.targetedManagedAppConfiguration entity.
+     * @return a {@link AppsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AppsRequestBuilder apps() {
@@ -36,6 +37,7 @@ public class TargetedManagedAppConfigurationItemRequestBuilder extends BaseReque
     }
     /**
      * Provides operations to call the assign method.
+     * @return a {@link AssignRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AssignRequestBuilder assign() {
@@ -43,6 +45,7 @@ public class TargetedManagedAppConfigurationItemRequestBuilder extends BaseReque
     }
     /**
      * Provides operations to manage the assignments property of the microsoft.graph.targetedManagedAppConfiguration entity.
+     * @return a {@link AssignmentsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AssignmentsRequestBuilder assignments() {
@@ -50,6 +53,7 @@ public class TargetedManagedAppConfigurationItemRequestBuilder extends BaseReque
     }
     /**
      * Provides operations to call the changeSettings method.
+     * @return a {@link ChangeSettingsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ChangeSettingsRequestBuilder changeSettings() {
@@ -57,6 +61,7 @@ public class TargetedManagedAppConfigurationItemRequestBuilder extends BaseReque
     }
     /**
      * Provides operations to manage the deploymentSummary property of the microsoft.graph.targetedManagedAppConfiguration entity.
+     * @return a {@link DeploymentSummaryRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DeploymentSummaryRequestBuilder deploymentSummary() {
@@ -64,6 +69,7 @@ public class TargetedManagedAppConfigurationItemRequestBuilder extends BaseReque
     }
     /**
      * Provides operations to manage the settings property of the microsoft.graph.managedAppConfiguration entity.
+     * @return a {@link SettingsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SettingsRequestBuilder settings() {
@@ -71,13 +77,14 @@ public class TargetedManagedAppConfigurationItemRequestBuilder extends BaseReque
     }
     /**
      * Provides operations to call the targetApps method.
+     * @return a {@link TargetAppsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TargetAppsRequestBuilder targetApps() {
         return new TargetAppsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new TargetedManagedAppConfigurationItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link TargetedManagedAppConfigurationItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -85,7 +92,7 @@ public class TargetedManagedAppConfigurationItemRequestBuilder extends BaseReque
         super(requestAdapter, "{+baseurl}/deviceAppManagement/targetedManagedAppConfigurations/{targetedManagedAppConfiguration%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new TargetedManagedAppConfigurationItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link TargetedManagedAppConfigurationItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -94,6 +101,7 @@ public class TargetedManagedAppConfigurationItemRequestBuilder extends BaseReque
     }
     /**
      * Delete navigation property targetedManagedAppConfigurations for deviceAppManagement
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete() {
         delete(null);
@@ -101,17 +109,18 @@ public class TargetedManagedAppConfigurationItemRequestBuilder extends BaseReque
     /**
      * Delete navigation property targetedManagedAppConfigurations for deviceAppManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Targeted managed app configurations.
-     * @return a TargetedManagedAppConfiguration
+     * @return a {@link TargetedManagedAppConfiguration}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public TargetedManagedAppConfiguration get() {
@@ -120,20 +129,21 @@ public class TargetedManagedAppConfigurationItemRequestBuilder extends BaseReque
     /**
      * Targeted managed app configurations.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a TargetedManagedAppConfiguration
+     * @return a {@link TargetedManagedAppConfiguration}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public TargetedManagedAppConfiguration get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, TargetedManagedAppConfiguration::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property targetedManagedAppConfigurations in deviceAppManagement
      * @param body The request body
-     * @return a TargetedManagedAppConfiguration
+     * @return a {@link TargetedManagedAppConfiguration}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public TargetedManagedAppConfiguration patch(@jakarta.annotation.Nonnull final TargetedManagedAppConfiguration body) {
@@ -143,20 +153,20 @@ public class TargetedManagedAppConfigurationItemRequestBuilder extends BaseReque
      * Update the navigation property targetedManagedAppConfigurations in deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a TargetedManagedAppConfiguration
+     * @return a {@link TargetedManagedAppConfiguration}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public TargetedManagedAppConfiguration patch(@jakarta.annotation.Nonnull final TargetedManagedAppConfiguration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, TargetedManagedAppConfiguration::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property targetedManagedAppConfigurations for deviceAppManagement
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -165,18 +175,18 @@ public class TargetedManagedAppConfigurationItemRequestBuilder extends BaseReque
     /**
      * Delete navigation property targetedManagedAppConfigurations for deviceAppManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/deviceAppManagement/targetedManagedAppConfigurations/{targetedManagedAppConfiguration%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Targeted managed app configurations.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -185,7 +195,7 @@ public class TargetedManagedAppConfigurationItemRequestBuilder extends BaseReque
     /**
      * Targeted managed app configurations.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -197,7 +207,7 @@ public class TargetedManagedAppConfigurationItemRequestBuilder extends BaseReque
     /**
      * Update the navigation property targetedManagedAppConfigurations in deviceAppManagement
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final TargetedManagedAppConfiguration body) {
@@ -207,12 +217,12 @@ public class TargetedManagedAppConfigurationItemRequestBuilder extends BaseReque
      * Update the navigation property targetedManagedAppConfigurations in deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final TargetedManagedAppConfiguration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/deviceAppManagement/targetedManagedAppConfigurations/{targetedManagedAppConfiguration%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -221,7 +231,7 @@ public class TargetedManagedAppConfigurationItemRequestBuilder extends BaseReque
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a TargetedManagedAppConfigurationItemRequestBuilder
+     * @return a {@link TargetedManagedAppConfigurationItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TargetedManagedAppConfigurationItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -251,7 +261,7 @@ public class TargetedManagedAppConfigurationItemRequestBuilder extends BaseReque
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

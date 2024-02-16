@@ -18,7 +18,7 @@ public class CloudPcPartnerAgentInstallResult implements AdditionalDataHolder, B
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new CloudPcPartnerAgentInstallResult and sets the default values.
+     * Instantiates a new {@link CloudPcPartnerAgentInstallResult} and sets the default values.
      */
     public CloudPcPartnerAgentInstallResult() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class CloudPcPartnerAgentInstallResult implements AdditionalDataHolder, B
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CloudPcPartnerAgentInstallResult
+     * @return a {@link CloudPcPartnerAgentInstallResult}
      */
     @jakarta.annotation.Nonnull
     public static CloudPcPartnerAgentInstallResult createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class CloudPcPartnerAgentInstallResult implements AdditionalDataHolder, B
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class CloudPcPartnerAgentInstallResult implements AdditionalDataHolder, B
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class CloudPcPartnerAgentInstallResult implements AdditionalDataHolder, B
     }
     /**
      * Gets the errorMessage property value. Contains a detailed error message when the partner agent installation failed.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getErrorMessage() {
@@ -65,7 +65,7 @@ public class CloudPcPartnerAgentInstallResult implements AdditionalDataHolder, B
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -80,7 +80,7 @@ public class CloudPcPartnerAgentInstallResult implements AdditionalDataHolder, B
     }
     /**
      * Gets the installStatus property value. The status of a partner agent installation. Possible values are: installed, installFailed, installing, uninstalling, uninstallFailed and licensed. Read-Only.
-     * @return a CloudPcPartnerAgentInstallStatus
+     * @return a {@link CloudPcPartnerAgentInstallStatus}
      */
     @jakarta.annotation.Nullable
     public CloudPcPartnerAgentInstallStatus getInstallStatus() {
@@ -88,7 +88,7 @@ public class CloudPcPartnerAgentInstallResult implements AdditionalDataHolder, B
     }
     /**
      * Gets the isThirdPartyPartner property value. Indicates whether the partner agent is a third party. When true, the agent is a third-party (non-Microsoft) agent and when false, the agent is a Microsoft agent or isn't known.  The default value is false.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsThirdPartyPartner() {
@@ -96,7 +96,7 @@ public class CloudPcPartnerAgentInstallResult implements AdditionalDataHolder, B
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -104,7 +104,7 @@ public class CloudPcPartnerAgentInstallResult implements AdditionalDataHolder, B
     }
     /**
      * Gets the partnerAgentName property value. The name of the first-party or third-party partner agent. Possible values for third-party partners are Citrix, VMware and HP. Read-Only.
-     * @return a CloudPcPartnerAgentName
+     * @return a {@link CloudPcPartnerAgentName}
      */
     @jakarta.annotation.Nullable
     public CloudPcPartnerAgentName getPartnerAgentName() {
@@ -112,7 +112,7 @@ public class CloudPcPartnerAgentInstallResult implements AdditionalDataHolder, B
     }
     /**
      * Gets the retriable property value. Indicates whether the partner agent installation should be retried. The default value is false.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getRetriable() {

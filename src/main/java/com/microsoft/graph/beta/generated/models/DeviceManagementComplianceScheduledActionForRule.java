@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementComplianceScheduledActionForRule extends Entity implements Parsable {
     /**
-     * Instantiates a new DeviceManagementComplianceScheduledActionForRule and sets the default values.
+     * Instantiates a new {@link DeviceManagementComplianceScheduledActionForRule} and sets the default values.
      */
     public DeviceManagementComplianceScheduledActionForRule() {
         super();
@@ -20,7 +20,7 @@ public class DeviceManagementComplianceScheduledActionForRule extends Entity imp
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceManagementComplianceScheduledActionForRule
+     * @return a {@link DeviceManagementComplianceScheduledActionForRule}
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementComplianceScheduledActionForRule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -29,7 +29,7 @@ public class DeviceManagementComplianceScheduledActionForRule extends Entity imp
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -40,7 +40,7 @@ public class DeviceManagementComplianceScheduledActionForRule extends Entity imp
     }
     /**
      * Gets the ruleName property value. Name of the rule which this scheduled action applies to.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRuleName() {
@@ -48,7 +48,7 @@ public class DeviceManagementComplianceScheduledActionForRule extends Entity imp
     }
     /**
      * Gets the scheduledActionConfigurations property value. The list of scheduled action configurations for this compliance policy. This collection can contain a maximum of 100 elements.
-     * @return a java.util.List<DeviceManagementComplianceActionItem>
+     * @return a {@link java.util.List<DeviceManagementComplianceActionItem>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementComplianceActionItem> getScheduledActionConfigurations() {

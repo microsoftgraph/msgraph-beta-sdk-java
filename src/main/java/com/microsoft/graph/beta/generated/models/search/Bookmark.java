@@ -11,7 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Bookmark extends SearchAnswer implements Parsable {
     /**
-     * Instantiates a new Bookmark and sets the default values.
+     * Instantiates a new {@link Bookmark} and sets the default values.
      */
     public Bookmark() {
         super();
@@ -19,7 +19,7 @@ public class Bookmark extends SearchAnswer implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Bookmark
+     * @return a {@link Bookmark}
      */
     @jakarta.annotation.Nonnull
     public static Bookmark createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class Bookmark extends SearchAnswer implements Parsable {
     }
     /**
      * Gets the availabilityEndDateTime property value. Timestamp of when the bookmark will stop to appear as a search result. Set as null for always available.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getAvailabilityEndDateTime() {
@@ -36,7 +36,7 @@ public class Bookmark extends SearchAnswer implements Parsable {
     }
     /**
      * Gets the availabilityStartDateTime property value. Timestamp of when the bookmark will start to appear as a search result. Set as null for always available.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getAvailabilityStartDateTime() {
@@ -44,7 +44,7 @@ public class Bookmark extends SearchAnswer implements Parsable {
     }
     /**
      * Gets the categories property value. Categories commonly used to describe this bookmark. For example, IT and HR.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getCategories() {
@@ -52,7 +52,7 @@ public class Bookmark extends SearchAnswer implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -72,7 +72,7 @@ public class Bookmark extends SearchAnswer implements Parsable {
     }
     /**
      * Gets the groupIds property value. List of security groups able to view this bookmark.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getGroupIds() {
@@ -80,7 +80,7 @@ public class Bookmark extends SearchAnswer implements Parsable {
     }
     /**
      * Gets the isSuggested property value. True if this bookmark was suggested to the admin by a user or was mined and suggested by Microsoft. Read-only.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsSuggested() {
@@ -88,7 +88,7 @@ public class Bookmark extends SearchAnswer implements Parsable {
     }
     /**
      * Gets the keywords property value. Keywords that trigger this bookmark to appear in search results.
-     * @return a AnswerKeyword
+     * @return a {@link AnswerKeyword}
      */
     @jakarta.annotation.Nullable
     public AnswerKeyword getKeywords() {
@@ -96,7 +96,7 @@ public class Bookmark extends SearchAnswer implements Parsable {
     }
     /**
      * Gets the languageTags property value. A list of language names that are geographically specific and that this bookmark can be viewed in. Each language tag value follows the pattern {language}-{region}. As an example, en-us is English as used in the United States. See supported language tags for the list of possible values.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getLanguageTags() {
@@ -104,7 +104,7 @@ public class Bookmark extends SearchAnswer implements Parsable {
     }
     /**
      * Gets the platforms property value. List of devices and operating systems able to view this bookmark. Possible values are: unknown, android, androidForWork, ios, macOS, windowsPhone81, windowsPhone81AndLater, windows10AndLater, androidWorkProfile, androidASOP.
-     * @return a java.util.List<DevicePlatformType>
+     * @return a {@link java.util.List<DevicePlatformType>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DevicePlatformType> getPlatforms() {
@@ -112,7 +112,7 @@ public class Bookmark extends SearchAnswer implements Parsable {
     }
     /**
      * Gets the powerAppIds property value. List of Power Apps associated with this bookmark. If users add existing Power Apps to a bookmark, they can complete tasks, such as to enter vacation time or to report expenses on the search results page.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getPowerAppIds() {
@@ -120,7 +120,7 @@ public class Bookmark extends SearchAnswer implements Parsable {
     }
     /**
      * Gets the state property value. The state property
-     * @return a AnswerState
+     * @return a {@link AnswerState}
      */
     @jakarta.annotation.Nullable
     public AnswerState getState() {
@@ -128,7 +128,7 @@ public class Bookmark extends SearchAnswer implements Parsable {
     }
     /**
      * Gets the targetedVariations property value. Variations of a bookmark for different countries or devices. Use when you need to show different content to users based on their device, country/region, or both. The date and group settings will apply to all variations.
-     * @return a java.util.List<AnswerVariant>
+     * @return a {@link java.util.List<AnswerVariant>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AnswerVariant> getTargetedVariations() {

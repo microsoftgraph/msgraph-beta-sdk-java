@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SuperAzureServicePrincipalFinding extends IdentityFinding implements Parsable {
     /**
-     * Instantiates a new SuperAzureServicePrincipalFinding and sets the default values.
+     * Instantiates a new {@link SuperAzureServicePrincipalFinding} and sets the default values.
      */
     public SuperAzureServicePrincipalFinding() {
         super();
@@ -17,7 +17,7 @@ public class SuperAzureServicePrincipalFinding extends IdentityFinding implement
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SuperAzureServicePrincipalFinding
+     * @return a {@link SuperAzureServicePrincipalFinding}
      */
     @jakarta.annotation.Nonnull
     public static SuperAzureServicePrincipalFinding createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class SuperAzureServicePrincipalFinding extends IdentityFinding implement
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

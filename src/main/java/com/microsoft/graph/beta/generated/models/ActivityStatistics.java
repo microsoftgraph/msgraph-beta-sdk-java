@@ -11,7 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ActivityStatistics extends Entity implements Parsable {
     /**
-     * Instantiates a new ActivityStatistics and sets the default values.
+     * Instantiates a new {@link ActivityStatistics} and sets the default values.
      */
     public ActivityStatistics() {
         super();
@@ -19,7 +19,7 @@ public class ActivityStatistics extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ActivityStatistics
+     * @return a {@link ActivityStatistics}
      */
     @jakarta.annotation.Nonnull
     public static ActivityStatistics createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class ActivityStatistics extends Entity implements Parsable {
     }
     /**
      * Gets the activity property value. The type of activity for which statistics are returned. The possible values are: call, chat, email, focus, and meeting.
-     * @return a AnalyticsActivityType
+     * @return a {@link AnalyticsActivityType}
      */
     @jakarta.annotation.Nullable
     public AnalyticsActivityType getActivity() {
@@ -47,7 +47,7 @@ public class ActivityStatistics extends Entity implements Parsable {
     }
     /**
      * Gets the duration property value. Total hours spent on the activity. The value is represented in ISO 8601 format for durations.
-     * @return a PeriodAndDuration
+     * @return a {@link PeriodAndDuration}
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getDuration() {
@@ -55,7 +55,7 @@ public class ActivityStatistics extends Entity implements Parsable {
     }
     /**
      * Gets the endDate property value. Date when the activity ended, expressed in ISO 8601 format for calendar dates. For example, the property value could be '2019-07-03' that follows the YYYY-MM-DD format.
-     * @return a LocalDate
+     * @return a {@link LocalDate}
      */
     @jakarta.annotation.Nullable
     public LocalDate getEndDate() {
@@ -63,7 +63,7 @@ public class ActivityStatistics extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -77,7 +77,7 @@ public class ActivityStatistics extends Entity implements Parsable {
     }
     /**
      * Gets the startDate property value. Date when the activity started, expressed in ISO 8601 format for calendar dates. For example, the property value could be '2019-07-04' that follows the YYYY-MM-DD format.
-     * @return a LocalDate
+     * @return a {@link LocalDate}
      */
     @jakarta.annotation.Nullable
     public LocalDate getStartDate() {
@@ -85,7 +85,7 @@ public class ActivityStatistics extends Entity implements Parsable {
     }
     /**
      * Gets the timeZoneUsed property value. The time zone that the user sets in Microsoft Outlook is used for the computation. For example, the property value could be 'Pacific Standard Time.'
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTimeZoneUsed() {

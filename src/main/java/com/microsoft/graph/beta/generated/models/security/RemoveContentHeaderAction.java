@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class RemoveContentHeaderAction extends InformationProtectionAction implements Parsable {
     /**
-     * Instantiates a new RemoveContentHeaderAction and sets the default values.
+     * Instantiates a new {@link RemoveContentHeaderAction} and sets the default values.
      */
     public RemoveContentHeaderAction() {
         super();
@@ -18,7 +18,7 @@ public class RemoveContentHeaderAction extends InformationProtectionAction imple
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a RemoveContentHeaderAction
+     * @return a {@link RemoveContentHeaderAction}
      */
     @jakarta.annotation.Nonnull
     public static RemoveContentHeaderAction createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class RemoveContentHeaderAction extends InformationProtectionAction imple
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -37,7 +37,7 @@ public class RemoveContentHeaderAction extends InformationProtectionAction imple
     }
     /**
      * Gets the uiElementNames property value. The name of the UI element of the header to be removed.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getUiElementNames() {

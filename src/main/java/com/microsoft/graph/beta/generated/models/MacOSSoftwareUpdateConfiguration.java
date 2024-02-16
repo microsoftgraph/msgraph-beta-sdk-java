@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implements Parsable {
     /**
-     * Instantiates a new MacOSSoftwareUpdateConfiguration and sets the default values.
+     * Instantiates a new {@link MacOSSoftwareUpdateConfiguration} and sets the default values.
      */
     public MacOSSoftwareUpdateConfiguration() {
         super();
@@ -21,7 +21,7 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MacOSSoftwareUpdateConfiguration
+     * @return a {@link MacOSSoftwareUpdateConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static MacOSSoftwareUpdateConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
     }
     /**
      * Gets the allOtherUpdateBehavior property value. Update behavior options for macOS software updates.
-     * @return a MacOSSoftwareUpdateBehavior
+     * @return a {@link MacOSSoftwareUpdateBehavior}
      */
     @jakarta.annotation.Nullable
     public MacOSSoftwareUpdateBehavior getAllOtherUpdateBehavior() {
@@ -38,7 +38,7 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
     }
     /**
      * Gets the configDataUpdateBehavior property value. Update behavior options for macOS software updates.
-     * @return a MacOSSoftwareUpdateBehavior
+     * @return a {@link MacOSSoftwareUpdateBehavior}
      */
     @jakarta.annotation.Nullable
     public MacOSSoftwareUpdateBehavior getConfigDataUpdateBehavior() {
@@ -46,7 +46,7 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
     }
     /**
      * Gets the criticalUpdateBehavior property value. Update behavior options for macOS software updates.
-     * @return a MacOSSoftwareUpdateBehavior
+     * @return a {@link MacOSSoftwareUpdateBehavior}
      */
     @jakarta.annotation.Nullable
     public MacOSSoftwareUpdateBehavior getCriticalUpdateBehavior() {
@@ -54,7 +54,7 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
     }
     /**
      * Gets the customUpdateTimeWindows property value. Custom Time windows when updates will be allowed or blocked. This collection can contain a maximum of 20 elements.
-     * @return a java.util.List<CustomUpdateTimeWindow>
+     * @return a {@link java.util.List<CustomUpdateTimeWindow>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<CustomUpdateTimeWindow> getCustomUpdateTimeWindows() {
@@ -62,7 +62,7 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -80,7 +80,7 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
     }
     /**
      * Gets the firmwareUpdateBehavior property value. Update behavior options for macOS software updates.
-     * @return a MacOSSoftwareUpdateBehavior
+     * @return a {@link MacOSSoftwareUpdateBehavior}
      */
     @jakarta.annotation.Nullable
     public MacOSSoftwareUpdateBehavior getFirmwareUpdateBehavior() {
@@ -88,7 +88,7 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
     }
     /**
      * Gets the maxUserDeferralsCount property value. The maximum number of times the system allows the user to postpone an update before its installed. Supported values: 0 - 366. Valid values 0 to 365
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getMaxUserDeferralsCount() {
@@ -96,7 +96,7 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
     }
     /**
      * Gets the priority property value. The scheduling priority for downloading and preparing the requested update. Default: Low. Possible values: Null, Low, High. Possible values are: low, high, unknownFutureValue.
-     * @return a MacOSPriority
+     * @return a {@link MacOSPriority}
      */
     @jakarta.annotation.Nullable
     public MacOSPriority getPriority() {
@@ -104,7 +104,7 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
     }
     /**
      * Gets the updateScheduleType property value. Updatescheduletypefor macOS software updates.
-     * @return a MacOSSoftwareUpdateScheduleType
+     * @return a {@link MacOSSoftwareUpdateScheduleType}
      */
     @jakarta.annotation.Nullable
     public MacOSSoftwareUpdateScheduleType getUpdateScheduleType() {
@@ -112,7 +112,7 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
     }
     /**
      * Gets the updateTimeWindowUtcOffsetInMinutes property value. Minutes indicating UTC offset for each update time window
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getUpdateTimeWindowUtcOffsetInMinutes() {

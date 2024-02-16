@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PersonCertification extends ItemFacet implements Parsable {
     /**
-     * Instantiates a new PersonCertification and sets the default values.
+     * Instantiates a new {@link PersonCertification} and sets the default values.
      */
     public PersonCertification() {
         super();
@@ -19,7 +19,7 @@ public class PersonCertification extends ItemFacet implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PersonCertification
+     * @return a {@link PersonCertification}
      */
     @jakarta.annotation.Nonnull
     public static PersonCertification createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class PersonCertification extends ItemFacet implements Parsable {
     }
     /**
      * Gets the certificationId property value. The referenceable identifier for the certification.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCertificationId() {
@@ -36,7 +36,7 @@ public class PersonCertification extends ItemFacet implements Parsable {
     }
     /**
      * Gets the description property value. Description of the certification.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -44,7 +44,7 @@ public class PersonCertification extends ItemFacet implements Parsable {
     }
     /**
      * Gets the displayName property value. Title of the certification.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -52,7 +52,7 @@ public class PersonCertification extends ItemFacet implements Parsable {
     }
     /**
      * Gets the endDate property value. The date that the certification expires.
-     * @return a LocalDate
+     * @return a {@link LocalDate}
      */
     @jakarta.annotation.Nullable
     public LocalDate getEndDate() {
@@ -60,7 +60,7 @@ public class PersonCertification extends ItemFacet implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -79,7 +79,7 @@ public class PersonCertification extends ItemFacet implements Parsable {
     }
     /**
      * Gets the issuedDate property value. The date that the certification was issued.
-     * @return a LocalDate
+     * @return a {@link LocalDate}
      */
     @jakarta.annotation.Nullable
     public LocalDate getIssuedDate() {
@@ -87,7 +87,7 @@ public class PersonCertification extends ItemFacet implements Parsable {
     }
     /**
      * Gets the issuingAuthority property value. Authority which granted the certification.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getIssuingAuthority() {
@@ -95,7 +95,7 @@ public class PersonCertification extends ItemFacet implements Parsable {
     }
     /**
      * Gets the issuingCompany property value. Company which granted the certification.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getIssuingCompany() {
@@ -103,7 +103,7 @@ public class PersonCertification extends ItemFacet implements Parsable {
     }
     /**
      * Gets the startDate property value. The date that the certification became valid.
-     * @return a LocalDate
+     * @return a {@link LocalDate}
      */
     @jakarta.annotation.Nullable
     public LocalDate getStartDate() {
@@ -111,7 +111,7 @@ public class PersonCertification extends ItemFacet implements Parsable {
     }
     /**
      * Gets the thumbnailUrl property value. URL referencing a thumbnail of the certification.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getThumbnailUrl() {
@@ -119,7 +119,7 @@ public class PersonCertification extends ItemFacet implements Parsable {
     }
     /**
      * Gets the webUrl property value. URL referencing the certification.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getWebUrl() {

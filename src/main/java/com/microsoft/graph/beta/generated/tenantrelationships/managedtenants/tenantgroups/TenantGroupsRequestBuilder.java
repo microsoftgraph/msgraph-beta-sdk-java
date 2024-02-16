@@ -26,6 +26,7 @@ import java.util.Objects;
 public class TenantGroupsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -33,6 +34,7 @@ public class TenantGroupsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the tenantSearch method.
+     * @return a {@link MicrosoftGraphManagedTenantsTenantSearchRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MicrosoftGraphManagedTenantsTenantSearchRequestBuilder microsoftGraphManagedTenantsTenantSearch() {
@@ -41,7 +43,7 @@ public class TenantGroupsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the tenantGroups property of the microsoft.graph.managedTenants.managedTenant entity.
      * @param tenantGroupId The unique identifier of tenantGroup
-     * @return a TenantGroupItemRequestBuilder
+     * @return a {@link TenantGroupItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TenantGroupItemRequestBuilder byTenantGroupId(@jakarta.annotation.Nonnull final String tenantGroupId) {
@@ -51,7 +53,7 @@ public class TenantGroupsRequestBuilder extends BaseRequestBuilder {
         return new TenantGroupItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new TenantGroupsRequestBuilder and sets the default values.
+     * Instantiates a new {@link TenantGroupsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -59,7 +61,7 @@ public class TenantGroupsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/tenantRelationships/managedTenants/tenantGroups{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new TenantGroupsRequestBuilder and sets the default values.
+     * Instantiates a new {@link TenantGroupsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -68,7 +70,8 @@ public class TenantGroupsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of the tenantGroup objects and their properties.
-     * @return a TenantGroupCollectionResponse
+     * @return a {@link TenantGroupCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-managedtenant-list-tenantgroups?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -78,21 +81,22 @@ public class TenantGroupsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the tenantGroup objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a TenantGroupCollectionResponse
+     * @return a {@link TenantGroupCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-managedtenant-list-tenantgroups?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TenantGroupCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, TenantGroupCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to tenantGroups for tenantRelationships
      * @param body The request body
-     * @return a TenantGroup
+     * @return a {@link TenantGroup}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public TenantGroup post(@jakarta.annotation.Nonnull final TenantGroup body) {
@@ -102,20 +106,20 @@ public class TenantGroupsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to tenantGroups for tenantRelationships
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a TenantGroup
+     * @return a {@link TenantGroup}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public TenantGroup post(@jakarta.annotation.Nonnull final TenantGroup body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, TenantGroup::createFromDiscriminatorValue);
     }
     /**
      * Get a list of the tenantGroup objects and their properties.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -124,7 +128,7 @@ public class TenantGroupsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the tenantGroup objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -136,7 +140,7 @@ public class TenantGroupsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to tenantGroups for tenantRelationships
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final TenantGroup body) {
@@ -146,12 +150,12 @@ public class TenantGroupsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to tenantGroups for tenantRelationships
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final TenantGroup body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/tenantRelationships/managedTenants/tenantGroups", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -160,7 +164,7 @@ public class TenantGroupsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a TenantGroupsRequestBuilder
+     * @return a {@link TenantGroupsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TenantGroupsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -214,7 +218,7 @@ public class TenantGroupsRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

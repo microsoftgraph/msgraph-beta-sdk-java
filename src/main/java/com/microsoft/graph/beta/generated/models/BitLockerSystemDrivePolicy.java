@@ -21,7 +21,7 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, BackedM
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new BitLockerSystemDrivePolicy and sets the default values.
+     * Instantiates a new {@link BitLockerSystemDrivePolicy} and sets the default values.
      */
     public BitLockerSystemDrivePolicy() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -30,7 +30,7 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, BackedM
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a BitLockerSystemDrivePolicy
+     * @return a {@link BitLockerSystemDrivePolicy}
      */
     @jakarta.annotation.Nonnull
     public static BitLockerSystemDrivePolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -52,7 +52,7 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -60,7 +60,7 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the encryptionMethod property value. Select the encryption method for operating system drives. Possible values are: aesCbc128, aesCbc256, xtsAes128, xtsAes256.
-     * @return a BitLockerEncryptionMethod
+     * @return a {@link BitLockerEncryptionMethod}
      */
     @jakarta.annotation.Nullable
     public BitLockerEncryptionMethod getEncryptionMethod() {
@@ -68,7 +68,7 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, BackedM
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -90,7 +90,7 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the minimumPinLength property value. Indicates the minimum length of startup pin. Valid values 4 to 20
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getMinimumPinLength() {
@@ -98,7 +98,7 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -106,7 +106,7 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the prebootRecoveryEnableMessageAndUrl property value. Enable pre-boot recovery message and Url. If requireStartupAuthentication is false, this value does not affect.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getPrebootRecoveryEnableMessageAndUrl() {
@@ -114,7 +114,7 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the prebootRecoveryMessage property value. Defines a custom recovery message.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPrebootRecoveryMessage() {
@@ -122,7 +122,7 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the prebootRecoveryUrl property value. Defines a custom recovery URL.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPrebootRecoveryUrl() {
@@ -130,7 +130,7 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the recoveryOptions property value. Allows to recover BitLocker encrypted operating system drives in the absence of the required startup key information. This policy setting is applied when you turn on BitLocker.
-     * @return a BitLockerRecoveryOptions
+     * @return a {@link BitLockerRecoveryOptions}
      */
     @jakarta.annotation.Nullable
     public BitLockerRecoveryOptions getRecoveryOptions() {
@@ -138,7 +138,7 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the startupAuthenticationBlockWithoutTpmChip property value. Indicates whether to allow BitLocker without a compatible TPM (requires a password or a startup key on a USB flash drive).
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getStartupAuthenticationBlockWithoutTpmChip() {
@@ -146,7 +146,7 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the startupAuthenticationRequired property value. Require additional authentication at startup.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getStartupAuthenticationRequired() {
@@ -154,7 +154,7 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the startupAuthenticationTpmKeyUsage property value. Possible values of the ConfigurationUsage list.
-     * @return a ConfigurationUsage
+     * @return a {@link ConfigurationUsage}
      */
     @jakarta.annotation.Nullable
     public ConfigurationUsage getStartupAuthenticationTpmKeyUsage() {
@@ -162,7 +162,7 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the startupAuthenticationTpmPinAndKeyUsage property value. Possible values of the ConfigurationUsage list.
-     * @return a ConfigurationUsage
+     * @return a {@link ConfigurationUsage}
      */
     @jakarta.annotation.Nullable
     public ConfigurationUsage getStartupAuthenticationTpmPinAndKeyUsage() {
@@ -170,7 +170,7 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the startupAuthenticationTpmPinUsage property value. Possible values of the ConfigurationUsage list.
-     * @return a ConfigurationUsage
+     * @return a {@link ConfigurationUsage}
      */
     @jakarta.annotation.Nullable
     public ConfigurationUsage getStartupAuthenticationTpmPinUsage() {
@@ -178,7 +178,7 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the startupAuthenticationTpmUsage property value. Possible values of the ConfigurationUsage list.
-     * @return a ConfigurationUsage
+     * @return a {@link ConfigurationUsage}
      */
     @jakarta.annotation.Nullable
     public ConfigurationUsage getStartupAuthenticationTpmUsage() {

@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class M365ForwardingRule extends ForwardingRule implements Parsable {
     /**
-     * Instantiates a new M365ForwardingRule and sets the default values.
+     * Instantiates a new {@link M365ForwardingRule} and sets the default values.
      */
     public M365ForwardingRule() {
         super();
@@ -18,7 +18,7 @@ public class M365ForwardingRule extends ForwardingRule implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a M365ForwardingRule
+     * @return a {@link M365ForwardingRule}
      */
     @jakarta.annotation.Nonnull
     public static M365ForwardingRule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class M365ForwardingRule extends ForwardingRule implements Parsable {
     }
     /**
      * Gets the category property value. The category property
-     * @return a ForwardingCategory
+     * @return a {@link ForwardingCategory}
      */
     @jakarta.annotation.Nullable
     public ForwardingCategory getCategory() {
@@ -35,7 +35,7 @@ public class M365ForwardingRule extends ForwardingRule implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -47,7 +47,7 @@ public class M365ForwardingRule extends ForwardingRule implements Parsable {
     }
     /**
      * Gets the ports property value. The port(s) used by a forwarding rule for Microsoft 365 traffic are specified to determine the specific network port(s) through which the Microsoft 365 traffic is directed and forwarded.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getPorts() {
@@ -55,7 +55,7 @@ public class M365ForwardingRule extends ForwardingRule implements Parsable {
     }
     /**
      * Gets the protocol property value. The protocol property
-     * @return a NetworkingProtocol
+     * @return a {@link NetworkingProtocol}
      */
     @jakarta.annotation.Nullable
     public NetworkingProtocol getProtocol() {

@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DocumentComment extends Entity implements Parsable {
     /**
-     * Instantiates a new DocumentComment and sets the default values.
+     * Instantiates a new {@link DocumentComment} and sets the default values.
      */
     public DocumentComment() {
         super();
@@ -17,7 +17,7 @@ public class DocumentComment extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DocumentComment
+     * @return a {@link DocumentComment}
      */
     @jakarta.annotation.Nonnull
     public static DocumentComment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class DocumentComment extends Entity implements Parsable {
     }
     /**
      * Gets the content property value. The content property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getContent() {
@@ -34,7 +34,7 @@ public class DocumentComment extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -45,7 +45,7 @@ public class DocumentComment extends Entity implements Parsable {
     }
     /**
      * Gets the replies property value. The replies property
-     * @return a java.util.List<DocumentCommentReply>
+     * @return a {@link java.util.List<DocumentCommentReply>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DocumentCommentReply> getReplies() {

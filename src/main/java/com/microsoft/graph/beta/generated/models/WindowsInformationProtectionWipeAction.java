@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsInformationProtectionWipeAction extends Entity implements Parsable {
     /**
-     * Instantiates a new WindowsInformationProtectionWipeAction and sets the default values.
+     * Instantiates a new {@link WindowsInformationProtectionWipeAction} and sets the default values.
      */
     public WindowsInformationProtectionWipeAction() {
         super();
@@ -21,7 +21,7 @@ public class WindowsInformationProtectionWipeAction extends Entity implements Pa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WindowsInformationProtectionWipeAction
+     * @return a {@link WindowsInformationProtectionWipeAction}
      */
     @jakarta.annotation.Nonnull
     public static WindowsInformationProtectionWipeAction createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class WindowsInformationProtectionWipeAction extends Entity implements Pa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -45,7 +45,7 @@ public class WindowsInformationProtectionWipeAction extends Entity implements Pa
     }
     /**
      * Gets the lastCheckInDateTime property value. Last checkin time of the device that was targeted by this wipe action.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastCheckInDateTime() {
@@ -53,7 +53,7 @@ public class WindowsInformationProtectionWipeAction extends Entity implements Pa
     }
     /**
      * Gets the status property value. The status property
-     * @return a ActionState
+     * @return a {@link ActionState}
      */
     @jakarta.annotation.Nullable
     public ActionState getStatus() {
@@ -61,7 +61,7 @@ public class WindowsInformationProtectionWipeAction extends Entity implements Pa
     }
     /**
      * Gets the targetedDeviceMacAddress property value. Targeted device Mac address.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTargetedDeviceMacAddress() {
@@ -69,7 +69,7 @@ public class WindowsInformationProtectionWipeAction extends Entity implements Pa
     }
     /**
      * Gets the targetedDeviceName property value. Targeted device name.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTargetedDeviceName() {
@@ -77,7 +77,7 @@ public class WindowsInformationProtectionWipeAction extends Entity implements Pa
     }
     /**
      * Gets the targetedDeviceRegistrationId property value. The DeviceRegistrationId being targeted by this wipe action.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTargetedDeviceRegistrationId() {
@@ -85,7 +85,7 @@ public class WindowsInformationProtectionWipeAction extends Entity implements Pa
     }
     /**
      * Gets the targetedUserId property value. The UserId being targeted by this wipe action.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTargetedUserId() {

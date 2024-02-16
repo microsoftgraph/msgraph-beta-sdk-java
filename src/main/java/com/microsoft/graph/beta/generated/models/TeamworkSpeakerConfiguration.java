@@ -18,7 +18,7 @@ public class TeamworkSpeakerConfiguration implements AdditionalDataHolder, Backe
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new TeamworkSpeakerConfiguration and sets the default values.
+     * Instantiates a new {@link TeamworkSpeakerConfiguration} and sets the default values.
      */
     public TeamworkSpeakerConfiguration() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class TeamworkSpeakerConfiguration implements AdditionalDataHolder, Backe
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TeamworkSpeakerConfiguration
+     * @return a {@link TeamworkSpeakerConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static TeamworkSpeakerConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class TeamworkSpeakerConfiguration implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class TeamworkSpeakerConfiguration implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class TeamworkSpeakerConfiguration implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the defaultCommunicationSpeaker property value. The defaultCommunicationSpeaker property
-     * @return a TeamworkPeripheral
+     * @return a {@link TeamworkPeripheral}
      */
     @jakarta.annotation.Nullable
     public TeamworkPeripheral getDefaultCommunicationSpeaker() {
@@ -65,7 +65,7 @@ public class TeamworkSpeakerConfiguration implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the defaultSpeaker property value. The defaultSpeaker property
-     * @return a TeamworkPeripheral
+     * @return a {@link TeamworkPeripheral}
      */
     @jakarta.annotation.Nullable
     public TeamworkPeripheral getDefaultSpeaker() {
@@ -73,7 +73,7 @@ public class TeamworkSpeakerConfiguration implements AdditionalDataHolder, Backe
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -88,7 +88,7 @@ public class TeamworkSpeakerConfiguration implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the isCommunicationSpeakerOptional property value. True if the communication speaker is optional. Used to compute the health state if the communication speaker is not optional.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsCommunicationSpeakerOptional() {
@@ -96,7 +96,7 @@ public class TeamworkSpeakerConfiguration implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the isSpeakerOptional property value. True if the configured speaker is optional. Used to compute the health state if the speaker is not optional.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsSpeakerOptional() {
@@ -104,7 +104,7 @@ public class TeamworkSpeakerConfiguration implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -112,7 +112,7 @@ public class TeamworkSpeakerConfiguration implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the speakers property value. The speakers property
-     * @return a java.util.List<TeamworkPeripheral>
+     * @return a {@link java.util.List<TeamworkPeripheral>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<TeamworkPeripheral> getSpeakers() {

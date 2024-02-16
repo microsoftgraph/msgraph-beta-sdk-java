@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class KeyIntegerValuePair extends KeyTypedValuePair implements Parsable {
     /**
-     * Instantiates a new KeyIntegerValuePair and sets the default values.
+     * Instantiates a new {@link KeyIntegerValuePair} and sets the default values.
      */
     public KeyIntegerValuePair() {
         super();
@@ -21,7 +21,7 @@ public class KeyIntegerValuePair extends KeyTypedValuePair implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a KeyIntegerValuePair
+     * @return a {@link KeyIntegerValuePair}
      */
     @jakarta.annotation.Nonnull
     public static KeyIntegerValuePair createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class KeyIntegerValuePair extends KeyTypedValuePair implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -40,7 +40,7 @@ public class KeyIntegerValuePair extends KeyTypedValuePair implements Parsable {
     }
     /**
      * Gets the value property value. The integer value of the key-value pair.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getValue() {

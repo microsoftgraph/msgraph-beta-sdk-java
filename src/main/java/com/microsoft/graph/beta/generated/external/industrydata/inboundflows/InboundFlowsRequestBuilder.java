@@ -25,6 +25,7 @@ import java.util.Objects;
 public class InboundFlowsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -33,7 +34,7 @@ public class InboundFlowsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the inboundFlows property of the microsoft.graph.industryData.industryDataRoot entity.
      * @param inboundFlowId The unique identifier of inboundFlow
-     * @return a InboundFlowItemRequestBuilder
+     * @return a {@link InboundFlowItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public InboundFlowItemRequestBuilder byInboundFlowId(@jakarta.annotation.Nonnull final String inboundFlowId) {
@@ -43,7 +44,7 @@ public class InboundFlowsRequestBuilder extends BaseRequestBuilder {
         return new InboundFlowItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new InboundFlowsRequestBuilder and sets the default values.
+     * Instantiates a new {@link InboundFlowsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -51,7 +52,7 @@ public class InboundFlowsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/external/industryData/inboundFlows{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new InboundFlowsRequestBuilder and sets the default values.
+     * Instantiates a new {@link InboundFlowsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -59,32 +60,34 @@ public class InboundFlowsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/external/industryData/inboundFlows{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a list of the inboundFileFlow objects and their properties.
-     * @return a InboundFlowCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-inboundfileflow-list?view=graph-rest-1.0">Find more info here</a>
+     * Get a list of the inboundFlow objects and their properties.
+     * @return a {@link InboundFlowCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-inboundflow-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public InboundFlowCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a list of the inboundFileFlow objects and their properties.
+     * Get a list of the inboundFlow objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a InboundFlowCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-inboundfileflow-list?view=graph-rest-1.0">Find more info here</a>
+     * @return a {@link InboundFlowCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-inboundflow-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public InboundFlowCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, InboundFlowCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new inboundFileFlow object. The following prerequisite resources are required when you create an inboundFileFlow:
      * @param body The request body
-     * @return a InboundFlow
+     * @return a {@link InboundFlow}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/industrydata-inboundfileflow-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -95,7 +98,8 @@ public class InboundFlowsRequestBuilder extends BaseRequestBuilder {
      * Create a new inboundFileFlow object. The following prerequisite resources are required when you create an inboundFileFlow:
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a InboundFlow
+     * @return a {@link InboundFlow}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/industrydata-inboundfileflow-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -103,22 +107,21 @@ public class InboundFlowsRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, InboundFlow::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the inboundFileFlow objects and their properties.
-     * @return a RequestInformation
+     * Get a list of the inboundFlow objects and their properties.
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the inboundFileFlow objects and their properties.
+     * Get a list of the inboundFlow objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -130,7 +133,7 @@ public class InboundFlowsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new inboundFileFlow object. The following prerequisite resources are required when you create an inboundFileFlow:
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final InboundFlow body) {
@@ -140,12 +143,12 @@ public class InboundFlowsRequestBuilder extends BaseRequestBuilder {
      * Create a new inboundFileFlow object. The following prerequisite resources are required when you create an inboundFileFlow:
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final InboundFlow body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/external/industryData/inboundFlows", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -154,7 +157,7 @@ public class InboundFlowsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a InboundFlowsRequestBuilder
+     * @return a {@link InboundFlowsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public InboundFlowsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -162,7 +165,7 @@ public class InboundFlowsRequestBuilder extends BaseRequestBuilder {
         return new InboundFlowsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the inboundFileFlow objects and their properties.
+     * Get a list of the inboundFlow objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
@@ -208,7 +211,7 @@ public class InboundFlowsRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

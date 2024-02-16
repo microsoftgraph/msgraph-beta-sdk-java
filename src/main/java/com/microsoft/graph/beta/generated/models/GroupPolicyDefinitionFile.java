@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GroupPolicyDefinitionFile extends Entity implements Parsable {
     /**
-     * Instantiates a new GroupPolicyDefinitionFile and sets the default values.
+     * Instantiates a new {@link GroupPolicyDefinitionFile} and sets the default values.
      */
     public GroupPolicyDefinitionFile() {
         super();
@@ -21,7 +21,7 @@ public class GroupPolicyDefinitionFile extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a GroupPolicyDefinitionFile
+     * @return a {@link GroupPolicyDefinitionFile}
      */
     @jakarta.annotation.Nonnull
     public static GroupPolicyDefinitionFile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class GroupPolicyDefinitionFile extends Entity implements Parsable {
     }
     /**
      * Gets the definitions property value. The group policy definitions associated with the file.
-     * @return a java.util.List<GroupPolicyDefinition>
+     * @return a {@link java.util.List<GroupPolicyDefinition>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<GroupPolicyDefinition> getDefinitions() {
@@ -45,7 +45,7 @@ public class GroupPolicyDefinitionFile extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The localized description of the policy settings in the ADMX file. The default value is empty.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -53,7 +53,7 @@ public class GroupPolicyDefinitionFile extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The localized friendly name of the ADMX file.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -61,7 +61,7 @@ public class GroupPolicyDefinitionFile extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -80,7 +80,7 @@ public class GroupPolicyDefinitionFile extends Entity implements Parsable {
     }
     /**
      * Gets the fileName property value. The file name of the ADMX file without the path. For example: edge.admx
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getFileName() {
@@ -88,7 +88,7 @@ public class GroupPolicyDefinitionFile extends Entity implements Parsable {
     }
     /**
      * Gets the languageCodes property value. The supported language codes for the ADMX file.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getLanguageCodes() {
@@ -96,7 +96,7 @@ public class GroupPolicyDefinitionFile extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. The date and time the entity was last modified.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -104,7 +104,7 @@ public class GroupPolicyDefinitionFile extends Entity implements Parsable {
     }
     /**
      * Gets the policyType property value. Type of Group Policy File or Definition.
-     * @return a GroupPolicyType
+     * @return a {@link GroupPolicyType}
      */
     @jakarta.annotation.Nullable
     public GroupPolicyType getPolicyType() {
@@ -112,7 +112,7 @@ public class GroupPolicyDefinitionFile extends Entity implements Parsable {
     }
     /**
      * Gets the revision property value. The revision version associated with the file.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRevision() {
@@ -120,7 +120,7 @@ public class GroupPolicyDefinitionFile extends Entity implements Parsable {
     }
     /**
      * Gets the targetNamespace property value. Specifies the URI used to identify the namespace within the ADMX file.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTargetNamespace() {
@@ -128,7 +128,7 @@ public class GroupPolicyDefinitionFile extends Entity implements Parsable {
     }
     /**
      * Gets the targetPrefix property value. Specifies the logical name that refers to the namespace within the ADMX file.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTargetPrefix() {

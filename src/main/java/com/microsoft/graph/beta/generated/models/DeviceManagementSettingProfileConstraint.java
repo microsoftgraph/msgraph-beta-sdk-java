@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementSettingProfileConstraint extends DeviceManagementConstraint implements Parsable {
     /**
-     * Instantiates a new DeviceManagementSettingProfileConstraint and sets the default values.
+     * Instantiates a new {@link DeviceManagementSettingProfileConstraint} and sets the default values.
      */
     public DeviceManagementSettingProfileConstraint() {
         super();
@@ -21,7 +21,7 @@ public class DeviceManagementSettingProfileConstraint extends DeviceManagementCo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceManagementSettingProfileConstraint
+     * @return a {@link DeviceManagementSettingProfileConstraint}
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementSettingProfileConstraint createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class DeviceManagementSettingProfileConstraint extends DeviceManagementCo
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -41,7 +41,7 @@ public class DeviceManagementSettingProfileConstraint extends DeviceManagementCo
     }
     /**
      * Gets the source property value. The source of the entity
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSource() {
@@ -49,7 +49,7 @@ public class DeviceManagementSettingProfileConstraint extends DeviceManagementCo
     }
     /**
      * Gets the types property value. A collection of types this entity carries
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getTypes() {

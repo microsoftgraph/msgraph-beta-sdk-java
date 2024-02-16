@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CustomAccessPackageWorkflowExtension extends CustomCalloutExtension implements Parsable {
     /**
-     * Instantiates a new CustomAccessPackageWorkflowExtension and sets the default values.
+     * Instantiates a new {@link CustomAccessPackageWorkflowExtension} and sets the default values.
      */
     public CustomAccessPackageWorkflowExtension() {
         super();
@@ -19,7 +19,7 @@ public class CustomAccessPackageWorkflowExtension extends CustomCalloutExtension
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CustomAccessPackageWorkflowExtension
+     * @return a {@link CustomAccessPackageWorkflowExtension}
      */
     @jakarta.annotation.Nonnull
     public static CustomAccessPackageWorkflowExtension createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class CustomAccessPackageWorkflowExtension extends CustomCalloutExtension
     }
     /**
      * Gets the createdDateTime property value. Represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -36,7 +36,7 @@ public class CustomAccessPackageWorkflowExtension extends CustomCalloutExtension
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -47,7 +47,7 @@ public class CustomAccessPackageWorkflowExtension extends CustomCalloutExtension
     }
     /**
      * Gets the lastModifiedDateTime property value. Represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {

@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
     /**
-     * Instantiates a new WindowsAutopilotDeviceIdentity and sets the default values.
+     * Instantiates a new {@link WindowsAutopilotDeviceIdentity} and sets the default values.
      */
     public WindowsAutopilotDeviceIdentity() {
         super();
@@ -21,7 +21,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WindowsAutopilotDeviceIdentity
+     * @return a {@link WindowsAutopilotDeviceIdentity}
      */
     @jakarta.annotation.Nonnull
     public static WindowsAutopilotDeviceIdentity createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
     }
     /**
      * Gets the addressableUserName property value. Addressable user name.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAddressableUserName() {
@@ -38,7 +38,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
     }
     /**
      * Gets the azureActiveDirectoryDeviceId property value. AAD Device ID - to be deprecated
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAzureActiveDirectoryDeviceId() {
@@ -46,7 +46,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
     }
     /**
      * Gets the azureAdDeviceId property value. AAD Device ID
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAzureAdDeviceId() {
@@ -54,7 +54,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
     }
     /**
      * Gets the deploymentProfile property value. Deployment profile currently assigned to the Windows autopilot device.
-     * @return a WindowsAutopilotDeploymentProfile
+     * @return a {@link WindowsAutopilotDeploymentProfile}
      */
     @jakarta.annotation.Nullable
     public WindowsAutopilotDeploymentProfile getDeploymentProfile() {
@@ -62,7 +62,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
     }
     /**
      * Gets the deploymentProfileAssignedDateTime property value. Profile set time of the Windows autopilot device.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getDeploymentProfileAssignedDateTime() {
@@ -70,7 +70,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
     }
     /**
      * Gets the deploymentProfileAssignmentDetailedStatus property value. The deploymentProfileAssignmentDetailedStatus property
-     * @return a WindowsAutopilotProfileAssignmentDetailedStatus
+     * @return a {@link WindowsAutopilotProfileAssignmentDetailedStatus}
      */
     @jakarta.annotation.Nullable
     public WindowsAutopilotProfileAssignmentDetailedStatus getDeploymentProfileAssignmentDetailedStatus() {
@@ -78,7 +78,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
     }
     /**
      * Gets the deploymentProfileAssignmentStatus property value. The deploymentProfileAssignmentStatus property
-     * @return a WindowsAutopilotProfileAssignmentStatus
+     * @return a {@link WindowsAutopilotProfileAssignmentStatus}
      */
     @jakarta.annotation.Nullable
     public WindowsAutopilotProfileAssignmentStatus getDeploymentProfileAssignmentStatus() {
@@ -86,7 +86,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
     }
     /**
      * Gets the deviceAccountPassword property value. Surface Hub Device Account Password
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceAccountPassword() {
@@ -94,7 +94,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
     }
     /**
      * Gets the deviceAccountUpn property value. Surface Hub Device Account Upn
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceAccountUpn() {
@@ -102,7 +102,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
     }
     /**
      * Gets the deviceFriendlyName property value. Surface Hub Device Friendly Name
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceFriendlyName() {
@@ -110,7 +110,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. Display Name
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -118,7 +118,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
     }
     /**
      * Gets the enrollmentState property value. The enrollmentState property
-     * @return a EnrollmentState
+     * @return a {@link EnrollmentState}
      */
     @jakarta.annotation.Nullable
     public EnrollmentState getEnrollmentState() {
@@ -126,7 +126,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -163,7 +163,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
     }
     /**
      * Gets the groupTag property value. Group Tag of the Windows autopilot device.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getGroupTag() {
@@ -171,7 +171,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
     }
     /**
      * Gets the intendedDeploymentProfile property value. Deployment profile intended to be assigned to the Windows autopilot device.
-     * @return a WindowsAutopilotDeploymentProfile
+     * @return a {@link WindowsAutopilotDeploymentProfile}
      */
     @jakarta.annotation.Nullable
     public WindowsAutopilotDeploymentProfile getIntendedDeploymentProfile() {
@@ -179,7 +179,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
     }
     /**
      * Gets the lastContactedDateTime property value. Intune Last Contacted Date Time of the Windows autopilot device.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastContactedDateTime() {
@@ -187,7 +187,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
     }
     /**
      * Gets the managedDeviceId property value. Managed Device ID
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getManagedDeviceId() {
@@ -195,7 +195,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
     }
     /**
      * Gets the manufacturer property value. Oem manufacturer of the Windows autopilot device.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getManufacturer() {
@@ -203,7 +203,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
     }
     /**
      * Gets the model property value. Model name of the Windows autopilot device.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getModel() {
@@ -211,7 +211,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
     }
     /**
      * Gets the productKey property value. Product Key of the Windows autopilot device.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getProductKey() {
@@ -219,7 +219,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
     }
     /**
      * Gets the purchaseOrderIdentifier property value. Purchase Order Identifier of the Windows autopilot device.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPurchaseOrderIdentifier() {
@@ -227,7 +227,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
     }
     /**
      * Gets the remediationState property value. Device remediation status, indicating whether or not hardware has been changed for an Autopilot-registered device.
-     * @return a WindowsAutopilotDeviceRemediationState
+     * @return a {@link WindowsAutopilotDeviceRemediationState}
      */
     @jakarta.annotation.Nullable
     public WindowsAutopilotDeviceRemediationState getRemediationState() {
@@ -235,7 +235,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
     }
     /**
      * Gets the remediationStateLastModifiedDateTime property value. RemediationState set time of Autopilot device.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getRemediationStateLastModifiedDateTime() {
@@ -243,7 +243,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
     }
     /**
      * Gets the resourceName property value. Resource Name.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getResourceName() {
@@ -251,7 +251,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
     }
     /**
      * Gets the serialNumber property value. Serial number of the Windows autopilot device.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSerialNumber() {
@@ -259,7 +259,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
     }
     /**
      * Gets the skuNumber property value. SKU Number
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSkuNumber() {
@@ -267,7 +267,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
     }
     /**
      * Gets the systemFamily property value. System Family
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSystemFamily() {
@@ -275,7 +275,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
     }
     /**
      * Gets the userlessEnrollmentStatus property value. Userless enrollment block status, indicating whether the next device enrollment will be blocked.
-     * @return a WindowsAutopilotUserlessEnrollmentStatus
+     * @return a {@link WindowsAutopilotUserlessEnrollmentStatus}
      */
     @jakarta.annotation.Nullable
     public WindowsAutopilotUserlessEnrollmentStatus getUserlessEnrollmentStatus() {
@@ -283,7 +283,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
     }
     /**
      * Gets the userPrincipalName property value. User Principal Name.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {

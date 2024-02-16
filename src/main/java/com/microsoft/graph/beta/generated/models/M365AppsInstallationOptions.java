@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class M365AppsInstallationOptions extends Entity implements Parsable {
     /**
-     * Instantiates a new M365AppsInstallationOptions and sets the default values.
+     * Instantiates a new {@link M365AppsInstallationOptions} and sets the default values.
      */
     public M365AppsInstallationOptions() {
         super();
@@ -17,7 +17,7 @@ public class M365AppsInstallationOptions extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a M365AppsInstallationOptions
+     * @return a {@link M365AppsInstallationOptions}
      */
     @jakarta.annotation.Nonnull
     public static M365AppsInstallationOptions createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class M365AppsInstallationOptions extends Entity implements Parsable {
     }
     /**
      * Gets the appsForMac property value. The appsForMac property
-     * @return a AppsInstallationOptionsForMac
+     * @return a {@link AppsInstallationOptionsForMac}
      */
     @jakarta.annotation.Nullable
     public AppsInstallationOptionsForMac getAppsForMac() {
@@ -34,7 +34,7 @@ public class M365AppsInstallationOptions extends Entity implements Parsable {
     }
     /**
      * Gets the appsForWindows property value. The appsForWindows property
-     * @return a AppsInstallationOptionsForWindows
+     * @return a {@link AppsInstallationOptionsForWindows}
      */
     @jakarta.annotation.Nullable
     public AppsInstallationOptionsForWindows getAppsForWindows() {
@@ -42,7 +42,7 @@ public class M365AppsInstallationOptions extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -54,7 +54,7 @@ public class M365AppsInstallationOptions extends Entity implements Parsable {
     }
     /**
      * Gets the updateChannel property value. The updateChannel property
-     * @return a AppsUpdateChannelType
+     * @return a {@link AppsUpdateChannelType}
      */
     @jakarta.annotation.Nullable
     public AppsUpdateChannelType getUpdateChannel() {

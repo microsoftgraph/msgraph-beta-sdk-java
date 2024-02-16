@@ -21,7 +21,7 @@ public class Vendor implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new Vendor and sets the default values.
+     * Instantiates a new {@link Vendor} and sets the default values.
      */
     public Vendor() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -30,7 +30,7 @@ public class Vendor implements AdditionalDataHolder, BackedModel, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Vendor
+     * @return a {@link Vendor}
      */
     @jakarta.annotation.Nonnull
     public static Vendor createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class Vendor implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -52,7 +52,7 @@ public class Vendor implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the address property value. The address property
-     * @return a PostalAddressType
+     * @return a {@link PostalAddressType}
      */
     @jakarta.annotation.Nullable
     public PostalAddressType getAddress() {
@@ -60,7 +60,7 @@ public class Vendor implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -68,7 +68,7 @@ public class Vendor implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the balance property value. The balance property
-     * @return a BigDecimal
+     * @return a {@link BigDecimal}
      */
     @jakarta.annotation.Nullable
     public BigDecimal getBalance() {
@@ -76,7 +76,7 @@ public class Vendor implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the blocked property value. The blocked property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getBlocked() {
@@ -84,7 +84,7 @@ public class Vendor implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the currency property value. The currency property
-     * @return a Currency
+     * @return a {@link Currency}
      */
     @jakarta.annotation.Nullable
     public Currency getCurrency() {
@@ -92,7 +92,7 @@ public class Vendor implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the currencyCode property value. The currencyCode property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCurrencyCode() {
@@ -100,7 +100,7 @@ public class Vendor implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the currencyId property value. The currencyId property
-     * @return a UUID
+     * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
     public UUID getCurrencyId() {
@@ -108,7 +108,7 @@ public class Vendor implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the displayName property value. The displayName property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -116,7 +116,7 @@ public class Vendor implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the email property value. The email property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getEmail() {
@@ -124,7 +124,7 @@ public class Vendor implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -154,7 +154,7 @@ public class Vendor implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the id property value. The id property
-     * @return a UUID
+     * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
     public UUID getId() {
@@ -162,7 +162,7 @@ public class Vendor implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -170,7 +170,7 @@ public class Vendor implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the number property value. The number property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getNumber() {
@@ -178,7 +178,7 @@ public class Vendor implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -186,7 +186,7 @@ public class Vendor implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the paymentMethod property value. The paymentMethod property
-     * @return a PaymentMethod
+     * @return a {@link PaymentMethod}
      */
     @jakarta.annotation.Nullable
     public PaymentMethod getPaymentMethod() {
@@ -194,7 +194,7 @@ public class Vendor implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the paymentMethodId property value. The paymentMethodId property
-     * @return a UUID
+     * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
     public UUID getPaymentMethodId() {
@@ -202,7 +202,7 @@ public class Vendor implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the paymentTerm property value. The paymentTerm property
-     * @return a PaymentTerm
+     * @return a {@link PaymentTerm}
      */
     @jakarta.annotation.Nullable
     public PaymentTerm getPaymentTerm() {
@@ -210,7 +210,7 @@ public class Vendor implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the paymentTermsId property value. The paymentTermsId property
-     * @return a UUID
+     * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
     public UUID getPaymentTermsId() {
@@ -218,7 +218,7 @@ public class Vendor implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the phoneNumber property value. The phoneNumber property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPhoneNumber() {
@@ -226,7 +226,7 @@ public class Vendor implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the picture property value. The picture property
-     * @return a java.util.List<Picture>
+     * @return a {@link java.util.List<Picture>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Picture> getPicture() {
@@ -234,7 +234,7 @@ public class Vendor implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the taxLiable property value. The taxLiable property
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getTaxLiable() {
@@ -242,7 +242,7 @@ public class Vendor implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the taxRegistrationNumber property value. The taxRegistrationNumber property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTaxRegistrationNumber() {
@@ -250,7 +250,7 @@ public class Vendor implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the website property value. The website property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getWebsite() {

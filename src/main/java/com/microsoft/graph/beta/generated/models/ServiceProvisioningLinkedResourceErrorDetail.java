@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ServiceProvisioningLinkedResourceErrorDetail extends ServiceProvisioningResourceErrorDetail implements Parsable {
     /**
-     * Instantiates a new ServiceProvisioningLinkedResourceErrorDetail and sets the default values.
+     * Instantiates a new {@link ServiceProvisioningLinkedResourceErrorDetail} and sets the default values.
      */
     public ServiceProvisioningLinkedResourceErrorDetail() {
         super();
@@ -17,7 +17,7 @@ public class ServiceProvisioningLinkedResourceErrorDetail extends ServiceProvisi
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ServiceProvisioningLinkedResourceErrorDetail
+     * @return a {@link ServiceProvisioningLinkedResourceErrorDetail}
      */
     @jakarta.annotation.Nonnull
     public static ServiceProvisioningLinkedResourceErrorDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class ServiceProvisioningLinkedResourceErrorDetail extends ServiceProvisi
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -37,7 +37,7 @@ public class ServiceProvisioningLinkedResourceErrorDetail extends ServiceProvisi
     }
     /**
      * Gets the propertyName property value. The propertyName property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPropertyName() {
@@ -45,7 +45,7 @@ public class ServiceProvisioningLinkedResourceErrorDetail extends ServiceProvisi
     }
     /**
      * Gets the target property value. The target property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTarget() {

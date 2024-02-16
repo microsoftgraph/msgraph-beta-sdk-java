@@ -20,7 +20,7 @@ public class Journal implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new Journal and sets the default values.
+     * Instantiates a new {@link Journal} and sets the default values.
      */
     public Journal() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -29,7 +29,7 @@ public class Journal implements AdditionalDataHolder, BackedModel, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Journal
+     * @return a {@link Journal}
      */
     @jakarta.annotation.Nonnull
     public static Journal createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,7 +38,7 @@ public class Journal implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the account property value. The account property
-     * @return a Account
+     * @return a {@link Account}
      */
     @jakarta.annotation.Nullable
     public Account getAccount() {
@@ -46,7 +46,7 @@ public class Journal implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -59,7 +59,7 @@ public class Journal implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -67,7 +67,7 @@ public class Journal implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the balancingAccountId property value. The balancingAccountId property
-     * @return a UUID
+     * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
     public UUID getBalancingAccountId() {
@@ -75,7 +75,7 @@ public class Journal implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the balancingAccountNumber property value. The balancingAccountNumber property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getBalancingAccountNumber() {
@@ -83,7 +83,7 @@ public class Journal implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the code property value. The code property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCode() {
@@ -91,7 +91,7 @@ public class Journal implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the displayName property value. The displayName property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -99,7 +99,7 @@ public class Journal implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -117,7 +117,7 @@ public class Journal implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the id property value. The id property
-     * @return a UUID
+     * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
     public UUID getId() {
@@ -125,7 +125,7 @@ public class Journal implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the journalLines property value. The journalLines property
-     * @return a java.util.List<JournalLine>
+     * @return a {@link java.util.List<JournalLine>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<JournalLine> getJournalLines() {
@@ -133,7 +133,7 @@ public class Journal implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -141,7 +141,7 @@ public class Journal implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {

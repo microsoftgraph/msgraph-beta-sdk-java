@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MacOsVppAppAssignedLicense extends Entity implements Parsable {
     /**
-     * Instantiates a new MacOsVppAppAssignedLicense and sets the default values.
+     * Instantiates a new {@link MacOsVppAppAssignedLicense} and sets the default values.
      */
     public MacOsVppAppAssignedLicense() {
         super();
@@ -20,7 +20,7 @@ public class MacOsVppAppAssignedLicense extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MacOsVppAppAssignedLicense
+     * @return a {@link MacOsVppAppAssignedLicense}
      */
     @jakarta.annotation.Nonnull
     public static MacOsVppAppAssignedLicense createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -29,7 +29,7 @@ public class MacOsVppAppAssignedLicense extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -42,7 +42,7 @@ public class MacOsVppAppAssignedLicense extends Entity implements Parsable {
     }
     /**
      * Gets the userEmailAddress property value. The user email address.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserEmailAddress() {
@@ -50,7 +50,7 @@ public class MacOsVppAppAssignedLicense extends Entity implements Parsable {
     }
     /**
      * Gets the userId property value. The user ID.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
@@ -58,7 +58,7 @@ public class MacOsVppAppAssignedLicense extends Entity implements Parsable {
     }
     /**
      * Gets the userName property value. The user name.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserName() {
@@ -66,7 +66,7 @@ public class MacOsVppAppAssignedLicense extends Entity implements Parsable {
     }
     /**
      * Gets the userPrincipalName property value. The user principal name.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {

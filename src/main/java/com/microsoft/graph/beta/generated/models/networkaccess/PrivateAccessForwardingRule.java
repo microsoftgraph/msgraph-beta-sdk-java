@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrivateAccessForwardingRule extends ForwardingRule implements Parsable {
     /**
-     * Instantiates a new PrivateAccessForwardingRule and sets the default values.
+     * Instantiates a new {@link PrivateAccessForwardingRule} and sets the default values.
      */
     public PrivateAccessForwardingRule() {
         super();
@@ -18,7 +18,7 @@ public class PrivateAccessForwardingRule extends ForwardingRule implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PrivateAccessForwardingRule
+     * @return a {@link PrivateAccessForwardingRule}
      */
     @jakarta.annotation.Nonnull
     public static PrivateAccessForwardingRule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class PrivateAccessForwardingRule extends ForwardingRule implements Parsa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

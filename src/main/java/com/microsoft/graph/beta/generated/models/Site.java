@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Site extends BaseItem implements Parsable {
     /**
-     * Instantiates a new Site and sets the default values.
+     * Instantiates a new {@link Site} and sets the default values.
      */
     public Site() {
         super();
@@ -19,7 +19,7 @@ public class Site extends BaseItem implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Site
+     * @return a {@link Site}
      */
     @jakarta.annotation.Nonnull
     public static Site createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class Site extends BaseItem implements Parsable {
     }
     /**
      * Gets the analytics property value. Analytics about the view activities that took place in this site.
-     * @return a ItemAnalytics
+     * @return a {@link ItemAnalytics}
      */
     @jakarta.annotation.Nullable
     public ItemAnalytics getAnalytics() {
@@ -36,7 +36,7 @@ public class Site extends BaseItem implements Parsable {
     }
     /**
      * Gets the columns property value. The collection of column definitions reusable across lists under this site.
-     * @return a java.util.List<ColumnDefinition>
+     * @return a {@link java.util.List<ColumnDefinition>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ColumnDefinition> getColumns() {
@@ -44,7 +44,7 @@ public class Site extends BaseItem implements Parsable {
     }
     /**
      * Gets the contentTypes property value. The collection of content types defined for this site.
-     * @return a java.util.List<ContentType>
+     * @return a {@link java.util.List<ContentType>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ContentType> getContentTypes() {
@@ -52,7 +52,7 @@ public class Site extends BaseItem implements Parsable {
     }
     /**
      * Gets the deleted property value. The deleted property
-     * @return a Deleted
+     * @return a {@link Deleted}
      */
     @jakarta.annotation.Nullable
     public Deleted getDeleted() {
@@ -60,7 +60,7 @@ public class Site extends BaseItem implements Parsable {
     }
     /**
      * Gets the displayName property value. The full title for the site. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -68,7 +68,7 @@ public class Site extends BaseItem implements Parsable {
     }
     /**
      * Gets the drive property value. The default drive (document library) for this site.
-     * @return a Drive
+     * @return a {@link Drive}
      */
     @jakarta.annotation.Nullable
     public Drive getDrive() {
@@ -76,7 +76,7 @@ public class Site extends BaseItem implements Parsable {
     }
     /**
      * Gets the drives property value. The collection of drives (document libraries) under this site.
-     * @return a java.util.List<Drive>
+     * @return a {@link java.util.List<Drive>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Drive> getDrives() {
@@ -84,7 +84,7 @@ public class Site extends BaseItem implements Parsable {
     }
     /**
      * Gets the externalColumns property value. The collection of column definitions available in the site that are referenced from the sites in the parent hierarchy of the current site.
-     * @return a java.util.List<ColumnDefinition>
+     * @return a {@link java.util.List<ColumnDefinition>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ColumnDefinition> getExternalColumns() {
@@ -92,7 +92,7 @@ public class Site extends BaseItem implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -124,7 +124,7 @@ public class Site extends BaseItem implements Parsable {
     }
     /**
      * Gets the informationProtection property value. The informationProtection property
-     * @return a InformationProtection
+     * @return a {@link InformationProtection}
      */
     @jakarta.annotation.Nullable
     public InformationProtection getInformationProtection() {
@@ -132,7 +132,7 @@ public class Site extends BaseItem implements Parsable {
     }
     /**
      * Gets the isPersonalSite property value. The isPersonalSite property
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsPersonalSite() {
@@ -140,7 +140,7 @@ public class Site extends BaseItem implements Parsable {
     }
     /**
      * Gets the items property value. Used to address any item contained in this site. This collection cannot be enumerated.
-     * @return a java.util.List<BaseItem>
+     * @return a {@link java.util.List<BaseItem>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<BaseItem> getItems() {
@@ -148,7 +148,7 @@ public class Site extends BaseItem implements Parsable {
     }
     /**
      * Gets the lists property value. The collection of lists under this site.
-     * @return a java.util.List<List>
+     * @return a {@link java.util.List<List>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<List> getLists() {
@@ -156,7 +156,7 @@ public class Site extends BaseItem implements Parsable {
     }
     /**
      * Gets the onenote property value. The onenote property
-     * @return a Onenote
+     * @return a {@link Onenote}
      */
     @jakarta.annotation.Nullable
     public Onenote getOnenote() {
@@ -164,7 +164,7 @@ public class Site extends BaseItem implements Parsable {
     }
     /**
      * Gets the operations property value. The collection of long running operations for the site.
-     * @return a java.util.List<RichLongRunningOperation>
+     * @return a {@link java.util.List<RichLongRunningOperation>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<RichLongRunningOperation> getOperations() {
@@ -172,7 +172,7 @@ public class Site extends BaseItem implements Parsable {
     }
     /**
      * Gets the pages property value. The collection of pages in the baseSitePages list in this site.
-     * @return a java.util.List<BaseSitePage>
+     * @return a {@link java.util.List<BaseSitePage>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<BaseSitePage> getPages() {
@@ -180,7 +180,7 @@ public class Site extends BaseItem implements Parsable {
     }
     /**
      * Gets the permissions property value. The permissions associated with the site. Nullable.
-     * @return a java.util.List<Permission>
+     * @return a {@link java.util.List<Permission>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Permission> getPermissions() {
@@ -188,7 +188,7 @@ public class Site extends BaseItem implements Parsable {
     }
     /**
      * Gets the recycleBin property value. A container for a collection of recycleBinItem resources in this site.
-     * @return a RecycleBin
+     * @return a {@link RecycleBin}
      */
     @jakarta.annotation.Nullable
     public RecycleBin getRecycleBin() {
@@ -196,7 +196,7 @@ public class Site extends BaseItem implements Parsable {
     }
     /**
      * Gets the root property value. If present, indicates that this is the root site in the site collection. Read-only.
-     * @return a Root
+     * @return a {@link Root}
      */
     @jakarta.annotation.Nullable
     public Root getRoot() {
@@ -204,7 +204,7 @@ public class Site extends BaseItem implements Parsable {
     }
     /**
      * Gets the settings property value. The settings on this site. Read-only.
-     * @return a SiteSettings
+     * @return a {@link SiteSettings}
      */
     @jakarta.annotation.Nullable
     public SiteSettings getSettings() {
@@ -212,7 +212,7 @@ public class Site extends BaseItem implements Parsable {
     }
     /**
      * Gets the sharepointIds property value. Returns identifiers useful for SharePoint REST compatibility. Read-only.
-     * @return a SharepointIds
+     * @return a {@link SharepointIds}
      */
     @jakarta.annotation.Nullable
     public SharepointIds getSharepointIds() {
@@ -220,7 +220,7 @@ public class Site extends BaseItem implements Parsable {
     }
     /**
      * Gets the siteCollection property value. Provides details about the site's site collection. Available only on the root site. Read-only.
-     * @return a SiteCollection
+     * @return a {@link SiteCollection}
      */
     @jakarta.annotation.Nullable
     public SiteCollection getSiteCollection() {
@@ -228,7 +228,7 @@ public class Site extends BaseItem implements Parsable {
     }
     /**
      * Gets the sites property value. The collection of the sub-sites under this site.
-     * @return a java.util.List<Site>
+     * @return a {@link java.util.List<Site>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Site> getSites() {
@@ -236,7 +236,7 @@ public class Site extends BaseItem implements Parsable {
     }
     /**
      * Gets the termStore property value. The termStore under this site.
-     * @return a Store
+     * @return a {@link Store}
      */
     @jakarta.annotation.Nullable
     public Store getTermStore() {

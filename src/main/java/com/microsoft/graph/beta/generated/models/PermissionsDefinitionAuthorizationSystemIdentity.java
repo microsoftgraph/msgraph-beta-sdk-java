@@ -18,7 +18,7 @@ public class PermissionsDefinitionAuthorizationSystemIdentity implements Additio
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new PermissionsDefinitionAuthorizationSystemIdentity and sets the default values.
+     * Instantiates a new {@link PermissionsDefinitionAuthorizationSystemIdentity} and sets the default values.
      */
     public PermissionsDefinitionAuthorizationSystemIdentity() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class PermissionsDefinitionAuthorizationSystemIdentity implements Additio
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PermissionsDefinitionAuthorizationSystemIdentity
+     * @return a {@link PermissionsDefinitionAuthorizationSystemIdentity}
      */
     @jakarta.annotation.Nonnull
     public static PermissionsDefinitionAuthorizationSystemIdentity createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class PermissionsDefinitionAuthorizationSystemIdentity implements Additio
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class PermissionsDefinitionAuthorizationSystemIdentity implements Additio
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class PermissionsDefinitionAuthorizationSystemIdentity implements Additio
     }
     /**
      * Gets the externalId property value. Unique ID of the identity within the external system. Prefixed with rsn: if this is a SAML or ED user in AWS. Alternate key.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getExternalId() {
@@ -65,7 +65,7 @@ public class PermissionsDefinitionAuthorizationSystemIdentity implements Additio
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -78,7 +78,7 @@ public class PermissionsDefinitionAuthorizationSystemIdentity implements Additio
     }
     /**
      * Gets the identityType property value. The identityType property
-     * @return a PermissionsDefinitionIdentityType
+     * @return a {@link PermissionsDefinitionIdentityType}
      */
     @jakarta.annotation.Nullable
     public PermissionsDefinitionIdentityType getIdentityType() {
@@ -86,7 +86,7 @@ public class PermissionsDefinitionAuthorizationSystemIdentity implements Additio
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -94,7 +94,7 @@ public class PermissionsDefinitionAuthorizationSystemIdentity implements Additio
     }
     /**
      * Gets the source property value. The source property
-     * @return a PermissionsDefinitionIdentitySource
+     * @return a {@link PermissionsDefinitionIdentitySource}
      */
     @jakarta.annotation.Nullable
     public PermissionsDefinitionIdentitySource getSource() {

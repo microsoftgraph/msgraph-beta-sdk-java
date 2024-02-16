@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AwsSource extends AuthorizationSystemIdentitySource implements Parsable {
     /**
-     * Instantiates a new AwsSource and sets the default values.
+     * Instantiates a new {@link AwsSource} and sets the default values.
      */
     public AwsSource() {
         super();
@@ -18,7 +18,7 @@ public class AwsSource extends AuthorizationSystemIdentitySource implements Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AwsSource
+     * @return a {@link AwsSource}
      */
     @jakarta.annotation.Nonnull
     public static AwsSource createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class AwsSource extends AuthorizationSystemIdentitySource implements Pars
     }
     /**
      * Gets the accountId property value. AWS account ID.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAccountId() {
@@ -35,7 +35,7 @@ public class AwsSource extends AuthorizationSystemIdentitySource implements Pars
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

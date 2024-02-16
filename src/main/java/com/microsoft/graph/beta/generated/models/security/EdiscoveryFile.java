@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EdiscoveryFile extends File implements Parsable {
     /**
-     * Instantiates a new EdiscoveryFile and sets the default values.
+     * Instantiates a new {@link EdiscoveryFile} and sets the default values.
      */
     public EdiscoveryFile() {
         super();
@@ -17,7 +17,7 @@ public class EdiscoveryFile extends File implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EdiscoveryFile
+     * @return a {@link EdiscoveryFile}
      */
     @jakarta.annotation.Nonnull
     public static EdiscoveryFile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class EdiscoveryFile extends File implements Parsable {
     }
     /**
      * Gets the custodian property value. Custodians associated with the file.
-     * @return a EdiscoveryCustodian
+     * @return a {@link EdiscoveryCustodian}
      */
     @jakarta.annotation.Nullable
     public EdiscoveryCustodian getCustodian() {
@@ -34,7 +34,7 @@ public class EdiscoveryFile extends File implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -45,7 +45,7 @@ public class EdiscoveryFile extends File implements Parsable {
     }
     /**
      * Gets the tags property value. Tags associated with the file.
-     * @return a java.util.List<EdiscoveryReviewTag>
+     * @return a {@link java.util.List<EdiscoveryReviewTag>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<EdiscoveryReviewTag> getTags() {

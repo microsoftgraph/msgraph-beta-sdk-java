@@ -18,7 +18,7 @@ public class OutboundSharedUserProfile implements AdditionalDataHolder, BackedMo
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new OutboundSharedUserProfile and sets the default values.
+     * Instantiates a new {@link OutboundSharedUserProfile} and sets the default values.
      */
     public OutboundSharedUserProfile() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class OutboundSharedUserProfile implements AdditionalDataHolder, BackedMo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a OutboundSharedUserProfile
+     * @return a {@link OutboundSharedUserProfile}
      */
     @jakarta.annotation.Nonnull
     public static OutboundSharedUserProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class OutboundSharedUserProfile implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class OutboundSharedUserProfile implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class OutboundSharedUserProfile implements AdditionalDataHolder, BackedMo
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -69,7 +69,7 @@ public class OutboundSharedUserProfile implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -77,7 +77,7 @@ public class OutboundSharedUserProfile implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the tenants property value. The collection of external Microsoft Entra tenants that the user has shared profile data with. Read-only.
-     * @return a java.util.List<TenantReference>
+     * @return a {@link java.util.List<TenantReference>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<TenantReference> getTenants() {
@@ -85,7 +85,7 @@ public class OutboundSharedUserProfile implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the userId property value. The object id of the external user. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserId() {

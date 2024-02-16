@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IosVpnConfiguration extends AppleVpnConfiguration implements Parsable {
     /**
-     * Instantiates a new IosVpnConfiguration and sets the default values.
+     * Instantiates a new {@link IosVpnConfiguration} and sets the default values.
      */
     public IosVpnConfiguration() {
         super();
@@ -21,7 +21,7 @@ public class IosVpnConfiguration extends AppleVpnConfiguration implements Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a IosVpnConfiguration
+     * @return a {@link IosVpnConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static IosVpnConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class IosVpnConfiguration extends AppleVpnConfiguration implements Parsab
     }
     /**
      * Gets the cloudName property value. Zscaler only. Zscaler cloud which the user is assigned to.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCloudName() {
@@ -45,7 +45,7 @@ public class IosVpnConfiguration extends AppleVpnConfiguration implements Parsab
     }
     /**
      * Gets the derivedCredentialSettings property value. Tenant level settings for the Derived Credentials to be used for authentication.
-     * @return a DeviceManagementDerivedCredentialSettings
+     * @return a {@link DeviceManagementDerivedCredentialSettings}
      */
     @jakarta.annotation.Nullable
     public DeviceManagementDerivedCredentialSettings getDerivedCredentialSettings() {
@@ -53,7 +53,7 @@ public class IosVpnConfiguration extends AppleVpnConfiguration implements Parsab
     }
     /**
      * Gets the excludeList property value. Zscaler only. List of network addresses which are not sent through the Zscaler cloud.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getExcludeList() {
@@ -61,7 +61,7 @@ public class IosVpnConfiguration extends AppleVpnConfiguration implements Parsab
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -78,7 +78,7 @@ public class IosVpnConfiguration extends AppleVpnConfiguration implements Parsab
     }
     /**
      * Gets the identityCertificate property value. Identity certificate for client authentication when authentication method is certificate.
-     * @return a IosCertificateProfileBase
+     * @return a {@link IosCertificateProfileBase}
      */
     @jakarta.annotation.Nullable
     public IosCertificateProfileBase getIdentityCertificate() {
@@ -86,7 +86,7 @@ public class IosVpnConfiguration extends AppleVpnConfiguration implements Parsab
     }
     /**
      * Gets the microsoftTunnelSiteId property value. Microsoft Tunnel site ID.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getMicrosoftTunnelSiteId() {
@@ -94,7 +94,7 @@ public class IosVpnConfiguration extends AppleVpnConfiguration implements Parsab
     }
     /**
      * Gets the strictEnforcement property value. Zscaler only. Blocks network traffic until the user signs into Zscaler app. 'True' means traffic is blocked.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getStrictEnforcement() {
@@ -102,7 +102,7 @@ public class IosVpnConfiguration extends AppleVpnConfiguration implements Parsab
     }
     /**
      * Gets the targetedMobileApps property value. Targeted mobile apps. This collection can contain a maximum of 500 elements.
-     * @return a java.util.List<AppListItem>
+     * @return a {@link java.util.List<AppListItem>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AppListItem> getTargetedMobileApps() {
@@ -110,7 +110,7 @@ public class IosVpnConfiguration extends AppleVpnConfiguration implements Parsab
     }
     /**
      * Gets the userDomain property value. Zscaler only. Enter a static domain to pre-populate the login field with in the Zscaler app. If this is left empty, the user's Azure Active Directory domain will be used instead.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserDomain() {

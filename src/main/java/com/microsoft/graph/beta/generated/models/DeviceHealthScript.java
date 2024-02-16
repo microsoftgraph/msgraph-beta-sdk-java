@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceHealthScript extends Entity implements Parsable {
     /**
-     * Instantiates a new DeviceHealthScript and sets the default values.
+     * Instantiates a new {@link DeviceHealthScript} and sets the default values.
      */
     public DeviceHealthScript() {
         super();
@@ -21,7 +21,7 @@ public class DeviceHealthScript extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceHealthScript
+     * @return a {@link DeviceHealthScript}
      */
     @jakarta.annotation.Nonnull
     public static DeviceHealthScript createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class DeviceHealthScript extends Entity implements Parsable {
     }
     /**
      * Gets the assignments property value. The list of group assignments for the device health script
-     * @return a java.util.List<DeviceHealthScriptAssignment>
+     * @return a {@link java.util.List<DeviceHealthScriptAssignment>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceHealthScriptAssignment> getAssignments() {
@@ -38,7 +38,7 @@ public class DeviceHealthScript extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. The timestamp of when the device health script was created. This property is read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -46,7 +46,7 @@ public class DeviceHealthScript extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. Description of the device health script
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -54,7 +54,7 @@ public class DeviceHealthScript extends Entity implements Parsable {
     }
     /**
      * Gets the detectionScriptContent property value. The entire content of the detection powershell script
-     * @return a byte[]
+     * @return a {@link byte[]}
      */
     @jakarta.annotation.Nullable
     public byte[] getDetectionScriptContent() {
@@ -62,7 +62,7 @@ public class DeviceHealthScript extends Entity implements Parsable {
     }
     /**
      * Gets the detectionScriptParameters property value. List of ComplexType DetectionScriptParameters objects.
-     * @return a java.util.List<DeviceHealthScriptParameter>
+     * @return a {@link java.util.List<DeviceHealthScriptParameter>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceHealthScriptParameter> getDetectionScriptParameters() {
@@ -70,7 +70,7 @@ public class DeviceHealthScript extends Entity implements Parsable {
     }
     /**
      * Gets the deviceHealthScriptType property value. Indicates the type of device script.
-     * @return a DeviceHealthScriptType
+     * @return a {@link DeviceHealthScriptType}
      */
     @jakarta.annotation.Nullable
     public DeviceHealthScriptType getDeviceHealthScriptType() {
@@ -78,7 +78,7 @@ public class DeviceHealthScript extends Entity implements Parsable {
     }
     /**
      * Gets the deviceRunStates property value. List of run states for the device health script across all devices
-     * @return a java.util.List<DeviceHealthScriptDeviceState>
+     * @return a {@link java.util.List<DeviceHealthScriptDeviceState>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceHealthScriptDeviceState> getDeviceRunStates() {
@@ -86,7 +86,7 @@ public class DeviceHealthScript extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. Name of the device health script
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -94,7 +94,7 @@ public class DeviceHealthScript extends Entity implements Parsable {
     }
     /**
      * Gets the enforceSignatureCheck property value. Indicate whether the script signature needs be checked
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getEnforceSignatureCheck() {
@@ -102,7 +102,7 @@ public class DeviceHealthScript extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -131,7 +131,7 @@ public class DeviceHealthScript extends Entity implements Parsable {
     }
     /**
      * Gets the highestAvailableVersion property value. Highest available version for a Microsoft Proprietary script
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getHighestAvailableVersion() {
@@ -139,7 +139,7 @@ public class DeviceHealthScript extends Entity implements Parsable {
     }
     /**
      * Gets the isGlobalScript property value. Determines if this is Microsoft Proprietary Script. Proprietary scripts are read-only
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsGlobalScript() {
@@ -147,7 +147,7 @@ public class DeviceHealthScript extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. The timestamp of when the device health script was modified. This property is read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -155,7 +155,7 @@ public class DeviceHealthScript extends Entity implements Parsable {
     }
     /**
      * Gets the publisher property value. Name of the device health script publisher
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPublisher() {
@@ -163,7 +163,7 @@ public class DeviceHealthScript extends Entity implements Parsable {
     }
     /**
      * Gets the remediationScriptContent property value. The entire content of the remediation powershell script
-     * @return a byte[]
+     * @return a {@link byte[]}
      */
     @jakarta.annotation.Nullable
     public byte[] getRemediationScriptContent() {
@@ -171,7 +171,7 @@ public class DeviceHealthScript extends Entity implements Parsable {
     }
     /**
      * Gets the remediationScriptParameters property value. List of ComplexType RemediationScriptParameters objects.
-     * @return a java.util.List<DeviceHealthScriptParameter>
+     * @return a {@link java.util.List<DeviceHealthScriptParameter>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceHealthScriptParameter> getRemediationScriptParameters() {
@@ -179,7 +179,7 @@ public class DeviceHealthScript extends Entity implements Parsable {
     }
     /**
      * Gets the roleScopeTagIds property value. List of Scope Tag IDs for the device health script
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {
@@ -187,7 +187,7 @@ public class DeviceHealthScript extends Entity implements Parsable {
     }
     /**
      * Gets the runAs32Bit property value. Indicate whether PowerShell script(s) should run as 32-bit
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getRunAs32Bit() {
@@ -195,7 +195,7 @@ public class DeviceHealthScript extends Entity implements Parsable {
     }
     /**
      * Gets the runAsAccount property value. Indicates the type of execution context the app runs in.
-     * @return a RunAsAccountType
+     * @return a {@link RunAsAccountType}
      */
     @jakarta.annotation.Nullable
     public RunAsAccountType getRunAsAccount() {
@@ -203,7 +203,7 @@ public class DeviceHealthScript extends Entity implements Parsable {
     }
     /**
      * Gets the runSummary property value. High level run summary for device health script.
-     * @return a DeviceHealthScriptRunSummary
+     * @return a {@link DeviceHealthScriptRunSummary}
      */
     @jakarta.annotation.Nullable
     public DeviceHealthScriptRunSummary getRunSummary() {
@@ -211,7 +211,7 @@ public class DeviceHealthScript extends Entity implements Parsable {
     }
     /**
      * Gets the version property value. Version of the device health script
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getVersion() {

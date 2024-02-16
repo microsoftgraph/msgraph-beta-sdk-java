@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Monitoring extends Entity implements Parsable {
     /**
-     * Instantiates a new Monitoring and sets the default values.
+     * Instantiates a new {@link Monitoring} and sets the default values.
      */
     public Monitoring() {
         super();
@@ -18,7 +18,7 @@ public class Monitoring extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Monitoring
+     * @return a {@link Monitoring}
      */
     @jakarta.annotation.Nonnull
     public static Monitoring createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class Monitoring extends Entity implements Parsable {
     }
     /**
      * Gets the alertRecords property value. The collection of records of alert events.
-     * @return a java.util.List<AlertRecord>
+     * @return a {@link java.util.List<AlertRecord>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AlertRecord> getAlertRecords() {
@@ -35,7 +35,7 @@ public class Monitoring extends Entity implements Parsable {
     }
     /**
      * Gets the alertRules property value. The collection of alert rules.
-     * @return a java.util.List<AlertRule>
+     * @return a {@link java.util.List<AlertRule>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AlertRule> getAlertRules() {
@@ -43,7 +43,7 @@ public class Monitoring extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

@@ -12,13 +12,14 @@ import java.util.Objects;
 public class ConnectorGroupItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the collection of onPremisesPublishingProfile entities.
+     * @return a {@link RefRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RefRequestBuilder ref() {
         return new RefRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new ConnectorGroupItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link ConnectorGroupItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -26,7 +27,7 @@ public class ConnectorGroupItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/onPremisesPublishingProfiles/{onPremisesPublishingProfile%2Did}/connectors/{connector%2Did}/memberOf/{connectorGroup%2Did}", pathParameters);
     }
     /**
-     * Instantiates a new ConnectorGroupItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link ConnectorGroupItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */

@@ -19,7 +19,7 @@ public class UserAccount implements AdditionalDataHolder, BackedModel, Parsable 
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new UserAccount and sets the default values.
+     * Instantiates a new {@link UserAccount} and sets the default values.
      */
     public UserAccount() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class UserAccount implements AdditionalDataHolder, BackedModel, Parsable 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserAccount
+     * @return a {@link UserAccount}
      */
     @jakarta.annotation.Nonnull
     public static UserAccount createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class UserAccount implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -50,7 +50,7 @@ public class UserAccount implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -58,7 +58,7 @@ public class UserAccount implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the displayName property value. The displayName property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -66,7 +66,7 @@ public class UserAccount implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -82,7 +82,7 @@ public class UserAccount implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the lastSeenDateTime property value. The lastSeenDateTime property
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastSeenDateTime() {
@@ -90,7 +90,7 @@ public class UserAccount implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -98,7 +98,7 @@ public class UserAccount implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the riskScore property value. The riskScore property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRiskScore() {
@@ -106,7 +106,7 @@ public class UserAccount implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the service property value. The service property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getService() {
@@ -114,7 +114,7 @@ public class UserAccount implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the signinName property value. The signinName property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSigninName() {
@@ -122,7 +122,7 @@ public class UserAccount implements AdditionalDataHolder, BackedModel, Parsable 
     }
     /**
      * Gets the status property value. The status property
-     * @return a AccountStatus
+     * @return a {@link AccountStatus}
      */
     @jakarta.annotation.Nullable
     public AccountStatus getStatus() {

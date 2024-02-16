@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CallRecord extends Entity implements Parsable {
     /**
-     * Instantiates a new CallRecord and sets the default values.
+     * Instantiates a new {@link CallRecord} and sets the default values.
      */
     public CallRecord() {
         super();
@@ -20,7 +20,7 @@ public class CallRecord extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CallRecord
+     * @return a {@link CallRecord}
      */
     @jakarta.annotation.Nonnull
     public static CallRecord createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -29,7 +29,7 @@ public class CallRecord extends Entity implements Parsable {
     }
     /**
      * Gets the endDateTime property value. UTC time when the last user left the call. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getEndDateTime() {
@@ -37,7 +37,7 @@ public class CallRecord extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -58,7 +58,7 @@ public class CallRecord extends Entity implements Parsable {
     }
     /**
      * Gets the joinWebUrl property value. Meeting URL associated to the call. May not be available for a peerToPeer call record type.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getJoinWebUrl() {
@@ -66,7 +66,7 @@ public class CallRecord extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. UTC time when the call record was created. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -74,7 +74,7 @@ public class CallRecord extends Entity implements Parsable {
     }
     /**
      * Gets the modalities property value. List of all the modalities used in the call. Possible values are: unknown, audio, video, videoBasedScreenSharing, data, screenSharing, unknownFutureValue.
-     * @return a java.util.List<Modality>
+     * @return a {@link java.util.List<Modality>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Modality> getModalities() {
@@ -82,7 +82,7 @@ public class CallRecord extends Entity implements Parsable {
     }
     /**
      * Gets the organizer property value. The organizer property
-     * @return a IdentitySet
+     * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
     public IdentitySet getOrganizer() {
@@ -90,7 +90,7 @@ public class CallRecord extends Entity implements Parsable {
     }
     /**
      * Gets the organizer_v2 property value. Identity of the organizer of the call. This relationship is expanded by default in callRecord methods.
-     * @return a Organizer
+     * @return a {@link Organizer}
      */
     @jakarta.annotation.Nullable
     public Organizer getOrganizerV2() {
@@ -98,7 +98,7 @@ public class CallRecord extends Entity implements Parsable {
     }
     /**
      * Gets the participants property value. The participants property
-     * @return a java.util.List<IdentitySet>
+     * @return a {@link java.util.List<IdentitySet>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<IdentitySet> getParticipants() {
@@ -106,7 +106,7 @@ public class CallRecord extends Entity implements Parsable {
     }
     /**
      * Gets the participants_v2 property value. List of distinct participants in the call.
-     * @return a java.util.List<Participant>
+     * @return a {@link java.util.List<Participant>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Participant> getParticipantsV2() {
@@ -114,7 +114,7 @@ public class CallRecord extends Entity implements Parsable {
     }
     /**
      * Gets the sessions property value. List of sessions involved in the call. Peer-to-peer calls typically only have one session, whereas group calls typically have at least one session per participant. Read-only. Nullable.
-     * @return a java.util.List<Session>
+     * @return a {@link java.util.List<Session>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Session> getSessions() {
@@ -122,7 +122,7 @@ public class CallRecord extends Entity implements Parsable {
     }
     /**
      * Gets the startDateTime property value. UTC time when the first user joined the call. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
@@ -130,7 +130,7 @@ public class CallRecord extends Entity implements Parsable {
     }
     /**
      * Gets the type property value. The type property
-     * @return a CallType
+     * @return a {@link CallType}
      */
     @jakarta.annotation.Nullable
     public CallType getType() {
@@ -138,7 +138,7 @@ public class CallRecord extends Entity implements Parsable {
     }
     /**
      * Gets the version property value. Monotonically increasing version of the call record. Higher version call records with the same ID include additional data compared to the lower version.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getVersion() {

@@ -11,7 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CloudPcOverview extends Entity implements Parsable {
     /**
-     * Instantiates a new CloudPcOverview and sets the default values.
+     * Instantiates a new {@link CloudPcOverview} and sets the default values.
      */
     public CloudPcOverview() {
         super();
@@ -19,7 +19,7 @@ public class CloudPcOverview extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CloudPcOverview
+     * @return a {@link CloudPcOverview}
      */
     @jakarta.annotation.Nonnull
     public static CloudPcOverview createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class CloudPcOverview extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -57,7 +57,7 @@ public class CloudPcOverview extends Entity implements Parsable {
     }
     /**
      * Gets the lastRefreshedDateTime property value. Date and time the entity was last updated in the multi-tenant management platform. Optional. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastRefreshedDateTime() {
@@ -65,7 +65,7 @@ public class CloudPcOverview extends Entity implements Parsable {
     }
     /**
      * Gets the numberOfCloudPcConnectionStatusFailed property value. The number of cloud PC connections that have a status of failed. Optional. Read-only.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getNumberOfCloudPcConnectionStatusFailed() {
@@ -73,7 +73,7 @@ public class CloudPcOverview extends Entity implements Parsable {
     }
     /**
      * Gets the numberOfCloudPcConnectionStatusPassed property value. The number of cloud PC connections that have a status of passed. Optional. Read-only.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getNumberOfCloudPcConnectionStatusPassed() {
@@ -81,7 +81,7 @@ public class CloudPcOverview extends Entity implements Parsable {
     }
     /**
      * Gets the numberOfCloudPcConnectionStatusPending property value. The number of cloud PC connections that have a status of pending. Optional. Read-only.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getNumberOfCloudPcConnectionStatusPending() {
@@ -89,7 +89,7 @@ public class CloudPcOverview extends Entity implements Parsable {
     }
     /**
      * Gets the numberOfCloudPcConnectionStatusRunning property value. The number of cloud PC connections that have a status of running. Optional. Read-only.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getNumberOfCloudPcConnectionStatusRunning() {
@@ -97,7 +97,7 @@ public class CloudPcOverview extends Entity implements Parsable {
     }
     /**
      * Gets the numberOfCloudPcConnectionStatusUnkownFutureValue property value. The number of cloud PC connections that have a status of unknownFutureValue. Optional. Read-only.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getNumberOfCloudPcConnectionStatusUnkownFutureValue() {
@@ -105,7 +105,7 @@ public class CloudPcOverview extends Entity implements Parsable {
     }
     /**
      * Gets the numberOfCloudPcStatusDeprovisioning property value. The number of cloud PCs that have a status of deprovisioning. Optional. Read-only.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getNumberOfCloudPcStatusDeprovisioning() {
@@ -113,7 +113,7 @@ public class CloudPcOverview extends Entity implements Parsable {
     }
     /**
      * Gets the numberOfCloudPcStatusFailed property value. The number of cloud PCs that have a status of failed. Optional. Read-only.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getNumberOfCloudPcStatusFailed() {
@@ -121,7 +121,7 @@ public class CloudPcOverview extends Entity implements Parsable {
     }
     /**
      * Gets the numberOfCloudPcStatusInGracePeriod property value. The number of cloud PCs that have a status of inGracePeriod. Optional. Read-only.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getNumberOfCloudPcStatusInGracePeriod() {
@@ -129,7 +129,7 @@ public class CloudPcOverview extends Entity implements Parsable {
     }
     /**
      * Gets the numberOfCloudPcStatusNotProvisioned property value. The number of cloud PCs that have a status of notProvisioned. Optional. Read-only.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getNumberOfCloudPcStatusNotProvisioned() {
@@ -137,7 +137,7 @@ public class CloudPcOverview extends Entity implements Parsable {
     }
     /**
      * Gets the numberOfCloudPcStatusProvisioned property value. The number of cloud PCs that have a status of provisioned. Optional. Read-only.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getNumberOfCloudPcStatusProvisioned() {
@@ -145,7 +145,7 @@ public class CloudPcOverview extends Entity implements Parsable {
     }
     /**
      * Gets the numberOfCloudPcStatusProvisioning property value. The number of cloud PCs that have a status of provisioning. Optional. Read-only.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getNumberOfCloudPcStatusProvisioning() {
@@ -153,7 +153,7 @@ public class CloudPcOverview extends Entity implements Parsable {
     }
     /**
      * Gets the numberOfCloudPcStatusUnknown property value. The number of cloud PCs that have a status of unknown. Optional. Read-only.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getNumberOfCloudPcStatusUnknown() {
@@ -161,7 +161,7 @@ public class CloudPcOverview extends Entity implements Parsable {
     }
     /**
      * Gets the numberOfCloudPcStatusUpgrading property value. The number of cloud PCs that have a status of upgrading. Optional. Read-only.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getNumberOfCloudPcStatusUpgrading() {
@@ -169,7 +169,7 @@ public class CloudPcOverview extends Entity implements Parsable {
     }
     /**
      * Gets the tenantDisplayName property value. The display name for the managed tenant. Optional. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTenantDisplayName() {
@@ -177,7 +177,7 @@ public class CloudPcOverview extends Entity implements Parsable {
     }
     /**
      * Gets the tenantId property value. The tenantId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
@@ -185,7 +185,7 @@ public class CloudPcOverview extends Entity implements Parsable {
     }
     /**
      * Gets the totalBusinessLicenses property value. The total number of cloud PC devices that have the Business SKU. Optional. Read-only.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getTotalBusinessLicenses() {
@@ -193,7 +193,7 @@ public class CloudPcOverview extends Entity implements Parsable {
     }
     /**
      * Gets the totalCloudPcConnectionStatus property value. The total number of cloud PC connection statuses for the given managed tenant. Optional. Read-only.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getTotalCloudPcConnectionStatus() {
@@ -201,7 +201,7 @@ public class CloudPcOverview extends Entity implements Parsable {
     }
     /**
      * Gets the totalCloudPcStatus property value. The total number of cloud PC statues for the given managed tenant. Optional. Read-only.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getTotalCloudPcStatus() {
@@ -209,7 +209,7 @@ public class CloudPcOverview extends Entity implements Parsable {
     }
     /**
      * Gets the totalEnterpriseLicenses property value. The total number of cloud PC devices that have the Enterprise SKU. Optional. Read-only.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getTotalEnterpriseLicenses() {

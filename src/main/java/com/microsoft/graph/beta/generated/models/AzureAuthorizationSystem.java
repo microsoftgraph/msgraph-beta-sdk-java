@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AzureAuthorizationSystem extends AuthorizationSystem implements Parsable {
     /**
-     * Instantiates a new AzureAuthorizationSystem and sets the default values.
+     * Instantiates a new {@link AzureAuthorizationSystem} and sets the default values.
      */
     public AzureAuthorizationSystem() {
         super();
@@ -18,7 +18,7 @@ public class AzureAuthorizationSystem extends AuthorizationSystem implements Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AzureAuthorizationSystem
+     * @return a {@link AzureAuthorizationSystem}
      */
     @jakarta.annotation.Nonnull
     public static AzureAuthorizationSystem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class AzureAuthorizationSystem extends AuthorizationSystem implements Par
     }
     /**
      * Gets the actions property value. List of actions for service in authorization system.
-     * @return a java.util.List<AzureAuthorizationSystemTypeAction>
+     * @return a {@link java.util.List<AzureAuthorizationSystemTypeAction>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AzureAuthorizationSystemTypeAction> getActions() {
@@ -35,7 +35,7 @@ public class AzureAuthorizationSystem extends AuthorizationSystem implements Par
     }
     /**
      * Gets the associatedIdentities property value. Identities in the authorization system.
-     * @return a AzureAssociatedIdentities
+     * @return a {@link AzureAssociatedIdentities}
      */
     @jakarta.annotation.Nullable
     public AzureAssociatedIdentities getAssociatedIdentities() {
@@ -43,7 +43,7 @@ public class AzureAuthorizationSystem extends AuthorizationSystem implements Par
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -57,7 +57,7 @@ public class AzureAuthorizationSystem extends AuthorizationSystem implements Par
     }
     /**
      * Gets the resources property value. Resources associated with the authorization system type.
-     * @return a java.util.List<AzureAuthorizationSystemResource>
+     * @return a {@link java.util.List<AzureAuthorizationSystemResource>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AzureAuthorizationSystemResource> getResources() {
@@ -65,7 +65,7 @@ public class AzureAuthorizationSystem extends AuthorizationSystem implements Par
     }
     /**
      * Gets the roleDefinitions property value. Roles associated with the authorization system type.
-     * @return a java.util.List<AzureRoleDefinition>
+     * @return a {@link java.util.List<AzureRoleDefinition>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AzureRoleDefinition> getRoleDefinitions() {
@@ -73,7 +73,7 @@ public class AzureAuthorizationSystem extends AuthorizationSystem implements Par
     }
     /**
      * Gets the services property value. Services associated with the authorization system type.
-     * @return a java.util.List<AuthorizationSystemTypeService>
+     * @return a {@link java.util.List<AuthorizationSystemTypeService>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthorizationSystemTypeService> getServices() {

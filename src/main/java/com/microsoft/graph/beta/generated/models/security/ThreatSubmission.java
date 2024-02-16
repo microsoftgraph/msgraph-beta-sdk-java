@@ -11,7 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ThreatSubmission extends Entity implements Parsable {
     /**
-     * Instantiates a new ThreatSubmission and sets the default values.
+     * Instantiates a new {@link ThreatSubmission} and sets the default values.
      */
     public ThreatSubmission() {
         super();
@@ -19,7 +19,7 @@ public class ThreatSubmission extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ThreatSubmission
+     * @return a {@link ThreatSubmission}
      */
     @jakarta.annotation.Nonnull
     public static ThreatSubmission createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class ThreatSubmission extends Entity implements Parsable {
     }
     /**
      * Gets the adminReview property value. Specifies the admin review property that constitutes of who reviewed the user submission, when and what was it identified as.
-     * @return a SubmissionAdminReview
+     * @return a {@link SubmissionAdminReview}
      */
     @jakarta.annotation.Nullable
     public SubmissionAdminReview getAdminReview() {
@@ -49,7 +49,7 @@ public class ThreatSubmission extends Entity implements Parsable {
     }
     /**
      * Gets the category property value. The category property
-     * @return a SubmissionCategory
+     * @return a {@link SubmissionCategory}
      */
     @jakarta.annotation.Nullable
     public SubmissionCategory getCategory() {
@@ -57,7 +57,7 @@ public class ThreatSubmission extends Entity implements Parsable {
     }
     /**
      * Gets the clientSource property value. Specifies the source of the submission. The possible values are: microsoft,  other and unkownFutureValue.
-     * @return a SubmissionClientSource
+     * @return a {@link SubmissionClientSource}
      */
     @jakarta.annotation.Nullable
     public SubmissionClientSource getClientSource() {
@@ -65,7 +65,7 @@ public class ThreatSubmission extends Entity implements Parsable {
     }
     /**
      * Gets the contentType property value. Specifies the type of content being submitted. The possible values are: email, url, file, app and unkownFutureValue.
-     * @return a SubmissionContentType
+     * @return a {@link SubmissionContentType}
      */
     @jakarta.annotation.Nullable
     public SubmissionContentType getContentType() {
@@ -73,7 +73,7 @@ public class ThreatSubmission extends Entity implements Parsable {
     }
     /**
      * Gets the createdBy property value. Specifies who submitted the email as a threat. Supports $filter = createdBy/email eq 'value'.
-     * @return a SubmissionUserIdentity
+     * @return a {@link SubmissionUserIdentity}
      */
     @jakarta.annotation.Nullable
     public SubmissionUserIdentity getCreatedBy() {
@@ -81,7 +81,7 @@ public class ThreatSubmission extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. Specifies when the threat submission was created. Supports $filter = createdDateTime ge 2022-01-01T00:00:00Z and createdDateTime lt 2022-01-02T00:00:00Z.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -89,7 +89,7 @@ public class ThreatSubmission extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -108,7 +108,7 @@ public class ThreatSubmission extends Entity implements Parsable {
     }
     /**
      * Gets the result property value. Specifies the result of the analysis performed by Microsoft.
-     * @return a SubmissionResult
+     * @return a {@link SubmissionResult}
      */
     @jakarta.annotation.Nullable
     public SubmissionResult getResult() {
@@ -116,7 +116,7 @@ public class ThreatSubmission extends Entity implements Parsable {
     }
     /**
      * Gets the source property value. Specifies the role of the submitter. Supports $filter = source eq 'value'. The possible values are: administrator,  user and unkownFutureValue.
-     * @return a SubmissionSource
+     * @return a {@link SubmissionSource}
      */
     @jakarta.annotation.Nullable
     public SubmissionSource getSource() {
@@ -124,7 +124,7 @@ public class ThreatSubmission extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. Indicates whether the threat submission has been analyzed by Microsoft. Supports $filter = status eq 'value'. The possible values are: notStarted, running, succeeded, failed, skipped and unkownFutureValue.
-     * @return a LongRunningOperationStatus
+     * @return a {@link LongRunningOperationStatus}
      */
     @jakarta.annotation.Nullable
     public LongRunningOperationStatus getStatus() {
@@ -132,7 +132,7 @@ public class ThreatSubmission extends Entity implements Parsable {
     }
     /**
      * Gets the tenantId property value. Indicates the tenant id of the submitter. Not required when created using a POST operation. It's extracted from the token of the post API call.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {

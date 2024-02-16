@@ -11,7 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TenantTag extends Entity implements Parsable {
     /**
-     * Instantiates a new TenantTag and sets the default values.
+     * Instantiates a new {@link TenantTag} and sets the default values.
      */
     public TenantTag() {
         super();
@@ -19,7 +19,7 @@ public class TenantTag extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TenantTag
+     * @return a {@link TenantTag}
      */
     @jakarta.annotation.Nonnull
     public static TenantTag createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class TenantTag extends Entity implements Parsable {
     }
     /**
      * Gets the createdByUserId property value. The identifier for the account that created the tenant tag. Required. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCreatedByUserId() {
@@ -36,7 +36,7 @@ public class TenantTag extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. The date and time when the tenant tag was created. Required. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -44,7 +44,7 @@ public class TenantTag extends Entity implements Parsable {
     }
     /**
      * Gets the deletedDateTime property value. The date and time when the tenant tag was deleted. Required. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getDeletedDateTime() {
@@ -52,7 +52,7 @@ public class TenantTag extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The description for the tenant tag. Optional. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -60,7 +60,7 @@ public class TenantTag extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name for the tenant tag. Required. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -68,7 +68,7 @@ public class TenantTag extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -85,7 +85,7 @@ public class TenantTag extends Entity implements Parsable {
     }
     /**
      * Gets the lastActionByUserId property value. The identifier for the account that lasted on the tenant tag. Optional. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getLastActionByUserId() {
@@ -93,7 +93,7 @@ public class TenantTag extends Entity implements Parsable {
     }
     /**
      * Gets the lastActionDateTime property value. The date and time the last action was performed against the tenant tag. Optional. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastActionDateTime() {
@@ -101,7 +101,7 @@ public class TenantTag extends Entity implements Parsable {
     }
     /**
      * Gets the tenants property value. The collection of managed tenants associated with the tenant tag. Optional.
-     * @return a java.util.List<TenantInfo>
+     * @return a {@link java.util.List<TenantInfo>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<TenantInfo> getTenants() {

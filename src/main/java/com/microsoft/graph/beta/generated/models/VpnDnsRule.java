@@ -21,7 +21,7 @@ public class VpnDnsRule implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new VpnDnsRule and sets the default values.
+     * Instantiates a new {@link VpnDnsRule} and sets the default values.
      */
     public VpnDnsRule() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -30,7 +30,7 @@ public class VpnDnsRule implements AdditionalDataHolder, BackedModel, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a VpnDnsRule
+     * @return a {@link VpnDnsRule}
      */
     @jakarta.annotation.Nonnull
     public static VpnDnsRule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class VpnDnsRule implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -52,7 +52,7 @@ public class VpnDnsRule implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the autoTrigger property value. Automatically connect to the VPN when the device connects to this domain: Default False.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAutoTrigger() {
@@ -60,7 +60,7 @@ public class VpnDnsRule implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -68,7 +68,7 @@ public class VpnDnsRule implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -83,7 +83,7 @@ public class VpnDnsRule implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the name property value. Name.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -91,7 +91,7 @@ public class VpnDnsRule implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -99,7 +99,7 @@ public class VpnDnsRule implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the persistent property value. Keep this rule active even when the VPN is not connected: Default False
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getPersistent() {
@@ -107,7 +107,7 @@ public class VpnDnsRule implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the proxyServerUri property value. Proxy Server Uri.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getProxyServerUri() {
@@ -115,7 +115,7 @@ public class VpnDnsRule implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the servers property value. Servers.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getServers() {

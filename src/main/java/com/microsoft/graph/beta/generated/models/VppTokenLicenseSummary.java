@@ -21,7 +21,7 @@ public class VppTokenLicenseSummary implements AdditionalDataHolder, BackedModel
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new VppTokenLicenseSummary and sets the default values.
+     * Instantiates a new {@link VppTokenLicenseSummary} and sets the default values.
      */
     public VppTokenLicenseSummary() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -30,7 +30,7 @@ public class VppTokenLicenseSummary implements AdditionalDataHolder, BackedModel
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a VppTokenLicenseSummary
+     * @return a {@link VppTokenLicenseSummary}
      */
     @jakarta.annotation.Nonnull
     public static VppTokenLicenseSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class VppTokenLicenseSummary implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -52,7 +52,7 @@ public class VppTokenLicenseSummary implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the appleId property value. The Apple Id associated with the given Apple Volume Purchase Program Token.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAppleId() {
@@ -60,7 +60,7 @@ public class VppTokenLicenseSummary implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the availableLicenseCount property value. The number of VPP licenses available.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getAvailableLicenseCount() {
@@ -68,7 +68,7 @@ public class VppTokenLicenseSummary implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -76,7 +76,7 @@ public class VppTokenLicenseSummary implements AdditionalDataHolder, BackedModel
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -91,7 +91,7 @@ public class VppTokenLicenseSummary implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -99,7 +99,7 @@ public class VppTokenLicenseSummary implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the organizationName property value. The organization associated with the Apple Volume Purchase Program Token.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOrganizationName() {
@@ -107,7 +107,7 @@ public class VppTokenLicenseSummary implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the usedLicenseCount property value. The number of VPP licenses in use.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getUsedLicenseCount() {
@@ -115,7 +115,7 @@ public class VppTokenLicenseSummary implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the vppTokenId property value. Identifier of the VPP token.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getVppTokenId() {

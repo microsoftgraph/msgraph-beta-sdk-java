@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IndustryDataRun extends Entity implements Parsable {
     /**
-     * Instantiates a new IndustryDataRun and sets the default values.
+     * Instantiates a new {@link IndustryDataRun} and sets the default values.
      */
     public IndustryDataRun() {
         super();
@@ -20,7 +20,7 @@ public class IndustryDataRun extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a IndustryDataRun
+     * @return a {@link IndustryDataRun}
      */
     @jakarta.annotation.Nonnull
     public static IndustryDataRun createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -29,7 +29,7 @@ public class IndustryDataRun extends Entity implements Parsable {
     }
     /**
      * Gets the activities property value. The set of activities performed during the run.
-     * @return a java.util.List<IndustryDataRunActivity>
+     * @return a {@link java.util.List<IndustryDataRunActivity>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<IndustryDataRunActivity> getActivities() {
@@ -37,7 +37,7 @@ public class IndustryDataRun extends Entity implements Parsable {
     }
     /**
      * Gets the blockingError property value. An error object to diagnose critical failures in the run.
-     * @return a PublicError
+     * @return a {@link PublicError}
      */
     @jakarta.annotation.Nullable
     public PublicError getBlockingError() {
@@ -45,7 +45,7 @@ public class IndustryDataRun extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The name of the run for rendering in a user interface.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -53,7 +53,7 @@ public class IndustryDataRun extends Entity implements Parsable {
     }
     /**
      * Gets the endDateTime property value. The date and time when the run finished or null if the run is still in-progress. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getEndDateTime() {
@@ -61,7 +61,7 @@ public class IndustryDataRun extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -76,7 +76,7 @@ public class IndustryDataRun extends Entity implements Parsable {
     }
     /**
      * Gets the startDateTime property value. The date and time when the run started. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
@@ -84,7 +84,7 @@ public class IndustryDataRun extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status property
-     * @return a IndustryDataRunStatus
+     * @return a {@link IndustryDataRunStatus}
      */
     @jakarta.annotation.Nullable
     public IndustryDataRunStatus getStatus() {

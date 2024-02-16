@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OperationApprovalRequest extends Entity implements Parsable {
     /**
-     * Instantiates a new OperationApprovalRequest and sets the default values.
+     * Instantiates a new {@link OperationApprovalRequest} and sets the default values.
      */
     public OperationApprovalRequest() {
         super();
@@ -21,7 +21,7 @@ public class OperationApprovalRequest extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a OperationApprovalRequest
+     * @return a {@link OperationApprovalRequest}
      */
     @jakarta.annotation.Nonnull
     public static OperationApprovalRequest createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class OperationApprovalRequest extends Entity implements Parsable {
     }
     /**
      * Gets the approvalJustification property value. Indicates the justification for approving or rejecting the request. Maximum length of justification is 1024 characters. For example: 'Approved per Change 23423 - needed for Feb 2023 application baseline updates.' Read-only. This property is read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getApprovalJustification() {
@@ -38,7 +38,7 @@ public class OperationApprovalRequest extends Entity implements Parsable {
     }
     /**
      * Gets the approver property value. The identity of the approver as an Identity Set. Optionally contains the application ID, the device ID and the User ID. See information about this type here: https://learn.microsoft.com/graph/api/resources/identityset?view=graph-rest-1.0. Read-only. This property is read-only.
-     * @return a IdentitySet
+     * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
     public IdentitySet getApprover() {
@@ -46,7 +46,7 @@ public class OperationApprovalRequest extends Entity implements Parsable {
     }
     /**
      * Gets the expirationDateTime property value. Indicates the DateTime when any action on the approval request is no longer permitted. The value cannot be modified and is automatically populated when the request is created using expiration offset values defined in the service controllers. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default. Read-only. This property is read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getExpirationDateTime() {
@@ -54,7 +54,7 @@ public class OperationApprovalRequest extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -73,7 +73,7 @@ public class OperationApprovalRequest extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. Indicates the last DateTime that the request was modified. The value cannot be modified and is automatically populated whenever values in the request are updated. For example, when the 'status' property changes from needsApproval to approved. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default. Read-only. This property is read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -81,7 +81,7 @@ public class OperationApprovalRequest extends Entity implements Parsable {
     }
     /**
      * Gets the operationApprovalPolicies property value. The operational approval policies used in the request. Indicates the policy and platform combinations that are required for this request to be approved or rejected. Read-only. This property is read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOperationApprovalPolicies() {
@@ -89,7 +89,7 @@ public class OperationApprovalRequest extends Entity implements Parsable {
     }
     /**
      * Gets the requestDateTime property value. Indicates the DateTime that the request was made. The value cannot be modified and is automatically populated when the request is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default. Read-only. This property is read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getRequestDateTime() {
@@ -97,7 +97,7 @@ public class OperationApprovalRequest extends Entity implements Parsable {
     }
     /**
      * Gets the requestJustification property value. Indicates the justification for creating the request. Maximum length of justification is 1024 characters. For example: 'Needed for Feb 2023 application baseline updates.' Read-only. This property is read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRequestJustification() {
@@ -105,7 +105,7 @@ public class OperationApprovalRequest extends Entity implements Parsable {
     }
     /**
      * Gets the requestor property value. The identity of the requestor as an Identity Set. Optionally contains the application ID, the device ID and the User ID. See information about this type here: https://learn.microsoft.com/graph/api/resources/identityset?view=graph-rest-1.0. Read-only. This property is read-only.
-     * @return a IdentitySet
+     * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
     public IdentitySet getRequestor() {
@@ -113,7 +113,7 @@ public class OperationApprovalRequest extends Entity implements Parsable {
     }
     /**
      * Gets the requiredOperationApprovalPolicyTypes property value. Indicates the approval policy types required by the request in order for the request to be approved or rejected. Read-only. This property is read-only.
-     * @return a java.util.List<OperationApprovalPolicyType>
+     * @return a {@link java.util.List<OperationApprovalPolicyType>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<OperationApprovalPolicyType> getRequiredOperationApprovalPolicyTypes() {
@@ -121,7 +121,7 @@ public class OperationApprovalRequest extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. Indicates the status of the Approval Request. The status of a request will change when an action is successfully performed on it, such as when it is `approved` or `rejected`, or when the request's expiration DateTime passes and the result is `expired`.
-     * @return a OperationApprovalRequestStatus
+     * @return a {@link OperationApprovalRequestStatus}
      */
     @jakarta.annotation.Nullable
     public OperationApprovalRequestStatus getStatus() {

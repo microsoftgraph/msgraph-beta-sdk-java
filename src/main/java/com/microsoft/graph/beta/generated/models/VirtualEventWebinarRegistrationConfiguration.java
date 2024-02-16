@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class VirtualEventWebinarRegistrationConfiguration extends VirtualEventRegistrationConfiguration implements Parsable {
     /**
-     * Instantiates a new VirtualEventWebinarRegistrationConfiguration and sets the default values.
+     * Instantiates a new {@link VirtualEventWebinarRegistrationConfiguration} and sets the default values.
      */
     public VirtualEventWebinarRegistrationConfiguration() {
         super();
@@ -17,7 +17,7 @@ public class VirtualEventWebinarRegistrationConfiguration extends VirtualEventRe
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a VirtualEventWebinarRegistrationConfiguration
+     * @return a {@link VirtualEventWebinarRegistrationConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static VirtualEventWebinarRegistrationConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class VirtualEventWebinarRegistrationConfiguration extends VirtualEventRe
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -37,7 +37,7 @@ public class VirtualEventWebinarRegistrationConfiguration extends VirtualEventRe
     }
     /**
      * Gets the isManualApprovalEnabled property value. The isManualApprovalEnabled property
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsManualApprovalEnabled() {
@@ -45,7 +45,7 @@ public class VirtualEventWebinarRegistrationConfiguration extends VirtualEventRe
     }
     /**
      * Gets the isWaitlistEnabled property value. The isWaitlistEnabled property
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsWaitlistEnabled() {

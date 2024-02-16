@@ -29,6 +29,7 @@ import java.util.Objects;
 public class TeamworkDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the activity property of the microsoft.graph.teamworkDevice entity.
+     * @return a {@link ActivityRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ActivityRequestBuilder activity() {
@@ -36,6 +37,7 @@ public class TeamworkDeviceItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the configuration property of the microsoft.graph.teamworkDevice entity.
+     * @return a {@link ConfigurationRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ConfigurationRequestBuilder configuration() {
@@ -43,6 +45,7 @@ public class TeamworkDeviceItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the health property of the microsoft.graph.teamworkDevice entity.
+     * @return a {@link HealthRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public HealthRequestBuilder health() {
@@ -50,6 +53,7 @@ public class TeamworkDeviceItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the operations property of the microsoft.graph.teamworkDevice entity.
+     * @return a {@link OperationsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public OperationsRequestBuilder operations() {
@@ -57,6 +61,7 @@ public class TeamworkDeviceItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the restart method.
+     * @return a {@link RestartRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RestartRequestBuilder restart() {
@@ -64,6 +69,7 @@ public class TeamworkDeviceItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the runDiagnostics method.
+     * @return a {@link RunDiagnosticsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RunDiagnosticsRequestBuilder runDiagnostics() {
@@ -71,13 +77,14 @@ public class TeamworkDeviceItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the updateSoftware method.
+     * @return a {@link UpdateSoftwareRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UpdateSoftwareRequestBuilder updateSoftware() {
         return new UpdateSoftwareRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new TeamworkDeviceItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link TeamworkDeviceItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -85,7 +92,7 @@ public class TeamworkDeviceItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/teamwork/devices/{teamworkDevice%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new TeamworkDeviceItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link TeamworkDeviceItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -94,6 +101,7 @@ public class TeamworkDeviceItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Delete navigation property devices for teamwork
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete() {
         delete(null);
@@ -101,17 +109,18 @@ public class TeamworkDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property devices for teamwork
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Get the properties of a Microsoft Teams-enabled device. For example, you can use this method to get the device type, hardware detail, activity state, and health status information for a device that's enabled for Teams.
-     * @return a TeamworkDevice
+     * @return a {@link TeamworkDevice}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/teamworkdevice-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -121,21 +130,22 @@ public class TeamworkDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the properties of a Microsoft Teams-enabled device. For example, you can use this method to get the device type, hardware detail, activity state, and health status information for a device that's enabled for Teams.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a TeamworkDevice
+     * @return a {@link TeamworkDevice}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/teamworkdevice-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TeamworkDevice get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, TeamworkDevice::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property devices in teamwork
      * @param body The request body
-     * @return a TeamworkDevice
+     * @return a {@link TeamworkDevice}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public TeamworkDevice patch(@jakarta.annotation.Nonnull final TeamworkDevice body) {
@@ -145,20 +155,20 @@ public class TeamworkDeviceItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property devices in teamwork
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a TeamworkDevice
+     * @return a {@link TeamworkDevice}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public TeamworkDevice patch(@jakarta.annotation.Nonnull final TeamworkDevice body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, TeamworkDevice::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property devices for teamwork
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -167,18 +177,18 @@ public class TeamworkDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property devices for teamwork
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/teamwork/devices/{teamworkDevice%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Get the properties of a Microsoft Teams-enabled device. For example, you can use this method to get the device type, hardware detail, activity state, and health status information for a device that's enabled for Teams.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -187,7 +197,7 @@ public class TeamworkDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the properties of a Microsoft Teams-enabled device. For example, you can use this method to get the device type, hardware detail, activity state, and health status information for a device that's enabled for Teams.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -199,7 +209,7 @@ public class TeamworkDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property devices in teamwork
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final TeamworkDevice body) {
@@ -209,12 +219,12 @@ public class TeamworkDeviceItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property devices in teamwork
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final TeamworkDevice body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/teamwork/devices/{teamworkDevice%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -223,7 +233,7 @@ public class TeamworkDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a TeamworkDeviceItemRequestBuilder
+     * @return a {@link TeamworkDeviceItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TeamworkDeviceItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -253,7 +263,7 @@ public class TeamworkDeviceItemRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

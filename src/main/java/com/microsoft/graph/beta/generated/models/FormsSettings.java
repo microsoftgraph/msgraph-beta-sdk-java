@@ -18,7 +18,7 @@ public class FormsSettings implements AdditionalDataHolder, BackedModel, Parsabl
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new FormsSettings and sets the default values.
+     * Instantiates a new {@link FormsSettings} and sets the default values.
      */
     public FormsSettings() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class FormsSettings implements AdditionalDataHolder, BackedModel, Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a FormsSettings
+     * @return a {@link FormsSettings}
      */
     @jakarta.annotation.Nonnull
     public static FormsSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class FormsSettings implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class FormsSettings implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class FormsSettings implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -74,7 +74,7 @@ public class FormsSettings implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the isBingImageSearchEnabled property value. Controls whether users can add images from Bing to forms.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsBingImageSearchEnabled() {
@@ -82,7 +82,7 @@ public class FormsSettings implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the isExternalSendFormEnabled property value. Controls whether users can send a link to a form to an external user.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsExternalSendFormEnabled() {
@@ -90,7 +90,7 @@ public class FormsSettings implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the isExternalShareCollaborationEnabled property value. Controls whether users can collaborate on a form layout and structure with an external user.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsExternalShareCollaborationEnabled() {
@@ -98,7 +98,7 @@ public class FormsSettings implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the isExternalShareResultEnabled property value. Controls whether users can share form results with external users.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsExternalShareResultEnabled() {
@@ -106,7 +106,7 @@ public class FormsSettings implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the isExternalShareTemplateEnabled property value. Controls whether users can share form templates with external users.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsExternalShareTemplateEnabled() {
@@ -114,7 +114,7 @@ public class FormsSettings implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the isInOrgFormsPhishingScanEnabled property value. Controls whether phishing protection is run on forms created by users, blocking the creation of forms if common phishing questions are detected.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsInOrgFormsPhishingScanEnabled() {
@@ -122,7 +122,7 @@ public class FormsSettings implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the isRecordIdentityByDefaultEnabled property value. Controls whether the names of users who fill out forms are recorded.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsRecordIdentityByDefaultEnabled() {
@@ -130,7 +130,7 @@ public class FormsSettings implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {

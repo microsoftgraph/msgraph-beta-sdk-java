@@ -18,7 +18,7 @@ public class ManagementTemplateDetailedInfo implements AdditionalDataHolder, Bac
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new ManagementTemplateDetailedInfo and sets the default values.
+     * Instantiates a new {@link ManagementTemplateDetailedInfo} and sets the default values.
      */
     public ManagementTemplateDetailedInfo() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class ManagementTemplateDetailedInfo implements AdditionalDataHolder, Bac
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ManagementTemplateDetailedInfo
+     * @return a {@link ManagementTemplateDetailedInfo}
      */
     @jakarta.annotation.Nonnull
     public static ManagementTemplateDetailedInfo createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class ManagementTemplateDetailedInfo implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class ManagementTemplateDetailedInfo implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class ManagementTemplateDetailedInfo implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the category property value. The category property
-     * @return a ManagementCategory
+     * @return a {@link ManagementCategory}
      */
     @jakarta.annotation.Nullable
     public ManagementCategory getCategory() {
@@ -65,7 +65,7 @@ public class ManagementTemplateDetailedInfo implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the displayName property value. The display name for the management template. Required. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -73,7 +73,7 @@ public class ManagementTemplateDetailedInfo implements AdditionalDataHolder, Bac
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -87,7 +87,7 @@ public class ManagementTemplateDetailedInfo implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the managementTemplateId property value. The unique identifier for the management template. Required. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getManagementTemplateId() {
@@ -95,7 +95,7 @@ public class ManagementTemplateDetailedInfo implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -103,7 +103,7 @@ public class ManagementTemplateDetailedInfo implements AdditionalDataHolder, Bac
     }
     /**
      * Gets the version property value. The version property
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getVersion() {

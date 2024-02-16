@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81CertificateProfileBase implements Parsable {
     /**
-     * Instantiates a new WindowsPhone81SCEPCertificateProfile and sets the default values.
+     * Instantiates a new {@link WindowsPhone81SCEPCertificateProfile} and sets the default values.
      */
     public WindowsPhone81SCEPCertificateProfile() {
         super();
@@ -22,7 +22,7 @@ public class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81Certific
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WindowsPhone81SCEPCertificateProfile
+     * @return a {@link WindowsPhone81SCEPCertificateProfile}
      */
     @jakarta.annotation.Nonnull
     public static WindowsPhone81SCEPCertificateProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -31,7 +31,7 @@ public class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81Certific
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -48,7 +48,7 @@ public class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81Certific
     }
     /**
      * Gets the hashAlgorithm property value. Hash Algorithm Options.
-     * @return a EnumSet<HashAlgorithms>
+     * @return a {@link EnumSet<HashAlgorithms>}
      */
     @jakarta.annotation.Nullable
     public EnumSet<HashAlgorithms> getHashAlgorithm() {
@@ -56,7 +56,7 @@ public class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81Certific
     }
     /**
      * Gets the keySize property value. Key Size Options.
-     * @return a KeySize
+     * @return a {@link KeySize}
      */
     @jakarta.annotation.Nullable
     public KeySize getKeySize() {
@@ -64,7 +64,7 @@ public class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81Certific
     }
     /**
      * Gets the keyUsage property value. Key Usage Options.
-     * @return a EnumSet<KeyUsages>
+     * @return a {@link EnumSet<KeyUsages>}
      */
     @jakarta.annotation.Nullable
     public EnumSet<KeyUsages> getKeyUsage() {
@@ -72,7 +72,7 @@ public class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81Certific
     }
     /**
      * Gets the managedDeviceCertificateStates property value. Certificate state for devices. This collection can contain a maximum of 2147483647 elements.
-     * @return a java.util.List<ManagedDeviceCertificateState>
+     * @return a {@link java.util.List<ManagedDeviceCertificateState>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedDeviceCertificateState> getManagedDeviceCertificateStates() {
@@ -80,7 +80,7 @@ public class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81Certific
     }
     /**
      * Gets the rootCertificate property value. Trusted Root Certificate.
-     * @return a WindowsPhone81TrustedRootCertificate
+     * @return a {@link WindowsPhone81TrustedRootCertificate}
      */
     @jakarta.annotation.Nullable
     public WindowsPhone81TrustedRootCertificate getRootCertificate() {
@@ -88,7 +88,7 @@ public class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81Certific
     }
     /**
      * Gets the scepServerUrls property value. SCEP Server Url(s).
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getScepServerUrls() {
@@ -96,7 +96,7 @@ public class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81Certific
     }
     /**
      * Gets the subjectAlternativeNameFormatString property value. Custom String that defines the AAD Attribute.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSubjectAlternativeNameFormatString() {
@@ -104,7 +104,7 @@ public class WindowsPhone81SCEPCertificateProfile extends WindowsPhone81Certific
     }
     /**
      * Gets the subjectNameFormatString property value. Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSubjectNameFormatString() {

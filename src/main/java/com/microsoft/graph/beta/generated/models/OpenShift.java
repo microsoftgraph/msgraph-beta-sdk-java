@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OpenShift extends ChangeTrackedEntity implements Parsable {
     /**
-     * Instantiates a new OpenShift and sets the default values.
+     * Instantiates a new {@link OpenShift} and sets the default values.
      */
     public OpenShift() {
         super();
@@ -18,7 +18,7 @@ public class OpenShift extends ChangeTrackedEntity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a OpenShift
+     * @return a {@link OpenShift}
      */
     @jakarta.annotation.Nonnull
     public static OpenShift createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,8 +26,8 @@ public class OpenShift extends ChangeTrackedEntity implements Parsable {
         return new OpenShift();
     }
     /**
-     * Gets the draftOpenShift property value. Draft changes in the openShift are only visible to managers until they are shared.
-     * @return a OpenShiftItem
+     * Gets the draftOpenShift property value. Draft changes in the openShift are only visible to managers until they're shared.
+     * @return a {@link OpenShiftItem}
      */
     @jakarta.annotation.Nullable
     public OpenShiftItem getDraftOpenShift() {
@@ -35,7 +35,7 @@ public class OpenShift extends ChangeTrackedEntity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -50,7 +50,7 @@ public class OpenShift extends ChangeTrackedEntity implements Parsable {
     }
     /**
      * Gets the isStagedForDeletion property value. The openShift is marked for deletion, a process that is finalized when the schedule is shared.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsStagedForDeletion() {
@@ -58,15 +58,15 @@ public class OpenShift extends ChangeTrackedEntity implements Parsable {
     }
     /**
      * Gets the schedulingGroupId property value. The ID of the schedulingGroup that contains the openShift.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSchedulingGroupId() {
         return this.backingStore.get("schedulingGroupId");
     }
     /**
-     * Gets the schedulingGroupInfo property value. The schedulingGroupInfo property
-     * @return a SchedulingGroupInfo
+     * Gets the schedulingGroupInfo property value. Information about the scheduling group to which the shift belongs.
+     * @return a {@link SchedulingGroupInfo}
      */
     @jakarta.annotation.Nullable
     public SchedulingGroupInfo getSchedulingGroupInfo() {
@@ -74,15 +74,15 @@ public class OpenShift extends ChangeTrackedEntity implements Parsable {
     }
     /**
      * Gets the sharedOpenShift property value. The shared version of this openShift that is viewable by both employees and managers.
-     * @return a OpenShiftItem
+     * @return a {@link OpenShiftItem}
      */
     @jakarta.annotation.Nullable
     public OpenShiftItem getSharedOpenShift() {
         return this.backingStore.get("sharedOpenShift");
     }
     /**
-     * Gets the teamInfo property value. The teamInfo property
-     * @return a ShiftsTeamInfo
+     * Gets the teamInfo property value. Information of the team that the openShift is in.
+     * @return a {@link ShiftsTeamInfo}
      */
     @jakarta.annotation.Nullable
     public ShiftsTeamInfo getTeamInfo() {
@@ -101,7 +101,7 @@ public class OpenShift extends ChangeTrackedEntity implements Parsable {
         writer.writeObjectValue("sharedOpenShift", this.getSharedOpenShift());
     }
     /**
-     * Sets the draftOpenShift property value. Draft changes in the openShift are only visible to managers until they are shared.
+     * Sets the draftOpenShift property value. Draft changes in the openShift are only visible to managers until they're shared.
      * @param value Value to set for the draftOpenShift property.
      */
     public void setDraftOpenShift(@jakarta.annotation.Nullable final OpenShiftItem value) {
@@ -122,7 +122,7 @@ public class OpenShift extends ChangeTrackedEntity implements Parsable {
         this.backingStore.set("schedulingGroupId", value);
     }
     /**
-     * Sets the schedulingGroupInfo property value. The schedulingGroupInfo property
+     * Sets the schedulingGroupInfo property value. Information about the scheduling group to which the shift belongs.
      * @param value Value to set for the schedulingGroupInfo property.
      */
     public void setSchedulingGroupInfo(@jakarta.annotation.Nullable final SchedulingGroupInfo value) {
@@ -136,7 +136,7 @@ public class OpenShift extends ChangeTrackedEntity implements Parsable {
         this.backingStore.set("sharedOpenShift", value);
     }
     /**
-     * Sets the teamInfo property value. The teamInfo property
+     * Sets the teamInfo property value. Information of the team that the openShift is in.
      * @param value Value to set for the teamInfo property.
      */
     public void setTeamInfo(@jakarta.annotation.Nullable final ShiftsTeamInfo value) {

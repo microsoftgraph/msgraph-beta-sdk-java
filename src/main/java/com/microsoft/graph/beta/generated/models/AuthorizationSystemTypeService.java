@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AuthorizationSystemTypeService extends Entity implements Parsable {
     /**
-     * Instantiates a new AuthorizationSystemTypeService and sets the default values.
+     * Instantiates a new {@link AuthorizationSystemTypeService} and sets the default values.
      */
     public AuthorizationSystemTypeService() {
         super();
@@ -17,7 +17,7 @@ public class AuthorizationSystemTypeService extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AuthorizationSystemTypeService
+     * @return a {@link AuthorizationSystemTypeService}
      */
     @jakarta.annotation.Nonnull
     public static AuthorizationSystemTypeService createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class AuthorizationSystemTypeService extends Entity implements Parsable {
     }
     /**
      * Gets the actions property value. List of actions for the service in an authorization system that is onboarded to Permissions Management.
-     * @return a java.util.List<AuthorizationSystemTypeAction>
+     * @return a {@link java.util.List<AuthorizationSystemTypeAction>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthorizationSystemTypeAction> getActions() {
@@ -34,7 +34,7 @@ public class AuthorizationSystemTypeService extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

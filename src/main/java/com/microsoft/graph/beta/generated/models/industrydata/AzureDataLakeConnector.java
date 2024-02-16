@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AzureDataLakeConnector extends FileDataConnector implements Parsable {
     /**
-     * Instantiates a new AzureDataLakeConnector and sets the default values.
+     * Instantiates a new {@link AzureDataLakeConnector} and sets the default values.
      */
     public AzureDataLakeConnector() {
         super();
@@ -18,7 +18,7 @@ public class AzureDataLakeConnector extends FileDataConnector implements Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AzureDataLakeConnector
+     * @return a {@link AzureDataLakeConnector}
      */
     @jakarta.annotation.Nonnull
     public static AzureDataLakeConnector createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class AzureDataLakeConnector extends FileDataConnector implements Parsabl
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

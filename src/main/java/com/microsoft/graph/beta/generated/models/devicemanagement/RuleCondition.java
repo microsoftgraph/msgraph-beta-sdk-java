@@ -18,7 +18,7 @@ public class RuleCondition implements AdditionalDataHolder, BackedModel, Parsabl
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new RuleCondition and sets the default values.
+     * Instantiates a new {@link RuleCondition} and sets the default values.
      */
     public RuleCondition() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class RuleCondition implements AdditionalDataHolder, BackedModel, Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a RuleCondition
+     * @return a {@link RuleCondition}
      */
     @jakarta.annotation.Nonnull
     public static RuleCondition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class RuleCondition implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class RuleCondition implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the aggregation property value. The built-in aggregation method for the rule condition. The possible values are: count, percentage, affectedCloudPcCount, affectedCloudPcPercentage, unknownFutureValue.
-     * @return a AggregationType
+     * @return a {@link AggregationType}
      */
     @jakarta.annotation.Nullable
     public AggregationType getAggregation() {
@@ -57,7 +57,7 @@ public class RuleCondition implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -65,7 +65,7 @@ public class RuleCondition implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the conditionCategory property value. The property that the rule condition monitors. Possible values are:  provisionFailures, imageUploadFailures, azureNetworkConnectionCheckFailures, cloudPcInGracePeriod, frontlineInsufficientLicenses, cloudPcConnectionErrors, cloudPcHostHealthCheckFailures, cloudPcZoneOutage, unknownFutureValue.
-     * @return a ConditionCategory
+     * @return a {@link ConditionCategory}
      */
     @jakarta.annotation.Nullable
     public ConditionCategory getConditionCategory() {
@@ -73,7 +73,7 @@ public class RuleCondition implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -88,7 +88,7 @@ public class RuleCondition implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -96,7 +96,7 @@ public class RuleCondition implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the operator property value. The built-in operator for the rule condition. The possible values are: greaterOrEqual, equal, greater, less, lessOrEqual, notEqual, unknownFutureValue.
-     * @return a OperatorType
+     * @return a {@link OperatorType}
      */
     @jakarta.annotation.Nullable
     public OperatorType getOperator() {
@@ -104,7 +104,7 @@ public class RuleCondition implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the relationshipType property value. The relationship type.  Possible values are: and, or.
-     * @return a RelationshipType
+     * @return a {@link RelationshipType}
      */
     @jakarta.annotation.Nullable
     public RelationshipType getRelationshipType() {
@@ -112,7 +112,7 @@ public class RuleCondition implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the thresholdValue property value. The threshold value of the alert condition. The threshold value can be a number in string form or string like 'WestUS'.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getThresholdValue() {

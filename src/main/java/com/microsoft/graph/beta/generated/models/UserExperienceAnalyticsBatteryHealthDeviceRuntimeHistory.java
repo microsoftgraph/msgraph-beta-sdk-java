@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory extends Entity implements Parsable {
     /**
-     * Instantiates a new UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory and sets the default values.
+     * Instantiates a new {@link UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory} and sets the default values.
      */
     public UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory() {
         super();
@@ -20,7 +20,7 @@ public class UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory extends En
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory
+     * @return a {@link UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory}
      */
     @jakarta.annotation.Nonnull
     public static UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -29,7 +29,7 @@ public class UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory extends En
     }
     /**
      * Gets the deviceId property value. The unique identifier of the device, Intune DeviceID or SCCM device id.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceId() {
@@ -37,7 +37,7 @@ public class UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory extends En
     }
     /**
      * Gets the estimatedRuntimeInMinutes property value. The estimated runtime of the device when the battery is fully charged. Unit in minutes. Valid values 0 to 2147483647
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getEstimatedRuntimeInMinutes() {
@@ -45,7 +45,7 @@ public class UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory extends En
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -57,7 +57,7 @@ public class UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory extends En
     }
     /**
      * Gets the runtimeDateTime property value. The datetime for the instance of runtime history.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRuntimeDateTime() {

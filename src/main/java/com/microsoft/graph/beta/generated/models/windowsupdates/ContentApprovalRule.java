@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ContentApprovalRule extends ComplianceChangeRule implements Parsable {
     /**
-     * Instantiates a new ContentApprovalRule and sets the default values.
+     * Instantiates a new {@link ContentApprovalRule} and sets the default values.
      */
     public ContentApprovalRule() {
         super();
@@ -19,7 +19,7 @@ public class ContentApprovalRule extends ComplianceChangeRule implements Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ContentApprovalRule
+     * @return a {@link ContentApprovalRule}
      */
     @jakarta.annotation.Nonnull
     public static ContentApprovalRule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class ContentApprovalRule extends ComplianceChangeRule implements Parsabl
     }
     /**
      * Gets the contentFilter property value. A filter to determine which content matches the rule on an ongoing basis.
-     * @return a ContentFilter
+     * @return a {@link ContentFilter}
      */
     @jakarta.annotation.Nullable
     public ContentFilter getContentFilter() {
@@ -36,7 +36,7 @@ public class ContentApprovalRule extends ComplianceChangeRule implements Parsabl
     }
     /**
      * Gets the durationBeforeDeploymentStart property value. The time before the deployment starts represented in ISO 8601 format for durations.
-     * @return a PeriodAndDuration
+     * @return a {@link PeriodAndDuration}
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getDurationBeforeDeploymentStart() {
@@ -44,7 +44,7 @@ public class ContentApprovalRule extends ComplianceChangeRule implements Parsabl
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

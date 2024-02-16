@@ -13,7 +13,7 @@ import java.util.UUID;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Windows10XVpnConfiguration extends DeviceManagementResourceAccessProfileBase implements Parsable {
     /**
-     * Instantiates a new Windows10XVpnConfiguration and sets the default values.
+     * Instantiates a new {@link Windows10XVpnConfiguration} and sets the default values.
      */
     public Windows10XVpnConfiguration() {
         super();
@@ -22,7 +22,7 @@ public class Windows10XVpnConfiguration extends DeviceManagementResourceAccessPr
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Windows10XVpnConfiguration
+     * @return a {@link Windows10XVpnConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static Windows10XVpnConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -31,7 +31,7 @@ public class Windows10XVpnConfiguration extends DeviceManagementResourceAccessPr
     }
     /**
      * Gets the authenticationCertificateId property value. ID to the Authentication Certificate
-     * @return a UUID
+     * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
     public UUID getAuthenticationCertificateId() {
@@ -39,7 +39,7 @@ public class Windows10XVpnConfiguration extends DeviceManagementResourceAccessPr
     }
     /**
      * Gets the customXml property value. Custom XML commands that configures the VPN connection. (UTF8 byte encoding)
-     * @return a byte[]
+     * @return a {@link byte[]}
      */
     @jakarta.annotation.Nullable
     public byte[] getCustomXml() {
@@ -47,7 +47,7 @@ public class Windows10XVpnConfiguration extends DeviceManagementResourceAccessPr
     }
     /**
      * Gets the customXmlFileName property value. Custom Xml file name.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCustomXmlFileName() {
@@ -55,7 +55,7 @@ public class Windows10XVpnConfiguration extends DeviceManagementResourceAccessPr
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

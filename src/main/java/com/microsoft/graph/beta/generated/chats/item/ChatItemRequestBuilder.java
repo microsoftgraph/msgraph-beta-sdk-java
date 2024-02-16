@@ -36,6 +36,7 @@ import java.util.Objects;
 public class ChatItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the hideForUser method.
+     * @return a {@link HideForUserRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public HideForUserRequestBuilder hideForUser() {
@@ -43,6 +44,7 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the installedApps property of the microsoft.graph.chat entity.
+     * @return a {@link InstalledAppsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public InstalledAppsRequestBuilder installedApps() {
@@ -50,6 +52,7 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the lastMessagePreview property of the microsoft.graph.chat entity.
+     * @return a {@link LastMessagePreviewRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public LastMessagePreviewRequestBuilder lastMessagePreview() {
@@ -57,6 +60,7 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the markChatReadForUser method.
+     * @return a {@link MarkChatReadForUserRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MarkChatReadForUserRequestBuilder markChatReadForUser() {
@@ -64,6 +68,7 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the markChatUnreadForUser method.
+     * @return a {@link MarkChatUnreadForUserRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MarkChatUnreadForUserRequestBuilder markChatUnreadForUser() {
@@ -71,6 +76,7 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the members property of the microsoft.graph.chat entity.
+     * @return a {@link MembersRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MembersRequestBuilder members() {
@@ -78,6 +84,7 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the messages property of the microsoft.graph.chat entity.
+     * @return a {@link MessagesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MessagesRequestBuilder messages() {
@@ -85,6 +92,7 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the operations property of the microsoft.graph.chat entity.
+     * @return a {@link OperationsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public OperationsRequestBuilder operations() {
@@ -92,6 +100,7 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the permissionGrants property of the microsoft.graph.chat entity.
+     * @return a {@link PermissionGrantsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PermissionGrantsRequestBuilder permissionGrants() {
@@ -99,6 +108,7 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the pinnedMessages property of the microsoft.graph.chat entity.
+     * @return a {@link PinnedMessagesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PinnedMessagesRequestBuilder pinnedMessages() {
@@ -106,6 +116,7 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the removeAllAccessForUser method.
+     * @return a {@link RemoveAllAccessForUserRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RemoveAllAccessForUserRequestBuilder removeAllAccessForUser() {
@@ -113,6 +124,7 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the sendActivityNotification method.
+     * @return a {@link SendActivityNotificationRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SendActivityNotificationRequestBuilder sendActivityNotification() {
@@ -120,6 +132,7 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the tabs property of the microsoft.graph.chat entity.
+     * @return a {@link TabsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TabsRequestBuilder tabs() {
@@ -127,13 +140,14 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the unhideForUser method.
+     * @return a {@link UnhideForUserRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UnhideForUserRequestBuilder unhideForUser() {
         return new UnhideForUserRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new ChatItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link ChatItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -141,7 +155,7 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/chats/{chat%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new ChatItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link ChatItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -150,6 +164,7 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Soft-delete a chat. When invoked with delegated permissions, this operation only works for tenant admins and Teams service admins.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/chat-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
@@ -158,18 +173,19 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Soft-delete a chat. When invoked with delegated permissions, this operation only works for tenant admins and Teams service admins.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/chat-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Retrieve a single chat (without its messages). This method supports federation. To access a chat, at least one chat member must belong to the tenant the request initiated from.
-     * @return a Chat
+     * @return a {@link Chat}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/chat-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -179,21 +195,22 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a single chat (without its messages). This method supports federation. To access a chat, at least one chat member must belong to the tenant the request initiated from.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a Chat
+     * @return a {@link Chat}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/chat-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Chat get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, Chat::createFromDiscriminatorValue);
     }
     /**
      * Update the properties of a chat object.
      * @param body The request body
-     * @return a Chat
+     * @return a {@link Chat}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/chat-patch?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -204,7 +221,8 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a chat object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a Chat
+     * @return a {@link Chat}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/chat-patch?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -212,13 +230,12 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, Chat::createFromDiscriminatorValue);
     }
     /**
      * Soft-delete a chat. When invoked with delegated permissions, this operation only works for tenant admins and Teams service admins.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -227,18 +244,18 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Soft-delete a chat. When invoked with delegated permissions, this operation only works for tenant admins and Teams service admins.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/chats/{chat%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Retrieve a single chat (without its messages). This method supports federation. To access a chat, at least one chat member must belong to the tenant the request initiated from.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -247,7 +264,7 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a single chat (without its messages). This method supports federation. To access a chat, at least one chat member must belong to the tenant the request initiated from.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -259,7 +276,7 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of a chat object.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final Chat body) {
@@ -269,12 +286,12 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a chat object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final Chat body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/chats/{chat%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -283,7 +300,7 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a ChatItemRequestBuilder
+     * @return a {@link ChatItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ChatItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -313,7 +330,7 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

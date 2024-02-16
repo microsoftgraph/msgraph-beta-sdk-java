@@ -11,7 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Tenant extends Entity implements Parsable {
     /**
-     * Instantiates a new Tenant and sets the default values.
+     * Instantiates a new {@link Tenant} and sets the default values.
      */
     public Tenant() {
         super();
@@ -19,7 +19,7 @@ public class Tenant extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Tenant
+     * @return a {@link Tenant}
      */
     @jakarta.annotation.Nonnull
     public static Tenant createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class Tenant extends Entity implements Parsable {
     }
     /**
      * Gets the contract property value. The relationship details for the tenant with the managing entity.
-     * @return a TenantContract
+     * @return a {@link TenantContract}
      */
     @jakarta.annotation.Nullable
     public TenantContract getContract() {
@@ -36,7 +36,7 @@ public class Tenant extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. The date and time the tenant was created in the multi-tenant management platform. Optional. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -44,7 +44,7 @@ public class Tenant extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name for the tenant. Required. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -52,7 +52,7 @@ public class Tenant extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -67,7 +67,7 @@ public class Tenant extends Entity implements Parsable {
     }
     /**
      * Gets the lastUpdatedDateTime property value. The date and time the tenant was last updated within the multi-tenant management platform. Optional. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastUpdatedDateTime() {
@@ -75,7 +75,7 @@ public class Tenant extends Entity implements Parsable {
     }
     /**
      * Gets the tenantId property value. The Microsoft Entra tenant identifier for the managed tenant. Optional. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
@@ -83,7 +83,7 @@ public class Tenant extends Entity implements Parsable {
     }
     /**
      * Gets the tenantStatusInformation property value. The onboarding status information for the tenant. Optional. Read-only.
-     * @return a TenantStatusInformation
+     * @return a {@link TenantStatusInformation}
      */
     @jakarta.annotation.Nullable
     public TenantStatusInformation getTenantStatusInformation() {

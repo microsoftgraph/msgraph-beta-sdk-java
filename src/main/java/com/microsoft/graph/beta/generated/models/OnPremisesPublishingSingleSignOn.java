@@ -18,7 +18,7 @@ public class OnPremisesPublishingSingleSignOn implements AdditionalDataHolder, B
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new OnPremisesPublishingSingleSignOn and sets the default values.
+     * Instantiates a new {@link OnPremisesPublishingSingleSignOn} and sets the default values.
      */
     public OnPremisesPublishingSingleSignOn() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class OnPremisesPublishingSingleSignOn implements AdditionalDataHolder, B
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a OnPremisesPublishingSingleSignOn
+     * @return a {@link OnPremisesPublishingSingleSignOn}
      */
     @jakarta.annotation.Nonnull
     public static OnPremisesPublishingSingleSignOn createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class OnPremisesPublishingSingleSignOn implements AdditionalDataHolder, B
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class OnPremisesPublishingSingleSignOn implements AdditionalDataHolder, B
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class OnPremisesPublishingSingleSignOn implements AdditionalDataHolder, B
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -69,7 +69,7 @@ public class OnPremisesPublishingSingleSignOn implements AdditionalDataHolder, B
     }
     /**
      * Gets the kerberosSignOnSettings property value. The Kerberos Constrained Delegation settings for applications that use Integrated Window Authentication.
-     * @return a KerberosSignOnSettings
+     * @return a {@link KerberosSignOnSettings}
      */
     @jakarta.annotation.Nullable
     public KerberosSignOnSettings getKerberosSignOnSettings() {
@@ -77,7 +77,7 @@ public class OnPremisesPublishingSingleSignOn implements AdditionalDataHolder, B
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -85,7 +85,7 @@ public class OnPremisesPublishingSingleSignOn implements AdditionalDataHolder, B
     }
     /**
      * Gets the singleSignOnMode property value. The preferred single-sign on mode for the application. Possible values are: none, onPremisesKerberos, aadHeaderBased,pingHeaderBased, oAuthToken.
-     * @return a SingleSignOnMode
+     * @return a {@link SingleSignOnMode}
      */
     @jakarta.annotation.Nullable
     public SingleSignOnMode getSingleSignOnMode() {

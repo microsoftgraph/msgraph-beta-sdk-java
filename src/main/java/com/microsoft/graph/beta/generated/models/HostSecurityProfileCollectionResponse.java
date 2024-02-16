@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class HostSecurityProfileCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * Instantiates a new HostSecurityProfileCollectionResponse and sets the default values.
+     * Instantiates a new {@link HostSecurityProfileCollectionResponse} and sets the default values.
      */
     public HostSecurityProfileCollectionResponse() {
         super();
@@ -17,7 +17,7 @@ public class HostSecurityProfileCollectionResponse extends BaseCollectionPaginat
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a HostSecurityProfileCollectionResponse
+     * @return a {@link HostSecurityProfileCollectionResponse}
      */
     @jakarta.annotation.Nonnull
     public static HostSecurityProfileCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class HostSecurityProfileCollectionResponse extends BaseCollectionPaginat
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -36,7 +36,7 @@ public class HostSecurityProfileCollectionResponse extends BaseCollectionPaginat
     }
     /**
      * Gets the value property value. The value property
-     * @return a java.util.List<HostSecurityProfile>
+     * @return a {@link java.util.List<HostSecurityProfile>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<HostSecurityProfile> getValue() {

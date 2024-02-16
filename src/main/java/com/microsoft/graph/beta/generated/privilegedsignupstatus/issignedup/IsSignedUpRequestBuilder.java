@@ -19,7 +19,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IsSignedUpRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new IsSignedUpRequestBuilder and sets the default values.
+     * Instantiates a new {@link IsSignedUpRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -27,7 +27,7 @@ public class IsSignedUpRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/privilegedSignupStatus/isSignedUp()", pathParameters);
     }
     /**
-     * Instantiates a new IsSignedUpRequestBuilder and sets the default values.
+     * Instantiates a new {@link IsSignedUpRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -36,7 +36,8 @@ public class IsSignedUpRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Invoke function isSignedUp
-     * @return a IsSignedUpGetResponse
+     * @return a {@link IsSignedUpGetResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public IsSignedUpGetResponse get() {
@@ -45,19 +46,19 @@ public class IsSignedUpRequestBuilder extends BaseRequestBuilder {
     /**
      * Invoke function isSignedUp
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a IsSignedUpGetResponse
+     * @return a {@link IsSignedUpGetResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public IsSignedUpGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, IsSignedUpGetResponse::createFromDiscriminatorValue);
     }
     /**
      * Invoke function isSignedUp
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -66,7 +67,7 @@ public class IsSignedUpRequestBuilder extends BaseRequestBuilder {
     /**
      * Invoke function isSignedUp
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -78,7 +79,7 @@ public class IsSignedUpRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a IsSignedUpRequestBuilder
+     * @return a {@link IsSignedUpRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public IsSignedUpRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -22,7 +22,7 @@ public class PurchaseInvoice implements AdditionalDataHolder, BackedModel, Parsa
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new PurchaseInvoice and sets the default values.
+     * Instantiates a new {@link PurchaseInvoice} and sets the default values.
      */
     public PurchaseInvoice() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -31,7 +31,7 @@ public class PurchaseInvoice implements AdditionalDataHolder, BackedModel, Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PurchaseInvoice
+     * @return a {@link PurchaseInvoice}
      */
     @jakarta.annotation.Nonnull
     public static PurchaseInvoice createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class PurchaseInvoice implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -53,7 +53,7 @@ public class PurchaseInvoice implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -61,7 +61,7 @@ public class PurchaseInvoice implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the buyFromAddress property value. The buyFromAddress property
-     * @return a PostalAddressType
+     * @return a {@link PostalAddressType}
      */
     @jakarta.annotation.Nullable
     public PostalAddressType getBuyFromAddress() {
@@ -69,7 +69,7 @@ public class PurchaseInvoice implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the currency property value. The currency property
-     * @return a Currency
+     * @return a {@link Currency}
      */
     @jakarta.annotation.Nullable
     public Currency getCurrency() {
@@ -77,7 +77,7 @@ public class PurchaseInvoice implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the currencyCode property value. The currencyCode property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCurrencyCode() {
@@ -85,7 +85,7 @@ public class PurchaseInvoice implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the currencyId property value. The currencyId property
-     * @return a UUID
+     * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
     public UUID getCurrencyId() {
@@ -93,7 +93,7 @@ public class PurchaseInvoice implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the discountAmount property value. The discountAmount property
-     * @return a BigDecimal
+     * @return a {@link BigDecimal}
      */
     @jakarta.annotation.Nullable
     public BigDecimal getDiscountAmount() {
@@ -101,7 +101,7 @@ public class PurchaseInvoice implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the discountAppliedBeforeTax property value. The discountAppliedBeforeTax property
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDiscountAppliedBeforeTax() {
@@ -109,7 +109,7 @@ public class PurchaseInvoice implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the dueDate property value. The dueDate property
-     * @return a LocalDate
+     * @return a {@link LocalDate}
      */
     @jakarta.annotation.Nullable
     public LocalDate getDueDate() {
@@ -117,7 +117,7 @@ public class PurchaseInvoice implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -157,7 +157,7 @@ public class PurchaseInvoice implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the id property value. The id property
-     * @return a UUID
+     * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
     public UUID getId() {
@@ -165,7 +165,7 @@ public class PurchaseInvoice implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the invoiceDate property value. The invoiceDate property
-     * @return a LocalDate
+     * @return a {@link LocalDate}
      */
     @jakarta.annotation.Nullable
     public LocalDate getInvoiceDate() {
@@ -173,7 +173,7 @@ public class PurchaseInvoice implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -181,7 +181,7 @@ public class PurchaseInvoice implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the number property value. The number property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getNumber() {
@@ -189,7 +189,7 @@ public class PurchaseInvoice implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -197,7 +197,7 @@ public class PurchaseInvoice implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the payToAddress property value. The payToAddress property
-     * @return a PostalAddressType
+     * @return a {@link PostalAddressType}
      */
     @jakarta.annotation.Nullable
     public PostalAddressType getPayToAddress() {
@@ -205,7 +205,7 @@ public class PurchaseInvoice implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the payToContact property value. The payToContact property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPayToContact() {
@@ -213,7 +213,7 @@ public class PurchaseInvoice implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the payToName property value. The payToName property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPayToName() {
@@ -221,7 +221,7 @@ public class PurchaseInvoice implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the payToVendorId property value. The payToVendorId property
-     * @return a UUID
+     * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
     public UUID getPayToVendorId() {
@@ -229,7 +229,7 @@ public class PurchaseInvoice implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the payToVendorNumber property value. The payToVendorNumber property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPayToVendorNumber() {
@@ -237,7 +237,7 @@ public class PurchaseInvoice implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the pricesIncludeTax property value. The pricesIncludeTax property
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getPricesIncludeTax() {
@@ -245,7 +245,7 @@ public class PurchaseInvoice implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the purchaseInvoiceLines property value. The purchaseInvoiceLines property
-     * @return a java.util.List<PurchaseInvoiceLine>
+     * @return a {@link java.util.List<PurchaseInvoiceLine>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<PurchaseInvoiceLine> getPurchaseInvoiceLines() {
@@ -253,7 +253,7 @@ public class PurchaseInvoice implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the shipToAddress property value. The shipToAddress property
-     * @return a PostalAddressType
+     * @return a {@link PostalAddressType}
      */
     @jakarta.annotation.Nullable
     public PostalAddressType getShipToAddress() {
@@ -261,7 +261,7 @@ public class PurchaseInvoice implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the shipToContact property value. The shipToContact property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getShipToContact() {
@@ -269,7 +269,7 @@ public class PurchaseInvoice implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the shipToName property value. The shipToName property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getShipToName() {
@@ -277,7 +277,7 @@ public class PurchaseInvoice implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the status property value. The status property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getStatus() {
@@ -285,7 +285,7 @@ public class PurchaseInvoice implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the totalAmountExcludingTax property value. The totalAmountExcludingTax property
-     * @return a BigDecimal
+     * @return a {@link BigDecimal}
      */
     @jakarta.annotation.Nullable
     public BigDecimal getTotalAmountExcludingTax() {
@@ -293,7 +293,7 @@ public class PurchaseInvoice implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the totalAmountIncludingTax property value. The totalAmountIncludingTax property
-     * @return a BigDecimal
+     * @return a {@link BigDecimal}
      */
     @jakarta.annotation.Nullable
     public BigDecimal getTotalAmountIncludingTax() {
@@ -301,7 +301,7 @@ public class PurchaseInvoice implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the totalTaxAmount property value. The totalTaxAmount property
-     * @return a BigDecimal
+     * @return a {@link BigDecimal}
      */
     @jakarta.annotation.Nullable
     public BigDecimal getTotalTaxAmount() {
@@ -309,7 +309,7 @@ public class PurchaseInvoice implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the vendor property value. The vendor property
-     * @return a Vendor
+     * @return a {@link Vendor}
      */
     @jakarta.annotation.Nullable
     public Vendor getVendor() {
@@ -317,7 +317,7 @@ public class PurchaseInvoice implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the vendorId property value. The vendorId property
-     * @return a UUID
+     * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
     public UUID getVendorId() {
@@ -325,7 +325,7 @@ public class PurchaseInvoice implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the vendorInvoiceNumber property value. The vendorInvoiceNumber property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getVendorInvoiceNumber() {
@@ -333,7 +333,7 @@ public class PurchaseInvoice implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the vendorName property value. The vendorName property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getVendorName() {
@@ -341,7 +341,7 @@ public class PurchaseInvoice implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the vendorNumber property value. The vendorNumber property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getVendorNumber() {

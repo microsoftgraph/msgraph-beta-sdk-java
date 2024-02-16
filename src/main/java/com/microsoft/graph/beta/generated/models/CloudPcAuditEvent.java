@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CloudPcAuditEvent extends Entity implements Parsable {
     /**
-     * Instantiates a new CloudPcAuditEvent and sets the default values.
+     * Instantiates a new {@link CloudPcAuditEvent} and sets the default values.
      */
     public CloudPcAuditEvent() {
         super();
@@ -18,7 +18,7 @@ public class CloudPcAuditEvent extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CloudPcAuditEvent
+     * @return a {@link CloudPcAuditEvent}
      */
     @jakarta.annotation.Nonnull
     public static CloudPcAuditEvent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class CloudPcAuditEvent extends Entity implements Parsable {
     }
     /**
      * Gets the activity property value. Friendly name of the activity.Optional.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getActivity() {
@@ -35,7 +35,7 @@ public class CloudPcAuditEvent extends Entity implements Parsable {
     }
     /**
      * Gets the activityDateTime property value. The date time in UTC when the activity was performed.Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getActivityDateTime() {
@@ -43,7 +43,7 @@ public class CloudPcAuditEvent extends Entity implements Parsable {
     }
     /**
      * Gets the activityOperationType property value. The activityOperationType property
-     * @return a CloudPcAuditActivityOperationType
+     * @return a {@link CloudPcAuditActivityOperationType}
      */
     @jakarta.annotation.Nullable
     public CloudPcAuditActivityOperationType getActivityOperationType() {
@@ -51,7 +51,7 @@ public class CloudPcAuditEvent extends Entity implements Parsable {
     }
     /**
      * Gets the activityResult property value. The activityResult property
-     * @return a CloudPcAuditActivityResult
+     * @return a {@link CloudPcAuditActivityResult}
      */
     @jakarta.annotation.Nullable
     public CloudPcAuditActivityResult getActivityResult() {
@@ -59,7 +59,7 @@ public class CloudPcAuditEvent extends Entity implements Parsable {
     }
     /**
      * Gets the activityType property value. The type of activity that was performed.Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getActivityType() {
@@ -67,7 +67,7 @@ public class CloudPcAuditEvent extends Entity implements Parsable {
     }
     /**
      * Gets the actor property value. The actor property
-     * @return a CloudPcAuditActor
+     * @return a {@link CloudPcAuditActor}
      */
     @jakarta.annotation.Nullable
     public CloudPcAuditActor getActor() {
@@ -75,7 +75,7 @@ public class CloudPcAuditEvent extends Entity implements Parsable {
     }
     /**
      * Gets the category property value. The category property
-     * @return a CloudPcAuditCategory
+     * @return a {@link CloudPcAuditCategory}
      */
     @jakarta.annotation.Nullable
     public CloudPcAuditCategory getCategory() {
@@ -83,7 +83,7 @@ public class CloudPcAuditEvent extends Entity implements Parsable {
     }
     /**
      * Gets the componentName property value. Component name. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getComponentName() {
@@ -91,7 +91,7 @@ public class CloudPcAuditEvent extends Entity implements Parsable {
     }
     /**
      * Gets the correlationId property value. The client request identifier, used to correlate activity within the system.Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCorrelationId() {
@@ -99,7 +99,7 @@ public class CloudPcAuditEvent extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. Event display name. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -107,7 +107,7 @@ public class CloudPcAuditEvent extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -127,7 +127,7 @@ public class CloudPcAuditEvent extends Entity implements Parsable {
     }
     /**
      * Gets the resources property value. List of cloudPcAuditResource objects.Read-only.
-     * @return a java.util.List<CloudPcAuditResource>
+     * @return a {@link java.util.List<CloudPcAuditResource>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<CloudPcAuditResource> getResources() {

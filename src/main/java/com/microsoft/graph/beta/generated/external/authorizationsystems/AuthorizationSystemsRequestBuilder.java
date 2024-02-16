@@ -25,6 +25,7 @@ import java.util.Objects;
 public class AuthorizationSystemsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -33,7 +34,7 @@ public class AuthorizationSystemsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the authorizationSystems property of the microsoft.graph.externalConnectors.external entity.
      * @param authorizationSystemId The unique identifier of authorizationSystem
-     * @return a AuthorizationSystemItemRequestBuilder
+     * @return a {@link AuthorizationSystemItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AuthorizationSystemItemRequestBuilder byAuthorizationSystemId(@jakarta.annotation.Nonnull final String authorizationSystemId) {
@@ -43,7 +44,7 @@ public class AuthorizationSystemsRequestBuilder extends BaseRequestBuilder {
         return new AuthorizationSystemItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new AuthorizationSystemsRequestBuilder and sets the default values.
+     * Instantiates a new {@link AuthorizationSystemsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -51,7 +52,7 @@ public class AuthorizationSystemsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/external/authorizationSystems{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new AuthorizationSystemsRequestBuilder and sets the default values.
+     * Instantiates a new {@link AuthorizationSystemsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -60,7 +61,8 @@ public class AuthorizationSystemsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List the authorizationSystem objects onboarded to Permissions Management and their properties.
-     * @return a AuthorizationSystemCollectionResponse
+     * @return a {@link AuthorizationSystemCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-external-list-authorizationsystems?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -70,21 +72,22 @@ public class AuthorizationSystemsRequestBuilder extends BaseRequestBuilder {
     /**
      * List the authorizationSystem objects onboarded to Permissions Management and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a AuthorizationSystemCollectionResponse
+     * @return a {@link AuthorizationSystemCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-external-list-authorizationsystems?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AuthorizationSystemCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, AuthorizationSystemCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to authorizationSystems for external
      * @param body The request body
-     * @return a AuthorizationSystem
+     * @return a {@link AuthorizationSystem}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public AuthorizationSystem post(@jakarta.annotation.Nonnull final AuthorizationSystem body) {
@@ -94,20 +97,20 @@ public class AuthorizationSystemsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to authorizationSystems for external
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a AuthorizationSystem
+     * @return a {@link AuthorizationSystem}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public AuthorizationSystem post(@jakarta.annotation.Nonnull final AuthorizationSystem body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, AuthorizationSystem::createFromDiscriminatorValue);
     }
     /**
      * List the authorizationSystem objects onboarded to Permissions Management and their properties.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -116,7 +119,7 @@ public class AuthorizationSystemsRequestBuilder extends BaseRequestBuilder {
     /**
      * List the authorizationSystem objects onboarded to Permissions Management and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -128,7 +131,7 @@ public class AuthorizationSystemsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to authorizationSystems for external
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final AuthorizationSystem body) {
@@ -138,12 +141,12 @@ public class AuthorizationSystemsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to authorizationSystems for external
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final AuthorizationSystem body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/external/authorizationSystems", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -152,7 +155,7 @@ public class AuthorizationSystemsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a AuthorizationSystemsRequestBuilder
+     * @return a {@link AuthorizationSystemsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AuthorizationSystemsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -206,7 +209,7 @@ public class AuthorizationSystemsRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

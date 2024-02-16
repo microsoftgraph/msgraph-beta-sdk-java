@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Command extends Entity implements Parsable {
     /**
-     * Instantiates a new Command and sets the default values.
+     * Instantiates a new {@link Command} and sets the default values.
      */
     public Command() {
         super();
@@ -17,7 +17,7 @@ public class Command extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Command
+     * @return a {@link Command}
      */
     @jakarta.annotation.Nonnull
     public static Command createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class Command extends Entity implements Parsable {
     }
     /**
      * Gets the appServiceName property value. The appServiceName property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAppServiceName() {
@@ -34,7 +34,7 @@ public class Command extends Entity implements Parsable {
     }
     /**
      * Gets the error property value. The error property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getError() {
@@ -42,7 +42,7 @@ public class Command extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -60,7 +60,7 @@ public class Command extends Entity implements Parsable {
     }
     /**
      * Gets the packageFamilyName property value. The packageFamilyName property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPackageFamilyName() {
@@ -68,7 +68,7 @@ public class Command extends Entity implements Parsable {
     }
     /**
      * Gets the payload property value. The payload property
-     * @return a PayloadRequest
+     * @return a {@link PayloadRequest}
      */
     @jakarta.annotation.Nullable
     public PayloadRequest getPayload() {
@@ -76,7 +76,7 @@ public class Command extends Entity implements Parsable {
     }
     /**
      * Gets the permissionTicket property value. The permissionTicket property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPermissionTicket() {
@@ -84,7 +84,7 @@ public class Command extends Entity implements Parsable {
     }
     /**
      * Gets the postBackUri property value. The postBackUri property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPostBackUri() {
@@ -92,7 +92,7 @@ public class Command extends Entity implements Parsable {
     }
     /**
      * Gets the responsepayload property value. The responsepayload property
-     * @return a PayloadResponse
+     * @return a {@link PayloadResponse}
      */
     @jakarta.annotation.Nullable
     public PayloadResponse getResponsepayload() {
@@ -100,7 +100,7 @@ public class Command extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getStatus() {
@@ -108,7 +108,7 @@ public class Command extends Entity implements Parsable {
     }
     /**
      * Gets the type property value. The type property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getType() {

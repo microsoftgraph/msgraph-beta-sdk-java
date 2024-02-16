@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MobileAppRelationship extends Entity implements Parsable {
     /**
-     * Instantiates a new MobileAppRelationship and sets the default values.
+     * Instantiates a new {@link MobileAppRelationship} and sets the default values.
      */
     public MobileAppRelationship() {
         super();
@@ -20,7 +20,7 @@ public class MobileAppRelationship extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MobileAppRelationship
+     * @return a {@link MobileAppRelationship}
      */
     @jakarta.annotation.Nonnull
     public static MobileAppRelationship createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class MobileAppRelationship extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -51,7 +51,7 @@ public class MobileAppRelationship extends Entity implements Parsable {
     }
     /**
      * Gets the targetDisplayName property value. The target mobile app's display name.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTargetDisplayName() {
@@ -59,7 +59,7 @@ public class MobileAppRelationship extends Entity implements Parsable {
     }
     /**
      * Gets the targetDisplayVersion property value. The target mobile app's display version.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTargetDisplayVersion() {
@@ -67,7 +67,7 @@ public class MobileAppRelationship extends Entity implements Parsable {
     }
     /**
      * Gets the targetId property value. The target mobile app's app id.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTargetId() {
@@ -75,7 +75,7 @@ public class MobileAppRelationship extends Entity implements Parsable {
     }
     /**
      * Gets the targetPublisher property value. The target mobile app's publisher.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTargetPublisher() {
@@ -83,7 +83,7 @@ public class MobileAppRelationship extends Entity implements Parsable {
     }
     /**
      * Gets the targetType property value. Indicates whether the target of a relationship is the parent or the child in the relationship.
-     * @return a MobileAppRelationshipType
+     * @return a {@link MobileAppRelationshipType}
      */
     @jakarta.annotation.Nullable
     public MobileAppRelationshipType getTargetType() {

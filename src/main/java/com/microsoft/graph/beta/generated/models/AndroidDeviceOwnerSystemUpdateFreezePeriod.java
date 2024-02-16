@@ -21,7 +21,7 @@ public class AndroidDeviceOwnerSystemUpdateFreezePeriod implements AdditionalDat
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new AndroidDeviceOwnerSystemUpdateFreezePeriod and sets the default values.
+     * Instantiates a new {@link AndroidDeviceOwnerSystemUpdateFreezePeriod} and sets the default values.
      */
     public AndroidDeviceOwnerSystemUpdateFreezePeriod() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -30,7 +30,7 @@ public class AndroidDeviceOwnerSystemUpdateFreezePeriod implements AdditionalDat
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AndroidDeviceOwnerSystemUpdateFreezePeriod
+     * @return a {@link AndroidDeviceOwnerSystemUpdateFreezePeriod}
      */
     @jakarta.annotation.Nonnull
     public static AndroidDeviceOwnerSystemUpdateFreezePeriod createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class AndroidDeviceOwnerSystemUpdateFreezePeriod implements AdditionalDat
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -52,7 +52,7 @@ public class AndroidDeviceOwnerSystemUpdateFreezePeriod implements AdditionalDat
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -60,7 +60,7 @@ public class AndroidDeviceOwnerSystemUpdateFreezePeriod implements AdditionalDat
     }
     /**
      * Gets the endDay property value. The day of the end date of the freeze period. Valid values 1 to 31
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getEndDay() {
@@ -68,7 +68,7 @@ public class AndroidDeviceOwnerSystemUpdateFreezePeriod implements AdditionalDat
     }
     /**
      * Gets the endMonth property value. The month of the end date of the freeze period. Valid values 1 to 12
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getEndMonth() {
@@ -76,7 +76,7 @@ public class AndroidDeviceOwnerSystemUpdateFreezePeriod implements AdditionalDat
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -90,7 +90,7 @@ public class AndroidDeviceOwnerSystemUpdateFreezePeriod implements AdditionalDat
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -98,7 +98,7 @@ public class AndroidDeviceOwnerSystemUpdateFreezePeriod implements AdditionalDat
     }
     /**
      * Gets the startDay property value. The day of the start date of the freeze period. Valid values 1 to 31
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getStartDay() {
@@ -106,7 +106,7 @@ public class AndroidDeviceOwnerSystemUpdateFreezePeriod implements AdditionalDat
     }
     /**
      * Gets the startMonth property value. The month of the start date of the freeze period. Valid values 1 to 12
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getStartMonth() {

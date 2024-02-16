@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ConditionalAccessPolicyCoverageCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * Instantiates a new ConditionalAccessPolicyCoverageCollectionResponse and sets the default values.
+     * Instantiates a new {@link ConditionalAccessPolicyCoverageCollectionResponse} and sets the default values.
      */
     public ConditionalAccessPolicyCoverageCollectionResponse() {
         super();
@@ -18,7 +18,7 @@ public class ConditionalAccessPolicyCoverageCollectionResponse extends BaseColle
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ConditionalAccessPolicyCoverageCollectionResponse
+     * @return a {@link ConditionalAccessPolicyCoverageCollectionResponse}
      */
     @jakarta.annotation.Nonnull
     public static ConditionalAccessPolicyCoverageCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class ConditionalAccessPolicyCoverageCollectionResponse extends BaseColle
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -37,7 +37,7 @@ public class ConditionalAccessPolicyCoverageCollectionResponse extends BaseColle
     }
     /**
      * Gets the value property value. The value property
-     * @return a java.util.List<ConditionalAccessPolicyCoverage>
+     * @return a {@link java.util.List<ConditionalAccessPolicyCoverage>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ConditionalAccessPolicyCoverage> getValue() {

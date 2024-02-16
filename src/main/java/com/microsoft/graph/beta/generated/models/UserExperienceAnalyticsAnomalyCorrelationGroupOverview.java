@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsAnomalyCorrelationGroupOverview extends Entity implements Parsable {
     /**
-     * Instantiates a new UserExperienceAnalyticsAnomalyCorrelationGroupOverview and sets the default values.
+     * Instantiates a new {@link UserExperienceAnalyticsAnomalyCorrelationGroupOverview} and sets the default values.
      */
     public UserExperienceAnalyticsAnomalyCorrelationGroupOverview() {
         super();
@@ -20,7 +20,7 @@ public class UserExperienceAnalyticsAnomalyCorrelationGroupOverview extends Enti
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserExperienceAnalyticsAnomalyCorrelationGroupOverview
+     * @return a {@link UserExperienceAnalyticsAnomalyCorrelationGroupOverview}
      */
     @jakarta.annotation.Nonnull
     public static UserExperienceAnalyticsAnomalyCorrelationGroupOverview createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -29,7 +29,7 @@ public class UserExperienceAnalyticsAnomalyCorrelationGroupOverview extends Enti
     }
     /**
      * Gets the anomalyCorrelationGroupCount property value. Indicates the number of correlation groups in the anomaly. Valid values -2147483648 to 2147483647
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getAnomalyCorrelationGroupCount() {
@@ -37,7 +37,7 @@ public class UserExperienceAnalyticsAnomalyCorrelationGroupOverview extends Enti
     }
     /**
      * Gets the anomalyId property value. The unique identifier of the anomaly. Anomaly details such as name and type can be found in the UserExperienceAnalyticsAnomalySeverityOverview entity.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAnomalyId() {
@@ -45,7 +45,7 @@ public class UserExperienceAnalyticsAnomalyCorrelationGroupOverview extends Enti
     }
     /**
      * Gets the correlationGroupAnomalousDeviceCount property value. Indicates the total number of devices affected by the anomaly in the correlation group. Valid values -2147483648 to 2147483647
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getCorrelationGroupAnomalousDeviceCount() {
@@ -53,7 +53,7 @@ public class UserExperienceAnalyticsAnomalyCorrelationGroupOverview extends Enti
     }
     /**
      * Gets the correlationGroupAtRiskDeviceCount property value. Indicates the total number of devices at risk in the correlation group. Valid values -2147483648 to 2147483647
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getCorrelationGroupAtRiskDeviceCount() {
@@ -61,7 +61,7 @@ public class UserExperienceAnalyticsAnomalyCorrelationGroupOverview extends Enti
     }
     /**
      * Gets the correlationGroupDeviceCount property value. Indicates the total number of devices in a correlation group. Valid values -2147483648 to 2147483647
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getCorrelationGroupDeviceCount() {
@@ -69,7 +69,7 @@ public class UserExperienceAnalyticsAnomalyCorrelationGroupOverview extends Enti
     }
     /**
      * Gets the correlationGroupFeatures property value. Describes the features of a device that are shared between all devices in a correlation group.
-     * @return a java.util.List<UserExperienceAnalyticsAnomalyCorrelationGroupFeature>
+     * @return a {@link java.util.List<UserExperienceAnalyticsAnomalyCorrelationGroupFeature>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserExperienceAnalyticsAnomalyCorrelationGroupFeature> getCorrelationGroupFeatures() {
@@ -77,7 +77,7 @@ public class UserExperienceAnalyticsAnomalyCorrelationGroupOverview extends Enti
     }
     /**
      * Gets the correlationGroupId property value. The unique identifier for the correlation group which will uniquely identify one of the correlation group within an anomaly. The correlation Id can be mapped to the correlation group name by concatinating the correlation group features. Example of correlation group name which is the indicative of concatenated features names are  for names, Contoso manufacture 4.4.1 and Windows 11.22621.1485.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCorrelationGroupId() {
@@ -85,7 +85,7 @@ public class UserExperienceAnalyticsAnomalyCorrelationGroupOverview extends Enti
     }
     /**
      * Gets the correlationGroupPrevalence property value. Indicates the level of prevalence of the correlation group features in the anomaly. Possible values are: high, medium or low
-     * @return a UserExperienceAnalyticsAnomalyCorrelationGroupPrevalence
+     * @return a {@link UserExperienceAnalyticsAnomalyCorrelationGroupPrevalence}
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsAnomalyCorrelationGroupPrevalence getCorrelationGroupPrevalence() {
@@ -93,7 +93,7 @@ public class UserExperienceAnalyticsAnomalyCorrelationGroupOverview extends Enti
     }
     /**
      * Gets the correlationGroupPrevalencePercentage property value. The percentage of the devices in the correlation group that are anomalous. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     * @return a Double
+     * @return a {@link Double}
      */
     @jakarta.annotation.Nullable
     public Double getCorrelationGroupPrevalencePercentage() {
@@ -101,7 +101,7 @@ public class UserExperienceAnalyticsAnomalyCorrelationGroupOverview extends Enti
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -120,7 +120,7 @@ public class UserExperienceAnalyticsAnomalyCorrelationGroupOverview extends Enti
     }
     /**
      * Gets the totalDeviceCount property value. Indicates the total number of devices in the tenant. Valid values -2147483648 to 2147483647
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getTotalDeviceCount() {

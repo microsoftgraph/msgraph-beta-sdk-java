@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TextClassificationRequest extends Entity implements Parsable {
     /**
-     * Instantiates a new TextClassificationRequest and sets the default values.
+     * Instantiates a new {@link TextClassificationRequest} and sets the default values.
      */
     public TextClassificationRequest() {
         super();
@@ -18,7 +18,7 @@ public class TextClassificationRequest extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TextClassificationRequest
+     * @return a {@link TextClassificationRequest}
      */
     @jakarta.annotation.Nonnull
     public static TextClassificationRequest createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class TextClassificationRequest extends Entity implements Parsable {
     }
     /**
      * Gets the contentMetaData property value. The contentMetaData property
-     * @return a ClassificationRequestContentMetaData
+     * @return a {@link ClassificationRequestContentMetaData}
      */
     @jakarta.annotation.Nullable
     public ClassificationRequestContentMetaData getContentMetaData() {
@@ -35,7 +35,7 @@ public class TextClassificationRequest extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -50,7 +50,7 @@ public class TextClassificationRequest extends Entity implements Parsable {
     }
     /**
      * Gets the fileExtension property value. The fileExtension property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getFileExtension() {
@@ -58,7 +58,7 @@ public class TextClassificationRequest extends Entity implements Parsable {
     }
     /**
      * Gets the matchTolerancesToInclude property value. The matchTolerancesToInclude property
-     * @return a EnumSet<MlClassificationMatchTolerance>
+     * @return a {@link EnumSet<MlClassificationMatchTolerance>}
      */
     @jakarta.annotation.Nullable
     public EnumSet<MlClassificationMatchTolerance> getMatchTolerancesToInclude() {
@@ -66,7 +66,7 @@ public class TextClassificationRequest extends Entity implements Parsable {
     }
     /**
      * Gets the scopesToRun property value. The scopesToRun property
-     * @return a EnumSet<SensitiveTypeScope>
+     * @return a {@link EnumSet<SensitiveTypeScope>}
      */
     @jakarta.annotation.Nullable
     public EnumSet<SensitiveTypeScope> getScopesToRun() {
@@ -74,7 +74,7 @@ public class TextClassificationRequest extends Entity implements Parsable {
     }
     /**
      * Gets the sensitiveTypeIds property value. The sensitiveTypeIds property
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSensitiveTypeIds() {
@@ -82,7 +82,7 @@ public class TextClassificationRequest extends Entity implements Parsable {
     }
     /**
      * Gets the text property value. The text property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getText() {

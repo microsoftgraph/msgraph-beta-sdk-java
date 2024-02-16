@@ -18,7 +18,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, BackedMod
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new DeviceManagementSettings and sets the default values.
+     * Instantiates a new {@link DeviceManagementSettings} and sets the default values.
      */
     public DeviceManagementSettings() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, BackedMod
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceManagementSettings
+     * @return a {@link DeviceManagementSettings}
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the androidDeviceAdministratorEnrollmentEnabled property value. The property to determine if Android device administrator enrollment is enabled for this account.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAndroidDeviceAdministratorEnrollmentEnabled() {
@@ -57,7 +57,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -65,7 +65,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the derivedCredentialProvider property value. Provider type for Derived Credentials.
-     * @return a DerivedCredentialProviderType
+     * @return a {@link DerivedCredentialProviderType}
      */
     @jakarta.annotation.Nullable
     public DerivedCredentialProviderType getDerivedCredentialProvider() {
@@ -73,7 +73,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the derivedCredentialUrl property value. The Derived Credential Provider self-service URI.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDerivedCredentialUrl() {
@@ -81,7 +81,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the deviceComplianceCheckinThresholdDays property value. The number of days a device is allowed to go without checking in to remain compliant.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getDeviceComplianceCheckinThresholdDays() {
@@ -89,7 +89,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the deviceInactivityBeforeRetirementInDay property value. When the device does not check in for specified number of days, the company data might be removed and the device will not be under management. Valid values 30 to 270
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getDeviceInactivityBeforeRetirementInDay() {
@@ -97,7 +97,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the enableAutopilotDiagnostics property value. Determines whether the autopilot diagnostic feature is enabled or not.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getEnableAutopilotDiagnostics() {
@@ -105,7 +105,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the enableDeviceGroupMembershipReport property value. Determines whether the device group membership report feature is enabled or not.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getEnableDeviceGroupMembershipReport() {
@@ -113,7 +113,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the enableEnhancedTroubleshootingExperience property value. Determines whether the enhanced troubleshooting UX is enabled or not.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getEnableEnhancedTroubleshootingExperience() {
@@ -121,7 +121,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the enableLogCollection property value. Determines whether the log collection feature should be available for use.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getEnableLogCollection() {
@@ -129,7 +129,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the enhancedJailBreak property value. Is feature enabled or not for enhanced jailbreak detection.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getEnhancedJailBreak() {
@@ -137,7 +137,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, BackedMod
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -160,7 +160,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the ignoreDevicesForUnsupportedSettingsEnabled property value. The property to determine whether to ignore unsupported compliance settings on certian models of devices.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIgnoreDevicesForUnsupportedSettingsEnabled() {
@@ -168,7 +168,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the isScheduledActionEnabled property value. Is feature enabled or not for scheduled action for rule.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsScheduledActionEnabled() {
@@ -176,7 +176,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -184,7 +184,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the secureByDefault property value. Device should be noncompliant when there is no compliance policy targeted when this is true
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getSecureByDefault() {

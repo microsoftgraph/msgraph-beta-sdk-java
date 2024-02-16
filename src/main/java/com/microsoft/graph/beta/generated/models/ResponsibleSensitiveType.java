@@ -18,7 +18,7 @@ public class ResponsibleSensitiveType implements AdditionalDataHolder, BackedMod
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new ResponsibleSensitiveType and sets the default values.
+     * Instantiates a new {@link ResponsibleSensitiveType} and sets the default values.
      */
     public ResponsibleSensitiveType() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class ResponsibleSensitiveType implements AdditionalDataHolder, BackedMod
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ResponsibleSensitiveType
+     * @return a {@link ResponsibleSensitiveType}
      */
     @jakarta.annotation.Nonnull
     public static ResponsibleSensitiveType createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class ResponsibleSensitiveType implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class ResponsibleSensitiveType implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class ResponsibleSensitiveType implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the description property value. The description property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -65,7 +65,7 @@ public class ResponsibleSensitiveType implements AdditionalDataHolder, BackedMod
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -81,7 +81,7 @@ public class ResponsibleSensitiveType implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the id property value. The id property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getId() {
@@ -89,7 +89,7 @@ public class ResponsibleSensitiveType implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the name property value. The name property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -97,7 +97,7 @@ public class ResponsibleSensitiveType implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -105,7 +105,7 @@ public class ResponsibleSensitiveType implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the publisherName property value. The publisherName property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPublisherName() {
@@ -113,7 +113,7 @@ public class ResponsibleSensitiveType implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the rulePackageId property value. The rulePackageId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRulePackageId() {
@@ -121,7 +121,7 @@ public class ResponsibleSensitiveType implements AdditionalDataHolder, BackedMod
     }
     /**
      * Gets the rulePackageType property value. The rulePackageType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRulePackageType() {

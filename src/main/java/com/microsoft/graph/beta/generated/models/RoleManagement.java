@@ -18,7 +18,7 @@ public class RoleManagement implements AdditionalDataHolder, BackedModel, Parsab
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new RoleManagement and sets the default values.
+     * Instantiates a new {@link RoleManagement} and sets the default values.
      */
     public RoleManagement() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class RoleManagement implements AdditionalDataHolder, BackedModel, Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a RoleManagement
+     * @return a {@link RoleManagement}
      */
     @jakarta.annotation.Nonnull
     public static RoleManagement createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class RoleManagement implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class RoleManagement implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class RoleManagement implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the cloudPC property value. The cloudPC property
-     * @return a RbacApplicationMultiple
+     * @return a {@link RbacApplicationMultiple}
      */
     @jakarta.annotation.Nullable
     public RbacApplicationMultiple getCloudPC() {
@@ -65,7 +65,7 @@ public class RoleManagement implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the deviceManagement property value. The RbacApplication for Device Management
-     * @return a RbacApplicationMultiple
+     * @return a {@link RbacApplicationMultiple}
      */
     @jakarta.annotation.Nullable
     public RbacApplicationMultiple getDeviceManagement() {
@@ -73,7 +73,7 @@ public class RoleManagement implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the directory property value. The directory property
-     * @return a RbacApplication
+     * @return a {@link RbacApplication}
      */
     @jakarta.annotation.Nullable
     public RbacApplication getDirectory() {
@@ -81,7 +81,7 @@ public class RoleManagement implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the enterpriseApps property value. The enterpriseApps property
-     * @return a java.util.List<RbacApplication>
+     * @return a {@link java.util.List<RbacApplication>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<RbacApplication> getEnterpriseApps() {
@@ -89,7 +89,7 @@ public class RoleManagement implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the entitlementManagement property value. The RbacApplication for Entitlement Management
-     * @return a RbacApplication
+     * @return a {@link RbacApplication}
      */
     @jakarta.annotation.Nullable
     public RbacApplication getEntitlementManagement() {
@@ -97,7 +97,7 @@ public class RoleManagement implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the exchange property value. The exchange property
-     * @return a UnifiedRbacApplication
+     * @return a {@link UnifiedRbacApplication}
      */
     @jakarta.annotation.Nullable
     public UnifiedRbacApplication getExchange() {
@@ -105,7 +105,7 @@ public class RoleManagement implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -121,7 +121,7 @@ public class RoleManagement implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {

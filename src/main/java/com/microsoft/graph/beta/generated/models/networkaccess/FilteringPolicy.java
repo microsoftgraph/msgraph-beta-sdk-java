@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class FilteringPolicy extends Policy implements Parsable {
     /**
-     * Instantiates a new FilteringPolicy and sets the default values.
+     * Instantiates a new {@link FilteringPolicy} and sets the default values.
      */
     public FilteringPolicy() {
         super();
@@ -19,7 +19,7 @@ public class FilteringPolicy extends Policy implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a FilteringPolicy
+     * @return a {@link FilteringPolicy}
      */
     @jakarta.annotation.Nonnull
     public static FilteringPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class FilteringPolicy extends Policy implements Parsable {
     }
     /**
      * Gets the action property value. The action property
-     * @return a FilteringPolicyAction
+     * @return a {@link FilteringPolicyAction}
      */
     @jakarta.annotation.Nullable
     public FilteringPolicyAction getAction() {
@@ -36,7 +36,7 @@ public class FilteringPolicy extends Policy implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. The date and time when the filtering Policy was originally created.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -44,7 +44,7 @@ public class FilteringPolicy extends Policy implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -56,7 +56,7 @@ public class FilteringPolicy extends Policy implements Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. The date and time when a particular profile was last modified or updated.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {

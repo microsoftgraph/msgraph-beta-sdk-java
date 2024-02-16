@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementScriptUserState extends Entity implements Parsable {
     /**
-     * Instantiates a new DeviceManagementScriptUserState and sets the default values.
+     * Instantiates a new {@link DeviceManagementScriptUserState} and sets the default values.
      */
     public DeviceManagementScriptUserState() {
         super();
@@ -20,7 +20,7 @@ public class DeviceManagementScriptUserState extends Entity implements Parsable 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceManagementScriptUserState
+     * @return a {@link DeviceManagementScriptUserState}
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementScriptUserState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -29,7 +29,7 @@ public class DeviceManagementScriptUserState extends Entity implements Parsable 
     }
     /**
      * Gets the deviceRunStates property value. List of run states for this script across all devices of specific user.
-     * @return a java.util.List<DeviceManagementScriptDeviceState>
+     * @return a {@link java.util.List<DeviceManagementScriptDeviceState>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementScriptDeviceState> getDeviceRunStates() {
@@ -37,7 +37,7 @@ public class DeviceManagementScriptUserState extends Entity implements Parsable 
     }
     /**
      * Gets the errorDeviceCount property value. Error device count for specific user.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getErrorDeviceCount() {
@@ -45,7 +45,7 @@ public class DeviceManagementScriptUserState extends Entity implements Parsable 
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -58,7 +58,7 @@ public class DeviceManagementScriptUserState extends Entity implements Parsable 
     }
     /**
      * Gets the successDeviceCount property value. Success device count for specific user.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getSuccessDeviceCount() {
@@ -66,7 +66,7 @@ public class DeviceManagementScriptUserState extends Entity implements Parsable 
     }
     /**
      * Gets the userPrincipalName property value. User principle name of specific user.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {

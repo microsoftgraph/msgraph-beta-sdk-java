@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementScriptAssignment extends Entity implements Parsable {
     /**
-     * Instantiates a new DeviceManagementScriptAssignment and sets the default values.
+     * Instantiates a new {@link DeviceManagementScriptAssignment} and sets the default values.
      */
     public DeviceManagementScriptAssignment() {
         super();
@@ -20,7 +20,7 @@ public class DeviceManagementScriptAssignment extends Entity implements Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceManagementScriptAssignment
+     * @return a {@link DeviceManagementScriptAssignment}
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementScriptAssignment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -29,7 +29,7 @@ public class DeviceManagementScriptAssignment extends Entity implements Parsable
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -39,7 +39,7 @@ public class DeviceManagementScriptAssignment extends Entity implements Parsable
     }
     /**
      * Gets the target property value. The Id of the Azure Active Directory group we are targeting the script to.
-     * @return a DeviceAndAppManagementAssignmentTarget
+     * @return a {@link DeviceAndAppManagementAssignmentTarget}
      */
     @jakarta.annotation.Nullable
     public DeviceAndAppManagementAssignmentTarget getTarget() {

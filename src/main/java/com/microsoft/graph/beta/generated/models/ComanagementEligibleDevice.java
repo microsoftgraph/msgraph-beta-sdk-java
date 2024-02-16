@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ComanagementEligibleDevice extends Entity implements Parsable {
     /**
-     * Instantiates a new ComanagementEligibleDevice and sets the default values.
+     * Instantiates a new {@link ComanagementEligibleDevice} and sets the default values.
      */
     public ComanagementEligibleDevice() {
         super();
@@ -20,7 +20,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ComanagementEligibleDevice
+     * @return a {@link ComanagementEligibleDevice}
      */
     @jakarta.annotation.Nonnull
     public static ComanagementEligibleDevice createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -29,7 +29,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
     }
     /**
      * Gets the clientRegistrationStatus property value. Device registration status.
-     * @return a DeviceRegistrationState
+     * @return a {@link DeviceRegistrationState}
      */
     @jakarta.annotation.Nullable
     public DeviceRegistrationState getClientRegistrationStatus() {
@@ -37,7 +37,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
     }
     /**
      * Gets the deviceName property value. DeviceName
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceName() {
@@ -45,7 +45,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
     }
     /**
      * Gets the deviceType property value. Device type.
-     * @return a DeviceType
+     * @return a {@link DeviceType}
      */
     @jakarta.annotation.Nullable
     public DeviceType getDeviceType() {
@@ -53,7 +53,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
     }
     /**
      * Gets the entitySource property value. EntitySource
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getEntitySource() {
@@ -61,7 +61,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -89,7 +89,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
     }
     /**
      * Gets the managementAgents property value. Management agent type.
-     * @return a ManagementAgentType
+     * @return a {@link ManagementAgentType}
      */
     @jakarta.annotation.Nullable
     public ManagementAgentType getManagementAgents() {
@@ -97,7 +97,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
     }
     /**
      * Gets the managementState property value. Management state of device in Microsoft Intune.
-     * @return a ManagementState
+     * @return a {@link ManagementState}
      */
     @jakarta.annotation.Nullable
     public ManagementState getManagementState() {
@@ -105,7 +105,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
     }
     /**
      * Gets the manufacturer property value. Manufacturer
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getManufacturer() {
@@ -113,7 +113,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
     }
     /**
      * Gets the mdmStatus property value. MDMStatus
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getMdmStatus() {
@@ -121,7 +121,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
     }
     /**
      * Gets the model property value. Model
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getModel() {
@@ -129,7 +129,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
     }
     /**
      * Gets the osDescription property value. OSDescription
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOsDescription() {
@@ -137,7 +137,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
     }
     /**
      * Gets the osVersion property value. OSVersion
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOsVersion() {
@@ -145,7 +145,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
     }
     /**
      * Gets the ownerType property value. Owner type of device.
-     * @return a OwnerType
+     * @return a {@link OwnerType}
      */
     @jakarta.annotation.Nullable
     public OwnerType getOwnerType() {
@@ -153,7 +153,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
     }
     /**
      * Gets the referenceId property value. ReferenceId
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getReferenceId() {
@@ -161,7 +161,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
     }
     /**
      * Gets the serialNumber property value. SerialNumber
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSerialNumber() {
@@ -169,7 +169,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status property
-     * @return a ComanagementEligibleType
+     * @return a {@link ComanagementEligibleType}
      */
     @jakarta.annotation.Nullable
     public ComanagementEligibleType getStatus() {
@@ -177,7 +177,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
     }
     /**
      * Gets the upn property value. UPN
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUpn() {
@@ -185,7 +185,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
     }
     /**
      * Gets the userEmail property value. UserEmail
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserEmail() {
@@ -193,7 +193,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
     }
     /**
      * Gets the userId property value. UserId
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
@@ -201,7 +201,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
     }
     /**
      * Gets the userName property value. UserName
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserName() {

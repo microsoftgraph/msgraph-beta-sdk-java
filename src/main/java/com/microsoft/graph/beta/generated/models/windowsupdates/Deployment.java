@@ -11,7 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Deployment extends Entity implements Parsable {
     /**
-     * Instantiates a new Deployment and sets the default values.
+     * Instantiates a new {@link Deployment} and sets the default values.
      */
     public Deployment() {
         super();
@@ -19,7 +19,7 @@ public class Deployment extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Deployment
+     * @return a {@link Deployment}
      */
     @jakarta.annotation.Nonnull
     public static Deployment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class Deployment extends Entity implements Parsable {
     }
     /**
      * Gets the audience property value. Specifies the audience to which content is deployed.
-     * @return a DeploymentAudience
+     * @return a {@link DeploymentAudience}
      */
     @jakarta.annotation.Nullable
     public DeploymentAudience getAudience() {
@@ -36,7 +36,7 @@ public class Deployment extends Entity implements Parsable {
     }
     /**
      * Gets the content property value. Specifies what content to deploy. Cannot be changed. Returned by default.
-     * @return a DeployableContent
+     * @return a {@link DeployableContent}
      */
     @jakarta.annotation.Nullable
     public DeployableContent getContent() {
@@ -44,7 +44,7 @@ public class Deployment extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. The date and time the deployment was created. Returned by default. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -52,7 +52,7 @@ public class Deployment extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -67,7 +67,7 @@ public class Deployment extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. The date and time the deployment was last modified. Returned by default. Read-only.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -75,7 +75,7 @@ public class Deployment extends Entity implements Parsable {
     }
     /**
      * Gets the settings property value. Settings specified on the specific deployment governing how to deploy content. Returned by default.
-     * @return a DeploymentSettings
+     * @return a {@link DeploymentSettings}
      */
     @jakarta.annotation.Nullable
     public DeploymentSettings getSettings() {
@@ -83,7 +83,7 @@ public class Deployment extends Entity implements Parsable {
     }
     /**
      * Gets the state property value. Execution status of the deployment. Returned by default.
-     * @return a DeploymentState
+     * @return a {@link DeploymentState}
      */
     @jakarta.annotation.Nullable
     public DeploymentState getState() {

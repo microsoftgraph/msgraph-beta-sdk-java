@@ -25,6 +25,7 @@ import java.util.Objects;
 public class ForwardingProfilesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      * @deprecated
      * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      */
@@ -36,7 +37,7 @@ public class ForwardingProfilesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the forwardingProfiles property of the microsoft.graph.networkaccess.branchSite entity.
      * @param forwardingProfileId The unique identifier of forwardingProfile
-     * @return a ForwardingProfileItemRequestBuilder
+     * @return a {@link ForwardingProfileItemRequestBuilder}
      * @deprecated
      * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      */
@@ -49,7 +50,7 @@ public class ForwardingProfilesRequestBuilder extends BaseRequestBuilder {
         return new ForwardingProfileItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new ForwardingProfilesRequestBuilder and sets the default values.
+     * Instantiates a new {@link ForwardingProfilesRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -57,7 +58,7 @@ public class ForwardingProfilesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/networkAccess/connectivity/branches/{branchSite%2Did}/forwardingProfiles{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new ForwardingProfilesRequestBuilder and sets the default values.
+     * Instantiates a new {@link ForwardingProfilesRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -66,7 +67,8 @@ public class ForwardingProfilesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of traffic forwarding profiles associated with a branch.
-     * @return a ForwardingProfileCollectionResponse
+     * @return a {@link ForwardingProfileCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-branchsite-list-forwardingprofiles?view=graph-rest-1.0">Find more info here</a>
@@ -79,7 +81,8 @@ public class ForwardingProfilesRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of traffic forwarding profiles associated with a branch.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a ForwardingProfileCollectionResponse
+     * @return a {@link ForwardingProfileCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-branchsite-list-forwardingprofiles?view=graph-rest-1.0">Find more info here</a>
@@ -89,14 +92,14 @@ public class ForwardingProfilesRequestBuilder extends BaseRequestBuilder {
     public ForwardingProfileCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, ForwardingProfileCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to forwardingProfiles for networkAccess
      * @param body The request body
-     * @return a ForwardingProfile
+     * @return a {@link ForwardingProfile}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      */
@@ -109,7 +112,8 @@ public class ForwardingProfilesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to forwardingProfiles for networkAccess
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a ForwardingProfile
+     * @return a {@link ForwardingProfile}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      */
@@ -119,13 +123,12 @@ public class ForwardingProfilesRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, ForwardingProfile::createFromDiscriminatorValue);
     }
     /**
      * Retrieve a list of traffic forwarding profiles associated with a branch.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      */
@@ -137,7 +140,7 @@ public class ForwardingProfilesRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of traffic forwarding profiles associated with a branch.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      */
@@ -152,7 +155,7 @@ public class ForwardingProfilesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to forwardingProfiles for networkAccess
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      */
@@ -165,7 +168,7 @@ public class ForwardingProfilesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to forwardingProfiles for networkAccess
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      * @deprecated
      * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      */
@@ -173,7 +176,7 @@ public class ForwardingProfilesRequestBuilder extends BaseRequestBuilder {
     @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ForwardingProfile body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/networkAccess/connectivity/branches/{branchSite%2Did}/forwardingProfiles", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -182,7 +185,7 @@ public class ForwardingProfilesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a ForwardingProfilesRequestBuilder
+     * @return a {@link ForwardingProfilesRequestBuilder}
      * @deprecated
      * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      */
@@ -239,7 +242,7 @@ public class ForwardingProfilesRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

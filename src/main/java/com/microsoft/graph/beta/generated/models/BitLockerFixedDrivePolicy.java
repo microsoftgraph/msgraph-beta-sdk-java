@@ -21,7 +21,7 @@ public class BitLockerFixedDrivePolicy implements AdditionalDataHolder, BackedMo
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new BitLockerFixedDrivePolicy and sets the default values.
+     * Instantiates a new {@link BitLockerFixedDrivePolicy} and sets the default values.
      */
     public BitLockerFixedDrivePolicy() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -30,7 +30,7 @@ public class BitLockerFixedDrivePolicy implements AdditionalDataHolder, BackedMo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a BitLockerFixedDrivePolicy
+     * @return a {@link BitLockerFixedDrivePolicy}
      */
     @jakarta.annotation.Nonnull
     public static BitLockerFixedDrivePolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class BitLockerFixedDrivePolicy implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -52,7 +52,7 @@ public class BitLockerFixedDrivePolicy implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -60,7 +60,7 @@ public class BitLockerFixedDrivePolicy implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the encryptionMethod property value. Select the encryption method for fixed drives. Possible values are: aesCbc128, aesCbc256, xtsAes128, xtsAes256.
-     * @return a BitLockerEncryptionMethod
+     * @return a {@link BitLockerEncryptionMethod}
      */
     @jakarta.annotation.Nullable
     public BitLockerEncryptionMethod getEncryptionMethod() {
@@ -68,7 +68,7 @@ public class BitLockerFixedDrivePolicy implements AdditionalDataHolder, BackedMo
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -81,7 +81,7 @@ public class BitLockerFixedDrivePolicy implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -89,7 +89,7 @@ public class BitLockerFixedDrivePolicy implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the recoveryOptions property value. This policy setting allows you to control how BitLocker-protected fixed data drives are recovered in the absence of the required credentials. This policy setting is applied when you turn on BitLocker.
-     * @return a BitLockerRecoveryOptions
+     * @return a {@link BitLockerRecoveryOptions}
      */
     @jakarta.annotation.Nullable
     public BitLockerRecoveryOptions getRecoveryOptions() {
@@ -97,7 +97,7 @@ public class BitLockerFixedDrivePolicy implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the requireEncryptionForWriteAccess property value. This policy setting determines whether BitLocker protection is required for fixed data drives to be writable on a computer.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getRequireEncryptionForWriteAccess() {

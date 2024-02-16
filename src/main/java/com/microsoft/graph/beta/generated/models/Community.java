@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Community extends Entity implements Parsable {
     /**
-     * Instantiates a new Community and sets the default values.
+     * Instantiates a new {@link Community} and sets the default values.
      */
     public Community() {
         super();
@@ -17,7 +17,7 @@ public class Community extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Community
+     * @return a {@link Community}
      */
     @jakarta.annotation.Nonnull
     public static Community createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class Community extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The description of the community. The maximum length is 1024 characters.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -34,7 +34,7 @@ public class Community extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The name of the community. The maximum length is 255 characters.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -42,7 +42,7 @@ public class Community extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -57,7 +57,7 @@ public class Community extends Entity implements Parsable {
     }
     /**
      * Gets the group property value. The Microsoft 365 group that manages the membership of this community.
-     * @return a Group
+     * @return a {@link Group}
      */
     @jakarta.annotation.Nullable
     public Group getGroup() {
@@ -65,7 +65,7 @@ public class Community extends Entity implements Parsable {
     }
     /**
      * Gets the groupId property value. The ID of the Microsoft 365 group that manages the membership of this community.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getGroupId() {
@@ -73,7 +73,7 @@ public class Community extends Entity implements Parsable {
     }
     /**
      * Gets the owners property value. The admins of the community. Limited to 100 users. If this property isn't specified when you create the community, the calling user is automatically assigned as the community owner.
-     * @return a java.util.List<User>
+     * @return a {@link java.util.List<User>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<User> getOwners() {
@@ -81,7 +81,7 @@ public class Community extends Entity implements Parsable {
     }
     /**
      * Gets the privacy property value. The privacy property
-     * @return a CommunityPrivacy
+     * @return a {@link CommunityPrivacy}
      */
     @jakarta.annotation.Nullable
     public CommunityPrivacy getPrivacy() {

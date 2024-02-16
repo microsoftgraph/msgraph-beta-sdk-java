@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CloudAppSecurityProfile extends Entity implements Parsable {
     /**
-     * Instantiates a new CloudAppSecurityProfile and sets the default values.
+     * Instantiates a new {@link CloudAppSecurityProfile} and sets the default values.
      */
     public CloudAppSecurityProfile() {
         super();
@@ -18,7 +18,7 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CloudAppSecurityProfile
+     * @return a {@link CloudAppSecurityProfile}
      */
     @jakarta.annotation.Nonnull
     public static CloudAppSecurityProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the azureSubscriptionId property value. The azureSubscriptionId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAzureSubscriptionId() {
@@ -35,7 +35,7 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the azureTenantId property value. The azureTenantId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAzureTenantId() {
@@ -43,7 +43,7 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. The createdDateTime property
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -51,7 +51,7 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the deploymentPackageUrl property value. The deploymentPackageUrl property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeploymentPackageUrl() {
@@ -59,7 +59,7 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the destinationServiceName property value. The destinationServiceName property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDestinationServiceName() {
@@ -67,7 +67,7 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -93,7 +93,7 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the isSigned property value. The isSigned property
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsSigned() {
@@ -101,7 +101,7 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -109,7 +109,7 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the manifest property value. The manifest property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getManifest() {
@@ -117,7 +117,7 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the name property value. The name property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -125,7 +125,7 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the permissionsRequired property value. The permissionsRequired property
-     * @return a ApplicationPermissionsRequired
+     * @return a {@link ApplicationPermissionsRequired}
      */
     @jakarta.annotation.Nullable
     public ApplicationPermissionsRequired getPermissionsRequired() {
@@ -133,7 +133,7 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the platform property value. The platform property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPlatform() {
@@ -141,7 +141,7 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the policyName property value. The policyName property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPolicyName() {
@@ -149,7 +149,7 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the publisher property value. The publisher property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPublisher() {
@@ -157,7 +157,7 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the riskScore property value. The riskScore property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRiskScore() {
@@ -165,7 +165,7 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the tags property value. The tags property
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getTags() {
@@ -173,7 +173,7 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the type property value. The type property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getType() {
@@ -181,7 +181,7 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the vendorInformation property value. The vendorInformation property
-     * @return a SecurityVendorInformation
+     * @return a {@link SecurityVendorInformation}
      */
     @jakarta.annotation.Nullable
     public SecurityVendorInformation getVendorInformation() {

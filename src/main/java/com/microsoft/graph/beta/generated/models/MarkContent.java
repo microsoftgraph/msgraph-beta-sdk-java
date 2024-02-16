@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MarkContent extends LabelActionBase implements Parsable {
     /**
-     * Instantiates a new MarkContent and sets the default values.
+     * Instantiates a new {@link MarkContent} and sets the default values.
      */
     public MarkContent() {
         super();
@@ -18,7 +18,7 @@ public class MarkContent extends LabelActionBase implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MarkContent
+     * @return a {@link MarkContent}
      */
     @jakarta.annotation.Nonnull
     public static MarkContent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class MarkContent extends LabelActionBase implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -48,7 +48,7 @@ public class MarkContent extends LabelActionBase implements Parsable {
     }
     /**
      * Gets the fontColor property value. The fontColor property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getFontColor() {
@@ -56,7 +56,7 @@ public class MarkContent extends LabelActionBase implements Parsable {
     }
     /**
      * Gets the fontSize property value. The fontSize property
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getFontSize() {
@@ -64,7 +64,7 @@ public class MarkContent extends LabelActionBase implements Parsable {
     }
     /**
      * Gets the text property value. The text property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getText() {

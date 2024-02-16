@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TenantDetailedInformationCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * Instantiates a new TenantDetailedInformationCollectionResponse and sets the default values.
+     * Instantiates a new {@link TenantDetailedInformationCollectionResponse} and sets the default values.
      */
     public TenantDetailedInformationCollectionResponse() {
         super();
@@ -18,7 +18,7 @@ public class TenantDetailedInformationCollectionResponse extends BaseCollectionP
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TenantDetailedInformationCollectionResponse
+     * @return a {@link TenantDetailedInformationCollectionResponse}
      */
     @jakarta.annotation.Nonnull
     public static TenantDetailedInformationCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class TenantDetailedInformationCollectionResponse extends BaseCollectionP
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -37,7 +37,7 @@ public class TenantDetailedInformationCollectionResponse extends BaseCollectionP
     }
     /**
      * Gets the value property value. The value property
-     * @return a java.util.List<TenantDetailedInformation>
+     * @return a {@link java.util.List<TenantDetailedInformation>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<TenantDetailedInformation> getValue() {

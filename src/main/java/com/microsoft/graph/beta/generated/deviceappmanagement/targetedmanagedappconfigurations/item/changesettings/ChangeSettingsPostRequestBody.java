@@ -19,7 +19,7 @@ public class ChangeSettingsPostRequestBody implements AdditionalDataHolder, Back
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new ChangeSettingsPostRequestBody and sets the default values.
+     * Instantiates a new {@link ChangeSettingsPostRequestBody} and sets the default values.
      */
     public ChangeSettingsPostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class ChangeSettingsPostRequestBody implements AdditionalDataHolder, Back
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ChangeSettingsPostRequestBody
+     * @return a {@link ChangeSettingsPostRequestBody}
      */
     @jakarta.annotation.Nonnull
     public static ChangeSettingsPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class ChangeSettingsPostRequestBody implements AdditionalDataHolder, Back
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -50,7 +50,7 @@ public class ChangeSettingsPostRequestBody implements AdditionalDataHolder, Back
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -58,7 +58,7 @@ public class ChangeSettingsPostRequestBody implements AdditionalDataHolder, Back
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -68,7 +68,7 @@ public class ChangeSettingsPostRequestBody implements AdditionalDataHolder, Back
     }
     /**
      * Gets the settings property value. The settings property
-     * @return a java.util.List<DeviceManagementConfigurationSetting>
+     * @return a {@link java.util.List<DeviceManagementConfigurationSetting>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementConfigurationSetting> getSettings() {

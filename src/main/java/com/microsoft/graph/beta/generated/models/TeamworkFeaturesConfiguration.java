@@ -18,7 +18,7 @@ public class TeamworkFeaturesConfiguration implements AdditionalDataHolder, Back
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new TeamworkFeaturesConfiguration and sets the default values.
+     * Instantiates a new {@link TeamworkFeaturesConfiguration} and sets the default values.
      */
     public TeamworkFeaturesConfiguration() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class TeamworkFeaturesConfiguration implements AdditionalDataHolder, Back
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TeamworkFeaturesConfiguration
+     * @return a {@link TeamworkFeaturesConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static TeamworkFeaturesConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class TeamworkFeaturesConfiguration implements AdditionalDataHolder, Back
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class TeamworkFeaturesConfiguration implements AdditionalDataHolder, Back
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -57,7 +57,7 @@ public class TeamworkFeaturesConfiguration implements AdditionalDataHolder, Back
     }
     /**
      * Gets the emailToSendLogsAndFeedback property value. Email address to send logs and feedback.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getEmailToSendLogsAndFeedback() {
@@ -65,7 +65,7 @@ public class TeamworkFeaturesConfiguration implements AdditionalDataHolder, Back
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -80,7 +80,7 @@ public class TeamworkFeaturesConfiguration implements AdditionalDataHolder, Back
     }
     /**
      * Gets the isAutoScreenShareEnabled property value. True if auto screen shared is enabled.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsAutoScreenShareEnabled() {
@@ -88,7 +88,7 @@ public class TeamworkFeaturesConfiguration implements AdditionalDataHolder, Back
     }
     /**
      * Gets the isBluetoothBeaconingEnabled property value. True if Bluetooth beaconing is enabled.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsBluetoothBeaconingEnabled() {
@@ -96,7 +96,7 @@ public class TeamworkFeaturesConfiguration implements AdditionalDataHolder, Back
     }
     /**
      * Gets the isHideMeetingNamesEnabled property value. True if hiding meeting names is enabled.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsHideMeetingNamesEnabled() {
@@ -104,7 +104,7 @@ public class TeamworkFeaturesConfiguration implements AdditionalDataHolder, Back
     }
     /**
      * Gets the isSendLogsAndFeedbackEnabled property value. True if sending logs and feedback is enabled.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsSendLogsAndFeedbackEnabled() {
@@ -112,7 +112,7 @@ public class TeamworkFeaturesConfiguration implements AdditionalDataHolder, Back
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {

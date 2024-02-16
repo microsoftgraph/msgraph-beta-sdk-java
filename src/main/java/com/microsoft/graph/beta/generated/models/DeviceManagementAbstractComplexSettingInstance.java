@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementAbstractComplexSettingInstance extends DeviceManagementSettingInstance implements Parsable {
     /**
-     * Instantiates a new DeviceManagementAbstractComplexSettingInstance and sets the default values.
+     * Instantiates a new {@link DeviceManagementAbstractComplexSettingInstance} and sets the default values.
      */
     public DeviceManagementAbstractComplexSettingInstance() {
         super();
@@ -21,7 +21,7 @@ public class DeviceManagementAbstractComplexSettingInstance extends DeviceManage
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceManagementAbstractComplexSettingInstance
+     * @return a {@link DeviceManagementAbstractComplexSettingInstance}
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementAbstractComplexSettingInstance createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class DeviceManagementAbstractComplexSettingInstance extends DeviceManage
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -41,7 +41,7 @@ public class DeviceManagementAbstractComplexSettingInstance extends DeviceManage
     }
     /**
      * Gets the implementationId property value. The definition ID for the chosen implementation of this complex setting
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getImplementationId() {
@@ -49,7 +49,7 @@ public class DeviceManagementAbstractComplexSettingInstance extends DeviceManage
     }
     /**
      * Gets the value property value. The values that make up the complex setting
-     * @return a java.util.List<DeviceManagementSettingInstance>
+     * @return a {@link java.util.List<DeviceManagementSettingInstance>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementSettingInstance> getValue() {

@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsVpnConfiguration extends DeviceConfiguration implements Parsable {
     /**
-     * Instantiates a new WindowsVpnConfiguration and sets the default values.
+     * Instantiates a new {@link WindowsVpnConfiguration} and sets the default values.
      */
     public WindowsVpnConfiguration() {
         super();
@@ -21,7 +21,7 @@ public class WindowsVpnConfiguration extends DeviceConfiguration implements Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WindowsVpnConfiguration
+     * @return a {@link WindowsVpnConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static WindowsVpnConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class WindowsVpnConfiguration extends DeviceConfiguration implements Pars
     }
     /**
      * Gets the connectionName property value. Connection name displayed to the user.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getConnectionName() {
@@ -47,7 +47,7 @@ public class WindowsVpnConfiguration extends DeviceConfiguration implements Pars
     }
     /**
      * Gets the customXml property value. Custom XML commands that configures the VPN connection. (UTF8 encoded byte array)
-     * @return a byte[]
+     * @return a {@link byte[]}
      */
     @jakarta.annotation.Nullable
     public byte[] getCustomXml() {
@@ -55,7 +55,7 @@ public class WindowsVpnConfiguration extends DeviceConfiguration implements Pars
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -67,7 +67,7 @@ public class WindowsVpnConfiguration extends DeviceConfiguration implements Pars
     }
     /**
      * Gets the servers property value. List of VPN Servers on the network. Make sure end users can access these network locations. This collection can contain a maximum of 500 elements.
-     * @return a java.util.List<VpnServer>
+     * @return a {@link java.util.List<VpnServer>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<VpnServer> getServers() {

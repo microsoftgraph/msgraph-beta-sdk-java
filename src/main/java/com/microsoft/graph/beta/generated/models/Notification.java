@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Notification extends Entity implements Parsable {
     /**
-     * Instantiates a new Notification and sets the default values.
+     * Instantiates a new {@link Notification} and sets the default values.
      */
     public Notification() {
         super();
@@ -18,7 +18,7 @@ public class Notification extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Notification
+     * @return a {@link Notification}
      */
     @jakarta.annotation.Nonnull
     public static Notification createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class Notification extends Entity implements Parsable {
     }
     /**
      * Gets the displayTimeToLive property value. Sets how long (in seconds) this notification content stays in each platform's notification viewer. For example, when the notification is delivered to a Windows device, the value of this property is passed on to ToastNotification.ExpirationTime, which determines how long the toast notification stays in the user's Windows Action Center.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getDisplayTimeToLive() {
@@ -35,7 +35,7 @@ public class Notification extends Entity implements Parsable {
     }
     /**
      * Gets the expirationDateTime property value. Sets a UTC expiration date and time on a user notification using ISO 8601 format (for example, midnight UTC on Jan 1, 2019 would look like this: '2019-01-01T00:00:00Z'). When time is up, the notification is removed from the Microsoft Graph notification feed store completely and is no longer part of notification history. Max value is 30 days.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getExpirationDateTime() {
@@ -43,7 +43,7 @@ public class Notification extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -59,7 +59,7 @@ public class Notification extends Entity implements Parsable {
     }
     /**
      * Gets the groupName property value. The name of the group that this notification belongs to. It is set by the developer for grouping notifications together.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getGroupName() {
@@ -67,7 +67,7 @@ public class Notification extends Entity implements Parsable {
     }
     /**
      * Gets the payload property value. The payload property
-     * @return a PayloadTypes
+     * @return a {@link PayloadTypes}
      */
     @jakarta.annotation.Nullable
     public PayloadTypes getPayload() {
@@ -75,7 +75,7 @@ public class Notification extends Entity implements Parsable {
     }
     /**
      * Gets the priority property value. Indicates the priority of a raw user notification. Visual notifications are sent with high priority by default. Valid values are None, High and Low.
-     * @return a Priority
+     * @return a {@link Priority}
      */
     @jakarta.annotation.Nullable
     public Priority getPriority() {
@@ -83,7 +83,7 @@ public class Notification extends Entity implements Parsable {
     }
     /**
      * Gets the targetHostName property value. Represents the host name of the app to which the calling service wants to post the notification, for the given user. If targeting web endpoints (see targetPolicy.platformTypes), ensure that targetHostName is the same as the name used when creating a subscription on the client side within the application JSON property.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTargetHostName() {
@@ -91,7 +91,7 @@ public class Notification extends Entity implements Parsable {
     }
     /**
      * Gets the targetPolicy property value. Target policy object handles notification delivery policy for endpoint types that should be targeted (Windows, iOS, Android and WebPush) for the given user.
-     * @return a TargetPolicyEndpoints
+     * @return a {@link TargetPolicyEndpoints}
      */
     @jakarta.annotation.Nullable
     public TargetPolicyEndpoints getTargetPolicy() {

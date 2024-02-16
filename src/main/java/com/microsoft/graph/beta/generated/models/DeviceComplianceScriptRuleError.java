@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceComplianceScriptRuleError extends DeviceComplianceScriptError implements Parsable {
     /**
-     * Instantiates a new DeviceComplianceScriptRuleError and sets the default values.
+     * Instantiates a new {@link DeviceComplianceScriptRuleError} and sets the default values.
      */
     public DeviceComplianceScriptRuleError() {
         super();
@@ -17,7 +17,7 @@ public class DeviceComplianceScriptRuleError extends DeviceComplianceScriptError
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceComplianceScriptRuleError
+     * @return a {@link DeviceComplianceScriptRuleError}
      */
     @jakarta.annotation.Nonnull
     public static DeviceComplianceScriptRuleError createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class DeviceComplianceScriptRuleError extends DeviceComplianceScriptError
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -36,7 +36,7 @@ public class DeviceComplianceScriptRuleError extends DeviceComplianceScriptError
     }
     /**
      * Gets the settingName property value. Setting name for the rule with error.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSettingName() {

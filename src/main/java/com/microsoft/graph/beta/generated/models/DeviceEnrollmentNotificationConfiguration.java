@@ -14,7 +14,7 @@ import java.util.UUID;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceEnrollmentNotificationConfiguration extends DeviceEnrollmentConfiguration implements Parsable {
     /**
-     * Instantiates a new DeviceEnrollmentNotificationConfiguration and sets the default values.
+     * Instantiates a new {@link DeviceEnrollmentNotificationConfiguration} and sets the default values.
      */
     public DeviceEnrollmentNotificationConfiguration() {
         super();
@@ -23,7 +23,7 @@ public class DeviceEnrollmentNotificationConfiguration extends DeviceEnrollmentC
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceEnrollmentNotificationConfiguration
+     * @return a {@link DeviceEnrollmentNotificationConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static DeviceEnrollmentNotificationConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -32,7 +32,7 @@ public class DeviceEnrollmentNotificationConfiguration extends DeviceEnrollmentC
     }
     /**
      * Gets the brandingOptions property value. Branding Options for the Message Template. Branding is defined in the Intune Admin Console.
-     * @return a EnumSet<EnrollmentNotificationBrandingOptions>
+     * @return a {@link EnumSet<EnrollmentNotificationBrandingOptions>}
      */
     @jakarta.annotation.Nullable
     public EnumSet<EnrollmentNotificationBrandingOptions> getBrandingOptions() {
@@ -40,7 +40,7 @@ public class DeviceEnrollmentNotificationConfiguration extends DeviceEnrollmentC
     }
     /**
      * Gets the defaultLocale property value. DefaultLocale for the Enrollment Notification
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDefaultLocale() {
@@ -48,7 +48,7 @@ public class DeviceEnrollmentNotificationConfiguration extends DeviceEnrollmentC
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -63,7 +63,7 @@ public class DeviceEnrollmentNotificationConfiguration extends DeviceEnrollmentC
     }
     /**
      * Gets the notificationMessageTemplateId property value. Notification Message Template Id
-     * @return a UUID
+     * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
     public UUID getNotificationMessageTemplateId() {
@@ -71,7 +71,7 @@ public class DeviceEnrollmentNotificationConfiguration extends DeviceEnrollmentC
     }
     /**
      * Gets the notificationTemplates property value. The list of notification data -
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getNotificationTemplates() {
@@ -79,7 +79,7 @@ public class DeviceEnrollmentNotificationConfiguration extends DeviceEnrollmentC
     }
     /**
      * Gets the platformType property value. This enum indicates the platform type for which the enrollment restriction applies.
-     * @return a EnrollmentRestrictionPlatformType
+     * @return a {@link EnrollmentRestrictionPlatformType}
      */
     @jakarta.annotation.Nullable
     public EnrollmentRestrictionPlatformType getPlatformType() {
@@ -87,7 +87,7 @@ public class DeviceEnrollmentNotificationConfiguration extends DeviceEnrollmentC
     }
     /**
      * Gets the templateType property value. This enum indicates the Template type for which the enrollment notification applies.
-     * @return a EnrollmentNotificationTemplateType
+     * @return a {@link EnrollmentNotificationTemplateType}
      */
     @jakarta.annotation.Nullable
     public EnrollmentNotificationTemplateType getTemplateType() {

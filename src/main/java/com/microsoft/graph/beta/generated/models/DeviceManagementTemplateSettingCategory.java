@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementTemplateSettingCategory extends DeviceManagementSettingCategory implements Parsable {
     /**
-     * Instantiates a new DeviceManagementTemplateSettingCategory and sets the default values.
+     * Instantiates a new {@link DeviceManagementTemplateSettingCategory} and sets the default values.
      */
     public DeviceManagementTemplateSettingCategory() {
         super();
@@ -20,7 +20,7 @@ public class DeviceManagementTemplateSettingCategory extends DeviceManagementSet
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceManagementTemplateSettingCategory
+     * @return a {@link DeviceManagementTemplateSettingCategory}
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementTemplateSettingCategory createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -29,7 +29,7 @@ public class DeviceManagementTemplateSettingCategory extends DeviceManagementSet
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -39,7 +39,7 @@ public class DeviceManagementTemplateSettingCategory extends DeviceManagementSet
     }
     /**
      * Gets the recommendedSettings property value. The settings this category contains
-     * @return a java.util.List<DeviceManagementSettingInstance>
+     * @return a {@link java.util.List<DeviceManagementSettingInstance>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementSettingInstance> getRecommendedSettings() {

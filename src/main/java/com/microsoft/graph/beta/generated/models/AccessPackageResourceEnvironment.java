@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AccessPackageResourceEnvironment extends Entity implements Parsable {
     /**
-     * Instantiates a new AccessPackageResourceEnvironment and sets the default values.
+     * Instantiates a new {@link AccessPackageResourceEnvironment} and sets the default values.
      */
     public AccessPackageResourceEnvironment() {
         super();
@@ -18,7 +18,7 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AccessPackageResourceEnvironment
+     * @return a {@link AccessPackageResourceEnvironment}
      */
     @jakarta.annotation.Nonnull
     public static AccessPackageResourceEnvironment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
     }
     /**
      * Gets the accessPackageResources property value. Read-only. Required.
-     * @return a java.util.List<AccessPackageResource>
+     * @return a {@link java.util.List<AccessPackageResource>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackageResource> getAccessPackageResources() {
@@ -35,7 +35,7 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
     }
     /**
      * Gets the connectionInfo property value. Connection information of an environment used to connect to a resource.
-     * @return a ConnectionInfo
+     * @return a {@link ConnectionInfo}
      */
     @jakarta.annotation.Nullable
     public ConnectionInfo getConnectionInfo() {
@@ -43,7 +43,7 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
     }
     /**
      * Gets the createdBy property value. The display name of the user that created this object.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCreatedBy() {
@@ -51,7 +51,7 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
     }
     /**
      * Gets the createdDateTime property value. The date and time that this object was created. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -59,7 +59,7 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
     }
     /**
      * Gets the description property value. The description of this object.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -67,7 +67,7 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
     }
     /**
      * Gets the displayName property value. The display name of this object.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -75,7 +75,7 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -95,7 +95,7 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
     }
     /**
      * Gets the isDefaultEnvironment property value. Determines whether this is default environment or not. It is set to true for all static origin systems, such as Microsoft Entra groups and Microsoft Entra Applications.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDefaultEnvironment() {
@@ -103,7 +103,7 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
     }
     /**
      * Gets the modifiedBy property value. The display name of the entity that last modified this object.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getModifiedBy() {
@@ -111,7 +111,7 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
     }
     /**
      * Gets the modifiedDateTime property value. The date and time that this object was last modified. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getModifiedDateTime() {
@@ -119,7 +119,7 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
     }
     /**
      * Gets the originId property value. The unique identifier of this environment in the origin system.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOriginId() {
@@ -127,7 +127,7 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
     }
     /**
      * Gets the originSystem property value. The type of the resource in the origin system, that is, SharePointOnline. Requires $filter (eq).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOriginSystem() {

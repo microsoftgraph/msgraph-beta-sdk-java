@@ -27,6 +27,7 @@ import java.util.Objects;
 public class RoleInfoRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the assignments property of the microsoft.graph.privilegedRole entity.
+     * @return a {@link AssignmentsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AssignmentsRequestBuilder assignments() {
@@ -34,6 +35,7 @@ public class RoleInfoRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the selfActivate method.
+     * @return a {@link SelfActivateRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SelfActivateRequestBuilder selfActivate() {
@@ -41,6 +43,7 @@ public class RoleInfoRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the selfDeactivate method.
+     * @return a {@link SelfDeactivateRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SelfDeactivateRequestBuilder selfDeactivate() {
@@ -48,6 +51,7 @@ public class RoleInfoRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the settings property of the microsoft.graph.privilegedRole entity.
+     * @return a {@link SettingsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SettingsRequestBuilder settings() {
@@ -55,13 +59,14 @@ public class RoleInfoRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the summary property of the microsoft.graph.privilegedRole entity.
+     * @return a {@link SummaryRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SummaryRequestBuilder summary() {
         return new SummaryRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new RoleInfoRequestBuilder and sets the default values.
+     * Instantiates a new {@link RoleInfoRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -69,7 +74,7 @@ public class RoleInfoRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/privilegedApproval/{privilegedApproval%2Did}/roleInfo{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new RoleInfoRequestBuilder and sets the default values.
+     * Instantiates a new {@link RoleInfoRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -78,6 +83,7 @@ public class RoleInfoRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Delete navigation property roleInfo for privilegedApproval
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete() {
         delete(null);
@@ -85,17 +91,18 @@ public class RoleInfoRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property roleInfo for privilegedApproval
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Get roleInfo from privilegedApproval
-     * @return a PrivilegedRole
+     * @return a {@link PrivilegedRole}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public PrivilegedRole get() {
@@ -104,20 +111,21 @@ public class RoleInfoRequestBuilder extends BaseRequestBuilder {
     /**
      * Get roleInfo from privilegedApproval
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a PrivilegedRole
+     * @return a {@link PrivilegedRole}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public PrivilegedRole get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, PrivilegedRole::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property roleInfo in privilegedApproval
      * @param body The request body
-     * @return a PrivilegedRole
+     * @return a {@link PrivilegedRole}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public PrivilegedRole patch(@jakarta.annotation.Nonnull final PrivilegedRole body) {
@@ -127,20 +135,20 @@ public class RoleInfoRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property roleInfo in privilegedApproval
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a PrivilegedRole
+     * @return a {@link PrivilegedRole}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public PrivilegedRole patch(@jakarta.annotation.Nonnull final PrivilegedRole body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, PrivilegedRole::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property roleInfo for privilegedApproval
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -149,18 +157,18 @@ public class RoleInfoRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property roleInfo for privilegedApproval
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/privilegedApproval/{privilegedApproval%2Did}/roleInfo", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Get roleInfo from privilegedApproval
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -169,7 +177,7 @@ public class RoleInfoRequestBuilder extends BaseRequestBuilder {
     /**
      * Get roleInfo from privilegedApproval
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -181,7 +189,7 @@ public class RoleInfoRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property roleInfo in privilegedApproval
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final PrivilegedRole body) {
@@ -191,12 +199,12 @@ public class RoleInfoRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property roleInfo in privilegedApproval
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final PrivilegedRole body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/privilegedApproval/{privilegedApproval%2Did}/roleInfo", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -205,7 +213,7 @@ public class RoleInfoRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a RoleInfoRequestBuilder
+     * @return a {@link RoleInfoRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RoleInfoRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -235,7 +243,7 @@ public class RoleInfoRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

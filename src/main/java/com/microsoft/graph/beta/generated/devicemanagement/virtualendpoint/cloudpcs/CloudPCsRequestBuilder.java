@@ -28,6 +28,7 @@ import java.util.Objects;
 public class CloudPCsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the bulkResize method.
+     * @return a {@link BulkResizeRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public BulkResizeRequestBuilder bulkResize() {
@@ -35,6 +36,7 @@ public class CloudPCsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -42,6 +44,7 @@ public class CloudPCsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the validateBulkResize method.
+     * @return a {@link ValidateBulkResizeRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ValidateBulkResizeRequestBuilder validateBulkResize() {
@@ -50,7 +53,7 @@ public class CloudPCsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the cloudPCs property of the microsoft.graph.virtualEndpoint entity.
      * @param cloudPCId The unique identifier of cloudPC
-     * @return a CloudPCItemRequestBuilder
+     * @return a {@link CloudPCItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CloudPCItemRequestBuilder byCloudPCId(@jakarta.annotation.Nonnull final String cloudPCId) {
@@ -60,7 +63,7 @@ public class CloudPCsRequestBuilder extends BaseRequestBuilder {
         return new CloudPCItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new CloudPCsRequestBuilder and sets the default values.
+     * Instantiates a new {@link CloudPCsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -68,7 +71,7 @@ public class CloudPCsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/cloudPCs{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new CloudPCsRequestBuilder and sets the default values.
+     * Instantiates a new {@link CloudPCsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -77,7 +80,8 @@ public class CloudPCsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List the cloudPC devices in a tenant.
-     * @return a CloudPCCollectionResponse
+     * @return a {@link CloudPCCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-cloudpcs?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -87,22 +91,22 @@ public class CloudPCsRequestBuilder extends BaseRequestBuilder {
     /**
      * List the cloudPC devices in a tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CloudPCCollectionResponse
+     * @return a {@link CloudPCCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-cloudpcs?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPCCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, CloudPCCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Provides operations to call the getProvisionedCloudPCs method.
      * @param groupId Usage: groupId='{groupId}'
      * @param servicePlanId Usage: servicePlanId='{servicePlanId}'
-     * @return a GetProvisionedCloudPCsWithGroupIdWithServicePlanIdRequestBuilder
+     * @return a {@link GetProvisionedCloudPCsWithGroupIdWithServicePlanIdRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetProvisionedCloudPCsWithGroupIdWithServicePlanIdRequestBuilder getProvisionedCloudPCsWithGroupIdWithServicePlanId(@jakarta.annotation.Nonnull final String groupId, @jakarta.annotation.Nonnull final String servicePlanId) {
@@ -113,7 +117,8 @@ public class CloudPCsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to cloudPCs for deviceManagement
      * @param body The request body
-     * @return a CloudPC
+     * @return a {@link CloudPC}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public CloudPC post(@jakarta.annotation.Nonnull final CloudPC body) {
@@ -123,20 +128,20 @@ public class CloudPCsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to cloudPCs for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CloudPC
+     * @return a {@link CloudPC}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public CloudPC post(@jakarta.annotation.Nonnull final CloudPC body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, CloudPC::createFromDiscriminatorValue);
     }
     /**
      * List the cloudPC devices in a tenant.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -145,7 +150,7 @@ public class CloudPCsRequestBuilder extends BaseRequestBuilder {
     /**
      * List the cloudPC devices in a tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -157,7 +162,7 @@ public class CloudPCsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to cloudPCs for deviceManagement
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final CloudPC body) {
@@ -167,12 +172,12 @@ public class CloudPCsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to cloudPCs for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final CloudPC body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/deviceManagement/virtualEndpoint/cloudPCs", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -181,7 +186,7 @@ public class CloudPCsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a CloudPCsRequestBuilder
+     * @return a {@link CloudPCsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CloudPCsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -235,7 +240,7 @@ public class CloudPCsRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

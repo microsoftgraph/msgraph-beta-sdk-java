@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AddToReviewSetOperation extends CaseOperation implements Parsable {
     /**
-     * Instantiates a new AddToReviewSetOperation and sets the default values.
+     * Instantiates a new {@link AddToReviewSetOperation} and sets the default values.
      */
     public AddToReviewSetOperation() {
         super();
@@ -17,7 +17,7 @@ public class AddToReviewSetOperation extends CaseOperation implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AddToReviewSetOperation
+     * @return a {@link AddToReviewSetOperation}
      */
     @jakarta.annotation.Nonnull
     public static AddToReviewSetOperation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class AddToReviewSetOperation extends CaseOperation implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -37,7 +37,7 @@ public class AddToReviewSetOperation extends CaseOperation implements Parsable {
     }
     /**
      * Gets the reviewSet property value. The review set to which items matching the source collection query are added to.
-     * @return a ReviewSet
+     * @return a {@link ReviewSet}
      */
     @jakarta.annotation.Nullable
     public ReviewSet getReviewSet() {
@@ -45,7 +45,7 @@ public class AddToReviewSetOperation extends CaseOperation implements Parsable {
     }
     /**
      * Gets the sourceCollection property value. The sourceCollection that items are being added from.
-     * @return a SourceCollection
+     * @return a {@link SourceCollection}
      */
     @jakarta.annotation.Nullable
     public SourceCollection getSourceCollection() {

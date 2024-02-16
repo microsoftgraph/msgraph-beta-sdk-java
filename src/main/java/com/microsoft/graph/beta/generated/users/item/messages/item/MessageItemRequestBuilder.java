@@ -38,6 +38,7 @@ import java.util.Objects;
 public class MessageItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the attachments property of the microsoft.graph.message entity.
+     * @return a {@link AttachmentsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AttachmentsRequestBuilder attachments() {
@@ -45,6 +46,7 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the media for the user entity.
+     * @return a {@link ContentRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ContentRequestBuilder content() {
@@ -52,6 +54,7 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the copy method.
+     * @return a {@link CopyRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CopyRequestBuilder copy() {
@@ -59,6 +62,7 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the createForward method.
+     * @return a {@link CreateForwardRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CreateForwardRequestBuilder createForward() {
@@ -66,6 +70,7 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the createReply method.
+     * @return a {@link CreateReplyRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CreateReplyRequestBuilder createReply() {
@@ -73,6 +78,7 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the createReplyAll method.
+     * @return a {@link CreateReplyAllRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CreateReplyAllRequestBuilder createReplyAll() {
@@ -80,6 +86,7 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the extensions property of the microsoft.graph.message entity.
+     * @return a {@link ExtensionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ExtensionsRequestBuilder extensions() {
@@ -87,6 +94,7 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the forward method.
+     * @return a {@link ForwardRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ForwardRequestBuilder forward() {
@@ -94,6 +102,7 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the markAsJunk method.
+     * @return a {@link MarkAsJunkRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MarkAsJunkRequestBuilder markAsJunk() {
@@ -101,6 +110,7 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the markAsNotJunk method.
+     * @return a {@link MarkAsNotJunkRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MarkAsNotJunkRequestBuilder markAsNotJunk() {
@@ -108,6 +118,7 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the mentions property of the microsoft.graph.message entity.
+     * @return a {@link MentionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MentionsRequestBuilder mentions() {
@@ -115,6 +126,7 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the move method.
+     * @return a {@link MoveRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MoveRequestBuilder move() {
@@ -122,6 +134,7 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the reply method.
+     * @return a {@link ReplyRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ReplyRequestBuilder reply() {
@@ -129,6 +142,7 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the replyAll method.
+     * @return a {@link ReplyAllRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ReplyAllRequestBuilder replyAll() {
@@ -136,6 +150,7 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the send method.
+     * @return a {@link SendRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SendRequestBuilder send() {
@@ -143,13 +158,14 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the unsubscribe method.
+     * @return a {@link UnsubscribeRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UnsubscribeRequestBuilder unsubscribe() {
         return new UnsubscribeRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new MessageItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link MessageItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -157,7 +173,7 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/messages/{message%2Did}{?%24expand,%24select,includeHiddenMessages*}", pathParameters);
     }
     /**
-     * Instantiates a new MessageItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link MessageItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -165,27 +181,29 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/messages/{message%2Did}{?%24expand,%24select,includeHiddenMessages*}", rawUrl);
     }
     /**
-     * Delete a message in the specified user's mailbox, or delete a relationship of the message. For example, you can delete a specific @-mention of the specified user in the message.
-     * @see <a href="https://learn.microsoft.com/graph/api/message-delete?view=graph-rest-1.0">Find more info here</a>
+     * Delete eventMessage.
+     * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/eventmessage-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a message in the specified user's mailbox, or delete a relationship of the message. For example, you can delete a specific @-mention of the specified user in the message.
+     * Delete eventMessage.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @see <a href="https://learn.microsoft.com/graph/api/message-delete?view=graph-rest-1.0">Find more info here</a>
+     * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/eventmessage-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * The messages in a mailbox or folder. Read-only. Nullable.
-     * @return a Message
+     * @return a {@link Message}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/eventmessage-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -195,21 +213,22 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The messages in a mailbox or folder. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a Message
+     * @return a {@link Message}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/eventmessage-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Message get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, Message::createFromDiscriminatorValue);
     }
     /**
      * Update the properties of an eventMessage object.
      * @param body The request body
-     * @return a Message
+     * @return a {@link Message}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/eventmessage-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -220,7 +239,8 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of an eventMessage object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a Message
+     * @return a {@link Message}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/eventmessage-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -228,33 +248,32 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, Message::createFromDiscriminatorValue);
     }
     /**
-     * Delete a message in the specified user's mailbox, or delete a relationship of the message. For example, you can delete a specific @-mention of the specified user in the message.
-     * @return a RequestInformation
+     * Delete eventMessage.
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a message in the specified user's mailbox, or delete a relationship of the message. For example, you can delete a specific @-mention of the specified user in the message.
+     * Delete eventMessage.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/users/{user%2Did}/messages/{message%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * The messages in a mailbox or folder. Read-only. Nullable.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -263,7 +282,7 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The messages in a mailbox or folder. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -275,7 +294,7 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of an eventMessage object.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final Message body) {
@@ -285,12 +304,12 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of an eventMessage object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final Message body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/users/{user%2Did}/messages/{message%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -299,7 +318,7 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a MessageItemRequestBuilder
+     * @return a {@link MessageItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MessageItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -334,7 +353,7 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MessageEvent extends Entity implements Parsable {
     /**
-     * Instantiates a new MessageEvent and sets the default values.
+     * Instantiates a new {@link MessageEvent} and sets the default values.
      */
     public MessageEvent() {
         super();
@@ -18,7 +18,7 @@ public class MessageEvent extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MessageEvent
+     * @return a {@link MessageEvent}
      */
     @jakarta.annotation.Nonnull
     public static MessageEvent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class MessageEvent extends Entity implements Parsable {
     }
     /**
      * Gets the dateTime property value. The dateTime property
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getDateTime() {
@@ -35,7 +35,7 @@ public class MessageEvent extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The description property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -43,7 +43,7 @@ public class MessageEvent extends Entity implements Parsable {
     }
     /**
      * Gets the eventType property value. The eventType property
-     * @return a MessageEventType
+     * @return a {@link MessageEventType}
      */
     @jakarta.annotation.Nullable
     public MessageEventType getEventType() {
@@ -51,7 +51,7 @@ public class MessageEvent extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

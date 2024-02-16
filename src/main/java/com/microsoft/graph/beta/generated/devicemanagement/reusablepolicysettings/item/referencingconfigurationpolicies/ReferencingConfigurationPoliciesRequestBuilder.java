@@ -25,6 +25,7 @@ import java.util.Objects;
 public class ReferencingConfigurationPoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -33,7 +34,7 @@ public class ReferencingConfigurationPoliciesRequestBuilder extends BaseRequestB
     /**
      * Provides operations to manage the referencingConfigurationPolicies property of the microsoft.graph.deviceManagementReusablePolicySetting entity.
      * @param deviceManagementConfigurationPolicyId The unique identifier of deviceManagementConfigurationPolicy
-     * @return a DeviceManagementConfigurationPolicyItemRequestBuilder
+     * @return a {@link DeviceManagementConfigurationPolicyItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DeviceManagementConfigurationPolicyItemRequestBuilder byDeviceManagementConfigurationPolicyId(@jakarta.annotation.Nonnull final String deviceManagementConfigurationPolicyId) {
@@ -43,7 +44,7 @@ public class ReferencingConfigurationPoliciesRequestBuilder extends BaseRequestB
         return new DeviceManagementConfigurationPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new ReferencingConfigurationPoliciesRequestBuilder and sets the default values.
+     * Instantiates a new {@link ReferencingConfigurationPoliciesRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -51,7 +52,7 @@ public class ReferencingConfigurationPoliciesRequestBuilder extends BaseRequestB
         super(requestAdapter, "{+baseurl}/deviceManagement/reusablePolicySettings/{deviceManagementReusablePolicySetting%2Did}/referencingConfigurationPolicies{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new ReferencingConfigurationPoliciesRequestBuilder and sets the default values.
+     * Instantiates a new {@link ReferencingConfigurationPoliciesRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -60,7 +61,8 @@ public class ReferencingConfigurationPoliciesRequestBuilder extends BaseRequestB
     }
     /**
      * configuration policies referencing the current reusable setting. This property is read-only.
-     * @return a DeviceManagementConfigurationPolicyCollectionResponse
+     * @return a {@link DeviceManagementConfigurationPolicyCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public DeviceManagementConfigurationPolicyCollectionResponse get() {
@@ -69,20 +71,21 @@ public class ReferencingConfigurationPoliciesRequestBuilder extends BaseRequestB
     /**
      * configuration policies referencing the current reusable setting. This property is read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a DeviceManagementConfigurationPolicyCollectionResponse
+     * @return a {@link DeviceManagementConfigurationPolicyCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public DeviceManagementConfigurationPolicyCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceManagementConfigurationPolicyCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to referencingConfigurationPolicies for deviceManagement
      * @param body The request body
-     * @return a DeviceManagementConfigurationPolicy
+     * @return a {@link DeviceManagementConfigurationPolicy}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public DeviceManagementConfigurationPolicy post(@jakarta.annotation.Nonnull final DeviceManagementConfigurationPolicy body) {
@@ -92,20 +95,20 @@ public class ReferencingConfigurationPoliciesRequestBuilder extends BaseRequestB
      * Create new navigation property to referencingConfigurationPolicies for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a DeviceManagementConfigurationPolicy
+     * @return a {@link DeviceManagementConfigurationPolicy}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public DeviceManagementConfigurationPolicy post(@jakarta.annotation.Nonnull final DeviceManagementConfigurationPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceManagementConfigurationPolicy::createFromDiscriminatorValue);
     }
     /**
      * configuration policies referencing the current reusable setting. This property is read-only.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -114,7 +117,7 @@ public class ReferencingConfigurationPoliciesRequestBuilder extends BaseRequestB
     /**
      * configuration policies referencing the current reusable setting. This property is read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -126,7 +129,7 @@ public class ReferencingConfigurationPoliciesRequestBuilder extends BaseRequestB
     /**
      * Create new navigation property to referencingConfigurationPolicies for deviceManagement
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final DeviceManagementConfigurationPolicy body) {
@@ -136,12 +139,12 @@ public class ReferencingConfigurationPoliciesRequestBuilder extends BaseRequestB
      * Create new navigation property to referencingConfigurationPolicies for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final DeviceManagementConfigurationPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/deviceManagement/reusablePolicySettings/{deviceManagementReusablePolicySetting%2Did}/referencingConfigurationPolicies", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -150,7 +153,7 @@ public class ReferencingConfigurationPoliciesRequestBuilder extends BaseRequestB
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a ReferencingConfigurationPoliciesRequestBuilder
+     * @return a {@link ReferencingConfigurationPoliciesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ReferencingConfigurationPoliciesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -204,7 +207,7 @@ public class ReferencingConfigurationPoliciesRequestBuilder extends BaseRequestB
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

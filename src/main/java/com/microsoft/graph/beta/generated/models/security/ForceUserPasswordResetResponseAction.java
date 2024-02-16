@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ForceUserPasswordResetResponseAction extends ResponseAction implements Parsable {
     /**
-     * Instantiates a new ForceUserPasswordResetResponseAction and sets the default values.
+     * Instantiates a new {@link ForceUserPasswordResetResponseAction} and sets the default values.
      */
     public ForceUserPasswordResetResponseAction() {
         super();
@@ -19,7 +19,7 @@ public class ForceUserPasswordResetResponseAction extends ResponseAction impleme
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ForceUserPasswordResetResponseAction
+     * @return a {@link ForceUserPasswordResetResponseAction}
      */
     @jakarta.annotation.Nonnull
     public static ForceUserPasswordResetResponseAction createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class ForceUserPasswordResetResponseAction extends ResponseAction impleme
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -38,7 +38,7 @@ public class ForceUserPasswordResetResponseAction extends ResponseAction impleme
     }
     /**
      * Gets the identifier property value. The identifier property
-     * @return a EnumSet<ForceUserPasswordResetEntityIdentifier>
+     * @return a {@link EnumSet<ForceUserPasswordResetEntityIdentifier>}
      */
     @jakarta.annotation.Nullable
     public EnumSet<ForceUserPasswordResetEntityIdentifier> getIdentifier() {

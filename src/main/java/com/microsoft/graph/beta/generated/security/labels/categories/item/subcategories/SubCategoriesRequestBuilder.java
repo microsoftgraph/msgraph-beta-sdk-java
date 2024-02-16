@@ -25,6 +25,7 @@ import java.util.Objects;
 public class SubCategoriesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -33,7 +34,7 @@ public class SubCategoriesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the subCategories property of the microsoft.graph.security.categoryTemplate entity.
      * @param subCategoryTemplateId The unique identifier of subCategoryTemplate
-     * @return a SubCategoryTemplateItemRequestBuilder
+     * @return a {@link SubCategoryTemplateItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SubCategoryTemplateItemRequestBuilder bySubCategoryTemplateId(@jakarta.annotation.Nonnull final String subCategoryTemplateId) {
@@ -43,7 +44,7 @@ public class SubCategoriesRequestBuilder extends BaseRequestBuilder {
         return new SubCategoryTemplateItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new SubCategoriesRequestBuilder and sets the default values.
+     * Instantiates a new {@link SubCategoriesRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -51,7 +52,7 @@ public class SubCategoriesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/labels/categories/{categoryTemplate%2Did}/subCategories{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new SubCategoriesRequestBuilder and sets the default values.
+     * Instantiates a new {@link SubCategoriesRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -60,7 +61,8 @@ public class SubCategoriesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of subcategories subCategoryTemplate associated with a category template.
-     * @return a SubCategoryTemplateCollectionResponse
+     * @return a {@link SubCategoryTemplateCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/security-categorytemplate-list-subcategories?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -70,21 +72,22 @@ public class SubCategoriesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of subcategories subCategoryTemplate associated with a category template.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a SubCategoryTemplateCollectionResponse
+     * @return a {@link SubCategoryTemplateCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/security-categorytemplate-list-subcategories?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SubCategoryTemplateCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, SubCategoryTemplateCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new subCategoryTemplate object.
      * @param body The request body
-     * @return a SubCategoryTemplate
+     * @return a {@link SubCategoryTemplate}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/security-categorytemplate-post-subcategories?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -95,7 +98,8 @@ public class SubCategoriesRequestBuilder extends BaseRequestBuilder {
      * Create a new subCategoryTemplate object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a SubCategoryTemplate
+     * @return a {@link SubCategoryTemplate}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/security-categorytemplate-post-subcategories?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -103,13 +107,12 @@ public class SubCategoriesRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, SubCategoryTemplate::createFromDiscriminatorValue);
     }
     /**
      * Get a list of subcategories subCategoryTemplate associated with a category template.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -118,7 +121,7 @@ public class SubCategoriesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of subcategories subCategoryTemplate associated with a category template.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -130,7 +133,7 @@ public class SubCategoriesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new subCategoryTemplate object.
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final SubCategoryTemplate body) {
@@ -140,12 +143,12 @@ public class SubCategoriesRequestBuilder extends BaseRequestBuilder {
      * Create a new subCategoryTemplate object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final SubCategoryTemplate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/security/labels/categories/{categoryTemplate%2Did}/subCategories", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -154,7 +157,7 @@ public class SubCategoriesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a SubCategoriesRequestBuilder
+     * @return a {@link SubCategoriesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SubCategoriesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -208,7 +211,7 @@ public class SubCategoriesRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

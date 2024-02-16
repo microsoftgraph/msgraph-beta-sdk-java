@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementSettingCategory extends Entity implements Parsable {
     /**
-     * Instantiates a new DeviceManagementSettingCategory and sets the default values.
+     * Instantiates a new {@link DeviceManagementSettingCategory} and sets the default values.
      */
     public DeviceManagementSettingCategory() {
         super();
@@ -20,7 +20,7 @@ public class DeviceManagementSettingCategory extends Entity implements Parsable 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceManagementSettingCategory
+     * @return a {@link DeviceManagementSettingCategory}
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementSettingCategory createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class DeviceManagementSettingCategory extends Entity implements Parsable 
     }
     /**
      * Gets the displayName property value. The category name
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -45,7 +45,7 @@ public class DeviceManagementSettingCategory extends Entity implements Parsable 
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -57,7 +57,7 @@ public class DeviceManagementSettingCategory extends Entity implements Parsable 
     }
     /**
      * Gets the hasRequiredSetting property value. The category contains top level required setting
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getHasRequiredSetting() {
@@ -65,7 +65,7 @@ public class DeviceManagementSettingCategory extends Entity implements Parsable 
     }
     /**
      * Gets the settingDefinitions property value. The setting definitions this category contains
-     * @return a java.util.List<DeviceManagementSettingDefinition>
+     * @return a {@link java.util.List<DeviceManagementSettingDefinition>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementSettingDefinition> getSettingDefinitions() {

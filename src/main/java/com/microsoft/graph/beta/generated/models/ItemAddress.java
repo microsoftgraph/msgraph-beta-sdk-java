@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ItemAddress extends ItemFacet implements Parsable {
     /**
-     * Instantiates a new ItemAddress and sets the default values.
+     * Instantiates a new {@link ItemAddress} and sets the default values.
      */
     public ItemAddress() {
         super();
@@ -18,7 +18,7 @@ public class ItemAddress extends ItemFacet implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ItemAddress
+     * @return a {@link ItemAddress}
      */
     @jakarta.annotation.Nonnull
     public static ItemAddress createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class ItemAddress extends ItemFacet implements Parsable {
     }
     /**
      * Gets the detail property value. The detail property
-     * @return a PhysicalAddress
+     * @return a {@link PhysicalAddress}
      */
     @jakarta.annotation.Nullable
     public PhysicalAddress getDetail() {
@@ -35,7 +35,7 @@ public class ItemAddress extends ItemFacet implements Parsable {
     }
     /**
      * Gets the displayName property value. Friendly name the user has assigned to this address.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -43,7 +43,7 @@ public class ItemAddress extends ItemFacet implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -55,7 +55,7 @@ public class ItemAddress extends ItemFacet implements Parsable {
     }
     /**
      * Gets the geoCoordinates property value. The geocoordinates of the address.
-     * @return a GeoCoordinates
+     * @return a {@link GeoCoordinates}
      */
     @jakarta.annotation.Nullable
     public GeoCoordinates getGeoCoordinates() {

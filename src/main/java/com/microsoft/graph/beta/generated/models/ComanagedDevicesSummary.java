@@ -21,7 +21,7 @@ public class ComanagedDevicesSummary implements AdditionalDataHolder, BackedMode
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new ComanagedDevicesSummary and sets the default values.
+     * Instantiates a new {@link ComanagedDevicesSummary} and sets the default values.
      */
     public ComanagedDevicesSummary() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -30,7 +30,7 @@ public class ComanagedDevicesSummary implements AdditionalDataHolder, BackedMode
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ComanagedDevicesSummary
+     * @return a {@link ComanagedDevicesSummary}
      */
     @jakarta.annotation.Nonnull
     public static ComanagedDevicesSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class ComanagedDevicesSummary implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -52,7 +52,7 @@ public class ComanagedDevicesSummary implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -60,7 +60,7 @@ public class ComanagedDevicesSummary implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the compliancePolicyCount property value. Number of devices with CompliancePolicy swung-over. This property is read-only.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getCompliancePolicyCount() {
@@ -68,7 +68,7 @@ public class ComanagedDevicesSummary implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the configurationSettingsCount property value. Number of devices with ConfigurationSettings swung-over. This property is read-only.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getConfigurationSettingsCount() {
@@ -76,7 +76,7 @@ public class ComanagedDevicesSummary implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the endpointProtectionCount property value. Number of devices with EndpointProtection swung-over. This property is read-only.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getEndpointProtectionCount() {
@@ -84,7 +84,7 @@ public class ComanagedDevicesSummary implements AdditionalDataHolder, BackedMode
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -103,7 +103,7 @@ public class ComanagedDevicesSummary implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the inventoryCount property value. Number of devices with Inventory swung-over. This property is read-only.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getInventoryCount() {
@@ -111,7 +111,7 @@ public class ComanagedDevicesSummary implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the modernAppsCount property value. Number of devices with ModernApps swung-over. This property is read-only.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getModernAppsCount() {
@@ -119,7 +119,7 @@ public class ComanagedDevicesSummary implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -127,7 +127,7 @@ public class ComanagedDevicesSummary implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the officeAppsCount property value. Number of devices with OfficeApps swung-over. This property is read-only.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getOfficeAppsCount() {
@@ -135,7 +135,7 @@ public class ComanagedDevicesSummary implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the resourceAccessCount property value. Number of devices with ResourceAccess swung-over. This property is read-only.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getResourceAccessCount() {
@@ -143,7 +143,7 @@ public class ComanagedDevicesSummary implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the totalComanagedCount property value. Number of Co-Managed Devices. This property is read-only.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getTotalComanagedCount() {
@@ -151,7 +151,7 @@ public class ComanagedDevicesSummary implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the windowsUpdateForBusinessCount property value. Number of devices with WindowsUpdateForBusiness swung-over. This property is read-only.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getWindowsUpdateForBusinessCount() {

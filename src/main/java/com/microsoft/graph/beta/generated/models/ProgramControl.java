@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ProgramControl extends Entity implements Parsable {
     /**
-     * Instantiates a new ProgramControl and sets the default values.
+     * Instantiates a new {@link ProgramControl} and sets the default values.
      */
     public ProgramControl() {
         super();
@@ -18,7 +18,7 @@ public class ProgramControl extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ProgramControl
+     * @return a {@link ProgramControl}
      */
     @jakarta.annotation.Nonnull
     public static ProgramControl createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class ProgramControl extends Entity implements Parsable {
     }
     /**
      * Gets the controlId property value. The controlId of the control, in particular the identifier of an access review. Required on create.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getControlId() {
@@ -35,7 +35,7 @@ public class ProgramControl extends Entity implements Parsable {
     }
     /**
      * Gets the controlTypeId property value. The programControlType identifies the type of program control - for example, a control linking to guest access reviews. Required on create.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getControlTypeId() {
@@ -43,7 +43,7 @@ public class ProgramControl extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. The creation date and time of the program control.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -51,7 +51,7 @@ public class ProgramControl extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The name of the control.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -59,7 +59,7 @@ public class ProgramControl extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -77,7 +77,7 @@ public class ProgramControl extends Entity implements Parsable {
     }
     /**
      * Gets the owner property value. The user who created the program control.
-     * @return a UserIdentity
+     * @return a {@link UserIdentity}
      */
     @jakarta.annotation.Nullable
     public UserIdentity getOwner() {
@@ -85,7 +85,7 @@ public class ProgramControl extends Entity implements Parsable {
     }
     /**
      * Gets the program property value. The program this control is part of.
-     * @return a Program
+     * @return a {@link Program}
      */
     @jakarta.annotation.Nullable
     public Program getProgram() {
@@ -93,7 +93,7 @@ public class ProgramControl extends Entity implements Parsable {
     }
     /**
      * Gets the programId property value. The programId of the program this control is a part of. Required on create.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getProgramId() {
@@ -101,7 +101,7 @@ public class ProgramControl extends Entity implements Parsable {
     }
     /**
      * Gets the resource property value. The resource, a group or an app, targeted by this program control's access review.
-     * @return a ProgramResource
+     * @return a {@link ProgramResource}
      */
     @jakarta.annotation.Nullable
     public ProgramResource getResource() {
@@ -109,7 +109,7 @@ public class ProgramControl extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The life cycle status of the control.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getStatus() {

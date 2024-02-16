@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementAutopilotPolicyStatusDetail extends Entity implements Parsable {
     /**
-     * Instantiates a new DeviceManagementAutopilotPolicyStatusDetail and sets the default values.
+     * Instantiates a new {@link DeviceManagementAutopilotPolicyStatusDetail} and sets the default values.
      */
     public DeviceManagementAutopilotPolicyStatusDetail() {
         super();
@@ -21,7 +21,7 @@ public class DeviceManagementAutopilotPolicyStatusDetail extends Entity implemen
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceManagementAutopilotPolicyStatusDetail
+     * @return a {@link DeviceManagementAutopilotPolicyStatusDetail}
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementAutopilotPolicyStatusDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class DeviceManagementAutopilotPolicyStatusDetail extends Entity implemen
     }
     /**
      * Gets the complianceStatus property value. The complianceStatus property
-     * @return a DeviceManagementAutopilotPolicyComplianceStatus
+     * @return a {@link DeviceManagementAutopilotPolicyComplianceStatus}
      */
     @jakarta.annotation.Nullable
     public DeviceManagementAutopilotPolicyComplianceStatus getComplianceStatus() {
@@ -38,7 +38,7 @@ public class DeviceManagementAutopilotPolicyStatusDetail extends Entity implemen
     }
     /**
      * Gets the displayName property value. The friendly name of the policy.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -46,7 +46,7 @@ public class DeviceManagementAutopilotPolicyStatusDetail extends Entity implemen
     }
     /**
      * Gets the errorCode property value. The errorode associated with the compliance or enforcement status of the policy. Error code for enforcement status takes precedence if it exists.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getErrorCode() {
@@ -54,7 +54,7 @@ public class DeviceManagementAutopilotPolicyStatusDetail extends Entity implemen
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -69,7 +69,7 @@ public class DeviceManagementAutopilotPolicyStatusDetail extends Entity implemen
     }
     /**
      * Gets the lastReportedDateTime property value. Timestamp of the reported policy status
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastReportedDateTime() {
@@ -77,7 +77,7 @@ public class DeviceManagementAutopilotPolicyStatusDetail extends Entity implemen
     }
     /**
      * Gets the policyType property value. The policyType property
-     * @return a DeviceManagementAutopilotPolicyType
+     * @return a {@link DeviceManagementAutopilotPolicyType}
      */
     @jakarta.annotation.Nullable
     public DeviceManagementAutopilotPolicyType getPolicyType() {
@@ -85,7 +85,7 @@ public class DeviceManagementAutopilotPolicyStatusDetail extends Entity implemen
     }
     /**
      * Gets the trackedOnEnrollmentStatus property value. Indicates if this policy was tracked as part of the autopilot bootstrap enrollment sync session
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getTrackedOnEnrollmentStatus() {

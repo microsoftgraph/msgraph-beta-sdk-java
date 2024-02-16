@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PermissionsCreepIndexDistribution extends Entity implements Parsable {
     /**
-     * Instantiates a new PermissionsCreepIndexDistribution and sets the default values.
+     * Instantiates a new {@link PermissionsCreepIndexDistribution} and sets the default values.
      */
     public PermissionsCreepIndexDistribution() {
         super();
@@ -18,7 +18,7 @@ public class PermissionsCreepIndexDistribution extends Entity implements Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PermissionsCreepIndexDistribution
+     * @return a {@link PermissionsCreepIndexDistribution}
      */
     @jakarta.annotation.Nonnull
     public static PermissionsCreepIndexDistribution createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class PermissionsCreepIndexDistribution extends Entity implements Parsabl
     }
     /**
      * Gets the authorizationSystem property value. The authorizationSystem property
-     * @return a AuthorizationSystem
+     * @return a {@link AuthorizationSystem}
      */
     @jakarta.annotation.Nullable
     public AuthorizationSystem getAuthorizationSystem() {
@@ -35,7 +35,7 @@ public class PermissionsCreepIndexDistribution extends Entity implements Parsabl
     }
     /**
      * Gets the createdDateTime property value. Defines when the PCI distribution was created.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -43,7 +43,7 @@ public class PermissionsCreepIndexDistribution extends Entity implements Parsabl
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -57,7 +57,7 @@ public class PermissionsCreepIndexDistribution extends Entity implements Parsabl
     }
     /**
      * Gets the highRiskProfile property value. The highRiskProfile property
-     * @return a RiskProfile
+     * @return a {@link RiskProfile}
      */
     @jakarta.annotation.Nullable
     public RiskProfile getHighRiskProfile() {
@@ -65,7 +65,7 @@ public class PermissionsCreepIndexDistribution extends Entity implements Parsabl
     }
     /**
      * Gets the lowRiskProfile property value. The lowRiskProfile property
-     * @return a RiskProfile
+     * @return a {@link RiskProfile}
      */
     @jakarta.annotation.Nullable
     public RiskProfile getLowRiskProfile() {
@@ -73,7 +73,7 @@ public class PermissionsCreepIndexDistribution extends Entity implements Parsabl
     }
     /**
      * Gets the mediumRiskProfile property value. The mediumRiskProfile property
-     * @return a RiskProfile
+     * @return a {@link RiskProfile}
      */
     @jakarta.annotation.Nullable
     public RiskProfile getMediumRiskProfile() {

@@ -30,6 +30,7 @@ import java.util.Objects;
 public class AccessReviewItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the applyDecisions method.
+     * @return a {@link ApplyDecisionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ApplyDecisionsRequestBuilder applyDecisions() {
@@ -37,6 +38,7 @@ public class AccessReviewItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the decisions property of the microsoft.graph.accessReview entity.
+     * @return a {@link DecisionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DecisionsRequestBuilder decisions() {
@@ -44,6 +46,7 @@ public class AccessReviewItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the instances property of the microsoft.graph.accessReview entity.
+     * @return a {@link InstancesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public InstancesRequestBuilder instances() {
@@ -51,6 +54,7 @@ public class AccessReviewItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the myDecisions property of the microsoft.graph.accessReview entity.
+     * @return a {@link MyDecisionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MyDecisionsRequestBuilder myDecisions() {
@@ -58,6 +62,7 @@ public class AccessReviewItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the resetDecisions method.
+     * @return a {@link ResetDecisionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ResetDecisionsRequestBuilder resetDecisions() {
@@ -65,6 +70,7 @@ public class AccessReviewItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the reviewers property of the microsoft.graph.accessReview entity.
+     * @return a {@link ReviewersRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ReviewersRequestBuilder reviewers() {
@@ -72,6 +78,7 @@ public class AccessReviewItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the sendReminder method.
+     * @return a {@link SendReminderRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SendReminderRequestBuilder sendReminder() {
@@ -79,13 +86,14 @@ public class AccessReviewItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the stop method.
+     * @return a {@link StopRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public StopRequestBuilder stop() {
         return new StopRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new AccessReviewItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link AccessReviewItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -93,7 +101,7 @@ public class AccessReviewItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/accessReviews/{accessReview%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new AccessReviewItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link AccessReviewItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -102,6 +110,7 @@ public class AccessReviewItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * In the Microsoft Entra access reviews feature, delete an accessReview object.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/accessreview-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
@@ -110,18 +119,19 @@ public class AccessReviewItemRequestBuilder extends BaseRequestBuilder {
     /**
      * In the Microsoft Entra access reviews feature, delete an accessReview object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/accessreview-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * In the Microsoft Entra access reviews feature, retrieve an accessReview object.   To retrieve the reviewers of the access review, use the list accessReview reviewers API. To retrieve the decisions of the access review, use the list accessReview decisions API, or the list my accessReview decisions API. If this is a recurring access review, no decisions will be associated with the recurring access review series. Instead, use the instances relationship of that series to retrieve an accessReview collection of the past, current, and future instances of the access review. Each past and current instance will have decisions.
-     * @return a AccessReview
+     * @return a {@link AccessReview}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/accessreview-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -131,21 +141,22 @@ public class AccessReviewItemRequestBuilder extends BaseRequestBuilder {
     /**
      * In the Microsoft Entra access reviews feature, retrieve an accessReview object.   To retrieve the reviewers of the access review, use the list accessReview reviewers API. To retrieve the decisions of the access review, use the list accessReview decisions API, or the list my accessReview decisions API. If this is a recurring access review, no decisions will be associated with the recurring access review series. Instead, use the instances relationship of that series to retrieve an accessReview collection of the past, current, and future instances of the access review. Each past and current instance will have decisions.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a AccessReview
+     * @return a {@link AccessReview}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/accessreview-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AccessReview get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, AccessReview::createFromDiscriminatorValue);
     }
     /**
      * In the Microsoft Entra access reviews feature, update an existing accessReview object to change one or more of its properties. This API is not intended to change the reviewers or decisions of a review.  To change the reviewers, use the addReviewer or removeReviewer APIs.  To stop an already-started one-time review, or an already-started instance of a recurring review, early, use the stop API. To apply the decisions to the target group or app access rights, use the apply API. 
      * @param body The request body
-     * @return a AccessReview
+     * @return a {@link AccessReview}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/accessreview-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -156,7 +167,8 @@ public class AccessReviewItemRequestBuilder extends BaseRequestBuilder {
      * In the Microsoft Entra access reviews feature, update an existing accessReview object to change one or more of its properties. This API is not intended to change the reviewers or decisions of a review.  To change the reviewers, use the addReviewer or removeReviewer APIs.  To stop an already-started one-time review, or an already-started instance of a recurring review, early, use the stop API. To apply the decisions to the target group or app access rights, use the apply API. 
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a AccessReview
+     * @return a {@link AccessReview}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/accessreview-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -164,13 +176,12 @@ public class AccessReviewItemRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, AccessReview::createFromDiscriminatorValue);
     }
     /**
      * In the Microsoft Entra access reviews feature, delete an accessReview object.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -179,18 +190,18 @@ public class AccessReviewItemRequestBuilder extends BaseRequestBuilder {
     /**
      * In the Microsoft Entra access reviews feature, delete an accessReview object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/accessReviews/{accessReview%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * In the Microsoft Entra access reviews feature, retrieve an accessReview object.   To retrieve the reviewers of the access review, use the list accessReview reviewers API. To retrieve the decisions of the access review, use the list accessReview decisions API, or the list my accessReview decisions API. If this is a recurring access review, no decisions will be associated with the recurring access review series. Instead, use the instances relationship of that series to retrieve an accessReview collection of the past, current, and future instances of the access review. Each past and current instance will have decisions.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -199,7 +210,7 @@ public class AccessReviewItemRequestBuilder extends BaseRequestBuilder {
     /**
      * In the Microsoft Entra access reviews feature, retrieve an accessReview object.   To retrieve the reviewers of the access review, use the list accessReview reviewers API. To retrieve the decisions of the access review, use the list accessReview decisions API, or the list my accessReview decisions API. If this is a recurring access review, no decisions will be associated with the recurring access review series. Instead, use the instances relationship of that series to retrieve an accessReview collection of the past, current, and future instances of the access review. Each past and current instance will have decisions.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -211,7 +222,7 @@ public class AccessReviewItemRequestBuilder extends BaseRequestBuilder {
     /**
      * In the Microsoft Entra access reviews feature, update an existing accessReview object to change one or more of its properties. This API is not intended to change the reviewers or decisions of a review.  To change the reviewers, use the addReviewer or removeReviewer APIs.  To stop an already-started one-time review, or an already-started instance of a recurring review, early, use the stop API. To apply the decisions to the target group or app access rights, use the apply API. 
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final AccessReview body) {
@@ -221,12 +232,12 @@ public class AccessReviewItemRequestBuilder extends BaseRequestBuilder {
      * In the Microsoft Entra access reviews feature, update an existing accessReview object to change one or more of its properties. This API is not intended to change the reviewers or decisions of a review.  To change the reviewers, use the addReviewer or removeReviewer APIs.  To stop an already-started one-time review, or an already-started instance of a recurring review, early, use the stop API. To apply the decisions to the target group or app access rights, use the apply API. 
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final AccessReview body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/accessReviews/{accessReview%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -235,7 +246,7 @@ public class AccessReviewItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a AccessReviewItemRequestBuilder
+     * @return a {@link AccessReviewItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AccessReviewItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -265,7 +276,7 @@ public class AccessReviewItemRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

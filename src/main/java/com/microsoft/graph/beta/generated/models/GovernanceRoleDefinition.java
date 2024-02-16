@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GovernanceRoleDefinition extends Entity implements Parsable {
     /**
-     * Instantiates a new GovernanceRoleDefinition and sets the default values.
+     * Instantiates a new {@link GovernanceRoleDefinition} and sets the default values.
      */
     public GovernanceRoleDefinition() {
         super();
@@ -17,7 +17,7 @@ public class GovernanceRoleDefinition extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a GovernanceRoleDefinition
+     * @return a {@link GovernanceRoleDefinition}
      */
     @jakarta.annotation.Nonnull
     public static GovernanceRoleDefinition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class GovernanceRoleDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name of the role definition.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -34,7 +34,7 @@ public class GovernanceRoleDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the externalId property value. The external id of the role definition.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getExternalId() {
@@ -42,7 +42,7 @@ public class GovernanceRoleDefinition extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -57,7 +57,7 @@ public class GovernanceRoleDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the resource property value. Read-only. The associated resource for the role definition.
-     * @return a GovernanceResource
+     * @return a {@link GovernanceResource}
      */
     @jakarta.annotation.Nullable
     public GovernanceResource getResource() {
@@ -65,7 +65,7 @@ public class GovernanceRoleDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the resourceId property value. Required. The id of the resource associated with the role definition.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getResourceId() {
@@ -73,7 +73,7 @@ public class GovernanceRoleDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the roleSetting property value. The associated role setting for the role definition.
-     * @return a GovernanceRoleSetting
+     * @return a {@link GovernanceRoleSetting}
      */
     @jakarta.annotation.Nullable
     public GovernanceRoleSetting getRoleSetting() {
@@ -81,7 +81,7 @@ public class GovernanceRoleDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the templateId property value. The templateId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getTemplateId() {

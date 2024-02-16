@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EmailThreatSubmission extends ThreatSubmission implements Parsable {
     /**
-     * Instantiates a new EmailThreatSubmission and sets the default values.
+     * Instantiates a new {@link EmailThreatSubmission} and sets the default values.
      */
     public EmailThreatSubmission() {
         super();
@@ -19,7 +19,7 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EmailThreatSubmission
+     * @return a {@link EmailThreatSubmission}
      */
     @jakarta.annotation.Nonnull
     public static EmailThreatSubmission createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
     }
     /**
      * Gets the attackSimulationInfo property value. If the email is phishing simulation, this field won't be null.
-     * @return a AttackSimulationInfo
+     * @return a {@link AttackSimulationInfo}
      */
     @jakarta.annotation.Nullable
     public AttackSimulationInfo getAttackSimulationInfo() {
@@ -44,7 +44,7 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -62,7 +62,7 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
     }
     /**
      * Gets the internetMessageId property value. Specifies the internet message ID of the email being submitted. This information is present in the email header.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getInternetMessageId() {
@@ -70,7 +70,7 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
     }
     /**
      * Gets the originalCategory property value. The original category of the submission. The possible values are: notJunk, spam, phishing, malware and unkownFutureValue.
-     * @return a SubmissionCategory
+     * @return a {@link SubmissionCategory}
      */
     @jakarta.annotation.Nullable
     public SubmissionCategory getOriginalCategory() {
@@ -78,7 +78,7 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
     }
     /**
      * Gets the receivedDateTime property value. Specifies the date and time stamp when the email was received.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getReceivedDateTime() {
@@ -86,7 +86,7 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
     }
     /**
      * Gets the recipientEmailAddress property value. Specifies the email address (in smtp format) of the recipient who received the email.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRecipientEmailAddress() {
@@ -94,7 +94,7 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
     }
     /**
      * Gets the sender property value. Specifies the email address of the sender.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSender() {
@@ -102,7 +102,7 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
     }
     /**
      * Gets the senderIP property value. Specifies the IP address of the sender.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSenderIP() {
@@ -110,7 +110,7 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
     }
     /**
      * Gets the subject property value. Specifies the subject of the email.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSubject() {
@@ -118,7 +118,7 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
     }
     /**
      * Gets the tenantAllowOrBlockListAction property value. It's used to automatically add allows for the components such as URL, file, sender; which are deemed bad by Microsoft so that similar messages in the future can be allowed.
-     * @return a TenantAllowOrBlockListAction
+     * @return a {@link TenantAllowOrBlockListAction}
      */
     @jakarta.annotation.Nullable
     public TenantAllowOrBlockListAction getTenantAllowOrBlockListAction() {

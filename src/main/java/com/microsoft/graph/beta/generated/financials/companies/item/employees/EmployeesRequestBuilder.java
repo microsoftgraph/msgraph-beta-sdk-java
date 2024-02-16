@@ -26,6 +26,7 @@ import java.util.UUID;
 public class EmployeesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -34,7 +35,7 @@ public class EmployeesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the employees property of the microsoft.graph.company entity.
      * @param employeeId The unique identifier of employee
-     * @return a EmployeeItemRequestBuilder
+     * @return a {@link EmployeeItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public EmployeeItemRequestBuilder byEmployeeId(@jakarta.annotation.Nonnull final UUID employeeId) {
@@ -44,7 +45,7 @@ public class EmployeesRequestBuilder extends BaseRequestBuilder {
         return new EmployeeItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new EmployeesRequestBuilder and sets the default values.
+     * Instantiates a new {@link EmployeesRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -52,7 +53,7 @@ public class EmployeesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/financials/companies/{company%2Did}/employees{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new EmployeesRequestBuilder and sets the default values.
+     * Instantiates a new {@link EmployeesRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -61,7 +62,8 @@ public class EmployeesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get employees from financials
-     * @return a EmployeeCollectionResponse
+     * @return a {@link EmployeeCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public EmployeeCollectionResponse get() {
@@ -70,20 +72,21 @@ public class EmployeesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get employees from financials
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a EmployeeCollectionResponse
+     * @return a {@link EmployeeCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public EmployeeCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, EmployeeCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to employees for financials
      * @param body The request body
-     * @return a Employee
+     * @return a {@link Employee}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public Employee post(@jakarta.annotation.Nonnull final Employee body) {
@@ -93,20 +96,20 @@ public class EmployeesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to employees for financials
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a Employee
+     * @return a {@link Employee}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public Employee post(@jakarta.annotation.Nonnull final Employee body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, Employee::createFromDiscriminatorValue);
     }
     /**
      * Get employees from financials
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -115,7 +118,7 @@ public class EmployeesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get employees from financials
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -127,7 +130,7 @@ public class EmployeesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to employees for financials
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final Employee body) {
@@ -137,12 +140,12 @@ public class EmployeesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to employees for financials
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final Employee body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/financials/companies/{company%2Did}/employees", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -151,7 +154,7 @@ public class EmployeesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a EmployeesRequestBuilder
+     * @return a {@link EmployeesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public EmployeesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -205,7 +208,7 @@ public class EmployeesRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

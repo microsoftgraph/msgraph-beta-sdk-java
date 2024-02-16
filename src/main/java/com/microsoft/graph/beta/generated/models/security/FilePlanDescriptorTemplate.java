@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class FilePlanDescriptorTemplate extends Entity implements Parsable {
     /**
-     * Instantiates a new FilePlanDescriptorTemplate and sets the default values.
+     * Instantiates a new {@link FilePlanDescriptorTemplate} and sets the default values.
      */
     public FilePlanDescriptorTemplate() {
         super();
@@ -20,7 +20,7 @@ public class FilePlanDescriptorTemplate extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a FilePlanDescriptorTemplate
+     * @return a {@link FilePlanDescriptorTemplate}
      */
     @jakarta.annotation.Nonnull
     public static FilePlanDescriptorTemplate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class FilePlanDescriptorTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the createdBy property value. Represents the user who created the filePlanDescriptorTemplate column.
-     * @return a IdentitySet
+     * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
@@ -49,7 +49,7 @@ public class FilePlanDescriptorTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. Represents the date and time in which the filePlanDescriptorTemplate is created.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -57,7 +57,7 @@ public class FilePlanDescriptorTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. Unique string that defines a filePlanDescriptorTemplate name.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -65,7 +65,7 @@ public class FilePlanDescriptorTemplate extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

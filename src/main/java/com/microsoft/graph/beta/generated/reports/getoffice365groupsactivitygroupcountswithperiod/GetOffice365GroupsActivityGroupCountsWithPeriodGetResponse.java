@@ -11,7 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GetOffice365GroupsActivityGroupCountsWithPeriodGetResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * Instantiates a new GetOffice365GroupsActivityGroupCountsWithPeriodGetResponse and sets the default values.
+     * Instantiates a new {@link GetOffice365GroupsActivityGroupCountsWithPeriodGetResponse} and sets the default values.
      */
     public GetOffice365GroupsActivityGroupCountsWithPeriodGetResponse() {
         super();
@@ -19,7 +19,7 @@ public class GetOffice365GroupsActivityGroupCountsWithPeriodGetResponse extends 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a GetOffice365GroupsActivityGroupCountsWithPeriodGetResponse
+     * @return a {@link GetOffice365GroupsActivityGroupCountsWithPeriodGetResponse}
      */
     @jakarta.annotation.Nonnull
     public static GetOffice365GroupsActivityGroupCountsWithPeriodGetResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class GetOffice365GroupsActivityGroupCountsWithPeriodGetResponse extends 
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -38,7 +38,7 @@ public class GetOffice365GroupsActivityGroupCountsWithPeriodGetResponse extends 
     }
     /**
      * Gets the value property value. The value property
-     * @return a java.util.List<Office365GroupsActivityGroupCounts>
+     * @return a {@link java.util.List<Office365GroupsActivityGroupCounts>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Office365GroupsActivityGroupCounts> getValue() {

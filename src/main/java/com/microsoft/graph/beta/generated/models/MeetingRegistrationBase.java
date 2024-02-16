@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MeetingRegistrationBase extends Entity implements Parsable {
     /**
-     * Instantiates a new MeetingRegistrationBase and sets the default values.
+     * Instantiates a new {@link MeetingRegistrationBase} and sets the default values.
      */
     public MeetingRegistrationBase() {
         super();
@@ -17,7 +17,7 @@ public class MeetingRegistrationBase extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MeetingRegistrationBase
+     * @return a {@link MeetingRegistrationBase}
      */
     @jakarta.annotation.Nonnull
     public static MeetingRegistrationBase createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -34,7 +34,7 @@ public class MeetingRegistrationBase extends Entity implements Parsable {
     }
     /**
      * Gets the allowedRegistrant property value. Specifies who can register for the meeting.
-     * @return a MeetingAudience
+     * @return a {@link MeetingAudience}
      */
     @jakarta.annotation.Nullable
     public MeetingAudience getAllowedRegistrant() {
@@ -42,7 +42,7 @@ public class MeetingRegistrationBase extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -53,7 +53,7 @@ public class MeetingRegistrationBase extends Entity implements Parsable {
     }
     /**
      * Gets the registrants property value. Registrants of the online meeting.
-     * @return a java.util.List<MeetingRegistrantBase>
+     * @return a {@link java.util.List<MeetingRegistrantBase>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<MeetingRegistrantBase> getRegistrants() {

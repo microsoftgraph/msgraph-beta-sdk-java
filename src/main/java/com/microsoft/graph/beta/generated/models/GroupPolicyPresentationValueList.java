@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GroupPolicyPresentationValueList extends GroupPolicyPresentationValue implements Parsable {
     /**
-     * Instantiates a new GroupPolicyPresentationValueList and sets the default values.
+     * Instantiates a new {@link GroupPolicyPresentationValueList} and sets the default values.
      */
     public GroupPolicyPresentationValueList() {
         super();
@@ -20,7 +20,7 @@ public class GroupPolicyPresentationValueList extends GroupPolicyPresentationVal
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a GroupPolicyPresentationValueList
+     * @return a {@link GroupPolicyPresentationValueList}
      */
     @jakarta.annotation.Nonnull
     public static GroupPolicyPresentationValueList createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -29,7 +29,7 @@ public class GroupPolicyPresentationValueList extends GroupPolicyPresentationVal
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -39,7 +39,7 @@ public class GroupPolicyPresentationValueList extends GroupPolicyPresentationVal
     }
     /**
      * Gets the values property value. A list of pairs for the associated presentation.
-     * @return a java.util.List<KeyValuePair>
+     * @return a {@link java.util.List<KeyValuePair>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyValuePair> getValues() {

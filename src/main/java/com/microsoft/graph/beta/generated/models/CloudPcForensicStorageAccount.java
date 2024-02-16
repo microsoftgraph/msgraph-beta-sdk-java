@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CloudPcForensicStorageAccount extends Entity implements Parsable {
     /**
-     * Instantiates a new CloudPcForensicStorageAccount and sets the default values.
+     * Instantiates a new {@link CloudPcForensicStorageAccount} and sets the default values.
      */
     public CloudPcForensicStorageAccount() {
         super();
@@ -17,7 +17,7 @@ public class CloudPcForensicStorageAccount extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CloudPcForensicStorageAccount
+     * @return a {@link CloudPcForensicStorageAccount}
      */
     @jakarta.annotation.Nonnull
     public static CloudPcForensicStorageAccount createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class CloudPcForensicStorageAccount extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -37,7 +37,7 @@ public class CloudPcForensicStorageAccount extends Entity implements Parsable {
     }
     /**
      * Gets the storageAccountId property value. The ID of the storage account.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getStorageAccountId() {
@@ -45,7 +45,7 @@ public class CloudPcForensicStorageAccount extends Entity implements Parsable {
     }
     /**
      * Gets the storageAccountName property value. The name of the storage account.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getStorageAccountName() {

@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ActiveUsersBreakdownMetric extends Entity implements Parsable {
     /**
-     * Instantiates a new ActiveUsersBreakdownMetric and sets the default values.
+     * Instantiates a new {@link ActiveUsersBreakdownMetric} and sets the default values.
      */
     public ActiveUsersBreakdownMetric() {
         super();
@@ -18,7 +18,7 @@ public class ActiveUsersBreakdownMetric extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ActiveUsersBreakdownMetric
+     * @return a {@link ActiveUsersBreakdownMetric}
      */
     @jakarta.annotation.Nonnull
     public static ActiveUsersBreakdownMetric createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class ActiveUsersBreakdownMetric extends Entity implements Parsable {
     }
     /**
      * Gets the appId property value. The ID of the Microsoft Entra application.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAppId() {
@@ -35,7 +35,7 @@ public class ActiveUsersBreakdownMetric extends Entity implements Parsable {
     }
     /**
      * Gets the appName property value. Name of the application users authenticated to.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAppName() {
@@ -43,7 +43,7 @@ public class ActiveUsersBreakdownMetric extends Entity implements Parsable {
     }
     /**
      * Gets the count property value. The total number of users who made at least one authentication request within the specified time period.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getCount() {
@@ -51,7 +51,7 @@ public class ActiveUsersBreakdownMetric extends Entity implements Parsable {
     }
     /**
      * Gets the factDate property value. The date of the insight.
-     * @return a LocalDate
+     * @return a {@link LocalDate}
      */
     @jakarta.annotation.Nullable
     public LocalDate getFactDate() {
@@ -59,7 +59,7 @@ public class ActiveUsersBreakdownMetric extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -73,7 +73,7 @@ public class ActiveUsersBreakdownMetric extends Entity implements Parsable {
     }
     /**
      * Gets the os property value. The platform for the device that the customers used. Supports $filter (eq).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOs() {

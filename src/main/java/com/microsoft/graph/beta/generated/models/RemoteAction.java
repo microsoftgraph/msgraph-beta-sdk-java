@@ -81,7 +81,9 @@ public enum RemoteAction implements ValuedEnum {
     /** Indicates an action has been initiated to pause configuration refresh for the device. */
     PauseConfigurationRefresh("pauseConfigurationRefresh"),
     /** Indicates remote device action to intiate Mobile Device Management (MDM) attestation if device is capable for it. */
-    InitiateDeviceAttestation("initiateDeviceAttestation");
+    InitiateDeviceAttestation("initiateDeviceAttestation"),
+    /** Indicates remote device action to override assignments for a Device. */
+    ChangeAssignments("changeAssignments");
     public final String value;
     RemoteAction(final String value) {
         this.value = value;
@@ -129,6 +131,7 @@ public enum RemoteAction implements ValuedEnum {
             case "removeDeviceFirmwareConfigurationInterfaceManagement": return RemoveDeviceFirmwareConfigurationInterfaceManagement;
             case "pauseConfigurationRefresh": return PauseConfigurationRefresh;
             case "initiateDeviceAttestation": return InitiateDeviceAttestation;
+            case "changeAssignments": return ChangeAssignments;
             default: return null;
         }
     }

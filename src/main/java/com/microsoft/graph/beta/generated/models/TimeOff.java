@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TimeOff extends ChangeTrackedEntity implements Parsable {
     /**
-     * Instantiates a new TimeOff and sets the default values.
+     * Instantiates a new {@link TimeOff} and sets the default values.
      */
     public TimeOff() {
         super();
@@ -18,7 +18,7 @@ public class TimeOff extends ChangeTrackedEntity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TimeOff
+     * @return a {@link TimeOff}
      */
     @jakarta.annotation.Nonnull
     public static TimeOff createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class TimeOff extends ChangeTrackedEntity implements Parsable {
     }
     /**
      * Gets the draftTimeOff property value. The draft version of this timeOff item that is viewable by managers. It must be shared before it is visible to team members. Required.
-     * @return a TimeOffItem
+     * @return a {@link TimeOffItem}
      */
     @jakarta.annotation.Nullable
     public TimeOffItem getDraftTimeOff() {
@@ -35,7 +35,7 @@ public class TimeOff extends ChangeTrackedEntity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -50,7 +50,7 @@ public class TimeOff extends ChangeTrackedEntity implements Parsable {
     }
     /**
      * Gets the isStagedForDeletion property value. The timeOff is marked for deletion, a process that is finalized when the schedule is shared.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsStagedForDeletion() {
@@ -58,15 +58,15 @@ public class TimeOff extends ChangeTrackedEntity implements Parsable {
     }
     /**
      * Gets the sharedTimeOff property value. The shared version of this timeOff that is viewable by both employees and managers. Updates to the sharedTimeOff property send notifications to users in the Teams client. Required.
-     * @return a TimeOffItem
+     * @return a {@link TimeOffItem}
      */
     @jakarta.annotation.Nullable
     public TimeOffItem getSharedTimeOff() {
         return this.backingStore.get("sharedTimeOff");
     }
     /**
-     * Gets the teamInfo property value. The teamInfo property
-     * @return a ShiftsTeamInfo
+     * Gets the teamInfo property value. Information of the team that the timeOff is in.
+     * @return a {@link ShiftsTeamInfo}
      */
     @jakarta.annotation.Nullable
     public ShiftsTeamInfo getTeamInfo() {
@@ -74,15 +74,15 @@ public class TimeOff extends ChangeTrackedEntity implements Parsable {
     }
     /**
      * Gets the userId property value. ID of the user assigned to the timeOff. Required.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
         return this.backingStore.get("userId");
     }
     /**
-     * Gets the userInfo property value. The userInfo property
-     * @return a ShiftsUserInfo
+     * Gets the userInfo property value. Information of the user assigned to the timeOff.
+     * @return a {@link ShiftsUserInfo}
      */
     @jakarta.annotation.Nullable
     public ShiftsUserInfo getUserInfo() {
@@ -122,7 +122,7 @@ public class TimeOff extends ChangeTrackedEntity implements Parsable {
         this.backingStore.set("sharedTimeOff", value);
     }
     /**
-     * Sets the teamInfo property value. The teamInfo property
+     * Sets the teamInfo property value. Information of the team that the timeOff is in.
      * @param value Value to set for the teamInfo property.
      */
     public void setTeamInfo(@jakarta.annotation.Nullable final ShiftsTeamInfo value) {
@@ -136,7 +136,7 @@ public class TimeOff extends ChangeTrackedEntity implements Parsable {
         this.backingStore.set("userId", value);
     }
     /**
-     * Sets the userInfo property value. The userInfo property
+     * Sets the userInfo property value. Information of the user assigned to the timeOff.
      * @param value Value to set for the userInfo property.
      */
     public void setUserInfo(@jakarta.annotation.Nullable final ShiftsUserInfo value) {

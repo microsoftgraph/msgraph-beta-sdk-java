@@ -38,6 +38,8 @@ public enum DeviceManagementConfigurationTemplateFamily implements ValuedEnum {
     DeviceConfigurationScripts("deviceConfigurationScripts"),
     /** Template Family for device configuration policies */
     DeviceConfigurationPolicies("deviceConfigurationPolicies"),
+    /** Template Family for windowsOsRecovery that can be applied during a Windows operating system recovery */
+    WindowsOsRecoveryPolicies("windowsOsRecoveryPolicies"),
     /** Template Family for Company Portal settings */
     CompanyPortal("companyPortal");
     public final String value;
@@ -65,6 +67,7 @@ public enum DeviceManagementConfigurationTemplateFamily implements ValuedEnum {
             case "unknownFutureValue": return UnknownFutureValue;
             case "deviceConfigurationScripts": return DeviceConfigurationScripts;
             case "deviceConfigurationPolicies": return DeviceConfigurationPolicies;
+            case "windowsOsRecoveryPolicies": return WindowsOsRecoveryPolicies;
             case "companyPortal": return CompanyPortal;
             default: return null;
         }

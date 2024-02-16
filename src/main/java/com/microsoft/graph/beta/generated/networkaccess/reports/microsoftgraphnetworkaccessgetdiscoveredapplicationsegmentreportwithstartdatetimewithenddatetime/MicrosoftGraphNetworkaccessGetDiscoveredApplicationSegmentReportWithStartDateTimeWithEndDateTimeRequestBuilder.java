@@ -21,7 +21,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MicrosoftGraphNetworkaccessGetDiscoveredApplicationSegmentReportWithStartDateTimeWithEndDateTimeRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new MicrosoftGraphNetworkaccessGetDiscoveredApplicationSegmentReportWithStartDateTimeWithEndDateTimeRequestBuilder and sets the default values.
+     * Instantiates a new {@link MicrosoftGraphNetworkaccessGetDiscoveredApplicationSegmentReportWithStartDateTimeWithEndDateTimeRequestBuilder} and sets the default values.
      * @param endDateTime Usage: endDateTime={endDateTime}
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
@@ -33,7 +33,7 @@ public class MicrosoftGraphNetworkaccessGetDiscoveredApplicationSegmentReportWit
         this.pathParameters.put("startDateTime", startDateTime);
     }
     /**
-     * Instantiates a new MicrosoftGraphNetworkaccessGetDiscoveredApplicationSegmentReportWithStartDateTimeWithEndDateTimeRequestBuilder and sets the default values.
+     * Instantiates a new {@link MicrosoftGraphNetworkaccessGetDiscoveredApplicationSegmentReportWithStartDateTimeWithEndDateTimeRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -42,7 +42,8 @@ public class MicrosoftGraphNetworkaccessGetDiscoveredApplicationSegmentReportWit
     }
     /**
      * Invoke function getDiscoveredApplicationSegmentReport
-     * @return a GetDiscoveredApplicationSegmentReportWithStartDateTimeWithEndDateTimeGetResponse
+     * @return a {@link GetDiscoveredApplicationSegmentReportWithStartDateTimeWithEndDateTimeGetResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public GetDiscoveredApplicationSegmentReportWithStartDateTimeWithEndDateTimeGetResponse get() {
@@ -51,19 +52,19 @@ public class MicrosoftGraphNetworkaccessGetDiscoveredApplicationSegmentReportWit
     /**
      * Invoke function getDiscoveredApplicationSegmentReport
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a GetDiscoveredApplicationSegmentReportWithStartDateTimeWithEndDateTimeGetResponse
+     * @return a {@link GetDiscoveredApplicationSegmentReportWithStartDateTimeWithEndDateTimeGetResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public GetDiscoveredApplicationSegmentReportWithStartDateTimeWithEndDateTimeGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, GetDiscoveredApplicationSegmentReportWithStartDateTimeWithEndDateTimeGetResponse::createFromDiscriminatorValue);
     }
     /**
      * Invoke function getDiscoveredApplicationSegmentReport
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -72,7 +73,7 @@ public class MicrosoftGraphNetworkaccessGetDiscoveredApplicationSegmentReportWit
     /**
      * Invoke function getDiscoveredApplicationSegmentReport
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,7 +85,7 @@ public class MicrosoftGraphNetworkaccessGetDiscoveredApplicationSegmentReportWit
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a MicrosoftGraphNetworkaccessGetDiscoveredApplicationSegmentReportWithStartDateTimeWithEndDateTimeRequestBuilder
+     * @return a {@link MicrosoftGraphNetworkaccessGetDiscoveredApplicationSegmentReportWithStartDateTimeWithEndDateTimeRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MicrosoftGraphNetworkaccessGetDiscoveredApplicationSegmentReportWithStartDateTimeWithEndDateTimeRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -123,7 +124,7 @@ public class MicrosoftGraphNetworkaccessGetDiscoveredApplicationSegmentReportWit
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

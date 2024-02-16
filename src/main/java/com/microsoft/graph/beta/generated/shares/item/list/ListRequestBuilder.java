@@ -31,6 +31,7 @@ import java.util.Objects;
 public class ListRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the activities property of the microsoft.graph.list entity.
+     * @return a {@link ActivitiesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ActivitiesRequestBuilder activities() {
@@ -38,6 +39,7 @@ public class ListRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the columns property of the microsoft.graph.list entity.
+     * @return a {@link ColumnsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ColumnsRequestBuilder columns() {
@@ -45,6 +47,7 @@ public class ListRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the contentTypes property of the microsoft.graph.list entity.
+     * @return a {@link ContentTypesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ContentTypesRequestBuilder contentTypes() {
@@ -52,6 +55,7 @@ public class ListRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the createdByUser property of the microsoft.graph.baseItem entity.
+     * @return a {@link CreatedByUserRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CreatedByUserRequestBuilder createdByUser() {
@@ -59,6 +63,7 @@ public class ListRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the drive property of the microsoft.graph.list entity.
+     * @return a {@link DriveRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DriveRequestBuilder drive() {
@@ -66,6 +71,7 @@ public class ListRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the items property of the microsoft.graph.list entity.
+     * @return a {@link ItemsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ItemsRequestBuilder items() {
@@ -73,6 +79,7 @@ public class ListRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the lastModifiedByUser property of the microsoft.graph.baseItem entity.
+     * @return a {@link LastModifiedByUserRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public LastModifiedByUserRequestBuilder lastModifiedByUser() {
@@ -80,6 +87,7 @@ public class ListRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the operations property of the microsoft.graph.list entity.
+     * @return a {@link OperationsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public OperationsRequestBuilder operations() {
@@ -87,13 +95,14 @@ public class ListRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the subscriptions property of the microsoft.graph.list entity.
+     * @return a {@link SubscriptionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SubscriptionsRequestBuilder subscriptions() {
         return new SubscriptionsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new ListRequestBuilder and sets the default values.
+     * Instantiates a new {@link ListRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -101,7 +110,7 @@ public class ListRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/shares/{sharedDriveItem%2Did}/list{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new ListRequestBuilder and sets the default values.
+     * Instantiates a new {@link ListRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -110,6 +119,7 @@ public class ListRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Delete navigation property list for shares
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete() {
         delete(null);
@@ -117,17 +127,18 @@ public class ListRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property list for shares
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * Used to access the underlying list
-     * @return a List
+     * @return a {@link List}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public List get() {
@@ -136,20 +147,21 @@ public class ListRequestBuilder extends BaseRequestBuilder {
     /**
      * Used to access the underlying list
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a List
+     * @return a {@link List}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public List get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, List::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property list in shares
      * @param body The request body
-     * @return a List
+     * @return a {@link List}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public List patch(@jakarta.annotation.Nonnull final List body) {
@@ -159,20 +171,20 @@ public class ListRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property list in shares
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a List
+     * @return a {@link List}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public List patch(@jakarta.annotation.Nonnull final List body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, List::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property list for shares
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -181,18 +193,18 @@ public class ListRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property list for shares
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/shares/{sharedDriveItem%2Did}/list", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Used to access the underlying list
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -201,7 +213,7 @@ public class ListRequestBuilder extends BaseRequestBuilder {
     /**
      * Used to access the underlying list
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -213,7 +225,7 @@ public class ListRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property list in shares
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final List body) {
@@ -223,12 +235,12 @@ public class ListRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property list in shares
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final List body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/shares/{sharedDriveItem%2Did}/list", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -237,7 +249,7 @@ public class ListRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a ListRequestBuilder
+     * @return a {@link ListRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ListRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -267,7 +279,7 @@ public class ListRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

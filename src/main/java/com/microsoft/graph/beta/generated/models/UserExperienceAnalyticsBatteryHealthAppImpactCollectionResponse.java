@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsBatteryHealthAppImpactCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * Instantiates a new UserExperienceAnalyticsBatteryHealthAppImpactCollectionResponse and sets the default values.
+     * Instantiates a new {@link UserExperienceAnalyticsBatteryHealthAppImpactCollectionResponse} and sets the default values.
      */
     public UserExperienceAnalyticsBatteryHealthAppImpactCollectionResponse() {
         super();
@@ -17,7 +17,7 @@ public class UserExperienceAnalyticsBatteryHealthAppImpactCollectionResponse ext
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserExperienceAnalyticsBatteryHealthAppImpactCollectionResponse
+     * @return a {@link UserExperienceAnalyticsBatteryHealthAppImpactCollectionResponse}
      */
     @jakarta.annotation.Nonnull
     public static UserExperienceAnalyticsBatteryHealthAppImpactCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class UserExperienceAnalyticsBatteryHealthAppImpactCollectionResponse ext
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -36,7 +36,7 @@ public class UserExperienceAnalyticsBatteryHealthAppImpactCollectionResponse ext
     }
     /**
      * Gets the value property value. The value property
-     * @return a java.util.List<UserExperienceAnalyticsBatteryHealthAppImpact>
+     * @return a {@link java.util.List<UserExperienceAnalyticsBatteryHealthAppImpact>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserExperienceAnalyticsBatteryHealthAppImpact> getValue() {

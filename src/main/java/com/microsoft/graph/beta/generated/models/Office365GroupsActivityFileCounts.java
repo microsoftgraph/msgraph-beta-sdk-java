@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Office365GroupsActivityFileCounts extends Entity implements Parsable {
     /**
-     * Instantiates a new Office365GroupsActivityFileCounts and sets the default values.
+     * Instantiates a new {@link Office365GroupsActivityFileCounts} and sets the default values.
      */
     public Office365GroupsActivityFileCounts() {
         super();
@@ -18,7 +18,7 @@ public class Office365GroupsActivityFileCounts extends Entity implements Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Office365GroupsActivityFileCounts
+     * @return a {@link Office365GroupsActivityFileCounts}
      */
     @jakarta.annotation.Nonnull
     public static Office365GroupsActivityFileCounts createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class Office365GroupsActivityFileCounts extends Entity implements Parsabl
     }
     /**
      * Gets the active property value. The number of files that were viewed, edited, shared, or synced in the group's SharePoint document library.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getActive() {
@@ -35,7 +35,7 @@ public class Office365GroupsActivityFileCounts extends Entity implements Parsabl
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -49,7 +49,7 @@ public class Office365GroupsActivityFileCounts extends Entity implements Parsabl
     }
     /**
      * Gets the reportDate property value. The date on which a number of files were active in the group's SharePoint site.
-     * @return a LocalDate
+     * @return a {@link LocalDate}
      */
     @jakarta.annotation.Nullable
     public LocalDate getReportDate() {
@@ -57,7 +57,7 @@ public class Office365GroupsActivityFileCounts extends Entity implements Parsabl
     }
     /**
      * Gets the reportPeriod property value. The number of days the report covers.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getReportPeriod() {
@@ -65,7 +65,7 @@ public class Office365GroupsActivityFileCounts extends Entity implements Parsabl
     }
     /**
      * Gets the reportRefreshDate property value. The latest date of the content.
-     * @return a LocalDate
+     * @return a {@link LocalDate}
      */
     @jakarta.annotation.Nullable
     public LocalDate getReportRefreshDate() {
@@ -73,7 +73,7 @@ public class Office365GroupsActivityFileCounts extends Entity implements Parsabl
     }
     /**
      * Gets the total property value. The total number of files in the group's SharePoint document library.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getTotal() {

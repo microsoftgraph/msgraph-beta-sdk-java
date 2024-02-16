@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsDriverUpdateProfile extends Entity implements Parsable {
     /**
-     * Instantiates a new WindowsDriverUpdateProfile and sets the default values.
+     * Instantiates a new {@link WindowsDriverUpdateProfile} and sets the default values.
      */
     public WindowsDriverUpdateProfile() {
         super();
@@ -21,7 +21,7 @@ public class WindowsDriverUpdateProfile extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WindowsDriverUpdateProfile
+     * @return a {@link WindowsDriverUpdateProfile}
      */
     @jakarta.annotation.Nonnull
     public static WindowsDriverUpdateProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class WindowsDriverUpdateProfile extends Entity implements Parsable {
     }
     /**
      * Gets the approvalType property value. An enum type to represent approval type of a driver update profile.
-     * @return a DriverUpdateProfileApprovalType
+     * @return a {@link DriverUpdateProfileApprovalType}
      */
     @jakarta.annotation.Nullable
     public DriverUpdateProfileApprovalType getApprovalType() {
@@ -38,7 +38,7 @@ public class WindowsDriverUpdateProfile extends Entity implements Parsable {
     }
     /**
      * Gets the assignments property value. The list of group assignments of the profile.
-     * @return a java.util.List<WindowsDriverUpdateProfileAssignment>
+     * @return a {@link java.util.List<WindowsDriverUpdateProfileAssignment>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<WindowsDriverUpdateProfileAssignment> getAssignments() {
@@ -46,7 +46,7 @@ public class WindowsDriverUpdateProfile extends Entity implements Parsable {
     }
     /**
      * Gets the createdDateTime property value. The date time that the profile was created.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -54,7 +54,7 @@ public class WindowsDriverUpdateProfile extends Entity implements Parsable {
     }
     /**
      * Gets the deploymentDeferralInDays property value. Deployment deferral settings in days, only applicable when ApprovalType is set to automatic approval.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getDeploymentDeferralInDays() {
@@ -62,7 +62,7 @@ public class WindowsDriverUpdateProfile extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The description of the profile which is specified by the user.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -70,7 +70,7 @@ public class WindowsDriverUpdateProfile extends Entity implements Parsable {
     }
     /**
      * Gets the deviceReporting property value. Number of devices reporting for this profile
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getDeviceReporting() {
@@ -78,7 +78,7 @@ public class WindowsDriverUpdateProfile extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name for the profile.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -86,7 +86,7 @@ public class WindowsDriverUpdateProfile extends Entity implements Parsable {
     }
     /**
      * Gets the driverInventories property value. Driver inventories for this profile.
-     * @return a java.util.List<WindowsDriverUpdateInventory>
+     * @return a {@link java.util.List<WindowsDriverUpdateInventory>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<WindowsDriverUpdateInventory> getDriverInventories() {
@@ -94,7 +94,7 @@ public class WindowsDriverUpdateProfile extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -115,7 +115,7 @@ public class WindowsDriverUpdateProfile extends Entity implements Parsable {
     }
     /**
      * Gets the inventorySyncStatus property value. Driver inventory sync status for this profile.
-     * @return a WindowsDriverUpdateProfileInventorySyncStatus
+     * @return a {@link WindowsDriverUpdateProfileInventorySyncStatus}
      */
     @jakarta.annotation.Nullable
     public WindowsDriverUpdateProfileInventorySyncStatus getInventorySyncStatus() {
@@ -123,7 +123,7 @@ public class WindowsDriverUpdateProfile extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. The date time that the profile was last modified.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -131,7 +131,7 @@ public class WindowsDriverUpdateProfile extends Entity implements Parsable {
     }
     /**
      * Gets the newUpdates property value. Number of new driver updates available for this profile.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getNewUpdates() {
@@ -139,7 +139,7 @@ public class WindowsDriverUpdateProfile extends Entity implements Parsable {
     }
     /**
      * Gets the roleScopeTagIds property value. List of Scope Tags for this Driver Update entity.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {

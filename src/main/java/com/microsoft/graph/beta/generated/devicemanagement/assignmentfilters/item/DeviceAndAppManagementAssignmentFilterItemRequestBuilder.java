@@ -23,13 +23,14 @@ import java.util.Objects;
 public class DeviceAndAppManagementAssignmentFilterItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getSupportedProperties method.
+     * @return a {@link GetSupportedPropertiesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetSupportedPropertiesRequestBuilder getSupportedProperties() {
         return new GetSupportedPropertiesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new DeviceAndAppManagementAssignmentFilterItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link DeviceAndAppManagementAssignmentFilterItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -37,7 +38,7 @@ public class DeviceAndAppManagementAssignmentFilterItemRequestBuilder extends Ba
         super(requestAdapter, "{+baseurl}/deviceManagement/assignmentFilters/{deviceAndAppManagementAssignmentFilter%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new DeviceAndAppManagementAssignmentFilterItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link DeviceAndAppManagementAssignmentFilterItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -46,6 +47,7 @@ public class DeviceAndAppManagementAssignmentFilterItemRequestBuilder extends Ba
     }
     /**
      * Delete navigation property assignmentFilters for deviceManagement
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete() {
         delete(null);
@@ -53,17 +55,18 @@ public class DeviceAndAppManagementAssignmentFilterItemRequestBuilder extends Ba
     /**
      * Delete navigation property assignmentFilters for deviceManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * The list of assignment filters
-     * @return a DeviceAndAppManagementAssignmentFilter
+     * @return a {@link DeviceAndAppManagementAssignmentFilter}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public DeviceAndAppManagementAssignmentFilter get() {
@@ -72,20 +75,21 @@ public class DeviceAndAppManagementAssignmentFilterItemRequestBuilder extends Ba
     /**
      * The list of assignment filters
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a DeviceAndAppManagementAssignmentFilter
+     * @return a {@link DeviceAndAppManagementAssignmentFilter}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public DeviceAndAppManagementAssignmentFilter get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceAndAppManagementAssignmentFilter::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property assignmentFilters in deviceManagement
      * @param body The request body
-     * @return a DeviceAndAppManagementAssignmentFilter
+     * @return a {@link DeviceAndAppManagementAssignmentFilter}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public DeviceAndAppManagementAssignmentFilter patch(@jakarta.annotation.Nonnull final DeviceAndAppManagementAssignmentFilter body) {
@@ -95,20 +99,20 @@ public class DeviceAndAppManagementAssignmentFilterItemRequestBuilder extends Ba
      * Update the navigation property assignmentFilters in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a DeviceAndAppManagementAssignmentFilter
+     * @return a {@link DeviceAndAppManagementAssignmentFilter}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public DeviceAndAppManagementAssignmentFilter patch(@jakarta.annotation.Nonnull final DeviceAndAppManagementAssignmentFilter body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceAndAppManagementAssignmentFilter::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property assignmentFilters for deviceManagement
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -117,18 +121,18 @@ public class DeviceAndAppManagementAssignmentFilterItemRequestBuilder extends Ba
     /**
      * Delete navigation property assignmentFilters for deviceManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/deviceManagement/assignmentFilters/{deviceAndAppManagementAssignmentFilter%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * The list of assignment filters
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -137,7 +141,7 @@ public class DeviceAndAppManagementAssignmentFilterItemRequestBuilder extends Ba
     /**
      * The list of assignment filters
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -149,7 +153,7 @@ public class DeviceAndAppManagementAssignmentFilterItemRequestBuilder extends Ba
     /**
      * Update the navigation property assignmentFilters in deviceManagement
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final DeviceAndAppManagementAssignmentFilter body) {
@@ -159,12 +163,12 @@ public class DeviceAndAppManagementAssignmentFilterItemRequestBuilder extends Ba
      * Update the navigation property assignmentFilters in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final DeviceAndAppManagementAssignmentFilter body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/deviceManagement/assignmentFilters/{deviceAndAppManagementAssignmentFilter%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -173,7 +177,7 @@ public class DeviceAndAppManagementAssignmentFilterItemRequestBuilder extends Ba
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a DeviceAndAppManagementAssignmentFilterItemRequestBuilder
+     * @return a {@link DeviceAndAppManagementAssignmentFilterItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DeviceAndAppManagementAssignmentFilterItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -203,7 +207,7 @@ public class DeviceAndAppManagementAssignmentFilterItemRequestBuilder extends Ba
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

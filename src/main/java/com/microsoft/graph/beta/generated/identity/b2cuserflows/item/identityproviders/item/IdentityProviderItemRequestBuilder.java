@@ -12,13 +12,14 @@ import java.util.Objects;
 public class IdentityProviderItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the collection of identityContainer entities.
+     * @return a {@link RefRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RefRequestBuilder ref() {
         return new RefRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new IdentityProviderItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link IdentityProviderItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -26,7 +27,7 @@ public class IdentityProviderItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identity/b2cUserFlows/{b2cIdentityUserFlow%2Did}/identityProviders/{identityProvider%2Did}", pathParameters);
     }
     /**
-     * Instantiates a new IdentityProviderItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link IdentityProviderItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */

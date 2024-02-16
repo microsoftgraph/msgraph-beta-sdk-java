@@ -26,6 +26,7 @@ import java.util.Objects;
 public class ImportedAppleDeviceIdentitiesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
@@ -33,6 +34,7 @@ public class ImportedAppleDeviceIdentitiesRequestBuilder extends BaseRequestBuil
     }
     /**
      * Provides operations to call the importAppleDeviceIdentityList method.
+     * @return a {@link ImportAppleDeviceIdentityListRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ImportAppleDeviceIdentityListRequestBuilder importAppleDeviceIdentityList() {
@@ -41,7 +43,7 @@ public class ImportedAppleDeviceIdentitiesRequestBuilder extends BaseRequestBuil
     /**
      * Provides operations to manage the importedAppleDeviceIdentities property of the microsoft.graph.depOnboardingSetting entity.
      * @param importedAppleDeviceIdentityId The unique identifier of importedAppleDeviceIdentity
-     * @return a ImportedAppleDeviceIdentityItemRequestBuilder
+     * @return a {@link ImportedAppleDeviceIdentityItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ImportedAppleDeviceIdentityItemRequestBuilder byImportedAppleDeviceIdentityId(@jakarta.annotation.Nonnull final String importedAppleDeviceIdentityId) {
@@ -51,7 +53,7 @@ public class ImportedAppleDeviceIdentitiesRequestBuilder extends BaseRequestBuil
         return new ImportedAppleDeviceIdentityItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new ImportedAppleDeviceIdentitiesRequestBuilder and sets the default values.
+     * Instantiates a new {@link ImportedAppleDeviceIdentitiesRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -59,7 +61,7 @@ public class ImportedAppleDeviceIdentitiesRequestBuilder extends BaseRequestBuil
         super(requestAdapter, "{+baseurl}/deviceManagement/depOnboardingSettings/{depOnboardingSetting%2Did}/importedAppleDeviceIdentities{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new ImportedAppleDeviceIdentitiesRequestBuilder and sets the default values.
+     * Instantiates a new {@link ImportedAppleDeviceIdentitiesRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -68,7 +70,8 @@ public class ImportedAppleDeviceIdentitiesRequestBuilder extends BaseRequestBuil
     }
     /**
      * The imported Apple device identities.
-     * @return a ImportedAppleDeviceIdentityCollectionResponse
+     * @return a {@link ImportedAppleDeviceIdentityCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public ImportedAppleDeviceIdentityCollectionResponse get() {
@@ -77,20 +80,21 @@ public class ImportedAppleDeviceIdentitiesRequestBuilder extends BaseRequestBuil
     /**
      * The imported Apple device identities.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a ImportedAppleDeviceIdentityCollectionResponse
+     * @return a {@link ImportedAppleDeviceIdentityCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public ImportedAppleDeviceIdentityCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, ImportedAppleDeviceIdentityCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to importedAppleDeviceIdentities for deviceManagement
      * @param body The request body
-     * @return a ImportedAppleDeviceIdentity
+     * @return a {@link ImportedAppleDeviceIdentity}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public ImportedAppleDeviceIdentity post(@jakarta.annotation.Nonnull final ImportedAppleDeviceIdentity body) {
@@ -100,20 +104,20 @@ public class ImportedAppleDeviceIdentitiesRequestBuilder extends BaseRequestBuil
      * Create new navigation property to importedAppleDeviceIdentities for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a ImportedAppleDeviceIdentity
+     * @return a {@link ImportedAppleDeviceIdentity}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public ImportedAppleDeviceIdentity post(@jakarta.annotation.Nonnull final ImportedAppleDeviceIdentity body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, ImportedAppleDeviceIdentity::createFromDiscriminatorValue);
     }
     /**
      * The imported Apple device identities.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -122,7 +126,7 @@ public class ImportedAppleDeviceIdentitiesRequestBuilder extends BaseRequestBuil
     /**
      * The imported Apple device identities.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -134,7 +138,7 @@ public class ImportedAppleDeviceIdentitiesRequestBuilder extends BaseRequestBuil
     /**
      * Create new navigation property to importedAppleDeviceIdentities for deviceManagement
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ImportedAppleDeviceIdentity body) {
@@ -144,12 +148,12 @@ public class ImportedAppleDeviceIdentitiesRequestBuilder extends BaseRequestBuil
      * Create new navigation property to importedAppleDeviceIdentities for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ImportedAppleDeviceIdentity body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/deviceManagement/depOnboardingSettings/{depOnboardingSetting%2Did}/importedAppleDeviceIdentities", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -158,7 +162,7 @@ public class ImportedAppleDeviceIdentitiesRequestBuilder extends BaseRequestBuil
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a ImportedAppleDeviceIdentitiesRequestBuilder
+     * @return a {@link ImportedAppleDeviceIdentitiesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ImportedAppleDeviceIdentitiesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -212,7 +216,7 @@ public class ImportedAppleDeviceIdentitiesRequestBuilder extends BaseRequestBuil
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

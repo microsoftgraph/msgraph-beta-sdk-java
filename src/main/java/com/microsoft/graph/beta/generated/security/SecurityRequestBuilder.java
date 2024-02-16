@@ -48,6 +48,7 @@ import java.util.Objects;
 public class SecurityRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the alerts property of the microsoft.graph.security entity.
+     * @return a {@link AlertsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AlertsRequestBuilder alerts() {
@@ -55,6 +56,7 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the alerts_v2 property of the microsoft.graph.security entity.
+     * @return a {@link AlertsV2RequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AlertsV2RequestBuilder alertsV2() {
@@ -62,6 +64,7 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the attackSimulation property of the microsoft.graph.security entity.
+     * @return a {@link AttackSimulationRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AttackSimulationRequestBuilder attackSimulation() {
@@ -69,6 +72,7 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the auditLog property of the microsoft.graph.security entity.
+     * @return a {@link AuditLogRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AuditLogRequestBuilder auditLog() {
@@ -76,6 +80,7 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the cases property of the microsoft.graph.security entity.
+     * @return a {@link CasesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CasesRequestBuilder cases() {
@@ -83,6 +88,7 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the cloudAppSecurityProfiles property of the microsoft.graph.security entity.
+     * @return a {@link CloudAppSecurityProfilesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CloudAppSecurityProfilesRequestBuilder cloudAppSecurityProfiles() {
@@ -90,6 +96,7 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the collaboration property of the microsoft.graph.security entity.
+     * @return a {@link CollaborationRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CollaborationRequestBuilder collaboration() {
@@ -97,6 +104,7 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the domainSecurityProfiles property of the microsoft.graph.security entity.
+     * @return a {@link DomainSecurityProfilesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DomainSecurityProfilesRequestBuilder domainSecurityProfiles() {
@@ -104,6 +112,7 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the fileSecurityProfiles property of the microsoft.graph.security entity.
+     * @return a {@link FileSecurityProfilesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public FileSecurityProfilesRequestBuilder fileSecurityProfiles() {
@@ -111,6 +120,7 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the hostSecurityProfiles property of the microsoft.graph.security entity.
+     * @return a {@link HostSecurityProfilesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public HostSecurityProfilesRequestBuilder hostSecurityProfiles() {
@@ -118,6 +128,7 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the incidents property of the microsoft.graph.security entity.
+     * @return a {@link IncidentsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public IncidentsRequestBuilder incidents() {
@@ -125,6 +136,7 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the informationProtection property of the microsoft.graph.security entity.
+     * @return a {@link InformationProtectionRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public InformationProtectionRequestBuilder informationProtection() {
@@ -132,6 +144,7 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the ipSecurityProfiles property of the microsoft.graph.security entity.
+     * @return a {@link IpSecurityProfilesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public IpSecurityProfilesRequestBuilder ipSecurityProfiles() {
@@ -139,6 +152,7 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the labels property of the microsoft.graph.security entity.
+     * @return a {@link LabelsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public LabelsRequestBuilder labels() {
@@ -146,6 +160,7 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the runHuntingQuery method.
+     * @return a {@link MicrosoftGraphSecurityRunHuntingQueryRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MicrosoftGraphSecurityRunHuntingQueryRequestBuilder microsoftGraphSecurityRunHuntingQuery() {
@@ -153,6 +168,7 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the providerTenantSettings property of the microsoft.graph.security entity.
+     * @return a {@link ProviderTenantSettingsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ProviderTenantSettingsRequestBuilder providerTenantSettings() {
@@ -160,6 +176,7 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the secureScoreControlProfiles property of the microsoft.graph.security entity.
+     * @return a {@link SecureScoreControlProfilesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SecureScoreControlProfilesRequestBuilder secureScoreControlProfiles() {
@@ -167,6 +184,7 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the secureScores property of the microsoft.graph.security entity.
+     * @return a {@link SecureScoresRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SecureScoresRequestBuilder secureScores() {
@@ -174,6 +192,7 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the securityActions property of the microsoft.graph.security entity.
+     * @return a {@link SecurityActionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SecurityActionsRequestBuilder securityActions() {
@@ -181,6 +200,7 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the subjectRightsRequests property of the microsoft.graph.security entity.
+     * @return a {@link SubjectRightsRequestsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SubjectRightsRequestsRequestBuilder subjectRightsRequests() {
@@ -188,6 +208,7 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the threatIntelligence property of the microsoft.graph.security entity.
+     * @return a {@link ThreatIntelligenceRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ThreatIntelligenceRequestBuilder threatIntelligence() {
@@ -195,6 +216,7 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the threatSubmission property of the microsoft.graph.security entity.
+     * @return a {@link ThreatSubmissionRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ThreatSubmissionRequestBuilder threatSubmission() {
@@ -202,6 +224,7 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the tiIndicators property of the microsoft.graph.security entity.
+     * @return a {@link TiIndicatorsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TiIndicatorsRequestBuilder tiIndicators() {
@@ -209,6 +232,7 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the triggers property of the microsoft.graph.security entity.
+     * @return a {@link TriggersRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TriggersRequestBuilder triggers() {
@@ -216,6 +240,7 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the triggerTypes property of the microsoft.graph.security entity.
+     * @return a {@link TriggerTypesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public TriggerTypesRequestBuilder triggerTypes() {
@@ -223,13 +248,14 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the userSecurityProfiles property of the microsoft.graph.security entity.
+     * @return a {@link UserSecurityProfilesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UserSecurityProfilesRequestBuilder userSecurityProfiles() {
         return new UserSecurityProfilesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new SecurityRequestBuilder and sets the default values.
+     * Instantiates a new {@link SecurityRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -237,7 +263,7 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new SecurityRequestBuilder and sets the default values.
+     * Instantiates a new {@link SecurityRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -246,7 +272,8 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get security
-     * @return a Security
+     * @return a {@link Security}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public Security get() {
@@ -255,20 +282,21 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     /**
      * Get security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a Security
+     * @return a {@link Security}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public Security get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, Security::createFromDiscriminatorValue);
     }
     /**
      * Update security
      * @param body The request body
-     * @return a Security
+     * @return a {@link Security}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public Security patch(@jakarta.annotation.Nonnull final Security body) {
@@ -278,20 +306,20 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
      * Update security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a Security
+     * @return a {@link Security}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public Security patch(@jakarta.annotation.Nonnull final Security body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, Security::createFromDiscriminatorValue);
     }
     /**
      * Get security
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -300,7 +328,7 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     /**
      * Get security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -312,7 +340,7 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     /**
      * Update security
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final Security body) {
@@ -322,12 +350,12 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
      * Update security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final Security body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/security", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -336,7 +364,7 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a SecurityRequestBuilder
+     * @return a {@link SecurityRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SecurityRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -360,7 +388,7 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

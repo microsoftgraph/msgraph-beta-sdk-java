@@ -32,6 +32,7 @@ import java.util.Objects;
 public class DepOnboardingSettingItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the defaultIosEnrollmentProfile property of the microsoft.graph.depOnboardingSetting entity.
+     * @return a {@link DefaultIosEnrollmentProfileRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DefaultIosEnrollmentProfileRequestBuilder defaultIosEnrollmentProfile() {
@@ -39,6 +40,7 @@ public class DepOnboardingSettingItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the defaultMacOsEnrollmentProfile property of the microsoft.graph.depOnboardingSetting entity.
+     * @return a {@link DefaultMacOsEnrollmentProfileRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DefaultMacOsEnrollmentProfileRequestBuilder defaultMacOsEnrollmentProfile() {
@@ -46,6 +48,7 @@ public class DepOnboardingSettingItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the enrollmentProfiles property of the microsoft.graph.depOnboardingSetting entity.
+     * @return a {@link EnrollmentProfilesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public EnrollmentProfilesRequestBuilder enrollmentProfiles() {
@@ -53,6 +56,7 @@ public class DepOnboardingSettingItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the generateEncryptionPublicKey method.
+     * @return a {@link GenerateEncryptionPublicKeyRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GenerateEncryptionPublicKeyRequestBuilder generateEncryptionPublicKey() {
@@ -60,6 +64,7 @@ public class DepOnboardingSettingItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getEncryptionPublicKey method.
+     * @return a {@link GetEncryptionPublicKeyRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetEncryptionPublicKeyRequestBuilder getEncryptionPublicKey() {
@@ -67,6 +72,7 @@ public class DepOnboardingSettingItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the importedAppleDeviceIdentities property of the microsoft.graph.depOnboardingSetting entity.
+     * @return a {@link ImportedAppleDeviceIdentitiesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ImportedAppleDeviceIdentitiesRequestBuilder importedAppleDeviceIdentities() {
@@ -74,6 +80,7 @@ public class DepOnboardingSettingItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the shareForSchoolDataSyncService method.
+     * @return a {@link ShareForSchoolDataSyncServiceRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ShareForSchoolDataSyncServiceRequestBuilder shareForSchoolDataSyncService() {
@@ -81,6 +88,7 @@ public class DepOnboardingSettingItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the syncWithAppleDeviceEnrollmentProgram method.
+     * @return a {@link SyncWithAppleDeviceEnrollmentProgramRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SyncWithAppleDeviceEnrollmentProgramRequestBuilder syncWithAppleDeviceEnrollmentProgram() {
@@ -88,6 +96,7 @@ public class DepOnboardingSettingItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the unshareForSchoolDataSyncService method.
+     * @return a {@link UnshareForSchoolDataSyncServiceRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UnshareForSchoolDataSyncServiceRequestBuilder unshareForSchoolDataSyncService() {
@@ -95,13 +104,14 @@ public class DepOnboardingSettingItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the uploadDepToken method.
+     * @return a {@link UploadDepTokenRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public UploadDepTokenRequestBuilder uploadDepToken() {
         return new UploadDepTokenRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new DepOnboardingSettingItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link DepOnboardingSettingItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -109,7 +119,7 @@ public class DepOnboardingSettingItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/depOnboardingSettings/{depOnboardingSetting%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new DepOnboardingSettingItemRequestBuilder and sets the default values.
+     * Instantiates a new {@link DepOnboardingSettingItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -118,6 +128,7 @@ public class DepOnboardingSettingItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Delete navigation property depOnboardingSettings for deviceManagement
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete() {
         delete(null);
@@ -125,17 +136,18 @@ public class DepOnboardingSettingItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property depOnboardingSettings for deviceManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
      * This collections of multiple DEP tokens per-tenant.
-     * @return a DepOnboardingSetting
+     * @return a {@link DepOnboardingSetting}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public DepOnboardingSetting get() {
@@ -144,20 +156,21 @@ public class DepOnboardingSettingItemRequestBuilder extends BaseRequestBuilder {
     /**
      * This collections of multiple DEP tokens per-tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a DepOnboardingSetting
+     * @return a {@link DepOnboardingSetting}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public DepOnboardingSetting get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, DepOnboardingSetting::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property depOnboardingSettings in deviceManagement
      * @param body The request body
-     * @return a DepOnboardingSetting
+     * @return a {@link DepOnboardingSetting}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public DepOnboardingSetting patch(@jakarta.annotation.Nonnull final DepOnboardingSetting body) {
@@ -167,20 +180,20 @@ public class DepOnboardingSettingItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property depOnboardingSettings in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a DepOnboardingSetting
+     * @return a {@link DepOnboardingSetting}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public DepOnboardingSetting patch(@jakarta.annotation.Nonnull final DepOnboardingSetting body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, DepOnboardingSetting::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property depOnboardingSettings for deviceManagement
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation() {
@@ -189,18 +202,18 @@ public class DepOnboardingSettingItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property depOnboardingSettings for deviceManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/deviceManagement/depOnboardingSettings/{depOnboardingSetting%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * This collections of multiple DEP tokens per-tenant.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -209,7 +222,7 @@ public class DepOnboardingSettingItemRequestBuilder extends BaseRequestBuilder {
     /**
      * This collections of multiple DEP tokens per-tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -221,7 +234,7 @@ public class DepOnboardingSettingItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property depOnboardingSettings in deviceManagement
      * @param body The request body
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final DepOnboardingSetting body) {
@@ -231,12 +244,12 @@ public class DepOnboardingSettingItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property depOnboardingSettings in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final DepOnboardingSetting body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/deviceManagement/depOnboardingSettings/{depOnboardingSetting%2Did}", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -245,7 +258,7 @@ public class DepOnboardingSettingItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a DepOnboardingSettingItemRequestBuilder
+     * @return a {@link DepOnboardingSettingItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DepOnboardingSettingItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -275,7 +288,7 @@ public class DepOnboardingSettingItemRequestBuilder extends BaseRequestBuilder {
         public String[] select;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

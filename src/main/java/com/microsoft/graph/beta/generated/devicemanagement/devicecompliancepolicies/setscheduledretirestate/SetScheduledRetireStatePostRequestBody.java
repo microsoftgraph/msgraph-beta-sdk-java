@@ -19,7 +19,7 @@ public class SetScheduledRetireStatePostRequestBody implements AdditionalDataHol
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new SetScheduledRetireStatePostRequestBody and sets the default values.
+     * Instantiates a new {@link SetScheduledRetireStatePostRequestBody} and sets the default values.
      */
     public SetScheduledRetireStatePostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class SetScheduledRetireStatePostRequestBody implements AdditionalDataHol
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SetScheduledRetireStatePostRequestBody
+     * @return a {@link SetScheduledRetireStatePostRequestBody}
      */
     @jakarta.annotation.Nonnull
     public static SetScheduledRetireStatePostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class SetScheduledRetireStatePostRequestBody implements AdditionalDataHol
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -50,7 +50,7 @@ public class SetScheduledRetireStatePostRequestBody implements AdditionalDataHol
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -58,7 +58,7 @@ public class SetScheduledRetireStatePostRequestBody implements AdditionalDataHol
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -70,7 +70,7 @@ public class SetScheduledRetireStatePostRequestBody implements AdditionalDataHol
     }
     /**
      * Gets the managedDeviceIds property value. The managedDeviceIds property
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getManagedDeviceIds() {
@@ -78,7 +78,7 @@ public class SetScheduledRetireStatePostRequestBody implements AdditionalDataHol
     }
     /**
      * Gets the scopedToAllDevices property value. The scopedToAllDevices property
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getScopedToAllDevices() {
@@ -86,7 +86,7 @@ public class SetScheduledRetireStatePostRequestBody implements AdditionalDataHol
     }
     /**
      * Gets the state property value. Cancel or confirm scheduled retire 
-     * @return a ScheduledRetireState
+     * @return a {@link ScheduledRetireState}
      */
     @jakarta.annotation.Nullable
     public ScheduledRetireState getState() {

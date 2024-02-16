@@ -19,7 +19,7 @@ public class RunDetails implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new RunDetails and sets the default values.
+     * Instantiates a new {@link RunDetails} and sets the default values.
      */
     public RunDetails() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class RunDetails implements AdditionalDataHolder, BackedModel, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a RunDetails
+     * @return a {@link RunDetails}
      */
     @jakarta.annotation.Nonnull
     public static RunDetails createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class RunDetails implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -50,7 +50,7 @@ public class RunDetails implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -58,7 +58,7 @@ public class RunDetails implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the errorCode property value. Error code of the most recent run that encountered an error. The possible values are: queryExecutionFailed, queryExecutionThrottling, queryExceededResultSize, queryLimitsExceeded, queryTimeout, alertCreationFailed, alertReportNotFound, partialRowsFailed, unknownFutureValue.
-     * @return a HuntingRuleErrorCode
+     * @return a {@link HuntingRuleErrorCode}
      */
     @jakarta.annotation.Nullable
     public HuntingRuleErrorCode getErrorCode() {
@@ -66,7 +66,7 @@ public class RunDetails implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the failureReason property value. Reason for failure when the custom detection last ran and failed. See the table below.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getFailureReason() {
@@ -74,7 +74,7 @@ public class RunDetails implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -88,7 +88,7 @@ public class RunDetails implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the lastRunDateTime property value. Timestamp when the custom detection was last run.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastRunDateTime() {
@@ -96,7 +96,7 @@ public class RunDetails implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -104,7 +104,7 @@ public class RunDetails implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the status property value. Status of custom detection when it was last run. The possible values are: running, completed, failed, partiallyFailed, unknownFutureValue.
-     * @return a HuntingRuleRunStatus
+     * @return a {@link HuntingRuleRunStatus}
      */
     @jakarta.annotation.Nullable
     public HuntingRuleRunStatus getStatus() {

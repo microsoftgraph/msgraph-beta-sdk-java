@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class BusinessFlow extends Entity implements Parsable {
     /**
-     * Instantiates a new BusinessFlow and sets the default values.
+     * Instantiates a new {@link BusinessFlow} and sets the default values.
      */
     public BusinessFlow() {
         super();
@@ -17,7 +17,7 @@ public class BusinessFlow extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a BusinessFlow
+     * @return a {@link BusinessFlow}
      */
     @jakarta.annotation.Nonnull
     public static BusinessFlow createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class BusinessFlow extends Entity implements Parsable {
     }
     /**
      * Gets the customData property value. The customData property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCustomData() {
@@ -34,7 +34,7 @@ public class BusinessFlow extends Entity implements Parsable {
     }
     /**
      * Gets the deDuplicationId property value. The deDuplicationId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeDuplicationId() {
@@ -42,7 +42,7 @@ public class BusinessFlow extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The description property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -50,7 +50,7 @@ public class BusinessFlow extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The displayName property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -58,7 +58,7 @@ public class BusinessFlow extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -76,7 +76,7 @@ public class BusinessFlow extends Entity implements Parsable {
     }
     /**
      * Gets the policy property value. The policy property
-     * @return a GovernancePolicy
+     * @return a {@link GovernancePolicy}
      */
     @jakarta.annotation.Nullable
     public GovernancePolicy getPolicy() {
@@ -84,7 +84,7 @@ public class BusinessFlow extends Entity implements Parsable {
     }
     /**
      * Gets the policyTemplateId property value. The policyTemplateId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPolicyTemplateId() {
@@ -92,7 +92,7 @@ public class BusinessFlow extends Entity implements Parsable {
     }
     /**
      * Gets the recordVersion property value. The recordVersion property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getRecordVersion() {
@@ -100,7 +100,7 @@ public class BusinessFlow extends Entity implements Parsable {
     }
     /**
      * Gets the schemaId property value. The schemaId property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSchemaId() {
@@ -108,7 +108,7 @@ public class BusinessFlow extends Entity implements Parsable {
     }
     /**
      * Gets the settings property value. The settings property
-     * @return a BusinessFlowSettings
+     * @return a {@link BusinessFlowSettings}
      */
     @jakarta.annotation.Nullable
     public BusinessFlowSettings getSettings() {

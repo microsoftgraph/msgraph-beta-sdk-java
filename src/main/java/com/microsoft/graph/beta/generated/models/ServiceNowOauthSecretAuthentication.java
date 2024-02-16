@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ServiceNowOauthSecretAuthentication extends ServiceNowAuthenticationMethod implements Parsable {
     /**
-     * Instantiates a new ServiceNowOauthSecretAuthentication and sets the default values.
+     * Instantiates a new {@link ServiceNowOauthSecretAuthentication} and sets the default values.
      */
     public ServiceNowOauthSecretAuthentication() {
         super();
@@ -21,7 +21,7 @@ public class ServiceNowOauthSecretAuthentication extends ServiceNowAuthenticatio
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ServiceNowOauthSecretAuthentication
+     * @return a {@link ServiceNowOauthSecretAuthentication}
      */
     @jakarta.annotation.Nonnull
     public static ServiceNowOauthSecretAuthentication createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class ServiceNowOauthSecretAuthentication extends ServiceNowAuthenticatio
     }
     /**
      * Gets the appId property value. Tenant appId registered with Azure AD
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAppId() {
@@ -38,7 +38,7 @@ public class ServiceNowOauthSecretAuthentication extends ServiceNowAuthenticatio
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

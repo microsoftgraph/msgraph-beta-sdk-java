@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OnAttributeCollectionSubmitListener extends AuthenticationEventListener implements Parsable {
     /**
-     * Instantiates a new OnAttributeCollectionSubmitListener and sets the default values.
+     * Instantiates a new {@link OnAttributeCollectionSubmitListener} and sets the default values.
      */
     public OnAttributeCollectionSubmitListener() {
         super();
@@ -18,7 +18,7 @@ public class OnAttributeCollectionSubmitListener extends AuthenticationEventList
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a OnAttributeCollectionSubmitListener
+     * @return a {@link OnAttributeCollectionSubmitListener}
      */
     @jakarta.annotation.Nonnull
     public static OnAttributeCollectionSubmitListener createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class OnAttributeCollectionSubmitListener extends AuthenticationEventList
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -37,7 +37,7 @@ public class OnAttributeCollectionSubmitListener extends AuthenticationEventList
     }
     /**
      * Gets the handler property value. Configuration for what to invoke if the event resolves to this listener.
-     * @return a OnAttributeCollectionSubmitHandler
+     * @return a {@link OnAttributeCollectionSubmitHandler}
      */
     @jakarta.annotation.Nullable
     public OnAttributeCollectionSubmitHandler getHandler() {

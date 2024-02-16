@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsManagementApp extends Entity implements Parsable {
     /**
-     * Instantiates a new WindowsManagementApp and sets the default values.
+     * Instantiates a new {@link WindowsManagementApp} and sets the default values.
      */
     public WindowsManagementApp() {
         super();
@@ -20,7 +20,7 @@ public class WindowsManagementApp extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WindowsManagementApp
+     * @return a {@link WindowsManagementApp}
      */
     @jakarta.annotation.Nonnull
     public static WindowsManagementApp createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -29,7 +29,7 @@ public class WindowsManagementApp extends Entity implements Parsable {
     }
     /**
      * Gets the availableVersion property value. Windows management app available version.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAvailableVersion() {
@@ -37,7 +37,7 @@ public class WindowsManagementApp extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -50,7 +50,7 @@ public class WindowsManagementApp extends Entity implements Parsable {
     }
     /**
      * Gets the healthStates property value. The list of health states for installed Windows management app.
-     * @return a java.util.List<WindowsManagementAppHealthState>
+     * @return a {@link java.util.List<WindowsManagementAppHealthState>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<WindowsManagementAppHealthState> getHealthStates() {
@@ -58,7 +58,7 @@ public class WindowsManagementApp extends Entity implements Parsable {
     }
     /**
      * Gets the managedInstaller property value. ManagedInstallerStatus
-     * @return a ManagedInstallerStatus
+     * @return a {@link ManagedInstallerStatus}
      */
     @jakarta.annotation.Nullable
     public ManagedInstallerStatus getManagedInstaller() {
@@ -66,7 +66,7 @@ public class WindowsManagementApp extends Entity implements Parsable {
     }
     /**
      * Gets the managedInstallerConfiguredDateTime property value. Managed Installer Configured Date Time
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getManagedInstallerConfiguredDateTime() {

@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SecurityBaselineStateSummary extends Entity implements Parsable {
     /**
-     * Instantiates a new SecurityBaselineStateSummary and sets the default values.
+     * Instantiates a new {@link SecurityBaselineStateSummary} and sets the default values.
      */
     public SecurityBaselineStateSummary() {
         super();
@@ -20,7 +20,7 @@ public class SecurityBaselineStateSummary extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SecurityBaselineStateSummary
+     * @return a {@link SecurityBaselineStateSummary}
      */
     @jakarta.annotation.Nonnull
     public static SecurityBaselineStateSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class SecurityBaselineStateSummary extends Entity implements Parsable {
     }
     /**
      * Gets the conflictCount property value. Number of conflict devices
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getConflictCount() {
@@ -44,7 +44,7 @@ public class SecurityBaselineStateSummary extends Entity implements Parsable {
     }
     /**
      * Gets the errorCount property value. Number of error devices
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getErrorCount() {
@@ -52,7 +52,7 @@ public class SecurityBaselineStateSummary extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -67,7 +67,7 @@ public class SecurityBaselineStateSummary extends Entity implements Parsable {
     }
     /**
      * Gets the notApplicableCount property value. Number of not applicable devices
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getNotApplicableCount() {
@@ -75,7 +75,7 @@ public class SecurityBaselineStateSummary extends Entity implements Parsable {
     }
     /**
      * Gets the notSecureCount property value. Number of not secure devices
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getNotSecureCount() {
@@ -83,7 +83,7 @@ public class SecurityBaselineStateSummary extends Entity implements Parsable {
     }
     /**
      * Gets the secureCount property value. Number of secure devices
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getSecureCount() {
@@ -91,7 +91,7 @@ public class SecurityBaselineStateSummary extends Entity implements Parsable {
     }
     /**
      * Gets the unknownCount property value. Number of unknown devices
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getUnknownCount() {

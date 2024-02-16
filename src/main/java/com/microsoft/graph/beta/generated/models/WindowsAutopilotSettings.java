@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsAutopilotSettings extends Entity implements Parsable {
     /**
-     * Instantiates a new WindowsAutopilotSettings and sets the default values.
+     * Instantiates a new {@link WindowsAutopilotSettings} and sets the default values.
      */
     public WindowsAutopilotSettings() {
         super();
@@ -21,7 +21,7 @@ public class WindowsAutopilotSettings extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WindowsAutopilotSettings
+     * @return a {@link WindowsAutopilotSettings}
      */
     @jakarta.annotation.Nonnull
     public static WindowsAutopilotSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class WindowsAutopilotSettings extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -42,7 +42,7 @@ public class WindowsAutopilotSettings extends Entity implements Parsable {
     }
     /**
      * Gets the lastManualSyncTriggerDateTime property value. Last data sync date time with DDS service.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastManualSyncTriggerDateTime() {
@@ -50,7 +50,7 @@ public class WindowsAutopilotSettings extends Entity implements Parsable {
     }
     /**
      * Gets the lastSyncDateTime property value. Last data sync date time with DDS service.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastSyncDateTime() {
@@ -58,7 +58,7 @@ public class WindowsAutopilotSettings extends Entity implements Parsable {
     }
     /**
      * Gets the syncStatus property value. The syncStatus property
-     * @return a WindowsAutopilotSyncStatus
+     * @return a {@link WindowsAutopilotSyncStatus}
      */
     @jakarta.annotation.Nullable
     public WindowsAutopilotSyncStatus getSyncStatus() {

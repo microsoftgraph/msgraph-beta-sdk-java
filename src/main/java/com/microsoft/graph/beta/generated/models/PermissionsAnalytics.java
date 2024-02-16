@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PermissionsAnalytics extends Entity implements Parsable {
     /**
-     * Instantiates a new PermissionsAnalytics and sets the default values.
+     * Instantiates a new {@link PermissionsAnalytics} and sets the default values.
      */
     public PermissionsAnalytics() {
         super();
@@ -17,7 +17,7 @@ public class PermissionsAnalytics extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PermissionsAnalytics
+     * @return a {@link PermissionsAnalytics}
      */
     @jakarta.annotation.Nonnull
     public static PermissionsAnalytics createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class PermissionsAnalytics extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -37,7 +37,7 @@ public class PermissionsAnalytics extends Entity implements Parsable {
     }
     /**
      * Gets the findings property value. The output of the permissions usage data analysis performed by Permissions Management to assess risk with identities and resources.
-     * @return a java.util.List<Finding>
+     * @return a {@link java.util.List<Finding>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<Finding> getFindings() {
@@ -45,7 +45,7 @@ public class PermissionsAnalytics extends Entity implements Parsable {
     }
     /**
      * Gets the permissionsCreepIndexDistributions property value. Represents the Permissions Creep Index (PCI) for the authorization system. PCI distribution chart shows the classification of human and nonhuman identities based on the PCI score in three buckets (low, medium, high).
-     * @return a java.util.List<PermissionsCreepIndexDistribution>
+     * @return a {@link java.util.List<PermissionsCreepIndexDistribution>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<PermissionsCreepIndexDistribution> getPermissionsCreepIndexDistributions() {

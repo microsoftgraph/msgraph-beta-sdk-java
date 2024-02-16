@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsBatteryHealthCapacityDetails extends Entity implements Parsable {
     /**
-     * Instantiates a new UserExperienceAnalyticsBatteryHealthCapacityDetails and sets the default values.
+     * Instantiates a new {@link UserExperienceAnalyticsBatteryHealthCapacityDetails} and sets the default values.
      */
     public UserExperienceAnalyticsBatteryHealthCapacityDetails() {
         super();
@@ -21,7 +21,7 @@ public class UserExperienceAnalyticsBatteryHealthCapacityDetails extends Entity 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserExperienceAnalyticsBatteryHealthCapacityDetails
+     * @return a {@link UserExperienceAnalyticsBatteryHealthCapacityDetails}
      */
     @jakarta.annotation.Nonnull
     public static UserExperienceAnalyticsBatteryHealthCapacityDetails createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class UserExperienceAnalyticsBatteryHealthCapacityDetails extends Entity 
     }
     /**
      * Gets the activeDevices property value. Number of active devices within the tenant. Valid values 0 to 2147483647
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getActiveDevices() {
@@ -38,7 +38,7 @@ public class UserExperienceAnalyticsBatteryHealthCapacityDetails extends Entity 
     }
     /**
      * Gets the batteryCapacityFair property value. Number of devices whose battery maximum capacity is greater than 50% but lesser than 80%. Valid values 0 to 2147483647
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getBatteryCapacityFair() {
@@ -46,7 +46,7 @@ public class UserExperienceAnalyticsBatteryHealthCapacityDetails extends Entity 
     }
     /**
      * Gets the batteryCapacityGood property value. Number of devices whose battery maximum capacity is greater than 80%. Valid values 0 to 2147483647
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getBatteryCapacityGood() {
@@ -54,7 +54,7 @@ public class UserExperienceAnalyticsBatteryHealthCapacityDetails extends Entity 
     }
     /**
      * Gets the batteryCapacityPoor property value. Number of devices whose battery maximum capacity is lesser than 50%. Valid values 0 to 2147483647
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getBatteryCapacityPoor() {
@@ -62,7 +62,7 @@ public class UserExperienceAnalyticsBatteryHealthCapacityDetails extends Entity 
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -76,7 +76,7 @@ public class UserExperienceAnalyticsBatteryHealthCapacityDetails extends Entity 
     }
     /**
      * Gets the lastRefreshedDateTime property value. Recorded date time of this capacity details instance.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastRefreshedDateTime() {

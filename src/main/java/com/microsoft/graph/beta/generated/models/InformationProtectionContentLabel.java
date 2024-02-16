@@ -19,7 +19,7 @@ public class InformationProtectionContentLabel implements AdditionalDataHolder, 
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new InformationProtectionContentLabel and sets the default values.
+     * Instantiates a new {@link InformationProtectionContentLabel} and sets the default values.
      */
     public InformationProtectionContentLabel() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -28,7 +28,7 @@ public class InformationProtectionContentLabel implements AdditionalDataHolder, 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a InformationProtectionContentLabel
+     * @return a {@link InformationProtectionContentLabel}
      */
     @jakarta.annotation.Nonnull
     public static InformationProtectionContentLabel createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class InformationProtectionContentLabel implements AdditionalDataHolder, 
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -50,7 +50,7 @@ public class InformationProtectionContentLabel implements AdditionalDataHolder, 
     }
     /**
      * Gets the assignmentMethod property value. The assignmentMethod property
-     * @return a AssignmentMethod
+     * @return a {@link AssignmentMethod}
      */
     @jakarta.annotation.Nullable
     public AssignmentMethod getAssignmentMethod() {
@@ -58,7 +58,7 @@ public class InformationProtectionContentLabel implements AdditionalDataHolder, 
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -66,7 +66,7 @@ public class InformationProtectionContentLabel implements AdditionalDataHolder, 
     }
     /**
      * Gets the creationDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreationDateTime() {
@@ -74,7 +74,7 @@ public class InformationProtectionContentLabel implements AdditionalDataHolder, 
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -87,7 +87,7 @@ public class InformationProtectionContentLabel implements AdditionalDataHolder, 
     }
     /**
      * Gets the label property value. Details on the label that is currently applied to the file.
-     * @return a LabelDetails
+     * @return a {@link LabelDetails}
      */
     @jakarta.annotation.Nullable
     public LabelDetails getLabel() {
@@ -95,7 +95,7 @@ public class InformationProtectionContentLabel implements AdditionalDataHolder, 
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {

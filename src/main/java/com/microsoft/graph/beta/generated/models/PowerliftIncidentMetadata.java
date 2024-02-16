@@ -23,7 +23,7 @@ public class PowerliftIncidentMetadata implements AdditionalDataHolder, BackedMo
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new PowerliftIncidentMetadata and sets the default values.
+     * Instantiates a new {@link PowerliftIncidentMetadata} and sets the default values.
      */
     public PowerliftIncidentMetadata() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -32,7 +32,7 @@ public class PowerliftIncidentMetadata implements AdditionalDataHolder, BackedMo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PowerliftIncidentMetadata
+     * @return a {@link PowerliftIncidentMetadata}
      */
     @jakarta.annotation.Nonnull
     public static PowerliftIncidentMetadata createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class PowerliftIncidentMetadata implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -54,7 +54,7 @@ public class PowerliftIncidentMetadata implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the application property value. The name of the application the diagnostic is from. Example: com.microsoft.CompanyPortal
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getApplication() {
@@ -62,7 +62,7 @@ public class PowerliftIncidentMetadata implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -70,7 +70,7 @@ public class PowerliftIncidentMetadata implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the clientVersion property value. The version of the application. Example: 5.2203.1
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getClientVersion() {
@@ -78,7 +78,7 @@ public class PowerliftIncidentMetadata implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the createdAtDateTime property value. The time the app diagnostic was created. Example: 2022-04-19T17:24:45.313Z
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedAtDateTime() {
@@ -86,7 +86,7 @@ public class PowerliftIncidentMetadata implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the easyId property value. The unique app diagnostic identifier as a user friendly 8 character hexadecimal string. Example: 8520467A
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getEasyId() {
@@ -94,7 +94,7 @@ public class PowerliftIncidentMetadata implements AdditionalDataHolder, BackedMo
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -112,7 +112,7 @@ public class PowerliftIncidentMetadata implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the fileNames property value. A list of files that are associated with the diagnostic.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getFileNames() {
@@ -120,7 +120,7 @@ public class PowerliftIncidentMetadata implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the locale property value. The locale information of the application. Example: en-US
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getLocale() {
@@ -128,7 +128,7 @@ public class PowerliftIncidentMetadata implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -136,7 +136,7 @@ public class PowerliftIncidentMetadata implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the platform property value. The device's OS the diagnostic is from. Example: iOS
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPlatform() {
@@ -144,7 +144,7 @@ public class PowerliftIncidentMetadata implements AdditionalDataHolder, BackedMo
     }
     /**
      * Gets the powerliftId property value. The unique identifier of the app diagnostic. Example: 8520467a-49a9-44a4-8447-8dfb8bec6726
-     * @return a UUID
+     * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
     public UUID getPowerliftId() {

@@ -21,7 +21,7 @@ public class VpnOnDemandRule implements AdditionalDataHolder, BackedModel, Parsa
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new VpnOnDemandRule and sets the default values.
+     * Instantiates a new {@link VpnOnDemandRule} and sets the default values.
      */
     public VpnOnDemandRule() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -30,7 +30,7 @@ public class VpnOnDemandRule implements AdditionalDataHolder, BackedModel, Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a VpnOnDemandRule
+     * @return a {@link VpnOnDemandRule}
      */
     @jakarta.annotation.Nonnull
     public static VpnOnDemandRule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class VpnOnDemandRule implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the action property value. VPN On-Demand Rule Connection Action.
-     * @return a VpnOnDemandRuleConnectionAction
+     * @return a {@link VpnOnDemandRuleConnectionAction}
      */
     @jakarta.annotation.Nullable
     public VpnOnDemandRuleConnectionAction getAction() {
@@ -47,7 +47,7 @@ public class VpnOnDemandRule implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -60,7 +60,7 @@ public class VpnOnDemandRule implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -68,7 +68,7 @@ public class VpnOnDemandRule implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the dnsSearchDomains property value. DNS Search Domains.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getDnsSearchDomains() {
@@ -76,7 +76,7 @@ public class VpnOnDemandRule implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the dnsServerAddressMatch property value. DNS Search Server Address.
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getDnsServerAddressMatch() {
@@ -84,7 +84,7 @@ public class VpnOnDemandRule implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the domainAction property value. VPN On-Demand Rule Connection Domain Action.
-     * @return a VpnOnDemandRuleConnectionDomainAction
+     * @return a {@link VpnOnDemandRuleConnectionDomainAction}
      */
     @jakarta.annotation.Nullable
     public VpnOnDemandRuleConnectionDomainAction getDomainAction() {
@@ -92,7 +92,7 @@ public class VpnOnDemandRule implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the domains property value. Domains (Only applicable when Action is evaluate connection).
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getDomains() {
@@ -100,7 +100,7 @@ public class VpnOnDemandRule implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -119,7 +119,7 @@ public class VpnOnDemandRule implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the interfaceTypeMatch property value. VPN On-Demand Rule Connection network interface type.
-     * @return a VpnOnDemandRuleInterfaceTypeMatch
+     * @return a {@link VpnOnDemandRuleInterfaceTypeMatch}
      */
     @jakarta.annotation.Nullable
     public VpnOnDemandRuleInterfaceTypeMatch getInterfaceTypeMatch() {
@@ -127,7 +127,7 @@ public class VpnOnDemandRule implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -135,7 +135,7 @@ public class VpnOnDemandRule implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the probeRequiredUrl property value. Probe Required Url (Only applicable when Action is evaluate connection and DomainAction is connect if needed).
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getProbeRequiredUrl() {
@@ -143,7 +143,7 @@ public class VpnOnDemandRule implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the probeUrl property value. A URL to probe. If this URL is successfully fetched (returning a 200 HTTP status code) without redirection, this rule matches.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getProbeUrl() {
@@ -151,7 +151,7 @@ public class VpnOnDemandRule implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the ssids property value. Network Service Set Identifiers (SSIDs).
-     * @return a java.util.List<String>
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSsids() {

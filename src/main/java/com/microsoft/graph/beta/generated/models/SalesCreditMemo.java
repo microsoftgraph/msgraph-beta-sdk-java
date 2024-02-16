@@ -22,7 +22,7 @@ public class SalesCreditMemo implements AdditionalDataHolder, BackedModel, Parsa
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new SalesCreditMemo and sets the default values.
+     * Instantiates a new {@link SalesCreditMemo} and sets the default values.
      */
     public SalesCreditMemo() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -31,7 +31,7 @@ public class SalesCreditMemo implements AdditionalDataHolder, BackedModel, Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SalesCreditMemo
+     * @return a {@link SalesCreditMemo}
      */
     @jakarta.annotation.Nonnull
     public static SalesCreditMemo createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class SalesCreditMemo implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -53,7 +53,7 @@ public class SalesCreditMemo implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -61,7 +61,7 @@ public class SalesCreditMemo implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the billingPostalAddress property value. The billingPostalAddress property
-     * @return a PostalAddressType
+     * @return a {@link PostalAddressType}
      */
     @jakarta.annotation.Nullable
     public PostalAddressType getBillingPostalAddress() {
@@ -69,7 +69,7 @@ public class SalesCreditMemo implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the billToCustomerId property value. The billToCustomerId property
-     * @return a UUID
+     * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
     public UUID getBillToCustomerId() {
@@ -77,7 +77,7 @@ public class SalesCreditMemo implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the billToCustomerNumber property value. The billToCustomerNumber property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getBillToCustomerNumber() {
@@ -85,7 +85,7 @@ public class SalesCreditMemo implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the billToName property value. The billToName property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getBillToName() {
@@ -93,7 +93,7 @@ public class SalesCreditMemo implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the creditMemoDate property value. The creditMemoDate property
-     * @return a LocalDate
+     * @return a {@link LocalDate}
      */
     @jakarta.annotation.Nullable
     public LocalDate getCreditMemoDate() {
@@ -101,7 +101,7 @@ public class SalesCreditMemo implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the currency property value. The currency property
-     * @return a Currency
+     * @return a {@link Currency}
      */
     @jakarta.annotation.Nullable
     public Currency getCurrency() {
@@ -109,7 +109,7 @@ public class SalesCreditMemo implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the currencyCode property value. The currencyCode property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCurrencyCode() {
@@ -117,7 +117,7 @@ public class SalesCreditMemo implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the currencyId property value. The currencyId property
-     * @return a UUID
+     * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
     public UUID getCurrencyId() {
@@ -125,7 +125,7 @@ public class SalesCreditMemo implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the customer property value. The customer property
-     * @return a Customer
+     * @return a {@link Customer}
      */
     @jakarta.annotation.Nullable
     public Customer getCustomer() {
@@ -133,7 +133,7 @@ public class SalesCreditMemo implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the customerId property value. The customerId property
-     * @return a UUID
+     * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
     public UUID getCustomerId() {
@@ -141,7 +141,7 @@ public class SalesCreditMemo implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the customerName property value. The customerName property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCustomerName() {
@@ -149,7 +149,7 @@ public class SalesCreditMemo implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the customerNumber property value. The customerNumber property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCustomerNumber() {
@@ -157,7 +157,7 @@ public class SalesCreditMemo implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the discountAmount property value. The discountAmount property
-     * @return a BigDecimal
+     * @return a {@link BigDecimal}
      */
     @jakarta.annotation.Nullable
     public BigDecimal getDiscountAmount() {
@@ -165,7 +165,7 @@ public class SalesCreditMemo implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the discountAppliedBeforeTax property value. The discountAppliedBeforeTax property
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getDiscountAppliedBeforeTax() {
@@ -173,7 +173,7 @@ public class SalesCreditMemo implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the dueDate property value. The dueDate property
-     * @return a LocalDate
+     * @return a {@link LocalDate}
      */
     @jakarta.annotation.Nullable
     public LocalDate getDueDate() {
@@ -181,7 +181,7 @@ public class SalesCreditMemo implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the email property value. The email property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getEmail() {
@@ -189,7 +189,7 @@ public class SalesCreditMemo implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the externalDocumentNumber property value. The externalDocumentNumber property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getExternalDocumentNumber() {
@@ -197,7 +197,7 @@ public class SalesCreditMemo implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -240,7 +240,7 @@ public class SalesCreditMemo implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the id property value. The id property
-     * @return a UUID
+     * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
     public UUID getId() {
@@ -248,7 +248,7 @@ public class SalesCreditMemo implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the invoiceId property value. The invoiceId property
-     * @return a UUID
+     * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
     public UUID getInvoiceId() {
@@ -256,7 +256,7 @@ public class SalesCreditMemo implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the invoiceNumber property value. The invoiceNumber property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getInvoiceNumber() {
@@ -264,7 +264,7 @@ public class SalesCreditMemo implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
@@ -272,7 +272,7 @@ public class SalesCreditMemo implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the number property value. The number property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getNumber() {
@@ -280,7 +280,7 @@ public class SalesCreditMemo implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -288,7 +288,7 @@ public class SalesCreditMemo implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the paymentTerm property value. The paymentTerm property
-     * @return a PaymentTerm
+     * @return a {@link PaymentTerm}
      */
     @jakarta.annotation.Nullable
     public PaymentTerm getPaymentTerm() {
@@ -296,7 +296,7 @@ public class SalesCreditMemo implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the paymentTermsId property value. The paymentTermsId property
-     * @return a UUID
+     * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
     public UUID getPaymentTermsId() {
@@ -304,7 +304,7 @@ public class SalesCreditMemo implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the phoneNumber property value. The phoneNumber property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPhoneNumber() {
@@ -312,7 +312,7 @@ public class SalesCreditMemo implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the pricesIncludeTax property value. The pricesIncludeTax property
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getPricesIncludeTax() {
@@ -320,7 +320,7 @@ public class SalesCreditMemo implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the salesCreditMemoLines property value. The salesCreditMemoLines property
-     * @return a java.util.List<SalesCreditMemoLine>
+     * @return a {@link java.util.List<SalesCreditMemoLine>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<SalesCreditMemoLine> getSalesCreditMemoLines() {
@@ -328,7 +328,7 @@ public class SalesCreditMemo implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the salesperson property value. The salesperson property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSalesperson() {
@@ -336,7 +336,7 @@ public class SalesCreditMemo implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the sellingPostalAddress property value. The sellingPostalAddress property
-     * @return a PostalAddressType
+     * @return a {@link PostalAddressType}
      */
     @jakarta.annotation.Nullable
     public PostalAddressType getSellingPostalAddress() {
@@ -344,7 +344,7 @@ public class SalesCreditMemo implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the status property value. The status property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getStatus() {
@@ -352,7 +352,7 @@ public class SalesCreditMemo implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the totalAmountExcludingTax property value. The totalAmountExcludingTax property
-     * @return a BigDecimal
+     * @return a {@link BigDecimal}
      */
     @jakarta.annotation.Nullable
     public BigDecimal getTotalAmountExcludingTax() {
@@ -360,7 +360,7 @@ public class SalesCreditMemo implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the totalAmountIncludingTax property value. The totalAmountIncludingTax property
-     * @return a BigDecimal
+     * @return a {@link BigDecimal}
      */
     @jakarta.annotation.Nullable
     public BigDecimal getTotalAmountIncludingTax() {
@@ -368,7 +368,7 @@ public class SalesCreditMemo implements AdditionalDataHolder, BackedModel, Parsa
     }
     /**
      * Gets the totalTaxAmount property value. The totalTaxAmount property
-     * @return a BigDecimal
+     * @return a {@link BigDecimal}
      */
     @jakarta.annotation.Nullable
     public BigDecimal getTotalTaxAmount() {

@@ -21,7 +21,7 @@ public class ConfigManagerPolicySummary implements AdditionalDataHolder, BackedM
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new ConfigManagerPolicySummary and sets the default values.
+     * Instantiates a new {@link ConfigManagerPolicySummary} and sets the default values.
      */
     public ConfigManagerPolicySummary() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -30,7 +30,7 @@ public class ConfigManagerPolicySummary implements AdditionalDataHolder, BackedM
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ConfigManagerPolicySummary
+     * @return a {@link ConfigManagerPolicySummary}
      */
     @jakarta.annotation.Nonnull
     public static ConfigManagerPolicySummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class ConfigManagerPolicySummary implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -52,7 +52,7 @@ public class ConfigManagerPolicySummary implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -60,7 +60,7 @@ public class ConfigManagerPolicySummary implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the compliantDeviceCount property value. The number of devices evaluated to be compliant by the policy.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getCompliantDeviceCount() {
@@ -68,7 +68,7 @@ public class ConfigManagerPolicySummary implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the enforcedDeviceCount property value. The number of devices that have have been remediated by the policy.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getEnforcedDeviceCount() {
@@ -76,7 +76,7 @@ public class ConfigManagerPolicySummary implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the failedDeviceCount property value. The number of devices that failed to be evaluated by the policy.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getFailedDeviceCount() {
@@ -84,7 +84,7 @@ public class ConfigManagerPolicySummary implements AdditionalDataHolder, BackedM
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -100,7 +100,7 @@ public class ConfigManagerPolicySummary implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the nonCompliantDeviceCount property value. The number of devices evaluated to be noncompliant by the policy.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getNonCompliantDeviceCount() {
@@ -108,7 +108,7 @@ public class ConfigManagerPolicySummary implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -116,7 +116,7 @@ public class ConfigManagerPolicySummary implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the pendingDeviceCount property value. The number of devices that have acknowledged the policy but are pending evaluation.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getPendingDeviceCount() {
@@ -124,7 +124,7 @@ public class ConfigManagerPolicySummary implements AdditionalDataHolder, BackedM
     }
     /**
      * Gets the targetedDeviceCount property value. The number of devices targeted by the policy.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getTargetedDeviceCount() {

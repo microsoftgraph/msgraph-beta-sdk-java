@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class QualityUpdateCatalogEntry extends SoftwareUpdateCatalogEntry implements Parsable {
     /**
-     * Instantiates a new QualityUpdateCatalogEntry and sets the default values.
+     * Instantiates a new {@link QualityUpdateCatalogEntry} and sets the default values.
      */
     public QualityUpdateCatalogEntry() {
         super();
@@ -18,7 +18,7 @@ public class QualityUpdateCatalogEntry extends SoftwareUpdateCatalogEntry implem
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a QualityUpdateCatalogEntry
+     * @return a {@link QualityUpdateCatalogEntry}
      */
     @jakarta.annotation.Nonnull
     public static QualityUpdateCatalogEntry createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class QualityUpdateCatalogEntry extends SoftwareUpdateCatalogEntry implem
     }
     /**
      * Gets the catalogName property value. The catalog name of the content. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCatalogName() {
@@ -35,7 +35,7 @@ public class QualityUpdateCatalogEntry extends SoftwareUpdateCatalogEntry implem
     }
     /**
      * Gets the cveSeverityInformation property value. Severity information of the Common Vulnerabilities and Exposures associated with the content.
-     * @return a QualityUpdateCveSeverityInformation
+     * @return a {@link QualityUpdateCveSeverityInformation}
      */
     @jakarta.annotation.Nullable
     public QualityUpdateCveSeverityInformation getCveSeverityInformation() {
@@ -43,7 +43,7 @@ public class QualityUpdateCatalogEntry extends SoftwareUpdateCatalogEntry implem
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -59,7 +59,7 @@ public class QualityUpdateCatalogEntry extends SoftwareUpdateCatalogEntry implem
     }
     /**
      * Gets the isExpeditable property value. Indicates whether the content can be deployed as an expedited quality update. Read-only.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsExpeditable() {
@@ -67,7 +67,7 @@ public class QualityUpdateCatalogEntry extends SoftwareUpdateCatalogEntry implem
     }
     /**
      * Gets the productRevisions property value. The operating system product revisions that are released as part of this quality update.
-     * @return a java.util.List<ProductRevision>
+     * @return a {@link java.util.List<ProductRevision>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ProductRevision> getProductRevisions() {
@@ -75,7 +75,7 @@ public class QualityUpdateCatalogEntry extends SoftwareUpdateCatalogEntry implem
     }
     /**
      * Gets the qualityUpdateCadence property value. The publishing cadence of the quality update. Possible values are: monthly, outOfBand, unknownFutureValue. Read-only.
-     * @return a QualityUpdateCadence
+     * @return a {@link QualityUpdateCadence}
      */
     @jakarta.annotation.Nullable
     public QualityUpdateCadence getQualityUpdateCadence() {
@@ -83,7 +83,7 @@ public class QualityUpdateCatalogEntry extends SoftwareUpdateCatalogEntry implem
     }
     /**
      * Gets the qualityUpdateClassification property value. The qualityUpdateClassification property
-     * @return a QualityUpdateClassification
+     * @return a {@link QualityUpdateClassification}
      */
     @jakarta.annotation.Nullable
     public QualityUpdateClassification getQualityUpdateClassification() {
@@ -91,7 +91,7 @@ public class QualityUpdateCatalogEntry extends SoftwareUpdateCatalogEntry implem
     }
     /**
      * Gets the shortName property value. The short name of the content. Read-only.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getShortName() {

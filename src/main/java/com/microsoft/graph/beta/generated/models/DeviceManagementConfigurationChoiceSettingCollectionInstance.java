@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementConfigurationChoiceSettingCollectionInstance extends DeviceManagementConfigurationSettingInstance implements Parsable {
     /**
-     * Instantiates a new DeviceManagementConfigurationChoiceSettingCollectionInstance and sets the default values.
+     * Instantiates a new {@link DeviceManagementConfigurationChoiceSettingCollectionInstance} and sets the default values.
      */
     public DeviceManagementConfigurationChoiceSettingCollectionInstance() {
         super();
@@ -21,7 +21,7 @@ public class DeviceManagementConfigurationChoiceSettingCollectionInstance extend
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceManagementConfigurationChoiceSettingCollectionInstance
+     * @return a {@link DeviceManagementConfigurationChoiceSettingCollectionInstance}
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementConfigurationChoiceSettingCollectionInstance createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class DeviceManagementConfigurationChoiceSettingCollectionInstance extend
     }
     /**
      * Gets the choiceSettingCollectionValue property value. Choice setting collection value
-     * @return a java.util.List<DeviceManagementConfigurationChoiceSettingValue>
+     * @return a {@link java.util.List<DeviceManagementConfigurationChoiceSettingValue>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementConfigurationChoiceSettingValue> getChoiceSettingCollectionValue() {
@@ -38,7 +38,7 @@ public class DeviceManagementConfigurationChoiceSettingCollectionInstance extend
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class BusinessScenarioTask extends PlannerTask implements Parsable {
     /**
-     * Instantiates a new BusinessScenarioTask and sets the default values.
+     * Instantiates a new {@link BusinessScenarioTask} and sets the default values.
      */
     public BusinessScenarioTask() {
         super();
@@ -17,7 +17,7 @@ public class BusinessScenarioTask extends PlannerTask implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a BusinessScenarioTask
+     * @return a {@link BusinessScenarioTask}
      */
     @jakarta.annotation.Nonnull
     public static BusinessScenarioTask createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class BusinessScenarioTask extends PlannerTask implements Parsable {
     }
     /**
      * Gets the businessScenarioProperties property value. Scenario-specific properties of the task. externalObjectId and externalBucketId properties must be specified when creating a task.
-     * @return a BusinessScenarioProperties
+     * @return a {@link BusinessScenarioProperties}
      */
     @jakarta.annotation.Nullable
     public BusinessScenarioProperties getBusinessScenarioProperties() {
@@ -34,7 +34,7 @@ public class BusinessScenarioTask extends PlannerTask implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -45,7 +45,7 @@ public class BusinessScenarioTask extends PlannerTask implements Parsable {
     }
     /**
      * Gets the target property value. Target of the task that specifies where the task should be placed. Must be specified when creating a task.
-     * @return a BusinessScenarioTaskTargetBase
+     * @return a {@link BusinessScenarioTaskTargetBase}
      */
     @jakarta.annotation.Nullable
     public BusinessScenarioTaskTargetBase getTarget() {

@@ -18,7 +18,7 @@ public class AuthenticationAttributeCollectionInputConfiguration implements Addi
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new AuthenticationAttributeCollectionInputConfiguration and sets the default values.
+     * Instantiates a new {@link AuthenticationAttributeCollectionInputConfiguration} and sets the default values.
      */
     public AuthenticationAttributeCollectionInputConfiguration() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
@@ -27,7 +27,7 @@ public class AuthenticationAttributeCollectionInputConfiguration implements Addi
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AuthenticationAttributeCollectionInputConfiguration
+     * @return a {@link AuthenticationAttributeCollectionInputConfiguration}
      */
     @jakarta.annotation.Nonnull
     public static AuthenticationAttributeCollectionInputConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class AuthenticationAttributeCollectionInputConfiguration implements Addi
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
+     * @return a {@link Map<String, Object>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
@@ -49,7 +49,7 @@ public class AuthenticationAttributeCollectionInputConfiguration implements Addi
     }
     /**
      * Gets the attribute property value. The built-in or custom attribute for which a value is being collected.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAttribute() {
@@ -57,7 +57,7 @@ public class AuthenticationAttributeCollectionInputConfiguration implements Addi
     }
     /**
      * Gets the backingStore property value. Stores model information.
-     * @return a BackingStore
+     * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
@@ -65,7 +65,7 @@ public class AuthenticationAttributeCollectionInputConfiguration implements Addi
     }
     /**
      * Gets the defaultValue property value. The default value of the attribute displayed to the end user.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDefaultValue() {
@@ -73,7 +73,7 @@ public class AuthenticationAttributeCollectionInputConfiguration implements Addi
     }
     /**
      * Gets the editable property value. Whether the attribute is editable by the end user.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getEditable() {
@@ -81,7 +81,7 @@ public class AuthenticationAttributeCollectionInputConfiguration implements Addi
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -101,7 +101,7 @@ public class AuthenticationAttributeCollectionInputConfiguration implements Addi
     }
     /**
      * Gets the hidden property value. Whether the attribute is displayed to the end user.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getHidden() {
@@ -109,7 +109,7 @@ public class AuthenticationAttributeCollectionInputConfiguration implements Addi
     }
     /**
      * Gets the inputType property value. The inputType property
-     * @return a AuthenticationAttributeCollectionInputType
+     * @return a {@link AuthenticationAttributeCollectionInputType}
      */
     @jakarta.annotation.Nullable
     public AuthenticationAttributeCollectionInputType getInputType() {
@@ -117,7 +117,7 @@ public class AuthenticationAttributeCollectionInputConfiguration implements Addi
     }
     /**
      * Gets the label property value. The label of the attribute field that is displayed to end user, unless overridden.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getLabel() {
@@ -125,7 +125,7 @@ public class AuthenticationAttributeCollectionInputConfiguration implements Addi
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -133,7 +133,7 @@ public class AuthenticationAttributeCollectionInputConfiguration implements Addi
     }
     /**
      * Gets the options property value. The option values for certain multiple-option input types.
-     * @return a java.util.List<AuthenticationAttributeCollectionOptionConfiguration>
+     * @return a {@link java.util.List<AuthenticationAttributeCollectionOptionConfiguration>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthenticationAttributeCollectionOptionConfiguration> getOptions() {
@@ -141,7 +141,7 @@ public class AuthenticationAttributeCollectionInputConfiguration implements Addi
     }
     /**
      * Gets the required property value. Whether the field is required.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getRequired() {
@@ -149,7 +149,7 @@ public class AuthenticationAttributeCollectionInputConfiguration implements Addi
     }
     /**
      * Gets the validationRegEx property value. The regex for the value of the field.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getValidationRegEx() {
@@ -157,7 +157,7 @@ public class AuthenticationAttributeCollectionInputConfiguration implements Addi
     }
     /**
      * Gets the writeToDirectory property value. Whether the value collected is stored.
-     * @return a Boolean
+     * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getWriteToDirectory() {

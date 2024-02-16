@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PasswordlessMicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMethod implements Parsable {
     /**
-     * Instantiates a new PasswordlessMicrosoftAuthenticatorAuthenticationMethod and sets the default values.
+     * Instantiates a new {@link PasswordlessMicrosoftAuthenticatorAuthenticationMethod} and sets the default values.
      */
     public PasswordlessMicrosoftAuthenticatorAuthenticationMethod() {
         super();
@@ -19,7 +19,7 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethod extends Auth
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PasswordlessMicrosoftAuthenticatorAuthenticationMethod
+     * @return a {@link PasswordlessMicrosoftAuthenticatorAuthenticationMethod}
      */
     @jakarta.annotation.Nonnull
     public static PasswordlessMicrosoftAuthenticatorAuthenticationMethod createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -28,7 +28,7 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethod extends Auth
     }
     /**
      * Gets the createdDateTime property value. The createdDateTime property
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
@@ -36,7 +36,7 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethod extends Auth
     }
     /**
      * Gets the creationDateTime property value. The timestamp when this method was registered to the user.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreationDateTime() {
@@ -44,7 +44,7 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethod extends Auth
     }
     /**
      * Gets the device property value. The device property
-     * @return a Device
+     * @return a {@link Device}
      */
     @jakarta.annotation.Nullable
     public Device getDevice() {
@@ -52,7 +52,7 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethod extends Auth
     }
     /**
      * Gets the displayName property value. The display name of the mobile device as given by the user.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -60,7 +60,7 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethod extends Auth
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

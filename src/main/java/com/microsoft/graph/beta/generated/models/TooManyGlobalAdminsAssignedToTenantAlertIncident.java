@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TooManyGlobalAdminsAssignedToTenantAlertIncident extends UnifiedRoleManagementAlertIncident implements Parsable {
     /**
-     * Instantiates a new TooManyGlobalAdminsAssignedToTenantAlertIncident and sets the default values.
+     * Instantiates a new {@link TooManyGlobalAdminsAssignedToTenantAlertIncident} and sets the default values.
      */
     public TooManyGlobalAdminsAssignedToTenantAlertIncident() {
         super();
@@ -18,7 +18,7 @@ public class TooManyGlobalAdminsAssignedToTenantAlertIncident extends UnifiedRol
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TooManyGlobalAdminsAssignedToTenantAlertIncident
+     * @return a {@link TooManyGlobalAdminsAssignedToTenantAlertIncident}
      */
     @jakarta.annotation.Nonnull
     public static TooManyGlobalAdminsAssignedToTenantAlertIncident createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class TooManyGlobalAdminsAssignedToTenantAlertIncident extends UnifiedRol
     }
     /**
      * Gets the assigneeDisplayName property value. Display name of the subject that the incident applies to.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAssigneeDisplayName() {
@@ -35,7 +35,7 @@ public class TooManyGlobalAdminsAssignedToTenantAlertIncident extends UnifiedRol
     }
     /**
      * Gets the assigneeId property value. The identifier of the subject that the incident applies to.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAssigneeId() {
@@ -43,7 +43,7 @@ public class TooManyGlobalAdminsAssignedToTenantAlertIncident extends UnifiedRol
     }
     /**
      * Gets the assigneeUserPrincipalName property value. User principal name of the subject that the incident applies to. Applies to user principals.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAssigneeUserPrincipalName() {
@@ -51,7 +51,7 @@ public class TooManyGlobalAdminsAssignedToTenantAlertIncident extends UnifiedRol
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

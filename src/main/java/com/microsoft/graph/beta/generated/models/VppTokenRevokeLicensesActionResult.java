@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class VppTokenRevokeLicensesActionResult extends VppTokenActionResult implements Parsable {
     /**
-     * Instantiates a new VppTokenRevokeLicensesActionResult and sets the default values.
+     * Instantiates a new {@link VppTokenRevokeLicensesActionResult} and sets the default values.
      */
     public VppTokenRevokeLicensesActionResult() {
         super();
@@ -20,7 +20,7 @@ public class VppTokenRevokeLicensesActionResult extends VppTokenActionResult imp
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a VppTokenRevokeLicensesActionResult
+     * @return a {@link VppTokenRevokeLicensesActionResult}
      */
     @jakarta.annotation.Nonnull
     public static VppTokenRevokeLicensesActionResult createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -29,7 +29,7 @@ public class VppTokenRevokeLicensesActionResult extends VppTokenActionResult imp
     }
     /**
      * Gets the actionFailureReason property value. Possible types of reasons for an Apple Volume Purchase Program token action failure.
-     * @return a VppTokenActionFailureReason
+     * @return a {@link VppTokenActionFailureReason}
      */
     @jakarta.annotation.Nullable
     public VppTokenActionFailureReason getActionFailureReason() {
@@ -37,7 +37,7 @@ public class VppTokenRevokeLicensesActionResult extends VppTokenActionResult imp
     }
     /**
      * Gets the failedLicensesCount property value. A count of the number of licenses that failed to revoke.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getFailedLicensesCount() {
@@ -45,7 +45,7 @@ public class VppTokenRevokeLicensesActionResult extends VppTokenActionResult imp
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -57,7 +57,7 @@ public class VppTokenRevokeLicensesActionResult extends VppTokenActionResult imp
     }
     /**
      * Gets the totalLicensesCount property value. A count of the number of licenses that were attempted to revoke.
-     * @return a Integer
+     * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
     public Integer getTotalLicensesCount() {

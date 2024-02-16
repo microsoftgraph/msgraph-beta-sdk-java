@@ -25,13 +25,14 @@ import java.util.Objects;
 public class DeviceHealthScriptStatesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new DeviceHealthScriptStatesRequestBuilder and sets the default values.
+     * Instantiates a new {@link DeviceHealthScriptStatesRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -39,7 +40,7 @@ public class DeviceHealthScriptStatesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/managedDevices/{managedDevice%2Did}/deviceHealthScriptStates{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new DeviceHealthScriptStatesRequestBuilder and sets the default values.
+     * Instantiates a new {@link DeviceHealthScriptStatesRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
@@ -48,7 +49,8 @@ public class DeviceHealthScriptStatesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Results of device health scripts that ran for this device. Default is empty list. This property is read-only.
-     * @return a DeviceHealthScriptPolicyStateCollectionResponse
+     * @return a {@link DeviceHealthScriptPolicyStateCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public DeviceHealthScriptPolicyStateCollectionResponse get() {
@@ -57,20 +59,21 @@ public class DeviceHealthScriptStatesRequestBuilder extends BaseRequestBuilder {
     /**
      * Results of device health scripts that ran for this device. Default is empty list. This property is read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a DeviceHealthScriptPolicyStateCollectionResponse
+     * @return a {@link DeviceHealthScriptPolicyStateCollectionResponse}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public DeviceHealthScriptPolicyStateCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceHealthScriptPolicyStateCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to deviceHealthScriptStates for users
      * @param body Contains properties for policy run state of the device health script.
-     * @return a DeviceHealthScriptPolicyState
+     * @return a {@link DeviceHealthScriptPolicyState}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public DeviceHealthScriptPolicyState post(@jakarta.annotation.Nonnull final DeviceHealthScriptPolicyState body) {
@@ -80,20 +83,20 @@ public class DeviceHealthScriptStatesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to deviceHealthScriptStates for users
      * @param body Contains properties for policy run state of the device health script.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a DeviceHealthScriptPolicyState
+     * @return a {@link DeviceHealthScriptPolicyState}
+     * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
     public DeviceHealthScriptPolicyState post(@jakarta.annotation.Nonnull final DeviceHealthScriptPolicyState body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
-        errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceHealthScriptPolicyState::createFromDiscriminatorValue);
     }
     /**
      * Results of device health scripts that ran for this device. Default is empty list. This property is read-only.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation() {
@@ -102,7 +105,7 @@ public class DeviceHealthScriptStatesRequestBuilder extends BaseRequestBuilder {
     /**
      * Results of device health scripts that ran for this device. Default is empty list. This property is read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -114,7 +117,7 @@ public class DeviceHealthScriptStatesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to deviceHealthScriptStates for users
      * @param body Contains properties for policy run state of the device health script.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final DeviceHealthScriptPolicyState body) {
@@ -124,12 +127,12 @@ public class DeviceHealthScriptStatesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to deviceHealthScriptStates for users
      * @param body Contains properties for policy run state of the device health script.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
+     * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final DeviceHealthScriptPolicyState body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/users/{user%2Did}/managedDevices/{managedDevice%2Did}/deviceHealthScriptStates", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -140,7 +143,7 @@ public class DeviceHealthScriptStatesRequestBuilder extends BaseRequestBuilder {
      * @param deviceId Property in multi-part unique identifier of deviceHealthScriptPolicyState
      * @param id Property in multi-part unique identifier of deviceHealthScriptPolicyState
      * @param policyId Property in multi-part unique identifier of deviceHealthScriptPolicyState
-     * @return a WithIdWithPolicyIdWithDeviceIdRequestBuilder
+     * @return a {@link WithIdWithPolicyIdWithDeviceIdRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public WithIdWithPolicyIdWithDeviceIdRequestBuilder withIdWithPolicyIdWithDeviceId(@jakarta.annotation.Nonnull final String deviceId, @jakarta.annotation.Nonnull final String id, @jakarta.annotation.Nonnull final String policyId) {
@@ -152,7 +155,7 @@ public class DeviceHealthScriptStatesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a DeviceHealthScriptStatesRequestBuilder
+     * @return a {@link DeviceHealthScriptStatesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public DeviceHealthScriptStatesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -206,7 +209,7 @@ public class DeviceHealthScriptStatesRequestBuilder extends BaseRequestBuilder {
         public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
-         * @return a Map<String, Object>
+         * @return a {@link Map<String, Object>}
          */
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {

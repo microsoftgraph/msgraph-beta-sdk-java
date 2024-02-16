@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OpenIdConnectProvider extends IdentityProvider implements Parsable {
     /**
-     * Instantiates a new OpenIdConnectProvider and sets the default values.
+     * Instantiates a new {@link OpenIdConnectProvider} and sets the default values.
      */
     public OpenIdConnectProvider() {
         super();
@@ -18,7 +18,7 @@ public class OpenIdConnectProvider extends IdentityProvider implements Parsable 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a OpenIdConnectProvider
+     * @return a {@link OpenIdConnectProvider}
      */
     @jakarta.annotation.Nonnull
     public static OpenIdConnectProvider createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class OpenIdConnectProvider extends IdentityProvider implements Parsable 
     }
     /**
      * Gets the claimsMapping property value. After the OIDC provider sends an ID token back to Microsoft Entra ID, Microsoft Entra ID needs to be able to map the claims from the received token to the claims that Microsoft Entra ID recognizes and uses. This complex type captures that mapping. It's a required property.
-     * @return a ClaimsMapping
+     * @return a {@link ClaimsMapping}
      */
     @jakarta.annotation.Nullable
     public ClaimsMapping getClaimsMapping() {
@@ -35,7 +35,7 @@ public class OpenIdConnectProvider extends IdentityProvider implements Parsable 
     }
     /**
      * Gets the domainHint property value. The domain hint can be used to skip directly to the sign-in page of the specified identity provider, instead of having the user make a selection among the list of available identity providers.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDomainHint() {
@@ -43,7 +43,7 @@ public class OpenIdConnectProvider extends IdentityProvider implements Parsable 
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -58,7 +58,7 @@ public class OpenIdConnectProvider extends IdentityProvider implements Parsable 
     }
     /**
      * Gets the metadataUrl property value. The URL for the metadata document of the OpenID Connect identity provider. Every OpenID Connect identity provider describes a metadata document that contains most of the information required to perform sign-in. This includes information such as the URLs to use and the location of the service's public signing keys. The OpenID Connect metadata document is always located at an endpoint that ends in a well-known/openid-configuration. For the OpenID Connect identity provider you're looking to add, you need to provide the metadata URL. It's a required property and is read only after creation.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getMetadataUrl() {
@@ -66,7 +66,7 @@ public class OpenIdConnectProvider extends IdentityProvider implements Parsable 
     }
     /**
      * Gets the responseMode property value. The responseMode property
-     * @return a OpenIdConnectResponseMode
+     * @return a {@link OpenIdConnectResponseMode}
      */
     @jakarta.annotation.Nullable
     public OpenIdConnectResponseMode getResponseMode() {
@@ -74,7 +74,7 @@ public class OpenIdConnectProvider extends IdentityProvider implements Parsable 
     }
     /**
      * Gets the responseType property value. The responseType property
-     * @return a EnumSet<OpenIdConnectResponseTypes>
+     * @return a {@link EnumSet<OpenIdConnectResponseTypes>}
      */
     @jakarta.annotation.Nullable
     public EnumSet<OpenIdConnectResponseTypes> getResponseType() {
@@ -82,7 +82,7 @@ public class OpenIdConnectProvider extends IdentityProvider implements Parsable 
     }
     /**
      * Gets the scope property value. Scope defines the information and permissions you're looking to gather from your custom identity provider. OpenID Connect requests must contain the openid scope value in order to receive the ID token from the identity provider. Without the ID token, users aren't able to sign in to Azure AD B2C using the custom identity provider. Other scopes can be appended separated by space. For more information about the scope limitations, see RFC6749 Section 3.3. It's a required property.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getScope() {

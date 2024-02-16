@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MonthlyUserInsightMetricsRoot extends Entity implements Parsable {
     /**
-     * Instantiates a new MonthlyUserInsightMetricsRoot and sets the default values.
+     * Instantiates a new {@link MonthlyUserInsightMetricsRoot} and sets the default values.
      */
     public MonthlyUserInsightMetricsRoot() {
         super();
@@ -17,7 +17,7 @@ public class MonthlyUserInsightMetricsRoot extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MonthlyUserInsightMetricsRoot
+     * @return a {@link MonthlyUserInsightMetricsRoot}
      */
     @jakarta.annotation.Nonnull
     public static MonthlyUserInsightMetricsRoot createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -26,7 +26,7 @@ public class MonthlyUserInsightMetricsRoot extends Entity implements Parsable {
     }
     /**
      * Gets the activeUsers property value. Insights for active users on apps registered in the tenant for a specified period.
-     * @return a java.util.List<ActiveUsersMetric>
+     * @return a {@link java.util.List<ActiveUsersMetric>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ActiveUsersMetric> getActiveUsers() {
@@ -34,7 +34,7 @@ public class MonthlyUserInsightMetricsRoot extends Entity implements Parsable {
     }
     /**
      * Gets the activeUsersBreakdown property value. Insights for the breakdown of users who were active on apps registered in the tenant for a specified period.
-     * @return a java.util.List<ActiveUsersBreakdownMetric>
+     * @return a {@link java.util.List<ActiveUsersBreakdownMetric>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ActiveUsersBreakdownMetric> getActiveUsersBreakdown() {
@@ -42,7 +42,7 @@ public class MonthlyUserInsightMetricsRoot extends Entity implements Parsable {
     }
     /**
      * Gets the authentications property value. Insights for authentications on apps registered in the tenant for a specified period.
-     * @return a java.util.List<AuthenticationsMetric>
+     * @return a {@link java.util.List<AuthenticationsMetric>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthenticationsMetric> getAuthentications() {
@@ -50,7 +50,7 @@ public class MonthlyUserInsightMetricsRoot extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -68,7 +68,7 @@ public class MonthlyUserInsightMetricsRoot extends Entity implements Parsable {
     }
     /**
      * Gets the inactiveUsers property value. The inactiveUsers property
-     * @return a java.util.List<MonthlyInactiveUsersMetric>
+     * @return a {@link java.util.List<MonthlyInactiveUsersMetric>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<MonthlyInactiveUsersMetric> getInactiveUsers() {
@@ -76,7 +76,7 @@ public class MonthlyUserInsightMetricsRoot extends Entity implements Parsable {
     }
     /**
      * Gets the inactiveUsersByApplication property value. The inactiveUsersByApplication property
-     * @return a java.util.List<MonthlyInactiveUsersByApplicationMetric>
+     * @return a {@link java.util.List<MonthlyInactiveUsersByApplicationMetric>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<MonthlyInactiveUsersByApplicationMetric> getInactiveUsersByApplication() {
@@ -84,7 +84,7 @@ public class MonthlyUserInsightMetricsRoot extends Entity implements Parsable {
     }
     /**
      * Gets the mfaCompletions property value. Insights for MFA usage on apps registered in the tenant for a specified period.
-     * @return a java.util.List<MfaCompletionMetric>
+     * @return a {@link java.util.List<MfaCompletionMetric>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<MfaCompletionMetric> getMfaCompletions() {
@@ -92,7 +92,7 @@ public class MonthlyUserInsightMetricsRoot extends Entity implements Parsable {
     }
     /**
      * Gets the requests property value. Insights for all user requests on apps registered in the tenant for a specified period.
-     * @return a java.util.List<UserRequestsMetric>
+     * @return a {@link java.util.List<UserRequestsMetric>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserRequestsMetric> getRequests() {
@@ -100,7 +100,7 @@ public class MonthlyUserInsightMetricsRoot extends Entity implements Parsable {
     }
     /**
      * Gets the signUps property value. Total sign-ups on apps registered in the tenant for a specified period.
-     * @return a java.util.List<UserSignUpMetric>
+     * @return a {@link java.util.List<UserSignUpMetric>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserSignUpMetric> getSignUps() {
@@ -108,7 +108,7 @@ public class MonthlyUserInsightMetricsRoot extends Entity implements Parsable {
     }
     /**
      * Gets the summary property value. Summary of all usage insights on apps registered in the tenant for a specified period.
-     * @return a java.util.List<InsightSummary>
+     * @return a {@link java.util.List<InsightSummary>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<InsightSummary> getSummary() {

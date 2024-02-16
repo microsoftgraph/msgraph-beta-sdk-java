@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Office365GroupsActivityCounts extends Entity implements Parsable {
     /**
-     * Instantiates a new Office365GroupsActivityCounts and sets the default values.
+     * Instantiates a new {@link Office365GroupsActivityCounts} and sets the default values.
      */
     public Office365GroupsActivityCounts() {
         super();
@@ -18,7 +18,7 @@ public class Office365GroupsActivityCounts extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Office365GroupsActivityCounts
+     * @return a {@link Office365GroupsActivityCounts}
      */
     @jakarta.annotation.Nonnull
     public static Office365GroupsActivityCounts createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class Office365GroupsActivityCounts extends Entity implements Parsable {
     }
     /**
      * Gets the exchangeEmailsReceived property value. The number of emails received by Group mailboxes.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getExchangeEmailsReceived() {
@@ -35,7 +35,7 @@ public class Office365GroupsActivityCounts extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -53,7 +53,7 @@ public class Office365GroupsActivityCounts extends Entity implements Parsable {
     }
     /**
      * Gets the reportDate property value. The date on which a number of emails were sent to a group mailbox or a number of messages were posted, read, or liked in a Yammer group
-     * @return a LocalDate
+     * @return a {@link LocalDate}
      */
     @jakarta.annotation.Nullable
     public LocalDate getReportDate() {
@@ -61,7 +61,7 @@ public class Office365GroupsActivityCounts extends Entity implements Parsable {
     }
     /**
      * Gets the reportPeriod property value. The number of days the report covers.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getReportPeriod() {
@@ -69,7 +69,7 @@ public class Office365GroupsActivityCounts extends Entity implements Parsable {
     }
     /**
      * Gets the reportRefreshDate property value. The latest date of the content.
-     * @return a LocalDate
+     * @return a {@link LocalDate}
      */
     @jakarta.annotation.Nullable
     public LocalDate getReportRefreshDate() {
@@ -77,7 +77,7 @@ public class Office365GroupsActivityCounts extends Entity implements Parsable {
     }
     /**
      * Gets the teamsChannelMessages property value. The number of channel messages in Teams team.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getTeamsChannelMessages() {
@@ -85,7 +85,7 @@ public class Office365GroupsActivityCounts extends Entity implements Parsable {
     }
     /**
      * Gets the teamsMeetingsOrganized property value. The number of meetings organized in Teams team.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getTeamsMeetingsOrganized() {
@@ -93,7 +93,7 @@ public class Office365GroupsActivityCounts extends Entity implements Parsable {
     }
     /**
      * Gets the yammerMessagesLiked property value. The number of messages liked in Yammer groups.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getYammerMessagesLiked() {
@@ -101,7 +101,7 @@ public class Office365GroupsActivityCounts extends Entity implements Parsable {
     }
     /**
      * Gets the yammerMessagesPosted property value. The number of messages posted to Yammer groups.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getYammerMessagesPosted() {
@@ -109,7 +109,7 @@ public class Office365GroupsActivityCounts extends Entity implements Parsable {
     }
     /**
      * Gets the yammerMessagesRead property value. The number of messages read in Yammer groups.
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getYammerMessagesRead() {

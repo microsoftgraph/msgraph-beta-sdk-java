@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrintConnector extends Entity implements Parsable {
     /**
-     * Instantiates a new PrintConnector and sets the default values.
+     * Instantiates a new {@link PrintConnector} and sets the default values.
      */
     public PrintConnector() {
         super();
@@ -18,7 +18,7 @@ public class PrintConnector extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PrintConnector
+     * @return a {@link PrintConnector}
      */
     @jakarta.annotation.Nonnull
     public static PrintConnector createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class PrintConnector extends Entity implements Parsable {
     }
     /**
      * Gets the appVersion property value. The connector's version.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getAppVersion() {
@@ -35,7 +35,7 @@ public class PrintConnector extends Entity implements Parsable {
     }
     /**
      * Gets the deviceHealth property value. The connector's device health.
-     * @return a DeviceHealth
+     * @return a {@link DeviceHealth}
      */
     @jakarta.annotation.Nullable
     public DeviceHealth getDeviceHealth() {
@@ -43,7 +43,7 @@ public class PrintConnector extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The name of the connector.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -51,7 +51,7 @@ public class PrintConnector extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -68,7 +68,7 @@ public class PrintConnector extends Entity implements Parsable {
     }
     /**
      * Gets the fullyQualifiedDomainName property value. The connector machine's hostname.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getFullyQualifiedDomainName() {
@@ -76,7 +76,7 @@ public class PrintConnector extends Entity implements Parsable {
     }
     /**
      * Gets the location property value. The physical and/or organizational location of the connector.
-     * @return a PrinterLocation
+     * @return a {@link PrinterLocation}
      */
     @jakarta.annotation.Nullable
     public PrinterLocation getLocation() {
@@ -84,7 +84,7 @@ public class PrintConnector extends Entity implements Parsable {
     }
     /**
      * Gets the name property value. The name property
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -92,7 +92,7 @@ public class PrintConnector extends Entity implements Parsable {
     }
     /**
      * Gets the operatingSystem property value. The connector machine's operating system version.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOperatingSystem() {
@@ -100,7 +100,7 @@ public class PrintConnector extends Entity implements Parsable {
     }
     /**
      * Gets the registeredDateTime property value. The DateTimeOffset when the connector was registered.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getRegisteredDateTime() {

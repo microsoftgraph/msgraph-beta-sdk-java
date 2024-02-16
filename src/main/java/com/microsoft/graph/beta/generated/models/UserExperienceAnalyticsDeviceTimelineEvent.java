@@ -13,7 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsDeviceTimelineEvent extends Entity implements Parsable {
     /**
-     * Instantiates a new UserExperienceAnalyticsDeviceTimelineEvent and sets the default values.
+     * Instantiates a new {@link UserExperienceAnalyticsDeviceTimelineEvent} and sets the default values.
      */
     public UserExperienceAnalyticsDeviceTimelineEvent() {
         super();
@@ -21,7 +21,7 @@ public class UserExperienceAnalyticsDeviceTimelineEvent extends Entity implement
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserExperienceAnalyticsDeviceTimelineEvent
+     * @return a {@link UserExperienceAnalyticsDeviceTimelineEvent}
      */
     @jakarta.annotation.Nonnull
     public static UserExperienceAnalyticsDeviceTimelineEvent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class UserExperienceAnalyticsDeviceTimelineEvent extends Entity implement
     }
     /**
      * Gets the deviceId property value. The id of the device where the event occurred.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getDeviceId() {
@@ -38,7 +38,7 @@ public class UserExperienceAnalyticsDeviceTimelineEvent extends Entity implement
     }
     /**
      * Gets the eventDateTime property value. The time the event occured.
-     * @return a OffsetDateTime
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getEventDateTime() {
@@ -46,7 +46,7 @@ public class UserExperienceAnalyticsDeviceTimelineEvent extends Entity implement
     }
     /**
      * Gets the eventDetails property value. The details provided by the event, format depends on event type.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getEventDetails() {
@@ -54,7 +54,7 @@ public class UserExperienceAnalyticsDeviceTimelineEvent extends Entity implement
     }
     /**
      * Gets the eventLevel property value. Indicates device event level. Possible values are: None, Verbose, Information, Warning, Error, Critical
-     * @return a DeviceEventLevel
+     * @return a {@link DeviceEventLevel}
      */
     @jakarta.annotation.Nullable
     public DeviceEventLevel getEventLevel() {
@@ -62,7 +62,7 @@ public class UserExperienceAnalyticsDeviceTimelineEvent extends Entity implement
     }
     /**
      * Gets the eventName property value. The name of the event. Examples include: BootEvent, LogonEvent, AppCrashEvent, AppHangEvent.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getEventName() {
@@ -70,7 +70,7 @@ public class UserExperienceAnalyticsDeviceTimelineEvent extends Entity implement
     }
     /**
      * Gets the eventSource property value. The source of the event. Examples include: Intune, Sccm.
-     * @return a String
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getEventSource() {
@@ -78,7 +78,7 @@ public class UserExperienceAnalyticsDeviceTimelineEvent extends Entity implement
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {

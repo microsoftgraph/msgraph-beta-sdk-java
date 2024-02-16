@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementConfigurationIntegerSettingValueDefinition extends DeviceManagementConfigurationSettingValueDefinition implements Parsable {
     /**
-     * Instantiates a new DeviceManagementConfigurationIntegerSettingValueDefinition and sets the default values.
+     * Instantiates a new {@link DeviceManagementConfigurationIntegerSettingValueDefinition} and sets the default values.
      */
     public DeviceManagementConfigurationIntegerSettingValueDefinition() {
         super();
@@ -18,7 +18,7 @@ public class DeviceManagementConfigurationIntegerSettingValueDefinition extends 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceManagementConfigurationIntegerSettingValueDefinition
+     * @return a {@link DeviceManagementConfigurationIntegerSettingValueDefinition}
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementConfigurationIntegerSettingValueDefinition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -27,7 +27,7 @@ public class DeviceManagementConfigurationIntegerSettingValueDefinition extends 
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, java.util.function.Consumer<ParseNode>>
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
@@ -38,7 +38,7 @@ public class DeviceManagementConfigurationIntegerSettingValueDefinition extends 
     }
     /**
      * Gets the maximumValue property value. Maximum allowed value of the integer
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getMaximumValue() {
@@ -46,7 +46,7 @@ public class DeviceManagementConfigurationIntegerSettingValueDefinition extends 
     }
     /**
      * Gets the minimumValue property value. Minimum allowed value of the integer
-     * @return a Long
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
     public Long getMinimumValue() {
