@@ -60,7 +60,7 @@ jobs:
           #init-heap: 1024M  # Initial heap size
           #max-heap: 4096M  # Maximum heap size
           ram: 4096
-        
+
           # If you wish to specify custom queries, you can do so here or in a config file.
           # By default, queries listed here will override any specified in a config file.
           # Prefix the list here with "+" to use these queries and those in the config file.
@@ -83,8 +83,8 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
       - name: Build #with Gradle
-        run: gradle clean build "-Dorg.gradle.jvmargs=-Xmx4g -Xms1g -XX:+HeapDumpOnOutOfMemoryError -Dfile.encoding=UTF-8"
-            
+        run: gradle --no-build-cache build "-Dorg.gradle.jvmargs=-Xmx4g -Xms1g -XX:+HeapDumpOnOutOfMemoryError -Dfile.encoding=UTF-8"
+
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v3
         with:
