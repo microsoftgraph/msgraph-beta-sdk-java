@@ -96,7 +96,7 @@ public class DevicesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/devices{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Retrieve a list of devices registered in the directory. 
+     * Retrieve a list of devices registered in the directory.
      * @return a {@link DeviceCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/device-list?view=graph-rest-1.0">Find more info here</a>
@@ -106,7 +106,7 @@ public class DevicesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of devices registered in the directory. 
+     * Retrieve a list of devices registered in the directory.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DeviceCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -147,7 +147,7 @@ public class DevicesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Device::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of devices registered in the directory. 
+     * Retrieve a list of devices registered in the directory.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -155,7 +155,7 @@ public class DevicesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of devices registered in the directory. 
+     * Retrieve a list of devices registered in the directory.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -201,7 +201,7 @@ public class DevicesRequestBuilder extends BaseRequestBuilder {
         return new DevicesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of devices registered in the directory. 
+     * Retrieve a list of devices registered in the directory.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

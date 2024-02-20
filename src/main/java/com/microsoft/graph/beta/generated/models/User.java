@@ -645,7 +645,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("hireDate");
     }
     /**
-     * Gets the identities property value. Represents the identities that can be used to sign in to this user account. An identity can be provided by Microsoft (also known as a local account), by organizations, or by social identity providers such as Facebook, Google, and Microsoft and tied to a user account. It may contain multiple items with the same signInType value. Supports $filter (eq) including on null values, only where the signInType is not userPrincipalName.
+     * Gets the identities property value. Represents the identities that can be used to sign in to this user account. An identity can be provided by Microsoft (also known as a local account), by organizations, or by social identity providers such as Facebook, Google, and Microsoft and tied to a user account. It may contain multiple items with the same signInType value.  Supports $filter (eq) with limitations.
      * @return a {@link java.util.List<ObjectIdentity>}
      */
     @jakarta.annotation.Nullable
@@ -1964,7 +1964,7 @@ public class User extends DirectoryObject implements Parsable {
         this.backingStore.set("hireDate", value);
     }
     /**
-     * Sets the identities property value. Represents the identities that can be used to sign in to this user account. An identity can be provided by Microsoft (also known as a local account), by organizations, or by social identity providers such as Facebook, Google, and Microsoft and tied to a user account. It may contain multiple items with the same signInType value. Supports $filter (eq) including on null values, only where the signInType is not userPrincipalName.
+     * Sets the identities property value. Represents the identities that can be used to sign in to this user account. An identity can be provided by Microsoft (also known as a local account), by organizations, or by social identity providers such as Facebook, Google, and Microsoft and tied to a user account. It may contain multiple items with the same signInType value.  Supports $filter (eq) with limitations.
      * @param value Value to set for the identities property.
      */
     public void setIdentities(@jakarta.annotation.Nullable final java.util.List<ObjectIdentity> value) {

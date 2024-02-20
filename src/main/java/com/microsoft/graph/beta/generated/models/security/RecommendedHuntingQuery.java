@@ -67,7 +67,7 @@ public class RecommendedHuntingQuery implements AdditionalDataHolder, BackedMode
         return deserializerMap;
     }
     /**
-     * Gets the kqlText property value. The kqlText property
+     * Gets the kqlText property value. The query string.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -108,7 +108,7 @@ public class RecommendedHuntingQuery implements AdditionalDataHolder, BackedMode
         this.backingStore = value;
     }
     /**
-     * Sets the kqlText property value. The kqlText property
+     * Sets the kqlText property value. The query string.
      * @param value Value to set for the kqlText property.
      */
     public void setKqlText(@jakarta.annotation.Nullable final String value) {

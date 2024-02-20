@@ -275,7 +275,7 @@ public class Alert extends Entity implements Parsable {
         return this.backingStore.get("status");
     }
     /**
-     * Gets the systemTags property value. The systemTags property
+     * Gets the systemTags property value. The system tags associated with the alert
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -536,7 +536,7 @@ public class Alert extends Entity implements Parsable {
         this.backingStore.set("status", value);
     }
     /**
-     * Sets the systemTags property value. The systemTags property
+     * Sets the systemTags property value. The system tags associated with the alert
      * @param value Value to set for the systemTags property.
      */
     public void setSystemTags(@jakarta.annotation.Nullable final java.util.List<String> value) {

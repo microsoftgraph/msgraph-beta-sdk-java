@@ -75,7 +75,7 @@ public class Event extends OutlookItem implements Parsable {
         return this.backingStore.get("calendar");
     }
     /**
-     * Gets the cancelledOccurrences property value. Contains occurrenceId property values of cancelled instances in a recurring series, if the event is the series master. Instances in a recurring series that are cancelled are called cancelledOccurences.Returned only on $select in a Get operation which specifies the id of a series master event (that is, the seriesMasterId property value).
+     * Gets the cancelledOccurrences property value. Contains occurrenceId property values of canceled instances in a recurring series, if the event is the series master. Instances in a recurring series that are canceled are called cancelledOccurences.Returned only on $select in a Get operation which specifies the id of a series master event (that is, the seriesMasterId property value).
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -185,7 +185,7 @@ public class Event extends OutlookItem implements Parsable {
         return this.backingStore.get("importance");
     }
     /**
-     * Gets the instances property value. The occurrences of a recurring series, if the event is a series master. This property includes occurrences that are part of the recurrence pattern, and exceptions that have been modified, but does not include occurrences that have been cancelled from the series. Navigation property. Read-only. Nullable.
+     * Gets the instances property value. The occurrences of a recurring series, if the event is a series master. This property includes occurrences that are part of the recurrence pattern, and exceptions that have been modified, but doesn't include occurrences that have been canceled from the series. Navigation property. Read-only. Nullable.
      * @return a {@link java.util.List<Event>}
      */
     @jakarta.annotation.Nullable
@@ -536,7 +536,7 @@ public class Event extends OutlookItem implements Parsable {
         this.backingStore.set("calendar", value);
     }
     /**
-     * Sets the cancelledOccurrences property value. Contains occurrenceId property values of cancelled instances in a recurring series, if the event is the series master. Instances in a recurring series that are cancelled are called cancelledOccurences.Returned only on $select in a Get operation which specifies the id of a series master event (that is, the seriesMasterId property value).
+     * Sets the cancelledOccurrences property value. Contains occurrenceId property values of canceled instances in a recurring series, if the event is the series master. Instances in a recurring series that are canceled are called cancelledOccurences.Returned only on $select in a Get operation which specifies the id of a series master event (that is, the seriesMasterId property value).
      * @param value Value to set for the cancelledOccurrences property.
      */
     public void setCancelledOccurrences(@jakarta.annotation.Nullable final java.util.List<String> value) {
@@ -585,7 +585,7 @@ public class Event extends OutlookItem implements Parsable {
         this.backingStore.set("importance", value);
     }
     /**
-     * Sets the instances property value. The occurrences of a recurring series, if the event is a series master. This property includes occurrences that are part of the recurrence pattern, and exceptions that have been modified, but does not include occurrences that have been cancelled from the series. Navigation property. Read-only. Nullable.
+     * Sets the instances property value. The occurrences of a recurring series, if the event is a series master. This property includes occurrences that are part of the recurrence pattern, and exceptions that have been modified, but doesn't include occurrences that have been canceled from the series. Navigation property. Read-only. Nullable.
      * @param value Value to set for the instances property.
      */
     public void setInstances(@jakarta.annotation.Nullable final java.util.List<Event> value) {
