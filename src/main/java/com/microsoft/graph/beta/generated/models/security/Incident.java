@@ -67,7 +67,7 @@ public class Incident extends Entity implements Parsable {
         return this.backingStore.get("createdDateTime");
     }
     /**
-     * Gets the customTags property value. Array of custom tags associated with an incident.
+     * Gets the customTags property value. The collection of custom tags that are associated with an incident.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -75,7 +75,7 @@ public class Incident extends Entity implements Parsable {
         return this.backingStore.get("customTags");
     }
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. A rich text string describing the incident
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -151,7 +151,7 @@ public class Incident extends Entity implements Parsable {
         return this.backingStore.get("lastUpdateDateTime");
     }
     /**
-     * Gets the recommendedActions property value. The recommendedActions property
+     * Gets the recommendedActions property value. A rich text string that represents the actions that are reccomnded to take in order to resolve the incident
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -159,7 +159,7 @@ public class Incident extends Entity implements Parsable {
         return this.backingStore.get("recommendedActions");
     }
     /**
-     * Gets the recommendedHuntingQueries property value. The recommendedHuntingQueries property
+     * Gets the recommendedHuntingQueries property value. List of hunting Kusto Query Language (KQL) queries related to the incident
      * @return a {@link java.util.List<RecommendedHuntingQuery>}
      */
     @jakarta.annotation.Nullable
@@ -191,7 +191,7 @@ public class Incident extends Entity implements Parsable {
         return this.backingStore.get("status");
     }
     /**
-     * Gets the systemTags property value. The systemTags property
+     * Gets the systemTags property value. The collection of system tags that are associated with the incident.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -269,14 +269,14 @@ public class Incident extends Entity implements Parsable {
         this.backingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the customTags property value. Array of custom tags associated with an incident.
+     * Sets the customTags property value. The collection of custom tags that are associated with an incident.
      * @param value Value to set for the customTags property.
      */
     public void setCustomTags(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("customTags", value);
     }
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. A rich text string describing the incident
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
@@ -318,14 +318,14 @@ public class Incident extends Entity implements Parsable {
         this.backingStore.set("lastUpdateDateTime", value);
     }
     /**
-     * Sets the recommendedActions property value. The recommendedActions property
+     * Sets the recommendedActions property value. A rich text string that represents the actions that are reccomnded to take in order to resolve the incident
      * @param value Value to set for the recommendedActions property.
      */
     public void setRecommendedActions(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("recommendedActions", value);
     }
     /**
-     * Sets the recommendedHuntingQueries property value. The recommendedHuntingQueries property
+     * Sets the recommendedHuntingQueries property value. List of hunting Kusto Query Language (KQL) queries related to the incident
      * @param value Value to set for the recommendedHuntingQueries property.
      */
     public void setRecommendedHuntingQueries(@jakarta.annotation.Nullable final java.util.List<RecommendedHuntingQuery> value) {
@@ -353,7 +353,7 @@ public class Incident extends Entity implements Parsable {
         this.backingStore.set("status", value);
     }
     /**
-     * Sets the systemTags property value. The systemTags property
+     * Sets the systemTags property value. The collection of system tags that are associated with the incident.
      * @param value Value to set for the systemTags property.
      */
     public void setSystemTags(@jakarta.annotation.Nullable final java.util.List<String> value) {
