@@ -12,6 +12,9 @@ public enum DriveItemSourceApplication implements ValuedEnum {
     Stream("stream"),
     PowerPoint("powerPoint"),
     Office("office"),
+    Loki("loki"),
+    Loop("loop"),
+    Other("other"),
     UnknownFutureValue("unknownFutureValue");
     public final String value;
     DriveItemSourceApplication(final String value) {
@@ -30,6 +33,9 @@ public enum DriveItemSourceApplication implements ValuedEnum {
             case "stream": return Stream;
             case "powerPoint": return PowerPoint;
             case "office": return Office;
+            case "loki": return Loki;
+            case "loop": return Loop;
+            case "other": return Other;
             case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }

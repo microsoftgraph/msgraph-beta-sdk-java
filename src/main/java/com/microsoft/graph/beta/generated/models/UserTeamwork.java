@@ -54,7 +54,7 @@ public class UserTeamwork extends Entity implements Parsable {
         return this.backingStore.get("installedApps");
     }
     /**
-     * Gets the locale property value. Represents the chosen locale of a user in Microsoft Teams.
+     * Gets the locale property value. The chosen locale of a user in Microsoft Teams.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -62,7 +62,7 @@ public class UserTeamwork extends Entity implements Parsable {
         return this.backingStore.get("locale");
     }
     /**
-     * Gets the region property value. Represents the region of the user in Microsoft Teams.
+     * Gets the region property value. The region of the user in Microsoft Teams.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -96,14 +96,14 @@ public class UserTeamwork extends Entity implements Parsable {
         this.backingStore.set("installedApps", value);
     }
     /**
-     * Sets the locale property value. Represents the chosen locale of a user in Microsoft Teams.
+     * Sets the locale property value. The chosen locale of a user in Microsoft Teams.
      * @param value Value to set for the locale property.
      */
     public void setLocale(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("locale", value);
     }
     /**
-     * Sets the region property value. Represents the region of the user in Microsoft Teams.
+     * Sets the region property value. The region of the user in Microsoft Teams.
      * @param value Value to set for the region property.
      */
     public void setRegion(@jakarta.annotation.Nullable final String value) {

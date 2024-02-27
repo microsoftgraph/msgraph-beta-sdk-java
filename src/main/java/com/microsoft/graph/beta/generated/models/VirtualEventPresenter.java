@@ -40,18 +40,17 @@ public class VirtualEventPresenter extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("email", (n) -> { this.setEmail(n.getStringValue()); });
-        deserializerMap.put("identity", (n) -> { this.setIdentity(n.getObjectValue(CommunicationsUserIdentity::createFromDiscriminatorValue)); });
+        deserializerMap.put("identity", (n) -> { this.setIdentity(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
         deserializerMap.put("presenterDetails", (n) -> { this.setPresenterDetails(n.getObjectValue(VirtualEventPresenterDetails::createFromDiscriminatorValue)); });
-        deserializerMap.put("profilePhoto", (n) -> { this.setProfilePhoto(n.getByteArrayValue()); });
         deserializerMap.put("sessions", (n) -> { this.setSessions(n.getCollectionOfObjectValues(VirtualEventSession::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
-     * Gets the identity property value. Identity information of the presenter.
-     * @return a {@link CommunicationsUserIdentity}
+     * Gets the identity property value. Identity information of the presenter. The supported identites are: communicationsGuestIdentity and communicationsUserIdentity.
+     * @return a {@link Identity}
      */
     @jakarta.annotation.Nullable
-    public CommunicationsUserIdentity getIdentity() {
+    public Identity getIdentity() {
         return this.backingStore.get("identity");
     }
     /**
@@ -61,14 +60,6 @@ public class VirtualEventPresenter extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public VirtualEventPresenterDetails getPresenterDetails() {
         return this.backingStore.get("presenterDetails");
-    }
-    /**
-     * Gets the profilePhoto property value. The profilePhoto property
-     * @return a {@link byte[]}
-     */
-    @jakarta.annotation.Nullable
-    public byte[] getProfilePhoto() {
-        return this.backingStore.get("profilePhoto");
     }
     /**
      * Gets the sessions property value. The sessions property
@@ -88,7 +79,6 @@ public class VirtualEventPresenter extends Entity implements Parsable {
         writer.writeStringValue("email", this.getEmail());
         writer.writeObjectValue("identity", this.getIdentity());
         writer.writeObjectValue("presenterDetails", this.getPresenterDetails());
-        writer.writeByteArrayValue("profilePhoto", this.getProfilePhoto());
         writer.writeCollectionOfObjectValues("sessions", this.getSessions());
     }
     /**
@@ -99,10 +89,10 @@ public class VirtualEventPresenter extends Entity implements Parsable {
         this.backingStore.set("email", value);
     }
     /**
-     * Sets the identity property value. Identity information of the presenter.
+     * Sets the identity property value. Identity information of the presenter. The supported identites are: communicationsGuestIdentity and communicationsUserIdentity.
      * @param value Value to set for the identity property.
      */
-    public void setIdentity(@jakarta.annotation.Nullable final CommunicationsUserIdentity value) {
+    public void setIdentity(@jakarta.annotation.Nullable final Identity value) {
         this.backingStore.set("identity", value);
     }
     /**
@@ -111,13 +101,6 @@ public class VirtualEventPresenter extends Entity implements Parsable {
      */
     public void setPresenterDetails(@jakarta.annotation.Nullable final VirtualEventPresenterDetails value) {
         this.backingStore.set("presenterDetails", value);
-    }
-    /**
-     * Sets the profilePhoto property value. The profilePhoto property
-     * @param value Value to set for the profilePhoto property.
-     */
-    public void setProfilePhoto(@jakarta.annotation.Nullable final byte[] value) {
-        this.backingStore.set("profilePhoto", value);
     }
     /**
      * Sets the sessions property value. The sessions property

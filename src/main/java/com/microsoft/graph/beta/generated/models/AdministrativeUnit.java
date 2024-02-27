@@ -61,6 +61,9 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
         deserializerMap.put("extensions", (n) -> { this.setExtensions(n.getCollectionOfObjectValues(Extension::createFromDiscriminatorValue)); });
         deserializerMap.put("isMemberManagementRestricted", (n) -> { this.setIsMemberManagementRestricted(n.getBooleanValue()); });
         deserializerMap.put("members", (n) -> { this.setMembers(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
+        deserializerMap.put("membershipRule", (n) -> { this.setMembershipRule(n.getStringValue()); });
+        deserializerMap.put("membershipRuleProcessingState", (n) -> { this.setMembershipRuleProcessingState(n.getStringValue()); });
+        deserializerMap.put("membershipType", (n) -> { this.setMembershipType(n.getStringValue()); });
         deserializerMap.put("scopedRoleMembers", (n) -> { this.setScopedRoleMembers(n.getCollectionOfObjectValues(ScopedRoleMembership::createFromDiscriminatorValue)); });
         deserializerMap.put("visibility", (n) -> { this.setVisibility(n.getStringValue()); });
         return deserializerMap;
@@ -80,6 +83,30 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
     @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getMembers() {
         return this.backingStore.get("members");
+    }
+    /**
+     * Gets the membershipRule property value. Dynamic membership rule for the administrative unit. For more about the rules that you can use for dynamic administrative units and dynamic groups, see Using attributes to create advanced rules.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getMembershipRule() {
+        return this.backingStore.get("membershipRule");
+    }
+    /**
+     * Gets the membershipRuleProcessingState property value. Used to control whether the dynamic membership rule is actively processed. Set to On when you want the dynamic membership rule to be active and Paused if you want to stop updating membership dynamically. If not set, the default behavior is Paused.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getMembershipRuleProcessingState() {
+        return this.backingStore.get("membershipRuleProcessingState");
+    }
+    /**
+     * Gets the membershipType property value. Membership type for the administrative unit. Can be dynamic or assigned. If not set, the default behavior is assigned.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getMembershipType() {
+        return this.backingStore.get("membershipType");
     }
     /**
      * Gets the scopedRoleMembers property value. Scoped-role members of this administrative unit.
@@ -109,6 +136,9 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
         writer.writeCollectionOfObjectValues("extensions", this.getExtensions());
         writer.writeBooleanValue("isMemberManagementRestricted", this.getIsMemberManagementRestricted());
         writer.writeCollectionOfObjectValues("members", this.getMembers());
+        writer.writeStringValue("membershipRule", this.getMembershipRule());
+        writer.writeStringValue("membershipRuleProcessingState", this.getMembershipRuleProcessingState());
+        writer.writeStringValue("membershipType", this.getMembershipType());
         writer.writeCollectionOfObjectValues("scopedRoleMembers", this.getScopedRoleMembers());
         writer.writeStringValue("visibility", this.getVisibility());
     }
@@ -146,6 +176,27 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
      */
     public void setMembers(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this.backingStore.set("members", value);
+    }
+    /**
+     * Sets the membershipRule property value. Dynamic membership rule for the administrative unit. For more about the rules that you can use for dynamic administrative units and dynamic groups, see Using attributes to create advanced rules.
+     * @param value Value to set for the membershipRule property.
+     */
+    public void setMembershipRule(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("membershipRule", value);
+    }
+    /**
+     * Sets the membershipRuleProcessingState property value. Used to control whether the dynamic membership rule is actively processed. Set to On when you want the dynamic membership rule to be active and Paused if you want to stop updating membership dynamically. If not set, the default behavior is Paused.
+     * @param value Value to set for the membershipRuleProcessingState property.
+     */
+    public void setMembershipRuleProcessingState(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("membershipRuleProcessingState", value);
+    }
+    /**
+     * Sets the membershipType property value. Membership type for the administrative unit. Can be dynamic or assigned. If not set, the default behavior is assigned.
+     * @param value Value to set for the membershipType property.
+     */
+    public void setMembershipType(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("membershipType", value);
     }
     /**
      * Sets the scopedRoleMembers property value. Scoped-role members of this administrative unit.

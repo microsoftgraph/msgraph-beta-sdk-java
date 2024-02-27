@@ -7,6 +7,7 @@ import com.microsoft.graph.beta.models.security.CollaborationRoot;
 import com.microsoft.graph.beta.models.security.Incident;
 import com.microsoft.graph.beta.models.security.InformationProtection;
 import com.microsoft.graph.beta.models.security.LabelsRoot;
+import com.microsoft.graph.beta.models.security.RulesRoot;
 import com.microsoft.graph.beta.models.security.ThreatIntelligence;
 import com.microsoft.graph.beta.models.security.ThreatSubmissionRoot;
 import com.microsoft.graph.beta.models.security.TriggersRoot;
@@ -122,6 +123,7 @@ public class Security extends Entity implements Parsable {
         deserializerMap.put("labels", (n) -> { this.setLabels(n.getObjectValue(LabelsRoot::createFromDiscriminatorValue)); });
         deserializerMap.put("providerStatus", (n) -> { this.setProviderStatus(n.getCollectionOfObjectValues(SecurityProviderStatus::createFromDiscriminatorValue)); });
         deserializerMap.put("providerTenantSettings", (n) -> { this.setProviderTenantSettings(n.getCollectionOfObjectValues(ProviderTenantSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("rules", (n) -> { this.setRules(n.getObjectValue(RulesRoot::createFromDiscriminatorValue)); });
         deserializerMap.put("secureScoreControlProfiles", (n) -> { this.setSecureScoreControlProfiles(n.getCollectionOfObjectValues(SecureScoreControlProfile::createFromDiscriminatorValue)); });
         deserializerMap.put("secureScores", (n) -> { this.setSecureScores(n.getCollectionOfObjectValues(SecureScore::createFromDiscriminatorValue)); });
         deserializerMap.put("securityActions", (n) -> { this.setSecurityActions(n.getCollectionOfObjectValues(SecurityAction::createFromDiscriminatorValue)); });
@@ -197,6 +199,14 @@ public class Security extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public java.util.List<ProviderTenantSetting> getProviderTenantSettings() {
         return this.backingStore.get("providerTenantSettings");
+    }
+    /**
+     * Gets the rules property value. The rules property
+     * @return a {@link RulesRoot}
+     */
+    @jakarta.annotation.Nullable
+    public RulesRoot getRules() {
+        return this.backingStore.get("rules");
     }
     /**
      * Gets the secureScoreControlProfiles property value. The secureScoreControlProfiles property
@@ -301,6 +311,7 @@ public class Security extends Entity implements Parsable {
         writer.writeObjectValue("labels", this.getLabels());
         writer.writeCollectionOfObjectValues("providerStatus", this.getProviderStatus());
         writer.writeCollectionOfObjectValues("providerTenantSettings", this.getProviderTenantSettings());
+        writer.writeObjectValue("rules", this.getRules());
         writer.writeCollectionOfObjectValues("secureScoreControlProfiles", this.getSecureScoreControlProfiles());
         writer.writeCollectionOfObjectValues("secureScores", this.getSecureScores());
         writer.writeCollectionOfObjectValues("securityActions", this.getSecurityActions());
@@ -423,6 +434,13 @@ public class Security extends Entity implements Parsable {
      */
     public void setProviderTenantSettings(@jakarta.annotation.Nullable final java.util.List<ProviderTenantSetting> value) {
         this.backingStore.set("providerTenantSettings", value);
+    }
+    /**
+     * Sets the rules property value. The rules property
+     * @param value Value to set for the rules property.
+     */
+    public void setRules(@jakarta.annotation.Nullable final RulesRoot value) {
+        this.backingStore.set("rules", value);
     }
     /**
      * Sets the secureScoreControlProfiles property value. The secureScoreControlProfiles property

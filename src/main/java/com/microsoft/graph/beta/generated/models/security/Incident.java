@@ -75,7 +75,7 @@ public class Incident extends Entity implements Parsable {
         return this.backingStore.get("customTags");
     }
     /**
-     * Gets the description property value. A rich text string describing the incident
+     * Gets the description property value. Description of the incident.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -135,7 +135,7 @@ public class Incident extends Entity implements Parsable {
         return this.backingStore.get("incidentWebUrl");
     }
     /**
-     * Gets the lastModifiedBy property value. The lastModifiedBy property
+     * Gets the lastModifiedBy property value. The identity that last modified the incident.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -276,7 +276,7 @@ public class Incident extends Entity implements Parsable {
         this.backingStore.set("customTags", value);
     }
     /**
-     * Sets the description property value. A rich text string describing the incident
+     * Sets the description property value. Description of the incident.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
@@ -304,7 +304,7 @@ public class Incident extends Entity implements Parsable {
         this.backingStore.set("incidentWebUrl", value);
     }
     /**
-     * Sets the lastModifiedBy property value. The lastModifiedBy property
+     * Sets the lastModifiedBy property value. The identity that last modified the incident.
      * @param value Value to set for the lastModifiedBy property.
      */
     public void setLastModifiedBy(@jakarta.annotation.Nullable final String value) {

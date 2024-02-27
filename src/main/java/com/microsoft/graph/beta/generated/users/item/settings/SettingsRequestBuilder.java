@@ -6,6 +6,7 @@ import com.microsoft.graph.beta.users.item.settings.contactmergesuggestions.Cont
 import com.microsoft.graph.beta.users.item.settings.iteminsights.ItemInsightsRequestBuilder;
 import com.microsoft.graph.beta.users.item.settings.regionalandlanguagesettings.RegionalAndLanguageSettingsRequestBuilder;
 import com.microsoft.graph.beta.users.item.settings.shiftpreferences.ShiftPreferencesRequestBuilder;
+import com.microsoft.graph.beta.users.item.settings.windows.WindowsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -55,6 +56,14 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public ShiftPreferencesRequestBuilder shiftPreferences() {
         return new ShiftPreferencesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the windows property of the microsoft.graph.userSettings entity.
+     * @return a {@link WindowsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public WindowsRequestBuilder windows() {
+        return new WindowsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link SettingsRequestBuilder} and sets the default values.

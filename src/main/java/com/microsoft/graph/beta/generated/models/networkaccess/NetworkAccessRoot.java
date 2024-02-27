@@ -26,6 +26,14 @@ public class NetworkAccessRoot extends Entity implements Parsable {
         return new NetworkAccessRoot();
     }
     /**
+     * Gets the alerts property value. The alerts property
+     * @return a {@link java.util.List<Alert>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<Alert> getAlerts() {
+        return this.backingStore.get("alerts");
+    }
+    /**
      * Gets the connectivity property value. Connectivity represents all the connectivity components in Global Secure Access.
      * @return a {@link Connectivity}
      */
@@ -40,6 +48,7 @@ public class NetworkAccessRoot extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("alerts", (n) -> { this.setAlerts(n.getCollectionOfObjectValues(Alert::createFromDiscriminatorValue)); });
         deserializerMap.put("connectivity", (n) -> { this.setConnectivity(n.getObjectValue(Connectivity::createFromDiscriminatorValue)); });
         deserializerMap.put("filteringPolicies", (n) -> { this.setFilteringPolicies(n.getCollectionOfObjectValues(FilteringPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("filteringProfiles", (n) -> { this.setFilteringProfiles(n.getCollectionOfObjectValues(FilteringProfile::createFromDiscriminatorValue)); });
@@ -122,6 +131,7 @@ public class NetworkAccessRoot extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeCollectionOfObjectValues("alerts", this.getAlerts());
         writer.writeObjectValue("connectivity", this.getConnectivity());
         writer.writeCollectionOfObjectValues("filteringPolicies", this.getFilteringPolicies());
         writer.writeCollectionOfObjectValues("filteringProfiles", this.getFilteringProfiles());
@@ -131,6 +141,13 @@ public class NetworkAccessRoot extends Entity implements Parsable {
         writer.writeObjectValue("reports", this.getReports());
         writer.writeObjectValue("settings", this.getSettings());
         writer.writeObjectValue("tenantStatus", this.getTenantStatus());
+    }
+    /**
+     * Sets the alerts property value. The alerts property
+     * @param value Value to set for the alerts property.
+     */
+    public void setAlerts(@jakarta.annotation.Nullable final java.util.List<Alert> value) {
+        this.backingStore.set("alerts", value);
     }
     /**
      * Sets the connectivity property value. Connectivity represents all the connectivity components in Global Secure Access.

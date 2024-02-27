@@ -9,6 +9,11 @@ public enum MediaSourceContentCategory implements ValuedEnum {
     LiveStream("liveStream"),
     Presentation("presentation"),
     ScreenRecording("screenRecording"),
+    Story("story"),
+    Profile("profile"),
+    Chat("chat"),
+    Note("note"),
+    Comment("comment"),
     UnknownFutureValue("unknownFutureValue");
     public final String value;
     MediaSourceContentCategory(final String value) {
@@ -24,6 +29,11 @@ public enum MediaSourceContentCategory implements ValuedEnum {
             case "liveStream": return LiveStream;
             case "presentation": return Presentation;
             case "screenRecording": return ScreenRecording;
+            case "story": return Story;
+            case "profile": return Profile;
+            case "chat": return Chat;
+            case "note": return Note;
+            case "comment": return Comment;
             case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }

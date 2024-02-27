@@ -37,21 +37,27 @@ public class ActiveUsersBreakdownMetricItemRequestBuilder extends BaseRequestBui
         super(requestAdapter, "{+baseurl}/reports/userInsights/monthly/activeUsersBreakdown/{activeUsersBreakdownMetric%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Insights for the breakdown of users who were active on apps registered in the tenant for a specified period.
+     * Get activeUsersBreakdown from reports
      * @return a {@link ActiveUsersBreakdownMetric}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * The Active Users Breakdown Metric is deprecated and will stop returning data on February 16, 2024. Please use the existing Active Users API. as of 2024-02/Remove_Breakdown_APIs
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public ActiveUsersBreakdownMetric get() {
         return get(null);
     }
     /**
-     * Insights for the breakdown of users who were active on apps registered in the tenant for a specified period.
+     * Get activeUsersBreakdown from reports
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ActiveUsersBreakdownMetric}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * The Active Users Breakdown Metric is deprecated and will stop returning data on February 16, 2024. Please use the existing Active Users API. as of 2024-02/Remove_Breakdown_APIs
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public ActiveUsersBreakdownMetric get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -59,19 +65,25 @@ public class ActiveUsersBreakdownMetricItemRequestBuilder extends BaseRequestBui
         return this.requestAdapter.send(requestInfo, errorMapping, ActiveUsersBreakdownMetric::createFromDiscriminatorValue);
     }
     /**
-     * Insights for the breakdown of users who were active on apps registered in the tenant for a specified period.
+     * Get activeUsersBreakdown from reports
      * @return a {@link RequestInformation}
+     * @deprecated
+     * The Active Users Breakdown Metric is deprecated and will stop returning data on February 16, 2024. Please use the existing Active Users API. as of 2024-02/Remove_Breakdown_APIs
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
     /**
-     * Insights for the breakdown of users who were active on apps registered in the tenant for a specified period.
+     * Get activeUsersBreakdown from reports
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * The Active Users Breakdown Metric is deprecated and will stop returning data on February 16, 2024. Please use the existing Active Users API. as of 2024-02/Remove_Breakdown_APIs
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -82,14 +94,17 @@ public class ActiveUsersBreakdownMetricItemRequestBuilder extends BaseRequestBui
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link ActiveUsersBreakdownMetricItemRequestBuilder}
+     * @deprecated
+     * The Active Users Breakdown Metric is deprecated and will stop returning data on February 16, 2024. Please use the existing Active Users API. as of 2024-02/Remove_Breakdown_APIs
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public ActiveUsersBreakdownMetricItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new ActiveUsersBreakdownMetricItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Insights for the breakdown of users who were active on apps registered in the tenant for a specified period.
+     * Get activeUsersBreakdown from reports
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -3,7 +3,9 @@ package com.microsoft.graph.beta.places.item.graphroomlist;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.RoomList;
 import com.microsoft.graph.beta.places.item.graphroomlist.rooms.RoomsRequestBuilder;
+import com.microsoft.graph.beta.places.item.graphroomlist.roomswithplaceid.RoomsWithPlaceIdRequestBuilder;
 import com.microsoft.graph.beta.places.item.graphroomlist.workspaces.WorkspacesRequestBuilder;
+import com.microsoft.graph.beta.places.item.graphroomlist.workspaceswithplaceid.WorkspacesWithPlaceIdRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -77,6 +79,16 @@ public class GraphRoomListRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, RoomList::createFromDiscriminatorValue);
     }
     /**
+     * Provides operations to manage the rooms property of the microsoft.graph.roomList entity.
+     * @param placeId Alternate key of room
+     * @return a {@link RoomsWithPlaceIdRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RoomsWithPlaceIdRequestBuilder roomsWithPlaceId(@jakarta.annotation.Nonnull final String placeId) {
+        Objects.requireNonNull(placeId);
+        return new RoomsWithPlaceIdRequestBuilder(pathParameters, requestAdapter, placeId);
+    }
+    /**
      * Get the item of type microsoft.graph.place as microsoft.graph.roomList
      * @return a {@link RequestInformation}
      */
@@ -105,6 +117,16 @@ public class GraphRoomListRequestBuilder extends BaseRequestBuilder {
     public GraphRoomListRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new GraphRoomListRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the workspaces property of the microsoft.graph.roomList entity.
+     * @param placeId Alternate key of workspace
+     * @return a {@link WorkspacesWithPlaceIdRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public WorkspacesWithPlaceIdRequestBuilder workspacesWithPlaceId(@jakarta.annotation.Nonnull final String placeId) {
+        Objects.requireNonNull(placeId);
+        return new WorkspacesWithPlaceIdRequestBuilder(pathParameters, requestAdapter, placeId);
     }
     /**
      * Get the item of type microsoft.graph.place as microsoft.graph.roomList

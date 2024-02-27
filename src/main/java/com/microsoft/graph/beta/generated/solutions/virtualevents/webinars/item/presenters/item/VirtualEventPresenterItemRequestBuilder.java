@@ -2,7 +2,6 @@ package com.microsoft.graph.beta.solutions.virtualevents.webinars.item.presenter
 
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.VirtualEventPresenter;
-import com.microsoft.graph.beta.solutions.virtualevents.webinars.item.presenters.item.profilephoto.ProfilePhotoRequestBuilder;
 import com.microsoft.graph.beta.solutions.virtualevents.webinars.item.presenters.item.sessions.SessionsRequestBuilder;
 import com.microsoft.graph.beta.solutions.virtualevents.webinars.item.presenters.item.sessionswithjoinweburl.SessionsWithJoinWebUrlRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -23,14 +22,6 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class VirtualEventPresenterItemRequestBuilder extends BaseRequestBuilder {
-    /**
-     * Provides operations to manage the media for the solutionsRoot entity.
-     * @return a {@link ProfilePhotoRequestBuilder}
-     */
-    @jakarta.annotation.Nonnull
-    public ProfilePhotoRequestBuilder profilePhoto() {
-        return new ProfilePhotoRequestBuilder(pathParameters, requestAdapter);
-    }
     /**
      * Provides operations to manage the sessions property of the microsoft.graph.virtualEventPresenter entity.
      * @return a {@link SessionsRequestBuilder}

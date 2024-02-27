@@ -9,6 +9,7 @@ import com.microsoft.graph.beta.applications.item.connectorgroup.ConnectorGroupR
 import com.microsoft.graph.beta.applications.item.createdonbehalfof.CreatedOnBehalfOfRequestBuilder;
 import com.microsoft.graph.beta.applications.item.extensionproperties.ExtensionPropertiesRequestBuilder;
 import com.microsoft.graph.beta.applications.item.federatedidentitycredentials.FederatedIdentityCredentialsRequestBuilder;
+import com.microsoft.graph.beta.applications.item.federatedidentitycredentialswithname.FederatedIdentityCredentialsWithNameRequestBuilder;
 import com.microsoft.graph.beta.applications.item.getmembergroups.GetMemberGroupsRequestBuilder;
 import com.microsoft.graph.beta.applications.item.getmemberobjects.GetMemberObjectsRequestBuilder;
 import com.microsoft.graph.beta.applications.item.homerealmdiscoverypolicies.HomeRealmDiscoveryPoliciesRequestBuilder;
@@ -253,6 +254,16 @@ public class ApplicationItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
+    }
+    /**
+     * Provides operations to manage the federatedIdentityCredentials property of the microsoft.graph.application entity.
+     * @param name Alternate key of federatedIdentityCredential
+     * @return a {@link FederatedIdentityCredentialsWithNameRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public FederatedIdentityCredentialsWithNameRequestBuilder federatedIdentityCredentialsWithName(@jakarta.annotation.Nonnull final String name) {
+        Objects.requireNonNull(name);
+        return new FederatedIdentityCredentialsWithNameRequestBuilder(pathParameters, requestAdapter, name);
     }
     /**
      * Get the properties and relationships of an application object.

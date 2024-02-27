@@ -78,7 +78,7 @@ public class DeviceManagementConfigurationReferredSettingInformation implements 
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the settingDefinitionId property value. Setting definition id that is being referred to a setting. Applicable for reusable setting
+     * Gets the settingDefinitionId property value. Setting definition id that is being referred to a setting. Applicable for reusable setting.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -118,7 +118,7 @@ public class DeviceManagementConfigurationReferredSettingInformation implements 
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the settingDefinitionId property value. Setting definition id that is being referred to a setting. Applicable for reusable setting
+     * Sets the settingDefinitionId property value. Setting definition id that is being referred to a setting. Applicable for reusable setting.
      * @param value Value to set for the settingDefinitionId property.
      */
     public void setSettingDefinitionId(@jakarta.annotation.Nullable final String value) {

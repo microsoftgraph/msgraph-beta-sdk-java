@@ -58,6 +58,8 @@ public class Schedule extends Entity implements Parsable {
         deserializerMap.put("activitiesIncludedWhenCopyingShiftsEnabled", (n) -> { this.setActivitiesIncludedWhenCopyingShiftsEnabled(n.getBooleanValue()); });
         deserializerMap.put("dayNotes", (n) -> { this.setDayNotes(n.getCollectionOfObjectValues(DayNote::createFromDiscriminatorValue)); });
         deserializerMap.put("enabled", (n) -> { this.setEnabled(n.getBooleanValue()); });
+        deserializerMap.put("isCrossLocationShiftRequestApprovalRequired", (n) -> { this.setIsCrossLocationShiftRequestApprovalRequired(n.getBooleanValue()); });
+        deserializerMap.put("isCrossLocationShiftsEnabled", (n) -> { this.setIsCrossLocationShiftsEnabled(n.getBooleanValue()); });
         deserializerMap.put("offerShiftRequests", (n) -> { this.setOfferShiftRequests(n.getCollectionOfObjectValues(OfferShiftRequest::createFromDiscriminatorValue)); });
         deserializerMap.put("offerShiftRequestsEnabled", (n) -> { this.setOfferShiftRequestsEnabled(n.getBooleanValue()); });
         deserializerMap.put("openShiftChangeRequests", (n) -> { this.setOpenShiftChangeRequests(n.getCollectionOfObjectValues(OpenShiftChangeRequest::createFromDiscriminatorValue)); });
@@ -81,6 +83,22 @@ public class Schedule extends Entity implements Parsable {
         deserializerMap.put("timeZone", (n) -> { this.setTimeZone(n.getStringValue()); });
         deserializerMap.put("workforceIntegrationIds", (n) -> { this.setWorkforceIntegrationIds(n.getCollectionOfPrimitiveValues(String.class)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the isCrossLocationShiftRequestApprovalRequired property value. Indicates whether approval is required by a manager of this schedule for cross location shift requests.
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsCrossLocationShiftRequestApprovalRequired() {
+        return this.backingStore.get("isCrossLocationShiftRequestApprovalRequired");
+    }
+    /**
+     * Gets the isCrossLocationShiftsEnabled property value. Indicates whether the cross-location marketplace feature is enabled for this schedule.
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsCrossLocationShiftsEnabled() {
+        return this.backingStore.get("isCrossLocationShiftsEnabled");
     }
     /**
      * Gets the offerShiftRequests property value. The offer requests for shifts in the schedule.
@@ -163,7 +181,7 @@ public class Schedule extends Entity implements Parsable {
         return this.backingStore.get("shiftsRoleDefinitions");
     }
     /**
-     * Gets the startDayOfWeek property value. Indicates the start day of the week.
+     * Gets the startDayOfWeek property value. Indicates the start day of the week. The possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday.
      * @return a {@link DayOfWeek}
      */
     @jakarta.annotation.Nullable
@@ -251,7 +269,7 @@ public class Schedule extends Entity implements Parsable {
         return this.backingStore.get("timeZone");
     }
     /**
-     * Gets the workforceIntegrationIds property value. The Ids for the workforce integrations associated with this schedule.
+     * Gets the workforceIntegrationIds property value. The IDs for the workforce integrations associated with this schedule.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -268,6 +286,8 @@ public class Schedule extends Entity implements Parsable {
         writer.writeBooleanValue("activitiesIncludedWhenCopyingShiftsEnabled", this.getActivitiesIncludedWhenCopyingShiftsEnabled());
         writer.writeCollectionOfObjectValues("dayNotes", this.getDayNotes());
         writer.writeBooleanValue("enabled", this.getEnabled());
+        writer.writeBooleanValue("isCrossLocationShiftRequestApprovalRequired", this.getIsCrossLocationShiftRequestApprovalRequired());
+        writer.writeBooleanValue("isCrossLocationShiftsEnabled", this.getIsCrossLocationShiftsEnabled());
         writer.writeCollectionOfObjectValues("offerShiftRequests", this.getOfferShiftRequests());
         writer.writeBooleanValue("offerShiftRequestsEnabled", this.getOfferShiftRequestsEnabled());
         writer.writeCollectionOfObjectValues("openShiftChangeRequests", this.getOpenShiftChangeRequests());
@@ -309,6 +329,20 @@ public class Schedule extends Entity implements Parsable {
      */
     public void setEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("enabled", value);
+    }
+    /**
+     * Sets the isCrossLocationShiftRequestApprovalRequired property value. Indicates whether approval is required by a manager of this schedule for cross location shift requests.
+     * @param value Value to set for the isCrossLocationShiftRequestApprovalRequired property.
+     */
+    public void setIsCrossLocationShiftRequestApprovalRequired(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isCrossLocationShiftRequestApprovalRequired", value);
+    }
+    /**
+     * Sets the isCrossLocationShiftsEnabled property value. Indicates whether the cross-location marketplace feature is enabled for this schedule.
+     * @param value Value to set for the isCrossLocationShiftsEnabled property.
+     */
+    public void setIsCrossLocationShiftsEnabled(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isCrossLocationShiftsEnabled", value);
     }
     /**
      * Sets the offerShiftRequests property value. The offer requests for shifts in the schedule.
@@ -381,7 +415,7 @@ public class Schedule extends Entity implements Parsable {
         this.backingStore.set("shiftsRoleDefinitions", value);
     }
     /**
-     * Sets the startDayOfWeek property value. Indicates the start day of the week.
+     * Sets the startDayOfWeek property value. Indicates the start day of the week. The possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday.
      * @param value Value to set for the startDayOfWeek property.
      */
     public void setStartDayOfWeek(@jakarta.annotation.Nullable final DayOfWeek value) {
@@ -458,7 +492,7 @@ public class Schedule extends Entity implements Parsable {
         this.backingStore.set("timeZone", value);
     }
     /**
-     * Sets the workforceIntegrationIds property value. The Ids for the workforce integrations associated with this schedule.
+     * Sets the workforceIntegrationIds property value. The IDs for the workforce integrations associated with this schedule.
      * @param value Value to set for the workforceIntegrationIds property.
      */
     public void setWorkforceIntegrationIds(@jakarta.annotation.Nullable final java.util.List<String> value) {

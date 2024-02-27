@@ -7,7 +7,8 @@ import java.util.Objects;
 public enum DeviceCategory implements ValuedEnum {
     Client("client"),
     Branch("branch"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    RemoteNetwork("remoteNetwork");
     public final String value;
     DeviceCategory(final String value) {
         this.value = value;
@@ -21,6 +22,7 @@ public enum DeviceCategory implements ValuedEnum {
             case "client": return Client;
             case "branch": return Branch;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "remoteNetwork": return RemoteNetwork;
             default: return null;
         }
     }

@@ -68,7 +68,7 @@ public class TeamsAppDashboardCardIcon implements AdditionalDataHolder, BackedMo
         return deserializerMap;
     }
     /**
-     * Gets the iconUrl property value. The iconUrl property
+     * Gets the iconUrl property value. The icon for the card, displayed in the toolbox and card bar, is represented as a URL. The preferred size for raster images is 28x28 pixels. If this property has a value, the officeFabricIconFontName property is ignored.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -84,7 +84,7 @@ public class TeamsAppDashboardCardIcon implements AdditionalDataHolder, BackedMo
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the officeUIFabricIconName property value. The officeUIFabricIconName property
+     * Gets the officeUIFabricIconName property value. The friendly name of the Office UI Fabric/Fluent UI icon for the card that is used when the iconUrl property isn't specified. For example, 'officeUIFabricIconName': 'Search'.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -118,7 +118,7 @@ public class TeamsAppDashboardCardIcon implements AdditionalDataHolder, BackedMo
         this.backingStore = value;
     }
     /**
-     * Sets the iconUrl property value. The iconUrl property
+     * Sets the iconUrl property value. The icon for the card, displayed in the toolbox and card bar, is represented as a URL. The preferred size for raster images is 28x28 pixels. If this property has a value, the officeFabricIconFontName property is ignored.
      * @param value Value to set for the iconUrl property.
      */
     public void setIconUrl(@jakarta.annotation.Nullable final String value) {
@@ -132,7 +132,7 @@ public class TeamsAppDashboardCardIcon implements AdditionalDataHolder, BackedMo
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the officeUIFabricIconName property value. The officeUIFabricIconName property
+     * Sets the officeUIFabricIconName property value. The friendly name of the Office UI Fabric/Fluent UI icon for the card that is used when the iconUrl property isn't specified. For example, 'officeUIFabricIconName': 'Search'.
      * @param value Value to set for the officeUIFabricIconName property.
      */
     public void setOfficeUIFabricIconName(@jakarta.annotation.Nullable final String value) {

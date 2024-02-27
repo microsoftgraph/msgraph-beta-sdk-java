@@ -50,16 +50,16 @@ public class VirtualEventTownhall extends VirtualEvent implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("audience", (n) -> { this.setAudience(n.getEnumValue(MeetingAudience::forValue)); });
         deserializerMap.put("coOrganizers", (n) -> { this.setCoOrganizers(n.getCollectionOfObjectValues(CommunicationsUserIdentity::createFromDiscriminatorValue)); });
-        deserializerMap.put("invitedAttendees", (n) -> { this.setInvitedAttendees(n.getCollectionOfObjectValues(CommunicationsUserIdentity::createFromDiscriminatorValue)); });
+        deserializerMap.put("invitedAttendees", (n) -> { this.setInvitedAttendees(n.getCollectionOfObjectValues(Identity::createFromDiscriminatorValue)); });
         deserializerMap.put("isInviteOnly", (n) -> { this.setIsInviteOnly(n.getBooleanValue()); });
         return deserializerMap;
     }
     /**
      * Gets the invitedAttendees property value. The invitedAttendees property
-     * @return a {@link java.util.List<CommunicationsUserIdentity>}
+     * @return a {@link java.util.List<Identity>}
      */
     @jakarta.annotation.Nullable
-    public java.util.List<CommunicationsUserIdentity> getInvitedAttendees() {
+    public java.util.List<Identity> getInvitedAttendees() {
         return this.backingStore.get("invitedAttendees");
     }
     /**
@@ -100,7 +100,7 @@ public class VirtualEventTownhall extends VirtualEvent implements Parsable {
      * Sets the invitedAttendees property value. The invitedAttendees property
      * @param value Value to set for the invitedAttendees property.
      */
-    public void setInvitedAttendees(@jakarta.annotation.Nullable final java.util.List<CommunicationsUserIdentity> value) {
+    public void setInvitedAttendees(@jakarta.annotation.Nullable final java.util.List<Identity> value) {
         this.backingStore.set("invitedAttendees", value);
     }
     /**

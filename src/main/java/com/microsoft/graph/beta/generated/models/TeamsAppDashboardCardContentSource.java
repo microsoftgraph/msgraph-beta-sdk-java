@@ -56,7 +56,7 @@ public class TeamsAppDashboardCardContentSource implements AdditionalDataHolder,
         return this.backingStore;
     }
     /**
-     * Gets the botConfiguration property value. The botConfiguration property
+     * Gets the botConfiguration property value. The configuration for the bot source. Required if sourceType is set to bot.
      * @return a {@link TeamsAppDashboardCardBotConfiguration}
      */
     @jakarta.annotation.Nullable
@@ -84,7 +84,7 @@ public class TeamsAppDashboardCardContentSource implements AdditionalDataHolder,
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the sourceType property value. The sourceType property
+     * Gets the sourceType property value. Represents the type of source that powers the content of the dashboard card. The possible values are: bot, unknownFutureValue.
      * @return a {@link TeamsAppDashboardCardSourceType}
      */
     @jakarta.annotation.Nullable
@@ -118,7 +118,7 @@ public class TeamsAppDashboardCardContentSource implements AdditionalDataHolder,
         this.backingStore = value;
     }
     /**
-     * Sets the botConfiguration property value. The botConfiguration property
+     * Sets the botConfiguration property value. The configuration for the bot source. Required if sourceType is set to bot.
      * @param value Value to set for the botConfiguration property.
      */
     public void setBotConfiguration(@jakarta.annotation.Nullable final TeamsAppDashboardCardBotConfiguration value) {
@@ -132,7 +132,7 @@ public class TeamsAppDashboardCardContentSource implements AdditionalDataHolder,
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the sourceType property value. The sourceType property
+     * Sets the sourceType property value. Represents the type of source that powers the content of the dashboard card. The possible values are: bot, unknownFutureValue.
      * @param value Value to set for the sourceType property.
      */
     public void setSourceType(@jakarta.annotation.Nullable final TeamsAppDashboardCardSourceType value) {

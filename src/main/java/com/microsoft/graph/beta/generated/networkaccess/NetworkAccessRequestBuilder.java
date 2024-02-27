@@ -2,6 +2,7 @@ package com.microsoft.graph.beta.networkaccess;
 
 import com.microsoft.graph.beta.models.networkaccess.NetworkAccessRoot;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
+import com.microsoft.graph.beta.networkaccess.alerts.AlertsRequestBuilder;
 import com.microsoft.graph.beta.networkaccess.connectivity.ConnectivityRequestBuilder;
 import com.microsoft.graph.beta.networkaccess.filteringpolicies.FilteringPoliciesRequestBuilder;
 import com.microsoft.graph.beta.networkaccess.filteringprofiles.FilteringProfilesRequestBuilder;
@@ -30,6 +31,14 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class NetworkAccessRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the alerts property of the microsoft.graph.networkaccess.networkAccessRoot entity.
+     * @return a {@link AlertsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public AlertsRequestBuilder alerts() {
+        return new AlertsRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Provides operations to manage the connectivity property of the microsoft.graph.networkaccess.networkAccessRoot entity.
      * @return a {@link ConnectivityRequestBuilder}

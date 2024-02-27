@@ -44,6 +44,8 @@ public class DirectoryObject extends Entity implements Parsable {
                 case "#microsoft.graph.endpoint": return new Endpoint();
                 case "#microsoft.graph.extensionProperty": return new ExtensionProperty();
                 case "#microsoft.graph.externalIdentitiesPolicy": return new ExternalIdentitiesPolicy();
+                case "#microsoft.graph.externalProfile": return new ExternalProfile();
+                case "#microsoft.graph.externalUserProfile": return new ExternalUserProfile();
                 case "#microsoft.graph.federatedTokenValidationPolicy": return new FederatedTokenValidationPolicy();
                 case "#microsoft.graph.group": return new Group();
                 case "#microsoft.graph.homeRealmDiscoveryPolicy": return new HomeRealmDiscoveryPolicy();
@@ -51,6 +53,7 @@ public class DirectoryObject extends Entity implements Parsable {
                 case "#microsoft.graph.multiTenantOrganizationMember": return new MultiTenantOrganizationMember();
                 case "#microsoft.graph.organization": return new Organization();
                 case "#microsoft.graph.orgContact": return new OrgContact();
+                case "#microsoft.graph.pendingExternalUserProfile": return new PendingExternalUserProfile();
                 case "#microsoft.graph.permissionGrantPolicy": return new PermissionGrantPolicy();
                 case "#microsoft.graph.policyBase": return new PolicyBase();
                 case "#microsoft.graph.resourceSpecificPermissionGrant": return new ResourceSpecificPermissionGrant();

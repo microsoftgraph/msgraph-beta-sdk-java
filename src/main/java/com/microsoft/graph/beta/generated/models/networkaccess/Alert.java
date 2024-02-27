@@ -70,6 +70,7 @@ public class Alert extends Entity implements Parsable {
         deserializerMap.put("creationDateTime", (n) -> { this.setCreationDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("firstImpactedDateTime", (n) -> { this.setFirstImpactedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("relatedResources", (n) -> { this.setRelatedResources(n.getCollectionOfObjectValues(RelatedResource::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -79,6 +80,14 @@ public class Alert extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public OffsetDateTime getFirstImpactedDateTime() {
         return this.backingStore.get("firstImpactedDateTime");
+    }
+    /**
+     * Gets the relatedResources property value. The relatedResources property
+     * @return a {@link java.util.List<RelatedResource>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<RelatedResource> getRelatedResources() {
+        return this.backingStore.get("relatedResources");
     }
     /**
      * Serializes information the current object
@@ -92,6 +101,7 @@ public class Alert extends Entity implements Parsable {
         writer.writeOffsetDateTimeValue("creationDateTime", this.getCreationDateTime());
         writer.writeStringValue("description", this.getDescription());
         writer.writeOffsetDateTimeValue("firstImpactedDateTime", this.getFirstImpactedDateTime());
+        writer.writeCollectionOfObjectValues("relatedResources", this.getRelatedResources());
     }
     /**
      * Sets the actions property value. The actions property
@@ -127,5 +137,12 @@ public class Alert extends Entity implements Parsable {
      */
     public void setFirstImpactedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("firstImpactedDateTime", value);
+    }
+    /**
+     * Sets the relatedResources property value. The relatedResources property
+     * @param value Value to set for the relatedResources property.
+     */
+    public void setRelatedResources(@jakarta.annotation.Nullable final java.util.List<RelatedResource> value) {
+        this.backingStore.set("relatedResources", value);
     }
 }
