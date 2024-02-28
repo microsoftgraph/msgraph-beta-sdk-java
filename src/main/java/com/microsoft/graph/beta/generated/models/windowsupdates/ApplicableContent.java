@@ -76,7 +76,7 @@ public class ApplicableContent implements AdditionalDataHolder, BackedModel, Par
         return deserializerMap;
     }
     /**
-     * Gets the matchedDevices property value. Collection of devices and recommendations for applicable catalog content.
+     * Gets the matchedDevices property value. The matchedDevices property
      * @return a {@link java.util.List<ApplicableContentDeviceMatch>}
      */
     @jakarta.annotation.Nullable
@@ -125,7 +125,7 @@ public class ApplicableContent implements AdditionalDataHolder, BackedModel, Par
         this.backingStore.set("catalogEntry", value);
     }
     /**
-     * Sets the matchedDevices property value. Collection of devices and recommendations for applicable catalog content.
+     * Sets the matchedDevices property value. The matchedDevices property
      * @param value Value to set for the matchedDevices property.
      */
     public void setMatchedDevices(@jakarta.annotation.Nullable final java.util.List<ApplicableContentDeviceMatch> value) {

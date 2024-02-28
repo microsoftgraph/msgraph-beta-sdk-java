@@ -33,7 +33,7 @@ public class DailyUserInsightMetricsRoot extends Entity implements Parsable {
         return this.backingStore.get("activeUsers");
     }
     /**
-     * Gets the activeUsersBreakdown property value. Insights for the breakdown of users who were active on apps registered in the tenant for a specified period.
+     * Gets the activeUsersBreakdown property value. The activeUsersBreakdown property
      * @return a {@link java.util.List<ActiveUsersBreakdownMetric>}
      */
     @jakarta.annotation.Nullable
@@ -139,7 +139,7 @@ public class DailyUserInsightMetricsRoot extends Entity implements Parsable {
         this.backingStore.set("activeUsers", value);
     }
     /**
-     * Sets the activeUsersBreakdown property value. Insights for the breakdown of users who were active on apps registered in the tenant for a specified period.
+     * Sets the activeUsersBreakdown property value. The activeUsersBreakdown property
      * @param value Value to set for the activeUsersBreakdown property.
      */
     public void setActiveUsersBreakdown(@jakarta.annotation.Nullable final java.util.List<ActiveUsersBreakdownMetric> value) {

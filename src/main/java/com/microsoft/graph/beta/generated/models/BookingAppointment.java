@@ -168,6 +168,7 @@ public class BookingAppointment extends Entity implements Parsable {
         deserializerMap.put("invoiceId", (n) -> { this.setInvoiceId(n.getStringValue()); });
         deserializerMap.put("invoiceStatus", (n) -> { this.setInvoiceStatus(n.getEnumValue(BookingInvoiceStatus::forValue)); });
         deserializerMap.put("invoiceUrl", (n) -> { this.setInvoiceUrl(n.getStringValue()); });
+        deserializerMap.put("isCustomerAllowedToManageBooking", (n) -> { this.setIsCustomerAllowedToManageBooking(n.getBooleanValue()); });
         deserializerMap.put("isLocationOnline", (n) -> { this.setIsLocationOnline(n.getBooleanValue()); });
         deserializerMap.put("joinWebUrl", (n) -> { this.setJoinWebUrl(n.getStringValue()); });
         deserializerMap.put("lastUpdatedDateTime", (n) -> { this.setLastUpdatedDateTime(n.getOffsetDateTimeValue()); });
@@ -236,6 +237,14 @@ public class BookingAppointment extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public String getInvoiceUrl() {
         return this.backingStore.get("invoiceUrl");
+    }
+    /**
+     * Gets the isCustomerAllowedToManageBooking property value. The isCustomerAllowedToManageBooking property
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsCustomerAllowedToManageBooking() {
+        return this.backingStore.get("isCustomerAllowedToManageBooking");
     }
     /**
      * Gets the isLocationOnline property value. True indicates that the appointment will be held online. Default value is false.
@@ -414,6 +423,7 @@ public class BookingAppointment extends Entity implements Parsable {
         writer.writeStringValue("invoiceId", this.getInvoiceId());
         writer.writeEnumValue("invoiceStatus", this.getInvoiceStatus());
         writer.writeStringValue("invoiceUrl", this.getInvoiceUrl());
+        writer.writeBooleanValue("isCustomerAllowedToManageBooking", this.getIsCustomerAllowedToManageBooking());
         writer.writeBooleanValue("isLocationOnline", this.getIsLocationOnline());
         writer.writeStringValue("joinWebUrl", this.getJoinWebUrl());
         writer.writeOffsetDateTimeValue("lastUpdatedDateTime", this.getLastUpdatedDateTime());
@@ -573,6 +583,13 @@ public class BookingAppointment extends Entity implements Parsable {
      */
     public void setInvoiceUrl(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("invoiceUrl", value);
+    }
+    /**
+     * Sets the isCustomerAllowedToManageBooking property value. The isCustomerAllowedToManageBooking property
+     * @param value Value to set for the isCustomerAllowedToManageBooking property.
+     */
+    public void setIsCustomerAllowedToManageBooking(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isCustomerAllowedToManageBooking", value);
     }
     /**
      * Sets the isLocationOnline property value. True indicates that the appointment will be held online. Default value is false.

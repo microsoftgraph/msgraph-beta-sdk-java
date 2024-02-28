@@ -119,6 +119,7 @@ public class BookingService extends BookingNamedEntity implements Parsable {
         deserializerMap.put("defaultReminders", (n) -> { this.setDefaultReminders(n.getCollectionOfObjectValues(BookingReminder::createFromDiscriminatorValue)); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("isAnonymousJoinEnabled", (n) -> { this.setIsAnonymousJoinEnabled(n.getBooleanValue()); });
+        deserializerMap.put("isCustomerAllowedToManageBooking", (n) -> { this.setIsCustomerAllowedToManageBooking(n.getBooleanValue()); });
         deserializerMap.put("isHiddenFromCustomers", (n) -> { this.setIsHiddenFromCustomers(n.getBooleanValue()); });
         deserializerMap.put("isLocationOnline", (n) -> { this.setIsLocationOnline(n.getBooleanValue()); });
         deserializerMap.put("languageTag", (n) -> { this.setLanguageTag(n.getStringValue()); });
@@ -140,6 +141,14 @@ public class BookingService extends BookingNamedEntity implements Parsable {
     @jakarta.annotation.Nullable
     public Boolean getIsAnonymousJoinEnabled() {
         return this.backingStore.get("isAnonymousJoinEnabled");
+    }
+    /**
+     * Gets the isCustomerAllowedToManageBooking property value. The isCustomerAllowedToManageBooking property
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsCustomerAllowedToManageBooking() {
+        return this.backingStore.get("isCustomerAllowedToManageBooking");
     }
     /**
      * Gets the isHiddenFromCustomers property value. True means this service isn't available to customers for booking.
@@ -254,6 +263,7 @@ public class BookingService extends BookingNamedEntity implements Parsable {
         writer.writeCollectionOfObjectValues("defaultReminders", this.getDefaultReminders());
         writer.writeStringValue("description", this.getDescription());
         writer.writeBooleanValue("isAnonymousJoinEnabled", this.getIsAnonymousJoinEnabled());
+        writer.writeBooleanValue("isCustomerAllowedToManageBooking", this.getIsCustomerAllowedToManageBooking());
         writer.writeBooleanValue("isHiddenFromCustomers", this.getIsHiddenFromCustomers());
         writer.writeBooleanValue("isLocationOnline", this.getIsLocationOnline());
         writer.writeStringValue("languageTag", this.getLanguageTag());
@@ -335,6 +345,13 @@ public class BookingService extends BookingNamedEntity implements Parsable {
      */
     public void setIsAnonymousJoinEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isAnonymousJoinEnabled", value);
+    }
+    /**
+     * Sets the isCustomerAllowedToManageBooking property value. The isCustomerAllowedToManageBooking property
+     * @param value Value to set for the isCustomerAllowedToManageBooking property.
+     */
+    public void setIsCustomerAllowedToManageBooking(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isCustomerAllowedToManageBooking", value);
     }
     /**
      * Sets the isHiddenFromCustomers property value. True means this service isn't available to customers for booking.

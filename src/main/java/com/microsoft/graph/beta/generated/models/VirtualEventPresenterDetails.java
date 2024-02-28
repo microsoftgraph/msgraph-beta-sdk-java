@@ -77,13 +77,14 @@ public class VirtualEventPresenterDetails implements AdditionalDataHolder, Backe
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(8);
         deserializerMap.put("bio", (n) -> { this.setBio(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
         deserializerMap.put("company", (n) -> { this.setCompany(n.getStringValue()); });
         deserializerMap.put("jobTitle", (n) -> { this.setJobTitle(n.getStringValue()); });
         deserializerMap.put("linkedInProfileWebUrl", (n) -> { this.setLinkedInProfileWebUrl(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("personalSiteWebUrl", (n) -> { this.setPersonalSiteWebUrl(n.getStringValue()); });
+        deserializerMap.put("photo", (n) -> { this.setPhoto(n.getByteArrayValue()); });
         deserializerMap.put("twitterProfileWebUrl", (n) -> { this.setTwitterProfileWebUrl(n.getStringValue()); });
         return deserializerMap;
     }
@@ -120,6 +121,14 @@ public class VirtualEventPresenterDetails implements AdditionalDataHolder, Backe
         return this.backingStore.get("personalSiteWebUrl");
     }
     /**
+     * Gets the photo property value. The content stream of the presenter's photo.
+     * @return a {@link byte[]}
+     */
+    @jakarta.annotation.Nullable
+    public byte[] getPhoto() {
+        return this.backingStore.get("photo");
+    }
+    /**
      * Gets the twitterProfileWebUrl property value. The presenter's Twitter profile URL.
      * @return a {@link String}
      */
@@ -139,6 +148,7 @@ public class VirtualEventPresenterDetails implements AdditionalDataHolder, Backe
         writer.writeStringValue("linkedInProfileWebUrl", this.getLinkedInProfileWebUrl());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("personalSiteWebUrl", this.getPersonalSiteWebUrl());
+        writer.writeByteArrayValue("photo", this.getPhoto());
         writer.writeStringValue("twitterProfileWebUrl", this.getTwitterProfileWebUrl());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -198,6 +208,13 @@ public class VirtualEventPresenterDetails implements AdditionalDataHolder, Backe
      */
     public void setPersonalSiteWebUrl(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("personalSiteWebUrl", value);
+    }
+    /**
+     * Sets the photo property value. The content stream of the presenter's photo.
+     * @param value Value to set for the photo property.
+     */
+    public void setPhoto(@jakarta.annotation.Nullable final byte[] value) {
+        this.backingStore.set("photo", value);
     }
     /**
      * Sets the twitterProfileWebUrl property value. The presenter's Twitter profile URL.

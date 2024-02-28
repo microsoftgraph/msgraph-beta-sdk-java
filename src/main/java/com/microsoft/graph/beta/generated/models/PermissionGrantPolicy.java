@@ -42,6 +42,7 @@ public class PermissionGrantPolicy extends PolicyBase implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("excludes", (n) -> { this.setExcludes(n.getCollectionOfObjectValues(PermissionGrantConditionSet::createFromDiscriminatorValue)); });
         deserializerMap.put("includes", (n) -> { this.setIncludes(n.getCollectionOfObjectValues(PermissionGrantConditionSet::createFromDiscriminatorValue)); });
+        deserializerMap.put("resourceScopeType", (n) -> { this.setResourceScopeType(n.getEnumValue(ResourceScopeType::forValue)); });
         return deserializerMap;
     }
     /**
@@ -53,6 +54,14 @@ public class PermissionGrantPolicy extends PolicyBase implements Parsable {
         return this.backingStore.get("includes");
     }
     /**
+     * Gets the resourceScopeType property value. The resource type the pre-approval policy applies to. Possible values: group for groups and teams, chat for chats, tenant for all supported resources in the tenant. Required.
+     * @return a {@link ResourceScopeType}
+     */
+    @jakarta.annotation.Nullable
+    public ResourceScopeType getResourceScopeType() {
+        return this.backingStore.get("resourceScopeType");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -61,6 +70,7 @@ public class PermissionGrantPolicy extends PolicyBase implements Parsable {
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("excludes", this.getExcludes());
         writer.writeCollectionOfObjectValues("includes", this.getIncludes());
+        writer.writeEnumValue("resourceScopeType", this.getResourceScopeType());
     }
     /**
      * Sets the excludes property value. Condition sets that are excluded in this permission grant policy. Automatically expanded on GET.
@@ -75,5 +85,12 @@ public class PermissionGrantPolicy extends PolicyBase implements Parsable {
      */
     public void setIncludes(@jakarta.annotation.Nullable final java.util.List<PermissionGrantConditionSet> value) {
         this.backingStore.set("includes", value);
+    }
+    /**
+     * Sets the resourceScopeType property value. The resource type the pre-approval policy applies to. Possible values: group for groups and teams, chat for chats, tenant for all supported resources in the tenant. Required.
+     * @param value Value to set for the resourceScopeType property.
+     */
+    public void setResourceScopeType(@jakarta.annotation.Nullable final ResourceScopeType value) {
+        this.backingStore.set("resourceScopeType", value);
     }
 }

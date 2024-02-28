@@ -61,6 +61,7 @@ public class UserSettings extends Entity implements Parsable {
         deserializerMap.put("itemInsights", (n) -> { this.setItemInsights(n.getObjectValue(UserInsightsSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("regionalAndLanguageSettings", (n) -> { this.setRegionalAndLanguageSettings(n.getObjectValue(RegionalAndLanguageSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("shiftPreferences", (n) -> { this.setShiftPreferences(n.getObjectValue(ShiftPreferences::createFromDiscriminatorValue)); });
+        deserializerMap.put("windows", (n) -> { this.setWindows(n.getCollectionOfObjectValues(WindowsSetting::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -88,6 +89,14 @@ public class UserSettings extends Entity implements Parsable {
         return this.backingStore.get("shiftPreferences");
     }
     /**
+     * Gets the windows property value. The windows property
+     * @return a {@link java.util.List<WindowsSetting>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<WindowsSetting> getWindows() {
+        return this.backingStore.get("windows");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -100,6 +109,7 @@ public class UserSettings extends Entity implements Parsable {
         writer.writeObjectValue("itemInsights", this.getItemInsights());
         writer.writeObjectValue("regionalAndLanguageSettings", this.getRegionalAndLanguageSettings());
         writer.writeObjectValue("shiftPreferences", this.getShiftPreferences());
+        writer.writeCollectionOfObjectValues("windows", this.getWindows());
     }
     /**
      * Sets the contactMergeSuggestions property value. The user's settings for the visibility of merge suggestion for the duplicate contacts in the user's contact list.
@@ -142,5 +152,12 @@ public class UserSettings extends Entity implements Parsable {
      */
     public void setShiftPreferences(@jakarta.annotation.Nullable final ShiftPreferences value) {
         this.backingStore.set("shiftPreferences", value);
+    }
+    /**
+     * Sets the windows property value. The windows property
+     * @param value Value to set for the windows property.
+     */
+    public void setWindows(@jakarta.annotation.Nullable final java.util.List<WindowsSetting> value) {
+        this.backingStore.set("windows", value);
     }
 }

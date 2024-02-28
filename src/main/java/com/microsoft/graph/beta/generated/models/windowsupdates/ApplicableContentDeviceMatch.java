@@ -56,7 +56,7 @@ public class ApplicableContentDeviceMatch implements AdditionalDataHolder, Backe
         return this.backingStore;
     }
     /**
-     * Gets the deviceId property value. The deviceId property
+     * Gets the deviceId property value. Collection of vendors who recommend the content.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -118,7 +118,7 @@ public class ApplicableContentDeviceMatch implements AdditionalDataHolder, Backe
         this.backingStore = value;
     }
     /**
-     * Sets the deviceId property value. The deviceId property
+     * Sets the deviceId property value. Collection of vendors who recommend the content.
      * @param value Value to set for the deviceId property.
      */
     public void setDeviceId(@jakarta.annotation.Nullable final String value) {

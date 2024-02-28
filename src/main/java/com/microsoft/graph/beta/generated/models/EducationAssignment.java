@@ -169,6 +169,7 @@ public class EducationAssignment extends Entity implements Parsable {
         deserializerMap.put("feedbackResourcesFolderUrl", (n) -> { this.setFeedbackResourcesFolderUrl(n.getStringValue()); });
         deserializerMap.put("grading", (n) -> { this.setGrading(n.getObjectValue(EducationAssignmentGradeType::createFromDiscriminatorValue)); });
         deserializerMap.put("gradingCategory", (n) -> { this.setGradingCategory(n.getObjectValue(EducationGradingCategory::createFromDiscriminatorValue)); });
+        deserializerMap.put("gradingScheme", (n) -> { this.setGradingScheme(n.getObjectValue(EducationGradingScheme::createFromDiscriminatorValue)); });
         deserializerMap.put("instructions", (n) -> { this.setInstructions(n.getObjectValue(EducationItemBody::createFromDiscriminatorValue)); });
         deserializerMap.put("lastModifiedBy", (n) -> { this.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
@@ -197,6 +198,14 @@ public class EducationAssignment extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public EducationGradingCategory getGradingCategory() {
         return this.backingStore.get("gradingCategory");
+    }
+    /**
+     * Gets the gradingScheme property value. The gradingScheme property
+     * @return a {@link EducationGradingScheme}
+     */
+    @jakarta.annotation.Nullable
+    public EducationGradingScheme getGradingScheme() {
+        return this.backingStore.get("gradingScheme");
     }
     /**
      * Gets the instructions property value. Instructions for the assignment. This property and the display name tell the student what to do.
@@ -263,7 +272,7 @@ public class EducationAssignment extends Entity implements Parsable {
         return this.backingStore.get("rubric");
     }
     /**
-     * Gets the status property value. Status of the Assignment.  You cant PATCH this value.  Possible values are: draft, scheduled, published, assigned, unknownFutureValue and inactive. You must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: inactive.
+     * Gets the status property value. Status of the assignment. You can't PATCH this value. Possible values are: draft, scheduled, published, assigned, unknownFutureValue, inactive. You must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: inactive.
      * @return a {@link EducationAssignmentStatus}
      */
     @jakarta.annotation.Nullable
@@ -305,6 +314,7 @@ public class EducationAssignment extends Entity implements Parsable {
         writer.writeOffsetDateTimeValue("dueDateTime", this.getDueDateTime());
         writer.writeObjectValue("grading", this.getGrading());
         writer.writeObjectValue("gradingCategory", this.getGradingCategory());
+        writer.writeObjectValue("gradingScheme", this.getGradingScheme());
         writer.writeObjectValue("instructions", this.getInstructions());
         writer.writeStringValue("moduleUrl", this.getModuleUrl());
         writer.writeStringValue("notificationChannelUrl", this.getNotificationChannelUrl());
@@ -432,6 +442,13 @@ public class EducationAssignment extends Entity implements Parsable {
         this.backingStore.set("gradingCategory", value);
     }
     /**
+     * Sets the gradingScheme property value. The gradingScheme property
+     * @param value Value to set for the gradingScheme property.
+     */
+    public void setGradingScheme(@jakarta.annotation.Nullable final EducationGradingScheme value) {
+        this.backingStore.set("gradingScheme", value);
+    }
+    /**
      * Sets the instructions property value. Instructions for the assignment. This property and the display name tell the student what to do.
      * @param value Value to set for the instructions property.
      */
@@ -488,7 +505,7 @@ public class EducationAssignment extends Entity implements Parsable {
         this.backingStore.set("rubric", value);
     }
     /**
-     * Sets the status property value. Status of the Assignment.  You cant PATCH this value.  Possible values are: draft, scheduled, published, assigned, unknownFutureValue and inactive. You must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: inactive.
+     * Sets the status property value. Status of the assignment. You can't PATCH this value. Possible values are: draft, scheduled, published, assigned, unknownFutureValue, inactive. You must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: inactive.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final EducationAssignmentStatus value) {

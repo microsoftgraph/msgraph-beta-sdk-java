@@ -60,7 +60,7 @@ public class DashboardCardsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/appCatalogs/teamsApps/{teamsApp%2Did}/appDefinitions/{teamsAppDefinition%2Did}/dashboardCards{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get dashboardCards from appCatalogs
+     * Dashboard cards specified in the Teams app manifest.
      * @return a {@link TeamsAppDashboardCardDefinitionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -69,7 +69,7 @@ public class DashboardCardsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get dashboardCards from appCatalogs
+     * Dashboard cards specified in the Teams app manifest.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TeamsAppDashboardCardDefinitionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -107,7 +107,7 @@ public class DashboardCardsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TeamsAppDashboardCardDefinition::createFromDiscriminatorValue);
     }
     /**
-     * Get dashboardCards from appCatalogs
+     * Dashboard cards specified in the Teams app manifest.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class DashboardCardsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get dashboardCards from appCatalogs
+     * Dashboard cards specified in the Teams app manifest.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +161,7 @@ public class DashboardCardsRequestBuilder extends BaseRequestBuilder {
         return new DashboardCardsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get dashboardCards from appCatalogs
+     * Dashboard cards specified in the Teams app manifest.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

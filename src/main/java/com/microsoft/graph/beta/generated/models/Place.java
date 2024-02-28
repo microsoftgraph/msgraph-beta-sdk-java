@@ -60,6 +60,7 @@ public class Place extends Entity implements Parsable {
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("geoCoordinates", (n) -> { this.setGeoCoordinates(n.getObjectValue(OutlookGeoCoordinates::createFromDiscriminatorValue)); });
         deserializerMap.put("phone", (n) -> { this.setPhone(n.getStringValue()); });
+        deserializerMap.put("placeId", (n) -> { this.setPlaceId(n.getStringValue()); });
         return deserializerMap;
     }
     /**
@@ -79,6 +80,14 @@ public class Place extends Entity implements Parsable {
         return this.backingStore.get("phone");
     }
     /**
+     * Gets the placeId property value. An alternate immutable unique identifier of the place.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getPlaceId() {
+        return this.backingStore.get("placeId");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -89,6 +98,7 @@ public class Place extends Entity implements Parsable {
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeObjectValue("geoCoordinates", this.getGeoCoordinates());
         writer.writeStringValue("phone", this.getPhone());
+        writer.writeStringValue("placeId", this.getPlaceId());
     }
     /**
      * Sets the address property value. The street address of the place.
@@ -117,5 +127,12 @@ public class Place extends Entity implements Parsable {
      */
     public void setPhone(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("phone", value);
+    }
+    /**
+     * Sets the placeId property value. An alternate immutable unique identifier of the place.
+     * @param value Value to set for the placeId property.
+     */
+    public void setPlaceId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("placeId", value);
     }
 }

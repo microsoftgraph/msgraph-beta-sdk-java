@@ -73,6 +73,14 @@ public class Directory extends Entity implements Parsable {
         return this.backingStore.get("deviceLocalCredentials");
     }
     /**
+     * Gets the externalUserProfiles property value. Collection of external user profiles that represent collaborators in the directory.
+     * @return a {@link java.util.List<ExternalUserProfile>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<ExternalUserProfile> getExternalUserProfiles() {
+        return this.backingStore.get("externalUserProfiles");
+    }
+    /**
      * Gets the featureRolloutPolicies property value. The featureRolloutPolicies property
      * @return a {@link java.util.List<FeatureRolloutPolicy>}
      */
@@ -101,12 +109,14 @@ public class Directory extends Entity implements Parsable {
         deserializerMap.put("customSecurityAttributeDefinitions", (n) -> { this.setCustomSecurityAttributeDefinitions(n.getCollectionOfObjectValues(CustomSecurityAttributeDefinition::createFromDiscriminatorValue)); });
         deserializerMap.put("deletedItems", (n) -> { this.setDeletedItems(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
         deserializerMap.put("deviceLocalCredentials", (n) -> { this.setDeviceLocalCredentials(n.getCollectionOfObjectValues(DeviceLocalCredentialInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("externalUserProfiles", (n) -> { this.setExternalUserProfiles(n.getCollectionOfObjectValues(ExternalUserProfile::createFromDiscriminatorValue)); });
         deserializerMap.put("featureRolloutPolicies", (n) -> { this.setFeatureRolloutPolicies(n.getCollectionOfObjectValues(FeatureRolloutPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("federationConfigurations", (n) -> { this.setFederationConfigurations(n.getCollectionOfObjectValues(IdentityProviderBase::createFromDiscriminatorValue)); });
         deserializerMap.put("impactedResources", (n) -> { this.setImpactedResources(n.getCollectionOfObjectValues(ImpactedResource::createFromDiscriminatorValue)); });
         deserializerMap.put("inboundSharedUserProfiles", (n) -> { this.setInboundSharedUserProfiles(n.getCollectionOfObjectValues(InboundSharedUserProfile::createFromDiscriminatorValue)); });
         deserializerMap.put("onPremisesSynchronization", (n) -> { this.setOnPremisesSynchronization(n.getCollectionOfObjectValues(OnPremisesDirectorySynchronization::createFromDiscriminatorValue)); });
         deserializerMap.put("outboundSharedUserProfiles", (n) -> { this.setOutboundSharedUserProfiles(n.getCollectionOfObjectValues(OutboundSharedUserProfile::createFromDiscriminatorValue)); });
+        deserializerMap.put("pendingExternalUserProfiles", (n) -> { this.setPendingExternalUserProfiles(n.getCollectionOfObjectValues(PendingExternalUserProfile::createFromDiscriminatorValue)); });
         deserializerMap.put("recommendations", (n) -> { this.setRecommendations(n.getCollectionOfObjectValues(Recommendation::createFromDiscriminatorValue)); });
         deserializerMap.put("sharedEmailDomains", (n) -> { this.setSharedEmailDomains(n.getCollectionOfObjectValues(SharedEmailDomain::createFromDiscriminatorValue)); });
         deserializerMap.put("subscriptions", (n) -> { this.setSubscriptions(n.getCollectionOfObjectValues(CompanySubscription::createFromDiscriminatorValue)); });
@@ -145,6 +155,14 @@ public class Directory extends Entity implements Parsable {
         return this.backingStore.get("outboundSharedUserProfiles");
     }
     /**
+     * Gets the pendingExternalUserProfiles property value. Collection of pending external user profiles representing collaborators in the directory that are unredeemed.
+     * @return a {@link java.util.List<PendingExternalUserProfile>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<PendingExternalUserProfile> getPendingExternalUserProfiles() {
+        return this.backingStore.get("pendingExternalUserProfiles");
+    }
+    /**
      * Gets the recommendations property value. List of recommended improvements to improve tenant posture.
      * @return a {@link java.util.List<Recommendation>}
      */
@@ -181,12 +199,14 @@ public class Directory extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("customSecurityAttributeDefinitions", this.getCustomSecurityAttributeDefinitions());
         writer.writeCollectionOfObjectValues("deletedItems", this.getDeletedItems());
         writer.writeCollectionOfObjectValues("deviceLocalCredentials", this.getDeviceLocalCredentials());
+        writer.writeCollectionOfObjectValues("externalUserProfiles", this.getExternalUserProfiles());
         writer.writeCollectionOfObjectValues("featureRolloutPolicies", this.getFeatureRolloutPolicies());
         writer.writeCollectionOfObjectValues("federationConfigurations", this.getFederationConfigurations());
         writer.writeCollectionOfObjectValues("impactedResources", this.getImpactedResources());
         writer.writeCollectionOfObjectValues("inboundSharedUserProfiles", this.getInboundSharedUserProfiles());
         writer.writeCollectionOfObjectValues("onPremisesSynchronization", this.getOnPremisesSynchronization());
         writer.writeCollectionOfObjectValues("outboundSharedUserProfiles", this.getOutboundSharedUserProfiles());
+        writer.writeCollectionOfObjectValues("pendingExternalUserProfiles", this.getPendingExternalUserProfiles());
         writer.writeCollectionOfObjectValues("recommendations", this.getRecommendations());
         writer.writeCollectionOfObjectValues("sharedEmailDomains", this.getSharedEmailDomains());
         writer.writeCollectionOfObjectValues("subscriptions", this.getSubscriptions());
@@ -234,6 +254,13 @@ public class Directory extends Entity implements Parsable {
         this.backingStore.set("deviceLocalCredentials", value);
     }
     /**
+     * Sets the externalUserProfiles property value. Collection of external user profiles that represent collaborators in the directory.
+     * @param value Value to set for the externalUserProfiles property.
+     */
+    public void setExternalUserProfiles(@jakarta.annotation.Nullable final java.util.List<ExternalUserProfile> value) {
+        this.backingStore.set("externalUserProfiles", value);
+    }
+    /**
      * Sets the featureRolloutPolicies property value. The featureRolloutPolicies property
      * @param value Value to set for the featureRolloutPolicies property.
      */
@@ -274,6 +301,13 @@ public class Directory extends Entity implements Parsable {
      */
     public void setOutboundSharedUserProfiles(@jakarta.annotation.Nullable final java.util.List<OutboundSharedUserProfile> value) {
         this.backingStore.set("outboundSharedUserProfiles", value);
+    }
+    /**
+     * Sets the pendingExternalUserProfiles property value. Collection of pending external user profiles representing collaborators in the directory that are unredeemed.
+     * @param value Value to set for the pendingExternalUserProfiles property.
+     */
+    public void setPendingExternalUserProfiles(@jakarta.annotation.Nullable final java.util.List<PendingExternalUserProfile> value) {
+        this.backingStore.set("pendingExternalUserProfiles", value);
     }
     /**
      * Sets the recommendations property value. List of recommended improvements to improve tenant posture.

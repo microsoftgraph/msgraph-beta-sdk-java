@@ -11,7 +11,8 @@ public enum AlertType implements ValuedEnum {
     CrossTenantAnomaly("crossTenantAnomaly"),
     SuspiciousProcess("suspiciousProcess"),
     ThreatIntelligenceTransactions("threatIntelligenceTransactions"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    WebContentBlocked("webContentBlocked");
     public final String value;
     AlertType(final String value) {
         this.value = value;
@@ -29,6 +30,7 @@ public enum AlertType implements ValuedEnum {
             case "suspiciousProcess": return SuspiciousProcess;
             case "threatIntelligenceTransactions": return ThreatIntelligenceTransactions;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "webContentBlocked": return WebContentBlocked;
             default: return null;
         }
     }

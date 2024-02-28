@@ -25,7 +25,10 @@ public class InactiveUsersByApplicationRequestBuilder extends BaseRequestBuilder
     /**
      * Provides operations to count the resources in the collection.
      * @return a {@link CountRequestBuilder}
+     * @deprecated
+     * The Inactive Users By Application Metric is deprecated and will stop returning data on February 16, 2024. Please use the existing Inactive Users API. as of 2024-02/Remove_Breakdown_APIs
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
@@ -34,8 +37,11 @@ public class InactiveUsersByApplicationRequestBuilder extends BaseRequestBuilder
      * Provides operations to manage the inactiveUsersByApplication property of the microsoft.graph.dailyUserInsightMetricsRoot entity.
      * @param dailyInactiveUsersByApplicationMetricId The unique identifier of dailyInactiveUsersByApplicationMetric
      * @return a {@link DailyInactiveUsersByApplicationMetricItemRequestBuilder}
+     * @deprecated
+     * The Inactive Users By Application Metric is deprecated and will stop returning data on February 16, 2024. Please use the existing Inactive Users API. as of 2024-02/Remove_Breakdown_APIs
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public DailyInactiveUsersByApplicationMetricItemRequestBuilder byDailyInactiveUsersByApplicationMetricId(@jakarta.annotation.Nonnull final String dailyInactiveUsersByApplicationMetricId) {
         Objects.requireNonNull(dailyInactiveUsersByApplicationMetricId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
@@ -62,8 +68,11 @@ public class InactiveUsersByApplicationRequestBuilder extends BaseRequestBuilder
      * Get inactiveUsersByApplication from reports
      * @return a {@link DailyInactiveUsersByApplicationMetricCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * The Inactive Users By Application Metric is deprecated and will stop returning data on February 16, 2024. Please use the existing Inactive Users API. as of 2024-02/Remove_Breakdown_APIs
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public DailyInactiveUsersByApplicationMetricCollectionResponse get() {
         return get(null);
     }
@@ -72,8 +81,11 @@ public class InactiveUsersByApplicationRequestBuilder extends BaseRequestBuilder
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DailyInactiveUsersByApplicationMetricCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * The Inactive Users By Application Metric is deprecated and will stop returning data on February 16, 2024. Please use the existing Inactive Users API. as of 2024-02/Remove_Breakdown_APIs
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public DailyInactiveUsersByApplicationMetricCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -83,8 +95,11 @@ public class InactiveUsersByApplicationRequestBuilder extends BaseRequestBuilder
     /**
      * Get inactiveUsersByApplication from reports
      * @return a {@link RequestInformation}
+     * @deprecated
+     * The Inactive Users By Application Metric is deprecated and will stop returning data on February 16, 2024. Please use the existing Inactive Users API. as of 2024-02/Remove_Breakdown_APIs
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -92,8 +107,11 @@ public class InactiveUsersByApplicationRequestBuilder extends BaseRequestBuilder
      * Get inactiveUsersByApplication from reports
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * The Inactive Users By Application Metric is deprecated and will stop returning data on February 16, 2024. Please use the existing Inactive Users API. as of 2024-02/Remove_Breakdown_APIs
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -104,8 +122,11 @@ public class InactiveUsersByApplicationRequestBuilder extends BaseRequestBuilder
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link InactiveUsersByApplicationRequestBuilder}
+     * @deprecated
+     * The Inactive Users By Application Metric is deprecated and will stop returning data on February 16, 2024. Please use the existing Inactive Users API. as of 2024-02/Remove_Breakdown_APIs
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public InactiveUsersByApplicationRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new InactiveUsersByApplicationRequestBuilder(rawUrl, requestAdapter);

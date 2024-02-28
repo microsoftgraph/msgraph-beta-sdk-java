@@ -26,7 +26,7 @@ public class TimeOffReason extends ChangeTrackedEntity implements Parsable {
         return new TimeOffReason();
     }
     /**
-     * Gets the code property value. The code of the timeOffReason to represent an external identifier.
+     * Gets the code property value. The code of the timeOffReason to represent an external identifier. This field must be unique within the team in Microsoft Teams and uses an alphanumeric format, with a maximum of 100 characters.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -83,7 +83,7 @@ public class TimeOffReason extends ChangeTrackedEntity implements Parsable {
         writer.writeBooleanValue("isActive", this.getIsActive());
     }
     /**
-     * Sets the code property value. The code of the timeOffReason to represent an external identifier.
+     * Sets the code property value. The code of the timeOffReason to represent an external identifier. This field must be unique within the team in Microsoft Teams and uses an alphanumeric format, with a maximum of 100 characters.
      * @param value Value to set for the code property.
      */
     public void setCode(@jakarta.annotation.Nullable final String value) {

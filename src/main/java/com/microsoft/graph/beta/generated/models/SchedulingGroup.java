@@ -26,7 +26,7 @@ public class SchedulingGroup extends ChangeTrackedEntity implements Parsable {
         return new SchedulingGroup();
     }
     /**
-     * Gets the code property value. The code for the schedulingGroup to represent an external identifier.
+     * Gets the code property value. The code for the schedulingGroup to represent an external identifier. This field must be unique within the team in Microsoft Teams and uses an alphanumeric format, with a maximum of 100 characters.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -82,7 +82,7 @@ public class SchedulingGroup extends ChangeTrackedEntity implements Parsable {
         writer.writeCollectionOfPrimitiveValues("userIds", this.getUserIds());
     }
     /**
-     * Sets the code property value. The code for the schedulingGroup to represent an external identifier.
+     * Sets the code property value. The code for the schedulingGroup to represent an external identifier. This field must be unique within the team in Microsoft Teams and uses an alphanumeric format, with a maximum of 100 characters.
      * @param value Value to set for the code property.
      */
     public void setCode(@jakarta.annotation.Nullable final String value) {

@@ -2,7 +2,6 @@ package com.microsoft.graph.beta.solutions.virtualevents.events.item.sessions.it
 
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.VirtualEventPresenter;
-import com.microsoft.graph.beta.solutions.virtualevents.events.item.sessions.item.presenters.item.profilephoto.ProfilePhotoRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -21,14 +20,6 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class VirtualEventPresenterItemRequestBuilder extends BaseRequestBuilder {
-    /**
-     * Provides operations to manage the media for the solutionsRoot entity.
-     * @return a {@link ProfilePhotoRequestBuilder}
-     */
-    @jakarta.annotation.Nonnull
-    public ProfilePhotoRequestBuilder profilePhoto() {
-        return new ProfilePhotoRequestBuilder(pathParameters, requestAdapter);
-    }
     /**
      * Instantiates a new {@link VirtualEventPresenterItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request

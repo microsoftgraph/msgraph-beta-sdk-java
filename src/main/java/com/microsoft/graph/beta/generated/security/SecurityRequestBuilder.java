@@ -18,6 +18,7 @@ import com.microsoft.graph.beta.security.ipsecurityprofiles.IpSecurityProfilesRe
 import com.microsoft.graph.beta.security.labels.LabelsRequestBuilder;
 import com.microsoft.graph.beta.security.microsoftgraphsecurityrunhuntingquery.MicrosoftGraphSecurityRunHuntingQueryRequestBuilder;
 import com.microsoft.graph.beta.security.providertenantsettings.ProviderTenantSettingsRequestBuilder;
+import com.microsoft.graph.beta.security.rules.RulesRequestBuilder;
 import com.microsoft.graph.beta.security.securescorecontrolprofiles.SecureScoreControlProfilesRequestBuilder;
 import com.microsoft.graph.beta.security.securescores.SecureScoresRequestBuilder;
 import com.microsoft.graph.beta.security.securityactions.SecurityActionsRequestBuilder;
@@ -173,6 +174,14 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public ProviderTenantSettingsRequestBuilder providerTenantSettings() {
         return new ProviderTenantSettingsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the rules property of the microsoft.graph.security entity.
+     * @return a {@link RulesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RulesRequestBuilder rules() {
+        return new RulesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the secureScoreControlProfiles property of the microsoft.graph.security entity.

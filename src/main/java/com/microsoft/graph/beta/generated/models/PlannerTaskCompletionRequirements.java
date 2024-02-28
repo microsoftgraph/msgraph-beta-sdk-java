@@ -9,7 +9,8 @@ public enum PlannerTaskCompletionRequirements implements ValuedEnum {
     ChecklistCompletion("checklistCompletion"),
     UnknownFutureValue("unknownFutureValue"),
     FormCompletion("formCompletion"),
-    ApprovalCompletion("approvalCompletion");
+    ApprovalCompletion("approvalCompletion"),
+    CompletionInHostedApp("completionInHostedApp");
     public final String value;
     PlannerTaskCompletionRequirements(final String value) {
         this.value = value;
@@ -25,6 +26,7 @@ public enum PlannerTaskCompletionRequirements implements ValuedEnum {
             case "unknownFutureValue": return UnknownFutureValue;
             case "formCompletion": return FormCompletion;
             case "approvalCompletion": return ApprovalCompletion;
+            case "completionInHostedApp": return CompletionInHostedApp;
             default: return null;
         }
     }

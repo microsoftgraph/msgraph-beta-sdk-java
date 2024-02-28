@@ -15,6 +15,7 @@ import com.microsoft.graph.beta.serviceprincipals.item.delegatedpermissionclassi
 import com.microsoft.graph.beta.serviceprincipals.item.deletepasswordsinglesignoncredentials.DeletePasswordSingleSignOnCredentialsRequestBuilder;
 import com.microsoft.graph.beta.serviceprincipals.item.endpoints.EndpointsRequestBuilder;
 import com.microsoft.graph.beta.serviceprincipals.item.federatedidentitycredentials.FederatedIdentityCredentialsRequestBuilder;
+import com.microsoft.graph.beta.serviceprincipals.item.federatedidentitycredentialswithname.FederatedIdentityCredentialsWithNameRequestBuilder;
 import com.microsoft.graph.beta.serviceprincipals.item.getmembergroups.GetMemberGroupsRequestBuilder;
 import com.microsoft.graph.beta.serviceprincipals.item.getmemberobjects.GetMemberObjectsRequestBuilder;
 import com.microsoft.graph.beta.serviceprincipals.item.getpasswordsinglesignoncredentials.GetPasswordSingleSignOnCredentialsRequestBuilder;
@@ -316,6 +317,16 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
+    }
+    /**
+     * Provides operations to manage the federatedIdentityCredentials property of the microsoft.graph.servicePrincipal entity.
+     * @param name Alternate key of federatedIdentityCredential
+     * @return a {@link FederatedIdentityCredentialsWithNameRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public FederatedIdentityCredentialsWithNameRequestBuilder federatedIdentityCredentialsWithName(@jakarta.annotation.Nonnull final String name) {
+        Objects.requireNonNull(name);
+        return new FederatedIdentityCredentialsWithNameRequestBuilder(pathParameters, requestAdapter, name);
     }
     /**
      * Retrieve the properties and relationships of a servicePrincipal object.

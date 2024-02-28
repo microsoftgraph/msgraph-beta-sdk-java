@@ -6,12 +6,14 @@ import com.microsoft.graph.beta.directory.certificateauthorities.CertificateAuth
 import com.microsoft.graph.beta.directory.customsecurityattributedefinitions.CustomSecurityAttributeDefinitionsRequestBuilder;
 import com.microsoft.graph.beta.directory.deleteditems.DeletedItemsRequestBuilder;
 import com.microsoft.graph.beta.directory.devicelocalcredentials.DeviceLocalCredentialsRequestBuilder;
+import com.microsoft.graph.beta.directory.externaluserprofiles.ExternalUserProfilesRequestBuilder;
 import com.microsoft.graph.beta.directory.featurerolloutpolicies.FeatureRolloutPoliciesRequestBuilder;
 import com.microsoft.graph.beta.directory.federationconfigurations.FederationConfigurationsRequestBuilder;
 import com.microsoft.graph.beta.directory.impactedresources.ImpactedResourcesRequestBuilder;
 import com.microsoft.graph.beta.directory.inboundshareduserprofiles.InboundSharedUserProfilesRequestBuilder;
 import com.microsoft.graph.beta.directory.onpremisessynchronization.OnPremisesSynchronizationRequestBuilder;
 import com.microsoft.graph.beta.directory.outboundshareduserprofiles.OutboundSharedUserProfilesRequestBuilder;
+import com.microsoft.graph.beta.directory.pendingexternaluserprofiles.PendingExternalUserProfilesRequestBuilder;
 import com.microsoft.graph.beta.directory.recommendations.RecommendationsRequestBuilder;
 import com.microsoft.graph.beta.directory.sharedemaildomains.SharedEmailDomainsRequestBuilder;
 import com.microsoft.graph.beta.directory.subscriptions.SubscriptionsRequestBuilder;
@@ -86,6 +88,14 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
         return new DeviceLocalCredentialsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the externalUserProfiles property of the microsoft.graph.directory entity.
+     * @return a {@link ExternalUserProfilesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ExternalUserProfilesRequestBuilder externalUserProfiles() {
+        return new ExternalUserProfilesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the featureRolloutPolicies property of the microsoft.graph.directory entity.
      * @return a {@link FeatureRolloutPoliciesRequestBuilder}
      */
@@ -132,6 +142,14 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public OutboundSharedUserProfilesRequestBuilder outboundSharedUserProfiles() {
         return new OutboundSharedUserProfilesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the pendingExternalUserProfiles property of the microsoft.graph.directory entity.
+     * @return a {@link PendingExternalUserProfilesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public PendingExternalUserProfilesRequestBuilder pendingExternalUserProfiles() {
+        return new PendingExternalUserProfilesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the recommendations property of the microsoft.graph.directory entity.

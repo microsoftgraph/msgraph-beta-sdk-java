@@ -56,7 +56,7 @@ public class TeamsAppDashboardCardBotConfiguration implements AdditionalDataHold
         return this.backingStore;
     }
     /**
-     * Gets the botId property value. The botId property
+     * Gets the botId property value. The ID (usually a GUID) of the bot associated with the specific teamsAppDefinition. This is a unique app ID for the bot as registered with the Bot Framework.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -108,7 +108,7 @@ public class TeamsAppDashboardCardBotConfiguration implements AdditionalDataHold
         this.backingStore = value;
     }
     /**
-     * Sets the botId property value. The botId property
+     * Sets the botId property value. The ID (usually a GUID) of the bot associated with the specific teamsAppDefinition. This is a unique app ID for the bot as registered with the Bot Framework.
      * @param value Value to set for the botId property.
      */
     public void setBotId(@jakarta.annotation.Nullable final String value) {

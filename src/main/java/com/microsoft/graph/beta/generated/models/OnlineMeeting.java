@@ -108,6 +108,7 @@ public class OnlineMeeting extends OnlineMeetingBase implements Parsable {
         deserializerMap.put("isBroadcast", (n) -> { this.setIsBroadcast(n.getBooleanValue()); });
         deserializerMap.put("joinUrl", (n) -> { this.setJoinUrl(n.getStringValue()); });
         deserializerMap.put("meetingAttendanceReport", (n) -> { this.setMeetingAttendanceReport(n.getObjectValue(MeetingAttendanceReport::createFromDiscriminatorValue)); });
+        deserializerMap.put("meetingTemplateId", (n) -> { this.setMeetingTemplateId(n.getStringValue()); });
         deserializerMap.put("participants", (n) -> { this.setParticipants(n.getObjectValue(MeetingParticipants::createFromDiscriminatorValue)); });
         deserializerMap.put("recording", (n) -> { this.setRecording(n.getByteArrayValue()); });
         deserializerMap.put("recordings", (n) -> { this.setRecordings(n.getCollectionOfObjectValues(CallRecording::createFromDiscriminatorValue)); });
@@ -139,6 +140,14 @@ public class OnlineMeeting extends OnlineMeetingBase implements Parsable {
     @jakarta.annotation.Nullable
     public MeetingAttendanceReport getMeetingAttendanceReport() {
         return this.backingStore.get("meetingAttendanceReport");
+    }
+    /**
+     * Gets the meetingTemplateId property value. The ID of the meeting template.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getMeetingTemplateId() {
+        return this.backingStore.get("meetingTemplateId");
     }
     /**
      * Gets the participants property value. The participants associated with the online meeting, including the organizer and the attendees.
@@ -206,6 +215,7 @@ public class OnlineMeeting extends OnlineMeetingBase implements Parsable {
         writer.writeBooleanValue("isBroadcast", this.getIsBroadcast());
         writer.writeStringValue("joinUrl", this.getJoinUrl());
         writer.writeObjectValue("meetingAttendanceReport", this.getMeetingAttendanceReport());
+        writer.writeStringValue("meetingTemplateId", this.getMeetingTemplateId());
         writer.writeObjectValue("participants", this.getParticipants());
         writer.writeByteArrayValue("recording", this.getRecording());
         writer.writeCollectionOfObjectValues("recordings", this.getRecordings());
@@ -289,6 +299,13 @@ public class OnlineMeeting extends OnlineMeetingBase implements Parsable {
      */
     public void setMeetingAttendanceReport(@jakarta.annotation.Nullable final MeetingAttendanceReport value) {
         this.backingStore.set("meetingAttendanceReport", value);
+    }
+    /**
+     * Sets the meetingTemplateId property value. The ID of the meeting template.
+     * @param value Value to set for the meetingTemplateId property.
+     */
+    public void setMeetingTemplateId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("meetingTemplateId", value);
     }
     /**
      * Sets the participants property value. The participants associated with the online meeting, including the organizer and the attendees.

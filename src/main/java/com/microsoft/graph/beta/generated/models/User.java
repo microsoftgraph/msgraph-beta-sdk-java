@@ -204,6 +204,14 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("city");
     }
     /**
+     * Gets the cloudClipboard property value. The cloudClipboard property
+     * @return a {@link CloudClipboardRoot}
+     */
+    @jakarta.annotation.Nullable
+    public CloudClipboardRoot getCloudClipboard() {
+        return this.backingStore.get("cloudClipboard");
+    }
+    /**
      * Gets the cloudPCs property value. The cloudPCs property
      * @return a {@link java.util.List<CloudPC>}
      */
@@ -488,6 +496,7 @@ public class User extends DirectoryObject implements Parsable {
         deserializerMap.put("calendarView", (n) -> { this.setCalendarView(n.getCollectionOfObjectValues(Event::createFromDiscriminatorValue)); });
         deserializerMap.put("chats", (n) -> { this.setChats(n.getCollectionOfObjectValues(Chat::createFromDiscriminatorValue)); });
         deserializerMap.put("city", (n) -> { this.setCity(n.getStringValue()); });
+        deserializerMap.put("cloudClipboard", (n) -> { this.setCloudClipboard(n.getObjectValue(CloudClipboardRoot::createFromDiscriminatorValue)); });
         deserializerMap.put("cloudPCs", (n) -> { this.setCloudPCs(n.getCollectionOfObjectValues(CloudPC::createFromDiscriminatorValue)); });
         deserializerMap.put("cloudRealtimeCommunicationInfo", (n) -> { this.setCloudRealtimeCommunicationInfo(n.getObjectValue(CloudRealtimeCommunicationInfo::createFromDiscriminatorValue)); });
         deserializerMap.put("companyName", (n) -> { this.setCompanyName(n.getStringValue()); });
@@ -1433,6 +1442,7 @@ public class User extends DirectoryObject implements Parsable {
         writer.writeCollectionOfObjectValues("calendarView", this.getCalendarView());
         writer.writeCollectionOfObjectValues("chats", this.getChats());
         writer.writeStringValue("city", this.getCity());
+        writer.writeObjectValue("cloudClipboard", this.getCloudClipboard());
         writer.writeCollectionOfObjectValues("cloudPCs", this.getCloudPCs());
         writer.writeObjectValue("cloudRealtimeCommunicationInfo", this.getCloudRealtimeCommunicationInfo());
         writer.writeStringValue("companyName", this.getCompanyName());
@@ -1717,6 +1727,13 @@ public class User extends DirectoryObject implements Parsable {
      */
     public void setCity(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("city", value);
+    }
+    /**
+     * Sets the cloudClipboard property value. The cloudClipboard property
+     * @param value Value to set for the cloudClipboard property.
+     */
+    public void setCloudClipboard(@jakarta.annotation.Nullable final CloudClipboardRoot value) {
+        this.backingStore.set("cloudClipboard", value);
     }
     /**
      * Sets the cloudPCs property value. The cloudPCs property
