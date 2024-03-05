@@ -41,7 +41,10 @@ public enum RecommendationType implements ValuedEnum {
     AadConnectDeprecated("aadConnectDeprecated"),
     AdalToMsalMigration("adalToMsalMigration"),
     OwnerlessApps("ownerlessApps"),
-    InactiveGuests("inactiveGuests");
+    InactiveGuests("inactiveGuests"),
+    AadGraphDeprecationApplication("aadGraphDeprecationApplication"),
+    AadGraphDeprecationServicePrincipal("aadGraphDeprecationServicePrincipal"),
+    MfaServerDeprecation("mfaServerDeprecation");
     public final String value;
     RecommendationType(final String value) {
         this.value = value;
@@ -89,6 +92,9 @@ public enum RecommendationType implements ValuedEnum {
             case "adalToMsalMigration": return AdalToMsalMigration;
             case "ownerlessApps": return OwnerlessApps;
             case "inactiveGuests": return InactiveGuests;
+            case "aadGraphDeprecationApplication": return AadGraphDeprecationApplication;
+            case "aadGraphDeprecationServicePrincipal": return AadGraphDeprecationServicePrincipal;
+            case "mfaServerDeprecation": return MfaServerDeprecation;
             default: return null;
         }
     }

@@ -35,7 +35,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
         return this.backingStore.get("allowedToSignUpEmailBasedSubscriptions");
     }
     /**
-     * Gets the allowedToUseSSPR property value. Indicates whether users can use the Self-Service Password Reset feature on the tenant.
+     * Gets the allowedToUseSSPR property value. Indicates whether administrators of the tenant can use the Self-Service Password Reset (SSPR). For more information, see Self-service password reset for administrators.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -51,7 +51,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
         return this.backingStore.get("allowEmailVerifiedUsersToJoinOrganization");
     }
     /**
-     * Gets the allowInvitesFrom property value. Indicates who can invite guests to the organization. Possible values are: none, adminsAndGuestInviters, adminsGuestInvitersAndAllMembers, everyone. everyone is the default setting for all cloud environments except US Government. See more in the table below.
+     * Gets the allowInvitesFrom property value. Indicates who can invite guests to the organization. Possible values are: none, adminsAndGuestInviters, adminsGuestInvitersAndAllMembers, everyone. everyone is the default setting for all cloud environments except US Government. For more information, see allowInvitesFrom values.
      * @return a {@link AllowInvitesFrom}
      */
     @jakarta.annotation.Nullable
@@ -67,7 +67,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
         return this.backingStore.get("allowUserConsentForRiskyApps");
     }
     /**
-     * Gets the blockMsolPowerShell property value. To disable the use of the MSOnline PowerShell module set this property to true. This will also disable user-based access to the legacy service endpoint used by the MSOnline PowerShell module. This doesn't affect Microsoft Entra Connect or Microsoft Graph.
+     * Gets the blockMsolPowerShell property value. To disable the use of the MSOnline PowerShell module set this property to true. This also disables user-based access to the legacy service endpoint used by the MSOnline PowerShell module. This doesn't affect Microsoft Entra Connect or Microsoft Graph.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -161,7 +161,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
         this.backingStore.set("allowedToSignUpEmailBasedSubscriptions", value);
     }
     /**
-     * Sets the allowedToUseSSPR property value. Indicates whether users can use the Self-Service Password Reset feature on the tenant.
+     * Sets the allowedToUseSSPR property value. Indicates whether administrators of the tenant can use the Self-Service Password Reset (SSPR). For more information, see Self-service password reset for administrators.
      * @param value Value to set for the allowedToUseSSPR property.
      */
     public void setAllowedToUseSSPR(@jakarta.annotation.Nullable final Boolean value) {
@@ -175,7 +175,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
         this.backingStore.set("allowEmailVerifiedUsersToJoinOrganization", value);
     }
     /**
-     * Sets the allowInvitesFrom property value. Indicates who can invite guests to the organization. Possible values are: none, adminsAndGuestInviters, adminsGuestInvitersAndAllMembers, everyone. everyone is the default setting for all cloud environments except US Government. See more in the table below.
+     * Sets the allowInvitesFrom property value. Indicates who can invite guests to the organization. Possible values are: none, adminsAndGuestInviters, adminsGuestInvitersAndAllMembers, everyone. everyone is the default setting for all cloud environments except US Government. For more information, see allowInvitesFrom values.
      * @param value Value to set for the allowInvitesFrom property.
      */
     public void setAllowInvitesFrom(@jakarta.annotation.Nullable final AllowInvitesFrom value) {
@@ -189,7 +189,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
         this.backingStore.set("allowUserConsentForRiskyApps", value);
     }
     /**
-     * Sets the blockMsolPowerShell property value. To disable the use of the MSOnline PowerShell module set this property to true. This will also disable user-based access to the legacy service endpoint used by the MSOnline PowerShell module. This doesn't affect Microsoft Entra Connect or Microsoft Graph.
+     * Sets the blockMsolPowerShell property value. To disable the use of the MSOnline PowerShell module set this property to true. This also disables user-based access to the legacy service endpoint used by the MSOnline PowerShell module. This doesn't affect Microsoft Entra Connect or Microsoft Graph.
      * @param value Value to set for the blockMsolPowerShell property.
      */
     public void setBlockMsolPowerShell(@jakarta.annotation.Nullable final Boolean value) {

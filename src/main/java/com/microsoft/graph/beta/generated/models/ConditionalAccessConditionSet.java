@@ -56,6 +56,14 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Back
         return this.backingStore.get("applications");
     }
     /**
+     * Gets the authenticationFlows property value. Authentication flows included in the policy scope. For more information, see Conditional Access: Authentication flows.
+     * @return a {@link ConditionalAccessAuthenticationFlows}
+     */
+    @jakarta.annotation.Nullable
+    public ConditionalAccessAuthenticationFlows getAuthenticationFlows() {
+        return this.backingStore.get("authenticationFlows");
+    }
+    /**
      * Gets the backingStore property value. Stores model information.
      * @return a {@link BackingStore}
      */
@@ -101,8 +109,9 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Back
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(12);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(13);
         deserializerMap.put("applications", (n) -> { this.setApplications(n.getObjectValue(ConditionalAccessApplications::createFromDiscriminatorValue)); });
+        deserializerMap.put("authenticationFlows", (n) -> { this.setAuthenticationFlows(n.getObjectValue(ConditionalAccessAuthenticationFlows::createFromDiscriminatorValue)); });
         deserializerMap.put("clientApplications", (n) -> { this.setClientApplications(n.getObjectValue(ConditionalAccessClientApplications::createFromDiscriminatorValue)); });
         deserializerMap.put("clientAppTypes", (n) -> { this.setClientAppTypes(n.getCollectionOfEnumValues(ConditionalAccessClientApp::forValue)); });
         deserializerMap.put("devices", (n) -> { this.setDevices(n.getObjectValue(ConditionalAccessDevices::createFromDiscriminatorValue)); });
@@ -179,6 +188,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Back
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("applications", this.getApplications());
+        writer.writeObjectValue("authenticationFlows", this.getAuthenticationFlows());
         writer.writeObjectValue("clientApplications", this.getClientApplications());
         writer.writeCollectionOfEnumValues("clientAppTypes", this.getClientAppTypes());
         writer.writeObjectValue("devices", this.getDevices());
@@ -205,6 +215,13 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Back
      */
     public void setApplications(@jakarta.annotation.Nullable final ConditionalAccessApplications value) {
         this.backingStore.set("applications", value);
+    }
+    /**
+     * Sets the authenticationFlows property value. Authentication flows included in the policy scope. For more information, see Conditional Access: Authentication flows.
+     * @param value Value to set for the authenticationFlows property.
+     */
+    public void setAuthenticationFlows(@jakarta.annotation.Nullable final ConditionalAccessAuthenticationFlows value) {
+        this.backingStore.set("authenticationFlows", value);
     }
     /**
      * Sets the backingStore property value. Stores model information.

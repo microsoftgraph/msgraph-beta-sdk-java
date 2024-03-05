@@ -46,18 +46,18 @@ public class ComplianceChangeItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/admin/windows/updates/updatePolicies/{updatePolicy%2Did}/complianceChanges/{complianceChange%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete a contentApproval object.
+     * Delete a complianceChange object.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-contentapproval-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-compliancechange-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a contentApproval object.
+     * Delete a complianceChange object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-contentapproval-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-compliancechange-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -90,23 +90,23 @@ public class ComplianceChangeItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ComplianceChange::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a complianceChange object.
+     * Update the properties of a contentApproval object.
      * @param body The request body
      * @return a {@link ComplianceChange}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-compliancechange-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-contentapproval-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ComplianceChange patch(@jakarta.annotation.Nonnull final ComplianceChange body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of a complianceChange object.
+     * Update the properties of a contentApproval object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ComplianceChange}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-compliancechange-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-contentapproval-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ComplianceChange patch(@jakarta.annotation.Nonnull final ComplianceChange body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -117,7 +117,7 @@ public class ComplianceChangeItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ComplianceChange::createFromDiscriminatorValue);
     }
     /**
-     * Delete a contentApproval object.
+     * Delete a complianceChange object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -125,7 +125,7 @@ public class ComplianceChangeItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a contentApproval object.
+     * Delete a complianceChange object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -157,7 +157,7 @@ public class ComplianceChangeItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a complianceChange object.
+     * Update the properties of a contentApproval object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -166,7 +166,7 @@ public class ComplianceChangeItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a complianceChange object.
+     * Update the properties of a contentApproval object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

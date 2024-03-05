@@ -9,6 +9,7 @@ import com.microsoft.graph.beta.security.attacksimulation.operations.OperationsR
 import com.microsoft.graph.beta.security.attacksimulation.payloads.PayloadsRequestBuilder;
 import com.microsoft.graph.beta.security.attacksimulation.simulationautomations.SimulationAutomationsRequestBuilder;
 import com.microsoft.graph.beta.security.attacksimulation.simulations.SimulationsRequestBuilder;
+import com.microsoft.graph.beta.security.attacksimulation.trainingcampaigns.TrainingCampaignsRequestBuilder;
 import com.microsoft.graph.beta.security.attacksimulation.trainings.TrainingsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -83,6 +84,14 @@ public class AttackSimulationRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public SimulationsRequestBuilder simulations() {
         return new SimulationsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the trainingCampaigns property of the microsoft.graph.attackSimulationRoot entity.
+     * @return a {@link TrainingCampaignsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public TrainingCampaignsRequestBuilder trainingCampaigns() {
+        return new TrainingCampaignsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the trainings property of the microsoft.graph.attackSimulationRoot entity.

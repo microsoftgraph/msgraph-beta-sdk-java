@@ -27,7 +27,7 @@ public class BranchSiteItemRequestBuilder extends BaseRequestBuilder {
      * Provides operations to manage the connectivityConfiguration property of the microsoft.graph.networkaccess.branchSite entity.
      * @return a {@link ConnectivityConfigurationRequestBuilder}
      * @deprecated
-     * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
+     * The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      */
     @Deprecated
     @jakarta.annotation.Nonnull
@@ -38,7 +38,7 @@ public class BranchSiteItemRequestBuilder extends BaseRequestBuilder {
      * Provides operations to manage the deviceLinks property of the microsoft.graph.networkaccess.branchSite entity.
      * @return a {@link DeviceLinksRequestBuilder}
      * @deprecated
-     * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
+     * The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      */
     @Deprecated
     @jakarta.annotation.Nonnull
@@ -49,7 +49,7 @@ public class BranchSiteItemRequestBuilder extends BaseRequestBuilder {
      * Provides operations to manage the forwardingProfiles property of the microsoft.graph.networkaccess.branchSite entity.
      * @return a {@link ForwardingProfilesRequestBuilder}
      * @deprecated
-     * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
+     * The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      */
     @Deprecated
     @jakarta.annotation.Nonnull
@@ -76,7 +76,7 @@ public class BranchSiteItemRequestBuilder extends BaseRequestBuilder {
      * Delete a specific branch.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
+     * The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-branchsite-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @Deprecated
@@ -88,7 +88,7 @@ public class BranchSiteItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
+     * The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-branchsite-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @Deprecated
@@ -103,7 +103,7 @@ public class BranchSiteItemRequestBuilder extends BaseRequestBuilder {
      * @return a {@link BranchSite}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
+     * The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-branchsite-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -117,7 +117,7 @@ public class BranchSiteItemRequestBuilder extends BaseRequestBuilder {
      * @return a {@link BranchSite}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
+     * The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-branchsite-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -134,7 +134,7 @@ public class BranchSiteItemRequestBuilder extends BaseRequestBuilder {
      * @return a {@link BranchSite}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
+     * The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-branchsite-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -149,7 +149,7 @@ public class BranchSiteItemRequestBuilder extends BaseRequestBuilder {
      * @return a {@link BranchSite}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
+     * The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-branchsite-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -165,7 +165,7 @@ public class BranchSiteItemRequestBuilder extends BaseRequestBuilder {
      * Delete a specific branch.
      * @return a {@link RequestInformation}
      * @deprecated
-     * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
+     * The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -177,7 +177,7 @@ public class BranchSiteItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
+     * The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -191,7 +191,7 @@ public class BranchSiteItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve information about a specific branch.
      * @return a {@link RequestInformation}
      * @deprecated
-     * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
+     * The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -203,7 +203,7 @@ public class BranchSiteItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
+     * The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -218,7 +218,7 @@ public class BranchSiteItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link RequestInformation}
      * @deprecated
-     * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
+     * The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -231,7 +231,7 @@ public class BranchSiteItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
+     * The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -248,7 +248,7 @@ public class BranchSiteItemRequestBuilder extends BaseRequestBuilder {
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link BranchSiteItemRequestBuilder}
      * @deprecated
-     * The Branches API is deprecated and will stop returning data on January 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
+     * The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
      */
     @jakarta.annotation.Nonnull
     @Deprecated

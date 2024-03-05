@@ -55,7 +55,7 @@ public class ShiftsRoleDefinitionItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get shiftsRoleDefinitions from groups
+     * The definitions of the roles in the schedule.
      * @return a {@link ShiftsRoleDefinition}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -64,7 +64,7 @@ public class ShiftsRoleDefinitionItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get shiftsRoleDefinitions from groups
+     * The definitions of the roles in the schedule.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ShiftsRoleDefinition}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -122,7 +122,7 @@ public class ShiftsRoleDefinitionItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get shiftsRoleDefinitions from groups
+     * The definitions of the roles in the schedule.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +130,7 @@ public class ShiftsRoleDefinitionItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get shiftsRoleDefinitions from groups
+     * The definitions of the roles in the schedule.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +182,7 @@ public class ShiftsRoleDefinitionItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get shiftsRoleDefinitions from groups
+     * The definitions of the roles in the schedule.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

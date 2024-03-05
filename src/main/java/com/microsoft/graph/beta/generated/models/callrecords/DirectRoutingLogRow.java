@@ -1,29 +1,19 @@
 package com.microsoft.graph.beta.models.callrecords;
 
-import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import com.microsoft.kiota.store.BackedModel;
-import com.microsoft.kiota.store.BackingStore;
-import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, Parsable {
-    /**
-     * Stores model information.
-     */
-    @jakarta.annotation.Nonnull
-    protected BackingStore backingStore;
+public class DirectRoutingLogRow extends CallLogRow implements Parsable {
     /**
      * Instantiates a new {@link DirectRoutingLogRow} and sets the default values.
      */
     public DirectRoutingLogRow() {
-        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
-        this.setAdditionalData(new HashMap<>());
+        super();
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -36,28 +26,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, P
         return new DirectRoutingLogRow();
     }
     /**
-     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a {@link Map<String, Object>}
-     */
-    @jakarta.annotation.Nonnull
-    public Map<String, Object> getAdditionalData() {
-        Map<String, Object> value = this.backingStore.get("additionalData");
-        if(value == null) {
-            value = new HashMap<>();
-            this.setAdditionalData(value);
-        }
-        return value;
-    }
-    /**
-     * Gets the backingStore property value. Stores model information.
-     * @return a {@link BackingStore}
-     */
-    @jakarta.annotation.Nonnull
-    public BackingStore getBackingStore() {
-        return this.backingStore;
-    }
-    /**
-     * Gets the calleeNumber property value. Number of the user or bot who received the call (E.164 format, but may include more data).
+     * Gets the calleeNumber property value. Number of the user or bot who received the call (E.164 format, but might include more data).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -73,7 +42,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, P
         return this.backingStore.get("callEndSubReason");
     }
     /**
-     * Gets the callerNumber property value. Number of the user or bot who made the call (E.164 format, but may include more data).
+     * Gets the callerNumber property value. Number of the user or bot who made the call (E.164 format, but might include more data).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -105,7 +74,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, P
         return this.backingStore.get("duration");
     }
     /**
-     * Gets the endDateTime property value. Only exists for successful (fully established) calls. Time when call ended.
+     * Gets the endDateTime property value. Only exists for successful (fully established) calls. The time when the call ended.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -126,7 +95,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, P
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(24);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("calleeNumber", (n) -> { this.setCalleeNumber(n.getStringValue()); });
         deserializerMap.put("callEndSubReason", (n) -> { this.setCallEndSubReason(n.getIntegerValue()); });
         deserializerMap.put("callerNumber", (n) -> { this.setCallerNumber(n.getStringValue()); });
@@ -137,24 +106,19 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, P
         deserializerMap.put("failureDateTime", (n) -> { this.setFailureDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("finalSipCode", (n) -> { this.setFinalSipCode(n.getIntegerValue()); });
         deserializerMap.put("finalSipCodePhrase", (n) -> { this.setFinalSipCodePhrase(n.getStringValue()); });
-        deserializerMap.put("id", (n) -> { this.setId(n.getStringValue()); });
         deserializerMap.put("inviteDateTime", (n) -> { this.setInviteDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("mediaBypassEnabled", (n) -> { this.setMediaBypassEnabled(n.getBooleanValue()); });
         deserializerMap.put("mediaPathLocation", (n) -> { this.setMediaPathLocation(n.getStringValue()); });
-        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("otherPartyCountryCode", (n) -> { this.setOtherPartyCountryCode(n.getStringValue()); });
         deserializerMap.put("signalingLocation", (n) -> { this.setSignalingLocation(n.getStringValue()); });
         deserializerMap.put("startDateTime", (n) -> { this.setStartDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("successfulCall", (n) -> { this.setSuccessfulCall(n.getBooleanValue()); });
+        deserializerMap.put("transferorCorrelationId", (n) -> { this.setTransferorCorrelationId(n.getStringValue()); });
         deserializerMap.put("trunkFullyQualifiedDomainName", (n) -> { this.setTrunkFullyQualifiedDomainName(n.getStringValue()); });
         deserializerMap.put("userCountryCode", (n) -> { this.setUserCountryCode(n.getStringValue()); });
-        deserializerMap.put("userDisplayName", (n) -> { this.setUserDisplayName(n.getStringValue()); });
-        deserializerMap.put("userId", (n) -> { this.setUserId(n.getStringValue()); });
-        deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
         return deserializerMap;
     }
     /**
-     * Gets the finalSipCode property value. The code with which the call ended (RFC 3261).
+     * Gets the finalSipCode property value. The final response code with which the call ended (RFC 3261).
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -168,14 +132,6 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, P
     @jakarta.annotation.Nullable
     public String getFinalSipCodePhrase() {
         return this.backingStore.get("finalSipCodePhrase");
-    }
-    /**
-     * Gets the id property value. Unique call identifier (GUID).
-     * @return a {@link String}
-     */
-    @jakarta.annotation.Nullable
-    public String getId() {
-        return this.backingStore.get("id");
     }
     /**
      * Gets the inviteDateTime property value. The date and time when the initial invite was sent.
@@ -202,22 +158,6 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, P
         return this.backingStore.get("mediaPathLocation");
     }
     /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return a {@link String}
-     */
-    @jakarta.annotation.Nullable
-    public String getOdataType() {
-        return this.backingStore.get("odataType");
-    }
-    /**
-     * Gets the otherPartyCountryCode property value. Country code of the caller for an incoming call, or callee for an outgoing call. For details, see ISO 3166-1 alpha-2.
-     * @return a {@link String}
-     */
-    @jakarta.annotation.Nullable
-    public String getOtherPartyCountryCode() {
-        return this.backingStore.get("otherPartyCountryCode");
-    }
-    /**
      * Gets the signalingLocation property value. The data center used for signaling for both bypass and non-bypass calls.
      * @return a {@link String}
      */
@@ -226,7 +166,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, P
         return this.backingStore.get("signalingLocation");
     }
     /**
-     * Gets the startDateTime property value. Call start time.For failed and unanswered calls, this can be equal to invite or failure time.
+     * Gets the startDateTime property value. Call start time.For failed and unanswered calls, this value can be equal to invite or failure time.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -242,6 +182,14 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, P
         return this.backingStore.get("successfulCall");
     }
     /**
+     * Gets the transferorCorrelationId property value. Correlation ID of the call to the transferor.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getTransferorCorrelationId() {
+        return this.backingStore.get("transferorCorrelationId");
+    }
+    /**
      * Gets the trunkFullyQualifiedDomainName property value. Fully qualified domain name of the session border controller.
      * @return a {@link String}
      */
@@ -250,7 +198,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, P
         return this.backingStore.get("trunkFullyQualifiedDomainName");
     }
     /**
-     * Gets the userCountryCode property value. Country code of the user. For details, see ISO 3166-1 alpha-2.
+     * Gets the userCountryCode property value. Country/region code of the user. For details, see ISO 3166-1 alpha-2.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -258,35 +206,12 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, P
         return this.backingStore.get("userCountryCode");
     }
     /**
-     * Gets the userDisplayName property value. Display name of the user.
-     * @return a {@link String}
-     */
-    @jakarta.annotation.Nullable
-    public String getUserDisplayName() {
-        return this.backingStore.get("userDisplayName");
-    }
-    /**
-     * Gets the userId property value. The unique identifier (GUID) of the user in Microsoft Entra ID. This and other user info is null/empty for bot call types.
-     * @return a {@link String}
-     */
-    @jakarta.annotation.Nullable
-    public String getUserId() {
-        return this.backingStore.get("userId");
-    }
-    /**
-     * Gets the userPrincipalName property value. The user principal name (sign-in name) in Microsoft Entra ID, is usually the same as the user's SIP address, and can be same as the user's e-mail address.
-     * @return a {@link String}
-     */
-    @jakarta.annotation.Nullable
-    public String getUserPrincipalName() {
-        return this.backingStore.get("userPrincipalName");
-    }
-    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        super.serialize(writer);
         writer.writeStringValue("calleeNumber", this.getCalleeNumber());
         writer.writeIntegerValue("callEndSubReason", this.getCallEndSubReason());
         writer.writeStringValue("callerNumber", this.getCallerNumber());
@@ -297,39 +222,18 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, P
         writer.writeOffsetDateTimeValue("failureDateTime", this.getFailureDateTime());
         writer.writeIntegerValue("finalSipCode", this.getFinalSipCode());
         writer.writeStringValue("finalSipCodePhrase", this.getFinalSipCodePhrase());
-        writer.writeStringValue("id", this.getId());
         writer.writeOffsetDateTimeValue("inviteDateTime", this.getInviteDateTime());
         writer.writeBooleanValue("mediaBypassEnabled", this.getMediaBypassEnabled());
         writer.writeStringValue("mediaPathLocation", this.getMediaPathLocation());
-        writer.writeStringValue("@odata.type", this.getOdataType());
-        writer.writeStringValue("otherPartyCountryCode", this.getOtherPartyCountryCode());
         writer.writeStringValue("signalingLocation", this.getSignalingLocation());
         writer.writeOffsetDateTimeValue("startDateTime", this.getStartDateTime());
         writer.writeBooleanValue("successfulCall", this.getSuccessfulCall());
+        writer.writeStringValue("transferorCorrelationId", this.getTransferorCorrelationId());
         writer.writeStringValue("trunkFullyQualifiedDomainName", this.getTrunkFullyQualifiedDomainName());
         writer.writeStringValue("userCountryCode", this.getUserCountryCode());
-        writer.writeStringValue("userDisplayName", this.getUserDisplayName());
-        writer.writeStringValue("userId", this.getUserId());
-        writer.writeStringValue("userPrincipalName", this.getUserPrincipalName());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
-     */
-    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.backingStore.set("additionalData", value);
-    }
-    /**
-     * Sets the backingStore property value. Stores model information.
-     * @param value Value to set for the backingStore property.
-     */
-    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
-        Objects.requireNonNull(value);
-        this.backingStore = value;
-    }
-    /**
-     * Sets the calleeNumber property value. Number of the user or bot who received the call (E.164 format, but may include more data).
+     * Sets the calleeNumber property value. Number of the user or bot who received the call (E.164 format, but might include more data).
      * @param value Value to set for the calleeNumber property.
      */
     public void setCalleeNumber(@jakarta.annotation.Nullable final String value) {
@@ -343,7 +247,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, P
         this.backingStore.set("callEndSubReason", value);
     }
     /**
-     * Sets the callerNumber property value. Number of the user or bot who made the call (E.164 format, but may include more data).
+     * Sets the callerNumber property value. Number of the user or bot who made the call (E.164 format, but might include more data).
      * @param value Value to set for the callerNumber property.
      */
     public void setCallerNumber(@jakarta.annotation.Nullable final String value) {
@@ -371,7 +275,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, P
         this.backingStore.set("duration", value);
     }
     /**
-     * Sets the endDateTime property value. Only exists for successful (fully established) calls. Time when call ended.
+     * Sets the endDateTime property value. Only exists for successful (fully established) calls. The time when the call ended.
      * @param value Value to set for the endDateTime property.
      */
     public void setEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -385,7 +289,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, P
         this.backingStore.set("failureDateTime", value);
     }
     /**
-     * Sets the finalSipCode property value. The code with which the call ended (RFC 3261).
+     * Sets the finalSipCode property value. The final response code with which the call ended (RFC 3261).
      * @param value Value to set for the finalSipCode property.
      */
     public void setFinalSipCode(@jakarta.annotation.Nullable final Integer value) {
@@ -397,13 +301,6 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, P
      */
     public void setFinalSipCodePhrase(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("finalSipCodePhrase", value);
-    }
-    /**
-     * Sets the id property value. Unique call identifier (GUID).
-     * @param value Value to set for the id property.
-     */
-    public void setId(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("id", value);
     }
     /**
      * Sets the inviteDateTime property value. The date and time when the initial invite was sent.
@@ -427,20 +324,6 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, P
         this.backingStore.set("mediaPathLocation", value);
     }
     /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the @odata.type property.
-     */
-    public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("odataType", value);
-    }
-    /**
-     * Sets the otherPartyCountryCode property value. Country code of the caller for an incoming call, or callee for an outgoing call. For details, see ISO 3166-1 alpha-2.
-     * @param value Value to set for the otherPartyCountryCode property.
-     */
-    public void setOtherPartyCountryCode(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("otherPartyCountryCode", value);
-    }
-    /**
      * Sets the signalingLocation property value. The data center used for signaling for both bypass and non-bypass calls.
      * @param value Value to set for the signalingLocation property.
      */
@@ -448,7 +331,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, P
         this.backingStore.set("signalingLocation", value);
     }
     /**
-     * Sets the startDateTime property value. Call start time.For failed and unanswered calls, this can be equal to invite or failure time.
+     * Sets the startDateTime property value. Call start time.For failed and unanswered calls, this value can be equal to invite or failure time.
      * @param value Value to set for the startDateTime property.
      */
     public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -462,6 +345,13 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, P
         this.backingStore.set("successfulCall", value);
     }
     /**
+     * Sets the transferorCorrelationId property value. Correlation ID of the call to the transferor.
+     * @param value Value to set for the transferorCorrelationId property.
+     */
+    public void setTransferorCorrelationId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("transferorCorrelationId", value);
+    }
+    /**
      * Sets the trunkFullyQualifiedDomainName property value. Fully qualified domain name of the session border controller.
      * @param value Value to set for the trunkFullyQualifiedDomainName property.
      */
@@ -469,31 +359,10 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, P
         this.backingStore.set("trunkFullyQualifiedDomainName", value);
     }
     /**
-     * Sets the userCountryCode property value. Country code of the user. For details, see ISO 3166-1 alpha-2.
+     * Sets the userCountryCode property value. Country/region code of the user. For details, see ISO 3166-1 alpha-2.
      * @param value Value to set for the userCountryCode property.
      */
     public void setUserCountryCode(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("userCountryCode", value);
-    }
-    /**
-     * Sets the userDisplayName property value. Display name of the user.
-     * @param value Value to set for the userDisplayName property.
-     */
-    public void setUserDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("userDisplayName", value);
-    }
-    /**
-     * Sets the userId property value. The unique identifier (GUID) of the user in Microsoft Entra ID. This and other user info is null/empty for bot call types.
-     * @param value Value to set for the userId property.
-     */
-    public void setUserId(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("userId", value);
-    }
-    /**
-     * Sets the userPrincipalName property value. The user principal name (sign-in name) in Microsoft Entra ID, is usually the same as the user's SIP address, and can be same as the user's e-mail address.
-     * @param value Value to set for the userPrincipalName property.
-     */
-    public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("userPrincipalName", value);
     }
 }
