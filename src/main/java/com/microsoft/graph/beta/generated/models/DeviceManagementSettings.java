@@ -141,7 +141,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, BackedMod
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(14);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(15);
         deserializerMap.put("androidDeviceAdministratorEnrollmentEnabled", (n) -> { this.setAndroidDeviceAdministratorEnrollmentEnabled(n.getBooleanValue()); });
         deserializerMap.put("derivedCredentialProvider", (n) -> { this.setDerivedCredentialProvider(n.getEnumValue(DerivedCredentialProviderType::forValue)); });
         deserializerMap.put("derivedCredentialUrl", (n) -> { this.setDerivedCredentialUrl(n.getStringValue()); });
@@ -154,6 +154,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, BackedMod
         deserializerMap.put("enhancedJailBreak", (n) -> { this.setEnhancedJailBreak(n.getBooleanValue()); });
         deserializerMap.put("ignoreDevicesForUnsupportedSettingsEnabled", (n) -> { this.setIgnoreDevicesForUnsupportedSettingsEnabled(n.getBooleanValue()); });
         deserializerMap.put("isScheduledActionEnabled", (n) -> { this.setIsScheduledActionEnabled(n.getBooleanValue()); });
+        deserializerMap.put("m365AppDiagnosticsEnabled", (n) -> { this.setM365AppDiagnosticsEnabled(n.getBooleanValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("secureByDefault", (n) -> { this.setSecureByDefault(n.getBooleanValue()); });
         return deserializerMap;
@@ -173,6 +174,14 @@ public class DeviceManagementSettings implements AdditionalDataHolder, BackedMod
     @jakarta.annotation.Nullable
     public Boolean getIsScheduledActionEnabled() {
         return this.backingStore.get("isScheduledActionEnabled");
+    }
+    /**
+     * Gets the m365AppDiagnosticsEnabled property value. The property to determine if M365 App log collection is enabled for account. When TRUE it indicates that M365 app log collection is enabled for account.  When FALSE it indicates that M365 app log collection is disabled for account. Default value is FALSE
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getM365AppDiagnosticsEnabled() {
+        return this.backingStore.get("m365AppDiagnosticsEnabled");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -208,6 +217,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, BackedMod
         writer.writeBooleanValue("enhancedJailBreak", this.getEnhancedJailBreak());
         writer.writeBooleanValue("ignoreDevicesForUnsupportedSettingsEnabled", this.getIgnoreDevicesForUnsupportedSettingsEnabled());
         writer.writeBooleanValue("isScheduledActionEnabled", this.getIsScheduledActionEnabled());
+        writer.writeBooleanValue("m365AppDiagnosticsEnabled", this.getM365AppDiagnosticsEnabled());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeBooleanValue("secureByDefault", this.getSecureByDefault());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -310,6 +320,13 @@ public class DeviceManagementSettings implements AdditionalDataHolder, BackedMod
      */
     public void setIsScheduledActionEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isScheduledActionEnabled", value);
+    }
+    /**
+     * Sets the m365AppDiagnosticsEnabled property value. The property to determine if M365 App log collection is enabled for account. When TRUE it indicates that M365 app log collection is enabled for account.  When FALSE it indicates that M365 app log collection is disabled for account. Default value is FALSE
+     * @param value Value to set for the m365AppDiagnosticsEnabled property.
+     */
+    public void setM365AppDiagnosticsEnabled(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("m365AppDiagnosticsEnabled", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property

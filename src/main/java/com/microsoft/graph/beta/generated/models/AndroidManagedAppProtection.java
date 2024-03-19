@@ -45,7 +45,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
         return this.backingStore.get("allowedAndroidDeviceModels");
     }
     /**
-     * Gets the appActionIfAccountIsClockedOut property value. Defines a managed app behavior, either block or warn, if the user is clocked out (non-working time).
+     * Gets the appActionIfAccountIsClockedOut property value. Defines a managed app behavior, either block or warn, if the user is clocked out (non-working time). Possible values are: block, wipe, warn.
      * @return a {@link ManagedAppRemediationAction}
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
         return this.backingStore.get("appActionIfDeviceLockNotSet");
     }
     /**
-     * Gets the appActionIfDevicePasscodeComplexityLessThanHigh property value. If the device does not have a passcode of high complexity or higher, trigger the stored action.
+     * Gets the appActionIfDevicePasscodeComplexityLessThanHigh property value. If the device does not have a passcode of high complexity or higher, trigger the stored action. Possible values are: block, wipe, warn.
      * @return a {@link ManagedAppRemediationAction}
      */
     @jakarta.annotation.Nullable
@@ -101,7 +101,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
         return this.backingStore.get("appActionIfDevicePasscodeComplexityLessThanHigh");
     }
     /**
-     * Gets the appActionIfDevicePasscodeComplexityLessThanLow property value. If the device does not have a passcode of low complexity or higher, trigger the stored action.
+     * Gets the appActionIfDevicePasscodeComplexityLessThanLow property value. If the device does not have a passcode of low complexity or higher, trigger the stored action. Possible values are: block, wipe, warn.
      * @return a {@link ManagedAppRemediationAction}
      */
     @jakarta.annotation.Nullable
@@ -109,7 +109,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
         return this.backingStore.get("appActionIfDevicePasscodeComplexityLessThanLow");
     }
     /**
-     * Gets the appActionIfDevicePasscodeComplexityLessThanMedium property value. If the device does not have a passcode of medium complexity or higher, trigger the stored action.
+     * Gets the appActionIfDevicePasscodeComplexityLessThanMedium property value. If the device does not have a passcode of medium complexity or higher, trigger the stored action. Possible values are: block, wipe, warn.
      * @return a {@link ManagedAppRemediationAction}
      */
     @jakarta.annotation.Nullable
@@ -117,7 +117,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
         return this.backingStore.get("appActionIfDevicePasscodeComplexityLessThanMedium");
     }
     /**
-     * Gets the appActionIfSamsungKnoxAttestationRequired property value. Defines the behavior of a managed app when Samsung Knox Attestation is required. Possible values are null, warn, block & wipe. If the admin does not set this action, the default is null, which indicates this setting is not configured.
+     * Gets the appActionIfSamsungKnoxAttestationRequired property value. Defines the behavior of a managed app when Samsung Knox Attestation is required. Possible values are null, warn, block & wipe. If the admin does not set this action, the default is null, which indicates this setting is not configured. Possible values are: block, wipe, warn.
      * @return a {@link ManagedAppRemediationAction}
      */
     @jakarta.annotation.Nullable
@@ -165,7 +165,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
         return this.backingStore.get("connectToVpnOnLaunch");
     }
     /**
-     * Gets the customBrowserDisplayName property value. Friendly name of the preferred custom browser to open weblink on Android.
+     * Gets the customBrowserDisplayName property value. Friendly name of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -173,7 +173,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
         return this.backingStore.get("customBrowserDisplayName");
     }
     /**
-     * Gets the customBrowserPackageId property value. Unique identifier of a custom browser to open weblink on Android.
+     * Gets the customBrowserPackageId property value. Unique identifier of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -510,7 +510,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
         this.backingStore.set("allowedAndroidDeviceModels", value);
     }
     /**
-     * Sets the appActionIfAccountIsClockedOut property value. Defines a managed app behavior, either block or warn, if the user is clocked out (non-working time).
+     * Sets the appActionIfAccountIsClockedOut property value. Defines a managed app behavior, either block or warn, if the user is clocked out (non-working time). Possible values are: block, wipe, warn.
      * @param value Value to set for the appActionIfAccountIsClockedOut property.
      */
     public void setAppActionIfAccountIsClockedOut(@jakarta.annotation.Nullable final ManagedAppRemediationAction value) {
@@ -552,28 +552,28 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
         this.backingStore.set("appActionIfDeviceLockNotSet", value);
     }
     /**
-     * Sets the appActionIfDevicePasscodeComplexityLessThanHigh property value. If the device does not have a passcode of high complexity or higher, trigger the stored action.
+     * Sets the appActionIfDevicePasscodeComplexityLessThanHigh property value. If the device does not have a passcode of high complexity or higher, trigger the stored action. Possible values are: block, wipe, warn.
      * @param value Value to set for the appActionIfDevicePasscodeComplexityLessThanHigh property.
      */
     public void setAppActionIfDevicePasscodeComplexityLessThanHigh(@jakarta.annotation.Nullable final ManagedAppRemediationAction value) {
         this.backingStore.set("appActionIfDevicePasscodeComplexityLessThanHigh", value);
     }
     /**
-     * Sets the appActionIfDevicePasscodeComplexityLessThanLow property value. If the device does not have a passcode of low complexity or higher, trigger the stored action.
+     * Sets the appActionIfDevicePasscodeComplexityLessThanLow property value. If the device does not have a passcode of low complexity or higher, trigger the stored action. Possible values are: block, wipe, warn.
      * @param value Value to set for the appActionIfDevicePasscodeComplexityLessThanLow property.
      */
     public void setAppActionIfDevicePasscodeComplexityLessThanLow(@jakarta.annotation.Nullable final ManagedAppRemediationAction value) {
         this.backingStore.set("appActionIfDevicePasscodeComplexityLessThanLow", value);
     }
     /**
-     * Sets the appActionIfDevicePasscodeComplexityLessThanMedium property value. If the device does not have a passcode of medium complexity or higher, trigger the stored action.
+     * Sets the appActionIfDevicePasscodeComplexityLessThanMedium property value. If the device does not have a passcode of medium complexity or higher, trigger the stored action. Possible values are: block, wipe, warn.
      * @param value Value to set for the appActionIfDevicePasscodeComplexityLessThanMedium property.
      */
     public void setAppActionIfDevicePasscodeComplexityLessThanMedium(@jakarta.annotation.Nullable final ManagedAppRemediationAction value) {
         this.backingStore.set("appActionIfDevicePasscodeComplexityLessThanMedium", value);
     }
     /**
-     * Sets the appActionIfSamsungKnoxAttestationRequired property value. Defines the behavior of a managed app when Samsung Knox Attestation is required. Possible values are null, warn, block & wipe. If the admin does not set this action, the default is null, which indicates this setting is not configured.
+     * Sets the appActionIfSamsungKnoxAttestationRequired property value. Defines the behavior of a managed app when Samsung Knox Attestation is required. Possible values are null, warn, block & wipe. If the admin does not set this action, the default is null, which indicates this setting is not configured. Possible values are: block, wipe, warn.
      * @param value Value to set for the appActionIfSamsungKnoxAttestationRequired property.
      */
     public void setAppActionIfSamsungKnoxAttestationRequired(@jakarta.annotation.Nullable final ManagedAppRemediationAction value) {
@@ -615,14 +615,14 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
         this.backingStore.set("connectToVpnOnLaunch", value);
     }
     /**
-     * Sets the customBrowserDisplayName property value. Friendly name of the preferred custom browser to open weblink on Android.
+     * Sets the customBrowserDisplayName property value. Friendly name of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
      * @param value Value to set for the customBrowserDisplayName property.
      */
     public void setCustomBrowserDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("customBrowserDisplayName", value);
     }
     /**
-     * Sets the customBrowserPackageId property value. Unique identifier of a custom browser to open weblink on Android.
+     * Sets the customBrowserPackageId property value. Unique identifier of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
      * @param value Value to set for the customBrowserPackageId property.
      */
     public void setCustomBrowserPackageId(@jakarta.annotation.Nullable final String value) {

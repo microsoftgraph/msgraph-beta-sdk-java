@@ -58,7 +58,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         return this.backingStore.get("alternateResourceUrl");
     }
     /**
-     * Gets the connectionType property value. The connectionType property
+     * Gets the connectionType property value. Specifies the method by which a provisioned Cloud PC is joined to Microsoft Entra. The azureADJoin option indicates the absence of an on-premises Active Directory (AD) in the current tenant that results in the Cloud PC device only joining to Microsoft Entra. The hybridAzureADJoin option indicates the presence of an on-premises AD in the current tenant and that the Cloud PC joins both the on-premises AD and Microsoft Entra. The selected option also determines the types of users who can be assigned and can sign into a Cloud PC. The azureADJoin option allows both cloud-only and hybrid users to be assigned and sign in, whereas hybridAzureADJoin is restricted to hybrid users only. The default value is hybridAzureADJoin. The possible values are: hybridAzureADJoin, azureADJoin, unknownFutureValue.
      * @return a {@link CloudPcOnPremisesConnectionType}
      */
     @jakarta.annotation.Nullable
@@ -111,7 +111,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         return this.backingStore.get("healthCheckStatus");
     }
     /**
-     * Gets the healthCheckStatusDetail property value. The healthCheckStatusDetail property
+     * Gets the healthCheckStatusDetail property value. Indicates the results of health checks performed on the on-premises connection. Returned only on $select. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetails. Read-only.
      * @return a {@link CloudPcOnPremisesConnectionStatusDetail}
      */
     @jakarta.annotation.Nullable
@@ -119,7 +119,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         return this.backingStore.get("healthCheckStatusDetail");
     }
     /**
-     * Gets the healthCheckStatusDetails property value. The details of the connection's health checks and the corresponding results. Returned only on $select. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetails. Read-only.
+     * Gets the healthCheckStatusDetails property value. The healthCheckStatusDetails property
      * @return a {@link CloudPcOnPremisesConnectionStatusDetails}
      */
     @jakarta.annotation.Nullable
@@ -191,7 +191,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         return this.backingStore.get("subscriptionName");
     }
     /**
-     * Gets the type property value. Specifies how the provisioned Cloud PC is joined to Microsoft Entra ID. Default value is hybridAzureADJoin. Possible values are: azureADJoin, hybridAzureADJoin, unknownFutureValue.
+     * Gets the type property value. The type property
      * @return a {@link CloudPcOnPremisesConnectionType}
      */
     @jakarta.annotation.Nullable
@@ -271,7 +271,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         this.backingStore.set("alternateResourceUrl", value);
     }
     /**
-     * Sets the connectionType property value. The connectionType property
+     * Sets the connectionType property value. Specifies the method by which a provisioned Cloud PC is joined to Microsoft Entra. The azureADJoin option indicates the absence of an on-premises Active Directory (AD) in the current tenant that results in the Cloud PC device only joining to Microsoft Entra. The hybridAzureADJoin option indicates the presence of an on-premises AD in the current tenant and that the Cloud PC joins both the on-premises AD and Microsoft Entra. The selected option also determines the types of users who can be assigned and can sign into a Cloud PC. The azureADJoin option allows both cloud-only and hybrid users to be assigned and sign in, whereas hybridAzureADJoin is restricted to hybrid users only. The default value is hybridAzureADJoin. The possible values are: hybridAzureADJoin, azureADJoin, unknownFutureValue.
      * @param value Value to set for the connectionType property.
      */
     public void setConnectionType(@jakarta.annotation.Nullable final CloudPcOnPremisesConnectionType value) {
@@ -292,14 +292,14 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         this.backingStore.set("healthCheckStatus", value);
     }
     /**
-     * Sets the healthCheckStatusDetail property value. The healthCheckStatusDetail property
+     * Sets the healthCheckStatusDetail property value. Indicates the results of health checks performed on the on-premises connection. Returned only on $select. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetails. Read-only.
      * @param value Value to set for the healthCheckStatusDetail property.
      */
     public void setHealthCheckStatusDetail(@jakarta.annotation.Nullable final CloudPcOnPremisesConnectionStatusDetail value) {
         this.backingStore.set("healthCheckStatusDetail", value);
     }
     /**
-     * Sets the healthCheckStatusDetails property value. The details of the connection's health checks and the corresponding results. Returned only on $select. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetails. Read-only.
+     * Sets the healthCheckStatusDetails property value. The healthCheckStatusDetails property
      * @param value Value to set for the healthCheckStatusDetails property.
      */
     public void setHealthCheckStatusDetails(@jakarta.annotation.Nullable final CloudPcOnPremisesConnectionStatusDetails value) {
@@ -362,7 +362,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         this.backingStore.set("subscriptionName", value);
     }
     /**
-     * Sets the type property value. Specifies how the provisioned Cloud PC is joined to Microsoft Entra ID. Default value is hybridAzureADJoin. Possible values are: azureADJoin, hybridAzureADJoin, unknownFutureValue.
+     * Sets the type property value. The type property
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final CloudPcOnPremisesConnectionType value) {

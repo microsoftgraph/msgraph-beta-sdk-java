@@ -60,7 +60,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/lists/{list%2Did}/columns{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get the collection of columns, represented as [columnDefinition][columnDefinition] resources, in a [list][list].
+     * The collection of field definitions for this list.
      * @return a {@link ColumnDefinitionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/list-list-columns?view=graph-rest-1.0">Find more info here</a>
@@ -70,7 +70,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the collection of columns, represented as [columnDefinition][columnDefinition] resources, in a [list][list].
+     * The collection of field definitions for this list.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ColumnDefinitionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -84,7 +84,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ColumnDefinitionCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a column for a [list][list] with a request that specifies a [columnDefinition][columnDefinition].
+     * Create columnDefinition
      * @param body The request body
      * @return a {@link ColumnDefinition}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -95,7 +95,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a column for a [list][list] with a request that specifies a [columnDefinition][columnDefinition].
+     * Create columnDefinition
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ColumnDefinition}
@@ -111,7 +111,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ColumnDefinition::createFromDiscriminatorValue);
     }
     /**
-     * Get the collection of columns, represented as [columnDefinition][columnDefinition] resources, in a [list][list].
+     * The collection of field definitions for this list.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +119,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the collection of columns, represented as [columnDefinition][columnDefinition] resources, in a [list][list].
+     * The collection of field definitions for this list.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +131,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a column for a [list][list] with a request that specifies a [columnDefinition][columnDefinition].
+     * Create columnDefinition
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +140,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a column for a [list][list] with a request that specifies a [columnDefinition][columnDefinition].
+     * Create columnDefinition
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +165,7 @@ public class ColumnsRequestBuilder extends BaseRequestBuilder {
         return new ColumnsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the collection of columns, represented as [columnDefinition][columnDefinition] resources, in a [list][list].
+     * The collection of field definitions for this list.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -142,7 +142,7 @@ public class ApplicationDetail implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore.get("productVersion");
     }
     /**
-     * Gets the publisherCert property value. The list of base64 encoded certificate for each signer, for example, string[encoded_leaf_cert1, encoded_leaf_cert2....]
+     * Gets the publisherCert property value. The list of base64 encoded certificate for each signer, for example, string[encodedleafcert1, encodedleafcert2....]
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -247,7 +247,7 @@ public class ApplicationDetail implements AdditionalDataHolder, BackedModel, Par
         this.backingStore.set("productVersion", value);
     }
     /**
-     * Sets the publisherCert property value. The list of base64 encoded certificate for each signer, for example, string[encoded_leaf_cert1, encoded_leaf_cert2....]
+     * Sets the publisherCert property value. The list of base64 encoded certificate for each signer, for example, string[encodedleafcert1, encodedleafcert2....]
      * @param value Value to set for the publisherCert property.
      */
     public void setPublisherCert(@jakarta.annotation.Nullable final String value) {

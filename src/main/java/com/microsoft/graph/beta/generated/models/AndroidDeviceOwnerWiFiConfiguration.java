@@ -74,7 +74,7 @@ public class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration imp
         return deserializerMap;
     }
     /**
-     * Gets the macAddressRandomizationMode property value. The MAC address randomization mode for Android device Wi-Fi configuration. Possible values include automatic and hardware. Default value is automatic.
+     * Gets the macAddressRandomizationMode property value. The MAC address randomization mode for Android device Wi-Fi configuration. Possible values include automatic and hardware. Default value is automatic. Possible values are: automatic, hardware, unknownFutureValue.
      * @return a {@link MacAddressRandomizationMode}
      */
     @jakarta.annotation.Nullable
@@ -197,7 +197,7 @@ public class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration imp
         this.backingStore.set("connectWhenNetworkNameIsHidden", value);
     }
     /**
-     * Sets the macAddressRandomizationMode property value. The MAC address randomization mode for Android device Wi-Fi configuration. Possible values include automatic and hardware. Default value is automatic.
+     * Sets the macAddressRandomizationMode property value. The MAC address randomization mode for Android device Wi-Fi configuration. Possible values include automatic and hardware. Default value is automatic. Possible values are: automatic, hardware, unknownFutureValue.
      * @param value Value to set for the macAddressRandomizationMode property.
      */
     public void setMacAddressRandomizationMode(@jakarta.annotation.Nullable final MacAddressRandomizationMode value) {

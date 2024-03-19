@@ -173,7 +173,7 @@ public class Schedule extends Entity implements Parsable {
         return this.backingStore.get("shifts");
     }
     /**
-     * Gets the shiftsRoleDefinitions property value. The shiftsRoleDefinitions property
+     * Gets the shiftsRoleDefinitions property value. The definitions of the roles in the schedule.
      * @return a {@link java.util.List<ShiftsRoleDefinition>}
      */
     @jakarta.annotation.Nullable
@@ -408,7 +408,7 @@ public class Schedule extends Entity implements Parsable {
         this.backingStore.set("shifts", value);
     }
     /**
-     * Sets the shiftsRoleDefinitions property value. The shiftsRoleDefinitions property
+     * Sets the shiftsRoleDefinitions property value. The definitions of the roles in the schedule.
      * @param value Value to set for the shiftsRoleDefinitions property.
      */
     public void setShiftsRoleDefinitions(@jakarta.annotation.Nullable final java.util.List<ShiftsRoleDefinition> value) {

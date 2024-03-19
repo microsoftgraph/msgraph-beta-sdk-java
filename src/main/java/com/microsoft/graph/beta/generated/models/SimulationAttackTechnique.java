@@ -12,7 +12,8 @@ public enum SimulationAttackTechnique implements ValuedEnum {
     LinkInAttachment("linkInAttachment"),
     LinkToMalwareFile("linkToMalwareFile"),
     UnknownFutureValue("unknownFutureValue"),
-    OAuthConsentGrant("oAuthConsentGrant");
+    OAuthConsentGrant("oAuthConsentGrant"),
+    PhishTraining("phishTraining");
     public final String value;
     SimulationAttackTechnique(final String value) {
         this.value = value;
@@ -31,6 +32,7 @@ public enum SimulationAttackTechnique implements ValuedEnum {
             case "linkToMalwareFile": return LinkToMalwareFile;
             case "unknownFutureValue": return UnknownFutureValue;
             case "oAuthConsentGrant": return OAuthConsentGrant;
+            case "phishTraining": return PhishTraining;
             default: return null;
         }
     }

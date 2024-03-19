@@ -69,17 +69,8 @@ public class Alert extends Entity implements Parsable {
         deserializerMap.put("alertType", (n) -> { this.setAlertType(n.getEnumValue(AlertType::forValue)); });
         deserializerMap.put("creationDateTime", (n) -> { this.setCreationDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
-        deserializerMap.put("firstImpactedDateTime", (n) -> { this.setFirstImpactedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("relatedResources", (n) -> { this.setRelatedResources(n.getCollectionOfObjectValues(RelatedResource::createFromDiscriminatorValue)); });
         return deserializerMap;
-    }
-    /**
-     * Gets the firstImpactedDateTime property value. The firstImpactedDateTime property
-     * @return a {@link OffsetDateTime}
-     */
-    @jakarta.annotation.Nullable
-    public OffsetDateTime getFirstImpactedDateTime() {
-        return this.backingStore.get("firstImpactedDateTime");
     }
     /**
      * Gets the relatedResources property value. The relatedResources property
@@ -100,7 +91,6 @@ public class Alert extends Entity implements Parsable {
         writer.writeEnumValue("alertType", this.getAlertType());
         writer.writeOffsetDateTimeValue("creationDateTime", this.getCreationDateTime());
         writer.writeStringValue("description", this.getDescription());
-        writer.writeOffsetDateTimeValue("firstImpactedDateTime", this.getFirstImpactedDateTime());
         writer.writeCollectionOfObjectValues("relatedResources", this.getRelatedResources());
     }
     /**
@@ -130,13 +120,6 @@ public class Alert extends Entity implements Parsable {
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("description", value);
-    }
-    /**
-     * Sets the firstImpactedDateTime property value. The firstImpactedDateTime property
-     * @param value Value to set for the firstImpactedDateTime property.
-     */
-    public void setFirstImpactedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.backingStore.set("firstImpactedDateTime", value);
     }
     /**
      * Sets the relatedResources property value. The relatedResources property

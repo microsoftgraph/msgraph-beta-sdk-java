@@ -56,7 +56,7 @@ public class AnalyzedEmailAttachment implements AdditionalDataHolder, BackedMode
         return this.backingStore;
     }
     /**
-     * Gets the detonationDetails property value. The detonationDetails property
+     * Gets the detonationDetails property value. The detonation details of the attachment.
      * @return a {@link DetonationDetails}
      */
     @jakarta.annotation.Nullable
@@ -80,7 +80,7 @@ public class AnalyzedEmailAttachment implements AdditionalDataHolder, BackedMode
         return deserializerMap;
     }
     /**
-     * Gets the fileName property value. The fileName property
+     * Gets the fileName property value. The name of the attachment in the email.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -88,7 +88,7 @@ public class AnalyzedEmailAttachment implements AdditionalDataHolder, BackedMode
         return this.backingStore.get("fileName");
     }
     /**
-     * Gets the fileType property value. The fileType property
+     * Gets the fileType property value. The type of the attachment in the email.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -104,7 +104,7 @@ public class AnalyzedEmailAttachment implements AdditionalDataHolder, BackedMode
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the sha256 property value. The sha256 property
+     * Gets the sha256 property value. The SHA256 file hash of the attachment.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -112,7 +112,7 @@ public class AnalyzedEmailAttachment implements AdditionalDataHolder, BackedMode
         return this.backingStore.get("sha256");
     }
     /**
-     * Gets the threatName property value. The threatName property
+     * Gets the threatName property value. The threat name associated with the threat type.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -120,7 +120,7 @@ public class AnalyzedEmailAttachment implements AdditionalDataHolder, BackedMode
         return this.backingStore.get("threatName");
     }
     /**
-     * Gets the threatType property value. The threatType property
+     * Gets the threatType property value. The threat type associated with the attachment. The possible values are: unknown, spam, malware, phishing, none, unknownFutureValue.
      * @return a {@link ThreatType}
      */
     @jakarta.annotation.Nullable
@@ -158,21 +158,21 @@ public class AnalyzedEmailAttachment implements AdditionalDataHolder, BackedMode
         this.backingStore = value;
     }
     /**
-     * Sets the detonationDetails property value. The detonationDetails property
+     * Sets the detonationDetails property value. The detonation details of the attachment.
      * @param value Value to set for the detonationDetails property.
      */
     public void setDetonationDetails(@jakarta.annotation.Nullable final DetonationDetails value) {
         this.backingStore.set("detonationDetails", value);
     }
     /**
-     * Sets the fileName property value. The fileName property
+     * Sets the fileName property value. The name of the attachment in the email.
      * @param value Value to set for the fileName property.
      */
     public void setFileName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("fileName", value);
     }
     /**
-     * Sets the fileType property value. The fileType property
+     * Sets the fileType property value. The type of the attachment in the email.
      * @param value Value to set for the fileType property.
      */
     public void setFileType(@jakarta.annotation.Nullable final String value) {
@@ -186,21 +186,21 @@ public class AnalyzedEmailAttachment implements AdditionalDataHolder, BackedMode
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the sha256 property value. The sha256 property
+     * Sets the sha256 property value. The SHA256 file hash of the attachment.
      * @param value Value to set for the sha256 property.
      */
     public void setSha256(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("sha256", value);
     }
     /**
-     * Sets the threatName property value. The threatName property
+     * Sets the threatName property value. The threat name associated with the threat type.
      * @param value Value to set for the threatName property.
      */
     public void setThreatName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("threatName", value);
     }
     /**
-     * Sets the threatType property value. The threatType property
+     * Sets the threatType property value. The threat type associated with the attachment. The possible values are: unknown, spam, malware, phishing, none, unknownFutureValue.
      * @param value Value to set for the threatType property.
      */
     public void setThreatType(@jakarta.annotation.Nullable final ThreatType value) {

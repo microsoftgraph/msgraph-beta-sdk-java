@@ -85,7 +85,7 @@ public class Security extends Entity implements Parsable {
         return this.backingStore.get("cloudAppSecurityProfiles");
     }
     /**
-     * Gets the collaboration property value. The collaboration property
+     * Gets the collaboration property value. Enables read and other actions on collaborative entities in Microsoft Defender.
      * @return a {@link CollaborationRoot}
      */
     @jakarta.annotation.Nullable
@@ -366,7 +366,7 @@ public class Security extends Entity implements Parsable {
         this.backingStore.set("cloudAppSecurityProfiles", value);
     }
     /**
-     * Sets the collaboration property value. The collaboration property
+     * Sets the collaboration property value. Enables read and other actions on collaborative entities in Microsoft Defender.
      * @param value Value to set for the collaboration property.
      */
     public void setCollaboration(@jakarta.annotation.Nullable final CollaborationRoot value) {

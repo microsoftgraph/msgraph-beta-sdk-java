@@ -57,10 +57,10 @@ public class DestinationSummary implements AdditionalDataHolder, BackedModel, Pa
     }
     /**
      * Gets the count property value. The number of the destinationSummary objects, aggregated by Global Secure Access service.
-     * @return a {@link Integer}
+     * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
-    public Integer getCount() {
+    public Long getCount() {
         return this.backingStore.get("count");
     }
     /**
@@ -78,7 +78,7 @@ public class DestinationSummary implements AdditionalDataHolder, BackedModel, Pa
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
-        deserializerMap.put("count", (n) -> { this.setCount(n.getIntegerValue()); });
+        deserializerMap.put("count", (n) -> { this.setCount(n.getLongValue()); });
         deserializerMap.put("destination", (n) -> { this.setDestination(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("trafficType", (n) -> { this.setTrafficType(n.getEnumValue(TrafficType::forValue)); });
@@ -106,7 +106,7 @@ public class DestinationSummary implements AdditionalDataHolder, BackedModel, Pa
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeIntegerValue("count", this.getCount());
+        writer.writeLongValue("count", this.getCount());
         writer.writeStringValue("destination", this.getDestination());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("trafficType", this.getTrafficType());
@@ -131,7 +131,7 @@ public class DestinationSummary implements AdditionalDataHolder, BackedModel, Pa
      * Sets the count property value. The number of the destinationSummary objects, aggregated by Global Secure Access service.
      * @param value Value to set for the count property.
      */
-    public void setCount(@jakarta.annotation.Nullable final Integer value) {
+    public void setCount(@jakarta.annotation.Nullable final Long value) {
         this.backingStore.set("count", value);
     }
     /**

@@ -68,7 +68,7 @@ public class BookingSchedulingPolicy implements AdditionalDataHolder, BackedMode
         return this.backingStore;
     }
     /**
-     * Gets the customAvailabilities property value. collection of custom availabilities for a given time range.
+     * Gets the customAvailabilities property value. Custom availability of the service in a given time frame of the service.
      * @return a {@link java.util.List<BookingsAvailabilityWindow>}
      */
     @jakarta.annotation.Nullable
@@ -94,7 +94,7 @@ public class BookingSchedulingPolicy implements AdditionalDataHolder, BackedMode
         return deserializerMap;
     }
     /**
-     * Gets the generalAvailability property value. General availability 
+     * Gets the generalAvailability property value. General availability of the service defined by the scheduling policy.
      * @return a {@link BookingsAvailability}
      */
     @jakarta.annotation.Nullable
@@ -189,14 +189,14 @@ public class BookingSchedulingPolicy implements AdditionalDataHolder, BackedMode
         this.backingStore = value;
     }
     /**
-     * Sets the customAvailabilities property value. collection of custom availabilities for a given time range.
+     * Sets the customAvailabilities property value. Custom availability of the service in a given time frame of the service.
      * @param value Value to set for the customAvailabilities property.
      */
     public void setCustomAvailabilities(@jakarta.annotation.Nullable final java.util.List<BookingsAvailabilityWindow> value) {
         this.backingStore.set("customAvailabilities", value);
     }
     /**
-     * Sets the generalAvailability property value. General availability 
+     * Sets the generalAvailability property value. General availability of the service defined by the scheduling policy.
      * @param value Value to set for the generalAvailability property.
      */
     public void setGeneralAvailability(@jakarta.annotation.Nullable final BookingsAvailability value) {

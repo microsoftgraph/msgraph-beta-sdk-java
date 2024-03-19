@@ -612,7 +612,7 @@ public class Group extends DirectoryObject implements Parsable {
         return this.backingStore.get("renewedDateTime");
     }
     /**
-     * Gets the resourceBehaviorOptions property value. Specifies the group behaviors that can be set for a Microsoft 365 group during creation. This can be set only as part of creation (POST). Possible values are AllowOnlyMembersToPost, HideGroupInOutlook, SubscribeNewGroupMembers, WelcomeEmailDisabled. For more information, see Set Microsoft 365 group behaviors and provisioning options.
+     * Gets the resourceBehaviorOptions property value. Specifies the group behaviors that can be set for a Microsoft 365 group during creation. This property can be set only as part of creation (POST). For the list of possible values, see Microsoft 365 group behaviors and provisioning options.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -620,7 +620,7 @@ public class Group extends DirectoryObject implements Parsable {
         return this.backingStore.get("resourceBehaviorOptions");
     }
     /**
-     * Gets the resourceProvisioningOptions property value. Specifies the group resources that are provisioned as part of Microsoft 365 group creation that isn't normally part of default group creation. The possible value is Team. For more information, see Set Microsoft 365 group behaviors and provisioning options. Returned by default. Supports $filter (eq, not, startsWith.
+     * Gets the resourceProvisioningOptions property value. Specifies the group resources that are associated with the Microsoft 365 group. The possible value is Team. For more information, see Microsoft 365 group behaviors and provisioning options. Returned by default. Supports $filter (eq, not, startsWith.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -708,7 +708,7 @@ public class Group extends DirectoryObject implements Parsable {
         return this.backingStore.get("transitiveMembers");
     }
     /**
-     * Gets the uniqueName property value. The uniqueName property
+     * Gets the uniqueName property value. The unique identifier that can be assigned to a group and used as an alternate key. Immutable. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -1278,14 +1278,14 @@ public class Group extends DirectoryObject implements Parsable {
         this.backingStore.set("renewedDateTime", value);
     }
     /**
-     * Sets the resourceBehaviorOptions property value. Specifies the group behaviors that can be set for a Microsoft 365 group during creation. This can be set only as part of creation (POST). Possible values are AllowOnlyMembersToPost, HideGroupInOutlook, SubscribeNewGroupMembers, WelcomeEmailDisabled. For more information, see Set Microsoft 365 group behaviors and provisioning options.
+     * Sets the resourceBehaviorOptions property value. Specifies the group behaviors that can be set for a Microsoft 365 group during creation. This property can be set only as part of creation (POST). For the list of possible values, see Microsoft 365 group behaviors and provisioning options.
      * @param value Value to set for the resourceBehaviorOptions property.
      */
     public void setResourceBehaviorOptions(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("resourceBehaviorOptions", value);
     }
     /**
-     * Sets the resourceProvisioningOptions property value. Specifies the group resources that are provisioned as part of Microsoft 365 group creation that isn't normally part of default group creation. The possible value is Team. For more information, see Set Microsoft 365 group behaviors and provisioning options. Returned by default. Supports $filter (eq, not, startsWith.
+     * Sets the resourceProvisioningOptions property value. Specifies the group resources that are associated with the Microsoft 365 group. The possible value is Team. For more information, see Microsoft 365 group behaviors and provisioning options. Returned by default. Supports $filter (eq, not, startsWith.
      * @param value Value to set for the resourceProvisioningOptions property.
      */
     public void setResourceProvisioningOptions(@jakarta.annotation.Nullable final java.util.List<String> value) {
@@ -1362,7 +1362,7 @@ public class Group extends DirectoryObject implements Parsable {
         this.backingStore.set("transitiveMembers", value);
     }
     /**
-     * Sets the uniqueName property value. The uniqueName property
+     * Sets the uniqueName property value. The unique identifier that can be assigned to a group and used as an alternate key. Immutable. Read-only.
      * @param value Value to set for the uniqueName property.
      */
     public void setUniqueName(@jakarta.annotation.Nullable final String value) {

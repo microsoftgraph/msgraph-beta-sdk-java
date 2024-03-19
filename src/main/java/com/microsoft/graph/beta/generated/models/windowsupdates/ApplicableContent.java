@@ -56,7 +56,7 @@ public class ApplicableContent implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore;
     }
     /**
-     * Gets the catalogEntry property value. The catalogEntry property
+     * Gets the catalogEntry property value. Catalog entry for the update or content.
      * @return a {@link CatalogEntry}
      */
     @jakarta.annotation.Nullable
@@ -64,19 +64,28 @@ public class ApplicableContent implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore.get("catalogEntry");
     }
     /**
+     * Gets the catalogEntryId property value. ID of the catalog entry for the applicable content.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getCatalogEntryId() {
+        return this.backingStore.get("catalogEntryId");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("catalogEntry", (n) -> { this.setCatalogEntry(n.getObjectValue(CatalogEntry::createFromDiscriminatorValue)); });
+        deserializerMap.put("catalogEntryId", (n) -> { this.setCatalogEntryId(n.getStringValue()); });
         deserializerMap.put("matchedDevices", (n) -> { this.setMatchedDevices(n.getCollectionOfObjectValues(ApplicableContentDeviceMatch::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;
     }
     /**
-     * Gets the matchedDevices property value. The matchedDevices property
+     * Gets the matchedDevices property value. Collection of devices and recommendations for applicable catalog content.
      * @return a {@link java.util.List<ApplicableContentDeviceMatch>}
      */
     @jakarta.annotation.Nullable
@@ -98,6 +107,7 @@ public class ApplicableContent implements AdditionalDataHolder, BackedModel, Par
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("catalogEntry", this.getCatalogEntry());
+        writer.writeStringValue("catalogEntryId", this.getCatalogEntryId());
         writer.writeCollectionOfObjectValues("matchedDevices", this.getMatchedDevices());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -118,14 +128,21 @@ public class ApplicableContent implements AdditionalDataHolder, BackedModel, Par
         this.backingStore = value;
     }
     /**
-     * Sets the catalogEntry property value. The catalogEntry property
+     * Sets the catalogEntry property value. Catalog entry for the update or content.
      * @param value Value to set for the catalogEntry property.
      */
     public void setCatalogEntry(@jakarta.annotation.Nullable final CatalogEntry value) {
         this.backingStore.set("catalogEntry", value);
     }
     /**
-     * Sets the matchedDevices property value. The matchedDevices property
+     * Sets the catalogEntryId property value. ID of the catalog entry for the applicable content.
+     * @param value Value to set for the catalogEntryId property.
+     */
+    public void setCatalogEntryId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("catalogEntryId", value);
+    }
+    /**
+     * Sets the matchedDevices property value. Collection of devices and recommendations for applicable catalog content.
      * @param value Value to set for the matchedDevices property.
      */
     public void setMatchedDevices(@jakarta.annotation.Nullable final java.util.List<ApplicableContentDeviceMatch> value) {

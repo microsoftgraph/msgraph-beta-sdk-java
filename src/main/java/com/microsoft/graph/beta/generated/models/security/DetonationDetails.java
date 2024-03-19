@@ -49,7 +49,7 @@ public class DetonationDetails implements AdditionalDataHolder, BackedModel, Par
         return value;
     }
     /**
-     * Gets the analysisDateTime property value. The analysisDateTime property
+     * Gets the analysisDateTime property value. The time of detonation.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -65,7 +65,7 @@ public class DetonationDetails implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore;
     }
     /**
-     * Gets the detonationChain property value. The detonationChain property
+     * Gets the detonationChain property value. The chain of detonation.
      * @return a {@link DetonationChain}
      */
     @jakarta.annotation.Nullable
@@ -73,7 +73,7 @@ public class DetonationDetails implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore.get("detonationChain");
     }
     /**
-     * Gets the detonationObservables property value. The detonationObservables property
+     * Gets the detonationObservables property value. All observables in the detonation tree.
      * @return a {@link DetonationObservables}
      */
     @jakarta.annotation.Nullable
@@ -81,7 +81,7 @@ public class DetonationDetails implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore.get("detonationObservables");
     }
     /**
-     * Gets the detonationVerdict property value. The detonationVerdict property
+     * Gets the detonationVerdict property value. The verdict of the detonation.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -89,7 +89,7 @@ public class DetonationDetails implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore.get("detonationVerdict");
     }
     /**
-     * Gets the detonationVerdictReason property value. The detonationVerdictReason property
+     * Gets the detonationVerdictReason property value. The reason for the verdict of the detonation.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -141,7 +141,7 @@ public class DetonationDetails implements AdditionalDataHolder, BackedModel, Par
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the analysisDateTime property value. The analysisDateTime property
+     * Sets the analysisDateTime property value. The time of detonation.
      * @param value Value to set for the analysisDateTime property.
      */
     public void setAnalysisDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -156,28 +156,28 @@ public class DetonationDetails implements AdditionalDataHolder, BackedModel, Par
         this.backingStore = value;
     }
     /**
-     * Sets the detonationChain property value. The detonationChain property
+     * Sets the detonationChain property value. The chain of detonation.
      * @param value Value to set for the detonationChain property.
      */
     public void setDetonationChain(@jakarta.annotation.Nullable final DetonationChain value) {
         this.backingStore.set("detonationChain", value);
     }
     /**
-     * Sets the detonationObservables property value. The detonationObservables property
+     * Sets the detonationObservables property value. All observables in the detonation tree.
      * @param value Value to set for the detonationObservables property.
      */
     public void setDetonationObservables(@jakarta.annotation.Nullable final DetonationObservables value) {
         this.backingStore.set("detonationObservables", value);
     }
     /**
-     * Sets the detonationVerdict property value. The detonationVerdict property
+     * Sets the detonationVerdict property value. The verdict of the detonation.
      * @param value Value to set for the detonationVerdict property.
      */
     public void setDetonationVerdict(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("detonationVerdict", value);
     }
     /**
-     * Sets the detonationVerdictReason property value. The detonationVerdictReason property
+     * Sets the detonationVerdictReason property value. The reason for the verdict of the detonation.
      * @param value Value to set for the detonationVerdictReason property.
      */
     public void setDetonationVerdictReason(@jakarta.annotation.Nullable final String value) {

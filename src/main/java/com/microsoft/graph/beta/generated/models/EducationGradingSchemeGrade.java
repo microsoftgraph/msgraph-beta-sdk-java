@@ -56,7 +56,7 @@ public class EducationGradingSchemeGrade implements AdditionalDataHolder, Backed
         return this.backingStore;
     }
     /**
-     * Gets the defaultPercentage property value. The defaultPercentage property
+     * Gets the defaultPercentage property value. The midpoint of the grade range.
      * @return a {@link Float}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class EducationGradingSchemeGrade implements AdditionalDataHolder, Backed
         return this.backingStore.get("defaultPercentage");
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The name of the grading scheme.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -85,7 +85,7 @@ public class EducationGradingSchemeGrade implements AdditionalDataHolder, Backed
         return deserializerMap;
     }
     /**
-     * Gets the minPercentage property value. The minPercentage property
+     * Gets the minPercentage property value. The minimum percentage of the total points needed to achieve this grade.
      * @return a {@link Float}
      */
     @jakarta.annotation.Nullable
@@ -128,21 +128,21 @@ public class EducationGradingSchemeGrade implements AdditionalDataHolder, Backed
         this.backingStore = value;
     }
     /**
-     * Sets the defaultPercentage property value. The defaultPercentage property
+     * Sets the defaultPercentage property value. The midpoint of the grade range.
      * @param value Value to set for the defaultPercentage property.
      */
     public void setDefaultPercentage(@jakarta.annotation.Nullable final Float value) {
         this.backingStore.set("defaultPercentage", value);
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The name of the grading scheme.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the minPercentage property value. The minPercentage property
+     * Sets the minPercentage property value. The minimum percentage of the total points needed to achieve this grade.
      * @param value Value to set for the minPercentage property.
      */
     public void setMinPercentage(@jakarta.annotation.Nullable final Float value) {

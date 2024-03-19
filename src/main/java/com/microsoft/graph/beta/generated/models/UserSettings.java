@@ -89,7 +89,7 @@ public class UserSettings extends Entity implements Parsable {
         return this.backingStore.get("shiftPreferences");
     }
     /**
-     * Gets the windows property value. The windows property
+     * Gets the windows property value. The Windows settings of the user stored in the cloud.
      * @return a {@link java.util.List<WindowsSetting>}
      */
     @jakarta.annotation.Nullable
@@ -154,7 +154,7 @@ public class UserSettings extends Entity implements Parsable {
         this.backingStore.set("shiftPreferences", value);
     }
     /**
-     * Sets the windows property value. The windows property
+     * Sets the windows property value. The Windows settings of the user stored in the cloud.
      * @param value Value to set for the windows property.
      */
     public void setWindows(@jakarta.annotation.Nullable final java.util.List<WindowsSetting> value) {

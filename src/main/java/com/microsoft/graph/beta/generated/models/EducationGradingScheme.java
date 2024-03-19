@@ -25,7 +25,7 @@ public class EducationGradingScheme extends Entity implements Parsable {
         return new EducationGradingScheme();
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The name of the grading scheme.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -45,7 +45,7 @@ public class EducationGradingScheme extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the grades property value. The grades property
+     * Gets the grades property value. The grades that make up the scheme.
      * @return a {@link java.util.List<EducationGradingSchemeGrade>}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class EducationGradingScheme extends Entity implements Parsable {
         return this.backingStore.get("grades");
     }
     /**
-     * Gets the hidePointsDuringGrading property value. The hidePointsDuringGrading property
+     * Gets the hidePointsDuringGrading property value. The display setting for the UI. Indicates whether teachers can grade with points in addition to letter grades.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -72,21 +72,21 @@ public class EducationGradingScheme extends Entity implements Parsable {
         writer.writeBooleanValue("hidePointsDuringGrading", this.getHidePointsDuringGrading());
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The name of the grading scheme.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the grades property value. The grades property
+     * Sets the grades property value. The grades that make up the scheme.
      * @param value Value to set for the grades property.
      */
     public void setGrades(@jakarta.annotation.Nullable final java.util.List<EducationGradingSchemeGrade> value) {
         this.backingStore.set("grades", value);
     }
     /**
-     * Sets the hidePointsDuringGrading property value. The hidePointsDuringGrading property
+     * Sets the hidePointsDuringGrading property value. The display setting for the UI. Indicates whether teachers can grade with points in addition to letter grades.
      * @param value Value to set for the hidePointsDuringGrading property.
      */
     public void setHidePointsDuringGrading(@jakarta.annotation.Nullable final Boolean value) {

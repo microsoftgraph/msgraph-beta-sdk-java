@@ -83,23 +83,23 @@ public class ServicePrincipalsWithAppIdRequestBuilder extends BaseRequestBuilder
         return this.requestAdapter.send(requestInfo, errorMapping, ServicePrincipal::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of servicePrincipal object.
+     * Create a new servicePrincipal object if it doesn't exist, or update the properties of an existing servicePrincipal object.
      * @param body The request body
      * @return a {@link ServicePrincipal}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-upsert?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ServicePrincipal patch(@jakarta.annotation.Nonnull final ServicePrincipal body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of servicePrincipal object.
+     * Create a new servicePrincipal object if it doesn't exist, or update the properties of an existing servicePrincipal object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ServicePrincipal}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-upsert?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ServicePrincipal patch(@jakarta.annotation.Nonnull final ServicePrincipal body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -150,7 +150,7 @@ public class ServicePrincipalsWithAppIdRequestBuilder extends BaseRequestBuilder
         return requestInfo;
     }
     /**
-     * Update the properties of servicePrincipal object.
+     * Create a new servicePrincipal object if it doesn't exist, or update the properties of an existing servicePrincipal object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -159,7 +159,7 @@ public class ServicePrincipalsWithAppIdRequestBuilder extends BaseRequestBuilder
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of servicePrincipal object.
+     * Create a new servicePrincipal object if it doesn't exist, or update the properties of an existing servicePrincipal object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

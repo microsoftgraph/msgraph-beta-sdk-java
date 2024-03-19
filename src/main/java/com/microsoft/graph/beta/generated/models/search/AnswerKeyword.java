@@ -93,7 +93,7 @@ public class AnswerKeyword implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the reservedKeywords property value. Unique keywords that will guarantee the search answer is triggered.
+     * Gets the reservedKeywords property value. Unique keywords that guarantee the search answer is triggered.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -149,7 +149,7 @@ public class AnswerKeyword implements AdditionalDataHolder, BackedModel, Parsabl
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the reservedKeywords property value. Unique keywords that will guarantee the search answer is triggered.
+     * Sets the reservedKeywords property value. Unique keywords that guarantee the search answer is triggered.
      * @param value Value to set for the reservedKeywords property.
      */
     public void setReservedKeywords(@jakarta.annotation.Nullable final java.util.List<String> value) {

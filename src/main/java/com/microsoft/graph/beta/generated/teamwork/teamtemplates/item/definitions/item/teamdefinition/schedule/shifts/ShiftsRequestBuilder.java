@@ -60,7 +60,7 @@ public class ShiftsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/teamwork/teamTemplates/{teamTemplate%2Did}/definitions/{teamTemplateDefinition%2Did}/teamDefinition/schedule/shifts{?%24count,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get the list of shift instances in a schedule.
+     * The shifts in the schedule.
      * @return a {@link ShiftCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/schedule-list-shifts?view=graph-rest-1.0">Find more info here</a>
@@ -70,7 +70,7 @@ public class ShiftsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the list of shift instances in a schedule.
+     * The shifts in the schedule.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ShiftCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -111,7 +111,7 @@ public class ShiftsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Shift::createFromDiscriminatorValue);
     }
     /**
-     * Get the list of shift instances in a schedule.
+     * The shifts in the schedule.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +119,7 @@ public class ShiftsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the list of shift instances in a schedule.
+     * The shifts in the schedule.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -165,7 +165,7 @@ public class ShiftsRequestBuilder extends BaseRequestBuilder {
         return new ShiftsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the list of shift instances in a schedule.
+     * The shifts in the schedule.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

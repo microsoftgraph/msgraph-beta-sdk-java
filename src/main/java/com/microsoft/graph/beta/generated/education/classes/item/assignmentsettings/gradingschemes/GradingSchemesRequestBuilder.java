@@ -60,7 +60,7 @@ public class GradingSchemesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/classes/{educationClass%2Did}/assignmentSettings/gradingSchemes{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get gradingSchemes from education
+     * Read the properties and relationships of an educationGradingScheme object.
      * @return a {@link EducationGradingSchemeCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -69,7 +69,7 @@ public class GradingSchemesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get gradingSchemes from education
+     * Read the properties and relationships of an educationGradingScheme object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EducationGradingSchemeCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -82,21 +82,23 @@ public class GradingSchemesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EducationGradingSchemeCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to gradingSchemes for education
+     * Create a new educationGradingScheme object.
      * @param body The request body
      * @return a {@link EducationGradingScheme}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/educationgradingscheme-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EducationGradingScheme post(@jakarta.annotation.Nonnull final EducationGradingScheme body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to gradingSchemes for education
+     * Create a new educationGradingScheme object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EducationGradingScheme}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/educationgradingscheme-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EducationGradingScheme post(@jakarta.annotation.Nonnull final EducationGradingScheme body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -107,7 +109,7 @@ public class GradingSchemesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EducationGradingScheme::createFromDiscriminatorValue);
     }
     /**
-     * Get gradingSchemes from education
+     * Read the properties and relationships of an educationGradingScheme object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +117,7 @@ public class GradingSchemesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get gradingSchemes from education
+     * Read the properties and relationships of an educationGradingScheme object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -127,7 +129,7 @@ public class GradingSchemesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to gradingSchemes for education
+     * Create a new educationGradingScheme object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -136,7 +138,7 @@ public class GradingSchemesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to gradingSchemes for education
+     * Create a new educationGradingScheme object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -161,7 +163,7 @@ public class GradingSchemesRequestBuilder extends BaseRequestBuilder {
         return new GradingSchemesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get gradingSchemes from education
+     * Read the properties and relationships of an educationGradingScheme object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -25,7 +25,7 @@ public class ShiftsRoleDefinition extends Entity implements Parsable {
         return new ShiftsRoleDefinition();
     }
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. The description of the role.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -33,7 +33,7 @@ public class ShiftsRoleDefinition extends Entity implements Parsable {
         return this.backingStore.get("description");
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The display name of the role.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class ShiftsRoleDefinition extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the shiftsRolePermissions property value. The shiftsRolePermissions property
+     * Gets the shiftsRolePermissions property value. The collection of role permissions within the role.
      * @return a {@link java.util.List<ShiftsRolePermission>}
      */
     @jakarta.annotation.Nullable
@@ -72,21 +72,21 @@ public class ShiftsRoleDefinition extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("shiftsRolePermissions", this.getShiftsRolePermissions());
     }
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. The description of the role.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("description", value);
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The display name of the role.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the shiftsRolePermissions property value. The shiftsRolePermissions property
+     * Sets the shiftsRolePermissions property value. The collection of role permissions within the role.
      * @param value Value to set for the shiftsRolePermissions property.
      */
     public void setShiftsRolePermissions(@jakarta.annotation.Nullable final java.util.List<ShiftsRolePermission> value) {

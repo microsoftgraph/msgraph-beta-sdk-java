@@ -101,7 +101,7 @@ public class OutlookTask extends OutlookItem implements Parsable {
         return this.backingStore.get("hasAttachments");
     }
     /**
-     * Gets the importance property value. The importance property
+     * Gets the importance property value. The importance of the event. Possible values are: low, normal, high.
      * @return a {@link Importance}
      */
     @jakarta.annotation.Nullable
@@ -109,7 +109,7 @@ public class OutlookTask extends OutlookItem implements Parsable {
         return this.backingStore.get("importance");
     }
     /**
-     * Gets the isReminderOn property value. The isReminderOn property
+     * Gets the isReminderOn property value. Set to true if an alert is set to remind the user of the task.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -125,7 +125,7 @@ public class OutlookTask extends OutlookItem implements Parsable {
         return this.backingStore.get("multiValueExtendedProperties");
     }
     /**
-     * Gets the owner property value. The owner property
+     * Gets the owner property value. The name of the person who created the task.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -133,7 +133,7 @@ public class OutlookTask extends OutlookItem implements Parsable {
         return this.backingStore.get("owner");
     }
     /**
-     * Gets the parentFolderId property value. The parentFolderId property
+     * Gets the parentFolderId property value. The unique identifier for the task's parent folder.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -141,7 +141,7 @@ public class OutlookTask extends OutlookItem implements Parsable {
         return this.backingStore.get("parentFolderId");
     }
     /**
-     * Gets the recurrence property value. The recurrence property
+     * Gets the recurrence property value. The recurrence pattern for the task.
      * @return a {@link PatternedRecurrence}
      */
     @jakarta.annotation.Nullable
@@ -149,7 +149,7 @@ public class OutlookTask extends OutlookItem implements Parsable {
         return this.backingStore.get("recurrence");
     }
     /**
-     * Gets the reminderDateTime property value. The reminderDateTime property
+     * Gets the reminderDateTime property value. The date and time for a reminder alert of the task to occur.
      * @return a {@link DateTimeTimeZone}
      */
     @jakarta.annotation.Nullable
@@ -157,7 +157,7 @@ public class OutlookTask extends OutlookItem implements Parsable {
         return this.backingStore.get("reminderDateTime");
     }
     /**
-     * Gets the sensitivity property value. The sensitivity property
+     * Gets the sensitivity property value. Indicates the level of privacy for the task. Possible values are: normal, personal, private, confidential.
      * @return a {@link Sensitivity}
      */
     @jakarta.annotation.Nullable
@@ -173,7 +173,7 @@ public class OutlookTask extends OutlookItem implements Parsable {
         return this.backingStore.get("singleValueExtendedProperties");
     }
     /**
-     * Gets the startDateTime property value. The startDateTime property
+     * Gets the startDateTime property value. The date in the specified time zone when the task is to begin.
      * @return a {@link DateTimeTimeZone}
      */
     @jakarta.annotation.Nullable
@@ -181,7 +181,7 @@ public class OutlookTask extends OutlookItem implements Parsable {
         return this.backingStore.get("startDateTime");
     }
     /**
-     * Gets the status property value. The status property
+     * Gets the status property value. Indicates the state or progress of the task. Possible values are: notStarted, inProgress, completed, waitingOnOthers, deferred.
      * @return a {@link TaskStatus}
      */
     @jakarta.annotation.Nullable
@@ -189,7 +189,7 @@ public class OutlookTask extends OutlookItem implements Parsable {
         return this.backingStore.get("status");
     }
     /**
-     * Gets the subject property value. The subject property
+     * Gets the subject property value. A brief description or title of the task.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -265,14 +265,14 @@ public class OutlookTask extends OutlookItem implements Parsable {
         this.backingStore.set("hasAttachments", value);
     }
     /**
-     * Sets the importance property value. The importance property
+     * Sets the importance property value. The importance of the event. Possible values are: low, normal, high.
      * @param value Value to set for the importance property.
      */
     public void setImportance(@jakarta.annotation.Nullable final Importance value) {
         this.backingStore.set("importance", value);
     }
     /**
-     * Sets the isReminderOn property value. The isReminderOn property
+     * Sets the isReminderOn property value. Set to true if an alert is set to remind the user of the task.
      * @param value Value to set for the isReminderOn property.
      */
     public void setIsReminderOn(@jakarta.annotation.Nullable final Boolean value) {
@@ -286,35 +286,35 @@ public class OutlookTask extends OutlookItem implements Parsable {
         this.backingStore.set("multiValueExtendedProperties", value);
     }
     /**
-     * Sets the owner property value. The owner property
+     * Sets the owner property value. The name of the person who created the task.
      * @param value Value to set for the owner property.
      */
     public void setOwner(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("owner", value);
     }
     /**
-     * Sets the parentFolderId property value. The parentFolderId property
+     * Sets the parentFolderId property value. The unique identifier for the task's parent folder.
      * @param value Value to set for the parentFolderId property.
      */
     public void setParentFolderId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("parentFolderId", value);
     }
     /**
-     * Sets the recurrence property value. The recurrence property
+     * Sets the recurrence property value. The recurrence pattern for the task.
      * @param value Value to set for the recurrence property.
      */
     public void setRecurrence(@jakarta.annotation.Nullable final PatternedRecurrence value) {
         this.backingStore.set("recurrence", value);
     }
     /**
-     * Sets the reminderDateTime property value. The reminderDateTime property
+     * Sets the reminderDateTime property value. The date and time for a reminder alert of the task to occur.
      * @param value Value to set for the reminderDateTime property.
      */
     public void setReminderDateTime(@jakarta.annotation.Nullable final DateTimeTimeZone value) {
         this.backingStore.set("reminderDateTime", value);
     }
     /**
-     * Sets the sensitivity property value. The sensitivity property
+     * Sets the sensitivity property value. Indicates the level of privacy for the task. Possible values are: normal, personal, private, confidential.
      * @param value Value to set for the sensitivity property.
      */
     public void setSensitivity(@jakarta.annotation.Nullable final Sensitivity value) {
@@ -328,21 +328,21 @@ public class OutlookTask extends OutlookItem implements Parsable {
         this.backingStore.set("singleValueExtendedProperties", value);
     }
     /**
-     * Sets the startDateTime property value. The startDateTime property
+     * Sets the startDateTime property value. The date in the specified time zone when the task is to begin.
      * @param value Value to set for the startDateTime property.
      */
     public void setStartDateTime(@jakarta.annotation.Nullable final DateTimeTimeZone value) {
         this.backingStore.set("startDateTime", value);
     }
     /**
-     * Sets the status property value. The status property
+     * Sets the status property value. Indicates the state or progress of the task. Possible values are: notStarted, inProgress, completed, waitingOnOthers, deferred.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final TaskStatus value) {
         this.backingStore.set("status", value);
     }
     /**
-     * Sets the subject property value. The subject property
+     * Sets the subject property value. A brief description or title of the task.
      * @param value Value to set for the subject property.
      */
     public void setSubject(@jakarta.annotation.Nullable final String value) {

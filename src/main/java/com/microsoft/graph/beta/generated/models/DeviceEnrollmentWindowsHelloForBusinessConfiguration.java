@@ -37,7 +37,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
         return this.backingStore.get("enhancedBiometricsState");
     }
     /**
-     * Gets the enhancedSignInSecurity property value. Setting to configure Enahcned sign-in security. Default is enabled on one secure modality (face or fingerprint)
+     * Gets the enhancedSignInSecurity property value. Setting to configure Enhanced sign-in security. Default is Not Configured
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -193,7 +193,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
         this.backingStore.set("enhancedBiometricsState", value);
     }
     /**
-     * Sets the enhancedSignInSecurity property value. Setting to configure Enahcned sign-in security. Default is enabled on one secure modality (face or fingerprint)
+     * Sets the enhancedSignInSecurity property value. Setting to configure Enhanced sign-in security. Default is Not Configured
      * @param value Value to set for the enhancedSignInSecurity property.
      */
     public void setEnhancedSignInSecurity(@jakarta.annotation.Nullable final Integer value) {

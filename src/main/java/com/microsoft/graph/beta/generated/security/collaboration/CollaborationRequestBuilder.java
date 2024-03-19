@@ -64,7 +64,7 @@ public class CollaborationRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get collaboration from security
+     * Enables read and other actions on collaborative entities in Microsoft Defender.
      * @return a {@link CollaborationRoot}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -73,7 +73,7 @@ public class CollaborationRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get collaboration from security
+     * Enables read and other actions on collaborative entities in Microsoft Defender.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CollaborationRoot}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -131,7 +131,7 @@ public class CollaborationRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get collaboration from security
+     * Enables read and other actions on collaborative entities in Microsoft Defender.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +139,7 @@ public class CollaborationRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get collaboration from security
+     * Enables read and other actions on collaborative entities in Microsoft Defender.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -191,7 +191,7 @@ public class CollaborationRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get collaboration from security
+     * Enables read and other actions on collaborative entities in Microsoft Defender.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

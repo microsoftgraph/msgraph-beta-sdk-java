@@ -46,7 +46,7 @@ public class WindowsUniversalAppX extends MobileLobApp implements Parsable {
         return this.backingStore.get("applicableDeviceTypes");
     }
     /**
-     * Gets the committedContainedApps property value. The collection of contained apps in the committed mobileAppContent of a windowsUniversalAppX app.
+     * Gets the committedContainedApps property value. The collection of contained apps in the committed mobileAppContent of a windowsUniversalAppX app. This property is read-only.
      * @return a {@link java.util.List<MobileContainedApp>}
      */
     @jakarta.annotation.Nullable
@@ -151,7 +151,7 @@ public class WindowsUniversalAppX extends MobileLobApp implements Parsable {
         this.backingStore.set("applicableDeviceTypes", value);
     }
     /**
-     * Sets the committedContainedApps property value. The collection of contained apps in the committed mobileAppContent of a windowsUniversalAppX app.
+     * Sets the committedContainedApps property value. The collection of contained apps in the committed mobileAppContent of a windowsUniversalAppX app. This property is read-only.
      * @param value Value to set for the committedContainedApps property.
      */
     public void setCommittedContainedApps(@jakarta.annotation.Nullable final java.util.List<MobileContainedApp> value) {

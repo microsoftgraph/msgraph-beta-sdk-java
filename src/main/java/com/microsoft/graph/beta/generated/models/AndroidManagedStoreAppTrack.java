@@ -79,7 +79,7 @@ public class AndroidManagedStoreAppTrack implements AdditionalDataHolder, Backed
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the trackAlias property value. Friendly name for track.
+     * Gets the trackAlias property value. Friendly name for track. This property is read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -87,7 +87,7 @@ public class AndroidManagedStoreAppTrack implements AdditionalDataHolder, Backed
         return this.backingStore.get("trackAlias");
     }
     /**
-     * Gets the trackId property value. Unique track identifier.
+     * Gets the trackId property value. Unique track identifier. This property is read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -101,8 +101,6 @@ public class AndroidManagedStoreAppTrack implements AdditionalDataHolder, Backed
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
-        writer.writeStringValue("trackAlias", this.getTrackAlias());
-        writer.writeStringValue("trackId", this.getTrackId());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -128,14 +126,14 @@ public class AndroidManagedStoreAppTrack implements AdditionalDataHolder, Backed
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the trackAlias property value. Friendly name for track.
+     * Sets the trackAlias property value. Friendly name for track. This property is read-only.
      * @param value Value to set for the trackAlias property.
      */
     public void setTrackAlias(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("trackAlias", value);
     }
     /**
-     * Sets the trackId property value. Unique track identifier.
+     * Sets the trackId property value. Unique track identifier. This property is read-only.
      * @param value Value to set for the trackId property.
      */
     public void setTrackId(@jakarta.annotation.Nullable final String value) {

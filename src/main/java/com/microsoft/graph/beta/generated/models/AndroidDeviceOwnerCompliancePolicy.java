@@ -214,7 +214,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
         return this.backingStore.get("requireNoPendingSystemUpdates");
     }
     /**
-     * Gets the securityRequiredAndroidSafetyNetEvaluationType property value. Require a specific Play Integrity evaluation type for compliance.
+     * Gets the securityRequiredAndroidSafetyNetEvaluationType property value. Require a specific Play Integrity evaluation type for compliance. Possible values are: basic, hardwareBacked.
      * @return a {@link AndroidSafetyNetEvaluationType}
      */
     @jakarta.annotation.Nullable
@@ -419,7 +419,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
         this.backingStore.set("requireNoPendingSystemUpdates", value);
     }
     /**
-     * Sets the securityRequiredAndroidSafetyNetEvaluationType property value. Require a specific Play Integrity evaluation type for compliance.
+     * Sets the securityRequiredAndroidSafetyNetEvaluationType property value. Require a specific Play Integrity evaluation type for compliance. Possible values are: basic, hardwareBacked.
      * @param value Value to set for the securityRequiredAndroidSafetyNetEvaluationType property.
      */
     public void setSecurityRequiredAndroidSafetyNetEvaluationType(@jakarta.annotation.Nullable final AndroidSafetyNetEvaluationType value) {

@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import com.microsoft.kiota.store.BackedModel;
 import com.microsoft.kiota.store.BackingStore;
 import com.microsoft.kiota.store.BackingStoreFactorySingleton;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -56,6 +57,14 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Back
         return this.backingStore.get("applications");
     }
     /**
+     * Gets the authenticationFlows property value. Authentication flows included in the policy scope. For more information, see Conditional Access: Authentication flows.
+     * @return a {@link ConditionalAccessAuthenticationFlows}
+     */
+    @jakarta.annotation.Nullable
+    public ConditionalAccessAuthenticationFlows getAuthenticationFlows() {
+        return this.backingStore.get("authenticationFlows");
+    }
+    /**
      * Gets the backingStore property value. Stores model information.
      * @return a {@link BackingStore}
      */
@@ -101,12 +110,14 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Back
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(12);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(14);
         deserializerMap.put("applications", (n) -> { this.setApplications(n.getObjectValue(ConditionalAccessApplications::createFromDiscriminatorValue)); });
+        deserializerMap.put("authenticationFlows", (n) -> { this.setAuthenticationFlows(n.getObjectValue(ConditionalAccessAuthenticationFlows::createFromDiscriminatorValue)); });
         deserializerMap.put("clientApplications", (n) -> { this.setClientApplications(n.getObjectValue(ConditionalAccessClientApplications::createFromDiscriminatorValue)); });
         deserializerMap.put("clientAppTypes", (n) -> { this.setClientAppTypes(n.getCollectionOfEnumValues(ConditionalAccessClientApp::forValue)); });
         deserializerMap.put("devices", (n) -> { this.setDevices(n.getObjectValue(ConditionalAccessDevices::createFromDiscriminatorValue)); });
         deserializerMap.put("deviceStates", (n) -> { this.setDeviceStates(n.getObjectValue(ConditionalAccessDeviceStates::createFromDiscriminatorValue)); });
+        deserializerMap.put("insiderRiskLevels", (n) -> { this.setInsiderRiskLevels(n.getEnumSetValue(ConditionalAccessInsiderRiskLevels::forValue)); });
         deserializerMap.put("locations", (n) -> { this.setLocations(n.getObjectValue(ConditionalAccessLocations::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("platforms", (n) -> { this.setPlatforms(n.getObjectValue(ConditionalAccessPlatforms::createFromDiscriminatorValue)); });
@@ -115,6 +126,14 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Back
         deserializerMap.put("userRiskLevels", (n) -> { this.setUserRiskLevels(n.getCollectionOfEnumValues(RiskLevel::forValue)); });
         deserializerMap.put("users", (n) -> { this.setUsers(n.getObjectValue(ConditionalAccessUsers::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the insiderRiskLevels property value. The insiderRiskLevels property
+     * @return a {@link EnumSet<ConditionalAccessInsiderRiskLevels>}
+     */
+    @jakarta.annotation.Nullable
+    public EnumSet<ConditionalAccessInsiderRiskLevels> getInsiderRiskLevels() {
+        return this.backingStore.get("insiderRiskLevels");
     }
     /**
      * Gets the locations property value. Locations included in and excluded from the policy.
@@ -179,10 +198,12 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Back
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("applications", this.getApplications());
+        writer.writeObjectValue("authenticationFlows", this.getAuthenticationFlows());
         writer.writeObjectValue("clientApplications", this.getClientApplications());
         writer.writeCollectionOfEnumValues("clientAppTypes", this.getClientAppTypes());
         writer.writeObjectValue("devices", this.getDevices());
         writer.writeObjectValue("deviceStates", this.getDeviceStates());
+        writer.writeEnumSetValue("insiderRiskLevels", this.getInsiderRiskLevels());
         writer.writeObjectValue("locations", this.getLocations());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("platforms", this.getPlatforms());
@@ -205,6 +226,13 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Back
      */
     public void setApplications(@jakarta.annotation.Nullable final ConditionalAccessApplications value) {
         this.backingStore.set("applications", value);
+    }
+    /**
+     * Sets the authenticationFlows property value. Authentication flows included in the policy scope. For more information, see Conditional Access: Authentication flows.
+     * @param value Value to set for the authenticationFlows property.
+     */
+    public void setAuthenticationFlows(@jakarta.annotation.Nullable final ConditionalAccessAuthenticationFlows value) {
+        this.backingStore.set("authenticationFlows", value);
     }
     /**
      * Sets the backingStore property value. Stores model information.
@@ -241,6 +269,13 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Back
      */
     public void setDeviceStates(@jakarta.annotation.Nullable final ConditionalAccessDeviceStates value) {
         this.backingStore.set("deviceStates", value);
+    }
+    /**
+     * Sets the insiderRiskLevels property value. The insiderRiskLevels property
+     * @param value Value to set for the insiderRiskLevels property.
+     */
+    public void setInsiderRiskLevels(@jakarta.annotation.Nullable final EnumSet<ConditionalAccessInsiderRiskLevels> value) {
+        this.backingStore.set("insiderRiskLevels", value);
     }
     /**
      * Sets the locations property value. Locations included in and excluded from the policy.

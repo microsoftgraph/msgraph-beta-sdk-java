@@ -35,7 +35,7 @@ public class AnalyzedEmailDeliveryDetail implements AdditionalDataHolder, Backed
         return new AnalyzedEmailDeliveryDetail();
     }
     /**
-     * Gets the action property value. The action property
+     * Gets the action property value. The delivery action of the email. The possible values are: unknown, deliveredToJunk, delivered, blocked, replaced, unknownFutureValue.
      * @return a {@link DeliveryAction}
      */
     @jakarta.annotation.Nullable
@@ -76,7 +76,7 @@ public class AnalyzedEmailDeliveryDetail implements AdditionalDataHolder, Backed
         return deserializerMap;
     }
     /**
-     * Gets the location property value. The location property
+     * Gets the location property value. The delivery location of the email. The possible values are: unknown, inboxfolder, junkFolder, deletedFolder, quarantine, onpremexternal, failed, dropped, others, unknownFutureValue.
      * @return a {@link DeliveryLocation}
      */
     @jakarta.annotation.Nullable
@@ -103,7 +103,7 @@ public class AnalyzedEmailDeliveryDetail implements AdditionalDataHolder, Backed
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the action property value. The action property
+     * Sets the action property value. The delivery action of the email. The possible values are: unknown, deliveredToJunk, delivered, blocked, replaced, unknownFutureValue.
      * @param value Value to set for the action property.
      */
     public void setAction(@jakarta.annotation.Nullable final DeliveryAction value) {
@@ -125,7 +125,7 @@ public class AnalyzedEmailDeliveryDetail implements AdditionalDataHolder, Backed
         this.backingStore = value;
     }
     /**
-     * Sets the location property value. The location property
+     * Sets the location property value. The delivery location of the email. The possible values are: unknown, inboxfolder, junkFolder, deletedFolder, quarantine, onpremexternal, failed, dropped, others, unknownFutureValue.
      * @param value Value to set for the location property.
      */
     public void setLocation(@jakarta.annotation.Nullable final DeliveryLocation value) {

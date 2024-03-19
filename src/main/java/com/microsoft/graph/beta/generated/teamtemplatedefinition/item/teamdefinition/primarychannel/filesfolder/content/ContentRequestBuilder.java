@@ -38,7 +38,7 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/teamTemplateDefinition/{teamTemplateDefinition%2Did}/teamDefinition/primaryChannel/filesFolder/content{?%24format*}", rawUrl);
     }
     /**
-     * The content stream, if the item represents a file.
+     * Get content for the navigation property filesFolder from teamTemplateDefinition
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/channel-get-filesfolder?view=graph-rest-1.0">Find more info here</a>
@@ -48,7 +48,7 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * The content stream, if the item represents a file.
+     * Get content for the navigation property filesFolder from teamTemplateDefinition
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -62,7 +62,7 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitive(requestInfo, errorMapping, InputStream.class);
     }
     /**
-     * The content stream, if the item represents a file.
+     * Update content for the navigation property filesFolder in teamTemplateDefinition
      * @param body Binary request body
      * @return a {@link DriveItem}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -72,7 +72,7 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
         return put(body, null);
     }
     /**
-     * The content stream, if the item represents a file.
+     * Update content for the navigation property filesFolder in teamTemplateDefinition
      * @param body Binary request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DriveItem}
@@ -87,7 +87,7 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DriveItem::createFromDiscriminatorValue);
     }
     /**
-     * The content stream, if the item represents a file.
+     * Get content for the navigation property filesFolder from teamTemplateDefinition
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The content stream, if the item represents a file.
+     * Get content for the navigation property filesFolder from teamTemplateDefinition
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -107,7 +107,7 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The content stream, if the item represents a file.
+     * Update content for the navigation property filesFolder in teamTemplateDefinition
      * @param body Binary request body
      * @return a {@link RequestInformation}
      */
@@ -116,7 +116,7 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
         return toPutRequestInformation(body, null);
     }
     /**
-     * The content stream, if the item represents a file.
+     * Update content for the navigation property filesFolder in teamTemplateDefinition
      * @param body Binary request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -141,7 +141,7 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
         return new ContentRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The content stream, if the item represents a file.
+     * Get content for the navigation property filesFolder from teamTemplateDefinition
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

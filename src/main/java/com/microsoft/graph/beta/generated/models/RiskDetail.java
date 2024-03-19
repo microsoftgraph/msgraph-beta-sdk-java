@@ -19,7 +19,10 @@ public enum RiskDetail implements ValuedEnum {
     UnknownFutureValue("unknownFutureValue"),
     AdminConfirmedServicePrincipalCompromised("adminConfirmedServicePrincipalCompromised"),
     AdminDismissedAllRiskForServicePrincipal("adminDismissedAllRiskForServicePrincipal"),
-    M365DAdminDismissedDetection("m365DAdminDismissedDetection");
+    M365DAdminDismissedDetection("m365DAdminDismissedDetection"),
+    UserChangedPasswordOnPremises("userChangedPasswordOnPremises"),
+    AdminDismissedRiskForSignIn("adminDismissedRiskForSignIn"),
+    AdminConfirmedAccountSafe("adminConfirmedAccountSafe");
     public final String value;
     RiskDetail(final String value) {
         this.value = value;
@@ -45,6 +48,9 @@ public enum RiskDetail implements ValuedEnum {
             case "adminConfirmedServicePrincipalCompromised": return AdminConfirmedServicePrincipalCompromised;
             case "adminDismissedAllRiskForServicePrincipal": return AdminDismissedAllRiskForServicePrincipal;
             case "m365DAdminDismissedDetection": return M365DAdminDismissedDetection;
+            case "userChangedPasswordOnPremises": return UserChangedPasswordOnPremises;
+            case "adminDismissedRiskForSignIn": return AdminDismissedRiskForSignIn;
+            case "adminConfirmedAccountSafe": return AdminConfirmedAccountSafe;
             default: return null;
         }
     }

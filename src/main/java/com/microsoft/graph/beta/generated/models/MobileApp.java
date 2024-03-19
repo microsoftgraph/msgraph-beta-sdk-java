@@ -91,7 +91,7 @@ public class MobileApp extends Entity implements Parsable {
         return this.backingStore.get("categories");
     }
     /**
-     * Gets the createdDateTime property value. The date and time the app was created.
+     * Gets the createdDateTime property value. The date and time the app was created. This property is read-only.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -99,7 +99,7 @@ public class MobileApp extends Entity implements Parsable {
         return this.backingStore.get("createdDateTime");
     }
     /**
-     * Gets the dependentAppCount property value. The total number of dependencies the child app has.
+     * Gets the dependentAppCount property value. The total number of dependencies the child app has. This property is read-only.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -170,7 +170,7 @@ public class MobileApp extends Entity implements Parsable {
         return this.backingStore.get("informationUrl");
     }
     /**
-     * Gets the isAssigned property value. The value indicating whether the app is assigned to at least one group.
+     * Gets the isAssigned property value. The value indicating whether the app is assigned to at least one group. This property is read-only.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -194,7 +194,7 @@ public class MobileApp extends Entity implements Parsable {
         return this.backingStore.get("largeIcon");
     }
     /**
-     * Gets the lastModifiedDateTime property value. The date and time the app was last modified.
+     * Gets the lastModifiedDateTime property value. The date and time the app was last modified. This property is read-only.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -242,7 +242,7 @@ public class MobileApp extends Entity implements Parsable {
         return this.backingStore.get("publishingState");
     }
     /**
-     * Gets the relationships property value. List of relationships for this mobile app.
+     * Gets the relationships property value. The set of direct relationships for this app.
      * @return a {@link java.util.List<MobileAppRelationship>}
      */
     @jakarta.annotation.Nullable
@@ -258,7 +258,7 @@ public class MobileApp extends Entity implements Parsable {
         return this.backingStore.get("roleScopeTagIds");
     }
     /**
-     * Gets the supersededAppCount property value. The total number of apps this app is directly or indirectly superseded by.
+     * Gets the supersededAppCount property value. The total number of apps this app is directly or indirectly superseded by. This property is read-only.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -266,7 +266,7 @@ public class MobileApp extends Entity implements Parsable {
         return this.backingStore.get("supersededAppCount");
     }
     /**
-     * Gets the supersedingAppCount property value. The total number of apps this app directly or indirectly supersedes.
+     * Gets the supersedingAppCount property value. The total number of apps this app directly or indirectly supersedes. This property is read-only.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -274,7 +274,7 @@ public class MobileApp extends Entity implements Parsable {
         return this.backingStore.get("supersedingAppCount");
     }
     /**
-     * Gets the uploadState property value. The upload state.
+     * Gets the uploadState property value. The upload state. Possible values are: 0 - Not Ready, 1 - Ready, 2 - Processing. This property is read-only.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -290,16 +290,12 @@ public class MobileApp extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("assignments", this.getAssignments());
         writer.writeCollectionOfObjectValues("categories", this.getCategories());
-        writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
-        writer.writeIntegerValue("dependentAppCount", this.getDependentAppCount());
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("developer", this.getDeveloper());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("informationUrl", this.getInformationUrl());
-        writer.writeBooleanValue("isAssigned", this.getIsAssigned());
         writer.writeBooleanValue("isFeatured", this.getIsFeatured());
         writer.writeObjectValue("largeIcon", this.getLargeIcon());
-        writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
         writer.writeStringValue("notes", this.getNotes());
         writer.writeStringValue("owner", this.getOwner());
         writer.writeStringValue("privacyInformationUrl", this.getPrivacyInformationUrl());
@@ -307,9 +303,6 @@ public class MobileApp extends Entity implements Parsable {
         writer.writeEnumValue("publishingState", this.getPublishingState());
         writer.writeCollectionOfObjectValues("relationships", this.getRelationships());
         writer.writeCollectionOfPrimitiveValues("roleScopeTagIds", this.getRoleScopeTagIds());
-        writer.writeIntegerValue("supersededAppCount", this.getSupersededAppCount());
-        writer.writeIntegerValue("supersedingAppCount", this.getSupersedingAppCount());
-        writer.writeIntegerValue("uploadState", this.getUploadState());
     }
     /**
      * Sets the assignments property value. The list of group assignments for this mobile app.
@@ -326,14 +319,14 @@ public class MobileApp extends Entity implements Parsable {
         this.backingStore.set("categories", value);
     }
     /**
-     * Sets the createdDateTime property value. The date and time the app was created.
+     * Sets the createdDateTime property value. The date and time the app was created. This property is read-only.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the dependentAppCount property value. The total number of dependencies the child app has.
+     * Sets the dependentAppCount property value. The total number of dependencies the child app has. This property is read-only.
      * @param value Value to set for the dependentAppCount property.
      */
     public void setDependentAppCount(@jakarta.annotation.Nullable final Integer value) {
@@ -368,7 +361,7 @@ public class MobileApp extends Entity implements Parsable {
         this.backingStore.set("informationUrl", value);
     }
     /**
-     * Sets the isAssigned property value. The value indicating whether the app is assigned to at least one group.
+     * Sets the isAssigned property value. The value indicating whether the app is assigned to at least one group. This property is read-only.
      * @param value Value to set for the isAssigned property.
      */
     public void setIsAssigned(@jakarta.annotation.Nullable final Boolean value) {
@@ -389,7 +382,7 @@ public class MobileApp extends Entity implements Parsable {
         this.backingStore.set("largeIcon", value);
     }
     /**
-     * Sets the lastModifiedDateTime property value. The date and time the app was last modified.
+     * Sets the lastModifiedDateTime property value. The date and time the app was last modified. This property is read-only.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -431,7 +424,7 @@ public class MobileApp extends Entity implements Parsable {
         this.backingStore.set("publishingState", value);
     }
     /**
-     * Sets the relationships property value. List of relationships for this mobile app.
+     * Sets the relationships property value. The set of direct relationships for this app.
      * @param value Value to set for the relationships property.
      */
     public void setRelationships(@jakarta.annotation.Nullable final java.util.List<MobileAppRelationship> value) {
@@ -445,21 +438,21 @@ public class MobileApp extends Entity implements Parsable {
         this.backingStore.set("roleScopeTagIds", value);
     }
     /**
-     * Sets the supersededAppCount property value. The total number of apps this app is directly or indirectly superseded by.
+     * Sets the supersededAppCount property value. The total number of apps this app is directly or indirectly superseded by. This property is read-only.
      * @param value Value to set for the supersededAppCount property.
      */
     public void setSupersededAppCount(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("supersededAppCount", value);
     }
     /**
-     * Sets the supersedingAppCount property value. The total number of apps this app directly or indirectly supersedes.
+     * Sets the supersedingAppCount property value. The total number of apps this app directly or indirectly supersedes. This property is read-only.
      * @param value Value to set for the supersedingAppCount property.
      */
     public void setSupersedingAppCount(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("supersedingAppCount", value);
     }
     /**
-     * Sets the uploadState property value. The upload state.
+     * Sets the uploadState property value. The upload state. Possible values are: 0 - Not Ready, 1 - Ready, 2 - Processing. This property is read-only.
      * @param value Value to set for the uploadState property.
      */
     public void setUploadState(@jakarta.annotation.Nullable final Integer value) {

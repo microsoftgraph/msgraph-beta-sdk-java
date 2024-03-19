@@ -41,7 +41,7 @@ public class MobileAppSupersedence extends MobileAppRelationship implements Pars
         return deserializerMap;
     }
     /**
-     * Gets the supersededAppCount property value. The total number of apps directly or indirectly superseded by the child app.
+     * Gets the supersededAppCount property value. The total number of apps directly or indirectly superseded by the child app. This property is read-only.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -57,7 +57,7 @@ public class MobileAppSupersedence extends MobileAppRelationship implements Pars
         return this.backingStore.get("supersedenceType");
     }
     /**
-     * Gets the supersedingAppCount property value. The total number of apps directly or indirectly superseding the parent app.
+     * Gets the supersedingAppCount property value. The total number of apps directly or indirectly superseding the parent app. This property is read-only.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -71,12 +71,10 @@ public class MobileAppSupersedence extends MobileAppRelationship implements Pars
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeIntegerValue("supersededAppCount", this.getSupersededAppCount());
         writer.writeEnumValue("supersedenceType", this.getSupersedenceType());
-        writer.writeIntegerValue("supersedingAppCount", this.getSupersedingAppCount());
     }
     /**
-     * Sets the supersededAppCount property value. The total number of apps directly or indirectly superseded by the child app.
+     * Sets the supersededAppCount property value. The total number of apps directly or indirectly superseded by the child app. This property is read-only.
      * @param value Value to set for the supersededAppCount property.
      */
     public void setSupersededAppCount(@jakarta.annotation.Nullable final Integer value) {
@@ -90,7 +88,7 @@ public class MobileAppSupersedence extends MobileAppRelationship implements Pars
         this.backingStore.set("supersedenceType", value);
     }
     /**
-     * Sets the supersedingAppCount property value. The total number of apps directly or indirectly superseding the parent app.
+     * Sets the supersedingAppCount property value. The total number of apps directly or indirectly superseding the parent app. This property is read-only.
      * @param value Value to set for the supersedingAppCount property.
      */
     public void setSupersedingAppCount(@jakarta.annotation.Nullable final Integer value) {

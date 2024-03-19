@@ -69,9 +69,10 @@ public class TunnelConfiguration implements AdditionalDataHolder, BackedModel, P
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("preSharedKey", (n) -> { this.setPreSharedKey(n.getStringValue()); });
+        deserializerMap.put("zoneRedundancyPreSharedKey", (n) -> { this.setZoneRedundancyPreSharedKey(n.getStringValue()); });
         return deserializerMap;
     }
     /**
@@ -91,6 +92,14 @@ public class TunnelConfiguration implements AdditionalDataHolder, BackedModel, P
         return this.backingStore.get("preSharedKey");
     }
     /**
+     * Gets the zoneRedundancyPreSharedKey property value. The zoneRedundancyPreSharedKey property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getZoneRedundancyPreSharedKey() {
+        return this.backingStore.get("zoneRedundancyPreSharedKey");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -98,6 +107,7 @@ public class TunnelConfiguration implements AdditionalDataHolder, BackedModel, P
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("preSharedKey", this.getPreSharedKey());
+        writer.writeStringValue("zoneRedundancyPreSharedKey", this.getZoneRedundancyPreSharedKey());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -128,5 +138,12 @@ public class TunnelConfiguration implements AdditionalDataHolder, BackedModel, P
      */
     public void setPreSharedKey(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("preSharedKey", value);
+    }
+    /**
+     * Sets the zoneRedundancyPreSharedKey property value. The zoneRedundancyPreSharedKey property
+     * @param value Value to set for the zoneRedundancyPreSharedKey property.
+     */
+    public void setZoneRedundancyPreSharedKey(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("zoneRedundancyPreSharedKey", value);
     }
 }
