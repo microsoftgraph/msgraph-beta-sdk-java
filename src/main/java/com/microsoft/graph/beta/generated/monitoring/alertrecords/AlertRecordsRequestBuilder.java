@@ -5,6 +5,7 @@ import com.microsoft.graph.beta.models.devicemanagement.AlertRecordCollectionRes
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.monitoring.alertrecords.count.CountRequestBuilder;
 import com.microsoft.graph.beta.monitoring.alertrecords.item.AlertRecordItemRequestBuilder;
+import com.microsoft.graph.beta.monitoring.alertrecords.microsoftgraphdevicemanagementchangealertrecordsportalnotificationassent.MicrosoftGraphDeviceManagementChangeAlertRecordsPortalNotificationAsSentRequestBuilder;
 import com.microsoft.graph.beta.monitoring.alertrecords.microsoftgraphdevicemanagementgetportalnotifications.MicrosoftGraphDeviceManagementGetPortalNotificationsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -31,6 +32,14 @@ public class AlertRecordsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the changeAlertRecordsPortalNotificationAsSent method.
+     * @return a {@link MicrosoftGraphDeviceManagementChangeAlertRecordsPortalNotificationAsSentRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public MicrosoftGraphDeviceManagementChangeAlertRecordsPortalNotificationAsSentRequestBuilder microsoftGraphDeviceManagementChangeAlertRecordsPortalNotificationAsSent() {
+        return new MicrosoftGraphDeviceManagementChangeAlertRecordsPortalNotificationAsSentRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the getPortalNotifications method.

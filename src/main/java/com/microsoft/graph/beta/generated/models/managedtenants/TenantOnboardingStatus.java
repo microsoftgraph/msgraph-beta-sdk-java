@@ -9,7 +9,8 @@ public enum TenantOnboardingStatus implements ValuedEnum {
     InProcess("inProcess"),
     Active("active"),
     Inactive("inactive"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    Disabled("disabled");
     public final String value;
     TenantOnboardingStatus(final String value) {
         this.value = value;
@@ -25,6 +26,7 @@ public enum TenantOnboardingStatus implements ValuedEnum {
             case "active": return Active;
             case "inactive": return Inactive;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "disabled": return Disabled;
             default: return null;
         }
     }

@@ -25,6 +25,14 @@ public class CloudPcFrontLineServicePlan extends Entity implements Parsable {
         return new CloudPcFrontLineServicePlan();
     }
     /**
+     * Gets the allotmentLicensesCount property value. The allotmentLicensesCount property
+     * @return a {@link Integer}
+     */
+    @jakarta.annotation.Nullable
+    public Integer getAllotmentLicensesCount() {
+        return this.backingStore.get("allotmentLicensesCount");
+    }
+    /**
      * Gets the displayName property value. The display name of the front-line service plan. For example, 2vCPU/8GB/128GB Front-line or 4vCPU/16GB/256GB Front-line.
      * @return a {@link String}
      */
@@ -39,6 +47,7 @@ public class CloudPcFrontLineServicePlan extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("allotmentLicensesCount", (n) -> { this.setAllotmentLicensesCount(n.getIntegerValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("totalCount", (n) -> { this.setTotalCount(n.getIntegerValue()); });
         deserializerMap.put("usedCount", (n) -> { this.setUsedCount(n.getIntegerValue()); });
@@ -67,9 +76,17 @@ public class CloudPcFrontLineServicePlan extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeIntegerValue("allotmentLicensesCount", this.getAllotmentLicensesCount());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeIntegerValue("totalCount", this.getTotalCount());
         writer.writeIntegerValue("usedCount", this.getUsedCount());
+    }
+    /**
+     * Sets the allotmentLicensesCount property value. The allotmentLicensesCount property
+     * @param value Value to set for the allotmentLicensesCount property.
+     */
+    public void setAllotmentLicensesCount(@jakarta.annotation.Nullable final Integer value) {
+        this.backingStore.set("allotmentLicensesCount", value);
     }
     /**
      * Sets the displayName property value. The display name of the front-line service plan. For example, 2vCPU/8GB/128GB Front-line or 4vCPU/16GB/256GB Front-line.

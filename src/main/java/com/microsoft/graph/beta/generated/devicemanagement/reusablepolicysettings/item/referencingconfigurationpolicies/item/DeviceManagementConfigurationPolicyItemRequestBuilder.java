@@ -1,9 +1,11 @@
 package com.microsoft.graph.beta.devicemanagement.reusablepolicysettings.item.referencingconfigurationpolicies.item;
 
 import com.microsoft.graph.beta.devicemanagement.reusablepolicysettings.item.referencingconfigurationpolicies.item.assign.AssignRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.reusablepolicysettings.item.referencingconfigurationpolicies.item.assignjustintimeconfiguration.AssignJustInTimeConfigurationRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.reusablepolicysettings.item.referencingconfigurationpolicies.item.assignments.AssignmentsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.reusablepolicysettings.item.referencingconfigurationpolicies.item.createcopy.CreateCopyRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.reusablepolicysettings.item.referencingconfigurationpolicies.item.reorder.ReorderRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.reusablepolicysettings.item.referencingconfigurationpolicies.item.retrievejustintimeconfiguration.RetrieveJustInTimeConfigurationRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.reusablepolicysettings.item.referencingconfigurationpolicies.item.retrievelatestupgradedefaultbaselinepolicy.RetrieveLatestUpgradeDefaultBaselinePolicyRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.reusablepolicysettings.item.referencingconfigurationpolicies.item.settings.SettingsRequestBuilder;
 import com.microsoft.graph.beta.models.DeviceManagementConfigurationPolicy;
@@ -35,6 +37,14 @@ public class DeviceManagementConfigurationPolicyItemRequestBuilder extends BaseR
         return new AssignRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to call the assignJustInTimeConfiguration method.
+     * @return a {@link AssignJustInTimeConfigurationRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public AssignJustInTimeConfigurationRequestBuilder assignJustInTimeConfiguration() {
+        return new AssignJustInTimeConfigurationRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the assignments property of the microsoft.graph.deviceManagementConfigurationPolicy entity.
      * @return a {@link AssignmentsRequestBuilder}
      */
@@ -57,6 +67,14 @@ public class DeviceManagementConfigurationPolicyItemRequestBuilder extends BaseR
     @jakarta.annotation.Nonnull
     public ReorderRequestBuilder reorder() {
         return new ReorderRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the retrieveJustInTimeConfiguration method.
+     * @return a {@link RetrieveJustInTimeConfigurationRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RetrieveJustInTimeConfigurationRequestBuilder retrieveJustInTimeConfiguration() {
+        return new RetrieveJustInTimeConfigurationRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the retrieveLatestUpgradeDefaultBaselinePolicy method.

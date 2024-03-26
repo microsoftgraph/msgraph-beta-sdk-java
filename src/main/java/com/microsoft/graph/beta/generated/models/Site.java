@@ -27,7 +27,7 @@ public class Site extends BaseItem implements Parsable {
         return new Site();
     }
     /**
-     * Gets the analytics property value. Analytics about the view activities that took place in this site.
+     * Gets the analytics property value. Analytics about the view activities that took place on this site.
      * @return a {@link ItemAnalytics}
      */
     @jakarta.annotation.Nullable
@@ -83,7 +83,7 @@ public class Site extends BaseItem implements Parsable {
         return this.backingStore.get("drives");
     }
     /**
-     * Gets the externalColumns property value. The collection of column definitions available in the site that are referenced from the sites in the parent hierarchy of the current site.
+     * Gets the externalColumns property value. The collection of column definitions available in the site that is referenced from the sites in the parent hierarchy of the current site.
      * @return a {@link java.util.List<ColumnDefinition>}
      */
     @jakarta.annotation.Nullable
@@ -139,7 +139,7 @@ public class Site extends BaseItem implements Parsable {
         return this.backingStore.get("isPersonalSite");
     }
     /**
-     * Gets the items property value. Used to address any item contained in this site. This collection cannot be enumerated.
+     * Gets the items property value. Used to address any item contained in this site. This collection can't be enumerated.
      * @return a {@link java.util.List<BaseItem>}
      */
     @jakarta.annotation.Nullable
@@ -171,7 +171,7 @@ public class Site extends BaseItem implements Parsable {
         return this.backingStore.get("operations");
     }
     /**
-     * Gets the pages property value. The collection of pages in the baseSitePages list in this site.
+     * Gets the pages property value. The collection of pages in the baseSitePages list on this site.
      * @return a {@link java.util.List<BaseSitePage>}
      */
     @jakarta.annotation.Nullable
@@ -195,7 +195,7 @@ public class Site extends BaseItem implements Parsable {
         return this.backingStore.get("recycleBin");
     }
     /**
-     * Gets the root property value. If present, indicates that this is the root site in the site collection. Read-only.
+     * Gets the root property value. If present, provides the root site in the site collection. Read-only.
      * @return a {@link Root}
      */
     @jakarta.annotation.Nullable
@@ -274,7 +274,7 @@ public class Site extends BaseItem implements Parsable {
         writer.writeObjectValue("termStore", this.getTermStore());
     }
     /**
-     * Sets the analytics property value. Analytics about the view activities that took place in this site.
+     * Sets the analytics property value. Analytics about the view activities that took place on this site.
      * @param value Value to set for the analytics property.
      */
     public void setAnalytics(@jakarta.annotation.Nullable final ItemAnalytics value) {
@@ -323,7 +323,7 @@ public class Site extends BaseItem implements Parsable {
         this.backingStore.set("drives", value);
     }
     /**
-     * Sets the externalColumns property value. The collection of column definitions available in the site that are referenced from the sites in the parent hierarchy of the current site.
+     * Sets the externalColumns property value. The collection of column definitions available in the site that is referenced from the sites in the parent hierarchy of the current site.
      * @param value Value to set for the externalColumns property.
      */
     public void setExternalColumns(@jakarta.annotation.Nullable final java.util.List<ColumnDefinition> value) {
@@ -344,7 +344,7 @@ public class Site extends BaseItem implements Parsable {
         this.backingStore.set("isPersonalSite", value);
     }
     /**
-     * Sets the items property value. Used to address any item contained in this site. This collection cannot be enumerated.
+     * Sets the items property value. Used to address any item contained in this site. This collection can't be enumerated.
      * @param value Value to set for the items property.
      */
     public void setItems(@jakarta.annotation.Nullable final java.util.List<BaseItem> value) {
@@ -372,7 +372,7 @@ public class Site extends BaseItem implements Parsable {
         this.backingStore.set("operations", value);
     }
     /**
-     * Sets the pages property value. The collection of pages in the baseSitePages list in this site.
+     * Sets the pages property value. The collection of pages in the baseSitePages list on this site.
      * @param value Value to set for the pages property.
      */
     public void setPages(@jakarta.annotation.Nullable final java.util.List<BaseSitePage> value) {
@@ -393,7 +393,7 @@ public class Site extends BaseItem implements Parsable {
         this.backingStore.set("recycleBin", value);
     }
     /**
-     * Sets the root property value. If present, indicates that this is the root site in the site collection. Read-only.
+     * Sets the root property value. If present, provides the root site in the site collection. Read-only.
      * @param value Value to set for the root property.
      */
     public void setRoot(@jakarta.annotation.Nullable final Root value) {

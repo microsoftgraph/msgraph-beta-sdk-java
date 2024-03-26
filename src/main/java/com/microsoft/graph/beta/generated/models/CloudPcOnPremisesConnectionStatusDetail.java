@@ -57,7 +57,7 @@ public class CloudPcOnPremisesConnectionStatusDetail implements AdditionalDataHo
         return this.backingStore;
     }
     /**
-     * Gets the endDateTime property value. The endDateTime property
+     * Gets the endDateTime property value. The end time of the connection health check. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -78,7 +78,7 @@ public class CloudPcOnPremisesConnectionStatusDetail implements AdditionalDataHo
         return deserializerMap;
     }
     /**
-     * Gets the healthChecks property value. The healthChecks property
+     * Gets the healthChecks property value. All checks that are done on the connection.
      * @return a {@link java.util.List<CloudPcOnPremisesConnectionHealthCheck>}
      */
     @jakarta.annotation.Nullable
@@ -94,7 +94,7 @@ public class CloudPcOnPremisesConnectionStatusDetail implements AdditionalDataHo
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the startDateTime property value. The startDateTime property
+     * Gets the startDateTime property value. The start time of the connection health check. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -129,14 +129,14 @@ public class CloudPcOnPremisesConnectionStatusDetail implements AdditionalDataHo
         this.backingStore = value;
     }
     /**
-     * Sets the endDateTime property value. The endDateTime property
+     * Sets the endDateTime property value. The end time of the connection health check. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the endDateTime property.
      */
     public void setEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("endDateTime", value);
     }
     /**
-     * Sets the healthChecks property value. The healthChecks property
+     * Sets the healthChecks property value. All checks that are done on the connection.
      * @param value Value to set for the healthChecks property.
      */
     public void setHealthChecks(@jakarta.annotation.Nullable final java.util.List<CloudPcOnPremisesConnectionHealthCheck> value) {
@@ -150,7 +150,7 @@ public class CloudPcOnPremisesConnectionStatusDetail implements AdditionalDataHo
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the startDateTime property value. The startDateTime property
+     * Sets the startDateTime property value. The start time of the connection health check. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the startDateTime property.
      */
     public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

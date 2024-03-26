@@ -48,7 +48,7 @@ public class MobileAppCategory extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the lastModifiedDateTime property value. The date and time the mobileAppCategory was last modified.
+     * Gets the lastModifiedDateTime property value. The date and time the mobileAppCategory was last modified. This property is read-only.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -63,7 +63,6 @@ public class MobileAppCategory extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
-        writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
     }
     /**
      * Sets the displayName property value. The name of the app category.
@@ -73,7 +72,7 @@ public class MobileAppCategory extends Entity implements Parsable {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the lastModifiedDateTime property value. The date and time the mobileAppCategory was last modified.
+     * Sets the lastModifiedDateTime property value. The date and time the mobileAppCategory was last modified. This property is read-only.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

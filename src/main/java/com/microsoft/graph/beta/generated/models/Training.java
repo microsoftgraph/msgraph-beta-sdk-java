@@ -50,6 +50,14 @@ public class Training extends Entity implements Parsable {
         return this.backingStore.get("createdDateTime");
     }
     /**
+     * Gets the customUrl property value. The customUrl property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getCustomUrl() {
+        return this.backingStore.get("customUrl");
+    }
+    /**
      * Gets the description property value. The description for the training.
      * @return a {@link String}
      */
@@ -83,6 +91,7 @@ public class Training extends Entity implements Parsable {
         deserializerMap.put("availabilityStatus", (n) -> { this.setAvailabilityStatus(n.getEnumValue(TrainingAvailabilityStatus::forValue)); });
         deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(EmailIdentity::createFromDiscriminatorValue)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("customUrl", (n) -> { this.setCustomUrl(n.getStringValue()); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("durationInMinutes", (n) -> { this.setDurationInMinutes(n.getIntegerValue()); });
@@ -170,6 +179,7 @@ public class Training extends Entity implements Parsable {
         writer.writeEnumValue("availabilityStatus", this.getAvailabilityStatus());
         writer.writeObjectValue("createdBy", this.getCreatedBy());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
+        writer.writeStringValue("customUrl", this.getCustomUrl());
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeIntegerValue("durationInMinutes", this.getDurationInMinutes());
@@ -202,6 +212,13 @@ public class Training extends Entity implements Parsable {
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("createdDateTime", value);
+    }
+    /**
+     * Sets the customUrl property value. The customUrl property
+     * @param value Value to set for the customUrl property.
+     */
+    public void setCustomUrl(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("customUrl", value);
     }
     /**
      * Sets the description property value. The description for the training.

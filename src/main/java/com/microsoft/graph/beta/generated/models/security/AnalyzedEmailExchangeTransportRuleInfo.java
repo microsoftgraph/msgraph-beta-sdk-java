@@ -68,7 +68,7 @@ public class AnalyzedEmailExchangeTransportRuleInfo implements AdditionalDataHol
         return deserializerMap;
     }
     /**
-     * Gets the name property value. The name property
+     * Gets the name property value. Name of the Exchange transport rules (ETRs) that are part of the email.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -84,7 +84,7 @@ public class AnalyzedEmailExchangeTransportRuleInfo implements AdditionalDataHol
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the ruleId property value. The ruleId property
+     * Gets the ruleId property value. The ETR rule ID.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -118,7 +118,7 @@ public class AnalyzedEmailExchangeTransportRuleInfo implements AdditionalDataHol
         this.backingStore = value;
     }
     /**
-     * Sets the name property value. The name property
+     * Sets the name property value. Name of the Exchange transport rules (ETRs) that are part of the email.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
@@ -132,7 +132,7 @@ public class AnalyzedEmailExchangeTransportRuleInfo implements AdditionalDataHol
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the ruleId property value. The ruleId property
+     * Sets the ruleId property value. The ETR rule ID.
      * @param value Value to set for the ruleId property.
      */
     public void setRuleId(@jakarta.annotation.Nullable final String value) {

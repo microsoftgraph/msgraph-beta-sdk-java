@@ -69,7 +69,7 @@ public class AnalyzedEmailSenderDetail implements AdditionalDataHolder, BackedMo
         return deserializerMap;
     }
     /**
-     * Gets the fromAddress property value. The fromAddress property
+     * Gets the fromAddress property value. The sender email address in the mail From header, also known as the envelope sender or the P1 sender.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -77,7 +77,7 @@ public class AnalyzedEmailSenderDetail implements AdditionalDataHolder, BackedMo
         return this.backingStore.get("fromAddress");
     }
     /**
-     * Gets the ipv4 property value. The ipv4 property
+     * Gets the ipv4 property value. The IPv4 address of the last detected mail server that relayed the message.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -85,7 +85,7 @@ public class AnalyzedEmailSenderDetail implements AdditionalDataHolder, BackedMo
         return this.backingStore.get("ipv4");
     }
     /**
-     * Gets the mailFromAddress property value. The mailFromAddress property
+     * Gets the mailFromAddress property value. The sender email address in the From header, which is visible to email recipients on their email clients. Also known as P2 sender.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -128,21 +128,21 @@ public class AnalyzedEmailSenderDetail implements AdditionalDataHolder, BackedMo
         this.backingStore = value;
     }
     /**
-     * Sets the fromAddress property value. The fromAddress property
+     * Sets the fromAddress property value. The sender email address in the mail From header, also known as the envelope sender or the P1 sender.
      * @param value Value to set for the fromAddress property.
      */
     public void setFromAddress(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("fromAddress", value);
     }
     /**
-     * Sets the ipv4 property value. The ipv4 property
+     * Sets the ipv4 property value. The IPv4 address of the last detected mail server that relayed the message.
      * @param value Value to set for the ipv4 property.
      */
     public void setIpv4(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("ipv4", value);
     }
     /**
-     * Sets the mailFromAddress property value. The mailFromAddress property
+     * Sets the mailFromAddress property value. The sender email address in the From header, which is visible to email recipients on their email clients. Also known as P2 sender.
      * @param value Value to set for the mailFromAddress property.
      */
     public void setMailFromAddress(@jakarta.annotation.Nullable final String value) {

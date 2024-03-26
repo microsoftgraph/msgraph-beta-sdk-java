@@ -27,7 +27,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
         return new AnalyzedEmail();
     }
     /**
-     * Gets the alertIds property value. The alertIds property
+     * Gets the alertIds property value. A collection of values that contain the IDs of any alerts associated with the email.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -35,7 +35,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
         return this.backingStore.get("alertIds");
     }
     /**
-     * Gets the attachments property value. The attachments property
+     * Gets the attachments property value. A collection of the attachments in the email.
      * @return a {@link java.util.List<AnalyzedEmailAttachment>}
      */
     @jakarta.annotation.Nullable
@@ -43,7 +43,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
         return this.backingStore.get("attachments");
     }
     /**
-     * Gets the attachmentsCount property value. The attachmentsCount property
+     * Gets the attachmentsCount property value. The number of attachments in the email.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -51,7 +51,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
         return this.backingStore.get("attachmentsCount");
     }
     /**
-     * Gets the authenticationDetails property value. The authenticationDetails property
+     * Gets the authenticationDetails property value. The authentication details associated with the email.
      * @return a {@link AnalyzedEmailAuthenticationDetail}
      */
     @jakarta.annotation.Nullable
@@ -59,7 +59,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
         return this.backingStore.get("authenticationDetails");
     }
     /**
-     * Gets the bulkComplaintLevel property value. The bulkComplaintLevel property
+     * Gets the bulkComplaintLevel property value. The bulk complaint level of the email. A higher level is more likely to be spam.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -67,7 +67,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
         return this.backingStore.get("bulkComplaintLevel");
     }
     /**
-     * Gets the contexts property value. The contexts property
+     * Gets the contexts property value. Provides context of the email.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -75,7 +75,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
         return this.backingStore.get("contexts");
     }
     /**
-     * Gets the detectionMethods property value. The detectionMethods property
+     * Gets the detectionMethods property value. The methods of detection used.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -83,7 +83,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
         return this.backingStore.get("detectionMethods");
     }
     /**
-     * Gets the directionality property value. The directionality property
+     * Gets the directionality property value. The direction of the emails. The possible values are: unknown, inbound, outbound, intraOrg, unknownFutureValue.
      * @return a {@link AntispamDirectionality}
      */
     @jakarta.annotation.Nullable
@@ -91,7 +91,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
         return this.backingStore.get("directionality");
     }
     /**
-     * Gets the distributionList property value. The distributionList property
+     * Gets the distributionList property value. The distribution list details to which the email was sent.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -99,7 +99,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
         return this.backingStore.get("distributionList");
     }
     /**
-     * Gets the emailClusterId property value. The emailClusterId property
+     * Gets the emailClusterId property value. The identifier for the group of similar emails clustered based on heuristic analysis of their content.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -107,7 +107,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
         return this.backingStore.get("emailClusterId");
     }
     /**
-     * Gets the exchangeTransportRules property value. The exchangeTransportRules property
+     * Gets the exchangeTransportRules property value. The name of the Exchange transport rules (ETRs) associated with the email.
      * @return a {@link java.util.List<AnalyzedEmailExchangeTransportRuleInfo>}
      */
     @jakarta.annotation.Nullable
@@ -154,7 +154,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the internetMessageId property value. The internetMessageId property
+     * Gets the internetMessageId property value. A public-facing identifier for the email that is sent. The message ID is in the format specified by RFC2822.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -162,7 +162,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
         return this.backingStore.get("internetMessageId");
     }
     /**
-     * Gets the language property value. The language property
+     * Gets the language property value. The detected language of the email content.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -170,7 +170,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
         return this.backingStore.get("language");
     }
     /**
-     * Gets the latestDelivery property value. The latestDelivery property
+     * Gets the latestDelivery property value. The latest delivery details of the email.
      * @return a {@link AnalyzedEmailDeliveryDetail}
      */
     @jakarta.annotation.Nullable
@@ -178,7 +178,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
         return this.backingStore.get("latestDelivery");
     }
     /**
-     * Gets the loggedDateTime property value. The loggedDateTime property
+     * Gets the loggedDateTime property value. Date-time when the email record was logged.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -186,7 +186,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
         return this.backingStore.get("loggedDateTime");
     }
     /**
-     * Gets the networkMessageId property value. The networkMessageId property
+     * Gets the networkMessageId property value. An internal identifier for the email generated by Microsoft 365.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -194,7 +194,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
         return this.backingStore.get("networkMessageId");
     }
     /**
-     * Gets the originalDelivery property value. The originalDelivery property
+     * Gets the originalDelivery property value. The original delivery details of the email.
      * @return a {@link AnalyzedEmailDeliveryDetail}
      */
     @jakarta.annotation.Nullable
@@ -202,7 +202,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
         return this.backingStore.get("originalDelivery");
     }
     /**
-     * Gets the overrideSources property value. The overrideSources property
+     * Gets the overrideSources property value. An aggregated list of all overrides with source on email.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -210,7 +210,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
         return this.backingStore.get("overrideSources");
     }
     /**
-     * Gets the phishConfidenceLevel property value. The phishConfidenceLevel property
+     * Gets the phishConfidenceLevel property value. The phish confidence level associated with the email
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -218,7 +218,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
         return this.backingStore.get("phishConfidenceLevel");
     }
     /**
-     * Gets the policy property value. The policy property
+     * Gets the policy property value. The action policy that took effect.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -226,7 +226,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
         return this.backingStore.get("policy");
     }
     /**
-     * Gets the policyAction property value. The policyAction property
+     * Gets the policyAction property value. The action taken on the email based on the configured policy.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -234,7 +234,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
         return this.backingStore.get("policyAction");
     }
     /**
-     * Gets the recipientEmailAddresses property value. The recipientEmailAddresses property
+     * Gets the recipientEmailAddresses property value. Contains the email addresses of the recipients.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -242,7 +242,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
         return this.backingStore.get("recipientEmailAddresses");
     }
     /**
-     * Gets the returnPath property value. The returnPath property
+     * Gets the returnPath property value. A field that indicates where and how bounced emails are processed.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -250,7 +250,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
         return this.backingStore.get("returnPath");
     }
     /**
-     * Gets the senderDetail property value. The senderDetail property
+     * Gets the senderDetail property value. Sender details of the email.
      * @return a {@link AnalyzedEmailSenderDetail}
      */
     @jakarta.annotation.Nullable
@@ -258,7 +258,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
         return this.backingStore.get("senderDetail");
     }
     /**
-     * Gets the sizeInBytes property value. The sizeInBytes property
+     * Gets the sizeInBytes property value. Size of the email in bytes.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -266,7 +266,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
         return this.backingStore.get("sizeInBytes");
     }
     /**
-     * Gets the spamConfidenceLevel property value. The spamConfidenceLevel property
+     * Gets the spamConfidenceLevel property value. Spam confidence of the email.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -274,7 +274,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
         return this.backingStore.get("spamConfidenceLevel");
     }
     /**
-     * Gets the subject property value. The subject property
+     * Gets the subject property value. Subject of the email.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -282,7 +282,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
         return this.backingStore.get("subject");
     }
     /**
-     * Gets the threatType property value. The threatType property
+     * Gets the threatType property value. Indicates the threat types. The possible values are: unknown, spam, malware, phishing, none, unknownFutureValue.
      * @return a {@link ThreatType}
      */
     @jakarta.annotation.Nullable
@@ -290,7 +290,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
         return this.backingStore.get("threatType");
     }
     /**
-     * Gets the urls property value. The urls property
+     * Gets the urls property value. A collection of the URLs in the email.
      * @return a {@link java.util.List<AnalyzedEmailUrl>}
      */
     @jakarta.annotation.Nullable
@@ -298,7 +298,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
         return this.backingStore.get("urls");
     }
     /**
-     * Gets the urlsCount property value. The urlsCount property
+     * Gets the urlsCount property value. The number of URLs in the email.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -344,210 +344,210 @@ public class AnalyzedEmail extends Entity implements Parsable {
         writer.writeIntegerValue("urlsCount", this.getUrlsCount());
     }
     /**
-     * Sets the alertIds property value. The alertIds property
+     * Sets the alertIds property value. A collection of values that contain the IDs of any alerts associated with the email.
      * @param value Value to set for the alertIds property.
      */
     public void setAlertIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("alertIds", value);
     }
     /**
-     * Sets the attachments property value. The attachments property
+     * Sets the attachments property value. A collection of the attachments in the email.
      * @param value Value to set for the attachments property.
      */
     public void setAttachments(@jakarta.annotation.Nullable final java.util.List<AnalyzedEmailAttachment> value) {
         this.backingStore.set("attachments", value);
     }
     /**
-     * Sets the attachmentsCount property value. The attachmentsCount property
+     * Sets the attachmentsCount property value. The number of attachments in the email.
      * @param value Value to set for the attachmentsCount property.
      */
     public void setAttachmentsCount(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("attachmentsCount", value);
     }
     /**
-     * Sets the authenticationDetails property value. The authenticationDetails property
+     * Sets the authenticationDetails property value. The authentication details associated with the email.
      * @param value Value to set for the authenticationDetails property.
      */
     public void setAuthenticationDetails(@jakarta.annotation.Nullable final AnalyzedEmailAuthenticationDetail value) {
         this.backingStore.set("authenticationDetails", value);
     }
     /**
-     * Sets the bulkComplaintLevel property value. The bulkComplaintLevel property
+     * Sets the bulkComplaintLevel property value. The bulk complaint level of the email. A higher level is more likely to be spam.
      * @param value Value to set for the bulkComplaintLevel property.
      */
     public void setBulkComplaintLevel(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("bulkComplaintLevel", value);
     }
     /**
-     * Sets the contexts property value. The contexts property
+     * Sets the contexts property value. Provides context of the email.
      * @param value Value to set for the contexts property.
      */
     public void setContexts(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("contexts", value);
     }
     /**
-     * Sets the detectionMethods property value. The detectionMethods property
+     * Sets the detectionMethods property value. The methods of detection used.
      * @param value Value to set for the detectionMethods property.
      */
     public void setDetectionMethods(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("detectionMethods", value);
     }
     /**
-     * Sets the directionality property value. The directionality property
+     * Sets the directionality property value. The direction of the emails. The possible values are: unknown, inbound, outbound, intraOrg, unknownFutureValue.
      * @param value Value to set for the directionality property.
      */
     public void setDirectionality(@jakarta.annotation.Nullable final AntispamDirectionality value) {
         this.backingStore.set("directionality", value);
     }
     /**
-     * Sets the distributionList property value. The distributionList property
+     * Sets the distributionList property value. The distribution list details to which the email was sent.
      * @param value Value to set for the distributionList property.
      */
     public void setDistributionList(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("distributionList", value);
     }
     /**
-     * Sets the emailClusterId property value. The emailClusterId property
+     * Sets the emailClusterId property value. The identifier for the group of similar emails clustered based on heuristic analysis of their content.
      * @param value Value to set for the emailClusterId property.
      */
     public void setEmailClusterId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("emailClusterId", value);
     }
     /**
-     * Sets the exchangeTransportRules property value. The exchangeTransportRules property
+     * Sets the exchangeTransportRules property value. The name of the Exchange transport rules (ETRs) associated with the email.
      * @param value Value to set for the exchangeTransportRules property.
      */
     public void setExchangeTransportRules(@jakarta.annotation.Nullable final java.util.List<AnalyzedEmailExchangeTransportRuleInfo> value) {
         this.backingStore.set("exchangeTransportRules", value);
     }
     /**
-     * Sets the internetMessageId property value. The internetMessageId property
+     * Sets the internetMessageId property value. A public-facing identifier for the email that is sent. The message ID is in the format specified by RFC2822.
      * @param value Value to set for the internetMessageId property.
      */
     public void setInternetMessageId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("internetMessageId", value);
     }
     /**
-     * Sets the language property value. The language property
+     * Sets the language property value. The detected language of the email content.
      * @param value Value to set for the language property.
      */
     public void setLanguage(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("language", value);
     }
     /**
-     * Sets the latestDelivery property value. The latestDelivery property
+     * Sets the latestDelivery property value. The latest delivery details of the email.
      * @param value Value to set for the latestDelivery property.
      */
     public void setLatestDelivery(@jakarta.annotation.Nullable final AnalyzedEmailDeliveryDetail value) {
         this.backingStore.set("latestDelivery", value);
     }
     /**
-     * Sets the loggedDateTime property value. The loggedDateTime property
+     * Sets the loggedDateTime property value. Date-time when the email record was logged.
      * @param value Value to set for the loggedDateTime property.
      */
     public void setLoggedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("loggedDateTime", value);
     }
     /**
-     * Sets the networkMessageId property value. The networkMessageId property
+     * Sets the networkMessageId property value. An internal identifier for the email generated by Microsoft 365.
      * @param value Value to set for the networkMessageId property.
      */
     public void setNetworkMessageId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("networkMessageId", value);
     }
     /**
-     * Sets the originalDelivery property value. The originalDelivery property
+     * Sets the originalDelivery property value. The original delivery details of the email.
      * @param value Value to set for the originalDelivery property.
      */
     public void setOriginalDelivery(@jakarta.annotation.Nullable final AnalyzedEmailDeliveryDetail value) {
         this.backingStore.set("originalDelivery", value);
     }
     /**
-     * Sets the overrideSources property value. The overrideSources property
+     * Sets the overrideSources property value. An aggregated list of all overrides with source on email.
      * @param value Value to set for the overrideSources property.
      */
     public void setOverrideSources(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("overrideSources", value);
     }
     /**
-     * Sets the phishConfidenceLevel property value. The phishConfidenceLevel property
+     * Sets the phishConfidenceLevel property value. The phish confidence level associated with the email
      * @param value Value to set for the phishConfidenceLevel property.
      */
     public void setPhishConfidenceLevel(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("phishConfidenceLevel", value);
     }
     /**
-     * Sets the policy property value. The policy property
+     * Sets the policy property value. The action policy that took effect.
      * @param value Value to set for the policy property.
      */
     public void setPolicy(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("policy", value);
     }
     /**
-     * Sets the policyAction property value. The policyAction property
+     * Sets the policyAction property value. The action taken on the email based on the configured policy.
      * @param value Value to set for the policyAction property.
      */
     public void setPolicyAction(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("policyAction", value);
     }
     /**
-     * Sets the recipientEmailAddresses property value. The recipientEmailAddresses property
+     * Sets the recipientEmailAddresses property value. Contains the email addresses of the recipients.
      * @param value Value to set for the recipientEmailAddresses property.
      */
     public void setRecipientEmailAddresses(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("recipientEmailAddresses", value);
     }
     /**
-     * Sets the returnPath property value. The returnPath property
+     * Sets the returnPath property value. A field that indicates where and how bounced emails are processed.
      * @param value Value to set for the returnPath property.
      */
     public void setReturnPath(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("returnPath", value);
     }
     /**
-     * Sets the senderDetail property value. The senderDetail property
+     * Sets the senderDetail property value. Sender details of the email.
      * @param value Value to set for the senderDetail property.
      */
     public void setSenderDetail(@jakarta.annotation.Nullable final AnalyzedEmailSenderDetail value) {
         this.backingStore.set("senderDetail", value);
     }
     /**
-     * Sets the sizeInBytes property value. The sizeInBytes property
+     * Sets the sizeInBytes property value. Size of the email in bytes.
      * @param value Value to set for the sizeInBytes property.
      */
     public void setSizeInBytes(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("sizeInBytes", value);
     }
     /**
-     * Sets the spamConfidenceLevel property value. The spamConfidenceLevel property
+     * Sets the spamConfidenceLevel property value. Spam confidence of the email.
      * @param value Value to set for the spamConfidenceLevel property.
      */
     public void setSpamConfidenceLevel(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("spamConfidenceLevel", value);
     }
     /**
-     * Sets the subject property value. The subject property
+     * Sets the subject property value. Subject of the email.
      * @param value Value to set for the subject property.
      */
     public void setSubject(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("subject", value);
     }
     /**
-     * Sets the threatType property value. The threatType property
+     * Sets the threatType property value. Indicates the threat types. The possible values are: unknown, spam, malware, phishing, none, unknownFutureValue.
      * @param value Value to set for the threatType property.
      */
     public void setThreatType(@jakarta.annotation.Nullable final ThreatType value) {
         this.backingStore.set("threatType", value);
     }
     /**
-     * Sets the urls property value. The urls property
+     * Sets the urls property value. A collection of the URLs in the email.
      * @param value Value to set for the urls property.
      */
     public void setUrls(@jakarta.annotation.Nullable final java.util.List<AnalyzedEmailUrl> value) {
         this.backingStore.set("urls", value);
     }
     /**
-     * Sets the urlsCount property value. The urlsCount property
+     * Sets the urlsCount property value. The number of URLs in the email.
      * @param value Value to set for the urlsCount property.
      */
     public void setUrlsCount(@jakarta.annotation.Nullable final Integer value) {

@@ -12,6 +12,7 @@ import com.microsoft.graph.beta.deviceappmanagement.managedappstatuses.ManagedAp
 import com.microsoft.graph.beta.deviceappmanagement.managedebookcategories.ManagedEBookCategoriesRequestBuilder;
 import com.microsoft.graph.beta.deviceappmanagement.managedebooks.ManagedEBooksRequestBuilder;
 import com.microsoft.graph.beta.deviceappmanagement.mdmwindowsinformationprotectionpolicies.MdmWindowsInformationProtectionPoliciesRequestBuilder;
+import com.microsoft.graph.beta.deviceappmanagement.mobileappcatalogpackages.MobileAppCatalogPackagesRequestBuilder;
 import com.microsoft.graph.beta.deviceappmanagement.mobileappcategories.MobileAppCategoriesRequestBuilder;
 import com.microsoft.graph.beta.deviceappmanagement.mobileappconfigurations.MobileAppConfigurationsRequestBuilder;
 import com.microsoft.graph.beta.deviceappmanagement.mobileapps.MobileAppsRequestBuilder;
@@ -141,6 +142,14 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public MdmWindowsInformationProtectionPoliciesRequestBuilder mdmWindowsInformationProtectionPolicies() {
         return new MdmWindowsInformationProtectionPoliciesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the mobileAppCatalogPackages property of the microsoft.graph.deviceAppManagement entity.
+     * @return a {@link MobileAppCatalogPackagesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public MobileAppCatalogPackagesRequestBuilder mobileAppCatalogPackages() {
+        return new MobileAppCatalogPackagesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the mobileAppCategories property of the microsoft.graph.deviceAppManagement entity.

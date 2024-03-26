@@ -58,7 +58,7 @@ public class IosStoreAppAssignmentSettings extends MobileAppAssignmentSettings i
         return this.backingStore.get("preventManagedAppBackup");
     }
     /**
-     * Gets the uninstallOnDeviceRemoval property value. Whether or not to uninstall the app when device is removed from Intune.
+     * Gets the uninstallOnDeviceRemoval property value. When TRUE, indicates that the app should be uninstalled when the device is removed from Intune. When FALSE, indicates that the app will not be uninstalled when the device is removed from Intune. By default, property is set to null which internally is treated as TRUE.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -66,7 +66,7 @@ public class IosStoreAppAssignmentSettings extends MobileAppAssignmentSettings i
         return this.backingStore.get("uninstallOnDeviceRemoval");
     }
     /**
-     * Gets the vpnConfigurationId property value. The VPN Configuration Id to apply for this app.
+     * Gets the vpnConfigurationId property value. This is the unique identifier (Id) of the VPN Configuration to apply to the app.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -100,14 +100,14 @@ public class IosStoreAppAssignmentSettings extends MobileAppAssignmentSettings i
         this.backingStore.set("preventManagedAppBackup", value);
     }
     /**
-     * Sets the uninstallOnDeviceRemoval property value. Whether or not to uninstall the app when device is removed from Intune.
+     * Sets the uninstallOnDeviceRemoval property value. When TRUE, indicates that the app should be uninstalled when the device is removed from Intune. When FALSE, indicates that the app will not be uninstalled when the device is removed from Intune. By default, property is set to null which internally is treated as TRUE.
      * @param value Value to set for the uninstallOnDeviceRemoval property.
      */
     public void setUninstallOnDeviceRemoval(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("uninstallOnDeviceRemoval", value);
     }
     /**
-     * Sets the vpnConfigurationId property value. The VPN Configuration Id to apply for this app.
+     * Sets the vpnConfigurationId property value. This is the unique identifier (Id) of the VPN Configuration to apply to the app.
      * @param value Value to set for the vpnConfigurationId property.
      */
     public void setVpnConfigurationId(@jakarta.annotation.Nullable final String value) {

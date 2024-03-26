@@ -26,7 +26,7 @@ public class DeploymentAudience extends Entity implements Parsable {
         return new DeploymentAudience();
     }
     /**
-     * Gets the applicableContent property value. The applicableContent property
+     * Gets the applicableContent property value. Content eligible to deploy to devices in the audience. Not nullable. Read-only.
      * @return a {@link java.util.List<ApplicableContent>}
      */
     @jakarta.annotation.Nullable
@@ -73,7 +73,7 @@ public class DeploymentAudience extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("members", this.getMembers());
     }
     /**
-     * Sets the applicableContent property value. The applicableContent property
+     * Sets the applicableContent property value. Content eligible to deploy to devices in the audience. Not nullable. Read-only.
      * @param value Value to set for the applicableContent property.
      */
     public void setApplicableContent(@jakarta.annotation.Nullable final java.util.List<ApplicableContent> value) {

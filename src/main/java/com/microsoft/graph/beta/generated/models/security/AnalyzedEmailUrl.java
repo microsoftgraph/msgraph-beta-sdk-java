@@ -56,7 +56,7 @@ public class AnalyzedEmailUrl implements AdditionalDataHolder, BackedModel, Pars
         return this.backingStore;
     }
     /**
-     * Gets the detectionMethod property value. The detectionMethod property
+     * Gets the detectionMethod property value. The method used to detect threats in the URL.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class AnalyzedEmailUrl implements AdditionalDataHolder, BackedModel, Pars
         return this.backingStore.get("detectionMethod");
     }
     /**
-     * Gets the detonationDetails property value. The detonationDetails property
+     * Gets the detonationDetails property value. Detonation data associated with the URL.
      * @return a {@link DetonationDetails}
      */
     @jakarta.annotation.Nullable
@@ -94,7 +94,7 @@ public class AnalyzedEmailUrl implements AdditionalDataHolder, BackedModel, Pars
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the threatType property value. The threatType property
+     * Gets the threatType property value. The type of threat associated with the URL. The possible values are: unknown, spam, malware, phishing, none, unknownFutureValue.
      * @return a {@link ThreatType}
      */
     @jakarta.annotation.Nullable
@@ -102,7 +102,7 @@ public class AnalyzedEmailUrl implements AdditionalDataHolder, BackedModel, Pars
         return this.backingStore.get("threatType");
     }
     /**
-     * Gets the url property value. The url property
+     * Gets the url property value. The URL that is found in the email. This is full URL string, including query parameters.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -138,14 +138,14 @@ public class AnalyzedEmailUrl implements AdditionalDataHolder, BackedModel, Pars
         this.backingStore = value;
     }
     /**
-     * Sets the detectionMethod property value. The detectionMethod property
+     * Sets the detectionMethod property value. The method used to detect threats in the URL.
      * @param value Value to set for the detectionMethod property.
      */
     public void setDetectionMethod(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("detectionMethod", value);
     }
     /**
-     * Sets the detonationDetails property value. The detonationDetails property
+     * Sets the detonationDetails property value. Detonation data associated with the URL.
      * @param value Value to set for the detonationDetails property.
      */
     public void setDetonationDetails(@jakarta.annotation.Nullable final DetonationDetails value) {
@@ -159,14 +159,14 @@ public class AnalyzedEmailUrl implements AdditionalDataHolder, BackedModel, Pars
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the threatType property value. The threatType property
+     * Sets the threatType property value. The type of threat associated with the URL. The possible values are: unknown, spam, malware, phishing, none, unknownFutureValue.
      * @param value Value to set for the threatType property.
      */
     public void setThreatType(@jakarta.annotation.Nullable final ThreatType value) {
         this.backingStore.set("threatType", value);
     }
     /**
-     * Sets the url property value. The url property
+     * Sets the url property value. The URL that is found in the email. This is full URL string, including query parameters.
      * @param value Value to set for the url property.
      */
     public void setUrl(@jakarta.annotation.Nullable final String value) {

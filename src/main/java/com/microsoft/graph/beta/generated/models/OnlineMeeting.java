@@ -75,7 +75,7 @@ public class OnlineMeeting extends OnlineMeetingBase implements Parsable {
         return this.backingStore.get("creationDateTime");
     }
     /**
-     * Gets the endDateTime property value. The meeting end time in UTC.
+     * Gets the endDateTime property value. The meeting end time in UTC. Required when you create an online meeting.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -182,7 +182,7 @@ public class OnlineMeeting extends OnlineMeetingBase implements Parsable {
         return this.backingStore.get("registration");
     }
     /**
-     * Gets the startDateTime property value. The meeting start time in UTC.
+     * Gets the startDateTime property value. The meeting start time in UTC. Required when you create an online meeting.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -266,7 +266,7 @@ public class OnlineMeeting extends OnlineMeetingBase implements Parsable {
         this.backingStore.set("creationDateTime", value);
     }
     /**
-     * Sets the endDateTime property value. The meeting end time in UTC.
+     * Sets the endDateTime property value. The meeting end time in UTC. Required when you create an online meeting.
      * @param value Value to set for the endDateTime property.
      */
     public void setEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -336,7 +336,7 @@ public class OnlineMeeting extends OnlineMeetingBase implements Parsable {
         this.backingStore.set("registration", value);
     }
     /**
-     * Sets the startDateTime property value. The meeting start time in UTC.
+     * Sets the startDateTime property value. The meeting start time in UTC. Required when you create an online meeting.
      * @param value Value to set for the startDateTime property.
      */
     public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

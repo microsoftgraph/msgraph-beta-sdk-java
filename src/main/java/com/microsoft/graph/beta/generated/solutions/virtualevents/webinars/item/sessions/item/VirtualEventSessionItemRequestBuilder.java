@@ -5,6 +5,8 @@ import com.microsoft.graph.beta.models.VirtualEventSession;
 import com.microsoft.graph.beta.solutions.virtualevents.webinars.item.sessions.item.attendancereports.AttendanceReportsRequestBuilder;
 import com.microsoft.graph.beta.solutions.virtualevents.webinars.item.sessions.item.presenters.PresentersRequestBuilder;
 import com.microsoft.graph.beta.solutions.virtualevents.webinars.item.sessions.item.registrations.RegistrationsRequestBuilder;
+import com.microsoft.graph.beta.solutions.virtualevents.webinars.item.sessions.item.registrationswithemail.RegistrationsWithEmailRequestBuilder;
+import com.microsoft.graph.beta.solutions.virtualevents.webinars.item.sessions.item.registrationswithuserid.RegistrationsWithUserIdRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -127,6 +129,26 @@ public class VirtualEventSessionItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, VirtualEventSession::createFromDiscriminatorValue);
+    }
+    /**
+     * Provides operations to manage the registrations property of the microsoft.graph.virtualEventSession entity.
+     * @param email Alternate key of virtualEventRegistration
+     * @return a {@link RegistrationsWithEmailRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RegistrationsWithEmailRequestBuilder registrationsWithEmail(@jakarta.annotation.Nonnull final String email) {
+        Objects.requireNonNull(email);
+        return new RegistrationsWithEmailRequestBuilder(pathParameters, requestAdapter, email);
+    }
+    /**
+     * Provides operations to manage the registrations property of the microsoft.graph.virtualEventSession entity.
+     * @param userId Alternate key of virtualEventRegistration
+     * @return a {@link RegistrationsWithUserIdRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RegistrationsWithUserIdRequestBuilder registrationsWithUserId(@jakarta.annotation.Nonnull final String userId) {
+        Objects.requireNonNull(userId);
+        return new RegistrationsWithUserIdRequestBuilder(pathParameters, requestAdapter, userId);
     }
     /**
      * Delete navigation property sessions for solutions

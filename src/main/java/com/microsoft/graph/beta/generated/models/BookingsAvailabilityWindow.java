@@ -27,7 +27,7 @@ public class BookingsAvailabilityWindow extends BookingsAvailability implements 
         return new BookingsAvailabilityWindow();
     }
     /**
-     * Gets the endDate property value. Allow customers to end date of availability window.
+     * Gets the endDate property value. End date of the availability window.
      * @return a {@link LocalDate}
      */
     @jakarta.annotation.Nullable
@@ -46,7 +46,7 @@ public class BookingsAvailabilityWindow extends BookingsAvailability implements 
         return deserializerMap;
     }
     /**
-     * Gets the startDate property value. Allow customers to start date of availability window.
+     * Gets the startDate property value. Start date of the availability window.
      * @return a {@link LocalDate}
      */
     @jakarta.annotation.Nullable
@@ -64,14 +64,14 @@ public class BookingsAvailabilityWindow extends BookingsAvailability implements 
         writer.writeLocalDateValue("startDate", this.getStartDate());
     }
     /**
-     * Sets the endDate property value. Allow customers to end date of availability window.
+     * Sets the endDate property value. End date of the availability window.
      * @param value Value to set for the endDate property.
      */
     public void setEndDate(@jakarta.annotation.Nullable final LocalDate value) {
         this.backingStore.set("endDate", value);
     }
     /**
-     * Sets the startDate property value. Allow customers to start date of availability window.
+     * Sets the startDate property value. Start date of the availability window.
      * @param value Value to set for the startDate property.
      */
     public void setStartDate(@jakarta.annotation.Nullable final LocalDate value) {

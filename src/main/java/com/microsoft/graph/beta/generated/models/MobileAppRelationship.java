@@ -50,7 +50,7 @@ public class MobileAppRelationship extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the targetDisplayName property value. The target mobile app's display name.
+     * Gets the targetDisplayName property value. The target mobile app's display name. This property is read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -58,7 +58,7 @@ public class MobileAppRelationship extends Entity implements Parsable {
         return this.backingStore.get("targetDisplayName");
     }
     /**
-     * Gets the targetDisplayVersion property value. The target mobile app's display version.
+     * Gets the targetDisplayVersion property value. The target mobile app's display version. This property is read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -74,7 +74,7 @@ public class MobileAppRelationship extends Entity implements Parsable {
         return this.backingStore.get("targetId");
     }
     /**
-     * Gets the targetPublisher property value. The target mobile app's publisher.
+     * Gets the targetPublisher property value. The target mobile app's publisher. This property is read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -96,21 +96,18 @@ public class MobileAppRelationship extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeStringValue("targetDisplayName", this.getTargetDisplayName());
-        writer.writeStringValue("targetDisplayVersion", this.getTargetDisplayVersion());
         writer.writeStringValue("targetId", this.getTargetId());
-        writer.writeStringValue("targetPublisher", this.getTargetPublisher());
         writer.writeEnumValue("targetType", this.getTargetType());
     }
     /**
-     * Sets the targetDisplayName property value. The target mobile app's display name.
+     * Sets the targetDisplayName property value. The target mobile app's display name. This property is read-only.
      * @param value Value to set for the targetDisplayName property.
      */
     public void setTargetDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("targetDisplayName", value);
     }
     /**
-     * Sets the targetDisplayVersion property value. The target mobile app's display version.
+     * Sets the targetDisplayVersion property value. The target mobile app's display version. This property is read-only.
      * @param value Value to set for the targetDisplayVersion property.
      */
     public void setTargetDisplayVersion(@jakarta.annotation.Nullable final String value) {
@@ -124,7 +121,7 @@ public class MobileAppRelationship extends Entity implements Parsable {
         this.backingStore.set("targetId", value);
     }
     /**
-     * Sets the targetPublisher property value. The target mobile app's publisher.
+     * Sets the targetPublisher property value. The target mobile app's publisher. This property is read-only.
      * @param value Value to set for the targetPublisher property.
      */
     public void setTargetPublisher(@jakarta.annotation.Nullable final String value) {

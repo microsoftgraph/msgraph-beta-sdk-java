@@ -37,7 +37,7 @@ public class MobileAppDependency extends MobileAppRelationship implements Parsab
         return this.backingStore.get("dependencyType");
     }
     /**
-     * Gets the dependentAppCount property value. The total number of apps that directly or indirectly depend on the parent app.
+     * Gets the dependentAppCount property value. The total number of apps that directly or indirectly depend on the parent app. This property is read-only.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -45,7 +45,7 @@ public class MobileAppDependency extends MobileAppRelationship implements Parsab
         return this.backingStore.get("dependentAppCount");
     }
     /**
-     * Gets the dependsOnAppCount property value. The total number of apps the child app directly or indirectly depends on.
+     * Gets the dependsOnAppCount property value. The total number of apps the child app directly or indirectly depends on. This property is read-only.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -72,8 +72,6 @@ public class MobileAppDependency extends MobileAppRelationship implements Parsab
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("dependencyType", this.getDependencyType());
-        writer.writeIntegerValue("dependentAppCount", this.getDependentAppCount());
-        writer.writeIntegerValue("dependsOnAppCount", this.getDependsOnAppCount());
     }
     /**
      * Sets the dependencyType property value. Indicates the dependency type associated with a relationship between two mobile apps.
@@ -83,14 +81,14 @@ public class MobileAppDependency extends MobileAppRelationship implements Parsab
         this.backingStore.set("dependencyType", value);
     }
     /**
-     * Sets the dependentAppCount property value. The total number of apps that directly or indirectly depend on the parent app.
+     * Sets the dependentAppCount property value. The total number of apps that directly or indirectly depend on the parent app. This property is read-only.
      * @param value Value to set for the dependentAppCount property.
      */
     public void setDependentAppCount(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("dependentAppCount", value);
     }
     /**
-     * Sets the dependsOnAppCount property value. The total number of apps the child app directly or indirectly depends on.
+     * Sets the dependsOnAppCount property value. The total number of apps the child app directly or indirectly depends on. This property is read-only.
      * @param value Value to set for the dependsOnAppCount property.
      */
     public void setDependsOnAppCount(@jakarta.annotation.Nullable final Integer value) {

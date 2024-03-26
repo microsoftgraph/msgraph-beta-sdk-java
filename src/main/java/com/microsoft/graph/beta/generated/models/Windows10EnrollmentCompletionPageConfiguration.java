@@ -29,7 +29,7 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
         return new Windows10EnrollmentCompletionPageConfiguration();
     }
     /**
-     * Gets the allowDeviceResetOnInstallFailure property value. Allow or block device reset on installation failure
+     * Gets the allowDeviceResetOnInstallFailure property value. When TRUE, allows device reset on installation failure. When false, reset is blocked. The default is false.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -37,7 +37,7 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
         return this.backingStore.get("allowDeviceResetOnInstallFailure");
     }
     /**
-     * Gets the allowDeviceUseOnInstallFailure property value. Allow the user to continue using the device on installation failure
+     * Gets the allowDeviceUseOnInstallFailure property value. When TRUE, allows the user to continue using the device on installation failure. When false, blocks the user on installation failure. The default is false.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -45,7 +45,7 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
         return this.backingStore.get("allowDeviceUseOnInstallFailure");
     }
     /**
-     * Gets the allowLogCollectionOnInstallFailure property value. Allow or block log collection on installation failure
+     * Gets the allowLogCollectionOnInstallFailure property value. When TRUE, allows log collection on installation failure. When false, log collection is not allowed. The default is false.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
         return this.backingStore.get("allowLogCollectionOnInstallFailure");
     }
     /**
-     * Gets the allowNonBlockingAppInstallation property value. Install all required apps as non blocking apps during white glove
+     * Gets the allowNonBlockingAppInstallation property value. When TRUE, ESP (Enrollment Status Page) installs all required apps targeted during technician phase and ignores any failures for non-blocking apps. When FALSE, ESP fails on any error during app install. The default is false.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -61,7 +61,7 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
         return this.backingStore.get("allowNonBlockingAppInstallation");
     }
     /**
-     * Gets the blockDeviceSetupRetryByUser property value. Allow the user to retry the setup on installation failure
+     * Gets the blockDeviceSetupRetryByUser property value. When TRUE, blocks user from retrying the setup on installation failure. When false, user is allowed to retry. The default is false.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -69,7 +69,7 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
         return this.backingStore.get("blockDeviceSetupRetryByUser");
     }
     /**
-     * Gets the customErrorMessage property value. Set custom error message to show upon installation failure
+     * Gets the customErrorMessage property value. The custom error message to show upon installation failure. Max length is 10000. example: 'Setup could not be completed. Please try again or contact your support person for help.'
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -77,7 +77,7 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
         return this.backingStore.get("customErrorMessage");
     }
     /**
-     * Gets the disableUserStatusTrackingAfterFirstUser property value. Only show installation progress for first user post enrollment
+     * Gets the disableUserStatusTrackingAfterFirstUser property value. When TRUE, disables showing installation progress for first user post enrollment. When false, enables showing progress. The default is false.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -106,7 +106,7 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
         return deserializerMap;
     }
     /**
-     * Gets the installProgressTimeoutInMinutes property value. Set installation progress timeout in minutes
+     * Gets the installProgressTimeoutInMinutes property value. The installation progress timeout in minutes. Default is 60 minutes.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -122,7 +122,7 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
         return this.backingStore.get("installQualityUpdates");
     }
     /**
-     * Gets the selectedMobileAppIds property value. Selected applications to track the installation status
+     * Gets the selectedMobileAppIds property value. Selected applications to track the installation status. It is in the form of an array of GUIDs.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -130,7 +130,7 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
         return this.backingStore.get("selectedMobileAppIds");
     }
     /**
-     * Gets the showInstallationProgress property value. Show or hide installation progress to user
+     * Gets the showInstallationProgress property value. When TRUE, shows installation progress to user. When false, hides installation progress. The default is false.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -138,7 +138,7 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
         return this.backingStore.get("showInstallationProgress");
     }
     /**
-     * Gets the trackInstallProgressForAutopilotOnly property value. Only show installation progress for Autopilot enrollment scenarios
+     * Gets the trackInstallProgressForAutopilotOnly property value. When TRUE, installation progress is tracked for only Autopilot enrollment scenarios. When false, other scenarios are tracked as well. The default is false.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -166,56 +166,56 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
         writer.writeBooleanValue("trackInstallProgressForAutopilotOnly", this.getTrackInstallProgressForAutopilotOnly());
     }
     /**
-     * Sets the allowDeviceResetOnInstallFailure property value. Allow or block device reset on installation failure
+     * Sets the allowDeviceResetOnInstallFailure property value. When TRUE, allows device reset on installation failure. When false, reset is blocked. The default is false.
      * @param value Value to set for the allowDeviceResetOnInstallFailure property.
      */
     public void setAllowDeviceResetOnInstallFailure(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("allowDeviceResetOnInstallFailure", value);
     }
     /**
-     * Sets the allowDeviceUseOnInstallFailure property value. Allow the user to continue using the device on installation failure
+     * Sets the allowDeviceUseOnInstallFailure property value. When TRUE, allows the user to continue using the device on installation failure. When false, blocks the user on installation failure. The default is false.
      * @param value Value to set for the allowDeviceUseOnInstallFailure property.
      */
     public void setAllowDeviceUseOnInstallFailure(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("allowDeviceUseOnInstallFailure", value);
     }
     /**
-     * Sets the allowLogCollectionOnInstallFailure property value. Allow or block log collection on installation failure
+     * Sets the allowLogCollectionOnInstallFailure property value. When TRUE, allows log collection on installation failure. When false, log collection is not allowed. The default is false.
      * @param value Value to set for the allowLogCollectionOnInstallFailure property.
      */
     public void setAllowLogCollectionOnInstallFailure(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("allowLogCollectionOnInstallFailure", value);
     }
     /**
-     * Sets the allowNonBlockingAppInstallation property value. Install all required apps as non blocking apps during white glove
+     * Sets the allowNonBlockingAppInstallation property value. When TRUE, ESP (Enrollment Status Page) installs all required apps targeted during technician phase and ignores any failures for non-blocking apps. When FALSE, ESP fails on any error during app install. The default is false.
      * @param value Value to set for the allowNonBlockingAppInstallation property.
      */
     public void setAllowNonBlockingAppInstallation(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("allowNonBlockingAppInstallation", value);
     }
     /**
-     * Sets the blockDeviceSetupRetryByUser property value. Allow the user to retry the setup on installation failure
+     * Sets the blockDeviceSetupRetryByUser property value. When TRUE, blocks user from retrying the setup on installation failure. When false, user is allowed to retry. The default is false.
      * @param value Value to set for the blockDeviceSetupRetryByUser property.
      */
     public void setBlockDeviceSetupRetryByUser(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("blockDeviceSetupRetryByUser", value);
     }
     /**
-     * Sets the customErrorMessage property value. Set custom error message to show upon installation failure
+     * Sets the customErrorMessage property value. The custom error message to show upon installation failure. Max length is 10000. example: 'Setup could not be completed. Please try again or contact your support person for help.'
      * @param value Value to set for the customErrorMessage property.
      */
     public void setCustomErrorMessage(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("customErrorMessage", value);
     }
     /**
-     * Sets the disableUserStatusTrackingAfterFirstUser property value. Only show installation progress for first user post enrollment
+     * Sets the disableUserStatusTrackingAfterFirstUser property value. When TRUE, disables showing installation progress for first user post enrollment. When false, enables showing progress. The default is false.
      * @param value Value to set for the disableUserStatusTrackingAfterFirstUser property.
      */
     public void setDisableUserStatusTrackingAfterFirstUser(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("disableUserStatusTrackingAfterFirstUser", value);
     }
     /**
-     * Sets the installProgressTimeoutInMinutes property value. Set installation progress timeout in minutes
+     * Sets the installProgressTimeoutInMinutes property value. The installation progress timeout in minutes. Default is 60 minutes.
      * @param value Value to set for the installProgressTimeoutInMinutes property.
      */
     public void setInstallProgressTimeoutInMinutes(@jakarta.annotation.Nullable final Integer value) {
@@ -229,21 +229,21 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
         this.backingStore.set("installQualityUpdates", value);
     }
     /**
-     * Sets the selectedMobileAppIds property value. Selected applications to track the installation status
+     * Sets the selectedMobileAppIds property value. Selected applications to track the installation status. It is in the form of an array of GUIDs.
      * @param value Value to set for the selectedMobileAppIds property.
      */
     public void setSelectedMobileAppIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("selectedMobileAppIds", value);
     }
     /**
-     * Sets the showInstallationProgress property value. Show or hide installation progress to user
+     * Sets the showInstallationProgress property value. When TRUE, shows installation progress to user. When false, hides installation progress. The default is false.
      * @param value Value to set for the showInstallationProgress property.
      */
     public void setShowInstallationProgress(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("showInstallationProgress", value);
     }
     /**
-     * Sets the trackInstallProgressForAutopilotOnly property value. Only show installation progress for Autopilot enrollment scenarios
+     * Sets the trackInstallProgressForAutopilotOnly property value. When TRUE, installation progress is tracked for only Autopilot enrollment scenarios. When false, other scenarios are tracked as well. The default is false.
      * @param value Value to set for the trackInstallProgressForAutopilotOnly property.
      */
     public void setTrackInstallProgressForAutopilotOnly(@jakarta.annotation.Nullable final Boolean value) {

@@ -58,7 +58,7 @@ public class CloudPcAuditEvent extends Entity implements Parsable {
         return this.backingStore.get("activityResult");
     }
     /**
-     * Gets the activityType property value. The type of activity that was performed.Read-only.
+     * Gets the activityType property value. The type of the activity that was performed.Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -90,7 +90,7 @@ public class CloudPcAuditEvent extends Entity implements Parsable {
         return this.backingStore.get("componentName");
     }
     /**
-     * Gets the correlationId property value. The client request identifier, used to correlate activity within the system.Read-only.
+     * Gets the correlationId property value. The client request ID that is used to correlate activity within the system.Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -181,7 +181,7 @@ public class CloudPcAuditEvent extends Entity implements Parsable {
         this.backingStore.set("activityResult", value);
     }
     /**
-     * Sets the activityType property value. The type of activity that was performed.Read-only.
+     * Sets the activityType property value. The type of the activity that was performed.Read-only.
      * @param value Value to set for the activityType property.
      */
     public void setActivityType(@jakarta.annotation.Nullable final String value) {
@@ -209,7 +209,7 @@ public class CloudPcAuditEvent extends Entity implements Parsable {
         this.backingStore.set("componentName", value);
     }
     /**
-     * Sets the correlationId property value. The client request identifier, used to correlate activity within the system.Read-only.
+     * Sets the correlationId property value. The client request ID that is used to correlate activity within the system.Read-only.
      * @param value Value to set for the correlationId property.
      */
     public void setCorrelationId(@jakarta.annotation.Nullable final String value) {

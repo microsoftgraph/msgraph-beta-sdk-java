@@ -120,6 +120,7 @@ public class Incident extends Entity implements Parsable {
         deserializerMap.put("recommendedActions", (n) -> { this.setRecommendedActions(n.getStringValue()); });
         deserializerMap.put("recommendedHuntingQueries", (n) -> { this.setRecommendedHuntingQueries(n.getCollectionOfObjectValues(RecommendedHuntingQuery::createFromDiscriminatorValue)); });
         deserializerMap.put("redirectIncidentId", (n) -> { this.setRedirectIncidentId(n.getStringValue()); });
+        deserializerMap.put("resolvingComment", (n) -> { this.setResolvingComment(n.getStringValue()); });
         deserializerMap.put("severity", (n) -> { this.setSeverity(n.getEnumValue(AlertSeverity::forValue)); });
         deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(IncidentStatus::forValue)); });
         deserializerMap.put("systemTags", (n) -> { this.setSystemTags(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -175,6 +176,14 @@ public class Incident extends Entity implements Parsable {
         return this.backingStore.get("redirectIncidentId");
     }
     /**
+     * Gets the resolvingComment property value. The resolvingComment property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getResolvingComment() {
+        return this.backingStore.get("resolvingComment");
+    }
+    /**
      * Gets the severity property value. The severity property
      * @return a {@link AlertSeverity}
      */
@@ -228,6 +237,7 @@ public class Incident extends Entity implements Parsable {
         writer.writeStringValue("recommendedActions", this.getRecommendedActions());
         writer.writeCollectionOfObjectValues("recommendedHuntingQueries", this.getRecommendedHuntingQueries());
         writer.writeStringValue("redirectIncidentId", this.getRedirectIncidentId());
+        writer.writeStringValue("resolvingComment", this.getResolvingComment());
         writer.writeEnumValue("severity", this.getSeverity());
         writer.writeEnumValue("status", this.getStatus());
         writer.writeCollectionOfPrimitiveValues("systemTags", this.getSystemTags());
@@ -337,6 +347,13 @@ public class Incident extends Entity implements Parsable {
      */
     public void setRedirectIncidentId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("redirectIncidentId", value);
+    }
+    /**
+     * Sets the resolvingComment property value. The resolvingComment property
+     * @param value Value to set for the resolvingComment property.
+     */
+    public void setResolvingComment(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("resolvingComment", value);
     }
     /**
      * Sets the severity property value. The severity property

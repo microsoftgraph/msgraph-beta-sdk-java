@@ -1,4 +1,4 @@
-package com.microsoft.graph.beta.networkaccess.reports.microsoftgraphnetworkaccessgetdiscoveredapplicationsegmentreportwithstartdatetimewithenddatetime;
+package com.microsoft.graph.beta.admin.windows.updates.products.item.microsoftgraphwindowsupdatesgetknownissuesbytimerangewithdaysinpastwithincludeallactive;
 
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -10,60 +10,57 @@ import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParsableFactory;
-import java.time.OffsetDateTime;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * Provides operations to call the getDiscoveredApplicationSegmentReport method.
+ * Provides operations to call the getKnownIssuesByTimeRange method.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class MicrosoftGraphNetworkaccessGetDiscoveredApplicationSegmentReportWithStartDateTimeWithEndDateTimeRequestBuilder extends BaseRequestBuilder {
+public class MicrosoftGraphWindowsUpdatesGetKnownIssuesByTimeRangeWithDaysInPastWithIncludeAllActiveRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new {@link MicrosoftGraphNetworkaccessGetDiscoveredApplicationSegmentReportWithStartDateTimeWithEndDateTimeRequestBuilder} and sets the default values.
-     * @param endDateTime Usage: endDateTime={endDateTime}
+     * Instantiates a new {@link MicrosoftGraphWindowsUpdatesGetKnownIssuesByTimeRangeWithDaysInPastWithIncludeAllActiveRequestBuilder} and sets the default values.
+     * @param daysInPast Usage: daysInPast={daysInPast}
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
-     * @param startDateTime Usage: startDateTime={startDateTime}
      */
-    public MicrosoftGraphNetworkaccessGetDiscoveredApplicationSegmentReportWithStartDateTimeWithEndDateTimeRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter, @jakarta.annotation.Nullable final OffsetDateTime endDateTime, @jakarta.annotation.Nullable final OffsetDateTime startDateTime) {
-        super(requestAdapter, "{+baseurl}/networkAccess/reports/microsoft.graph.networkaccess.getDiscoveredApplicationSegmentReport(startDateTime={startDateTime},endDateTime={endDateTime}){?%24count,%24filter,%24search,%24skip,%24top}", pathParameters);
-        this.pathParameters.put("endDateTime", endDateTime);
-        this.pathParameters.put("startDateTime", startDateTime);
+    public MicrosoftGraphWindowsUpdatesGetKnownIssuesByTimeRangeWithDaysInPastWithIncludeAllActiveRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter, @jakarta.annotation.Nullable final Integer daysInPast) {
+        super(requestAdapter, "{+baseurl}/admin/windows/updates/products/{product%2Did}/microsoft.graph.windowsUpdates.getKnownIssuesByTimeRange(daysInPast={daysInPast},includeAllActive=@includeAllActive){?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top,includeAllActive*}", pathParameters);
+        this.pathParameters.put("daysInPast", daysInPast);
     }
     /**
-     * Instantiates a new {@link MicrosoftGraphNetworkaccessGetDiscoveredApplicationSegmentReportWithStartDateTimeWithEndDateTimeRequestBuilder} and sets the default values.
+     * Instantiates a new {@link MicrosoftGraphWindowsUpdatesGetKnownIssuesByTimeRangeWithDaysInPastWithIncludeAllActiveRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
-    public MicrosoftGraphNetworkaccessGetDiscoveredApplicationSegmentReportWithStartDateTimeWithEndDateTimeRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/networkAccess/reports/microsoft.graph.networkaccess.getDiscoveredApplicationSegmentReport(startDateTime={startDateTime},endDateTime={endDateTime}){?%24count,%24filter,%24search,%24skip,%24top}", rawUrl);
+    public MicrosoftGraphWindowsUpdatesGetKnownIssuesByTimeRangeWithDaysInPastWithIncludeAllActiveRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
+        super(requestAdapter, "{+baseurl}/admin/windows/updates/products/{product%2Did}/microsoft.graph.windowsUpdates.getKnownIssuesByTimeRange(daysInPast={daysInPast},includeAllActive=@includeAllActive){?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top,includeAllActive*}", rawUrl);
     }
     /**
-     * Invoke function getDiscoveredApplicationSegmentReport
-     * @return a {@link GetDiscoveredApplicationSegmentReportWithStartDateTimeWithEndDateTimeGetResponse}
+     * Invoke function getKnownIssuesByTimeRange
+     * @return a {@link GetKnownIssuesByTimeRangeWithDaysInPastWithIncludeAllActiveGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public GetDiscoveredApplicationSegmentReportWithStartDateTimeWithEndDateTimeGetResponse get() {
+    public GetKnownIssuesByTimeRangeWithDaysInPastWithIncludeAllActiveGetResponse get() {
         return get(null);
     }
     /**
-     * Invoke function getDiscoveredApplicationSegmentReport
+     * Invoke function getKnownIssuesByTimeRange
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link GetDiscoveredApplicationSegmentReportWithStartDateTimeWithEndDateTimeGetResponse}
+     * @return a {@link GetKnownIssuesByTimeRangeWithDaysInPastWithIncludeAllActiveGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public GetDiscoveredApplicationSegmentReportWithStartDateTimeWithEndDateTimeGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public GetKnownIssuesByTimeRangeWithDaysInPastWithIncludeAllActiveGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, GetDiscoveredApplicationSegmentReportWithStartDateTimeWithEndDateTimeGetResponse::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, GetKnownIssuesByTimeRangeWithDaysInPastWithIncludeAllActiveGetResponse::createFromDiscriminatorValue);
     }
     /**
-     * Invoke function getDiscoveredApplicationSegmentReport
+     * Invoke function getKnownIssuesByTimeRange
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -71,7 +68,7 @@ public class MicrosoftGraphNetworkaccessGetDiscoveredApplicationSegmentReportWit
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function getDiscoveredApplicationSegmentReport
+     * Invoke function getKnownIssuesByTimeRange
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -85,15 +82,15 @@ public class MicrosoftGraphNetworkaccessGetDiscoveredApplicationSegmentReportWit
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a {@link MicrosoftGraphNetworkaccessGetDiscoveredApplicationSegmentReportWithStartDateTimeWithEndDateTimeRequestBuilder}
+     * @return a {@link MicrosoftGraphWindowsUpdatesGetKnownIssuesByTimeRangeWithDaysInPastWithIncludeAllActiveRequestBuilder}
      */
     @jakarta.annotation.Nonnull
-    public MicrosoftGraphNetworkaccessGetDiscoveredApplicationSegmentReportWithStartDateTimeWithEndDateTimeRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+    public MicrosoftGraphWindowsUpdatesGetKnownIssuesByTimeRangeWithDaysInPastWithIncludeAllActiveRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
-        return new MicrosoftGraphNetworkaccessGetDiscoveredApplicationSegmentReportWithStartDateTimeWithEndDateTimeRequestBuilder(rawUrl, requestAdapter);
+        return new MicrosoftGraphWindowsUpdatesGetKnownIssuesByTimeRangeWithDaysInPastWithIncludeAllActiveRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Invoke function getDiscoveredApplicationSegmentReport
+     * Invoke function getKnownIssuesByTimeRange
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
@@ -103,15 +100,35 @@ public class MicrosoftGraphNetworkaccessGetDiscoveredApplicationSegmentReportWit
         @jakarta.annotation.Nullable
         public Boolean count;
         /**
+         * Expand related entities
+         */
+        @jakarta.annotation.Nullable
+        public String[] expand;
+        /**
          * Filter items by property values
          */
         @jakarta.annotation.Nullable
         public String filter;
         /**
+         * Usage: includeAllActive=@includeAllActive
+         */
+        @jakarta.annotation.Nullable
+        public Boolean includeAllActive;
+        /**
+         * Order items by property values
+         */
+        @jakarta.annotation.Nullable
+        public String[] orderby;
+        /**
          * Search items by search phrases
          */
         @jakarta.annotation.Nullable
         public String search;
+        /**
+         * Select properties to be returned
+         */
+        @jakarta.annotation.Nullable
+        public String[] select;
         /**
          * Skip the first n items
          */
@@ -131,9 +148,13 @@ public class MicrosoftGraphNetworkaccessGetDiscoveredApplicationSegmentReportWit
             final Map<String, Object> allQueryParams = new HashMap();
             allQueryParams.put("%24count", count);
             allQueryParams.put("%24filter", filter);
+            allQueryParams.put("includeAllActive", includeAllActive);
             allQueryParams.put("%24search", search);
             allQueryParams.put("%24skip", skip);
             allQueryParams.put("%24top", top);
+            allQueryParams.put("%24expand", expand);
+            allQueryParams.put("%24orderby", orderby);
+            allQueryParams.put("%24select", select);
             return allQueryParams;
         }
     }

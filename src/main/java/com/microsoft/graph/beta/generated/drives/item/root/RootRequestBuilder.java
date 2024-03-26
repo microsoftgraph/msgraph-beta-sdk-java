@@ -1,6 +1,7 @@
 package com.microsoft.graph.beta.drives.item.root;
 
 import com.microsoft.graph.beta.drives.item.root.content.ContentRequestBuilder;
+import com.microsoft.graph.beta.drives.item.root.contentstream.ContentStreamRequestBuilder;
 import com.microsoft.graph.beta.models.DriveItem;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -28,6 +29,14 @@ public class RootRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public ContentRequestBuilder content() {
         return new ContentRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the media for the drive entity.
+     * @return a {@link ContentStreamRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ContentStreamRequestBuilder contentStream() {
+        return new ContentStreamRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link RootRequestBuilder} and sets the default values.

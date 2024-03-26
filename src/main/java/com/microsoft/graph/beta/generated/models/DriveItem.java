@@ -66,12 +66,20 @@ public class DriveItem extends BaseItem implements Parsable {
         return this.backingStore.get("children");
     }
     /**
-     * Gets the content property value. The content stream, if the item represents a file.
+     * Gets the content property value. The content property
      * @return a {@link byte[]}
      */
     @jakarta.annotation.Nullable
     public byte[] getContent() {
         return this.backingStore.get("content");
+    }
+    /**
+     * Gets the contentStream property value. The content stream, if the item represents a file.
+     * @return a {@link byte[]}
+     */
+    @jakarta.annotation.Nullable
+    public byte[] getContentStream() {
+        return this.backingStore.get("contentStream");
     }
     /**
      * Gets the cTag property value. An eTag for the content of the item. This eTag isn't changed if only the metadata is changed. Note This property isn't returned if the item is a folder. Read-only.
@@ -102,6 +110,7 @@ public class DriveItem extends BaseItem implements Parsable {
         deserializerMap.put("bundle", (n) -> { this.setBundle(n.getObjectValue(Bundle::createFromDiscriminatorValue)); });
         deserializerMap.put("children", (n) -> { this.setChildren(n.getCollectionOfObjectValues(DriveItem::createFromDiscriminatorValue)); });
         deserializerMap.put("content", (n) -> { this.setContent(n.getByteArrayValue()); });
+        deserializerMap.put("contentStream", (n) -> { this.setContentStream(n.getByteArrayValue()); });
         deserializerMap.put("cTag", (n) -> { this.setCTag(n.getStringValue()); });
         deserializerMap.put("deleted", (n) -> { this.setDeleted(n.getObjectValue(Deleted::createFromDiscriminatorValue)); });
         deserializerMap.put("file", (n) -> { this.setFile(n.getObjectValue(File::createFromDiscriminatorValue)); });
@@ -371,6 +380,7 @@ public class DriveItem extends BaseItem implements Parsable {
         writer.writeObjectValue("bundle", this.getBundle());
         writer.writeCollectionOfObjectValues("children", this.getChildren());
         writer.writeByteArrayValue("content", this.getContent());
+        writer.writeByteArrayValue("contentStream", this.getContentStream());
         writer.writeStringValue("cTag", this.getCTag());
         writer.writeObjectValue("deleted", this.getDeleted());
         writer.writeObjectValue("file", this.getFile());
@@ -438,11 +448,18 @@ public class DriveItem extends BaseItem implements Parsable {
         this.backingStore.set("children", value);
     }
     /**
-     * Sets the content property value. The content stream, if the item represents a file.
+     * Sets the content property value. The content property
      * @param value Value to set for the content property.
      */
     public void setContent(@jakarta.annotation.Nullable final byte[] value) {
         this.backingStore.set("content", value);
+    }
+    /**
+     * Sets the contentStream property value. The content stream, if the item represents a file.
+     * @param value Value to set for the contentStream property.
+     */
+    public void setContentStream(@jakarta.annotation.Nullable final byte[] value) {
+        this.backingStore.set("contentStream", value);
     }
     /**
      * Sets the cTag property value. An eTag for the content of the item. This eTag isn't changed if only the metadata is changed. Note This property isn't returned if the item is a folder. Read-only.

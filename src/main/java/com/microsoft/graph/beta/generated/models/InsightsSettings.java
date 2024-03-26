@@ -44,7 +44,7 @@ public class InsightsSettings extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the isEnabledInOrganization property value. true if the specified type of insights are enabled for the organization; false if the specified type of insights are disabled for all users without exceptions. Default is true. Optional.
+     * Gets the isEnabledInOrganization property value. true if the specified type of insights is enabled for the organization; false if the specified type of insights is disabled for all users without exceptions. Default is true. Optional.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -69,7 +69,7 @@ public class InsightsSettings extends Entity implements Parsable {
         this.backingStore.set("disabledForGroup", value);
     }
     /**
-     * Sets the isEnabledInOrganization property value. true if the specified type of insights are enabled for the organization; false if the specified type of insights are disabled for all users without exceptions. Default is true. Optional.
+     * Sets the isEnabledInOrganization property value. true if the specified type of insights is enabled for the organization; false if the specified type of insights is disabled for all users without exceptions. Default is true. Optional.
      * @param value Value to set for the isEnabledInOrganization property.
      */
     public void setIsEnabledInOrganization(@jakarta.annotation.Nullable final Boolean value) {

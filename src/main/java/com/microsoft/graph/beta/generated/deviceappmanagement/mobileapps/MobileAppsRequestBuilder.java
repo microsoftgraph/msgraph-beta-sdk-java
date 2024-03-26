@@ -1,5 +1,6 @@
 package com.microsoft.graph.beta.deviceappmanagement.mobileapps;
 
+import com.microsoft.graph.beta.deviceappmanagement.mobileapps.convertfrommobileappcatalogpackagewithmobileappcatalogpackageid.ConvertFromMobileAppCatalogPackageWithMobileAppCatalogPackageIdRequestBuilder;
 import com.microsoft.graph.beta.deviceappmanagement.mobileapps.count.CountRequestBuilder;
 import com.microsoft.graph.beta.deviceappmanagement.mobileapps.graphandroidforworkapp.GraphAndroidForWorkAppRequestBuilder;
 import com.microsoft.graph.beta.deviceappmanagement.mobileapps.graphandroidlobapp.GraphAndroidLobAppRequestBuilder;
@@ -265,6 +266,16 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
      */
     public MobileAppsRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/deviceAppManagement/mobileApps{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
+    }
+    /**
+     * Provides operations to call the convertFromMobileAppCatalogPackage method.
+     * @param mobileAppCatalogPackageId Usage: mobileAppCatalogPackageId='{mobileAppCatalogPackageId}'
+     * @return a {@link ConvertFromMobileAppCatalogPackageWithMobileAppCatalogPackageIdRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ConvertFromMobileAppCatalogPackageWithMobileAppCatalogPackageIdRequestBuilder convertFromMobileAppCatalogPackageWithMobileAppCatalogPackageId(@jakarta.annotation.Nonnull final String mobileAppCatalogPackageId) {
+        Objects.requireNonNull(mobileAppCatalogPackageId);
+        return new ConvertFromMobileAppCatalogPackageWithMobileAppCatalogPackageIdRequestBuilder(pathParameters, requestAdapter, mobileAppCatalogPackageId);
     }
     /**
      * The mobile apps.

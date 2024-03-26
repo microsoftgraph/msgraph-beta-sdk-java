@@ -27,6 +27,14 @@ public class ProductRevision extends Entity implements Parsable {
         return new ProductRevision();
     }
     /**
+     * Gets the catalogEntry property value. The catalogEntry property
+     * @return a {@link CatalogEntry}
+     */
+    @jakarta.annotation.Nullable
+    public CatalogEntry getCatalogEntry() {
+        return this.backingStore.get("catalogEntry");
+    }
+    /**
      * Gets the displayName property value. The display name of the content. Read-only.
      * @return a {@link String}
      */
@@ -41,6 +49,7 @@ public class ProductRevision extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("catalogEntry", (n) -> { this.setCatalogEntry(n.getObjectValue(CatalogEntry::createFromDiscriminatorValue)); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("knowledgeBaseArticle", (n) -> { this.setKnowledgeBaseArticle(n.getObjectValue(KnowledgeBaseArticle::createFromDiscriminatorValue)); });
         deserializerMap.put("osBuild", (n) -> { this.setOsBuild(n.getObjectValue(BuildVersionDetails::createFromDiscriminatorValue)); });
@@ -96,12 +105,20 @@ public class ProductRevision extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeObjectValue("catalogEntry", this.getCatalogEntry());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeObjectValue("knowledgeBaseArticle", this.getKnowledgeBaseArticle());
         writer.writeObjectValue("osBuild", this.getOsBuild());
         writer.writeStringValue("product", this.getProduct());
         writer.writeOffsetDateTimeValue("releaseDateTime", this.getReleaseDateTime());
         writer.writeStringValue("version", this.getVersion());
+    }
+    /**
+     * Sets the catalogEntry property value. The catalogEntry property
+     * @param value Value to set for the catalogEntry property.
+     */
+    public void setCatalogEntry(@jakarta.annotation.Nullable final CatalogEntry value) {
+        this.backingStore.set("catalogEntry", value);
     }
     /**
      * Sets the displayName property value. The display name of the content. Read-only.

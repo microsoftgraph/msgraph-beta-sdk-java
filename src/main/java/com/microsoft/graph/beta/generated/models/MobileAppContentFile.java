@@ -29,7 +29,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
         return new MobileAppContentFile();
     }
     /**
-     * Gets the azureStorageUri property value. Indicates the Azure Storage URI that the file is uploaded to. Created by the service upon receiving a valid mobileAppContentFile. Read-only.
+     * Gets the azureStorageUri property value. Indicates the Azure Storage URI that the file is uploaded to. Created by the service upon receiving a valid mobileAppContentFile. Read-only. This property is read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -37,7 +37,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
         return this.backingStore.get("azureStorageUri");
     }
     /**
-     * Gets the azureStorageUriExpirationDateTime property value. Indicates the date and time when the Azure storage URI expires, in ISO 8601 format. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
+     * Gets the azureStorageUriExpirationDateTime property value. Indicates the date and time when the Azure storage URI expires, in ISO 8601 format. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only. This property is read-only.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -45,7 +45,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
         return this.backingStore.get("azureStorageUriExpirationDateTime");
     }
     /**
-     * Gets the createdDateTime property value. Indicates created date and time associated with app content file, in ISO 8601 format. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
+     * Gets the createdDateTime property value. Indicates created date and time associated with app content file, in ISO 8601 format. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only. This property is read-only.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -75,7 +75,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the isCommitted property value. A value indicating whether the file is committed. A committed app content file has been fully uploaded and validated by the Intune service. TRUE means that app content file is committed, FALSE means that app content file is not committed. Defaults to FALSE. Read-only.
+     * Gets the isCommitted property value. A value indicating whether the file is committed. A committed app content file has been fully uploaded and validated by the Intune service. TRUE means that app content file is committed, FALSE means that app content file is not committed. Defaults to FALSE. Read-only. This property is read-only.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -131,7 +131,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
         return this.backingStore.get("sizeEncrypted");
     }
     /**
-     * Gets the sizeEncryptedInBytes property value. Indicates the size of the file after encryption, in bytes.
+     * Gets the sizeEncryptedInBytes property value. Indicates the size of the file after encryption, in bytes. Valid values 0 to 9.22337203685478E+18
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -139,7 +139,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
         return this.backingStore.get("sizeEncryptedInBytes");
     }
     /**
-     * Gets the sizeInBytes property value. Indicates the original size of the file, in bytes.
+     * Gets the sizeInBytes property value. Indicates the original size of the file, in bytes. Valid values 0 to 9.22337203685478E+18
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -161,10 +161,6 @@ public class MobileAppContentFile extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeStringValue("azureStorageUri", this.getAzureStorageUri());
-        writer.writeOffsetDateTimeValue("azureStorageUriExpirationDateTime", this.getAzureStorageUriExpirationDateTime());
-        writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
-        writer.writeBooleanValue("isCommitted", this.getIsCommitted());
         writer.writeBooleanValue("isDependency", this.getIsDependency());
         writer.writeBooleanValue("isFrameworkFile", this.getIsFrameworkFile());
         writer.writeByteArrayValue("manifest", this.getManifest());
@@ -176,28 +172,28 @@ public class MobileAppContentFile extends Entity implements Parsable {
         writer.writeEnumValue("uploadState", this.getUploadState());
     }
     /**
-     * Sets the azureStorageUri property value. Indicates the Azure Storage URI that the file is uploaded to. Created by the service upon receiving a valid mobileAppContentFile. Read-only.
+     * Sets the azureStorageUri property value. Indicates the Azure Storage URI that the file is uploaded to. Created by the service upon receiving a valid mobileAppContentFile. Read-only. This property is read-only.
      * @param value Value to set for the azureStorageUri property.
      */
     public void setAzureStorageUri(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("azureStorageUri", value);
     }
     /**
-     * Sets the azureStorageUriExpirationDateTime property value. Indicates the date and time when the Azure storage URI expires, in ISO 8601 format. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
+     * Sets the azureStorageUriExpirationDateTime property value. Indicates the date and time when the Azure storage URI expires, in ISO 8601 format. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only. This property is read-only.
      * @param value Value to set for the azureStorageUriExpirationDateTime property.
      */
     public void setAzureStorageUriExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("azureStorageUriExpirationDateTime", value);
     }
     /**
-     * Sets the createdDateTime property value. Indicates created date and time associated with app content file, in ISO 8601 format. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
+     * Sets the createdDateTime property value. Indicates created date and time associated with app content file, in ISO 8601 format. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only. This property is read-only.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the isCommitted property value. A value indicating whether the file is committed. A committed app content file has been fully uploaded and validated by the Intune service. TRUE means that app content file is committed, FALSE means that app content file is not committed. Defaults to FALSE. Read-only.
+     * Sets the isCommitted property value. A value indicating whether the file is committed. A committed app content file has been fully uploaded and validated by the Intune service. TRUE means that app content file is committed, FALSE means that app content file is not committed. Defaults to FALSE. Read-only. This property is read-only.
      * @param value Value to set for the isCommitted property.
      */
     public void setIsCommitted(@jakarta.annotation.Nullable final Boolean value) {
@@ -246,14 +242,14 @@ public class MobileAppContentFile extends Entity implements Parsable {
         this.backingStore.set("sizeEncrypted", value);
     }
     /**
-     * Sets the sizeEncryptedInBytes property value. Indicates the size of the file after encryption, in bytes.
+     * Sets the sizeEncryptedInBytes property value. Indicates the size of the file after encryption, in bytes. Valid values 0 to 9.22337203685478E+18
      * @param value Value to set for the sizeEncryptedInBytes property.
      */
     public void setSizeEncryptedInBytes(@jakarta.annotation.Nullable final Long value) {
         this.backingStore.set("sizeEncryptedInBytes", value);
     }
     /**
-     * Sets the sizeInBytes property value. Indicates the original size of the file, in bytes.
+     * Sets the sizeInBytes property value. Indicates the original size of the file, in bytes. Valid values 0 to 9.22337203685478E+18
      * @param value Value to set for the sizeInBytes property.
      */
     public void setSizeInBytes(@jakarta.annotation.Nullable final Long value) {

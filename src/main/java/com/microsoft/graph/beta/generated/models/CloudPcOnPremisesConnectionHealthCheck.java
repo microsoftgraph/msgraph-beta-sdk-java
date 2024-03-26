@@ -49,7 +49,7 @@ public class CloudPcOnPremisesConnectionHealthCheck implements AdditionalDataHol
         return value;
     }
     /**
-     * Gets the additionalDetail property value. The additionalDetail property
+     * Gets the additionalDetail property value. More details about the health check or the recommended action. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -57,7 +57,7 @@ public class CloudPcOnPremisesConnectionHealthCheck implements AdditionalDataHol
         return this.backingStore.get("additionalDetail");
     }
     /**
-     * Gets the additionalDetails property value. More details about the health check or the recommended action.
+     * Gets the additionalDetails property value. The additionalDetails property
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -181,14 +181,14 @@ public class CloudPcOnPremisesConnectionHealthCheck implements AdditionalDataHol
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the additionalDetail property value. The additionalDetail property
+     * Sets the additionalDetail property value. More details about the health check or the recommended action. Read-only.
      * @param value Value to set for the additionalDetail property.
      */
     public void setAdditionalDetail(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("additionalDetail", value);
     }
     /**
-     * Sets the additionalDetails property value. More details about the health check or the recommended action.
+     * Sets the additionalDetails property value. The additionalDetails property
      * @param value Value to set for the additionalDetails property.
      */
     public void setAdditionalDetails(@jakarta.annotation.Nullable final String value) {

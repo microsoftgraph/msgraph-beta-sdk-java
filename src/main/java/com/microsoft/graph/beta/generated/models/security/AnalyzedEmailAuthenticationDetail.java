@@ -56,7 +56,7 @@ public class AnalyzedEmailAuthenticationDetail implements AdditionalDataHolder, 
         return this.backingStore;
     }
     /**
-     * Gets the compositeAuthentication property value. The compositeAuthentication property
+     * Gets the compositeAuthentication property value. A value used by Microsoft 365 to combine email authentication such as SPF, DKIM, and DMARC, to determine whether the message is authentic.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class AnalyzedEmailAuthenticationDetail implements AdditionalDataHolder, 
         return this.backingStore.get("compositeAuthentication");
     }
     /**
-     * Gets the dkim property value. The dkim property
+     * Gets the dkim property value. DomainKeys identified mail (DKIM). Indicates whether it was pass/fail/soft fail.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -72,7 +72,7 @@ public class AnalyzedEmailAuthenticationDetail implements AdditionalDataHolder, 
         return this.backingStore.get("dkim");
     }
     /**
-     * Gets the dmarc property value. The dmarc property
+     * Gets the dmarc property value. Domain-based Message Authentication. Indicates whether it was pass/fail/soft fail.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -102,7 +102,7 @@ public class AnalyzedEmailAuthenticationDetail implements AdditionalDataHolder, 
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the senderPolicyFramework property value. The senderPolicyFramework property
+     * Gets the senderPolicyFramework property value. Sender Policy Framework (SPF). Indicates whether it was pass/fail/soft fail.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -138,21 +138,21 @@ public class AnalyzedEmailAuthenticationDetail implements AdditionalDataHolder, 
         this.backingStore = value;
     }
     /**
-     * Sets the compositeAuthentication property value. The compositeAuthentication property
+     * Sets the compositeAuthentication property value. A value used by Microsoft 365 to combine email authentication such as SPF, DKIM, and DMARC, to determine whether the message is authentic.
      * @param value Value to set for the compositeAuthentication property.
      */
     public void setCompositeAuthentication(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("compositeAuthentication", value);
     }
     /**
-     * Sets the dkim property value. The dkim property
+     * Sets the dkim property value. DomainKeys identified mail (DKIM). Indicates whether it was pass/fail/soft fail.
      * @param value Value to set for the dkim property.
      */
     public void setDkim(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("dkim", value);
     }
     /**
-     * Sets the dmarc property value. The dmarc property
+     * Sets the dmarc property value. Domain-based Message Authentication. Indicates whether it was pass/fail/soft fail.
      * @param value Value to set for the dmarc property.
      */
     public void setDmarc(@jakarta.annotation.Nullable final String value) {
@@ -166,7 +166,7 @@ public class AnalyzedEmailAuthenticationDetail implements AdditionalDataHolder, 
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the senderPolicyFramework property value. The senderPolicyFramework property
+     * Sets the senderPolicyFramework property value. Sender Policy Framework (SPF). Indicates whether it was pass/fail/soft fail.
      * @param value Value to set for the senderPolicyFramework property.
      */
     public void setSenderPolicyFramework(@jakarta.annotation.Nullable final String value) {

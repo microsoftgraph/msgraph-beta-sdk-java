@@ -29,7 +29,7 @@ public class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppC
         return new AndroidManagedStoreAppConfiguration();
     }
     /**
-     * Gets the appSupportsOemConfig property value. Whether or not this AppConfig is an OEMConfig policy.
+     * Gets the appSupportsOemConfig property value. Whether or not this AppConfig is an OEMConfig policy. This property is read-only.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -98,7 +98,6 @@ public class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppC
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeBooleanValue("appSupportsOemConfig", this.getAppSupportsOemConfig());
         writer.writeBooleanValue("connectedAppsEnabled", this.getConnectedAppsEnabled());
         writer.writeStringValue("packageId", this.getPackageId());
         writer.writeStringValue("payloadJson", this.getPayloadJson());
@@ -106,7 +105,7 @@ public class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppC
         writer.writeEnumValue("profileApplicability", this.getProfileApplicability());
     }
     /**
-     * Sets the appSupportsOemConfig property value. Whether or not this AppConfig is an OEMConfig policy.
+     * Sets the appSupportsOemConfig property value. Whether or not this AppConfig is an OEMConfig policy. This property is read-only.
      * @param value Value to set for the appSupportsOemConfig property.
      */
     public void setAppSupportsOemConfig(@jakarta.annotation.Nullable final Boolean value) {

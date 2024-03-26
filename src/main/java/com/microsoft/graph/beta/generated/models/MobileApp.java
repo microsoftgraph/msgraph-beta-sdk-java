@@ -258,7 +258,7 @@ public class MobileApp extends Entity implements Parsable {
         return this.backingStore.get("roleScopeTagIds");
     }
     /**
-     * Gets the supersededAppCount property value. The total number of apps this app is directly or indirectly superseded by.
+     * Gets the supersededAppCount property value. The total number of apps this app is directly or indirectly superseded by. This property is read-only.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -266,7 +266,7 @@ public class MobileApp extends Entity implements Parsable {
         return this.backingStore.get("supersededAppCount");
     }
     /**
-     * Gets the supersedingAppCount property value. The total number of apps this app directly or indirectly supersedes.
+     * Gets the supersedingAppCount property value. The total number of apps this app directly or indirectly supersedes. This property is read-only.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -290,16 +290,12 @@ public class MobileApp extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("assignments", this.getAssignments());
         writer.writeCollectionOfObjectValues("categories", this.getCategories());
-        writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
-        writer.writeIntegerValue("dependentAppCount", this.getDependentAppCount());
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("developer", this.getDeveloper());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("informationUrl", this.getInformationUrl());
-        writer.writeBooleanValue("isAssigned", this.getIsAssigned());
         writer.writeBooleanValue("isFeatured", this.getIsFeatured());
         writer.writeObjectValue("largeIcon", this.getLargeIcon());
-        writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
         writer.writeStringValue("notes", this.getNotes());
         writer.writeStringValue("owner", this.getOwner());
         writer.writeStringValue("privacyInformationUrl", this.getPrivacyInformationUrl());
@@ -307,9 +303,6 @@ public class MobileApp extends Entity implements Parsable {
         writer.writeEnumValue("publishingState", this.getPublishingState());
         writer.writeCollectionOfObjectValues("relationships", this.getRelationships());
         writer.writeCollectionOfPrimitiveValues("roleScopeTagIds", this.getRoleScopeTagIds());
-        writer.writeIntegerValue("supersededAppCount", this.getSupersededAppCount());
-        writer.writeIntegerValue("supersedingAppCount", this.getSupersedingAppCount());
-        writer.writeIntegerValue("uploadState", this.getUploadState());
     }
     /**
      * Sets the assignments property value. The list of group assignments for this mobile app.
@@ -445,14 +438,14 @@ public class MobileApp extends Entity implements Parsable {
         this.backingStore.set("roleScopeTagIds", value);
     }
     /**
-     * Sets the supersededAppCount property value. The total number of apps this app is directly or indirectly superseded by.
+     * Sets the supersededAppCount property value. The total number of apps this app is directly or indirectly superseded by. This property is read-only.
      * @param value Value to set for the supersededAppCount property.
      */
     public void setSupersededAppCount(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("supersededAppCount", value);
     }
     /**
-     * Sets the supersedingAppCount property value. The total number of apps this app directly or indirectly supersedes.
+     * Sets the supersedingAppCount property value. The total number of apps this app directly or indirectly supersedes. This property is read-only.
      * @param value Value to set for the supersedingAppCount property.
      */
     public void setSupersedingAppCount(@jakarta.annotation.Nullable final Integer value) {

@@ -11,6 +11,7 @@ import com.microsoft.graph.beta.groups.item.checkmembergroups.CheckMemberGroupsR
 import com.microsoft.graph.beta.groups.item.checkmemberobjects.CheckMemberObjectsRequestBuilder;
 import com.microsoft.graph.beta.groups.item.conversations.ConversationsRequestBuilder;
 import com.microsoft.graph.beta.groups.item.createdonbehalfof.CreatedOnBehalfOfRequestBuilder;
+import com.microsoft.graph.beta.groups.item.deletepasswordsinglesignoncredentials.DeletePasswordSingleSignOnCredentialsRequestBuilder;
 import com.microsoft.graph.beta.groups.item.drive.DriveRequestBuilder;
 import com.microsoft.graph.beta.groups.item.drives.DrivesRequestBuilder;
 import com.microsoft.graph.beta.groups.item.endpoints.EndpointsRequestBuilder;
@@ -19,6 +20,7 @@ import com.microsoft.graph.beta.groups.item.events.EventsRequestBuilder;
 import com.microsoft.graph.beta.groups.item.extensions.ExtensionsRequestBuilder;
 import com.microsoft.graph.beta.groups.item.getmembergroups.GetMemberGroupsRequestBuilder;
 import com.microsoft.graph.beta.groups.item.getmemberobjects.GetMemberObjectsRequestBuilder;
+import com.microsoft.graph.beta.groups.item.getpasswordsinglesignoncredentials.GetPasswordSingleSignOnCredentialsRequestBuilder;
 import com.microsoft.graph.beta.groups.item.grouplifecyclepolicies.GroupLifecyclePoliciesRequestBuilder;
 import com.microsoft.graph.beta.groups.item.memberof.MemberOfRequestBuilder;
 import com.microsoft.graph.beta.groups.item.members.MembersRequestBuilder;
@@ -154,6 +156,14 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
         return new CreatedOnBehalfOfRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to call the deletePasswordSingleSignOnCredentials method.
+     * @return a {@link DeletePasswordSingleSignOnCredentialsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public DeletePasswordSingleSignOnCredentialsRequestBuilder deletePasswordSingleSignOnCredentials() {
+        return new DeletePasswordSingleSignOnCredentialsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the drive property of the microsoft.graph.group entity.
      * @return a {@link DriveRequestBuilder}
      */
@@ -216,6 +226,14 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public GetMemberObjectsRequestBuilder getMemberObjects() {
         return new GetMemberObjectsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the getPasswordSingleSignOnCredentials method.
+     * @return a {@link GetPasswordSingleSignOnCredentialsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GetPasswordSingleSignOnCredentialsRequestBuilder getPasswordSingleSignOnCredentials() {
+        return new GetPasswordSingleSignOnCredentialsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the groupLifecyclePolicies property of the microsoft.graph.group entity.
@@ -486,23 +504,23 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Group::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a group object.
+     * Create a new group object if it doesn't exist, or update the properties of an existing group object.You can create or update the following types of group: By default, this operation returns only a subset of the properties for each group. For a list of properties that are returned by default, see thethe Properties section of the group resource. To get properties that are not returned by default, do a GET operation and specify the properties in a $select OData query option. Note: To create a team, first create a group then add a team to it, see create team.
      * @param body The request body
      * @return a {@link Group}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/group-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/group-upsert?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Group patch(@jakarta.annotation.Nonnull final Group body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of a group object.
+     * Create a new group object if it doesn't exist, or update the properties of an existing group object.You can create or update the following types of group: By default, this operation returns only a subset of the properties for each group. For a list of properties that are returned by default, see thethe Properties section of the group resource. To get properties that are not returned by default, do a GET operation and specify the properties in a $select OData query option. Note: To create a team, first create a group then add a team to it, see create team.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Group}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/group-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/group-upsert?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Group patch(@jakarta.annotation.Nonnull final Group body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -553,7 +571,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a group object.
+     * Create a new group object if it doesn't exist, or update the properties of an existing group object.You can create or update the following types of group: By default, this operation returns only a subset of the properties for each group. For a list of properties that are returned by default, see thethe Properties section of the group resource. To get properties that are not returned by default, do a GET operation and specify the properties in a $select OData query option. Note: To create a team, first create a group then add a team to it, see create team.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -562,7 +580,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a group object.
+     * Create a new group object if it doesn't exist, or update the properties of an existing group object.You can create or update the following types of group: By default, this operation returns only a subset of the properties for each group. For a list of properties that are returned by default, see thethe Properties section of the group resource. To get properties that are not returned by default, do a GET operation and specify the properties in a $select OData query option. Note: To create a team, first create a group then add a team to it, see create team.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

@@ -27,7 +27,7 @@ public class Bookmark extends SearchAnswer implements Parsable {
         return new Bookmark();
     }
     /**
-     * Gets the availabilityEndDateTime property value. Timestamp of when the bookmark will stop to appear as a search result. Set as null for always available.
+     * Gets the availabilityEndDateTime property value. Date and time when the bookmark stops appearing as a search result. Set as null for always available. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -35,7 +35,7 @@ public class Bookmark extends SearchAnswer implements Parsable {
         return this.backingStore.get("availabilityEndDateTime");
     }
     /**
-     * Gets the availabilityStartDateTime property value. Timestamp of when the bookmark will start to appear as a search result. Set as null for always available.
+     * Gets the availabilityStartDateTime property value. Date and time when the bookmark starts to appear as a search result. Set as null for always available. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -71,7 +71,7 @@ public class Bookmark extends SearchAnswer implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the groupIds property value. List of security groups able to view this bookmark.
+     * Gets the groupIds property value. The list of security groups that are able to view this bookmark.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -79,7 +79,7 @@ public class Bookmark extends SearchAnswer implements Parsable {
         return this.backingStore.get("groupIds");
     }
     /**
-     * Gets the isSuggested property value. True if this bookmark was suggested to the admin by a user or was mined and suggested by Microsoft. Read-only.
+     * Gets the isSuggested property value. True if this bookmark was suggested to the admin, by a user, or was mined and suggested by Microsoft. Read-only.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -95,7 +95,7 @@ public class Bookmark extends SearchAnswer implements Parsable {
         return this.backingStore.get("keywords");
     }
     /**
-     * Gets the languageTags property value. A list of language names that are geographically specific and that this bookmark can be viewed in. Each language tag value follows the pattern {language}-{region}. As an example, en-us is English as used in the United States. See supported language tags for the list of possible values.
+     * Gets the languageTags property value. A list of geographically specific language names in which this bookmark can be viewed. Each language tag value follows the pattern {language}-{region}. For example, en-us is English as used in the United States. For the list of possible values, see Supported language tags.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -103,7 +103,7 @@ public class Bookmark extends SearchAnswer implements Parsable {
         return this.backingStore.get("languageTags");
     }
     /**
-     * Gets the platforms property value. List of devices and operating systems able to view this bookmark. Possible values are: unknown, android, androidForWork, ios, macOS, windowsPhone81, windowsPhone81AndLater, windows10AndLater, androidWorkProfile, androidASOP.
+     * Gets the platforms property value. List of devices and operating systems that are able to view this bookmark. Possible values are: android, androidForWork, ios, macOS, windowsPhone81, windowsPhone81AndLater, windows10AndLater, androidWorkProfile, unknown, androidASOP, androidMobileApplicationManagement, iOSMobileApplicationManagement, unknownFutureValue.
      * @return a {@link java.util.List<DevicePlatformType>}
      */
     @jakarta.annotation.Nullable
@@ -111,7 +111,7 @@ public class Bookmark extends SearchAnswer implements Parsable {
         return this.backingStore.get("platforms");
     }
     /**
-     * Gets the powerAppIds property value. List of Power Apps associated with this bookmark. If users add existing Power Apps to a bookmark, they can complete tasks, such as to enter vacation time or to report expenses on the search results page.
+     * Gets the powerAppIds property value. List of Power Apps associated with this bookmark. If users add existing Power Apps to a bookmark, they can complete tasks directly on the search results page, such as entering vacation time or reporting expenses.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -127,7 +127,7 @@ public class Bookmark extends SearchAnswer implements Parsable {
         return this.backingStore.get("state");
     }
     /**
-     * Gets the targetedVariations property value. Variations of a bookmark for different countries or devices. Use when you need to show different content to users based on their device, country/region, or both. The date and group settings will apply to all variations.
+     * Gets the targetedVariations property value. Variations of a bookmark for different countries or devices. Use when you need to show different content to users based on their device, country/region, or both. The date and group settings apply to all variations.
      * @return a {@link java.util.List<AnswerVariant>}
      */
     @jakarta.annotation.Nullable
@@ -154,14 +154,14 @@ public class Bookmark extends SearchAnswer implements Parsable {
         writer.writeCollectionOfObjectValues("targetedVariations", this.getTargetedVariations());
     }
     /**
-     * Sets the availabilityEndDateTime property value. Timestamp of when the bookmark will stop to appear as a search result. Set as null for always available.
+     * Sets the availabilityEndDateTime property value. Date and time when the bookmark stops appearing as a search result. Set as null for always available. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the availabilityEndDateTime property.
      */
     public void setAvailabilityEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("availabilityEndDateTime", value);
     }
     /**
-     * Sets the availabilityStartDateTime property value. Timestamp of when the bookmark will start to appear as a search result. Set as null for always available.
+     * Sets the availabilityStartDateTime property value. Date and time when the bookmark starts to appear as a search result. Set as null for always available. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the availabilityStartDateTime property.
      */
     public void setAvailabilityStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -175,14 +175,14 @@ public class Bookmark extends SearchAnswer implements Parsable {
         this.backingStore.set("categories", value);
     }
     /**
-     * Sets the groupIds property value. List of security groups able to view this bookmark.
+     * Sets the groupIds property value. The list of security groups that are able to view this bookmark.
      * @param value Value to set for the groupIds property.
      */
     public void setGroupIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("groupIds", value);
     }
     /**
-     * Sets the isSuggested property value. True if this bookmark was suggested to the admin by a user or was mined and suggested by Microsoft. Read-only.
+     * Sets the isSuggested property value. True if this bookmark was suggested to the admin, by a user, or was mined and suggested by Microsoft. Read-only.
      * @param value Value to set for the isSuggested property.
      */
     public void setIsSuggested(@jakarta.annotation.Nullable final Boolean value) {
@@ -196,21 +196,21 @@ public class Bookmark extends SearchAnswer implements Parsable {
         this.backingStore.set("keywords", value);
     }
     /**
-     * Sets the languageTags property value. A list of language names that are geographically specific and that this bookmark can be viewed in. Each language tag value follows the pattern {language}-{region}. As an example, en-us is English as used in the United States. See supported language tags for the list of possible values.
+     * Sets the languageTags property value. A list of geographically specific language names in which this bookmark can be viewed. Each language tag value follows the pattern {language}-{region}. For example, en-us is English as used in the United States. For the list of possible values, see Supported language tags.
      * @param value Value to set for the languageTags property.
      */
     public void setLanguageTags(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("languageTags", value);
     }
     /**
-     * Sets the platforms property value. List of devices and operating systems able to view this bookmark. Possible values are: unknown, android, androidForWork, ios, macOS, windowsPhone81, windowsPhone81AndLater, windows10AndLater, androidWorkProfile, androidASOP.
+     * Sets the platforms property value. List of devices and operating systems that are able to view this bookmark. Possible values are: android, androidForWork, ios, macOS, windowsPhone81, windowsPhone81AndLater, windows10AndLater, androidWorkProfile, unknown, androidASOP, androidMobileApplicationManagement, iOSMobileApplicationManagement, unknownFutureValue.
      * @param value Value to set for the platforms property.
      */
     public void setPlatforms(@jakarta.annotation.Nullable final java.util.List<DevicePlatformType> value) {
         this.backingStore.set("platforms", value);
     }
     /**
-     * Sets the powerAppIds property value. List of Power Apps associated with this bookmark. If users add existing Power Apps to a bookmark, they can complete tasks, such as to enter vacation time or to report expenses on the search results page.
+     * Sets the powerAppIds property value. List of Power Apps associated with this bookmark. If users add existing Power Apps to a bookmark, they can complete tasks directly on the search results page, such as entering vacation time or reporting expenses.
      * @param value Value to set for the powerAppIds property.
      */
     public void setPowerAppIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
@@ -224,7 +224,7 @@ public class Bookmark extends SearchAnswer implements Parsable {
         this.backingStore.set("state", value);
     }
     /**
-     * Sets the targetedVariations property value. Variations of a bookmark for different countries or devices. Use when you need to show different content to users based on their device, country/region, or both. The date and group settings will apply to all variations.
+     * Sets the targetedVariations property value. Variations of a bookmark for different countries or devices. Use when you need to show different content to users based on their device, country/region, or both. The date and group settings apply to all variations.
      * @param value Value to set for the targetedVariations property.
      */
     public void setTargetedVariations(@jakarta.annotation.Nullable final java.util.List<AnswerVariant> value) {
