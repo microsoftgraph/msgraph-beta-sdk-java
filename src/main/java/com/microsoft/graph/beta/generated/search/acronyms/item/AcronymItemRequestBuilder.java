@@ -37,7 +37,7 @@ public class AcronymItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/search/acronyms/{acronym%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Deletes an acronym object.
+     * Delete an acronym object.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/search-acronym-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -45,7 +45,7 @@ public class AcronymItemRequestBuilder extends BaseRequestBuilder {
         delete(null);
     }
     /**
-     * Deletes an acronym object.
+     * Delete an acronym object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/search-acronym-delete?view=graph-rest-1.0">Find more info here</a>
@@ -108,7 +108,7 @@ public class AcronymItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Acronym::createFromDiscriminatorValue);
     }
     /**
-     * Deletes an acronym object.
+     * Delete an acronym object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class AcronymItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Deletes an acronym object.
+     * Delete an acronym object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

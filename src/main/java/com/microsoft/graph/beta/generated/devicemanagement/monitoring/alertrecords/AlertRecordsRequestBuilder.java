@@ -2,6 +2,7 @@ package com.microsoft.graph.beta.devicemanagement.monitoring.alertrecords;
 
 import com.microsoft.graph.beta.devicemanagement.monitoring.alertrecords.count.CountRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.monitoring.alertrecords.item.AlertRecordItemRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.monitoring.alertrecords.microsoftgraphdevicemanagementchangealertrecordsportalnotificationassent.MicrosoftGraphDeviceManagementChangeAlertRecordsPortalNotificationAsSentRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.monitoring.alertrecords.microsoftgraphdevicemanagementgetportalnotifications.MicrosoftGraphDeviceManagementGetPortalNotificationsRequestBuilder;
 import com.microsoft.graph.beta.models.devicemanagement.AlertRecord;
 import com.microsoft.graph.beta.models.devicemanagement.AlertRecordCollectionResponse;
@@ -31,6 +32,14 @@ public class AlertRecordsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the changeAlertRecordsPortalNotificationAsSent method.
+     * @return a {@link MicrosoftGraphDeviceManagementChangeAlertRecordsPortalNotificationAsSentRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public MicrosoftGraphDeviceManagementChangeAlertRecordsPortalNotificationAsSentRequestBuilder microsoftGraphDeviceManagementChangeAlertRecordsPortalNotificationAsSent() {
+        return new MicrosoftGraphDeviceManagementChangeAlertRecordsPortalNotificationAsSentRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the getPortalNotifications method.

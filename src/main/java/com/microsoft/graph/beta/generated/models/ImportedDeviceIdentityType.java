@@ -10,7 +10,9 @@ public enum ImportedDeviceIdentityType implements ValuedEnum {
     /** Device Identity is of type imei. */
     Imei("imei"),
     /** Device Identity is of type serial number. */
-    SerialNumber("serialNumber");
+    SerialNumber("serialNumber"),
+    /** Device Identity is of type manufacturer + model + serial number semi-colon delimited tuple with enforced order. */
+    ManufacturerModelSerial("manufacturerModelSerial");
     public final String value;
     ImportedDeviceIdentityType(final String value) {
         this.value = value;
@@ -24,6 +26,7 @@ public enum ImportedDeviceIdentityType implements ValuedEnum {
             case "unknown": return Unknown;
             case "imei": return Imei;
             case "serialNumber": return SerialNumber;
+            case "manufacturerModelSerial": return ManufacturerModelSerial;
             default: return null;
         }
     }

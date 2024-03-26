@@ -133,16 +133,6 @@ public class MobileAppInstallSummary extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeIntegerValue("failedDeviceCount", this.getFailedDeviceCount());
-        writer.writeIntegerValue("failedUserCount", this.getFailedUserCount());
-        writer.writeIntegerValue("installedDeviceCount", this.getInstalledDeviceCount());
-        writer.writeIntegerValue("installedUserCount", this.getInstalledUserCount());
-        writer.writeIntegerValue("notApplicableDeviceCount", this.getNotApplicableDeviceCount());
-        writer.writeIntegerValue("notApplicableUserCount", this.getNotApplicableUserCount());
-        writer.writeIntegerValue("notInstalledDeviceCount", this.getNotInstalledDeviceCount());
-        writer.writeIntegerValue("notInstalledUserCount", this.getNotInstalledUserCount());
-        writer.writeIntegerValue("pendingInstallDeviceCount", this.getPendingInstallDeviceCount());
-        writer.writeIntegerValue("pendingInstallUserCount", this.getPendingInstallUserCount());
     }
     /**
      * Sets the failedDeviceCount property value. Number of Devices that have failed to install this app.

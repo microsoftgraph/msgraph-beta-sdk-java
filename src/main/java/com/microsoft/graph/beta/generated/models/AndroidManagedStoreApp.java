@@ -44,7 +44,7 @@ public class AndroidManagedStoreApp extends MobileApp implements Parsable {
         return this.backingStore.get("appIdentifier");
     }
     /**
-     * Gets the appStoreUrl property value. The Play for Work Store app URL.
+     * Gets the appStoreUrl property value. The Play for Work Store app URL. This property is read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -52,7 +52,7 @@ public class AndroidManagedStoreApp extends MobileApp implements Parsable {
         return this.backingStore.get("appStoreUrl");
     }
     /**
-     * Gets the appTracks property value. The tracks that are visible to this enterprise.
+     * Gets the appTracks property value. The tracks that are visible to this enterprise. This property is read-only.
      * @return a {@link java.util.List<AndroidManagedStoreAppTrack>}
      */
     @jakarta.annotation.Nullable
@@ -78,7 +78,7 @@ public class AndroidManagedStoreApp extends MobileApp implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the isPrivate property value. Indicates whether the app is only available to a given enterprise's users.
+     * Gets the isPrivate property value. Indicates whether the app is only available to a given enterprise's users. This property is read-only.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -94,7 +94,7 @@ public class AndroidManagedStoreApp extends MobileApp implements Parsable {
         return this.backingStore.get("isSystemApp");
     }
     /**
-     * Gets the packageId property value. The package identifier.
+     * Gets the packageId property value. The package identifier. This property is read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -102,7 +102,7 @@ public class AndroidManagedStoreApp extends MobileApp implements Parsable {
         return this.backingStore.get("packageId");
     }
     /**
-     * Gets the supportsOemConfig property value. Whether this app supports OEMConfig policy.
+     * Gets the supportsOemConfig property value. Whether this app supports OEMConfig policy. This property is read-only.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -110,7 +110,7 @@ public class AndroidManagedStoreApp extends MobileApp implements Parsable {
         return this.backingStore.get("supportsOemConfig");
     }
     /**
-     * Gets the totalLicenseCount property value. The total number of VPP licenses.
+     * Gets the totalLicenseCount property value. The total number of VPP licenses. This property is read-only.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -118,7 +118,7 @@ public class AndroidManagedStoreApp extends MobileApp implements Parsable {
         return this.backingStore.get("totalLicenseCount");
     }
     /**
-     * Gets the usedLicenseCount property value. The number of VPP licenses in use.
+     * Gets the usedLicenseCount property value. The number of VPP licenses in use. This property is read-only.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -133,14 +133,7 @@ public class AndroidManagedStoreApp extends MobileApp implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("appIdentifier", this.getAppIdentifier());
-        writer.writeStringValue("appStoreUrl", this.getAppStoreUrl());
-        writer.writeCollectionOfObjectValues("appTracks", this.getAppTracks());
-        writer.writeBooleanValue("isPrivate", this.getIsPrivate());
         writer.writeBooleanValue("isSystemApp", this.getIsSystemApp());
-        writer.writeStringValue("packageId", this.getPackageId());
-        writer.writeBooleanValue("supportsOemConfig", this.getSupportsOemConfig());
-        writer.writeIntegerValue("totalLicenseCount", this.getTotalLicenseCount());
-        writer.writeIntegerValue("usedLicenseCount", this.getUsedLicenseCount());
     }
     /**
      * Sets the appIdentifier property value. The Identity Name.
@@ -150,21 +143,21 @@ public class AndroidManagedStoreApp extends MobileApp implements Parsable {
         this.backingStore.set("appIdentifier", value);
     }
     /**
-     * Sets the appStoreUrl property value. The Play for Work Store app URL.
+     * Sets the appStoreUrl property value. The Play for Work Store app URL. This property is read-only.
      * @param value Value to set for the appStoreUrl property.
      */
     public void setAppStoreUrl(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("appStoreUrl", value);
     }
     /**
-     * Sets the appTracks property value. The tracks that are visible to this enterprise.
+     * Sets the appTracks property value. The tracks that are visible to this enterprise. This property is read-only.
      * @param value Value to set for the appTracks property.
      */
     public void setAppTracks(@jakarta.annotation.Nullable final java.util.List<AndroidManagedStoreAppTrack> value) {
         this.backingStore.set("appTracks", value);
     }
     /**
-     * Sets the isPrivate property value. Indicates whether the app is only available to a given enterprise's users.
+     * Sets the isPrivate property value. Indicates whether the app is only available to a given enterprise's users. This property is read-only.
      * @param value Value to set for the isPrivate property.
      */
     public void setIsPrivate(@jakarta.annotation.Nullable final Boolean value) {
@@ -178,28 +171,28 @@ public class AndroidManagedStoreApp extends MobileApp implements Parsable {
         this.backingStore.set("isSystemApp", value);
     }
     /**
-     * Sets the packageId property value. The package identifier.
+     * Sets the packageId property value. The package identifier. This property is read-only.
      * @param value Value to set for the packageId property.
      */
     public void setPackageId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("packageId", value);
     }
     /**
-     * Sets the supportsOemConfig property value. Whether this app supports OEMConfig policy.
+     * Sets the supportsOemConfig property value. Whether this app supports OEMConfig policy. This property is read-only.
      * @param value Value to set for the supportsOemConfig property.
      */
     public void setSupportsOemConfig(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("supportsOemConfig", value);
     }
     /**
-     * Sets the totalLicenseCount property value. The total number of VPP licenses.
+     * Sets the totalLicenseCount property value. The total number of VPP licenses. This property is read-only.
      * @param value Value to set for the totalLicenseCount property.
      */
     public void setTotalLicenseCount(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("totalLicenseCount", value);
     }
     /**
-     * Sets the usedLicenseCount property value. The number of VPP licenses in use.
+     * Sets the usedLicenseCount property value. The number of VPP licenses in use. This property is read-only.
      * @param value Value to set for the usedLicenseCount property.
      */
     public void setUsedLicenseCount(@jakarta.annotation.Nullable final Integer value) {

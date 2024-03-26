@@ -35,7 +35,7 @@ public class MicrosoftGraphSecurityRemoveHoldRequestBuilder extends BaseRequestB
         super(requestAdapter, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/custodians/{ediscoveryCustodian%2Did}/microsoft.graph.security.removeHold", rawUrl);
     }
     /**
-     * Start the process of removing hold from eDiscovery custodians. After the operation is created, you can get the status by retrieving the Location parameter from the response headers. The location provides a URL that will return an eDiscoveryHoldOperation object.
+     * Invoke action removeHold
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycustodian-removehold?view=graph-rest-1.0">Find more info here</a>
      */
@@ -43,7 +43,7 @@ public class MicrosoftGraphSecurityRemoveHoldRequestBuilder extends BaseRequestB
         post(null);
     }
     /**
-     * Start the process of removing hold from eDiscovery custodians. After the operation is created, you can get the status by retrieving the Location parameter from the response headers. The location provides a URL that will return an eDiscoveryHoldOperation object.
+     * Invoke action removeHold
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycustodian-removehold?view=graph-rest-1.0">Find more info here</a>
@@ -55,7 +55,7 @@ public class MicrosoftGraphSecurityRemoveHoldRequestBuilder extends BaseRequestB
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Start the process of removing hold from eDiscovery custodians. After the operation is created, you can get the status by retrieving the Location parameter from the response headers. The location provides a URL that will return an eDiscoveryHoldOperation object.
+     * Invoke action removeHold
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -63,7 +63,7 @@ public class MicrosoftGraphSecurityRemoveHoldRequestBuilder extends BaseRequestB
         return toPostRequestInformation(null);
     }
     /**
-     * Start the process of removing hold from eDiscovery custodians. After the operation is created, you can get the status by retrieving the Location parameter from the response headers. The location provides a URL that will return an eDiscoveryHoldOperation object.
+     * Invoke action removeHold
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

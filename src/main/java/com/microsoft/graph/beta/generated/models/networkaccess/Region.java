@@ -36,7 +36,8 @@ public enum Region implements ValuedEnum {
     BrazilSouth("brazilSouth"),
     JapanEast("japanEast"),
     JapanWest("japanWest"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    KoreaSouth("koreaSouth");
     public final String value;
     Region(final String value) {
         this.value = value;
@@ -79,6 +80,7 @@ public enum Region implements ValuedEnum {
             case "japanEast": return JapanEast;
             case "japanWest": return JapanWest;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "koreaSouth": return KoreaSouth;
             default: return null;
         }
     }

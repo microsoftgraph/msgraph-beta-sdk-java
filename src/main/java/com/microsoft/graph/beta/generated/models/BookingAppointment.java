@@ -46,7 +46,7 @@ public class BookingAppointment extends Entity implements Parsable {
         return this.backingStore.get("anonymousJoinWebUrl");
     }
     /**
-     * Gets the appointmentLabel property value. Custom label that can be stamped on this appointment by the user.
+     * Gets the appointmentLabel property value. The user can stamp a custom label on the appointment.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -54,7 +54,7 @@ public class BookingAppointment extends Entity implements Parsable {
         return this.backingStore.get("appointmentLabel");
     }
     /**
-     * Gets the createdDateTime property value. The date, time and timezone when the appointment was created.
+     * Gets the createdDateTime property value. The date, time, and timezone when the appointment was created.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -239,7 +239,7 @@ public class BookingAppointment extends Entity implements Parsable {
         return this.backingStore.get("invoiceUrl");
     }
     /**
-     * Gets the isCustomerAllowedToManageBooking property value. The isCustomerAllowedToManageBooking property
+     * Gets the isCustomerAllowedToManageBooking property value. Indicates that the customer can manage bookings created by the staff. The default value is false.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -247,7 +247,7 @@ public class BookingAppointment extends Entity implements Parsable {
         return this.backingStore.get("isCustomerAllowedToManageBooking");
     }
     /**
-     * Gets the isLocationOnline property value. True indicates that the appointment will be held online. Default value is false.
+     * Gets the isLocationOnline property value. Indicates that the appointment is held online. The default value is false.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -335,7 +335,7 @@ public class BookingAppointment extends Entity implements Parsable {
         return this.backingStore.get("reminders");
     }
     /**
-     * Gets the selfServiceAppointmentId property value. An additional tracking ID for the appointment, if the appointment has been created directly by the customer on the scheduling page, as opposed to by a staff member on the behalf of the customer.
+     * Gets the selfServiceAppointmentId property value. Another tracking ID for the appointment, if the appointment was created directly by the customer on the scheduling page, as opposed to by a staff member on behalf of customer.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -459,14 +459,14 @@ public class BookingAppointment extends Entity implements Parsable {
         this.backingStore.set("anonymousJoinWebUrl", value);
     }
     /**
-     * Sets the appointmentLabel property value. Custom label that can be stamped on this appointment by the user.
+     * Sets the appointmentLabel property value. The user can stamp a custom label on the appointment.
      * @param value Value to set for the appointmentLabel property.
      */
     public void setAppointmentLabel(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("appointmentLabel", value);
     }
     /**
-     * Sets the createdDateTime property value. The date, time and timezone when the appointment was created.
+     * Sets the createdDateTime property value. The date, time, and timezone when the appointment was created.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -585,14 +585,14 @@ public class BookingAppointment extends Entity implements Parsable {
         this.backingStore.set("invoiceUrl", value);
     }
     /**
-     * Sets the isCustomerAllowedToManageBooking property value. The isCustomerAllowedToManageBooking property
+     * Sets the isCustomerAllowedToManageBooking property value. Indicates that the customer can manage bookings created by the staff. The default value is false.
      * @param value Value to set for the isCustomerAllowedToManageBooking property.
      */
     public void setIsCustomerAllowedToManageBooking(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isCustomerAllowedToManageBooking", value);
     }
     /**
-     * Sets the isLocationOnline property value. True indicates that the appointment will be held online. Default value is false.
+     * Sets the isLocationOnline property value. Indicates that the appointment is held online. The default value is false.
      * @param value Value to set for the isLocationOnline property.
      */
     public void setIsLocationOnline(@jakarta.annotation.Nullable final Boolean value) {
@@ -669,7 +669,7 @@ public class BookingAppointment extends Entity implements Parsable {
         this.backingStore.set("reminders", value);
     }
     /**
-     * Sets the selfServiceAppointmentId property value. An additional tracking ID for the appointment, if the appointment has been created directly by the customer on the scheduling page, as opposed to by a staff member on the behalf of the customer.
+     * Sets the selfServiceAppointmentId property value. Another tracking ID for the appointment, if the appointment was created directly by the customer on the scheduling page, as opposed to by a staff member on behalf of customer.
      * @param value Value to set for the selfServiceAppointmentId property.
      */
     public void setSelfServiceAppointmentId(@jakarta.annotation.Nullable final String value) {

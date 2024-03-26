@@ -26,7 +26,7 @@ public class CollaborationRoot extends Entity implements Parsable {
         return new CollaborationRoot();
     }
     /**
-     * Gets the analyzedEmails property value. The analyzedEmails property
+     * Gets the analyzedEmails property value. Contains metadata for analyzed emails.
      * @return a {@link java.util.List<AnalyzedEmail>}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class CollaborationRoot extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("analyzedEmails", this.getAnalyzedEmails());
     }
     /**
-     * Sets the analyzedEmails property value. The analyzedEmails property
+     * Sets the analyzedEmails property value. Contains metadata for analyzed emails.
      * @param value Value to set for the analyzedEmails property.
      */
     public void setAnalyzedEmails(@jakarta.annotation.Nullable final java.util.List<AnalyzedEmail> value) {

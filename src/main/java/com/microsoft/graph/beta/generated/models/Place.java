@@ -64,7 +64,7 @@ public class Place extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the geoCoordinates property value. Specifies the place location in latitude, longitude and (optionally) altitude coordinates.
+     * Gets the geoCoordinates property value. Specifies the place location in latitude, longitude, and (optionally) altitude coordinates.
      * @return a {@link OutlookGeoCoordinates}
      */
     @jakarta.annotation.Nullable
@@ -80,7 +80,7 @@ public class Place extends Entity implements Parsable {
         return this.backingStore.get("phone");
     }
     /**
-     * Gets the placeId property value. An alternate immutable unique identifier of the place.
+     * Gets the placeId property value. A unique, immutable identifier for the place. Read-only. The value of this identifier is equal to the ExternalDirectoryObjectId returned from the Get-Mailbox cmdlet.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -115,7 +115,7 @@ public class Place extends Entity implements Parsable {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the geoCoordinates property value. Specifies the place location in latitude, longitude and (optionally) altitude coordinates.
+     * Sets the geoCoordinates property value. Specifies the place location in latitude, longitude, and (optionally) altitude coordinates.
      * @param value Value to set for the geoCoordinates property.
      */
     public void setGeoCoordinates(@jakarta.annotation.Nullable final OutlookGeoCoordinates value) {
@@ -129,7 +129,7 @@ public class Place extends Entity implements Parsable {
         this.backingStore.set("phone", value);
     }
     /**
-     * Sets the placeId property value. An alternate immutable unique identifier of the place.
+     * Sets the placeId property value. A unique, immutable identifier for the place. Read-only. The value of this identifier is equal to the ExternalDirectoryObjectId returned from the Get-Mailbox cmdlet.
      * @param value Value to set for the placeId property.
      */
     public void setPlaceId(@jakarta.annotation.Nullable final String value) {

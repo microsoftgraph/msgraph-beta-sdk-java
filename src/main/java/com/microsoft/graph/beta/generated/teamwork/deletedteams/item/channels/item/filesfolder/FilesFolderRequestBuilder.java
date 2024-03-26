@@ -3,6 +3,7 @@ package com.microsoft.graph.beta.teamwork.deletedteams.item.channels.item.filesf
 import com.microsoft.graph.beta.models.DriveItem;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.teamwork.deletedteams.item.channels.item.filesfolder.content.ContentRequestBuilder;
+import com.microsoft.graph.beta.teamwork.deletedteams.item.channels.item.filesfolder.contentstream.ContentStreamRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -28,6 +29,14 @@ public class FilesFolderRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public ContentRequestBuilder content() {
         return new ContentRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the media for the teamwork entity.
+     * @return a {@link ContentStreamRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ContentStreamRequestBuilder contentStream() {
+        return new ContentStreamRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link FilesFolderRequestBuilder} and sets the default values.

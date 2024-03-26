@@ -28,7 +28,7 @@ public class SearchEntity extends Entity implements Parsable {
         return new SearchEntity();
     }
     /**
-     * Gets the acronyms property value. Administrative answer in Microsoft Search results to define common acronyms in a organization.
+     * Gets the acronyms property value. Administrative answer in Microsoft Search results to define common acronyms in an organization.
      * @return a {@link java.util.List<Acronym>}
      */
     @jakarta.annotation.Nullable
@@ -56,7 +56,7 @@ public class SearchEntity extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the qnas property value. Administrative answer in Microsoft Search results which provide answers for specific search keywords in an organization.
+     * Gets the qnas property value. Administrative answer in Microsoft Search results that provide answers for specific search keywords in an organization.
      * @return a {@link java.util.List<Qna>}
      */
     @jakarta.annotation.Nullable
@@ -75,7 +75,7 @@ public class SearchEntity extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("qnas", this.getQnas());
     }
     /**
-     * Sets the acronyms property value. Administrative answer in Microsoft Search results to define common acronyms in a organization.
+     * Sets the acronyms property value. Administrative answer in Microsoft Search results to define common acronyms in an organization.
      * @param value Value to set for the acronyms property.
      */
     public void setAcronyms(@jakarta.annotation.Nullable final java.util.List<Acronym> value) {
@@ -89,7 +89,7 @@ public class SearchEntity extends Entity implements Parsable {
         this.backingStore.set("bookmarks", value);
     }
     /**
-     * Sets the qnas property value. Administrative answer in Microsoft Search results which provide answers for specific search keywords in an organization.
+     * Sets the qnas property value. Administrative answer in Microsoft Search results that provide answers for specific search keywords in an organization.
      * @param value Value to set for the qnas property.
      */
     public void setQnas(@jakarta.annotation.Nullable final java.util.List<Qna> value) {

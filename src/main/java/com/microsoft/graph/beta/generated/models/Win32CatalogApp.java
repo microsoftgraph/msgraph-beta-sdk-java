@@ -35,8 +35,18 @@ public class Win32CatalogApp extends Win32LobApp implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("latestUpgradeCatalogPackage", (n) -> { this.setLatestUpgradeCatalogPackage(n.getObjectValue(MobileAppCatalogPackage::createFromDiscriminatorValue)); });
         deserializerMap.put("mobileAppCatalogPackageId", (n) -> { this.setMobileAppCatalogPackageId(n.getStringValue()); });
+        deserializerMap.put("referencedCatalogPackage", (n) -> { this.setReferencedCatalogPackage(n.getObjectValue(MobileAppCatalogPackage::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the latestUpgradeCatalogPackage property value. The latest available catalog package the app is upgradeable to. This property is read-only.
+     * @return a {@link MobileAppCatalogPackage}
+     */
+    @jakarta.annotation.Nullable
+    public MobileAppCatalogPackage getLatestUpgradeCatalogPackage() {
+        return this.backingStore.get("latestUpgradeCatalogPackage");
     }
     /**
      * Gets the mobileAppCatalogPackageId property value. The mobileAppCatalogPackageId property references the mobileAppCatalogPackage entity which contains information about an application catalog package that can be deployed to Intune-managed devices
@@ -47,13 +57,30 @@ public class Win32CatalogApp extends Win32LobApp implements Parsable {
         return this.backingStore.get("mobileAppCatalogPackageId");
     }
     /**
+     * Gets the referencedCatalogPackage property value. The current catalog package the app is synced from. This property is read-only.
+     * @return a {@link MobileAppCatalogPackage}
+     */
+    @jakarta.annotation.Nullable
+    public MobileAppCatalogPackage getReferencedCatalogPackage() {
+        return this.backingStore.get("referencedCatalogPackage");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeObjectValue("latestUpgradeCatalogPackage", this.getLatestUpgradeCatalogPackage());
         writer.writeStringValue("mobileAppCatalogPackageId", this.getMobileAppCatalogPackageId());
+        writer.writeObjectValue("referencedCatalogPackage", this.getReferencedCatalogPackage());
+    }
+    /**
+     * Sets the latestUpgradeCatalogPackage property value. The latest available catalog package the app is upgradeable to. This property is read-only.
+     * @param value Value to set for the latestUpgradeCatalogPackage property.
+     */
+    public void setLatestUpgradeCatalogPackage(@jakarta.annotation.Nullable final MobileAppCatalogPackage value) {
+        this.backingStore.set("latestUpgradeCatalogPackage", value);
     }
     /**
      * Sets the mobileAppCatalogPackageId property value. The mobileAppCatalogPackageId property references the mobileAppCatalogPackage entity which contains information about an application catalog package that can be deployed to Intune-managed devices
@@ -61,5 +88,12 @@ public class Win32CatalogApp extends Win32LobApp implements Parsable {
      */
     public void setMobileAppCatalogPackageId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("mobileAppCatalogPackageId", value);
+    }
+    /**
+     * Sets the referencedCatalogPackage property value. The current catalog package the app is synced from. This property is read-only.
+     * @param value Value to set for the referencedCatalogPackage property.
+     */
+    public void setReferencedCatalogPackage(@jakarta.annotation.Nullable final MobileAppCatalogPackage value) {
+        this.backingStore.set("referencedCatalogPackage", value);
     }
 }

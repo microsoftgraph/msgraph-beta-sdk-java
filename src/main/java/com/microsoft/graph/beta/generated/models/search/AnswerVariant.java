@@ -57,7 +57,7 @@ public class AnswerVariant implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore;
     }
     /**
-     * Gets the description property value. Answer variation description shown on search results page.
+     * Gets the description property value. The answer variation description that is shown on the search results page.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -65,7 +65,7 @@ public class AnswerVariant implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore.get("description");
     }
     /**
-     * Gets the displayName property value. Answer variation name displayed in search results.
+     * Gets the displayName property value. The answer variation name that is displayed in search results.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -88,7 +88,7 @@ public class AnswerVariant implements AdditionalDataHolder, BackedModel, Parsabl
         return deserializerMap;
     }
     /**
-     * Gets the languageTag property value. The languageTag property
+     * Gets the languageTag property value. The country or region that can view this answer variation.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -104,7 +104,7 @@ public class AnswerVariant implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the platform property value. The platform property
+     * Gets the platform property value. The device or operating system that can view this answer variation. Possible values are: android, androidForWork, ios, macOS, windowsPhone81, windowsPhone81AndLater, windows10AndLater, androidWorkProfile, unknown, androidASOP, androidMobileApplicationManagement, iOSMobileApplicationManagement, unknownFutureValue.
      * @return a {@link DevicePlatformType}
      */
     @jakarta.annotation.Nullable
@@ -112,7 +112,7 @@ public class AnswerVariant implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore.get("platform");
     }
     /**
-     * Gets the webUrl property value. Answer variation URL link. When users click this answer variation in search results, they will go to this URL.
+     * Gets the webUrl property value. The URL link for the answer variation. When users select this answer variation from the search results, they're directed to the specified URL.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -149,21 +149,21 @@ public class AnswerVariant implements AdditionalDataHolder, BackedModel, Parsabl
         this.backingStore = value;
     }
     /**
-     * Sets the description property value. Answer variation description shown on search results page.
+     * Sets the description property value. The answer variation description that is shown on the search results page.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("description", value);
     }
     /**
-     * Sets the displayName property value. Answer variation name displayed in search results.
+     * Sets the displayName property value. The answer variation name that is displayed in search results.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the languageTag property value. The languageTag property
+     * Sets the languageTag property value. The country or region that can view this answer variation.
      * @param value Value to set for the languageTag property.
      */
     public void setLanguageTag(@jakarta.annotation.Nullable final String value) {
@@ -177,14 +177,14 @@ public class AnswerVariant implements AdditionalDataHolder, BackedModel, Parsabl
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the platform property value. The platform property
+     * Sets the platform property value. The device or operating system that can view this answer variation. Possible values are: android, androidForWork, ios, macOS, windowsPhone81, windowsPhone81AndLater, windows10AndLater, androidWorkProfile, unknown, androidASOP, androidMobileApplicationManagement, iOSMobileApplicationManagement, unknownFutureValue.
      * @param value Value to set for the platform property.
      */
     public void setPlatform(@jakarta.annotation.Nullable final DevicePlatformType value) {
         this.backingStore.set("platform", value);
     }
     /**
-     * Sets the webUrl property value. Answer variation URL link. When users click this answer variation in search results, they will go to this URL.
+     * Sets the webUrl property value. The URL link for the answer variation. When users select this answer variation from the search results, they're directed to the specified URL.
      * @param value Value to set for the webUrl property.
      */
     public void setWebUrl(@jakarta.annotation.Nullable final String value) {

@@ -119,6 +119,7 @@ import com.microsoft.graph.beta.termstore.TermStoreRequestBuilder;
 import com.microsoft.graph.beta.threatsubmission.ThreatSubmissionRequestBuilder;
 import com.microsoft.graph.beta.trustframework.TrustFrameworkRequestBuilder;
 import com.microsoft.graph.beta.users.UsersRequestBuilder;
+import com.microsoft.graph.beta.workplace.WorkplaceRequestBuilder;
 import com.microsoft.kiota.ApiClientBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.RequestAdapter;
@@ -1035,6 +1036,14 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public UsersRequestBuilder users() {
         return new UsersRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the workplace singleton.
+     * @return a {@link WorkplaceRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public WorkplaceRequestBuilder workplace() {
+        return new WorkplaceRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the collection of application entities.

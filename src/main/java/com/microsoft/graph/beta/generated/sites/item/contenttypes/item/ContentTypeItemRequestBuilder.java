@@ -171,7 +171,7 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ContentType::createFromDiscriminatorValue);
     }
     /**
-     * Update a [content type][contentType].
+     * Update contentType
      * @param body The request body
      * @return a {@link ContentType}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -182,7 +182,7 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update a [content type][contentType].
+     * Update contentType
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ContentType}
@@ -238,7 +238,7 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update a [content type][contentType].
+     * Update contentType
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -247,7 +247,7 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update a [content type][contentType].
+     * Update contentType
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

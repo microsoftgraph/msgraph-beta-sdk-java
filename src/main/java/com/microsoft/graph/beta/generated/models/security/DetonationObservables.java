@@ -56,7 +56,7 @@ public class DetonationObservables implements AdditionalDataHolder, BackedModel,
         return this.backingStore;
     }
     /**
-     * Gets the contactedIps property value. The contactedIps property
+     * Gets the contactedIps property value. The list of all contacted IPs in the detonation.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class DetonationObservables implements AdditionalDataHolder, BackedModel,
         return this.backingStore.get("contactedIps");
     }
     /**
-     * Gets the contactedUrls property value. The contactedUrls property
+     * Gets the contactedUrls property value. The list of all URLs found in the detonation.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -72,7 +72,7 @@ public class DetonationObservables implements AdditionalDataHolder, BackedModel,
         return this.backingStore.get("contactedUrls");
     }
     /**
-     * Gets the droppedfiles property value. The droppedfiles property
+     * Gets the droppedfiles property value. The list of all dropped files in the detonation.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -128,21 +128,21 @@ public class DetonationObservables implements AdditionalDataHolder, BackedModel,
         this.backingStore = value;
     }
     /**
-     * Sets the contactedIps property value. The contactedIps property
+     * Sets the contactedIps property value. The list of all contacted IPs in the detonation.
      * @param value Value to set for the contactedIps property.
      */
     public void setContactedIps(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("contactedIps", value);
     }
     /**
-     * Sets the contactedUrls property value. The contactedUrls property
+     * Sets the contactedUrls property value. The list of all URLs found in the detonation.
      * @param value Value to set for the contactedUrls property.
      */
     public void setContactedUrls(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("contactedUrls", value);
     }
     /**
-     * Sets the droppedfiles property value. The droppedfiles property
+     * Sets the droppedfiles property value. The list of all dropped files in the detonation.
      * @param value Value to set for the droppedfiles property.
      */
     public void setDroppedfiles(@jakarta.annotation.Nullable final java.util.List<String> value) {

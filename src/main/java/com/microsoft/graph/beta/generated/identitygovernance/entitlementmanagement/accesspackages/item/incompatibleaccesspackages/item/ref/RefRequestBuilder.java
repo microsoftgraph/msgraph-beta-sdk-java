@@ -35,7 +35,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/accessPackages/{accessPackage%2Did}/incompatibleAccessPackages/{accessPackage%2Did1}/$ref", rawUrl);
     }
     /**
-     * Remove an access package from the list of access packages that have been marked as incompatible on an accessPackage.  
+     * Remove an access package from the list of access packages marked as incompatible on an accessPackage.  
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackage-delete-incompatibleaccesspackage?view=graph-rest-1.0">Find more info here</a>
      */
@@ -43,7 +43,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         delete(null);
     }
     /**
-     * Remove an access package from the list of access packages that have been marked as incompatible on an accessPackage.  
+     * Remove an access package from the list of access packages marked as incompatible on an accessPackage.  
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackage-delete-incompatibleaccesspackage?view=graph-rest-1.0">Find more info here</a>
@@ -55,7 +55,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Remove an access package from the list of access packages that have been marked as incompatible on an accessPackage.  
+     * Remove an access package from the list of access packages marked as incompatible on an accessPackage.  
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -63,7 +63,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Remove an access package from the list of access packages that have been marked as incompatible on an accessPackage.  
+     * Remove an access package from the list of access packages marked as incompatible on an accessPackage.  
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

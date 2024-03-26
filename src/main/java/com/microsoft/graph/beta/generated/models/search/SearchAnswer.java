@@ -36,7 +36,7 @@ public class SearchAnswer extends Entity implements Parsable {
         return new SearchAnswer();
     }
     /**
-     * Gets the description property value. Search answer description shown on search results page.
+     * Gets the description property value. The search answer description that is shown on the search results page.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -44,7 +44,7 @@ public class SearchAnswer extends Entity implements Parsable {
         return this.backingStore.get("description");
     }
     /**
-     * Gets the displayName property value. Search answer name displayed in search results.
+     * Gets the displayName property value. The search answer name that is displayed in search results.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -66,7 +66,7 @@ public class SearchAnswer extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the lastModifiedBy property value. Details of the user that created or last modified the search answer. Read-only.
+     * Gets the lastModifiedBy property value. Details of the user who created or last modified the search answer. Read-only.
      * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
@@ -74,7 +74,7 @@ public class SearchAnswer extends Entity implements Parsable {
         return this.backingStore.get("lastModifiedBy");
     }
     /**
-     * Gets the lastModifiedDateTime property value. Timestamp of when the search answer is created or edited. Read-only.
+     * Gets the lastModifiedDateTime property value. Date and time when the search answer was created or last edited. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -82,7 +82,7 @@ public class SearchAnswer extends Entity implements Parsable {
         return this.backingStore.get("lastModifiedDateTime");
     }
     /**
-     * Gets the webUrl property value. Search answer URL link. When users click this search answer in search results, they'll go to this URL.
+     * Gets the webUrl property value. The URL link for the search answer. When users select this search answer from the search results, they're directed to the specified URL.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -103,35 +103,35 @@ public class SearchAnswer extends Entity implements Parsable {
         writer.writeStringValue("webUrl", this.getWebUrl());
     }
     /**
-     * Sets the description property value. Search answer description shown on search results page.
+     * Sets the description property value. The search answer description that is shown on the search results page.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("description", value);
     }
     /**
-     * Sets the displayName property value. Search answer name displayed in search results.
+     * Sets the displayName property value. The search answer name that is displayed in search results.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the lastModifiedBy property value. Details of the user that created or last modified the search answer. Read-only.
+     * Sets the lastModifiedBy property value. Details of the user who created or last modified the search answer. Read-only.
      * @param value Value to set for the lastModifiedBy property.
      */
     public void setLastModifiedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.backingStore.set("lastModifiedBy", value);
     }
     /**
-     * Sets the lastModifiedDateTime property value. Timestamp of when the search answer is created or edited. Read-only.
+     * Sets the lastModifiedDateTime property value. Date and time when the search answer was created or last edited. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
-     * Sets the webUrl property value. Search answer URL link. When users click this search answer in search results, they'll go to this URL.
+     * Sets the webUrl property value. The URL link for the search answer. When users select this search answer from the search results, they're directed to the specified URL.
      * @param value Value to set for the webUrl property.
      */
     public void setWebUrl(@jakarta.annotation.Nullable final String value) {

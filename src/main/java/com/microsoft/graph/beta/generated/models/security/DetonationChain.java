@@ -56,7 +56,7 @@ public class DetonationChain implements AdditionalDataHolder, BackedModel, Parsa
         return this.backingStore;
     }
     /**
-     * Gets the childNodes property value. The childNodes property
+     * Gets the childNodes property value. A list of all child nodes in the chain.
      * @return a {@link java.util.List<DetonationChain>}
      */
     @jakarta.annotation.Nullable
@@ -84,7 +84,7 @@ public class DetonationChain implements AdditionalDataHolder, BackedModel, Parsa
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the value property value. The value property
+     * Gets the value property value. The value of the chain.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -118,7 +118,7 @@ public class DetonationChain implements AdditionalDataHolder, BackedModel, Parsa
         this.backingStore = value;
     }
     /**
-     * Sets the childNodes property value. The childNodes property
+     * Sets the childNodes property value. A list of all child nodes in the chain.
      * @param value Value to set for the childNodes property.
      */
     public void setChildNodes(@jakarta.annotation.Nullable final java.util.List<DetonationChain> value) {
@@ -132,7 +132,7 @@ public class DetonationChain implements AdditionalDataHolder, BackedModel, Parsa
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the value property value. The value property
+     * Sets the value property value. The value of the chain.
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final String value) {

@@ -143,7 +143,7 @@ public class BookingService extends BookingNamedEntity implements Parsable {
         return this.backingStore.get("isAnonymousJoinEnabled");
     }
     /**
-     * Gets the isCustomerAllowedToManageBooking property value. The isCustomerAllowedToManageBooking property
+     * Gets the isCustomerAllowedToManageBooking property value. Indicates that the customer can manage bookings created by the staff. The default value is false.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -347,7 +347,7 @@ public class BookingService extends BookingNamedEntity implements Parsable {
         this.backingStore.set("isAnonymousJoinEnabled", value);
     }
     /**
-     * Sets the isCustomerAllowedToManageBooking property value. The isCustomerAllowedToManageBooking property
+     * Sets the isCustomerAllowedToManageBooking property value. Indicates that the customer can manage bookings created by the staff. The default value is false.
      * @param value Value to set for the isCustomerAllowedToManageBooking property.
      */
     public void setIsCustomerAllowedToManageBooking(@jakarta.annotation.Nullable final Boolean value) {

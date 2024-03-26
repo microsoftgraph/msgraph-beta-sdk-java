@@ -1,5 +1,6 @@
 package com.microsoft.graph.beta.admin.windows.updates.deploymentaudiences.item;
 
+import com.microsoft.graph.beta.admin.windows.updates.deploymentaudiences.item.applicablecontent.ApplicableContentRequestBuilder;
 import com.microsoft.graph.beta.admin.windows.updates.deploymentaudiences.item.exclusions.ExclusionsRequestBuilder;
 import com.microsoft.graph.beta.admin.windows.updates.deploymentaudiences.item.members.MembersRequestBuilder;
 import com.microsoft.graph.beta.admin.windows.updates.deploymentaudiences.item.microsoftgraphwindowsupdatesupdateaudience.MicrosoftGraphWindowsUpdatesUpdateAudienceRequestBuilder;
@@ -24,6 +25,14 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeploymentAudienceItemRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the applicableContent property of the microsoft.graph.windowsUpdates.deploymentAudience entity.
+     * @return a {@link ApplicableContentRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ApplicableContentRequestBuilder applicableContent() {
+        return new ApplicableContentRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Provides operations to manage the exclusions property of the microsoft.graph.windowsUpdates.deploymentAudience entity.
      * @return a {@link ExclusionsRequestBuilder}

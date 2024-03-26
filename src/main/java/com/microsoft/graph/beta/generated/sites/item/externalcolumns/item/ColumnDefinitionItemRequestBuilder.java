@@ -37,7 +37,7 @@ public class ColumnDefinitionItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/sites/{site%2Did}/externalColumns/{columnDefinition%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * The collection of column definitions available in the site that are referenced from the sites in the parent hierarchy of the current site.
+     * The collection of column definitions available in the site that is referenced from the sites in the parent hierarchy of the current site.
      * @return a {@link ColumnDefinition}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -46,7 +46,7 @@ public class ColumnDefinitionItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * The collection of column definitions available in the site that are referenced from the sites in the parent hierarchy of the current site.
+     * The collection of column definitions available in the site that is referenced from the sites in the parent hierarchy of the current site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ColumnDefinition}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -59,7 +59,7 @@ public class ColumnDefinitionItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ColumnDefinition::createFromDiscriminatorValue);
     }
     /**
-     * The collection of column definitions available in the site that are referenced from the sites in the parent hierarchy of the current site.
+     * The collection of column definitions available in the site that is referenced from the sites in the parent hierarchy of the current site.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class ColumnDefinitionItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The collection of column definitions available in the site that are referenced from the sites in the parent hierarchy of the current site.
+     * The collection of column definitions available in the site that is referenced from the sites in the parent hierarchy of the current site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -89,7 +89,7 @@ public class ColumnDefinitionItemRequestBuilder extends BaseRequestBuilder {
         return new ColumnDefinitionItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The collection of column definitions available in the site that are referenced from the sites in the parent hierarchy of the current site.
+     * The collection of column definitions available in the site that is referenced from the sites in the parent hierarchy of the current site.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

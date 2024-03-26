@@ -66,7 +66,7 @@ public class MobileAppAssignment extends Entity implements Parsable {
         return this.backingStore.get("source");
     }
     /**
-     * Gets the sourceId property value. The identifier of the source of the assignment.
+     * Gets the sourceId property value. The identifier of the source of the assignment. This property is read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -91,7 +91,6 @@ public class MobileAppAssignment extends Entity implements Parsable {
         writer.writeEnumValue("intent", this.getIntent());
         writer.writeObjectValue("settings", this.getSettings());
         writer.writeEnumValue("source", this.getSource());
-        writer.writeStringValue("sourceId", this.getSourceId());
         writer.writeObjectValue("target", this.getTarget());
     }
     /**
@@ -116,7 +115,7 @@ public class MobileAppAssignment extends Entity implements Parsable {
         this.backingStore.set("source", value);
     }
     /**
-     * Sets the sourceId property value. The identifier of the source of the assignment.
+     * Sets the sourceId property value. The identifier of the source of the assignment. This property is read-only.
      * @param value Value to set for the sourceId property.
      */
     public void setSourceId(@jakarta.annotation.Nullable final String value) {

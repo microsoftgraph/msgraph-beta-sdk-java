@@ -69,11 +69,20 @@ public class UserExperienceSettings implements AdditionalDataHolder, BackedModel
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("daysUntilForcedReboot", (n) -> { this.setDaysUntilForcedReboot(n.getIntegerValue()); });
+        deserializerMap.put("isHotpatchEnabled", (n) -> { this.setIsHotpatchEnabled(n.getBooleanValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("offerAsOptional", (n) -> { this.setOfferAsOptional(n.getBooleanValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the isHotpatchEnabled property value. The isHotpatchEnabled property
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsHotpatchEnabled() {
+        return this.backingStore.get("isHotpatchEnabled");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -98,6 +107,7 @@ public class UserExperienceSettings implements AdditionalDataHolder, BackedModel
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("daysUntilForcedReboot", this.getDaysUntilForcedReboot());
+        writer.writeBooleanValue("isHotpatchEnabled", this.getIsHotpatchEnabled());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeBooleanValue("offerAsOptional", this.getOfferAsOptional());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -123,6 +133,13 @@ public class UserExperienceSettings implements AdditionalDataHolder, BackedModel
      */
     public void setDaysUntilForcedReboot(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("daysUntilForcedReboot", value);
+    }
+    /**
+     * Sets the isHotpatchEnabled property value. The isHotpatchEnabled property
+     * @param value Value to set for the isHotpatchEnabled property.
+     */
+    public void setIsHotpatchEnabled(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isHotpatchEnabled", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property

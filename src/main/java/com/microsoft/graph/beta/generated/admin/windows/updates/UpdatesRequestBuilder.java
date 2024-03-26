@@ -3,6 +3,7 @@ package com.microsoft.graph.beta.admin.windows.updates;
 import com.microsoft.graph.beta.admin.windows.updates.catalog.CatalogRequestBuilder;
 import com.microsoft.graph.beta.admin.windows.updates.deploymentaudiences.DeploymentAudiencesRequestBuilder;
 import com.microsoft.graph.beta.admin.windows.updates.deployments.DeploymentsRequestBuilder;
+import com.microsoft.graph.beta.admin.windows.updates.products.ProductsRequestBuilder;
 import com.microsoft.graph.beta.admin.windows.updates.resourceconnections.ResourceConnectionsRequestBuilder;
 import com.microsoft.graph.beta.admin.windows.updates.updatableassets.UpdatableAssetsRequestBuilder;
 import com.microsoft.graph.beta.admin.windows.updates.updatepolicies.UpdatePoliciesRequestBuilder;
@@ -49,6 +50,14 @@ public class UpdatesRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public DeploymentsRequestBuilder deployments() {
         return new DeploymentsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the products property of the microsoft.graph.adminWindowsUpdates entity.
+     * @return a {@link ProductsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ProductsRequestBuilder products() {
+        return new ProductsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the resourceConnections property of the microsoft.graph.adminWindowsUpdates entity.

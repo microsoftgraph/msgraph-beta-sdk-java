@@ -3,6 +3,7 @@ package com.microsoft.graph.beta.models;
 import com.microsoft.graph.beta.models.windowsupdates.Catalog;
 import com.microsoft.graph.beta.models.windowsupdates.Deployment;
 import com.microsoft.graph.beta.models.windowsupdates.DeploymentAudience;
+import com.microsoft.graph.beta.models.windowsupdates.Product;
 import com.microsoft.graph.beta.models.windowsupdates.ResourceConnection;
 import com.microsoft.graph.beta.models.windowsupdates.UpdatableAsset;
 import com.microsoft.graph.beta.models.windowsupdates.UpdatePolicy;
@@ -64,10 +65,19 @@ public class AdminWindowsUpdates extends Entity implements Parsable {
         deserializerMap.put("catalog", (n) -> { this.setCatalog(n.getObjectValue(Catalog::createFromDiscriminatorValue)); });
         deserializerMap.put("deploymentAudiences", (n) -> { this.setDeploymentAudiences(n.getCollectionOfObjectValues(DeploymentAudience::createFromDiscriminatorValue)); });
         deserializerMap.put("deployments", (n) -> { this.setDeployments(n.getCollectionOfObjectValues(Deployment::createFromDiscriminatorValue)); });
+        deserializerMap.put("products", (n) -> { this.setProducts(n.getCollectionOfObjectValues(Product::createFromDiscriminatorValue)); });
         deserializerMap.put("resourceConnections", (n) -> { this.setResourceConnections(n.getCollectionOfObjectValues(ResourceConnection::createFromDiscriminatorValue)); });
         deserializerMap.put("updatableAssets", (n) -> { this.setUpdatableAssets(n.getCollectionOfObjectValues(UpdatableAsset::createFromDiscriminatorValue)); });
         deserializerMap.put("updatePolicies", (n) -> { this.setUpdatePolicies(n.getCollectionOfObjectValues(UpdatePolicy::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the products property value. A collection of Windows products.
+     * @return a {@link java.util.List<Product>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<Product> getProducts() {
+        return this.backingStore.get("products");
     }
     /**
      * Gets the resourceConnections property value. Service connections to external resources such as analytics workspaces.
@@ -103,6 +113,7 @@ public class AdminWindowsUpdates extends Entity implements Parsable {
         writer.writeObjectValue("catalog", this.getCatalog());
         writer.writeCollectionOfObjectValues("deploymentAudiences", this.getDeploymentAudiences());
         writer.writeCollectionOfObjectValues("deployments", this.getDeployments());
+        writer.writeCollectionOfObjectValues("products", this.getProducts());
         writer.writeCollectionOfObjectValues("resourceConnections", this.getResourceConnections());
         writer.writeCollectionOfObjectValues("updatableAssets", this.getUpdatableAssets());
         writer.writeCollectionOfObjectValues("updatePolicies", this.getUpdatePolicies());
@@ -127,6 +138,13 @@ public class AdminWindowsUpdates extends Entity implements Parsable {
      */
     public void setDeployments(@jakarta.annotation.Nullable final java.util.List<Deployment> value) {
         this.backingStore.set("deployments", value);
+    }
+    /**
+     * Sets the products property value. A collection of Windows products.
+     * @param value Value to set for the products property.
+     */
+    public void setProducts(@jakarta.annotation.Nullable final java.util.List<Product> value) {
+        this.backingStore.set("products", value);
     }
     /**
      * Sets the resourceConnections property value. Service connections to external resources such as analytics workspaces.

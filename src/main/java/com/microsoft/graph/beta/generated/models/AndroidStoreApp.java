@@ -29,7 +29,7 @@ public class AndroidStoreApp extends MobileApp implements Parsable {
         return new AndroidStoreApp();
     }
     /**
-     * Gets the appIdentifier property value. The Identity Name.
+     * Gets the appIdentifier property value. The Identity Name. This property is read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -66,7 +66,7 @@ public class AndroidStoreApp extends MobileApp implements Parsable {
         return this.backingStore.get("minimumSupportedOperatingSystem");
     }
     /**
-     * Gets the packageId property value. The package identifier.
+     * Gets the packageId property value. The package identifier. This property is read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -80,13 +80,11 @@ public class AndroidStoreApp extends MobileApp implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeStringValue("appIdentifier", this.getAppIdentifier());
         writer.writeStringValue("appStoreUrl", this.getAppStoreUrl());
         writer.writeObjectValue("minimumSupportedOperatingSystem", this.getMinimumSupportedOperatingSystem());
-        writer.writeStringValue("packageId", this.getPackageId());
     }
     /**
-     * Sets the appIdentifier property value. The Identity Name.
+     * Sets the appIdentifier property value. The Identity Name. This property is read-only.
      * @param value Value to set for the appIdentifier property.
      */
     public void setAppIdentifier(@jakarta.annotation.Nullable final String value) {
@@ -107,7 +105,7 @@ public class AndroidStoreApp extends MobileApp implements Parsable {
         this.backingStore.set("minimumSupportedOperatingSystem", value);
     }
     /**
-     * Sets the packageId property value. The package identifier.
+     * Sets the packageId property value. The package identifier. This property is read-only.
      * @param value Value to set for the packageId property.
      */
     public void setPackageId(@jakarta.annotation.Nullable final String value) {

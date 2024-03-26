@@ -1,6 +1,7 @@
 package com.microsoft.graph.beta.groups.item.sites.item.analytics.itemactivitystats.item.activities.item.driveitem;
 
 import com.microsoft.graph.beta.groups.item.sites.item.analytics.itemactivitystats.item.activities.item.driveitem.content.ContentRequestBuilder;
+import com.microsoft.graph.beta.groups.item.sites.item.analytics.itemactivitystats.item.activities.item.driveitem.contentstream.ContentStreamRequestBuilder;
 import com.microsoft.graph.beta.models.DriveItem;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -28,6 +29,14 @@ public class DriveItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public ContentRequestBuilder content() {
         return new ContentRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the media for the group entity.
+     * @return a {@link ContentStreamRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ContentStreamRequestBuilder contentStream() {
+        return new ContentStreamRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link DriveItemRequestBuilder} and sets the default values.

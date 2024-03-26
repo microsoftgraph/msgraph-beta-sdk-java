@@ -85,6 +85,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
         deserializerMap.put("microsoftStoreForBusinessLastCompletedApplicationSyncTime", (n) -> { this.setMicrosoftStoreForBusinessLastCompletedApplicationSyncTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("microsoftStoreForBusinessLastSuccessfulSyncDateTime", (n) -> { this.setMicrosoftStoreForBusinessLastSuccessfulSyncDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("microsoftStoreForBusinessPortalSelection", (n) -> { this.setMicrosoftStoreForBusinessPortalSelection(n.getEnumSetValue(MicrosoftStoreForBusinessPortalSelectionOptions::forValue)); });
+        deserializerMap.put("mobileAppCatalogPackages", (n) -> { this.setMobileAppCatalogPackages(n.getCollectionOfObjectValues(MobileAppCatalogPackage::createFromDiscriminatorValue)); });
         deserializerMap.put("mobileAppCategories", (n) -> { this.setMobileAppCategories(n.getCollectionOfObjectValues(MobileAppCategory::createFromDiscriminatorValue)); });
         deserializerMap.put("mobileAppConfigurations", (n) -> { this.setMobileAppConfigurations(n.getCollectionOfObjectValues(ManagedDeviceMobileAppConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("mobileApps", (n) -> { this.setMobileApps(n.getCollectionOfObjectValues(MobileApp::createFromDiscriminatorValue)); });
@@ -203,6 +204,14 @@ public class DeviceAppManagement extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public EnumSet<MicrosoftStoreForBusinessPortalSelectionOptions> getMicrosoftStoreForBusinessPortalSelection() {
         return this.backingStore.get("microsoftStoreForBusinessPortalSelection");
+    }
+    /**
+     * Gets the mobileAppCatalogPackages property value. MobileAppCatalogPackage entities.
+     * @return a {@link java.util.List<MobileAppCatalogPackage>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<MobileAppCatalogPackage> getMobileAppCatalogPackages() {
+        return this.backingStore.get("mobileAppCatalogPackages");
     }
     /**
      * Gets the mobileAppCategories property value. The mobile app categories.
@@ -332,6 +341,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
         writer.writeOffsetDateTimeValue("microsoftStoreForBusinessLastCompletedApplicationSyncTime", this.getMicrosoftStoreForBusinessLastCompletedApplicationSyncTime());
         writer.writeOffsetDateTimeValue("microsoftStoreForBusinessLastSuccessfulSyncDateTime", this.getMicrosoftStoreForBusinessLastSuccessfulSyncDateTime());
         writer.writeEnumSetValue("microsoftStoreForBusinessPortalSelection", this.getMicrosoftStoreForBusinessPortalSelection());
+        writer.writeCollectionOfObjectValues("mobileAppCatalogPackages", this.getMobileAppCatalogPackages());
         writer.writeCollectionOfObjectValues("mobileAppCategories", this.getMobileAppCategories());
         writer.writeCollectionOfObjectValues("mobileAppConfigurations", this.getMobileAppConfigurations());
         writer.writeCollectionOfObjectValues("mobileApps", this.getMobileApps());
@@ -464,6 +474,13 @@ public class DeviceAppManagement extends Entity implements Parsable {
      */
     public void setMicrosoftStoreForBusinessPortalSelection(@jakarta.annotation.Nullable final EnumSet<MicrosoftStoreForBusinessPortalSelectionOptions> value) {
         this.backingStore.set("microsoftStoreForBusinessPortalSelection", value);
+    }
+    /**
+     * Sets the mobileAppCatalogPackages property value. MobileAppCatalogPackage entities.
+     * @param value Value to set for the mobileAppCatalogPackages property.
+     */
+    public void setMobileAppCatalogPackages(@jakarta.annotation.Nullable final java.util.List<MobileAppCatalogPackage> value) {
+        this.backingStore.set("mobileAppCatalogPackages", value);
     }
     /**
      * Sets the mobileAppCategories property value. The mobile app categories.
