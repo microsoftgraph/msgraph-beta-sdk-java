@@ -2,7 +2,7 @@ package com.microsoft.graph.beta.security.labels.categories.item;
 
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.security.CategoryTemplate;
-import com.microsoft.graph.beta.security.labels.categories.item.subcategories.SubCategoriesRequestBuilder;
+import com.microsoft.graph.beta.security.labels.categories.item.subcategories.SubcategoriesRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -22,12 +22,12 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CategoryTemplateItemRequestBuilder extends BaseRequestBuilder {
     /**
-     * Provides operations to manage the subCategories property of the microsoft.graph.security.categoryTemplate entity.
-     * @return a {@link SubCategoriesRequestBuilder}
+     * Provides operations to manage the subcategories property of the microsoft.graph.security.categoryTemplate entity.
+     * @return a {@link SubcategoriesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
-    public SubCategoriesRequestBuilder subCategories() {
-        return new SubCategoriesRequestBuilder(pathParameters, requestAdapter);
+    public SubcategoriesRequestBuilder subcategories() {
+        return new SubcategoriesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link CategoryTemplateItemRequestBuilder} and sets the default values.

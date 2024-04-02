@@ -7,22 +7,22 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class Authority extends FilePlanDescriptorBase implements Parsable {
+public class FilePlanDepartment extends FilePlanDescriptorBase implements Parsable {
     /**
-     * Instantiates a new {@link Authority} and sets the default values.
+     * Instantiates a new {@link FilePlanDepartment} and sets the default values.
      */
-    public Authority() {
+    public FilePlanDepartment() {
         super();
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a {@link Authority}
+     * @return a {@link FilePlanDepartment}
      */
     @jakarta.annotation.Nonnull
-    public static Authority createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
+    public static FilePlanDepartment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
-        return new Authority();
+        return new FilePlanDepartment();
     }
     /**
      * The deserialization information for the current model

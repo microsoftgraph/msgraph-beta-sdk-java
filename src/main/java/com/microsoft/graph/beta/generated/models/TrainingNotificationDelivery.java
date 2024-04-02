@@ -56,7 +56,7 @@ public class TrainingNotificationDelivery implements AdditionalDataHolder, Backe
         return this.backingStore;
     }
     /**
-     * Gets the failedMessageDeliveryCount property value. The failedMessageDeliveryCount property
+     * Gets the failedMessageDeliveryCount property value. The number of users to whom mails couldn't be delivered.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -85,7 +85,7 @@ public class TrainingNotificationDelivery implements AdditionalDataHolder, Backe
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the resolvedTargetsCount property value. The resolvedTargetsCount property
+     * Gets the resolvedTargetsCount property value. The number of users whose email address was successfully resolved from target users.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class TrainingNotificationDelivery implements AdditionalDataHolder, Backe
         return this.backingStore.get("resolvedTargetsCount");
     }
     /**
-     * Gets the successfulMessageDeliveryCount property value. The successfulMessageDeliveryCount property
+     * Gets the successfulMessageDeliveryCount property value. The number of users who received a mail while the training campaign was in the 'in progress' state.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -128,7 +128,7 @@ public class TrainingNotificationDelivery implements AdditionalDataHolder, Backe
         this.backingStore = value;
     }
     /**
-     * Sets the failedMessageDeliveryCount property value. The failedMessageDeliveryCount property
+     * Sets the failedMessageDeliveryCount property value. The number of users to whom mails couldn't be delivered.
      * @param value Value to set for the failedMessageDeliveryCount property.
      */
     public void setFailedMessageDeliveryCount(@jakarta.annotation.Nullable final Integer value) {
@@ -142,14 +142,14 @@ public class TrainingNotificationDelivery implements AdditionalDataHolder, Backe
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the resolvedTargetsCount property value. The resolvedTargetsCount property
+     * Sets the resolvedTargetsCount property value. The number of users whose email address was successfully resolved from target users.
      * @param value Value to set for the resolvedTargetsCount property.
      */
     public void setResolvedTargetsCount(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("resolvedTargetsCount", value);
     }
     /**
-     * Sets the successfulMessageDeliveryCount property value. The successfulMessageDeliveryCount property
+     * Sets the successfulMessageDeliveryCount property value. The number of users who received a mail while the training campaign was in the 'in progress' state.
      * @param value Value to set for the successfulMessageDeliveryCount property.
      */
     public void setSuccessfulMessageDeliveryCount(@jakarta.annotation.Nullable final Integer value) {

@@ -34,7 +34,7 @@ public class FilePlanDescriptorTemplate extends Entity implements Parsable {
                 case "#microsoft.graph.security.citationTemplate": return new CitationTemplate();
                 case "#microsoft.graph.security.departmentTemplate": return new DepartmentTemplate();
                 case "#microsoft.graph.security.filePlanReferenceTemplate": return new FilePlanReferenceTemplate();
-                case "#microsoft.graph.security.subCategoryTemplate": return new SubCategoryTemplate();
+                case "#microsoft.graph.security.subcategoryTemplate": return new SubcategoryTemplate();
             }
         }
         return new FilePlanDescriptorTemplate();

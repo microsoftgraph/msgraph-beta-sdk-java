@@ -7,22 +7,22 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class AppliedCategory extends FilePlanDescriptorBase implements Parsable {
+public class FilePlanAppliedCategory extends FilePlanDescriptorBase implements Parsable {
     /**
-     * Instantiates a new {@link AppliedCategory} and sets the default values.
+     * Instantiates a new {@link FilePlanAppliedCategory} and sets the default values.
      */
-    public AppliedCategory() {
+    public FilePlanAppliedCategory() {
         super();
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a {@link AppliedCategory}
+     * @return a {@link FilePlanAppliedCategory}
      */
     @jakarta.annotation.Nonnull
-    public static AppliedCategory createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
+    public static FilePlanAppliedCategory createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
-        return new AppliedCategory();
+        return new FilePlanAppliedCategory();
     }
     /**
      * The deserialization information for the current model
@@ -31,16 +31,16 @@ public class AppliedCategory extends FilePlanDescriptorBase implements Parsable 
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("subCategory", (n) -> { this.setSubCategory(n.getObjectValue(SubCategory::createFromDiscriminatorValue)); });
+        deserializerMap.put("subcategory", (n) -> { this.setSubcategory(n.getObjectValue(FilePlanSubcategory::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
-     * Gets the subCategory property value. Represents the file plan descriptor for a subcategory under a specific category, which has been assigned to a particular retention label.
-     * @return a {@link SubCategory}
+     * Gets the subcategory property value. The subcategory property
+     * @return a {@link FilePlanSubcategory}
      */
     @jakarta.annotation.Nullable
-    public SubCategory getSubCategory() {
-        return this.backingStore.get("subCategory");
+    public FilePlanSubcategory getSubcategory() {
+        return this.backingStore.get("subcategory");
     }
     /**
      * Serializes information the current object
@@ -49,13 +49,13 @@ public class AppliedCategory extends FilePlanDescriptorBase implements Parsable 
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeObjectValue("subCategory", this.getSubCategory());
+        writer.writeObjectValue("subcategory", this.getSubcategory());
     }
     /**
-     * Sets the subCategory property value. Represents the file plan descriptor for a subcategory under a specific category, which has been assigned to a particular retention label.
-     * @param value Value to set for the subCategory property.
+     * Sets the subcategory property value. The subcategory property
+     * @param value Value to set for the subcategory property.
      */
-    public void setSubCategory(@jakarta.annotation.Nullable final SubCategory value) {
-        this.backingStore.set("subCategory", value);
+    public void setSubcategory(@jakarta.annotation.Nullable final FilePlanSubcategory value) {
+        this.backingStore.set("subcategory", value);
     }
 }

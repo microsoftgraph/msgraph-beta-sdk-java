@@ -59,6 +59,7 @@ import com.microsoft.graph.beta.users.item.inferenceclassification.InferenceClas
 import com.microsoft.graph.beta.users.item.informationprotection.InformationProtectionRequestBuilder;
 import com.microsoft.graph.beta.users.item.insights.InsightsRequestBuilder;
 import com.microsoft.graph.beta.users.item.invalidateallrefreshtokens.InvalidateAllRefreshTokensRequestBuilder;
+import com.microsoft.graph.beta.users.item.invitedby.InvitedByRequestBuilder;
 import com.microsoft.graph.beta.users.item.ismanagedappuserblocked.IsManagedAppUserBlockedRequestBuilder;
 import com.microsoft.graph.beta.users.item.joinedgroups.JoinedGroupsRequestBuilder;
 import com.microsoft.graph.beta.users.item.joinedteams.JoinedTeamsRequestBuilder;
@@ -555,6 +556,14 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public InvalidateAllRefreshTokensRequestBuilder invalidateAllRefreshTokens() {
         return new InvalidateAllRefreshTokensRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the invitedBy property of the microsoft.graph.user entity.
+     * @return a {@link InvitedByRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public InvitedByRequestBuilder invitedBy() {
+        return new InvitedByRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the isManagedAppUserBlocked method.

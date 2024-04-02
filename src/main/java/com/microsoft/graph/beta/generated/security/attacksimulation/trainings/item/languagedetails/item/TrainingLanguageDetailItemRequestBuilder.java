@@ -55,7 +55,7 @@ public class TrainingLanguageDetailItemRequestBuilder extends BaseRequestBuilder
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Language specific details on a training.
+     * Details about the language used in the training.
      * @return a {@link TrainingLanguageDetail}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -64,7 +64,7 @@ public class TrainingLanguageDetailItemRequestBuilder extends BaseRequestBuilder
         return get(null);
     }
     /**
-     * Language specific details on a training.
+     * Details about the language used in the training.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TrainingLanguageDetail}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -122,7 +122,7 @@ public class TrainingLanguageDetailItemRequestBuilder extends BaseRequestBuilder
         return requestInfo;
     }
     /**
-     * Language specific details on a training.
+     * Details about the language used in the training.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +130,7 @@ public class TrainingLanguageDetailItemRequestBuilder extends BaseRequestBuilder
         return toGetRequestInformation(null);
     }
     /**
-     * Language specific details on a training.
+     * Details about the language used in the training.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +182,7 @@ public class TrainingLanguageDetailItemRequestBuilder extends BaseRequestBuilder
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Language specific details on a training.
+     * Details about the language used in the training.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
