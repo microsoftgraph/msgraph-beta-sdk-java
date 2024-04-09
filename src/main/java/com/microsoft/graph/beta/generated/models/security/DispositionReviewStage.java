@@ -34,7 +34,7 @@ public class DispositionReviewStage extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
         deserializerMap.put("reviewersEmailAddresses", (n) -> { this.setReviewersEmailAddresses(n.getCollectionOfPrimitiveValues(String.class)); });
-        deserializerMap.put("stageNumber", (n) -> { this.setStageNumber(n.getIntegerValue()); });
+        deserializerMap.put("stageNumber", (n) -> { this.setStageNumber(n.getStringValue()); });
         return deserializerMap;
     }
     /**
@@ -55,10 +55,10 @@ public class DispositionReviewStage extends Entity implements Parsable {
     }
     /**
      * Gets the stageNumber property value. The sequence number for each stage of the disposition review.
-     * @return a {@link Integer}
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
-    public Integer getStageNumber() {
+    public String getStageNumber() {
         return this.backingStore.get("stageNumber");
     }
     /**
@@ -70,7 +70,7 @@ public class DispositionReviewStage extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeStringValue("name", this.getName());
         writer.writeCollectionOfPrimitiveValues("reviewersEmailAddresses", this.getReviewersEmailAddresses());
-        writer.writeIntegerValue("stageNumber", this.getStageNumber());
+        writer.writeStringValue("stageNumber", this.getStageNumber());
     }
     /**
      * Sets the name property value. Name representing each stage within a collection.
@@ -90,7 +90,7 @@ public class DispositionReviewStage extends Entity implements Parsable {
      * Sets the stageNumber property value. The sequence number for each stage of the disposition review.
      * @param value Value to set for the stageNumber property.
      */
-    public void setStageNumber(@jakarta.annotation.Nullable final Integer value) {
+    public void setStageNumber(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("stageNumber", value);
     }
 }

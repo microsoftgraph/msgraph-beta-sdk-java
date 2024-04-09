@@ -43,7 +43,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
         return this.backingStore.get("activeChecklistItemCount");
     }
     /**
-     * Gets the appliedCategories property value. The categories to which the task has been applied. See applied Categories for possible values.
+     * Gets the appliedCategories property value. The categories to which the task is applied. See plannerAppliedCategories resource type for possible values.
      * @return a {@link PlannerAppliedCategories}
      */
     @jakarta.annotation.Nullable
@@ -83,7 +83,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
         return this.backingStore.get("assignments");
     }
     /**
-     * Gets the bucketId property value. Bucket ID to which the task belongs. The bucket needs to be in the plan that the task is in. It is 28 characters long and case-sensitive. Format validation is done on the service.
+     * Gets the bucketId property value. Bucket ID to which the task belongs. The bucket needs to be in the plan that the task is in. It's 28 characters long and case-sensitive. Format validation is done on the service.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -155,7 +155,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
         return this.backingStore.get("creationSource");
     }
     /**
-     * Gets the details property value. Read-only. Nullable. Additional details about the task.
+     * Gets the details property value. Read-only. Nullable. More details about the task.
      * @return a {@link PlannerTaskDetails}
      */
     @jakarta.annotation.Nullable
@@ -228,7 +228,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
         return this.backingStore.get("isArchived");
     }
     /**
-     * Gets the isOnMyDay property value. The isOnMyDay property
+     * Gets the isOnMyDay property value. A Boolean value that indicates whether to show this task in the MyDay view. true to show the task. Otherwise, false.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -236,7 +236,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
         return this.backingStore.get("isOnMyDay");
     }
     /**
-     * Gets the isOnMyDayLastModifiedDate property value. The isOnMyDayLastModifiedDate property
+     * Gets the isOnMyDayLastModifiedDate property value. Read-only. The date on which task is added to or removed from MyDay.
      * @return a {@link LocalDate}
      */
     @jakarta.annotation.Nullable
@@ -276,7 +276,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
         return this.backingStore.get("previewType");
     }
     /**
-     * Gets the priority property value. Priority of the task. Valid range of values is between 0 and 10 (inclusive), with increasing value being lower priority (0 has the highest priority and 10 has the lowest priority).  Currently, Planner interprets values 0 and 1 as 'urgent', 2 and 3 and 4 as 'important', 5, 6, and 7 as 'medium', and 8, 9, and 10 as 'low'.  Currently, Planner sets the value 1 for 'urgent', 3 for 'important', 5 for 'medium', and 9 for 'low'.
+     * Gets the priority property value. The priority of the task. Valid values are between 0 and 10, inclusive. Larger values indicate lower priority. For example, 0 has the highest priority and 10 has the lowest priority. Currently, Planner interprets values 0 and 1 as 'urgent', 2 and 3 and 4 as 'important', 5, 6, and 7 as 'medium', and 8, 9, and 10 as 'low'. Currently, Planner sets the value 1 for 'urgent', 3 for 'important', 5 for 'medium', and 9 for 'low'.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -308,7 +308,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
         return this.backingStore.get("referenceCount");
     }
     /**
-     * Gets the specifiedCompletionRequirements property value. Indicates all the requirements specified on the plannerTask. Possible values are: none, checklistCompletion, unknownFutureValue. Read-only. The plannerTaskCompletionRequirementDetails in plannerTaskDetails has details of the requirements specified, if any.
+     * Gets the specifiedCompletionRequirements property value. Indicates all the requirements specified on the plannerTask. Possible values are: none, checklistCompletion, unknownFutureValue, formCompletion, approvalCompletion. You must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: checklistCompletion,formCompletion, approvalCompletion. conditionalAccessConditions is a multi-valued enumeration and the property can contain multiple values in a comma-separated list. Read-only. The plannerTaskCompletionRequirementDetails in plannerTaskDetails has details of the requirements specified, if any.
      * @return a {@link EnumSet<PlannerTaskCompletionRequirements>}
      */
     @jakarta.annotation.Nullable
@@ -379,7 +379,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
         this.backingStore.set("activeChecklistItemCount", value);
     }
     /**
-     * Sets the appliedCategories property value. The categories to which the task has been applied. See applied Categories for possible values.
+     * Sets the appliedCategories property value. The categories to which the task is applied. See plannerAppliedCategories resource type for possible values.
      * @param value Value to set for the appliedCategories property.
      */
     public void setAppliedCategories(@jakarta.annotation.Nullable final PlannerAppliedCategories value) {
@@ -414,7 +414,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
         this.backingStore.set("assignments", value);
     }
     /**
-     * Sets the bucketId property value. Bucket ID to which the task belongs. The bucket needs to be in the plan that the task is in. It is 28 characters long and case-sensitive. Format validation is done on the service.
+     * Sets the bucketId property value. Bucket ID to which the task belongs. The bucket needs to be in the plan that the task is in. It's 28 characters long and case-sensitive. Format validation is done on the service.
      * @param value Value to set for the bucketId property.
      */
     public void setBucketId(@jakarta.annotation.Nullable final String value) {
@@ -477,7 +477,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
         this.backingStore.set("creationSource", value);
     }
     /**
-     * Sets the details property value. Read-only. Nullable. Additional details about the task.
+     * Sets the details property value. Read-only. Nullable. More details about the task.
      * @param value Value to set for the details property.
      */
     public void setDetails(@jakarta.annotation.Nullable final PlannerTaskDetails value) {
@@ -505,14 +505,14 @@ public class PlannerTask extends PlannerDelta implements Parsable {
         this.backingStore.set("isArchived", value);
     }
     /**
-     * Sets the isOnMyDay property value. The isOnMyDay property
+     * Sets the isOnMyDay property value. A Boolean value that indicates whether to show this task in the MyDay view. true to show the task. Otherwise, false.
      * @param value Value to set for the isOnMyDay property.
      */
     public void setIsOnMyDay(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isOnMyDay", value);
     }
     /**
-     * Sets the isOnMyDayLastModifiedDate property value. The isOnMyDayLastModifiedDate property
+     * Sets the isOnMyDayLastModifiedDate property value. Read-only. The date on which task is added to or removed from MyDay.
      * @param value Value to set for the isOnMyDayLastModifiedDate property.
      */
     public void setIsOnMyDayLastModifiedDate(@jakarta.annotation.Nullable final LocalDate value) {
@@ -547,7 +547,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
         this.backingStore.set("previewType", value);
     }
     /**
-     * Sets the priority property value. Priority of the task. Valid range of values is between 0 and 10 (inclusive), with increasing value being lower priority (0 has the highest priority and 10 has the lowest priority).  Currently, Planner interprets values 0 and 1 as 'urgent', 2 and 3 and 4 as 'important', 5, 6, and 7 as 'medium', and 8, 9, and 10 as 'low'.  Currently, Planner sets the value 1 for 'urgent', 3 for 'important', 5 for 'medium', and 9 for 'low'.
+     * Sets the priority property value. The priority of the task. Valid values are between 0 and 10, inclusive. Larger values indicate lower priority. For example, 0 has the highest priority and 10 has the lowest priority. Currently, Planner interprets values 0 and 1 as 'urgent', 2 and 3 and 4 as 'important', 5, 6, and 7 as 'medium', and 8, 9, and 10 as 'low'. Currently, Planner sets the value 1 for 'urgent', 3 for 'important', 5 for 'medium', and 9 for 'low'.
      * @param value Value to set for the priority property.
      */
     public void setPriority(@jakarta.annotation.Nullable final Integer value) {
@@ -575,7 +575,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
         this.backingStore.set("referenceCount", value);
     }
     /**
-     * Sets the specifiedCompletionRequirements property value. Indicates all the requirements specified on the plannerTask. Possible values are: none, checklistCompletion, unknownFutureValue. Read-only. The plannerTaskCompletionRequirementDetails in plannerTaskDetails has details of the requirements specified, if any.
+     * Sets the specifiedCompletionRequirements property value. Indicates all the requirements specified on the plannerTask. Possible values are: none, checklistCompletion, unknownFutureValue, formCompletion, approvalCompletion. You must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: checklistCompletion,formCompletion, approvalCompletion. conditionalAccessConditions is a multi-valued enumeration and the property can contain multiple values in a comma-separated list. Read-only. The plannerTaskCompletionRequirementDetails in plannerTaskDetails has details of the requirements specified, if any.
      * @param value Value to set for the specifiedCompletionRequirements property.
      */
     public void setSpecifiedCompletionRequirements(@jakarta.annotation.Nullable final EnumSet<PlannerTaskCompletionRequirements> value) {

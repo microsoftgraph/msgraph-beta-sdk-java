@@ -26,7 +26,7 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
         return new AdministrativeUnit();
     }
     /**
-     * Gets the description property value. An optional description for the administrative unit. Supports $filter (eq, ne, in, startsWith), $search.
+     * Gets the description property value. The description property
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -34,7 +34,7 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
         return this.backingStore.get("description");
     }
     /**
-     * Gets the displayName property value. Display name for the administrative unit. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderby.
+     * Gets the displayName property value. The displayName property
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -69,7 +69,7 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the isMemberManagementRestricted property value. true if members of this administrative unit should be treated as sensitive, which requires specific permissions to manage. Default value is false. Use this property to define administrative units whose roles don't inherit from tenant-level administrators, and management of individual member objects is limited to administrators scoped to a restricted management administrative unit. Immutable, so can't be changed later.  For more information about working with restricted management administrative units, see Restricted management administrative units in Microsoft Entra ID.
+     * Gets the isMemberManagementRestricted property value. The isMemberManagementRestricted property
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -85,7 +85,7 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
         return this.backingStore.get("members");
     }
     /**
-     * Gets the membershipRule property value. Dynamic membership rule for the administrative unit. For more about the rules that you can use for dynamic administrative units and dynamic groups, see Using attributes to create advanced rules.
+     * Gets the membershipRule property value. The membershipRule property
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
         return this.backingStore.get("membershipRule");
     }
     /**
-     * Gets the membershipRuleProcessingState property value. Used to control whether the dynamic membership rule is actively processed. Set to On when you want the dynamic membership rule to be active and Paused if you want to stop updating membership dynamically. If not set, the default behavior is Paused.
+     * Gets the membershipRuleProcessingState property value. The membershipRuleProcessingState property
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -101,7 +101,7 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
         return this.backingStore.get("membershipRuleProcessingState");
     }
     /**
-     * Gets the membershipType property value. Membership type for the administrative unit. Can be dynamic or assigned. If not set, the default behavior is assigned.
+     * Gets the membershipType property value. The membershipType property
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -117,7 +117,7 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
         return this.backingStore.get("scopedRoleMembers");
     }
     /**
-     * Gets the visibility property value. Controls whether the administrative unit and its members are hidden or public. Can be set to HiddenMembership or Public. If not set, the default behavior is Public. When set to HiddenMembership, only members of the administrative unit can list other members of the administrative unit.
+     * Gets the visibility property value. The visibility property
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -143,14 +143,14 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
         writer.writeStringValue("visibility", this.getVisibility());
     }
     /**
-     * Sets the description property value. An optional description for the administrative unit. Supports $filter (eq, ne, in, startsWith), $search.
+     * Sets the description property value. The description property
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("description", value);
     }
     /**
-     * Sets the displayName property value. Display name for the administrative unit. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderby.
+     * Sets the displayName property value. The displayName property
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
@@ -164,7 +164,7 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
         this.backingStore.set("extensions", value);
     }
     /**
-     * Sets the isMemberManagementRestricted property value. true if members of this administrative unit should be treated as sensitive, which requires specific permissions to manage. Default value is false. Use this property to define administrative units whose roles don't inherit from tenant-level administrators, and management of individual member objects is limited to administrators scoped to a restricted management administrative unit. Immutable, so can't be changed later.  For more information about working with restricted management administrative units, see Restricted management administrative units in Microsoft Entra ID.
+     * Sets the isMemberManagementRestricted property value. The isMemberManagementRestricted property
      * @param value Value to set for the isMemberManagementRestricted property.
      */
     public void setIsMemberManagementRestricted(@jakarta.annotation.Nullable final Boolean value) {
@@ -178,21 +178,21 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
         this.backingStore.set("members", value);
     }
     /**
-     * Sets the membershipRule property value. Dynamic membership rule for the administrative unit. For more about the rules that you can use for dynamic administrative units and dynamic groups, see Using attributes to create advanced rules.
+     * Sets the membershipRule property value. The membershipRule property
      * @param value Value to set for the membershipRule property.
      */
     public void setMembershipRule(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("membershipRule", value);
     }
     /**
-     * Sets the membershipRuleProcessingState property value. Used to control whether the dynamic membership rule is actively processed. Set to On when you want the dynamic membership rule to be active and Paused if you want to stop updating membership dynamically. If not set, the default behavior is Paused.
+     * Sets the membershipRuleProcessingState property value. The membershipRuleProcessingState property
      * @param value Value to set for the membershipRuleProcessingState property.
      */
     public void setMembershipRuleProcessingState(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("membershipRuleProcessingState", value);
     }
     /**
-     * Sets the membershipType property value. Membership type for the administrative unit. Can be dynamic or assigned. If not set, the default behavior is assigned.
+     * Sets the membershipType property value. The membershipType property
      * @param value Value to set for the membershipType property.
      */
     public void setMembershipType(@jakarta.annotation.Nullable final String value) {
@@ -206,7 +206,7 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
         this.backingStore.set("scopedRoleMembers", value);
     }
     /**
-     * Sets the visibility property value. Controls whether the administrative unit and its members are hidden or public. Can be set to HiddenMembership or Public. If not set, the default behavior is Public. When set to HiddenMembership, only members of the administrative unit can list other members of the administrative unit.
+     * Sets the visibility property value. The visibility property
      * @param value Value to set for the visibility property.
      */
     public void setVisibility(@jakarta.annotation.Nullable final String value) {

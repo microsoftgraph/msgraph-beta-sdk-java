@@ -75,7 +75,7 @@ public class Workplace implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the sensorDevices property value. The sensorDevices property
+     * Gets the sensorDevices property value. A collection of sensor devices.
      * @return a {@link java.util.List<WorkplaceSensorDevice>}
      */
     @jakarta.annotation.Nullable
@@ -115,7 +115,7 @@ public class Workplace implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the sensorDevices property value. The sensorDevices property
+     * Sets the sensorDevices property value. A collection of sensor devices.
      * @param value Value to set for the sensorDevices property.
      */
     public void setSensorDevices(@jakarta.annotation.Nullable final java.util.List<WorkplaceSensorDevice> value) {

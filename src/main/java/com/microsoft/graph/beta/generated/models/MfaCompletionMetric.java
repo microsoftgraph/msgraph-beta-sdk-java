@@ -42,6 +42,14 @@ public class MfaCompletionMetric extends Entity implements Parsable {
         return this.backingStore.get("attemptsCount");
     }
     /**
+     * Gets the country property value. The country property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getCountry() {
+        return this.backingStore.get("country");
+    }
+    /**
      * Gets the factDate property value. The date of the user insight.
      * @return a {@link LocalDate}
      */
@@ -58,11 +66,39 @@ public class MfaCompletionMetric extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("appId", (n) -> { this.setAppId(n.getStringValue()); });
         deserializerMap.put("attemptsCount", (n) -> { this.setAttemptsCount(n.getLongValue()); });
+        deserializerMap.put("country", (n) -> { this.setCountry(n.getStringValue()); });
         deserializerMap.put("factDate", (n) -> { this.setFactDate(n.getLocalDateValue()); });
+        deserializerMap.put("identityProvider", (n) -> { this.setIdentityProvider(n.getStringValue()); });
+        deserializerMap.put("language", (n) -> { this.setLanguage(n.getStringValue()); });
+        deserializerMap.put("mfaFailures", (n) -> { this.setMfaFailures(n.getCollectionOfObjectValues(MfaFailure::createFromDiscriminatorValue)); });
         deserializerMap.put("mfaMethod", (n) -> { this.setMfaMethod(n.getStringValue()); });
         deserializerMap.put("os", (n) -> { this.setOs(n.getStringValue()); });
         deserializerMap.put("successCount", (n) -> { this.setSuccessCount(n.getLongValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the identityProvider property value. The identityProvider property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getIdentityProvider() {
+        return this.backingStore.get("identityProvider");
+    }
+    /**
+     * Gets the language property value. The language property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getLanguage() {
+        return this.backingStore.get("language");
+    }
+    /**
+     * Gets the mfaFailures property value. The mfaFailures property
+     * @return a {@link java.util.List<MfaFailure>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<MfaFailure> getMfaFailures() {
+        return this.backingStore.get("mfaFailures");
     }
     /**
      * Gets the mfaMethod property value. The MFA authentication method used by the customers. Supports $filter (eq).
@@ -97,7 +133,11 @@ public class MfaCompletionMetric extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeStringValue("appId", this.getAppId());
         writer.writeLongValue("attemptsCount", this.getAttemptsCount());
+        writer.writeStringValue("country", this.getCountry());
         writer.writeLocalDateValue("factDate", this.getFactDate());
+        writer.writeStringValue("identityProvider", this.getIdentityProvider());
+        writer.writeStringValue("language", this.getLanguage());
+        writer.writeCollectionOfObjectValues("mfaFailures", this.getMfaFailures());
         writer.writeStringValue("mfaMethod", this.getMfaMethod());
         writer.writeStringValue("os", this.getOs());
         writer.writeLongValue("successCount", this.getSuccessCount());
@@ -117,11 +157,39 @@ public class MfaCompletionMetric extends Entity implements Parsable {
         this.backingStore.set("attemptsCount", value);
     }
     /**
+     * Sets the country property value. The country property
+     * @param value Value to set for the country property.
+     */
+    public void setCountry(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("country", value);
+    }
+    /**
      * Sets the factDate property value. The date of the user insight.
      * @param value Value to set for the factDate property.
      */
     public void setFactDate(@jakarta.annotation.Nullable final LocalDate value) {
         this.backingStore.set("factDate", value);
+    }
+    /**
+     * Sets the identityProvider property value. The identityProvider property
+     * @param value Value to set for the identityProvider property.
+     */
+    public void setIdentityProvider(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("identityProvider", value);
+    }
+    /**
+     * Sets the language property value. The language property
+     * @param value Value to set for the language property.
+     */
+    public void setLanguage(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("language", value);
+    }
+    /**
+     * Sets the mfaFailures property value. The mfaFailures property
+     * @param value Value to set for the mfaFailures property.
+     */
+    public void setMfaFailures(@jakarta.annotation.Nullable final java.util.List<MfaFailure> value) {
+        this.backingStore.set("mfaFailures", value);
     }
     /**
      * Sets the mfaMethod property value. The MFA authentication method used by the customers. Supports $filter (eq).

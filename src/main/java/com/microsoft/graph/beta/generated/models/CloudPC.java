@@ -143,7 +143,7 @@ public class CloudPC extends Entity implements Parsable {
         return this.backingStore.get("lastModifiedDateTime");
     }
     /**
-     * Gets the lastRemoteActionResult property value. The last remote action result of the enterprise Cloud PCs. The supported remote actions are: Reboot, Rename, Reprovision, Restore, and Troubleshoot.
+     * Gets the lastRemoteActionResult property value. The last remote action result of the enterprise Cloud PCs. The supported remote actions are: Reboot, Rename, Reprovision, Restore, Troubleshoot.
      * @return a {@link CloudPcRemoteActionResult}
      */
     @jakarta.annotation.Nullable
@@ -175,7 +175,7 @@ public class CloudPC extends Entity implements Parsable {
         return this.backingStore.get("onPremisesConnectionName");
     }
     /**
-     * Gets the osVersion property value. The version of the operating system (OS) to provision on Cloud PCs. Possible values are: windows10, windows11, and unknownFutureValue.
+     * Gets the osVersion property value. The version of the operating system (OS) to provision on Cloud PCs. Possible values are: windows10, windows11, unknownFutureValue.
      * @return a {@link CloudPcOperatingSystem}
      */
     @jakarta.annotation.Nullable
@@ -191,7 +191,7 @@ public class CloudPC extends Entity implements Parsable {
         return this.backingStore.get("partnerAgentInstallResults");
     }
     /**
-     * Gets the powerState property value. The power state of a Cloud PC. The possible values are: running, poweredOff and unknown. This property only supports shift work Cloud PCs.
+     * Gets the powerState property value. The power state of a Cloud PC. The possible values are: running, poweredOff, unknown. This property only supports shift work Cloud PCs.
      * @return a {@link CloudPcPowerState}
      */
     @jakarta.annotation.Nullable
@@ -271,7 +271,7 @@ public class CloudPC extends Entity implements Parsable {
         return this.backingStore.get("statusDetails");
     }
     /**
-     * Gets the userAccountType property value. The account type of the user on provisioned Cloud PCs. Possible values are: standardUser, administrator, and unknownFutureValue.
+     * Gets the userAccountType property value. The account type of the user on provisioned Cloud PCs. Possible values are: standardUser, administrator, unknownFutureValue.
      * @return a {@link CloudPcUserAccountType}
      */
     @jakarta.annotation.Nullable
@@ -393,7 +393,7 @@ public class CloudPC extends Entity implements Parsable {
         this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
-     * Sets the lastRemoteActionResult property value. The last remote action result of the enterprise Cloud PCs. The supported remote actions are: Reboot, Rename, Reprovision, Restore, and Troubleshoot.
+     * Sets the lastRemoteActionResult property value. The last remote action result of the enterprise Cloud PCs. The supported remote actions are: Reboot, Rename, Reprovision, Restore, Troubleshoot.
      * @param value Value to set for the lastRemoteActionResult property.
      */
     public void setLastRemoteActionResult(@jakarta.annotation.Nullable final CloudPcRemoteActionResult value) {
@@ -421,7 +421,7 @@ public class CloudPC extends Entity implements Parsable {
         this.backingStore.set("onPremisesConnectionName", value);
     }
     /**
-     * Sets the osVersion property value. The version of the operating system (OS) to provision on Cloud PCs. Possible values are: windows10, windows11, and unknownFutureValue.
+     * Sets the osVersion property value. The version of the operating system (OS) to provision on Cloud PCs. Possible values are: windows10, windows11, unknownFutureValue.
      * @param value Value to set for the osVersion property.
      */
     public void setOsVersion(@jakarta.annotation.Nullable final CloudPcOperatingSystem value) {
@@ -435,7 +435,7 @@ public class CloudPC extends Entity implements Parsable {
         this.backingStore.set("partnerAgentInstallResults", value);
     }
     /**
-     * Sets the powerState property value. The power state of a Cloud PC. The possible values are: running, poweredOff and unknown. This property only supports shift work Cloud PCs.
+     * Sets the powerState property value. The power state of a Cloud PC. The possible values are: running, poweredOff, unknown. This property only supports shift work Cloud PCs.
      * @param value Value to set for the powerState property.
      */
     public void setPowerState(@jakarta.annotation.Nullable final CloudPcPowerState value) {
@@ -505,7 +505,7 @@ public class CloudPC extends Entity implements Parsable {
         this.backingStore.set("statusDetails", value);
     }
     /**
-     * Sets the userAccountType property value. The account type of the user on provisioned Cloud PCs. Possible values are: standardUser, administrator, and unknownFutureValue.
+     * Sets the userAccountType property value. The account type of the user on provisioned Cloud PCs. Possible values are: standardUser, administrator, unknownFutureValue.
      * @param value Value to set for the userAccountType property.
      */
     public void setUserAccountType(@jakarta.annotation.Nullable final CloudPcUserAccountType value) {

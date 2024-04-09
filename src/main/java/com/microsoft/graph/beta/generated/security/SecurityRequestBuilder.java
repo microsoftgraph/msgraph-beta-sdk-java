@@ -12,6 +12,7 @@ import com.microsoft.graph.beta.security.collaboration.CollaborationRequestBuild
 import com.microsoft.graph.beta.security.domainsecurityprofiles.DomainSecurityProfilesRequestBuilder;
 import com.microsoft.graph.beta.security.filesecurityprofiles.FileSecurityProfilesRequestBuilder;
 import com.microsoft.graph.beta.security.hostsecurityprofiles.HostSecurityProfilesRequestBuilder;
+import com.microsoft.graph.beta.security.identities.IdentitiesRequestBuilder;
 import com.microsoft.graph.beta.security.incidents.IncidentsRequestBuilder;
 import com.microsoft.graph.beta.security.informationprotection.InformationProtectionRequestBuilder;
 import com.microsoft.graph.beta.security.ipsecurityprofiles.IpSecurityProfilesRequestBuilder;
@@ -126,6 +127,14 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public HostSecurityProfilesRequestBuilder hostSecurityProfiles() {
         return new HostSecurityProfilesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the identities property of the microsoft.graph.security entity.
+     * @return a {@link IdentitiesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public IdentitiesRequestBuilder identities() {
+        return new IdentitiesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the incidents property of the microsoft.graph.security entity.
@@ -364,7 +373,7 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final Security body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/security", pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);

@@ -29,7 +29,7 @@ public class IosLobAppProvisioningConfiguration extends Entity implements Parsab
         return new IosLobAppProvisioningConfiguration();
     }
     /**
-     * Gets the assignments property value. The associated group assignments for IosLobAppProvisioningConfiguration, this determines which devices/users the IOS LOB app provisioning conifguration will be targeted to.
+     * Gets the assignments property value. The associated group assignments for IosLobAppProvisioningConfiguration.
      * @return a {@link java.util.List<IosLobAppProvisioningConfigurationAssignment>}
      */
     @jakarta.annotation.Nullable
@@ -69,7 +69,7 @@ public class IosLobAppProvisioningConfiguration extends Entity implements Parsab
         return this.backingStore.get("displayName");
     }
     /**
-     * Gets the expirationDateTime property value. Optional profile expiration date and time. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default.
+     * Gets the expirationDateTime property value. Optional profile expiration date and time.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -176,7 +176,7 @@ public class IosLobAppProvisioningConfiguration extends Entity implements Parsab
         writer.writeIntegerValue("version", this.getVersion());
     }
     /**
-     * Sets the assignments property value. The associated group assignments for IosLobAppProvisioningConfiguration, this determines which devices/users the IOS LOB app provisioning conifguration will be targeted to.
+     * Sets the assignments property value. The associated group assignments for IosLobAppProvisioningConfiguration.
      * @param value Value to set for the assignments property.
      */
     public void setAssignments(@jakarta.annotation.Nullable final java.util.List<IosLobAppProvisioningConfigurationAssignment> value) {
@@ -211,7 +211,7 @@ public class IosLobAppProvisioningConfiguration extends Entity implements Parsab
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the expirationDateTime property value. Optional profile expiration date and time. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default.
+     * Sets the expirationDateTime property value. Optional profile expiration date and time.
      * @param value Value to set for the expirationDateTime property.
      */
     public void setExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

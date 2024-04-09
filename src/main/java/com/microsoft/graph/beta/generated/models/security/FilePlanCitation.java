@@ -7,25 +7,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class Citation extends FilePlanDescriptorBase implements Parsable {
+public class FilePlanCitation extends FilePlanDescriptorBase implements Parsable {
     /**
-     * Instantiates a new {@link Citation} and sets the default values.
+     * Instantiates a new {@link FilePlanCitation} and sets the default values.
      */
-    public Citation() {
+    public FilePlanCitation() {
         super();
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a {@link Citation}
+     * @return a {@link FilePlanCitation}
      */
     @jakarta.annotation.Nonnull
-    public static Citation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
+    public static FilePlanCitation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
-        return new Citation();
+        return new FilePlanCitation();
     }
     /**
-     * Gets the citationJurisdiction property value. Represents the jurisdiction or agency that published the citation.
+     * Gets the citationJurisdiction property value. The citationJurisdiction property
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -33,7 +33,7 @@ public class Citation extends FilePlanDescriptorBase implements Parsable {
         return this.backingStore.get("citationJurisdiction");
     }
     /**
-     * Gets the citationUrl property value. Represents the URL to the published citation.
+     * Gets the citationUrl property value. The citationUrl property
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -62,14 +62,14 @@ public class Citation extends FilePlanDescriptorBase implements Parsable {
         writer.writeStringValue("citationUrl", this.getCitationUrl());
     }
     /**
-     * Sets the citationJurisdiction property value. Represents the jurisdiction or agency that published the citation.
+     * Sets the citationJurisdiction property value. The citationJurisdiction property
      * @param value Value to set for the citationJurisdiction property.
      */
     public void setCitationJurisdiction(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("citationJurisdiction", value);
     }
     /**
-     * Sets the citationUrl property value. Represents the URL to the published citation.
+     * Sets the citationUrl property value. The citationUrl property
      * @param value Value to set for the citationUrl property.
      */
     public void setCitationUrl(@jakarta.annotation.Nullable final String value) {

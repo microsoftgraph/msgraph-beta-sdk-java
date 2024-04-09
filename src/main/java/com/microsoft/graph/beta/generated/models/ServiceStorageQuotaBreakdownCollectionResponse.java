@@ -1,6 +1,5 @@
-package com.microsoft.graph.beta.models.security;
+package com.microsoft.graph.beta.models;
 
-import com.microsoft.graph.beta.models.BaseCollectionPaginationCountResponse;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -8,22 +7,22 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class SubCategoryTemplateCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
+public class ServiceStorageQuotaBreakdownCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * Instantiates a new {@link SubCategoryTemplateCollectionResponse} and sets the default values.
+     * Instantiates a new {@link ServiceStorageQuotaBreakdownCollectionResponse} and sets the default values.
      */
-    public SubCategoryTemplateCollectionResponse() {
+    public ServiceStorageQuotaBreakdownCollectionResponse() {
         super();
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a {@link SubCategoryTemplateCollectionResponse}
+     * @return a {@link ServiceStorageQuotaBreakdownCollectionResponse}
      */
     @jakarta.annotation.Nonnull
-    public static SubCategoryTemplateCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
+    public static ServiceStorageQuotaBreakdownCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
-        return new SubCategoryTemplateCollectionResponse();
+        return new ServiceStorageQuotaBreakdownCollectionResponse();
     }
     /**
      * The deserialization information for the current model
@@ -32,15 +31,15 @@ public class SubCategoryTemplateCollectionResponse extends BaseCollectionPaginat
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("value", (n) -> { this.setValue(n.getCollectionOfObjectValues(SubCategoryTemplate::createFromDiscriminatorValue)); });
+        deserializerMap.put("value", (n) -> { this.setValue(n.getCollectionOfObjectValues(ServiceStorageQuotaBreakdown::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the value property value. The value property
-     * @return a {@link java.util.List<SubCategoryTemplate>}
+     * @return a {@link java.util.List<ServiceStorageQuotaBreakdown>}
      */
     @jakarta.annotation.Nullable
-    public java.util.List<SubCategoryTemplate> getValue() {
+    public java.util.List<ServiceStorageQuotaBreakdown> getValue() {
         return this.backingStore.get("value");
     }
     /**
@@ -56,7 +55,7 @@ public class SubCategoryTemplateCollectionResponse extends BaseCollectionPaginat
      * Sets the value property value. The value property
      * @param value Value to set for the value property.
      */
-    public void setValue(@jakarta.annotation.Nullable final java.util.List<SubCategoryTemplate> value) {
+    public void setValue(@jakarta.annotation.Nullable final java.util.List<ServiceStorageQuotaBreakdown> value) {
         this.backingStore.set("value", value);
     }
 }

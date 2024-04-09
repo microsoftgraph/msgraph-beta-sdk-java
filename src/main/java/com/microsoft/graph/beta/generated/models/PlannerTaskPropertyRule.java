@@ -108,7 +108,7 @@ public class PlannerTaskPropertyRule extends PlannerPropertyRule implements Pars
         return deserializerMap;
     }
     /**
-     * Gets the forms property value. The forms property
+     * Gets the forms property value. Rules and restrictions for forms. Allowed overrides are userCreated and applicationCreated. The following are the accepted values for the default rule and individual overrides: allow, add, addResponse, remove, update, block.
      * @return a {@link PlannerFieldRules}
      */
     @jakarta.annotation.Nullable
@@ -262,7 +262,7 @@ public class PlannerTaskPropertyRule extends PlannerPropertyRule implements Pars
         this.backingStore.set("dueDate", value);
     }
     /**
-     * Sets the forms property value. The forms property
+     * Sets the forms property value. Rules and restrictions for forms. Allowed overrides are userCreated and applicationCreated. The following are the accepted values for the default rule and individual overrides: allow, add, addResponse, remove, update, block.
      * @param value Value to set for the forms property.
      */
     public void setForms(@jakarta.annotation.Nullable final PlannerFieldRules value) {

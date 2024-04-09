@@ -25,7 +25,7 @@ public class CountRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CountRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/security/labels/categories/{categoryTemplate%2Did}/subCategories/$count{?%24filter,%24search}", pathParameters);
+        super(requestAdapter, "{+baseurl}/security/labels/categories/{categoryTemplate%2Did}/subcategories/$count{?%24filter,%24search}", pathParameters);
     }
     /**
      * Instantiates a new {@link CountRequestBuilder} and sets the default values.
@@ -33,7 +33,7 @@ public class CountRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CountRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/security/labels/categories/{categoryTemplate%2Did}/subCategories/$count{?%24filter,%24search}", rawUrl);
+        super(requestAdapter, "{+baseurl}/security/labels/categories/{categoryTemplate%2Did}/subcategories/$count{?%24filter,%24search}", rawUrl);
     }
     /**
      * Get the number of the resource

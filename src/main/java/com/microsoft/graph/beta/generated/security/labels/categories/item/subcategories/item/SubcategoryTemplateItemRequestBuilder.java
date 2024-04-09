@@ -1,7 +1,7 @@
 package com.microsoft.graph.beta.security.labels.categories.item.subcategories.item;
 
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
-import com.microsoft.graph.beta.models.security.SubCategoryTemplate;
+import com.microsoft.graph.beta.models.security.SubcategoryTemplate;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -16,39 +16,37 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * Provides operations to manage the subCategories property of the microsoft.graph.security.categoryTemplate entity.
+ * Provides operations to manage the subcategories property of the microsoft.graph.security.categoryTemplate entity.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class SubCategoryTemplateItemRequestBuilder extends BaseRequestBuilder {
+public class SubcategoryTemplateItemRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new {@link SubCategoryTemplateItemRequestBuilder} and sets the default values.
+     * Instantiates a new {@link SubcategoryTemplateItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
-    public SubCategoryTemplateItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/security/labels/categories/{categoryTemplate%2Did}/subCategories/{subCategoryTemplate%2Did}{?%24expand,%24select}", pathParameters);
+    public SubcategoryTemplateItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
+        super(requestAdapter, "{+baseurl}/security/labels/categories/{categoryTemplate%2Did}/subcategories/{subcategoryTemplate%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new {@link SubCategoryTemplateItemRequestBuilder} and sets the default values.
+     * Instantiates a new {@link SubcategoryTemplateItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
-    public SubCategoryTemplateItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/security/labels/categories/{categoryTemplate%2Did}/subCategories/{subCategoryTemplate%2Did}{?%24expand,%24select}", rawUrl);
+    public SubcategoryTemplateItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
+        super(requestAdapter, "{+baseurl}/security/labels/categories/{categoryTemplate%2Did}/subcategories/{subcategoryTemplate%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete a subCategoryTemplate object.
+     * Delete navigation property subcategories for security
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-categorytemplate-delete-subcategories?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a subCategoryTemplate object.
+     * Delete navigation property subcategories for security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-categorytemplate-delete-subcategories?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -57,56 +55,54 @@ public class SubCategoryTemplateItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a subCategoryTemplate object.
-     * @return a {@link SubCategoryTemplate}
+     * Get subcategories from security
+     * @return a {@link SubcategoryTemplate}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-subcategorytemplate-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public SubCategoryTemplate get() {
+    public SubcategoryTemplate get() {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a subCategoryTemplate object.
+     * Get subcategories from security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link SubCategoryTemplate}
+     * @return a {@link SubcategoryTemplate}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-subcategorytemplate-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public SubCategoryTemplate get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public SubcategoryTemplate get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, SubCategoryTemplate::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, SubcategoryTemplate::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property subCategories in security
+     * Update the navigation property subcategories in security
      * @param body The request body
-     * @return a {@link SubCategoryTemplate}
+     * @return a {@link SubcategoryTemplate}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public SubCategoryTemplate patch(@jakarta.annotation.Nonnull final SubCategoryTemplate body) {
+    public SubcategoryTemplate patch(@jakarta.annotation.Nonnull final SubcategoryTemplate body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property subCategories in security
+     * Update the navigation property subcategories in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link SubCategoryTemplate}
+     * @return a {@link SubcategoryTemplate}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public SubCategoryTemplate patch(@jakarta.annotation.Nonnull final SubCategoryTemplate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    public SubcategoryTemplate patch(@jakarta.annotation.Nonnull final SubcategoryTemplate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, SubCategoryTemplate::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, SubcategoryTemplate::createFromDiscriminatorValue);
     }
     /**
-     * Delete a subCategoryTemplate object.
+     * Delete navigation property subcategories for security
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -114,19 +110,19 @@ public class SubCategoryTemplateItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a subCategoryTemplate object.
+     * Delete navigation property subcategories for security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/security/labels/categories/{categoryTemplate%2Did}/subCategories/{subCategoryTemplate%2Did}", pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a subCategoryTemplate object.
+     * Get subcategories from security
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -134,7 +130,7 @@ public class SubCategoryTemplateItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a subCategoryTemplate object.
+     * Get subcategories from security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -146,24 +142,24 @@ public class SubCategoryTemplateItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property subCategories in security
+     * Update the navigation property subcategories in security
      * @param body The request body
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final SubCategoryTemplate body) {
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final SubcategoryTemplate body) {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property subCategories in security
+     * Update the navigation property subcategories in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final SubCategoryTemplate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final SubcategoryTemplate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/security/labels/categories/{categoryTemplate%2Did}/subCategories/{subCategoryTemplate%2Did}", pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -172,12 +168,12 @@ public class SubCategoryTemplateItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a {@link SubCategoryTemplateItemRequestBuilder}
+     * @return a {@link SubcategoryTemplateItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
-    public SubCategoryTemplateItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+    public SubcategoryTemplateItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
-        return new SubCategoryTemplateItemRequestBuilder(rawUrl, requestAdapter);
+        return new SubcategoryTemplateItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.
@@ -186,7 +182,7 @@ public class SubCategoryTemplateItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a subCategoryTemplate object.
+     * Get subcategories from security
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

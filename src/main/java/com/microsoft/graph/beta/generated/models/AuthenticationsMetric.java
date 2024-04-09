@@ -68,9 +68,27 @@ public class AuthenticationsMetric extends Entity implements Parsable {
         deserializerMap.put("attemptsCount", (n) -> { this.setAttemptsCount(n.getLongValue()); });
         deserializerMap.put("country", (n) -> { this.setCountry(n.getStringValue()); });
         deserializerMap.put("factDate", (n) -> { this.setFactDate(n.getLocalDateValue()); });
+        deserializerMap.put("identityProvider", (n) -> { this.setIdentityProvider(n.getStringValue()); });
+        deserializerMap.put("language", (n) -> { this.setLanguage(n.getStringValue()); });
         deserializerMap.put("os", (n) -> { this.setOs(n.getStringValue()); });
         deserializerMap.put("successCount", (n) -> { this.setSuccessCount(n.getLongValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the identityProvider property value. The identityProvider property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getIdentityProvider() {
+        return this.backingStore.get("identityProvider");
+    }
+    /**
+     * Gets the language property value. The language property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getLanguage() {
+        return this.backingStore.get("language");
     }
     /**
      * Gets the os property value. The platform for the device that the customers used. Supports $filter (eq).
@@ -99,6 +117,8 @@ public class AuthenticationsMetric extends Entity implements Parsable {
         writer.writeLongValue("attemptsCount", this.getAttemptsCount());
         writer.writeStringValue("country", this.getCountry());
         writer.writeLocalDateValue("factDate", this.getFactDate());
+        writer.writeStringValue("identityProvider", this.getIdentityProvider());
+        writer.writeStringValue("language", this.getLanguage());
         writer.writeStringValue("os", this.getOs());
         writer.writeLongValue("successCount", this.getSuccessCount());
     }
@@ -129,6 +149,20 @@ public class AuthenticationsMetric extends Entity implements Parsable {
      */
     public void setFactDate(@jakarta.annotation.Nullable final LocalDate value) {
         this.backingStore.set("factDate", value);
+    }
+    /**
+     * Sets the identityProvider property value. The identityProvider property
+     * @param value Value to set for the identityProvider property.
+     */
+    public void setIdentityProvider(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("identityProvider", value);
+    }
+    /**
+     * Sets the language property value. The language property
+     * @param value Value to set for the language property.
+     */
+    public void setLanguage(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("language", value);
     }
     /**
      * Sets the os property value. The platform for the device that the customers used. Supports $filter (eq).

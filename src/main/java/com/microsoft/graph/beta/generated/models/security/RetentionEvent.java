@@ -68,7 +68,7 @@ public class RetentionEvent extends Entity implements Parsable {
         return this.backingStore.get("eventPropagationResults");
     }
     /**
-     * Gets the eventQueries property value. Represents the workload (SharePoint Online, OneDrive for Business, Exchange Online) and identification information associated with a retention event.
+     * Gets the eventQueries property value. The eventQueries property
      * @return a {@link java.util.List<EventQuery>}
      */
     @jakarta.annotation.Nullable
@@ -200,7 +200,7 @@ public class RetentionEvent extends Entity implements Parsable {
         this.backingStore.set("eventPropagationResults", value);
     }
     /**
-     * Sets the eventQueries property value. Represents the workload (SharePoint Online, OneDrive for Business, Exchange Online) and identification information associated with a retention event.
+     * Sets the eventQueries property value. The eventQueries property
      * @param value Value to set for the eventQueries property.
      */
     public void setEventQueries(@jakarta.annotation.Nullable final java.util.List<EventQuery> value) {

@@ -34,13 +34,13 @@ public class FilePlanDescriptorTemplate extends Entity implements Parsable {
                 case "#microsoft.graph.security.citationTemplate": return new CitationTemplate();
                 case "#microsoft.graph.security.departmentTemplate": return new DepartmentTemplate();
                 case "#microsoft.graph.security.filePlanReferenceTemplate": return new FilePlanReferenceTemplate();
-                case "#microsoft.graph.security.subCategoryTemplate": return new SubCategoryTemplate();
+                case "#microsoft.graph.security.subcategoryTemplate": return new SubcategoryTemplate();
             }
         }
         return new FilePlanDescriptorTemplate();
     }
     /**
-     * Gets the createdBy property value. Represents the user who created the filePlanDescriptorTemplate column.
+     * Gets the createdBy property value. Represents the user who created the filePlanDescriptorTemplate column. Read-only.
      * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
@@ -48,7 +48,7 @@ public class FilePlanDescriptorTemplate extends Entity implements Parsable {
         return this.backingStore.get("createdBy");
     }
     /**
-     * Gets the createdDateTime property value. Represents the date and time in which the filePlanDescriptorTemplate is created.
+     * Gets the createdDateTime property value. Represents the date and time in which the filePlanDescriptorTemplate is created. Read-only.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -87,14 +87,14 @@ public class FilePlanDescriptorTemplate extends Entity implements Parsable {
         writer.writeStringValue("displayName", this.getDisplayName());
     }
     /**
-     * Sets the createdBy property value. Represents the user who created the filePlanDescriptorTemplate column.
+     * Sets the createdBy property value. Represents the user who created the filePlanDescriptorTemplate column. Read-only.
      * @param value Value to set for the createdBy property.
      */
     public void setCreatedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.backingStore.set("createdBy", value);
     }
     /**
-     * Sets the createdDateTime property value. Represents the date and time in which the filePlanDescriptorTemplate is created.
+     * Sets the createdDateTime property value. Represents the date and time in which the filePlanDescriptorTemplate is created. Read-only.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

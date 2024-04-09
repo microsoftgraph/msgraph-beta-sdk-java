@@ -118,7 +118,7 @@ public class AccessReviewItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * The collection of access reviews instances past, present and future, if this object is a recurring access review.
+     * The collection of access reviews instances past, present, and future, if this object is a recurring access review.
      * @return a {@link AccessReview}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -127,7 +127,7 @@ public class AccessReviewItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * The collection of access reviews instances past, present and future, if this object is a recurring access review.
+     * The collection of access reviews instances past, present, and future, if this object is a recurring access review.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AccessReview}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -179,13 +179,13 @@ public class AccessReviewItemRequestBuilder extends BaseRequestBuilder {
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/accessReviews/{accessReview%2Did}/instances/{accessReview%2Did1}", pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
-     * The collection of access reviews instances past, present and future, if this object is a recurring access review.
+     * The collection of access reviews instances past, present, and future, if this object is a recurring access review.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -193,7 +193,7 @@ public class AccessReviewItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The collection of access reviews instances past, present and future, if this object is a recurring access review.
+     * The collection of access reviews instances past, present, and future, if this object is a recurring access review.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -222,7 +222,7 @@ public class AccessReviewItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final AccessReview body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/accessReviews/{accessReview%2Did}/instances/{accessReview%2Did1}", pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -245,7 +245,7 @@ public class AccessReviewItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The collection of access reviews instances past, present and future, if this object is a recurring access review.
+     * The collection of access reviews instances past, present, and future, if this object is a recurring access review.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

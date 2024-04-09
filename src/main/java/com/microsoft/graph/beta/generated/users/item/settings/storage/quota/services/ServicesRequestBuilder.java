@@ -1,10 +1,10 @@
-package com.microsoft.graph.beta.security.labels.categories.item.subcategories;
+package com.microsoft.graph.beta.users.item.settings.storage.quota.services;
 
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
-import com.microsoft.graph.beta.models.security.SubCategoryTemplate;
-import com.microsoft.graph.beta.models.security.SubCategoryTemplateCollectionResponse;
-import com.microsoft.graph.beta.security.labels.categories.item.subcategories.count.CountRequestBuilder;
-import com.microsoft.graph.beta.security.labels.categories.item.subcategories.item.SubCategoryTemplateItemRequestBuilder;
+import com.microsoft.graph.beta.models.ServiceStorageQuotaBreakdown;
+import com.microsoft.graph.beta.models.ServiceStorageQuotaBreakdownCollectionResponse;
+import com.microsoft.graph.beta.users.item.settings.storage.quota.services.count.CountRequestBuilder;
+import com.microsoft.graph.beta.users.item.settings.storage.quota.services.item.ServiceStorageQuotaBreakdownItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -19,10 +19,10 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * Provides operations to manage the subCategories property of the microsoft.graph.security.categoryTemplate entity.
+ * Provides operations to manage the services property of the microsoft.graph.unifiedStorageQuota entity.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class SubCategoriesRequestBuilder extends BaseRequestBuilder {
+public class ServicesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
      * @return a {@link CountRequestBuilder}
@@ -32,86 +32,84 @@ public class SubCategoriesRequestBuilder extends BaseRequestBuilder {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Provides operations to manage the subCategories property of the microsoft.graph.security.categoryTemplate entity.
-     * @param subCategoryTemplateId The unique identifier of subCategoryTemplate
-     * @return a {@link SubCategoryTemplateItemRequestBuilder}
+     * Provides operations to manage the services property of the microsoft.graph.unifiedStorageQuota entity.
+     * @param serviceStorageQuotaBreakdownId The unique identifier of serviceStorageQuotaBreakdown
+     * @return a {@link ServiceStorageQuotaBreakdownItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
-    public SubCategoryTemplateItemRequestBuilder bySubCategoryTemplateId(@jakarta.annotation.Nonnull final String subCategoryTemplateId) {
-        Objects.requireNonNull(subCategoryTemplateId);
+    public ServiceStorageQuotaBreakdownItemRequestBuilder byServiceStorageQuotaBreakdownId(@jakarta.annotation.Nonnull final String serviceStorageQuotaBreakdownId) {
+        Objects.requireNonNull(serviceStorageQuotaBreakdownId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("subCategoryTemplate%2Did", subCategoryTemplateId);
-        return new SubCategoryTemplateItemRequestBuilder(urlTplParams, requestAdapter);
+        urlTplParams.put("serviceStorageQuotaBreakdown%2Did", serviceStorageQuotaBreakdownId);
+        return new ServiceStorageQuotaBreakdownItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Instantiates a new {@link SubCategoriesRequestBuilder} and sets the default values.
+     * Instantiates a new {@link ServicesRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
-    public SubCategoriesRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/security/labels/categories/{categoryTemplate%2Did}/subCategories{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
+    public ServicesRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/settings/storage/quota/services{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
-     * Instantiates a new {@link SubCategoriesRequestBuilder} and sets the default values.
+     * Instantiates a new {@link ServicesRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
-    public SubCategoriesRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/security/labels/categories/{categoryTemplate%2Did}/subCategories{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
+    public ServicesRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/settings/storage/quota/services{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a list of subcategories subCategoryTemplate associated with a category template.
-     * @return a {@link SubCategoryTemplateCollectionResponse}
+     * Get a list of serviceStorageQuotaBreakdown objects and their properties.
+     * @return a {@link ServiceStorageQuotaBreakdownCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-categorytemplate-list-subcategories?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/unifiedstoragequota-list-services?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public SubCategoryTemplateCollectionResponse get() {
+    public ServiceStorageQuotaBreakdownCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a list of subcategories subCategoryTemplate associated with a category template.
+     * Get a list of serviceStorageQuotaBreakdown objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link SubCategoryTemplateCollectionResponse}
+     * @return a {@link ServiceStorageQuotaBreakdownCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-categorytemplate-list-subcategories?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/unifiedstoragequota-list-services?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public SubCategoryTemplateCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public ServiceStorageQuotaBreakdownCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, SubCategoryTemplateCollectionResponse::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, ServiceStorageQuotaBreakdownCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new subCategoryTemplate object.
+     * Create new navigation property to services for users
      * @param body The request body
-     * @return a {@link SubCategoryTemplate}
+     * @return a {@link ServiceStorageQuotaBreakdown}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-categorytemplate-post-subcategories?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public SubCategoryTemplate post(@jakarta.annotation.Nonnull final SubCategoryTemplate body) {
+    public ServiceStorageQuotaBreakdown post(@jakarta.annotation.Nonnull final ServiceStorageQuotaBreakdown body) {
         return post(body, null);
     }
     /**
-     * Create a new subCategoryTemplate object.
+     * Create new navigation property to services for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link SubCategoryTemplate}
+     * @return a {@link ServiceStorageQuotaBreakdown}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-categorytemplate-post-subcategories?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public SubCategoryTemplate post(@jakarta.annotation.Nonnull final SubCategoryTemplate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    public ServiceStorageQuotaBreakdown post(@jakarta.annotation.Nonnull final ServiceStorageQuotaBreakdown body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, SubCategoryTemplate::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, ServiceStorageQuotaBreakdown::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of subcategories subCategoryTemplate associated with a category template.
+     * Get a list of serviceStorageQuotaBreakdown objects and their properties.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +117,7 @@ public class SubCategoriesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of subcategories subCategoryTemplate associated with a category template.
+     * Get a list of serviceStorageQuotaBreakdown objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,24 +129,24 @@ public class SubCategoriesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new subCategoryTemplate object.
+     * Create new navigation property to services for users
      * @param body The request body
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final SubCategoryTemplate body) {
+    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ServiceStorageQuotaBreakdown body) {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new subCategoryTemplate object.
+     * Create new navigation property to services for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final SubCategoryTemplate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ServiceStorageQuotaBreakdown body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/security/labels/categories/{categoryTemplate%2Did}/subCategories", pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -157,15 +155,15 @@ public class SubCategoriesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a {@link SubCategoriesRequestBuilder}
+     * @return a {@link ServicesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
-    public SubCategoriesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+    public ServicesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
-        return new SubCategoriesRequestBuilder(rawUrl, requestAdapter);
+        return new ServicesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of subcategories subCategoryTemplate associated with a category template.
+     * Get a list of serviceStorageQuotaBreakdown objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

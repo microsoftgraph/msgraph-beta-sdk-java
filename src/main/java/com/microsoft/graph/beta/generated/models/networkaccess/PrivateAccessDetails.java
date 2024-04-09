@@ -101,7 +101,7 @@ public class PrivateAccessDetails implements AdditionalDataHolder, BackedModel, 
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(8);
         deserializerMap.put("accessType", (n) -> { this.setAccessType(n.getEnumValue(AccessType::forValue)); });
         deserializerMap.put("connectionStatus", (n) -> { this.setConnectionStatus(n.getEnumValue(ConnectionStatus::forValue)); });
         deserializerMap.put("connectorId", (n) -> { this.setConnectorId(n.getStringValue()); });
@@ -109,6 +109,7 @@ public class PrivateAccessDetails implements AdditionalDataHolder, BackedModel, 
         deserializerMap.put("connectorName", (n) -> { this.setConnectorName(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("processingRegion", (n) -> { this.setProcessingRegion(n.getStringValue()); });
+        deserializerMap.put("thirdPartyTokenDetails", (n) -> { this.setThirdPartyTokenDetails(n.getObjectValue(ThirdPartyTokenDetails::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -128,6 +129,14 @@ public class PrivateAccessDetails implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("processingRegion");
     }
     /**
+     * Gets the thirdPartyTokenDetails property value. The thirdPartyTokenDetails property
+     * @return a {@link ThirdPartyTokenDetails}
+     */
+    @jakarta.annotation.Nullable
+    public ThirdPartyTokenDetails getThirdPartyTokenDetails() {
+        return this.backingStore.get("thirdPartyTokenDetails");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -140,6 +149,7 @@ public class PrivateAccessDetails implements AdditionalDataHolder, BackedModel, 
         writer.writeStringValue("connectorName", this.getConnectorName());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("processingRegion", this.getProcessingRegion());
+        writer.writeObjectValue("thirdPartyTokenDetails", this.getThirdPartyTokenDetails());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -205,5 +215,12 @@ public class PrivateAccessDetails implements AdditionalDataHolder, BackedModel, 
      */
     public void setProcessingRegion(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("processingRegion", value);
+    }
+    /**
+     * Sets the thirdPartyTokenDetails property value. The thirdPartyTokenDetails property
+     * @param value Value to set for the thirdPartyTokenDetails property.
+     */
+    public void setThirdPartyTokenDetails(@jakarta.annotation.Nullable final ThirdPartyTokenDetails value) {
+        this.backingStore.set("thirdPartyTokenDetails", value);
     }
 }

@@ -4,6 +4,7 @@ import com.microsoft.graph.beta.models.security.Alert;
 import com.microsoft.graph.beta.models.security.AuditCoreRoot;
 import com.microsoft.graph.beta.models.security.CasesRoot;
 import com.microsoft.graph.beta.models.security.CollaborationRoot;
+import com.microsoft.graph.beta.models.security.IdentityContainer;
 import com.microsoft.graph.beta.models.security.Incident;
 import com.microsoft.graph.beta.models.security.InformationProtection;
 import com.microsoft.graph.beta.models.security.LabelsRoot;
@@ -117,6 +118,7 @@ public class Security extends Entity implements Parsable {
         deserializerMap.put("domainSecurityProfiles", (n) -> { this.setDomainSecurityProfiles(n.getCollectionOfObjectValues(DomainSecurityProfile::createFromDiscriminatorValue)); });
         deserializerMap.put("fileSecurityProfiles", (n) -> { this.setFileSecurityProfiles(n.getCollectionOfObjectValues(FileSecurityProfile::createFromDiscriminatorValue)); });
         deserializerMap.put("hostSecurityProfiles", (n) -> { this.setHostSecurityProfiles(n.getCollectionOfObjectValues(HostSecurityProfile::createFromDiscriminatorValue)); });
+        deserializerMap.put("identities", (n) -> { this.setIdentities(n.getObjectValue(IdentityContainer::createFromDiscriminatorValue)); });
         deserializerMap.put("incidents", (n) -> { this.setIncidents(n.getCollectionOfObjectValues(Incident::createFromDiscriminatorValue)); });
         deserializerMap.put("informationProtection", (n) -> { this.setInformationProtection(n.getObjectValue(InformationProtection::createFromDiscriminatorValue)); });
         deserializerMap.put("ipSecurityProfiles", (n) -> { this.setIpSecurityProfiles(n.getCollectionOfObjectValues(IpSecurityProfile::createFromDiscriminatorValue)); });
@@ -151,6 +153,14 @@ public class Security extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public java.util.List<HostSecurityProfile> getHostSecurityProfiles() {
         return this.backingStore.get("hostSecurityProfiles");
+    }
+    /**
+     * Gets the identities property value. A container for security identities APIs.
+     * @return a {@link IdentityContainer}
+     */
+    @jakarta.annotation.Nullable
+    public IdentityContainer getIdentities() {
+        return this.backingStore.get("identities");
     }
     /**
      * Gets the incidents property value. A collection of incidents in Microsoft 365 Defender, each of which is a set of correlated alerts and associated metadata that reflects the story of an attack.
@@ -305,6 +315,7 @@ public class Security extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("domainSecurityProfiles", this.getDomainSecurityProfiles());
         writer.writeCollectionOfObjectValues("fileSecurityProfiles", this.getFileSecurityProfiles());
         writer.writeCollectionOfObjectValues("hostSecurityProfiles", this.getHostSecurityProfiles());
+        writer.writeObjectValue("identities", this.getIdentities());
         writer.writeCollectionOfObjectValues("incidents", this.getIncidents());
         writer.writeObjectValue("informationProtection", this.getInformationProtection());
         writer.writeCollectionOfObjectValues("ipSecurityProfiles", this.getIpSecurityProfiles());
@@ -392,6 +403,13 @@ public class Security extends Entity implements Parsable {
      */
     public void setHostSecurityProfiles(@jakarta.annotation.Nullable final java.util.List<HostSecurityProfile> value) {
         this.backingStore.set("hostSecurityProfiles", value);
+    }
+    /**
+     * Sets the identities property value. A container for security identities APIs.
+     * @param value Value to set for the identities property.
+     */
+    public void setIdentities(@jakarta.annotation.Nullable final IdentityContainer value) {
+        this.backingStore.set("identities", value);
     }
     /**
      * Sets the incidents property value. A collection of incidents in Microsoft 365 Defender, each of which is a set of correlated alerts and associated metadata that reflects the story of an attack.
