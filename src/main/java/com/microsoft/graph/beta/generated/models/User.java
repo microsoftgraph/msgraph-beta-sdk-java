@@ -539,6 +539,7 @@ public class User extends DirectoryObject implements Parsable {
         deserializerMap.put("informationProtection", (n) -> { this.setInformationProtection(n.getObjectValue(InformationProtection::createFromDiscriminatorValue)); });
         deserializerMap.put("insights", (n) -> { this.setInsights(n.getObjectValue(ItemInsights::createFromDiscriminatorValue)); });
         deserializerMap.put("interests", (n) -> { this.setInterests(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("invitedBy", (n) -> { this.setInvitedBy(n.getObjectValue(DirectoryObject::createFromDiscriminatorValue)); });
         deserializerMap.put("isLicenseReconciliationNeeded", (n) -> { this.setIsLicenseReconciliationNeeded(n.getBooleanValue()); });
         deserializerMap.put("isManagementRestricted", (n) -> { this.setIsManagementRestricted(n.getBooleanValue()); });
         deserializerMap.put("isResourceAccount", (n) -> { this.setIsResourceAccount(n.getBooleanValue()); });
@@ -553,6 +554,7 @@ public class User extends DirectoryObject implements Parsable {
         deserializerMap.put("mailboxSettings", (n) -> { this.setMailboxSettings(n.getObjectValue(MailboxSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("mailFolders", (n) -> { this.setMailFolders(n.getCollectionOfObjectValues(MailFolder::createFromDiscriminatorValue)); });
         deserializerMap.put("mailNickname", (n) -> { this.setMailNickname(n.getStringValue()); });
+        deserializerMap.put("managedAppLogCollectionRequests", (n) -> { this.setManagedAppLogCollectionRequests(n.getCollectionOfObjectValues(ManagedAppLogCollectionRequest::createFromDiscriminatorValue)); });
         deserializerMap.put("managedAppRegistrations", (n) -> { this.setManagedAppRegistrations(n.getCollectionOfObjectValues(ManagedAppRegistration::createFromDiscriminatorValue)); });
         deserializerMap.put("managedDevices", (n) -> { this.setManagedDevices(n.getCollectionOfObjectValues(ManagedDevice::createFromDiscriminatorValue)); });
         deserializerMap.put("manager", (n) -> { this.setManager(n.getObjectValue(DirectoryObject::createFromDiscriminatorValue)); });
@@ -710,6 +712,14 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("interests");
     }
     /**
+     * Gets the invitedBy property value. The invitedBy property
+     * @return a {@link DirectoryObject}
+     */
+    @jakarta.annotation.Nullable
+    public DirectoryObject getInvitedBy() {
+        return this.backingStore.get("invitedBy");
+    }
+    /**
      * Gets the isLicenseReconciliationNeeded property value. Indicates whether the user is pending an exchange mailbox license assignment.  Read-only.  Supports $filter (eq where true only).
      * @return a {@link Boolean}
      */
@@ -820,6 +830,14 @@ public class User extends DirectoryObject implements Parsable {
     @jakarta.annotation.Nullable
     public String getMailNickname() {
         return this.backingStore.get("mailNickname");
+    }
+    /**
+     * Gets the managedAppLogCollectionRequests property value. Zero or more log collection requests triggered for the user.
+     * @return a {@link java.util.List<ManagedAppLogCollectionRequest>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<ManagedAppLogCollectionRequest> getManagedAppLogCollectionRequests() {
+        return this.backingStore.get("managedAppLogCollectionRequests");
     }
     /**
      * Gets the managedAppRegistrations property value. Zero or more managed app registrations that belong to the user.
@@ -1390,7 +1408,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("userPrincipalName");
     }
     /**
-     * Gets the userType property value. A String value that can be used to classify user types in your directory, such as Member and Guest. Supports $filter (eq, ne, not, in, and eq on null values). NOTE: For more information about the permissions for member and guest users, see What are the default user permissions in Microsoft Entra ID?
+     * Gets the userType property value. A String value that can be used to classify user types in your directory. The possible values are Member and Guest. Supports $filter (eq, ne, not, in, and eq on null values). NOTE: For more information about the permissions for member and guest users, see What are the default user permissions in Microsoft Entra ID?
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -1485,6 +1503,7 @@ public class User extends DirectoryObject implements Parsable {
         writer.writeObjectValue("informationProtection", this.getInformationProtection());
         writer.writeObjectValue("insights", this.getInsights());
         writer.writeCollectionOfPrimitiveValues("interests", this.getInterests());
+        writer.writeObjectValue("invitedBy", this.getInvitedBy());
         writer.writeBooleanValue("isLicenseReconciliationNeeded", this.getIsLicenseReconciliationNeeded());
         writer.writeBooleanValue("isManagementRestricted", this.getIsManagementRestricted());
         writer.writeBooleanValue("isResourceAccount", this.getIsResourceAccount());
@@ -1499,6 +1518,7 @@ public class User extends DirectoryObject implements Parsable {
         writer.writeObjectValue("mailboxSettings", this.getMailboxSettings());
         writer.writeCollectionOfObjectValues("mailFolders", this.getMailFolders());
         writer.writeStringValue("mailNickname", this.getMailNickname());
+        writer.writeCollectionOfObjectValues("managedAppLogCollectionRequests", this.getManagedAppLogCollectionRequests());
         writer.writeCollectionOfObjectValues("managedAppRegistrations", this.getManagedAppRegistrations());
         writer.writeCollectionOfObjectValues("managedDevices", this.getManagedDevices());
         writer.writeObjectValue("manager", this.getManager());
@@ -2030,6 +2050,13 @@ public class User extends DirectoryObject implements Parsable {
         this.backingStore.set("interests", value);
     }
     /**
+     * Sets the invitedBy property value. The invitedBy property
+     * @param value Value to set for the invitedBy property.
+     */
+    public void setInvitedBy(@jakarta.annotation.Nullable final DirectoryObject value) {
+        this.backingStore.set("invitedBy", value);
+    }
+    /**
      * Sets the isLicenseReconciliationNeeded property value. Indicates whether the user is pending an exchange mailbox license assignment.  Read-only.  Supports $filter (eq where true only).
      * @param value Value to set for the isLicenseReconciliationNeeded property.
      */
@@ -2126,6 +2153,13 @@ public class User extends DirectoryObject implements Parsable {
      */
     public void setMailNickname(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("mailNickname", value);
+    }
+    /**
+     * Sets the managedAppLogCollectionRequests property value. Zero or more log collection requests triggered for the user.
+     * @param value Value to set for the managedAppLogCollectionRequests property.
+     */
+    public void setManagedAppLogCollectionRequests(@jakarta.annotation.Nullable final java.util.List<ManagedAppLogCollectionRequest> value) {
+        this.backingStore.set("managedAppLogCollectionRequests", value);
     }
     /**
      * Sets the managedAppRegistrations property value. Zero or more managed app registrations that belong to the user.
@@ -2625,7 +2659,7 @@ public class User extends DirectoryObject implements Parsable {
         this.backingStore.set("userPrincipalName", value);
     }
     /**
-     * Sets the userType property value. A String value that can be used to classify user types in your directory, such as Member and Guest. Supports $filter (eq, ne, not, in, and eq on null values). NOTE: For more information about the permissions for member and guest users, see What are the default user permissions in Microsoft Entra ID?
+     * Sets the userType property value. A String value that can be used to classify user types in your directory. The possible values are Member and Guest. Supports $filter (eq, ne, not, in, and eq on null values). NOTE: For more information about the permissions for member and guest users, see What are the default user permissions in Microsoft Entra ID?
      * @param value Value to set for the userType property.
      */
     public void setUserType(@jakarta.annotation.Nullable final String value) {

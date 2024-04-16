@@ -27,15 +27,7 @@ public class RemoteNetwork extends Entity implements Parsable {
         return new RemoteNetwork();
     }
     /**
-     * Gets the bandwidthCapacity property value. The bandwidthCapacity property
-     * @return a {@link Long}
-     */
-    @jakarta.annotation.Nullable
-    public Long getBandwidthCapacity() {
-        return this.backingStore.get("bandwidthCapacity");
-    }
-    /**
-     * Gets the connectivityConfiguration property value. The connectivityConfiguration property
+     * Gets the connectivityConfiguration property value. Specifies the connectivity details of all device links associated with a remote network.
      * @return a {@link RemoteNetworkConnectivityConfiguration}
      */
     @jakarta.annotation.Nullable
@@ -43,23 +35,7 @@ public class RemoteNetwork extends Entity implements Parsable {
         return this.backingStore.get("connectivityConfiguration");
     }
     /**
-     * Gets the connectivityState property value. The connectivityState property
-     * @return a {@link ConnectivityState}
-     */
-    @jakarta.annotation.Nullable
-    public ConnectivityState getConnectivityState() {
-        return this.backingStore.get("connectivityState");
-    }
-    /**
-     * Gets the country property value. The country property
-     * @return a {@link String}
-     */
-    @jakarta.annotation.Nullable
-    public String getCountry() {
-        return this.backingStore.get("country");
-    }
-    /**
-     * Gets the deviceLinks property value. The deviceLinks property
+     * Gets the deviceLinks property value. Each unique CPE device associated with a remote network is specified. Supports $expand.
      * @return a {@link java.util.List<DeviceLink>}
      */
     @jakarta.annotation.Nullable
@@ -73,10 +49,7 @@ public class RemoteNetwork extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("bandwidthCapacity", (n) -> { this.setBandwidthCapacity(n.getLongValue()); });
         deserializerMap.put("connectivityConfiguration", (n) -> { this.setConnectivityConfiguration(n.getObjectValue(RemoteNetworkConnectivityConfiguration::createFromDiscriminatorValue)); });
-        deserializerMap.put("connectivityState", (n) -> { this.setConnectivityState(n.getEnumValue(ConnectivityState::forValue)); });
-        deserializerMap.put("country", (n) -> { this.setCountry(n.getStringValue()); });
         deserializerMap.put("deviceLinks", (n) -> { this.setDeviceLinks(n.getCollectionOfObjectValues(DeviceLink::createFromDiscriminatorValue)); });
         deserializerMap.put("forwardingProfiles", (n) -> { this.setForwardingProfiles(n.getCollectionOfObjectValues(ForwardingProfile::createFromDiscriminatorValue)); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
@@ -86,7 +59,7 @@ public class RemoteNetwork extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the forwardingProfiles property value. The forwardingProfiles property
+     * Gets the forwardingProfiles property value. Each forwarding profile associated with a remote network is specified. Supports $expand and $select.
      * @return a {@link java.util.List<ForwardingProfile>}
      */
     @jakarta.annotation.Nullable
@@ -94,7 +67,7 @@ public class RemoteNetwork extends Entity implements Parsable {
         return this.backingStore.get("forwardingProfiles");
     }
     /**
-     * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Gets the lastModifiedDateTime property value. last modified time.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -102,7 +75,7 @@ public class RemoteNetwork extends Entity implements Parsable {
         return this.backingStore.get("lastModifiedDateTime");
     }
     /**
-     * Gets the name property value. The name property
+     * Gets the name property value. Name.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -118,7 +91,7 @@ public class RemoteNetwork extends Entity implements Parsable {
         return this.backingStore.get("region");
     }
     /**
-     * Gets the version property value. The version property
+     * Gets the version property value. Remote network version.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -132,10 +105,7 @@ public class RemoteNetwork extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeLongValue("bandwidthCapacity", this.getBandwidthCapacity());
         writer.writeObjectValue("connectivityConfiguration", this.getConnectivityConfiguration());
-        writer.writeEnumValue("connectivityState", this.getConnectivityState());
-        writer.writeStringValue("country", this.getCountry());
         writer.writeCollectionOfObjectValues("deviceLinks", this.getDeviceLinks());
         writer.writeCollectionOfObjectValues("forwardingProfiles", this.getForwardingProfiles());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
@@ -144,56 +114,35 @@ public class RemoteNetwork extends Entity implements Parsable {
         writer.writeStringValue("version", this.getVersion());
     }
     /**
-     * Sets the bandwidthCapacity property value. The bandwidthCapacity property
-     * @param value Value to set for the bandwidthCapacity property.
-     */
-    public void setBandwidthCapacity(@jakarta.annotation.Nullable final Long value) {
-        this.backingStore.set("bandwidthCapacity", value);
-    }
-    /**
-     * Sets the connectivityConfiguration property value. The connectivityConfiguration property
+     * Sets the connectivityConfiguration property value. Specifies the connectivity details of all device links associated with a remote network.
      * @param value Value to set for the connectivityConfiguration property.
      */
     public void setConnectivityConfiguration(@jakarta.annotation.Nullable final RemoteNetworkConnectivityConfiguration value) {
         this.backingStore.set("connectivityConfiguration", value);
     }
     /**
-     * Sets the connectivityState property value. The connectivityState property
-     * @param value Value to set for the connectivityState property.
-     */
-    public void setConnectivityState(@jakarta.annotation.Nullable final ConnectivityState value) {
-        this.backingStore.set("connectivityState", value);
-    }
-    /**
-     * Sets the country property value. The country property
-     * @param value Value to set for the country property.
-     */
-    public void setCountry(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("country", value);
-    }
-    /**
-     * Sets the deviceLinks property value. The deviceLinks property
+     * Sets the deviceLinks property value. Each unique CPE device associated with a remote network is specified. Supports $expand.
      * @param value Value to set for the deviceLinks property.
      */
     public void setDeviceLinks(@jakarta.annotation.Nullable final java.util.List<DeviceLink> value) {
         this.backingStore.set("deviceLinks", value);
     }
     /**
-     * Sets the forwardingProfiles property value. The forwardingProfiles property
+     * Sets the forwardingProfiles property value. Each forwarding profile associated with a remote network is specified. Supports $expand and $select.
      * @param value Value to set for the forwardingProfiles property.
      */
     public void setForwardingProfiles(@jakarta.annotation.Nullable final java.util.List<ForwardingProfile> value) {
         this.backingStore.set("forwardingProfiles", value);
     }
     /**
-     * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Sets the lastModifiedDateTime property value. last modified time.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
-     * Sets the name property value. The name property
+     * Sets the name property value. Name.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
@@ -207,7 +156,7 @@ public class RemoteNetwork extends Entity implements Parsable {
         this.backingStore.set("region", value);
     }
     /**
-     * Sets the version property value. The version property
+     * Sets the version property value. Remote network version.
      * @param value Value to set for the version property.
      */
     public void setVersion(@jakarta.annotation.Nullable final String value) {

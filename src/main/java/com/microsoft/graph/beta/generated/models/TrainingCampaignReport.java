@@ -56,7 +56,7 @@ public class TrainingCampaignReport implements AdditionalDataHolder, BackedModel
         return this.backingStore;
     }
     /**
-     * Gets the campaignUsers property value. The campaignUsers property
+     * Gets the campaignUsers property value. The overview of the attack simulation and training campaign.
      * @return a {@link java.util.List<UserSimulationDetails>}
      */
     @jakarta.annotation.Nullable
@@ -118,7 +118,7 @@ public class TrainingCampaignReport implements AdditionalDataHolder, BackedModel
         this.backingStore = value;
     }
     /**
-     * Sets the campaignUsers property value. The campaignUsers property
+     * Sets the campaignUsers property value. The overview of the attack simulation and training campaign.
      * @param value Value to set for the campaignUsers property.
      */
     public void setCampaignUsers(@jakarta.annotation.Nullable final java.util.List<UserSimulationDetails> value) {

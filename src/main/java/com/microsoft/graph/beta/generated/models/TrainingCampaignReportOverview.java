@@ -77,7 +77,7 @@ public class TrainingCampaignReportOverview implements AdditionalDataHolder, Bac
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the trainingModuleCompletion property value. The trainingModuleCompletion property
+     * Gets the trainingModuleCompletion property value. Aggregate data of training completion.
      * @return a {@link TrainingEventsContent}
      */
     @jakarta.annotation.Nullable
@@ -85,7 +85,7 @@ public class TrainingCampaignReportOverview implements AdditionalDataHolder, Bac
         return this.backingStore.get("trainingModuleCompletion");
     }
     /**
-     * Gets the trainingNotificationDeliveryStatus property value. The trainingNotificationDeliveryStatus property
+     * Gets the trainingNotificationDeliveryStatus property value. Aggregate data of training mail delivery over the course of the training campaign.
      * @return a {@link TrainingNotificationDelivery}
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class TrainingCampaignReportOverview implements AdditionalDataHolder, Bac
         return this.backingStore.get("trainingNotificationDeliveryStatus");
     }
     /**
-     * Gets the userCompletionStatus property value. The userCompletionStatus property
+     * Gets the userCompletionStatus property value. Aggregate data of users training progress.
      * @return a {@link UserTrainingCompletionSummary}
      */
     @jakarta.annotation.Nullable
@@ -135,21 +135,21 @@ public class TrainingCampaignReportOverview implements AdditionalDataHolder, Bac
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the trainingModuleCompletion property value. The trainingModuleCompletion property
+     * Sets the trainingModuleCompletion property value. Aggregate data of training completion.
      * @param value Value to set for the trainingModuleCompletion property.
      */
     public void setTrainingModuleCompletion(@jakarta.annotation.Nullable final TrainingEventsContent value) {
         this.backingStore.set("trainingModuleCompletion", value);
     }
     /**
-     * Sets the trainingNotificationDeliveryStatus property value. The trainingNotificationDeliveryStatus property
+     * Sets the trainingNotificationDeliveryStatus property value. Aggregate data of training mail delivery over the course of the training campaign.
      * @param value Value to set for the trainingNotificationDeliveryStatus property.
      */
     public void setTrainingNotificationDeliveryStatus(@jakarta.annotation.Nullable final TrainingNotificationDelivery value) {
         this.backingStore.set("trainingNotificationDeliveryStatus", value);
     }
     /**
-     * Sets the userCompletionStatus property value. The userCompletionStatus property
+     * Sets the userCompletionStatus property value. Aggregate data of users training progress.
      * @param value Value to set for the userCompletionStatus property.
      */
     public void setUserCompletionStatus(@jakarta.annotation.Nullable final UserTrainingCompletionSummary value) {

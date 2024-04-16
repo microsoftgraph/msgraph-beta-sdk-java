@@ -1,5 +1,6 @@
 package com.microsoft.graph.beta.models;
 
+import com.microsoft.graph.beta.models.identitygovernance.GroupBasedSubjectSet;
 import com.microsoft.graph.beta.models.identitygovernance.RuleBasedSubjectSet;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
@@ -37,6 +38,7 @@ public class SubjectSet implements AdditionalDataHolder, BackedModel, Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
+                case "#microsoft.graph.identityGovernance.groupBasedSubjectSet": return new GroupBasedSubjectSet();
                 case "#microsoft.graph.identityGovernance.ruleBasedSubjectSet": return new RuleBasedSubjectSet();
             }
         }

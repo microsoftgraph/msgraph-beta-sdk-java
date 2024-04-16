@@ -35,18 +35,20 @@ public class IngestTelemetryRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/workplace/sensorDevices/ingestTelemetry", rawUrl);
     }
     /**
-     * Invoke action ingestTelemetry
+     * Ingest sensor telemetry for a workplace sensor device.
      * @param body The request body
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/workplacesensordevice-ingesttelemetry?view=graph-rest-1.0">Find more info here</a>
      */
     public void post(@jakarta.annotation.Nonnull final IngestTelemetryPostRequestBody body) {
         post(body, null);
     }
     /**
-     * Invoke action ingestTelemetry
+     * Ingest sensor telemetry for a workplace sensor device.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/workplacesensordevice-ingesttelemetry?view=graph-rest-1.0">Find more info here</a>
      */
     public void post(@jakarta.annotation.Nonnull final IngestTelemetryPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
@@ -56,7 +58,7 @@ public class IngestTelemetryRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Invoke action ingestTelemetry
+     * Ingest sensor telemetry for a workplace sensor device.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -65,7 +67,7 @@ public class IngestTelemetryRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action ingestTelemetry
+     * Ingest sensor telemetry for a workplace sensor device.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

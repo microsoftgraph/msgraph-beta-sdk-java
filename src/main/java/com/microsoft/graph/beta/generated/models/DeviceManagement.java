@@ -392,6 +392,14 @@ public class DeviceManagement extends Entity implements Parsable {
         return this.backingStore.get("deviceConfigurationDeviceStateSummaries");
     }
     /**
+     * Gets the deviceConfigurationProfiles property value. Profile Id of the object.
+     * @return a {@link java.util.List<DeviceConfigurationProfile>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<DeviceConfigurationProfile> getDeviceConfigurationProfiles() {
+        return this.backingStore.get("deviceConfigurationProfiles");
+    }
+    /**
      * Gets the deviceConfigurationRestrictedAppsViolations property value. Restricted apps violations for this account.
      * @return a {@link java.util.List<RestrictedAppsViolation>}
      */
@@ -579,6 +587,7 @@ public class DeviceManagement extends Entity implements Parsable {
         deserializerMap.put("deviceComplianceScripts", (n) -> { this.setDeviceComplianceScripts(n.getCollectionOfObjectValues(DeviceComplianceScript::createFromDiscriminatorValue)); });
         deserializerMap.put("deviceConfigurationConflictSummary", (n) -> { this.setDeviceConfigurationConflictSummary(n.getCollectionOfObjectValues(DeviceConfigurationConflictSummary::createFromDiscriminatorValue)); });
         deserializerMap.put("deviceConfigurationDeviceStateSummaries", (n) -> { this.setDeviceConfigurationDeviceStateSummaries(n.getObjectValue(DeviceConfigurationDeviceStateSummary::createFromDiscriminatorValue)); });
+        deserializerMap.put("deviceConfigurationProfiles", (n) -> { this.setDeviceConfigurationProfiles(n.getCollectionOfObjectValues(DeviceConfigurationProfile::createFromDiscriminatorValue)); });
         deserializerMap.put("deviceConfigurationRestrictedAppsViolations", (n) -> { this.setDeviceConfigurationRestrictedAppsViolations(n.getCollectionOfObjectValues(RestrictedAppsViolation::createFromDiscriminatorValue)); });
         deserializerMap.put("deviceConfigurations", (n) -> { this.setDeviceConfigurations(n.getCollectionOfObjectValues(DeviceConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("deviceConfigurationsAllManagedDeviceCertificateStates", (n) -> { this.setDeviceConfigurationsAllManagedDeviceCertificateStates(n.getCollectionOfObjectValues(ManagedAllDeviceCertificateState::createFromDiscriminatorValue)); });
@@ -603,6 +612,8 @@ public class DeviceManagement extends Entity implements Parsable {
         deserializerMap.put("groupPolicyMigrationReports", (n) -> { this.setGroupPolicyMigrationReports(n.getCollectionOfObjectValues(GroupPolicyMigrationReport::createFromDiscriminatorValue)); });
         deserializerMap.put("groupPolicyObjectFiles", (n) -> { this.setGroupPolicyObjectFiles(n.getCollectionOfObjectValues(GroupPolicyObjectFile::createFromDiscriminatorValue)); });
         deserializerMap.put("groupPolicyUploadedDefinitionFiles", (n) -> { this.setGroupPolicyUploadedDefinitionFiles(n.getCollectionOfObjectValues(GroupPolicyUploadedDefinitionFile::createFromDiscriminatorValue)); });
+        deserializerMap.put("hardwareConfigurations", (n) -> { this.setHardwareConfigurations(n.getCollectionOfObjectValues(HardwareConfiguration::createFromDiscriminatorValue)); });
+        deserializerMap.put("hardwarePasswordInfo", (n) -> { this.setHardwarePasswordInfo(n.getCollectionOfObjectValues(HardwarePasswordInfo::createFromDiscriminatorValue)); });
         deserializerMap.put("importedDeviceIdentities", (n) -> { this.setImportedDeviceIdentities(n.getCollectionOfObjectValues(ImportedDeviceIdentity::createFromDiscriminatorValue)); });
         deserializerMap.put("importedWindowsAutopilotDeviceIdentities", (n) -> { this.setImportedWindowsAutopilotDeviceIdentities(n.getCollectionOfObjectValues(ImportedWindowsAutopilotDeviceIdentity::createFromDiscriminatorValue)); });
         deserializerMap.put("intents", (n) -> { this.setIntents(n.getCollectionOfObjectValues(DeviceManagementIntent::createFromDiscriminatorValue)); });
@@ -775,6 +786,22 @@ public class DeviceManagement extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public java.util.List<GroupPolicyUploadedDefinitionFile> getGroupPolicyUploadedDefinitionFiles() {
         return this.backingStore.get("groupPolicyUploadedDefinitionFiles");
+    }
+    /**
+     * Gets the hardwareConfigurations property value. The hardware configurations for this account.
+     * @return a {@link java.util.List<HardwareConfiguration>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<HardwareConfiguration> getHardwareConfigurations() {
+        return this.backingStore.get("hardwareConfigurations");
+    }
+    /**
+     * Gets the hardwarePasswordInfo property value. The hardware password info for this account.
+     * @return a {@link java.util.List<HardwarePasswordInfo>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<HardwarePasswordInfo> getHardwarePasswordInfo() {
+        return this.backingStore.get("hardwarePasswordInfo");
     }
     /**
      * Gets the importedDeviceIdentities property value. The imported device identities.
@@ -1747,6 +1774,7 @@ public class DeviceManagement extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("deviceComplianceScripts", this.getDeviceComplianceScripts());
         writer.writeCollectionOfObjectValues("deviceConfigurationConflictSummary", this.getDeviceConfigurationConflictSummary());
         writer.writeObjectValue("deviceConfigurationDeviceStateSummaries", this.getDeviceConfigurationDeviceStateSummaries());
+        writer.writeCollectionOfObjectValues("deviceConfigurationProfiles", this.getDeviceConfigurationProfiles());
         writer.writeCollectionOfObjectValues("deviceConfigurationRestrictedAppsViolations", this.getDeviceConfigurationRestrictedAppsViolations());
         writer.writeCollectionOfObjectValues("deviceConfigurations", this.getDeviceConfigurations());
         writer.writeCollectionOfObjectValues("deviceConfigurationsAllManagedDeviceCertificateStates", this.getDeviceConfigurationsAllManagedDeviceCertificateStates());
@@ -1771,6 +1799,8 @@ public class DeviceManagement extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("groupPolicyMigrationReports", this.getGroupPolicyMigrationReports());
         writer.writeCollectionOfObjectValues("groupPolicyObjectFiles", this.getGroupPolicyObjectFiles());
         writer.writeCollectionOfObjectValues("groupPolicyUploadedDefinitionFiles", this.getGroupPolicyUploadedDefinitionFiles());
+        writer.writeCollectionOfObjectValues("hardwareConfigurations", this.getHardwareConfigurations());
+        writer.writeCollectionOfObjectValues("hardwarePasswordInfo", this.getHardwarePasswordInfo());
         writer.writeCollectionOfObjectValues("importedDeviceIdentities", this.getImportedDeviceIdentities());
         writer.writeCollectionOfObjectValues("importedWindowsAutopilotDeviceIdentities", this.getImportedWindowsAutopilotDeviceIdentities());
         writer.writeCollectionOfObjectValues("intents", this.getIntents());
@@ -2200,6 +2230,13 @@ public class DeviceManagement extends Entity implements Parsable {
         this.backingStore.set("deviceConfigurationDeviceStateSummaries", value);
     }
     /**
+     * Sets the deviceConfigurationProfiles property value. Profile Id of the object.
+     * @param value Value to set for the deviceConfigurationProfiles property.
+     */
+    public void setDeviceConfigurationProfiles(@jakarta.annotation.Nullable final java.util.List<DeviceConfigurationProfile> value) {
+        this.backingStore.set("deviceConfigurationProfiles", value);
+    }
+    /**
      * Sets the deviceConfigurationRestrictedAppsViolations property value. Restricted apps violations for this account.
      * @param value Value to set for the deviceConfigurationRestrictedAppsViolations property.
      */
@@ -2366,6 +2403,20 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     public void setGroupPolicyUploadedDefinitionFiles(@jakarta.annotation.Nullable final java.util.List<GroupPolicyUploadedDefinitionFile> value) {
         this.backingStore.set("groupPolicyUploadedDefinitionFiles", value);
+    }
+    /**
+     * Sets the hardwareConfigurations property value. The hardware configurations for this account.
+     * @param value Value to set for the hardwareConfigurations property.
+     */
+    public void setHardwareConfigurations(@jakarta.annotation.Nullable final java.util.List<HardwareConfiguration> value) {
+        this.backingStore.set("hardwareConfigurations", value);
+    }
+    /**
+     * Sets the hardwarePasswordInfo property value. The hardware password info for this account.
+     * @param value Value to set for the hardwarePasswordInfo property.
+     */
+    public void setHardwarePasswordInfo(@jakarta.annotation.Nullable final java.util.List<HardwarePasswordInfo> value) {
+        this.backingStore.set("hardwarePasswordInfo", value);
     }
     /**
      * Sets the importedDeviceIdentities property value. The imported device identities.

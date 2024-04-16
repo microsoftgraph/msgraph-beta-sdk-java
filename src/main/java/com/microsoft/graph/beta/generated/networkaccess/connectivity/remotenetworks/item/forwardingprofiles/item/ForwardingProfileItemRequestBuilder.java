@@ -73,7 +73,7 @@ public class ForwardingProfileItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get forwardingProfiles from networkAccess
+     * Each forwarding profile associated with a remote network is specified. Supports $expand and $select.
      * @return a {@link ForwardingProfile}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -82,7 +82,7 @@ public class ForwardingProfileItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get forwardingProfiles from networkAccess
+     * Each forwarding profile associated with a remote network is specified. Supports $expand and $select.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ForwardingProfile}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -134,13 +134,13 @@ public class ForwardingProfileItemRequestBuilder extends BaseRequestBuilder {
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/networkAccess/connectivity/remoteNetworks/{remoteNetwork%2Did}/forwardingProfiles/{forwardingProfile%2Did}", pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
-     * Get forwardingProfiles from networkAccess
+     * Each forwarding profile associated with a remote network is specified. Supports $expand and $select.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -148,7 +148,7 @@ public class ForwardingProfileItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get forwardingProfiles from networkAccess
+     * Each forwarding profile associated with a remote network is specified. Supports $expand and $select.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -177,7 +177,7 @@ public class ForwardingProfileItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final ForwardingProfile body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/networkAccess/connectivity/remoteNetworks/{remoteNetwork%2Did}/forwardingProfiles/{forwardingProfile%2Did}", pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -200,7 +200,7 @@ public class ForwardingProfileItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get forwardingProfiles from networkAccess
+     * Each forwarding profile associated with a remote network is specified. Supports $expand and $select.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

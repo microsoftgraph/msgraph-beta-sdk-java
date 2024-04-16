@@ -37,7 +37,7 @@ public class PeopleAdminSettings extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the itemInsights property value. The itemInsights property
+     * Gets the itemInsights property value. Represents administrator settings that manage the support for item insights in an organization.
      * @return a {@link InsightsSettings}
      */
     @jakarta.annotation.Nullable
@@ -45,7 +45,7 @@ public class PeopleAdminSettings extends Entity implements Parsable {
         return this.backingStore.get("itemInsights");
     }
     /**
-     * Gets the profileCardProperties property value. Contains a collection of the properties an administrator has defined as visible on the Microsoft 365 profile card.
+     * Gets the profileCardProperties property value. Contains a collection of the properties an administrator defined as visible on the Microsoft 365 profile card.
      * @return a {@link java.util.List<ProfileCardProperty>}
      */
     @jakarta.annotation.Nullable
@@ -72,14 +72,14 @@ public class PeopleAdminSettings extends Entity implements Parsable {
         writer.writeObjectValue("pronouns", this.getPronouns());
     }
     /**
-     * Sets the itemInsights property value. The itemInsights property
+     * Sets the itemInsights property value. Represents administrator settings that manage the support for item insights in an organization.
      * @param value Value to set for the itemInsights property.
      */
     public void setItemInsights(@jakarta.annotation.Nullable final InsightsSettings value) {
         this.backingStore.set("itemInsights", value);
     }
     /**
-     * Sets the profileCardProperties property value. Contains a collection of the properties an administrator has defined as visible on the Microsoft 365 profile card.
+     * Sets the profileCardProperties property value. Contains a collection of the properties an administrator defined as visible on the Microsoft 365 profile card.
      * @param value Value to set for the profileCardProperties property.
      */
     public void setProfileCardProperties(@jakarta.annotation.Nullable final java.util.List<ProfileCardProperty> value) {

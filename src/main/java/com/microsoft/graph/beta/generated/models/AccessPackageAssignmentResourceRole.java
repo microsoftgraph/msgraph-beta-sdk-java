@@ -81,7 +81,7 @@ public class AccessPackageAssignmentResourceRole extends Entity implements Parsa
         return this.backingStore.get("originId");
     }
     /**
-     * Gets the originSystem property value. The system where the role assignment is to be created or has been created for an access package assignment, such as SharePointOnline, AadGroup or AadApplication, corresponding to the originSystem property of the accessPackageResourceRole.
+     * Gets the originSystem property value. The system where the role assignment is to be created or has been created for an access package assignment, such as SharePointOnline, AadGroup, or AadApplication, corresponding to the originSystem property of the accessPackageResourceRole.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -89,7 +89,7 @@ public class AccessPackageAssignmentResourceRole extends Entity implements Parsa
         return this.backingStore.get("originSystem");
     }
     /**
-     * Gets the status property value. The value is PendingFulfillment when the access package assignment hasn't yet been delivered to the origin system, and Fulfilled when the access package assignment has been delivered to the origin system.
+     * Gets the status property value. The value is PendingFulfillment before the access package assignment is delivered to the origin system, and Fulfilled after the access package assignment is delivered to the origin system.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -147,14 +147,14 @@ public class AccessPackageAssignmentResourceRole extends Entity implements Parsa
         this.backingStore.set("originId", value);
     }
     /**
-     * Sets the originSystem property value. The system where the role assignment is to be created or has been created for an access package assignment, such as SharePointOnline, AadGroup or AadApplication, corresponding to the originSystem property of the accessPackageResourceRole.
+     * Sets the originSystem property value. The system where the role assignment is to be created or has been created for an access package assignment, such as SharePointOnline, AadGroup, or AadApplication, corresponding to the originSystem property of the accessPackageResourceRole.
      * @param value Value to set for the originSystem property.
      */
     public void setOriginSystem(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("originSystem", value);
     }
     /**
-     * Sets the status property value. The value is PendingFulfillment when the access package assignment hasn't yet been delivered to the origin system, and Fulfilled when the access package assignment has been delivered to the origin system.
+     * Sets the status property value. The value is PendingFulfillment before the access package assignment is delivered to the origin system, and Fulfilled after the access package assignment is delivered to the origin system.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final String value) {

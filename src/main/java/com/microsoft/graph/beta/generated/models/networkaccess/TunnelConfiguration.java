@@ -92,7 +92,7 @@ public class TunnelConfiguration implements AdditionalDataHolder, BackedModel, P
         return this.backingStore.get("preSharedKey");
     }
     /**
-     * Gets the zoneRedundancyPreSharedKey property value. The zoneRedundancyPreSharedKey property
+     * Gets the zoneRedundancyPreSharedKey property value. Another key for zone redundant tunnel. Required only when you select zoneRedundancy redindancyTier when creating a deviceLink.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -140,7 +140,7 @@ public class TunnelConfiguration implements AdditionalDataHolder, BackedModel, P
         this.backingStore.set("preSharedKey", value);
     }
     /**
-     * Sets the zoneRedundancyPreSharedKey property value. The zoneRedundancyPreSharedKey property
+     * Sets the zoneRedundancyPreSharedKey property value. Another key for zone redundant tunnel. Required only when you select zoneRedundancy redindancyTier when creating a deviceLink.
      * @param value Value to set for the zoneRedundancyPreSharedKey property.
      */
     public void setZoneRedundancyPreSharedKey(@jakarta.annotation.Nullable final String value) {

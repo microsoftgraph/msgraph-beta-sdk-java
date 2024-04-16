@@ -27,7 +27,7 @@ public class DeviceLink extends Entity implements Parsable {
         return new DeviceLink();
     }
     /**
-     * Gets the bandwidthCapacityInMbps property value. Determines the maximum allowed Mbps (megabits per second) bandwidth from a branch site. The possible values are:250,500,750,1000.
+     * Gets the bandwidthCapacityInMbps property value. Determines the maximum allowed Mbps (megabits per second) bandwidth from a device link. The possible values are:250,500,750,1000.
      * @return a {@link BandwidthCapacityInMbps}
      */
     @jakarta.annotation.Nullable
@@ -68,7 +68,7 @@ public class DeviceLink extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the ipAddress property value. Specifies the client IPv4 of the link
+     * Gets the ipAddress property value. The public IP address of your CPE (customer premise equipment) device.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -124,7 +124,7 @@ public class DeviceLink extends Entity implements Parsable {
         writer.writeObjectValue("tunnelConfiguration", this.getTunnelConfiguration());
     }
     /**
-     * Sets the bandwidthCapacityInMbps property value. Determines the maximum allowed Mbps (megabits per second) bandwidth from a branch site. The possible values are:250,500,750,1000.
+     * Sets the bandwidthCapacityInMbps property value. Determines the maximum allowed Mbps (megabits per second) bandwidth from a device link. The possible values are:250,500,750,1000.
      * @param value Value to set for the bandwidthCapacityInMbps property.
      */
     public void setBandwidthCapacityInMbps(@jakarta.annotation.Nullable final BandwidthCapacityInMbps value) {
@@ -145,7 +145,7 @@ public class DeviceLink extends Entity implements Parsable {
         this.backingStore.set("deviceVendor", value);
     }
     /**
-     * Sets the ipAddress property value. Specifies the client IPv4 of the link
+     * Sets the ipAddress property value. The public IP address of your CPE (customer premise equipment) device.
      * @param value Value to set for the ipAddress property.
      */
     public void setIpAddress(@jakarta.annotation.Nullable final String value) {

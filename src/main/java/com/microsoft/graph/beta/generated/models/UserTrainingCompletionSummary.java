@@ -56,7 +56,7 @@ public class UserTrainingCompletionSummary implements AdditionalDataHolder, Back
         return this.backingStore;
     }
     /**
-     * Gets the completedUsersCount property value. The completedUsersCount property
+     * Gets the completedUsersCount property value. The number of users who completed all the trainings before the due date.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -79,7 +79,7 @@ public class UserTrainingCompletionSummary implements AdditionalDataHolder, Back
         return deserializerMap;
     }
     /**
-     * Gets the inProgressUsersCount property value. The inProgressUsersCount property
+     * Gets the inProgressUsersCount property value. The number of users who started at least one training.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -87,7 +87,7 @@ public class UserTrainingCompletionSummary implements AdditionalDataHolder, Back
         return this.backingStore.get("inProgressUsersCount");
     }
     /**
-     * Gets the notCompletedUsersCount property value. The notCompletedUsersCount property
+     * Gets the notCompletedUsersCount property value. The number of users who didn't complete all the trainings before the due date.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -95,7 +95,7 @@ public class UserTrainingCompletionSummary implements AdditionalDataHolder, Back
         return this.backingStore.get("notCompletedUsersCount");
     }
     /**
-     * Gets the notStartedUsersCount property value. The notStartedUsersCount property
+     * Gets the notStartedUsersCount property value. The number of users who didn't start any training.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -111,7 +111,7 @@ public class UserTrainingCompletionSummary implements AdditionalDataHolder, Back
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the previouslyAssignedUsersCount property value. The previouslyAssignedUsersCount property
+     * Gets the previouslyAssignedUsersCount property value. The number of users who are already assigned the same training.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -148,28 +148,28 @@ public class UserTrainingCompletionSummary implements AdditionalDataHolder, Back
         this.backingStore = value;
     }
     /**
-     * Sets the completedUsersCount property value. The completedUsersCount property
+     * Sets the completedUsersCount property value. The number of users who completed all the trainings before the due date.
      * @param value Value to set for the completedUsersCount property.
      */
     public void setCompletedUsersCount(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("completedUsersCount", value);
     }
     /**
-     * Sets the inProgressUsersCount property value. The inProgressUsersCount property
+     * Sets the inProgressUsersCount property value. The number of users who started at least one training.
      * @param value Value to set for the inProgressUsersCount property.
      */
     public void setInProgressUsersCount(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("inProgressUsersCount", value);
     }
     /**
-     * Sets the notCompletedUsersCount property value. The notCompletedUsersCount property
+     * Sets the notCompletedUsersCount property value. The number of users who didn't complete all the trainings before the due date.
      * @param value Value to set for the notCompletedUsersCount property.
      */
     public void setNotCompletedUsersCount(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("notCompletedUsersCount", value);
     }
     /**
-     * Sets the notStartedUsersCount property value. The notStartedUsersCount property
+     * Sets the notStartedUsersCount property value. The number of users who didn't start any training.
      * @param value Value to set for the notStartedUsersCount property.
      */
     public void setNotStartedUsersCount(@jakarta.annotation.Nullable final Integer value) {
@@ -183,7 +183,7 @@ public class UserTrainingCompletionSummary implements AdditionalDataHolder, Back
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the previouslyAssignedUsersCount property value. The previouslyAssignedUsersCount property
+     * Sets the previouslyAssignedUsersCount property value. The number of users who are already assigned the same training.
      * @param value Value to set for the previouslyAssignedUsersCount property.
      */
     public void setPreviouslyAssignedUsersCount(@jakarta.annotation.Nullable final Integer value) {

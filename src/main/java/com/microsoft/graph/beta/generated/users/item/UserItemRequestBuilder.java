@@ -59,12 +59,14 @@ import com.microsoft.graph.beta.users.item.inferenceclassification.InferenceClas
 import com.microsoft.graph.beta.users.item.informationprotection.InformationProtectionRequestBuilder;
 import com.microsoft.graph.beta.users.item.insights.InsightsRequestBuilder;
 import com.microsoft.graph.beta.users.item.invalidateallrefreshtokens.InvalidateAllRefreshTokensRequestBuilder;
+import com.microsoft.graph.beta.users.item.invitedby.InvitedByRequestBuilder;
 import com.microsoft.graph.beta.users.item.ismanagedappuserblocked.IsManagedAppUserBlockedRequestBuilder;
 import com.microsoft.graph.beta.users.item.joinedgroups.JoinedGroupsRequestBuilder;
 import com.microsoft.graph.beta.users.item.joinedteams.JoinedTeamsRequestBuilder;
 import com.microsoft.graph.beta.users.item.licensedetails.LicenseDetailsRequestBuilder;
 import com.microsoft.graph.beta.users.item.mailboxsettings.MailboxSettingsRequestBuilder;
 import com.microsoft.graph.beta.users.item.mailfolders.MailFoldersRequestBuilder;
+import com.microsoft.graph.beta.users.item.managedapplogcollectionrequests.ManagedAppLogCollectionRequestsRequestBuilder;
 import com.microsoft.graph.beta.users.item.managedappregistrations.ManagedAppRegistrationsRequestBuilder;
 import com.microsoft.graph.beta.users.item.manageddevices.ManagedDevicesRequestBuilder;
 import com.microsoft.graph.beta.users.item.manager.ManagerRequestBuilder;
@@ -557,6 +559,14 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
         return new InvalidateAllRefreshTokensRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the invitedBy property of the microsoft.graph.user entity.
+     * @return a {@link InvitedByRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public InvitedByRequestBuilder invitedBy() {
+        return new InvitedByRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to call the isManagedAppUserBlocked method.
      * @return a {@link IsManagedAppUserBlockedRequestBuilder}
      */
@@ -603,6 +613,14 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public MailFoldersRequestBuilder mailFolders() {
         return new MailFoldersRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the managedAppLogCollectionRequests property of the microsoft.graph.user entity.
+     * @return a {@link ManagedAppLogCollectionRequestsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ManagedAppLogCollectionRequestsRequestBuilder managedAppLogCollectionRequests() {
+        return new ManagedAppLogCollectionRequestsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the managedAppRegistrations property of the microsoft.graph.user entity.
@@ -1146,7 +1164,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/users/{user%2Did}", pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
@@ -1189,7 +1207,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final User body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/users/{user%2Did}", pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);

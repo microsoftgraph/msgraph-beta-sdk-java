@@ -3,6 +3,7 @@ package com.microsoft.graph.beta.deviceappmanagement.windowsmanagedappprotection
 import com.microsoft.graph.beta.deviceappmanagement.windowsmanagedappprotections.item.apps.AppsRequestBuilder;
 import com.microsoft.graph.beta.deviceappmanagement.windowsmanagedappprotections.item.assign.AssignRequestBuilder;
 import com.microsoft.graph.beta.deviceappmanagement.windowsmanagedappprotections.item.assignments.AssignmentsRequestBuilder;
+import com.microsoft.graph.beta.deviceappmanagement.windowsmanagedappprotections.item.deploymentsummary.DeploymentSummaryRequestBuilder;
 import com.microsoft.graph.beta.deviceappmanagement.windowsmanagedappprotections.item.targetapps.TargetAppsRequestBuilder;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.WindowsManagedAppProtection;
@@ -47,6 +48,14 @@ public class WindowsManagedAppProtectionItemRequestBuilder extends BaseRequestBu
     @jakarta.annotation.Nonnull
     public AssignmentsRequestBuilder assignments() {
         return new AssignmentsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the deploymentSummary property of the microsoft.graph.windowsManagedAppProtection entity.
+     * @return a {@link DeploymentSummaryRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public DeploymentSummaryRequestBuilder deploymentSummary() {
+        return new DeploymentSummaryRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the targetApps method.
@@ -152,7 +161,7 @@ public class WindowsManagedAppProtectionItemRequestBuilder extends BaseRequestBu
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/deviceAppManagement/windowsManagedAppProtections/{windowsManagedAppProtection%2Did}", pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
@@ -195,7 +204,7 @@ public class WindowsManagedAppProtectionItemRequestBuilder extends BaseRequestBu
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final WindowsManagedAppProtection body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/deviceAppManagement/windowsManagedAppProtections/{windowsManagedAppProtection%2Did}", pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);

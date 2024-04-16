@@ -82,7 +82,7 @@ public class PlannerBaseApprovalAttachment implements AdditionalDataHolder, Back
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the status property value. The status property
+     * Gets the status property value. Status of the approval. The possible values are: requested, approved, rejected, cancelled, unknownFutureValue. Read-only.
      * @return a {@link PlannerApprovalStatus}
      */
     @jakarta.annotation.Nullable
@@ -122,7 +122,7 @@ public class PlannerBaseApprovalAttachment implements AdditionalDataHolder, Back
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the status property value. The status property
+     * Sets the status property value. Status of the approval. The possible values are: requested, approved, rejected, cancelled, unknownFutureValue. Read-only.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final PlannerApprovalStatus value) {

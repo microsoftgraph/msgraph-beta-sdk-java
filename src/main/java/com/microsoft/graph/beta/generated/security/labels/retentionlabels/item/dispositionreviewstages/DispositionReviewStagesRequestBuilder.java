@@ -4,7 +4,7 @@ import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.security.DispositionReviewStage;
 import com.microsoft.graph.beta.models.security.DispositionReviewStageCollectionResponse;
 import com.microsoft.graph.beta.security.labels.retentionlabels.item.dispositionreviewstages.count.CountRequestBuilder;
-import com.microsoft.graph.beta.security.labels.retentionlabels.item.dispositionreviewstages.item.DispositionReviewStageItemRequestBuilder;
+import com.microsoft.graph.beta.security.labels.retentionlabels.item.dispositionreviewstages.item.DispositionReviewStageStageNumberItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -33,15 +33,15 @@ public class DispositionReviewStagesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the dispositionReviewStages property of the microsoft.graph.security.retentionLabel entity.
-     * @param dispositionReviewStageId The unique identifier of dispositionReviewStage
-     * @return a {@link DispositionReviewStageItemRequestBuilder}
+     * @param dispositionReviewStageStageNumber The unique identifier of dispositionReviewStage
+     * @return a {@link DispositionReviewStageStageNumberItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
-    public DispositionReviewStageItemRequestBuilder byDispositionReviewStageId(@jakarta.annotation.Nonnull final String dispositionReviewStageId) {
-        Objects.requireNonNull(dispositionReviewStageId);
+    public DispositionReviewStageStageNumberItemRequestBuilder byDispositionReviewStageStageNumber(@jakarta.annotation.Nonnull final String dispositionReviewStageStageNumber) {
+        Objects.requireNonNull(dispositionReviewStageStageNumber);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("dispositionReviewStage%2Did", dispositionReviewStageId);
-        return new DispositionReviewStageItemRequestBuilder(urlTplParams, requestAdapter);
+        urlTplParams.put("dispositionReviewStage%2DstageNumber", dispositionReviewStageStageNumber);
+        return new DispositionReviewStageStageNumberItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new {@link DispositionReviewStagesRequestBuilder} and sets the default values.
@@ -144,7 +144,7 @@ public class DispositionReviewStagesRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final DispositionReviewStage body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/security/labels/retentionLabels/{retentionLabel%2Did}/dispositionReviewStages", pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);

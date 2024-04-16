@@ -75,7 +75,7 @@ public class PlannerFormsRequirement implements AdditionalDataHolder, BackedMode
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the requiredForms property value. The requiredForms property
+     * Gets the requiredForms property value. Read-only. A collection of keys from the plannerFormsDictionary that identify the plannerFormReference objects that specify the requirements to complete the plannerTask.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -115,7 +115,7 @@ public class PlannerFormsRequirement implements AdditionalDataHolder, BackedMode
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the requiredForms property value. The requiredForms property
+     * Sets the requiredForms property value. Read-only. A collection of keys from the plannerFormsDictionary that identify the plannerFormReference objects that specify the requirements to complete the plannerTask.
      * @param value Value to set for the requiredForms property.
      */
     public void setRequiredForms(@jakarta.annotation.Nullable final java.util.List<String> value) {

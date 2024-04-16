@@ -11,7 +11,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * The Custom Extended Key Usage definition
+ * Complex type that represents the extended key usage of a certificate. This is shared complex type.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ExtendedKeyUsage implements AdditionalDataHolder, BackedModel, Parsable {

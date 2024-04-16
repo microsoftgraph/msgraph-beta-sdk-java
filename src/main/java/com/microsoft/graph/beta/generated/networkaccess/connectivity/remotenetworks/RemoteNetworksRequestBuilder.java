@@ -60,7 +60,7 @@ public class RemoteNetworksRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/networkAccess/connectivity/remoteNetworks{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get remoteNetworks from networkAccess
+     * Represent locations, such as branches, that are connected to Global Secure Access services through an IPsec tunnel.
      * @return a {@link RemoteNetworkCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -69,7 +69,7 @@ public class RemoteNetworksRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get remoteNetworks from networkAccess
+     * Represent locations, such as branches, that are connected to Global Secure Access services through an IPsec tunnel.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RemoteNetworkCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -82,21 +82,23 @@ public class RemoteNetworksRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, RemoteNetworkCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to remoteNetworks for networkAccess
+     * Create a new remote network.
      * @param body The request body
      * @return a {@link RemoteNetwork}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-connectivity-post-remotenetworks?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RemoteNetwork post(@jakarta.annotation.Nonnull final RemoteNetwork body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to remoteNetworks for networkAccess
+     * Create a new remote network.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RemoteNetwork}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-connectivity-post-remotenetworks?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RemoteNetwork post(@jakarta.annotation.Nonnull final RemoteNetwork body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -107,7 +109,7 @@ public class RemoteNetworksRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, RemoteNetwork::createFromDiscriminatorValue);
     }
     /**
-     * Get remoteNetworks from networkAccess
+     * Represent locations, such as branches, that are connected to Global Secure Access services through an IPsec tunnel.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +117,7 @@ public class RemoteNetworksRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get remoteNetworks from networkAccess
+     * Represent locations, such as branches, that are connected to Global Secure Access services through an IPsec tunnel.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -127,7 +129,7 @@ public class RemoteNetworksRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to remoteNetworks for networkAccess
+     * Create a new remote network.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -136,7 +138,7 @@ public class RemoteNetworksRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to remoteNetworks for networkAccess
+     * Create a new remote network.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -144,7 +146,7 @@ public class RemoteNetworksRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final RemoteNetwork body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/networkAccess/connectivity/remoteNetworks", pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -161,7 +163,7 @@ public class RemoteNetworksRequestBuilder extends BaseRequestBuilder {
         return new RemoteNetworksRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get remoteNetworks from networkAccess
+     * Represent locations, such as branches, that are connected to Global Secure Access services through an IPsec tunnel.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

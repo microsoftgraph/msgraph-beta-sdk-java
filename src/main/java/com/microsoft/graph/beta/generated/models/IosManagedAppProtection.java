@@ -37,6 +37,14 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
         return this.backingStore.get("allowedIosDeviceModels");
     }
     /**
+     * Gets the appActionIfAccountIsClockedOut property value. Defines a managed app behavior, either block or warn, if the user is clocked out (non-working time).
+     * @return a {@link ManagedAppRemediationAction}
+     */
+    @jakarta.annotation.Nullable
+    public ManagedAppRemediationAction getAppActionIfAccountIsClockedOut() {
+        return this.backingStore.get("appActionIfAccountIsClockedOut");
+    }
+    /**
      * Gets the appActionIfIosDeviceModelNotAllowed property value. An admin initiated action to be applied on a managed app.
      * @return a {@link ManagedAppRemediationAction}
      */
@@ -61,7 +69,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
         return this.backingStore.get("apps");
     }
     /**
-     * Gets the customBrowserProtocol property value. A custom browser protocol to open weblink on iOS. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
+     * Gets the customBrowserProtocol property value. A custom browser protocol to open weblink on iOS.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -132,6 +140,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("allowedIosDeviceModels", (n) -> { this.setAllowedIosDeviceModels(n.getStringValue()); });
+        deserializerMap.put("appActionIfAccountIsClockedOut", (n) -> { this.setAppActionIfAccountIsClockedOut(n.getEnumValue(ManagedAppRemediationAction::forValue)); });
         deserializerMap.put("appActionIfIosDeviceModelNotAllowed", (n) -> { this.setAppActionIfIosDeviceModelNotAllowed(n.getEnumValue(ManagedAppRemediationAction::forValue)); });
         deserializerMap.put("appDataEncryptionType", (n) -> { this.setAppDataEncryptionType(n.getEnumValue(ManagedAppDataEncryptionType::forValue)); });
         deserializerMap.put("apps", (n) -> { this.setApps(n.getCollectionOfObjectValues(ManagedMobileApp::createFromDiscriminatorValue)); });
@@ -225,6 +234,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("allowedIosDeviceModels", this.getAllowedIosDeviceModels());
+        writer.writeEnumValue("appActionIfAccountIsClockedOut", this.getAppActionIfAccountIsClockedOut());
         writer.writeEnumValue("appActionIfIosDeviceModelNotAllowed", this.getAppActionIfIosDeviceModelNotAllowed());
         writer.writeEnumValue("appDataEncryptionType", this.getAppDataEncryptionType());
         writer.writeCollectionOfObjectValues("apps", this.getApps());
@@ -253,6 +263,13 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
         this.backingStore.set("allowedIosDeviceModels", value);
     }
     /**
+     * Sets the appActionIfAccountIsClockedOut property value. Defines a managed app behavior, either block or warn, if the user is clocked out (non-working time).
+     * @param value Value to set for the appActionIfAccountIsClockedOut property.
+     */
+    public void setAppActionIfAccountIsClockedOut(@jakarta.annotation.Nullable final ManagedAppRemediationAction value) {
+        this.backingStore.set("appActionIfAccountIsClockedOut", value);
+    }
+    /**
      * Sets the appActionIfIosDeviceModelNotAllowed property value. An admin initiated action to be applied on a managed app.
      * @param value Value to set for the appActionIfIosDeviceModelNotAllowed property.
      */
@@ -274,7 +291,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
         this.backingStore.set("apps", value);
     }
     /**
-     * Sets the customBrowserProtocol property value. A custom browser protocol to open weblink on iOS. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
+     * Sets the customBrowserProtocol property value. A custom browser protocol to open weblink on iOS.
      * @param value Value to set for the customBrowserProtocol property.
      */
     public void setCustomBrowserProtocol(@jakarta.annotation.Nullable final String value) {

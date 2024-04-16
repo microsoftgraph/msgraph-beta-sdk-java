@@ -55,7 +55,7 @@ public class ConnectivityConfigurationLinkItemRequestBuilder extends BaseRequest
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get links from networkAccess
+     * List of connectivity configurations for deviceLink objects.
      * @return a {@link ConnectivityConfigurationLink}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -64,7 +64,7 @@ public class ConnectivityConfigurationLinkItemRequestBuilder extends BaseRequest
         return get(null);
     }
     /**
-     * Get links from networkAccess
+     * List of connectivity configurations for deviceLink objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ConnectivityConfigurationLink}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -116,13 +116,13 @@ public class ConnectivityConfigurationLinkItemRequestBuilder extends BaseRequest
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/networkAccess/connectivity/remoteNetworks/{remoteNetwork%2Did}/connectivityConfiguration/links/{connectivityConfigurationLink%2Did}", pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
-     * Get links from networkAccess
+     * List of connectivity configurations for deviceLink objects.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +130,7 @@ public class ConnectivityConfigurationLinkItemRequestBuilder extends BaseRequest
         return toGetRequestInformation(null);
     }
     /**
-     * Get links from networkAccess
+     * List of connectivity configurations for deviceLink objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -159,7 +159,7 @@ public class ConnectivityConfigurationLinkItemRequestBuilder extends BaseRequest
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final ConnectivityConfigurationLink body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/networkAccess/connectivity/remoteNetworks/{remoteNetwork%2Did}/connectivityConfiguration/links/{connectivityConfigurationLink%2Did}", pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -182,7 +182,7 @@ public class ConnectivityConfigurationLinkItemRequestBuilder extends BaseRequest
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get links from networkAccess
+     * List of connectivity configurations for deviceLink objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

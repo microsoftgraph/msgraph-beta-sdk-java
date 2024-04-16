@@ -26,7 +26,7 @@ public class PlannerBasicApprovalAttachment extends PlannerBaseApprovalAttachmen
         return new PlannerBasicApprovalAttachment();
     }
     /**
-     * Gets the approvalId property value. The approvalId property
+     * Gets the approvalId property value. Read-only. The identifier of the approval in the approval service.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class PlannerBasicApprovalAttachment extends PlannerBaseApprovalAttachmen
         writer.writeStringValue("approvalId", this.getApprovalId());
     }
     /**
-     * Sets the approvalId property value. The approvalId property
+     * Sets the approvalId property value. Read-only. The identifier of the approval in the approval service.
      * @param value Value to set for the approvalId property.
      */
     public void setApprovalId(@jakarta.annotation.Nullable final String value) {

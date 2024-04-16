@@ -86,6 +86,14 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
         return this.backingStore.get("deployedAppCount");
     }
     /**
+     * Gets the deploymentSummary property value. Navigation property to deployment summary of the configuration.
+     * @return a {@link ManagedAppPolicyDeploymentSummary}
+     */
+    @jakarta.annotation.Nullable
+    public ManagedAppPolicyDeploymentSummary getDeploymentSummary() {
+        return this.backingStore.get("deploymentSummary");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
@@ -99,6 +107,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
         deserializerMap.put("apps", (n) -> { this.setApps(n.getCollectionOfObjectValues(ManagedMobileApp::createFromDiscriminatorValue)); });
         deserializerMap.put("assignments", (n) -> { this.setAssignments(n.getCollectionOfObjectValues(TargetedManagedAppPolicyAssignment::createFromDiscriminatorValue)); });
         deserializerMap.put("deployedAppCount", (n) -> { this.setDeployedAppCount(n.getIntegerValue()); });
+        deserializerMap.put("deploymentSummary", (n) -> { this.setDeploymentSummary(n.getObjectValue(ManagedAppPolicyDeploymentSummary::createFromDiscriminatorValue)); });
         deserializerMap.put("isAssigned", (n) -> { this.setIsAssigned(n.getBooleanValue()); });
         deserializerMap.put("maximumAllowedDeviceThreatLevel", (n) -> { this.setMaximumAllowedDeviceThreatLevel(n.getEnumValue(ManagedAppDeviceThreatLevel::forValue)); });
         deserializerMap.put("maximumRequiredOsVersion", (n) -> { this.setMaximumRequiredOsVersion(n.getStringValue()); });
@@ -268,6 +277,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
         writer.writeCollectionOfObjectValues("apps", this.getApps());
         writer.writeCollectionOfObjectValues("assignments", this.getAssignments());
         writer.writeIntegerValue("deployedAppCount", this.getDeployedAppCount());
+        writer.writeObjectValue("deploymentSummary", this.getDeploymentSummary());
         writer.writeBooleanValue("isAssigned", this.getIsAssigned());
         writer.writeEnumValue("maximumAllowedDeviceThreatLevel", this.getMaximumAllowedDeviceThreatLevel());
         writer.writeStringValue("maximumRequiredOsVersion", this.getMaximumRequiredOsVersion());
@@ -334,6 +344,13 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
      */
     public void setDeployedAppCount(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("deployedAppCount", value);
+    }
+    /**
+     * Sets the deploymentSummary property value. Navigation property to deployment summary of the configuration.
+     * @param value Value to set for the deploymentSummary property.
+     */
+    public void setDeploymentSummary(@jakarta.annotation.Nullable final ManagedAppPolicyDeploymentSummary value) {
+        this.backingStore.set("deploymentSummary", value);
     }
     /**
      * Sets the isAssigned property value. When TRUE, indicates that the policy is deployed to some inclusion groups. When FALSE, indicates that the policy is not deployed to any inclusion groups. Default value is FALSE.

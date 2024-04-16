@@ -33,7 +33,7 @@ public class WorkplaceSensorDevice extends Entity implements Parsable {
         return this.backingStore.get("description");
     }
     /**
-     * Gets the deviceId property value. The unique identifier of the device set by the user.
+     * Gets the deviceId property value. The user-defined unique identifier of the device provided at the time of creation.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -68,7 +68,7 @@ public class WorkplaceSensorDevice extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the ipV4Address property value. The IPv4 Address of the device.
+     * Gets the ipV4Address property value. The IPv4 address of the device.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -76,7 +76,7 @@ public class WorkplaceSensorDevice extends Entity implements Parsable {
         return this.backingStore.get("ipV4Address");
     }
     /**
-     * Gets the ipV6Address property value. The IPv6 Address of the device.
+     * Gets the ipV6Address property value. The IPv6 address of the device.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -100,7 +100,7 @@ public class WorkplaceSensorDevice extends Entity implements Parsable {
         return this.backingStore.get("manufacturer");
     }
     /**
-     * Gets the placeId property value. The unique identifier of the place where the device is located.
+     * Gets the placeId property value. The unique identifier of the place where the device is located. If the device is installed in a room equipped with a mailbox, this property should match the ExternalDirectoryObjectId or Microsoft Entra object ID of the room mailbox.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -108,7 +108,7 @@ public class WorkplaceSensorDevice extends Entity implements Parsable {
         return this.backingStore.get("placeId");
     }
     /**
-     * Gets the sensors property value. A list of sensors associated with the device. Sensors can measure physical quantities such as temperature, humidity, occupancy,         etc.
+     * Gets the sensors property value. A list of sensors associated with the device that collect and report data about physical or environmental conditions, such as occupancy, people count, inferred occupancy, temperature, and more.
      * @return a {@link java.util.List<WorkplaceSensor>}
      */
     @jakarta.annotation.Nullable
@@ -149,7 +149,7 @@ public class WorkplaceSensorDevice extends Entity implements Parsable {
         this.backingStore.set("description", value);
     }
     /**
-     * Sets the deviceId property value. The unique identifier of the device set by the user.
+     * Sets the deviceId property value. The user-defined unique identifier of the device provided at the time of creation.
      * @param value Value to set for the deviceId property.
      */
     public void setDeviceId(@jakarta.annotation.Nullable final String value) {
@@ -163,14 +163,14 @@ public class WorkplaceSensorDevice extends Entity implements Parsable {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the ipV4Address property value. The IPv4 Address of the device.
+     * Sets the ipV4Address property value. The IPv4 address of the device.
      * @param value Value to set for the ipV4Address property.
      */
     public void setIpV4Address(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("ipV4Address", value);
     }
     /**
-     * Sets the ipV6Address property value. The IPv6 Address of the device.
+     * Sets the ipV6Address property value. The IPv6 address of the device.
      * @param value Value to set for the ipV6Address property.
      */
     public void setIpV6Address(@jakarta.annotation.Nullable final String value) {
@@ -191,14 +191,14 @@ public class WorkplaceSensorDevice extends Entity implements Parsable {
         this.backingStore.set("manufacturer", value);
     }
     /**
-     * Sets the placeId property value. The unique identifier of the place where the device is located.
+     * Sets the placeId property value. The unique identifier of the place where the device is located. If the device is installed in a room equipped with a mailbox, this property should match the ExternalDirectoryObjectId or Microsoft Entra object ID of the room mailbox.
      * @param value Value to set for the placeId property.
      */
     public void setPlaceId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("placeId", value);
     }
     /**
-     * Sets the sensors property value. A list of sensors associated with the device. Sensors can measure physical quantities such as temperature, humidity, occupancy,         etc.
+     * Sets the sensors property value. A list of sensors associated with the device that collect and report data about physical or environmental conditions, such as occupancy, people count, inferred occupancy, temperature, and more.
      * @param value Value to set for the sensors property.
      */
     public void setSensors(@jakarta.annotation.Nullable final java.util.List<WorkplaceSensor> value) {

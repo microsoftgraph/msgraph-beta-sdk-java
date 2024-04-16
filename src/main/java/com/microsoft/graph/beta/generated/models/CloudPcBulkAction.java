@@ -42,7 +42,7 @@ public class CloudPcBulkAction extends Entity implements Parsable {
         return new CloudPcBulkAction();
     }
     /**
-     * Gets the actionSummary property value. The actionSummary property
+     * Gets the actionSummary property value. Run summary of this bulk action.
      * @return a {@link CloudPcBulkActionSummary}
      */
     @jakarta.annotation.Nullable
@@ -58,7 +58,7 @@ public class CloudPcBulkAction extends Entity implements Parsable {
         return this.backingStore.get("cloudPcIds");
     }
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. The date and time when the bulk action was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -66,7 +66,7 @@ public class CloudPcBulkAction extends Entity implements Parsable {
         return this.backingStore.get("createdDateTime");
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. Name of the bulk action.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -88,7 +88,7 @@ public class CloudPcBulkAction extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the scheduledDuringMaintenanceWindow property value. The scheduledDuringMaintenanceWindow property
+     * Gets the scheduledDuringMaintenanceWindow property value. Indicates whether the bulk actions can be initiated during maintenance window. When true, bulk action will use maintenance window to schedule action, When false means bulk action will not use the maintenance window. Default value is false.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -109,7 +109,7 @@ public class CloudPcBulkAction extends Entity implements Parsable {
         writer.writeBooleanValue("scheduledDuringMaintenanceWindow", this.getScheduledDuringMaintenanceWindow());
     }
     /**
-     * Sets the actionSummary property value. The actionSummary property
+     * Sets the actionSummary property value. Run summary of this bulk action.
      * @param value Value to set for the actionSummary property.
      */
     public void setActionSummary(@jakarta.annotation.Nullable final CloudPcBulkActionSummary value) {
@@ -123,21 +123,21 @@ public class CloudPcBulkAction extends Entity implements Parsable {
         this.backingStore.set("cloudPcIds", value);
     }
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. The date and time when the bulk action was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. Name of the bulk action.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the scheduledDuringMaintenanceWindow property value. The scheduledDuringMaintenanceWindow property
+     * Sets the scheduledDuringMaintenanceWindow property value. Indicates whether the bulk actions can be initiated during maintenance window. When true, bulk action will use maintenance window to schedule action, When false means bulk action will not use the maintenance window. Default value is false.
      * @param value Value to set for the scheduledDuringMaintenanceWindow property.
      */
     public void setScheduledDuringMaintenanceWindow(@jakarta.annotation.Nullable final Boolean value) {

@@ -37,7 +37,7 @@ public class DeviceLinkItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/networkAccess/connectivity/branches/{branchSite%2Did}/deviceLinks/{deviceLink%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Removes the link between the branch and the CPE device, effectively removing the connection and associated configuration between them.
+     * Removes the link between the branch or remote network and the CPE device, effectively removing the connection and associated configuration between them.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
@@ -48,7 +48,7 @@ public class DeviceLinkItemRequestBuilder extends BaseRequestBuilder {
         delete(null);
     }
     /**
-     * Removes the link between the branch and the CPE device, effectively removing the connection and associated configuration between them.
+     * Removes the link between the branch or remote network and the CPE device, effectively removing the connection and associated configuration between them.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
@@ -63,12 +63,11 @@ public class DeviceLinkItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the device link associated with a specific branch.
+     * Each unique CPE device associated with a branch is specified. Supports $expand.
      * @return a {@link DeviceLink}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
-     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-devicelink-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -76,13 +75,12 @@ public class DeviceLinkItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the device link associated with a specific branch.
+     * Each unique CPE device associated with a branch is specified. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DeviceLink}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
-     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-devicelink-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -93,7 +91,7 @@ public class DeviceLinkItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceLink::createFromDiscriminatorValue);
     }
     /**
-     * Update the device link associated with a specific branch.
+     * Update the device link associated with a specific branch or remote network.
      * @param body The request body
      * @return a {@link DeviceLink}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -107,7 +105,7 @@ public class DeviceLinkItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the device link associated with a specific branch.
+     * Update the device link associated with a specific branch or remote network.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DeviceLink}
@@ -126,7 +124,7 @@ public class DeviceLinkItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceLink::createFromDiscriminatorValue);
     }
     /**
-     * Removes the link between the branch and the CPE device, effectively removing the connection and associated configuration between them.
+     * Removes the link between the branch or remote network and the CPE device, effectively removing the connection and associated configuration between them.
      * @return a {@link RequestInformation}
      * @deprecated
      * The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
@@ -137,7 +135,7 @@ public class DeviceLinkItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Removes the link between the branch and the CPE device, effectively removing the connection and associated configuration between them.
+     * Removes the link between the branch or remote network and the CPE device, effectively removing the connection and associated configuration between them.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -146,13 +144,13 @@ public class DeviceLinkItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     @Deprecated
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/networkAccess/connectivity/branches/{branchSite%2Did}/deviceLinks/{deviceLink%2Did}", pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
-     * Retrieve the device link associated with a specific branch.
+     * Each unique CPE device associated with a branch is specified. Supports $expand.
      * @return a {@link RequestInformation}
      * @deprecated
      * The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
@@ -163,7 +161,7 @@ public class DeviceLinkItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the device link associated with a specific branch.
+     * Each unique CPE device associated with a branch is specified. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -178,7 +176,7 @@ public class DeviceLinkItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the device link associated with a specific branch.
+     * Update the device link associated with a specific branch or remote network.
      * @param body The request body
      * @return a {@link RequestInformation}
      * @deprecated
@@ -190,7 +188,7 @@ public class DeviceLinkItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the device link associated with a specific branch.
+     * Update the device link associated with a specific branch or remote network.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -201,7 +199,7 @@ public class DeviceLinkItemRequestBuilder extends BaseRequestBuilder {
     @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final DeviceLink body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/networkAccess/connectivity/branches/{branchSite%2Did}/deviceLinks/{deviceLink%2Did}", pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -227,7 +225,7 @@ public class DeviceLinkItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the device link associated with a specific branch.
+     * Each unique CPE device associated with a branch is specified. Supports $expand.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -38,6 +38,7 @@ public class ReferenceValue implements AdditionalDataHolder, BackedModel, Parsab
             switch (mappingValue) {
                 case "#microsoft.graph.industryData.identifierTypeReferenceValue": return new IdentifierTypeReferenceValue();
                 case "#microsoft.graph.industryData.roleReferenceValue": return new RoleReferenceValue();
+                case "#microsoft.graph.industryData.sectionRoleReferenceValue": return new SectionRoleReferenceValue();
                 case "#microsoft.graph.industryData.userMatchTargetReferenceValue": return new UserMatchTargetReferenceValue();
                 case "#microsoft.graph.industryData.yearReferenceValue": return new YearReferenceValue();
             }

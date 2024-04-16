@@ -34,6 +34,14 @@ public class InactiveUsersMetricBase extends Entity implements Parsable {
         return new InactiveUsersMetricBase();
     }
     /**
+     * Gets the appId property value. The appId property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getAppId() {
+        return this.backingStore.get("appId");
+    }
+    /**
      * Gets the factDate property value. The factDate property
      * @return a {@link LocalDate}
      */
@@ -48,6 +56,7 @@ public class InactiveUsersMetricBase extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("appId", (n) -> { this.setAppId(n.getStringValue()); });
         deserializerMap.put("factDate", (n) -> { this.setFactDate(n.getLocalDateValue()); });
         deserializerMap.put("inactive30DayCount", (n) -> { this.setInactive30DayCount(n.getLongValue()); });
         deserializerMap.put("inactive60DayCount", (n) -> { this.setInactive60DayCount(n.getLongValue()); });
@@ -85,10 +94,18 @@ public class InactiveUsersMetricBase extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeStringValue("appId", this.getAppId());
         writer.writeLocalDateValue("factDate", this.getFactDate());
         writer.writeLongValue("inactive30DayCount", this.getInactive30DayCount());
         writer.writeLongValue("inactive60DayCount", this.getInactive60DayCount());
         writer.writeLongValue("inactive90DayCount", this.getInactive90DayCount());
+    }
+    /**
+     * Sets the appId property value. The appId property
+     * @param value Value to set for the appId property.
+     */
+    public void setAppId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("appId", value);
     }
     /**
      * Sets the factDate property value. The factDate property

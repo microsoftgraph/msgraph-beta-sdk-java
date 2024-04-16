@@ -31,16 +31,16 @@ public class CategoryTemplate extends FilePlanDescriptorTemplate implements Pars
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("subCategories", (n) -> { this.setSubCategories(n.getCollectionOfObjectValues(SubCategoryTemplate::createFromDiscriminatorValue)); });
+        deserializerMap.put("subcategories", (n) -> { this.setSubcategories(n.getCollectionOfObjectValues(SubcategoryTemplate::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
-     * Gets the subCategories property value. Represents all subcategories under a particular category.
-     * @return a {@link java.util.List<SubCategoryTemplate>}
+     * Gets the subcategories property value. The subcategories property
+     * @return a {@link java.util.List<SubcategoryTemplate>}
      */
     @jakarta.annotation.Nullable
-    public java.util.List<SubCategoryTemplate> getSubCategories() {
-        return this.backingStore.get("subCategories");
+    public java.util.List<SubcategoryTemplate> getSubcategories() {
+        return this.backingStore.get("subcategories");
     }
     /**
      * Serializes information the current object
@@ -49,13 +49,13 @@ public class CategoryTemplate extends FilePlanDescriptorTemplate implements Pars
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeCollectionOfObjectValues("subCategories", this.getSubCategories());
+        writer.writeCollectionOfObjectValues("subcategories", this.getSubcategories());
     }
     /**
-     * Sets the subCategories property value. Represents all subcategories under a particular category.
-     * @param value Value to set for the subCategories property.
+     * Sets the subcategories property value. The subcategories property
+     * @param value Value to set for the subcategories property.
      */
-    public void setSubCategories(@jakarta.annotation.Nullable final java.util.List<SubCategoryTemplate> value) {
-        this.backingStore.set("subCategories", value);
+    public void setSubcategories(@jakarta.annotation.Nullable final java.util.List<SubcategoryTemplate> value) {
+        this.backingStore.set("subcategories", value);
     }
 }

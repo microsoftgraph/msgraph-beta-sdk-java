@@ -27,10 +27,10 @@ public class FilePlanDescriptor extends Entity implements Parsable {
     }
     /**
      * Gets the authority property value. Represents the file plan descriptor of type authority applied to a particular retention label.
-     * @return a {@link Authority}
+     * @return a {@link FilePlanAuthority}
      */
     @jakarta.annotation.Nullable
-    public Authority getAuthority() {
+    public FilePlanAuthority getAuthority() {
         return this.backingStore.get("authority");
     }
     /**
@@ -43,10 +43,10 @@ public class FilePlanDescriptor extends Entity implements Parsable {
     }
     /**
      * Gets the category property value. The category property
-     * @return a {@link AppliedCategory}
+     * @return a {@link FilePlanAppliedCategory}
      */
     @jakarta.annotation.Nullable
-    public AppliedCategory getCategory() {
+    public FilePlanAppliedCategory getCategory() {
         return this.backingStore.get("category");
     }
     /**
@@ -59,10 +59,10 @@ public class FilePlanDescriptor extends Entity implements Parsable {
     }
     /**
      * Gets the citation property value. Represents the file plan descriptor of type citation applied to a particular retention label.
-     * @return a {@link Citation}
+     * @return a {@link FilePlanCitation}
      */
     @jakarta.annotation.Nullable
-    public Citation getCitation() {
+    public FilePlanCitation getCitation() {
         return this.backingStore.get("citation");
     }
     /**
@@ -75,10 +75,10 @@ public class FilePlanDescriptor extends Entity implements Parsable {
     }
     /**
      * Gets the department property value. Represents the file plan descriptor of type department applied to a particular retention label.
-     * @return a {@link Department}
+     * @return a {@link FilePlanDepartment}
      */
     @jakarta.annotation.Nullable
-    public Department getDepartment() {
+    public FilePlanDepartment getDepartment() {
         return this.backingStore.get("department");
     }
     /**
@@ -96,13 +96,13 @@ public class FilePlanDescriptor extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("authority", (n) -> { this.setAuthority(n.getObjectValue(Authority::createFromDiscriminatorValue)); });
+        deserializerMap.put("authority", (n) -> { this.setAuthority(n.getObjectValue(FilePlanAuthority::createFromDiscriminatorValue)); });
         deserializerMap.put("authorityTemplate", (n) -> { this.setAuthorityTemplate(n.getObjectValue(AuthorityTemplate::createFromDiscriminatorValue)); });
-        deserializerMap.put("category", (n) -> { this.setCategory(n.getObjectValue(AppliedCategory::createFromDiscriminatorValue)); });
+        deserializerMap.put("category", (n) -> { this.setCategory(n.getObjectValue(FilePlanAppliedCategory::createFromDiscriminatorValue)); });
         deserializerMap.put("categoryTemplate", (n) -> { this.setCategoryTemplate(n.getObjectValue(CategoryTemplate::createFromDiscriminatorValue)); });
-        deserializerMap.put("citation", (n) -> { this.setCitation(n.getObjectValue(Citation::createFromDiscriminatorValue)); });
+        deserializerMap.put("citation", (n) -> { this.setCitation(n.getObjectValue(FilePlanCitation::createFromDiscriminatorValue)); });
         deserializerMap.put("citationTemplate", (n) -> { this.setCitationTemplate(n.getObjectValue(CitationTemplate::createFromDiscriminatorValue)); });
-        deserializerMap.put("department", (n) -> { this.setDepartment(n.getObjectValue(Department::createFromDiscriminatorValue)); });
+        deserializerMap.put("department", (n) -> { this.setDepartment(n.getObjectValue(FilePlanDepartment::createFromDiscriminatorValue)); });
         deserializerMap.put("departmentTemplate", (n) -> { this.setDepartmentTemplate(n.getObjectValue(DepartmentTemplate::createFromDiscriminatorValue)); });
         deserializerMap.put("filePlanReference", (n) -> { this.setFilePlanReference(n.getObjectValue(FilePlanReference::createFromDiscriminatorValue)); });
         deserializerMap.put("filePlanReferenceTemplate", (n) -> { this.setFilePlanReferenceTemplate(n.getObjectValue(FilePlanReferenceTemplate::createFromDiscriminatorValue)); });
@@ -146,7 +146,7 @@ public class FilePlanDescriptor extends Entity implements Parsable {
      * Sets the authority property value. Represents the file plan descriptor of type authority applied to a particular retention label.
      * @param value Value to set for the authority property.
      */
-    public void setAuthority(@jakarta.annotation.Nullable final Authority value) {
+    public void setAuthority(@jakarta.annotation.Nullable final FilePlanAuthority value) {
         this.backingStore.set("authority", value);
     }
     /**
@@ -160,7 +160,7 @@ public class FilePlanDescriptor extends Entity implements Parsable {
      * Sets the category property value. The category property
      * @param value Value to set for the category property.
      */
-    public void setCategory(@jakarta.annotation.Nullable final AppliedCategory value) {
+    public void setCategory(@jakarta.annotation.Nullable final FilePlanAppliedCategory value) {
         this.backingStore.set("category", value);
     }
     /**
@@ -174,7 +174,7 @@ public class FilePlanDescriptor extends Entity implements Parsable {
      * Sets the citation property value. Represents the file plan descriptor of type citation applied to a particular retention label.
      * @param value Value to set for the citation property.
      */
-    public void setCitation(@jakarta.annotation.Nullable final Citation value) {
+    public void setCitation(@jakarta.annotation.Nullable final FilePlanCitation value) {
         this.backingStore.set("citation", value);
     }
     /**
@@ -188,7 +188,7 @@ public class FilePlanDescriptor extends Entity implements Parsable {
      * Sets the department property value. Represents the file plan descriptor of type department applied to a particular retention label.
      * @param value Value to set for the department property.
      */
-    public void setDepartment(@jakarta.annotation.Nullable final Department value) {
+    public void setDepartment(@jakarta.annotation.Nullable final FilePlanDepartment value) {
         this.backingStore.set("department", value);
     }
     /**

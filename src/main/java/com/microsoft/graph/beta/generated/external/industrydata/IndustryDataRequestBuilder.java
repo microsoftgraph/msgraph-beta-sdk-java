@@ -3,6 +3,7 @@ package com.microsoft.graph.beta.external.industrydata;
 import com.microsoft.graph.beta.external.industrydata.dataconnectors.DataConnectorsRequestBuilder;
 import com.microsoft.graph.beta.external.industrydata.inboundflows.InboundFlowsRequestBuilder;
 import com.microsoft.graph.beta.external.industrydata.operations.OperationsRequestBuilder;
+import com.microsoft.graph.beta.external.industrydata.outboundprovisioningflowsets.OutboundProvisioningFlowSetsRequestBuilder;
 import com.microsoft.graph.beta.external.industrydata.referencedefinitions.ReferenceDefinitionsRequestBuilder;
 import com.microsoft.graph.beta.external.industrydata.rolegroups.RoleGroupsRequestBuilder;
 import com.microsoft.graph.beta.external.industrydata.runs.RunsRequestBuilder;
@@ -51,6 +52,14 @@ public class IndustryDataRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public OperationsRequestBuilder operations() {
         return new OperationsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the outboundProvisioningFlowSets property of the microsoft.graph.industryData.industryDataRoot entity.
+     * @return a {@link OutboundProvisioningFlowSetsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public OutboundProvisioningFlowSetsRequestBuilder outboundProvisioningFlowSets() {
+        return new OutboundProvisioningFlowSetsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the referenceDefinitions property of the microsoft.graph.industryData.industryDataRoot entity.

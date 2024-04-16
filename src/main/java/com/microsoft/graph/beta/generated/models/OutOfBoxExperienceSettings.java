@@ -11,7 +11,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * Out of box experience setting
+ * The Windows Autopilot Deployment Profile settings used by the Autopilot device for out-of-box experience. Supports: $select, $top, $skip. $Search, $orderBy and $filter are not supported. Read-Only. Starting from May 2024 this property will no longer be supported and will be marked as deprecated. Use outOfBoxExperienceSetting instead.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OutOfBoxExperienceSettings implements AdditionalDataHolder, BackedModel, Parsable {

@@ -50,7 +50,16 @@ public class UserCountMetric extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("count", (n) -> { this.setCount(n.getLongValue()); });
         deserializerMap.put("factDate", (n) -> { this.setFactDate(n.getLocalDateValue()); });
+        deserializerMap.put("language", (n) -> { this.setLanguage(n.getStringValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the language property value. The language property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getLanguage() {
+        return this.backingStore.get("language");
     }
     /**
      * Serializes information the current object
@@ -61,6 +70,7 @@ public class UserCountMetric extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeLongValue("count", this.getCount());
         writer.writeLocalDateValue("factDate", this.getFactDate());
+        writer.writeStringValue("language", this.getLanguage());
     }
     /**
      * Sets the count property value. The total number of users in the tenant over time.
@@ -75,5 +85,12 @@ public class UserCountMetric extends Entity implements Parsable {
      */
     public void setFactDate(@jakarta.annotation.Nullable final LocalDate value) {
         this.backingStore.set("factDate", value);
+    }
+    /**
+     * Sets the language property value. The language property
+     * @param value Value to set for the language property.
+     */
+    public void setLanguage(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("language", value);
     }
 }

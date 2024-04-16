@@ -27,7 +27,7 @@ public class ForwardingProfile extends Profile implements Parsable {
         return new ForwardingProfile();
     }
     /**
-     * Gets the associations property value. Specifies the users, groups, devices, and branch locations whose traffic is associated with the given traffic forwarding profile.
+     * Gets the associations property value. Specifies the users, groups, devices, and remote networks whose traffic is associated with the given traffic forwarding profile.
      * @return a {@link java.util.List<Association>}
      */
     @jakarta.annotation.Nullable
@@ -84,7 +84,7 @@ public class ForwardingProfile extends Profile implements Parsable {
         writer.writeEnumValue("trafficForwardingType", this.getTrafficForwardingType());
     }
     /**
-     * Sets the associations property value. Specifies the users, groups, devices, and branch locations whose traffic is associated with the given traffic forwarding profile.
+     * Sets the associations property value. Specifies the users, groups, devices, and remote networks whose traffic is associated with the given traffic forwarding profile.
      * @param value Value to set for the associations property.
      */
     public void setAssociations(@jakarta.annotation.Nullable final java.util.List<Association> value) {

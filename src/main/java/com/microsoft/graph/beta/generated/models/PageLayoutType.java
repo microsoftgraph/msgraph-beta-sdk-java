@@ -8,7 +8,9 @@ public enum PageLayoutType implements ValuedEnum {
     MicrosoftReserved("microsoftReserved"),
     Article("article"),
     Home("home"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    NewsLink("newsLink"),
+    VideoNewsLink("videoNewsLink");
     public final String value;
     PageLayoutType(final String value) {
         this.value = value;
@@ -23,6 +25,8 @@ public enum PageLayoutType implements ValuedEnum {
             case "article": return Article;
             case "home": return Home;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "newsLink": return NewsLink;
+            case "videoNewsLink": return VideoNewsLink;
             default: return null;
         }
     }

@@ -36,12 +36,12 @@ public class FilePlanDescriptorBase implements AdditionalDataHolder, BackedModel
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.security.appliedCategory": return new AppliedCategory();
-                case "#microsoft.graph.security.authority": return new Authority();
-                case "#microsoft.graph.security.citation": return new Citation();
-                case "#microsoft.graph.security.department": return new Department();
+                case "#microsoft.graph.security.filePlanAppliedCategory": return new FilePlanAppliedCategory();
+                case "#microsoft.graph.security.filePlanAuthority": return new FilePlanAuthority();
+                case "#microsoft.graph.security.filePlanCitation": return new FilePlanCitation();
+                case "#microsoft.graph.security.filePlanDepartment": return new FilePlanDepartment();
                 case "#microsoft.graph.security.filePlanReference": return new FilePlanReference();
-                case "#microsoft.graph.security.subCategory": return new SubCategory();
+                case "#microsoft.graph.security.filePlanSubcategory": return new FilePlanSubcategory();
             }
         }
         return new FilePlanDescriptorBase();
@@ -68,7 +68,7 @@ public class FilePlanDescriptorBase implements AdditionalDataHolder, BackedModel
         return this.backingStore;
     }
     /**
-     * Gets the displayName property value. Unique string that defines the name for each file plan descriptor associated with a particular retention label.
+     * Gets the displayName property value. Unique string that defines the name for the file plan descriptor associated with a particular retention label.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -120,7 +120,7 @@ public class FilePlanDescriptorBase implements AdditionalDataHolder, BackedModel
         this.backingStore = value;
     }
     /**
-     * Sets the displayName property value. Unique string that defines the name for each file plan descriptor associated with a particular retention label.
+     * Sets the displayName property value. Unique string that defines the name for the file plan descriptor associated with a particular retention label.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {

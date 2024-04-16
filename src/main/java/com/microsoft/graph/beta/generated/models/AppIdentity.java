@@ -48,7 +48,7 @@ public class AppIdentity implements AdditionalDataHolder, BackedModel, Parsable 
         return value;
     }
     /**
-     * Gets the appId property value. Refers to the unique identifier representing Application Id in the Microsoft Entra ID.
+     * Gets the appId property value. Refers to the unique identifier representing application ID in the Microsoft Entra ID.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -94,7 +94,7 @@ public class AppIdentity implements AdditionalDataHolder, BackedModel, Parsable 
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the servicePrincipalId property value. Refers to the unique identifier indicating Service Principal Id in Microsoft Entra ID for the corresponding App.
+     * Gets the servicePrincipalId property value. Refers to the unique identifier indicating service principal ID in Microsoft Entra ID for the corresponding App.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -130,7 +130,7 @@ public class AppIdentity implements AdditionalDataHolder, BackedModel, Parsable 
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the appId property value. Refers to the unique identifier representing Application Id in the Microsoft Entra ID.
+     * Sets the appId property value. Refers to the unique identifier representing application ID in the Microsoft Entra ID.
      * @param value Value to set for the appId property.
      */
     public void setAppId(@jakarta.annotation.Nullable final String value) {
@@ -159,7 +159,7 @@ public class AppIdentity implements AdditionalDataHolder, BackedModel, Parsable 
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the servicePrincipalId property value. Refers to the unique identifier indicating Service Principal Id in Microsoft Entra ID for the corresponding App.
+     * Sets the servicePrincipalId property value. Refers to the unique identifier indicating service principal ID in Microsoft Entra ID for the corresponding App.
      * @param value Value to set for the servicePrincipalId property.
      */
     public void setServicePrincipalId(@jakarta.annotation.Nullable final String value) {

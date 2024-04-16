@@ -1,6 +1,7 @@
 package com.microsoft.graph.beta.devicemanagement.manageddevices.item.logcollectionrequests.item;
 
 import com.microsoft.graph.beta.devicemanagement.manageddevices.item.logcollectionrequests.item.createdownloadurl.CreateDownloadUrlRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.manageddevices.item.logcollectionrequests.item.downloaddevicelogs.DownloadDeviceLogsRequestBuilder;
 import com.microsoft.graph.beta.models.DeviceLogCollectionResponse;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -28,6 +29,14 @@ public class DeviceLogCollectionResponseItemRequestBuilder extends BaseRequestBu
     @jakarta.annotation.Nonnull
     public CreateDownloadUrlRequestBuilder createDownloadUrl() {
         return new CreateDownloadUrlRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the downloadDeviceLogs method.
+     * @return a {@link DownloadDeviceLogsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public DownloadDeviceLogsRequestBuilder downloadDeviceLogs() {
+        return new DownloadDeviceLogsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link DeviceLogCollectionResponseItemRequestBuilder} and sets the default values.
@@ -125,7 +134,7 @@ public class DeviceLogCollectionResponseItemRequestBuilder extends BaseRequestBu
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/deviceManagement/managedDevices/{managedDevice%2Did}/logCollectionRequests/{deviceLogCollectionResponse%2Did}", pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
@@ -168,7 +177,7 @@ public class DeviceLogCollectionResponseItemRequestBuilder extends BaseRequestBu
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final DeviceLogCollectionResponse body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/deviceManagement/managedDevices/{managedDevice%2Did}/logCollectionRequests/{deviceLogCollectionResponse%2Did}", pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);

@@ -6,6 +6,7 @@ import com.microsoft.graph.beta.users.item.settings.contactmergesuggestions.Cont
 import com.microsoft.graph.beta.users.item.settings.iteminsights.ItemInsightsRequestBuilder;
 import com.microsoft.graph.beta.users.item.settings.regionalandlanguagesettings.RegionalAndLanguageSettingsRequestBuilder;
 import com.microsoft.graph.beta.users.item.settings.shiftpreferences.ShiftPreferencesRequestBuilder;
+import com.microsoft.graph.beta.users.item.settings.storage.StorageRequestBuilder;
 import com.microsoft.graph.beta.users.item.settings.windows.WindowsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -56,6 +57,14 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public ShiftPreferencesRequestBuilder shiftPreferences() {
         return new ShiftPreferencesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the storage property of the microsoft.graph.userSettings entity.
+     * @return a {@link StorageRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public StorageRequestBuilder storage() {
+        return new StorageRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the windows property of the microsoft.graph.userSettings entity.
@@ -161,7 +170,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/users/{user%2Did}/settings", pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
@@ -204,7 +213,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final UserSettings body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/users/{user%2Did}/settings", pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
