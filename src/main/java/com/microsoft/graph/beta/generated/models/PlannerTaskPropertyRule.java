@@ -26,7 +26,7 @@ public class PlannerTaskPropertyRule extends PlannerPropertyRule implements Pars
         return new PlannerTaskPropertyRule();
     }
     /**
-     * Gets the appliedCategories property value. Rules and restrictions for applied categories. This value does not currently support overrides. Accepted values for the default rule and individual overrides are allow, block.
+     * Gets the appliedCategories property value. Rules and restrictions for applied categories. This value doesn't currently support overrides. Accepted values for the default rule and individual overrides are allow, block.
      * @return a {@link PlannerFieldRules}
      */
     @jakarta.annotation.Nullable
@@ -34,7 +34,7 @@ public class PlannerTaskPropertyRule extends PlannerPropertyRule implements Pars
         return this.backingStore.get("appliedCategories");
     }
     /**
-     * Gets the approvalAttachment property value. The approvalAttachment property
+     * Gets the approvalAttachment property value. Rules and restrictions for approval. Allowed overrides are userCreated and applicationCreated. Accepted values for the default rule and individual overrides are: allow, add, remove, block.
      * @return a {@link PlannerFieldRules}
      */
     @jakarta.annotation.Nullable
@@ -108,7 +108,7 @@ public class PlannerTaskPropertyRule extends PlannerPropertyRule implements Pars
         return deserializerMap;
     }
     /**
-     * Gets the forms property value. The forms property
+     * Gets the forms property value. Rules and restrictions for forms. Allowed overrides are userCreated and applicationCreated. The following are the accepted values for the default rule and individual overrides: allow, add, addResponse, remove, update, block.
      * @return a {@link PlannerFieldRules}
      */
     @jakarta.annotation.Nullable
@@ -213,14 +213,14 @@ public class PlannerTaskPropertyRule extends PlannerPropertyRule implements Pars
         writer.writeCollectionOfPrimitiveValues("title", this.getTitle());
     }
     /**
-     * Sets the appliedCategories property value. Rules and restrictions for applied categories. This value does not currently support overrides. Accepted values for the default rule and individual overrides are allow, block.
+     * Sets the appliedCategories property value. Rules and restrictions for applied categories. This value doesn't currently support overrides. Accepted values for the default rule and individual overrides are allow, block.
      * @param value Value to set for the appliedCategories property.
      */
     public void setAppliedCategories(@jakarta.annotation.Nullable final PlannerFieldRules value) {
         this.backingStore.set("appliedCategories", value);
     }
     /**
-     * Sets the approvalAttachment property value. The approvalAttachment property
+     * Sets the approvalAttachment property value. Rules and restrictions for approval. Allowed overrides are userCreated and applicationCreated. Accepted values for the default rule and individual overrides are: allow, add, remove, block.
      * @param value Value to set for the approvalAttachment property.
      */
     public void setApprovalAttachment(@jakarta.annotation.Nullable final PlannerFieldRules value) {
@@ -262,7 +262,7 @@ public class PlannerTaskPropertyRule extends PlannerPropertyRule implements Pars
         this.backingStore.set("dueDate", value);
     }
     /**
-     * Sets the forms property value. The forms property
+     * Sets the forms property value. Rules and restrictions for forms. Allowed overrides are userCreated and applicationCreated. The following are the accepted values for the default rule and individual overrides: allow, add, addResponse, remove, update, block.
      * @param value Value to set for the forms property.
      */
     public void setForms(@jakarta.annotation.Nullable final PlannerFieldRules value) {

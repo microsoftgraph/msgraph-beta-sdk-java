@@ -28,7 +28,7 @@ public class RetentionLabel extends Entity implements Parsable {
         return new RetentionLabel();
     }
     /**
-     * Gets the actionAfterRetentionPeriod property value. Specifies the action to take on a document with this label applied during the retention period. The possible values are: none, delete, startDispositionReview, unknownFutureValue.
+     * Gets the actionAfterRetentionPeriod property value. Specifies the action to take on the labeled document after the period specified by the retentionDuration property expires. The possible values are: none, delete, startDispositionReview, unknownFutureValue.
      * @return a {@link ActionAfterRetentionPeriod}
      */
     @jakarta.annotation.Nullable
@@ -215,7 +215,7 @@ public class RetentionLabel extends Entity implements Parsable {
         writer.writeEnumValue("retentionTrigger", this.getRetentionTrigger());
     }
     /**
-     * Sets the actionAfterRetentionPeriod property value. Specifies the action to take on a document with this label applied during the retention period. The possible values are: none, delete, startDispositionReview, unknownFutureValue.
+     * Sets the actionAfterRetentionPeriod property value. Specifies the action to take on the labeled document after the period specified by the retentionDuration property expires. The possible values are: none, delete, startDispositionReview, unknownFutureValue.
      * @param value Value to set for the actionAfterRetentionPeriod property.
      */
     public void setActionAfterRetentionPeriod(@jakarta.annotation.Nullable final ActionAfterRetentionPeriod value) {

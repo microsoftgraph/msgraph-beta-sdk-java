@@ -48,7 +48,7 @@ public class PlannerTaskCompletionRequirementDetails implements AdditionalDataHo
         return value;
     }
     /**
-     * Gets the approvalRequirement property value. The approvalRequirement property
+     * Gets the approvalRequirement property value. Information about the requirements of an approval.
      * @return a {@link PlannerApprovalRequirement}
      */
     @jakarta.annotation.Nullable
@@ -85,7 +85,7 @@ public class PlannerTaskCompletionRequirementDetails implements AdditionalDataHo
         return deserializerMap;
     }
     /**
-     * Gets the formsRequirement property value. The formsRequirement property
+     * Gets the formsRequirement property value. Information about the requirements for completing the forms.
      * @return a {@link PlannerFormsRequirement}
      */
     @jakarta.annotation.Nullable
@@ -120,7 +120,7 @@ public class PlannerTaskCompletionRequirementDetails implements AdditionalDataHo
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the approvalRequirement property value. The approvalRequirement property
+     * Sets the approvalRequirement property value. Information about the requirements of an approval.
      * @param value Value to set for the approvalRequirement property.
      */
     public void setApprovalRequirement(@jakarta.annotation.Nullable final PlannerApprovalRequirement value) {
@@ -142,7 +142,7 @@ public class PlannerTaskCompletionRequirementDetails implements AdditionalDataHo
         this.backingStore.set("checklistRequirement", value);
     }
     /**
-     * Sets the formsRequirement property value. The formsRequirement property
+     * Sets the formsRequirement property value. Information about the requirements for completing the forms.
      * @param value Value to set for the formsRequirement property.
      */
     public void setFormsRequirement(@jakarta.annotation.Nullable final PlannerFormsRequirement value) {

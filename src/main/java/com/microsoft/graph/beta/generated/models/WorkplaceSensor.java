@@ -56,7 +56,7 @@ public class WorkplaceSensor implements AdditionalDataHolder, BackedModel, Parsa
         return this.backingStore;
     }
     /**
-     * Gets the displayName property value. The display name of the sensor.
+     * Gets the displayName property value. The display name of the sensor. Optional.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -86,7 +86,7 @@ public class WorkplaceSensor implements AdditionalDataHolder, BackedModel, Parsa
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the placeId property value. The unique identifier of the place served by the sensor. Only needs to be provided if the sensor serves a different place than the device's location.
+     * Gets the placeId property value. The unique identifier of the place that the sensor detects. If the device is installed in a room equipped with a mailbox, this property should match the ExternalDirectoryObjectId or Microsoft Entra object ID of the room mailbox. If the sensor detects the same place as the location of the device, the property can be omitted. The default value is the place identifier of the device. Optional.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -94,7 +94,7 @@ public class WorkplaceSensor implements AdditionalDataHolder, BackedModel, Parsa
         return this.backingStore.get("placeId");
     }
     /**
-     * Gets the sensorId property value. The unique identifier of a sensor within the device. If the sensor Id is not provided, the sensorType will be used as sensorId.
+     * Gets the sensorId property value. The user-defined unique identifier of the sensor on the device. If the device has multiple sensors of the same type, the property must be provided to identify each sensor. If the device has only one sensor of a type, the property can be omitted. The default value is the sensor type. Optional.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -138,7 +138,7 @@ public class WorkplaceSensor implements AdditionalDataHolder, BackedModel, Parsa
         this.backingStore = value;
     }
     /**
-     * Sets the displayName property value. The display name of the sensor.
+     * Sets the displayName property value. The display name of the sensor. Optional.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
@@ -152,14 +152,14 @@ public class WorkplaceSensor implements AdditionalDataHolder, BackedModel, Parsa
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the placeId property value. The unique identifier of the place served by the sensor. Only needs to be provided if the sensor serves a different place than the device's location.
+     * Sets the placeId property value. The unique identifier of the place that the sensor detects. If the device is installed in a room equipped with a mailbox, this property should match the ExternalDirectoryObjectId or Microsoft Entra object ID of the room mailbox. If the sensor detects the same place as the location of the device, the property can be omitted. The default value is the place identifier of the device. Optional.
      * @param value Value to set for the placeId property.
      */
     public void setPlaceId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("placeId", value);
     }
     /**
-     * Sets the sensorId property value. The unique identifier of a sensor within the device. If the sensor Id is not provided, the sensorType will be used as sensorId.
+     * Sets the sensorId property value. The user-defined unique identifier of the sensor on the device. If the device has multiple sensors of the same type, the property must be provided to identify each sensor. If the device has only one sensor of a type, the property can be omitted. The default value is the sensor type. Optional.
      * @param value Value to set for the sensorId property.
      */
     public void setSensorId(@jakarta.annotation.Nullable final String value) {

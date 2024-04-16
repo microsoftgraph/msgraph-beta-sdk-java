@@ -37,7 +37,7 @@ public class TimeOffReasonItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/team/schedule/timeOffReasons/{timeOffReason%2Did}{?%24select}", rawUrl);
     }
     /**
-     * Mark a timeOffReason as inactive by setting the isActive property. Every team must include at least one timeOffReason. This method does not remove the specified timeOffReason instance. timeOffItem instances that have been assigned this reason remain assigned to this reason.
+     * Mark a timeOffReason as inactive by setting the isActive property. Every team must include at least one timeOffReason. This method doesn't remove the specified timeOffReason instance. timeOffItem instances that were assigned this reason remain assigned to this reason.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/timeoffreason-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -45,7 +45,7 @@ public class TimeOffReasonItemRequestBuilder extends BaseRequestBuilder {
         delete(null);
     }
     /**
-     * Mark a timeOffReason as inactive by setting the isActive property. Every team must include at least one timeOffReason. This method does not remove the specified timeOffReason instance. timeOffItem instances that have been assigned this reason remain assigned to this reason.
+     * Mark a timeOffReason as inactive by setting the isActive property. Every team must include at least one timeOffReason. This method doesn't remove the specified timeOffReason instance. timeOffItem instances that were assigned this reason remain assigned to this reason.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/timeoffreason-delete?view=graph-rest-1.0">Find more info here</a>
@@ -108,7 +108,7 @@ public class TimeOffReasonItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TimeOffReason::createFromDiscriminatorValue);
     }
     /**
-     * Mark a timeOffReason as inactive by setting the isActive property. Every team must include at least one timeOffReason. This method does not remove the specified timeOffReason instance. timeOffItem instances that have been assigned this reason remain assigned to this reason.
+     * Mark a timeOffReason as inactive by setting the isActive property. Every team must include at least one timeOffReason. This method doesn't remove the specified timeOffReason instance. timeOffItem instances that were assigned this reason remain assigned to this reason.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -116,13 +116,13 @@ public class TimeOffReasonItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Mark a timeOffReason as inactive by setting the isActive property. Every team must include at least one timeOffReason. This method does not remove the specified timeOffReason instance. timeOffItem instances that have been assigned this reason remain assigned to this reason.
+     * Mark a timeOffReason as inactive by setting the isActive property. Every team must include at least one timeOffReason. This method doesn't remove the specified timeOffReason instance. timeOffItem instances that were assigned this reason remain assigned to this reason.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/groups/{group%2Did}/team/schedule/timeOffReasons/{timeOffReason%2Did}", pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
@@ -165,7 +165,7 @@ public class TimeOffReasonItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final TimeOffReason body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/groups/{group%2Did}/team/schedule/timeOffReasons/{timeOffReason%2Did}", pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);

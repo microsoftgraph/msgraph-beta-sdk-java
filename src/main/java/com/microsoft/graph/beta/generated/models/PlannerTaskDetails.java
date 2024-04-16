@@ -25,7 +25,7 @@ public class PlannerTaskDetails extends PlannerDelta implements Parsable {
         return new PlannerTaskDetails();
     }
     /**
-     * Gets the approvalAttachment property value. The approvalAttachment property
+     * Gets the approvalAttachment property value. Detailed information about the approval that is attached to the task.
      * @return a {@link PlannerBaseApprovalAttachment}
      */
     @jakarta.annotation.Nullable
@@ -74,7 +74,7 @@ public class PlannerTaskDetails extends PlannerDelta implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the forms property value. The forms property
+     * Gets the forms property value. Read-only. Represents a dictionary of data about the forms associated with a task. Each entry in the dictionary is a key-value pair, and the value is a plannerFormReference object.
      * @return a {@link PlannerFormsDictionary}
      */
     @jakarta.annotation.Nullable
@@ -122,7 +122,7 @@ public class PlannerTaskDetails extends PlannerDelta implements Parsable {
         writer.writeObjectValue("references", this.getReferences());
     }
     /**
-     * Sets the approvalAttachment property value. The approvalAttachment property
+     * Sets the approvalAttachment property value. Detailed information about the approval that is attached to the task.
      * @param value Value to set for the approvalAttachment property.
      */
     public void setApprovalAttachment(@jakarta.annotation.Nullable final PlannerBaseApprovalAttachment value) {
@@ -150,7 +150,7 @@ public class PlannerTaskDetails extends PlannerDelta implements Parsable {
         this.backingStore.set("description", value);
     }
     /**
-     * Sets the forms property value. The forms property
+     * Sets the forms property value. Read-only. Represents a dictionary of data about the forms associated with a task. Each entry in the dictionary is a key-value pair, and the value is a plannerFormReference object.
      * @param value Value to set for the forms property.
      */
     public void setForms(@jakarta.annotation.Nullable final PlannerFormsDictionary value) {

@@ -69,19 +69,21 @@ public class SensorDevicesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/workplace/sensorDevices{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get sensorDevices from workplace
+     * Get a list of all workplace sensor devices created for a tenant.
      * @return a {@link WorkplaceSensorDeviceCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/workplace-list-sensordevices?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WorkplaceSensorDeviceCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get sensorDevices from workplace
+     * Get a list of all workplace sensor devices created for a tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link WorkplaceSensorDeviceCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/workplace-list-sensordevices?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WorkplaceSensorDeviceCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -91,21 +93,23 @@ public class SensorDevicesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, WorkplaceSensorDeviceCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to sensorDevices for workplace
+     * Create a new workplace sensor device.
      * @param body The request body
      * @return a {@link WorkplaceSensorDevice}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/workplace-post-sensordevices?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WorkplaceSensorDevice post(@jakarta.annotation.Nonnull final WorkplaceSensorDevice body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to sensorDevices for workplace
+     * Create a new workplace sensor device.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link WorkplaceSensorDevice}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/workplace-post-sensordevices?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WorkplaceSensorDevice post(@jakarta.annotation.Nonnull final WorkplaceSensorDevice body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -116,7 +120,7 @@ public class SensorDevicesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, WorkplaceSensorDevice::createFromDiscriminatorValue);
     }
     /**
-     * Get sensorDevices from workplace
+     * Get a list of all workplace sensor devices created for a tenant.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -124,7 +128,7 @@ public class SensorDevicesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get sensorDevices from workplace
+     * Get a list of all workplace sensor devices created for a tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -136,7 +140,7 @@ public class SensorDevicesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to sensorDevices for workplace
+     * Create a new workplace sensor device.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -145,7 +149,7 @@ public class SensorDevicesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to sensorDevices for workplace
+     * Create a new workplace sensor device.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -153,7 +157,7 @@ public class SensorDevicesRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final WorkplaceSensorDevice body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/workplace/sensorDevices", pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -170,7 +174,7 @@ public class SensorDevicesRequestBuilder extends BaseRequestBuilder {
         return new SensorDevicesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get sensorDevices from workplace
+     * Get a list of all workplace sensor devices created for a tenant.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

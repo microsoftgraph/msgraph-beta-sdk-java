@@ -56,7 +56,7 @@ public class CloudPcBulkActionSummary implements AdditionalDataHolder, BackedMod
         return this.backingStore;
     }
     /**
-     * Gets the failedCount property value. The failedCount property
+     * Gets the failedCount property value. The number of Cloud PCs where the action failed.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -79,7 +79,7 @@ public class CloudPcBulkActionSummary implements AdditionalDataHolder, BackedMod
         return deserializerMap;
     }
     /**
-     * Gets the inProgressCount property value. The inProgressCount property
+     * Gets the inProgressCount property value. The number of Cloud PCs where the action is in progress.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -87,7 +87,7 @@ public class CloudPcBulkActionSummary implements AdditionalDataHolder, BackedMod
         return this.backingStore.get("inProgressCount");
     }
     /**
-     * Gets the notSupportedCount property value. The notSupportedCount property
+     * Gets the notSupportedCount property value. The number of Cloud PCs where the action isn't supported.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -103,7 +103,7 @@ public class CloudPcBulkActionSummary implements AdditionalDataHolder, BackedMod
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the pendingCount property value. The pendingCount property
+     * Gets the pendingCount property value. The number of Cloud PCs where the action is pending.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -111,7 +111,7 @@ public class CloudPcBulkActionSummary implements AdditionalDataHolder, BackedMod
         return this.backingStore.get("pendingCount");
     }
     /**
-     * Gets the successfulCount property value. The successfulCount property
+     * Gets the successfulCount property value. The number of Cloud PCs where the action is successful.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -148,21 +148,21 @@ public class CloudPcBulkActionSummary implements AdditionalDataHolder, BackedMod
         this.backingStore = value;
     }
     /**
-     * Sets the failedCount property value. The failedCount property
+     * Sets the failedCount property value. The number of Cloud PCs where the action failed.
      * @param value Value to set for the failedCount property.
      */
     public void setFailedCount(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("failedCount", value);
     }
     /**
-     * Sets the inProgressCount property value. The inProgressCount property
+     * Sets the inProgressCount property value. The number of Cloud PCs where the action is in progress.
      * @param value Value to set for the inProgressCount property.
      */
     public void setInProgressCount(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("inProgressCount", value);
     }
     /**
-     * Sets the notSupportedCount property value. The notSupportedCount property
+     * Sets the notSupportedCount property value. The number of Cloud PCs where the action isn't supported.
      * @param value Value to set for the notSupportedCount property.
      */
     public void setNotSupportedCount(@jakarta.annotation.Nullable final Integer value) {
@@ -176,14 +176,14 @@ public class CloudPcBulkActionSummary implements AdditionalDataHolder, BackedMod
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the pendingCount property value. The pendingCount property
+     * Sets the pendingCount property value. The number of Cloud PCs where the action is pending.
      * @param value Value to set for the pendingCount property.
      */
     public void setPendingCount(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("pendingCount", value);
     }
     /**
-     * Sets the successfulCount property value. The successfulCount property
+     * Sets the successfulCount property value. The number of Cloud PCs where the action is successful.
      * @param value Value to set for the successfulCount property.
      */
     public void setSuccessfulCount(@jakarta.annotation.Nullable final Integer value) {

@@ -2,7 +2,7 @@ package com.microsoft.graph.beta.security.labels.categories.item;
 
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.security.CategoryTemplate;
-import com.microsoft.graph.beta.security.labels.categories.item.subcategories.SubCategoriesRequestBuilder;
+import com.microsoft.graph.beta.security.labels.categories.item.subcategories.SubcategoriesRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -22,12 +22,12 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CategoryTemplateItemRequestBuilder extends BaseRequestBuilder {
     /**
-     * Provides operations to manage the subCategories property of the microsoft.graph.security.categoryTemplate entity.
-     * @return a {@link SubCategoriesRequestBuilder}
+     * Provides operations to manage the subcategories property of the microsoft.graph.security.categoryTemplate entity.
+     * @return a {@link SubcategoriesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
-    public SubCategoriesRequestBuilder subCategories() {
-        return new SubCategoriesRequestBuilder(pathParameters, requestAdapter);
+    public SubcategoriesRequestBuilder subcategories() {
+        return new SubcategoriesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link CategoryTemplateItemRequestBuilder} and sets the default values.
@@ -46,18 +46,16 @@ public class CategoryTemplateItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/labels/categories/{categoryTemplate%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete a categoryTemplate object.
+     * Delete navigation property categories for security
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-labelsroot-delete-categories?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a categoryTemplate object.
+     * Delete navigation property categories for security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-labelsroot-delete-categories?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -115,7 +113,7 @@ public class CategoryTemplateItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CategoryTemplate::createFromDiscriminatorValue);
     }
     /**
-     * Delete a categoryTemplate object.
+     * Delete navigation property categories for security
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -123,13 +121,13 @@ public class CategoryTemplateItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a categoryTemplate object.
+     * Delete navigation property categories for security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/security/labels/categories/{categoryTemplate%2Did}", pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
@@ -172,7 +170,7 @@ public class CategoryTemplateItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final CategoryTemplate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/security/labels/categories/{categoryTemplate%2Did}", pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);

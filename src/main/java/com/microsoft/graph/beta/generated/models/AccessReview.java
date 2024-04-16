@@ -26,7 +26,7 @@ public class AccessReview extends Entity implements Parsable {
         return new AccessReview();
     }
     /**
-     * Gets the businessFlowTemplateId property value. The business flow template identifier. Required on create.  This value is case sensitive.
+     * Gets the businessFlowTemplateId property value. The business flow template identifier. Required on create. This value is case sensitive.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -66,7 +66,7 @@ public class AccessReview extends Entity implements Parsable {
         return this.backingStore.get("displayName");
     }
     /**
-     * Gets the endDateTime property value. The DateTime when the review is scheduled to end. This must be at least one day later than the start date.  Required on create.
+     * Gets the endDateTime property value. The DateTime when the review is scheduled to end. This must be at least one day later than the start date. Required on create.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -97,7 +97,7 @@ public class AccessReview extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the instances property value. The collection of access reviews instances past, present and future, if this object is a recurring access review.
+     * Gets the instances property value. The collection of access reviews instances past, present, and future, if this object is a recurring access review.
      * @return a {@link java.util.List<AccessReview>}
      */
     @jakarta.annotation.Nullable
@@ -113,7 +113,7 @@ public class AccessReview extends Entity implements Parsable {
         return this.backingStore.get("myDecisions");
     }
     /**
-     * Gets the reviewedEntity property value. The object for which the access reviews is reviewing the access rights assignments. This can be the group for the review of memberships of users in a group, or the app for a review of assignments of users to an application. Required on create.
+     * Gets the reviewedEntity property value. The object for which the access review is reviewing the access rights assignments. This identity can be the group for the review of memberships of users in a group, or the app for a review of assignments of users to an application. Required on create.
      * @return a {@link Identity}
      */
     @jakarta.annotation.Nullable
@@ -129,7 +129,7 @@ public class AccessReview extends Entity implements Parsable {
         return this.backingStore.get("reviewers");
     }
     /**
-     * Gets the reviewerType property value. The relationship type of reviewer to the target object, one of self, delegated or entityOwners. Required on create.
+     * Gets the reviewerType property value. The relationship type of reviewer to the target object, one of: self, delegated, entityOwners. Required on create.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -145,7 +145,7 @@ public class AccessReview extends Entity implements Parsable {
         return this.backingStore.get("settings");
     }
     /**
-     * Gets the startDateTime property value. The DateTime when the review is scheduled to be start.  This could be a date in the future.  Required on create.
+     * Gets the startDateTime property value. The date and time when the review is scheduled to be start. This date can be in the future.  Required on create.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -183,7 +183,7 @@ public class AccessReview extends Entity implements Parsable {
         writer.writeStringValue("status", this.getStatus());
     }
     /**
-     * Sets the businessFlowTemplateId property value. The business flow template identifier. Required on create.  This value is case sensitive.
+     * Sets the businessFlowTemplateId property value. The business flow template identifier. Required on create. This value is case sensitive.
      * @param value Value to set for the businessFlowTemplateId property.
      */
     public void setBusinessFlowTemplateId(@jakarta.annotation.Nullable final String value) {
@@ -218,14 +218,14 @@ public class AccessReview extends Entity implements Parsable {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the endDateTime property value. The DateTime when the review is scheduled to end. This must be at least one day later than the start date.  Required on create.
+     * Sets the endDateTime property value. The DateTime when the review is scheduled to end. This must be at least one day later than the start date. Required on create.
      * @param value Value to set for the endDateTime property.
      */
     public void setEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("endDateTime", value);
     }
     /**
-     * Sets the instances property value. The collection of access reviews instances past, present and future, if this object is a recurring access review.
+     * Sets the instances property value. The collection of access reviews instances past, present, and future, if this object is a recurring access review.
      * @param value Value to set for the instances property.
      */
     public void setInstances(@jakarta.annotation.Nullable final java.util.List<AccessReview> value) {
@@ -239,7 +239,7 @@ public class AccessReview extends Entity implements Parsable {
         this.backingStore.set("myDecisions", value);
     }
     /**
-     * Sets the reviewedEntity property value. The object for which the access reviews is reviewing the access rights assignments. This can be the group for the review of memberships of users in a group, or the app for a review of assignments of users to an application. Required on create.
+     * Sets the reviewedEntity property value. The object for which the access review is reviewing the access rights assignments. This identity can be the group for the review of memberships of users in a group, or the app for a review of assignments of users to an application. Required on create.
      * @param value Value to set for the reviewedEntity property.
      */
     public void setReviewedEntity(@jakarta.annotation.Nullable final Identity value) {
@@ -253,7 +253,7 @@ public class AccessReview extends Entity implements Parsable {
         this.backingStore.set("reviewers", value);
     }
     /**
-     * Sets the reviewerType property value. The relationship type of reviewer to the target object, one of self, delegated or entityOwners. Required on create.
+     * Sets the reviewerType property value. The relationship type of reviewer to the target object, one of: self, delegated, entityOwners. Required on create.
      * @param value Value to set for the reviewerType property.
      */
     public void setReviewerType(@jakarta.annotation.Nullable final String value) {
@@ -267,7 +267,7 @@ public class AccessReview extends Entity implements Parsable {
         this.backingStore.set("settings", value);
     }
     /**
-     * Sets the startDateTime property value. The DateTime when the review is scheduled to be start.  This could be a date in the future.  Required on create.
+     * Sets the startDateTime property value. The date and time when the review is scheduled to be start. This date can be in the future.  Required on create.
      * @param value Value to set for the startDateTime property.
      */
     public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

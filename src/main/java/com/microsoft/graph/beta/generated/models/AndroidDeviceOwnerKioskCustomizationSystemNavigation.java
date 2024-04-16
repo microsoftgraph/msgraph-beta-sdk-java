@@ -12,7 +12,7 @@ public enum AndroidDeviceOwnerKioskCustomizationSystemNavigation implements Valu
     NotConfigured("notConfigured"),
     /** Home and overview buttons are enabled. */
     NavigationEnabled("navigationEnabled"),
-    /**  Only the home button is enabled. */
+    /** Only the home button is enabled. */
     HomeButtonOnly("homeButtonOnly");
     public final String value;
     AndroidDeviceOwnerKioskCustomizationSystemNavigation(final String value) {

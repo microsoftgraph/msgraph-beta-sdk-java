@@ -99,7 +99,7 @@ public class AttackSimulationRoot extends Entity implements Parsable {
         return this.backingStore.get("simulations");
     }
     /**
-     * Gets the trainingCampaigns property value. The trainingCampaigns property
+     * Gets the trainingCampaigns property value. Represents a training campaign in a tenant.
      * @return a {@link java.util.List<TrainingCampaign>}
      */
     @jakarta.annotation.Nullable
@@ -181,7 +181,7 @@ public class AttackSimulationRoot extends Entity implements Parsable {
         this.backingStore.set("simulations", value);
     }
     /**
-     * Sets the trainingCampaigns property value. The trainingCampaigns property
+     * Sets the trainingCampaigns property value. Represents a training campaign in a tenant.
      * @param value Value to set for the trainingCampaigns property.
      */
     public void setTrainingCampaigns(@jakarta.annotation.Nullable final java.util.List<TrainingCampaign> value) {

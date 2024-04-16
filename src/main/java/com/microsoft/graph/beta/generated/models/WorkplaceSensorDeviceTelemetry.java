@@ -57,7 +57,7 @@ public class WorkplaceSensorDeviceTelemetry implements AdditionalDataHolder, Bac
         return this.backingStore;
     }
     /**
-     * Gets the boolValue property value. The value of the sensor.
+     * Gets the boolValue property value. The value of the sensor can be true or false. Use it for sensors that report binary values, such as occupancy or heartbeat.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -65,7 +65,7 @@ public class WorkplaceSensorDeviceTelemetry implements AdditionalDataHolder, Bac
         return this.backingStore.get("boolValue");
     }
     /**
-     * Gets the deviceId property value. The unique identifier of the device.
+     * Gets the deviceId property value. The user-defined unique identifier of the device provided at the time of creation. Don't use the system generated identifier of the device.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -89,7 +89,7 @@ public class WorkplaceSensorDeviceTelemetry implements AdditionalDataHolder, Bac
         return deserializerMap;
     }
     /**
-     * Gets the intValue property value. The value of the sensor.
+     * Gets the intValue property value. The value of the sensor as an integer. Use it for sensors that report numerical values, such as people count.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -105,7 +105,7 @@ public class WorkplaceSensorDeviceTelemetry implements AdditionalDataHolder, Bac
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the sensorId property value. The unique identifier of a sensor within the device. If the sensor Id is not provided, the sensorType will be used as sensorId.
+     * Gets the sensorId property value. The user-defined unique identifier of the sensor on the device. Optional. If the device has multiple sensors of the same type, the property must be provided to identify each sensor. If the device has unique sensor types, the property can be omitted. The default value is the sensor type.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -121,7 +121,7 @@ public class WorkplaceSensorDeviceTelemetry implements AdditionalDataHolder, Bac
         return this.backingStore.get("sensorType");
     }
     /**
-     * Gets the timestamp property value. The timestamp at which the sensor value was observed.
+     * Gets the timestamp property value. The date and time when the sensor measured and reported its value. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -159,21 +159,21 @@ public class WorkplaceSensorDeviceTelemetry implements AdditionalDataHolder, Bac
         this.backingStore = value;
     }
     /**
-     * Sets the boolValue property value. The value of the sensor.
+     * Sets the boolValue property value. The value of the sensor can be true or false. Use it for sensors that report binary values, such as occupancy or heartbeat.
      * @param value Value to set for the boolValue property.
      */
     public void setBoolValue(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("boolValue", value);
     }
     /**
-     * Sets the deviceId property value. The unique identifier of the device.
+     * Sets the deviceId property value. The user-defined unique identifier of the device provided at the time of creation. Don't use the system generated identifier of the device.
      * @param value Value to set for the deviceId property.
      */
     public void setDeviceId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("deviceId", value);
     }
     /**
-     * Sets the intValue property value. The value of the sensor.
+     * Sets the intValue property value. The value of the sensor as an integer. Use it for sensors that report numerical values, such as people count.
      * @param value Value to set for the intValue property.
      */
     public void setIntValue(@jakarta.annotation.Nullable final Integer value) {
@@ -187,7 +187,7 @@ public class WorkplaceSensorDeviceTelemetry implements AdditionalDataHolder, Bac
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the sensorId property value. The unique identifier of a sensor within the device. If the sensor Id is not provided, the sensorType will be used as sensorId.
+     * Sets the sensorId property value. The user-defined unique identifier of the sensor on the device. Optional. If the device has multiple sensors of the same type, the property must be provided to identify each sensor. If the device has unique sensor types, the property can be omitted. The default value is the sensor type.
      * @param value Value to set for the sensorId property.
      */
     public void setSensorId(@jakarta.annotation.Nullable final String value) {
@@ -201,7 +201,7 @@ public class WorkplaceSensorDeviceTelemetry implements AdditionalDataHolder, Bac
         this.backingStore.set("sensorType", value);
     }
     /**
-     * Sets the timestamp property value. The timestamp at which the sensor value was observed.
+     * Sets the timestamp property value. The date and time when the sensor measured and reported its value. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the timestamp property.
      */
     public void setTimestamp(@jakarta.annotation.Nullable final OffsetDateTime value) {

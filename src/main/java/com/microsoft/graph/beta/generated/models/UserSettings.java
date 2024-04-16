@@ -61,6 +61,7 @@ public class UserSettings extends Entity implements Parsable {
         deserializerMap.put("itemInsights", (n) -> { this.setItemInsights(n.getObjectValue(UserInsightsSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("regionalAndLanguageSettings", (n) -> { this.setRegionalAndLanguageSettings(n.getObjectValue(RegionalAndLanguageSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("shiftPreferences", (n) -> { this.setShiftPreferences(n.getObjectValue(ShiftPreferences::createFromDiscriminatorValue)); });
+        deserializerMap.put("storage", (n) -> { this.setStorage(n.getObjectValue(UserStorage::createFromDiscriminatorValue)); });
         deserializerMap.put("windows", (n) -> { this.setWindows(n.getCollectionOfObjectValues(WindowsSetting::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -89,6 +90,14 @@ public class UserSettings extends Entity implements Parsable {
         return this.backingStore.get("shiftPreferences");
     }
     /**
+     * Gets the storage property value. The storage property
+     * @return a {@link UserStorage}
+     */
+    @jakarta.annotation.Nullable
+    public UserStorage getStorage() {
+        return this.backingStore.get("storage");
+    }
+    /**
      * Gets the windows property value. The Windows settings of the user stored in the cloud.
      * @return a {@link java.util.List<WindowsSetting>}
      */
@@ -109,6 +118,7 @@ public class UserSettings extends Entity implements Parsable {
         writer.writeObjectValue("itemInsights", this.getItemInsights());
         writer.writeObjectValue("regionalAndLanguageSettings", this.getRegionalAndLanguageSettings());
         writer.writeObjectValue("shiftPreferences", this.getShiftPreferences());
+        writer.writeObjectValue("storage", this.getStorage());
         writer.writeCollectionOfObjectValues("windows", this.getWindows());
     }
     /**
@@ -152,6 +162,13 @@ public class UserSettings extends Entity implements Parsable {
      */
     public void setShiftPreferences(@jakarta.annotation.Nullable final ShiftPreferences value) {
         this.backingStore.set("shiftPreferences", value);
+    }
+    /**
+     * Sets the storage property value. The storage property
+     * @param value Value to set for the storage property.
+     */
+    public void setStorage(@jakarta.annotation.Nullable final UserStorage value) {
+        this.backingStore.set("storage", value);
     }
     /**
      * Sets the windows property value. The Windows settings of the user stored in the cloud.

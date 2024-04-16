@@ -40,6 +40,7 @@ import com.microsoft.graph.beta.devicemanagement.devicecompliancepolicysettingst
 import com.microsoft.graph.beta.devicemanagement.devicecompliancescripts.DeviceComplianceScriptsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.deviceconfigurationconflictsummary.DeviceConfigurationConflictSummaryRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.deviceconfigurationdevicestatesummaries.DeviceConfigurationDeviceStateSummariesRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.deviceconfigurationprofiles.DeviceConfigurationProfilesRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.deviceconfigurationrestrictedappsviolations.DeviceConfigurationRestrictedAppsViolationsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.deviceconfigurations.DeviceConfigurationsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.deviceconfigurationsallmanageddevicecertificatestates.DeviceConfigurationsAllManagedDeviceCertificateStatesRequestBuilder;
@@ -76,6 +77,8 @@ import com.microsoft.graph.beta.devicemanagement.grouppolicydefinitions.GroupPol
 import com.microsoft.graph.beta.devicemanagement.grouppolicymigrationreports.GroupPolicyMigrationReportsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.grouppolicyobjectfiles.GroupPolicyObjectFilesRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.grouppolicyuploadeddefinitionfiles.GroupPolicyUploadedDefinitionFilesRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.hardwareconfigurations.HardwareConfigurationsRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.hardwarepasswordinfo.HardwarePasswordInfoRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.importeddeviceidentities.ImportedDeviceIdentitiesRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.importedwindowsautopilotdeviceidentities.ImportedWindowsAutopilotDeviceIdentitiesRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.intents.IntentsRequestBuilder;
@@ -524,6 +527,14 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
         return new DeviceConfigurationDeviceStateSummariesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the deviceConfigurationProfiles property of the microsoft.graph.deviceManagement entity.
+     * @return a {@link DeviceConfigurationProfilesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public DeviceConfigurationProfilesRequestBuilder deviceConfigurationProfiles() {
+        return new DeviceConfigurationProfilesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the deviceConfigurationRestrictedAppsViolations property of the microsoft.graph.deviceManagement entity.
      * @return a {@link DeviceConfigurationRestrictedAppsViolationsRequestBuilder}
      */
@@ -778,6 +789,22 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public GroupPolicyUploadedDefinitionFilesRequestBuilder groupPolicyUploadedDefinitionFiles() {
         return new GroupPolicyUploadedDefinitionFilesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the hardwareConfigurations property of the microsoft.graph.deviceManagement entity.
+     * @return a {@link HardwareConfigurationsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public HardwareConfigurationsRequestBuilder hardwareConfigurations() {
+        return new HardwareConfigurationsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the hardwarePasswordInfo property of the microsoft.graph.deviceManagement entity.
+     * @return a {@link HardwarePasswordInfoRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public HardwarePasswordInfoRequestBuilder hardwarePasswordInfo() {
+        return new HardwarePasswordInfoRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the importedDeviceIdentities property of the microsoft.graph.deviceManagement entity.
@@ -1770,7 +1797,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final DeviceManagement body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/deviceManagement", pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);

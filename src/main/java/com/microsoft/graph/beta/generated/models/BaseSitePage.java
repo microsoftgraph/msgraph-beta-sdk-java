@@ -27,7 +27,9 @@ public class BaseSitePage extends BaseItem implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
+                case "#microsoft.graph.newsLinkPage": return new NewsLinkPage();
                 case "#microsoft.graph.sitePage": return new SitePage();
+                case "#microsoft.graph.videoNewsLinkPage": return new VideoNewsLinkPage();
             }
         }
         return new BaseSitePage();

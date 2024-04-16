@@ -44,6 +44,7 @@ public class IndustryDataRoot extends Entity implements Parsable {
         deserializerMap.put("dataConnectors", (n) -> { this.setDataConnectors(n.getCollectionOfObjectValues(IndustryDataConnector::createFromDiscriminatorValue)); });
         deserializerMap.put("inboundFlows", (n) -> { this.setInboundFlows(n.getCollectionOfObjectValues(InboundFlow::createFromDiscriminatorValue)); });
         deserializerMap.put("operations", (n) -> { this.setOperations(n.getCollectionOfObjectValues(LongRunningOperation::createFromDiscriminatorValue)); });
+        deserializerMap.put("outboundProvisioningFlowSets", (n) -> { this.setOutboundProvisioningFlowSets(n.getCollectionOfObjectValues(OutboundProvisioningFlowSet::createFromDiscriminatorValue)); });
         deserializerMap.put("referenceDefinitions", (n) -> { this.setReferenceDefinitions(n.getCollectionOfObjectValues(ReferenceDefinition::createFromDiscriminatorValue)); });
         deserializerMap.put("roleGroups", (n) -> { this.setRoleGroups(n.getCollectionOfObjectValues(RoleGroup::createFromDiscriminatorValue)); });
         deserializerMap.put("runs", (n) -> { this.setRuns(n.getCollectionOfObjectValues(IndustryDataRun::createFromDiscriminatorValue)); });
@@ -66,6 +67,14 @@ public class IndustryDataRoot extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public java.util.List<LongRunningOperation> getOperations() {
         return this.backingStore.get("operations");
+    }
+    /**
+     * Gets the outboundProvisioningFlowSets property value. The outboundProvisioningFlowSets property
+     * @return a {@link java.util.List<OutboundProvisioningFlowSet>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<OutboundProvisioningFlowSet> getOutboundProvisioningFlowSets() {
+        return this.backingStore.get("outboundProvisioningFlowSets");
     }
     /**
      * Gets the referenceDefinitions property value. Set of user modifiable system picker types.
@@ -117,6 +126,7 @@ public class IndustryDataRoot extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("dataConnectors", this.getDataConnectors());
         writer.writeCollectionOfObjectValues("inboundFlows", this.getInboundFlows());
         writer.writeCollectionOfObjectValues("operations", this.getOperations());
+        writer.writeCollectionOfObjectValues("outboundProvisioningFlowSets", this.getOutboundProvisioningFlowSets());
         writer.writeCollectionOfObjectValues("referenceDefinitions", this.getReferenceDefinitions());
         writer.writeCollectionOfObjectValues("roleGroups", this.getRoleGroups());
         writer.writeCollectionOfObjectValues("runs", this.getRuns());
@@ -143,6 +153,13 @@ public class IndustryDataRoot extends Entity implements Parsable {
      */
     public void setOperations(@jakarta.annotation.Nullable final java.util.List<LongRunningOperation> value) {
         this.backingStore.set("operations", value);
+    }
+    /**
+     * Sets the outboundProvisioningFlowSets property value. The outboundProvisioningFlowSets property
+     * @param value Value to set for the outboundProvisioningFlowSets property.
+     */
+    public void setOutboundProvisioningFlowSets(@jakarta.annotation.Nullable final java.util.List<OutboundProvisioningFlowSet> value) {
+        this.backingStore.set("outboundProvisioningFlowSets", value);
     }
     /**
      * Sets the referenceDefinitions property value. Set of user modifiable system picker types.

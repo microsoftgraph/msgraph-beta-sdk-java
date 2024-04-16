@@ -60,7 +60,7 @@ public class DeviceLinksRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/networkAccess/connectivity/remoteNetworks/{remoteNetwork%2Did}/deviceLinks{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get deviceLinks from networkAccess
+     * Retrieves a specific device link associated with a remote network.
      * @return a {@link DeviceLinkCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -69,7 +69,7 @@ public class DeviceLinksRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get deviceLinks from networkAccess
+     * Retrieves a specific device link associated with a remote network.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DeviceLinkCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -107,7 +107,7 @@ public class DeviceLinksRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceLink::createFromDiscriminatorValue);
     }
     /**
-     * Get deviceLinks from networkAccess
+     * Retrieves a specific device link associated with a remote network.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class DeviceLinksRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get deviceLinks from networkAccess
+     * Retrieves a specific device link associated with a remote network.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -144,7 +144,7 @@ public class DeviceLinksRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final DeviceLink body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/networkAccess/connectivity/remoteNetworks/{remoteNetwork%2Did}/deviceLinks", pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -161,7 +161,7 @@ public class DeviceLinksRequestBuilder extends BaseRequestBuilder {
         return new DeviceLinksRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get deviceLinks from networkAccess
+     * Retrieves a specific device link associated with a remote network.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

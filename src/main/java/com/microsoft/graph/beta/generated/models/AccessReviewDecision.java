@@ -26,7 +26,7 @@ public class AccessReviewDecision extends Entity implements Parsable {
         return new AccessReviewDecision();
     }
     /**
-     * Gets the accessRecommendation property value. The feature- generated recommendation shown to the reviewer, one of Approve, Deny or NotAvailable.
+     * Gets the accessRecommendation property value. The feature- generated recommendation shown to the reviewer, one of: Approve, Deny, NotAvailable.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -58,7 +58,7 @@ public class AccessReviewDecision extends Entity implements Parsable {
         return this.backingStore.get("appliedDateTime");
     }
     /**
-     * Gets the applyResult property value. The outcome of applying the decision, one of NotApplied, Success, Failed, NotFound or NotSupported.
+     * Gets the applyResult property value. The outcome of applying the decision, one of: NotApplied, Success, Failed, NotFound, NotSupported.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -133,7 +133,7 @@ public class AccessReviewDecision extends Entity implements Parsable {
         writer.writeStringValue("reviewResult", this.getReviewResult());
     }
     /**
-     * Sets the accessRecommendation property value. The feature- generated recommendation shown to the reviewer, one of Approve, Deny or NotAvailable.
+     * Sets the accessRecommendation property value. The feature- generated recommendation shown to the reviewer, one of: Approve, Deny, NotAvailable.
      * @param value Value to set for the accessRecommendation property.
      */
     public void setAccessRecommendation(@jakarta.annotation.Nullable final String value) {
@@ -161,7 +161,7 @@ public class AccessReviewDecision extends Entity implements Parsable {
         this.backingStore.set("appliedDateTime", value);
     }
     /**
-     * Sets the applyResult property value. The outcome of applying the decision, one of NotApplied, Success, Failed, NotFound or NotSupported.
+     * Sets the applyResult property value. The outcome of applying the decision, one of: NotApplied, Success, Failed, NotFound, NotSupported.
      * @param value Value to set for the applyResult property.
      */
     public void setApplyResult(@jakarta.annotation.Nullable final String value) {

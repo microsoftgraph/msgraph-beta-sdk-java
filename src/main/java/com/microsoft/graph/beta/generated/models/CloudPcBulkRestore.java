@@ -38,7 +38,7 @@ public class CloudPcBulkRestore extends CloudPcBulkAction implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the restorePointDateTime property value. The restorePointDateTime property
+     * Gets the restorePointDateTime property value. The date and time point for the selected Cloud PCs to restore. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class CloudPcBulkRestore extends CloudPcBulkAction implements Parsable {
         writer.writeEnumValue("timeRange", this.getTimeRange());
     }
     /**
-     * Sets the restorePointDateTime property value. The restorePointDateTime property
+     * Sets the restorePointDateTime property value. The date and time point for the selected Cloud PCs to restore. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the restorePointDateTime property.
      */
     public void setRestorePointDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

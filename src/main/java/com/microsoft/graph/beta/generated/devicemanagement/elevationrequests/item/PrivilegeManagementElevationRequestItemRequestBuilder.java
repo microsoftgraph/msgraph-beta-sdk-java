@@ -3,6 +3,7 @@ package com.microsoft.graph.beta.devicemanagement.elevationrequests.item;
 import com.microsoft.graph.beta.devicemanagement.elevationrequests.item.approve.ApproveRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.elevationrequests.item.deny.DenyRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.elevationrequests.item.getallelevationrequests.GetAllElevationRequestsRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.elevationrequests.item.revoke.RevokeRequestBuilder;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.PrivilegeManagementElevationRequest;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -46,6 +47,14 @@ public class PrivilegeManagementElevationRequestItemRequestBuilder extends BaseR
     @jakarta.annotation.Nonnull
     public GetAllElevationRequestsRequestBuilder getAllElevationRequests() {
         return new GetAllElevationRequestsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the revoke method.
+     * @return a {@link RevokeRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RevokeRequestBuilder revoke() {
+        return new RevokeRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link PrivilegeManagementElevationRequestItemRequestBuilder} and sets the default values.
@@ -143,7 +152,7 @@ public class PrivilegeManagementElevationRequestItemRequestBuilder extends BaseR
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, "{+baseurl}/deviceManagement/elevationRequests/{privilegeManagementElevationRequest%2Did}", pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
@@ -186,7 +195,7 @@ public class PrivilegeManagementElevationRequestItemRequestBuilder extends BaseR
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final PrivilegeManagementElevationRequest body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/deviceManagement/elevationRequests/{privilegeManagementElevationRequest%2Did}", pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);

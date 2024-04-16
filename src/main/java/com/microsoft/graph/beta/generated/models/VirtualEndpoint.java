@@ -33,7 +33,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
         return this.backingStore.get("auditEvents");
     }
     /**
-     * Gets the bulkActions property value. The bulkActions property
+     * Gets the bulkActions property value. Bulk actions applied to a Cloud PC.
      * @return a {@link java.util.List<CloudPcBulkAction>}
      */
     @jakarta.annotation.Nullable
@@ -219,7 +219,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
         this.backingStore.set("auditEvents", value);
     }
     /**
-     * Sets the bulkActions property value. The bulkActions property
+     * Sets the bulkActions property value. Bulk actions applied to a Cloud PC.
      * @param value Value to set for the bulkActions property.
      */
     public void setBulkActions(@jakarta.annotation.Nullable final java.util.List<CloudPcBulkAction> value) {

@@ -26,7 +26,7 @@ public class TrainingCampaign extends Entity implements Parsable {
         return new TrainingCampaign();
     }
     /**
-     * Gets the campaignSchedule property value. The campaignSchedule property
+     * Gets the campaignSchedule property value. Details about the schedule and current status for a training campaign
      * @return a {@link CampaignSchedule}
      */
     @jakarta.annotation.Nullable
@@ -34,7 +34,7 @@ public class TrainingCampaign extends Entity implements Parsable {
         return this.backingStore.get("campaignSchedule");
     }
     /**
-     * Gets the createdBy property value. The createdBy property
+     * Gets the createdBy property value. Identity of the user who created the training campaign
      * @return a {@link EmailIdentity}
      */
     @jakarta.annotation.Nullable
@@ -42,7 +42,7 @@ public class TrainingCampaign extends Entity implements Parsable {
         return this.backingStore.get("createdBy");
     }
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. Date and time of creation of the training campaign.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -50,7 +50,7 @@ public class TrainingCampaign extends Entity implements Parsable {
         return this.backingStore.get("createdDateTime");
     }
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. Description of the training campaign.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -58,7 +58,7 @@ public class TrainingCampaign extends Entity implements Parsable {
         return this.backingStore.get("description");
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. Display name of the training campaign. Supports $filter and $orderby.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -66,7 +66,7 @@ public class TrainingCampaign extends Entity implements Parsable {
         return this.backingStore.get("displayName");
     }
     /**
-     * Gets the endUserNotificationSetting property value. The endUserNotificationSetting property
+     * Gets the endUserNotificationSetting property value. Details about the end user notification setting.
      * @return a {@link EndUserNotificationSetting}
      */
     @jakarta.annotation.Nullable
@@ -74,7 +74,7 @@ public class TrainingCampaign extends Entity implements Parsable {
         return this.backingStore.get("endUserNotificationSetting");
     }
     /**
-     * Gets the excludedAccountTarget property value. The excludedAccountTarget property
+     * Gets the excludedAccountTarget property value. Users excluded from the training campaign.
      * @return a {@link AccountTargetContent}
      */
     @jakarta.annotation.Nullable
@@ -103,7 +103,7 @@ public class TrainingCampaign extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the includedAccountTarget property value. The includedAccountTarget property
+     * Gets the includedAccountTarget property value. Users targeted in the training campaign.
      * @return a {@link AccountTargetContent}
      */
     @jakarta.annotation.Nullable
@@ -111,7 +111,7 @@ public class TrainingCampaign extends Entity implements Parsable {
         return this.backingStore.get("includedAccountTarget");
     }
     /**
-     * Gets the lastModifiedBy property value. The lastModifiedBy property
+     * Gets the lastModifiedBy property value. Identity of the user who most recently modified the training campaign.
      * @return a {@link EmailIdentity}
      */
     @jakarta.annotation.Nullable
@@ -119,7 +119,7 @@ public class TrainingCampaign extends Entity implements Parsable {
         return this.backingStore.get("lastModifiedBy");
     }
     /**
-     * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Gets the lastModifiedDateTime property value. Date and time of the most recent modification of the training campaign.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -127,7 +127,7 @@ public class TrainingCampaign extends Entity implements Parsable {
         return this.backingStore.get("lastModifiedDateTime");
     }
     /**
-     * Gets the report property value. The report property
+     * Gets the report property value. Report of the training campaign.
      * @return a {@link TrainingCampaignReport}
      */
     @jakarta.annotation.Nullable
@@ -135,7 +135,7 @@ public class TrainingCampaign extends Entity implements Parsable {
         return this.backingStore.get("report");
     }
     /**
-     * Gets the trainingSetting property value. The trainingSetting property
+     * Gets the trainingSetting property value. Details about the training settings for a training campaign.
      * @return a {@link TrainingSetting}
      */
     @jakarta.annotation.Nullable
@@ -163,84 +163,84 @@ public class TrainingCampaign extends Entity implements Parsable {
         writer.writeObjectValue("trainingSetting", this.getTrainingSetting());
     }
     /**
-     * Sets the campaignSchedule property value. The campaignSchedule property
+     * Sets the campaignSchedule property value. Details about the schedule and current status for a training campaign
      * @param value Value to set for the campaignSchedule property.
      */
     public void setCampaignSchedule(@jakarta.annotation.Nullable final CampaignSchedule value) {
         this.backingStore.set("campaignSchedule", value);
     }
     /**
-     * Sets the createdBy property value. The createdBy property
+     * Sets the createdBy property value. Identity of the user who created the training campaign
      * @param value Value to set for the createdBy property.
      */
     public void setCreatedBy(@jakarta.annotation.Nullable final EmailIdentity value) {
         this.backingStore.set("createdBy", value);
     }
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. Date and time of creation of the training campaign.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. Description of the training campaign.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("description", value);
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. Display name of the training campaign. Supports $filter and $orderby.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the endUserNotificationSetting property value. The endUserNotificationSetting property
+     * Sets the endUserNotificationSetting property value. Details about the end user notification setting.
      * @param value Value to set for the endUserNotificationSetting property.
      */
     public void setEndUserNotificationSetting(@jakarta.annotation.Nullable final EndUserNotificationSetting value) {
         this.backingStore.set("endUserNotificationSetting", value);
     }
     /**
-     * Sets the excludedAccountTarget property value. The excludedAccountTarget property
+     * Sets the excludedAccountTarget property value. Users excluded from the training campaign.
      * @param value Value to set for the excludedAccountTarget property.
      */
     public void setExcludedAccountTarget(@jakarta.annotation.Nullable final AccountTargetContent value) {
         this.backingStore.set("excludedAccountTarget", value);
     }
     /**
-     * Sets the includedAccountTarget property value. The includedAccountTarget property
+     * Sets the includedAccountTarget property value. Users targeted in the training campaign.
      * @param value Value to set for the includedAccountTarget property.
      */
     public void setIncludedAccountTarget(@jakarta.annotation.Nullable final AccountTargetContent value) {
         this.backingStore.set("includedAccountTarget", value);
     }
     /**
-     * Sets the lastModifiedBy property value. The lastModifiedBy property
+     * Sets the lastModifiedBy property value. Identity of the user who most recently modified the training campaign.
      * @param value Value to set for the lastModifiedBy property.
      */
     public void setLastModifiedBy(@jakarta.annotation.Nullable final EmailIdentity value) {
         this.backingStore.set("lastModifiedBy", value);
     }
     /**
-     * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Sets the lastModifiedDateTime property value. Date and time of the most recent modification of the training campaign.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
-     * Sets the report property value. The report property
+     * Sets the report property value. Report of the training campaign.
      * @param value Value to set for the report property.
      */
     public void setReport(@jakarta.annotation.Nullable final TrainingCampaignReport value) {
         this.backingStore.set("report", value);
     }
     /**
-     * Sets the trainingSetting property value. The trainingSetting property
+     * Sets the trainingSetting property value. Details about the training settings for a training campaign.
      * @param value Value to set for the trainingSetting property.
      */
     public void setTrainingSetting(@jakarta.annotation.Nullable final TrainingSetting value) {

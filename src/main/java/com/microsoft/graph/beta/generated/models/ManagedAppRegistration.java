@@ -137,6 +137,7 @@ public class ManagedAppRegistration extends Entity implements Parsable {
         deserializerMap.put("flaggedReasons", (n) -> { this.setFlaggedReasons(n.getCollectionOfEnumValues(ManagedAppFlaggedReason::forValue)); });
         deserializerMap.put("intendedPolicies", (n) -> { this.setIntendedPolicies(n.getCollectionOfObjectValues(ManagedAppPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("lastSyncDateTime", (n) -> { this.setLastSyncDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("managedAppLogCollectionRequests", (n) -> { this.setManagedAppLogCollectionRequests(n.getCollectionOfObjectValues(ManagedAppLogCollectionRequest::createFromDiscriminatorValue)); });
         deserializerMap.put("managedDeviceId", (n) -> { this.setManagedDeviceId(n.getStringValue()); });
         deserializerMap.put("managementSdkVersion", (n) -> { this.setManagementSdkVersion(n.getStringValue()); });
         deserializerMap.put("operations", (n) -> { this.setOperations(n.getCollectionOfObjectValues(ManagedAppOperation::createFromDiscriminatorValue)); });
@@ -168,6 +169,14 @@ public class ManagedAppRegistration extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastSyncDateTime() {
         return this.backingStore.get("lastSyncDateTime");
+    }
+    /**
+     * Gets the managedAppLogCollectionRequests property value. Zero or more log collection requests triggered for the app.
+     * @return a {@link java.util.List<ManagedAppLogCollectionRequest>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<ManagedAppLogCollectionRequest> getManagedAppLogCollectionRequests() {
+        return this.backingStore.get("managedAppLogCollectionRequests");
     }
     /**
      * Gets the managedDeviceId property value. The Managed Device identifier of the host device. Value could be empty even when the host device is managed.
@@ -237,6 +246,7 @@ public class ManagedAppRegistration extends Entity implements Parsable {
         writer.writeCollectionOfEnumValues("flaggedReasons", this.getFlaggedReasons());
         writer.writeCollectionOfObjectValues("intendedPolicies", this.getIntendedPolicies());
         writer.writeOffsetDateTimeValue("lastSyncDateTime", this.getLastSyncDateTime());
+        writer.writeCollectionOfObjectValues("managedAppLogCollectionRequests", this.getManagedAppLogCollectionRequests());
         writer.writeStringValue("managedDeviceId", this.getManagedDeviceId());
         writer.writeStringValue("managementSdkVersion", this.getManagementSdkVersion());
         writer.writeCollectionOfObjectValues("operations", this.getOperations());
@@ -334,6 +344,13 @@ public class ManagedAppRegistration extends Entity implements Parsable {
      */
     public void setLastSyncDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("lastSyncDateTime", value);
+    }
+    /**
+     * Sets the managedAppLogCollectionRequests property value. Zero or more log collection requests triggered for the app.
+     * @param value Value to set for the managedAppLogCollectionRequests property.
+     */
+    public void setManagedAppLogCollectionRequests(@jakarta.annotation.Nullable final java.util.List<ManagedAppLogCollectionRequest> value) {
+        this.backingStore.set("managedAppLogCollectionRequests", value);
     }
     /**
      * Sets the managedDeviceId property value. The Managed Device identifier of the host device. Value could be empty even when the host device is managed.

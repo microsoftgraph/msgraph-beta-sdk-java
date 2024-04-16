@@ -133,12 +133,24 @@ public class WindowsAutopilotDeploymentProfile extends Entity implements Parsabl
         deserializerMap.put("enableWhiteGlove", (n) -> { this.setEnableWhiteGlove(n.getBooleanValue()); });
         deserializerMap.put("enrollmentStatusScreenSettings", (n) -> { this.setEnrollmentStatusScreenSettings(n.getObjectValue(WindowsEnrollmentStatusScreenSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("extractHardwareHash", (n) -> { this.setExtractHardwareHash(n.getBooleanValue()); });
+        deserializerMap.put("hardwareHashExtractionEnabled", (n) -> { this.setHardwareHashExtractionEnabled(n.getBooleanValue()); });
         deserializerMap.put("language", (n) -> { this.setLanguage(n.getStringValue()); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("locale", (n) -> { this.setLocale(n.getStringValue()); });
         deserializerMap.put("managementServiceAppId", (n) -> { this.setManagementServiceAppId(n.getStringValue()); });
+        deserializerMap.put("outOfBoxExperienceSetting", (n) -> { this.setOutOfBoxExperienceSetting(n.getObjectValue(OutOfBoxExperienceSetting::createFromDiscriminatorValue)); });
         deserializerMap.put("outOfBoxExperienceSettings", (n) -> { this.setOutOfBoxExperienceSettings(n.getObjectValue(OutOfBoxExperienceSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("preprovisioningAllowed", (n) -> { this.setPreprovisioningAllowed(n.getBooleanValue()); });
         deserializerMap.put("roleScopeTagIds", (n) -> { this.setRoleScopeTagIds(n.getCollectionOfPrimitiveValues(String.class)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the hardwareHashExtractionEnabled property value. Indicates whether the profile supports the extraction of hardware hash values and registration of the device into Windows Autopilot. When TRUE, indicates if hardware extraction and Windows Autopilot registration will happen on the next successful check-in. When FALSE, hardware hash extraction and Windows Autopilot registration will not happen. Default value is FALSE. Supports: $select, $top, $skip. $Search, $orderBy and $filter are not supported.
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getHardwareHashExtractionEnabled() {
+        return this.backingStore.get("hardwareHashExtractionEnabled");
     }
     /**
      * Gets the language property value. Language configured on the device
@@ -157,6 +169,14 @@ public class WindowsAutopilotDeploymentProfile extends Entity implements Parsabl
         return this.backingStore.get("lastModifiedDateTime");
     }
     /**
+     * Gets the locale property value. The locale (language) to be used when configuring the device. E.g. en-US. The default value is os-default. Supports: $select, $top, $skip. $Search, $orderBy and $filter are not supported.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getLocale() {
+        return this.backingStore.get("locale");
+    }
+    /**
      * Gets the managementServiceAppId property value. AzureAD management app ID used during client device-based enrollment discovery
      * @return a {@link String}
      */
@@ -165,12 +185,28 @@ public class WindowsAutopilotDeploymentProfile extends Entity implements Parsabl
         return this.backingStore.get("managementServiceAppId");
     }
     /**
+     * Gets the outOfBoxExperienceSetting property value. The Windows Autopilot Deployment Profile settings used by the device for the out-of-box experience. Supports: $select, $top, $skip. $Search, $orderBy and $filter are not supported.
+     * @return a {@link OutOfBoxExperienceSetting}
+     */
+    @jakarta.annotation.Nullable
+    public OutOfBoxExperienceSetting getOutOfBoxExperienceSetting() {
+        return this.backingStore.get("outOfBoxExperienceSetting");
+    }
+    /**
      * Gets the outOfBoxExperienceSettings property value. Out of box experience setting
      * @return a {@link OutOfBoxExperienceSettings}
      */
     @jakarta.annotation.Nullable
     public OutOfBoxExperienceSettings getOutOfBoxExperienceSettings() {
         return this.backingStore.get("outOfBoxExperienceSettings");
+    }
+    /**
+     * Gets the preprovisioningAllowed property value. Indicates whether the user is allowed to use Windows Autopilot for pre-provisioned deployment mode during Out of Box experience (OOBE). When TRUE, indicates that Windows Autopilot for pre-provisioned deployment mode for OOBE is allowed to be used. When false, Windows Autopilot for pre-provisioned deployment mode for OOBE is not allowed. The default is FALSE.
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getPreprovisioningAllowed() {
+        return this.backingStore.get("preprovisioningAllowed");
     }
     /**
      * Gets the roleScopeTagIds property value. Scope tags for the profile.
@@ -197,10 +233,14 @@ public class WindowsAutopilotDeploymentProfile extends Entity implements Parsabl
         writer.writeBooleanValue("enableWhiteGlove", this.getEnableWhiteGlove());
         writer.writeObjectValue("enrollmentStatusScreenSettings", this.getEnrollmentStatusScreenSettings());
         writer.writeBooleanValue("extractHardwareHash", this.getExtractHardwareHash());
+        writer.writeBooleanValue("hardwareHashExtractionEnabled", this.getHardwareHashExtractionEnabled());
         writer.writeStringValue("language", this.getLanguage());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
+        writer.writeStringValue("locale", this.getLocale());
         writer.writeStringValue("managementServiceAppId", this.getManagementServiceAppId());
+        writer.writeObjectValue("outOfBoxExperienceSetting", this.getOutOfBoxExperienceSetting());
         writer.writeObjectValue("outOfBoxExperienceSettings", this.getOutOfBoxExperienceSettings());
+        writer.writeBooleanValue("preprovisioningAllowed", this.getPreprovisioningAllowed());
         writer.writeCollectionOfPrimitiveValues("roleScopeTagIds", this.getRoleScopeTagIds());
     }
     /**
@@ -274,6 +314,13 @@ public class WindowsAutopilotDeploymentProfile extends Entity implements Parsabl
         this.backingStore.set("extractHardwareHash", value);
     }
     /**
+     * Sets the hardwareHashExtractionEnabled property value. Indicates whether the profile supports the extraction of hardware hash values and registration of the device into Windows Autopilot. When TRUE, indicates if hardware extraction and Windows Autopilot registration will happen on the next successful check-in. When FALSE, hardware hash extraction and Windows Autopilot registration will not happen. Default value is FALSE. Supports: $select, $top, $skip. $Search, $orderBy and $filter are not supported.
+     * @param value Value to set for the hardwareHashExtractionEnabled property.
+     */
+    public void setHardwareHashExtractionEnabled(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("hardwareHashExtractionEnabled", value);
+    }
+    /**
      * Sets the language property value. Language configured on the device
      * @param value Value to set for the language property.
      */
@@ -288,6 +335,13 @@ public class WindowsAutopilotDeploymentProfile extends Entity implements Parsabl
         this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
+     * Sets the locale property value. The locale (language) to be used when configuring the device. E.g. en-US. The default value is os-default. Supports: $select, $top, $skip. $Search, $orderBy and $filter are not supported.
+     * @param value Value to set for the locale property.
+     */
+    public void setLocale(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("locale", value);
+    }
+    /**
      * Sets the managementServiceAppId property value. AzureAD management app ID used during client device-based enrollment discovery
      * @param value Value to set for the managementServiceAppId property.
      */
@@ -295,11 +349,25 @@ public class WindowsAutopilotDeploymentProfile extends Entity implements Parsabl
         this.backingStore.set("managementServiceAppId", value);
     }
     /**
+     * Sets the outOfBoxExperienceSetting property value. The Windows Autopilot Deployment Profile settings used by the device for the out-of-box experience. Supports: $select, $top, $skip. $Search, $orderBy and $filter are not supported.
+     * @param value Value to set for the outOfBoxExperienceSetting property.
+     */
+    public void setOutOfBoxExperienceSetting(@jakarta.annotation.Nullable final OutOfBoxExperienceSetting value) {
+        this.backingStore.set("outOfBoxExperienceSetting", value);
+    }
+    /**
      * Sets the outOfBoxExperienceSettings property value. Out of box experience setting
      * @param value Value to set for the outOfBoxExperienceSettings property.
      */
     public void setOutOfBoxExperienceSettings(@jakarta.annotation.Nullable final OutOfBoxExperienceSettings value) {
         this.backingStore.set("outOfBoxExperienceSettings", value);
+    }
+    /**
+     * Sets the preprovisioningAllowed property value. Indicates whether the user is allowed to use Windows Autopilot for pre-provisioned deployment mode during Out of Box experience (OOBE). When TRUE, indicates that Windows Autopilot for pre-provisioned deployment mode for OOBE is allowed to be used. When false, Windows Autopilot for pre-provisioned deployment mode for OOBE is not allowed. The default is FALSE.
+     * @param value Value to set for the preprovisioningAllowed property.
+     */
+    public void setPreprovisioningAllowed(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("preprovisioningAllowed", value);
     }
     /**
      * Sets the roleScopeTagIds property value. Scope tags for the profile.

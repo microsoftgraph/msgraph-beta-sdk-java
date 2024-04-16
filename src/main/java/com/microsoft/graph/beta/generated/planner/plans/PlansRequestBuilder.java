@@ -93,7 +93,7 @@ public class PlansRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PlannerPlanCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new plannerPlan.
+     * Create a new plannerPlan object.
      * @param body The request body
      * @return a {@link PlannerPlan}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -104,7 +104,7 @@ public class PlansRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new plannerPlan.
+     * Create a new plannerPlan object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PlannerPlan}
@@ -140,7 +140,7 @@ public class PlansRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new plannerPlan.
+     * Create a new plannerPlan object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -149,7 +149,7 @@ public class PlansRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new plannerPlan.
+     * Create a new plannerPlan object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -157,7 +157,7 @@ public class PlansRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final PlannerPlan body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/planner/plans", pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);

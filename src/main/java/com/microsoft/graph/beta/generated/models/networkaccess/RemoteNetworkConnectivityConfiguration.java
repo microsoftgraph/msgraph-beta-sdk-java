@@ -69,7 +69,7 @@ public class RemoteNetworkConnectivityConfiguration implements AdditionalDataHol
         return deserializerMap;
     }
     /**
-     * Gets the links property value. The links property
+     * Gets the links property value. List of connectivity configurations for deviceLink objects.
      * @return a {@link java.util.List<ConnectivityConfigurationLink>}
      */
     @jakarta.annotation.Nullable
@@ -85,7 +85,7 @@ public class RemoteNetworkConnectivityConfiguration implements AdditionalDataHol
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the remoteNetworkId property value. The remoteNetworkId property
+     * Gets the remoteNetworkId property value. Unique identifier or a specific reference assigned to a branchSite. Key.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class RemoteNetworkConnectivityConfiguration implements AdditionalDataHol
         return this.backingStore.get("remoteNetworkId");
     }
     /**
-     * Gets the remoteNetworkName property value. The remoteNetworkName property
+     * Gets the remoteNetworkName property value. Display name assigned to a branchSite.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -128,7 +128,7 @@ public class RemoteNetworkConnectivityConfiguration implements AdditionalDataHol
         this.backingStore = value;
     }
     /**
-     * Sets the links property value. The links property
+     * Sets the links property value. List of connectivity configurations for deviceLink objects.
      * @param value Value to set for the links property.
      */
     public void setLinks(@jakarta.annotation.Nullable final java.util.List<ConnectivityConfigurationLink> value) {
@@ -142,14 +142,14 @@ public class RemoteNetworkConnectivityConfiguration implements AdditionalDataHol
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the remoteNetworkId property value. The remoteNetworkId property
+     * Sets the remoteNetworkId property value. Unique identifier or a specific reference assigned to a branchSite. Key.
      * @param value Value to set for the remoteNetworkId property.
      */
     public void setRemoteNetworkId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("remoteNetworkId", value);
     }
     /**
-     * Sets the remoteNetworkName property value. The remoteNetworkName property
+     * Sets the remoteNetworkName property value. Display name assigned to a branchSite.
      * @param value Value to set for the remoteNetworkName property.
      */
     public void setRemoteNetworkName(@jakarta.annotation.Nullable final String value) {

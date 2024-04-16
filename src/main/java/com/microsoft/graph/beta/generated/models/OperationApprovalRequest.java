@@ -63,7 +63,6 @@ public class OperationApprovalRequest extends Entity implements Parsable {
         deserializerMap.put("approver", (n) -> { this.setApprover(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("expirationDateTime", (n) -> { this.setExpirationDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("operationApprovalPolicies", (n) -> { this.setOperationApprovalPolicies(n.getStringValue()); });
         deserializerMap.put("requestDateTime", (n) -> { this.setRequestDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("requestJustification", (n) -> { this.setRequestJustification(n.getStringValue()); });
         deserializerMap.put("requestor", (n) -> { this.setRequestor(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
@@ -78,14 +77,6 @@ public class OperationApprovalRequest extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.backingStore.get("lastModifiedDateTime");
-    }
-    /**
-     * Gets the operationApprovalPolicies property value. The operational approval policies used in the request. Indicates the policy and platform combinations that are required for this request to be approved or rejected. Read-only. This property is read-only.
-     * @return a {@link String}
-     */
-    @jakarta.annotation.Nullable
-    public String getOperationApprovalPolicies() {
-        return this.backingStore.get("operationApprovalPolicies");
     }
     /**
      * Gets the requestDateTime property value. Indicates the DateTime that the request was made. The value cannot be modified and is automatically populated when the request is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default. Read-only. This property is read-only.
@@ -163,13 +154,6 @@ public class OperationApprovalRequest extends Entity implements Parsable {
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("lastModifiedDateTime", value);
-    }
-    /**
-     * Sets the operationApprovalPolicies property value. The operational approval policies used in the request. Indicates the policy and platform combinations that are required for this request to be approved or rejected. Read-only. This property is read-only.
-     * @param value Value to set for the operationApprovalPolicies property.
-     */
-    public void setOperationApprovalPolicies(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("operationApprovalPolicies", value);
     }
     /**
      * Sets the requestDateTime property value. Indicates the DateTime that the request was made. The value cannot be modified and is automatically populated when the request is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default. Read-only. This property is read-only.
