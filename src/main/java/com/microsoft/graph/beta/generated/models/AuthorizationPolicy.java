@@ -127,7 +127,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
         return this.backingStore.get("guestUserRoleId");
     }
     /**
-     * Gets the permissionGrantPolicyIdsAssignedToDefaultUserRole property value. Indicates if user consent to apps is allowed, and if it is, which app consent policy (permissionGrantPolicy) governs the permission for users to grant consent. Values should be in the format managePermissionGrantsForSelf.{id}, where {id} is the id of a built-in or custom app consent policy. An empty list indicates user consent to apps is disabled.
+     * Gets the permissionGrantPolicyIdsAssignedToDefaultUserRole property value. Indicates if user consent to apps is allowed, and if it is, the app consent policy that governs the permission for users to grant consent. Values should be in the format managePermissionGrantsForSelf.{id} for user consent policies or managePermissionGrantsForOwnedResource.{id} for resource-specific consent policies, where {id} is the id of a built-in or custom app consent policy. An empty list indicates user consent to apps is disabled.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -224,7 +224,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
         this.backingStore.set("guestUserRoleId", value);
     }
     /**
-     * Sets the permissionGrantPolicyIdsAssignedToDefaultUserRole property value. Indicates if user consent to apps is allowed, and if it is, which app consent policy (permissionGrantPolicy) governs the permission for users to grant consent. Values should be in the format managePermissionGrantsForSelf.{id}, where {id} is the id of a built-in or custom app consent policy. An empty list indicates user consent to apps is disabled.
+     * Sets the permissionGrantPolicyIdsAssignedToDefaultUserRole property value. Indicates if user consent to apps is allowed, and if it is, the app consent policy that governs the permission for users to grant consent. Values should be in the format managePermissionGrantsForSelf.{id} for user consent policies or managePermissionGrantsForOwnedResource.{id} for resource-specific consent policies, where {id} is the id of a built-in or custom app consent policy. An empty list indicates user consent to apps is disabled.
      * @param value Value to set for the permissionGrantPolicyIdsAssignedToDefaultUserRole property.
      */
     public void setPermissionGrantPolicyIdsAssignedToDefaultUserRole(@jakarta.annotation.Nullable final java.util.List<String> value) {

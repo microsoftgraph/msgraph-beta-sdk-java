@@ -49,23 +49,21 @@ public class OutlookTaskFolderItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/outlook/taskFolders/{outlookTaskFolder%2Did}{?%24select}", rawUrl);
     }
     /**
-     * Delete the specified Outlook task folder.
+     * Delete navigation property taskFolders for users
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The Outlook tasks API is deprecated and will stop returning data on February 20, 2023. Please use the new To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/ as of 2020-08/Outlook_Tasks
-     * @see <a href="https://learn.microsoft.com/graph/api/outlooktaskfolder-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @Deprecated
     public void delete() {
         delete(null);
     }
     /**
-     * Delete the specified Outlook task folder.
+     * Delete navigation property taskFolders for users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The Outlook tasks API is deprecated and will stop returning data on February 20, 2023. Please use the new To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/ as of 2020-08/Outlook_Tasks
-     * @see <a href="https://learn.microsoft.com/graph/api/outlooktaskfolder-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -75,12 +73,11 @@ public class OutlookTaskFolderItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get the properties and relationships of the specified Outlook task folder.
+     * Get taskFolders from users
      * @return a {@link OutlookTaskFolder}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The Outlook tasks API is deprecated and will stop returning data on February 20, 2023. Please use the new To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/ as of 2020-08/Outlook_Tasks
-     * @see <a href="https://learn.microsoft.com/graph/api/outlooktaskfolder-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -88,13 +85,12 @@ public class OutlookTaskFolderItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the properties and relationships of the specified Outlook task folder.
+     * Get taskFolders from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link OutlookTaskFolder}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The Outlook tasks API is deprecated and will stop returning data on February 20, 2023. Please use the new To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/ as of 2020-08/Outlook_Tasks
-     * @see <a href="https://learn.microsoft.com/graph/api/outlooktaskfolder-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -105,13 +101,12 @@ public class OutlookTaskFolderItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, OutlookTaskFolder::createFromDiscriminatorValue);
     }
     /**
-     * Update the writable properties of an Outlook task folder. You cannot change the name property value of the default task folder, 'Tasks'.
+     * Update the navigation property taskFolders in users
      * @param body The request body
      * @return a {@link OutlookTaskFolder}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The Outlook tasks API is deprecated and will stop returning data on February 20, 2023. Please use the new To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/ as of 2020-08/Outlook_Tasks
-     * @see <a href="https://learn.microsoft.com/graph/api/outlooktaskfolder-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -119,14 +114,13 @@ public class OutlookTaskFolderItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the writable properties of an Outlook task folder. You cannot change the name property value of the default task folder, 'Tasks'.
+     * Update the navigation property taskFolders in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link OutlookTaskFolder}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The Outlook tasks API is deprecated and will stop returning data on February 20, 2023. Please use the new To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/ as of 2020-08/Outlook_Tasks
-     * @see <a href="https://learn.microsoft.com/graph/api/outlooktaskfolder-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -138,7 +132,7 @@ public class OutlookTaskFolderItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, OutlookTaskFolder::createFromDiscriminatorValue);
     }
     /**
-     * Delete the specified Outlook task folder.
+     * Delete navigation property taskFolders for users
      * @return a {@link RequestInformation}
      * @deprecated
      * The Outlook tasks API is deprecated and will stop returning data on February 20, 2023. Please use the new To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/ as of 2020-08/Outlook_Tasks
@@ -149,7 +143,7 @@ public class OutlookTaskFolderItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete the specified Outlook task folder.
+     * Delete navigation property taskFolders for users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -164,7 +158,7 @@ public class OutlookTaskFolderItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get the properties and relationships of the specified Outlook task folder.
+     * Get taskFolders from users
      * @return a {@link RequestInformation}
      * @deprecated
      * The Outlook tasks API is deprecated and will stop returning data on February 20, 2023. Please use the new To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/ as of 2020-08/Outlook_Tasks
@@ -175,7 +169,7 @@ public class OutlookTaskFolderItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the properties and relationships of the specified Outlook task folder.
+     * Get taskFolders from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -190,7 +184,7 @@ public class OutlookTaskFolderItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the writable properties of an Outlook task folder. You cannot change the name property value of the default task folder, 'Tasks'.
+     * Update the navigation property taskFolders in users
      * @param body The request body
      * @return a {@link RequestInformation}
      * @deprecated
@@ -202,7 +196,7 @@ public class OutlookTaskFolderItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the writable properties of an Outlook task folder. You cannot change the name property value of the default task folder, 'Tasks'.
+     * Update the navigation property taskFolders in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -239,7 +233,7 @@ public class OutlookTaskFolderItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get the properties and relationships of the specified Outlook task folder.
+     * Get taskFolders from users
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

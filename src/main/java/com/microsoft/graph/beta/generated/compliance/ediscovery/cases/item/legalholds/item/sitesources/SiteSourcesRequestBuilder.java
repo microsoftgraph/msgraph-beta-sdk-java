@@ -66,12 +66,11 @@ public class SiteSourcesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/compliance/ediscovery/cases/{case%2Did}/legalHolds/{legalHold%2Did}/siteSources{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get the list of siteSource objecs associated with a legal hold.
+     * Data source entity for SharePoint sites associated with the legal hold.
      * @return a {@link SiteSourceCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
-     * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-legalhold-list-sitesources?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -79,13 +78,12 @@ public class SiteSourcesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the list of siteSource objecs associated with a legal hold.
+     * Data source entity for SharePoint sites associated with the legal hold.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SiteSourceCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
-     * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-legalhold-list-sitesources?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -96,13 +94,12 @@ public class SiteSourcesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, SiteSourceCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Adds a siteSource to a legalHold object.
+     * Create new navigation property to siteSources for compliance
      * @param body The request body
      * @return a {@link SiteSource}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
-     * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-legalhold-post-sitesources?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -110,14 +107,13 @@ public class SiteSourcesRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Adds a siteSource to a legalHold object.
+     * Create new navigation property to siteSources for compliance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SiteSource}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
-     * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-legalhold-post-sitesources?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -129,7 +125,7 @@ public class SiteSourcesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, SiteSource::createFromDiscriminatorValue);
     }
     /**
-     * Get the list of siteSource objecs associated with a legal hold.
+     * Data source entity for SharePoint sites associated with the legal hold.
      * @return a {@link RequestInformation}
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
@@ -140,7 +136,7 @@ public class SiteSourcesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the list of siteSource objecs associated with a legal hold.
+     * Data source entity for SharePoint sites associated with the legal hold.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -155,7 +151,7 @@ public class SiteSourcesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Adds a siteSource to a legalHold object.
+     * Create new navigation property to siteSources for compliance
      * @param body The request body
      * @return a {@link RequestInformation}
      * @deprecated
@@ -167,7 +163,7 @@ public class SiteSourcesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Adds a siteSource to a legalHold object.
+     * Create new navigation property to siteSources for compliance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -198,7 +194,7 @@ public class SiteSourcesRequestBuilder extends BaseRequestBuilder {
         return new SiteSourcesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the list of siteSource objecs associated with a legal hold.
+     * Data source entity for SharePoint sites associated with the legal hold.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

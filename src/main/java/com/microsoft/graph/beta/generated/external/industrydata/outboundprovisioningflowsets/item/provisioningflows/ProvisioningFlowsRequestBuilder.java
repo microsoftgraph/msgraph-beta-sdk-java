@@ -60,21 +60,19 @@ public class ProvisioningFlowsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/external/industryData/outboundProvisioningFlowSets/{outboundProvisioningFlowSet%2Did}/provisioningFlows{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a list of the provisioningFlow objects and their properties.
+     * A flow that provisions relevant records of a given entity type in the Microsoft 365 tenant.
      * @return a {@link ProvisioningFlowCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-outboundprovisioningflowset-list-provisioningflows?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ProvisioningFlowCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a list of the provisioningFlow objects and their properties.
+     * A flow that provisions relevant records of a given entity type in the Microsoft 365 tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ProvisioningFlowCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-outboundprovisioningflowset-list-provisioningflows?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ProvisioningFlowCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +82,21 @@ public class ProvisioningFlowsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ProvisioningFlowCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new provisioningFlow object.
+     * Create new navigation property to provisioningFlows for external
      * @param body The request body
      * @return a {@link ProvisioningFlow}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-outboundprovisioningflowset-post-provisioningflows?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ProvisioningFlow post(@jakarta.annotation.Nonnull final ProvisioningFlow body) {
         return post(body, null);
     }
     /**
-     * Create a new provisioningFlow object.
+     * Create new navigation property to provisioningFlows for external
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ProvisioningFlow}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-outboundprovisioningflowset-post-provisioningflows?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ProvisioningFlow post(@jakarta.annotation.Nonnull final ProvisioningFlow body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +107,7 @@ public class ProvisioningFlowsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ProvisioningFlow::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the provisioningFlow objects and their properties.
+     * A flow that provisions relevant records of a given entity type in the Microsoft 365 tenant.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class ProvisioningFlowsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the provisioningFlow objects and their properties.
+     * A flow that provisions relevant records of a given entity type in the Microsoft 365 tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +127,7 @@ public class ProvisioningFlowsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new provisioningFlow object.
+     * Create new navigation property to provisioningFlows for external
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class ProvisioningFlowsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new provisioningFlow object.
+     * Create new navigation property to provisioningFlows for external
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +161,7 @@ public class ProvisioningFlowsRequestBuilder extends BaseRequestBuilder {
         return new ProvisioningFlowsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the provisioningFlow objects and their properties.
+     * A flow that provisions relevant records of a given entity type in the Microsoft 365 tenant.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

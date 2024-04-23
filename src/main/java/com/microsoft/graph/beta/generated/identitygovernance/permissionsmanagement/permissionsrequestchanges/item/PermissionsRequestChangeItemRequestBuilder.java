@@ -55,21 +55,19 @@ public class PermissionsRequestChangeItemRequestBuilder extends BaseRequestBuild
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a permissionsRequestChange object.
+     * Represents a change event of the scheduledPermissionsRequest entity.
      * @return a {@link PermissionsRequestChange}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/permissionsrequestchange-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PermissionsRequestChange get() {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a permissionsRequestChange object.
+     * Represents a change event of the scheduledPermissionsRequest entity.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PermissionsRequestChange}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/permissionsrequestchange-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PermissionsRequestChange get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -124,7 +122,7 @@ public class PermissionsRequestChangeItemRequestBuilder extends BaseRequestBuild
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a permissionsRequestChange object.
+     * Represents a change event of the scheduledPermissionsRequest entity.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -132,7 +130,7 @@ public class PermissionsRequestChangeItemRequestBuilder extends BaseRequestBuild
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a permissionsRequestChange object.
+     * Represents a change event of the scheduledPermissionsRequest entity.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -184,7 +182,7 @@ public class PermissionsRequestChangeItemRequestBuilder extends BaseRequestBuild
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a permissionsRequestChange object.
+     * Represents a change event of the scheduledPermissionsRequest entity.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

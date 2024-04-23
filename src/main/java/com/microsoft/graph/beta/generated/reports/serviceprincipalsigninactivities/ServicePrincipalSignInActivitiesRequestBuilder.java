@@ -60,21 +60,19 @@ public class ServicePrincipalSignInActivitiesRequestBuilder extends BaseRequestB
         super(requestAdapter, "{+baseurl}/reports/servicePrincipalSignInActivities{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a list of servicePrincipalSignInActivity objects that contains sign-in activity information for service principals in a Microsoft Entra tenant. You can use a service principal as a client or resource. A service principal supports delegated or app-only authentication context.
+     * Represents a collection of sign-in activities of service principals.
      * @return a {@link ServicePrincipalSignInActivityCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/reportroot-list-serviceprincipalsigninactivities?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ServicePrincipalSignInActivityCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a list of servicePrincipalSignInActivity objects that contains sign-in activity information for service principals in a Microsoft Entra tenant. You can use a service principal as a client or resource. A service principal supports delegated or app-only authentication context.
+     * Represents a collection of sign-in activities of service principals.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ServicePrincipalSignInActivityCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/reportroot-list-serviceprincipalsigninactivities?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ServicePrincipalSignInActivityCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -109,7 +107,7 @@ public class ServicePrincipalSignInActivitiesRequestBuilder extends BaseRequestB
         return this.requestAdapter.send(requestInfo, errorMapping, ServicePrincipalSignInActivity::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of servicePrincipalSignInActivity objects that contains sign-in activity information for service principals in a Microsoft Entra tenant. You can use a service principal as a client or resource. A service principal supports delegated or app-only authentication context.
+     * Represents a collection of sign-in activities of service principals.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -117,7 +115,7 @@ public class ServicePrincipalSignInActivitiesRequestBuilder extends BaseRequestB
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of servicePrincipalSignInActivity objects that contains sign-in activity information for service principals in a Microsoft Entra tenant. You can use a service principal as a client or resource. A service principal supports delegated or app-only authentication context.
+     * Represents a collection of sign-in activities of service principals.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -163,7 +161,7 @@ public class ServicePrincipalSignInActivitiesRequestBuilder extends BaseRequestB
         return new ServicePrincipalSignInActivitiesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of servicePrincipalSignInActivity objects that contains sign-in activity information for service principals in a Microsoft Entra tenant. You can use a service principal as a client or resource. A service principal supports delegated or app-only authentication context.
+     * Represents a collection of sign-in activities of service principals.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

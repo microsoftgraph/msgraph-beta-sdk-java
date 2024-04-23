@@ -55,21 +55,19 @@ public class TenantCustomizedInformationItemRequestBuilder extends BaseRequestBu
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a tenantCustomizedInformation object.
+     * The collection of tenant level customized information across managed tenants.
      * @return a {@link TenantCustomizedInformation}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-tenantcustomizedinformation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TenantCustomizedInformation get() {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a tenantCustomizedInformation object.
+     * The collection of tenant level customized information across managed tenants.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TenantCustomizedInformation}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-tenantcustomizedinformation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TenantCustomizedInformation get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,23 +77,21 @@ public class TenantCustomizedInformationItemRequestBuilder extends BaseRequestBu
         return this.requestAdapter.send(requestInfo, errorMapping, TenantCustomizedInformation::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a tenantCustomizedInformation object.
+     * Update the navigation property tenantsCustomizedInformation in tenantRelationships
      * @param body The request body
      * @return a {@link TenantCustomizedInformation}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-tenantcustomizedinformation-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TenantCustomizedInformation patch(@jakarta.annotation.Nonnull final TenantCustomizedInformation body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of a tenantCustomizedInformation object.
+     * Update the navigation property tenantsCustomizedInformation in tenantRelationships
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TenantCustomizedInformation}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-tenantcustomizedinformation-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TenantCustomizedInformation patch(@jakarta.annotation.Nonnull final TenantCustomizedInformation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -126,7 +122,7 @@ public class TenantCustomizedInformationItemRequestBuilder extends BaseRequestBu
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a tenantCustomizedInformation object.
+     * The collection of tenant level customized information across managed tenants.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -134,7 +130,7 @@ public class TenantCustomizedInformationItemRequestBuilder extends BaseRequestBu
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a tenantCustomizedInformation object.
+     * The collection of tenant level customized information across managed tenants.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -146,7 +142,7 @@ public class TenantCustomizedInformationItemRequestBuilder extends BaseRequestBu
         return requestInfo;
     }
     /**
-     * Update the properties of a tenantCustomizedInformation object.
+     * Update the navigation property tenantsCustomizedInformation in tenantRelationships
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -155,7 +151,7 @@ public class TenantCustomizedInformationItemRequestBuilder extends BaseRequestBu
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a tenantCustomizedInformation object.
+     * Update the navigation property tenantsCustomizedInformation in tenantRelationships
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -186,7 +182,7 @@ public class TenantCustomizedInformationItemRequestBuilder extends BaseRequestBu
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a tenantCustomizedInformation object.
+     * The collection of tenant level customized information across managed tenants.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

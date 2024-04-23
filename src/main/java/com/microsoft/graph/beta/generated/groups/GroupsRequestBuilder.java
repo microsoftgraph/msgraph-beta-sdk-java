@@ -108,7 +108,7 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
      * List all the groups available in an organization, excluding dynamic distribution groups. To retrieve dynamic distribution groups, use the Exchange admin center. This operation returns by default only a subset of the more commonly used properties for each group. These default properties are noted in the Properties section. To get properties that are not returned by default, do a GET operation for the group and specify the properties in a $select OData query option. The hasMembersWithLicenseErrors and isArchived properties are an exception and are not returned in the $select query.
      * @return a {@link GroupCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/group-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/group-list?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GroupCollectionResponse get() {
@@ -119,7 +119,7 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GroupCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/group-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/group-list?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GroupCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -133,7 +133,7 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link Group}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/group-post-groups?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/group-post-groups?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Group post(@jakarta.annotation.Nonnull final Group body) {
@@ -145,7 +145,7 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Group}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/group-post-groups?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/group-post-groups?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Group post(@jakarta.annotation.Nonnull final Group body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

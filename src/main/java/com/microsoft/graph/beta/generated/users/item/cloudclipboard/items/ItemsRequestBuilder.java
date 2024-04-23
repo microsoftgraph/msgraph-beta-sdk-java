@@ -60,21 +60,19 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/cloudClipboard/items{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a list of the cloudClipboardItem objects and their properties for a user. This API only allows you to get cloudClipboardItem objects for: This API doesn't support using another user's credentials to get a cloudClipboardItem for a user. 
+     * Represents a collection of Cloud Clipboard items.
      * @return a {@link CloudClipboardItemCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/cloudclipboardroot-list-items?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudClipboardItemCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a list of the cloudClipboardItem objects and their properties for a user. This API only allows you to get cloudClipboardItem objects for: This API doesn't support using another user's credentials to get a cloudClipboardItem for a user. 
+     * Represents a collection of Cloud Clipboard items.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CloudClipboardItemCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/cloudclipboardroot-list-items?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudClipboardItemCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -109,7 +107,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CloudClipboardItem::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the cloudClipboardItem objects and their properties for a user. This API only allows you to get cloudClipboardItem objects for: This API doesn't support using another user's credentials to get a cloudClipboardItem for a user. 
+     * Represents a collection of Cloud Clipboard items.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -117,7 +115,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the cloudClipboardItem objects and their properties for a user. This API only allows you to get cloudClipboardItem objects for: This API doesn't support using another user's credentials to get a cloudClipboardItem for a user. 
+     * Represents a collection of Cloud Clipboard items.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -163,7 +161,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
         return new ItemsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the cloudClipboardItem objects and their properties for a user. This API only allows you to get cloudClipboardItem objects for: This API doesn't support using another user's credentials to get a cloudClipboardItem for a user. 
+     * Represents a collection of Cloud Clipboard items.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

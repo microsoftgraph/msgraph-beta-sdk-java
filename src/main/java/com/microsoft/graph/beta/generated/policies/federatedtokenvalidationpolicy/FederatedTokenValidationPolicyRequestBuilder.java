@@ -55,21 +55,19 @@ public class FederatedTokenValidationPolicyRequestBuilder extends BaseRequestBui
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get a list of the federatedTokenValidationPolicy objects and their properties.
+     * Represents a policy to control enabling or disabling validation of federation authentication tokens.
      * @return a {@link FederatedTokenValidationPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/policyroot-list-federatedtokenvalidationpolicy?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public FederatedTokenValidationPolicy get() {
         return get(null);
     }
     /**
-     * Get a list of the federatedTokenValidationPolicy objects and their properties.
+     * Represents a policy to control enabling or disabling validation of federation authentication tokens.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link FederatedTokenValidationPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/policyroot-list-federatedtokenvalidationpolicy?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public FederatedTokenValidationPolicy get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,23 +77,21 @@ public class FederatedTokenValidationPolicyRequestBuilder extends BaseRequestBui
         return this.requestAdapter.send(requestInfo, errorMapping, FederatedTokenValidationPolicy::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a federatedTokenValidationPolicy object.
+     * Update the navigation property federatedTokenValidationPolicy in policies
      * @param body The request body
      * @return a {@link FederatedTokenValidationPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/federatedtokenvalidationpolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public FederatedTokenValidationPolicy patch(@jakarta.annotation.Nonnull final FederatedTokenValidationPolicy body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of a federatedTokenValidationPolicy object.
+     * Update the navigation property federatedTokenValidationPolicy in policies
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link FederatedTokenValidationPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/federatedtokenvalidationpolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public FederatedTokenValidationPolicy patch(@jakarta.annotation.Nonnull final FederatedTokenValidationPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -126,7 +122,7 @@ public class FederatedTokenValidationPolicyRequestBuilder extends BaseRequestBui
         return requestInfo;
     }
     /**
-     * Get a list of the federatedTokenValidationPolicy objects and their properties.
+     * Represents a policy to control enabling or disabling validation of federation authentication tokens.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -134,7 +130,7 @@ public class FederatedTokenValidationPolicyRequestBuilder extends BaseRequestBui
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the federatedTokenValidationPolicy objects and their properties.
+     * Represents a policy to control enabling or disabling validation of federation authentication tokens.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -146,7 +142,7 @@ public class FederatedTokenValidationPolicyRequestBuilder extends BaseRequestBui
         return requestInfo;
     }
     /**
-     * Update the properties of a federatedTokenValidationPolicy object.
+     * Update the navigation property federatedTokenValidationPolicy in policies
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -155,7 +151,7 @@ public class FederatedTokenValidationPolicyRequestBuilder extends BaseRequestBui
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a federatedTokenValidationPolicy object.
+     * Update the navigation property federatedTokenValidationPolicy in policies
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -186,7 +182,7 @@ public class FederatedTokenValidationPolicyRequestBuilder extends BaseRequestBui
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get a list of the federatedTokenValidationPolicy objects and their properties.
+     * Represents a policy to control enabling or disabling validation of federation authentication tokens.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

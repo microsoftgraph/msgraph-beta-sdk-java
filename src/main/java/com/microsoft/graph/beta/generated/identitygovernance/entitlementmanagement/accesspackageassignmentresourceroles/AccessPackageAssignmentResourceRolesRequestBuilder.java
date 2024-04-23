@@ -69,21 +69,19 @@ public class AccessPackageAssignmentResourceRolesRequestBuilder extends BaseRequ
         super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/accessPackageAssignmentResourceRoles{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Retrieve a list of accessPackageAssignmentResourceRole objects.  The resulting list includes all the resource roles of all assignments that the caller has access to read, across all catalogs and access packages.
+     * Represents the resource-specific role which a subject has been assigned through an access package assignment.
      * @return a {@link AccessPackageAssignmentResourceRoleCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/entitlementmanagement-list-accesspackageassignmentresourceroles?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AccessPackageAssignmentResourceRoleCollectionResponse get() {
         return get(null);
     }
     /**
-     * Retrieve a list of accessPackageAssignmentResourceRole objects.  The resulting list includes all the resource roles of all assignments that the caller has access to read, across all catalogs and access packages.
+     * Represents the resource-specific role which a subject has been assigned through an access package assignment.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AccessPackageAssignmentResourceRoleCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/entitlementmanagement-list-accesspackageassignmentresourceroles?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AccessPackageAssignmentResourceRoleCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -118,7 +116,7 @@ public class AccessPackageAssignmentResourceRolesRequestBuilder extends BaseRequ
         return this.requestAdapter.send(requestInfo, errorMapping, AccessPackageAssignmentResourceRole::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of accessPackageAssignmentResourceRole objects.  The resulting list includes all the resource roles of all assignments that the caller has access to read, across all catalogs and access packages.
+     * Represents the resource-specific role which a subject has been assigned through an access package assignment.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -126,7 +124,7 @@ public class AccessPackageAssignmentResourceRolesRequestBuilder extends BaseRequ
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of accessPackageAssignmentResourceRole objects.  The resulting list includes all the resource roles of all assignments that the caller has access to read, across all catalogs and access packages.
+     * Represents the resource-specific role which a subject has been assigned through an access package assignment.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -172,7 +170,7 @@ public class AccessPackageAssignmentResourceRolesRequestBuilder extends BaseRequ
         return new AccessPackageAssignmentResourceRolesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of accessPackageAssignmentResourceRole objects.  The resulting list includes all the resource roles of all assignments that the caller has access to read, across all catalogs and access packages.
+     * Represents the resource-specific role which a subject has been assigned through an access package assignment.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -55,7 +55,7 @@ public class ManagedAppLogCollectionRequest extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the managedAppRegistrationId property value. The unique identifier of the app instance for which diagnostic was collected.
+     * Gets the managedAppRegistrationId property value. The unique identifier of the app instance for which diagnostic logs were collected. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -63,7 +63,7 @@ public class ManagedAppLogCollectionRequest extends Entity implements Parsable {
         return this.backingStore.get("managedAppRegistrationId");
     }
     /**
-     * Gets the requestedBy property value. The user principal name associated with the request for the managed application log collection.
+     * Gets the requestedBy property value. The user principal name associated with the request for the managed application log collection. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -95,7 +95,7 @@ public class ManagedAppLogCollectionRequest extends Entity implements Parsable {
         return this.backingStore.get("status");
     }
     /**
-     * Gets the uploadedLogs property value. The collection of log upload results as reported by each component on the device. Such components can be the application itself, the Mobile Application Management (MAM) SDK, and other on-device components that are requested to upload diagnostic logs.
+     * Gets the uploadedLogs property value. The collection of log upload results as reported by each component on the device. Such components can be the application itself, the Mobile Application Management (MAM) SDK, and other on-device components that are requested to upload diagnostic logs. Read-only.
      * @return a {@link java.util.List<ManagedAppLogUpload>}
      */
     @jakarta.annotation.Nullable
@@ -143,14 +143,14 @@ public class ManagedAppLogCollectionRequest extends Entity implements Parsable {
         this.backingStore.set("completedDateTime", value);
     }
     /**
-     * Sets the managedAppRegistrationId property value. The unique identifier of the app instance for which diagnostic was collected.
+     * Sets the managedAppRegistrationId property value. The unique identifier of the app instance for which diagnostic logs were collected. Read-only.
      * @param value Value to set for the managedAppRegistrationId property.
      */
     public void setManagedAppRegistrationId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("managedAppRegistrationId", value);
     }
     /**
-     * Sets the requestedBy property value. The user principal name associated with the request for the managed application log collection.
+     * Sets the requestedBy property value. The user principal name associated with the request for the managed application log collection. Read-only.
      * @param value Value to set for the requestedBy property.
      */
     public void setRequestedBy(@jakarta.annotation.Nullable final String value) {
@@ -178,7 +178,7 @@ public class ManagedAppLogCollectionRequest extends Entity implements Parsable {
         this.backingStore.set("status", value);
     }
     /**
-     * Sets the uploadedLogs property value. The collection of log upload results as reported by each component on the device. Such components can be the application itself, the Mobile Application Management (MAM) SDK, and other on-device components that are requested to upload diagnostic logs.
+     * Sets the uploadedLogs property value. The collection of log upload results as reported by each component on the device. Such components can be the application itself, the Mobile Application Management (MAM) SDK, and other on-device components that are requested to upload diagnostic logs. Read-only.
      * @param value Value to set for the uploadedLogs property.
      */
     public void setUploadedLogs(@jakarta.annotation.Nullable final java.util.List<ManagedAppLogUpload> value) {

@@ -63,7 +63,7 @@ public class ProgramControlsRequestBuilder extends BaseRequestBuilder {
      * In the Microsoft Entra access reviews feature, list all the programControl objects, across all programs in the tenant.
      * @return a {@link ProgramControlCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/programcontrol-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/programcontrol-list?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ProgramControlCollectionResponse get() {
@@ -74,7 +74,7 @@ public class ProgramControlsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ProgramControlCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/programcontrol-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/programcontrol-list?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ProgramControlCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -88,7 +88,7 @@ public class ProgramControlsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link ProgramControl}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/programcontrol-create?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/programcontrol-create?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ProgramControl post(@jakarta.annotation.Nonnull final ProgramControl body) {
@@ -100,7 +100,7 @@ public class ProgramControlsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ProgramControl}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/programcontrol-create?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/programcontrol-create?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ProgramControl post(@jakarta.annotation.Nonnull final ProgramControl body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

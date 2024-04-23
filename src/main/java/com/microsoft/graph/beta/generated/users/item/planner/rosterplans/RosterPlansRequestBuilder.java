@@ -59,21 +59,19 @@ public class RosterPlansRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/planner/rosterPlans{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get the list of plannerPlans that are contained by the plannerRosters of which the user is a member.
+     * Read-only. Nullable. Returns the plannerPlans contained by the plannerRosters the user is a member.
      * @return a {@link PlannerPlanCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/planneruser-list-rosterplans?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PlannerPlanCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get the list of plannerPlans that are contained by the plannerRosters of which the user is a member.
+     * Read-only. Nullable. Returns the plannerPlans contained by the plannerRosters the user is a member.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PlannerPlanCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/planneruser-list-rosterplans?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PlannerPlanCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -83,7 +81,7 @@ public class RosterPlansRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PlannerPlanCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Get the list of plannerPlans that are contained by the plannerRosters of which the user is a member.
+     * Read-only. Nullable. Returns the plannerPlans contained by the plannerRosters the user is a member.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -91,7 +89,7 @@ public class RosterPlansRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the list of plannerPlans that are contained by the plannerRosters of which the user is a member.
+     * Read-only. Nullable. Returns the plannerPlans contained by the plannerRosters the user is a member.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -113,7 +111,7 @@ public class RosterPlansRequestBuilder extends BaseRequestBuilder {
         return new RosterPlansRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the list of plannerPlans that are contained by the plannerRosters of which the user is a member.
+     * Read-only. Nullable. Returns the plannerPlans contained by the plannerRosters the user is a member.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

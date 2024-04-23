@@ -55,18 +55,16 @@ public class UpdatePolicyItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/admin/windows/updates/updatePolicies/{updatePolicy%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete an updatePolicy object.
+     * Delete navigation property updatePolicies for admin
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-updatepolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete an updatePolicy object.
+     * Delete navigation property updatePolicies for admin
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-updatepolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -75,21 +73,19 @@ public class UpdatePolicyItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of an updatePolicy object.
+     * A collection of policies for approving the deployment of different content to an audience over time.
      * @return a {@link UpdatePolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-updatepolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UpdatePolicy get() {
         return get(null);
     }
     /**
-     * Read the properties and relationships of an updatePolicy object.
+     * A collection of policies for approving the deployment of different content to an audience over time.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UpdatePolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-updatepolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UpdatePolicy get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -99,23 +95,21 @@ public class UpdatePolicyItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, UpdatePolicy::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of an updatePolicy object.
+     * Update the navigation property updatePolicies in admin
      * @param body The request body
      * @return a {@link UpdatePolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-updatepolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UpdatePolicy patch(@jakarta.annotation.Nonnull final UpdatePolicy body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of an updatePolicy object.
+     * Update the navigation property updatePolicies in admin
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UpdatePolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-updatepolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UpdatePolicy patch(@jakarta.annotation.Nonnull final UpdatePolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -126,7 +120,7 @@ public class UpdatePolicyItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, UpdatePolicy::createFromDiscriminatorValue);
     }
     /**
-     * Delete an updatePolicy object.
+     * Delete navigation property updatePolicies for admin
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -134,7 +128,7 @@ public class UpdatePolicyItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete an updatePolicy object.
+     * Delete navigation property updatePolicies for admin
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -146,7 +140,7 @@ public class UpdatePolicyItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of an updatePolicy object.
+     * A collection of policies for approving the deployment of different content to an audience over time.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -154,7 +148,7 @@ public class UpdatePolicyItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of an updatePolicy object.
+     * A collection of policies for approving the deployment of different content to an audience over time.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -166,7 +160,7 @@ public class UpdatePolicyItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of an updatePolicy object.
+     * Update the navigation property updatePolicies in admin
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -175,7 +169,7 @@ public class UpdatePolicyItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of an updatePolicy object.
+     * Update the navigation property updatePolicies in admin
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -206,7 +200,7 @@ public class UpdatePolicyItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of an updatePolicy object.
+     * A collection of policies for approving the deployment of different content to an audience over time.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

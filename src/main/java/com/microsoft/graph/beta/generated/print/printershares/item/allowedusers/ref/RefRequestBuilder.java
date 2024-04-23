@@ -38,23 +38,21 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/print/printerShares/{printerShare%2Did}/allowedUsers/$ref?@id={%40id}{&%24count,%24filter,%24orderby,%24search,%24skip,%24top}", rawUrl);
     }
     /**
-     * Revoke the specified user's access to submit print jobs to the associated printerShare.
+     * Delete ref of navigation property allowedUsers for print
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
-     * @see <a href="https://learn.microsoft.com/graph/api/printershare-delete-alloweduser?view=graph-rest-1.0">Find more info here</a>
      */
     @Deprecated
     public void delete() {
         delete(null);
     }
     /**
-     * Revoke the specified user's access to submit print jobs to the associated printerShare.
+     * Delete ref of navigation property allowedUsers for print
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
-     * @see <a href="https://learn.microsoft.com/graph/api/printershare-delete-alloweduser?view=graph-rest-1.0">Find more info here</a>
      */
     @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -64,12 +62,11 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve a list of users who have been granted access to submit print jobs to the associated printerShare.
+     * The users who have access to print using the printer.
      * @return a {@link StringCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
-     * @see <a href="https://learn.microsoft.com/graph/api/printershare-list-allowedusers?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -77,13 +74,12 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of users who have been granted access to submit print jobs to the associated printerShare.
+     * The users who have access to print using the printer.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link StringCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
-     * @see <a href="https://learn.microsoft.com/graph/api/printershare-list-allowedusers?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -94,25 +90,23 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, StringCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Grant the specified user access to submit print jobs to the associated printerShare.
+     * Create new navigation property ref to allowedUsers for print
      * @param body The request body
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
-     * @see <a href="https://learn.microsoft.com/graph/api/printershare-post-allowedusers?view=graph-rest-1.0">Find more info here</a>
      */
     @Deprecated
     public void post(@jakarta.annotation.Nonnull final ReferenceCreate body) {
         post(body, null);
     }
     /**
-     * Grant the specified user access to submit print jobs to the associated printerShare.
+     * Create new navigation property ref to allowedUsers for print
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
-     * @see <a href="https://learn.microsoft.com/graph/api/printershare-post-allowedusers?view=graph-rest-1.0">Find more info here</a>
      */
     @Deprecated
     public void post(@jakarta.annotation.Nonnull final ReferenceCreate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -123,7 +117,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Revoke the specified user's access to submit print jobs to the associated printerShare.
+     * Delete ref of navigation property allowedUsers for print
      * @return a {@link RequestInformation}
      * @deprecated
      * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
@@ -134,7 +128,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Revoke the specified user's access to submit print jobs to the associated printerShare.
+     * Delete ref of navigation property allowedUsers for print
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -149,7 +143,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve a list of users who have been granted access to submit print jobs to the associated printerShare.
+     * The users who have access to print using the printer.
      * @return a {@link RequestInformation}
      * @deprecated
      * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
@@ -160,7 +154,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of users who have been granted access to submit print jobs to the associated printerShare.
+     * The users who have access to print using the printer.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -175,7 +169,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Grant the specified user access to submit print jobs to the associated printerShare.
+     * Create new navigation property ref to allowedUsers for print
      * @param body The request body
      * @return a {@link RequestInformation}
      * @deprecated
@@ -187,7 +181,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Grant the specified user access to submit print jobs to the associated printerShare.
+     * Create new navigation property ref to allowedUsers for print
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -218,7 +212,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return new RefRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Revoke the specified user's access to submit print jobs to the associated printerShare.
+     * Delete ref of navigation property allowedUsers for print
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class DeleteQueryParameters implements QueryParameters {
@@ -250,7 +244,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         public DeleteQueryParameters queryParameters = new DeleteQueryParameters();
     }
     /**
-     * Retrieve a list of users who have been granted access to submit print jobs to the associated printerShare.
+     * The users who have access to print using the printer.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

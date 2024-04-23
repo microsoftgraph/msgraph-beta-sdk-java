@@ -42,19 +42,21 @@ public class GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/getActivitiesByInterval(startDateTime='{startDateTime}',endDateTime='{endDateTime}',interval='{interval}'){?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Invoke function getActivitiesByInterval
+     * Get itemActivityStats for the activities that took place under this resource within the specified time interval. Analytics aggregates might not be available for all action types.
      * @return a {@link GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/itemactivity-getbyinterval?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalGetResponse get() {
         return get(null);
     }
     /**
-     * Invoke function getActivitiesByInterval
+     * Get itemActivityStats for the activities that took place under this resource within the specified time interval. Analytics aggregates might not be available for all action types.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/itemactivity-getbyinterval?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -64,7 +66,7 @@ public class GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval
         return this.requestAdapter.send(requestInfo, errorMapping, GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalGetResponse::createFromDiscriminatorValue);
     }
     /**
-     * Invoke function getActivitiesByInterval
+     * Get itemActivityStats for the activities that took place under this resource within the specified time interval. Analytics aggregates might not be available for all action types.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -72,7 +74,7 @@ public class GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function getActivitiesByInterval
+     * Get itemActivityStats for the activities that took place under this resource within the specified time interval. Analytics aggregates might not be available for all action types.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -94,7 +96,7 @@ public class GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval
         return new GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Invoke function getActivitiesByInterval
+     * Get itemActivityStats for the activities that took place under this resource within the specified time interval. Analytics aggregates might not be available for all action types.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

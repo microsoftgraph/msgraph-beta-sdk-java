@@ -65,12 +65,11 @@ public class ActiveUsersBreakdownRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/reports/userInsights/daily/activeUsersBreakdown{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a list of daily activeUsersBreakdown objects on apps registered in your tenant configured for Microsoft Entra External ID for customers.
+     * Get activeUsersBreakdown from reports
      * @return a {@link ActiveUsersBreakdownMetricCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The Active Users Breakdown Metric is deprecated and will stop returning data on February 16, 2024. Please use the existing Active Users API. as of 2024-02/Remove_Breakdown_APIs
-     * @see <a href="https://learn.microsoft.com/graph/api/dailyuserinsightmetricsroot-list-activeusersbreakdown?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -78,13 +77,12 @@ public class ActiveUsersBreakdownRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a list of daily activeUsersBreakdown objects on apps registered in your tenant configured for Microsoft Entra External ID for customers.
+     * Get activeUsersBreakdown from reports
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ActiveUsersBreakdownMetricCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The Active Users Breakdown Metric is deprecated and will stop returning data on February 16, 2024. Please use the existing Active Users API. as of 2024-02/Remove_Breakdown_APIs
-     * @see <a href="https://learn.microsoft.com/graph/api/dailyuserinsightmetricsroot-list-activeusersbreakdown?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -95,7 +93,7 @@ public class ActiveUsersBreakdownRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ActiveUsersBreakdownMetricCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of daily activeUsersBreakdown objects on apps registered in your tenant configured for Microsoft Entra External ID for customers.
+     * Get activeUsersBreakdown from reports
      * @return a {@link RequestInformation}
      * @deprecated
      * The Active Users Breakdown Metric is deprecated and will stop returning data on February 16, 2024. Please use the existing Active Users API. as of 2024-02/Remove_Breakdown_APIs
@@ -106,7 +104,7 @@ public class ActiveUsersBreakdownRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of daily activeUsersBreakdown objects on apps registered in your tenant configured for Microsoft Entra External ID for customers.
+     * Get activeUsersBreakdown from reports
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -134,7 +132,7 @@ public class ActiveUsersBreakdownRequestBuilder extends BaseRequestBuilder {
         return new ActiveUsersBreakdownRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of daily activeUsersBreakdown objects on apps registered in your tenant configured for Microsoft Entra External ID for customers.
+     * Get activeUsersBreakdown from reports
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -103,7 +103,7 @@ public class CloudPcAuditResource implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("resourceId");
     }
     /**
-     * Gets the resourceType property value. The resourceType property
+     * Gets the resourceType property value. The type of the audit resource.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -111,7 +111,7 @@ public class CloudPcAuditResource implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("resourceType");
     }
     /**
-     * Gets the type property value. The type of the audit resource.
+     * Gets the type property value. The type property
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -176,14 +176,14 @@ public class CloudPcAuditResource implements AdditionalDataHolder, BackedModel, 
         this.backingStore.set("resourceId", value);
     }
     /**
-     * Sets the resourceType property value. The resourceType property
+     * Sets the resourceType property value. The type of the audit resource.
      * @param value Value to set for the resourceType property.
      */
     public void setResourceType(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("resourceType", value);
     }
     /**
-     * Sets the type property value. The type of the audit resource.
+     * Sets the type property value. The type property
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final String value) {

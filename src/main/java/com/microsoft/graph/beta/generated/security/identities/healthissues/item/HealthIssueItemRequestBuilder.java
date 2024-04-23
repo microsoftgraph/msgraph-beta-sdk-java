@@ -55,21 +55,19 @@ public class HealthIssueItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a healthIssue object.
+     * Represents potential issues within a customer's Microsoft Defender for Identity configuration that Microsoft Defender for Identity identified.
      * @return a {@link HealthIssue}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-healthissue-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public HealthIssue get() {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a healthIssue object.
+     * Represents potential issues within a customer's Microsoft Defender for Identity configuration that Microsoft Defender for Identity identified.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link HealthIssue}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-healthissue-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public HealthIssue get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,23 +77,21 @@ public class HealthIssueItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, HealthIssue::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a healthIssue object.
+     * Update the navigation property healthIssues in security
      * @param body The request body
      * @return a {@link HealthIssue}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-healthissue-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public HealthIssue patch(@jakarta.annotation.Nonnull final HealthIssue body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of a healthIssue object.
+     * Update the navigation property healthIssues in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link HealthIssue}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-healthissue-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public HealthIssue patch(@jakarta.annotation.Nonnull final HealthIssue body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -126,7 +122,7 @@ public class HealthIssueItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a healthIssue object.
+     * Represents potential issues within a customer's Microsoft Defender for Identity configuration that Microsoft Defender for Identity identified.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -134,7 +130,7 @@ public class HealthIssueItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a healthIssue object.
+     * Represents potential issues within a customer's Microsoft Defender for Identity configuration that Microsoft Defender for Identity identified.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -146,7 +142,7 @@ public class HealthIssueItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a healthIssue object.
+     * Update the navigation property healthIssues in security
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -155,7 +151,7 @@ public class HealthIssueItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a healthIssue object.
+     * Update the navigation property healthIssues in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -186,7 +182,7 @@ public class HealthIssueItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a healthIssue object.
+     * Represents potential issues within a customer's Microsoft Defender for Identity configuration that Microsoft Defender for Identity identified.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

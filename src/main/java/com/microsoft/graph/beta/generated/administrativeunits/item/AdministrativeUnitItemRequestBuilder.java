@@ -111,7 +111,7 @@ public class AdministrativeUnitItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete an administrativeUnit.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/administrativeunit-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/administrativeunit-delete?view=graph-rest-beta">Find more info here</a>
      */
     public void delete() {
         delete(null);
@@ -120,7 +120,7 @@ public class AdministrativeUnitItemRequestBuilder extends BaseRequestBuilder {
      * Delete an administrativeUnit.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/administrativeunit-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/administrativeunit-delete?view=graph-rest-beta">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -132,7 +132,7 @@ public class AdministrativeUnitItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties and relationships of an administrativeUnit object. Since the administrativeUnit resource supports extensions, you can also use the GET operation to get custom properties and extension data in an administrativeUnit instance.
      * @return a {@link AdministrativeUnit}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/administrativeunit-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/administrativeunit-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AdministrativeUnit get() {
@@ -143,7 +143,7 @@ public class AdministrativeUnitItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AdministrativeUnit}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/administrativeunit-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/administrativeunit-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AdministrativeUnit get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -157,7 +157,7 @@ public class AdministrativeUnitItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link AdministrativeUnit}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/administrativeunit-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/administrativeunit-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AdministrativeUnit patch(@jakarta.annotation.Nonnull final AdministrativeUnit body) {
@@ -169,7 +169,7 @@ public class AdministrativeUnitItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AdministrativeUnit}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/administrativeunit-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/administrativeunit-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AdministrativeUnit patch(@jakarta.annotation.Nonnull final AdministrativeUnit body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

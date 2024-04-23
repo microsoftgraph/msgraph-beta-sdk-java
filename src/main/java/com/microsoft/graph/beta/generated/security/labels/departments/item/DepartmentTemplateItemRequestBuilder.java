@@ -55,21 +55,19 @@ public class DepartmentTemplateItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a departmentTemplate object.
+     * Specifies the department or business unit of an organization to which a label belongs.
      * @return a {@link DepartmentTemplate}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-departmenttemplate-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DepartmentTemplate get() {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a departmentTemplate object.
+     * Specifies the department or business unit of an organization to which a label belongs.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DepartmentTemplate}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-departmenttemplate-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DepartmentTemplate get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -124,7 +122,7 @@ public class DepartmentTemplateItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a departmentTemplate object.
+     * Specifies the department or business unit of an organization to which a label belongs.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -132,7 +130,7 @@ public class DepartmentTemplateItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a departmentTemplate object.
+     * Specifies the department or business unit of an organization to which a label belongs.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -184,7 +182,7 @@ public class DepartmentTemplateItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a departmentTemplate object.
+     * Specifies the department or business unit of an organization to which a label belongs.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

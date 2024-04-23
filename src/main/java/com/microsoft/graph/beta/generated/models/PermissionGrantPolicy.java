@@ -54,7 +54,7 @@ public class PermissionGrantPolicy extends PolicyBase implements Parsable {
         return this.backingStore.get("includes");
     }
     /**
-     * Gets the resourceScopeType property value. The resource type the pre-approval policy applies to. Possible values: group for groups and teams, chat for chats, tenant for all supported resources in the tenant. Required.
+     * Gets the resourceScopeType property value. The resource type the pre-approval policy applies to. Possible values: team for groups and teams, chat for chats, tenant for all supported resources in the tenant. Required.
      * @return a {@link ResourceScopeType}
      */
     @jakarta.annotation.Nullable
@@ -87,7 +87,7 @@ public class PermissionGrantPolicy extends PolicyBase implements Parsable {
         this.backingStore.set("includes", value);
     }
     /**
-     * Sets the resourceScopeType property value. The resource type the pre-approval policy applies to. Possible values: group for groups and teams, chat for chats, tenant for all supported resources in the tenant. Required.
+     * Sets the resourceScopeType property value. The resource type the pre-approval policy applies to. Possible values: team for groups and teams, chat for chats, tenant for all supported resources in the tenant. Required.
      * @param value Value to set for the resourceScopeType property.
      */
     public void setResourceScopeType(@jakarta.annotation.Nullable final ResourceScopeType value) {

@@ -64,21 +64,19 @@ public class MultiTenantOrganizationIdentitySynchronizationRequestBuilder extend
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get the cross-tenant access policy template with user synchronization settings for a multitenant organization.
+     * Defines an optional cross-tenant access policy template with user synchronization settings for a multi-tenant organization.
      * @return a {@link MultiTenantOrganizationIdentitySyncPolicyTemplate}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/multitenantorganizationidentitysyncpolicytemplate-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MultiTenantOrganizationIdentitySyncPolicyTemplate get() {
         return get(null);
     }
     /**
-     * Get the cross-tenant access policy template with user synchronization settings for a multitenant organization.
+     * Defines an optional cross-tenant access policy template with user synchronization settings for a multi-tenant organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MultiTenantOrganizationIdentitySyncPolicyTemplate}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/multitenantorganizationidentitysyncpolicytemplate-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MultiTenantOrganizationIdentitySyncPolicyTemplate get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -88,23 +86,21 @@ public class MultiTenantOrganizationIdentitySynchronizationRequestBuilder extend
         return this.requestAdapter.send(requestInfo, errorMapping, MultiTenantOrganizationIdentitySyncPolicyTemplate::createFromDiscriminatorValue);
     }
     /**
-     * Update the cross-tenant access policy template with user synchronization settings for a multi-tenant organization.
+     * Update the navigation property multiTenantOrganizationIdentitySynchronization in policies
      * @param body The request body
      * @return a {@link MultiTenantOrganizationIdentitySyncPolicyTemplate}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/multitenantorganizationidentitysyncpolicytemplate-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MultiTenantOrganizationIdentitySyncPolicyTemplate patch(@jakarta.annotation.Nonnull final MultiTenantOrganizationIdentitySyncPolicyTemplate body) {
         return patch(body, null);
     }
     /**
-     * Update the cross-tenant access policy template with user synchronization settings for a multi-tenant organization.
+     * Update the navigation property multiTenantOrganizationIdentitySynchronization in policies
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MultiTenantOrganizationIdentitySyncPolicyTemplate}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/multitenantorganizationidentitysyncpolicytemplate-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MultiTenantOrganizationIdentitySyncPolicyTemplate patch(@jakarta.annotation.Nonnull final MultiTenantOrganizationIdentitySyncPolicyTemplate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -135,7 +131,7 @@ public class MultiTenantOrganizationIdentitySynchronizationRequestBuilder extend
         return requestInfo;
     }
     /**
-     * Get the cross-tenant access policy template with user synchronization settings for a multitenant organization.
+     * Defines an optional cross-tenant access policy template with user synchronization settings for a multi-tenant organization.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -143,7 +139,7 @@ public class MultiTenantOrganizationIdentitySynchronizationRequestBuilder extend
         return toGetRequestInformation(null);
     }
     /**
-     * Get the cross-tenant access policy template with user synchronization settings for a multitenant organization.
+     * Defines an optional cross-tenant access policy template with user synchronization settings for a multi-tenant organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -155,7 +151,7 @@ public class MultiTenantOrganizationIdentitySynchronizationRequestBuilder extend
         return requestInfo;
     }
     /**
-     * Update the cross-tenant access policy template with user synchronization settings for a multi-tenant organization.
+     * Update the navigation property multiTenantOrganizationIdentitySynchronization in policies
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -164,7 +160,7 @@ public class MultiTenantOrganizationIdentitySynchronizationRequestBuilder extend
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the cross-tenant access policy template with user synchronization settings for a multi-tenant organization.
+     * Update the navigation property multiTenantOrganizationIdentitySynchronization in policies
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -195,7 +191,7 @@ public class MultiTenantOrganizationIdentitySynchronizationRequestBuilder extend
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get the cross-tenant access policy template with user synchronization settings for a multitenant organization.
+     * Defines an optional cross-tenant access policy template with user synchronization settings for a multi-tenant organization.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

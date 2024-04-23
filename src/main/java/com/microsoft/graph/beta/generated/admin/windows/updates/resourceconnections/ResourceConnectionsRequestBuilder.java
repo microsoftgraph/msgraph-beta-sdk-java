@@ -60,21 +60,19 @@ public class ResourceConnectionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/admin/windows/updates/resourceConnections{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a list of the resourceConnection objects and their properties.
+     * Service connections to external resources such as analytics workspaces.
      * @return a {@link ResourceConnectionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/adminwindowsupdates-list-resourceconnections?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ResourceConnectionCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a list of the resourceConnection objects and their properties.
+     * Service connections to external resources such as analytics workspaces.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ResourceConnectionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/adminwindowsupdates-list-resourceconnections?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ResourceConnectionCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +82,21 @@ public class ResourceConnectionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ResourceConnectionCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new operationalInsightsConnection object.
+     * Create new navigation property to resourceConnections for admin
      * @param body The request body
      * @return a {@link ResourceConnection}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/adminwindowsupdates-post-resourceconnections-operationalinsightsconnection?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ResourceConnection post(@jakarta.annotation.Nonnull final ResourceConnection body) {
         return post(body, null);
     }
     /**
-     * Create a new operationalInsightsConnection object.
+     * Create new navigation property to resourceConnections for admin
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ResourceConnection}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/adminwindowsupdates-post-resourceconnections-operationalinsightsconnection?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ResourceConnection post(@jakarta.annotation.Nonnull final ResourceConnection body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +107,7 @@ public class ResourceConnectionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ResourceConnection::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the resourceConnection objects and their properties.
+     * Service connections to external resources such as analytics workspaces.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class ResourceConnectionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the resourceConnection objects and their properties.
+     * Service connections to external resources such as analytics workspaces.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +127,7 @@ public class ResourceConnectionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new operationalInsightsConnection object.
+     * Create new navigation property to resourceConnections for admin
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class ResourceConnectionsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new operationalInsightsConnection object.
+     * Create new navigation property to resourceConnections for admin
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +161,7 @@ public class ResourceConnectionsRequestBuilder extends BaseRequestBuilder {
         return new ResourceConnectionsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the resourceConnection objects and their properties.
+     * Service connections to external resources such as analytics workspaces.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

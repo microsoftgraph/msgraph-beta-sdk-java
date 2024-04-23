@@ -63,7 +63,7 @@ public class ProgramsRequestBuilder extends BaseRequestBuilder {
      * In the Microsoft Entra access reviews feature, list all the program objects.
      * @return a {@link ProgramCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/program-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/program-list?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ProgramCollectionResponse get() {
@@ -74,7 +74,7 @@ public class ProgramsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ProgramCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/program-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/program-list?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ProgramCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -88,7 +88,7 @@ public class ProgramsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link Program}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/program-create?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/program-create?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Program post(@jakarta.annotation.Nonnull final Program body) {
@@ -100,7 +100,7 @@ public class ProgramsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Program}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/program-create?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/program-create?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Program post(@jakarta.annotation.Nonnull final Program body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

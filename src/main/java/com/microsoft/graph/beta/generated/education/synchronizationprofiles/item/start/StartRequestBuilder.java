@@ -38,7 +38,7 @@ public class StartRequestBuilder extends BaseRequestBuilder {
      * Verify the files uploaded to a specific school data synchronization profile in the tenant. If the verification is successful, synchronization starts on the profile. Otherwise, the response contains errors and warnings. If the response contains errors, the synchronization won't start. If the response contains only warnings, synchronization starts.
      * @return a {@link StartPostResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/educationsynchronizationprofile-start?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/educationsynchronizationprofile-start?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public StartPostResponse post() {
@@ -49,7 +49,7 @@ public class StartRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link StartPostResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/educationsynchronizationprofile-start?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/educationsynchronizationprofile-start?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public StartPostResponse post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

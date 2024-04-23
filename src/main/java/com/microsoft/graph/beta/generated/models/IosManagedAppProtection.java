@@ -37,7 +37,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
         return this.backingStore.get("allowedIosDeviceModels");
     }
     /**
-     * Gets the appActionIfAccountIsClockedOut property value. Defines a managed app behavior, either block or warn, if the user is clocked out (non-working time).
+     * Gets the appActionIfAccountIsClockedOut property value. Defines a managed app behavior, either block or warn, if the user is clocked out (non-working time). Possible values are: block, wipe, warn.
      * @return a {@link ManagedAppRemediationAction}
      */
     @jakarta.annotation.Nullable
@@ -263,7 +263,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
         this.backingStore.set("allowedIosDeviceModels", value);
     }
     /**
-     * Sets the appActionIfAccountIsClockedOut property value. Defines a managed app behavior, either block or warn, if the user is clocked out (non-working time).
+     * Sets the appActionIfAccountIsClockedOut property value. Defines a managed app behavior, either block or warn, if the user is clocked out (non-working time). Possible values are: block, wipe, warn.
      * @param value Value to set for the appActionIfAccountIsClockedOut property.
      */
     public void setAppActionIfAccountIsClockedOut(@jakarta.annotation.Nullable final ManagedAppRemediationAction value) {

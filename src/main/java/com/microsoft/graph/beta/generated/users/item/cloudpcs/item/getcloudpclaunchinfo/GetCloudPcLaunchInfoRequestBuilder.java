@@ -36,19 +36,21 @@ public class GetCloudPcLaunchInfoRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/cloudPCs/{cloudPC%2Did}/getCloudPcLaunchInfo()", rawUrl);
     }
     /**
-     * Invoke function getCloudPcLaunchInfo
+     * Get the cloudPCLaunchInfo for the signed-in user.
      * @return a {@link CloudPcLaunchInfo}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpc-getcloudpclaunchinfo?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPcLaunchInfo get() {
         return get(null);
     }
     /**
-     * Invoke function getCloudPcLaunchInfo
+     * Get the cloudPCLaunchInfo for the signed-in user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CloudPcLaunchInfo}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpc-getcloudpclaunchinfo?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPcLaunchInfo get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -58,7 +60,7 @@ public class GetCloudPcLaunchInfoRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CloudPcLaunchInfo::createFromDiscriminatorValue);
     }
     /**
-     * Invoke function getCloudPcLaunchInfo
+     * Get the cloudPCLaunchInfo for the signed-in user.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -66,7 +68,7 @@ public class GetCloudPcLaunchInfoRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function getCloudPcLaunchInfo
+     * Get the cloudPCLaunchInfo for the signed-in user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

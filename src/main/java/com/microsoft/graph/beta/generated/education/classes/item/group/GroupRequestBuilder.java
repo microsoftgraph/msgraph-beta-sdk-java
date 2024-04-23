@@ -46,21 +46,19 @@ public class GroupRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/classes/{educationClass%2Did}/group{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Retrieve the Microsoft 365 group that corresponds to this educationClass.
+     * Get group from education
      * @return a {@link Group}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/educationclass-get-group?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Group get() {
         return get(null);
     }
     /**
-     * Retrieve the Microsoft 365 group that corresponds to this educationClass.
+     * Get group from education
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Group}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/educationclass-get-group?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Group get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -70,7 +68,7 @@ public class GroupRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Group::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve the Microsoft 365 group that corresponds to this educationClass.
+     * Get group from education
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -78,7 +76,7 @@ public class GroupRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the Microsoft 365 group that corresponds to this educationClass.
+     * Get group from education
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -100,7 +98,7 @@ public class GroupRequestBuilder extends BaseRequestBuilder {
         return new GroupRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve the Microsoft 365 group that corresponds to this educationClass.
+     * Get group from education
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

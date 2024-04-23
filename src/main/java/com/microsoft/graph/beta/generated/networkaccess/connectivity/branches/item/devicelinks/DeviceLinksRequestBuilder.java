@@ -66,12 +66,11 @@ public class DeviceLinksRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/networkAccess/connectivity/branches/{branchSite%2Did}/deviceLinks{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Retrieve a list of device links associated with a specific branch.
+     * Each unique CPE device associated with a branch is specified. Supports $expand.
      * @return a {@link DeviceLinkCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
-     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-branchsite-list-devicelinks?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -79,13 +78,12 @@ public class DeviceLinksRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of device links associated with a specific branch.
+     * Each unique CPE device associated with a branch is specified. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DeviceLinkCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
-     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-branchsite-list-devicelinks?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -96,13 +94,12 @@ public class DeviceLinksRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceLinkCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a branch site with associated device links.
+     * Create new navigation property to deviceLinks for networkAccess
      * @param body The request body
      * @return a {@link DeviceLink}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
-     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-branchsite-post-devicelinks?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -110,14 +107,13 @@ public class DeviceLinksRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a branch site with associated device links.
+     * Create new navigation property to deviceLinks for networkAccess
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DeviceLink}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
-     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-branchsite-post-devicelinks?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -129,7 +125,7 @@ public class DeviceLinksRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceLink::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of device links associated with a specific branch.
+     * Each unique CPE device associated with a branch is specified. Supports $expand.
      * @return a {@link RequestInformation}
      * @deprecated
      * The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
@@ -140,7 +136,7 @@ public class DeviceLinksRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of device links associated with a specific branch.
+     * Each unique CPE device associated with a branch is specified. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -155,7 +151,7 @@ public class DeviceLinksRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a branch site with associated device links.
+     * Create new navigation property to deviceLinks for networkAccess
      * @param body The request body
      * @return a {@link RequestInformation}
      * @deprecated
@@ -167,7 +163,7 @@ public class DeviceLinksRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a branch site with associated device links.
+     * Create new navigation property to deviceLinks for networkAccess
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -198,7 +194,7 @@ public class DeviceLinksRequestBuilder extends BaseRequestBuilder {
         return new DeviceLinksRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of device links associated with a specific branch.
+     * Each unique CPE device associated with a branch is specified. Supports $expand.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

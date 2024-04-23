@@ -60,21 +60,19 @@ public class AwardsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/profile/awards{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Retrieve a list of personAward objects from a user's profile.
+     * Represents the details of awards or honors associated with a person.
      * @return a {@link PersonAwardCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/profile-list-awards?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PersonAwardCollectionResponse get() {
         return get(null);
     }
     /**
-     * Retrieve a list of personAward objects from a user's profile.
+     * Represents the details of awards or honors associated with a person.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PersonAwardCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/profile-list-awards?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PersonAwardCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +82,21 @@ public class AwardsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PersonAwardCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new personAward object in a user's profile.
+     * Create new navigation property to awards for users
      * @param body The request body
      * @return a {@link PersonAward}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/profile-post-awards?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PersonAward post(@jakarta.annotation.Nonnull final PersonAward body) {
         return post(body, null);
     }
     /**
-     * Create a new personAward object in a user's profile.
+     * Create new navigation property to awards for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PersonAward}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/profile-post-awards?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PersonAward post(@jakarta.annotation.Nonnull final PersonAward body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +107,7 @@ public class AwardsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PersonAward::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of personAward objects from a user's profile.
+     * Represents the details of awards or honors associated with a person.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class AwardsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of personAward objects from a user's profile.
+     * Represents the details of awards or honors associated with a person.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +127,7 @@ public class AwardsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new personAward object in a user's profile.
+     * Create new navigation property to awards for users
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class AwardsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new personAward object in a user's profile.
+     * Create new navigation property to awards for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +161,7 @@ public class AwardsRequestBuilder extends BaseRequestBuilder {
         return new AwardsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of personAward objects from a user's profile.
+     * Represents the details of awards or honors associated with a person.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

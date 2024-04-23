@@ -38,19 +38,21 @@ public class GetCredentialUsageSummaryWithPeriodRequestBuilder extends BaseReque
         super(requestAdapter, "{+baseurl}/reports/getCredentialUsageSummary(period='{period}'){?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Invoke function getCredentialUsageSummary
+     * Report the current state of how many users in your organization used the self-service password reset capabilities.
      * @return a {@link GetCredentialUsageSummaryWithPeriodGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/reportroot-getcredentialusagesummary?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetCredentialUsageSummaryWithPeriodGetResponse get() {
         return get(null);
     }
     /**
-     * Invoke function getCredentialUsageSummary
+     * Report the current state of how many users in your organization used the self-service password reset capabilities.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GetCredentialUsageSummaryWithPeriodGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/reportroot-getcredentialusagesummary?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetCredentialUsageSummaryWithPeriodGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -60,7 +62,7 @@ public class GetCredentialUsageSummaryWithPeriodRequestBuilder extends BaseReque
         return this.requestAdapter.send(requestInfo, errorMapping, GetCredentialUsageSummaryWithPeriodGetResponse::createFromDiscriminatorValue);
     }
     /**
-     * Invoke function getCredentialUsageSummary
+     * Report the current state of how many users in your organization used the self-service password reset capabilities.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +70,7 @@ public class GetCredentialUsageSummaryWithPeriodRequestBuilder extends BaseReque
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function getCredentialUsageSummary
+     * Report the current state of how many users in your organization used the self-service password reset capabilities.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -90,7 +92,7 @@ public class GetCredentialUsageSummaryWithPeriodRequestBuilder extends BaseReque
         return new GetCredentialUsageSummaryWithPeriodRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Invoke function getCredentialUsageSummary
+     * Report the current state of how many users in your organization used the self-service password reset capabilities.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

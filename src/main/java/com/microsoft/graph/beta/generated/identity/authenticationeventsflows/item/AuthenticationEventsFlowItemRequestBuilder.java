@@ -55,18 +55,16 @@ public class AuthenticationEventsFlowItemRequestBuilder extends BaseRequestBuild
         super(requestAdapter, "{+baseurl}/identity/authenticationEventsFlows/{authenticationEventsFlow%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete a specific authenticationEventsFlow resource by ID. Only externalUsersSelfServiceSignupEventsFlow object types are available.
+     * Delete navigation property authenticationEventsFlows for identity
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/authenticationeventsflow-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a specific authenticationEventsFlow resource by ID. Only externalUsersSelfServiceSignupEventsFlow object types are available.
+     * Delete navigation property authenticationEventsFlows for identity
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/authenticationeventsflow-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -75,21 +73,19 @@ public class AuthenticationEventsFlowItemRequestBuilder extends BaseRequestBuild
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties and relationships of a specific authenticationEventsFlow object by ID. Only externalUsersSelfServiceSignupEventsFlow object types are available.
+     * Represents the entry point for self-service sign up and sign in user flows in both Microsoft Entra workforce and customer tenants.
      * @return a {@link AuthenticationEventsFlow}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/authenticationeventsflow-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AuthenticationEventsFlow get() {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of a specific authenticationEventsFlow object by ID. Only externalUsersSelfServiceSignupEventsFlow object types are available.
+     * Represents the entry point for self-service sign up and sign in user flows in both Microsoft Entra workforce and customer tenants.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AuthenticationEventsFlow}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/authenticationeventsflow-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AuthenticationEventsFlow get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -99,23 +95,21 @@ public class AuthenticationEventsFlowItemRequestBuilder extends BaseRequestBuild
         return this.requestAdapter.send(requestInfo, errorMapping, AuthenticationEventsFlow::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of an authenticationEventsFlow object. Only the externalUsersSelfServiceSignupEventsFlow object type is supported.
+     * Update the navigation property authenticationEventsFlows in identity
      * @param body The request body
      * @return a {@link AuthenticationEventsFlow}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/authenticationeventsflow-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AuthenticationEventsFlow patch(@jakarta.annotation.Nonnull final AuthenticationEventsFlow body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of an authenticationEventsFlow object. Only the externalUsersSelfServiceSignupEventsFlow object type is supported.
+     * Update the navigation property authenticationEventsFlows in identity
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AuthenticationEventsFlow}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/authenticationeventsflow-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AuthenticationEventsFlow patch(@jakarta.annotation.Nonnull final AuthenticationEventsFlow body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -126,7 +120,7 @@ public class AuthenticationEventsFlowItemRequestBuilder extends BaseRequestBuild
         return this.requestAdapter.send(requestInfo, errorMapping, AuthenticationEventsFlow::createFromDiscriminatorValue);
     }
     /**
-     * Delete a specific authenticationEventsFlow resource by ID. Only externalUsersSelfServiceSignupEventsFlow object types are available.
+     * Delete navigation property authenticationEventsFlows for identity
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -134,7 +128,7 @@ public class AuthenticationEventsFlowItemRequestBuilder extends BaseRequestBuild
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a specific authenticationEventsFlow resource by ID. Only externalUsersSelfServiceSignupEventsFlow object types are available.
+     * Delete navigation property authenticationEventsFlows for identity
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -146,7 +140,7 @@ public class AuthenticationEventsFlowItemRequestBuilder extends BaseRequestBuild
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of a specific authenticationEventsFlow object by ID. Only externalUsersSelfServiceSignupEventsFlow object types are available.
+     * Represents the entry point for self-service sign up and sign in user flows in both Microsoft Entra workforce and customer tenants.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -154,7 +148,7 @@ public class AuthenticationEventsFlowItemRequestBuilder extends BaseRequestBuild
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of a specific authenticationEventsFlow object by ID. Only externalUsersSelfServiceSignupEventsFlow object types are available.
+     * Represents the entry point for self-service sign up and sign in user flows in both Microsoft Entra workforce and customer tenants.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -166,7 +160,7 @@ public class AuthenticationEventsFlowItemRequestBuilder extends BaseRequestBuild
         return requestInfo;
     }
     /**
-     * Update the properties of an authenticationEventsFlow object. Only the externalUsersSelfServiceSignupEventsFlow object type is supported.
+     * Update the navigation property authenticationEventsFlows in identity
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -175,7 +169,7 @@ public class AuthenticationEventsFlowItemRequestBuilder extends BaseRequestBuild
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of an authenticationEventsFlow object. Only the externalUsersSelfServiceSignupEventsFlow object type is supported.
+     * Update the navigation property authenticationEventsFlows in identity
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -206,7 +200,7 @@ public class AuthenticationEventsFlowItemRequestBuilder extends BaseRequestBuild
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of a specific authenticationEventsFlow object by ID. Only externalUsersSelfServiceSignupEventsFlow object types are available.
+     * Represents the entry point for self-service sign up and sign in user flows in both Microsoft Entra workforce and customer tenants.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

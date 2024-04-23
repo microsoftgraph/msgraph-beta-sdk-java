@@ -69,21 +69,19 @@ public class ResourcesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/privilegedAccess/{privilegedAccess%2Did}/resources{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Retrieve a collection of governanceResource that the requestor has access to.
+     * A collection of resources for the provider.
      * @return a {@link GovernanceResourceCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/governanceresource-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GovernanceResourceCollectionResponse get() {
         return get(null);
     }
     /**
-     * Retrieve a collection of governanceResource that the requestor has access to.
+     * A collection of resources for the provider.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GovernanceResourceCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/governanceresource-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GovernanceResourceCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -118,7 +116,7 @@ public class ResourcesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, GovernanceResource::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a collection of governanceResource that the requestor has access to.
+     * A collection of resources for the provider.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -126,7 +124,7 @@ public class ResourcesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a collection of governanceResource that the requestor has access to.
+     * A collection of resources for the provider.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -172,7 +170,7 @@ public class ResourcesRequestBuilder extends BaseRequestBuilder {
         return new ResourcesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a collection of governanceResource that the requestor has access to.
+     * A collection of resources for the provider.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

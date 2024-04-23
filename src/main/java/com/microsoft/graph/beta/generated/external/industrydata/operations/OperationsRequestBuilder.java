@@ -60,21 +60,19 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/external/industryData/operations{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a list of long-running file validation operations and their statuses.
+     * Set of ephemeral operations that the system runs currently. Read-only.
      * @return a {@link LongRunningOperationCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-filevalidateoperation-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public LongRunningOperationCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a list of long-running file validation operations and their statuses.
+     * Set of ephemeral operations that the system runs currently. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link LongRunningOperationCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-filevalidateoperation-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public LongRunningOperationCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -109,7 +107,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, LongRunningOperation::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of long-running file validation operations and their statuses.
+     * Set of ephemeral operations that the system runs currently. Read-only.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -117,7 +115,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of long-running file validation operations and their statuses.
+     * Set of ephemeral operations that the system runs currently. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -163,7 +161,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         return new OperationsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of long-running file validation operations and their statuses.
+     * Set of ephemeral operations that the system runs currently. Read-only.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

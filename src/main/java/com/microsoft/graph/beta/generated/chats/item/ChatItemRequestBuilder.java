@@ -165,7 +165,7 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Soft-delete a chat. When invoked with delegated permissions, this operation only works for tenant admins and Teams service admins.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/chat-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chat-delete?view=graph-rest-beta">Find more info here</a>
      */
     public void delete() {
         delete(null);
@@ -174,7 +174,7 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
      * Soft-delete a chat. When invoked with delegated permissions, this operation only works for tenant admins and Teams service admins.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/chat-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chat-delete?view=graph-rest-beta">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -186,7 +186,7 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve a single chat (without its messages). This method supports federation. To access a chat, at least one chat member must belong to the tenant the request initiated from.
      * @return a {@link Chat}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/chat-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chat-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Chat get() {
@@ -197,7 +197,7 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Chat}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/chat-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chat-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Chat get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -211,7 +211,7 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link Chat}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/chat-patch?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chat-patch?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Chat patch(@jakarta.annotation.Nonnull final Chat body) {
@@ -223,7 +223,7 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Chat}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/chat-patch?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chat-patch?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Chat patch(@jakarta.annotation.Nonnull final Chat body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

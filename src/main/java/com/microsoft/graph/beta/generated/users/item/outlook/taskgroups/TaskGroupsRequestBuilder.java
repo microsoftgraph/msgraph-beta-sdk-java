@@ -66,12 +66,11 @@ public class TaskGroupsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/outlook/taskGroups{?%24count,%24filter,%24orderby,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get all the Outlook task groups in the user's mailbox. The response always includes the default task group My Tasks, and any other task groups that have been created in the mailbox.
+     * Get taskGroups from users
      * @return a {@link OutlookTaskGroupCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The Outlook tasks API is deprecated and will stop returning data on February 20, 2023. Please use the new To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/ as of 2020-08/Outlook_Tasks
-     * @see <a href="https://learn.microsoft.com/graph/api/outlookuser-list-taskgroups?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -79,13 +78,12 @@ public class TaskGroupsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get all the Outlook task groups in the user's mailbox. The response always includes the default task group My Tasks, and any other task groups that have been created in the mailbox.
+     * Get taskGroups from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link OutlookTaskGroupCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The Outlook tasks API is deprecated and will stop returning data on February 20, 2023. Please use the new To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/ as of 2020-08/Outlook_Tasks
-     * @see <a href="https://learn.microsoft.com/graph/api/outlookuser-list-taskgroups?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -96,13 +94,12 @@ public class TaskGroupsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, OutlookTaskGroupCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create an Outlook task group in the user's mailbox.
+     * Create new navigation property to taskGroups for users
      * @param body The request body
      * @return a {@link OutlookTaskGroup}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The Outlook tasks API is deprecated and will stop returning data on February 20, 2023. Please use the new To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/ as of 2020-08/Outlook_Tasks
-     * @see <a href="https://learn.microsoft.com/graph/api/outlookuser-post-taskgroups?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -110,14 +107,13 @@ public class TaskGroupsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create an Outlook task group in the user's mailbox.
+     * Create new navigation property to taskGroups for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link OutlookTaskGroup}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The Outlook tasks API is deprecated and will stop returning data on February 20, 2023. Please use the new To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/ as of 2020-08/Outlook_Tasks
-     * @see <a href="https://learn.microsoft.com/graph/api/outlookuser-post-taskgroups?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -129,7 +125,7 @@ public class TaskGroupsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, OutlookTaskGroup::createFromDiscriminatorValue);
     }
     /**
-     * Get all the Outlook task groups in the user's mailbox. The response always includes the default task group My Tasks, and any other task groups that have been created in the mailbox.
+     * Get taskGroups from users
      * @return a {@link RequestInformation}
      * @deprecated
      * The Outlook tasks API is deprecated and will stop returning data on February 20, 2023. Please use the new To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/ as of 2020-08/Outlook_Tasks
@@ -140,7 +136,7 @@ public class TaskGroupsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get all the Outlook task groups in the user's mailbox. The response always includes the default task group My Tasks, and any other task groups that have been created in the mailbox.
+     * Get taskGroups from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -155,7 +151,7 @@ public class TaskGroupsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create an Outlook task group in the user's mailbox.
+     * Create new navigation property to taskGroups for users
      * @param body The request body
      * @return a {@link RequestInformation}
      * @deprecated
@@ -167,7 +163,7 @@ public class TaskGroupsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create an Outlook task group in the user's mailbox.
+     * Create new navigation property to taskGroups for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -198,7 +194,7 @@ public class TaskGroupsRequestBuilder extends BaseRequestBuilder {
         return new TaskGroupsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get all the Outlook task groups in the user's mailbox. The response always includes the default task group My Tasks, and any other task groups that have been created in the mailbox.
+     * Get taskGroups from users
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

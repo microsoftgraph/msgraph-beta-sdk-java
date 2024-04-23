@@ -96,21 +96,19 @@ public class UpdatableAssetsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/admin/windows/updates/updatableAssets{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a list of updatableAsset objects and their properties. Listing updatable assets returns updatableAsset resources of the following derived types: azureADDevice and updatableAssetGroup. Use list azureADDevice resources or list updatableAssetGroup resources to filter and get resources of only one of the derived types.
+     * Assets registered with the deployment service that can receive updates.
      * @return a {@link UpdatableAssetCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/adminwindowsupdates-list-updatableassets?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UpdatableAssetCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a list of updatableAsset objects and their properties. Listing updatable assets returns updatableAsset resources of the following derived types: azureADDevice and updatableAssetGroup. Use list azureADDevice resources or list updatableAssetGroup resources to filter and get resources of only one of the derived types.
+     * Assets registered with the deployment service that can receive updates.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UpdatableAssetCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/adminwindowsupdates-list-updatableassets?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UpdatableAssetCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -120,23 +118,21 @@ public class UpdatableAssetsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, UpdatableAssetCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new updatableAssetGroup object. The updatableAssetGroup resource inherits from updatableAsset.
+     * Create new navigation property to updatableAssets for admin
      * @param body The request body
      * @return a {@link UpdatableAsset}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/adminwindowsupdates-post-updatableassets-updatableassetgroup?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UpdatableAsset post(@jakarta.annotation.Nonnull final UpdatableAsset body) {
         return post(body, null);
     }
     /**
-     * Create a new updatableAssetGroup object. The updatableAssetGroup resource inherits from updatableAsset.
+     * Create new navigation property to updatableAssets for admin
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UpdatableAsset}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/adminwindowsupdates-post-updatableassets-updatableassetgroup?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UpdatableAsset post(@jakarta.annotation.Nonnull final UpdatableAsset body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -147,7 +143,7 @@ public class UpdatableAssetsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, UpdatableAsset::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of updatableAsset objects and their properties. Listing updatable assets returns updatableAsset resources of the following derived types: azureADDevice and updatableAssetGroup. Use list azureADDevice resources or list updatableAssetGroup resources to filter and get resources of only one of the derived types.
+     * Assets registered with the deployment service that can receive updates.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -155,7 +151,7 @@ public class UpdatableAssetsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of updatableAsset objects and their properties. Listing updatable assets returns updatableAsset resources of the following derived types: azureADDevice and updatableAssetGroup. Use list azureADDevice resources or list updatableAssetGroup resources to filter and get resources of only one of the derived types.
+     * Assets registered with the deployment service that can receive updates.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -167,7 +163,7 @@ public class UpdatableAssetsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new updatableAssetGroup object. The updatableAssetGroup resource inherits from updatableAsset.
+     * Create new navigation property to updatableAssets for admin
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -176,7 +172,7 @@ public class UpdatableAssetsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new updatableAssetGroup object. The updatableAssetGroup resource inherits from updatableAsset.
+     * Create new navigation property to updatableAssets for admin
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -201,7 +197,7 @@ public class UpdatableAssetsRequestBuilder extends BaseRequestBuilder {
         return new UpdatableAssetsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of updatableAsset objects and their properties. Listing updatable assets returns updatableAsset resources of the following derived types: azureADDevice and updatableAssetGroup. Use list azureADDevice resources or list updatableAssetGroup resources to filter and get resources of only one of the derived types.
+     * Assets registered with the deployment service that can receive updates.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

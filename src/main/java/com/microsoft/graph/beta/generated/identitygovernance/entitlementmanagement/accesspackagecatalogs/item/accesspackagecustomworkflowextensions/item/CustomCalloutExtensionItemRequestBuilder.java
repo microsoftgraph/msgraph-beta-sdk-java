@@ -61,12 +61,11 @@ public class CustomCalloutExtensionItemRequestBuilder extends BaseRequestBuilder
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of an accessPackageAssignmentRequestWorkflowExtension object.
+     * The attributes of a logic app, which can be called at various stages of an access package request and assignment cycle.
      * @return a {@link CustomCalloutExtension}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
-     * @see <a href="https://learn.microsoft.com/graph/api/accesspackageassignmentrequestworkflowextension-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -74,13 +73,12 @@ public class CustomCalloutExtensionItemRequestBuilder extends BaseRequestBuilder
         return get(null);
     }
     /**
-     * Read the properties and relationships of an accessPackageAssignmentRequestWorkflowExtension object.
+     * The attributes of a logic app, which can be called at various stages of an access package request and assignment cycle.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CustomCalloutExtension}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
-     * @see <a href="https://learn.microsoft.com/graph/api/accesspackageassignmentrequestworkflowextension-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -91,13 +89,12 @@ public class CustomCalloutExtensionItemRequestBuilder extends BaseRequestBuilder
         return this.requestAdapter.send(requestInfo, errorMapping, CustomCalloutExtension::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of an accessPackageAssignmentRequestWorkflowExtension object.
+     * Update the navigation property accessPackageCustomWorkflowExtensions in identityGovernance
      * @param body The request body
      * @return a {@link CustomCalloutExtension}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
-     * @see <a href="https://learn.microsoft.com/graph/api/accesspackageassignmentrequestworkflowextension-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -105,14 +102,13 @@ public class CustomCalloutExtensionItemRequestBuilder extends BaseRequestBuilder
         return patch(body, null);
     }
     /**
-     * Update the properties of an accessPackageAssignmentRequestWorkflowExtension object.
+     * Update the navigation property accessPackageCustomWorkflowExtensions in identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CustomCalloutExtension}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
-     * @see <a href="https://learn.microsoft.com/graph/api/accesspackageassignmentrequestworkflowextension-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -150,7 +146,7 @@ public class CustomCalloutExtensionItemRequestBuilder extends BaseRequestBuilder
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of an accessPackageAssignmentRequestWorkflowExtension object.
+     * The attributes of a logic app, which can be called at various stages of an access package request and assignment cycle.
      * @return a {@link RequestInformation}
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
@@ -161,7 +157,7 @@ public class CustomCalloutExtensionItemRequestBuilder extends BaseRequestBuilder
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of an accessPackageAssignmentRequestWorkflowExtension object.
+     * The attributes of a logic app, which can be called at various stages of an access package request and assignment cycle.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -176,7 +172,7 @@ public class CustomCalloutExtensionItemRequestBuilder extends BaseRequestBuilder
         return requestInfo;
     }
     /**
-     * Update the properties of an accessPackageAssignmentRequestWorkflowExtension object.
+     * Update the navigation property accessPackageCustomWorkflowExtensions in identityGovernance
      * @param body The request body
      * @return a {@link RequestInformation}
      * @deprecated
@@ -188,7 +184,7 @@ public class CustomCalloutExtensionItemRequestBuilder extends BaseRequestBuilder
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of an accessPackageAssignmentRequestWorkflowExtension object.
+     * Update the navigation property accessPackageCustomWorkflowExtensions in identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -225,7 +221,7 @@ public class CustomCalloutExtensionItemRequestBuilder extends BaseRequestBuilder
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of an accessPackageAssignmentRequestWorkflowExtension object.
+     * The attributes of a logic app, which can be called at various stages of an access package request and assignment cycle.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

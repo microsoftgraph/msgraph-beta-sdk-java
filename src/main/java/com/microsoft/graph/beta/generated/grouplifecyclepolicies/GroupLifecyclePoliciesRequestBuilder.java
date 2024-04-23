@@ -72,7 +72,7 @@ public class GroupLifecyclePoliciesRequestBuilder extends BaseRequestBuilder {
      * List all the groupLifecyclePolicies.
      * @return a {@link GroupLifecyclePolicyCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/grouplifecyclepolicy-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/grouplifecyclepolicy-list?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GroupLifecyclePolicyCollectionResponse get() {
@@ -83,7 +83,7 @@ public class GroupLifecyclePoliciesRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GroupLifecyclePolicyCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/grouplifecyclepolicy-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/grouplifecyclepolicy-list?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GroupLifecyclePolicyCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -97,7 +97,7 @@ public class GroupLifecyclePoliciesRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link GroupLifecyclePolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/grouplifecyclepolicy-post-grouplifecyclepolicies?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/grouplifecyclepolicy-post-grouplifecyclepolicies?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GroupLifecyclePolicy post(@jakarta.annotation.Nonnull final GroupLifecyclePolicy body) {
@@ -109,7 +109,7 @@ public class GroupLifecyclePoliciesRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GroupLifecyclePolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/grouplifecyclepolicy-post-grouplifecyclepolicies?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/grouplifecyclepolicy-post-grouplifecyclepolicies?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GroupLifecyclePolicy post(@jakarta.annotation.Nonnull final GroupLifecyclePolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

@@ -41,19 +41,21 @@ public class GetMetricsForMfaSignInSuccessWithInclusiveIntervalStartDateTimeWith
         super(requestAdapter, "{+baseurl}/reports/serviceActivity/getMetricsForMfaSignInSuccess(inclusiveIntervalStartDateTime={inclusiveIntervalStartDateTime},exclusiveIntervalEndDateTime={exclusiveIntervalEndDateTime},aggregationIntervalInMinutes=@aggregationIntervalInMinutes){?%24count,%24filter,%24search,%24skip,%24top,aggregationIntervalInMinutes*}", rawUrl);
     }
     /**
-     * Invoke function getMetricsForMfaSignInSuccess
+     * Get the number of times users successfully completed interactive MFA sign-ins using the Microsoft Entra MFA cloud service during a specified time period.
      * @return a {@link GetMetricsForMfaSignInSuccessWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/serviceactivity-getmetricsformfasigninsuccess?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetMetricsForMfaSignInSuccessWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesGetResponse get() {
         return get(null);
     }
     /**
-     * Invoke function getMetricsForMfaSignInSuccess
+     * Get the number of times users successfully completed interactive MFA sign-ins using the Microsoft Entra MFA cloud service during a specified time period.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GetMetricsForMfaSignInSuccessWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/serviceactivity-getmetricsformfasigninsuccess?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetMetricsForMfaSignInSuccessWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -63,7 +65,7 @@ public class GetMetricsForMfaSignInSuccessWithInclusiveIntervalStartDateTimeWith
         return this.requestAdapter.send(requestInfo, errorMapping, GetMetricsForMfaSignInSuccessWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesGetResponse::createFromDiscriminatorValue);
     }
     /**
-     * Invoke function getMetricsForMfaSignInSuccess
+     * Get the number of times users successfully completed interactive MFA sign-ins using the Microsoft Entra MFA cloud service during a specified time period.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -71,7 +73,7 @@ public class GetMetricsForMfaSignInSuccessWithInclusiveIntervalStartDateTimeWith
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function getMetricsForMfaSignInSuccess
+     * Get the number of times users successfully completed interactive MFA sign-ins using the Microsoft Entra MFA cloud service during a specified time period.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -93,7 +95,7 @@ public class GetMetricsForMfaSignInSuccessWithInclusiveIntervalStartDateTimeWith
         return new GetMetricsForMfaSignInSuccessWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Invoke function getMetricsForMfaSignInSuccess
+     * Get the number of times users successfully completed interactive MFA sign-ins using the Microsoft Entra MFA cloud service during a specified time period.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

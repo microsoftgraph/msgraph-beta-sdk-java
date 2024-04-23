@@ -60,21 +60,19 @@ public class DeviceCompliancePolicySettingStateSummariesRequestBuilder extends B
         super(requestAdapter, "{+baseurl}/tenantRelationships/managedTenants/deviceCompliancePolicySettingStateSummaries{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a list of the deviceCompliancePolicySettingStateSummary objects and their properties.
+     * Summary information for device compliance policy setting states across managed tenants.
      * @return a {@link DeviceCompliancePolicySettingStateSummaryCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-managedtenant-list-devicecompliancepolicysettingstatesummary?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceCompliancePolicySettingStateSummaryCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a list of the deviceCompliancePolicySettingStateSummary objects and their properties.
+     * Summary information for device compliance policy setting states across managed tenants.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DeviceCompliancePolicySettingStateSummaryCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-managedtenant-list-devicecompliancepolicysettingstatesummary?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceCompliancePolicySettingStateSummaryCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -109,7 +107,7 @@ public class DeviceCompliancePolicySettingStateSummariesRequestBuilder extends B
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceCompliancePolicySettingStateSummary::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the deviceCompliancePolicySettingStateSummary objects and their properties.
+     * Summary information for device compliance policy setting states across managed tenants.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -117,7 +115,7 @@ public class DeviceCompliancePolicySettingStateSummariesRequestBuilder extends B
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the deviceCompliancePolicySettingStateSummary objects and their properties.
+     * Summary information for device compliance policy setting states across managed tenants.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -163,7 +161,7 @@ public class DeviceCompliancePolicySettingStateSummariesRequestBuilder extends B
         return new DeviceCompliancePolicySettingStateSummariesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the deviceCompliancePolicySettingStateSummary objects and their properties.
+     * Summary information for device compliance policy setting states across managed tenants.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

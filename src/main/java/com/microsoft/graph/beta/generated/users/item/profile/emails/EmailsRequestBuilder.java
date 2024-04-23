@@ -60,21 +60,19 @@ public class EmailsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/profile/emails{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Retrieve the properties and relationships of an itemEmail object in a user's profile.
+     * Represents detailed information about email addresses associated with the user.
      * @return a {@link ItemEmailCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/profile-list-emails?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ItemEmailCollectionResponse get() {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of an itemEmail object in a user's profile.
+     * Represents detailed information about email addresses associated with the user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ItemEmailCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/profile-list-emails?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ItemEmailCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +82,21 @@ public class EmailsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ItemEmailCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new itemEmail object in a user's profile.
+     * Create new navigation property to emails for users
      * @param body The request body
      * @return a {@link ItemEmail}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/profile-post-emails?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ItemEmail post(@jakarta.annotation.Nonnull final ItemEmail body) {
         return post(body, null);
     }
     /**
-     * Create a new itemEmail object in a user's profile.
+     * Create new navigation property to emails for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ItemEmail}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/profile-post-emails?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ItemEmail post(@jakarta.annotation.Nonnull final ItemEmail body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +107,7 @@ public class EmailsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ItemEmail::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve the properties and relationships of an itemEmail object in a user's profile.
+     * Represents detailed information about email addresses associated with the user.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class EmailsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of an itemEmail object in a user's profile.
+     * Represents detailed information about email addresses associated with the user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +127,7 @@ public class EmailsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new itemEmail object in a user's profile.
+     * Create new navigation property to emails for users
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class EmailsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new itemEmail object in a user's profile.
+     * Create new navigation property to emails for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +161,7 @@ public class EmailsRequestBuilder extends BaseRequestBuilder {
         return new EmailsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve the properties and relationships of an itemEmail object in a user's profile.
+     * Represents detailed information about email addresses associated with the user.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

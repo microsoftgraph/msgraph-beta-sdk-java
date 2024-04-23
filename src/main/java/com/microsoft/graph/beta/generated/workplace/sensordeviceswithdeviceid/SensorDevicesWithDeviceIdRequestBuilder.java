@@ -39,18 +39,16 @@ public class SensorDevicesWithDeviceIdRequestBuilder extends BaseRequestBuilder 
         super(requestAdapter, "{+baseurl}/workplace/sensorDevices(deviceId='{deviceId}'){?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete a workplace sensor device.
+     * Delete navigation property sensorDevices for workplace
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/workplacesensordevice-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a workplace sensor device.
+     * Delete navigation property sensorDevices for workplace
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/workplacesensordevice-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -59,21 +57,19 @@ public class SensorDevicesWithDeviceIdRequestBuilder extends BaseRequestBuilder 
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get the properties of a workplace sensor device, including tags, MAC address, sensors, and more.
+     * A collection of sensor devices.
      * @return a {@link WorkplaceSensorDevice}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/workplacesensordevice-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WorkplaceSensorDevice get() {
         return get(null);
     }
     /**
-     * Get the properties of a workplace sensor device, including tags, MAC address, sensors, and more.
+     * A collection of sensor devices.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link WorkplaceSensorDevice}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/workplacesensordevice-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WorkplaceSensorDevice get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -83,23 +79,21 @@ public class SensorDevicesWithDeviceIdRequestBuilder extends BaseRequestBuilder 
         return this.requestAdapter.send(requestInfo, errorMapping, WorkplaceSensorDevice::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a workplace sensor device.
+     * Update the navigation property sensorDevices in workplace
      * @param body The request body
      * @return a {@link WorkplaceSensorDevice}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/workplacesensordevice-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WorkplaceSensorDevice patch(@jakarta.annotation.Nonnull final WorkplaceSensorDevice body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of a workplace sensor device.
+     * Update the navigation property sensorDevices in workplace
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link WorkplaceSensorDevice}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/workplacesensordevice-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WorkplaceSensorDevice patch(@jakarta.annotation.Nonnull final WorkplaceSensorDevice body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -110,7 +104,7 @@ public class SensorDevicesWithDeviceIdRequestBuilder extends BaseRequestBuilder 
         return this.requestAdapter.send(requestInfo, errorMapping, WorkplaceSensorDevice::createFromDiscriminatorValue);
     }
     /**
-     * Delete a workplace sensor device.
+     * Delete navigation property sensorDevices for workplace
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -118,7 +112,7 @@ public class SensorDevicesWithDeviceIdRequestBuilder extends BaseRequestBuilder 
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a workplace sensor device.
+     * Delete navigation property sensorDevices for workplace
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -130,7 +124,7 @@ public class SensorDevicesWithDeviceIdRequestBuilder extends BaseRequestBuilder 
         return requestInfo;
     }
     /**
-     * Get the properties of a workplace sensor device, including tags, MAC address, sensors, and more.
+     * A collection of sensor devices.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -138,7 +132,7 @@ public class SensorDevicesWithDeviceIdRequestBuilder extends BaseRequestBuilder 
         return toGetRequestInformation(null);
     }
     /**
-     * Get the properties of a workplace sensor device, including tags, MAC address, sensors, and more.
+     * A collection of sensor devices.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -150,7 +144,7 @@ public class SensorDevicesWithDeviceIdRequestBuilder extends BaseRequestBuilder 
         return requestInfo;
     }
     /**
-     * Update the properties of a workplace sensor device.
+     * Update the navigation property sensorDevices in workplace
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -159,7 +153,7 @@ public class SensorDevicesWithDeviceIdRequestBuilder extends BaseRequestBuilder 
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a workplace sensor device.
+     * Update the navigation property sensorDevices in workplace
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -190,7 +184,7 @@ public class SensorDevicesWithDeviceIdRequestBuilder extends BaseRequestBuilder 
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get the properties of a workplace sensor device, including tags, MAC address, sensors, and more.
+     * A collection of sensor devices.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

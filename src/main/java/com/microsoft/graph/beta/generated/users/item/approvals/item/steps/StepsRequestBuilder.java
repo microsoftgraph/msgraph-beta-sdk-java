@@ -60,21 +60,19 @@ public class StepsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/approvals/{approval%2Did}/steps{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * List the approvalStep objects associated with an approval. This API request is made by an approver in the following scenarios:
+     * Used to represent the decision associated with a single step in the approval process configured in approvalStage.
      * @return a {@link ApprovalStepCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/approval-list-steps?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ApprovalStepCollectionResponse get() {
         return get(null);
     }
     /**
-     * List the approvalStep objects associated with an approval. This API request is made by an approver in the following scenarios:
+     * Used to represent the decision associated with a single step in the approval process configured in approvalStage.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ApprovalStepCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/approval-list-steps?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ApprovalStepCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -109,7 +107,7 @@ public class StepsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ApprovalStep::createFromDiscriminatorValue);
     }
     /**
-     * List the approvalStep objects associated with an approval. This API request is made by an approver in the following scenarios:
+     * Used to represent the decision associated with a single step in the approval process configured in approvalStage.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -117,7 +115,7 @@ public class StepsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List the approvalStep objects associated with an approval. This API request is made by an approver in the following scenarios:
+     * Used to represent the decision associated with a single step in the approval process configured in approvalStage.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -163,7 +161,7 @@ public class StepsRequestBuilder extends BaseRequestBuilder {
         return new StepsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List the approvalStep objects associated with an approval. This API request is made by an approver in the following scenarios:
+     * Used to represent the decision associated with a single step in the approval process configured in approvalStage.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

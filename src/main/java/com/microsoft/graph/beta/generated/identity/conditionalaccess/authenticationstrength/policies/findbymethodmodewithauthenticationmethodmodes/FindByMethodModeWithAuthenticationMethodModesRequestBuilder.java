@@ -38,11 +38,12 @@ public class FindByMethodModeWithAuthenticationMethodModesRequestBuilder extends
         super(requestAdapter, "{+baseurl}/identity/conditionalAccess/authenticationStrength/policies/findByMethodMode(authenticationMethodModes={authenticationMethodModes}){?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Invoke function findByMethodMode
+     * Get a list of the authenticationStrengthPolicy objects and their properties filtered to only include policies that include the authentication method mode specified in the request.
      * @return a {@link FindByMethodModeWithAuthenticationMethodModesGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The findByMethodMode function is deprecated. Please use OData filter query instead. as of 2023-02/FindByMethodModeRemove
+     * @see <a href="https://learn.microsoft.com/graph/api/authenticationstrengthpolicy-findbymethodmode?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -50,12 +51,13 @@ public class FindByMethodModeWithAuthenticationMethodModesRequestBuilder extends
         return get(null);
     }
     /**
-     * Invoke function findByMethodMode
+     * Get a list of the authenticationStrengthPolicy objects and their properties filtered to only include policies that include the authentication method mode specified in the request.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link FindByMethodModeWithAuthenticationMethodModesGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The findByMethodMode function is deprecated. Please use OData filter query instead. as of 2023-02/FindByMethodModeRemove
+     * @see <a href="https://learn.microsoft.com/graph/api/authenticationstrengthpolicy-findbymethodmode?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -66,7 +68,7 @@ public class FindByMethodModeWithAuthenticationMethodModesRequestBuilder extends
         return this.requestAdapter.send(requestInfo, errorMapping, FindByMethodModeWithAuthenticationMethodModesGetResponse::createFromDiscriminatorValue);
     }
     /**
-     * Invoke function findByMethodMode
+     * Get a list of the authenticationStrengthPolicy objects and their properties filtered to only include policies that include the authentication method mode specified in the request.
      * @return a {@link RequestInformation}
      * @deprecated
      * The findByMethodMode function is deprecated. Please use OData filter query instead. as of 2023-02/FindByMethodModeRemove
@@ -77,7 +79,7 @@ public class FindByMethodModeWithAuthenticationMethodModesRequestBuilder extends
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function findByMethodMode
+     * Get a list of the authenticationStrengthPolicy objects and their properties filtered to only include policies that include the authentication method mode specified in the request.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -105,7 +107,7 @@ public class FindByMethodModeWithAuthenticationMethodModesRequestBuilder extends
         return new FindByMethodModeWithAuthenticationMethodModesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Invoke function findByMethodMode
+     * Get a list of the authenticationStrengthPolicy objects and their properties filtered to only include policies that include the authentication method mode specified in the request.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

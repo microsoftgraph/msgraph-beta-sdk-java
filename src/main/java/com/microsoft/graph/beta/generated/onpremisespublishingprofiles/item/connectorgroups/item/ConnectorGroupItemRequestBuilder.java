@@ -77,18 +77,16 @@ public class ConnectorGroupItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/onPremisesPublishingProfiles/{onPremisesPublishingProfile%2Did}/connectorGroups/{connectorGroup%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete a connectorGroup. All connectors and applications must be removed from the connector group before a connector group can be deleted.
+     * Delete navigation property connectorGroups for onPremisesPublishingProfiles
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/connectorgroup-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a connectorGroup. All connectors and applications must be removed from the connector group before a connector group can be deleted.
+     * Delete navigation property connectorGroups for onPremisesPublishingProfiles
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/connectorgroup-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -97,21 +95,19 @@ public class ConnectorGroupItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties of a connectorGroup.
+     * List of existing connectorGroup objects for applications published through Application Proxy. Read-only. Nullable.
      * @return a {@link ConnectorGroup}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/connectorgroup-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ConnectorGroup get() {
         return get(null);
     }
     /**
-     * Retrieve the properties of a connectorGroup.
+     * List of existing connectorGroup objects for applications published through Application Proxy. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ConnectorGroup}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/connectorgroup-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ConnectorGroup get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -121,23 +117,21 @@ public class ConnectorGroupItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ConnectorGroup::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a connectorGroup object.
+     * Update the navigation property connectorGroups in onPremisesPublishingProfiles
      * @param body The request body
      * @return a {@link ConnectorGroup}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/connectorgroup-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ConnectorGroup patch(@jakarta.annotation.Nonnull final ConnectorGroup body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of a connectorGroup object.
+     * Update the navigation property connectorGroups in onPremisesPublishingProfiles
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ConnectorGroup}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/connectorgroup-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ConnectorGroup patch(@jakarta.annotation.Nonnull final ConnectorGroup body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -148,7 +142,7 @@ public class ConnectorGroupItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ConnectorGroup::createFromDiscriminatorValue);
     }
     /**
-     * Delete a connectorGroup. All connectors and applications must be removed from the connector group before a connector group can be deleted.
+     * Delete navigation property connectorGroups for onPremisesPublishingProfiles
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -156,7 +150,7 @@ public class ConnectorGroupItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a connectorGroup. All connectors and applications must be removed from the connector group before a connector group can be deleted.
+     * Delete navigation property connectorGroups for onPremisesPublishingProfiles
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -168,7 +162,7 @@ public class ConnectorGroupItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties of a connectorGroup.
+     * List of existing connectorGroup objects for applications published through Application Proxy. Read-only. Nullable.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -176,7 +170,7 @@ public class ConnectorGroupItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties of a connectorGroup.
+     * List of existing connectorGroup objects for applications published through Application Proxy. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -188,7 +182,7 @@ public class ConnectorGroupItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a connectorGroup object.
+     * Update the navigation property connectorGroups in onPremisesPublishingProfiles
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -197,7 +191,7 @@ public class ConnectorGroupItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a connectorGroup object.
+     * Update the navigation property connectorGroups in onPremisesPublishingProfiles
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -228,7 +222,7 @@ public class ConnectorGroupItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties of a connectorGroup.
+     * List of existing connectorGroup objects for applications published through Application Proxy. Read-only. Nullable.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

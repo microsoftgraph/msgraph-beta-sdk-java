@@ -37,18 +37,16 @@ public class PermissionGrantConditionSetItemRequestBuilder extends BaseRequestBu
         super(requestAdapter, "{+baseurl}/policies/permissionGrantPolicies/{permissionGrantPolicy%2Did}/excludes/{permissionGrantConditionSet%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Deletes a permissionGrantConditionSet from the excludes collection of a permissionGrantPolicy.
+     * Delete navigation property excludes for policies
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/permissiongrantpolicy-delete-excludes?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Deletes a permissionGrantConditionSet from the excludes collection of a permissionGrantPolicy.
+     * Delete navigation property excludes for policies
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/permissiongrantpolicy-delete-excludes?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -104,7 +102,7 @@ public class PermissionGrantConditionSetItemRequestBuilder extends BaseRequestBu
         return this.requestAdapter.send(requestInfo, errorMapping, PermissionGrantConditionSet::createFromDiscriminatorValue);
     }
     /**
-     * Deletes a permissionGrantConditionSet from the excludes collection of a permissionGrantPolicy.
+     * Delete navigation property excludes for policies
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -112,7 +110,7 @@ public class PermissionGrantConditionSetItemRequestBuilder extends BaseRequestBu
         return toDeleteRequestInformation(null);
     }
     /**
-     * Deletes a permissionGrantConditionSet from the excludes collection of a permissionGrantPolicy.
+     * Delete navigation property excludes for policies
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

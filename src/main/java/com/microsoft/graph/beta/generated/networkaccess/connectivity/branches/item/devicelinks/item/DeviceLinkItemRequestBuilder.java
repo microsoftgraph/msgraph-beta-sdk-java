@@ -37,23 +37,21 @@ public class DeviceLinkItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/networkAccess/connectivity/branches/{branchSite%2Did}/deviceLinks/{deviceLink%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Removes the link between the branch or remote network and the CPE device, effectively removing the connection and associated configuration between them.
+     * Delete navigation property deviceLinks for networkAccess
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
-     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-branchsite-delete-devicelinks?view=graph-rest-1.0">Find more info here</a>
      */
     @Deprecated
     public void delete() {
         delete(null);
     }
     /**
-     * Removes the link between the branch or remote network and the CPE device, effectively removing the connection and associated configuration between them.
+     * Delete navigation property deviceLinks for networkAccess
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
-     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-branchsite-delete-devicelinks?view=graph-rest-1.0">Find more info here</a>
      */
     @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -91,13 +89,12 @@ public class DeviceLinkItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceLink::createFromDiscriminatorValue);
     }
     /**
-     * Update the device link associated with a specific branch or remote network.
+     * Update the navigation property deviceLinks in networkAccess
      * @param body The request body
      * @return a {@link DeviceLink}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
-     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-devicelink-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -105,14 +102,13 @@ public class DeviceLinkItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the device link associated with a specific branch or remote network.
+     * Update the navigation property deviceLinks in networkAccess
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DeviceLink}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
-     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-devicelink-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -124,7 +120,7 @@ public class DeviceLinkItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceLink::createFromDiscriminatorValue);
     }
     /**
-     * Removes the link between the branch or remote network and the CPE device, effectively removing the connection and associated configuration between them.
+     * Delete navigation property deviceLinks for networkAccess
      * @return a {@link RequestInformation}
      * @deprecated
      * The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
@@ -135,7 +131,7 @@ public class DeviceLinkItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Removes the link between the branch or remote network and the CPE device, effectively removing the connection and associated configuration between them.
+     * Delete navigation property deviceLinks for networkAccess
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -176,7 +172,7 @@ public class DeviceLinkItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the device link associated with a specific branch or remote network.
+     * Update the navigation property deviceLinks in networkAccess
      * @param body The request body
      * @return a {@link RequestInformation}
      * @deprecated
@@ -188,7 +184,7 @@ public class DeviceLinkItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the device link associated with a specific branch or remote network.
+     * Update the navigation property deviceLinks in networkAccess
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

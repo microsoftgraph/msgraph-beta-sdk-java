@@ -60,21 +60,19 @@ public class PatentsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/profile/patents{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Retrieve a list of itemPatent objects from a user's profile.
+     * Represents patents that a user has added to their profile.
      * @return a {@link ItemPatentCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/profile-list-patents?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ItemPatentCollectionResponse get() {
         return get(null);
     }
     /**
-     * Retrieve a list of itemPatent objects from a user's profile.
+     * Represents patents that a user has added to their profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ItemPatentCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/profile-list-patents?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ItemPatentCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +82,21 @@ public class PatentsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ItemPatentCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new itemPatent object within a user's profile.
+     * Create new navigation property to patents for users
      * @param body The request body
      * @return a {@link ItemPatent}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/profile-post-patents?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ItemPatent post(@jakarta.annotation.Nonnull final ItemPatent body) {
         return post(body, null);
     }
     /**
-     * Create a new itemPatent object within a user's profile.
+     * Create new navigation property to patents for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ItemPatent}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/profile-post-patents?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ItemPatent post(@jakarta.annotation.Nonnull final ItemPatent body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +107,7 @@ public class PatentsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ItemPatent::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of itemPatent objects from a user's profile.
+     * Represents patents that a user has added to their profile.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class PatentsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of itemPatent objects from a user's profile.
+     * Represents patents that a user has added to their profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +127,7 @@ public class PatentsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new itemPatent object within a user's profile.
+     * Create new navigation property to patents for users
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class PatentsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new itemPatent object within a user's profile.
+     * Create new navigation property to patents for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +161,7 @@ public class PatentsRequestBuilder extends BaseRequestBuilder {
         return new PatentsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of itemPatent objects from a user's profile.
+     * Represents patents that a user has added to their profile.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

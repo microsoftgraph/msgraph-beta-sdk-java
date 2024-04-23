@@ -35,19 +35,21 @@ public class UploadUrlRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/synchronizationProfiles/{educationSynchronizationProfile%2Did}/uploadUrl()", rawUrl);
     }
     /**
-     * Invoke function uploadUrl
+     * Retrieve a shared access signature (SAS) for uploading source files to Azure blob storage for a specific school data synchronization profile in the tenant. The SAS token has a validity of one hour. The upload URL is provided only for the CSV data provider.
      * @return a {@link UploadUrlGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/educationsynchronizationprofile-uploadurl?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UploadUrlGetResponse get() {
         return get(null);
     }
     /**
-     * Invoke function uploadUrl
+     * Retrieve a shared access signature (SAS) for uploading source files to Azure blob storage for a specific school data synchronization profile in the tenant. The SAS token has a validity of one hour. The upload URL is provided only for the CSV data provider.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UploadUrlGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/educationsynchronizationprofile-uploadurl?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UploadUrlGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -57,7 +59,7 @@ public class UploadUrlRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, UploadUrlGetResponse::createFromDiscriminatorValue);
     }
     /**
-     * Invoke function uploadUrl
+     * Retrieve a shared access signature (SAS) for uploading source files to Azure blob storage for a specific school data synchronization profile in the tenant. The SAS token has a validity of one hour. The upload URL is provided only for the CSV data provider.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -65,7 +67,7 @@ public class UploadUrlRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function uploadUrl
+     * Retrieve a shared access signature (SAS) for uploading source files to Azure blob storage for a specific school data synchronization profile in the tenant. The SAS token has a validity of one hour. The upload URL is provided only for the CSV data provider.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

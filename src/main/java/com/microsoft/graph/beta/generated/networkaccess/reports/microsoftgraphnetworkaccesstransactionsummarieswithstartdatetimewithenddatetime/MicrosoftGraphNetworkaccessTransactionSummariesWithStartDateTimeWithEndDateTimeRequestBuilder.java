@@ -41,19 +41,21 @@ public class MicrosoftGraphNetworkaccessTransactionSummariesWithStartDateTimeWit
         super(requestAdapter, "{+baseurl}/networkAccess/reports/microsoft.graph.networkaccess.transactionSummaries(startDateTime={startDateTime},endDateTime={endDateTime}){?%24count,%24filter,%24search,%24skip,%24top}", rawUrl);
     }
     /**
-     * Invoke function transactionSummaries
+     * Get the total number of transactions and the number of blocked transactions, grouped by traffic type.
      * @return a {@link TransactionSummariesWithStartDateTimeWithEndDateTimeGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-reports-transactionsummaries?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TransactionSummariesWithStartDateTimeWithEndDateTimeGetResponse get() {
         return get(null);
     }
     /**
-     * Invoke function transactionSummaries
+     * Get the total number of transactions and the number of blocked transactions, grouped by traffic type.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TransactionSummariesWithStartDateTimeWithEndDateTimeGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-reports-transactionsummaries?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TransactionSummariesWithStartDateTimeWithEndDateTimeGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -63,7 +65,7 @@ public class MicrosoftGraphNetworkaccessTransactionSummariesWithStartDateTimeWit
         return this.requestAdapter.send(requestInfo, errorMapping, TransactionSummariesWithStartDateTimeWithEndDateTimeGetResponse::createFromDiscriminatorValue);
     }
     /**
-     * Invoke function transactionSummaries
+     * Get the total number of transactions and the number of blocked transactions, grouped by traffic type.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -71,7 +73,7 @@ public class MicrosoftGraphNetworkaccessTransactionSummariesWithStartDateTimeWit
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function transactionSummaries
+     * Get the total number of transactions and the number of blocked transactions, grouped by traffic type.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -93,7 +95,7 @@ public class MicrosoftGraphNetworkaccessTransactionSummariesWithStartDateTimeWit
         return new MicrosoftGraphNetworkaccessTransactionSummariesWithStartDateTimeWithEndDateTimeRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Invoke function transactionSummaries
+     * Get the total number of transactions and the number of blocked transactions, grouped by traffic type.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

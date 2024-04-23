@@ -42,7 +42,7 @@ public class ExtractLabelRequestBuilder extends BaseRequestBuilder {
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels
-     * @see <a href="https://learn.microsoft.com/graph/api/informationprotectionlabel-extractlabel?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/informationprotectionlabel-extractlabel?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -57,7 +57,7 @@ public class ExtractLabelRequestBuilder extends BaseRequestBuilder {
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels
-     * @see <a href="https://learn.microsoft.com/graph/api/informationprotectionlabel-extractlabel?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/informationprotectionlabel-extractlabel?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated

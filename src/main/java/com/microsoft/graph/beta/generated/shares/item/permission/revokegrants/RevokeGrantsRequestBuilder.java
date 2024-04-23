@@ -36,23 +36,23 @@ public class RevokeGrantsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/shares/{sharedDriveItem%2Did}/permission/revokeGrants", rawUrl);
     }
     /**
-     * Revoke access to a [listItem][] or [driveItem][] granted via a sharing link by removing the specified [recipient][] from the link.
+     * Revoke access to a listItem or driveItem granted via a sharing link by removing the specified recipient from the link.
      * @param body The request body
      * @return a {@link Permission}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/permission-revokegrants?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/permission-revokegrants?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Permission post(@jakarta.annotation.Nonnull final RevokeGrantsPostRequestBody body) {
         return post(body, null);
     }
     /**
-     * Revoke access to a [listItem][] or [driveItem][] granted via a sharing link by removing the specified [recipient][] from the link.
+     * Revoke access to a listItem or driveItem granted via a sharing link by removing the specified recipient from the link.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Permission}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/permission-revokegrants?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/permission-revokegrants?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Permission post(@jakarta.annotation.Nonnull final RevokeGrantsPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -63,7 +63,7 @@ public class RevokeGrantsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Permission::createFromDiscriminatorValue);
     }
     /**
-     * Revoke access to a [listItem][] or [driveItem][] granted via a sharing link by removing the specified [recipient][] from the link.
+     * Revoke access to a listItem or driveItem granted via a sharing link by removing the specified recipient from the link.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -72,7 +72,7 @@ public class RevokeGrantsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Revoke access to a [listItem][] or [driveItem][] granted via a sharing link by removing the specified [recipient][] from the link.
+     * Revoke access to a listItem or driveItem granted via a sharing link by removing the specified recipient from the link.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

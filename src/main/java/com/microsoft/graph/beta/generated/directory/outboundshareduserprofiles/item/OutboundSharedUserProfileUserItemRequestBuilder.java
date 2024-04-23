@@ -64,21 +64,19 @@ public class OutboundSharedUserProfileUserItemRequestBuilder extends BaseRequest
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get the details of an outboundSharedUserProfile.
+     * Get outboundSharedUserProfiles from directory
      * @return a {@link OutboundSharedUserProfile}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/outboundshareduserprofile-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public OutboundSharedUserProfile get() {
         return get(null);
     }
     /**
-     * Get the details of an outboundSharedUserProfile.
+     * Get outboundSharedUserProfiles from directory
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link OutboundSharedUserProfile}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/outboundshareduserprofile-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public OutboundSharedUserProfile get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -133,7 +131,7 @@ public class OutboundSharedUserProfileUserItemRequestBuilder extends BaseRequest
         return requestInfo;
     }
     /**
-     * Get the details of an outboundSharedUserProfile.
+     * Get outboundSharedUserProfiles from directory
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -141,7 +139,7 @@ public class OutboundSharedUserProfileUserItemRequestBuilder extends BaseRequest
         return toGetRequestInformation(null);
     }
     /**
-     * Get the details of an outboundSharedUserProfile.
+     * Get outboundSharedUserProfiles from directory
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -193,7 +191,7 @@ public class OutboundSharedUserProfileUserItemRequestBuilder extends BaseRequest
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get the details of an outboundSharedUserProfile.
+     * Get outboundSharedUserProfiles from directory
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

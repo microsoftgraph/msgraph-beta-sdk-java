@@ -177,7 +177,7 @@ public class WindowsAutopilotDeploymentProfile extends Entity implements Parsabl
         return this.backingStore.get("locale");
     }
     /**
-     * Gets the managementServiceAppId property value. AzureAD management app ID used during client device-based enrollment discovery
+     * Gets the managementServiceAppId property value. The Entra management service App ID which gets used during client device-based enrollment discovery. Supports: $select, $top, $skip. $Search, $orderBy and $filter are not supported.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -342,7 +342,7 @@ public class WindowsAutopilotDeploymentProfile extends Entity implements Parsabl
         this.backingStore.set("locale", value);
     }
     /**
-     * Sets the managementServiceAppId property value. AzureAD management app ID used during client device-based enrollment discovery
+     * Sets the managementServiceAppId property value. The Entra management service App ID which gets used during client device-based enrollment discovery. Supports: $select, $top, $skip. $Search, $orderBy and $filter are not supported.
      * @param value Value to set for the managementServiceAppId property.
      */
     public void setManagementServiceAppId(@jakarta.annotation.Nullable final String value) {

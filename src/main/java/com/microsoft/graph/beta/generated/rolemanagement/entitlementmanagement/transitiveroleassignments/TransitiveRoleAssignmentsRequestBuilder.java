@@ -63,7 +63,6 @@ public class TransitiveRoleAssignmentsRequestBuilder extends BaseRequestBuilder 
      * Get transitiveRoleAssignments from roleManagement
      * @return a {@link UnifiedRoleAssignmentCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/rbacapplication-list-transitiveroleassignments?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UnifiedRoleAssignmentCollectionResponse get() {
@@ -74,7 +73,6 @@ public class TransitiveRoleAssignmentsRequestBuilder extends BaseRequestBuilder 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UnifiedRoleAssignmentCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/rbacapplication-list-transitiveroleassignments?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UnifiedRoleAssignmentCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

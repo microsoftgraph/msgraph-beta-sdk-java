@@ -60,21 +60,19 @@ public class HealthIssuesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/identities/healthIssues{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a list of health issue objects and their properties.
+     * Represents potential issues within a customer's Microsoft Defender for Identity configuration that Microsoft Defender for Identity identified.
      * @return a {@link HealthIssueCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-identitycontainer-list-healthissues?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public HealthIssueCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a list of health issue objects and their properties.
+     * Represents potential issues within a customer's Microsoft Defender for Identity configuration that Microsoft Defender for Identity identified.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link HealthIssueCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-identitycontainer-list-healthissues?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public HealthIssueCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -109,7 +107,7 @@ public class HealthIssuesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, HealthIssue::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of health issue objects and their properties.
+     * Represents potential issues within a customer's Microsoft Defender for Identity configuration that Microsoft Defender for Identity identified.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -117,7 +115,7 @@ public class HealthIssuesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of health issue objects and their properties.
+     * Represents potential issues within a customer's Microsoft Defender for Identity configuration that Microsoft Defender for Identity identified.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -163,7 +161,7 @@ public class HealthIssuesRequestBuilder extends BaseRequestBuilder {
         return new HealthIssuesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of health issue objects and their properties.
+     * Represents potential issues within a customer's Microsoft Defender for Identity configuration that Microsoft Defender for Identity identified.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

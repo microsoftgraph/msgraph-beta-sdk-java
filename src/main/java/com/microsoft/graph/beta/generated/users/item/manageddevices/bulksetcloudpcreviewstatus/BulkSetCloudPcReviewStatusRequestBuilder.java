@@ -40,7 +40,7 @@ public class BulkSetCloudPcReviewStatusRequestBuilder extends BaseRequestBuilder
      * @param body The request body
      * @return a {@link CloudPcBulkRemoteActionResult}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/manageddevice-bulksetcloudpcreviewstatus?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/manageddevice-bulksetcloudpcreviewstatus?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPcBulkRemoteActionResult post(@jakarta.annotation.Nonnull final BulkSetCloudPcReviewStatusPostRequestBody body) {
@@ -52,7 +52,7 @@ public class BulkSetCloudPcReviewStatusRequestBuilder extends BaseRequestBuilder
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CloudPcBulkRemoteActionResult}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/manageddevice-bulksetcloudpcreviewstatus?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/manageddevice-bulksetcloudpcreviewstatus?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPcBulkRemoteActionResult post(@jakarta.annotation.Nonnull final BulkSetCloudPcReviewStatusPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

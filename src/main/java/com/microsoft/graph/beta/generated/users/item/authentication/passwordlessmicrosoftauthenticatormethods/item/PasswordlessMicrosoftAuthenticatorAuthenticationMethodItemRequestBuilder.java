@@ -46,18 +46,16 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethodItemRequestBu
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Deletes a user's Microsoft Authenticator Passwordless Phone Sign-in method object.
+     * Delete navigation property passwordlessMicrosoftAuthenticatorMethods for users
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/passwordlessmicrosoftauthenticatorauthenticationmethod-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Deletes a user's Microsoft Authenticator Passwordless Phone Sign-in method object.
+     * Delete navigation property passwordlessMicrosoftAuthenticatorMethods for users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/passwordlessmicrosoftauthenticatorauthenticationmethod-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -66,21 +64,19 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethodItemRequestBu
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve a user's single Microsoft Authenticator Passwordless Phone Sign-in method object.
+     * Represents the Microsoft Authenticator Passwordless Phone Sign-in methods registered to a user for authentication.
      * @return a {@link PasswordlessMicrosoftAuthenticatorAuthenticationMethod}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/passwordlessmicrosoftauthenticatorauthenticationmethod-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PasswordlessMicrosoftAuthenticatorAuthenticationMethod get() {
         return get(null);
     }
     /**
-     * Retrieve a user's single Microsoft Authenticator Passwordless Phone Sign-in method object.
+     * Represents the Microsoft Authenticator Passwordless Phone Sign-in methods registered to a user for authentication.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PasswordlessMicrosoftAuthenticatorAuthenticationMethod}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/passwordlessmicrosoftauthenticatorauthenticationmethod-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PasswordlessMicrosoftAuthenticatorAuthenticationMethod get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -90,7 +86,7 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethodItemRequestBu
         return this.requestAdapter.send(requestInfo, errorMapping, PasswordlessMicrosoftAuthenticatorAuthenticationMethod::createFromDiscriminatorValue);
     }
     /**
-     * Deletes a user's Microsoft Authenticator Passwordless Phone Sign-in method object.
+     * Delete navigation property passwordlessMicrosoftAuthenticatorMethods for users
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -98,7 +94,7 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethodItemRequestBu
         return toDeleteRequestInformation(null);
     }
     /**
-     * Deletes a user's Microsoft Authenticator Passwordless Phone Sign-in method object.
+     * Delete navigation property passwordlessMicrosoftAuthenticatorMethods for users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -110,7 +106,7 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethodItemRequestBu
         return requestInfo;
     }
     /**
-     * Retrieve a user's single Microsoft Authenticator Passwordless Phone Sign-in method object.
+     * Represents the Microsoft Authenticator Passwordless Phone Sign-in methods registered to a user for authentication.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -118,7 +114,7 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethodItemRequestBu
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a user's single Microsoft Authenticator Passwordless Phone Sign-in method object.
+     * Represents the Microsoft Authenticator Passwordless Phone Sign-in methods registered to a user for authentication.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -146,7 +142,7 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethodItemRequestBu
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve a user's single Microsoft Authenticator Passwordless Phone Sign-in method object.
+     * Represents the Microsoft Authenticator Passwordless Phone Sign-in methods registered to a user for authentication.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

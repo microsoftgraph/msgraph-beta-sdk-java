@@ -73,23 +73,21 @@ public class CloudPcProvisioningPolicyItemRequestBuilder extends BaseRequestBuil
         super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/provisioningPolicies/{cloudPcProvisioningPolicy%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete a cloudPcProvisioningPolicy object. You cant delete a policy thats in use.
+     * Delete navigation property provisioningPolicies for deviceManagement
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The onPremisesConnectionId property is deprecated and will stop returning on July 30, 2023. as of 2023-03/onPremisesConnectionId
-     * @see <a href="https://learn.microsoft.com/graph/api/cloudpcprovisioningpolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @Deprecated
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a cloudPcProvisioningPolicy object. You cant delete a policy thats in use.
+     * Delete navigation property provisioningPolicies for deviceManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The onPremisesConnectionId property is deprecated and will stop returning on July 30, 2023. as of 2023-03/onPremisesConnectionId
-     * @see <a href="https://learn.microsoft.com/graph/api/cloudpcprovisioningpolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -99,12 +97,11 @@ public class CloudPcProvisioningPolicyItemRequestBuilder extends BaseRequestBuil
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a cloudPcProvisioningPolicy object.
+     * Cloud PC provisioning policy.
      * @return a {@link CloudPcProvisioningPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The onPremisesConnectionId property is deprecated and will stop returning on July 30, 2023. as of 2023-03/onPremisesConnectionId
-     * @see <a href="https://learn.microsoft.com/graph/api/cloudpcprovisioningpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -112,13 +109,12 @@ public class CloudPcProvisioningPolicyItemRequestBuilder extends BaseRequestBuil
         return get(null);
     }
     /**
-     * Read the properties and relationships of a cloudPcProvisioningPolicy object.
+     * Cloud PC provisioning policy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CloudPcProvisioningPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The onPremisesConnectionId property is deprecated and will stop returning on July 30, 2023. as of 2023-03/onPremisesConnectionId
-     * @see <a href="https://learn.microsoft.com/graph/api/cloudpcprovisioningpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -129,13 +125,12 @@ public class CloudPcProvisioningPolicyItemRequestBuilder extends BaseRequestBuil
         return this.requestAdapter.send(requestInfo, errorMapping, CloudPcProvisioningPolicy::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a cloudPcProvisioningPolicy object.
+     * Update the navigation property provisioningPolicies in deviceManagement
      * @param body The request body
      * @return a {@link CloudPcProvisioningPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The onPremisesConnectionId property is deprecated and will stop returning on July 30, 2023. as of 2023-03/onPremisesConnectionId
-     * @see <a href="https://learn.microsoft.com/graph/api/cloudpcprovisioningpolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -143,14 +138,13 @@ public class CloudPcProvisioningPolicyItemRequestBuilder extends BaseRequestBuil
         return patch(body, null);
     }
     /**
-     * Update the properties of a cloudPcProvisioningPolicy object.
+     * Update the navigation property provisioningPolicies in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CloudPcProvisioningPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The onPremisesConnectionId property is deprecated and will stop returning on July 30, 2023. as of 2023-03/onPremisesConnectionId
-     * @see <a href="https://learn.microsoft.com/graph/api/cloudpcprovisioningpolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -162,7 +156,7 @@ public class CloudPcProvisioningPolicyItemRequestBuilder extends BaseRequestBuil
         return this.requestAdapter.send(requestInfo, errorMapping, CloudPcProvisioningPolicy::createFromDiscriminatorValue);
     }
     /**
-     * Delete a cloudPcProvisioningPolicy object. You cant delete a policy thats in use.
+     * Delete navigation property provisioningPolicies for deviceManagement
      * @return a {@link RequestInformation}
      * @deprecated
      * The onPremisesConnectionId property is deprecated and will stop returning on July 30, 2023. as of 2023-03/onPremisesConnectionId
@@ -173,7 +167,7 @@ public class CloudPcProvisioningPolicyItemRequestBuilder extends BaseRequestBuil
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a cloudPcProvisioningPolicy object. You cant delete a policy thats in use.
+     * Delete navigation property provisioningPolicies for deviceManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -188,7 +182,7 @@ public class CloudPcProvisioningPolicyItemRequestBuilder extends BaseRequestBuil
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a cloudPcProvisioningPolicy object.
+     * Cloud PC provisioning policy.
      * @return a {@link RequestInformation}
      * @deprecated
      * The onPremisesConnectionId property is deprecated and will stop returning on July 30, 2023. as of 2023-03/onPremisesConnectionId
@@ -199,7 +193,7 @@ public class CloudPcProvisioningPolicyItemRequestBuilder extends BaseRequestBuil
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a cloudPcProvisioningPolicy object.
+     * Cloud PC provisioning policy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -214,7 +208,7 @@ public class CloudPcProvisioningPolicyItemRequestBuilder extends BaseRequestBuil
         return requestInfo;
     }
     /**
-     * Update the properties of a cloudPcProvisioningPolicy object.
+     * Update the navigation property provisioningPolicies in deviceManagement
      * @param body The request body
      * @return a {@link RequestInformation}
      * @deprecated
@@ -226,7 +220,7 @@ public class CloudPcProvisioningPolicyItemRequestBuilder extends BaseRequestBuil
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a cloudPcProvisioningPolicy object.
+     * Update the navigation property provisioningPolicies in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -263,7 +257,7 @@ public class CloudPcProvisioningPolicyItemRequestBuilder extends BaseRequestBuil
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a cloudPcProvisioningPolicy object.
+     * Cloud PC provisioning policy.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

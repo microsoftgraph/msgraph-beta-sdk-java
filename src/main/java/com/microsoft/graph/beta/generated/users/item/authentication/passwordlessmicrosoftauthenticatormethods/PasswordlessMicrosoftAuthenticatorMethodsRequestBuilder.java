@@ -59,21 +59,19 @@ public class PasswordlessMicrosoftAuthenticatorMethodsRequestBuilder extends Bas
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/authentication/passwordlessMicrosoftAuthenticatorMethods{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Retrieve a list of a user's Microsoft Authenticator Passwordless Phone Sign-in method objects and their properties.
+     * Represents the Microsoft Authenticator Passwordless Phone Sign-in methods registered to a user for authentication.
      * @return a {@link PasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/passwordlessmicrosoftauthenticatorauthenticationmethod-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionResponse get() {
         return get(null);
     }
     /**
-     * Retrieve a list of a user's Microsoft Authenticator Passwordless Phone Sign-in method objects and their properties.
+     * Represents the Microsoft Authenticator Passwordless Phone Sign-in methods registered to a user for authentication.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/passwordlessmicrosoftauthenticatorauthenticationmethod-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -83,7 +81,7 @@ public class PasswordlessMicrosoftAuthenticatorMethodsRequestBuilder extends Bas
         return this.requestAdapter.send(requestInfo, errorMapping, PasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of a user's Microsoft Authenticator Passwordless Phone Sign-in method objects and their properties.
+     * Represents the Microsoft Authenticator Passwordless Phone Sign-in methods registered to a user for authentication.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -91,7 +89,7 @@ public class PasswordlessMicrosoftAuthenticatorMethodsRequestBuilder extends Bas
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of a user's Microsoft Authenticator Passwordless Phone Sign-in method objects and their properties.
+     * Represents the Microsoft Authenticator Passwordless Phone Sign-in methods registered to a user for authentication.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -113,7 +111,7 @@ public class PasswordlessMicrosoftAuthenticatorMethodsRequestBuilder extends Bas
         return new PasswordlessMicrosoftAuthenticatorMethodsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of a user's Microsoft Authenticator Passwordless Phone Sign-in method objects and their properties.
+     * Represents the Microsoft Authenticator Passwordless Phone Sign-in methods registered to a user for authentication.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

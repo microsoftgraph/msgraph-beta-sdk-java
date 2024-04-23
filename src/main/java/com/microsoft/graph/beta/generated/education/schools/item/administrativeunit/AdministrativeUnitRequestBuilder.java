@@ -37,21 +37,19 @@ public class AdministrativeUnitRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/schools/{educationSchool%2Did}/administrativeUnit{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Retrieve the directory administrativeUnit that corresponds to this educationSchool.
+     * Get administrativeUnit from education
      * @return a {@link AdministrativeUnit}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/educationschool-get-administrativeUnit?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AdministrativeUnit get() {
         return get(null);
     }
     /**
-     * Retrieve the directory administrativeUnit that corresponds to this educationSchool.
+     * Get administrativeUnit from education
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AdministrativeUnit}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/educationschool-get-administrativeUnit?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AdministrativeUnit get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -86,7 +84,7 @@ public class AdministrativeUnitRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AdministrativeUnit::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve the directory administrativeUnit that corresponds to this educationSchool.
+     * Get administrativeUnit from education
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -94,7 +92,7 @@ public class AdministrativeUnitRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the directory administrativeUnit that corresponds to this educationSchool.
+     * Get administrativeUnit from education
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -140,7 +138,7 @@ public class AdministrativeUnitRequestBuilder extends BaseRequestBuilder {
         return new AdministrativeUnitRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve the directory administrativeUnit that corresponds to this educationSchool.
+     * Get administrativeUnit from education
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -36,19 +36,21 @@ public class GetSupportedCloudPcRemoteActionsRequestBuilder extends BaseRequestB
         super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/cloudPCs/{cloudPC%2Did}/getSupportedCloudPcRemoteActions(){?%24count,%24filter,%24search,%24skip,%24top}", rawUrl);
     }
     /**
-     * Invoke function getSupportedCloudPcRemoteActions
+     * Get a list of supported Cloud PC remote actions for a specific Cloud PC device, including the action names and capabilities.
      * @return a {@link GetSupportedCloudPcRemoteActionsGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpc-getsupportedcloudpcremoteactions?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetSupportedCloudPcRemoteActionsGetResponse get() {
         return get(null);
     }
     /**
-     * Invoke function getSupportedCloudPcRemoteActions
+     * Get a list of supported Cloud PC remote actions for a specific Cloud PC device, including the action names and capabilities.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GetSupportedCloudPcRemoteActionsGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpc-getsupportedcloudpcremoteactions?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetSupportedCloudPcRemoteActionsGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -58,7 +60,7 @@ public class GetSupportedCloudPcRemoteActionsRequestBuilder extends BaseRequestB
         return this.requestAdapter.send(requestInfo, errorMapping, GetSupportedCloudPcRemoteActionsGetResponse::createFromDiscriminatorValue);
     }
     /**
-     * Invoke function getSupportedCloudPcRemoteActions
+     * Get a list of supported Cloud PC remote actions for a specific Cloud PC device, including the action names and capabilities.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -66,7 +68,7 @@ public class GetSupportedCloudPcRemoteActionsRequestBuilder extends BaseRequestB
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function getSupportedCloudPcRemoteActions
+     * Get a list of supported Cloud PC remote actions for a specific Cloud PC device, including the action names and capabilities.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -88,7 +90,7 @@ public class GetSupportedCloudPcRemoteActionsRequestBuilder extends BaseRequestB
         return new GetSupportedCloudPcRemoteActionsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Invoke function getSupportedCloudPcRemoteActions
+     * Get a list of supported Cloud PC remote actions for a specific Cloud PC device, including the action names and capabilities.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

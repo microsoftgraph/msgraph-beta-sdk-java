@@ -60,21 +60,19 @@ public class AccessPackageResourceEnvironmentsRequestBuilder extends BaseRequest
         super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/accessPackageResourceEnvironments{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Retrieve a list of accessPackageResourceEnvironment objects and their properties.
+     * A reference to the geolocation environment in which a resource is located.
      * @return a {@link AccessPackageResourceEnvironmentCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/entitlementmanagement-list-accesspackageresourceenvironment?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AccessPackageResourceEnvironmentCollectionResponse get() {
         return get(null);
     }
     /**
-     * Retrieve a list of accessPackageResourceEnvironment objects and their properties.
+     * A reference to the geolocation environment in which a resource is located.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AccessPackageResourceEnvironmentCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/entitlementmanagement-list-accesspackageresourceenvironment?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AccessPackageResourceEnvironmentCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -109,7 +107,7 @@ public class AccessPackageResourceEnvironmentsRequestBuilder extends BaseRequest
         return this.requestAdapter.send(requestInfo, errorMapping, AccessPackageResourceEnvironment::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of accessPackageResourceEnvironment objects and their properties.
+     * A reference to the geolocation environment in which a resource is located.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -117,7 +115,7 @@ public class AccessPackageResourceEnvironmentsRequestBuilder extends BaseRequest
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of accessPackageResourceEnvironment objects and their properties.
+     * A reference to the geolocation environment in which a resource is located.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -163,7 +161,7 @@ public class AccessPackageResourceEnvironmentsRequestBuilder extends BaseRequest
         return new AccessPackageResourceEnvironmentsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of accessPackageResourceEnvironment objects and their properties.
+     * A reference to the geolocation environment in which a resource is located.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

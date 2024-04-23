@@ -36,19 +36,21 @@ public class MicrosoftGraphIndustryDataGetStatisticsRequestBuilder extends BaseR
         super(requestAdapter, "{+baseurl}/external/industryData/runs/{industryDataRun%2Did}/microsoft.graph.industryData.getStatistics()", rawUrl);
     }
     /**
-     * Invoke function getStatistics
+     * Get statistics for an industryDataRun.
      * @return a {@link IndustryDataRunStatistics}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-industrydatarun-getstatistics?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public IndustryDataRunStatistics get() {
         return get(null);
     }
     /**
-     * Invoke function getStatistics
+     * Get statistics for an industryDataRun.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link IndustryDataRunStatistics}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-industrydatarun-getstatistics?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public IndustryDataRunStatistics get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -58,7 +60,7 @@ public class MicrosoftGraphIndustryDataGetStatisticsRequestBuilder extends BaseR
         return this.requestAdapter.send(requestInfo, errorMapping, IndustryDataRunStatistics::createFromDiscriminatorValue);
     }
     /**
-     * Invoke function getStatistics
+     * Get statistics for an industryDataRun.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -66,7 +68,7 @@ public class MicrosoftGraphIndustryDataGetStatisticsRequestBuilder extends BaseR
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function getStatistics
+     * Get statistics for an industryDataRun.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

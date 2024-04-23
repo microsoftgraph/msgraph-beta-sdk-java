@@ -55,21 +55,19 @@ public class EngagementAsyncOperationItemRequestBuilder extends BaseRequestBuild
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get an engagementAsyncOperation to track a long-running operation request.
+     * A collection of long-running, asynchronous operations related to Viva Engage.
      * @return a {@link EngagementAsyncOperation}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/engagementasyncoperation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EngagementAsyncOperation get() {
         return get(null);
     }
     /**
-     * Get an engagementAsyncOperation to track a long-running operation request.
+     * A collection of long-running, asynchronous operations related to Viva Engage.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EngagementAsyncOperation}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/engagementasyncoperation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EngagementAsyncOperation get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -124,7 +122,7 @@ public class EngagementAsyncOperationItemRequestBuilder extends BaseRequestBuild
         return requestInfo;
     }
     /**
-     * Get an engagementAsyncOperation to track a long-running operation request.
+     * A collection of long-running, asynchronous operations related to Viva Engage.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -132,7 +130,7 @@ public class EngagementAsyncOperationItemRequestBuilder extends BaseRequestBuild
         return toGetRequestInformation(null);
     }
     /**
-     * Get an engagementAsyncOperation to track a long-running operation request.
+     * A collection of long-running, asynchronous operations related to Viva Engage.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -184,7 +182,7 @@ public class EngagementAsyncOperationItemRequestBuilder extends BaseRequestBuild
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get an engagementAsyncOperation to track a long-running operation request.
+     * A collection of long-running, asynchronous operations related to Viva Engage.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

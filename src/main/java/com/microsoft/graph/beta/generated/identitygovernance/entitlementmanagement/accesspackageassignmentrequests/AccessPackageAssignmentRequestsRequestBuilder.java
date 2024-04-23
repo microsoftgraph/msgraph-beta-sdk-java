@@ -80,12 +80,11 @@ public class AccessPackageAssignmentRequestsRequestBuilder extends BaseRequestBu
         return new FilterByCurrentUserWithOnRequestBuilder(pathParameters, requestAdapter, on);
     }
     /**
-     * In Microsoft Entra entitlement management, retrieve a list of accessPackageAssignmentRequest objects.  The resulting list includes all the assignment requests, current and well as expired, that the caller has access to read, across all catalogs and access packages.
+     * Represents access package assignment requests created by or on behalf of a user. DO NOT USE. TO BE RETIRED SOON. Use the assignmentRequests relationship instead.
      * @return a {@link AccessPackageAssignmentRequestCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
-     * @see <a href="https://learn.microsoft.com/graph/api/entitlementmanagement-list-accesspackageassignmentrequests?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -93,13 +92,12 @@ public class AccessPackageAssignmentRequestsRequestBuilder extends BaseRequestBu
         return get(null);
     }
     /**
-     * In Microsoft Entra entitlement management, retrieve a list of accessPackageAssignmentRequest objects.  The resulting list includes all the assignment requests, current and well as expired, that the caller has access to read, across all catalogs and access packages.
+     * Represents access package assignment requests created by or on behalf of a user. DO NOT USE. TO BE RETIRED SOON. Use the assignmentRequests relationship instead.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AccessPackageAssignmentRequestCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
-     * @see <a href="https://learn.microsoft.com/graph/api/entitlementmanagement-list-accesspackageassignmentrequests?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -110,13 +108,12 @@ public class AccessPackageAssignmentRequestsRequestBuilder extends BaseRequestBu
         return this.requestAdapter.send(requestInfo, errorMapping, AccessPackageAssignmentRequestCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * In Microsoft Entra Entitlement Management, create a new accessPackageAssignmentRequest object.  This operation is used to assign a user to an access package, or to remove an access package assignment.
+     * Create new navigation property to accessPackageAssignmentRequests for identityGovernance
      * @param body The request body
      * @return a {@link AccessPackageAssignmentRequest}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
-     * @see <a href="https://learn.microsoft.com/graph/api/entitlementmanagement-post-accesspackageassignmentrequests?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -124,14 +121,13 @@ public class AccessPackageAssignmentRequestsRequestBuilder extends BaseRequestBu
         return post(body, null);
     }
     /**
-     * In Microsoft Entra Entitlement Management, create a new accessPackageAssignmentRequest object.  This operation is used to assign a user to an access package, or to remove an access package assignment.
+     * Create new navigation property to accessPackageAssignmentRequests for identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AccessPackageAssignmentRequest}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
-     * @see <a href="https://learn.microsoft.com/graph/api/entitlementmanagement-post-accesspackageassignmentrequests?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -143,7 +139,7 @@ public class AccessPackageAssignmentRequestsRequestBuilder extends BaseRequestBu
         return this.requestAdapter.send(requestInfo, errorMapping, AccessPackageAssignmentRequest::createFromDiscriminatorValue);
     }
     /**
-     * In Microsoft Entra entitlement management, retrieve a list of accessPackageAssignmentRequest objects.  The resulting list includes all the assignment requests, current and well as expired, that the caller has access to read, across all catalogs and access packages.
+     * Represents access package assignment requests created by or on behalf of a user. DO NOT USE. TO BE RETIRED SOON. Use the assignmentRequests relationship instead.
      * @return a {@link RequestInformation}
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
@@ -154,7 +150,7 @@ public class AccessPackageAssignmentRequestsRequestBuilder extends BaseRequestBu
         return toGetRequestInformation(null);
     }
     /**
-     * In Microsoft Entra entitlement management, retrieve a list of accessPackageAssignmentRequest objects.  The resulting list includes all the assignment requests, current and well as expired, that the caller has access to read, across all catalogs and access packages.
+     * Represents access package assignment requests created by or on behalf of a user. DO NOT USE. TO BE RETIRED SOON. Use the assignmentRequests relationship instead.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -169,7 +165,7 @@ public class AccessPackageAssignmentRequestsRequestBuilder extends BaseRequestBu
         return requestInfo;
     }
     /**
-     * In Microsoft Entra Entitlement Management, create a new accessPackageAssignmentRequest object.  This operation is used to assign a user to an access package, or to remove an access package assignment.
+     * Create new navigation property to accessPackageAssignmentRequests for identityGovernance
      * @param body The request body
      * @return a {@link RequestInformation}
      * @deprecated
@@ -181,7 +177,7 @@ public class AccessPackageAssignmentRequestsRequestBuilder extends BaseRequestBu
         return toPostRequestInformation(body, null);
     }
     /**
-     * In Microsoft Entra Entitlement Management, create a new accessPackageAssignmentRequest object.  This operation is used to assign a user to an access package, or to remove an access package assignment.
+     * Create new navigation property to accessPackageAssignmentRequests for identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -212,7 +208,7 @@ public class AccessPackageAssignmentRequestsRequestBuilder extends BaseRequestBu
         return new AccessPackageAssignmentRequestsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * In Microsoft Entra entitlement management, retrieve a list of accessPackageAssignmentRequest objects.  The resulting list includes all the assignment requests, current and well as expired, that the caller has access to read, across all catalogs and access packages.
+     * Represents access package assignment requests created by or on behalf of a user. DO NOT USE. TO BE RETIRED SOON. Use the assignmentRequests relationship instead.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

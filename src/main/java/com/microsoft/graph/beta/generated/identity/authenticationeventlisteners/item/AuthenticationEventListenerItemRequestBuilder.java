@@ -37,18 +37,16 @@ public class AuthenticationEventListenerItemRequestBuilder extends BaseRequestBu
         super(requestAdapter, "{+baseurl}/identity/authenticationEventListeners/{authenticationEventListener%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Deletes an authenticationEventListener object.
+     * Delete navigation property authenticationEventListeners for identity
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/authenticationeventlistener-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Deletes an authenticationEventListener object.
+     * Delete navigation property authenticationEventListeners for identity
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/authenticationeventlistener-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -79,23 +77,21 @@ public class AuthenticationEventListenerItemRequestBuilder extends BaseRequestBu
         return this.requestAdapter.send(requestInfo, errorMapping, AuthenticationEventListener::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of an authenticationEventListener object. You must specify the @odata.type property and the value of the authenticationEventListener object type to update.
+     * Update the navigation property authenticationEventListeners in identity
      * @param body The request body
      * @return a {@link AuthenticationEventListener}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/authenticationeventlistener-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AuthenticationEventListener patch(@jakarta.annotation.Nonnull final AuthenticationEventListener body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of an authenticationEventListener object. You must specify the @odata.type property and the value of the authenticationEventListener object type to update.
+     * Update the navigation property authenticationEventListeners in identity
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AuthenticationEventListener}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/authenticationeventlistener-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AuthenticationEventListener patch(@jakarta.annotation.Nonnull final AuthenticationEventListener body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -106,7 +102,7 @@ public class AuthenticationEventListenerItemRequestBuilder extends BaseRequestBu
         return this.requestAdapter.send(requestInfo, errorMapping, AuthenticationEventListener::createFromDiscriminatorValue);
     }
     /**
-     * Deletes an authenticationEventListener object.
+     * Delete navigation property authenticationEventListeners for identity
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +110,7 @@ public class AuthenticationEventListenerItemRequestBuilder extends BaseRequestBu
         return toDeleteRequestInformation(null);
     }
     /**
-     * Deletes an authenticationEventListener object.
+     * Delete navigation property authenticationEventListeners for identity
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -146,7 +142,7 @@ public class AuthenticationEventListenerItemRequestBuilder extends BaseRequestBu
         return requestInfo;
     }
     /**
-     * Update the properties of an authenticationEventListener object. You must specify the @odata.type property and the value of the authenticationEventListener object type to update.
+     * Update the navigation property authenticationEventListeners in identity
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -155,7 +151,7 @@ public class AuthenticationEventListenerItemRequestBuilder extends BaseRequestBu
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of an authenticationEventListener object. You must specify the @odata.type property and the value of the authenticationEventListener object type to update.
+     * Update the navigation property authenticationEventListeners in identity
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

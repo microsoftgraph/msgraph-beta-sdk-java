@@ -121,7 +121,7 @@ public class DirectoryRoleItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties of a directoryRole object. You can use both the object ID and template ID of the directoryRole with this API. The template ID of a built-in role is immutable and can be seen in the role description on the Microsoft Entra admin center. For details, see Role template IDs.
      * @return a {@link DirectoryRole}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/directoryrole-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/directoryrole-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DirectoryRole get() {
@@ -132,7 +132,7 @@ public class DirectoryRoleItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DirectoryRole}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/directoryrole-get?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/directoryrole-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DirectoryRole get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

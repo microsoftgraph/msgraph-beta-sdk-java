@@ -41,19 +41,21 @@ public class MicrosoftGraphNetworkaccessEntitiesSummariesWithStartDateTimeWithEn
         super(requestAdapter, "{+baseurl}/networkAccess/reports/microsoft.graph.networkaccess.entitiesSummaries(startDateTime={startDateTime},endDateTime={endDateTime}){?%24count,%24filter,%24search,%24skip,%24top}", rawUrl);
     }
     /**
-     * Invoke function entitiesSummaries
+     * Get the number of users, devices, and workloads per traffic type in a specified time period.
      * @return a {@link EntitiesSummariesWithStartDateTimeWithEndDateTimeGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-reports-entitiessummaries?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EntitiesSummariesWithStartDateTimeWithEndDateTimeGetResponse get() {
         return get(null);
     }
     /**
-     * Invoke function entitiesSummaries
+     * Get the number of users, devices, and workloads per traffic type in a specified time period.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EntitiesSummariesWithStartDateTimeWithEndDateTimeGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-reports-entitiessummaries?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EntitiesSummariesWithStartDateTimeWithEndDateTimeGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -63,7 +65,7 @@ public class MicrosoftGraphNetworkaccessEntitiesSummariesWithStartDateTimeWithEn
         return this.requestAdapter.send(requestInfo, errorMapping, EntitiesSummariesWithStartDateTimeWithEndDateTimeGetResponse::createFromDiscriminatorValue);
     }
     /**
-     * Invoke function entitiesSummaries
+     * Get the number of users, devices, and workloads per traffic type in a specified time period.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -71,7 +73,7 @@ public class MicrosoftGraphNetworkaccessEntitiesSummariesWithStartDateTimeWithEn
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function entitiesSummaries
+     * Get the number of users, devices, and workloads per traffic type in a specified time period.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -93,7 +95,7 @@ public class MicrosoftGraphNetworkaccessEntitiesSummariesWithStartDateTimeWithEn
         return new MicrosoftGraphNetworkaccessEntitiesSummariesWithStartDateTimeWithEndDateTimeRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Invoke function entitiesSummaries
+     * Get the number of users, devices, and workloads per traffic type in a specified time period.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

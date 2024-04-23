@@ -60,21 +60,19 @@ public class EmailThreatSubmissionPoliciesRequestBuilder extends BaseRequestBuil
         super(requestAdapter, "{+baseurl}/security/threatSubmission/emailThreatSubmissionPolicies{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a list of the emailThreatSubmissionPolicy objects and their properties.
+     * Get emailThreatSubmissionPolicies from security
      * @return a {@link EmailThreatSubmissionPolicyCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-emailthreatsubmissionpolicy-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EmailThreatSubmissionPolicyCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a list of the emailThreatSubmissionPolicy objects and their properties.
+     * Get emailThreatSubmissionPolicies from security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EmailThreatSubmissionPolicyCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-emailthreatsubmissionpolicy-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EmailThreatSubmissionPolicyCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -109,7 +107,7 @@ public class EmailThreatSubmissionPoliciesRequestBuilder extends BaseRequestBuil
         return this.requestAdapter.send(requestInfo, errorMapping, EmailThreatSubmissionPolicy::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the emailThreatSubmissionPolicy objects and their properties.
+     * Get emailThreatSubmissionPolicies from security
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -117,7 +115,7 @@ public class EmailThreatSubmissionPoliciesRequestBuilder extends BaseRequestBuil
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the emailThreatSubmissionPolicy objects and their properties.
+     * Get emailThreatSubmissionPolicies from security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -163,7 +161,7 @@ public class EmailThreatSubmissionPoliciesRequestBuilder extends BaseRequestBuil
         return new EmailThreatSubmissionPoliciesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the emailThreatSubmissionPolicy objects and their properties.
+     * Get emailThreatSubmissionPolicies from security
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

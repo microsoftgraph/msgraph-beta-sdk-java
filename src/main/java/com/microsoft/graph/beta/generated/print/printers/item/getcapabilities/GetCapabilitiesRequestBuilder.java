@@ -36,11 +36,12 @@ public class GetCapabilitiesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/print/printers/{printer%2Did}/getCapabilities()", rawUrl);
     }
     /**
-     * Invoke function getCapabilities
+     * Get a list of capabilities for the printer.
      * @return a {@link PrinterCapabilities}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The getCapabilities API is deprecated and will stop returning data on July 31, 2023. Please use the capabilities property instead of this. as of 2023-06/Tasks_And_Plans
+     * @see <a href="https://learn.microsoft.com/graph/api/printer-getcapabilities?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -48,12 +49,13 @@ public class GetCapabilitiesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Invoke function getCapabilities
+     * Get a list of capabilities for the printer.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PrinterCapabilities}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The getCapabilities API is deprecated and will stop returning data on July 31, 2023. Please use the capabilities property instead of this. as of 2023-06/Tasks_And_Plans
+     * @see <a href="https://learn.microsoft.com/graph/api/printer-getcapabilities?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -64,7 +66,7 @@ public class GetCapabilitiesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PrinterCapabilities::createFromDiscriminatorValue);
     }
     /**
-     * Invoke function getCapabilities
+     * Get a list of capabilities for the printer.
      * @return a {@link RequestInformation}
      * @deprecated
      * The getCapabilities API is deprecated and will stop returning data on July 31, 2023. Please use the capabilities property instead of this. as of 2023-06/Tasks_And_Plans
@@ -75,7 +77,7 @@ public class GetCapabilitiesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function getCapabilities
+     * Get a list of capabilities for the printer.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated

@@ -60,21 +60,19 @@ public class AnniversariesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/profile/anniversaries{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Retrieve a list of personAnniversary objects for the given user from their profile.
+     * Represents the details of meaningful dates associated with a person.
      * @return a {@link PersonAnnualEventCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/profile-list-anniversaries?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PersonAnnualEventCollectionResponse get() {
         return get(null);
     }
     /**
-     * Retrieve a list of personAnniversary objects for the given user from their profile.
+     * Represents the details of meaningful dates associated with a person.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PersonAnnualEventCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/profile-list-anniversaries?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PersonAnnualEventCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +82,21 @@ public class AnniversariesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PersonAnnualEventCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Use this API to create a new personAnniversary object in a user's profile.
+     * Create new navigation property to anniversaries for users
      * @param body The request body
      * @return a {@link PersonAnnualEvent}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/profile-post-anniversaries?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PersonAnnualEvent post(@jakarta.annotation.Nonnull final PersonAnnualEvent body) {
         return post(body, null);
     }
     /**
-     * Use this API to create a new personAnniversary object in a user's profile.
+     * Create new navigation property to anniversaries for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PersonAnnualEvent}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/profile-post-anniversaries?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PersonAnnualEvent post(@jakarta.annotation.Nonnull final PersonAnnualEvent body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +107,7 @@ public class AnniversariesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PersonAnnualEvent::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of personAnniversary objects for the given user from their profile.
+     * Represents the details of meaningful dates associated with a person.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class AnniversariesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of personAnniversary objects for the given user from their profile.
+     * Represents the details of meaningful dates associated with a person.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +127,7 @@ public class AnniversariesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Use this API to create a new personAnniversary object in a user's profile.
+     * Create new navigation property to anniversaries for users
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class AnniversariesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Use this API to create a new personAnniversary object in a user's profile.
+     * Create new navigation property to anniversaries for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +161,7 @@ public class AnniversariesRequestBuilder extends BaseRequestBuilder {
         return new AnniversariesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of personAnniversary objects for the given user from their profile.
+     * Represents the details of meaningful dates associated with a person.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

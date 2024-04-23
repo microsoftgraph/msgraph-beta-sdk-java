@@ -82,21 +82,19 @@ public class CallRecordItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties and relationships of a callRecord object. There are two ways to get the id of a callRecord:
+     * Get callRecords from communications
      * @return a {@link CallRecord}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/callrecords-callrecord-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CallRecord get() {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of a callRecord object. There are two ways to get the id of a callRecord:
+     * Get callRecords from communications
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CallRecord}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/callrecords-callrecord-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CallRecord get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -151,7 +149,7 @@ public class CallRecordItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of a callRecord object. There are two ways to get the id of a callRecord:
+     * Get callRecords from communications
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -159,7 +157,7 @@ public class CallRecordItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of a callRecord object. There are two ways to get the id of a callRecord:
+     * Get callRecords from communications
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -211,7 +209,7 @@ public class CallRecordItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of a callRecord object. There are two ways to get the id of a callRecord:
+     * Get callRecords from communications
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -55,21 +55,19 @@ public class TeamsAsyncOperationItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get the specified Teams async operation that ran or is running on a specific resource.
+     * A collection of all the Teams async operations that ran or are running on the chat. Nullable.
      * @return a {@link TeamsAsyncOperation}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/teamsasyncoperation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TeamsAsyncOperation get() {
         return get(null);
     }
     /**
-     * Get the specified Teams async operation that ran or is running on a specific resource.
+     * A collection of all the Teams async operations that ran or are running on the chat. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TeamsAsyncOperation}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/teamsasyncoperation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TeamsAsyncOperation get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -124,7 +122,7 @@ public class TeamsAsyncOperationItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get the specified Teams async operation that ran or is running on a specific resource.
+     * A collection of all the Teams async operations that ran or are running on the chat. Nullable.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -132,7 +130,7 @@ public class TeamsAsyncOperationItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the specified Teams async operation that ran or is running on a specific resource.
+     * A collection of all the Teams async operations that ran or are running on the chat. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -184,7 +182,7 @@ public class TeamsAsyncOperationItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get the specified Teams async operation that ran or is running on a specific resource.
+     * A collection of all the Teams async operations that ran or are running on the chat. Nullable.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

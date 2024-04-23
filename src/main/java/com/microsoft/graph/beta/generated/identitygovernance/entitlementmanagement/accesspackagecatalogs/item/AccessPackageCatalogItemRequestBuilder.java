@@ -109,23 +109,21 @@ public class AccessPackageCatalogItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/accessPackageCatalogs/{accessPackageCatalog%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete an accessPackageCatalog.
+     * Delete navigation property accessPackageCatalogs for identityGovernance
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
-     * @see <a href="https://learn.microsoft.com/graph/api/accesspackagecatalog-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @Deprecated
     public void delete() {
         delete(null);
     }
     /**
-     * Delete an accessPackageCatalog.
+     * Delete navigation property accessPackageCatalogs for identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
-     * @see <a href="https://learn.microsoft.com/graph/api/accesspackagecatalog-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -135,12 +133,11 @@ public class AccessPackageCatalogItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties and relationships of an accessPackageCatalog object.
+     * A container of access packages.
      * @return a {@link AccessPackageCatalog}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
-     * @see <a href="https://learn.microsoft.com/graph/api/accesspackagecatalog-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -148,13 +145,12 @@ public class AccessPackageCatalogItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of an accessPackageCatalog object.
+     * A container of access packages.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AccessPackageCatalog}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
-     * @see <a href="https://learn.microsoft.com/graph/api/accesspackagecatalog-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -165,13 +161,12 @@ public class AccessPackageCatalogItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AccessPackageCatalog::createFromDiscriminatorValue);
     }
     /**
-     * Update an existing accessPackageCatalog object to change one or more of its properties, such as the display name or description.
+     * Update the navigation property accessPackageCatalogs in identityGovernance
      * @param body The request body
      * @return a {@link AccessPackageCatalog}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
-     * @see <a href="https://learn.microsoft.com/graph/api/accesspackagecatalog-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -179,14 +174,13 @@ public class AccessPackageCatalogItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update an existing accessPackageCatalog object to change one or more of its properties, such as the display name or description.
+     * Update the navigation property accessPackageCatalogs in identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AccessPackageCatalog}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
-     * @see <a href="https://learn.microsoft.com/graph/api/accesspackagecatalog-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -198,7 +192,7 @@ public class AccessPackageCatalogItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AccessPackageCatalog::createFromDiscriminatorValue);
     }
     /**
-     * Delete an accessPackageCatalog.
+     * Delete navigation property accessPackageCatalogs for identityGovernance
      * @return a {@link RequestInformation}
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
@@ -209,7 +203,7 @@ public class AccessPackageCatalogItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete an accessPackageCatalog.
+     * Delete navigation property accessPackageCatalogs for identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -224,7 +218,7 @@ public class AccessPackageCatalogItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of an accessPackageCatalog object.
+     * A container of access packages.
      * @return a {@link RequestInformation}
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
@@ -235,7 +229,7 @@ public class AccessPackageCatalogItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of an accessPackageCatalog object.
+     * A container of access packages.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -250,7 +244,7 @@ public class AccessPackageCatalogItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update an existing accessPackageCatalog object to change one or more of its properties, such as the display name or description.
+     * Update the navigation property accessPackageCatalogs in identityGovernance
      * @param body The request body
      * @return a {@link RequestInformation}
      * @deprecated
@@ -262,7 +256,7 @@ public class AccessPackageCatalogItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update an existing accessPackageCatalog object to change one or more of its properties, such as the display name or description.
+     * Update the navigation property accessPackageCatalogs in identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -299,7 +293,7 @@ public class AccessPackageCatalogItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of an accessPackageCatalog object.
+     * A container of access packages.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

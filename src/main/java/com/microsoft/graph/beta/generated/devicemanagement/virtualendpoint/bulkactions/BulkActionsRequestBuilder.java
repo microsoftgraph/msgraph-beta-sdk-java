@@ -60,21 +60,19 @@ public class BulkActionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/bulkActions{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a list of the cloudPcBulkAction objects and their properties.
+     * Bulk actions applied to a Cloud PC.
      * @return a {@link CloudPcBulkActionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-bulkactions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPcBulkActionCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a list of the cloudPcBulkAction objects and their properties.
+     * Bulk actions applied to a Cloud PC.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CloudPcBulkActionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-bulkactions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPcBulkActionCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +82,21 @@ public class BulkActionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CloudPcBulkActionCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new cloudPcBulkAction object.
+     * Create new navigation property to bulkActions for deviceManagement
      * @param body The request body
      * @return a {@link CloudPcBulkAction}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-post-bulkactions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPcBulkAction post(@jakarta.annotation.Nonnull final CloudPcBulkAction body) {
         return post(body, null);
     }
     /**
-     * Create a new cloudPcBulkAction object.
+     * Create new navigation property to bulkActions for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CloudPcBulkAction}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-post-bulkactions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPcBulkAction post(@jakarta.annotation.Nonnull final CloudPcBulkAction body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +107,7 @@ public class BulkActionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CloudPcBulkAction::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the cloudPcBulkAction objects and their properties.
+     * Bulk actions applied to a Cloud PC.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class BulkActionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the cloudPcBulkAction objects and their properties.
+     * Bulk actions applied to a Cloud PC.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +127,7 @@ public class BulkActionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new cloudPcBulkAction object.
+     * Create new navigation property to bulkActions for deviceManagement
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class BulkActionsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new cloudPcBulkAction object.
+     * Create new navigation property to bulkActions for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +161,7 @@ public class BulkActionsRequestBuilder extends BaseRequestBuilder {
         return new BulkActionsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the cloudPcBulkAction objects and their properties.
+     * Bulk actions applied to a Cloud PC.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

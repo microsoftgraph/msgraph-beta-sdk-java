@@ -39,7 +39,7 @@ public class ReactivateRequestBuilder extends BaseRequestBuilder {
      * Reactivate a completed, dismissed, or postponed recommendation object. This action updates the status of the recommendation to active. This method only works when the status of the recommendation is completedByUser, dismissed, or postponed.
      * @return a {@link Recommendation}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/recommendation-reactivate?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/recommendation-reactivate?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Recommendation post() {
@@ -50,7 +50,7 @@ public class ReactivateRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Recommendation}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/recommendation-reactivate?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/recommendation-reactivate?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Recommendation post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

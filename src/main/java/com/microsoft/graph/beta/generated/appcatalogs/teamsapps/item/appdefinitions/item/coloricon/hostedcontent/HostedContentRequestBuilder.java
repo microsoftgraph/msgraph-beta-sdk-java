@@ -64,21 +64,19 @@ public class HostedContentRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the hosted content in an app's icon.
+     * The contents of the app icon if the icon is hosted within the Teams infrastructure.
      * @return a {@link TeamworkHostedContent}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/teamworkhostedcontent-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TeamworkHostedContent get() {
         return get(null);
     }
     /**
-     * Retrieve the hosted content in an app's icon.
+     * The contents of the app icon if the icon is hosted within the Teams infrastructure.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TeamworkHostedContent}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/teamworkhostedcontent-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TeamworkHostedContent get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -133,7 +131,7 @@ public class HostedContentRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the hosted content in an app's icon.
+     * The contents of the app icon if the icon is hosted within the Teams infrastructure.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -141,7 +139,7 @@ public class HostedContentRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the hosted content in an app's icon.
+     * The contents of the app icon if the icon is hosted within the Teams infrastructure.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -193,7 +191,7 @@ public class HostedContentRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the hosted content in an app's icon.
+     * The contents of the app icon if the icon is hosted within the Teams infrastructure.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

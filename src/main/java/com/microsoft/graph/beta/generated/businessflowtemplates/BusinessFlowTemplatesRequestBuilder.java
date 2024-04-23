@@ -63,7 +63,7 @@ public class BusinessFlowTemplatesRequestBuilder extends BaseRequestBuilder {
      * In the Microsoft Entra access reviews feature, list all the businessFlowTemplate objects.
      * @return a {@link BusinessFlowTemplateCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/businessflowtemplate-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/businessflowtemplate-list?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public BusinessFlowTemplateCollectionResponse get() {
@@ -74,7 +74,7 @@ public class BusinessFlowTemplatesRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link BusinessFlowTemplateCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/businessflowtemplate-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/businessflowtemplate-list?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public BusinessFlowTemplateCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

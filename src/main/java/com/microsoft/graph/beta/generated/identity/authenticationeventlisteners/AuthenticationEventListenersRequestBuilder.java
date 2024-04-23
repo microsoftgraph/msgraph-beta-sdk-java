@@ -60,21 +60,19 @@ public class AuthenticationEventListenersRequestBuilder extends BaseRequestBuild
         super(requestAdapter, "{+baseurl}/identity/authenticationEventListeners{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a list of the authenticationEventListener objects and their properties. The following derived types are supported:
+     * Get authenticationEventListeners from identity
      * @return a {@link AuthenticationEventListenerCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/identitycontainer-list-authenticationeventlisteners?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AuthenticationEventListenerCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a list of the authenticationEventListener objects and their properties. The following derived types are supported:
+     * Get authenticationEventListeners from identity
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AuthenticationEventListenerCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/identitycontainer-list-authenticationeventlisteners?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AuthenticationEventListenerCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +82,21 @@ public class AuthenticationEventListenersRequestBuilder extends BaseRequestBuild
         return this.requestAdapter.send(requestInfo, errorMapping, AuthenticationEventListenerCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new authenticationEventListener object. You can create one of the following subtypes that are derived from authenticationEventListener.
+     * Create new navigation property to authenticationEventListeners for identity
      * @param body The request body
      * @return a {@link AuthenticationEventListener}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/identitycontainer-post-authenticationeventlisteners?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AuthenticationEventListener post(@jakarta.annotation.Nonnull final AuthenticationEventListener body) {
         return post(body, null);
     }
     /**
-     * Create a new authenticationEventListener object. You can create one of the following subtypes that are derived from authenticationEventListener.
+     * Create new navigation property to authenticationEventListeners for identity
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AuthenticationEventListener}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/identitycontainer-post-authenticationeventlisteners?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AuthenticationEventListener post(@jakarta.annotation.Nonnull final AuthenticationEventListener body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +107,7 @@ public class AuthenticationEventListenersRequestBuilder extends BaseRequestBuild
         return this.requestAdapter.send(requestInfo, errorMapping, AuthenticationEventListener::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the authenticationEventListener objects and their properties. The following derived types are supported:
+     * Get authenticationEventListeners from identity
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class AuthenticationEventListenersRequestBuilder extends BaseRequestBuild
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the authenticationEventListener objects and their properties. The following derived types are supported:
+     * Get authenticationEventListeners from identity
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +127,7 @@ public class AuthenticationEventListenersRequestBuilder extends BaseRequestBuild
         return requestInfo;
     }
     /**
-     * Create a new authenticationEventListener object. You can create one of the following subtypes that are derived from authenticationEventListener.
+     * Create new navigation property to authenticationEventListeners for identity
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class AuthenticationEventListenersRequestBuilder extends BaseRequestBuild
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new authenticationEventListener object. You can create one of the following subtypes that are derived from authenticationEventListener.
+     * Create new navigation property to authenticationEventListeners for identity
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +161,7 @@ public class AuthenticationEventListenersRequestBuilder extends BaseRequestBuild
         return new AuthenticationEventListenersRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the authenticationEventListener objects and their properties. The following derived types are supported:
+     * Get authenticationEventListeners from identity
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

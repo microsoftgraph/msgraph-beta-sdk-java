@@ -63,7 +63,7 @@ public class SchemaExtensionsRequestBuilder extends BaseRequestBuilder {
      * Get a list of schemaExtension objects in your tenant. The schema extensions can be InDevelopment, Available, or Deprecated and includes schema extensions:+ Created by any apps you own in the current tenant.+ Owned by other apps that are marked as Available.+ Created by other developers from other tenants and marked as Available. This is different from other APIs that only return tenant-specific data. Extension data created based on schema extension definitions is tenant-specific and can only be accessed by apps explicitly granted permission. 
      * @return a {@link SchemaExtensionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/schemaextension-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/schemaextension-list?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SchemaExtensionCollectionResponse get() {
@@ -74,7 +74,7 @@ public class SchemaExtensionsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SchemaExtensionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/schemaextension-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/schemaextension-list?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SchemaExtensionCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -88,7 +88,7 @@ public class SchemaExtensionsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link SchemaExtension}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/schemaextension-post-schemaextensions?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/schemaextension-post-schemaextensions?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SchemaExtension post(@jakarta.annotation.Nonnull final SchemaExtension body) {
@@ -100,7 +100,7 @@ public class SchemaExtensionsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SchemaExtension}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/schemaextension-post-schemaextensions?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/schemaextension-post-schemaextensions?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SchemaExtension post(@jakarta.annotation.Nonnull final SchemaExtension body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

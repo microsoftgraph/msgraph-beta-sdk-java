@@ -60,21 +60,19 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/planner/rosters/{plannerRoster%2Did}/members{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get the list of plannerRosterMembers from a plannerRoster.
+     * Retrieves the members of the plannerRoster.
      * @return a {@link PlannerRosterMemberCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/plannerroster-list-members?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PlannerRosterMemberCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get the list of plannerRosterMembers from a plannerRoster.
+     * Retrieves the members of the plannerRoster.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PlannerRosterMemberCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/plannerroster-list-members?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PlannerRosterMemberCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +82,21 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PlannerRosterMemberCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Add a member to the plannerRoster object.
+     * Create new navigation property to members for planner
      * @param body The request body
      * @return a {@link PlannerRosterMember}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/plannerroster-post-members?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PlannerRosterMember post(@jakarta.annotation.Nonnull final PlannerRosterMember body) {
         return post(body, null);
     }
     /**
-     * Add a member to the plannerRoster object.
+     * Create new navigation property to members for planner
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PlannerRosterMember}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/plannerroster-post-members?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PlannerRosterMember post(@jakarta.annotation.Nonnull final PlannerRosterMember body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +107,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PlannerRosterMember::createFromDiscriminatorValue);
     }
     /**
-     * Get the list of plannerRosterMembers from a plannerRoster.
+     * Retrieves the members of the plannerRoster.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the list of plannerRosterMembers from a plannerRoster.
+     * Retrieves the members of the plannerRoster.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +127,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Add a member to the plannerRoster object.
+     * Create new navigation property to members for planner
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Add a member to the plannerRoster object.
+     * Create new navigation property to members for planner
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +161,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
         return new MembersRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the list of plannerRosterMembers from a plannerRoster.
+     * Retrieves the members of the plannerRoster.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

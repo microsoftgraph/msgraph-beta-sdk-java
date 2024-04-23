@@ -34,7 +34,7 @@ public class Drive extends BaseItem implements Parsable {
         return this.backingStore.get("activities");
     }
     /**
-     * Gets the bundles property value. Collection of [bundles][bundle] (albums and multi-select-shared sets of items). Only in personal OneDrive.
+     * Gets the bundles property value. Collection of bundles (albums and multi-select-shared sets of items). Only in personal OneDrive.
      * @return a {@link java.util.List<DriveItem>}
      */
     @jakarta.annotation.Nullable
@@ -170,7 +170,7 @@ public class Drive extends BaseItem implements Parsable {
         this.backingStore.set("activities", value);
     }
     /**
-     * Sets the bundles property value. Collection of [bundles][bundle] (albums and multi-select-shared sets of items). Only in personal OneDrive.
+     * Sets the bundles property value. Collection of bundles (albums and multi-select-shared sets of items). Only in personal OneDrive.
      * @param value Value to set for the bundles property.
      */
     public void setBundles(@jakarta.annotation.Nullable final java.util.List<DriveItem> value) {

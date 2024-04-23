@@ -63,7 +63,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
      * Retrieve a list of tenant-level or group-specific group settings objects.
      * @return a {@link DirectorySettingCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/group-list-settings?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/group-list-settings?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DirectorySettingCollectionResponse get() {
@@ -74,7 +74,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DirectorySettingCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/group-list-settings?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/group-list-settings?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DirectorySettingCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -88,7 +88,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link DirectorySetting}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/group-post-settings?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/group-post-settings?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DirectorySetting post(@jakarta.annotation.Nonnull final DirectorySetting body) {
@@ -100,7 +100,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DirectorySetting}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/group-post-settings?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/group-post-settings?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DirectorySetting post(@jakarta.annotation.Nonnull final DirectorySetting body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

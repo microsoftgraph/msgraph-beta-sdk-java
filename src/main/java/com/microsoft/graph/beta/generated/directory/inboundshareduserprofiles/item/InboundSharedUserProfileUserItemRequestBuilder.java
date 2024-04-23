@@ -73,21 +73,19 @@ public class InboundSharedUserProfileUserItemRequestBuilder extends BaseRequestB
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties of an inboundSharedUserProfile.
+     * A collection of external users whose profile data is shared with the Microsoft Entra tenant. Nullable.
      * @return a {@link InboundSharedUserProfile}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/inboundshareduserprofile-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public InboundSharedUserProfile get() {
         return get(null);
     }
     /**
-     * Read the properties of an inboundSharedUserProfile.
+     * A collection of external users whose profile data is shared with the Microsoft Entra tenant. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link InboundSharedUserProfile}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/inboundshareduserprofile-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public InboundSharedUserProfile get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -142,7 +140,7 @@ public class InboundSharedUserProfileUserItemRequestBuilder extends BaseRequestB
         return requestInfo;
     }
     /**
-     * Read the properties of an inboundSharedUserProfile.
+     * A collection of external users whose profile data is shared with the Microsoft Entra tenant. Nullable.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -150,7 +148,7 @@ public class InboundSharedUserProfileUserItemRequestBuilder extends BaseRequestB
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties of an inboundSharedUserProfile.
+     * A collection of external users whose profile data is shared with the Microsoft Entra tenant. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -202,7 +200,7 @@ public class InboundSharedUserProfileUserItemRequestBuilder extends BaseRequestB
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties of an inboundSharedUserProfile.
+     * A collection of external users whose profile data is shared with the Microsoft Entra tenant. Nullable.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

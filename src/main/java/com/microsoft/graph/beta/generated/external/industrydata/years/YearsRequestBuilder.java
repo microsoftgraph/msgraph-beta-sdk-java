@@ -60,21 +60,19 @@ public class YearsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/external/industryData/years{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a list of the yearTimePeriodDefinition objects and their properties.
+     * Set of years represented in the system.
      * @return a {@link YearTimePeriodDefinitionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-yeartimeperioddefinition-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public YearTimePeriodDefinitionCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a list of the yearTimePeriodDefinition objects and their properties.
+     * Set of years represented in the system.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link YearTimePeriodDefinitionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-yeartimeperioddefinition-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public YearTimePeriodDefinitionCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +82,21 @@ public class YearsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, YearTimePeriodDefinitionCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new yearTimePeriodDefinition object.
+     * Create new navigation property to years for external
      * @param body The request body
      * @return a {@link YearTimePeriodDefinition}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-yeartimeperioddefinition-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public YearTimePeriodDefinition post(@jakarta.annotation.Nonnull final YearTimePeriodDefinition body) {
         return post(body, null);
     }
     /**
-     * Create a new yearTimePeriodDefinition object.
+     * Create new navigation property to years for external
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link YearTimePeriodDefinition}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-yeartimeperioddefinition-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public YearTimePeriodDefinition post(@jakarta.annotation.Nonnull final YearTimePeriodDefinition body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +107,7 @@ public class YearsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, YearTimePeriodDefinition::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the yearTimePeriodDefinition objects and their properties.
+     * Set of years represented in the system.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class YearsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the yearTimePeriodDefinition objects and their properties.
+     * Set of years represented in the system.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +127,7 @@ public class YearsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new yearTimePeriodDefinition object.
+     * Create new navigation property to years for external
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class YearsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new yearTimePeriodDefinition object.
+     * Create new navigation property to years for external
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +161,7 @@ public class YearsRequestBuilder extends BaseRequestBuilder {
         return new YearsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the yearTimePeriodDefinition objects and their properties.
+     * Set of years represented in the system.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

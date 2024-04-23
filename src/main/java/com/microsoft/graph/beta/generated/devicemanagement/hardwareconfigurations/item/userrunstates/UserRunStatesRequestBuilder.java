@@ -60,7 +60,7 @@ public class UserRunStatesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/hardwareConfigurations/{hardwareConfiguration%2Did}/userRunStates{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * List of run states for the hardware configuration across all users
+     * List of run states for the hardware configuration across all users. Read-Only.
      * @return a {@link HardwareConfigurationUserStateCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -69,7 +69,7 @@ public class UserRunStatesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * List of run states for the hardware configuration across all users
+     * List of run states for the hardware configuration across all users. Read-Only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link HardwareConfigurationUserStateCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -107,7 +107,7 @@ public class UserRunStatesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, HardwareConfigurationUserState::createFromDiscriminatorValue);
     }
     /**
-     * List of run states for the hardware configuration across all users
+     * List of run states for the hardware configuration across all users. Read-Only.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class UserRunStatesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List of run states for the hardware configuration across all users
+     * List of run states for the hardware configuration across all users. Read-Only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +161,7 @@ public class UserRunStatesRequestBuilder extends BaseRequestBuilder {
         return new UserRunStatesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List of run states for the hardware configuration across all users
+     * List of run states for the hardware configuration across all users. Read-Only.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

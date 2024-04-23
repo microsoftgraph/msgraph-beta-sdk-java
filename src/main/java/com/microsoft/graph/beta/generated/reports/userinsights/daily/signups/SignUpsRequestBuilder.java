@@ -59,21 +59,19 @@ public class SignUpsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/reports/userInsights/daily/signUps{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a list of daily user sign-ups on apps registered in your tenant configured for Microsoft Entra External ID for customers.
+     * Total sign-ups on apps registered in the tenant for a specified period.
      * @return a {@link UserSignUpMetricCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/dailyuserinsightmetricsroot-list-signups?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UserSignUpMetricCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a list of daily user sign-ups on apps registered in your tenant configured for Microsoft Entra External ID for customers.
+     * Total sign-ups on apps registered in the tenant for a specified period.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UserSignUpMetricCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/dailyuserinsightmetricsroot-list-signups?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UserSignUpMetricCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -83,7 +81,7 @@ public class SignUpsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, UserSignUpMetricCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of daily user sign-ups on apps registered in your tenant configured for Microsoft Entra External ID for customers.
+     * Total sign-ups on apps registered in the tenant for a specified period.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -91,7 +89,7 @@ public class SignUpsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of daily user sign-ups on apps registered in your tenant configured for Microsoft Entra External ID for customers.
+     * Total sign-ups on apps registered in the tenant for a specified period.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -113,7 +111,7 @@ public class SignUpsRequestBuilder extends BaseRequestBuilder {
         return new SignUpsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of daily user sign-ups on apps registered in your tenant configured for Microsoft Entra External ID for customers.
+     * Total sign-ups on apps registered in the tenant for a specified period.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

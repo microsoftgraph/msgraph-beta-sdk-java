@@ -40,19 +40,21 @@ public class GetProvisionedCloudPCsWithGroupIdWithServicePlanIdRequestBuilder ex
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/cloudPCs/getProvisionedCloudPCs(groupId='{groupId}',servicePlanId='{servicePlanId}'){?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Invoke function getProvisionedCloudPCs
+     * Get all provisioned Cloud PCs of a specific service plan for users under a Microsoft Entra user group.
      * @return a {@link GetProvisionedCloudPCsWithGroupIdWithServicePlanIdGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpc-getprovisionedcloudpcs?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetProvisionedCloudPCsWithGroupIdWithServicePlanIdGetResponse get() {
         return get(null);
     }
     /**
-     * Invoke function getProvisionedCloudPCs
+     * Get all provisioned Cloud PCs of a specific service plan for users under a Microsoft Entra user group.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GetProvisionedCloudPCsWithGroupIdWithServicePlanIdGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpc-getprovisionedcloudpcs?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetProvisionedCloudPCsWithGroupIdWithServicePlanIdGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -62,7 +64,7 @@ public class GetProvisionedCloudPCsWithGroupIdWithServicePlanIdRequestBuilder ex
         return this.requestAdapter.send(requestInfo, errorMapping, GetProvisionedCloudPCsWithGroupIdWithServicePlanIdGetResponse::createFromDiscriminatorValue);
     }
     /**
-     * Invoke function getProvisionedCloudPCs
+     * Get all provisioned Cloud PCs of a specific service plan for users under a Microsoft Entra user group.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +72,7 @@ public class GetProvisionedCloudPCsWithGroupIdWithServicePlanIdRequestBuilder ex
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function getProvisionedCloudPCs
+     * Get all provisioned Cloud PCs of a specific service plan for users under a Microsoft Entra user group.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -92,7 +94,7 @@ public class GetProvisionedCloudPCsWithGroupIdWithServicePlanIdRequestBuilder ex
         return new GetProvisionedCloudPCsWithGroupIdWithServicePlanIdRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Invoke function getProvisionedCloudPCs
+     * Get all provisioned Cloud PCs of a specific service plan for users under a Microsoft Entra user group.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

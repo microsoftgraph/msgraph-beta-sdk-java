@@ -60,21 +60,19 @@ public class CertificationsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/profile/certifications{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Retrieve a list of personCertification objects from a user's profile.
+     * Represents the details of certifications associated with a person.
      * @return a {@link PersonCertificationCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/profile-list-certifications?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PersonCertificationCollectionResponse get() {
         return get(null);
     }
     /**
-     * Retrieve a list of personCertification objects from a user's profile.
+     * Represents the details of certifications associated with a person.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PersonCertificationCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/profile-list-certifications?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PersonCertificationCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +82,21 @@ public class CertificationsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PersonCertificationCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new personCertification object in a user's profile.
+     * Create new navigation property to certifications for users
      * @param body The request body
      * @return a {@link PersonCertification}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/profile-post-certifications?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PersonCertification post(@jakarta.annotation.Nonnull final PersonCertification body) {
         return post(body, null);
     }
     /**
-     * Create a new personCertification object in a user's profile.
+     * Create new navigation property to certifications for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PersonCertification}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/profile-post-certifications?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PersonCertification post(@jakarta.annotation.Nonnull final PersonCertification body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +107,7 @@ public class CertificationsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PersonCertification::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of personCertification objects from a user's profile.
+     * Represents the details of certifications associated with a person.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class CertificationsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of personCertification objects from a user's profile.
+     * Represents the details of certifications associated with a person.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +127,7 @@ public class CertificationsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new personCertification object in a user's profile.
+     * Create new navigation property to certifications for users
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class CertificationsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new personCertification object in a user's profile.
+     * Create new navigation property to certifications for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +161,7 @@ public class CertificationsRequestBuilder extends BaseRequestBuilder {
         return new CertificationsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of personCertification objects from a user's profile.
+     * Represents the details of certifications associated with a person.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

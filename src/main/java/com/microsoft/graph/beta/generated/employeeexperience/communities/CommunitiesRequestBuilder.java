@@ -60,7 +60,7 @@ public class CommunitiesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/employeeExperience/communities{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Read the properties and relationships of a community object.
+     * A collection of communities in Viva Engage.
      * @return a {@link CommunityCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -69,7 +69,7 @@ public class CommunitiesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a community object.
+     * A collection of communities in Viva Engage.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CommunityCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -82,23 +82,21 @@ public class CommunitiesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CommunityCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new community in Viva Engage.
+     * Create new navigation property to communities for employeeExperience
      * @param body The request body
      * @return a {@link Community}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/employeeexperience-post-communities?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Community post(@jakarta.annotation.Nonnull final Community body) {
         return post(body, null);
     }
     /**
-     * Create a new community in Viva Engage.
+     * Create new navigation property to communities for employeeExperience
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Community}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/employeeexperience-post-communities?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Community post(@jakarta.annotation.Nonnull final Community body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -109,7 +107,7 @@ public class CommunitiesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Community::createFromDiscriminatorValue);
     }
     /**
-     * Read the properties and relationships of a community object.
+     * A collection of communities in Viva Engage.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -117,7 +115,7 @@ public class CommunitiesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a community object.
+     * A collection of communities in Viva Engage.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -129,7 +127,7 @@ public class CommunitiesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new community in Viva Engage.
+     * Create new navigation property to communities for employeeExperience
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -138,7 +136,7 @@ public class CommunitiesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new community in Viva Engage.
+     * Create new navigation property to communities for employeeExperience
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -163,7 +161,7 @@ public class CommunitiesRequestBuilder extends BaseRequestBuilder {
         return new CommunitiesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Read the properties and relationships of a community object.
+     * A collection of communities in Viva Engage.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

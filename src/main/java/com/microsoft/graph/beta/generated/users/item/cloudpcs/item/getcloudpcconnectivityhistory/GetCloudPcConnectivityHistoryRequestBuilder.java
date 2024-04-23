@@ -36,19 +36,21 @@ public class GetCloudPcConnectivityHistoryRequestBuilder extends BaseRequestBuil
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/cloudPCs/{cloudPC%2Did}/getCloudPcConnectivityHistory(){?%24count,%24filter,%24search,%24skip,%24top}", rawUrl);
     }
     /**
-     * Invoke function getCloudPcConnectivityHistory
+     * Get the connectivity history of a specific Cloud PC.
      * @return a {@link GetCloudPcConnectivityHistoryGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpc-getcloudpcconnectivityhistory?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetCloudPcConnectivityHistoryGetResponse get() {
         return get(null);
     }
     /**
-     * Invoke function getCloudPcConnectivityHistory
+     * Get the connectivity history of a specific Cloud PC.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GetCloudPcConnectivityHistoryGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpc-getcloudpcconnectivityhistory?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetCloudPcConnectivityHistoryGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -58,7 +60,7 @@ public class GetCloudPcConnectivityHistoryRequestBuilder extends BaseRequestBuil
         return this.requestAdapter.send(requestInfo, errorMapping, GetCloudPcConnectivityHistoryGetResponse::createFromDiscriminatorValue);
     }
     /**
-     * Invoke function getCloudPcConnectivityHistory
+     * Get the connectivity history of a specific Cloud PC.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -66,7 +68,7 @@ public class GetCloudPcConnectivityHistoryRequestBuilder extends BaseRequestBuil
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function getCloudPcConnectivityHistory
+     * Get the connectivity history of a specific Cloud PC.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -88,7 +90,7 @@ public class GetCloudPcConnectivityHistoryRequestBuilder extends BaseRequestBuil
         return new GetCloudPcConnectivityHistoryRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Invoke function getCloudPcConnectivityHistory
+     * Get the connectivity history of a specific Cloud PC.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -60,21 +60,19 @@ public class ComplianceChangesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/admin/windows/updates/updatePolicies/{updatePolicy%2Did}/complianceChanges{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a list of the complianceChange objects and their properties.
+     * Compliance changes like content approvals which result in the automatic creation of deployments using the audience and deploymentSettings of the policy.
      * @return a {@link ComplianceChangeCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-updatepolicy-list-compliancechanges?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ComplianceChangeCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a list of the complianceChange objects and their properties.
+     * Compliance changes like content approvals which result in the automatic creation of deployments using the audience and deploymentSettings of the policy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ComplianceChangeCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-updatepolicy-list-compliancechanges?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ComplianceChangeCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +82,21 @@ public class ComplianceChangesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ComplianceChangeCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new contentApproval object.
+     * Create new navigation property to complianceChanges for admin
      * @param body The request body
      * @return a {@link ComplianceChange}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-updatepolicy-post-compliancechanges-contentapproval?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ComplianceChange post(@jakarta.annotation.Nonnull final ComplianceChange body) {
         return post(body, null);
     }
     /**
-     * Create a new contentApproval object.
+     * Create new navigation property to complianceChanges for admin
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ComplianceChange}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-updatepolicy-post-compliancechanges-contentapproval?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ComplianceChange post(@jakarta.annotation.Nonnull final ComplianceChange body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +107,7 @@ public class ComplianceChangesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ComplianceChange::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the complianceChange objects and their properties.
+     * Compliance changes like content approvals which result in the automatic creation of deployments using the audience and deploymentSettings of the policy.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class ComplianceChangesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the complianceChange objects and their properties.
+     * Compliance changes like content approvals which result in the automatic creation of deployments using the audience and deploymentSettings of the policy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +127,7 @@ public class ComplianceChangesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new contentApproval object.
+     * Create new navigation property to complianceChanges for admin
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class ComplianceChangesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new contentApproval object.
+     * Create new navigation property to complianceChanges for admin
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +161,7 @@ public class ComplianceChangesRequestBuilder extends BaseRequestBuilder {
         return new ComplianceChangesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the complianceChange objects and their properties.
+     * Compliance changes like content approvals which result in the automatic creation of deployments using the audience and deploymentSettings of the policy.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

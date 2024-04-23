@@ -60,21 +60,19 @@ public class ExportJobsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/employeeExperience/goals/exportJobs{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a list of goalsExportJob objects and their properties in a Viva Goals organization.
+     * Represents a collection of goals export jobs for Viva Goals.
      * @return a {@link GoalsExportJobCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/goals-list-exportjobs?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GoalsExportJobCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a list of goalsExportJob objects and their properties in a Viva Goals organization.
+     * Represents a collection of goals export jobs for Viva Goals.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GoalsExportJobCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/goals-list-exportjobs?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GoalsExportJobCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +82,21 @@ public class ExportJobsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, GoalsExportJobCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new goalsExportJob object in a Viva Goals organization.
+     * Create new navigation property to exportJobs for employeeExperience
      * @param body The request body
      * @return a {@link GoalsExportJob}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/goals-post-exportjobs?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GoalsExportJob post(@jakarta.annotation.Nonnull final GoalsExportJob body) {
         return post(body, null);
     }
     /**
-     * Create a new goalsExportJob object in a Viva Goals organization.
+     * Create new navigation property to exportJobs for employeeExperience
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GoalsExportJob}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/goals-post-exportjobs?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GoalsExportJob post(@jakarta.annotation.Nonnull final GoalsExportJob body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +107,7 @@ public class ExportJobsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, GoalsExportJob::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of goalsExportJob objects and their properties in a Viva Goals organization.
+     * Represents a collection of goals export jobs for Viva Goals.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class ExportJobsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of goalsExportJob objects and their properties in a Viva Goals organization.
+     * Represents a collection of goals export jobs for Viva Goals.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +127,7 @@ public class ExportJobsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new goalsExportJob object in a Viva Goals organization.
+     * Create new navigation property to exportJobs for employeeExperience
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class ExportJobsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new goalsExportJob object in a Viva Goals organization.
+     * Create new navigation property to exportJobs for employeeExperience
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +161,7 @@ public class ExportJobsRequestBuilder extends BaseRequestBuilder {
         return new ExportJobsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of goalsExportJob objects and their properties in a Viva Goals organization.
+     * Represents a collection of goals export jobs for Viva Goals.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

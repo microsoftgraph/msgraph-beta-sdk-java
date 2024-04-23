@@ -37,18 +37,16 @@ public class EducationalActivityItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/profile/educationalActivities/{educationalActivity%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete an educationalActivity object from a user's profile.
+     * Delete navigation property educationalActivities for users
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/educationalactivity-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete an educationalActivity object from a user's profile.
+     * Delete navigation property educationalActivities for users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/educationalactivity-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -57,21 +55,19 @@ public class EducationalActivityItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties and relationships of an educationalActivity object from a users profile.
+     * Represents data that a user has supplied related to undergraduate, graduate, postgraduate or other educational activities.
      * @return a {@link EducationalActivity}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/educationalactivity-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EducationalActivity get() {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of an educationalActivity object from a users profile.
+     * Represents data that a user has supplied related to undergraduate, graduate, postgraduate or other educational activities.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EducationalActivity}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/educationalactivity-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EducationalActivity get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -81,23 +77,21 @@ public class EducationalActivityItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EducationalActivity::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of an educationalActivity object within a user's profile.
+     * Update the navigation property educationalActivities in users
      * @param body The request body
      * @return a {@link EducationalActivity}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/educationalactivity-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EducationalActivity patch(@jakarta.annotation.Nonnull final EducationalActivity body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of an educationalActivity object within a user's profile.
+     * Update the navigation property educationalActivities in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EducationalActivity}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/educationalactivity-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EducationalActivity patch(@jakarta.annotation.Nonnull final EducationalActivity body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -108,7 +102,7 @@ public class EducationalActivityItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EducationalActivity::createFromDiscriminatorValue);
     }
     /**
-     * Delete an educationalActivity object from a user's profile.
+     * Delete navigation property educationalActivities for users
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +110,7 @@ public class EducationalActivityItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete an educationalActivity object from a user's profile.
+     * Delete navigation property educationalActivities for users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -128,7 +122,7 @@ public class EducationalActivityItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of an educationalActivity object from a users profile.
+     * Represents data that a user has supplied related to undergraduate, graduate, postgraduate or other educational activities.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -136,7 +130,7 @@ public class EducationalActivityItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of an educationalActivity object from a users profile.
+     * Represents data that a user has supplied related to undergraduate, graduate, postgraduate or other educational activities.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -148,7 +142,7 @@ public class EducationalActivityItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of an educationalActivity object within a user's profile.
+     * Update the navigation property educationalActivities in users
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -157,7 +151,7 @@ public class EducationalActivityItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of an educationalActivity object within a user's profile.
+     * Update the navigation property educationalActivities in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -188,7 +182,7 @@ public class EducationalActivityItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of an educationalActivity object from a users profile.
+     * Represents data that a user has supplied related to undergraduate, graduate, postgraduate or other educational activities.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

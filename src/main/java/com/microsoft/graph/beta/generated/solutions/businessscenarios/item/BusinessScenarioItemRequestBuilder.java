@@ -46,18 +46,16 @@ public class BusinessScenarioItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/solutions/businessScenarios/{businessScenario%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete a businessScenario object. The deletion of a scenario causes all data associated with the scenario to be deleted.
+     * Delete navigation property businessScenarios for solutions
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/businessscenario-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a businessScenario object. The deletion of a scenario causes all data associated with the scenario to be deleted.
+     * Delete navigation property businessScenarios for solutions
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/businessscenario-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -66,21 +64,19 @@ public class BusinessScenarioItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a businessScenario object.
+     * Get businessScenarios from solutions
      * @return a {@link BusinessScenario}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/businessscenario-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public BusinessScenario get() {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a businessScenario object.
+     * Get businessScenarios from solutions
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link BusinessScenario}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/businessscenario-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public BusinessScenario get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -90,23 +86,21 @@ public class BusinessScenarioItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, BusinessScenario::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a businessScenario object.
+     * Update the navigation property businessScenarios in solutions
      * @param body The request body
      * @return a {@link BusinessScenario}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/businessscenario-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public BusinessScenario patch(@jakarta.annotation.Nonnull final BusinessScenario body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of a businessScenario object.
+     * Update the navigation property businessScenarios in solutions
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link BusinessScenario}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/businessscenario-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public BusinessScenario patch(@jakarta.annotation.Nonnull final BusinessScenario body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -117,7 +111,7 @@ public class BusinessScenarioItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, BusinessScenario::createFromDiscriminatorValue);
     }
     /**
-     * Delete a businessScenario object. The deletion of a scenario causes all data associated with the scenario to be deleted.
+     * Delete navigation property businessScenarios for solutions
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -125,7 +119,7 @@ public class BusinessScenarioItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a businessScenario object. The deletion of a scenario causes all data associated with the scenario to be deleted.
+     * Delete navigation property businessScenarios for solutions
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -137,7 +131,7 @@ public class BusinessScenarioItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a businessScenario object.
+     * Get businessScenarios from solutions
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -145,7 +139,7 @@ public class BusinessScenarioItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a businessScenario object.
+     * Get businessScenarios from solutions
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -157,7 +151,7 @@ public class BusinessScenarioItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a businessScenario object.
+     * Update the navigation property businessScenarios in solutions
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -166,7 +160,7 @@ public class BusinessScenarioItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a businessScenario object.
+     * Update the navigation property businessScenarios in solutions
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -197,7 +191,7 @@ public class BusinessScenarioItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a businessScenario object.
+     * Get businessScenarios from solutions
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

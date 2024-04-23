@@ -59,21 +59,19 @@ public class PlatformCredentialMethodsRequestBuilder extends BaseRequestBuilder 
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/authentication/platformCredentialMethods{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a list of the platformCredentialAuthenticationMethod objects and their properties.
+     * Get platformCredentialMethods from users
      * @return a {@link PlatformCredentialAuthenticationMethodCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/platformcredentialauthenticationmethod-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PlatformCredentialAuthenticationMethodCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a list of the platformCredentialAuthenticationMethod objects and their properties.
+     * Get platformCredentialMethods from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PlatformCredentialAuthenticationMethodCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/platformcredentialauthenticationmethod-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PlatformCredentialAuthenticationMethodCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -83,7 +81,7 @@ public class PlatformCredentialMethodsRequestBuilder extends BaseRequestBuilder 
         return this.requestAdapter.send(requestInfo, errorMapping, PlatformCredentialAuthenticationMethodCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the platformCredentialAuthenticationMethod objects and their properties.
+     * Get platformCredentialMethods from users
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -91,7 +89,7 @@ public class PlatformCredentialMethodsRequestBuilder extends BaseRequestBuilder 
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the platformCredentialAuthenticationMethod objects and their properties.
+     * Get platformCredentialMethods from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -113,7 +111,7 @@ public class PlatformCredentialMethodsRequestBuilder extends BaseRequestBuilder 
         return new PlatformCredentialMethodsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the platformCredentialAuthenticationMethod objects and their properties.
+     * Get platformCredentialMethods from users
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

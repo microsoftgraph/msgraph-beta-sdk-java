@@ -90,12 +90,11 @@ public class NoncustodialDataSourcesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/compliance/ediscovery/cases/{case%2Did}/noncustodialDataSources{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a list of the noncustodialDataSource objects and their properties.
+     * Returns a list of case noncustodialDataSource objects for this case.  Nullable.
      * @return a {@link NoncustodialDataSourceCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
-     * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-noncustodialdatasource-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -103,13 +102,12 @@ public class NoncustodialDataSourcesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a list of the noncustodialDataSource objects and their properties.
+     * Returns a list of case noncustodialDataSource objects for this case.  Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link NoncustodialDataSourceCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
-     * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-noncustodialdatasource-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -120,13 +118,12 @@ public class NoncustodialDataSourcesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, NoncustodialDataSourceCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new noncustodialDataSource object.
+     * Create new navigation property to noncustodialDataSources for compliance
      * @param body The request body
      * @return a {@link NoncustodialDataSource}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
-     * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-noncustodialdatasource-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -134,14 +131,13 @@ public class NoncustodialDataSourcesRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new noncustodialDataSource object.
+     * Create new navigation property to noncustodialDataSources for compliance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link NoncustodialDataSource}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
-     * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-noncustodialdatasource-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -153,7 +149,7 @@ public class NoncustodialDataSourcesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, NoncustodialDataSource::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the noncustodialDataSource objects and their properties.
+     * Returns a list of case noncustodialDataSource objects for this case.  Nullable.
      * @return a {@link RequestInformation}
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
@@ -164,7 +160,7 @@ public class NoncustodialDataSourcesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the noncustodialDataSource objects and their properties.
+     * Returns a list of case noncustodialDataSource objects for this case.  Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -179,7 +175,7 @@ public class NoncustodialDataSourcesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new noncustodialDataSource object.
+     * Create new navigation property to noncustodialDataSources for compliance
      * @param body The request body
      * @return a {@link RequestInformation}
      * @deprecated
@@ -191,7 +187,7 @@ public class NoncustodialDataSourcesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new noncustodialDataSource object.
+     * Create new navigation property to noncustodialDataSources for compliance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -222,7 +218,7 @@ public class NoncustodialDataSourcesRequestBuilder extends BaseRequestBuilder {
         return new NoncustodialDataSourcesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the noncustodialDataSource objects and their properties.
+     * Returns a list of case noncustodialDataSource objects for this case.  Nullable.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

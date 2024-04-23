@@ -78,12 +78,11 @@ public class ProvisioningPoliciesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/provisioningPolicies{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * List properties and relationships of the cloudPcProvisioningPolicy objects.
+     * Cloud PC provisioning policy.
      * @return a {@link CloudPcProvisioningPolicyCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The onPremisesConnectionId property is deprecated and will stop returning on July 30, 2023. as of 2023-03/onPremisesConnectionId
-     * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-provisioningpolicies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -91,13 +90,12 @@ public class ProvisioningPoliciesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * List properties and relationships of the cloudPcProvisioningPolicy objects.
+     * Cloud PC provisioning policy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CloudPcProvisioningPolicyCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The onPremisesConnectionId property is deprecated and will stop returning on July 30, 2023. as of 2023-03/onPremisesConnectionId
-     * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-provisioningpolicies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -108,13 +106,12 @@ public class ProvisioningPoliciesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CloudPcProvisioningPolicyCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new cloudPcProvisioningPolicy object.
+     * Create new navigation property to provisioningPolicies for deviceManagement
      * @param body The request body
      * @return a {@link CloudPcProvisioningPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The onPremisesConnectionId property is deprecated and will stop returning on July 30, 2023. as of 2023-03/onPremisesConnectionId
-     * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-post-provisioningpolicies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -122,14 +119,13 @@ public class ProvisioningPoliciesRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new cloudPcProvisioningPolicy object.
+     * Create new navigation property to provisioningPolicies for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CloudPcProvisioningPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The onPremisesConnectionId property is deprecated and will stop returning on July 30, 2023. as of 2023-03/onPremisesConnectionId
-     * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-post-provisioningpolicies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -141,7 +137,7 @@ public class ProvisioningPoliciesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CloudPcProvisioningPolicy::createFromDiscriminatorValue);
     }
     /**
-     * List properties and relationships of the cloudPcProvisioningPolicy objects.
+     * Cloud PC provisioning policy.
      * @return a {@link RequestInformation}
      * @deprecated
      * The onPremisesConnectionId property is deprecated and will stop returning on July 30, 2023. as of 2023-03/onPremisesConnectionId
@@ -152,7 +148,7 @@ public class ProvisioningPoliciesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List properties and relationships of the cloudPcProvisioningPolicy objects.
+     * Cloud PC provisioning policy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -167,7 +163,7 @@ public class ProvisioningPoliciesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new cloudPcProvisioningPolicy object.
+     * Create new navigation property to provisioningPolicies for deviceManagement
      * @param body The request body
      * @return a {@link RequestInformation}
      * @deprecated
@@ -179,7 +175,7 @@ public class ProvisioningPoliciesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new cloudPcProvisioningPolicy object.
+     * Create new navigation property to provisioningPolicies for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -210,7 +206,7 @@ public class ProvisioningPoliciesRequestBuilder extends BaseRequestBuilder {
         return new ProvisioningPoliciesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List properties and relationships of the cloudPcProvisioningPolicy objects.
+     * Cloud PC provisioning policy.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

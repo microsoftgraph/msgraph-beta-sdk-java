@@ -68,21 +68,19 @@ public class IncludedGroupsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/policies/mobileDeviceManagementPolicies/{mobilityManagementPolicy%2Did}/includedGroups{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get the list of groups that are included in a mobile app management policy.
+     * Microsoft Entra groups under the scope of the mobility management application if appliesTo is selected
      * @return a {@link GroupCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/mobileappmanagementpolicies-list-includedgroups?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GroupCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get the list of groups that are included in a mobile app management policy.
+     * Microsoft Entra groups under the scope of the mobility management application if appliesTo is selected
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GroupCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/mobileappmanagementpolicies-list-includedgroups?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GroupCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -92,7 +90,7 @@ public class IncludedGroupsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, GroupCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Get the list of groups that are included in a mobile app management policy.
+     * Microsoft Entra groups under the scope of the mobility management application if appliesTo is selected
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -100,7 +98,7 @@ public class IncludedGroupsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the list of groups that are included in a mobile app management policy.
+     * Microsoft Entra groups under the scope of the mobility management application if appliesTo is selected
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -122,7 +120,7 @@ public class IncludedGroupsRequestBuilder extends BaseRequestBuilder {
         return new IncludedGroupsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the list of groups that are included in a mobile app management policy.
+     * Microsoft Entra groups under the scope of the mobility management application if appliesTo is selected
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

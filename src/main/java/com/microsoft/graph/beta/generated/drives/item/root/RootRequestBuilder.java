@@ -55,21 +55,19 @@ public class RootRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/root{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Retrieve the metadata for a driveItem in a drive by file system path or ID.
+     * The root folder of the drive. Read-only.
      * @return a {@link DriveItem}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/driveitem-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DriveItem get() {
         return get(null);
     }
     /**
-     * Retrieve the metadata for a driveItem in a drive by file system path or ID.
+     * The root folder of the drive. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DriveItem}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/driveitem-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DriveItem get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +77,7 @@ public class RootRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DriveItem::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve the metadata for a driveItem in a drive by file system path or ID.
+     * The root folder of the drive. Read-only.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -87,7 +85,7 @@ public class RootRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the metadata for a driveItem in a drive by file system path or ID.
+     * The root folder of the drive. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -109,7 +107,7 @@ public class RootRequestBuilder extends BaseRequestBuilder {
         return new RootRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve the metadata for a driveItem in a drive by file system path or ID.
+     * The root folder of the drive. Read-only.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

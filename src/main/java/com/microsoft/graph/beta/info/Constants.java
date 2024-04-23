@@ -5,6 +5,6 @@ public final class Constants {
     private Constants() {
     }
     /** The SDK version */
-    public static final String VERSION_NAME = "6.6.0";
+    public static final String VERSION_NAME = "6.7.0";
 }
 

@@ -38,19 +38,21 @@ public class GetAzureADApplicationSignInSummaryWithPeriodRequestBuilder extends 
         super(requestAdapter, "{+baseurl}/reports/getAzureADApplicationSignInSummary(period='{period}'){?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Invoke function getAzureADApplicationSignInSummary
+     * Retrieve applicationSigninSummary objects within either the last seven or 30 days.
      * @return a {@link GetAzureADApplicationSignInSummaryWithPeriodGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/reportroot-getazureadapplicationsigninsummary?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetAzureADApplicationSignInSummaryWithPeriodGetResponse get() {
         return get(null);
     }
     /**
-     * Invoke function getAzureADApplicationSignInSummary
+     * Retrieve applicationSigninSummary objects within either the last seven or 30 days.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GetAzureADApplicationSignInSummaryWithPeriodGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/reportroot-getazureadapplicationsigninsummary?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetAzureADApplicationSignInSummaryWithPeriodGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -60,7 +62,7 @@ public class GetAzureADApplicationSignInSummaryWithPeriodRequestBuilder extends 
         return this.requestAdapter.send(requestInfo, errorMapping, GetAzureADApplicationSignInSummaryWithPeriodGetResponse::createFromDiscriminatorValue);
     }
     /**
-     * Invoke function getAzureADApplicationSignInSummary
+     * Retrieve applicationSigninSummary objects within either the last seven or 30 days.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +70,7 @@ public class GetAzureADApplicationSignInSummaryWithPeriodRequestBuilder extends 
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function getAzureADApplicationSignInSummary
+     * Retrieve applicationSigninSummary objects within either the last seven or 30 days.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -90,7 +92,7 @@ public class GetAzureADApplicationSignInSummaryWithPeriodRequestBuilder extends 
         return new GetAzureADApplicationSignInSummaryWithPeriodRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Invoke function getAzureADApplicationSignInSummary
+     * Retrieve applicationSigninSummary objects within either the last seven or 30 days.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

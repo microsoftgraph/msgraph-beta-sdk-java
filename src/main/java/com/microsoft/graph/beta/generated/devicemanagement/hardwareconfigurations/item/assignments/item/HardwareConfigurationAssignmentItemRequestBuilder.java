@@ -55,7 +55,7 @@ public class HardwareConfigurationAssignmentItemRequestBuilder extends BaseReque
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * List of the Azure AD user group ids that hardware configuration will be applied to. Only security groups and Office 365 Groups are supported.
+     * A list of the Entra user group ids that hardware configuration will be applied to. Only security groups and Office 365 Groups are supported. Optional.
      * @return a {@link HardwareConfigurationAssignment}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -64,7 +64,7 @@ public class HardwareConfigurationAssignmentItemRequestBuilder extends BaseReque
         return get(null);
     }
     /**
-     * List of the Azure AD user group ids that hardware configuration will be applied to. Only security groups and Office 365 Groups are supported.
+     * A list of the Entra user group ids that hardware configuration will be applied to. Only security groups and Office 365 Groups are supported. Optional.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link HardwareConfigurationAssignment}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -122,7 +122,7 @@ public class HardwareConfigurationAssignmentItemRequestBuilder extends BaseReque
         return requestInfo;
     }
     /**
-     * List of the Azure AD user group ids that hardware configuration will be applied to. Only security groups and Office 365 Groups are supported.
+     * A list of the Entra user group ids that hardware configuration will be applied to. Only security groups and Office 365 Groups are supported. Optional.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +130,7 @@ public class HardwareConfigurationAssignmentItemRequestBuilder extends BaseReque
         return toGetRequestInformation(null);
     }
     /**
-     * List of the Azure AD user group ids that hardware configuration will be applied to. Only security groups and Office 365 Groups are supported.
+     * A list of the Entra user group ids that hardware configuration will be applied to. Only security groups and Office 365 Groups are supported. Optional.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +182,7 @@ public class HardwareConfigurationAssignmentItemRequestBuilder extends BaseReque
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * List of the Azure AD user group ids that hardware configuration will be applied to. Only security groups and Office 365 Groups are supported.
+     * A list of the Entra user group ids that hardware configuration will be applied to. Only security groups and Office 365 Groups are supported. Optional.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

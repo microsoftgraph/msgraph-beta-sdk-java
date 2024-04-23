@@ -37,23 +37,21 @@ public class IdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identity/userFlows/{identityUserFlow%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete an existing userFlow object.
+     * Delete navigation property userFlows for identity
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The identity/userflows API is deprecated and will stop returning data on January 2022. Please use the new b2cUserflows or b2xUserflows APIs. as of 2021-05/identityProvider
-     * @see <a href="https://learn.microsoft.com/graph/api/identityuserflow-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @Deprecated
     public void delete() {
         delete(null);
     }
     /**
-     * Delete an existing userFlow object.
+     * Delete navigation property userFlows for identity
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The identity/userflows API is deprecated and will stop returning data on January 2022. Please use the new b2cUserflows or b2xUserflows APIs. as of 2021-05/identityProvider
-     * @see <a href="https://learn.microsoft.com/graph/api/identityuserflow-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -63,12 +61,11 @@ public class IdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties and associations for an userFlow object.
+     * Get userFlows from identity
      * @return a {@link IdentityUserFlow}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The identity/userflows API is deprecated and will stop returning data on January 2022. Please use the new b2cUserflows or b2xUserflows APIs. as of 2021-05/identityProvider
-     * @see <a href="https://learn.microsoft.com/graph/api/identityuserflow-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -76,13 +73,12 @@ public class IdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the properties and associations for an userFlow object.
+     * Get userFlows from identity
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link IdentityUserFlow}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The identity/userflows API is deprecated and will stop returning data on January 2022. Please use the new b2cUserflows or b2xUserflows APIs. as of 2021-05/identityProvider
-     * @see <a href="https://learn.microsoft.com/graph/api/identityuserflow-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -124,7 +120,7 @@ public class IdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, IdentityUserFlow::createFromDiscriminatorValue);
     }
     /**
-     * Delete an existing userFlow object.
+     * Delete navigation property userFlows for identity
      * @return a {@link RequestInformation}
      * @deprecated
      * The identity/userflows API is deprecated and will stop returning data on January 2022. Please use the new b2cUserflows or b2xUserflows APIs. as of 2021-05/identityProvider
@@ -135,7 +131,7 @@ public class IdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete an existing userFlow object.
+     * Delete navigation property userFlows for identity
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -150,7 +146,7 @@ public class IdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and associations for an userFlow object.
+     * Get userFlows from identity
      * @return a {@link RequestInformation}
      * @deprecated
      * The identity/userflows API is deprecated and will stop returning data on January 2022. Please use the new b2cUserflows or b2xUserflows APIs. as of 2021-05/identityProvider
@@ -161,7 +157,7 @@ public class IdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and associations for an userFlow object.
+     * Get userFlows from identity
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -225,7 +221,7 @@ public class IdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and associations for an userFlow object.
+     * Get userFlows from identity
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

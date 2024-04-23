@@ -55,21 +55,19 @@ public class ManagedDeviceComplianceItemRequestBuilder extends BaseRequestBuilde
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a managedDeviceCompliance object.
+     * The collection of compliance for managed devices across managed tenants.
      * @return a {@link ManagedDeviceCompliance}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-manageddevicecompliance-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ManagedDeviceCompliance get() {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a managedDeviceCompliance object.
+     * The collection of compliance for managed devices across managed tenants.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ManagedDeviceCompliance}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-manageddevicecompliance-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ManagedDeviceCompliance get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -124,7 +122,7 @@ public class ManagedDeviceComplianceItemRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a managedDeviceCompliance object.
+     * The collection of compliance for managed devices across managed tenants.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -132,7 +130,7 @@ public class ManagedDeviceComplianceItemRequestBuilder extends BaseRequestBuilde
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a managedDeviceCompliance object.
+     * The collection of compliance for managed devices across managed tenants.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -184,7 +182,7 @@ public class ManagedDeviceComplianceItemRequestBuilder extends BaseRequestBuilde
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a managedDeviceCompliance object.
+     * The collection of compliance for managed devices across managed tenants.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -61,12 +61,11 @@ public class InformationProtectionLabelItemRequestBuilder extends BaseRequestBui
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties and relationships of an informationProtectionLabel object.
+     * Get labels from groups
      * @return a {@link InformationProtectionLabel}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels
-     * @see <a href="https://learn.microsoft.com/graph/api/informationprotectionlabel-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -74,13 +73,12 @@ public class InformationProtectionLabelItemRequestBuilder extends BaseRequestBui
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of an informationProtectionLabel object.
+     * Get labels from groups
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link InformationProtectionLabel}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels
-     * @see <a href="https://learn.microsoft.com/graph/api/informationprotectionlabel-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -148,7 +146,7 @@ public class InformationProtectionLabelItemRequestBuilder extends BaseRequestBui
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of an informationProtectionLabel object.
+     * Get labels from groups
      * @return a {@link RequestInformation}
      * @deprecated
      * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels
@@ -159,7 +157,7 @@ public class InformationProtectionLabelItemRequestBuilder extends BaseRequestBui
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of an informationProtectionLabel object.
+     * Get labels from groups
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -223,7 +221,7 @@ public class InformationProtectionLabelItemRequestBuilder extends BaseRequestBui
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of an informationProtectionLabel object.
+     * Get labels from groups
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

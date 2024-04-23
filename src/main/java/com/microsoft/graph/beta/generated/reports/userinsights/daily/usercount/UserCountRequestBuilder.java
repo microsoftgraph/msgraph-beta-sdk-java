@@ -59,21 +59,19 @@ public class UserCountRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/reports/userInsights/daily/userCount{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a list of daily user count on apps registered in your tenant configured for Microsoft Entra External ID for customers.
+     * Insights for total users on apps registered in the tenant for a specified period.
      * @return a {@link UserCountMetricCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/dailyuserinsightmetricsroot-list-usercount?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UserCountMetricCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a list of daily user count on apps registered in your tenant configured for Microsoft Entra External ID for customers.
+     * Insights for total users on apps registered in the tenant for a specified period.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UserCountMetricCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/dailyuserinsightmetricsroot-list-usercount?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UserCountMetricCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -83,7 +81,7 @@ public class UserCountRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, UserCountMetricCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of daily user count on apps registered in your tenant configured for Microsoft Entra External ID for customers.
+     * Insights for total users on apps registered in the tenant for a specified period.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -91,7 +89,7 @@ public class UserCountRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of daily user count on apps registered in your tenant configured for Microsoft Entra External ID for customers.
+     * Insights for total users on apps registered in the tenant for a specified period.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -113,7 +111,7 @@ public class UserCountRequestBuilder extends BaseRequestBuilder {
         return new UserCountRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of daily user count on apps registered in your tenant configured for Microsoft Entra External ID for customers.
+     * Insights for total users on apps registered in the tenant for a specified period.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

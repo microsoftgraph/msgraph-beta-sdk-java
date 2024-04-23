@@ -55,7 +55,7 @@ public class HardwareConfigurationDeviceStateItemRequestBuilder extends BaseRequ
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * List of run states for the hardware configuration across all devices
+     * List of run states for the hardware configuration across all devices. Read-Only.
      * @return a {@link HardwareConfigurationDeviceState}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -64,7 +64,7 @@ public class HardwareConfigurationDeviceStateItemRequestBuilder extends BaseRequ
         return get(null);
     }
     /**
-     * List of run states for the hardware configuration across all devices
+     * List of run states for the hardware configuration across all devices. Read-Only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link HardwareConfigurationDeviceState}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -122,7 +122,7 @@ public class HardwareConfigurationDeviceStateItemRequestBuilder extends BaseRequ
         return requestInfo;
     }
     /**
-     * List of run states for the hardware configuration across all devices
+     * List of run states for the hardware configuration across all devices. Read-Only.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +130,7 @@ public class HardwareConfigurationDeviceStateItemRequestBuilder extends BaseRequ
         return toGetRequestInformation(null);
     }
     /**
-     * List of run states for the hardware configuration across all devices
+     * List of run states for the hardware configuration across all devices. Read-Only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +182,7 @@ public class HardwareConfigurationDeviceStateItemRequestBuilder extends BaseRequ
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * List of run states for the hardware configuration across all devices
+     * List of run states for the hardware configuration across all devices. Read-Only.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
