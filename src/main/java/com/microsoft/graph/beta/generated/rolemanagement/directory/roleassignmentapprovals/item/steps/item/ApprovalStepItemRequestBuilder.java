@@ -55,21 +55,19 @@ public class ApprovalStepItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties of an approvalStep object.
+     * Used to represent the decision associated with a single step in the approval process configured in approvalStage.
      * @return a {@link ApprovalStep}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/approvalstep-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ApprovalStep get() {
         return get(null);
     }
     /**
-     * Retrieve the properties of an approvalStep object.
+     * Used to represent the decision associated with a single step in the approval process configured in approvalStage.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ApprovalStep}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/approvalstep-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ApprovalStep get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,23 +77,21 @@ public class ApprovalStepItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ApprovalStep::createFromDiscriminatorValue);
     }
     /**
-     * Apply approve or deny decision on an approvalStep object.
+     * Update the navigation property steps in roleManagement
      * @param body The request body
      * @return a {@link ApprovalStep}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/approvalstep-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ApprovalStep patch(@jakarta.annotation.Nonnull final ApprovalStep body) {
         return patch(body, null);
     }
     /**
-     * Apply approve or deny decision on an approvalStep object.
+     * Update the navigation property steps in roleManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ApprovalStep}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/approvalstep-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ApprovalStep patch(@jakarta.annotation.Nonnull final ApprovalStep body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -126,7 +122,7 @@ public class ApprovalStepItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties of an approvalStep object.
+     * Used to represent the decision associated with a single step in the approval process configured in approvalStage.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -134,7 +130,7 @@ public class ApprovalStepItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties of an approvalStep object.
+     * Used to represent the decision associated with a single step in the approval process configured in approvalStage.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -146,7 +142,7 @@ public class ApprovalStepItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Apply approve or deny decision on an approvalStep object.
+     * Update the navigation property steps in roleManagement
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -155,7 +151,7 @@ public class ApprovalStepItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Apply approve or deny decision on an approvalStep object.
+     * Update the navigation property steps in roleManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -186,7 +182,7 @@ public class ApprovalStepItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties of an approvalStep object.
+     * Used to represent the decision associated with a single step in the approval process configured in approvalStage.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

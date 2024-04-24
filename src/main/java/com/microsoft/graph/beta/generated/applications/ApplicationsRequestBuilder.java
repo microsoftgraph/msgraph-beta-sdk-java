@@ -99,7 +99,7 @@ public class ApplicationsRequestBuilder extends BaseRequestBuilder {
      * Get the list of applications in this organization.
      * @return a {@link ApplicationCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/application-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/application-list?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ApplicationCollectionResponse get() {
@@ -110,7 +110,7 @@ public class ApplicationsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ApplicationCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/application-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/application-list?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ApplicationCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -124,7 +124,7 @@ public class ApplicationsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link Application}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/application-post-applications?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/application-post-applications?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Application post(@jakarta.annotation.Nonnull final Application body) {
@@ -136,7 +136,7 @@ public class ApplicationsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Application}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/application-post-applications?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/application-post-applications?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Application post(@jakarta.annotation.Nonnull final Application body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

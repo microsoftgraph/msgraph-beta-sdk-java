@@ -60,21 +60,19 @@ public class SkillsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/profile/skills{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Retrieve a list of skillProficiency objects in a user's profile.
+     * Represents detailed information about skills associated with a user in various services.
      * @return a {@link SkillProficiencyCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/profile-list-skills?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SkillProficiencyCollectionResponse get() {
         return get(null);
     }
     /**
-     * Retrieve a list of skillProficiency objects in a user's profile.
+     * Represents detailed information about skills associated with a user in various services.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SkillProficiencyCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/profile-list-skills?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SkillProficiencyCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +82,21 @@ public class SkillsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, SkillProficiencyCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Use this API to create a new skillProficiency object in a user's profile.
+     * Create new navigation property to skills for users
      * @param body The request body
      * @return a {@link SkillProficiency}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/profile-post-skills?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SkillProficiency post(@jakarta.annotation.Nonnull final SkillProficiency body) {
         return post(body, null);
     }
     /**
-     * Use this API to create a new skillProficiency object in a user's profile.
+     * Create new navigation property to skills for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SkillProficiency}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/profile-post-skills?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SkillProficiency post(@jakarta.annotation.Nonnull final SkillProficiency body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +107,7 @@ public class SkillsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, SkillProficiency::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of skillProficiency objects in a user's profile.
+     * Represents detailed information about skills associated with a user in various services.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class SkillsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of skillProficiency objects in a user's profile.
+     * Represents detailed information about skills associated with a user in various services.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +127,7 @@ public class SkillsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Use this API to create a new skillProficiency object in a user's profile.
+     * Create new navigation property to skills for users
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class SkillsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Use this API to create a new skillProficiency object in a user's profile.
+     * Create new navigation property to skills for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +161,7 @@ public class SkillsRequestBuilder extends BaseRequestBuilder {
         return new SkillsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of skillProficiency objects in a user's profile.
+     * Represents detailed information about skills associated with a user in various services.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

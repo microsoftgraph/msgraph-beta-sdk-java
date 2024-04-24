@@ -70,21 +70,19 @@ public class SnapshotsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/snapshots{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a list of cloudPcSnapshot objects and their properties.
+     * Cloud PC snapshots.
      * @return a {@link CloudPcSnapshotCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-snapshots?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPcSnapshotCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a list of cloudPcSnapshot objects and their properties.
+     * Cloud PC snapshots.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CloudPcSnapshotCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-snapshots?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPcSnapshotCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -129,7 +127,7 @@ public class SnapshotsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CloudPcSnapshot::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of cloudPcSnapshot objects and their properties.
+     * Cloud PC snapshots.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -137,7 +135,7 @@ public class SnapshotsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of cloudPcSnapshot objects and their properties.
+     * Cloud PC snapshots.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -183,7 +181,7 @@ public class SnapshotsRequestBuilder extends BaseRequestBuilder {
         return new SnapshotsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of cloudPcSnapshot objects and their properties.
+     * Cloud PC snapshots.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

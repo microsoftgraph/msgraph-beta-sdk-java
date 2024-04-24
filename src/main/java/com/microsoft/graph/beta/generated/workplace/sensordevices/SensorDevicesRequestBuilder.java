@@ -69,21 +69,19 @@ public class SensorDevicesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/workplace/sensorDevices{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a list of all workplace sensor devices created for a tenant.
+     * A collection of sensor devices.
      * @return a {@link WorkplaceSensorDeviceCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/workplace-list-sensordevices?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WorkplaceSensorDeviceCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a list of all workplace sensor devices created for a tenant.
+     * A collection of sensor devices.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link WorkplaceSensorDeviceCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/workplace-list-sensordevices?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WorkplaceSensorDeviceCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -93,23 +91,21 @@ public class SensorDevicesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, WorkplaceSensorDeviceCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new workplace sensor device.
+     * Create new navigation property to sensorDevices for workplace
      * @param body The request body
      * @return a {@link WorkplaceSensorDevice}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/workplace-post-sensordevices?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WorkplaceSensorDevice post(@jakarta.annotation.Nonnull final WorkplaceSensorDevice body) {
         return post(body, null);
     }
     /**
-     * Create a new workplace sensor device.
+     * Create new navigation property to sensorDevices for workplace
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link WorkplaceSensorDevice}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/workplace-post-sensordevices?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WorkplaceSensorDevice post(@jakarta.annotation.Nonnull final WorkplaceSensorDevice body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -120,7 +116,7 @@ public class SensorDevicesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, WorkplaceSensorDevice::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of all workplace sensor devices created for a tenant.
+     * A collection of sensor devices.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -128,7 +124,7 @@ public class SensorDevicesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of all workplace sensor devices created for a tenant.
+     * A collection of sensor devices.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class SensorDevicesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new workplace sensor device.
+     * Create new navigation property to sensorDevices for workplace
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -149,7 +145,7 @@ public class SensorDevicesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new workplace sensor device.
+     * Create new navigation property to sensorDevices for workplace
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -174,7 +170,7 @@ public class SensorDevicesRequestBuilder extends BaseRequestBuilder {
         return new SensorDevicesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of all workplace sensor devices created for a tenant.
+     * A collection of sensor devices.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

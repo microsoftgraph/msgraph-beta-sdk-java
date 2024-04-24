@@ -60,21 +60,19 @@ public class AppCredentialSignInActivitiesRequestBuilder extends BaseRequestBuil
         super(requestAdapter, "{+baseurl}/reports/appCredentialSignInActivities{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a list of appCredentialSignInActivity objects that contains recent activity of application credentials.
+     * Represents a collection of sign-in activities of application credentials.
      * @return a {@link AppCredentialSignInActivityCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/reportroot-list-appcredentialsigninactivities?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AppCredentialSignInActivityCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a list of appCredentialSignInActivity objects that contains recent activity of application credentials.
+     * Represents a collection of sign-in activities of application credentials.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AppCredentialSignInActivityCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/reportroot-list-appcredentialsigninactivities?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AppCredentialSignInActivityCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -109,7 +107,7 @@ public class AppCredentialSignInActivitiesRequestBuilder extends BaseRequestBuil
         return this.requestAdapter.send(requestInfo, errorMapping, AppCredentialSignInActivity::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of appCredentialSignInActivity objects that contains recent activity of application credentials.
+     * Represents a collection of sign-in activities of application credentials.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -117,7 +115,7 @@ public class AppCredentialSignInActivitiesRequestBuilder extends BaseRequestBuil
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of appCredentialSignInActivity objects that contains recent activity of application credentials.
+     * Represents a collection of sign-in activities of application credentials.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -163,7 +161,7 @@ public class AppCredentialSignInActivitiesRequestBuilder extends BaseRequestBuil
         return new AppCredentialSignInActivitiesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of appCredentialSignInActivity objects that contains recent activity of application credentials.
+     * Represents a collection of sign-in activities of application credentials.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

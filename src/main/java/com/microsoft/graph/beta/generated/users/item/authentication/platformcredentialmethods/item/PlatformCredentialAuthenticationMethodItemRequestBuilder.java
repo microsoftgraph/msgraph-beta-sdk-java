@@ -46,18 +46,16 @@ public class PlatformCredentialAuthenticationMethodItemRequestBuilder extends Ba
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/authentication/platformCredentialMethods/{platformCredentialAuthenticationMethod%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete a platformCredentialAuthenticationMethod object.
+     * Delete navigation property platformCredentialMethods for users
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/platformcredentialauthenticationmethod-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a platformCredentialAuthenticationMethod object.
+     * Delete navigation property platformCredentialMethods for users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/platformcredentialauthenticationmethod-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -66,21 +64,19 @@ public class PlatformCredentialAuthenticationMethodItemRequestBuilder extends Ba
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a platformCredentialAuthenticationMethod object.
+     * Get platformCredentialMethods from users
      * @return a {@link PlatformCredentialAuthenticationMethod}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/platformcredentialauthenticationmethod-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PlatformCredentialAuthenticationMethod get() {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a platformCredentialAuthenticationMethod object.
+     * Get platformCredentialMethods from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PlatformCredentialAuthenticationMethod}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/platformcredentialauthenticationmethod-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PlatformCredentialAuthenticationMethod get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -90,7 +86,7 @@ public class PlatformCredentialAuthenticationMethodItemRequestBuilder extends Ba
         return this.requestAdapter.send(requestInfo, errorMapping, PlatformCredentialAuthenticationMethod::createFromDiscriminatorValue);
     }
     /**
-     * Delete a platformCredentialAuthenticationMethod object.
+     * Delete navigation property platformCredentialMethods for users
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -98,7 +94,7 @@ public class PlatformCredentialAuthenticationMethodItemRequestBuilder extends Ba
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a platformCredentialAuthenticationMethod object.
+     * Delete navigation property platformCredentialMethods for users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -110,7 +106,7 @@ public class PlatformCredentialAuthenticationMethodItemRequestBuilder extends Ba
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a platformCredentialAuthenticationMethod object.
+     * Get platformCredentialMethods from users
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -118,7 +114,7 @@ public class PlatformCredentialAuthenticationMethodItemRequestBuilder extends Ba
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a platformCredentialAuthenticationMethod object.
+     * Get platformCredentialMethods from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -146,7 +142,7 @@ public class PlatformCredentialAuthenticationMethodItemRequestBuilder extends Ba
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a platformCredentialAuthenticationMethod object.
+     * Get platformCredentialMethods from users
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

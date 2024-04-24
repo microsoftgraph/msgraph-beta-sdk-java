@@ -99,7 +99,7 @@ public class DevicesRequestBuilder extends BaseRequestBuilder {
      * Retrieve a list of devices registered in the directory.
      * @return a {@link DeviceCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/device-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/device-list?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceCollectionResponse get() {
@@ -110,7 +110,7 @@ public class DevicesRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DeviceCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/device-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/device-list?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -124,7 +124,7 @@ public class DevicesRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link Device}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/device-post-devices?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/device-post-devices?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Device post(@jakarta.annotation.Nonnull final Device body) {
@@ -136,7 +136,7 @@ public class DevicesRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Device}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/device-post-devices?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/device-post-devices?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Device post(@jakarta.annotation.Nonnull final Device body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

@@ -36,19 +36,21 @@ public class GetOpenShiftsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/teams/getOpenShifts(){?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Invoke function getOpenShifts
+     * Get all openShift objects across all teams a user is a direct member of.
      * @return a {@link GetOpenShiftsGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/team-getopenshifts?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetOpenShiftsGetResponse get() {
         return get(null);
     }
     /**
-     * Invoke function getOpenShifts
+     * Get all openShift objects across all teams a user is a direct member of.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GetOpenShiftsGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/team-getopenshifts?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetOpenShiftsGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -58,7 +60,7 @@ public class GetOpenShiftsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, GetOpenShiftsGetResponse::createFromDiscriminatorValue);
     }
     /**
-     * Invoke function getOpenShifts
+     * Get all openShift objects across all teams a user is a direct member of.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -66,7 +68,7 @@ public class GetOpenShiftsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function getOpenShifts
+     * Get all openShift objects across all teams a user is a direct member of.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -88,7 +90,7 @@ public class GetOpenShiftsRequestBuilder extends BaseRequestBuilder {
         return new GetOpenShiftsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Invoke function getOpenShifts
+     * Get all openShift objects across all teams a user is a direct member of.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

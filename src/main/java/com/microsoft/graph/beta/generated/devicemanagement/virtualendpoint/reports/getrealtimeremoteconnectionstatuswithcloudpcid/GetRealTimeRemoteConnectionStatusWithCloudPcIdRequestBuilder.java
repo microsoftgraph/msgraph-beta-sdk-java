@@ -38,19 +38,21 @@ public class GetRealTimeRemoteConnectionStatusWithCloudPcIdRequestBuilder extend
         super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/reports/getRealTimeRemoteConnectionStatus(cloudPcId='{cloudPcId}')", rawUrl);
     }
     /**
-     * Invoke function getRealTimeRemoteConnectionStatus
+     * Get the real-time connection status information, such as signInStatus or daysSinceLastUse, for a Cloud PC.
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpcreports-getrealtimeremoteconnectionstatus?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public InputStream get() {
         return get(null);
     }
     /**
-     * Invoke function getRealTimeRemoteConnectionStatus
+     * Get the real-time connection status information, such as signInStatus or daysSinceLastUse, for a Cloud PC.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpcreports-getrealtimeremoteconnectionstatus?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public InputStream get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -60,7 +62,7 @@ public class GetRealTimeRemoteConnectionStatusWithCloudPcIdRequestBuilder extend
         return this.requestAdapter.sendPrimitive(requestInfo, errorMapping, InputStream.class);
     }
     /**
-     * Invoke function getRealTimeRemoteConnectionStatus
+     * Get the real-time connection status information, such as signInStatus or daysSinceLastUse, for a Cloud PC.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +70,7 @@ public class GetRealTimeRemoteConnectionStatusWithCloudPcIdRequestBuilder extend
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function getRealTimeRemoteConnectionStatus
+     * Get the real-time connection status information, such as signInStatus or daysSinceLastUse, for a Cloud PC.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

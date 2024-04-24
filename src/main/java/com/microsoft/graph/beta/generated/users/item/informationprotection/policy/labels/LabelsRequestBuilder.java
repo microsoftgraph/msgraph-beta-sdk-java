@@ -114,12 +114,11 @@ public class LabelsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/informationProtection/policy/labels{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a collection of information protection labels available to the user or to the organization.
+     * Get labels from users
      * @return a {@link InformationProtectionLabelCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels
-     * @see <a href="https://learn.microsoft.com/graph/api/informationprotectionpolicy-list-labels?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -127,13 +126,12 @@ public class LabelsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a collection of information protection labels available to the user or to the organization.
+     * Get labels from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link InformationProtectionLabelCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels
-     * @see <a href="https://learn.microsoft.com/graph/api/informationprotectionpolicy-list-labels?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -175,7 +173,7 @@ public class LabelsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, InformationProtectionLabel::createFromDiscriminatorValue);
     }
     /**
-     * Get a collection of information protection labels available to the user or to the organization.
+     * Get labels from users
      * @return a {@link RequestInformation}
      * @deprecated
      * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels
@@ -186,7 +184,7 @@ public class LabelsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a collection of information protection labels available to the user or to the organization.
+     * Get labels from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -244,7 +242,7 @@ public class LabelsRequestBuilder extends BaseRequestBuilder {
         return new LabelsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a collection of information protection labels available to the user or to the organization.
+     * Get labels from users
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

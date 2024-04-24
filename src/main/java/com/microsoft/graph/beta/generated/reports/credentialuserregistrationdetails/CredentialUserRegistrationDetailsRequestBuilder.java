@@ -66,12 +66,11 @@ public class CredentialUserRegistrationDetailsRequestBuilder extends BaseRequest
         super(requestAdapter, "{+baseurl}/reports/credentialUserRegistrationDetails{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a list of credentialUserRegistrationDetails objects for a given tenant.
+     * Details of the usage of self-service password reset and multifactor authentication (MFA) for all registered users.
      * @return a {@link CredentialUserRegistrationDetailsCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails
-     * @see <a href="https://learn.microsoft.com/graph/api/reportroot-list-credentialuserregistrationdetails?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -79,13 +78,12 @@ public class CredentialUserRegistrationDetailsRequestBuilder extends BaseRequest
         return get(null);
     }
     /**
-     * Get a list of credentialUserRegistrationDetails objects for a given tenant.
+     * Details of the usage of self-service password reset and multifactor authentication (MFA) for all registered users.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CredentialUserRegistrationDetailsCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails
-     * @see <a href="https://learn.microsoft.com/graph/api/reportroot-list-credentialuserregistrationdetails?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -127,7 +125,7 @@ public class CredentialUserRegistrationDetailsRequestBuilder extends BaseRequest
         return this.requestAdapter.send(requestInfo, errorMapping, CredentialUserRegistrationDetails::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of credentialUserRegistrationDetails objects for a given tenant.
+     * Details of the usage of self-service password reset and multifactor authentication (MFA) for all registered users.
      * @return a {@link RequestInformation}
      * @deprecated
      * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails
@@ -138,7 +136,7 @@ public class CredentialUserRegistrationDetailsRequestBuilder extends BaseRequest
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of credentialUserRegistrationDetails objects for a given tenant.
+     * Details of the usage of self-service password reset and multifactor authentication (MFA) for all registered users.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -196,7 +194,7 @@ public class CredentialUserRegistrationDetailsRequestBuilder extends BaseRequest
         return new CredentialUserRegistrationDetailsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of credentialUserRegistrationDetails objects for a given tenant.
+     * Details of the usage of self-service password reset and multifactor authentication (MFA) for all registered users.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

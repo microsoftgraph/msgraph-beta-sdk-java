@@ -60,21 +60,19 @@ public class ActivitiesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/activities{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * List the recent activities that took place on an item or under a hierarchy.
+     * The list of recent activities that took place under this drive.
      * @return a {@link ItemActivityOLDCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/activities-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ItemActivityOLDCollectionResponse get() {
         return get(null);
     }
     /**
-     * List the recent activities that took place on an item or under a hierarchy.
+     * The list of recent activities that took place under this drive.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ItemActivityOLDCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/activities-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ItemActivityOLDCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -109,7 +107,7 @@ public class ActivitiesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ItemActivityOLD::createFromDiscriminatorValue);
     }
     /**
-     * List the recent activities that took place on an item or under a hierarchy.
+     * The list of recent activities that took place under this drive.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -117,7 +115,7 @@ public class ActivitiesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List the recent activities that took place on an item or under a hierarchy.
+     * The list of recent activities that took place under this drive.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -163,7 +161,7 @@ public class ActivitiesRequestBuilder extends BaseRequestBuilder {
         return new ActivitiesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List the recent activities that took place on an item or under a hierarchy.
+     * The list of recent activities that took place under this drive.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

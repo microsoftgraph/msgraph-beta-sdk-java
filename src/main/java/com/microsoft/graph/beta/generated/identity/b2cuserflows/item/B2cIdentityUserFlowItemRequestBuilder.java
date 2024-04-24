@@ -73,18 +73,16 @@ public class B2cIdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identity/b2cUserFlows/{b2cIdentityUserFlow%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete a b2cIdentityUserFlow object.
+     * Delete navigation property b2cUserFlows for identity
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/b2cidentityuserflow-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a b2cIdentityUserFlow object.
+     * Delete navigation property b2cUserFlows for identity
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/b2cidentityuserflow-delete?view=graph-rest-1.0">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -93,21 +91,19 @@ public class B2cIdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties and relationships of a b2cUserFlow object.
+     * Represents entry point for B2C identity userflows.
      * @return a {@link B2cIdentityUserFlow}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/b2cidentityuserflow-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public B2cIdentityUserFlow get() {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of a b2cUserFlow object.
+     * Represents entry point for B2C identity userflows.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link B2cIdentityUserFlow}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/b2cidentityuserflow-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public B2cIdentityUserFlow get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -117,23 +113,21 @@ public class B2cIdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, B2cIdentityUserFlow::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a b2cIdentityUserFlow object.
+     * Update the navigation property b2cUserFlows in identity
      * @param body The request body
      * @return a {@link B2cIdentityUserFlow}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/b2cidentityuserflow-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public B2cIdentityUserFlow patch(@jakarta.annotation.Nonnull final B2cIdentityUserFlow body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of a b2cIdentityUserFlow object.
+     * Update the navigation property b2cUserFlows in identity
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link B2cIdentityUserFlow}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/b2cidentityuserflow-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public B2cIdentityUserFlow patch(@jakarta.annotation.Nonnull final B2cIdentityUserFlow body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -144,7 +138,7 @@ public class B2cIdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, B2cIdentityUserFlow::createFromDiscriminatorValue);
     }
     /**
-     * Delete a b2cIdentityUserFlow object.
+     * Delete navigation property b2cUserFlows for identity
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -152,7 +146,7 @@ public class B2cIdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a b2cIdentityUserFlow object.
+     * Delete navigation property b2cUserFlows for identity
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -164,7 +158,7 @@ public class B2cIdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of a b2cUserFlow object.
+     * Represents entry point for B2C identity userflows.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -172,7 +166,7 @@ public class B2cIdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of a b2cUserFlow object.
+     * Represents entry point for B2C identity userflows.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -184,7 +178,7 @@ public class B2cIdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a b2cIdentityUserFlow object.
+     * Update the navigation property b2cUserFlows in identity
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -193,7 +187,7 @@ public class B2cIdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a b2cIdentityUserFlow object.
+     * Update the navigation property b2cUserFlows in identity
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -224,7 +218,7 @@ public class B2cIdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of a b2cUserFlow object.
+     * Represents entry point for B2C identity userflows.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

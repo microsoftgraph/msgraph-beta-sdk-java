@@ -39,7 +39,7 @@ public class ValidateBulkResizeRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link ValidateBulkResizePostResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/cloudpc-validatebulkresize?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpc-validatebulkresize?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ValidateBulkResizePostResponse post(@jakarta.annotation.Nonnull final ValidateBulkResizePostRequestBody body) {
@@ -51,7 +51,7 @@ public class ValidateBulkResizeRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ValidateBulkResizePostResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/cloudpc-validatebulkresize?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpc-validatebulkresize?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ValidateBulkResizePostResponse post(@jakarta.annotation.Nonnull final ValidateBulkResizePostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

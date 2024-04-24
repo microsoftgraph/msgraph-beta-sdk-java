@@ -96,21 +96,19 @@ public class TiIndicatorsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/tiIndicators{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Retrieve a list of tiIndicator objects.
+     * Get tiIndicators from security
      * @return a {@link TiIndicatorCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/tiindicators-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TiIndicatorCollectionResponse get() {
         return get(null);
     }
     /**
-     * Retrieve a list of tiIndicator objects.
+     * Get tiIndicators from security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TiIndicatorCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/tiindicators-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TiIndicatorCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -120,23 +118,21 @@ public class TiIndicatorsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TiIndicatorCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new tiIndicator object.
+     * Create new navigation property to tiIndicators for security
      * @param body The request body
      * @return a {@link TiIndicator}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/tiindicators-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TiIndicator post(@jakarta.annotation.Nonnull final TiIndicator body) {
         return post(body, null);
     }
     /**
-     * Create a new tiIndicator object.
+     * Create new navigation property to tiIndicators for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TiIndicator}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/tiindicators-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TiIndicator post(@jakarta.annotation.Nonnull final TiIndicator body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -147,7 +143,7 @@ public class TiIndicatorsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TiIndicator::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of tiIndicator objects.
+     * Get tiIndicators from security
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -155,7 +151,7 @@ public class TiIndicatorsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of tiIndicator objects.
+     * Get tiIndicators from security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -167,7 +163,7 @@ public class TiIndicatorsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new tiIndicator object.
+     * Create new navigation property to tiIndicators for security
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -176,7 +172,7 @@ public class TiIndicatorsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new tiIndicator object.
+     * Create new navigation property to tiIndicators for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -201,7 +197,7 @@ public class TiIndicatorsRequestBuilder extends BaseRequestBuilder {
         return new TiIndicatorsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of tiIndicator objects.
+     * Get tiIndicators from security
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

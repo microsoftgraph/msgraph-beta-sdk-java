@@ -55,21 +55,19 @@ public class TeamworkDeviceOperationItemRequestBuilder extends BaseRequestBuilde
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get the details of an async, long-running operation on a Microsoft Teams-enabled device.
+     * The async operations on the device.
      * @return a {@link TeamworkDeviceOperation}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/teamworkdeviceoperation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TeamworkDeviceOperation get() {
         return get(null);
     }
     /**
-     * Get the details of an async, long-running operation on a Microsoft Teams-enabled device.
+     * The async operations on the device.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TeamworkDeviceOperation}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/teamworkdeviceoperation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TeamworkDeviceOperation get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -124,7 +122,7 @@ public class TeamworkDeviceOperationItemRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
-     * Get the details of an async, long-running operation on a Microsoft Teams-enabled device.
+     * The async operations on the device.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -132,7 +130,7 @@ public class TeamworkDeviceOperationItemRequestBuilder extends BaseRequestBuilde
         return toGetRequestInformation(null);
     }
     /**
-     * Get the details of an async, long-running operation on a Microsoft Teams-enabled device.
+     * The async operations on the device.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -184,7 +182,7 @@ public class TeamworkDeviceOperationItemRequestBuilder extends BaseRequestBuilde
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get the details of an async, long-running operation on a Microsoft Teams-enabled device.
+     * The async operations on the device.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

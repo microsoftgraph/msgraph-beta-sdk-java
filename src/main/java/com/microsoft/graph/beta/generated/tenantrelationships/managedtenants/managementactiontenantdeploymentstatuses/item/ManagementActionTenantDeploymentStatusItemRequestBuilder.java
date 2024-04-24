@@ -55,21 +55,19 @@ public class ManagementActionTenantDeploymentStatusItemRequestBuilder extends Ba
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a managementActionTenantDeploymentStatus object.
+     * The tenant level status of management actions across managed tenants.
      * @return a {@link ManagementActionTenantDeploymentStatus}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-managementactiontenantdeploymentstatus-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ManagementActionTenantDeploymentStatus get() {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a managementActionTenantDeploymentStatus object.
+     * The tenant level status of management actions across managed tenants.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ManagementActionTenantDeploymentStatus}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-managementactiontenantdeploymentstatus-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ManagementActionTenantDeploymentStatus get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -124,7 +122,7 @@ public class ManagementActionTenantDeploymentStatusItemRequestBuilder extends Ba
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a managementActionTenantDeploymentStatus object.
+     * The tenant level status of management actions across managed tenants.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -132,7 +130,7 @@ public class ManagementActionTenantDeploymentStatusItemRequestBuilder extends Ba
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a managementActionTenantDeploymentStatus object.
+     * The tenant level status of management actions across managed tenants.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -184,7 +182,7 @@ public class ManagementActionTenantDeploymentStatusItemRequestBuilder extends Ba
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a managementActionTenantDeploymentStatus object.
+     * The tenant level status of management actions across managed tenants.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

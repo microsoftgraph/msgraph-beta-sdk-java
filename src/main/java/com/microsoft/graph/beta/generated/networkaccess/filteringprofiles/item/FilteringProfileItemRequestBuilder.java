@@ -95,23 +95,21 @@ public class FilteringProfileItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, FilteringProfile::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a filteringProfile object.
+     * Update the navigation property filteringProfiles in networkAccess
      * @param body The request body
      * @return a {@link FilteringProfile}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-filteringprofile-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public FilteringProfile patch(@jakarta.annotation.Nonnull final FilteringProfile body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of a filteringProfile object.
+     * Update the navigation property filteringProfiles in networkAccess
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link FilteringProfile}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-filteringprofile-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public FilteringProfile patch(@jakarta.annotation.Nonnull final FilteringProfile body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -162,7 +160,7 @@ public class FilteringProfileItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a filteringProfile object.
+     * Update the navigation property filteringProfiles in networkAccess
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -171,7 +169,7 @@ public class FilteringProfileItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a filteringProfile object.
+     * Update the navigation property filteringProfiles in networkAccess
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

@@ -36,19 +36,21 @@ public class GetCloudPcRemoteActionResultsRequestBuilder extends BaseRequestBuil
         super(requestAdapter, "{+baseurl}/deviceManagement/comanagedDevices/{managedDevice%2Did}/getCloudPcRemoteActionResults(){?%24count,%24filter,%24search,%24skip,%24top}", rawUrl);
     }
     /**
-     * Invoke function getCloudPcRemoteActionResults
+     * Check the Cloud PC-specified remote action results for a Cloud PC device. Cloud PC supports reprovision and resize remote actions.
      * @return a {@link GetCloudPcRemoteActionResultsGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/manageddevice-getcloudpcremoteactionresults?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetCloudPcRemoteActionResultsGetResponse get() {
         return get(null);
     }
     /**
-     * Invoke function getCloudPcRemoteActionResults
+     * Check the Cloud PC-specified remote action results for a Cloud PC device. Cloud PC supports reprovision and resize remote actions.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GetCloudPcRemoteActionResultsGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/manageddevice-getcloudpcremoteactionresults?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetCloudPcRemoteActionResultsGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -58,7 +60,7 @@ public class GetCloudPcRemoteActionResultsRequestBuilder extends BaseRequestBuil
         return this.requestAdapter.send(requestInfo, errorMapping, GetCloudPcRemoteActionResultsGetResponse::createFromDiscriminatorValue);
     }
     /**
-     * Invoke function getCloudPcRemoteActionResults
+     * Check the Cloud PC-specified remote action results for a Cloud PC device. Cloud PC supports reprovision and resize remote actions.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -66,7 +68,7 @@ public class GetCloudPcRemoteActionResultsRequestBuilder extends BaseRequestBuil
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function getCloudPcRemoteActionResults
+     * Check the Cloud PC-specified remote action results for a Cloud PC device. Cloud PC supports reprovision and resize remote actions.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -88,7 +90,7 @@ public class GetCloudPcRemoteActionResultsRequestBuilder extends BaseRequestBuil
         return new GetCloudPcRemoteActionResultsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Invoke function getCloudPcRemoteActionResults
+     * Check the Cloud PC-specified remote action results for a Cloud PC device. Cloud PC supports reprovision and resize remote actions.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

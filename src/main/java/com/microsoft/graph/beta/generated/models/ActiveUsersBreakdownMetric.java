@@ -26,7 +26,7 @@ public class ActiveUsersBreakdownMetric extends Entity implements Parsable {
         return new ActiveUsersBreakdownMetric();
     }
     /**
-     * Gets the appId property value. The ID of the Microsoft Entra application.
+     * Gets the appId property value. The appId property
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -34,7 +34,7 @@ public class ActiveUsersBreakdownMetric extends Entity implements Parsable {
         return this.backingStore.get("appId");
     }
     /**
-     * Gets the appName property value. Name of the application users authenticated to.
+     * Gets the appName property value. The appName property
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -42,7 +42,7 @@ public class ActiveUsersBreakdownMetric extends Entity implements Parsable {
         return this.backingStore.get("appName");
     }
     /**
-     * Gets the count property value. The total number of users who made at least one authentication request within the specified time period.
+     * Gets the count property value. The count property
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -50,7 +50,7 @@ public class ActiveUsersBreakdownMetric extends Entity implements Parsable {
         return this.backingStore.get("count");
     }
     /**
-     * Gets the factDate property value. The date of the insight.
+     * Gets the factDate property value. The factDate property
      * @return a {@link LocalDate}
      */
     @jakarta.annotation.Nullable
@@ -72,7 +72,7 @@ public class ActiveUsersBreakdownMetric extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the os property value. The platform for the device that the customers used. Supports $filter (eq).
+     * Gets the os property value. The os property
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -93,35 +93,35 @@ public class ActiveUsersBreakdownMetric extends Entity implements Parsable {
         writer.writeStringValue("os", this.getOs());
     }
     /**
-     * Sets the appId property value. The ID of the Microsoft Entra application.
+     * Sets the appId property value. The appId property
      * @param value Value to set for the appId property.
      */
     public void setAppId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("appId", value);
     }
     /**
-     * Sets the appName property value. Name of the application users authenticated to.
+     * Sets the appName property value. The appName property
      * @param value Value to set for the appName property.
      */
     public void setAppName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("appName", value);
     }
     /**
-     * Sets the count property value. The total number of users who made at least one authentication request within the specified time period.
+     * Sets the count property value. The count property
      * @param value Value to set for the count property.
      */
     public void setCount(@jakarta.annotation.Nullable final Long value) {
         this.backingStore.set("count", value);
     }
     /**
-     * Sets the factDate property value. The date of the insight.
+     * Sets the factDate property value. The factDate property
      * @param value Value to set for the factDate property.
      */
     public void setFactDate(@jakarta.annotation.Nullable final LocalDate value) {
         this.backingStore.set("factDate", value);
     }
     /**
-     * Sets the os property value. The platform for the device that the customers used. Supports $filter (eq).
+     * Sets the os property value. The os property
      * @param value Value to set for the os property.
      */
     public void setOs(@jakarta.annotation.Nullable final String value) {

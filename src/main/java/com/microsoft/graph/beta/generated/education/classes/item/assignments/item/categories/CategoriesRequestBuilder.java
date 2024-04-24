@@ -78,21 +78,19 @@ public class CategoriesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/classes/{educationClass%2Did}/assignments/{educationAssignment%2Did}/categories{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * List all categories for an assignment. Only teachers, students, and applications with application permissions can perform this operation.
+     * When set, enables users to easily find assignments of a given type.  Read-only. Nullable.
      * @return a {@link EducationCategoryCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/educationassignment-list-categories?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EducationCategoryCollectionResponse get() {
         return get(null);
     }
     /**
-     * List all categories for an assignment. Only teachers, students, and applications with application permissions can perform this operation.
+     * When set, enables users to easily find assignments of a given type.  Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EducationCategoryCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/educationassignment-list-categories?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EducationCategoryCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -127,7 +125,7 @@ public class CategoriesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EducationCategory::createFromDiscriminatorValue);
     }
     /**
-     * List all categories for an assignment. Only teachers, students, and applications with application permissions can perform this operation.
+     * When set, enables users to easily find assignments of a given type.  Read-only. Nullable.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -135,7 +133,7 @@ public class CategoriesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List all categories for an assignment. Only teachers, students, and applications with application permissions can perform this operation.
+     * When set, enables users to easily find assignments of a given type.  Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -181,7 +179,7 @@ public class CategoriesRequestBuilder extends BaseRequestBuilder {
         return new CategoriesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List all categories for an assignment. Only teachers, students, and applications with application permissions can perform this operation.
+     * When set, enables users to easily find assignments of a given type.  Read-only. Nullable.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

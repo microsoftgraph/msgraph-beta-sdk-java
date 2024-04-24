@@ -60,21 +60,19 @@ public class BusinessScenariosRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/solutions/businessScenarios{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a list of all businessScenario objects in an organization.
+     * Get businessScenarios from solutions
      * @return a {@link BusinessScenarioCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/solutionsroot-list-businessscenarios?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public BusinessScenarioCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a list of all businessScenario objects in an organization.
+     * Get businessScenarios from solutions
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link BusinessScenarioCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/solutionsroot-list-businessscenarios?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public BusinessScenarioCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +82,21 @@ public class BusinessScenariosRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, BusinessScenarioCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new businessScenario object.
+     * Create new navigation property to businessScenarios for solutions
      * @param body The request body
      * @return a {@link BusinessScenario}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/solutionsroot-post-businessscenarios?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public BusinessScenario post(@jakarta.annotation.Nonnull final BusinessScenario body) {
         return post(body, null);
     }
     /**
-     * Create a new businessScenario object.
+     * Create new navigation property to businessScenarios for solutions
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link BusinessScenario}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/solutionsroot-post-businessscenarios?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public BusinessScenario post(@jakarta.annotation.Nonnull final BusinessScenario body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +107,7 @@ public class BusinessScenariosRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, BusinessScenario::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of all businessScenario objects in an organization.
+     * Get businessScenarios from solutions
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class BusinessScenariosRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of all businessScenario objects in an organization.
+     * Get businessScenarios from solutions
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +127,7 @@ public class BusinessScenariosRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new businessScenario object.
+     * Create new navigation property to businessScenarios for solutions
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class BusinessScenariosRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new businessScenario object.
+     * Create new navigation property to businessScenarios for solutions
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +161,7 @@ public class BusinessScenariosRequestBuilder extends BaseRequestBuilder {
         return new BusinessScenariosRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of all businessScenario objects in an organization.
+     * Get businessScenarios from solutions
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

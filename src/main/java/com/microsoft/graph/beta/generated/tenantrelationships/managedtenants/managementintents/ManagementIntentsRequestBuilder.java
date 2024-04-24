@@ -60,21 +60,19 @@ public class ManagementIntentsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/tenantRelationships/managedTenants/managementIntents{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a list of the managementIntent objects and their properties.
+     * The collection of baseline management intents across managed tenants.
      * @return a {@link ManagementIntentCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-managedtenant-list-managementintents?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ManagementIntentCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a list of the managementIntent objects and their properties.
+     * The collection of baseline management intents across managed tenants.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ManagementIntentCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-managedtenant-list-managementintents?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ManagementIntentCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -109,7 +107,7 @@ public class ManagementIntentsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ManagementIntent::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the managementIntent objects and their properties.
+     * The collection of baseline management intents across managed tenants.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -117,7 +115,7 @@ public class ManagementIntentsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the managementIntent objects and their properties.
+     * The collection of baseline management intents across managed tenants.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -163,7 +161,7 @@ public class ManagementIntentsRequestBuilder extends BaseRequestBuilder {
         return new ManagementIntentsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the managementIntent objects and their properties.
+     * The collection of baseline management intents across managed tenants.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

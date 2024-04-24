@@ -60,21 +60,19 @@ public class LanguagesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/profile/languages{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Retrieve a list of languageProficiency objects from a user's profile.
+     * Represents detailed information about languages that a user has added to their profile.
      * @return a {@link LanguageProficiencyCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/profile-list-languages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public LanguageProficiencyCollectionResponse get() {
         return get(null);
     }
     /**
-     * Retrieve a list of languageProficiency objects from a user's profile.
+     * Represents detailed information about languages that a user has added to their profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link LanguageProficiencyCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/profile-list-languages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public LanguageProficiencyCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +82,21 @@ public class LanguagesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, LanguageProficiencyCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Use this API to create a new languageProficiency object in a user's profile.
+     * Create new navigation property to languages for users
      * @param body The request body
      * @return a {@link LanguageProficiency}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/profile-post-languages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public LanguageProficiency post(@jakarta.annotation.Nonnull final LanguageProficiency body) {
         return post(body, null);
     }
     /**
-     * Use this API to create a new languageProficiency object in a user's profile.
+     * Create new navigation property to languages for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link LanguageProficiency}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/profile-post-languages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public LanguageProficiency post(@jakarta.annotation.Nonnull final LanguageProficiency body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +107,7 @@ public class LanguagesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, LanguageProficiency::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of languageProficiency objects from a user's profile.
+     * Represents detailed information about languages that a user has added to their profile.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class LanguagesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of languageProficiency objects from a user's profile.
+     * Represents detailed information about languages that a user has added to their profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +127,7 @@ public class LanguagesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Use this API to create a new languageProficiency object in a user's profile.
+     * Create new navigation property to languages for users
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class LanguagesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Use this API to create a new languageProficiency object in a user's profile.
+     * Create new navigation property to languages for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +161,7 @@ public class LanguagesRequestBuilder extends BaseRequestBuilder {
         return new LanguagesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of languageProficiency objects from a user's profile.
+     * Represents detailed information about languages that a user has added to their profile.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

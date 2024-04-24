@@ -40,19 +40,21 @@ public class ReminderViewWithStartDateTimeWithEndDateTimeRequestBuilder extends 
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/reminderView(StartDateTime='{StartDateTime}',EndDateTime='{EndDateTime}'){?%24count,%24filter,%24search,%24skip,%24top}", rawUrl);
     }
     /**
-     * Invoke function reminderView
+     * Return a list of event reminders in a user calendar within the specified start and end times.
      * @return a {@link ReminderViewWithStartDateTimeWithEndDateTimeGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/user-reminderview?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ReminderViewWithStartDateTimeWithEndDateTimeGetResponse get() {
         return get(null);
     }
     /**
-     * Invoke function reminderView
+     * Return a list of event reminders in a user calendar within the specified start and end times.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ReminderViewWithStartDateTimeWithEndDateTimeGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/user-reminderview?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ReminderViewWithStartDateTimeWithEndDateTimeGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -62,7 +64,7 @@ public class ReminderViewWithStartDateTimeWithEndDateTimeRequestBuilder extends 
         return this.requestAdapter.send(requestInfo, errorMapping, ReminderViewWithStartDateTimeWithEndDateTimeGetResponse::createFromDiscriminatorValue);
     }
     /**
-     * Invoke function reminderView
+     * Return a list of event reminders in a user calendar within the specified start and end times.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +72,7 @@ public class ReminderViewWithStartDateTimeWithEndDateTimeRequestBuilder extends 
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function reminderView
+     * Return a list of event reminders in a user calendar within the specified start and end times.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -92,7 +94,7 @@ public class ReminderViewWithStartDateTimeWithEndDateTimeRequestBuilder extends 
         return new ReminderViewWithStartDateTimeWithEndDateTimeRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Invoke function reminderView
+     * Return a list of event reminders in a user calendar within the specified start and end times.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

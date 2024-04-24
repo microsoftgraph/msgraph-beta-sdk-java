@@ -38,19 +38,21 @@ public class GetStorageAccountsWithSubscriptionIdRequestBuilder extends BaseRequ
         super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/snapshots/getStorageAccounts(subscriptionId='{subscriptionId}'){?%24count,%24filter,%24search,%24skip,%24top}", rawUrl);
     }
     /**
-     * Invoke function getStorageAccounts
+     * List all storage accounts cloudPcForensicStorageAccount that can be used to store a snapshot or snapshots of a Cloud PC for forensic analysis.
      * @return a {@link GetStorageAccountsWithSubscriptionIdGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpcsnapshot-getstorageaccounts?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetStorageAccountsWithSubscriptionIdGetResponse get() {
         return get(null);
     }
     /**
-     * Invoke function getStorageAccounts
+     * List all storage accounts cloudPcForensicStorageAccount that can be used to store a snapshot or snapshots of a Cloud PC for forensic analysis.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GetStorageAccountsWithSubscriptionIdGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpcsnapshot-getstorageaccounts?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetStorageAccountsWithSubscriptionIdGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -60,7 +62,7 @@ public class GetStorageAccountsWithSubscriptionIdRequestBuilder extends BaseRequ
         return this.requestAdapter.send(requestInfo, errorMapping, GetStorageAccountsWithSubscriptionIdGetResponse::createFromDiscriminatorValue);
     }
     /**
-     * Invoke function getStorageAccounts
+     * List all storage accounts cloudPcForensicStorageAccount that can be used to store a snapshot or snapshots of a Cloud PC for forensic analysis.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +70,7 @@ public class GetStorageAccountsWithSubscriptionIdRequestBuilder extends BaseRequ
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function getStorageAccounts
+     * List all storage accounts cloudPcForensicStorageAccount that can be used to store a snapshot or snapshots of a Cloud PC for forensic analysis.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -90,7 +92,7 @@ public class GetStorageAccountsWithSubscriptionIdRequestBuilder extends BaseRequ
         return new GetStorageAccountsWithSubscriptionIdRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Invoke function getStorageAccounts
+     * List all storage accounts cloudPcForensicStorageAccount that can be used to store a snapshot or snapshots of a Cloud PC for forensic analysis.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

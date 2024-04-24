@@ -55,21 +55,19 @@ public class MicrosoftApplicationDataAccessRequestBuilder extends BaseRequestBui
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get the settings in a microsoftApplicationDataAccessSettings object that specify access from Microsoft applications to Microsoft 365 user data in an organization.
+     * Get microsoftApplicationDataAccess from organization
      * @return a {@link MicrosoftApplicationDataAccessSettings}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/organizationsettings-list-microsoftapplicationdataaccess?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MicrosoftApplicationDataAccessSettings get() {
         return get(null);
     }
     /**
-     * Get the settings in a microsoftApplicationDataAccessSettings object that specify access from Microsoft applications to Microsoft 365 user data in an organization.
+     * Get microsoftApplicationDataAccess from organization
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MicrosoftApplicationDataAccessSettings}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/organizationsettings-list-microsoftapplicationdataaccess?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MicrosoftApplicationDataAccessSettings get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,23 +77,21 @@ public class MicrosoftApplicationDataAccessRequestBuilder extends BaseRequestBui
         return this.requestAdapter.send(requestInfo, errorMapping, MicrosoftApplicationDataAccessSettings::createFromDiscriminatorValue);
     }
     /**
-     * Update the settings in a microsoftApplicationDataAccessSettings object that specify access from Microsoft applications to Microsoft 365 user data in an organization.
+     * Update the navigation property microsoftApplicationDataAccess in organization
      * @param body The request body
      * @return a {@link MicrosoftApplicationDataAccessSettings}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/microsoftapplicationdataaccesssettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MicrosoftApplicationDataAccessSettings patch(@jakarta.annotation.Nonnull final MicrosoftApplicationDataAccessSettings body) {
         return patch(body, null);
     }
     /**
-     * Update the settings in a microsoftApplicationDataAccessSettings object that specify access from Microsoft applications to Microsoft 365 user data in an organization.
+     * Update the navigation property microsoftApplicationDataAccess in organization
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MicrosoftApplicationDataAccessSettings}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/microsoftapplicationdataaccesssettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MicrosoftApplicationDataAccessSettings patch(@jakarta.annotation.Nonnull final MicrosoftApplicationDataAccessSettings body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -126,7 +122,7 @@ public class MicrosoftApplicationDataAccessRequestBuilder extends BaseRequestBui
         return requestInfo;
     }
     /**
-     * Get the settings in a microsoftApplicationDataAccessSettings object that specify access from Microsoft applications to Microsoft 365 user data in an organization.
+     * Get microsoftApplicationDataAccess from organization
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -134,7 +130,7 @@ public class MicrosoftApplicationDataAccessRequestBuilder extends BaseRequestBui
         return toGetRequestInformation(null);
     }
     /**
-     * Get the settings in a microsoftApplicationDataAccessSettings object that specify access from Microsoft applications to Microsoft 365 user data in an organization.
+     * Get microsoftApplicationDataAccess from organization
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -146,7 +142,7 @@ public class MicrosoftApplicationDataAccessRequestBuilder extends BaseRequestBui
         return requestInfo;
     }
     /**
-     * Update the settings in a microsoftApplicationDataAccessSettings object that specify access from Microsoft applications to Microsoft 365 user data in an organization.
+     * Update the navigation property microsoftApplicationDataAccess in organization
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -155,7 +151,7 @@ public class MicrosoftApplicationDataAccessRequestBuilder extends BaseRequestBui
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the settings in a microsoftApplicationDataAccessSettings object that specify access from Microsoft applications to Microsoft 365 user data in an organization.
+     * Update the navigation property microsoftApplicationDataAccess in organization
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -186,7 +182,7 @@ public class MicrosoftApplicationDataAccessRequestBuilder extends BaseRequestBui
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get the settings in a microsoftApplicationDataAccessSettings object that specify access from Microsoft applications to Microsoft 365 user data in an organization.
+     * Get microsoftApplicationDataAccess from organization
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

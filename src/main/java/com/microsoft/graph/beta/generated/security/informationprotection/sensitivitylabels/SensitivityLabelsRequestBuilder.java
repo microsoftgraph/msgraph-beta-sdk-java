@@ -96,21 +96,19 @@ public class SensitivityLabelsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/informationProtection/sensitivityLabels{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a list of sensitivityLabel objects associated with a user or organization.
+     * Read the Microsoft Purview Information Protection labels for the user or organization.
      * @return a {@link SensitivityLabelCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-informationprotection-list-sensitivitylabels?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SensitivityLabelCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a list of sensitivityLabel objects associated with a user or organization.
+     * Read the Microsoft Purview Information Protection labels for the user or organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SensitivityLabelCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-informationprotection-list-sensitivitylabels?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SensitivityLabelCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -145,7 +143,7 @@ public class SensitivityLabelsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, SensitivityLabel::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of sensitivityLabel objects associated with a user or organization.
+     * Read the Microsoft Purview Information Protection labels for the user or organization.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -153,7 +151,7 @@ public class SensitivityLabelsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of sensitivityLabel objects associated with a user or organization.
+     * Read the Microsoft Purview Information Protection labels for the user or organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -199,7 +197,7 @@ public class SensitivityLabelsRequestBuilder extends BaseRequestBuilder {
         return new SensitivityLabelsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of sensitivityLabel objects associated with a user or organization.
+     * Read the Microsoft Purview Information Protection labels for the user or organization.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

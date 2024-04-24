@@ -60,21 +60,19 @@ public class PositionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/profile/positions{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Retrieve a list of workPosition objects from a user's profile.
+     * Represents detailed information about work positions associated with a user's profile.
      * @return a {@link WorkPositionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/profile-list-positions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WorkPositionCollectionResponse get() {
         return get(null);
     }
     /**
-     * Retrieve a list of workPosition objects from a user's profile.
+     * Represents detailed information about work positions associated with a user's profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link WorkPositionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/profile-list-positions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WorkPositionCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +82,21 @@ public class PositionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, WorkPositionCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Use this API to create a new workPosition in a user's profile.
+     * Create new navigation property to positions for users
      * @param body The request body
      * @return a {@link WorkPosition}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/profile-post-positions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WorkPosition post(@jakarta.annotation.Nonnull final WorkPosition body) {
         return post(body, null);
     }
     /**
-     * Use this API to create a new workPosition in a user's profile.
+     * Create new navigation property to positions for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link WorkPosition}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/profile-post-positions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WorkPosition post(@jakarta.annotation.Nonnull final WorkPosition body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +107,7 @@ public class PositionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, WorkPosition::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of workPosition objects from a user's profile.
+     * Represents detailed information about work positions associated with a user's profile.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class PositionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of workPosition objects from a user's profile.
+     * Represents detailed information about work positions associated with a user's profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +127,7 @@ public class PositionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Use this API to create a new workPosition in a user's profile.
+     * Create new navigation property to positions for users
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class PositionsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Use this API to create a new workPosition in a user's profile.
+     * Create new navigation property to positions for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +161,7 @@ public class PositionsRequestBuilder extends BaseRequestBuilder {
         return new PositionsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of workPosition objects from a user's profile.
+     * Represents detailed information about work positions associated with a user's profile.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

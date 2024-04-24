@@ -60,21 +60,19 @@ public class AccountRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/profile/account{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Retrieves properties related to the user's accounts from the profile.
+     * Get account from users
      * @return a {@link UserAccountInformationCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/profile-list-accounts?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UserAccountInformationCollectionResponse get() {
         return get(null);
     }
     /**
-     * Retrieves properties related to the user's accounts from the profile.
+     * Get account from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UserAccountInformationCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/profile-list-accounts?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UserAccountInformationCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +82,21 @@ public class AccountRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, UserAccountInformationCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new userAccountInformation object in a user's profile.
+     * Create new navigation property to account for users
      * @param body The request body
      * @return a {@link UserAccountInformation}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/profile-post-accounts?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UserAccountInformation post(@jakarta.annotation.Nonnull final UserAccountInformation body) {
         return post(body, null);
     }
     /**
-     * Create a new userAccountInformation object in a user's profile.
+     * Create new navigation property to account for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UserAccountInformation}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/profile-post-accounts?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UserAccountInformation post(@jakarta.annotation.Nonnull final UserAccountInformation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +107,7 @@ public class AccountRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, UserAccountInformation::createFromDiscriminatorValue);
     }
     /**
-     * Retrieves properties related to the user's accounts from the profile.
+     * Get account from users
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class AccountRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieves properties related to the user's accounts from the profile.
+     * Get account from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +127,7 @@ public class AccountRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new userAccountInformation object in a user's profile.
+     * Create new navigation property to account for users
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class AccountRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new userAccountInformation object in a user's profile.
+     * Create new navigation property to account for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +161,7 @@ public class AccountRequestBuilder extends BaseRequestBuilder {
         return new AccountRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieves properties related to the user's accounts from the profile.
+     * Get account from users
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

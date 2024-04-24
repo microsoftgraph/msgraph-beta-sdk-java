@@ -55,7 +55,7 @@ public class RunSummaryRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * A summary of the results from an attempt to configure hardware settings
+     * A summary of the results from an attempt to configure hardware settings. Read-Only.
      * @return a {@link HardwareConfigurationRunSummary}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -64,7 +64,7 @@ public class RunSummaryRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * A summary of the results from an attempt to configure hardware settings
+     * A summary of the results from an attempt to configure hardware settings. Read-Only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link HardwareConfigurationRunSummary}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -122,7 +122,7 @@ public class RunSummaryRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * A summary of the results from an attempt to configure hardware settings
+     * A summary of the results from an attempt to configure hardware settings. Read-Only.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +130,7 @@ public class RunSummaryRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * A summary of the results from an attempt to configure hardware settings
+     * A summary of the results from an attempt to configure hardware settings. Read-Only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +182,7 @@ public class RunSummaryRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * A summary of the results from an attempt to configure hardware settings
+     * A summary of the results from an attempt to configure hardware settings. Read-Only.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -60,21 +60,19 @@ public class PhonesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/profile/phones{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Retrieve a list of itemPhone objects from a user's profile.
+     * Represents detailed information about phone numbers associated with a user in various services.
      * @return a {@link ItemPhoneCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/profile-list-phones?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ItemPhoneCollectionResponse get() {
         return get(null);
     }
     /**
-     * Retrieve a list of itemPhone objects from a user's profile.
+     * Represents detailed information about phone numbers associated with a user in various services.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ItemPhoneCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/profile-list-phones?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ItemPhoneCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +82,21 @@ public class PhonesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ItemPhoneCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Use this API to create a new itemPhone object in a user's profile.
+     * Create new navigation property to phones for users
      * @param body The request body
      * @return a {@link ItemPhone}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/profile-post-phones?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ItemPhone post(@jakarta.annotation.Nonnull final ItemPhone body) {
         return post(body, null);
     }
     /**
-     * Use this API to create a new itemPhone object in a user's profile.
+     * Create new navigation property to phones for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ItemPhone}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/profile-post-phones?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ItemPhone post(@jakarta.annotation.Nonnull final ItemPhone body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +107,7 @@ public class PhonesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ItemPhone::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of itemPhone objects from a user's profile.
+     * Represents detailed information about phone numbers associated with a user in various services.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class PhonesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of itemPhone objects from a user's profile.
+     * Represents detailed information about phone numbers associated with a user in various services.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +127,7 @@ public class PhonesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Use this API to create a new itemPhone object in a user's profile.
+     * Create new navigation property to phones for users
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class PhonesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Use this API to create a new itemPhone object in a user's profile.
+     * Create new navigation property to phones for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +161,7 @@ public class PhonesRequestBuilder extends BaseRequestBuilder {
         return new PhonesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of itemPhone objects from a user's profile.
+     * Represents detailed information about phone numbers associated with a user in various services.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

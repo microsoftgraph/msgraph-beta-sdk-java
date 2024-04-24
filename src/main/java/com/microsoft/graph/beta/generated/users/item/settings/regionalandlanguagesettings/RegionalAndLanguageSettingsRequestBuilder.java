@@ -55,21 +55,19 @@ public class RegionalAndLanguageSettingsRequestBuilder extends BaseRequestBuilde
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties of a user's regionalAndLanguageSettings.
+     * The user's preferences for languages, regional locale and date/time formatting.
      * @return a {@link RegionalAndLanguageSettings}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/regionalandlanguagesettings-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RegionalAndLanguageSettings get() {
         return get(null);
     }
     /**
-     * Retrieve the properties of a user's regionalAndLanguageSettings.
+     * The user's preferences for languages, regional locale and date/time formatting.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RegionalAndLanguageSettings}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/regionalandlanguagesettings-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RegionalAndLanguageSettings get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,23 +77,21 @@ public class RegionalAndLanguageSettingsRequestBuilder extends BaseRequestBuilde
         return this.requestAdapter.send(requestInfo, errorMapping, RegionalAndLanguageSettings::createFromDiscriminatorValue);
     }
     /**
-     * Update some or all of the properties of a regionalAndLanguageSettings object.
+     * Update the navigation property regionalAndLanguageSettings in users
      * @param body The request body
      * @return a {@link RegionalAndLanguageSettings}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/regionalandlanguagesettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RegionalAndLanguageSettings patch(@jakarta.annotation.Nonnull final RegionalAndLanguageSettings body) {
         return patch(body, null);
     }
     /**
-     * Update some or all of the properties of a regionalAndLanguageSettings object.
+     * Update the navigation property regionalAndLanguageSettings in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RegionalAndLanguageSettings}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/regionalandlanguagesettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RegionalAndLanguageSettings patch(@jakarta.annotation.Nonnull final RegionalAndLanguageSettings body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -126,7 +122,7 @@ public class RegionalAndLanguageSettingsRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
-     * Retrieve the properties of a user's regionalAndLanguageSettings.
+     * The user's preferences for languages, regional locale and date/time formatting.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -134,7 +130,7 @@ public class RegionalAndLanguageSettingsRequestBuilder extends BaseRequestBuilde
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties of a user's regionalAndLanguageSettings.
+     * The user's preferences for languages, regional locale and date/time formatting.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -146,7 +142,7 @@ public class RegionalAndLanguageSettingsRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
-     * Update some or all of the properties of a regionalAndLanguageSettings object.
+     * Update the navigation property regionalAndLanguageSettings in users
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -155,7 +151,7 @@ public class RegionalAndLanguageSettingsRequestBuilder extends BaseRequestBuilde
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update some or all of the properties of a regionalAndLanguageSettings object.
+     * Update the navigation property regionalAndLanguageSettings in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -186,7 +182,7 @@ public class RegionalAndLanguageSettingsRequestBuilder extends BaseRequestBuilde
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties of a user's regionalAndLanguageSettings.
+     * The user's preferences for languages, regional locale and date/time formatting.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

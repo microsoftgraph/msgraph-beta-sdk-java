@@ -54,7 +54,7 @@ public class SubscriptionsRequestBuilder extends BaseRequestBuilder {
      * Retrieve a list of webhook subscriptions. The content of the response depends on the context in which the app is calling; for details, see the scenarios in the Permissions section.
      * @return a {@link SubscriptionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/subscription-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/subscription-list?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SubscriptionCollectionResponse get() {
@@ -65,7 +65,7 @@ public class SubscriptionsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SubscriptionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/subscription-list?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/subscription-list?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SubscriptionCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class SubscriptionsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link Subscription}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/subscription-post-subscriptions?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/subscription-post-subscriptions?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Subscription post(@jakarta.annotation.Nonnull final Subscription body) {
@@ -91,7 +91,7 @@ public class SubscriptionsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Subscription}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/subscription-post-subscriptions?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/subscription-post-subscriptions?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Subscription post(@jakarta.annotation.Nonnull final Subscription body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

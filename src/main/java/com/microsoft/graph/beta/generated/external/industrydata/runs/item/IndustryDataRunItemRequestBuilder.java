@@ -55,21 +55,19 @@ public class IndustryDataRunItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/external/industryData/runs/{industryDataRun%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Read the properties and relationships of an industryDataRun object.
+     * Set of ephemeral runs which present the point-in-time that diagnostic state of activities performed by the system. Read-only.
      * @return a {@link IndustryDataRun}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-industrydatarun-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public IndustryDataRun get() {
         return get(null);
     }
     /**
-     * Read the properties and relationships of an industryDataRun object.
+     * Set of ephemeral runs which present the point-in-time that diagnostic state of activities performed by the system. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link IndustryDataRun}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-industrydatarun-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public IndustryDataRun get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +77,7 @@ public class IndustryDataRunItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, IndustryDataRun::createFromDiscriminatorValue);
     }
     /**
-     * Read the properties and relationships of an industryDataRun object.
+     * Set of ephemeral runs which present the point-in-time that diagnostic state of activities performed by the system. Read-only.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -87,7 +85,7 @@ public class IndustryDataRunItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of an industryDataRun object.
+     * Set of ephemeral runs which present the point-in-time that diagnostic state of activities performed by the system. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -109,7 +107,7 @@ public class IndustryDataRunItemRequestBuilder extends BaseRequestBuilder {
         return new IndustryDataRunItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Read the properties and relationships of an industryDataRun object.
+     * Set of ephemeral runs which present the point-in-time that diagnostic state of activities performed by the system. Read-only.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

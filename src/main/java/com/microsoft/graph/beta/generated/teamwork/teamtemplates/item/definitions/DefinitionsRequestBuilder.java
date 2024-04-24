@@ -60,7 +60,7 @@ public class DefinitionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/teamwork/teamTemplates/{teamTemplate%2Did}/definitions{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Read the properties and relationships of a teamTemplateDefinition object.
+     * A generic representation of a team template definition for a team with a specific structure and configuration.
      * @return a {@link TeamTemplateDefinitionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -69,7 +69,7 @@ public class DefinitionsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a teamTemplateDefinition object.
+     * A generic representation of a team template definition for a team with a specific structure and configuration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TeamTemplateDefinitionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -107,7 +107,7 @@ public class DefinitionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TeamTemplateDefinition::createFromDiscriminatorValue);
     }
     /**
-     * Read the properties and relationships of a teamTemplateDefinition object.
+     * A generic representation of a team template definition for a team with a specific structure and configuration.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class DefinitionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a teamTemplateDefinition object.
+     * A generic representation of a team template definition for a team with a specific structure and configuration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +161,7 @@ public class DefinitionsRequestBuilder extends BaseRequestBuilder {
         return new DefinitionsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Read the properties and relationships of a teamTemplateDefinition object.
+     * A generic representation of a team template definition for a team with a specific structure and configuration.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

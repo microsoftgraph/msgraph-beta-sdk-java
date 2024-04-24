@@ -60,21 +60,19 @@ public class CustomQuestionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/app/onlineMeetings/{onlineMeeting%2Did}/registration/customQuestions{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a custom registration question associated with a meetingRegistration object on behalf of the organizer.
+     * Custom registration questions.
      * @return a {@link MeetingRegistrationQuestionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/meetingregistration-list-customquestions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MeetingRegistrationQuestionCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a custom registration question associated with a meetingRegistration object on behalf of the organizer.
+     * Custom registration questions.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MeetingRegistrationQuestionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/meetingregistration-list-customquestions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MeetingRegistrationQuestionCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +82,21 @@ public class CustomQuestionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, MeetingRegistrationQuestionCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a custom registration question associated with a meetingRegistration object on behalf of the organizer.
+     * Create new navigation property to customQuestions for app
      * @param body The request body
      * @return a {@link MeetingRegistrationQuestion}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/meetingregistration-post-customquestions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MeetingRegistrationQuestion post(@jakarta.annotation.Nonnull final MeetingRegistrationQuestion body) {
         return post(body, null);
     }
     /**
-     * Create a custom registration question associated with a meetingRegistration object on behalf of the organizer.
+     * Create new navigation property to customQuestions for app
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MeetingRegistrationQuestion}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/meetingregistration-post-customquestions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MeetingRegistrationQuestion post(@jakarta.annotation.Nonnull final MeetingRegistrationQuestion body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +107,7 @@ public class CustomQuestionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, MeetingRegistrationQuestion::createFromDiscriminatorValue);
     }
     /**
-     * Get a custom registration question associated with a meetingRegistration object on behalf of the organizer.
+     * Custom registration questions.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class CustomQuestionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a custom registration question associated with a meetingRegistration object on behalf of the organizer.
+     * Custom registration questions.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +127,7 @@ public class CustomQuestionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a custom registration question associated with a meetingRegistration object on behalf of the organizer.
+     * Create new navigation property to customQuestions for app
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class CustomQuestionsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a custom registration question associated with a meetingRegistration object on behalf of the organizer.
+     * Create new navigation property to customQuestions for app
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +161,7 @@ public class CustomQuestionsRequestBuilder extends BaseRequestBuilder {
         return new CustomQuestionsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a custom registration question associated with a meetingRegistration object on behalf of the organizer.
+     * Custom registration questions.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

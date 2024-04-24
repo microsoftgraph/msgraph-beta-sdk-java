@@ -36,11 +36,12 @@ public class GetAttackSimulationRepeatOffendersRequestBuilder extends BaseReques
         super(requestAdapter, "{+baseurl}/reports/getAttackSimulationRepeatOffenders(){?%24count,%24filter,%24search,%24skip,%24top}", rawUrl);
     }
     /**
-     * Invoke function getAttackSimulationRepeatOffenders
+     * List the users of a tenant who have yielded to attacks more than once in attack simulation and training campaigns. This function supports @odata.nextLink for pagination.
      * @return a {@link GetAttackSimulationRepeatOffendersGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * This report function api is deprecated and will stop returning data on August 20, 2022. Api is now moved to /reports/security. Please use the new API. as of 2022-05/Tasks_And_Plans
+     * @see <a href="https://learn.microsoft.com/graph/api/reportroot-getattacksimulationrepeatoffenders?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -48,12 +49,13 @@ public class GetAttackSimulationRepeatOffendersRequestBuilder extends BaseReques
         return get(null);
     }
     /**
-     * Invoke function getAttackSimulationRepeatOffenders
+     * List the users of a tenant who have yielded to attacks more than once in attack simulation and training campaigns. This function supports @odata.nextLink for pagination.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GetAttackSimulationRepeatOffendersGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * This report function api is deprecated and will stop returning data on August 20, 2022. Api is now moved to /reports/security. Please use the new API. as of 2022-05/Tasks_And_Plans
+     * @see <a href="https://learn.microsoft.com/graph/api/reportroot-getattacksimulationrepeatoffenders?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -64,7 +66,7 @@ public class GetAttackSimulationRepeatOffendersRequestBuilder extends BaseReques
         return this.requestAdapter.send(requestInfo, errorMapping, GetAttackSimulationRepeatOffendersGetResponse::createFromDiscriminatorValue);
     }
     /**
-     * Invoke function getAttackSimulationRepeatOffenders
+     * List the users of a tenant who have yielded to attacks more than once in attack simulation and training campaigns. This function supports @odata.nextLink for pagination.
      * @return a {@link RequestInformation}
      * @deprecated
      * This report function api is deprecated and will stop returning data on August 20, 2022. Api is now moved to /reports/security. Please use the new API. as of 2022-05/Tasks_And_Plans
@@ -75,7 +77,7 @@ public class GetAttackSimulationRepeatOffendersRequestBuilder extends BaseReques
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function getAttackSimulationRepeatOffenders
+     * List the users of a tenant who have yielded to attacks more than once in attack simulation and training campaigns. This function supports @odata.nextLink for pagination.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -103,7 +105,7 @@ public class GetAttackSimulationRepeatOffendersRequestBuilder extends BaseReques
         return new GetAttackSimulationRepeatOffendersRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Invoke function getAttackSimulationRepeatOffenders
+     * List the users of a tenant who have yielded to attacks more than once in attack simulation and training campaigns. This function supports @odata.nextLink for pagination.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -71,23 +71,21 @@ public class ScheduledPermissionsRequestsRequestBuilder extends BaseRequestBuild
         return this.requestAdapter.send(requestInfo, errorMapping, ScheduledPermissionsRequestCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new scheduledPermissionsRequest object.
+     * Create new navigation property to scheduledPermissionsRequests for identityGovernance
      * @param body The request body
      * @return a {@link ScheduledPermissionsRequest}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/permissionsmanagement-post-scheduledpermissionsrequests?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ScheduledPermissionsRequest post(@jakarta.annotation.Nonnull final ScheduledPermissionsRequest body) {
         return post(body, null);
     }
     /**
-     * Create a new scheduledPermissionsRequest object.
+     * Create new navigation property to scheduledPermissionsRequests for identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ScheduledPermissionsRequest}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/permissionsmanagement-post-scheduledpermissionsrequests?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ScheduledPermissionsRequest post(@jakarta.annotation.Nonnull final ScheduledPermissionsRequest body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -118,7 +116,7 @@ public class ScheduledPermissionsRequestsRequestBuilder extends BaseRequestBuild
         return requestInfo;
     }
     /**
-     * Create a new scheduledPermissionsRequest object.
+     * Create new navigation property to scheduledPermissionsRequests for identityGovernance
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -127,7 +125,7 @@ public class ScheduledPermissionsRequestsRequestBuilder extends BaseRequestBuild
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new scheduledPermissionsRequest object.
+     * Create new navigation property to scheduledPermissionsRequests for identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

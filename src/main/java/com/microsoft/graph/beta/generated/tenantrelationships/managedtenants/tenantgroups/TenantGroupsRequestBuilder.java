@@ -69,21 +69,19 @@ public class TenantGroupsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/tenantRelationships/managedTenants/tenantGroups{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a list of the tenantGroup objects and their properties.
+     * The collection of a logical grouping of managed tenants used by the multi-tenant management platform.
      * @return a {@link TenantGroupCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-managedtenant-list-tenantgroups?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TenantGroupCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a list of the tenantGroup objects and their properties.
+     * The collection of a logical grouping of managed tenants used by the multi-tenant management platform.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TenantGroupCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-managedtenant-list-tenantgroups?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TenantGroupCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -118,7 +116,7 @@ public class TenantGroupsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TenantGroup::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the tenantGroup objects and their properties.
+     * The collection of a logical grouping of managed tenants used by the multi-tenant management platform.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -126,7 +124,7 @@ public class TenantGroupsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the tenantGroup objects and their properties.
+     * The collection of a logical grouping of managed tenants used by the multi-tenant management platform.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -172,7 +170,7 @@ public class TenantGroupsRequestBuilder extends BaseRequestBuilder {
         return new TenantGroupsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the tenantGroup objects and their properties.
+     * The collection of a logical grouping of managed tenants used by the multi-tenant management platform.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

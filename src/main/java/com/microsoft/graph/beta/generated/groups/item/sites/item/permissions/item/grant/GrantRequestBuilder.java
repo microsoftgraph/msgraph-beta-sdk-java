@@ -35,23 +35,23 @@ public class GrantRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/permissions/{permission%2Did}/grant", rawUrl);
     }
     /**
-     * Grant users access to a link represented by a [permission][].
+     * Grant users access to a link represented by a permission.
      * @param body The request body
      * @return a {@link GrantPostResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/permission-grant?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/permission-grant?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GrantPostResponse post(@jakarta.annotation.Nonnull final GrantPostRequestBody body) {
         return post(body, null);
     }
     /**
-     * Grant users access to a link represented by a [permission][].
+     * Grant users access to a link represented by a permission.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GrantPostResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/permission-grant?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/permission-grant?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GrantPostResponse post(@jakarta.annotation.Nonnull final GrantPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -62,7 +62,7 @@ public class GrantRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, GrantPostResponse::createFromDiscriminatorValue);
     }
     /**
-     * Grant users access to a link represented by a [permission][].
+     * Grant users access to a link represented by a permission.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -71,7 +71,7 @@ public class GrantRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Grant users access to a link represented by a [permission][].
+     * Grant users access to a link represented by a permission.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

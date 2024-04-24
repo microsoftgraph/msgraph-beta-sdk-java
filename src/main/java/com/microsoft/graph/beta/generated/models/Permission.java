@@ -126,7 +126,7 @@ public class Permission extends Entity implements Parsable {
         return this.backingStore.get("roles");
     }
     /**
-     * Gets the shareId property value. A unique token that can be used to access this shared item via the [shares API][]. Read-only.
+     * Gets the shareId property value. A unique token that can be used to access this shared item via the shares API. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -223,7 +223,7 @@ public class Permission extends Entity implements Parsable {
         this.backingStore.set("roles", value);
     }
     /**
-     * Sets the shareId property value. A unique token that can be used to access this shared item via the [shares API][]. Read-only.
+     * Sets the shareId property value. A unique token that can be used to access this shared item via the shares API. Read-only.
      * @param value Value to set for the shareId property.
      */
     public void setShareId(@jakarta.annotation.Nullable final String value) {

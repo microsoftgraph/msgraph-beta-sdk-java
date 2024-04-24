@@ -29,7 +29,7 @@ public class HardwareConfiguration extends Entity implements Parsable {
         return new HardwareConfiguration();
     }
     /**
-     * Gets the assignments property value. List of the Azure AD user group ids that hardware configuration will be applied to. Only security groups and Office 365 Groups are supported.
+     * Gets the assignments property value. A list of the Entra user group ids that hardware configuration will be applied to. Only security groups and Office 365 Groups are supported. Optional.
      * @return a {@link java.util.List<HardwareConfigurationAssignment>}
      */
     @jakarta.annotation.Nullable
@@ -37,7 +37,7 @@ public class HardwareConfiguration extends Entity implements Parsable {
         return this.backingStore.get("assignments");
     }
     /**
-     * Gets the configurationFileContent property value. File content of the hardware configuration
+     * Gets the configurationFileContent property value. The file content contains custom hardware settings that will be applied to the assigned devices' BIOS. Max allowed file size is 5KB. Represented as bytes. Required.
      * @return a {@link byte[]}
      */
     @jakarta.annotation.Nullable
@@ -45,7 +45,7 @@ public class HardwareConfiguration extends Entity implements Parsable {
         return this.backingStore.get("configurationFileContent");
     }
     /**
-     * Gets the createdDateTime property value. Timestamp of when the hardware configuration was created. This property is read-only.
+     * Gets the createdDateTime property value. The date and time  of when the BIOS configuration profile was created. The value cannot be modified and is automatically populated when the device is enrolled. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default. Read-Only. This property is read-only.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class HardwareConfiguration extends Entity implements Parsable {
         return this.backingStore.get("createdDateTime");
     }
     /**
-     * Gets the description property value. Description of the hardware configuration
+     * Gets the description property value. The description of the hardware configuration. Use this to provide context, purpose, applications, etc of the BIOS configuration profile for your organization's admins. Max length is 1000 characters. Optional.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -61,7 +61,7 @@ public class HardwareConfiguration extends Entity implements Parsable {
         return this.backingStore.get("description");
     }
     /**
-     * Gets the deviceRunStates property value. List of run states for the hardware configuration across all devices
+     * Gets the deviceRunStates property value. List of run states for the hardware configuration across all devices. Read-Only.
      * @return a {@link java.util.List<HardwareConfigurationDeviceState>}
      */
     @jakarta.annotation.Nullable
@@ -69,7 +69,7 @@ public class HardwareConfiguration extends Entity implements Parsable {
         return this.backingStore.get("deviceRunStates");
     }
     /**
-     * Gets the displayName property value. Name of the hardware configuration
+     * Gets the displayName property value. The name of the hardware BIOS configuration profile. It serves as user-friendly name to identify hardware BIOS configuration profiles. Max length is 150 characters. Required. Read-Only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -100,7 +100,7 @@ public class HardwareConfiguration extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the fileName property value. File name of the hardware configuration
+     * Gets the fileName property value. The file name for the BIOS configuration profile's ConfigurationFileContent. Max length is 150 characters. Required.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -116,7 +116,7 @@ public class HardwareConfiguration extends Entity implements Parsable {
         return this.backingStore.get("hardwareConfigurationFormat");
     }
     /**
-     * Gets the lastModifiedDateTime property value. Timestamp of when the hardware configuration was modified. This property is read-only.
+     * Gets the lastModifiedDateTime property value. The date and time  of when the BIOS configuration profile was last modified. The value cannot be modified and is automatically populated when the device is enrolled. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default. Read-Only. Read-Only. This property is read-only.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -124,7 +124,7 @@ public class HardwareConfiguration extends Entity implements Parsable {
         return this.backingStore.get("lastModifiedDateTime");
     }
     /**
-     * Gets the perDevicePasswordDisabled property value. A value indicating whether per devcive pasword disabled
+     * Gets the perDevicePasswordDisabled property value. When TRUE, indicates whether the policy-assigned devices' passwords are disabled. When FALSE, indicates they are enabled. Default is FALSE. Required.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -132,7 +132,7 @@ public class HardwareConfiguration extends Entity implements Parsable {
         return this.backingStore.get("perDevicePasswordDisabled");
     }
     /**
-     * Gets the roleScopeTagIds property value. List of Scope Tag IDs for the hardware configuration
+     * Gets the roleScopeTagIds property value. A list of unique Scope Tag IDs associated with the hardware configuration. Optional.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -140,7 +140,7 @@ public class HardwareConfiguration extends Entity implements Parsable {
         return this.backingStore.get("roleScopeTagIds");
     }
     /**
-     * Gets the runSummary property value. A summary of the results from an attempt to configure hardware settings
+     * Gets the runSummary property value. A summary of the results from an attempt to configure hardware settings. Read-Only.
      * @return a {@link HardwareConfigurationRunSummary}
      */
     @jakarta.annotation.Nullable
@@ -148,7 +148,7 @@ public class HardwareConfiguration extends Entity implements Parsable {
         return this.backingStore.get("runSummary");
     }
     /**
-     * Gets the userRunStates property value. List of run states for the hardware configuration across all users
+     * Gets the userRunStates property value. List of run states for the hardware configuration across all users. Read-Only.
      * @return a {@link java.util.List<HardwareConfigurationUserState>}
      */
     @jakarta.annotation.Nullable
@@ -156,7 +156,7 @@ public class HardwareConfiguration extends Entity implements Parsable {
         return this.backingStore.get("userRunStates");
     }
     /**
-     * Gets the version property value. Version of the hardware configuration (E.g. 1, 2, 3 ...)
+     * Gets the version property value. The version of the hardware configuration (E.g. 1, 2, 3 ...). This is incremented after a change to the BIOS configuration profile's settings file name (FileName property), settings file content (ConfigurationFileContent property), or the PerDevicePasswordDisabled property. Read-Only.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -184,49 +184,49 @@ public class HardwareConfiguration extends Entity implements Parsable {
         writer.writeIntegerValue("version", this.getVersion());
     }
     /**
-     * Sets the assignments property value. List of the Azure AD user group ids that hardware configuration will be applied to. Only security groups and Office 365 Groups are supported.
+     * Sets the assignments property value. A list of the Entra user group ids that hardware configuration will be applied to. Only security groups and Office 365 Groups are supported. Optional.
      * @param value Value to set for the assignments property.
      */
     public void setAssignments(@jakarta.annotation.Nullable final java.util.List<HardwareConfigurationAssignment> value) {
         this.backingStore.set("assignments", value);
     }
     /**
-     * Sets the configurationFileContent property value. File content of the hardware configuration
+     * Sets the configurationFileContent property value. The file content contains custom hardware settings that will be applied to the assigned devices' BIOS. Max allowed file size is 5KB. Represented as bytes. Required.
      * @param value Value to set for the configurationFileContent property.
      */
     public void setConfigurationFileContent(@jakarta.annotation.Nullable final byte[] value) {
         this.backingStore.set("configurationFileContent", value);
     }
     /**
-     * Sets the createdDateTime property value. Timestamp of when the hardware configuration was created. This property is read-only.
+     * Sets the createdDateTime property value. The date and time  of when the BIOS configuration profile was created. The value cannot be modified and is automatically populated when the device is enrolled. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default. Read-Only. This property is read-only.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the description property value. Description of the hardware configuration
+     * Sets the description property value. The description of the hardware configuration. Use this to provide context, purpose, applications, etc of the BIOS configuration profile for your organization's admins. Max length is 1000 characters. Optional.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("description", value);
     }
     /**
-     * Sets the deviceRunStates property value. List of run states for the hardware configuration across all devices
+     * Sets the deviceRunStates property value. List of run states for the hardware configuration across all devices. Read-Only.
      * @param value Value to set for the deviceRunStates property.
      */
     public void setDeviceRunStates(@jakarta.annotation.Nullable final java.util.List<HardwareConfigurationDeviceState> value) {
         this.backingStore.set("deviceRunStates", value);
     }
     /**
-     * Sets the displayName property value. Name of the hardware configuration
+     * Sets the displayName property value. The name of the hardware BIOS configuration profile. It serves as user-friendly name to identify hardware BIOS configuration profiles. Max length is 150 characters. Required. Read-Only.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the fileName property value. File name of the hardware configuration
+     * Sets the fileName property value. The file name for the BIOS configuration profile's ConfigurationFileContent. Max length is 150 characters. Required.
      * @param value Value to set for the fileName property.
      */
     public void setFileName(@jakarta.annotation.Nullable final String value) {
@@ -240,42 +240,42 @@ public class HardwareConfiguration extends Entity implements Parsable {
         this.backingStore.set("hardwareConfigurationFormat", value);
     }
     /**
-     * Sets the lastModifiedDateTime property value. Timestamp of when the hardware configuration was modified. This property is read-only.
+     * Sets the lastModifiedDateTime property value. The date and time  of when the BIOS configuration profile was last modified. The value cannot be modified and is automatically populated when the device is enrolled. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default. Read-Only. Read-Only. This property is read-only.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
-     * Sets the perDevicePasswordDisabled property value. A value indicating whether per devcive pasword disabled
+     * Sets the perDevicePasswordDisabled property value. When TRUE, indicates whether the policy-assigned devices' passwords are disabled. When FALSE, indicates they are enabled. Default is FALSE. Required.
      * @param value Value to set for the perDevicePasswordDisabled property.
      */
     public void setPerDevicePasswordDisabled(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("perDevicePasswordDisabled", value);
     }
     /**
-     * Sets the roleScopeTagIds property value. List of Scope Tag IDs for the hardware configuration
+     * Sets the roleScopeTagIds property value. A list of unique Scope Tag IDs associated with the hardware configuration. Optional.
      * @param value Value to set for the roleScopeTagIds property.
      */
     public void setRoleScopeTagIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("roleScopeTagIds", value);
     }
     /**
-     * Sets the runSummary property value. A summary of the results from an attempt to configure hardware settings
+     * Sets the runSummary property value. A summary of the results from an attempt to configure hardware settings. Read-Only.
      * @param value Value to set for the runSummary property.
      */
     public void setRunSummary(@jakarta.annotation.Nullable final HardwareConfigurationRunSummary value) {
         this.backingStore.set("runSummary", value);
     }
     /**
-     * Sets the userRunStates property value. List of run states for the hardware configuration across all users
+     * Sets the userRunStates property value. List of run states for the hardware configuration across all users. Read-Only.
      * @param value Value to set for the userRunStates property.
      */
     public void setUserRunStates(@jakarta.annotation.Nullable final java.util.List<HardwareConfigurationUserState> value) {
         this.backingStore.set("userRunStates", value);
     }
     /**
-     * Sets the version property value. Version of the hardware configuration (E.g. 1, 2, 3 ...)
+     * Sets the version property value. The version of the hardware configuration (E.g. 1, 2, 3 ...). This is incremented after a change to the BIOS configuration profile's settings file name (FileName property), settings file content (ConfigurationFileContent property), or the PerDevicePasswordDisabled property. Read-Only.
      * @param value Value to set for the version property.
      */
     public void setVersion(@jakarta.annotation.Nullable final Integer value) {

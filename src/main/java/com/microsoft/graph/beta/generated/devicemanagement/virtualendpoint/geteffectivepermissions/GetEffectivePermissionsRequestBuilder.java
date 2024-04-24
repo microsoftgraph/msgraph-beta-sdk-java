@@ -36,19 +36,21 @@ public class GetEffectivePermissionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/getEffectivePermissions(){?%24count,%24filter,%24search,%24skip,%24top}", rawUrl);
     }
     /**
-     * Invoke function getEffectivePermissions
+     * Get the effective permissions of the currently authenticated user, helping UX hide or disable content that the current user doesn't have access to.
      * @return a {@link GetEffectivePermissionsGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-geteffectivepermissions?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetEffectivePermissionsGetResponse get() {
         return get(null);
     }
     /**
-     * Invoke function getEffectivePermissions
+     * Get the effective permissions of the currently authenticated user, helping UX hide or disable content that the current user doesn't have access to.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GetEffectivePermissionsGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-geteffectivepermissions?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetEffectivePermissionsGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -58,7 +60,7 @@ public class GetEffectivePermissionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, GetEffectivePermissionsGetResponse::createFromDiscriminatorValue);
     }
     /**
-     * Invoke function getEffectivePermissions
+     * Get the effective permissions of the currently authenticated user, helping UX hide or disable content that the current user doesn't have access to.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -66,7 +68,7 @@ public class GetEffectivePermissionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function getEffectivePermissions
+     * Get the effective permissions of the currently authenticated user, helping UX hide or disable content that the current user doesn't have access to.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -88,7 +90,7 @@ public class GetEffectivePermissionsRequestBuilder extends BaseRequestBuilder {
         return new GetEffectivePermissionsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Invoke function getEffectivePermissions
+     * Get the effective permissions of the currently authenticated user, helping UX hide or disable content that the current user doesn't have access to.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

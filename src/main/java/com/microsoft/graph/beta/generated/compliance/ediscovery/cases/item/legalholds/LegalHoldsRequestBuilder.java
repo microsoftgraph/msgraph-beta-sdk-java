@@ -66,7 +66,7 @@ public class LegalHoldsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/compliance/ediscovery/cases/{case%2Did}/legalHolds{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Read the properties and relationships of a legalHold object.
+     * Returns a list of case legalHold objects for this case.  Nullable.
      * @return a {@link LegalHoldCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
@@ -78,7 +78,7 @@ public class LegalHoldsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a legalHold object.
+     * Returns a list of case legalHold objects for this case.  Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link LegalHoldCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -125,7 +125,7 @@ public class LegalHoldsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, LegalHold::createFromDiscriminatorValue);
     }
     /**
-     * Read the properties and relationships of a legalHold object.
+     * Returns a list of case legalHold objects for this case.  Nullable.
      * @return a {@link RequestInformation}
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
@@ -136,7 +136,7 @@ public class LegalHoldsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a legalHold object.
+     * Returns a list of case legalHold objects for this case.  Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -194,7 +194,7 @@ public class LegalHoldsRequestBuilder extends BaseRequestBuilder {
         return new LegalHoldsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Read the properties and relationships of a legalHold object.
+     * Returns a list of case legalHold objects for this case.  Nullable.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

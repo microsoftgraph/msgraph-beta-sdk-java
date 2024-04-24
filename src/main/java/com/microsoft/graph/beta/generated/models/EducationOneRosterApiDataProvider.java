@@ -65,7 +65,7 @@ public class EducationOneRosterApiDataProvider extends EducationSynchronizationD
         return deserializerMap;
     }
     /**
-     * Gets the providerName property value. The OneRoster Service Provider name as defined by the [OneRoster specification][oneroster].
+     * Gets the providerName property value. The OneRoster Service Provider name as defined by the OneRoster specification.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -73,7 +73,7 @@ public class EducationOneRosterApiDataProvider extends EducationSynchronizationD
         return this.backingStore.get("providerName");
     }
     /**
-     * Gets the schoolsIds property value. The list of [School/Org][orgs] sourcedId to sync.
+     * Gets the schoolsIds property value. The list of School/Org sourcedId to sync.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -81,7 +81,7 @@ public class EducationOneRosterApiDataProvider extends EducationSynchronizationD
         return this.backingStore.get("schoolsIds");
     }
     /**
-     * Gets the termIds property value. The list of [academic sessions][terms] to sync.
+     * Gets the termIds property value. The list of academic sessions to sync.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -124,21 +124,21 @@ public class EducationOneRosterApiDataProvider extends EducationSynchronizationD
         this.backingStore.set("customizations", value);
     }
     /**
-     * Sets the providerName property value. The OneRoster Service Provider name as defined by the [OneRoster specification][oneroster].
+     * Sets the providerName property value. The OneRoster Service Provider name as defined by the OneRoster specification.
      * @param value Value to set for the providerName property.
      */
     public void setProviderName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("providerName", value);
     }
     /**
-     * Sets the schoolsIds property value. The list of [School/Org][orgs] sourcedId to sync.
+     * Sets the schoolsIds property value. The list of School/Org sourcedId to sync.
      * @param value Value to set for the schoolsIds property.
      */
     public void setSchoolsIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("schoolsIds", value);
     }
     /**
-     * Sets the termIds property value. The list of [academic sessions][terms] to sync.
+     * Sets the termIds property value. The list of academic sessions to sync.
      * @param value Value to set for the termIds property.
      */
     public void setTermIds(@jakarta.annotation.Nullable final java.util.List<String> value) {

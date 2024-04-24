@@ -60,21 +60,19 @@ public class WebAccountsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/profile/webAccounts{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Retrieve a list of webAccounts objects from the user's profile.
+     * Represents web accounts the user has indicated they use or has added to their user profile.
      * @return a {@link WebAccountCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/profile-list-webaccounts?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WebAccountCollectionResponse get() {
         return get(null);
     }
     /**
-     * Retrieve a list of webAccounts objects from the user's profile.
+     * Represents web accounts the user has indicated they use or has added to their user profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link WebAccountCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/profile-list-webaccounts?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WebAccountCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +82,21 @@ public class WebAccountsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, WebAccountCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new webAccount object in a user's profile.
+     * Create new navigation property to webAccounts for users
      * @param body The request body
      * @return a {@link WebAccount}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/profile-post-webaccounts?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WebAccount post(@jakarta.annotation.Nonnull final WebAccount body) {
         return post(body, null);
     }
     /**
-     * Create a new webAccount object in a user's profile.
+     * Create new navigation property to webAccounts for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link WebAccount}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/profile-post-webaccounts?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WebAccount post(@jakarta.annotation.Nonnull final WebAccount body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +107,7 @@ public class WebAccountsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, WebAccount::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of webAccounts objects from the user's profile.
+     * Represents web accounts the user has indicated they use or has added to their user profile.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class WebAccountsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of webAccounts objects from the user's profile.
+     * Represents web accounts the user has indicated they use or has added to their user profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +127,7 @@ public class WebAccountsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new webAccount object in a user's profile.
+     * Create new navigation property to webAccounts for users
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class WebAccountsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new webAccount object in a user's profile.
+     * Create new navigation property to webAccounts for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +161,7 @@ public class WebAccountsRequestBuilder extends BaseRequestBuilder {
         return new WebAccountsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of webAccounts objects from the user's profile.
+     * Represents web accounts the user has indicated they use or has added to their user profile.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

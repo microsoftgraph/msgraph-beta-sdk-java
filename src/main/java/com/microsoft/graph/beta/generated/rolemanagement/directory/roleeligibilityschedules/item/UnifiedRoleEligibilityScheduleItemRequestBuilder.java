@@ -91,21 +91,19 @@ public class UnifiedRoleEligibilityScheduleItemRequestBuilder extends BaseReques
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of an unifiedRoleEligibilitySchedule object.
+     * Get roleEligibilitySchedules from roleManagement
      * @return a {@link UnifiedRoleEligibilitySchedule}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/unifiedroleeligibilityschedule-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UnifiedRoleEligibilitySchedule get() {
         return get(null);
     }
     /**
-     * Read the properties and relationships of an unifiedRoleEligibilitySchedule object.
+     * Get roleEligibilitySchedules from roleManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UnifiedRoleEligibilitySchedule}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/unifiedroleeligibilityschedule-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UnifiedRoleEligibilitySchedule get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -160,7 +158,7 @@ public class UnifiedRoleEligibilityScheduleItemRequestBuilder extends BaseReques
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of an unifiedRoleEligibilitySchedule object.
+     * Get roleEligibilitySchedules from roleManagement
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -168,7 +166,7 @@ public class UnifiedRoleEligibilityScheduleItemRequestBuilder extends BaseReques
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of an unifiedRoleEligibilitySchedule object.
+     * Get roleEligibilitySchedules from roleManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -220,7 +218,7 @@ public class UnifiedRoleEligibilityScheduleItemRequestBuilder extends BaseReques
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of an unifiedRoleEligibilitySchedule object.
+     * Get roleEligibilitySchedules from roleManagement
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -55,21 +55,19 @@ public class B2cAuthenticationMethodsPolicyRequestBuilder extends BaseRequestBui
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties of a b2cAuthenticationMethodsPolicy object.
+     * The Azure AD B2C policies that define how end users register via local accounts.
      * @return a {@link B2cAuthenticationMethodsPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/b2cauthenticationmethodspolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public B2cAuthenticationMethodsPolicy get() {
         return get(null);
     }
     /**
-     * Read the properties of a b2cAuthenticationMethodsPolicy object.
+     * The Azure AD B2C policies that define how end users register via local accounts.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link B2cAuthenticationMethodsPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/b2cauthenticationmethodspolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public B2cAuthenticationMethodsPolicy get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,23 +77,21 @@ public class B2cAuthenticationMethodsPolicyRequestBuilder extends BaseRequestBui
         return this.requestAdapter.send(requestInfo, errorMapping, B2cAuthenticationMethodsPolicy::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a b2cAuthenticationMethodsPolicy object.
+     * Update the navigation property b2cAuthenticationMethodsPolicy in policies
      * @param body The request body
      * @return a {@link B2cAuthenticationMethodsPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/b2cauthenticationmethodspolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public B2cAuthenticationMethodsPolicy patch(@jakarta.annotation.Nonnull final B2cAuthenticationMethodsPolicy body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of a b2cAuthenticationMethodsPolicy object.
+     * Update the navigation property b2cAuthenticationMethodsPolicy in policies
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link B2cAuthenticationMethodsPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/b2cauthenticationmethodspolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public B2cAuthenticationMethodsPolicy patch(@jakarta.annotation.Nonnull final B2cAuthenticationMethodsPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -126,7 +122,7 @@ public class B2cAuthenticationMethodsPolicyRequestBuilder extends BaseRequestBui
         return requestInfo;
     }
     /**
-     * Read the properties of a b2cAuthenticationMethodsPolicy object.
+     * The Azure AD B2C policies that define how end users register via local accounts.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -134,7 +130,7 @@ public class B2cAuthenticationMethodsPolicyRequestBuilder extends BaseRequestBui
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties of a b2cAuthenticationMethodsPolicy object.
+     * The Azure AD B2C policies that define how end users register via local accounts.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -146,7 +142,7 @@ public class B2cAuthenticationMethodsPolicyRequestBuilder extends BaseRequestBui
         return requestInfo;
     }
     /**
-     * Update the properties of a b2cAuthenticationMethodsPolicy object.
+     * Update the navigation property b2cAuthenticationMethodsPolicy in policies
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -155,7 +151,7 @@ public class B2cAuthenticationMethodsPolicyRequestBuilder extends BaseRequestBui
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a b2cAuthenticationMethodsPolicy object.
+     * Update the navigation property b2cAuthenticationMethodsPolicy in policies
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -186,7 +182,7 @@ public class B2cAuthenticationMethodsPolicyRequestBuilder extends BaseRequestBui
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties of a b2cAuthenticationMethodsPolicy object.
+     * The Azure AD B2C policies that define how end users register via local accounts.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

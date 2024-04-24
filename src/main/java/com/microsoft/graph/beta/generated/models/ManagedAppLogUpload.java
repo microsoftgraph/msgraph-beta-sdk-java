@@ -72,7 +72,7 @@ public class ManagedAppLogUpload implements AdditionalDataHolder, BackedModel, P
         return deserializerMap;
     }
     /**
-     * Gets the managedAppComponent property value. The Mobile Application Management (MAM) Logs Uploading Component.
+     * Gets the managedAppComponent property value. The Mobile Application Management (MAM) Logs Uploading Component. Such components can be the application itself, the MAM SDK, and other on-device components that are capable of uploading diagnostic logs. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -96,7 +96,7 @@ public class ManagedAppLogUpload implements AdditionalDataHolder, BackedModel, P
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the referenceId property value. A provider-specific reference id for the uploaded logs.
+     * Gets the referenceId property value. A provider-specific reference id for the uploaded logs. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -131,7 +131,7 @@ public class ManagedAppLogUpload implements AdditionalDataHolder, BackedModel, P
         this.backingStore = value;
     }
     /**
-     * Sets the managedAppComponent property value. The Mobile Application Management (MAM) Logs Uploading Component.
+     * Sets the managedAppComponent property value. The Mobile Application Management (MAM) Logs Uploading Component. Such components can be the application itself, the MAM SDK, and other on-device components that are capable of uploading diagnostic logs. Read-only.
      * @param value Value to set for the managedAppComponent property.
      */
     public void setManagedAppComponent(@jakarta.annotation.Nullable final String value) {
@@ -152,7 +152,7 @@ public class ManagedAppLogUpload implements AdditionalDataHolder, BackedModel, P
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the referenceId property value. A provider-specific reference id for the uploaded logs.
+     * Sets the referenceId property value. A provider-specific reference id for the uploaded logs. Read-only.
      * @param value Value to set for the referenceId property.
      */
     public void setReferenceId(@jakarta.annotation.Nullable final String value) {

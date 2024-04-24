@@ -59,21 +59,19 @@ public class AppRoleAssignedResourcesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/appRoleAssignedResources{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get the service principals to which the user has an app role assignment either directly or through group membership.
+     * Get appRoleAssignedResources from users
      * @return a {@link ServicePrincipalCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/user-list-approleassignedresources?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ServicePrincipalCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get the service principals to which the user has an app role assignment either directly or through group membership.
+     * Get appRoleAssignedResources from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ServicePrincipalCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/user-list-approleassignedresources?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ServicePrincipalCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -83,7 +81,7 @@ public class AppRoleAssignedResourcesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ServicePrincipalCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Get the service principals to which the user has an app role assignment either directly or through group membership.
+     * Get appRoleAssignedResources from users
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -91,7 +89,7 @@ public class AppRoleAssignedResourcesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the service principals to which the user has an app role assignment either directly or through group membership.
+     * Get appRoleAssignedResources from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -113,7 +111,7 @@ public class AppRoleAssignedResourcesRequestBuilder extends BaseRequestBuilder {
         return new AppRoleAssignedResourcesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the service principals to which the user has an app role assignment either directly or through group membership.
+     * Get appRoleAssignedResources from users
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

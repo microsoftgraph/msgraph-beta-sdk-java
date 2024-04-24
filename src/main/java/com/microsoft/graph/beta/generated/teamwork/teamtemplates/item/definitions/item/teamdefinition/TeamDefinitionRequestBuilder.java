@@ -235,21 +235,19 @@ public class TeamDefinitionRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get the properties of the team associated with a teamTemplateDefinition object.
+     * Collection of channel objects. A channel represents a topic, and therefore a logical isolation of discussion, within a team.
      * @return a {@link Team}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/teamtemplatedefinition-get-teamdefinition?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Team get() {
         return get(null);
     }
     /**
-     * Get the properties of the team associated with a teamTemplateDefinition object.
+     * Collection of channel objects. A channel represents a topic, and therefore a logical isolation of discussion, within a team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Team}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/teamtemplatedefinition-get-teamdefinition?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Team get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -304,7 +302,7 @@ public class TeamDefinitionRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get the properties of the team associated with a teamTemplateDefinition object.
+     * Collection of channel objects. A channel represents a topic, and therefore a logical isolation of discussion, within a team.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -312,7 +310,7 @@ public class TeamDefinitionRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the properties of the team associated with a teamTemplateDefinition object.
+     * Collection of channel objects. A channel represents a topic, and therefore a logical isolation of discussion, within a team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -364,7 +362,7 @@ public class TeamDefinitionRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get the properties of the team associated with a teamTemplateDefinition object.
+     * Collection of channel objects. A channel represents a topic, and therefore a logical isolation of discussion, within a team.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

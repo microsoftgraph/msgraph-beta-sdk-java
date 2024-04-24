@@ -60,21 +60,19 @@ public class ExternalUserProfilesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/directory/externalUserProfiles{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Retrieve the properties of all externalUserProfiles
+     * Collection of external user profiles that represent collaborators in the directory.
      * @return a {@link ExternalUserProfileCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/directory-list-externaluserprofiles?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ExternalUserProfileCollectionResponse get() {
         return get(null);
     }
     /**
-     * Retrieve the properties of all externalUserProfiles
+     * Collection of external user profiles that represent collaborators in the directory.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ExternalUserProfileCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/directory-list-externaluserprofiles?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ExternalUserProfileCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -109,7 +107,7 @@ public class ExternalUserProfilesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ExternalUserProfile::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve the properties of all externalUserProfiles
+     * Collection of external user profiles that represent collaborators in the directory.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -117,7 +115,7 @@ public class ExternalUserProfilesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties of all externalUserProfiles
+     * Collection of external user profiles that represent collaborators in the directory.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -163,7 +161,7 @@ public class ExternalUserProfilesRequestBuilder extends BaseRequestBuilder {
         return new ExternalUserProfilesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve the properties of all externalUserProfiles
+     * Collection of external user profiles that represent collaborators in the directory.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

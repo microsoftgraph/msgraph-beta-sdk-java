@@ -36,19 +36,21 @@ public class RoleScheduleInstancesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppS
         super(requestAdapter, "{+baseurl}/roleManagement/enterpriseApps/{rbacApplication%2Did}/roleScheduleInstances(directoryScopeId='@directoryScopeId',appScopeId='@appScopeId',principalId='@principalId',roleDefinitionId='@roleDefinitionId'){?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top,appScopeId*,directoryScopeId*,principalId*,roleDefinitionId*}", rawUrl);
     }
     /**
-     * Invoke function roleScheduleInstances
+     * Retrieve both roleAssignmentScheduleInstances and roleEligibilityScheduleInstances.
      * @return a {@link RoleScheduleInstancesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppScopeIdPrincipalIdPrincipalIdRoleDefinitionIdRoleDefinitionIdGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/rbacapplication-rolescheduleinstances?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RoleScheduleInstancesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppScopeIdPrincipalIdPrincipalIdRoleDefinitionIdRoleDefinitionIdGetResponse get() {
         return get(null);
     }
     /**
-     * Invoke function roleScheduleInstances
+     * Retrieve both roleAssignmentScheduleInstances and roleEligibilityScheduleInstances.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RoleScheduleInstancesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppScopeIdPrincipalIdPrincipalIdRoleDefinitionIdRoleDefinitionIdGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/rbacapplication-rolescheduleinstances?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RoleScheduleInstancesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppScopeIdPrincipalIdPrincipalIdRoleDefinitionIdRoleDefinitionIdGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -58,7 +60,7 @@ public class RoleScheduleInstancesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppS
         return this.requestAdapter.send(requestInfo, errorMapping, RoleScheduleInstancesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppScopeIdPrincipalIdPrincipalIdRoleDefinitionIdRoleDefinitionIdGetResponse::createFromDiscriminatorValue);
     }
     /**
-     * Invoke function roleScheduleInstances
+     * Retrieve both roleAssignmentScheduleInstances and roleEligibilityScheduleInstances.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -66,7 +68,7 @@ public class RoleScheduleInstancesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppS
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function roleScheduleInstances
+     * Retrieve both roleAssignmentScheduleInstances and roleEligibilityScheduleInstances.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -88,7 +90,7 @@ public class RoleScheduleInstancesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppS
         return new RoleScheduleInstancesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppScopeIdPrincipalIdPrincipalIdRoleDefinitionIdRoleDefinitionIdRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Invoke function roleScheduleInstances
+     * Retrieve both roleAssignmentScheduleInstances and roleEligibilityScheduleInstances.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
