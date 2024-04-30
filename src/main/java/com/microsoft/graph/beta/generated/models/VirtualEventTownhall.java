@@ -26,7 +26,7 @@ public class VirtualEventTownhall extends VirtualEvent implements Parsable {
         return new VirtualEventTownhall();
     }
     /**
-     * Gets the audience property value. The audience property
+     * Gets the audience property value. The audience to whom the town hall is visible. Possible values are: everyone, organization, unknownFutureValue.
      * @return a {@link MeetingAudience}
      */
     @jakarta.annotation.Nullable
@@ -34,7 +34,7 @@ public class VirtualEventTownhall extends VirtualEvent implements Parsable {
         return this.backingStore.get("audience");
     }
     /**
-     * Gets the coOrganizers property value. The coOrganizers property
+     * Gets the coOrganizers property value. Identity information of the coorganizers of the town hall.
      * @return a {@link java.util.List<CommunicationsUserIdentity>}
      */
     @jakarta.annotation.Nullable
@@ -55,7 +55,7 @@ public class VirtualEventTownhall extends VirtualEvent implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the invitedAttendees property value. The invitedAttendees property
+     * Gets the invitedAttendees property value. The attendees invited to the town hall. The supported identites are: communicationsUserIdentity and communicationsGuestIdentity.
      * @return a {@link java.util.List<Identity>}
      */
     @jakarta.annotation.Nullable
@@ -63,7 +63,7 @@ public class VirtualEventTownhall extends VirtualEvent implements Parsable {
         return this.backingStore.get("invitedAttendees");
     }
     /**
-     * Gets the isInviteOnly property value. The isInviteOnly property
+     * Gets the isInviteOnly property value. Indicates whether the town hall is only open to invited people and groups within your organization. The isInviteOnly property can only be true if the value of the audience property is set to organization.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -83,28 +83,28 @@ public class VirtualEventTownhall extends VirtualEvent implements Parsable {
         writer.writeBooleanValue("isInviteOnly", this.getIsInviteOnly());
     }
     /**
-     * Sets the audience property value. The audience property
+     * Sets the audience property value. The audience to whom the town hall is visible. Possible values are: everyone, organization, unknownFutureValue.
      * @param value Value to set for the audience property.
      */
     public void setAudience(@jakarta.annotation.Nullable final MeetingAudience value) {
         this.backingStore.set("audience", value);
     }
     /**
-     * Sets the coOrganizers property value. The coOrganizers property
+     * Sets the coOrganizers property value. Identity information of the coorganizers of the town hall.
      * @param value Value to set for the coOrganizers property.
      */
     public void setCoOrganizers(@jakarta.annotation.Nullable final java.util.List<CommunicationsUserIdentity> value) {
         this.backingStore.set("coOrganizers", value);
     }
     /**
-     * Sets the invitedAttendees property value. The invitedAttendees property
+     * Sets the invitedAttendees property value. The attendees invited to the town hall. The supported identites are: communicationsUserIdentity and communicationsGuestIdentity.
      * @param value Value to set for the invitedAttendees property.
      */
     public void setInvitedAttendees(@jakarta.annotation.Nullable final java.util.List<Identity> value) {
         this.backingStore.set("invitedAttendees", value);
     }
     /**
-     * Sets the isInviteOnly property value. The isInviteOnly property
+     * Sets the isInviteOnly property value. Indicates whether the town hall is only open to invited people and groups within your organization. The isInviteOnly property can only be true if the value of the audience property is set to organization.
      * @param value Value to set for the isInviteOnly property.
      */
     public void setIsInviteOnly(@jakarta.annotation.Nullable final Boolean value) {

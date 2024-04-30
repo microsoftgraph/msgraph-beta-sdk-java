@@ -59,7 +59,7 @@ public class RecentPlansRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/planner/recentPlans{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Read-only. Nullable. Returns the plannerPlans that have been recently viewed by the user in apps that support recent plans.
+     * Read-only. Nullable. Returns the plannerPlans that the user recently viewed in apps that support recent plans.
      * @return a {@link PlannerPlanCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -68,7 +68,7 @@ public class RecentPlansRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read-only. Nullable. Returns the plannerPlans that have been recently viewed by the user in apps that support recent plans.
+     * Read-only. Nullable. Returns the plannerPlans that the user recently viewed in apps that support recent plans.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PlannerPlanCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -81,7 +81,7 @@ public class RecentPlansRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PlannerPlanCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Read-only. Nullable. Returns the plannerPlans that have been recently viewed by the user in apps that support recent plans.
+     * Read-only. Nullable. Returns the plannerPlans that the user recently viewed in apps that support recent plans.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class RecentPlansRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read-only. Nullable. Returns the plannerPlans that have been recently viewed by the user in apps that support recent plans.
+     * Read-only. Nullable. Returns the plannerPlans that the user recently viewed in apps that support recent plans.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -111,7 +111,7 @@ public class RecentPlansRequestBuilder extends BaseRequestBuilder {
         return new RecentPlansRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Read-only. Nullable. Returns the plannerPlans that have been recently viewed by the user in apps that support recent plans.
+     * Read-only. Nullable. Returns the plannerPlans that the user recently viewed in apps that support recent plans.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

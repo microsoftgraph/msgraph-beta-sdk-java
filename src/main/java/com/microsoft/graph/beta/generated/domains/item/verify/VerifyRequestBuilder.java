@@ -36,7 +36,7 @@ public class VerifyRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/domains/{domain%2Did}/verify", rawUrl);
     }
     /**
-     * Validates the ownership of the domain.
+     * Validate the ownership of a domain.
      * @return a {@link Domain}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/domain-verify?view=graph-rest-beta">Find more info here</a>
@@ -46,7 +46,7 @@ public class VerifyRequestBuilder extends BaseRequestBuilder {
         return post(null);
     }
     /**
-     * Validates the ownership of the domain.
+     * Validate the ownership of a domain.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Domain}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -60,7 +60,7 @@ public class VerifyRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Domain::createFromDiscriminatorValue);
     }
     /**
-     * Validates the ownership of the domain.
+     * Validate the ownership of a domain.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +68,7 @@ public class VerifyRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Validates the ownership of the domain.
+     * Validate the ownership of a domain.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

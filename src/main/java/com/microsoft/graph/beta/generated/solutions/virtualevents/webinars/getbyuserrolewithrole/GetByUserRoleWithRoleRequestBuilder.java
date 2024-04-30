@@ -38,7 +38,7 @@ public class GetByUserRoleWithRoleRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/solutions/virtualEvents/webinars/getByUserRole(role='{role}'){?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a virtualEventWebinar collection where the signed-in user is either the organizer or a coorganizer.
+     * Get a list of virtualEventWebinar objects where the signed-in user is either the organizer or a coorganizer.
      * @return a {@link GetByUserRoleWithRoleGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/virtualeventwebinar-getbyuserrole?view=graph-rest-beta">Find more info here</a>
@@ -48,7 +48,7 @@ public class GetByUserRoleWithRoleRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a virtualEventWebinar collection where the signed-in user is either the organizer or a coorganizer.
+     * Get a list of virtualEventWebinar objects where the signed-in user is either the organizer or a coorganizer.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GetByUserRoleWithRoleGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -62,7 +62,7 @@ public class GetByUserRoleWithRoleRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, GetByUserRoleWithRoleGetResponse::createFromDiscriminatorValue);
     }
     /**
-     * Get a virtualEventWebinar collection where the signed-in user is either the organizer or a coorganizer.
+     * Get a list of virtualEventWebinar objects where the signed-in user is either the organizer or a coorganizer.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class GetByUserRoleWithRoleRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a virtualEventWebinar collection where the signed-in user is either the organizer or a coorganizer.
+     * Get a list of virtualEventWebinar objects where the signed-in user is either the organizer or a coorganizer.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -92,7 +92,7 @@ public class GetByUserRoleWithRoleRequestBuilder extends BaseRequestBuilder {
         return new GetByUserRoleWithRoleRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a virtualEventWebinar collection where the signed-in user is either the organizer or a coorganizer.
+     * Get a list of virtualEventWebinar objects where the signed-in user is either the organizer or a coorganizer.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

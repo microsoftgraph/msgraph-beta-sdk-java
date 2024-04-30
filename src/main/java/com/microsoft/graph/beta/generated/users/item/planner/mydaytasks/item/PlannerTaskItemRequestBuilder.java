@@ -37,7 +37,7 @@ public class PlannerTaskItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/planner/myDayTasks/{plannerTask%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Get myDayTasks from users
+     * Read-only. Nullable. Returns the plannerTasks to be shown in the My Day view of the user.
      * @return a {@link PlannerTask}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -46,7 +46,7 @@ public class PlannerTaskItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get myDayTasks from users
+     * Read-only. Nullable. Returns the plannerTasks to be shown in the My Day view of the user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PlannerTask}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -59,7 +59,7 @@ public class PlannerTaskItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PlannerTask::createFromDiscriminatorValue);
     }
     /**
-     * Get myDayTasks from users
+     * Read-only. Nullable. Returns the plannerTasks to be shown in the My Day view of the user.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class PlannerTaskItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get myDayTasks from users
+     * Read-only. Nullable. Returns the plannerTasks to be shown in the My Day view of the user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -89,7 +89,7 @@ public class PlannerTaskItemRequestBuilder extends BaseRequestBuilder {
         return new PlannerTaskItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get myDayTasks from users
+     * Read-only. Nullable. Returns the plannerTasks to be shown in the My Day view of the user.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

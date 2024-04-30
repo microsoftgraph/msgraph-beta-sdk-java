@@ -77,10 +77,12 @@ public class ContentCustomization implements AdditionalDataHolder, BackedModel, 
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("attributeCollection", (n) -> { this.setAttributeCollection(n.getCollectionOfObjectValues(KeyValue::createFromDiscriminatorValue)); });
         deserializerMap.put("attributeCollectionRelativeUrl", (n) -> { this.setAttributeCollectionRelativeUrl(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("registrationCampaign", (n) -> { this.setRegistrationCampaign(n.getCollectionOfObjectValues(KeyValue::createFromDiscriminatorValue)); });
+        deserializerMap.put("registrationCampaignRelativeUrl", (n) -> { this.setRegistrationCampaignRelativeUrl(n.getStringValue()); });
         return deserializerMap;
     }
     /**
@@ -92,6 +94,22 @@ public class ContentCustomization implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("odataType");
     }
     /**
+     * Gets the registrationCampaign property value. The registrationCampaign property
+     * @return a {@link java.util.List<KeyValue>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<KeyValue> getRegistrationCampaign() {
+        return this.backingStore.get("registrationCampaign");
+    }
+    /**
+     * Gets the registrationCampaignRelativeUrl property value. The registrationCampaignRelativeUrl property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getRegistrationCampaignRelativeUrl() {
+        return this.backingStore.get("registrationCampaignRelativeUrl");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -100,6 +118,8 @@ public class ContentCustomization implements AdditionalDataHolder, BackedModel, 
         writer.writeCollectionOfObjectValues("attributeCollection", this.getAttributeCollection());
         writer.writeStringValue("attributeCollectionRelativeUrl", this.getAttributeCollectionRelativeUrl());
         writer.writeStringValue("@odata.type", this.getOdataType());
+        writer.writeCollectionOfObjectValues("registrationCampaign", this.getRegistrationCampaign());
+        writer.writeStringValue("registrationCampaignRelativeUrl", this.getRegistrationCampaignRelativeUrl());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -137,5 +157,19 @@ public class ContentCustomization implements AdditionalDataHolder, BackedModel, 
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("odataType", value);
+    }
+    /**
+     * Sets the registrationCampaign property value. The registrationCampaign property
+     * @param value Value to set for the registrationCampaign property.
+     */
+    public void setRegistrationCampaign(@jakarta.annotation.Nullable final java.util.List<KeyValue> value) {
+        this.backingStore.set("registrationCampaign", value);
+    }
+    /**
+     * Sets the registrationCampaignRelativeUrl property value. The registrationCampaignRelativeUrl property
+     * @param value Value to set for the registrationCampaignRelativeUrl property.
+     */
+    public void setRegistrationCampaignRelativeUrl(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("registrationCampaignRelativeUrl", value);
     }
 }
