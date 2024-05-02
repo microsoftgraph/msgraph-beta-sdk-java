@@ -33,7 +33,7 @@ public class PlannerUser extends PlannerDelta implements Parsable {
         return this.backingStore.get("all");
     }
     /**
-     * Gets the favoritePlanReferences property value. A collection that contains the references to the plans that the user has marked as favorites.
+     * Gets the favoritePlanReferences property value. A collection that contains the references to the plans that the user marked as favorites.
      * @return a {@link PlannerFavoritePlanReferenceCollection}
      */
     @jakarta.annotation.Nullable
@@ -67,7 +67,7 @@ public class PlannerUser extends PlannerDelta implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the myDayTasks property value. The myDayTasks property
+     * Gets the myDayTasks property value. Read-only. Nullable. Returns the plannerTasks to be shown in the My Day view of the user.
      * @return a {@link java.util.List<PlannerTask>}
      */
     @jakarta.annotation.Nullable
@@ -83,7 +83,7 @@ public class PlannerUser extends PlannerDelta implements Parsable {
         return this.backingStore.get("plans");
     }
     /**
-     * Gets the recentPlanReferences property value. A collection that contains references to the plans that were viewed recently by the user in apps that support recent plans.
+     * Gets the recentPlanReferences property value. A collection that contains references to the plans that the user recently viewed in apps that support recent plans.
      * @return a {@link PlannerRecentPlanReferenceCollection}
      */
     @jakarta.annotation.Nullable
@@ -91,7 +91,7 @@ public class PlannerUser extends PlannerDelta implements Parsable {
         return this.backingStore.get("recentPlanReferences");
     }
     /**
-     * Gets the recentPlans property value. Read-only. Nullable. Returns the plannerPlans that have been recently viewed by the user in apps that support recent plans.
+     * Gets the recentPlans property value. Read-only. Nullable. Returns the plannerPlans that the user recently viewed in apps that support recent plans.
      * @return a {@link java.util.List<PlannerPlan>}
      */
     @jakarta.annotation.Nullable
@@ -139,7 +139,7 @@ public class PlannerUser extends PlannerDelta implements Parsable {
         this.backingStore.set("all", value);
     }
     /**
-     * Sets the favoritePlanReferences property value. A collection that contains the references to the plans that the user has marked as favorites.
+     * Sets the favoritePlanReferences property value. A collection that contains the references to the plans that the user marked as favorites.
      * @param value Value to set for the favoritePlanReferences property.
      */
     public void setFavoritePlanReferences(@jakarta.annotation.Nullable final PlannerFavoritePlanReferenceCollection value) {
@@ -153,7 +153,7 @@ public class PlannerUser extends PlannerDelta implements Parsable {
         this.backingStore.set("favoritePlans", value);
     }
     /**
-     * Sets the myDayTasks property value. The myDayTasks property
+     * Sets the myDayTasks property value. Read-only. Nullable. Returns the plannerTasks to be shown in the My Day view of the user.
      * @param value Value to set for the myDayTasks property.
      */
     public void setMyDayTasks(@jakarta.annotation.Nullable final java.util.List<PlannerTask> value) {
@@ -167,14 +167,14 @@ public class PlannerUser extends PlannerDelta implements Parsable {
         this.backingStore.set("plans", value);
     }
     /**
-     * Sets the recentPlanReferences property value. A collection that contains references to the plans that were viewed recently by the user in apps that support recent plans.
+     * Sets the recentPlanReferences property value. A collection that contains references to the plans that the user recently viewed in apps that support recent plans.
      * @param value Value to set for the recentPlanReferences property.
      */
     public void setRecentPlanReferences(@jakarta.annotation.Nullable final PlannerRecentPlanReferenceCollection value) {
         this.backingStore.set("recentPlanReferences", value);
     }
     /**
-     * Sets the recentPlans property value. Read-only. Nullable. Returns the plannerPlans that have been recently viewed by the user in apps that support recent plans.
+     * Sets the recentPlans property value. Read-only. Nullable. Returns the plannerPlans that the user recently viewed in apps that support recent plans.
      * @param value Value to set for the recentPlans property.
      */
     public void setRecentPlans(@jakarta.annotation.Nullable final java.util.List<PlannerPlan> value) {

@@ -34,6 +34,14 @@ public class CloudPC extends Entity implements Parsable {
         return this.backingStore.get("aadDeviceId");
     }
     /**
+     * Gets the allotmentDisplayName property value. The allotment name divides tenant licenses into smaller batches or groups that helps restrict the number of licenses available for use in a specific assignment. When the provisioningType is dedicated, the allotment name is null. Read-only.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getAllotmentDisplayName() {
+        return this.backingStore.get("allotmentDisplayName");
+    }
+    /**
      * Gets the connectionSettings property value. The connectionSettings property
      * @return a {@link CloudPcConnectionSettings}
      */
@@ -81,6 +89,7 @@ public class CloudPC extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("aadDeviceId", (n) -> { this.setAadDeviceId(n.getStringValue()); });
+        deserializerMap.put("allotmentDisplayName", (n) -> { this.setAllotmentDisplayName(n.getStringValue()); });
         deserializerMap.put("connectionSettings", (n) -> { this.setConnectionSettings(n.getObjectValue(CloudPcConnectionSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("connectivityResult", (n) -> { this.setConnectivityResult(n.getObjectValue(CloudPcConnectivityResult::createFromDiscriminatorValue)); });
         deserializerMap.put("disasterRecoveryCapability", (n) -> { this.setDisasterRecoveryCapability(n.getObjectValue(CloudPcDisasterRecoveryCapability::createFromDiscriminatorValue)); });
@@ -294,6 +303,7 @@ public class CloudPC extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("aadDeviceId", this.getAadDeviceId());
+        writer.writeStringValue("allotmentDisplayName", this.getAllotmentDisplayName());
         writer.writeObjectValue("connectionSettings", this.getConnectionSettings());
         writer.writeObjectValue("connectivityResult", this.getConnectivityResult());
         writer.writeObjectValue("disasterRecoveryCapability", this.getDisasterRecoveryCapability());
@@ -328,6 +338,13 @@ public class CloudPC extends Entity implements Parsable {
      */
     public void setAadDeviceId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("aadDeviceId", value);
+    }
+    /**
+     * Sets the allotmentDisplayName property value. The allotment name divides tenant licenses into smaller batches or groups that helps restrict the number of licenses available for use in a specific assignment. When the provisioningType is dedicated, the allotment name is null. Read-only.
+     * @param value Value to set for the allotmentDisplayName property.
+     */
+    public void setAllotmentDisplayName(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("allotmentDisplayName", value);
     }
     /**
      * Sets the connectionSettings property value. The connectionSettings property

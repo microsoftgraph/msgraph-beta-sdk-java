@@ -118,7 +118,7 @@ public class DomainItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/domains/{domain%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Deletes a domain from a tenant.
+     * Delete a domain from a tenant.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/domain-delete?view=graph-rest-beta">Find more info here</a>
      */
@@ -126,7 +126,7 @@ public class DomainItemRequestBuilder extends BaseRequestBuilder {
         delete(null);
     }
     /**
-     * Deletes a domain from a tenant.
+     * Delete a domain from a tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/domain-delete?view=graph-rest-beta">Find more info here</a>
@@ -162,7 +162,7 @@ public class DomainItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Domain::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of domain object.
+     * Update the properties of domain object. Only verified domains can be updated.
      * @param body The request body
      * @return a {@link Domain}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -173,7 +173,7 @@ public class DomainItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of domain object.
+     * Update the properties of domain object. Only verified domains can be updated.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Domain}
@@ -189,7 +189,7 @@ public class DomainItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Domain::createFromDiscriminatorValue);
     }
     /**
-     * Deletes a domain from a tenant.
+     * Delete a domain from a tenant.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -197,7 +197,7 @@ public class DomainItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Deletes a domain from a tenant.
+     * Delete a domain from a tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -229,7 +229,7 @@ public class DomainItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of domain object.
+     * Update the properties of domain object. Only verified domains can be updated.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -238,7 +238,7 @@ public class DomainItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of domain object.
+     * Update the properties of domain object. Only verified domains can be updated.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
