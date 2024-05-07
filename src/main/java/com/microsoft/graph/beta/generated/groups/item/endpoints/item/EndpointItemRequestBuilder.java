@@ -55,19 +55,21 @@ public class EndpointItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Endpoints for the group. Read-only. Nullable.
+     * Retrieve the properties and relationships of a specific endpoint object.
      * @return a {@link Endpoint}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/endpoint-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Endpoint get() {
         return get(null);
     }
     /**
-     * Endpoints for the group. Read-only. Nullable.
+     * Retrieve the properties and relationships of a specific endpoint object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Endpoint}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/endpoint-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Endpoint get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -122,7 +124,7 @@ public class EndpointItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Endpoints for the group. Read-only. Nullable.
+     * Retrieve the properties and relationships of a specific endpoint object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +132,7 @@ public class EndpointItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Endpoints for the group. Read-only. Nullable.
+     * Retrieve the properties and relationships of a specific endpoint object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +184,7 @@ public class EndpointItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Endpoints for the group. Read-only. Nullable.
+     * Retrieve the properties and relationships of a specific endpoint object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

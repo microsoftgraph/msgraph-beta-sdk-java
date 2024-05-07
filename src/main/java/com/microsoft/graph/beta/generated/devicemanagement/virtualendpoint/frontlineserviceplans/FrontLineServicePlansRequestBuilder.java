@@ -60,19 +60,21 @@ public class FrontLineServicePlansRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/frontLineServicePlans{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Front-line service plans for a Cloud PC.
+     * Get a list of the cloudPcFrontLineServicePlan objects and their properties.
      * @return a {@link CloudPcFrontLineServicePlanCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-frontlineserviceplans?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPcFrontLineServicePlanCollectionResponse get() {
         return get(null);
     }
     /**
-     * Front-line service plans for a Cloud PC.
+     * Get a list of the cloudPcFrontLineServicePlan objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CloudPcFrontLineServicePlanCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-frontlineserviceplans?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPcFrontLineServicePlanCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -107,7 +109,7 @@ public class FrontLineServicePlansRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CloudPcFrontLineServicePlan::createFromDiscriminatorValue);
     }
     /**
-     * Front-line service plans for a Cloud PC.
+     * Get a list of the cloudPcFrontLineServicePlan objects and their properties.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +117,7 @@ public class FrontLineServicePlansRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Front-line service plans for a Cloud PC.
+     * Get a list of the cloudPcFrontLineServicePlan objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +163,7 @@ public class FrontLineServicePlansRequestBuilder extends BaseRequestBuilder {
         return new FrontLineServicePlansRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Front-line service plans for a Cloud PC.
+     * Get a list of the cloudPcFrontLineServicePlan objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

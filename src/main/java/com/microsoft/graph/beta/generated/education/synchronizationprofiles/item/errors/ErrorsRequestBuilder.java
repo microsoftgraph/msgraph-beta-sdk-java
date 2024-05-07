@@ -60,19 +60,21 @@ public class ErrorsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/synchronizationProfiles/{educationSynchronizationProfile%2Did}/errors{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * All errors associated with this synchronization profile.
+     * Get the errors generated during validation and/or during a sync of a specific school data synchronization profile in the tenant.
      * @return a {@link EducationSynchronizationErrorCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/educationsynchronizationerrors-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EducationSynchronizationErrorCollectionResponse get() {
         return get(null);
     }
     /**
-     * All errors associated with this synchronization profile.
+     * Get the errors generated during validation and/or during a sync of a specific school data synchronization profile in the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EducationSynchronizationErrorCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/educationsynchronizationerrors-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EducationSynchronizationErrorCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -107,7 +109,7 @@ public class ErrorsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EducationSynchronizationError::createFromDiscriminatorValue);
     }
     /**
-     * All errors associated with this synchronization profile.
+     * Get the errors generated during validation and/or during a sync of a specific school data synchronization profile in the tenant.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +117,7 @@ public class ErrorsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * All errors associated with this synchronization profile.
+     * Get the errors generated during validation and/or during a sync of a specific school data synchronization profile in the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +163,7 @@ public class ErrorsRequestBuilder extends BaseRequestBuilder {
         return new ErrorsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * All errors associated with this synchronization profile.
+     * Get the errors generated during validation and/or during a sync of a specific school data synchronization profile in the tenant.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

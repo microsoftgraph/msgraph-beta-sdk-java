@@ -60,19 +60,21 @@ public class EntriesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/admin/windows/updates/catalog/entries{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Lists the content that you can approve for deployment. Read-only.
+     * Get a list of catalogEntry resources from the catalog. Currently, this operation returns entries of the featureUpdateCatalogEntry or qualityUpdateCatalog types, inherited from catalogEntry. 
      * @return a {@link CatalogEntryCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-catalog-list-entries?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CatalogEntryCollectionResponse get() {
         return get(null);
     }
     /**
-     * Lists the content that you can approve for deployment. Read-only.
+     * Get a list of catalogEntry resources from the catalog. Currently, this operation returns entries of the featureUpdateCatalogEntry or qualityUpdateCatalog types, inherited from catalogEntry. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CatalogEntryCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-catalog-list-entries?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CatalogEntryCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -107,7 +109,7 @@ public class EntriesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CatalogEntry::createFromDiscriminatorValue);
     }
     /**
-     * Lists the content that you can approve for deployment. Read-only.
+     * Get a list of catalogEntry resources from the catalog. Currently, this operation returns entries of the featureUpdateCatalogEntry or qualityUpdateCatalog types, inherited from catalogEntry. 
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +117,7 @@ public class EntriesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Lists the content that you can approve for deployment. Read-only.
+     * Get a list of catalogEntry resources from the catalog. Currently, this operation returns entries of the featureUpdateCatalogEntry or qualityUpdateCatalog types, inherited from catalogEntry. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +163,7 @@ public class EntriesRequestBuilder extends BaseRequestBuilder {
         return new EntriesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Lists the content that you can approve for deployment. Read-only.
+     * Get a list of catalogEntry resources from the catalog. Currently, this operation returns entries of the featureUpdateCatalogEntry or qualityUpdateCatalog types, inherited from catalogEntry. 
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

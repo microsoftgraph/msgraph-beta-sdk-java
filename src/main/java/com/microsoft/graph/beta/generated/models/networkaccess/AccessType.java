@@ -7,7 +7,8 @@ import java.util.Objects;
 public enum AccessType implements ValuedEnum {
     QuickAccess("quickAccess"),
     PrivateAccess("privateAccess"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    AppAccess("appAccess");
     public final String value;
     AccessType(final String value) {
         this.value = value;
@@ -21,6 +22,7 @@ public enum AccessType implements ValuedEnum {
             case "quickAccess": return QuickAccess;
             case "privateAccess": return PrivateAccess;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "appAccess": return AppAccess;
             default: return null;
         }
     }

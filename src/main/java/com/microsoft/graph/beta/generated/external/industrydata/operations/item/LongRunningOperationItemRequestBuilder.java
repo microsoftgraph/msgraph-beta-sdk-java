@@ -55,19 +55,21 @@ public class LongRunningOperationItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Set of ephemeral operations that the system runs currently. Read-only.
+     * Read the properties and relationships of a fileValidateOperation object.
      * @return a {@link LongRunningOperation}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-filevalidateoperation-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public LongRunningOperation get() {
         return get(null);
     }
     /**
-     * Set of ephemeral operations that the system runs currently. Read-only.
+     * Read the properties and relationships of a fileValidateOperation object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link LongRunningOperation}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-filevalidateoperation-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public LongRunningOperation get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -122,7 +124,7 @@ public class LongRunningOperationItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Set of ephemeral operations that the system runs currently. Read-only.
+     * Read the properties and relationships of a fileValidateOperation object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +132,7 @@ public class LongRunningOperationItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Set of ephemeral operations that the system runs currently. Read-only.
+     * Read the properties and relationships of a fileValidateOperation object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +184,7 @@ public class LongRunningOperationItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Set of ephemeral operations that the system runs currently. Read-only.
+     * Read the properties and relationships of a fileValidateOperation object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -39,9 +39,12 @@ public class SubmitTiIndicatorsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link SubmitTiIndicatorsPostResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation
      * @see <a href="https://learn.microsoft.com/graph/api/tiindicator-submittiindicators?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public SubmitTiIndicatorsPostResponse post(@jakarta.annotation.Nonnull final SubmitTiIndicatorsPostRequestBody body) {
         return post(body, null);
     }
@@ -51,9 +54,12 @@ public class SubmitTiIndicatorsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SubmitTiIndicatorsPostResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation
      * @see <a href="https://learn.microsoft.com/graph/api/tiindicator-submittiindicators?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public SubmitTiIndicatorsPostResponse post(@jakarta.annotation.Nonnull final SubmitTiIndicatorsPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
@@ -65,8 +71,11 @@ public class SubmitTiIndicatorsRequestBuilder extends BaseRequestBuilder {
      * Upload multiple threat intelligence (TI) indicators in one request instead of multiple requests.
      * @param body The request body
      * @return a {@link RequestInformation}
+     * @deprecated
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final SubmitTiIndicatorsPostRequestBody body) {
         return toPostRequestInformation(body, null);
     }
@@ -75,8 +84,11 @@ public class SubmitTiIndicatorsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final SubmitTiIndicatorsPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
@@ -89,8 +101,11 @@ public class SubmitTiIndicatorsRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link SubmitTiIndicatorsRequestBuilder}
+     * @deprecated
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public SubmitTiIndicatorsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new SubmitTiIndicatorsRequestBuilder(rawUrl, requestAdapter);

@@ -55,19 +55,21 @@ public class CloudPcBulkActionItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Bulk actions applied to a Cloud PC.
+     * Read the properties and relationships of a cloudPcBulkAction object.
      * @return a {@link CloudPcBulkAction}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpcbulkaction-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPcBulkAction get() {
         return get(null);
     }
     /**
-     * Bulk actions applied to a Cloud PC.
+     * Read the properties and relationships of a cloudPcBulkAction object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CloudPcBulkAction}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpcbulkaction-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPcBulkAction get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -122,7 +124,7 @@ public class CloudPcBulkActionItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Bulk actions applied to a Cloud PC.
+     * Read the properties and relationships of a cloudPcBulkAction object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +132,7 @@ public class CloudPcBulkActionItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Bulk actions applied to a Cloud PC.
+     * Read the properties and relationships of a cloudPcBulkAction object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +184,7 @@ public class CloudPcBulkActionItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Bulk actions applied to a Cloud PC.
+     * Read the properties and relationships of a cloudPcBulkAction object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -109,16 +109,18 @@ public class AccessPackageItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/accessPackages/{accessPackage%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property accessPackages for identityGovernance
+     * Delete an accessPackage object. You can't delete an access package if it has any accessPackageAssignment. To delete the access package, first query if there are any assignments with a filter to indicate the specific access package, such as: $filter=accessPackage/id eq 'a914b616-e04e-476b-aa37-91038f0b165b'. For more information on how to remove assignments that are still in the delivered state, see Remove an assignment.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/accesspackage-delete?view=graph-rest-beta">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property accessPackages for identityGovernance
+     * Delete an accessPackage object. You can't delete an access package if it has any accessPackageAssignment. To delete the access package, first query if there are any assignments with a filter to indicate the specific access package, such as: $filter=accessPackage/id eq 'a914b616-e04e-476b-aa37-91038f0b165b'. For more information on how to remove assignments that are still in the delivered state, see Remove an assignment.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/accesspackage-delete?view=graph-rest-beta">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -127,19 +129,21 @@ public class AccessPackageItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Represents access package objects.
+     * Retrieve the properties and relationships of an accessPackage object.
      * @return a {@link AccessPackage}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/accesspackage-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AccessPackage get() {
         return get(null);
     }
     /**
-     * Represents access package objects.
+     * Retrieve the properties and relationships of an accessPackage object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AccessPackage}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/accesspackage-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AccessPackage get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -149,21 +153,23 @@ public class AccessPackageItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AccessPackage::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property accessPackages in identityGovernance
+     * Update an existing accessPackage object to change one or more of its properties, such as the display name or description.
      * @param body The request body
      * @return a {@link AccessPackage}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/accesspackage-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AccessPackage patch(@jakarta.annotation.Nonnull final AccessPackage body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property accessPackages in identityGovernance
+     * Update an existing accessPackage object to change one or more of its properties, such as the display name or description.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AccessPackage}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/accesspackage-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AccessPackage patch(@jakarta.annotation.Nonnull final AccessPackage body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -174,7 +180,7 @@ public class AccessPackageItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AccessPackage::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property accessPackages for identityGovernance
+     * Delete an accessPackage object. You can't delete an access package if it has any accessPackageAssignment. To delete the access package, first query if there are any assignments with a filter to indicate the specific access package, such as: $filter=accessPackage/id eq 'a914b616-e04e-476b-aa37-91038f0b165b'. For more information on how to remove assignments that are still in the delivered state, see Remove an assignment.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -182,7 +188,7 @@ public class AccessPackageItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property accessPackages for identityGovernance
+     * Delete an accessPackage object. You can't delete an access package if it has any accessPackageAssignment. To delete the access package, first query if there are any assignments with a filter to indicate the specific access package, such as: $filter=accessPackage/id eq 'a914b616-e04e-476b-aa37-91038f0b165b'. For more information on how to remove assignments that are still in the delivered state, see Remove an assignment.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -194,7 +200,7 @@ public class AccessPackageItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Represents access package objects.
+     * Retrieve the properties and relationships of an accessPackage object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -202,7 +208,7 @@ public class AccessPackageItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Represents access package objects.
+     * Retrieve the properties and relationships of an accessPackage object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -214,7 +220,7 @@ public class AccessPackageItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property accessPackages in identityGovernance
+     * Update an existing accessPackage object to change one or more of its properties, such as the display name or description.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -223,7 +229,7 @@ public class AccessPackageItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property accessPackages in identityGovernance
+     * Update an existing accessPackage object to change one or more of its properties, such as the display name or description.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -254,7 +260,7 @@ public class AccessPackageItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Represents access package objects.
+     * Retrieve the properties and relationships of an accessPackage object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

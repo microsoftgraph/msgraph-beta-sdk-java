@@ -66,11 +66,12 @@ public class UserFlowsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identity/userFlows{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get userFlows from identity
+     * Retrieve a list of userflows.
      * @return a {@link IdentityUserFlowCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The identity/userflows API is deprecated and will stop returning data on January 2022. Please use the new b2cUserflows or b2xUserflows APIs. as of 2021-05/identityProvider
+     * @see <a href="https://learn.microsoft.com/graph/api/identityuserflow-list?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -78,12 +79,13 @@ public class UserFlowsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get userFlows from identity
+     * Retrieve a list of userflows.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link IdentityUserFlowCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The identity/userflows API is deprecated and will stop returning data on January 2022. Please use the new b2cUserflows or b2xUserflows APIs. as of 2021-05/identityProvider
+     * @see <a href="https://learn.microsoft.com/graph/api/identityuserflow-list?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -94,12 +96,13 @@ public class UserFlowsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, IdentityUserFlowCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to userFlows for identity
+     * Create a new userFlow object.
      * @param body The request body
      * @return a {@link IdentityUserFlow}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The identity/userflows API is deprecated and will stop returning data on January 2022. Please use the new b2cUserflows or b2xUserflows APIs. as of 2021-05/identityProvider
+     * @see <a href="https://learn.microsoft.com/graph/api/identityuserflow-post-userflows?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -107,13 +110,14 @@ public class UserFlowsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create new navigation property to userFlows for identity
+     * Create a new userFlow object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link IdentityUserFlow}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The identity/userflows API is deprecated and will stop returning data on January 2022. Please use the new b2cUserflows or b2xUserflows APIs. as of 2021-05/identityProvider
+     * @see <a href="https://learn.microsoft.com/graph/api/identityuserflow-post-userflows?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -125,7 +129,7 @@ public class UserFlowsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, IdentityUserFlow::createFromDiscriminatorValue);
     }
     /**
-     * Get userFlows from identity
+     * Retrieve a list of userflows.
      * @return a {@link RequestInformation}
      * @deprecated
      * The identity/userflows API is deprecated and will stop returning data on January 2022. Please use the new b2cUserflows or b2xUserflows APIs. as of 2021-05/identityProvider
@@ -136,7 +140,7 @@ public class UserFlowsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get userFlows from identity
+     * Retrieve a list of userflows.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -151,7 +155,7 @@ public class UserFlowsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to userFlows for identity
+     * Create a new userFlow object.
      * @param body The request body
      * @return a {@link RequestInformation}
      * @deprecated
@@ -163,7 +167,7 @@ public class UserFlowsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to userFlows for identity
+     * Create a new userFlow object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -194,7 +198,7 @@ public class UserFlowsRequestBuilder extends BaseRequestBuilder {
         return new UserFlowsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get userFlows from identity
+     * Retrieve a list of userflows.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

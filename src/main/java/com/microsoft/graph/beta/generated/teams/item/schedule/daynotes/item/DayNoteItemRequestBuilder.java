@@ -77,21 +77,23 @@ public class DayNoteItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DayNote::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property dayNotes in teams
+     * Update the properties of a day note.
      * @param body The request body
      * @return a {@link DayNote}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/daynote-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DayNote patch(@jakarta.annotation.Nonnull final DayNote body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property dayNotes in teams
+     * Update the properties of a day note.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DayNote}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/daynote-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DayNote patch(@jakarta.annotation.Nonnull final DayNote body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -142,7 +144,7 @@ public class DayNoteItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property dayNotes in teams
+     * Update the properties of a day note.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -151,7 +153,7 @@ public class DayNoteItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property dayNotes in teams
+     * Update the properties of a day note.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

@@ -37,16 +37,18 @@ public class CertificateAuthorityAsEntityItemRequestBuilder extends BaseRequestB
         super(requestAdapter, "{+baseurl}/directory/certificateAuthorities/certificateBasedApplicationConfigurations/{certificateBasedApplicationConfiguration%2Did}/trustedCertificateAuthorities/{certificateAuthorityAsEntity%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property trustedCertificateAuthorities for directory
+     * Delete a certificateAuthorityAsEntity object. You can't delete all items in the collection because this collection requires at least one object that is a root authority to always persist.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/certificateauthorityasentity-delete?view=graph-rest-beta">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property trustedCertificateAuthorities for directory
+     * Delete a certificateAuthorityAsEntity object. You can't delete all items in the collection because this collection requires at least one object that is a root authority to always persist.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/certificateauthorityasentity-delete?view=graph-rest-beta">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -55,19 +57,21 @@ public class CertificateAuthorityAsEntityItemRequestBuilder extends BaseRequestB
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Collection of trusted certificate authorities.
+     * Read the properties and relationships of a certificateAuthorityAsEntity object.
      * @return a {@link CertificateAuthorityAsEntity}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/certificateauthorityasentity-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CertificateAuthorityAsEntity get() {
         return get(null);
     }
     /**
-     * Collection of trusted certificate authorities.
+     * Read the properties and relationships of a certificateAuthorityAsEntity object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CertificateAuthorityAsEntity}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/certificateauthorityasentity-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CertificateAuthorityAsEntity get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -77,21 +81,23 @@ public class CertificateAuthorityAsEntityItemRequestBuilder extends BaseRequestB
         return this.requestAdapter.send(requestInfo, errorMapping, CertificateAuthorityAsEntity::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property trustedCertificateAuthorities in directory
+     * Update the properties of a certificateAuthorityAsEntity object.
      * @param body The request body
      * @return a {@link CertificateAuthorityAsEntity}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/certificateauthorityasentity-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CertificateAuthorityAsEntity patch(@jakarta.annotation.Nonnull final CertificateAuthorityAsEntity body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property trustedCertificateAuthorities in directory
+     * Update the properties of a certificateAuthorityAsEntity object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CertificateAuthorityAsEntity}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/certificateauthorityasentity-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CertificateAuthorityAsEntity patch(@jakarta.annotation.Nonnull final CertificateAuthorityAsEntity body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -102,7 +108,7 @@ public class CertificateAuthorityAsEntityItemRequestBuilder extends BaseRequestB
         return this.requestAdapter.send(requestInfo, errorMapping, CertificateAuthorityAsEntity::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property trustedCertificateAuthorities for directory
+     * Delete a certificateAuthorityAsEntity object. You can't delete all items in the collection because this collection requires at least one object that is a root authority to always persist.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -110,7 +116,7 @@ public class CertificateAuthorityAsEntityItemRequestBuilder extends BaseRequestB
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property trustedCertificateAuthorities for directory
+     * Delete a certificateAuthorityAsEntity object. You can't delete all items in the collection because this collection requires at least one object that is a root authority to always persist.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -122,7 +128,7 @@ public class CertificateAuthorityAsEntityItemRequestBuilder extends BaseRequestB
         return requestInfo;
     }
     /**
-     * Collection of trusted certificate authorities.
+     * Read the properties and relationships of a certificateAuthorityAsEntity object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +136,7 @@ public class CertificateAuthorityAsEntityItemRequestBuilder extends BaseRequestB
         return toGetRequestInformation(null);
     }
     /**
-     * Collection of trusted certificate authorities.
+     * Read the properties and relationships of a certificateAuthorityAsEntity object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -142,7 +148,7 @@ public class CertificateAuthorityAsEntityItemRequestBuilder extends BaseRequestB
         return requestInfo;
     }
     /**
-     * Update the navigation property trustedCertificateAuthorities in directory
+     * Update the properties of a certificateAuthorityAsEntity object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -151,7 +157,7 @@ public class CertificateAuthorityAsEntityItemRequestBuilder extends BaseRequestB
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property trustedCertificateAuthorities in directory
+     * Update the properties of a certificateAuthorityAsEntity object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -182,7 +188,7 @@ public class CertificateAuthorityAsEntityItemRequestBuilder extends BaseRequestB
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Collection of trusted certificate authorities.
+     * Read the properties and relationships of a certificateAuthorityAsEntity object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

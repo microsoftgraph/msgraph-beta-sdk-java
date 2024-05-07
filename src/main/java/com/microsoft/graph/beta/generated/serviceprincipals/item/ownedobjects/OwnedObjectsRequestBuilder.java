@@ -95,19 +95,21 @@ public class OwnedObjectsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/servicePrincipals/{servicePrincipal%2Did}/ownedObjects{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Directory objects that are owned by this service principal. Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
+     * Retrieve a list of objects owned by the servicePrincipal.  This could include applications or groups.
      * @return a {@link DirectoryObjectCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-list-ownedobjects?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DirectoryObjectCollectionResponse get() {
         return get(null);
     }
     /**
-     * Directory objects that are owned by this service principal. Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
+     * Retrieve a list of objects owned by the servicePrincipal.  This could include applications or groups.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DirectoryObjectCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-list-ownedobjects?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DirectoryObjectCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -117,7 +119,7 @@ public class OwnedObjectsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DirectoryObjectCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Directory objects that are owned by this service principal. Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
+     * Retrieve a list of objects owned by the servicePrincipal.  This could include applications or groups.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -125,7 +127,7 @@ public class OwnedObjectsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Directory objects that are owned by this service principal. Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
+     * Retrieve a list of objects owned by the servicePrincipal.  This could include applications or groups.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -147,7 +149,7 @@ public class OwnedObjectsRequestBuilder extends BaseRequestBuilder {
         return new OwnedObjectsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Directory objects that are owned by this service principal. Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
+     * Retrieve a list of objects owned by the servicePrincipal.  This could include applications or groups.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

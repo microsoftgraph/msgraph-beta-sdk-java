@@ -39,16 +39,18 @@ public class BusinessScenariosWithUniqueNameRequestBuilder extends BaseRequestBu
         super(requestAdapter, "{+baseurl}/solutions/businessScenarios(uniqueName='{uniqueName}'){?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property businessScenarios for solutions
+     * Delete a businessScenario object. The deletion of a scenario causes all data associated with the scenario to be deleted.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/businessscenario-delete?view=graph-rest-beta">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property businessScenarios for solutions
+     * Delete a businessScenario object. The deletion of a scenario causes all data associated with the scenario to be deleted.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/businessscenario-delete?view=graph-rest-beta">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -57,19 +59,21 @@ public class BusinessScenariosWithUniqueNameRequestBuilder extends BaseRequestBu
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get businessScenarios from solutions
+     * Read the properties and relationships of a businessScenario object.
      * @return a {@link BusinessScenario}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/businessscenario-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public BusinessScenario get() {
         return get(null);
     }
     /**
-     * Get businessScenarios from solutions
+     * Read the properties and relationships of a businessScenario object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link BusinessScenario}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/businessscenario-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public BusinessScenario get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,21 +83,23 @@ public class BusinessScenariosWithUniqueNameRequestBuilder extends BaseRequestBu
         return this.requestAdapter.send(requestInfo, errorMapping, BusinessScenario::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property businessScenarios in solutions
+     * Update the properties of a businessScenario object.
      * @param body The request body
      * @return a {@link BusinessScenario}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/businessscenario-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public BusinessScenario patch(@jakarta.annotation.Nonnull final BusinessScenario body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property businessScenarios in solutions
+     * Update the properties of a businessScenario object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link BusinessScenario}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/businessscenario-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public BusinessScenario patch(@jakarta.annotation.Nonnull final BusinessScenario body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -104,7 +110,7 @@ public class BusinessScenariosWithUniqueNameRequestBuilder extends BaseRequestBu
         return this.requestAdapter.send(requestInfo, errorMapping, BusinessScenario::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property businessScenarios for solutions
+     * Delete a businessScenario object. The deletion of a scenario causes all data associated with the scenario to be deleted.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -112,7 +118,7 @@ public class BusinessScenariosWithUniqueNameRequestBuilder extends BaseRequestBu
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property businessScenarios for solutions
+     * Delete a businessScenario object. The deletion of a scenario causes all data associated with the scenario to be deleted.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -124,7 +130,7 @@ public class BusinessScenariosWithUniqueNameRequestBuilder extends BaseRequestBu
         return requestInfo;
     }
     /**
-     * Get businessScenarios from solutions
+     * Read the properties and relationships of a businessScenario object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -132,7 +138,7 @@ public class BusinessScenariosWithUniqueNameRequestBuilder extends BaseRequestBu
         return toGetRequestInformation(null);
     }
     /**
-     * Get businessScenarios from solutions
+     * Read the properties and relationships of a businessScenario object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -144,7 +150,7 @@ public class BusinessScenariosWithUniqueNameRequestBuilder extends BaseRequestBu
         return requestInfo;
     }
     /**
-     * Update the navigation property businessScenarios in solutions
+     * Update the properties of a businessScenario object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -153,7 +159,7 @@ public class BusinessScenariosWithUniqueNameRequestBuilder extends BaseRequestBu
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property businessScenarios in solutions
+     * Update the properties of a businessScenario object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -184,7 +190,7 @@ public class BusinessScenariosWithUniqueNameRequestBuilder extends BaseRequestBu
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get businessScenarios from solutions
+     * Read the properties and relationships of a businessScenario object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

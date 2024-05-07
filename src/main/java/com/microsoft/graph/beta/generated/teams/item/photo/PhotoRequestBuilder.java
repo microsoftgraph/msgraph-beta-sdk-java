@@ -68,21 +68,23 @@ public class PhotoRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ProfilePhoto::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property photo in teams
+     * Update the photo for the specified contact, group, team, or user in a tenant. The size of the photo you can update to is limited to 4 MB. You can use either PATCH or PUT for this operation.
      * @param body The request body
      * @return a {@link ProfilePhoto}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/profilephoto-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ProfilePhoto patch(@jakarta.annotation.Nonnull final ProfilePhoto body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property photo in teams
+     * Update the photo for the specified contact, group, team, or user in a tenant. The size of the photo you can update to is limited to 4 MB. You can use either PATCH or PUT for this operation.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ProfilePhoto}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/profilephoto-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ProfilePhoto patch(@jakarta.annotation.Nonnull final ProfilePhoto body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -113,7 +115,7 @@ public class PhotoRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property photo in teams
+     * Update the photo for the specified contact, group, team, or user in a tenant. The size of the photo you can update to is limited to 4 MB. You can use either PATCH or PUT for this operation.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -122,7 +124,7 @@ public class PhotoRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property photo in teams
+     * Update the photo for the specified contact, group, team, or user in a tenant. The size of the photo you can update to is limited to 4 MB. You can use either PATCH or PUT for this operation.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

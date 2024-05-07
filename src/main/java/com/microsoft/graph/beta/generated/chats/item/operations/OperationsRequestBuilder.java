@@ -60,19 +60,21 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/chats/{chat%2Did}/operations{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * A collection of all the Teams async operations that ran or are running on the chat. Nullable.
+     * List all Teams async operations that ran or are running on the specified chat.
      * @return a {@link TeamsAsyncOperationCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/chat-list-operations?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TeamsAsyncOperationCollectionResponse get() {
         return get(null);
     }
     /**
-     * A collection of all the Teams async operations that ran or are running on the chat. Nullable.
+     * List all Teams async operations that ran or are running on the specified chat.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TeamsAsyncOperationCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/chat-list-operations?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TeamsAsyncOperationCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -107,7 +109,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TeamsAsyncOperation::createFromDiscriminatorValue);
     }
     /**
-     * A collection of all the Teams async operations that ran or are running on the chat. Nullable.
+     * List all Teams async operations that ran or are running on the specified chat.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +117,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * A collection of all the Teams async operations that ran or are running on the chat. Nullable.
+     * List all Teams async operations that ran or are running on the specified chat.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +163,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         return new OperationsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * A collection of all the Teams async operations that ran or are running on the chat. Nullable.
+     * List all Teams async operations that ran or are running on the specified chat.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

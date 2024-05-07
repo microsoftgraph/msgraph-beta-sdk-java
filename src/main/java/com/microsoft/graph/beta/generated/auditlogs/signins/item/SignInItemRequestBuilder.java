@@ -55,19 +55,21 @@ public class SignInItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get signIns from auditLogs
+     * Get a signIn object that contains a specific user sign-in event for your tenant that includes sign-ins where a user is asked to enter a username or password, and session tokens.
      * @return a {@link SignIn}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/signin-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SignIn get() {
         return get(null);
     }
     /**
-     * Get signIns from auditLogs
+     * Get a signIn object that contains a specific user sign-in event for your tenant that includes sign-ins where a user is asked to enter a username or password, and session tokens.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SignIn}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/signin-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SignIn get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -122,7 +124,7 @@ public class SignInItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get signIns from auditLogs
+     * Get a signIn object that contains a specific user sign-in event for your tenant that includes sign-ins where a user is asked to enter a username or password, and session tokens.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +132,7 @@ public class SignInItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get signIns from auditLogs
+     * Get a signIn object that contains a specific user sign-in event for your tenant that includes sign-ins where a user is asked to enter a username or password, and session tokens.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +184,7 @@ public class SignInItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get signIns from auditLogs
+     * Get a signIn object that contains a specific user sign-in event for your tenant that includes sign-ins where a user is asked to enter a username or password, and session tokens.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

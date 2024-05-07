@@ -73,16 +73,18 @@ public class TimeCardItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/teams/{team%2Did}/schedule/timeCards/{timeCard%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property timeCards for teams
+     * Delete a timeCard instance in a schedule.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/timecard-delete?view=graph-rest-beta">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property timeCards for teams
+     * Delete a timeCard instance in a schedule.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/timecard-delete?view=graph-rest-beta">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -91,19 +93,21 @@ public class TimeCardItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * The time cards in the schedule.
+     * Get the properties and relationships of a timeCard object by ID.
      * @return a {@link TimeCard}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/timecard-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TimeCard get() {
         return get(null);
     }
     /**
-     * The time cards in the schedule.
+     * Get the properties and relationships of a timeCard object by ID.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TimeCard}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/timecard-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TimeCard get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -113,21 +117,23 @@ public class TimeCardItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TimeCard::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property timeCards in teams
+     * Replace an existing timeCard with updated values.
      * @param body The request body
      * @return a {@link TimeCard}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/timecard-replace?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TimeCard patch(@jakarta.annotation.Nonnull final TimeCard body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property timeCards in teams
+     * Replace an existing timeCard with updated values.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TimeCard}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/timecard-replace?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TimeCard patch(@jakarta.annotation.Nonnull final TimeCard body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -138,7 +144,7 @@ public class TimeCardItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TimeCard::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property timeCards for teams
+     * Delete a timeCard instance in a schedule.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -146,7 +152,7 @@ public class TimeCardItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property timeCards for teams
+     * Delete a timeCard instance in a schedule.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -158,7 +164,7 @@ public class TimeCardItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The time cards in the schedule.
+     * Get the properties and relationships of a timeCard object by ID.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -166,7 +172,7 @@ public class TimeCardItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The time cards in the schedule.
+     * Get the properties and relationships of a timeCard object by ID.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -178,7 +184,7 @@ public class TimeCardItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property timeCards in teams
+     * Replace an existing timeCard with updated values.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -187,7 +193,7 @@ public class TimeCardItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property timeCards in teams
+     * Replace an existing timeCard with updated values.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -218,7 +224,7 @@ public class TimeCardItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The time cards in the schedule.
+     * Get the properties and relationships of a timeCard object by ID.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

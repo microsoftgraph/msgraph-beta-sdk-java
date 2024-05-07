@@ -69,19 +69,21 @@ public class PlansRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/planner/plans{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Read-only. Nullable. Returns the plannerPlans owned by the group.
+     * Retrieve a list of plannerPlan objects owned by a group object.
      * @return a {@link PlannerPlanCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/plannergroup-list-plans?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PlannerPlanCollectionResponse get() {
         return get(null);
     }
     /**
-     * Read-only. Nullable. Returns the plannerPlans owned by the group.
+     * Retrieve a list of plannerPlan objects owned by a group object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PlannerPlanCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/plannergroup-list-plans?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PlannerPlanCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -116,7 +118,7 @@ public class PlansRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PlannerPlan::createFromDiscriminatorValue);
     }
     /**
-     * Read-only. Nullable. Returns the plannerPlans owned by the group.
+     * Retrieve a list of plannerPlan objects owned by a group object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -124,7 +126,7 @@ public class PlansRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read-only. Nullable. Returns the plannerPlans owned by the group.
+     * Retrieve a list of plannerPlan objects owned by a group object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -170,7 +172,7 @@ public class PlansRequestBuilder extends BaseRequestBuilder {
         return new PlansRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Read-only. Nullable. Returns the plannerPlans owned by the group.
+     * Retrieve a list of plannerPlan objects owned by a group object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

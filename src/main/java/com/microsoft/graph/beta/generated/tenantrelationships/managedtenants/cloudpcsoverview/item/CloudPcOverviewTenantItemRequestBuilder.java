@@ -55,19 +55,21 @@ public class CloudPcOverviewTenantItemRequestBuilder extends BaseRequestBuilder 
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Overview of cloud PC information across managed tenants.
+     * Read the properties and relationships of a cloudPcOverview object.
      * @return a {@link CloudPcOverview}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-cloudpcoverview-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPcOverview get() {
         return get(null);
     }
     /**
-     * Overview of cloud PC information across managed tenants.
+     * Read the properties and relationships of a cloudPcOverview object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CloudPcOverview}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-cloudpcoverview-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPcOverview get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -122,7 +124,7 @@ public class CloudPcOverviewTenantItemRequestBuilder extends BaseRequestBuilder 
         return requestInfo;
     }
     /**
-     * Overview of cloud PC information across managed tenants.
+     * Read the properties and relationships of a cloudPcOverview object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +132,7 @@ public class CloudPcOverviewTenantItemRequestBuilder extends BaseRequestBuilder 
         return toGetRequestInformation(null);
     }
     /**
-     * Overview of cloud PC information across managed tenants.
+     * Read the properties and relationships of a cloudPcOverview object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +184,7 @@ public class CloudPcOverviewTenantItemRequestBuilder extends BaseRequestBuilder 
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Overview of cloud PC information across managed tenants.
+     * Read the properties and relationships of a cloudPcOverview object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -55,19 +55,21 @@ public class CloudPcExternalPartnerSettingItemRequestBuilder extends BaseRequest
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * The external partner settings on a Cloud PC.
+     * Read the properties and relationships of a cloudPcExternalPartnerSetting object.
      * @return a {@link CloudPcExternalPartnerSetting}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpcexternalpartnersetting-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPcExternalPartnerSetting get() {
         return get(null);
     }
     /**
-     * The external partner settings on a Cloud PC.
+     * Read the properties and relationships of a cloudPcExternalPartnerSetting object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CloudPcExternalPartnerSetting}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpcexternalpartnersetting-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPcExternalPartnerSetting get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -77,21 +79,23 @@ public class CloudPcExternalPartnerSettingItemRequestBuilder extends BaseRequest
         return this.requestAdapter.send(requestInfo, errorMapping, CloudPcExternalPartnerSetting::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property externalPartnerSettings in deviceManagement
+     * Update the properties of a cloudPcExternalPartnerSetting object.
      * @param body The request body
      * @return a {@link CloudPcExternalPartnerSetting}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpcexternalpartnersetting-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPcExternalPartnerSetting patch(@jakarta.annotation.Nonnull final CloudPcExternalPartnerSetting body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property externalPartnerSettings in deviceManagement
+     * Update the properties of a cloudPcExternalPartnerSetting object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CloudPcExternalPartnerSetting}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpcexternalpartnersetting-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPcExternalPartnerSetting patch(@jakarta.annotation.Nonnull final CloudPcExternalPartnerSetting body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -122,7 +126,7 @@ public class CloudPcExternalPartnerSettingItemRequestBuilder extends BaseRequest
         return requestInfo;
     }
     /**
-     * The external partner settings on a Cloud PC.
+     * Read the properties and relationships of a cloudPcExternalPartnerSetting object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +134,7 @@ public class CloudPcExternalPartnerSettingItemRequestBuilder extends BaseRequest
         return toGetRequestInformation(null);
     }
     /**
-     * The external partner settings on a Cloud PC.
+     * Read the properties and relationships of a cloudPcExternalPartnerSetting object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -142,7 +146,7 @@ public class CloudPcExternalPartnerSettingItemRequestBuilder extends BaseRequest
         return requestInfo;
     }
     /**
-     * Update the navigation property externalPartnerSettings in deviceManagement
+     * Update the properties of a cloudPcExternalPartnerSetting object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -151,7 +155,7 @@ public class CloudPcExternalPartnerSettingItemRequestBuilder extends BaseRequest
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property externalPartnerSettings in deviceManagement
+     * Update the properties of a cloudPcExternalPartnerSetting object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -182,7 +186,7 @@ public class CloudPcExternalPartnerSettingItemRequestBuilder extends BaseRequest
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The external partner settings on a Cloud PC.
+     * Read the properties and relationships of a cloudPcExternalPartnerSetting object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

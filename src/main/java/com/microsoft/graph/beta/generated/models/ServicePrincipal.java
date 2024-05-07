@@ -140,6 +140,14 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         return this.backingStore.get("claimsMappingPolicies");
     }
     /**
+     * Gets the claimsPolicy property value. The claimsPolicy property
+     * @return a {@link CustomClaimsPolicy}
+     */
+    @jakarta.annotation.Nullable
+    public CustomClaimsPolicy getClaimsPolicy() {
+        return this.backingStore.get("claimsPolicy");
+    }
+    /**
      * Gets the createdObjects property value. Directory objects created by this service principal. Read-only. Nullable.
      * @return a {@link java.util.List<DirectoryObject>}
      */
@@ -232,6 +240,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         deserializerMap.put("appRoleAssignments", (n) -> { this.setAppRoleAssignments(n.getCollectionOfObjectValues(AppRoleAssignment::createFromDiscriminatorValue)); });
         deserializerMap.put("appRoles", (n) -> { this.setAppRoles(n.getCollectionOfObjectValues(AppRole::createFromDiscriminatorValue)); });
         deserializerMap.put("claimsMappingPolicies", (n) -> { this.setClaimsMappingPolicies(n.getCollectionOfObjectValues(ClaimsMappingPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("claimsPolicy", (n) -> { this.setClaimsPolicy(n.getObjectValue(CustomClaimsPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("createdObjects", (n) -> { this.setCreatedObjects(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
         deserializerMap.put("customSecurityAttributes", (n) -> { this.setCustomSecurityAttributes(n.getObjectValue(CustomSecurityAttributeValue::createFromDiscriminatorValue)); });
         deserializerMap.put("delegatedPermissionClassifications", (n) -> { this.setDelegatedPermissionClassifications(n.getCollectionOfObjectValues(DelegatedPermissionClassification::createFromDiscriminatorValue)); });
@@ -570,6 +579,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         writer.writeCollectionOfObjectValues("appRoleAssignments", this.getAppRoleAssignments());
         writer.writeCollectionOfObjectValues("appRoles", this.getAppRoles());
         writer.writeCollectionOfObjectValues("claimsMappingPolicies", this.getClaimsMappingPolicies());
+        writer.writeObjectValue("claimsPolicy", this.getClaimsPolicy());
         writer.writeCollectionOfObjectValues("createdObjects", this.getCreatedObjects());
         writer.writeObjectValue("customSecurityAttributes", this.getCustomSecurityAttributes());
         writer.writeCollectionOfObjectValues("delegatedPermissionClassifications", this.getDelegatedPermissionClassifications());
@@ -711,6 +721,13 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     public void setClaimsMappingPolicies(@jakarta.annotation.Nullable final java.util.List<ClaimsMappingPolicy> value) {
         this.backingStore.set("claimsMappingPolicies", value);
+    }
+    /**
+     * Sets the claimsPolicy property value. The claimsPolicy property
+     * @param value Value to set for the claimsPolicy property.
+     */
+    public void setClaimsPolicy(@jakarta.annotation.Nullable final CustomClaimsPolicy value) {
+        this.backingStore.set("claimsPolicy", value);
     }
     /**
      * Sets the createdObjects property value. Directory objects created by this service principal. Read-only. Nullable.

@@ -26,7 +26,10 @@ public class ProviderTenantSettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
      * @return a {@link CountRequestBuilder}
+     * @deprecated
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
@@ -35,8 +38,11 @@ public class ProviderTenantSettingsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to manage the providerTenantSettings property of the microsoft.graph.security entity.
      * @param providerTenantSettingId The unique identifier of providerTenantSetting
      * @return a {@link ProviderTenantSettingItemRequestBuilder}
+     * @deprecated
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public ProviderTenantSettingItemRequestBuilder byProviderTenantSettingId(@jakarta.annotation.Nonnull final String providerTenantSettingId) {
         Objects.requireNonNull(providerTenantSettingId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
@@ -63,8 +69,11 @@ public class ProviderTenantSettingsRequestBuilder extends BaseRequestBuilder {
      * Get providerTenantSettings from security
      * @return a {@link ProviderTenantSettingCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public ProviderTenantSettingCollectionResponse get() {
         return get(null);
     }
@@ -73,8 +82,11 @@ public class ProviderTenantSettingsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ProviderTenantSettingCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public ProviderTenantSettingCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -86,8 +98,11 @@ public class ProviderTenantSettingsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link ProviderTenantSetting}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public ProviderTenantSetting post(@jakarta.annotation.Nonnull final ProviderTenantSetting body) {
         return post(body, null);
     }
@@ -97,8 +112,11 @@ public class ProviderTenantSettingsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ProviderTenantSetting}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public ProviderTenantSetting post(@jakarta.annotation.Nonnull final ProviderTenantSetting body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
@@ -109,8 +127,11 @@ public class ProviderTenantSettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get providerTenantSettings from security
      * @return a {@link RequestInformation}
+     * @deprecated
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -118,8 +139,11 @@ public class ProviderTenantSettingsRequestBuilder extends BaseRequestBuilder {
      * Get providerTenantSettings from security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -130,8 +154,11 @@ public class ProviderTenantSettingsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to providerTenantSettings for security
      * @param body The request body
      * @return a {@link RequestInformation}
+     * @deprecated
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ProviderTenantSetting body) {
         return toPostRequestInformation(body, null);
     }
@@ -140,8 +167,11 @@ public class ProviderTenantSettingsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ProviderTenantSetting body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
@@ -154,8 +184,11 @@ public class ProviderTenantSettingsRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link ProviderTenantSettingsRequestBuilder}
+     * @deprecated
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public ProviderTenantSettingsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new ProviderTenantSettingsRequestBuilder(rawUrl, requestAdapter);

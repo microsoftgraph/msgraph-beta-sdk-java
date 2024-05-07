@@ -55,19 +55,21 @@ public class CredentialUserRegistrationsSummaryItemRequestBuilder extends BaseRe
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Summary information for user registration for multi-factor authentication and self service password reset across managed tenants.
+     * Read the properties and relationships of a credentialUserRegistrationsSummary object.
      * @return a {@link CredentialUserRegistrationsSummary}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-credentialuserregistrationssummary-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CredentialUserRegistrationsSummary get() {
         return get(null);
     }
     /**
-     * Summary information for user registration for multi-factor authentication and self service password reset across managed tenants.
+     * Read the properties and relationships of a credentialUserRegistrationsSummary object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CredentialUserRegistrationsSummary}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-credentialuserregistrationssummary-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CredentialUserRegistrationsSummary get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -122,7 +124,7 @@ public class CredentialUserRegistrationsSummaryItemRequestBuilder extends BaseRe
         return requestInfo;
     }
     /**
-     * Summary information for user registration for multi-factor authentication and self service password reset across managed tenants.
+     * Read the properties and relationships of a credentialUserRegistrationsSummary object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +132,7 @@ public class CredentialUserRegistrationsSummaryItemRequestBuilder extends BaseRe
         return toGetRequestInformation(null);
     }
     /**
-     * Summary information for user registration for multi-factor authentication and self service password reset across managed tenants.
+     * Read the properties and relationships of a credentialUserRegistrationsSummary object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +184,7 @@ public class CredentialUserRegistrationsSummaryItemRequestBuilder extends BaseRe
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Summary information for user registration for multi-factor authentication and self service password reset across managed tenants.
+     * Read the properties and relationships of a credentialUserRegistrationsSummary object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -46,16 +46,18 @@ public class DeploymentItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/admin/windows/updates/deployments/{deployment%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property deployments for admin
+     * Delete a deployment object.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-deployment-delete?view=graph-rest-beta">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property deployments for admin
+     * Delete a deployment object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-deployment-delete?view=graph-rest-beta">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -64,19 +66,21 @@ public class DeploymentItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Deployments created using the deployment service.
+     * Read the properties and relationships of a deployment object.
      * @return a {@link Deployment}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-deployment-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Deployment get() {
         return get(null);
     }
     /**
-     * Deployments created using the deployment service.
+     * Read the properties and relationships of a deployment object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Deployment}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-deployment-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Deployment get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -86,21 +90,23 @@ public class DeploymentItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Deployment::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property deployments in admin
+     * Update the properties of a deployment object.
      * @param body The request body
      * @return a {@link Deployment}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-deployment-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Deployment patch(@jakarta.annotation.Nonnull final Deployment body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property deployments in admin
+     * Update the properties of a deployment object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Deployment}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-deployment-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Deployment patch(@jakarta.annotation.Nonnull final Deployment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -111,7 +117,7 @@ public class DeploymentItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Deployment::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property deployments for admin
+     * Delete a deployment object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +125,7 @@ public class DeploymentItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property deployments for admin
+     * Delete a deployment object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +137,7 @@ public class DeploymentItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Deployments created using the deployment service.
+     * Read the properties and relationships of a deployment object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +145,7 @@ public class DeploymentItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Deployments created using the deployment service.
+     * Read the properties and relationships of a deployment object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -151,7 +157,7 @@ public class DeploymentItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property deployments in admin
+     * Update the properties of a deployment object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -160,7 +166,7 @@ public class DeploymentItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property deployments in admin
+     * Update the properties of a deployment object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -191,7 +197,7 @@ public class DeploymentItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Deployments created using the deployment service.
+     * Read the properties and relationships of a deployment object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

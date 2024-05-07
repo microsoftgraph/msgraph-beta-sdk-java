@@ -61,21 +61,23 @@ public class TagItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/compliance/ediscovery/cases/{case%2Did}/tags/{tag%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property tags for compliance
+     * Delete a tag object.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
+     * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-tag-delete?view=graph-rest-beta">Find more info here</a>
      */
     @Deprecated
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property tags for compliance
+     * Delete a tag object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
+     * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-tag-delete?view=graph-rest-beta">Find more info here</a>
      */
     @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -85,11 +87,12 @@ public class TagItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Returns a list of tag objects associated to this case.
+     * Read the properties and relationships of a tag object.
      * @return a {@link Tag}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
+     * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-tag-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -97,12 +100,13 @@ public class TagItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Returns a list of tag objects associated to this case.
+     * Read the properties and relationships of a tag object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Tag}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
+     * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-tag-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -113,12 +117,13 @@ public class TagItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Tag::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property tags in compliance
+     * Update the properties of a tag object.
      * @param body The request body
      * @return a {@link Tag}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
+     * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-tag-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -126,13 +131,14 @@ public class TagItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the navigation property tags in compliance
+     * Update the properties of a tag object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Tag}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
+     * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-tag-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -144,7 +150,7 @@ public class TagItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Tag::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property tags for compliance
+     * Delete a tag object.
      * @return a {@link RequestInformation}
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
@@ -155,7 +161,7 @@ public class TagItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property tags for compliance
+     * Delete a tag object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -170,7 +176,7 @@ public class TagItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Returns a list of tag objects associated to this case.
+     * Read the properties and relationships of a tag object.
      * @return a {@link RequestInformation}
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
@@ -181,7 +187,7 @@ public class TagItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Returns a list of tag objects associated to this case.
+     * Read the properties and relationships of a tag object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -196,7 +202,7 @@ public class TagItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property tags in compliance
+     * Update the properties of a tag object.
      * @param body The request body
      * @return a {@link RequestInformation}
      * @deprecated
@@ -208,7 +214,7 @@ public class TagItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property tags in compliance
+     * Update the properties of a tag object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -245,7 +251,7 @@ public class TagItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Returns a list of tag objects associated to this case.
+     * Read the properties and relationships of a tag object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

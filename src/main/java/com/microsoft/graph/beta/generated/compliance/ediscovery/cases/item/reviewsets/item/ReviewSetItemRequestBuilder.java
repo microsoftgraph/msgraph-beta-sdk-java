@@ -97,11 +97,12 @@ public class ReviewSetItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Returns a list of reviewSet objects in the case. Read-only. Nullable.
+     * Retrieve the properties and relationships of a reviewSet object.
      * @return a {@link ReviewSet}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
+     * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-reviewset-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -109,12 +110,13 @@ public class ReviewSetItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Returns a list of reviewSet objects in the case. Read-only. Nullable.
+     * Retrieve the properties and relationships of a reviewSet object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ReviewSet}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
+     * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-reviewset-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -182,7 +184,7 @@ public class ReviewSetItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Returns a list of reviewSet objects in the case. Read-only. Nullable.
+     * Retrieve the properties and relationships of a reviewSet object.
      * @return a {@link RequestInformation}
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
@@ -193,7 +195,7 @@ public class ReviewSetItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Returns a list of reviewSet objects in the case. Read-only. Nullable.
+     * Retrieve the properties and relationships of a reviewSet object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -257,7 +259,7 @@ public class ReviewSetItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Returns a list of reviewSet objects in the case. Read-only. Nullable.
+     * Retrieve the properties and relationships of a reviewSet object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

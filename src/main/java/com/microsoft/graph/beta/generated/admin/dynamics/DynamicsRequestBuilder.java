@@ -55,19 +55,21 @@ public class DynamicsRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get dynamics from admin
+     * Read the properties and relationships of a adminDynamics object.
      * @return a {@link AdminDynamics}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/admindynamics-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AdminDynamics get() {
         return get(null);
     }
     /**
-     * Get dynamics from admin
+     * Read the properties and relationships of a adminDynamics object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AdminDynamics}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/admindynamics-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AdminDynamics get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -77,21 +79,23 @@ public class DynamicsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AdminDynamics::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property dynamics in admin
+     * Update the properties of a adminDynamics object.
      * @param body The request body
      * @return a {@link AdminDynamics}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/admindynamics-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AdminDynamics patch(@jakarta.annotation.Nonnull final AdminDynamics body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property dynamics in admin
+     * Update the properties of a adminDynamics object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AdminDynamics}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/admindynamics-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AdminDynamics patch(@jakarta.annotation.Nonnull final AdminDynamics body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -122,7 +126,7 @@ public class DynamicsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get dynamics from admin
+     * Read the properties and relationships of a adminDynamics object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +134,7 @@ public class DynamicsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get dynamics from admin
+     * Read the properties and relationships of a adminDynamics object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -142,7 +146,7 @@ public class DynamicsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property dynamics in admin
+     * Update the properties of a adminDynamics object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -151,7 +155,7 @@ public class DynamicsRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property dynamics in admin
+     * Update the properties of a adminDynamics object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -182,7 +186,7 @@ public class DynamicsRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get dynamics from admin
+     * Read the properties and relationships of a adminDynamics object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

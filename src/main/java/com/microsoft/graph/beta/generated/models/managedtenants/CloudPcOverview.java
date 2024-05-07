@@ -33,6 +33,7 @@ public class CloudPcOverview extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("frontlineLicensesCount", (n) -> { this.setFrontlineLicensesCount(n.getIntegerValue()); });
         deserializerMap.put("lastRefreshedDateTime", (n) -> { this.setLastRefreshedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("numberOfCloudPcConnectionStatusFailed", (n) -> { this.setNumberOfCloudPcConnectionStatusFailed(n.getIntegerValue()); });
         deserializerMap.put("numberOfCloudPcConnectionStatusPassed", (n) -> { this.setNumberOfCloudPcConnectionStatusPassed(n.getIntegerValue()); });
@@ -54,6 +55,14 @@ public class CloudPcOverview extends Entity implements Parsable {
         deserializerMap.put("totalCloudPcStatus", (n) -> { this.setTotalCloudPcStatus(n.getIntegerValue()); });
         deserializerMap.put("totalEnterpriseLicenses", (n) -> { this.setTotalEnterpriseLicenses(n.getIntegerValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the frontlineLicensesCount property value. The total number of cloud PC devices that have the Frontline SKU. Optional. Read-only.
+     * @return a {@link Integer}
+     */
+    @jakarta.annotation.Nullable
+    public Integer getFrontlineLicensesCount() {
+        return this.backingStore.get("frontlineLicensesCount");
     }
     /**
      * Gets the lastRefreshedDateTime property value. Date and time the entity was last updated in the multi-tenant management platform. Optional. Read-only.
@@ -222,6 +231,7 @@ public class CloudPcOverview extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeIntegerValue("frontlineLicensesCount", this.getFrontlineLicensesCount());
         writer.writeOffsetDateTimeValue("lastRefreshedDateTime", this.getLastRefreshedDateTime());
         writer.writeIntegerValue("numberOfCloudPcConnectionStatusFailed", this.getNumberOfCloudPcConnectionStatusFailed());
         writer.writeIntegerValue("numberOfCloudPcConnectionStatusPassed", this.getNumberOfCloudPcConnectionStatusPassed());
@@ -242,6 +252,13 @@ public class CloudPcOverview extends Entity implements Parsable {
         writer.writeIntegerValue("totalCloudPcConnectionStatus", this.getTotalCloudPcConnectionStatus());
         writer.writeIntegerValue("totalCloudPcStatus", this.getTotalCloudPcStatus());
         writer.writeIntegerValue("totalEnterpriseLicenses", this.getTotalEnterpriseLicenses());
+    }
+    /**
+     * Sets the frontlineLicensesCount property value. The total number of cloud PC devices that have the Frontline SKU. Optional. Read-only.
+     * @param value Value to set for the frontlineLicensesCount property.
+     */
+    public void setFrontlineLicensesCount(@jakarta.annotation.Nullable final Integer value) {
+        this.backingStore.set("frontlineLicensesCount", value);
     }
     /**
      * Sets the lastRefreshedDateTime property value. Date and time the entity was last updated in the multi-tenant management platform. Optional. Read-only.

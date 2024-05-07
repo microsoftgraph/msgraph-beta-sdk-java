@@ -109,19 +109,21 @@ public class UnifiedRoleEligibilityScheduleRequestItemRequestBuilder extends Bas
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get roleEligibilityScheduleRequests from roleManagement
+     * Read the properties and relationships of an unifiedRoleEligibilityScheduleRequest object.
      * @return a {@link UnifiedRoleEligibilityScheduleRequest}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/unifiedroleeligibilityschedulerequest-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UnifiedRoleEligibilityScheduleRequest get() {
         return get(null);
     }
     /**
-     * Get roleEligibilityScheduleRequests from roleManagement
+     * Read the properties and relationships of an unifiedRoleEligibilityScheduleRequest object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UnifiedRoleEligibilityScheduleRequest}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/unifiedroleeligibilityschedulerequest-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UnifiedRoleEligibilityScheduleRequest get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -176,7 +178,7 @@ public class UnifiedRoleEligibilityScheduleRequestItemRequestBuilder extends Bas
         return requestInfo;
     }
     /**
-     * Get roleEligibilityScheduleRequests from roleManagement
+     * Read the properties and relationships of an unifiedRoleEligibilityScheduleRequest object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -184,7 +186,7 @@ public class UnifiedRoleEligibilityScheduleRequestItemRequestBuilder extends Bas
         return toGetRequestInformation(null);
     }
     /**
-     * Get roleEligibilityScheduleRequests from roleManagement
+     * Read the properties and relationships of an unifiedRoleEligibilityScheduleRequest object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -236,7 +238,7 @@ public class UnifiedRoleEligibilityScheduleRequestItemRequestBuilder extends Bas
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get roleEligibilityScheduleRequests from roleManagement
+     * Read the properties and relationships of an unifiedRoleEligibilityScheduleRequest object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

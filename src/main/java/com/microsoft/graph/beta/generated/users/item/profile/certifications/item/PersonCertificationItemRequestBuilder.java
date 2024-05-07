@@ -37,16 +37,18 @@ public class PersonCertificationItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/profile/certifications/{personCertification%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property certifications for users
+     * Deletes a personCertification object from a user's profile.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/personcertification-delete?view=graph-rest-beta">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property certifications for users
+     * Deletes a personCertification object from a user's profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/personcertification-delete?view=graph-rest-beta">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -77,21 +79,23 @@ public class PersonCertificationItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PersonCertification::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property certifications in users
+     * Update the properties of a personCertification object from a user's profile.
      * @param body The request body
      * @return a {@link PersonCertification}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/personcertification-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PersonCertification patch(@jakarta.annotation.Nonnull final PersonCertification body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property certifications in users
+     * Update the properties of a personCertification object from a user's profile.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PersonCertification}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/personcertification-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PersonCertification patch(@jakarta.annotation.Nonnull final PersonCertification body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -102,7 +106,7 @@ public class PersonCertificationItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PersonCertification::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property certifications for users
+     * Deletes a personCertification object from a user's profile.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -110,7 +114,7 @@ public class PersonCertificationItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property certifications for users
+     * Deletes a personCertification object from a user's profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -142,7 +146,7 @@ public class PersonCertificationItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property certifications in users
+     * Update the properties of a personCertification object from a user's profile.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -151,7 +155,7 @@ public class PersonCertificationItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property certifications in users
+     * Update the properties of a personCertification object from a user's profile.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

@@ -66,11 +66,12 @@ public class SharedUseServicePlansRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/sharedUseServicePlans{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get sharedUseServicePlans from deviceManagement
+     * Get a list of the cloudPcSharedUseServicePlan objects and their properties.
      * @return a {@link CloudPcSharedUseServicePlanCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The sharedUseServicePlans property is deprecated and will not be supported starting Oct 8, 2023. This property will not be included as part of the API response. as of 2023-03/sharedUseServicePlans
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-shareduseserviceplans?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -78,12 +79,13 @@ public class SharedUseServicePlansRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get sharedUseServicePlans from deviceManagement
+     * Get a list of the cloudPcSharedUseServicePlan objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CloudPcSharedUseServicePlanCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The sharedUseServicePlans property is deprecated and will not be supported starting Oct 8, 2023. This property will not be included as part of the API response. as of 2023-03/sharedUseServicePlans
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-shareduseserviceplans?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -125,7 +127,7 @@ public class SharedUseServicePlansRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CloudPcSharedUseServicePlan::createFromDiscriminatorValue);
     }
     /**
-     * Get sharedUseServicePlans from deviceManagement
+     * Get a list of the cloudPcSharedUseServicePlan objects and their properties.
      * @return a {@link RequestInformation}
      * @deprecated
      * The sharedUseServicePlans property is deprecated and will not be supported starting Oct 8, 2023. This property will not be included as part of the API response. as of 2023-03/sharedUseServicePlans
@@ -136,7 +138,7 @@ public class SharedUseServicePlansRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get sharedUseServicePlans from deviceManagement
+     * Get a list of the cloudPcSharedUseServicePlan objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -194,7 +196,7 @@ public class SharedUseServicePlansRequestBuilder extends BaseRequestBuilder {
         return new SharedUseServicePlansRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get sharedUseServicePlans from deviceManagement
+     * Get a list of the cloudPcSharedUseServicePlan objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

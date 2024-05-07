@@ -26,7 +26,10 @@ public class UserSecurityProfilesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
      * @return a {@link CountRequestBuilder}
+     * @deprecated
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
@@ -35,8 +38,11 @@ public class UserSecurityProfilesRequestBuilder extends BaseRequestBuilder {
      * Provides operations to manage the userSecurityProfiles property of the microsoft.graph.security entity.
      * @param userSecurityProfileId The unique identifier of userSecurityProfile
      * @return a {@link UserSecurityProfileItemRequestBuilder}
+     * @deprecated
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public UserSecurityProfileItemRequestBuilder byUserSecurityProfileId(@jakarta.annotation.Nonnull final String userSecurityProfileId) {
         Objects.requireNonNull(userSecurityProfileId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
@@ -63,8 +69,11 @@ public class UserSecurityProfilesRequestBuilder extends BaseRequestBuilder {
      * Get userSecurityProfiles from security
      * @return a {@link UserSecurityProfileCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public UserSecurityProfileCollectionResponse get() {
         return get(null);
     }
@@ -73,8 +82,11 @@ public class UserSecurityProfilesRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UserSecurityProfileCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public UserSecurityProfileCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -86,8 +98,11 @@ public class UserSecurityProfilesRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link UserSecurityProfile}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public UserSecurityProfile post(@jakarta.annotation.Nonnull final UserSecurityProfile body) {
         return post(body, null);
     }
@@ -97,8 +112,11 @@ public class UserSecurityProfilesRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UserSecurityProfile}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public UserSecurityProfile post(@jakarta.annotation.Nonnull final UserSecurityProfile body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
@@ -109,8 +127,11 @@ public class UserSecurityProfilesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get userSecurityProfiles from security
      * @return a {@link RequestInformation}
+     * @deprecated
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -118,8 +139,11 @@ public class UserSecurityProfilesRequestBuilder extends BaseRequestBuilder {
      * Get userSecurityProfiles from security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -130,8 +154,11 @@ public class UserSecurityProfilesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to userSecurityProfiles for security
      * @param body The request body
      * @return a {@link RequestInformation}
+     * @deprecated
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final UserSecurityProfile body) {
         return toPostRequestInformation(body, null);
     }
@@ -140,8 +167,11 @@ public class UserSecurityProfilesRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final UserSecurityProfile body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
@@ -154,8 +184,11 @@ public class UserSecurityProfilesRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link UserSecurityProfilesRequestBuilder}
+     * @deprecated
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public UserSecurityProfilesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new UserSecurityProfilesRequestBuilder(rawUrl, requestAdapter);

@@ -60,19 +60,21 @@ public class DeploymentsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/admin/windows/updates/deployments{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Deployments created using the deployment service.
+     * Get a list of deployment objects and their properties.
      * @return a {@link DeploymentCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/adminwindowsupdates-list-deployments?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeploymentCollectionResponse get() {
         return get(null);
     }
     /**
-     * Deployments created using the deployment service.
+     * Get a list of deployment objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DeploymentCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/adminwindowsupdates-list-deployments?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeploymentCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,21 +84,23 @@ public class DeploymentsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DeploymentCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to deployments for admin
+     * Create a new deployment object.
      * @param body The request body
      * @return a {@link Deployment}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/adminwindowsupdates-post-deployments?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Deployment post(@jakarta.annotation.Nonnull final Deployment body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to deployments for admin
+     * Create a new deployment object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Deployment}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/adminwindowsupdates-post-deployments?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Deployment post(@jakarta.annotation.Nonnull final Deployment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -107,7 +111,7 @@ public class DeploymentsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Deployment::createFromDiscriminatorValue);
     }
     /**
-     * Deployments created using the deployment service.
+     * Get a list of deployment objects and their properties.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +119,7 @@ public class DeploymentsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Deployments created using the deployment service.
+     * Get a list of deployment objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -127,7 +131,7 @@ public class DeploymentsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to deployments for admin
+     * Create a new deployment object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -136,7 +140,7 @@ public class DeploymentsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to deployments for admin
+     * Create a new deployment object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -161,7 +165,7 @@ public class DeploymentsRequestBuilder extends BaseRequestBuilder {
         return new DeploymentsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Deployments created using the deployment service.
+     * Get a list of deployment objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

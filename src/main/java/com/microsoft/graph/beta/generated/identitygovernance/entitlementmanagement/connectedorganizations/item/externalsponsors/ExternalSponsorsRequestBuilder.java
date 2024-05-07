@@ -68,19 +68,21 @@ public class ExternalSponsorsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/connectedOrganizations/{connectedOrganization%2Did}/externalSponsors{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get externalSponsors from identityGovernance
+     * Retrieve a list of a connectedOrganization's external sponsors.  The external sponsors are a set of users who can approve requests on behalf of other users from that connected organization.
      * @return a {@link DirectoryObjectCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/connectedorganization-list-externalsponsors?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DirectoryObjectCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get externalSponsors from identityGovernance
+     * Retrieve a list of a connectedOrganization's external sponsors.  The external sponsors are a set of users who can approve requests on behalf of other users from that connected organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DirectoryObjectCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/connectedorganization-list-externalsponsors?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DirectoryObjectCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -90,7 +92,7 @@ public class ExternalSponsorsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DirectoryObjectCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Get externalSponsors from identityGovernance
+     * Retrieve a list of a connectedOrganization's external sponsors.  The external sponsors are a set of users who can approve requests on behalf of other users from that connected organization.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -98,7 +100,7 @@ public class ExternalSponsorsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get externalSponsors from identityGovernance
+     * Retrieve a list of a connectedOrganization's external sponsors.  The external sponsors are a set of users who can approve requests on behalf of other users from that connected organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -120,7 +122,7 @@ public class ExternalSponsorsRequestBuilder extends BaseRequestBuilder {
         return new ExternalSponsorsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get externalSponsors from identityGovernance
+     * Retrieve a list of a connectedOrganization's external sponsors.  The external sponsors are a set of users who can approve requests on behalf of other users from that connected organization.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -60,19 +60,21 @@ public class EndpointsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/endpoints{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Endpoints for the group. Read-only. Nullable.
+     * Retrieve a list of endpoint objects.
      * @return a {@link EndpointCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/group-list-endpoints?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EndpointCollectionResponse get() {
         return get(null);
     }
     /**
-     * Endpoints for the group. Read-only. Nullable.
+     * Retrieve a list of endpoint objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EndpointCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/group-list-endpoints?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EndpointCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -107,7 +109,7 @@ public class EndpointsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Endpoint::createFromDiscriminatorValue);
     }
     /**
-     * Endpoints for the group. Read-only. Nullable.
+     * Retrieve a list of endpoint objects.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +117,7 @@ public class EndpointsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Endpoints for the group. Read-only. Nullable.
+     * Retrieve a list of endpoint objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +163,7 @@ public class EndpointsRequestBuilder extends BaseRequestBuilder {
         return new EndpointsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Endpoints for the group. Read-only. Nullable.
+     * Retrieve a list of endpoint objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

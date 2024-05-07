@@ -73,11 +73,12 @@ public class ConnectivityConfigurationRequestBuilder extends BaseRequestBuilder 
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Specifies the connectivity details of all device links associated with a branch.
+     * Retrieve the IPSec tunnel configuration required to establish a bidirectional communication link between your organization's router and the Microsoft gateway. This information is vital for configuring your router (customer premise equipment) after creating a deviceLink.
      * @return a {@link BranchConnectivityConfiguration}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-branchconnectivityconfiguration-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -85,12 +86,13 @@ public class ConnectivityConfigurationRequestBuilder extends BaseRequestBuilder 
         return get(null);
     }
     /**
-     * Specifies the connectivity details of all device links associated with a branch.
+     * Retrieve the IPSec tunnel configuration required to establish a bidirectional communication link between your organization's router and the Microsoft gateway. This information is vital for configuring your router (customer premise equipment) after creating a deviceLink.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link BranchConnectivityConfiguration}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-branchconnectivityconfiguration-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -158,7 +160,7 @@ public class ConnectivityConfigurationRequestBuilder extends BaseRequestBuilder 
         return requestInfo;
     }
     /**
-     * Specifies the connectivity details of all device links associated with a branch.
+     * Retrieve the IPSec tunnel configuration required to establish a bidirectional communication link between your organization's router and the Microsoft gateway. This information is vital for configuring your router (customer premise equipment) after creating a deviceLink.
      * @return a {@link RequestInformation}
      * @deprecated
      * The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
@@ -169,7 +171,7 @@ public class ConnectivityConfigurationRequestBuilder extends BaseRequestBuilder 
         return toGetRequestInformation(null);
     }
     /**
-     * Specifies the connectivity details of all device links associated with a branch.
+     * Retrieve the IPSec tunnel configuration required to establish a bidirectional communication link between your organization's router and the Microsoft gateway. This information is vital for configuring your router (customer premise equipment) after creating a deviceLink.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -233,7 +235,7 @@ public class ConnectivityConfigurationRequestBuilder extends BaseRequestBuilder 
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Specifies the connectivity details of all device links associated with a branch.
+     * Retrieve the IPSec tunnel configuration required to establish a bidirectional communication link between your organization's router and the Microsoft gateway. This information is vital for configuring your router (customer premise equipment) after creating a deviceLink.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

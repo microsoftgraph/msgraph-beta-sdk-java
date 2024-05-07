@@ -73,19 +73,21 @@ public class ForwardingPolicyItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * A forwarding policy defines the specific traffic that is routed through the Global Secure Access Service. It's then added to a forwarding profile.
+     * Retrieve information about a specific forwarding policy.
      * @return a {@link ForwardingPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-forwardingpolicy-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ForwardingPolicy get() {
         return get(null);
     }
     /**
-     * A forwarding policy defines the specific traffic that is routed through the Global Secure Access Service. It's then added to a forwarding profile.
+     * Retrieve information about a specific forwarding policy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ForwardingPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-forwardingpolicy-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ForwardingPolicy get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -140,7 +142,7 @@ public class ForwardingPolicyItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * A forwarding policy defines the specific traffic that is routed through the Global Secure Access Service. It's then added to a forwarding profile.
+     * Retrieve information about a specific forwarding policy.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -148,7 +150,7 @@ public class ForwardingPolicyItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * A forwarding policy defines the specific traffic that is routed through the Global Secure Access Service. It's then added to a forwarding profile.
+     * Retrieve information about a specific forwarding policy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -200,7 +202,7 @@ public class ForwardingPolicyItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * A forwarding policy defines the specific traffic that is routed through the Global Secure Access Service. It's then added to a forwarding profile.
+     * Retrieve information about a specific forwarding policy.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

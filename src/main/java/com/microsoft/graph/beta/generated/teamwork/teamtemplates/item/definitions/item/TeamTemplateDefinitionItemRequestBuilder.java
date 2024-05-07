@@ -64,19 +64,21 @@ public class TeamTemplateDefinitionItemRequestBuilder extends BaseRequestBuilder
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * A generic representation of a team template definition for a team with a specific structure and configuration.
+     * Read the properties and relationships of a teamTemplateDefinition object.
      * @return a {@link TeamTemplateDefinition}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/teamtemplatedefinition-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TeamTemplateDefinition get() {
         return get(null);
     }
     /**
-     * A generic representation of a team template definition for a team with a specific structure and configuration.
+     * Read the properties and relationships of a teamTemplateDefinition object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TeamTemplateDefinition}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/teamtemplatedefinition-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TeamTemplateDefinition get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -131,7 +133,7 @@ public class TeamTemplateDefinitionItemRequestBuilder extends BaseRequestBuilder
         return requestInfo;
     }
     /**
-     * A generic representation of a team template definition for a team with a specific structure and configuration.
+     * Read the properties and relationships of a teamTemplateDefinition object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +141,7 @@ public class TeamTemplateDefinitionItemRequestBuilder extends BaseRequestBuilder
         return toGetRequestInformation(null);
     }
     /**
-     * A generic representation of a team template definition for a team with a specific structure and configuration.
+     * Read the properties and relationships of a teamTemplateDefinition object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -191,7 +193,7 @@ public class TeamTemplateDefinitionItemRequestBuilder extends BaseRequestBuilder
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * A generic representation of a team template definition for a team with a specific structure and configuration.
+     * Read the properties and relationships of a teamTemplateDefinition object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

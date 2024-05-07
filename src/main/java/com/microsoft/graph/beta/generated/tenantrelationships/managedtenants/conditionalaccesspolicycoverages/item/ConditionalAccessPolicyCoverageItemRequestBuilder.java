@@ -55,19 +55,21 @@ public class ConditionalAccessPolicyCoverageItemRequestBuilder extends BaseReque
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Aggregate view of conditional access policy coverage across managed tenants.
+     * Read the properties and relationships of a conditionalAccessPolicyCoverage object.
      * @return a {@link ConditionalAccessPolicyCoverage}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-conditionalaccesspolicycoverage-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ConditionalAccessPolicyCoverage get() {
         return get(null);
     }
     /**
-     * Aggregate view of conditional access policy coverage across managed tenants.
+     * Read the properties and relationships of a conditionalAccessPolicyCoverage object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ConditionalAccessPolicyCoverage}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-conditionalaccesspolicycoverage-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ConditionalAccessPolicyCoverage get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -122,7 +124,7 @@ public class ConditionalAccessPolicyCoverageItemRequestBuilder extends BaseReque
         return requestInfo;
     }
     /**
-     * Aggregate view of conditional access policy coverage across managed tenants.
+     * Read the properties and relationships of a conditionalAccessPolicyCoverage object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +132,7 @@ public class ConditionalAccessPolicyCoverageItemRequestBuilder extends BaseReque
         return toGetRequestInformation(null);
     }
     /**
-     * Aggregate view of conditional access policy coverage across managed tenants.
+     * Read the properties and relationships of a conditionalAccessPolicyCoverage object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +184,7 @@ public class ConditionalAccessPolicyCoverageItemRequestBuilder extends BaseReque
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Aggregate view of conditional access policy coverage across managed tenants.
+     * Read the properties and relationships of a conditionalAccessPolicyCoverage object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

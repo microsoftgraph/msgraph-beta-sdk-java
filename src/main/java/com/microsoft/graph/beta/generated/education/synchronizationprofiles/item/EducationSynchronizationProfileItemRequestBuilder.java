@@ -100,16 +100,18 @@ public class EducationSynchronizationProfileItemRequestBuilder extends BaseReque
         super(requestAdapter, "{+baseurl}/education/synchronizationProfiles/{educationSynchronizationProfile%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property synchronizationProfiles for education
+     * Delete a school data synchronization profile in the tenant based on the identifier.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/educationsynchronizationprofile-delete?view=graph-rest-beta">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property synchronizationProfiles for education
+     * Delete a school data synchronization profile in the tenant based on the identifier.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/educationsynchronizationprofile-delete?view=graph-rest-beta">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -118,19 +120,21 @@ public class EducationSynchronizationProfileItemRequestBuilder extends BaseReque
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get synchronizationProfiles from education
+     * Retrieve a school data synchronization profile in the tenant based on the identifier.
      * @return a {@link EducationSynchronizationProfile}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/educationsynchronizationprofile-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EducationSynchronizationProfile get() {
         return get(null);
     }
     /**
-     * Get synchronizationProfiles from education
+     * Retrieve a school data synchronization profile in the tenant based on the identifier.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EducationSynchronizationProfile}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/educationsynchronizationprofile-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EducationSynchronizationProfile get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -165,7 +169,7 @@ public class EducationSynchronizationProfileItemRequestBuilder extends BaseReque
         return this.requestAdapter.send(requestInfo, errorMapping, EducationSynchronizationProfile::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property synchronizationProfiles for education
+     * Delete a school data synchronization profile in the tenant based on the identifier.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -173,7 +177,7 @@ public class EducationSynchronizationProfileItemRequestBuilder extends BaseReque
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property synchronizationProfiles for education
+     * Delete a school data synchronization profile in the tenant based on the identifier.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -185,7 +189,7 @@ public class EducationSynchronizationProfileItemRequestBuilder extends BaseReque
         return requestInfo;
     }
     /**
-     * Get synchronizationProfiles from education
+     * Retrieve a school data synchronization profile in the tenant based on the identifier.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -193,7 +197,7 @@ public class EducationSynchronizationProfileItemRequestBuilder extends BaseReque
         return toGetRequestInformation(null);
     }
     /**
-     * Get synchronizationProfiles from education
+     * Retrieve a school data synchronization profile in the tenant based on the identifier.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -245,7 +249,7 @@ public class EducationSynchronizationProfileItemRequestBuilder extends BaseReque
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get synchronizationProfiles from education
+     * Retrieve a school data synchronization profile in the tenant based on the identifier.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

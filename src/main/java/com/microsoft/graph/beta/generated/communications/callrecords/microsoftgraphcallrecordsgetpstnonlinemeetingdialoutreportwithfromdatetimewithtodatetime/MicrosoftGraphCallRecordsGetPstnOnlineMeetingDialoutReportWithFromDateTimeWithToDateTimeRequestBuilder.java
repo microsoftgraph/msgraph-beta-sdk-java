@@ -41,7 +41,7 @@ public class MicrosoftGraphCallRecordsGetPstnOnlineMeetingDialoutReportWithFromD
         super(requestAdapter, "{+baseurl}/communications/callRecords/microsoft.graph.callRecords.getPstnOnlineMeetingDialoutReport(fromDateTime={fromDateTime},toDateTime={toDateTime}){?%24count,%24filter,%24search,%24skip,%24top}", rawUrl);
     }
     /**
-     * Invoke function getPstnOnlineMeetingDialoutReport
+     * Get aggregated report of usage and money spent for the audio conferencing dial-out service over a selected period as a collection of pstnOnlineMeetingDialoutReport entries.The report is aggregated by user, user location, destination context (domestic/international), and currency. The report includes:
      * @return a {@link GetPstnOnlineMeetingDialoutReportWithFromDateTimeWithToDateTimeGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -50,7 +50,7 @@ public class MicrosoftGraphCallRecordsGetPstnOnlineMeetingDialoutReportWithFromD
         return get(null);
     }
     /**
-     * Invoke function getPstnOnlineMeetingDialoutReport
+     * Get aggregated report of usage and money spent for the audio conferencing dial-out service over a selected period as a collection of pstnOnlineMeetingDialoutReport entries.The report is aggregated by user, user location, destination context (domestic/international), and currency. The report includes:
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GetPstnOnlineMeetingDialoutReportWithFromDateTimeWithToDateTimeGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -63,7 +63,7 @@ public class MicrosoftGraphCallRecordsGetPstnOnlineMeetingDialoutReportWithFromD
         return this.requestAdapter.send(requestInfo, errorMapping, GetPstnOnlineMeetingDialoutReportWithFromDateTimeWithToDateTimeGetResponse::createFromDiscriminatorValue);
     }
     /**
-     * Invoke function getPstnOnlineMeetingDialoutReport
+     * Get aggregated report of usage and money spent for the audio conferencing dial-out service over a selected period as a collection of pstnOnlineMeetingDialoutReport entries.The report is aggregated by user, user location, destination context (domestic/international), and currency. The report includes:
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -71,7 +71,7 @@ public class MicrosoftGraphCallRecordsGetPstnOnlineMeetingDialoutReportWithFromD
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function getPstnOnlineMeetingDialoutReport
+     * Get aggregated report of usage and money spent for the audio conferencing dial-out service over a selected period as a collection of pstnOnlineMeetingDialoutReport entries.The report is aggregated by user, user location, destination context (domestic/international), and currency. The report includes:
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -93,7 +93,7 @@ public class MicrosoftGraphCallRecordsGetPstnOnlineMeetingDialoutReportWithFromD
         return new MicrosoftGraphCallRecordsGetPstnOnlineMeetingDialoutReportWithFromDateTimeWithToDateTimeRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Invoke function getPstnOnlineMeetingDialoutReport
+     * Get aggregated report of usage and money spent for the audio conferencing dial-out service over a selected period as a collection of pstnOnlineMeetingDialoutReport entries.The report is aggregated by user, user location, destination context (domestic/international), and currency. The report includes:
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

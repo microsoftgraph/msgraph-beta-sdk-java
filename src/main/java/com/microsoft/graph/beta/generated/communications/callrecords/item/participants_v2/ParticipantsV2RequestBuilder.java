@@ -60,19 +60,21 @@ public class ParticipantsV2RequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/communications/callRecords/{callRecord%2Did}/participants_v2{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * List of distinct participants in the call.
+     * Get the list of participant objects associated with a callRecord.
      * @return a {@link ParticipantCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/callrecords-callrecord-list-participants_v2?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ParticipantCollectionResponse get() {
         return get(null);
     }
     /**
-     * List of distinct participants in the call.
+     * Get the list of participant objects associated with a callRecord.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ParticipantCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/callrecords-callrecord-list-participants_v2?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ParticipantCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -107,7 +109,7 @@ public class ParticipantsV2RequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Participant::createFromDiscriminatorValue);
     }
     /**
-     * List of distinct participants in the call.
+     * Get the list of participant objects associated with a callRecord.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +117,7 @@ public class ParticipantsV2RequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List of distinct participants in the call.
+     * Get the list of participant objects associated with a callRecord.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +163,7 @@ public class ParticipantsV2RequestBuilder extends BaseRequestBuilder {
         return new ParticipantsV2RequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List of distinct participants in the call.
+     * Get the list of participant objects associated with a callRecord.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

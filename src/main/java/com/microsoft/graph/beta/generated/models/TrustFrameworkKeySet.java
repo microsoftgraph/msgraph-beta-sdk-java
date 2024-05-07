@@ -32,6 +32,7 @@ public class TrustFrameworkKeySet extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("keys", (n) -> { this.setKeys(n.getCollectionOfObjectValues(TrustFrameworkKey::createFromDiscriminatorValue)); });
+        deserializerMap.put("keys_v2", (n) -> { this.setKeysV2(n.getCollectionOfObjectValues(TrustFrameworkKeyV2::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -43,6 +44,14 @@ public class TrustFrameworkKeySet extends Entity implements Parsable {
         return this.backingStore.get("keys");
     }
     /**
+     * Gets the keys_v2 property value. A collection of the keys.
+     * @return a {@link java.util.List<TrustFrameworkKeyV2>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<TrustFrameworkKeyV2> getKeysV2() {
+        return this.backingStore.get("keysV2");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -50,6 +59,7 @@ public class TrustFrameworkKeySet extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("keys", this.getKeys());
+        writer.writeCollectionOfObjectValues("keys_v2", this.getKeysV2());
     }
     /**
      * Sets the keys property value. A collection of the keys.
@@ -57,5 +67,12 @@ public class TrustFrameworkKeySet extends Entity implements Parsable {
      */
     public void setKeys(@jakarta.annotation.Nullable final java.util.List<TrustFrameworkKey> value) {
         this.backingStore.set("keys", value);
+    }
+    /**
+     * Sets the keys_v2 property value. A collection of the keys.
+     * @param value Value to set for the keys_v2 property.
+     */
+    public void setKeysV2(@jakarta.annotation.Nullable final java.util.List<TrustFrameworkKeyV2> value) {
+        this.backingStore.set("keysV2", value);
     }
 }

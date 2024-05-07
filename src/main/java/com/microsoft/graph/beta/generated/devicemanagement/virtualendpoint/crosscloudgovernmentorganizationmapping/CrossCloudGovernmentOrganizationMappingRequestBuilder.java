@@ -55,19 +55,21 @@ public class CrossCloudGovernmentOrganizationMappingRequestBuilder extends BaseR
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Cloud PC organization mapping between public and US Government Community Cloud (GCC) organizations.
+     * Read the properties and relationships of a cloudPcCrossCloudGovernmentOrganizationMapping object.
      * @return a {@link CloudPcCrossCloudGovernmentOrganizationMapping}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpccrosscloudgovernmentorganizationmapping-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPcCrossCloudGovernmentOrganizationMapping get() {
         return get(null);
     }
     /**
-     * Cloud PC organization mapping between public and US Government Community Cloud (GCC) organizations.
+     * Read the properties and relationships of a cloudPcCrossCloudGovernmentOrganizationMapping object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CloudPcCrossCloudGovernmentOrganizationMapping}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpccrosscloudgovernmentorganizationmapping-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPcCrossCloudGovernmentOrganizationMapping get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -122,7 +124,7 @@ public class CrossCloudGovernmentOrganizationMappingRequestBuilder extends BaseR
         return requestInfo;
     }
     /**
-     * Cloud PC organization mapping between public and US Government Community Cloud (GCC) organizations.
+     * Read the properties and relationships of a cloudPcCrossCloudGovernmentOrganizationMapping object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +132,7 @@ public class CrossCloudGovernmentOrganizationMappingRequestBuilder extends BaseR
         return toGetRequestInformation(null);
     }
     /**
-     * Cloud PC organization mapping between public and US Government Community Cloud (GCC) organizations.
+     * Read the properties and relationships of a cloudPcCrossCloudGovernmentOrganizationMapping object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +184,7 @@ public class CrossCloudGovernmentOrganizationMappingRequestBuilder extends BaseR
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Cloud PC organization mapping between public and US Government Community Cloud (GCC) organizations.
+     * Read the properties and relationships of a cloudPcCrossCloudGovernmentOrganizationMapping object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

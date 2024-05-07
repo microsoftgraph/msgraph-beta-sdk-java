@@ -85,21 +85,23 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequest
         super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/accessPackageAssignmentPolicies/{accessPackageAssignmentPolicy%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property accessPackageAssignmentPolicies for identityGovernance
+     * In Microsoft Entra entitlement management, delete an accessPackageAssignmentPolicy.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     * @see <a href="https://learn.microsoft.com/graph/api/accesspackageassignmentpolicy-delete?view=graph-rest-beta">Find more info here</a>
      */
     @Deprecated
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property accessPackageAssignmentPolicies for identityGovernance
+     * In Microsoft Entra entitlement management, delete an accessPackageAssignmentPolicy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     * @see <a href="https://learn.microsoft.com/graph/api/accesspackageassignmentpolicy-delete?view=graph-rest-beta">Find more info here</a>
      */
     @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -109,11 +111,12 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequest
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Represents the policy that governs which subjects can request or be assigned an access package via an access package assignment.
+     * In Microsoft Entra entitlement management, retrieve the properties and relationships of an accessPackageAssignmentPolicy object.
      * @return a {@link AccessPackageAssignmentPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     * @see <a href="https://learn.microsoft.com/graph/api/accesspackageassignmentpolicy-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -121,12 +124,13 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequest
         return get(null);
     }
     /**
-     * Represents the policy that governs which subjects can request or be assigned an access package via an access package assignment.
+     * In Microsoft Entra entitlement management, retrieve the properties and relationships of an accessPackageAssignmentPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AccessPackageAssignmentPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     * @see <a href="https://learn.microsoft.com/graph/api/accesspackageassignmentpolicy-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -137,12 +141,13 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequest
         return this.requestAdapter.send(requestInfo, errorMapping, AccessPackageAssignmentPolicy::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property accessPackageAssignmentPolicies in identityGovernance
+     * Update an existing accessPackageAssignmentPolicy object to change one or more of its properties, such as the display name or description.
      * @param body The request body
      * @return a {@link AccessPackageAssignmentPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     * @see <a href="https://learn.microsoft.com/graph/api/accesspackageassignmentpolicy-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -150,13 +155,14 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequest
         return put(body, null);
     }
     /**
-     * Update the navigation property accessPackageAssignmentPolicies in identityGovernance
+     * Update an existing accessPackageAssignmentPolicy object to change one or more of its properties, such as the display name or description.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AccessPackageAssignmentPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     * @see <a href="https://learn.microsoft.com/graph/api/accesspackageassignmentpolicy-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -168,7 +174,7 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequest
         return this.requestAdapter.send(requestInfo, errorMapping, AccessPackageAssignmentPolicy::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property accessPackageAssignmentPolicies for identityGovernance
+     * In Microsoft Entra entitlement management, delete an accessPackageAssignmentPolicy.
      * @return a {@link RequestInformation}
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
@@ -179,7 +185,7 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequest
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property accessPackageAssignmentPolicies for identityGovernance
+     * In Microsoft Entra entitlement management, delete an accessPackageAssignmentPolicy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -194,7 +200,7 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequest
         return requestInfo;
     }
     /**
-     * Represents the policy that governs which subjects can request or be assigned an access package via an access package assignment.
+     * In Microsoft Entra entitlement management, retrieve the properties and relationships of an accessPackageAssignmentPolicy object.
      * @return a {@link RequestInformation}
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
@@ -205,7 +211,7 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequest
         return toGetRequestInformation(null);
     }
     /**
-     * Represents the policy that governs which subjects can request or be assigned an access package via an access package assignment.
+     * In Microsoft Entra entitlement management, retrieve the properties and relationships of an accessPackageAssignmentPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -220,7 +226,7 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequest
         return requestInfo;
     }
     /**
-     * Update the navigation property accessPackageAssignmentPolicies in identityGovernance
+     * Update an existing accessPackageAssignmentPolicy object to change one or more of its properties, such as the display name or description.
      * @param body The request body
      * @return a {@link RequestInformation}
      * @deprecated
@@ -232,7 +238,7 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequest
         return toPutRequestInformation(body, null);
     }
     /**
-     * Update the navigation property accessPackageAssignmentPolicies in identityGovernance
+     * Update an existing accessPackageAssignmentPolicy object to change one or more of its properties, such as the display name or description.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -269,7 +275,7 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequest
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Represents the policy that governs which subjects can request or be assigned an access package via an access package assignment.
+     * In Microsoft Entra entitlement management, retrieve the properties and relationships of an accessPackageAssignmentPolicy object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

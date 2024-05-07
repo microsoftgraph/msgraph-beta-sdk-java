@@ -37,16 +37,18 @@ public class WorkforceIntegrationItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/teamwork/workforceIntegrations/{workforceIntegration%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property workforceIntegrations for teamwork
+     * Delete an instance of a workforceIntegration.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/workforceintegration-delete?view=graph-rest-beta">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property workforceIntegrations for teamwork
+     * Delete an instance of a workforceIntegration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/workforceintegration-delete?view=graph-rest-beta">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -55,19 +57,21 @@ public class WorkforceIntegrationItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * A workforce integration with shifts.
+     * Retrieve the properties and relationships of a workforceintegration object.
      * @return a {@link WorkforceIntegration}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/workforceintegration-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WorkforceIntegration get() {
         return get(null);
     }
     /**
-     * A workforce integration with shifts.
+     * Retrieve the properties and relationships of a workforceintegration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link WorkforceIntegration}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/workforceintegration-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WorkforceIntegration get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -77,21 +81,23 @@ public class WorkforceIntegrationItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, WorkforceIntegration::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property workforceIntegrations in teamwork
+     * Update the properties of a workforceintegration object.
      * @param body The request body
      * @return a {@link WorkforceIntegration}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/workforceintegration-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WorkforceIntegration patch(@jakarta.annotation.Nonnull final WorkforceIntegration body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property workforceIntegrations in teamwork
+     * Update the properties of a workforceintegration object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link WorkforceIntegration}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/workforceintegration-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WorkforceIntegration patch(@jakarta.annotation.Nonnull final WorkforceIntegration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -102,7 +108,7 @@ public class WorkforceIntegrationItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, WorkforceIntegration::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property workforceIntegrations for teamwork
+     * Delete an instance of a workforceIntegration.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -110,7 +116,7 @@ public class WorkforceIntegrationItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property workforceIntegrations for teamwork
+     * Delete an instance of a workforceIntegration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -122,7 +128,7 @@ public class WorkforceIntegrationItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * A workforce integration with shifts.
+     * Retrieve the properties and relationships of a workforceintegration object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +136,7 @@ public class WorkforceIntegrationItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * A workforce integration with shifts.
+     * Retrieve the properties and relationships of a workforceintegration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -142,7 +148,7 @@ public class WorkforceIntegrationItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property workforceIntegrations in teamwork
+     * Update the properties of a workforceintegration object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -151,7 +157,7 @@ public class WorkforceIntegrationItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property workforceIntegrations in teamwork
+     * Update the properties of a workforceintegration object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -182,7 +188,7 @@ public class WorkforceIntegrationItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * A workforce integration with shifts.
+     * Retrieve the properties and relationships of a workforceintegration object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -77,21 +77,23 @@ public class ItemPublicationItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ItemPublication::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property publications in users
+     * Update the properties of an itemPublication object in a user's profile.
      * @param body The request body
      * @return a {@link ItemPublication}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/itempublication-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ItemPublication patch(@jakarta.annotation.Nonnull final ItemPublication body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property publications in users
+     * Update the properties of an itemPublication object in a user's profile.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ItemPublication}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/itempublication-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ItemPublication patch(@jakarta.annotation.Nonnull final ItemPublication body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -142,7 +144,7 @@ public class ItemPublicationItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property publications in users
+     * Update the properties of an itemPublication object in a user's profile.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -151,7 +153,7 @@ public class ItemPublicationItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property publications in users
+     * Update the properties of an itemPublication object in a user's profile.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

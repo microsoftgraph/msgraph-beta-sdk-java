@@ -60,19 +60,21 @@ public class ReviewersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/accessReviews/{accessReview%2Did}/reviewers{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * The collection of reviewers for an access review, if access review reviewerType is of type delegated.
+     * In the Microsoft Entra access reviews feature, retrieve the reviewers of an accessReview object.
      * @return a {@link AccessReviewReviewerCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/accessreview-listreviewers?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AccessReviewReviewerCollectionResponse get() {
         return get(null);
     }
     /**
-     * The collection of reviewers for an access review, if access review reviewerType is of type delegated.
+     * In the Microsoft Entra access reviews feature, retrieve the reviewers of an accessReview object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AccessReviewReviewerCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/accessreview-listreviewers?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AccessReviewReviewerCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,21 +84,23 @@ public class ReviewersRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AccessReviewReviewerCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to reviewers for accessReviews
+     * In the Microsoft Entra access reviews feature, update an existing accessReview object to add another user as a reviewer.  This operation is only permitted for an access review that isn't yet completed, and only for an access review where the reviewers are explicitly specified. This operation isn't permitted for an access review in which users review their own access, and not intended for an access review in which the group owners are assigned as the reviewers. 
      * @param body The request body
      * @return a {@link AccessReviewReviewer}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/accessreview-addreviewer?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AccessReviewReviewer post(@jakarta.annotation.Nonnull final AccessReviewReviewer body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to reviewers for accessReviews
+     * In the Microsoft Entra access reviews feature, update an existing accessReview object to add another user as a reviewer.  This operation is only permitted for an access review that isn't yet completed, and only for an access review where the reviewers are explicitly specified. This operation isn't permitted for an access review in which users review their own access, and not intended for an access review in which the group owners are assigned as the reviewers. 
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AccessReviewReviewer}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/accessreview-addreviewer?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AccessReviewReviewer post(@jakarta.annotation.Nonnull final AccessReviewReviewer body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -107,7 +111,7 @@ public class ReviewersRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AccessReviewReviewer::createFromDiscriminatorValue);
     }
     /**
-     * The collection of reviewers for an access review, if access review reviewerType is of type delegated.
+     * In the Microsoft Entra access reviews feature, retrieve the reviewers of an accessReview object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +119,7 @@ public class ReviewersRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The collection of reviewers for an access review, if access review reviewerType is of type delegated.
+     * In the Microsoft Entra access reviews feature, retrieve the reviewers of an accessReview object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -127,7 +131,7 @@ public class ReviewersRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to reviewers for accessReviews
+     * In the Microsoft Entra access reviews feature, update an existing accessReview object to add another user as a reviewer.  This operation is only permitted for an access review that isn't yet completed, and only for an access review where the reviewers are explicitly specified. This operation isn't permitted for an access review in which users review their own access, and not intended for an access review in which the group owners are assigned as the reviewers. 
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -136,7 +140,7 @@ public class ReviewersRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to reviewers for accessReviews
+     * In the Microsoft Entra access reviews feature, update an existing accessReview object to add another user as a reviewer.  This operation is only permitted for an access review that isn't yet completed, and only for an access review where the reviewers are explicitly specified. This operation isn't permitted for an access review in which users review their own access, and not intended for an access review in which the group owners are assigned as the reviewers. 
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -161,7 +165,7 @@ public class ReviewersRequestBuilder extends BaseRequestBuilder {
         return new ReviewersRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The collection of reviewers for an access review, if access review reviewerType is of type delegated.
+     * In the Microsoft Entra access reviews feature, retrieve the reviewers of an accessReview object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

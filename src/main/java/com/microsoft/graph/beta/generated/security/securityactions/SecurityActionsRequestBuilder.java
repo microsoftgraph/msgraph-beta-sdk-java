@@ -26,7 +26,10 @@ public class SecurityActionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
      * @return a {@link CountRequestBuilder}
+     * @deprecated
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
@@ -35,8 +38,11 @@ public class SecurityActionsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to manage the securityActions property of the microsoft.graph.security entity.
      * @param securityActionId The unique identifier of securityAction
      * @return a {@link SecurityActionItemRequestBuilder}
+     * @deprecated
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public SecurityActionItemRequestBuilder bySecurityActionId(@jakarta.annotation.Nonnull final String securityActionId) {
         Objects.requireNonNull(securityActionId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
@@ -60,21 +66,29 @@ public class SecurityActionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/securityActions{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get securityActions from security
+     * Retrieve a list of securityAction objects.
      * @return a {@link SecurityActionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation
+     * @see <a href="https://learn.microsoft.com/graph/api/securityactions-list?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public SecurityActionCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get securityActions from security
+     * Retrieve a list of securityAction objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SecurityActionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation
+     * @see <a href="https://learn.microsoft.com/graph/api/securityactions-list?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public SecurityActionCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -82,23 +96,31 @@ public class SecurityActionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, SecurityActionCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to securityActions for security
+     * Create a new securityAction object.
      * @param body The request body
      * @return a {@link SecurityAction}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation
+     * @see <a href="https://learn.microsoft.com/graph/api/securityactions-post?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public SecurityAction post(@jakarta.annotation.Nonnull final SecurityAction body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to securityActions for security
+     * Create a new securityAction object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SecurityAction}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation
+     * @see <a href="https://learn.microsoft.com/graph/api/securityactions-post?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public SecurityAction post(@jakarta.annotation.Nonnull final SecurityAction body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
@@ -107,19 +129,25 @@ public class SecurityActionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, SecurityAction::createFromDiscriminatorValue);
     }
     /**
-     * Get securityActions from security
+     * Retrieve a list of securityAction objects.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
     /**
-     * Get securityActions from security
+     * Retrieve a list of securityAction objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -127,21 +155,27 @@ public class SecurityActionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to securityActions for security
+     * Create a new securityAction object.
      * @param body The request body
      * @return a {@link RequestInformation}
+     * @deprecated
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final SecurityAction body) {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to securityActions for security
+     * Create a new securityAction object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final SecurityAction body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
@@ -154,14 +188,17 @@ public class SecurityActionsRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link SecurityActionsRequestBuilder}
+     * @deprecated
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public SecurityActionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new SecurityActionsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get securityActions from security
+     * Retrieve a list of securityAction objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

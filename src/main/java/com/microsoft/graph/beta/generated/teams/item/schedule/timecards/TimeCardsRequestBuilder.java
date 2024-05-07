@@ -69,19 +69,21 @@ public class TimeCardsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/teams/{team%2Did}/schedule/timeCards{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * The time cards in the schedule.
+     * Retrieve a list of timeCard entries in a schedule.
      * @return a {@link TimeCardCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/timecard-list?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TimeCardCollectionResponse get() {
         return get(null);
     }
     /**
-     * The time cards in the schedule.
+     * Retrieve a list of timeCard entries in a schedule.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TimeCardCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/timecard-list?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TimeCardCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -91,21 +93,23 @@ public class TimeCardsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TimeCardCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to timeCards for teams
+     * Create a timeCard instance in a schedule.
      * @param body The request body
      * @return a {@link TimeCard}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/timecard-post?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TimeCard post(@jakarta.annotation.Nonnull final TimeCard body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to timeCards for teams
+     * Create a timeCard instance in a schedule.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TimeCard}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/timecard-post?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TimeCard post(@jakarta.annotation.Nonnull final TimeCard body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -116,7 +120,7 @@ public class TimeCardsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TimeCard::createFromDiscriminatorValue);
     }
     /**
-     * The time cards in the schedule.
+     * Retrieve a list of timeCard entries in a schedule.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -124,7 +128,7 @@ public class TimeCardsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The time cards in the schedule.
+     * Retrieve a list of timeCard entries in a schedule.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -136,7 +140,7 @@ public class TimeCardsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to timeCards for teams
+     * Create a timeCard instance in a schedule.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -145,7 +149,7 @@ public class TimeCardsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to timeCards for teams
+     * Create a timeCard instance in a schedule.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -170,7 +174,7 @@ public class TimeCardsRequestBuilder extends BaseRequestBuilder {
         return new TimeCardsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The time cards in the schedule.
+     * Retrieve a list of timeCard entries in a schedule.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -12,7 +12,8 @@ public enum ProtocolType implements ValuedEnum {
     Saml20("saml20"),
     DeviceCode("deviceCode"),
     UnknownFutureValue("unknownFutureValue"),
-    AuthenticationTransfer("authenticationTransfer");
+    AuthenticationTransfer("authenticationTransfer"),
+    NativeAuth("nativeAuth");
     public final String value;
     ProtocolType(final String value) {
         this.value = value;
@@ -31,6 +32,7 @@ public enum ProtocolType implements ValuedEnum {
             case "deviceCode": return DeviceCode;
             case "unknownFutureValue": return UnknownFutureValue;
             case "authenticationTransfer": return AuthenticationTransfer;
+            case "nativeAuth": return NativeAuth;
             default: return null;
         }
     }

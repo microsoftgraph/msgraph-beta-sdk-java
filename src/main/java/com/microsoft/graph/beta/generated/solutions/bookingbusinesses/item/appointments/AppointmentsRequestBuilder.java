@@ -60,7 +60,7 @@ public class AppointmentsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/solutions/bookingBusinesses/{bookingBusiness%2Did}/appointments{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * All the appointments of this business. Read-only. Nullable.
+     * Get the properties and relationships of a bookingAppointment object in the specified bookingBusiness. The start and end properties are always returned in UTC.
      * @return a {@link BookingAppointmentCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -69,7 +69,7 @@ public class AppointmentsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * All the appointments of this business. Read-only. Nullable.
+     * Get the properties and relationships of a bookingAppointment object in the specified bookingBusiness. The start and end properties are always returned in UTC.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link BookingAppointmentCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -107,7 +107,7 @@ public class AppointmentsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, BookingAppointment::createFromDiscriminatorValue);
     }
     /**
-     * All the appointments of this business. Read-only. Nullable.
+     * Get the properties and relationships of a bookingAppointment object in the specified bookingBusiness. The start and end properties are always returned in UTC.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class AppointmentsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * All the appointments of this business. Read-only. Nullable.
+     * Get the properties and relationships of a bookingAppointment object in the specified bookingBusiness. The start and end properties are always returned in UTC.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +161,7 @@ public class AppointmentsRequestBuilder extends BaseRequestBuilder {
         return new AppointmentsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * All the appointments of this business. Read-only. Nullable.
+     * Get the properties and relationships of a bookingAppointment object in the specified bookingBusiness. The start and end properties are always returned in UTC.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

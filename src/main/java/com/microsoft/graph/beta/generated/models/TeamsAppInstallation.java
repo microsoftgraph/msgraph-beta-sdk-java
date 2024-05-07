@@ -47,9 +47,18 @@ public class TeamsAppInstallation extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("consentedPermissionSet", (n) -> { this.setConsentedPermissionSet(n.getObjectValue(TeamsAppPermissionSet::createFromDiscriminatorValue)); });
+        deserializerMap.put("scopeInfo", (n) -> { this.setScopeInfo(n.getObjectValue(TeamsAppInstallationScopeInfo::createFromDiscriminatorValue)); });
         deserializerMap.put("teamsApp", (n) -> { this.setTeamsApp(n.getObjectValue(TeamsApp::createFromDiscriminatorValue)); });
         deserializerMap.put("teamsAppDefinition", (n) -> { this.setTeamsAppDefinition(n.getObjectValue(TeamsAppDefinition::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the scopeInfo property value. The scopeInfo property
+     * @return a {@link TeamsAppInstallationScopeInfo}
+     */
+    @jakarta.annotation.Nullable
+    public TeamsAppInstallationScopeInfo getScopeInfo() {
+        return this.backingStore.get("scopeInfo");
     }
     /**
      * Gets the teamsApp property value. The app that is installed.
@@ -75,6 +84,7 @@ public class TeamsAppInstallation extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("consentedPermissionSet", this.getConsentedPermissionSet());
+        writer.writeObjectValue("scopeInfo", this.getScopeInfo());
         writer.writeObjectValue("teamsApp", this.getTeamsApp());
         writer.writeObjectValue("teamsAppDefinition", this.getTeamsAppDefinition());
     }
@@ -84,6 +94,13 @@ public class TeamsAppInstallation extends Entity implements Parsable {
      */
     public void setConsentedPermissionSet(@jakarta.annotation.Nullable final TeamsAppPermissionSet value) {
         this.backingStore.set("consentedPermissionSet", value);
+    }
+    /**
+     * Sets the scopeInfo property value. The scopeInfo property
+     * @param value Value to set for the scopeInfo property.
+     */
+    public void setScopeInfo(@jakarta.annotation.Nullable final TeamsAppInstallationScopeInfo value) {
+        this.backingStore.set("scopeInfo", value);
     }
     /**
      * Sets the teamsApp property value. The app that is installed.

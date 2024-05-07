@@ -60,19 +60,21 @@ public class ImpactedResourcesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/directory/recommendations/{recommendation%2Did}/impactedResources{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * The list of directory objects associated with the recommendation.
+     * Get the impactedResource objects for a recommendation.
      * @return a {@link ImpactedResourceCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/recommendation-list-impactedresources?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ImpactedResourceCollectionResponse get() {
         return get(null);
     }
     /**
-     * The list of directory objects associated with the recommendation.
+     * Get the impactedResource objects for a recommendation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ImpactedResourceCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/recommendation-list-impactedresources?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ImpactedResourceCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -107,7 +109,7 @@ public class ImpactedResourcesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ImpactedResource::createFromDiscriminatorValue);
     }
     /**
-     * The list of directory objects associated with the recommendation.
+     * Get the impactedResource objects for a recommendation.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +117,7 @@ public class ImpactedResourcesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The list of directory objects associated with the recommendation.
+     * Get the impactedResource objects for a recommendation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +163,7 @@ public class ImpactedResourcesRequestBuilder extends BaseRequestBuilder {
         return new ImpactedResourcesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The list of directory objects associated with the recommendation.
+     * Get the impactedResource objects for a recommendation.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

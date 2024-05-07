@@ -55,19 +55,21 @@ public class ReportSettingsRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * A container for administrative resources to manage reports.
+     * Get the tenant-level settings for Microsoft 365 reports.
      * @return a {@link AdminReportSettings}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/adminreportsettings-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AdminReportSettings get() {
         return get(null);
     }
     /**
-     * A container for administrative resources to manage reports.
+     * Get the tenant-level settings for Microsoft 365 reports.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AdminReportSettings}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/adminreportsettings-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AdminReportSettings get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -77,21 +79,23 @@ public class ReportSettingsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AdminReportSettings::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property reportSettings in admin
+     * Update tenant-level settings for Microsoft 365 reports.
      * @param body The request body
      * @return a {@link AdminReportSettings}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/adminreportsettings-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AdminReportSettings patch(@jakarta.annotation.Nonnull final AdminReportSettings body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property reportSettings in admin
+     * Update tenant-level settings for Microsoft 365 reports.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AdminReportSettings}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/adminreportsettings-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AdminReportSettings patch(@jakarta.annotation.Nonnull final AdminReportSettings body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -122,7 +126,7 @@ public class ReportSettingsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * A container for administrative resources to manage reports.
+     * Get the tenant-level settings for Microsoft 365 reports.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +134,7 @@ public class ReportSettingsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * A container for administrative resources to manage reports.
+     * Get the tenant-level settings for Microsoft 365 reports.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -142,7 +146,7 @@ public class ReportSettingsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property reportSettings in admin
+     * Update tenant-level settings for Microsoft 365 reports.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -151,7 +155,7 @@ public class ReportSettingsRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property reportSettings in admin
+     * Update tenant-level settings for Microsoft 365 reports.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -182,7 +186,7 @@ public class ReportSettingsRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * A container for administrative resources to manage reports.
+     * Get the tenant-level settings for Microsoft 365 reports.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

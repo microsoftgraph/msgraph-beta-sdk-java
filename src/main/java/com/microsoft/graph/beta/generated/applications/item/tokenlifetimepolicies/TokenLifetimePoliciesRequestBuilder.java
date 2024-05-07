@@ -68,19 +68,21 @@ public class TokenLifetimePoliciesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/applications/{application%2Did}/tokenLifetimePolicies{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * The tokenLifetimePolicies assigned to this application. Supports $expand.
+     * List the tokenLifetimePolicy objects that are assigned to an application or servicePrincipal. Only one object is returned in the collection because only one tokenLifetimePolicy can be assigned to an application.
      * @return a {@link TokenLifetimePolicyCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/application-list-tokenlifetimepolicies?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TokenLifetimePolicyCollectionResponse get() {
         return get(null);
     }
     /**
-     * The tokenLifetimePolicies assigned to this application. Supports $expand.
+     * List the tokenLifetimePolicy objects that are assigned to an application or servicePrincipal. Only one object is returned in the collection because only one tokenLifetimePolicy can be assigned to an application.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TokenLifetimePolicyCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/application-list-tokenlifetimepolicies?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TokenLifetimePolicyCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -90,7 +92,7 @@ public class TokenLifetimePoliciesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TokenLifetimePolicyCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * The tokenLifetimePolicies assigned to this application. Supports $expand.
+     * List the tokenLifetimePolicy objects that are assigned to an application or servicePrincipal. Only one object is returned in the collection because only one tokenLifetimePolicy can be assigned to an application.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -98,7 +100,7 @@ public class TokenLifetimePoliciesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The tokenLifetimePolicies assigned to this application. Supports $expand.
+     * List the tokenLifetimePolicy objects that are assigned to an application or servicePrincipal. Only one object is returned in the collection because only one tokenLifetimePolicy can be assigned to an application.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -120,7 +122,7 @@ public class TokenLifetimePoliciesRequestBuilder extends BaseRequestBuilder {
         return new TokenLifetimePoliciesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The tokenLifetimePolicies assigned to this application. Supports $expand.
+     * List the tokenLifetimePolicy objects that are assigned to an application or servicePrincipal. Only one object is returned in the collection because only one tokenLifetimePolicy can be assigned to an application.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

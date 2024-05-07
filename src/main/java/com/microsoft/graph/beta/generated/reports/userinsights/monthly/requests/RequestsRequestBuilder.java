@@ -59,19 +59,21 @@ public class RequestsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/reports/userInsights/monthly/requests{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Insights for all user requests on apps registered in the tenant for a specified period.
+     * Get a list of monthly user requests on apps registered in your tenant configured for Microsoft Entra External ID for customers.
      * @return a {@link UserRequestsMetricCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/monthlyuserinsightmetricsroot-list-requests?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UserRequestsMetricCollectionResponse get() {
         return get(null);
     }
     /**
-     * Insights for all user requests on apps registered in the tenant for a specified period.
+     * Get a list of monthly user requests on apps registered in your tenant configured for Microsoft Entra External ID for customers.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UserRequestsMetricCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/monthlyuserinsightmetricsroot-list-requests?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UserRequestsMetricCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -81,7 +83,7 @@ public class RequestsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, UserRequestsMetricCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Insights for all user requests on apps registered in the tenant for a specified period.
+     * Get a list of monthly user requests on apps registered in your tenant configured for Microsoft Entra External ID for customers.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +91,7 @@ public class RequestsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Insights for all user requests on apps registered in the tenant for a specified period.
+     * Get a list of monthly user requests on apps registered in your tenant configured for Microsoft Entra External ID for customers.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -111,7 +113,7 @@ public class RequestsRequestBuilder extends BaseRequestBuilder {
         return new RequestsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Insights for all user requests on apps registered in the tenant for a specified period.
+     * Get a list of monthly user requests on apps registered in your tenant configured for Microsoft Entra External ID for customers.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

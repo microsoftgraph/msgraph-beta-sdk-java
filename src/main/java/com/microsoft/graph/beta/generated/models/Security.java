@@ -1,5 +1,6 @@
 package com.microsoft.graph.beta.models;
 
+import com.microsoft.graph.beta.models.partner.security.PartnerSecurity;
 import com.microsoft.graph.beta.models.security.Alert;
 import com.microsoft.graph.beta.models.security.AuditCoreRoot;
 import com.microsoft.graph.beta.models.security.CasesRoot;
@@ -123,6 +124,7 @@ public class Security extends Entity implements Parsable {
         deserializerMap.put("informationProtection", (n) -> { this.setInformationProtection(n.getObjectValue(InformationProtection::createFromDiscriminatorValue)); });
         deserializerMap.put("ipSecurityProfiles", (n) -> { this.setIpSecurityProfiles(n.getCollectionOfObjectValues(IpSecurityProfile::createFromDiscriminatorValue)); });
         deserializerMap.put("labels", (n) -> { this.setLabels(n.getObjectValue(LabelsRoot::createFromDiscriminatorValue)); });
+        deserializerMap.put("partner", (n) -> { this.setPartner(n.getObjectValue(PartnerSecurity::createFromDiscriminatorValue)); });
         deserializerMap.put("providerStatus", (n) -> { this.setProviderStatus(n.getCollectionOfObjectValues(SecurityProviderStatus::createFromDiscriminatorValue)); });
         deserializerMap.put("providerTenantSettings", (n) -> { this.setProviderTenantSettings(n.getCollectionOfObjectValues(ProviderTenantSetting::createFromDiscriminatorValue)); });
         deserializerMap.put("rules", (n) -> { this.setRules(n.getObjectValue(RulesRoot::createFromDiscriminatorValue)); });
@@ -193,6 +195,14 @@ public class Security extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public LabelsRoot getLabels() {
         return this.backingStore.get("labels");
+    }
+    /**
+     * Gets the partner property value. The partner property
+     * @return a {@link PartnerSecurity}
+     */
+    @jakarta.annotation.Nullable
+    public PartnerSecurity getPartner() {
+        return this.backingStore.get("partner");
     }
     /**
      * Gets the providerStatus property value. The providerStatus property
@@ -320,6 +330,7 @@ public class Security extends Entity implements Parsable {
         writer.writeObjectValue("informationProtection", this.getInformationProtection());
         writer.writeCollectionOfObjectValues("ipSecurityProfiles", this.getIpSecurityProfiles());
         writer.writeObjectValue("labels", this.getLabels());
+        writer.writeObjectValue("partner", this.getPartner());
         writer.writeCollectionOfObjectValues("providerStatus", this.getProviderStatus());
         writer.writeCollectionOfObjectValues("providerTenantSettings", this.getProviderTenantSettings());
         writer.writeObjectValue("rules", this.getRules());
@@ -438,6 +449,13 @@ public class Security extends Entity implements Parsable {
      */
     public void setLabels(@jakarta.annotation.Nullable final LabelsRoot value) {
         this.backingStore.set("labels", value);
+    }
+    /**
+     * Sets the partner property value. The partner property
+     * @param value Value to set for the partner property.
+     */
+    public void setPartner(@jakarta.annotation.Nullable final PartnerSecurity value) {
+        this.backingStore.set("partner", value);
     }
     /**
      * Sets the providerStatus property value. The providerStatus property

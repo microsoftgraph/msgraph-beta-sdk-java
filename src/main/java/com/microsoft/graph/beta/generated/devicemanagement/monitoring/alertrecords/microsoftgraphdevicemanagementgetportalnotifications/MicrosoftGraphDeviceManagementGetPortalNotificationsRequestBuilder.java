@@ -36,7 +36,7 @@ public class MicrosoftGraphDeviceManagementGetPortalNotificationsRequestBuilder 
         super(requestAdapter, "{+baseurl}/deviceManagement/monitoring/alertRecords/microsoft.graph.deviceManagement.getPortalNotifications(){?%24count,%24filter,%24search,%24skip,%24top}", rawUrl);
     }
     /**
-     * Invoke function getPortalNotifications
+     * Get a list of all notifications that one or more users can access, from the Microsoft Endpoint Manager admin center.
      * @return a {@link GetPortalNotificationsGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -45,7 +45,7 @@ public class MicrosoftGraphDeviceManagementGetPortalNotificationsRequestBuilder 
         return get(null);
     }
     /**
-     * Invoke function getPortalNotifications
+     * Get a list of all notifications that one or more users can access, from the Microsoft Endpoint Manager admin center.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GetPortalNotificationsGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -58,7 +58,7 @@ public class MicrosoftGraphDeviceManagementGetPortalNotificationsRequestBuilder 
         return this.requestAdapter.send(requestInfo, errorMapping, GetPortalNotificationsGetResponse::createFromDiscriminatorValue);
     }
     /**
-     * Invoke function getPortalNotifications
+     * Get a list of all notifications that one or more users can access, from the Microsoft Endpoint Manager admin center.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -66,7 +66,7 @@ public class MicrosoftGraphDeviceManagementGetPortalNotificationsRequestBuilder 
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function getPortalNotifications
+     * Get a list of all notifications that one or more users can access, from the Microsoft Endpoint Manager admin center.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -88,7 +88,7 @@ public class MicrosoftGraphDeviceManagementGetPortalNotificationsRequestBuilder 
         return new MicrosoftGraphDeviceManagementGetPortalNotificationsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Invoke function getPortalNotifications
+     * Get a list of all notifications that one or more users can access, from the Microsoft Endpoint Manager admin center.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

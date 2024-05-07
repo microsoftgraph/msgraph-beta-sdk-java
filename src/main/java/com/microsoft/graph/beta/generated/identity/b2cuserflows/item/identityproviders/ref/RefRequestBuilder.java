@@ -38,21 +38,23 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identity/b2cUserFlows/{b2cIdentityUserFlow%2Did}/identityProviders/$ref?@id={%40id}{&%24count,%24filter,%24orderby,%24search,%24skip,%24top}", rawUrl);
     }
     /**
-     * Delete ref of navigation property identityProviders for identity
+     * Delete an identity provider from a b2cIdentityUserFlow object. For more information about identity providers available for user flows, see the identityProviders API reference.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API. as of 2021-05/identityProvider
+     * @see <a href="https://learn.microsoft.com/graph/api/b2cidentityuserflow-delete-identityproviders?view=graph-rest-beta">Find more info here</a>
      */
     @Deprecated
     public void delete() {
         delete(null);
     }
     /**
-     * Delete ref of navigation property identityProviders for identity
+     * Delete an identity provider from a b2cIdentityUserFlow object. For more information about identity providers available for user flows, see the identityProviders API reference.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API. as of 2021-05/identityProvider
+     * @see <a href="https://learn.microsoft.com/graph/api/b2cidentityuserflow-delete-identityproviders?view=graph-rest-beta">Find more info here</a>
      */
     @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -62,11 +64,12 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get ref of identityProviders from identity
+     * Get the identity providers in a b2cIdentityUserFlow object.
      * @return a {@link StringCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API. as of 2021-05/identityProvider
+     * @see <a href="https://learn.microsoft.com/graph/api/b2cidentityuserflow-list-identityproviders?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -74,12 +77,13 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get ref of identityProviders from identity
+     * Get the identity providers in a b2cIdentityUserFlow object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link StringCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API. as of 2021-05/identityProvider
+     * @see <a href="https://learn.microsoft.com/graph/api/b2cidentityuserflow-list-identityproviders?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -90,23 +94,25 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, StringCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property ref to identityProviders for identity
+     * Add identity providers in a b2cIdentityUserFlow object.
      * @param body The request body
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API. as of 2021-05/identityProvider
+     * @see <a href="https://learn.microsoft.com/graph/api/b2cidentityuserflow-post-identityproviders?view=graph-rest-beta">Find more info here</a>
      */
     @Deprecated
     public void post(@jakarta.annotation.Nonnull final ReferenceCreate body) {
         post(body, null);
     }
     /**
-     * Create new navigation property ref to identityProviders for identity
+     * Add identity providers in a b2cIdentityUserFlow object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API. as of 2021-05/identityProvider
+     * @see <a href="https://learn.microsoft.com/graph/api/b2cidentityuserflow-post-identityproviders?view=graph-rest-beta">Find more info here</a>
      */
     @Deprecated
     public void post(@jakarta.annotation.Nonnull final ReferenceCreate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -117,7 +123,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Delete ref of navigation property identityProviders for identity
+     * Delete an identity provider from a b2cIdentityUserFlow object. For more information about identity providers available for user flows, see the identityProviders API reference.
      * @return a {@link RequestInformation}
      * @deprecated
      * The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API. as of 2021-05/identityProvider
@@ -128,7 +134,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete ref of navigation property identityProviders for identity
+     * Delete an identity provider from a b2cIdentityUserFlow object. For more information about identity providers available for user flows, see the identityProviders API reference.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -143,7 +149,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get ref of identityProviders from identity
+     * Get the identity providers in a b2cIdentityUserFlow object.
      * @return a {@link RequestInformation}
      * @deprecated
      * The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API. as of 2021-05/identityProvider
@@ -154,7 +160,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get ref of identityProviders from identity
+     * Get the identity providers in a b2cIdentityUserFlow object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -169,7 +175,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property ref to identityProviders for identity
+     * Add identity providers in a b2cIdentityUserFlow object.
      * @param body The request body
      * @return a {@link RequestInformation}
      * @deprecated
@@ -181,7 +187,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property ref to identityProviders for identity
+     * Add identity providers in a b2cIdentityUserFlow object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -212,7 +218,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return new RefRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Delete ref of navigation property identityProviders for identity
+     * Delete an identity provider from a b2cIdentityUserFlow object. For more information about identity providers available for user flows, see the identityProviders API reference.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class DeleteQueryParameters implements QueryParameters {
@@ -244,7 +250,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         public DeleteQueryParameters queryParameters = new DeleteQueryParameters();
     }
     /**
-     * Get ref of identityProviders from identity
+     * Get the identity providers in a b2cIdentityUserFlow object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

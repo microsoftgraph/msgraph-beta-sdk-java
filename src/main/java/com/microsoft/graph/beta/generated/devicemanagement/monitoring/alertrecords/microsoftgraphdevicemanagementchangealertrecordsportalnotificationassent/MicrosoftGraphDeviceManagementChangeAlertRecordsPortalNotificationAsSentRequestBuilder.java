@@ -35,7 +35,7 @@ public class MicrosoftGraphDeviceManagementChangeAlertRecordsPortalNotificationA
         super(requestAdapter, "{+baseurl}/deviceManagement/monitoring/alertRecords/microsoft.graph.deviceManagement.changeAlertRecordsPortalNotificationAsSent", rawUrl);
     }
     /**
-     * Invoke action changeAlertRecordsPortalNotificationAsSent
+     * Set the isPortalNotificationSent property of all portal notification resources associated with the specified alertRecord to true, marking them as sent. A maximum of 100 alertRecord IDs can be received at one time, and a maximum of 100 portal notification resources can be changed in the isPortalNotificationSent property status.
      * @param body The request body
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -43,7 +43,7 @@ public class MicrosoftGraphDeviceManagementChangeAlertRecordsPortalNotificationA
         post(body, null);
     }
     /**
-     * Invoke action changeAlertRecordsPortalNotificationAsSent
+     * Set the isPortalNotificationSent property of all portal notification resources associated with the specified alertRecord to true, marking them as sent. A maximum of 100 alertRecord IDs can be received at one time, and a maximum of 100 portal notification resources can be changed in the isPortalNotificationSent property status.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -56,7 +56,7 @@ public class MicrosoftGraphDeviceManagementChangeAlertRecordsPortalNotificationA
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Invoke action changeAlertRecordsPortalNotificationAsSent
+     * Set the isPortalNotificationSent property of all portal notification resources associated with the specified alertRecord to true, marking them as sent. A maximum of 100 alertRecord IDs can be received at one time, and a maximum of 100 portal notification resources can be changed in the isPortalNotificationSent property status.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -65,7 +65,7 @@ public class MicrosoftGraphDeviceManagementChangeAlertRecordsPortalNotificationA
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action changeAlertRecordsPortalNotificationAsSent
+     * Set the isPortalNotificationSent property of all portal notification resources associated with the specified alertRecord to true, marking them as sent. A maximum of 100 alertRecord IDs can be received at one time, and a maximum of 100 portal notification resources can be changed in the isPortalNotificationSent property status.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

@@ -5,8 +5,8 @@ import com.microsoft.graph.beta.models.OnlineMeeting;
 import com.microsoft.graph.beta.models.OnlineMeetingCollectionResponse;
 import com.microsoft.graph.beta.users.item.onlinemeetings.count.CountRequestBuilder;
 import com.microsoft.graph.beta.users.item.onlinemeetings.createorget.CreateOrGetRequestBuilder;
-import com.microsoft.graph.beta.users.item.onlinemeetings.getallrecordings.GetAllRecordingsRequestBuilder;
-import com.microsoft.graph.beta.users.item.onlinemeetings.getalltranscripts.GetAllTranscriptsRequestBuilder;
+import com.microsoft.graph.beta.users.item.onlinemeetings.getallrecordingsmeetingorganizeruseridmeetingorganizeruseridwithstartdatetimewithenddatetime.GetAllRecordingsmeetingOrganizerUserIdMeetingOrganizerUserIdWithStartDateTimeWithEndDateTimeRequestBuilder;
+import com.microsoft.graph.beta.users.item.onlinemeetings.getalltranscriptsmeetingorganizeruseridmeetingorganizeruseridwithstartdatetimewithenddatetime.GetAllTranscriptsmeetingOrganizerUserIdMeetingOrganizerUserIdWithStartDateTimeWithEndDateTimeRequestBuilder;
 import com.microsoft.graph.beta.users.item.onlinemeetings.item.OnlineMeetingItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -44,19 +44,19 @@ public class OnlineMeetingsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getAllRecordings method.
-     * @return a {@link GetAllRecordingsRequestBuilder}
+     * @return a {@link GetAllRecordingsmeetingOrganizerUserIdMeetingOrganizerUserIdWithStartDateTimeWithEndDateTimeRequestBuilder}
      */
     @jakarta.annotation.Nonnull
-    public GetAllRecordingsRequestBuilder getAllRecordings() {
-        return new GetAllRecordingsRequestBuilder(pathParameters, requestAdapter);
+    public GetAllRecordingsmeetingOrganizerUserIdMeetingOrganizerUserIdWithStartDateTimeWithEndDateTimeRequestBuilder getAllRecordingsmeetingOrganizerUserIdMeetingOrganizerUserIdWithStartDateTimeWithEndDateTime() {
+        return new GetAllRecordingsmeetingOrganizerUserIdMeetingOrganizerUserIdWithStartDateTimeWithEndDateTimeRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the getAllTranscripts method.
-     * @return a {@link GetAllTranscriptsRequestBuilder}
+     * @return a {@link GetAllTranscriptsmeetingOrganizerUserIdMeetingOrganizerUserIdWithStartDateTimeWithEndDateTimeRequestBuilder}
      */
     @jakarta.annotation.Nonnull
-    public GetAllTranscriptsRequestBuilder getAllTranscripts() {
-        return new GetAllTranscriptsRequestBuilder(pathParameters, requestAdapter);
+    public GetAllTranscriptsmeetingOrganizerUserIdMeetingOrganizerUserIdWithStartDateTimeWithEndDateTimeRequestBuilder getAllTranscriptsmeetingOrganizerUserIdMeetingOrganizerUserIdWithStartDateTimeWithEndDateTime() {
+        return new GetAllTranscriptsmeetingOrganizerUserIdMeetingOrganizerUserIdWithStartDateTimeWithEndDateTimeRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the onlineMeetings property of the microsoft.graph.user entity.

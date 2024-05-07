@@ -171,6 +171,14 @@ public class SignIn extends Entity implements Parsable {
         return this.backingStore.get("clientCredentialType");
     }
     /**
+     * Gets the conditionalAccessAudiences property value. A list that indicates the audience that was evaluated by Conditional Access during a sign-in event.  Supports $filter (eq).
+     * @return a {@link java.util.List<ConditionalAccessAudience>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<ConditionalAccessAudience> getConditionalAccessAudiences() {
+        return this.backingStore.get("conditionalAccessAudiences");
+    }
+    /**
      * Gets the conditionalAccessStatus property value. The status of the conditional access policy triggered. Possible values: success, failure, notApplied, or unknownFutureValue.  Supports $filter (eq).
      * @return a {@link ConditionalAccessStatus}
      */
@@ -243,6 +251,7 @@ public class SignIn extends Entity implements Parsable {
         deserializerMap.put("azureResourceId", (n) -> { this.setAzureResourceId(n.getStringValue()); });
         deserializerMap.put("clientAppUsed", (n) -> { this.setClientAppUsed(n.getStringValue()); });
         deserializerMap.put("clientCredentialType", (n) -> { this.setClientCredentialType(n.getEnumValue(ClientCredentialType::forValue)); });
+        deserializerMap.put("conditionalAccessAudiences", (n) -> { this.setConditionalAccessAudiences(n.getCollectionOfObjectValues(ConditionalAccessAudience::createFromDiscriminatorValue)); });
         deserializerMap.put("conditionalAccessStatus", (n) -> { this.setConditionalAccessStatus(n.getEnumValue(ConditionalAccessStatus::forValue)); });
         deserializerMap.put("correlationId", (n) -> { this.setCorrelationId(n.getStringValue()); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
@@ -250,6 +259,7 @@ public class SignIn extends Entity implements Parsable {
         deserializerMap.put("deviceDetail", (n) -> { this.setDeviceDetail(n.getObjectValue(DeviceDetail::createFromDiscriminatorValue)); });
         deserializerMap.put("federatedCredentialId", (n) -> { this.setFederatedCredentialId(n.getStringValue()); });
         deserializerMap.put("flaggedForReview", (n) -> { this.setFlaggedForReview(n.getBooleanValue()); });
+        deserializerMap.put("globalSecureAccessIpAddress", (n) -> { this.setGlobalSecureAccessIpAddress(n.getStringValue()); });
         deserializerMap.put("homeTenantId", (n) -> { this.setHomeTenantId(n.getStringValue()); });
         deserializerMap.put("homeTenantName", (n) -> { this.setHomeTenantName(n.getStringValue()); });
         deserializerMap.put("incomingTokenType", (n) -> { this.setIncomingTokenType(n.getEnumSetValue(IncomingTokenType::forValue)); });
@@ -257,6 +267,7 @@ public class SignIn extends Entity implements Parsable {
         deserializerMap.put("ipAddressFromResourceProvider", (n) -> { this.setIpAddressFromResourceProvider(n.getStringValue()); });
         deserializerMap.put("isInteractive", (n) -> { this.setIsInteractive(n.getBooleanValue()); });
         deserializerMap.put("isTenantRestricted", (n) -> { this.setIsTenantRestricted(n.getBooleanValue()); });
+        deserializerMap.put("isThroughGlobalSecureAccess", (n) -> { this.setIsThroughGlobalSecureAccess(n.getBooleanValue()); });
         deserializerMap.put("location", (n) -> { this.setLocation(n.getObjectValue(SignInLocation::createFromDiscriminatorValue)); });
         deserializerMap.put("managedServiceIdentity", (n) -> { this.setManagedServiceIdentity(n.getObjectValue(ManagedIdentity::createFromDiscriminatorValue)); });
         deserializerMap.put("mfaDetail", (n) -> { this.setMfaDetail(n.getObjectValue(MfaDetail::createFromDiscriminatorValue)); });
@@ -301,6 +312,14 @@ public class SignIn extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public Boolean getFlaggedForReview() {
         return this.backingStore.get("flaggedForReview");
+    }
+    /**
+     * Gets the globalSecureAccessIpAddress property value. The Global Secure Access IP address that the sign-in was initiated from.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getGlobalSecureAccessIpAddress() {
+        return this.backingStore.get("globalSecureAccessIpAddress");
     }
     /**
      * Gets the homeTenantId property value. The tenant identifier of the user initiating the sign-in. Not applicable in Managed Identity or service principal sign ins.
@@ -357,6 +376,14 @@ public class SignIn extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public Boolean getIsTenantRestricted() {
         return this.backingStore.get("isTenantRestricted");
+    }
+    /**
+     * Gets the isThroughGlobalSecureAccess property value. Indicates whether a user came through Global Secure Access service.
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsThroughGlobalSecureAccess() {
+        return this.backingStore.get("isThroughGlobalSecureAccess");
     }
     /**
      * Gets the location property value. The city, state, and two letter country code from where the sign-in occurred.  Supports $filter (eq, startsWith) on city, state, and countryOrRegion properties.
@@ -663,6 +690,7 @@ public class SignIn extends Entity implements Parsable {
         writer.writeStringValue("azureResourceId", this.getAzureResourceId());
         writer.writeStringValue("clientAppUsed", this.getClientAppUsed());
         writer.writeEnumValue("clientCredentialType", this.getClientCredentialType());
+        writer.writeCollectionOfObjectValues("conditionalAccessAudiences", this.getConditionalAccessAudiences());
         writer.writeEnumValue("conditionalAccessStatus", this.getConditionalAccessStatus());
         writer.writeStringValue("correlationId", this.getCorrelationId());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
@@ -670,6 +698,7 @@ public class SignIn extends Entity implements Parsable {
         writer.writeObjectValue("deviceDetail", this.getDeviceDetail());
         writer.writeStringValue("federatedCredentialId", this.getFederatedCredentialId());
         writer.writeBooleanValue("flaggedForReview", this.getFlaggedForReview());
+        writer.writeStringValue("globalSecureAccessIpAddress", this.getGlobalSecureAccessIpAddress());
         writer.writeStringValue("homeTenantId", this.getHomeTenantId());
         writer.writeStringValue("homeTenantName", this.getHomeTenantName());
         writer.writeEnumSetValue("incomingTokenType", this.getIncomingTokenType());
@@ -677,6 +706,7 @@ public class SignIn extends Entity implements Parsable {
         writer.writeStringValue("ipAddressFromResourceProvider", this.getIpAddressFromResourceProvider());
         writer.writeBooleanValue("isInteractive", this.getIsInteractive());
         writer.writeBooleanValue("isTenantRestricted", this.getIsTenantRestricted());
+        writer.writeBooleanValue("isThroughGlobalSecureAccess", this.getIsThroughGlobalSecureAccess());
         writer.writeObjectValue("location", this.getLocation());
         writer.writeObjectValue("managedServiceIdentity", this.getManagedServiceIdentity());
         writer.writeObjectValue("mfaDetail", this.getMfaDetail());
@@ -840,6 +870,13 @@ public class SignIn extends Entity implements Parsable {
         this.backingStore.set("clientCredentialType", value);
     }
     /**
+     * Sets the conditionalAccessAudiences property value. A list that indicates the audience that was evaluated by Conditional Access during a sign-in event.  Supports $filter (eq).
+     * @param value Value to set for the conditionalAccessAudiences property.
+     */
+    public void setConditionalAccessAudiences(@jakarta.annotation.Nullable final java.util.List<ConditionalAccessAudience> value) {
+        this.backingStore.set("conditionalAccessAudiences", value);
+    }
+    /**
      * Sets the conditionalAccessStatus property value. The status of the conditional access policy triggered. Possible values: success, failure, notApplied, or unknownFutureValue.  Supports $filter (eq).
      * @param value Value to set for the conditionalAccessStatus property.
      */
@@ -889,6 +926,13 @@ public class SignIn extends Entity implements Parsable {
         this.backingStore.set("flaggedForReview", value);
     }
     /**
+     * Sets the globalSecureAccessIpAddress property value. The Global Secure Access IP address that the sign-in was initiated from.
+     * @param value Value to set for the globalSecureAccessIpAddress property.
+     */
+    public void setGlobalSecureAccessIpAddress(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("globalSecureAccessIpAddress", value);
+    }
+    /**
      * Sets the homeTenantId property value. The tenant identifier of the user initiating the sign-in. Not applicable in Managed Identity or service principal sign ins.
      * @param value Value to set for the homeTenantId property.
      */
@@ -936,6 +980,13 @@ public class SignIn extends Entity implements Parsable {
      */
     public void setIsTenantRestricted(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isTenantRestricted", value);
+    }
+    /**
+     * Sets the isThroughGlobalSecureAccess property value. Indicates whether a user came through Global Secure Access service.
+     * @param value Value to set for the isThroughGlobalSecureAccess property.
+     */
+    public void setIsThroughGlobalSecureAccess(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isThroughGlobalSecureAccess", value);
     }
     /**
      * Sets the location property value. The city, state, and two letter country code from where the sign-in occurred.  Supports $filter (eq, startsWith) on city, state, and countryOrRegion properties.

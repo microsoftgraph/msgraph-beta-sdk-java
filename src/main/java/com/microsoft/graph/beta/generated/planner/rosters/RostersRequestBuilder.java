@@ -60,7 +60,7 @@ public class RostersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/planner/rosters{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Read-only. Nullable. Returns a collection of the specified rosters
+     * Read the properties and relationships of a plannerRoster object.
      * @return a {@link PlannerRosterCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -69,7 +69,7 @@ public class RostersRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read-only. Nullable. Returns a collection of the specified rosters
+     * Read the properties and relationships of a plannerRoster object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PlannerRosterCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -82,21 +82,23 @@ public class RostersRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PlannerRosterCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to rosters for planner
+     * Create a new plannerRoster object.
      * @param body The request body
      * @return a {@link PlannerRoster}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/planner-post-rosters?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PlannerRoster post(@jakarta.annotation.Nonnull final PlannerRoster body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to rosters for planner
+     * Create a new plannerRoster object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PlannerRoster}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/planner-post-rosters?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PlannerRoster post(@jakarta.annotation.Nonnull final PlannerRoster body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -107,7 +109,7 @@ public class RostersRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PlannerRoster::createFromDiscriminatorValue);
     }
     /**
-     * Read-only. Nullable. Returns a collection of the specified rosters
+     * Read the properties and relationships of a plannerRoster object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +117,7 @@ public class RostersRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read-only. Nullable. Returns a collection of the specified rosters
+     * Read the properties and relationships of a plannerRoster object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -127,7 +129,7 @@ public class RostersRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to rosters for planner
+     * Create a new plannerRoster object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -136,7 +138,7 @@ public class RostersRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to rosters for planner
+     * Create a new plannerRoster object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -161,7 +163,7 @@ public class RostersRequestBuilder extends BaseRequestBuilder {
         return new RostersRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Read-only. Nullable. Returns a collection of the specified rosters
+     * Read the properties and relationships of a plannerRoster object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

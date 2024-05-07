@@ -46,16 +46,18 @@ public class PlatformCredentialAuthenticationMethodItemRequestBuilder extends Ba
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/authentication/platformCredentialMethods/{platformCredentialAuthenticationMethod%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property platformCredentialMethods for users
+     * Delete a platformCredentialAuthenticationMethod object.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/platformcredentialauthenticationmethod-delete?view=graph-rest-beta">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property platformCredentialMethods for users
+     * Delete a platformCredentialAuthenticationMethod object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/platformcredentialauthenticationmethod-delete?view=graph-rest-beta">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -86,7 +88,7 @@ public class PlatformCredentialAuthenticationMethodItemRequestBuilder extends Ba
         return this.requestAdapter.send(requestInfo, errorMapping, PlatformCredentialAuthenticationMethod::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property platformCredentialMethods for users
+     * Delete a platformCredentialAuthenticationMethod object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -94,7 +96,7 @@ public class PlatformCredentialAuthenticationMethodItemRequestBuilder extends Ba
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property platformCredentialMethods for users
+     * Delete a platformCredentialAuthenticationMethod object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

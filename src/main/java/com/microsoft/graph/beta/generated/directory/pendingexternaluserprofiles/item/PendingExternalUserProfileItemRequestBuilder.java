@@ -37,16 +37,18 @@ public class PendingExternalUserProfileItemRequestBuilder extends BaseRequestBui
         super(requestAdapter, "{+baseurl}/directory/pendingExternalUserProfiles/{pendingExternalUserProfile%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property pendingExternalUserProfiles for directory
+     * Delete a pendingExternalUserProfile object. Note: To permanently delete the pendingExternalUserProfile, follow permanently delete an item. To restore a pendingExternalUserProfile, follow restore a deleted item.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/directory-delete-pendingexternaluserprofiles?view=graph-rest-beta">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property pendingExternalUserProfiles for directory
+     * Delete a pendingExternalUserProfile object. Note: To permanently delete the pendingExternalUserProfile, follow permanently delete an item. To restore a pendingExternalUserProfile, follow restore a deleted item.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/directory-delete-pendingexternaluserprofiles?view=graph-rest-beta">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -55,19 +57,21 @@ public class PendingExternalUserProfileItemRequestBuilder extends BaseRequestBui
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Collection of pending external user profiles representing collaborators in the directory that are unredeemed.
+     * Retrieve the properties of a specific pendingExternalUserProfile.
      * @return a {@link PendingExternalUserProfile}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/pendingexternaluserprofile-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PendingExternalUserProfile get() {
         return get(null);
     }
     /**
-     * Collection of pending external user profiles representing collaborators in the directory that are unredeemed.
+     * Retrieve the properties of a specific pendingExternalUserProfile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PendingExternalUserProfile}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/pendingexternaluserprofile-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PendingExternalUserProfile get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -77,21 +81,23 @@ public class PendingExternalUserProfileItemRequestBuilder extends BaseRequestBui
         return this.requestAdapter.send(requestInfo, errorMapping, PendingExternalUserProfile::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property pendingExternalUserProfiles in directory
+     * Update the properties of a pendingExternalUserProfile object.
      * @param body The request body
      * @return a {@link PendingExternalUserProfile}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/pendingexternaluserprofile-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PendingExternalUserProfile patch(@jakarta.annotation.Nonnull final PendingExternalUserProfile body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property pendingExternalUserProfiles in directory
+     * Update the properties of a pendingExternalUserProfile object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PendingExternalUserProfile}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/pendingexternaluserprofile-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PendingExternalUserProfile patch(@jakarta.annotation.Nonnull final PendingExternalUserProfile body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -102,7 +108,7 @@ public class PendingExternalUserProfileItemRequestBuilder extends BaseRequestBui
         return this.requestAdapter.send(requestInfo, errorMapping, PendingExternalUserProfile::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property pendingExternalUserProfiles for directory
+     * Delete a pendingExternalUserProfile object. Note: To permanently delete the pendingExternalUserProfile, follow permanently delete an item. To restore a pendingExternalUserProfile, follow restore a deleted item.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -110,7 +116,7 @@ public class PendingExternalUserProfileItemRequestBuilder extends BaseRequestBui
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property pendingExternalUserProfiles for directory
+     * Delete a pendingExternalUserProfile object. Note: To permanently delete the pendingExternalUserProfile, follow permanently delete an item. To restore a pendingExternalUserProfile, follow restore a deleted item.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -122,7 +128,7 @@ public class PendingExternalUserProfileItemRequestBuilder extends BaseRequestBui
         return requestInfo;
     }
     /**
-     * Collection of pending external user profiles representing collaborators in the directory that are unredeemed.
+     * Retrieve the properties of a specific pendingExternalUserProfile.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +136,7 @@ public class PendingExternalUserProfileItemRequestBuilder extends BaseRequestBui
         return toGetRequestInformation(null);
     }
     /**
-     * Collection of pending external user profiles representing collaborators in the directory that are unredeemed.
+     * Retrieve the properties of a specific pendingExternalUserProfile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -142,7 +148,7 @@ public class PendingExternalUserProfileItemRequestBuilder extends BaseRequestBui
         return requestInfo;
     }
     /**
-     * Update the navigation property pendingExternalUserProfiles in directory
+     * Update the properties of a pendingExternalUserProfile object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -151,7 +157,7 @@ public class PendingExternalUserProfileItemRequestBuilder extends BaseRequestBui
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property pendingExternalUserProfiles in directory
+     * Update the properties of a pendingExternalUserProfile object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -182,7 +188,7 @@ public class PendingExternalUserProfileItemRequestBuilder extends BaseRequestBui
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Collection of pending external user profiles representing collaborators in the directory that are unredeemed.
+     * Retrieve the properties of a specific pendingExternalUserProfile.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

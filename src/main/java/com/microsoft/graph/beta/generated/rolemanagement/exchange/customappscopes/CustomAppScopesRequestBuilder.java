@@ -60,19 +60,21 @@ public class CustomAppScopesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/roleManagement/exchange/customAppScopes{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Workload-specific scope object that represents the resources for which the principal has been granted access.
+     * Get a list of customAppScope objects for an RBAC provider. Currently only the Exchange Online RBAC provider is supported.
      * @return a {@link CustomAppScopeCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/unifiedrbacapplication-list-customappscopes?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CustomAppScopeCollectionResponse get() {
         return get(null);
     }
     /**
-     * Workload-specific scope object that represents the resources for which the principal has been granted access.
+     * Get a list of customAppScope objects for an RBAC provider. Currently only the Exchange Online RBAC provider is supported.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CustomAppScopeCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/unifiedrbacapplication-list-customappscopes?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CustomAppScopeCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,21 +84,23 @@ public class CustomAppScopesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CustomAppScopeCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to customAppScopes for roleManagement
+     * Create a new customAppScope object for an RBAC provider. Currently only the Exchange Online RBAC provider is supported.
      * @param body The request body
      * @return a {@link CustomAppScope}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/unifiedrbacapplication-post-customappscope?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CustomAppScope post(@jakarta.annotation.Nonnull final CustomAppScope body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to customAppScopes for roleManagement
+     * Create a new customAppScope object for an RBAC provider. Currently only the Exchange Online RBAC provider is supported.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CustomAppScope}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/unifiedrbacapplication-post-customappscope?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CustomAppScope post(@jakarta.annotation.Nonnull final CustomAppScope body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -107,7 +111,7 @@ public class CustomAppScopesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CustomAppScope::createFromDiscriminatorValue);
     }
     /**
-     * Workload-specific scope object that represents the resources for which the principal has been granted access.
+     * Get a list of customAppScope objects for an RBAC provider. Currently only the Exchange Online RBAC provider is supported.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +119,7 @@ public class CustomAppScopesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Workload-specific scope object that represents the resources for which the principal has been granted access.
+     * Get a list of customAppScope objects for an RBAC provider. Currently only the Exchange Online RBAC provider is supported.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -127,7 +131,7 @@ public class CustomAppScopesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to customAppScopes for roleManagement
+     * Create a new customAppScope object for an RBAC provider. Currently only the Exchange Online RBAC provider is supported.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -136,7 +140,7 @@ public class CustomAppScopesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to customAppScopes for roleManagement
+     * Create a new customAppScope object for an RBAC provider. Currently only the Exchange Online RBAC provider is supported.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -161,7 +165,7 @@ public class CustomAppScopesRequestBuilder extends BaseRequestBuilder {
         return new CustomAppScopesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Workload-specific scope object that represents the resources for which the principal has been granted access.
+     * Get a list of customAppScope objects for an RBAC provider. Currently only the Exchange Online RBAC provider is supported.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

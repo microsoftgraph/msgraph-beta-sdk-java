@@ -55,19 +55,21 @@ public class FileThreatSubmissionItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get fileThreats from security
+     * Read the properties and relationships of a fileThreatSubmission object.
      * @return a {@link FileThreatSubmission}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-filethreatsubmission-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public FileThreatSubmission get() {
         return get(null);
     }
     /**
-     * Get fileThreats from security
+     * Read the properties and relationships of a fileThreatSubmission object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link FileThreatSubmission}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-filethreatsubmission-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public FileThreatSubmission get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -122,7 +124,7 @@ public class FileThreatSubmissionItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get fileThreats from security
+     * Read the properties and relationships of a fileThreatSubmission object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +132,7 @@ public class FileThreatSubmissionItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get fileThreats from security
+     * Read the properties and relationships of a fileThreatSubmission object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +184,7 @@ public class FileThreatSubmissionItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get fileThreats from security
+     * Read the properties and relationships of a fileThreatSubmission object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

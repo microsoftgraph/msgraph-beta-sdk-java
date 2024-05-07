@@ -73,16 +73,18 @@ public class UnifiedRoleAssignmentMultipleItemRequestBuilder extends BaseRequest
         super(requestAdapter, "{+baseurl}/roleManagement/cloudPC/roleAssignments/{unifiedRoleAssignmentMultiple%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property roleAssignments for roleManagement
+     * Delete a unifiedRoleAssignmentMultiple object of an RBAC provider.  This is applicable for a RBAC application that supports multiple principals and scopes. The following RBAC providers are currently supported:- Cloud PC - device management (Intune)
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/unifiedroleassignmentmultiple-delete?view=graph-rest-beta">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property roleAssignments for roleManagement
+     * Delete a unifiedRoleAssignmentMultiple object of an RBAC provider.  This is applicable for a RBAC application that supports multiple principals and scopes. The following RBAC providers are currently supported:- Cloud PC - device management (Intune)
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/unifiedroleassignmentmultiple-delete?view=graph-rest-beta">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -91,19 +93,21 @@ public class UnifiedRoleAssignmentMultipleItemRequestBuilder extends BaseRequest
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get roleAssignments from roleManagement
+     * Get the properties and relationships of a unifiedRoleAssignmentMultiple object of an RBAC provider.  The following RBAC providers are currently supported:- Cloud PC - device management (Intune) For other Microsoft 365 applications (like Microsoft Entra ID), use unifiedRoleAssignment.
      * @return a {@link UnifiedRoleAssignmentMultiple}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/unifiedroleassignmentmultiple-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UnifiedRoleAssignmentMultiple get() {
         return get(null);
     }
     /**
-     * Get roleAssignments from roleManagement
+     * Get the properties and relationships of a unifiedRoleAssignmentMultiple object of an RBAC provider.  The following RBAC providers are currently supported:- Cloud PC - device management (Intune) For other Microsoft 365 applications (like Microsoft Entra ID), use unifiedRoleAssignment.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UnifiedRoleAssignmentMultiple}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/unifiedroleassignmentmultiple-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UnifiedRoleAssignmentMultiple get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -113,21 +117,23 @@ public class UnifiedRoleAssignmentMultipleItemRequestBuilder extends BaseRequest
         return this.requestAdapter.send(requestInfo, errorMapping, UnifiedRoleAssignmentMultiple::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property roleAssignments in roleManagement
+     * Update an existing unifiedRoleAssignmentMultiple object of an RBAC provider.  The following RBAC providers are currently supported:- Cloud PC - device management (Intune) In contrast, unifiedRoleAssignment does not support update.
      * @param body The request body
      * @return a {@link UnifiedRoleAssignmentMultiple}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/unifiedroleassignmentmultiple-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UnifiedRoleAssignmentMultiple patch(@jakarta.annotation.Nonnull final UnifiedRoleAssignmentMultiple body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property roleAssignments in roleManagement
+     * Update an existing unifiedRoleAssignmentMultiple object of an RBAC provider.  The following RBAC providers are currently supported:- Cloud PC - device management (Intune) In contrast, unifiedRoleAssignment does not support update.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UnifiedRoleAssignmentMultiple}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/unifiedroleassignmentmultiple-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UnifiedRoleAssignmentMultiple patch(@jakarta.annotation.Nonnull final UnifiedRoleAssignmentMultiple body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -138,7 +144,7 @@ public class UnifiedRoleAssignmentMultipleItemRequestBuilder extends BaseRequest
         return this.requestAdapter.send(requestInfo, errorMapping, UnifiedRoleAssignmentMultiple::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property roleAssignments for roleManagement
+     * Delete a unifiedRoleAssignmentMultiple object of an RBAC provider.  This is applicable for a RBAC application that supports multiple principals and scopes. The following RBAC providers are currently supported:- Cloud PC - device management (Intune)
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -146,7 +152,7 @@ public class UnifiedRoleAssignmentMultipleItemRequestBuilder extends BaseRequest
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property roleAssignments for roleManagement
+     * Delete a unifiedRoleAssignmentMultiple object of an RBAC provider.  This is applicable for a RBAC application that supports multiple principals and scopes. The following RBAC providers are currently supported:- Cloud PC - device management (Intune)
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -158,7 +164,7 @@ public class UnifiedRoleAssignmentMultipleItemRequestBuilder extends BaseRequest
         return requestInfo;
     }
     /**
-     * Get roleAssignments from roleManagement
+     * Get the properties and relationships of a unifiedRoleAssignmentMultiple object of an RBAC provider.  The following RBAC providers are currently supported:- Cloud PC - device management (Intune) For other Microsoft 365 applications (like Microsoft Entra ID), use unifiedRoleAssignment.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -166,7 +172,7 @@ public class UnifiedRoleAssignmentMultipleItemRequestBuilder extends BaseRequest
         return toGetRequestInformation(null);
     }
     /**
-     * Get roleAssignments from roleManagement
+     * Get the properties and relationships of a unifiedRoleAssignmentMultiple object of an RBAC provider.  The following RBAC providers are currently supported:- Cloud PC - device management (Intune) For other Microsoft 365 applications (like Microsoft Entra ID), use unifiedRoleAssignment.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -178,7 +184,7 @@ public class UnifiedRoleAssignmentMultipleItemRequestBuilder extends BaseRequest
         return requestInfo;
     }
     /**
-     * Update the navigation property roleAssignments in roleManagement
+     * Update an existing unifiedRoleAssignmentMultiple object of an RBAC provider.  The following RBAC providers are currently supported:- Cloud PC - device management (Intune) In contrast, unifiedRoleAssignment does not support update.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -187,7 +193,7 @@ public class UnifiedRoleAssignmentMultipleItemRequestBuilder extends BaseRequest
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property roleAssignments in roleManagement
+     * Update an existing unifiedRoleAssignmentMultiple object of an RBAC provider.  The following RBAC providers are currently supported:- Cloud PC - device management (Intune) In contrast, unifiedRoleAssignment does not support update.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -218,7 +224,7 @@ public class UnifiedRoleAssignmentMultipleItemRequestBuilder extends BaseRequest
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get roleAssignments from roleManagement
+     * Get the properties and relationships of a unifiedRoleAssignmentMultiple object of an RBAC provider.  The following RBAC providers are currently supported:- Cloud PC - device management (Intune) For other Microsoft 365 applications (like Microsoft Entra ID), use unifiedRoleAssignment.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

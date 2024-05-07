@@ -37,16 +37,18 @@ public class SourceSystemDefinitionItemRequestBuilder extends BaseRequestBuilder
         super(requestAdapter, "{+baseurl}/external/industryData/sourceSystems/{sourceSystemDefinition%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property sourceSystems for external
+     * Delete a sourceSystemDefinition object.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-sourcesystemdefinition-delete?view=graph-rest-beta">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property sourceSystems for external
+     * Delete a sourceSystemDefinition object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-sourcesystemdefinition-delete?view=graph-rest-beta">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -55,19 +57,21 @@ public class SourceSystemDefinitionItemRequestBuilder extends BaseRequestBuilder
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Set of source definitions that represents real-world external systems.
+     * Read the properties and relationships of a sourceSystemDefinition object.
      * @return a {@link SourceSystemDefinition}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-sourcesystemdefinition-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SourceSystemDefinition get() {
         return get(null);
     }
     /**
-     * Set of source definitions that represents real-world external systems.
+     * Read the properties and relationships of a sourceSystemDefinition object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SourceSystemDefinition}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-sourcesystemdefinition-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SourceSystemDefinition get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -77,21 +81,23 @@ public class SourceSystemDefinitionItemRequestBuilder extends BaseRequestBuilder
         return this.requestAdapter.send(requestInfo, errorMapping, SourceSystemDefinition::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property sourceSystems in external
+     * Update the properties of a sourceSystemDefinition object.
      * @param body The request body
      * @return a {@link SourceSystemDefinition}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-sourcesystemdefinition-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SourceSystemDefinition patch(@jakarta.annotation.Nonnull final SourceSystemDefinition body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property sourceSystems in external
+     * Update the properties of a sourceSystemDefinition object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SourceSystemDefinition}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-sourcesystemdefinition-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SourceSystemDefinition patch(@jakarta.annotation.Nonnull final SourceSystemDefinition body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -102,7 +108,7 @@ public class SourceSystemDefinitionItemRequestBuilder extends BaseRequestBuilder
         return this.requestAdapter.send(requestInfo, errorMapping, SourceSystemDefinition::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property sourceSystems for external
+     * Delete a sourceSystemDefinition object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -110,7 +116,7 @@ public class SourceSystemDefinitionItemRequestBuilder extends BaseRequestBuilder
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property sourceSystems for external
+     * Delete a sourceSystemDefinition object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -122,7 +128,7 @@ public class SourceSystemDefinitionItemRequestBuilder extends BaseRequestBuilder
         return requestInfo;
     }
     /**
-     * Set of source definitions that represents real-world external systems.
+     * Read the properties and relationships of a sourceSystemDefinition object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +136,7 @@ public class SourceSystemDefinitionItemRequestBuilder extends BaseRequestBuilder
         return toGetRequestInformation(null);
     }
     /**
-     * Set of source definitions that represents real-world external systems.
+     * Read the properties and relationships of a sourceSystemDefinition object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -142,7 +148,7 @@ public class SourceSystemDefinitionItemRequestBuilder extends BaseRequestBuilder
         return requestInfo;
     }
     /**
-     * Update the navigation property sourceSystems in external
+     * Update the properties of a sourceSystemDefinition object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -151,7 +157,7 @@ public class SourceSystemDefinitionItemRequestBuilder extends BaseRequestBuilder
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property sourceSystems in external
+     * Update the properties of a sourceSystemDefinition object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -182,7 +188,7 @@ public class SourceSystemDefinitionItemRequestBuilder extends BaseRequestBuilder
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Set of source definitions that represents real-world external systems.
+     * Read the properties and relationships of a sourceSystemDefinition object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

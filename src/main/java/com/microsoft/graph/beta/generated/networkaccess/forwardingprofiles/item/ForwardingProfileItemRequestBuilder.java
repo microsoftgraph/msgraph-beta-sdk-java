@@ -73,19 +73,21 @@ public class ForwardingProfileItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * A forwarding profile determines which types of traffic are routed through the Global Secure Access services and which ones are skipped. The handling of specific traffic is determined by the forwarding policies that are added to the forwarding profile.
+     * Retrieve information about a specific forwarding profile.
      * @return a {@link ForwardingProfile}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-forwardingprofile-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ForwardingProfile get() {
         return get(null);
     }
     /**
-     * A forwarding profile determines which types of traffic are routed through the Global Secure Access services and which ones are skipped. The handling of specific traffic is determined by the forwarding policies that are added to the forwarding profile.
+     * Retrieve information about a specific forwarding profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ForwardingProfile}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-forwardingprofile-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ForwardingProfile get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -95,21 +97,23 @@ public class ForwardingProfileItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ForwardingProfile::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property forwardingProfiles in networkAccess
+     * Update an existing forwarding profile.
      * @param body The request body
      * @return a {@link ForwardingProfile}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-forwardingprofile-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ForwardingProfile patch(@jakarta.annotation.Nonnull final ForwardingProfile body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property forwardingProfiles in networkAccess
+     * Update an existing forwarding profile.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ForwardingProfile}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-forwardingprofile-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ForwardingProfile patch(@jakarta.annotation.Nonnull final ForwardingProfile body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -140,7 +144,7 @@ public class ForwardingProfileItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * A forwarding profile determines which types of traffic are routed through the Global Secure Access services and which ones are skipped. The handling of specific traffic is determined by the forwarding policies that are added to the forwarding profile.
+     * Retrieve information about a specific forwarding profile.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -148,7 +152,7 @@ public class ForwardingProfileItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * A forwarding profile determines which types of traffic are routed through the Global Secure Access services and which ones are skipped. The handling of specific traffic is determined by the forwarding policies that are added to the forwarding profile.
+     * Retrieve information about a specific forwarding profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -160,7 +164,7 @@ public class ForwardingProfileItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property forwardingProfiles in networkAccess
+     * Update an existing forwarding profile.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -169,7 +173,7 @@ public class ForwardingProfileItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property forwardingProfiles in networkAccess
+     * Update an existing forwarding profile.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -200,7 +204,7 @@ public class ForwardingProfileItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * A forwarding profile determines which types of traffic are routed through the Global Secure Access services and which ones are skipped. The handling of specific traffic is determined by the forwarding policies that are added to the forwarding profile.
+     * Retrieve information about a specific forwarding profile.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

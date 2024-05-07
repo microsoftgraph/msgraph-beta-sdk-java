@@ -66,11 +66,12 @@ public class CasesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/compliance/ediscovery/cases{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get cases from compliance
+     * Retrieve a list of case objects.
      * @return a {@link CaseCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
+     * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-case-list?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -78,12 +79,13 @@ public class CasesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get cases from compliance
+     * Retrieve a list of case objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CaseCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
+     * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-case-list?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -94,12 +96,13 @@ public class CasesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CaseCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to cases for compliance
+     * Create a new case object.
      * @param body The request body
      * @return a {@link CaseEscaped}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
+     * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-case-post?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -107,13 +110,14 @@ public class CasesRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create new navigation property to cases for compliance
+     * Create a new case object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CaseEscaped}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
+     * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-case-post?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -125,7 +129,7 @@ public class CasesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CaseEscaped::createFromDiscriminatorValue);
     }
     /**
-     * Get cases from compliance
+     * Retrieve a list of case objects.
      * @return a {@link RequestInformation}
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
@@ -136,7 +140,7 @@ public class CasesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get cases from compliance
+     * Retrieve a list of case objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -151,7 +155,7 @@ public class CasesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to cases for compliance
+     * Create a new case object.
      * @param body The request body
      * @return a {@link RequestInformation}
      * @deprecated
@@ -163,7 +167,7 @@ public class CasesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to cases for compliance
+     * Create a new case object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -194,7 +198,7 @@ public class CasesRequestBuilder extends BaseRequestBuilder {
         return new CasesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get cases from compliance
+     * Retrieve a list of case objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

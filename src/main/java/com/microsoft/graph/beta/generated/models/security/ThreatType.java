@@ -8,7 +8,7 @@ public enum ThreatType implements ValuedEnum {
     Unknown("unknown"),
     Spam("spam"),
     Malware("malware"),
-    Phishing("phishing"),
+    Phish("phish"),
     None("none"),
     UnknownFutureValue("unknownFutureValue");
     public final String value;
@@ -24,7 +24,7 @@ public enum ThreatType implements ValuedEnum {
             case "unknown": return Unknown;
             case "spam": return Spam;
             case "malware": return Malware;
-            case "phishing": return Phishing;
+            case "phish": return Phish;
             case "none": return None;
             case "unknownFutureValue": return UnknownFutureValue;
             default: return null;

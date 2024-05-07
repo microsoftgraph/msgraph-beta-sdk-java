@@ -60,19 +60,21 @@ public class AlertRulesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/monitoring/alertRules{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * The collection of alert rules.
+     * Get a list of the alertRule objects and their properties.
      * @return a {@link AlertRuleCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/devicemanagement-alertrule-list?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AlertRuleCollectionResponse get() {
         return get(null);
     }
     /**
-     * The collection of alert rules.
+     * Get a list of the alertRule objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AlertRuleCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/devicemanagement-alertrule-list?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AlertRuleCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,21 +84,23 @@ public class AlertRulesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AlertRuleCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to alertRules for deviceManagement
+     * Create an alertRule object.
      * @param body The request body
      * @return a {@link AlertRule}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/devicemanagement-alertrule-post?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AlertRule post(@jakarta.annotation.Nonnull final AlertRule body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to alertRules for deviceManagement
+     * Create an alertRule object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AlertRule}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/devicemanagement-alertrule-post?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AlertRule post(@jakarta.annotation.Nonnull final AlertRule body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -107,7 +111,7 @@ public class AlertRulesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AlertRule::createFromDiscriminatorValue);
     }
     /**
-     * The collection of alert rules.
+     * Get a list of the alertRule objects and their properties.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +119,7 @@ public class AlertRulesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The collection of alert rules.
+     * Get a list of the alertRule objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -127,7 +131,7 @@ public class AlertRulesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to alertRules for deviceManagement
+     * Create an alertRule object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -136,7 +140,7 @@ public class AlertRulesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to alertRules for deviceManagement
+     * Create an alertRule object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -161,7 +165,7 @@ public class AlertRulesRequestBuilder extends BaseRequestBuilder {
         return new AlertRulesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The collection of alert rules.
+     * Get a list of the alertRule objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

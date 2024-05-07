@@ -60,19 +60,21 @@ public class MyDecisionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/accessReviews/{accessReview%2Did}/myDecisions{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * The collection of decisions for the caller, if the caller is a reviewer.
+     * In the Microsoft Entra access reviews feature, retrieve the decisions of an accessReview object for the calling user as reviewer.
      * @return a {@link AccessReviewDecisionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/accessreview-listmydecisions?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AccessReviewDecisionCollectionResponse get() {
         return get(null);
     }
     /**
-     * The collection of decisions for the caller, if the caller is a reviewer.
+     * In the Microsoft Entra access reviews feature, retrieve the decisions of an accessReview object for the calling user as reviewer.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AccessReviewDecisionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/accessreview-listmydecisions?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AccessReviewDecisionCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -107,7 +109,7 @@ public class MyDecisionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AccessReviewDecision::createFromDiscriminatorValue);
     }
     /**
-     * The collection of decisions for the caller, if the caller is a reviewer.
+     * In the Microsoft Entra access reviews feature, retrieve the decisions of an accessReview object for the calling user as reviewer.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +117,7 @@ public class MyDecisionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The collection of decisions for the caller, if the caller is a reviewer.
+     * In the Microsoft Entra access reviews feature, retrieve the decisions of an accessReview object for the calling user as reviewer.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +163,7 @@ public class MyDecisionsRequestBuilder extends BaseRequestBuilder {
         return new MyDecisionsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The collection of decisions for the caller, if the caller is a reviewer.
+     * In the Microsoft Entra access reviews feature, retrieve the decisions of an accessReview object for the calling user as reviewer.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

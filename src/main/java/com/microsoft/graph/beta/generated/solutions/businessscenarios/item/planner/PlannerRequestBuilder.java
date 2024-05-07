@@ -91,19 +91,21 @@ public class PlannerRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Planner content related to the scenario.
+     * Read the properties and relationships of a businessScenarioPlanner object.
      * @return a {@link BusinessScenarioPlanner}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/businessscenarioplanner-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public BusinessScenarioPlanner get() {
         return get(null);
     }
     /**
-     * Planner content related to the scenario.
+     * Read the properties and relationships of a businessScenarioPlanner object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link BusinessScenarioPlanner}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/businessscenarioplanner-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public BusinessScenarioPlanner get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -158,7 +160,7 @@ public class PlannerRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Planner content related to the scenario.
+     * Read the properties and relationships of a businessScenarioPlanner object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -166,7 +168,7 @@ public class PlannerRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Planner content related to the scenario.
+     * Read the properties and relationships of a businessScenarioPlanner object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -218,7 +220,7 @@ public class PlannerRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Planner content related to the scenario.
+     * Read the properties and relationships of a businessScenarioPlanner object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

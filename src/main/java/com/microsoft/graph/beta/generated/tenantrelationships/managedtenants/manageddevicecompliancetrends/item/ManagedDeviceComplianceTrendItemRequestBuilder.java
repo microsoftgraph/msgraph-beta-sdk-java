@@ -55,19 +55,21 @@ public class ManagedDeviceComplianceTrendItemRequestBuilder extends BaseRequestB
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Trend insights for device compliance across managed tenants.
+     * Read the properties and relationships of a managedDeviceComplianceTrend object.
      * @return a {@link ManagedDeviceComplianceTrend}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-manageddevicecompliancetrend-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ManagedDeviceComplianceTrend get() {
         return get(null);
     }
     /**
-     * Trend insights for device compliance across managed tenants.
+     * Read the properties and relationships of a managedDeviceComplianceTrend object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ManagedDeviceComplianceTrend}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-manageddevicecompliancetrend-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ManagedDeviceComplianceTrend get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -122,7 +124,7 @@ public class ManagedDeviceComplianceTrendItemRequestBuilder extends BaseRequestB
         return requestInfo;
     }
     /**
-     * Trend insights for device compliance across managed tenants.
+     * Read the properties and relationships of a managedDeviceComplianceTrend object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +132,7 @@ public class ManagedDeviceComplianceTrendItemRequestBuilder extends BaseRequestB
         return toGetRequestInformation(null);
     }
     /**
-     * Trend insights for device compliance across managed tenants.
+     * Read the properties and relationships of a managedDeviceComplianceTrend object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +184,7 @@ public class ManagedDeviceComplianceTrendItemRequestBuilder extends BaseRequestB
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Trend insights for device compliance across managed tenants.
+     * Read the properties and relationships of a managedDeviceComplianceTrend object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

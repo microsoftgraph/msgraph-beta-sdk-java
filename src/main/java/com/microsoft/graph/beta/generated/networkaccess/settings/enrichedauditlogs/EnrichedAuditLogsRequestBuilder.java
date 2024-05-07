@@ -77,21 +77,23 @@ public class EnrichedAuditLogsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EnrichedAuditLogs::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property enrichedAuditLogs in networkAccess
+     * Update the settings for the enriched audit logs workloads to control the enrichment feature for each partner workload, such as SharePoint, Teams, and Exchange.
      * @param body The request body
      * @return a {@link EnrichedAuditLogs}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-enrichedauditlogs-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EnrichedAuditLogs patch(@jakarta.annotation.Nonnull final EnrichedAuditLogs body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property enrichedAuditLogs in networkAccess
+     * Update the settings for the enriched audit logs workloads to control the enrichment feature for each partner workload, such as SharePoint, Teams, and Exchange.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EnrichedAuditLogs}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-enrichedauditlogs-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EnrichedAuditLogs patch(@jakarta.annotation.Nonnull final EnrichedAuditLogs body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -142,7 +144,7 @@ public class EnrichedAuditLogsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property enrichedAuditLogs in networkAccess
+     * Update the settings for the enriched audit logs workloads to control the enrichment feature for each partner workload, such as SharePoint, Teams, and Exchange.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -151,7 +153,7 @@ public class EnrichedAuditLogsRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property enrichedAuditLogs in networkAccess
+     * Update the settings for the enriched audit logs workloads to control the enrichment feature for each partner workload, such as SharePoint, Teams, and Exchange.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

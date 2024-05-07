@@ -55,19 +55,21 @@ public class WindowsProtectionStateItemRequestBuilder extends BaseRequestBuilder
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * The protection state for Windows devices, registered with Microsoft Endpoint Manager, across managed tenants.
+     * Read the properties and relationships of a windowsProtectionState object.
      * @return a {@link WindowsProtectionState}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-windowsprotectionstate-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WindowsProtectionState get() {
         return get(null);
     }
     /**
-     * The protection state for Windows devices, registered with Microsoft Endpoint Manager, across managed tenants.
+     * Read the properties and relationships of a windowsProtectionState object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link WindowsProtectionState}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-windowsprotectionstate-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WindowsProtectionState get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -122,7 +124,7 @@ public class WindowsProtectionStateItemRequestBuilder extends BaseRequestBuilder
         return requestInfo;
     }
     /**
-     * The protection state for Windows devices, registered with Microsoft Endpoint Manager, across managed tenants.
+     * Read the properties and relationships of a windowsProtectionState object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +132,7 @@ public class WindowsProtectionStateItemRequestBuilder extends BaseRequestBuilder
         return toGetRequestInformation(null);
     }
     /**
-     * The protection state for Windows devices, registered with Microsoft Endpoint Manager, across managed tenants.
+     * Read the properties and relationships of a windowsProtectionState object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +184,7 @@ public class WindowsProtectionStateItemRequestBuilder extends BaseRequestBuilder
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The protection state for Windows devices, registered with Microsoft Endpoint Manager, across managed tenants.
+     * Read the properties and relationships of a windowsProtectionState object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -67,7 +67,7 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AttachmentsRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/outlook/tasks/{outlookTask%2Did}/attachments{?%24count,%24expand,%24filter,%24orderby,%24select,%24skip,%24top}", pathParameters);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/outlook/tasks/{outlookTask%2Did}/attachments{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
      * Instantiates a new {@link AttachmentsRequestBuilder} and sets the default values.
@@ -75,14 +75,15 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AttachmentsRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/outlook/tasks/{outlookTask%2Did}/attachments{?%24count,%24expand,%24filter,%24orderby,%24select,%24skip,%24top}", rawUrl);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/outlook/tasks/{outlookTask%2Did}/attachments{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * The collection of fileAttachment, itemAttachment, and referenceAttachment attachments for the task.  Read-only. Nullable.
+     * Get a list of attachment objects attached to an Outlook task.
      * @return a {@link AttachmentCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The Outlook tasks API is deprecated and will stop returning data on February 20, 2023. Please use the new To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/ as of 2020-08/Outlook_Tasks
+     * @see <a href="https://learn.microsoft.com/graph/api/outlooktask-list-attachments?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -90,12 +91,13 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * The collection of fileAttachment, itemAttachment, and referenceAttachment attachments for the task.  Read-only. Nullable.
+     * Get a list of attachment objects attached to an Outlook task.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AttachmentCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The Outlook tasks API is deprecated and will stop returning data on February 20, 2023. Please use the new To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/ as of 2020-08/Outlook_Tasks
+     * @see <a href="https://learn.microsoft.com/graph/api/outlooktask-list-attachments?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -137,7 +139,7 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Attachment::createFromDiscriminatorValue);
     }
     /**
-     * The collection of fileAttachment, itemAttachment, and referenceAttachment attachments for the task.  Read-only. Nullable.
+     * Get a list of attachment objects attached to an Outlook task.
      * @return a {@link RequestInformation}
      * @deprecated
      * The Outlook tasks API is deprecated and will stop returning data on February 20, 2023. Please use the new To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/ as of 2020-08/Outlook_Tasks
@@ -148,7 +150,7 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The collection of fileAttachment, itemAttachment, and referenceAttachment attachments for the task.  Read-only. Nullable.
+     * Get a list of attachment objects attached to an Outlook task.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -206,7 +208,7 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
         return new AttachmentsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The collection of fileAttachment, itemAttachment, and referenceAttachment attachments for the task.  Read-only. Nullable.
+     * Get a list of attachment objects attached to an Outlook task.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
@@ -231,6 +233,11 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
         @jakarta.annotation.Nullable
         public String[] orderby;
         /**
+         * Search items by search phrases
+         */
+        @jakarta.annotation.Nullable
+        public String search;
+        /**
          * Select properties to be returned
          */
         @jakarta.annotation.Nullable
@@ -254,6 +261,7 @@ public class AttachmentsRequestBuilder extends BaseRequestBuilder {
             final Map<String, Object> allQueryParams = new HashMap();
             allQueryParams.put("%24count", count);
             allQueryParams.put("%24filter", filter);
+            allQueryParams.put("%24search", search);
             allQueryParams.put("%24skip", skip);
             allQueryParams.put("%24top", top);
             allQueryParams.put("%24expand", expand);

@@ -41,7 +41,7 @@ public class MicrosoftGraphCallRecordsGetSmsLogWithFromDateTimeWithToDateTimeReq
         super(requestAdapter, "{+baseurl}/communications/callRecords/microsoft.graph.callRecords.getSmsLog(fromDateTime={fromDateTime},toDateTime={toDateTime}){?%24count,%24filter,%24search,%24skip,%24top}", rawUrl);
     }
     /**
-     * Invoke function getSmsLog
+     * Get the log of a sent/received SMS as a collection of smsLogRow entries.
      * @return a {@link GetSmsLogWithFromDateTimeWithToDateTimeGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -50,7 +50,7 @@ public class MicrosoftGraphCallRecordsGetSmsLogWithFromDateTimeWithToDateTimeReq
         return get(null);
     }
     /**
-     * Invoke function getSmsLog
+     * Get the log of a sent/received SMS as a collection of smsLogRow entries.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GetSmsLogWithFromDateTimeWithToDateTimeGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -63,7 +63,7 @@ public class MicrosoftGraphCallRecordsGetSmsLogWithFromDateTimeWithToDateTimeReq
         return this.requestAdapter.send(requestInfo, errorMapping, GetSmsLogWithFromDateTimeWithToDateTimeGetResponse::createFromDiscriminatorValue);
     }
     /**
-     * Invoke function getSmsLog
+     * Get the log of a sent/received SMS as a collection of smsLogRow entries.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -71,7 +71,7 @@ public class MicrosoftGraphCallRecordsGetSmsLogWithFromDateTimeWithToDateTimeReq
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function getSmsLog
+     * Get the log of a sent/received SMS as a collection of smsLogRow entries.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -93,7 +93,7 @@ public class MicrosoftGraphCallRecordsGetSmsLogWithFromDateTimeWithToDateTimeReq
         return new MicrosoftGraphCallRecordsGetSmsLogWithFromDateTimeWithToDateTimeRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Invoke function getSmsLog
+     * Get the log of a sent/received SMS as a collection of smsLogRow entries.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -67,14 +67,6 @@ public class RemediatePostRequestBody implements AdditionalDataHolder, BackedMod
         return this.backingStore.get("analyzedEmails");
     }
     /**
-     * Gets the approverUpn property value. The approverUpn property
-     * @return a {@link String}
-     */
-    @jakarta.annotation.Nullable
-    public String getApproverUpn() {
-        return this.backingStore.get("approverUpn");
-    }
-    /**
      * Gets the backingStore property value. Stores model information.
      * @return a {@link BackingStore}
      */
@@ -104,10 +96,9 @@ public class RemediatePostRequestBody implements AdditionalDataHolder, BackedMod
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("action", (n) -> { this.setAction(n.getEnumValue(RemediationAction::forValue)); });
         deserializerMap.put("analyzedEmails", (n) -> { this.setAnalyzedEmails(n.getCollectionOfObjectValues(AnalyzedEmail::createFromDiscriminatorValue)); });
-        deserializerMap.put("approverUpn", (n) -> { this.setApproverUpn(n.getStringValue()); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("remediateSendersCopy", (n) -> { this.setRemediateSendersCopy(n.getBooleanValue()); });
@@ -138,7 +129,6 @@ public class RemediatePostRequestBody implements AdditionalDataHolder, BackedMod
         Objects.requireNonNull(writer);
         writer.writeEnumValue("action", this.getAction());
         writer.writeCollectionOfObjectValues("analyzedEmails", this.getAnalyzedEmails());
-        writer.writeStringValue("approverUpn", this.getApproverUpn());
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeBooleanValue("remediateSendersCopy", this.getRemediateSendersCopy());
@@ -165,13 +155,6 @@ public class RemediatePostRequestBody implements AdditionalDataHolder, BackedMod
      */
     public void setAnalyzedEmails(@jakarta.annotation.Nullable final java.util.List<AnalyzedEmail> value) {
         this.backingStore.set("analyzedEmails", value);
-    }
-    /**
-     * Sets the approverUpn property value. The approverUpn property
-     * @param value Value to set for the approverUpn property.
-     */
-    public void setApproverUpn(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("approverUpn", value);
     }
     /**
      * Sets the backingStore property value. Stores model information.

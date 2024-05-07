@@ -60,19 +60,21 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/trustFramework/policies{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get policies from trustFramework
+     * Retrieve a list of trustFrameworkPolicies in the tenant/directory.
      * @return a {@link TrustFrameworkPolicyCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/trustframework-list-trustframeworkpolicies?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TrustFrameworkPolicyCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get policies from trustFramework
+     * Retrieve a list of trustFrameworkPolicies in the tenant/directory.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TrustFrameworkPolicyCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/trustframework-list-trustframeworkpolicies?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TrustFrameworkPolicyCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -107,7 +109,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TrustFrameworkPolicy::createFromDiscriminatorValue);
     }
     /**
-     * Get policies from trustFramework
+     * Retrieve a list of trustFrameworkPolicies in the tenant/directory.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +117,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get policies from trustFramework
+     * Retrieve a list of trustFrameworkPolicies in the tenant/directory.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +163,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
         return new PoliciesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get policies from trustFramework
+     * Retrieve a list of trustFrameworkPolicies in the tenant/directory.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

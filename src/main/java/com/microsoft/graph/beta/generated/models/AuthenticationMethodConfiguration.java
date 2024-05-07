@@ -27,6 +27,7 @@ public class AuthenticationMethodConfiguration extends Entity implements Parsabl
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
                 case "#microsoft.graph.emailAuthenticationMethodConfiguration": return new EmailAuthenticationMethodConfiguration();
+                case "#microsoft.graph.externalAuthenticationMethodConfiguration": return new ExternalAuthenticationMethodConfiguration();
                 case "#microsoft.graph.fido2AuthenticationMethodConfiguration": return new Fido2AuthenticationMethodConfiguration();
                 case "#microsoft.graph.hardwareOathAuthenticationMethodConfiguration": return new HardwareOathAuthenticationMethodConfiguration();
                 case "#microsoft.graph.microsoftAuthenticatorAuthenticationMethodConfiguration": return new MicrosoftAuthenticatorAuthenticationMethodConfiguration();

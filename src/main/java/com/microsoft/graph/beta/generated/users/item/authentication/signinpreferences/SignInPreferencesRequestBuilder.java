@@ -37,19 +37,21 @@ public class SignInPreferencesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/authentication/signInPreferences{?%24expand,%24select}", rawUrl);
     }
     /**
-     * The settings and preferences for to the sign-in experience of a user. Use this property to configure the user's default multifactor authentication (MFA) method.
+     * Read the properties and relationships of a signInPreferences object.
      * @return a {@link SignInPreferences}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/authentication-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SignInPreferences get() {
         return get(null);
     }
     /**
-     * The settings and preferences for to the sign-in experience of a user. Use this property to configure the user's default multifactor authentication (MFA) method.
+     * Read the properties and relationships of a signInPreferences object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SignInPreferences}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/authentication-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SignInPreferences get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -59,21 +61,23 @@ public class SignInPreferencesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, SignInPreferences::createFromDiscriminatorValue);
     }
     /**
-     * Update property signInPreferences value.
+     * Update the properties of a signInPreferences object.
      * @param body The request body
      * @return a {@link SignInPreferences}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/authentication-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SignInPreferences patch(@jakarta.annotation.Nonnull final SignInPreferences body) {
         return patch(body, null);
     }
     /**
-     * Update property signInPreferences value.
+     * Update the properties of a signInPreferences object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SignInPreferences}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/authentication-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SignInPreferences patch(@jakarta.annotation.Nonnull final SignInPreferences body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -84,7 +88,7 @@ public class SignInPreferencesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, SignInPreferences::createFromDiscriminatorValue);
     }
     /**
-     * The settings and preferences for to the sign-in experience of a user. Use this property to configure the user's default multifactor authentication (MFA) method.
+     * Read the properties and relationships of a signInPreferences object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -92,7 +96,7 @@ public class SignInPreferencesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The settings and preferences for to the sign-in experience of a user. Use this property to configure the user's default multifactor authentication (MFA) method.
+     * Read the properties and relationships of a signInPreferences object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -104,7 +108,7 @@ public class SignInPreferencesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update property signInPreferences value.
+     * Update the properties of a signInPreferences object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -113,7 +117,7 @@ public class SignInPreferencesRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update property signInPreferences value.
+     * Update the properties of a signInPreferences object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -138,7 +142,7 @@ public class SignInPreferencesRequestBuilder extends BaseRequestBuilder {
         return new SignInPreferencesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The settings and preferences for to the sign-in experience of a user. Use this property to configure the user's default multifactor authentication (MFA) method.
+     * Read the properties and relationships of a signInPreferences object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

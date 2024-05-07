@@ -60,19 +60,21 @@ public class PendingExternalUserProfilesRequestBuilder extends BaseRequestBuilde
         super(requestAdapter, "{+baseurl}/directory/pendingExternalUserProfiles{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Collection of pending external user profiles representing collaborators in the directory that are unredeemed.
+     * Retrieve the properties of all pendingExternalUserProfiles.
      * @return a {@link PendingExternalUserProfileCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/directory-list-pendingexternaluserprofile?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PendingExternalUserProfileCollectionResponse get() {
         return get(null);
     }
     /**
-     * Collection of pending external user profiles representing collaborators in the directory that are unredeemed.
+     * Retrieve the properties of all pendingExternalUserProfiles.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PendingExternalUserProfileCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/directory-list-pendingexternaluserprofile?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PendingExternalUserProfileCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,21 +84,23 @@ public class PendingExternalUserProfilesRequestBuilder extends BaseRequestBuilde
         return this.requestAdapter.send(requestInfo, errorMapping, PendingExternalUserProfileCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to pendingExternalUserProfiles for directory
+     * Create a new pendingExternalUserProfile object.
      * @param body The request body
      * @return a {@link PendingExternalUserProfile}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/directory-post-pendingexternaluserprofile?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PendingExternalUserProfile post(@jakarta.annotation.Nonnull final PendingExternalUserProfile body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to pendingExternalUserProfiles for directory
+     * Create a new pendingExternalUserProfile object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PendingExternalUserProfile}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/directory-post-pendingexternaluserprofile?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PendingExternalUserProfile post(@jakarta.annotation.Nonnull final PendingExternalUserProfile body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -107,7 +111,7 @@ public class PendingExternalUserProfilesRequestBuilder extends BaseRequestBuilde
         return this.requestAdapter.send(requestInfo, errorMapping, PendingExternalUserProfile::createFromDiscriminatorValue);
     }
     /**
-     * Collection of pending external user profiles representing collaborators in the directory that are unredeemed.
+     * Retrieve the properties of all pendingExternalUserProfiles.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +119,7 @@ public class PendingExternalUserProfilesRequestBuilder extends BaseRequestBuilde
         return toGetRequestInformation(null);
     }
     /**
-     * Collection of pending external user profiles representing collaborators in the directory that are unredeemed.
+     * Retrieve the properties of all pendingExternalUserProfiles.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -127,7 +131,7 @@ public class PendingExternalUserProfilesRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
-     * Create new navigation property to pendingExternalUserProfiles for directory
+     * Create a new pendingExternalUserProfile object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -136,7 +140,7 @@ public class PendingExternalUserProfilesRequestBuilder extends BaseRequestBuilde
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to pendingExternalUserProfiles for directory
+     * Create a new pendingExternalUserProfile object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -161,7 +165,7 @@ public class PendingExternalUserProfilesRequestBuilder extends BaseRequestBuilde
         return new PendingExternalUserProfilesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Collection of pending external user profiles representing collaborators in the directory that are unredeemed.
+     * Retrieve the properties of all pendingExternalUserProfiles.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

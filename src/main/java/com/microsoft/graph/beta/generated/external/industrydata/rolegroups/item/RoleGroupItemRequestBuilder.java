@@ -55,19 +55,21 @@ public class RoleGroupItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Set of groups of individual roles that makes role-based admin simpler.
+     * Read the properties and relationships of a roleGroup object.
      * @return a {@link RoleGroup}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-rolegroup-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RoleGroup get() {
         return get(null);
     }
     /**
-     * Set of groups of individual roles that makes role-based admin simpler.
+     * Read the properties and relationships of a roleGroup object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RoleGroup}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-rolegroup-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RoleGroup get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -122,7 +124,7 @@ public class RoleGroupItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Set of groups of individual roles that makes role-based admin simpler.
+     * Read the properties and relationships of a roleGroup object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +132,7 @@ public class RoleGroupItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Set of groups of individual roles that makes role-based admin simpler.
+     * Read the properties and relationships of a roleGroup object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +184,7 @@ public class RoleGroupItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Set of groups of individual roles that makes role-based admin simpler.
+     * Read the properties and relationships of a roleGroup object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

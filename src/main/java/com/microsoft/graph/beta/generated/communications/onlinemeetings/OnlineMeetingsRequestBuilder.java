@@ -2,8 +2,8 @@ package com.microsoft.graph.beta.communications.onlinemeetings;
 
 import com.microsoft.graph.beta.communications.onlinemeetings.count.CountRequestBuilder;
 import com.microsoft.graph.beta.communications.onlinemeetings.createorget.CreateOrGetRequestBuilder;
-import com.microsoft.graph.beta.communications.onlinemeetings.getallrecordings.GetAllRecordingsRequestBuilder;
-import com.microsoft.graph.beta.communications.onlinemeetings.getalltranscripts.GetAllTranscriptsRequestBuilder;
+import com.microsoft.graph.beta.communications.onlinemeetings.getallrecordingsmeetingorganizeruseridmeetingorganizeruseridwithstartdatetimewithenddatetime.GetAllRecordingsmeetingOrganizerUserIdMeetingOrganizerUserIdWithStartDateTimeWithEndDateTimeRequestBuilder;
+import com.microsoft.graph.beta.communications.onlinemeetings.getalltranscriptsmeetingorganizeruseridmeetingorganizeruseridwithstartdatetimewithenddatetime.GetAllTranscriptsmeetingOrganizerUserIdMeetingOrganizerUserIdWithStartDateTimeWithEndDateTimeRequestBuilder;
 import com.microsoft.graph.beta.communications.onlinemeetings.item.OnlineMeetingItemRequestBuilder;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.OnlineMeeting;
@@ -44,19 +44,19 @@ public class OnlineMeetingsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getAllRecordings method.
-     * @return a {@link GetAllRecordingsRequestBuilder}
+     * @return a {@link GetAllRecordingsmeetingOrganizerUserIdMeetingOrganizerUserIdWithStartDateTimeWithEndDateTimeRequestBuilder}
      */
     @jakarta.annotation.Nonnull
-    public GetAllRecordingsRequestBuilder getAllRecordings() {
-        return new GetAllRecordingsRequestBuilder(pathParameters, requestAdapter);
+    public GetAllRecordingsmeetingOrganizerUserIdMeetingOrganizerUserIdWithStartDateTimeWithEndDateTimeRequestBuilder getAllRecordingsmeetingOrganizerUserIdMeetingOrganizerUserIdWithStartDateTimeWithEndDateTime() {
+        return new GetAllRecordingsmeetingOrganizerUserIdMeetingOrganizerUserIdWithStartDateTimeWithEndDateTimeRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the getAllTranscripts method.
-     * @return a {@link GetAllTranscriptsRequestBuilder}
+     * @return a {@link GetAllTranscriptsmeetingOrganizerUserIdMeetingOrganizerUserIdWithStartDateTimeWithEndDateTimeRequestBuilder}
      */
     @jakarta.annotation.Nonnull
-    public GetAllTranscriptsRequestBuilder getAllTranscripts() {
-        return new GetAllTranscriptsRequestBuilder(pathParameters, requestAdapter);
+    public GetAllTranscriptsmeetingOrganizerUserIdMeetingOrganizerUserIdWithStartDateTimeWithEndDateTimeRequestBuilder getAllTranscriptsmeetingOrganizerUserIdMeetingOrganizerUserIdWithStartDateTimeWithEndDateTime() {
+        return new GetAllTranscriptsmeetingOrganizerUserIdMeetingOrganizerUserIdWithStartDateTimeWithEndDateTimeRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the onlineMeetings property of the microsoft.graph.cloudCommunications entity.
@@ -87,19 +87,21 @@ public class OnlineMeetingsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/communications/onlineMeetings{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get onlineMeetings from communications
+     * Retrieve the properties and relationships of an onlineMeeting object. For example, you can: Teams live event attendee report (deprecated) and Teams live event recordings (deprecated) are online meeting artifacts. For details, see Online meeting artifacts and permissions. 
      * @return a {@link OnlineMeetingCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/onlinemeeting-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public OnlineMeetingCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get onlineMeetings from communications
+     * Retrieve the properties and relationships of an onlineMeeting object. For example, you can: Teams live event attendee report (deprecated) and Teams live event recordings (deprecated) are online meeting artifacts. For details, see Online meeting artifacts and permissions. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link OnlineMeetingCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/onlinemeeting-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public OnlineMeetingCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -134,7 +136,7 @@ public class OnlineMeetingsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, OnlineMeeting::createFromDiscriminatorValue);
     }
     /**
-     * Get onlineMeetings from communications
+     * Retrieve the properties and relationships of an onlineMeeting object. For example, you can: Teams live event attendee report (deprecated) and Teams live event recordings (deprecated) are online meeting artifacts. For details, see Online meeting artifacts and permissions. 
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -142,7 +144,7 @@ public class OnlineMeetingsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get onlineMeetings from communications
+     * Retrieve the properties and relationships of an onlineMeeting object. For example, you can: Teams live event attendee report (deprecated) and Teams live event recordings (deprecated) are online meeting artifacts. For details, see Online meeting artifacts and permissions. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -188,7 +190,7 @@ public class OnlineMeetingsRequestBuilder extends BaseRequestBuilder {
         return new OnlineMeetingsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get onlineMeetings from communications
+     * Retrieve the properties and relationships of an onlineMeeting object. For example, you can: Teams live event attendee report (deprecated) and Teams live event recordings (deprecated) are online meeting artifacts. For details, see Online meeting artifacts and permissions. 
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

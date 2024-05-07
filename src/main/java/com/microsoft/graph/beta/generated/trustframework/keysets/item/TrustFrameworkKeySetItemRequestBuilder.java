@@ -4,6 +4,7 @@ import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.TrustFrameworkKeySet;
 import com.microsoft.graph.beta.trustframework.keysets.item.generatekey.GenerateKeyRequestBuilder;
 import com.microsoft.graph.beta.trustframework.keysets.item.getactivekey.GetActiveKeyRequestBuilder;
+import com.microsoft.graph.beta.trustframework.keysets.item.keys_v2.KeysV2RequestBuilder;
 import com.microsoft.graph.beta.trustframework.keysets.item.uploadcertificate.UploadCertificateRequestBuilder;
 import com.microsoft.graph.beta.trustframework.keysets.item.uploadpkcs12.UploadPkcs12RequestBuilder;
 import com.microsoft.graph.beta.trustframework.keysets.item.uploadsecret.UploadSecretRequestBuilder;
@@ -40,6 +41,14 @@ public class TrustFrameworkKeySetItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public GetActiveKeyRequestBuilder getActiveKey() {
         return new GetActiveKeyRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the keys_v2 property of the microsoft.graph.trustFrameworkKeySet entity.
+     * @return a {@link KeysV2RequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public KeysV2RequestBuilder keysV2() {
+        return new KeysV2RequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the uploadCertificate method.
@@ -82,16 +91,18 @@ public class TrustFrameworkKeySetItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/trustFramework/keySets/{trustFrameworkKeySet%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property keySets for trustFramework
+     * Delete a trustFrameworkKeySet.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/trustframeworkkeyset-delete?view=graph-rest-beta">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property keySets for trustFramework
+     * Delete a trustFrameworkKeySet.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/trustframeworkkeyset-delete?view=graph-rest-beta">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -100,19 +111,21 @@ public class TrustFrameworkKeySetItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get keySets from trustFramework
+     * Retrieve the properties and associations for a Trustframeworkkeyset.
      * @return a {@link TrustFrameworkKeySet}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/trustframeworkkeyset-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TrustFrameworkKeySet get() {
         return get(null);
     }
     /**
-     * Get keySets from trustFramework
+     * Retrieve the properties and associations for a Trustframeworkkeyset.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TrustFrameworkKeySet}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/trustframeworkkeyset-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TrustFrameworkKeySet get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -122,21 +135,23 @@ public class TrustFrameworkKeySetItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TrustFrameworkKeySet::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property keySets in trustFramework
+     * Update the properties of a trustFrameworkKeyset. This operation will replace the content of an existing keyset. Specifying the ID in the request payload is optional.
      * @param body The request body
      * @return a {@link TrustFrameworkKeySet}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/trustframeworkkeyset-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TrustFrameworkKeySet patch(@jakarta.annotation.Nonnull final TrustFrameworkKeySet body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property keySets in trustFramework
+     * Update the properties of a trustFrameworkKeyset. This operation will replace the content of an existing keyset. Specifying the ID in the request payload is optional.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TrustFrameworkKeySet}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/trustframeworkkeyset-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TrustFrameworkKeySet patch(@jakarta.annotation.Nonnull final TrustFrameworkKeySet body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -147,7 +162,7 @@ public class TrustFrameworkKeySetItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TrustFrameworkKeySet::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property keySets for trustFramework
+     * Delete a trustFrameworkKeySet.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -155,7 +170,7 @@ public class TrustFrameworkKeySetItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property keySets for trustFramework
+     * Delete a trustFrameworkKeySet.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -167,7 +182,7 @@ public class TrustFrameworkKeySetItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get keySets from trustFramework
+     * Retrieve the properties and associations for a Trustframeworkkeyset.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -175,7 +190,7 @@ public class TrustFrameworkKeySetItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get keySets from trustFramework
+     * Retrieve the properties and associations for a Trustframeworkkeyset.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -187,7 +202,7 @@ public class TrustFrameworkKeySetItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property keySets in trustFramework
+     * Update the properties of a trustFrameworkKeyset. This operation will replace the content of an existing keyset. Specifying the ID in the request payload is optional.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -196,7 +211,7 @@ public class TrustFrameworkKeySetItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property keySets in trustFramework
+     * Update the properties of a trustFrameworkKeyset. This operation will replace the content of an existing keyset. Specifying the ID in the request payload is optional.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -227,7 +242,7 @@ public class TrustFrameworkKeySetItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get keySets from trustFramework
+     * Retrieve the properties and associations for a Trustframeworkkeyset.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

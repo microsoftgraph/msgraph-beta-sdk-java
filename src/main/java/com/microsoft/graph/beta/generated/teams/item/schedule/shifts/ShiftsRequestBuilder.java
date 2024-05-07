@@ -63,6 +63,7 @@ public class ShiftsRequestBuilder extends BaseRequestBuilder {
      * The shifts in the schedule.
      * @return a {@link ShiftCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/schedule-list-shifts?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ShiftCollectionResponse get() {
@@ -73,6 +74,7 @@ public class ShiftsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ShiftCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/schedule-list-shifts?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ShiftCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,21 +84,23 @@ public class ShiftsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ShiftCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to shifts for teams
+     * Create a new shift instance in a schedule. The duration of a shift cannot be less than 1 minute or longer than 24 hours.
      * @param body The request body
      * @return a {@link Shift}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/schedule-post-shifts?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Shift post(@jakarta.annotation.Nonnull final Shift body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to shifts for teams
+     * Create a new shift instance in a schedule. The duration of a shift cannot be less than 1 minute or longer than 24 hours.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Shift}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/schedule-post-shifts?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Shift post(@jakarta.annotation.Nonnull final Shift body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -127,7 +131,7 @@ public class ShiftsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to shifts for teams
+     * Create a new shift instance in a schedule. The duration of a shift cannot be less than 1 minute or longer than 24 hours.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -136,7 +140,7 @@ public class ShiftsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to shifts for teams
+     * Create a new shift instance in a schedule. The duration of a shift cannot be less than 1 minute or longer than 24 hours.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
