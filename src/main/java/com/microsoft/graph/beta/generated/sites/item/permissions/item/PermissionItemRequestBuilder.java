@@ -73,19 +73,21 @@ public class PermissionItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * The permissions associated with the site. Nullable.
+     * Retrieve the properties and relationships of a permission object on a site.
      * @return a {@link Permission}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/site-get-permission?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Permission get() {
         return get(null);
     }
     /**
-     * The permissions associated with the site. Nullable.
+     * Retrieve the properties and relationships of a permission object on a site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Permission}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/site-get-permission?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Permission get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -95,21 +97,23 @@ public class PermissionItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Permission::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property permissions in sites
+     * Update the permission object on a site.
      * @param body The request body
      * @return a {@link Permission}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/site-update-permission?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Permission patch(@jakarta.annotation.Nonnull final Permission body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property permissions in sites
+     * Update the permission object on a site.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Permission}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/site-update-permission?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Permission patch(@jakarta.annotation.Nonnull final Permission body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -140,7 +144,7 @@ public class PermissionItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The permissions associated with the site. Nullable.
+     * Retrieve the properties and relationships of a permission object on a site.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -148,7 +152,7 @@ public class PermissionItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The permissions associated with the site. Nullable.
+     * Retrieve the properties and relationships of a permission object on a site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -160,7 +164,7 @@ public class PermissionItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property permissions in sites
+     * Update the permission object on a site.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -169,7 +173,7 @@ public class PermissionItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property permissions in sites
+     * Update the permission object on a site.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -200,7 +204,7 @@ public class PermissionItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The permissions associated with the site. Nullable.
+     * Retrieve the properties and relationships of a permission object on a site.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

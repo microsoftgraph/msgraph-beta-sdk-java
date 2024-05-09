@@ -142,13 +142,13 @@ public class AnalyzedEmail extends Entity implements Parsable {
         deserializerMap.put("phishConfidenceLevel", (n) -> { this.setPhishConfidenceLevel(n.getStringValue()); });
         deserializerMap.put("policy", (n) -> { this.setPolicy(n.getStringValue()); });
         deserializerMap.put("policyAction", (n) -> { this.setPolicyAction(n.getStringValue()); });
-        deserializerMap.put("recipientEmailAddresses", (n) -> { this.setRecipientEmailAddresses(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("recipientEmailAddress", (n) -> { this.setRecipientEmailAddress(n.getStringValue()); });
         deserializerMap.put("returnPath", (n) -> { this.setReturnPath(n.getStringValue()); });
         deserializerMap.put("senderDetail", (n) -> { this.setSenderDetail(n.getObjectValue(AnalyzedEmailSenderDetail::createFromDiscriminatorValue)); });
         deserializerMap.put("sizeInBytes", (n) -> { this.setSizeInBytes(n.getIntegerValue()); });
         deserializerMap.put("spamConfidenceLevel", (n) -> { this.setSpamConfidenceLevel(n.getStringValue()); });
         deserializerMap.put("subject", (n) -> { this.setSubject(n.getStringValue()); });
-        deserializerMap.put("threatType", (n) -> { this.setThreatType(n.getEnumValue(ThreatType::forValue)); });
+        deserializerMap.put("threatTypes", (n) -> { this.setThreatTypes(n.getCollectionOfEnumValues(ThreatType::forValue)); });
         deserializerMap.put("urls", (n) -> { this.setUrls(n.getCollectionOfObjectValues(AnalyzedEmailUrl::createFromDiscriminatorValue)); });
         deserializerMap.put("urlsCount", (n) -> { this.setUrlsCount(n.getIntegerValue()); });
         return deserializerMap;
@@ -234,12 +234,12 @@ public class AnalyzedEmail extends Entity implements Parsable {
         return this.backingStore.get("policyAction");
     }
     /**
-     * Gets the recipientEmailAddresses property value. Contains the email addresses of the recipients.
-     * @return a {@link java.util.List<String>}
+     * Gets the recipientEmailAddress property value. Contains the email address of the recipient.
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
-    public java.util.List<String> getRecipientEmailAddresses() {
-        return this.backingStore.get("recipientEmailAddresses");
+    public String getRecipientEmailAddress() {
+        return this.backingStore.get("recipientEmailAddress");
     }
     /**
      * Gets the returnPath property value. A field that indicates where and how bounced emails are processed.
@@ -282,12 +282,12 @@ public class AnalyzedEmail extends Entity implements Parsable {
         return this.backingStore.get("subject");
     }
     /**
-     * Gets the threatType property value. Indicates the threat types. The possible values are: unknown, spam, malware, phishing, none, unknownFutureValue.
-     * @return a {@link ThreatType}
+     * Gets the threatTypes property value. Indicates the threat types. The possible values are: unknown, spam, malware, phish, none, unknownFutureValue.
+     * @return a {@link java.util.List<ThreatType>}
      */
     @jakarta.annotation.Nullable
-    public ThreatType getThreatType() {
-        return this.backingStore.get("threatType");
+    public java.util.List<ThreatType> getThreatTypes() {
+        return this.backingStore.get("threatTypes");
     }
     /**
      * Gets the urls property value. A collection of the URLs in the email.
@@ -333,13 +333,13 @@ public class AnalyzedEmail extends Entity implements Parsable {
         writer.writeStringValue("phishConfidenceLevel", this.getPhishConfidenceLevel());
         writer.writeStringValue("policy", this.getPolicy());
         writer.writeStringValue("policyAction", this.getPolicyAction());
-        writer.writeCollectionOfPrimitiveValues("recipientEmailAddresses", this.getRecipientEmailAddresses());
+        writer.writeStringValue("recipientEmailAddress", this.getRecipientEmailAddress());
         writer.writeStringValue("returnPath", this.getReturnPath());
         writer.writeObjectValue("senderDetail", this.getSenderDetail());
         writer.writeIntegerValue("sizeInBytes", this.getSizeInBytes());
         writer.writeStringValue("spamConfidenceLevel", this.getSpamConfidenceLevel());
         writer.writeStringValue("subject", this.getSubject());
-        writer.writeEnumValue("threatType", this.getThreatType());
+        writer.writeCollectionOfEnumValues("threatTypes", this.getThreatTypes());
         writer.writeCollectionOfObjectValues("urls", this.getUrls());
         writer.writeIntegerValue("urlsCount", this.getUrlsCount());
     }
@@ -491,11 +491,11 @@ public class AnalyzedEmail extends Entity implements Parsable {
         this.backingStore.set("policyAction", value);
     }
     /**
-     * Sets the recipientEmailAddresses property value. Contains the email addresses of the recipients.
-     * @param value Value to set for the recipientEmailAddresses property.
+     * Sets the recipientEmailAddress property value. Contains the email address of the recipient.
+     * @param value Value to set for the recipientEmailAddress property.
      */
-    public void setRecipientEmailAddresses(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.backingStore.set("recipientEmailAddresses", value);
+    public void setRecipientEmailAddress(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("recipientEmailAddress", value);
     }
     /**
      * Sets the returnPath property value. A field that indicates where and how bounced emails are processed.
@@ -533,11 +533,11 @@ public class AnalyzedEmail extends Entity implements Parsable {
         this.backingStore.set("subject", value);
     }
     /**
-     * Sets the threatType property value. Indicates the threat types. The possible values are: unknown, spam, malware, phishing, none, unknownFutureValue.
-     * @param value Value to set for the threatType property.
+     * Sets the threatTypes property value. Indicates the threat types. The possible values are: unknown, spam, malware, phish, none, unknownFutureValue.
+     * @param value Value to set for the threatTypes property.
      */
-    public void setThreatType(@jakarta.annotation.Nullable final ThreatType value) {
-        this.backingStore.set("threatType", value);
+    public void setThreatTypes(@jakarta.annotation.Nullable final java.util.List<ThreatType> value) {
+        this.backingStore.set("threatTypes", value);
     }
     /**
      * Sets the urls property value. A collection of the URLs in the email.

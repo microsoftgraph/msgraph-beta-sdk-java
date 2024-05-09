@@ -60,19 +60,21 @@ public class TrafficRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/networkAccess/logs/traffic{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * A network access traffic log entry that contains comprehensive information about network traffic events.
+     * Get a list of log events for traffic routed through the Global Secure Access services.
      * @return a {@link NetworkAccessTrafficCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-logs-list-traffic?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public NetworkAccessTrafficCollectionResponse get() {
         return get(null);
     }
     /**
-     * A network access traffic log entry that contains comprehensive information about network traffic events.
+     * Get a list of log events for traffic routed through the Global Secure Access services.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link NetworkAccessTrafficCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-logs-list-traffic?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public NetworkAccessTrafficCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -107,7 +109,7 @@ public class TrafficRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, NetworkAccessTraffic::createFromDiscriminatorValue);
     }
     /**
-     * A network access traffic log entry that contains comprehensive information about network traffic events.
+     * Get a list of log events for traffic routed through the Global Secure Access services.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +117,7 @@ public class TrafficRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * A network access traffic log entry that contains comprehensive information about network traffic events.
+     * Get a list of log events for traffic routed through the Global Secure Access services.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +163,7 @@ public class TrafficRequestBuilder extends BaseRequestBuilder {
         return new TrafficRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * A network access traffic log entry that contains comprehensive information about network traffic events.
+     * Get a list of log events for traffic routed through the Global Secure Access services.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

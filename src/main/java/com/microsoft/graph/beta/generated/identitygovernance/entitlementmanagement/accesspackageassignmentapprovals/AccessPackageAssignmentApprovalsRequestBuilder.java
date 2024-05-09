@@ -71,7 +71,7 @@ public class AccessPackageAssignmentApprovalsRequestBuilder extends BaseRequestB
         return new FilterByCurrentUserWithOnRequestBuilder(pathParameters, requestAdapter, on);
     }
     /**
-     * Get accessPackageAssignmentApprovals from identityGovernance
+     * Retrieve the properties of an approval object. This API request is made by an approver in the following scenarios:
      * @return a {@link ApprovalCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -80,7 +80,7 @@ public class AccessPackageAssignmentApprovalsRequestBuilder extends BaseRequestB
         return get(null);
     }
     /**
-     * Get accessPackageAssignmentApprovals from identityGovernance
+     * Retrieve the properties of an approval object. This API request is made by an approver in the following scenarios:
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ApprovalCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -118,7 +118,7 @@ public class AccessPackageAssignmentApprovalsRequestBuilder extends BaseRequestB
         return this.requestAdapter.send(requestInfo, errorMapping, Approval::createFromDiscriminatorValue);
     }
     /**
-     * Get accessPackageAssignmentApprovals from identityGovernance
+     * Retrieve the properties of an approval object. This API request is made by an approver in the following scenarios:
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -126,7 +126,7 @@ public class AccessPackageAssignmentApprovalsRequestBuilder extends BaseRequestB
         return toGetRequestInformation(null);
     }
     /**
-     * Get accessPackageAssignmentApprovals from identityGovernance
+     * Retrieve the properties of an approval object. This API request is made by an approver in the following scenarios:
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -172,7 +172,7 @@ public class AccessPackageAssignmentApprovalsRequestBuilder extends BaseRequestB
         return new AccessPackageAssignmentApprovalsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get accessPackageAssignmentApprovals from identityGovernance
+     * Retrieve the properties of an approval object. This API request is made by an approver in the following scenarios:
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

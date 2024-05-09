@@ -62,7 +62,7 @@ public class TownhallsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/solutions/virtualEvents/townhalls{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get townhalls from solutions
+     * Read the properties and relationships of a virtualEventTownhall object.
      * @return a {@link VirtualEventTownhallCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -71,7 +71,7 @@ public class TownhallsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get townhalls from solutions
+     * Read the properties and relationships of a virtualEventTownhall object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link VirtualEventTownhallCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -106,21 +106,23 @@ public class TownhallsRequestBuilder extends BaseRequestBuilder {
         return new GetByUserRoleWithRoleRequestBuilder(pathParameters, requestAdapter, role);
     }
     /**
-     * Create new navigation property to townhalls for solutions
+     * Create a new virtualEventTownhall object in draft mode.
      * @param body The request body
      * @return a {@link VirtualEventTownhall}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualeventsroot-post-townhalls?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public VirtualEventTownhall post(@jakarta.annotation.Nonnull final VirtualEventTownhall body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to townhalls for solutions
+     * Create a new virtualEventTownhall object in draft mode.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link VirtualEventTownhall}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualeventsroot-post-townhalls?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public VirtualEventTownhall post(@jakarta.annotation.Nonnull final VirtualEventTownhall body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -131,7 +133,7 @@ public class TownhallsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, VirtualEventTownhall::createFromDiscriminatorValue);
     }
     /**
-     * Get townhalls from solutions
+     * Read the properties and relationships of a virtualEventTownhall object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +141,7 @@ public class TownhallsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get townhalls from solutions
+     * Read the properties and relationships of a virtualEventTownhall object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -151,7 +153,7 @@ public class TownhallsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to townhalls for solutions
+     * Create a new virtualEventTownhall object in draft mode.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -160,7 +162,7 @@ public class TownhallsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to townhalls for solutions
+     * Create a new virtualEventTownhall object in draft mode.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -185,7 +187,7 @@ public class TownhallsRequestBuilder extends BaseRequestBuilder {
         return new TownhallsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get townhalls from solutions
+     * Read the properties and relationships of a virtualEventTownhall object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

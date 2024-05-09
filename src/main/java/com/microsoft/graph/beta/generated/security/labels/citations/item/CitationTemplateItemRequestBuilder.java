@@ -55,19 +55,21 @@ public class CitationTemplateItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * The specific rule or regulation created by a jurisdiction used to determine whether certain labels and content should be retained or deleted.
+     * Read the properties and relationships of a citationTemplate object.
      * @return a {@link CitationTemplate}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-citationtemplate-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CitationTemplate get() {
         return get(null);
     }
     /**
-     * The specific rule or regulation created by a jurisdiction used to determine whether certain labels and content should be retained or deleted.
+     * Read the properties and relationships of a citationTemplate object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CitationTemplate}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-citationtemplate-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CitationTemplate get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -122,7 +124,7 @@ public class CitationTemplateItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The specific rule or regulation created by a jurisdiction used to determine whether certain labels and content should be retained or deleted.
+     * Read the properties and relationships of a citationTemplate object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +132,7 @@ public class CitationTemplateItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The specific rule or regulation created by a jurisdiction used to determine whether certain labels and content should be retained or deleted.
+     * Read the properties and relationships of a citationTemplate object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +184,7 @@ public class CitationTemplateItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The specific rule or regulation created by a jurisdiction used to determine whether certain labels and content should be retained or deleted.
+     * Read the properties and relationships of a citationTemplate object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

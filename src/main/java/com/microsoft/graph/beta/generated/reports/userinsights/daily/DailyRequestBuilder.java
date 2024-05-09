@@ -3,7 +3,6 @@ package com.microsoft.graph.beta.reports.userinsights.daily;
 import com.microsoft.graph.beta.models.DailyUserInsightMetricsRoot;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.reports.userinsights.daily.activeusers.ActiveUsersRequestBuilder;
-import com.microsoft.graph.beta.reports.userinsights.daily.activeusersbreakdown.ActiveUsersBreakdownRequestBuilder;
 import com.microsoft.graph.beta.reports.userinsights.daily.authentications.AuthenticationsRequestBuilder;
 import com.microsoft.graph.beta.reports.userinsights.daily.inactiveusers.InactiveUsersRequestBuilder;
 import com.microsoft.graph.beta.reports.userinsights.daily.inactiveusersbyapplication.InactiveUsersByApplicationRequestBuilder;
@@ -36,14 +35,6 @@ public class DailyRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public ActiveUsersRequestBuilder activeUsers() {
         return new ActiveUsersRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the activeUsersBreakdown property of the microsoft.graph.dailyUserInsightMetricsRoot entity.
-     * @return a {@link ActiveUsersBreakdownRequestBuilder}
-     */
-    @jakarta.annotation.Nonnull
-    public ActiveUsersBreakdownRequestBuilder activeUsersBreakdown() {
-        return new ActiveUsersBreakdownRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the authentications property of the microsoft.graph.dailyUserInsightMetricsRoot entity.

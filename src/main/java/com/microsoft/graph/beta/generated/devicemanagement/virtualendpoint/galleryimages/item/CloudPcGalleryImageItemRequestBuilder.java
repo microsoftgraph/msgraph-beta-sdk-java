@@ -55,19 +55,21 @@ public class CloudPcGalleryImageItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * The gallery image resource on Cloud PC.
+     * Read the properties and relationships of a specific cloudPcGalleryImage object.
      * @return a {@link CloudPcGalleryImage}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpcgalleryimage-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPcGalleryImage get() {
         return get(null);
     }
     /**
-     * The gallery image resource on Cloud PC.
+     * Read the properties and relationships of a specific cloudPcGalleryImage object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CloudPcGalleryImage}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpcgalleryimage-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPcGalleryImage get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -122,7 +124,7 @@ public class CloudPcGalleryImageItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The gallery image resource on Cloud PC.
+     * Read the properties and relationships of a specific cloudPcGalleryImage object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +132,7 @@ public class CloudPcGalleryImageItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The gallery image resource on Cloud PC.
+     * Read the properties and relationships of a specific cloudPcGalleryImage object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +184,7 @@ public class CloudPcGalleryImageItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The gallery image resource on Cloud PC.
+     * Read the properties and relationships of a specific cloudPcGalleryImage object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

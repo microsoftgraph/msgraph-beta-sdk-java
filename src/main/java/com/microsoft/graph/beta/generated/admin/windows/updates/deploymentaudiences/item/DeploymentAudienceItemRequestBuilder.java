@@ -82,16 +82,18 @@ public class DeploymentAudienceItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/admin/windows/updates/deploymentAudiences/{deploymentAudience%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property deploymentAudiences for admin
+     * Delete a deploymentAudience object.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-deploymentaudience-delete?view=graph-rest-beta">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property deploymentAudiences for admin
+     * Delete a deploymentAudience object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-deploymentaudience-delete?view=graph-rest-beta">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -100,19 +102,21 @@ public class DeploymentAudienceItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * The set of updatableAsset resources to which a deployment can apply.
+     * Read the properties and relationships of a deploymentAudience object.
      * @return a {@link DeploymentAudience}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-deploymentaudience-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeploymentAudience get() {
         return get(null);
     }
     /**
-     * The set of updatableAsset resources to which a deployment can apply.
+     * Read the properties and relationships of a deploymentAudience object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DeploymentAudience}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-deploymentaudience-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeploymentAudience get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -147,7 +151,7 @@ public class DeploymentAudienceItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DeploymentAudience::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property deploymentAudiences for admin
+     * Delete a deploymentAudience object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -155,7 +159,7 @@ public class DeploymentAudienceItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property deploymentAudiences for admin
+     * Delete a deploymentAudience object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -167,7 +171,7 @@ public class DeploymentAudienceItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The set of updatableAsset resources to which a deployment can apply.
+     * Read the properties and relationships of a deploymentAudience object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -175,7 +179,7 @@ public class DeploymentAudienceItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The set of updatableAsset resources to which a deployment can apply.
+     * Read the properties and relationships of a deploymentAudience object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -227,7 +231,7 @@ public class DeploymentAudienceItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The set of updatableAsset resources to which a deployment can apply.
+     * Read the properties and relationships of a deploymentAudience object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

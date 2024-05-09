@@ -60,19 +60,21 @@ public class RecordsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/auditLog/queries/{auditLogQuery%2Did}/records{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * An individual audit log record.
+     * Get a list of the auditLogRecord objects and their properties.
      * @return a {@link AuditLogRecordCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-auditlogquery-list-records?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AuditLogRecordCollectionResponse get() {
         return get(null);
     }
     /**
-     * An individual audit log record.
+     * Get a list of the auditLogRecord objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AuditLogRecordCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-auditlogquery-list-records?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AuditLogRecordCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -107,7 +109,7 @@ public class RecordsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AuditLogRecord::createFromDiscriminatorValue);
     }
     /**
-     * An individual audit log record.
+     * Get a list of the auditLogRecord objects and their properties.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +117,7 @@ public class RecordsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * An individual audit log record.
+     * Get a list of the auditLogRecord objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +163,7 @@ public class RecordsRequestBuilder extends BaseRequestBuilder {
         return new RecordsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * An individual audit log record.
+     * Get a list of the auditLogRecord objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

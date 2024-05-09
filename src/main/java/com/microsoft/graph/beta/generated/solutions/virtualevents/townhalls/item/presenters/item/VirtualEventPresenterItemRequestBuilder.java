@@ -47,16 +47,18 @@ public class VirtualEventPresenterItemRequestBuilder extends BaseRequestBuilder 
         super(requestAdapter, "{+baseurl}/solutions/virtualEvents/townhalls/{virtualEventTownhall%2Did}/presenters/{virtualEventPresenter%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property presenters for solutions
+     * Delete a virtualEventPresenter from a virtual event. Currently the supported virtual event type is virtualEventTownhall.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualeventpresenter-delete?view=graph-rest-beta">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property presenters for solutions
+     * Delete a virtualEventPresenter from a virtual event. Currently the supported virtual event type is virtualEventTownhall.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualeventpresenter-delete?view=graph-rest-beta">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -65,19 +67,21 @@ public class VirtualEventPresenterItemRequestBuilder extends BaseRequestBuilder 
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * The virtual event presenters.
+     * Read the properties and relationships of a virtualEventPresenter object.
      * @return a {@link VirtualEventPresenter}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualeventpresenter-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public VirtualEventPresenter get() {
         return get(null);
     }
     /**
-     * The virtual event presenters.
+     * Read the properties and relationships of a virtualEventPresenter object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link VirtualEventPresenter}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualeventpresenter-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public VirtualEventPresenter get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -122,7 +126,7 @@ public class VirtualEventPresenterItemRequestBuilder extends BaseRequestBuilder 
         return new SessionsWithJoinWebUrlRequestBuilder(pathParameters, requestAdapter, joinWebUrl);
     }
     /**
-     * Delete navigation property presenters for solutions
+     * Delete a virtualEventPresenter from a virtual event. Currently the supported virtual event type is virtualEventTownhall.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +134,7 @@ public class VirtualEventPresenterItemRequestBuilder extends BaseRequestBuilder 
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property presenters for solutions
+     * Delete a virtualEventPresenter from a virtual event. Currently the supported virtual event type is virtualEventTownhall.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -142,7 +146,7 @@ public class VirtualEventPresenterItemRequestBuilder extends BaseRequestBuilder 
         return requestInfo;
     }
     /**
-     * The virtual event presenters.
+     * Read the properties and relationships of a virtualEventPresenter object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -150,7 +154,7 @@ public class VirtualEventPresenterItemRequestBuilder extends BaseRequestBuilder 
         return toGetRequestInformation(null);
     }
     /**
-     * The virtual event presenters.
+     * Read the properties and relationships of a virtualEventPresenter object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -202,7 +206,7 @@ public class VirtualEventPresenterItemRequestBuilder extends BaseRequestBuilder 
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The virtual event presenters.
+     * Read the properties and relationships of a virtualEventPresenter object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -11,6 +11,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [6.9.0] - 2024-05-09
+
+### Changed
+
+- Weekly generated beta models and request builders using Kiota
+- Downgrade `jakarta.annotations-api` dependency for java 8 compatibility
+
+## [6.8.0] - 2024-05-02
+
+### Changed
+
+- Weekly generated beta models and request builders using Kiota
+
 ## [6.7.0] - 2024-04-24
 
 ### Added

@@ -77,21 +77,23 @@ public class PolicyRuleItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PolicyRule::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property policyRules in networkAccess
+     * Update an existing forwarding rule within a forwarding policy.
      * @param body The request body
      * @return a {@link PolicyRule}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-policyrule-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PolicyRule patch(@jakarta.annotation.Nonnull final PolicyRule body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property policyRules in networkAccess
+     * Update an existing forwarding rule within a forwarding policy.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PolicyRule}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-policyrule-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PolicyRule patch(@jakarta.annotation.Nonnull final PolicyRule body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -142,7 +144,7 @@ public class PolicyRuleItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property policyRules in networkAccess
+     * Update an existing forwarding rule within a forwarding policy.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -151,7 +153,7 @@ public class PolicyRuleItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property policyRules in networkAccess
+     * Update an existing forwarding rule within a forwarding policy.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

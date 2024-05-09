@@ -57,19 +57,21 @@ public class SubscriptionsWithOcpSubscriptionIdRequestBuilder extends BaseReques
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * List of commercial subscriptions that an organization has.
+     * Get a specific commercial subscription that an organization has acquired.
      * @return a {@link CompanySubscription}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/companysubscription-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CompanySubscription get() {
         return get(null);
     }
     /**
-     * List of commercial subscriptions that an organization has.
+     * Get a specific commercial subscription that an organization has acquired.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CompanySubscription}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/companysubscription-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CompanySubscription get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -124,7 +126,7 @@ public class SubscriptionsWithOcpSubscriptionIdRequestBuilder extends BaseReques
         return requestInfo;
     }
     /**
-     * List of commercial subscriptions that an organization has.
+     * Get a specific commercial subscription that an organization has acquired.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -132,7 +134,7 @@ public class SubscriptionsWithOcpSubscriptionIdRequestBuilder extends BaseReques
         return toGetRequestInformation(null);
     }
     /**
-     * List of commercial subscriptions that an organization has.
+     * Get a specific commercial subscription that an organization has acquired.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -184,7 +186,7 @@ public class SubscriptionsWithOcpSubscriptionIdRequestBuilder extends BaseReques
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * List of commercial subscriptions that an organization has.
+     * Get a specific commercial subscription that an organization has acquired.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

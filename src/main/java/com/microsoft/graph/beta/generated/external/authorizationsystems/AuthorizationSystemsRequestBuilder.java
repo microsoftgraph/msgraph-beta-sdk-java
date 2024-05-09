@@ -60,19 +60,21 @@ public class AuthorizationSystemsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/external/authorizationSystems{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Represents an onboarded AWS account, Azure subscription, or GCP project that Microsoft Entra Permissions Management will collect and analyze permissions and actions on.
+     * List the authorizationSystem objects onboarded to Permissions Management and their properties.
      * @return a {@link AuthorizationSystemCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-external-list-authorizationsystems?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AuthorizationSystemCollectionResponse get() {
         return get(null);
     }
     /**
-     * Represents an onboarded AWS account, Azure subscription, or GCP project that Microsoft Entra Permissions Management will collect and analyze permissions and actions on.
+     * List the authorizationSystem objects onboarded to Permissions Management and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AuthorizationSystemCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-external-list-authorizationsystems?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AuthorizationSystemCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -107,7 +109,7 @@ public class AuthorizationSystemsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AuthorizationSystem::createFromDiscriminatorValue);
     }
     /**
-     * Represents an onboarded AWS account, Azure subscription, or GCP project that Microsoft Entra Permissions Management will collect and analyze permissions and actions on.
+     * List the authorizationSystem objects onboarded to Permissions Management and their properties.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +117,7 @@ public class AuthorizationSystemsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Represents an onboarded AWS account, Azure subscription, or GCP project that Microsoft Entra Permissions Management will collect and analyze permissions and actions on.
+     * List the authorizationSystem objects onboarded to Permissions Management and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +163,7 @@ public class AuthorizationSystemsRequestBuilder extends BaseRequestBuilder {
         return new AuthorizationSystemsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Represents an onboarded AWS account, Azure subscription, or GCP project that Microsoft Entra Permissions Management will collect and analyze permissions and actions on.
+     * List the authorizationSystem objects onboarded to Permissions Management and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

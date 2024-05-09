@@ -37,16 +37,18 @@ public class CustomAppScopeItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/roleManagement/exchange/customAppScopes/{customAppScope%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property customAppScopes for roleManagement
+     * Delete a customAppScope object of an RBAC provider. Currently only the Exchange Online RBAC provider is supported.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/customappscope-delete?view=graph-rest-beta">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property customAppScopes for roleManagement
+     * Delete a customAppScope object of an RBAC provider. Currently only the Exchange Online RBAC provider is supported.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/customappscope-delete?view=graph-rest-beta">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -55,19 +57,21 @@ public class CustomAppScopeItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Workload-specific scope object that represents the resources for which the principal has been granted access.
+     * Get the properties of a customAppScope object for an RBAC provider. Currently only the Exchange Online RBAC provider is supported.
      * @return a {@link CustomAppScope}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/customappscope-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CustomAppScope get() {
         return get(null);
     }
     /**
-     * Workload-specific scope object that represents the resources for which the principal has been granted access.
+     * Get the properties of a customAppScope object for an RBAC provider. Currently only the Exchange Online RBAC provider is supported.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CustomAppScope}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/customappscope-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CustomAppScope get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -77,21 +81,23 @@ public class CustomAppScopeItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CustomAppScope::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property customAppScopes in roleManagement
+     * Update an existing customAppScope object of an RBAC provider. Currently only the Exchange Online RBAC provider is supported.
      * @param body The request body
      * @return a {@link CustomAppScope}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/customappscope-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CustomAppScope patch(@jakarta.annotation.Nonnull final CustomAppScope body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property customAppScopes in roleManagement
+     * Update an existing customAppScope object of an RBAC provider. Currently only the Exchange Online RBAC provider is supported.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CustomAppScope}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/customappscope-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CustomAppScope patch(@jakarta.annotation.Nonnull final CustomAppScope body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -102,7 +108,7 @@ public class CustomAppScopeItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CustomAppScope::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property customAppScopes for roleManagement
+     * Delete a customAppScope object of an RBAC provider. Currently only the Exchange Online RBAC provider is supported.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -110,7 +116,7 @@ public class CustomAppScopeItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property customAppScopes for roleManagement
+     * Delete a customAppScope object of an RBAC provider. Currently only the Exchange Online RBAC provider is supported.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -122,7 +128,7 @@ public class CustomAppScopeItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Workload-specific scope object that represents the resources for which the principal has been granted access.
+     * Get the properties of a customAppScope object for an RBAC provider. Currently only the Exchange Online RBAC provider is supported.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +136,7 @@ public class CustomAppScopeItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Workload-specific scope object that represents the resources for which the principal has been granted access.
+     * Get the properties of a customAppScope object for an RBAC provider. Currently only the Exchange Online RBAC provider is supported.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -142,7 +148,7 @@ public class CustomAppScopeItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property customAppScopes in roleManagement
+     * Update an existing customAppScope object of an RBAC provider. Currently only the Exchange Online RBAC provider is supported.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -151,7 +157,7 @@ public class CustomAppScopeItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property customAppScopes in roleManagement
+     * Update an existing customAppScope object of an RBAC provider. Currently only the Exchange Online RBAC provider is supported.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -182,7 +188,7 @@ public class CustomAppScopeItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Workload-specific scope object that represents the resources for which the principal has been granted access.
+     * Get the properties of a customAppScope object for an RBAC provider. Currently only the Exchange Online RBAC provider is supported.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

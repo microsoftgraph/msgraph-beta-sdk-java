@@ -60,19 +60,21 @@ public class ApplicationSignInDetailedSummaryRequestBuilder extends BaseRequestB
         super(requestAdapter, "{+baseurl}/reports/applicationSignInDetailedSummary{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Represents a detailed summary of an application sign-in.
+     * Retrieve the applicationSignInDetailedSummary objects.
      * @return a {@link ApplicationSignInDetailedSummaryCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/reportroot-list-applicationsignindetailedsummary?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ApplicationSignInDetailedSummaryCollectionResponse get() {
         return get(null);
     }
     /**
-     * Represents a detailed summary of an application sign-in.
+     * Retrieve the applicationSignInDetailedSummary objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ApplicationSignInDetailedSummaryCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/reportroot-list-applicationsignindetailedsummary?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ApplicationSignInDetailedSummaryCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -107,7 +109,7 @@ public class ApplicationSignInDetailedSummaryRequestBuilder extends BaseRequestB
         return this.requestAdapter.send(requestInfo, errorMapping, ApplicationSignInDetailedSummary::createFromDiscriminatorValue);
     }
     /**
-     * Represents a detailed summary of an application sign-in.
+     * Retrieve the applicationSignInDetailedSummary objects.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +117,7 @@ public class ApplicationSignInDetailedSummaryRequestBuilder extends BaseRequestB
         return toGetRequestInformation(null);
     }
     /**
-     * Represents a detailed summary of an application sign-in.
+     * Retrieve the applicationSignInDetailedSummary objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +163,7 @@ public class ApplicationSignInDetailedSummaryRequestBuilder extends BaseRequestB
         return new ApplicationSignInDetailedSummaryRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Represents a detailed summary of an application sign-in.
+     * Retrieve the applicationSignInDetailedSummary objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

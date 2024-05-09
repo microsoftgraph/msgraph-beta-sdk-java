@@ -60,19 +60,21 @@ public class TenantsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/directory/outboundSharedUserProfiles/{outboundSharedUserProfile%2DuserId}/tenants{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * The collection of external Microsoft Entra tenants that the user has shared profile data with. Read-only.
+     * List the tenant references of an outboundSharedUserProfile.
      * @return a {@link TenantReferenceCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/outboundshareduserprofile-list-tenants?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TenantReferenceCollectionResponse get() {
         return get(null);
     }
     /**
-     * The collection of external Microsoft Entra tenants that the user has shared profile data with. Read-only.
+     * List the tenant references of an outboundSharedUserProfile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TenantReferenceCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/outboundshareduserprofile-list-tenants?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TenantReferenceCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -107,7 +109,7 @@ public class TenantsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TenantReference::createFromDiscriminatorValue);
     }
     /**
-     * The collection of external Microsoft Entra tenants that the user has shared profile data with. Read-only.
+     * List the tenant references of an outboundSharedUserProfile.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +117,7 @@ public class TenantsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The collection of external Microsoft Entra tenants that the user has shared profile data with. Read-only.
+     * List the tenant references of an outboundSharedUserProfile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +163,7 @@ public class TenantsRequestBuilder extends BaseRequestBuilder {
         return new TenantsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The collection of external Microsoft Entra tenants that the user has shared profile data with. Read-only.
+     * List the tenant references of an outboundSharedUserProfile.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

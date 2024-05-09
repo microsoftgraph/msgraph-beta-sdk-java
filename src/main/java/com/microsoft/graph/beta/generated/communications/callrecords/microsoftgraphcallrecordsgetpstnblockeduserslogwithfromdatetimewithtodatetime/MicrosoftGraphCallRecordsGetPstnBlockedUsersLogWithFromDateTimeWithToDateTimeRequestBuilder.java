@@ -41,7 +41,7 @@ public class MicrosoftGraphCallRecordsGetPstnBlockedUsersLogWithFromDateTimeWith
         super(requestAdapter, "{+baseurl}/communications/callRecords/microsoft.graph.callRecords.getPstnBlockedUsersLog(fromDateTime={fromDateTime},toDateTime={toDateTime}){?%24count,%24filter,%24search,%24skip,%24top}", rawUrl);
     }
     /**
-     * Invoke function getPstnBlockedUsersLog
+     * Get the log of users who are blocked/unblocked from making public switched telephone network (PSTN) calls in Microsoft Teams as a collection of pstnBlockedUsersLogRow entries. The log includes information about each blocked user such as their assigned phone number and the reason they were blocked/unblocked from making calls.
      * @return a {@link GetPstnBlockedUsersLogWithFromDateTimeWithToDateTimeGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -50,7 +50,7 @@ public class MicrosoftGraphCallRecordsGetPstnBlockedUsersLogWithFromDateTimeWith
         return get(null);
     }
     /**
-     * Invoke function getPstnBlockedUsersLog
+     * Get the log of users who are blocked/unblocked from making public switched telephone network (PSTN) calls in Microsoft Teams as a collection of pstnBlockedUsersLogRow entries. The log includes information about each blocked user such as their assigned phone number and the reason they were blocked/unblocked from making calls.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GetPstnBlockedUsersLogWithFromDateTimeWithToDateTimeGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -63,7 +63,7 @@ public class MicrosoftGraphCallRecordsGetPstnBlockedUsersLogWithFromDateTimeWith
         return this.requestAdapter.send(requestInfo, errorMapping, GetPstnBlockedUsersLogWithFromDateTimeWithToDateTimeGetResponse::createFromDiscriminatorValue);
     }
     /**
-     * Invoke function getPstnBlockedUsersLog
+     * Get the log of users who are blocked/unblocked from making public switched telephone network (PSTN) calls in Microsoft Teams as a collection of pstnBlockedUsersLogRow entries. The log includes information about each blocked user such as their assigned phone number and the reason they were blocked/unblocked from making calls.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -71,7 +71,7 @@ public class MicrosoftGraphCallRecordsGetPstnBlockedUsersLogWithFromDateTimeWith
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function getPstnBlockedUsersLog
+     * Get the log of users who are blocked/unblocked from making public switched telephone network (PSTN) calls in Microsoft Teams as a collection of pstnBlockedUsersLogRow entries. The log includes information about each blocked user such as their assigned phone number and the reason they were blocked/unblocked from making calls.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -93,7 +93,7 @@ public class MicrosoftGraphCallRecordsGetPstnBlockedUsersLogWithFromDateTimeWith
         return new MicrosoftGraphCallRecordsGetPstnBlockedUsersLogWithFromDateTimeWithToDateTimeRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Invoke function getPstnBlockedUsersLog
+     * Get the log of users who are blocked/unblocked from making public switched telephone network (PSTN) calls in Microsoft Teams as a collection of pstnBlockedUsersLogRow entries. The log includes information about each blocked user such as their assigned phone number and the reason they were blocked/unblocked from making calls.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

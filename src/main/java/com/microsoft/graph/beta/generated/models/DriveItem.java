@@ -139,6 +139,7 @@ public class DriveItem extends BaseItem implements Parsable {
         deserializerMap.put("thumbnails", (n) -> { this.setThumbnails(n.getCollectionOfObjectValues(ThumbnailSet::createFromDiscriminatorValue)); });
         deserializerMap.put("versions", (n) -> { this.setVersions(n.getCollectionOfObjectValues(DriveItemVersion::createFromDiscriminatorValue)); });
         deserializerMap.put("video", (n) -> { this.setVideo(n.getObjectValue(Video::createFromDiscriminatorValue)); });
+        deserializerMap.put("viewpoint", (n) -> { this.setViewpoint(n.getObjectValue(DriveItemViewpoint::createFromDiscriminatorValue)); });
         deserializerMap.put("webDavUrl", (n) -> { this.setWebDavUrl(n.getStringValue()); });
         deserializerMap.put("workbook", (n) -> { this.setWorkbook(n.getObjectValue(Workbook::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -352,6 +353,14 @@ public class DriveItem extends BaseItem implements Parsable {
         return this.backingStore.get("video");
     }
     /**
+     * Gets the viewpoint property value. Returns information specific to the calling user for this drive item. Read-only.
+     * @return a {@link DriveItemViewpoint}
+     */
+    @jakarta.annotation.Nullable
+    public DriveItemViewpoint getViewpoint() {
+        return this.backingStore.get("viewpoint");
+    }
+    /**
      * Gets the webDavUrl property value. WebDAV compatible URL for the item.
      * @return a {@link String}
      */
@@ -409,6 +418,7 @@ public class DriveItem extends BaseItem implements Parsable {
         writer.writeCollectionOfObjectValues("thumbnails", this.getThumbnails());
         writer.writeCollectionOfObjectValues("versions", this.getVersions());
         writer.writeObjectValue("video", this.getVideo());
+        writer.writeObjectValue("viewpoint", this.getViewpoint());
         writer.writeStringValue("webDavUrl", this.getWebDavUrl());
         writer.writeObjectValue("workbook", this.getWorkbook());
     }
@@ -656,6 +666,13 @@ public class DriveItem extends BaseItem implements Parsable {
      */
     public void setVideo(@jakarta.annotation.Nullable final Video value) {
         this.backingStore.set("video", value);
+    }
+    /**
+     * Sets the viewpoint property value. Returns information specific to the calling user for this drive item. Read-only.
+     * @param value Value to set for the viewpoint property.
+     */
+    public void setViewpoint(@jakarta.annotation.Nullable final DriveItemViewpoint value) {
+        this.backingStore.set("viewpoint", value);
     }
     /**
      * Sets the webDavUrl property value. WebDAV compatible URL for the item.

@@ -69,19 +69,21 @@ public class AuthenticationEventsFlowsRequestBuilder extends BaseRequestBuilder 
         super(requestAdapter, "{+baseurl}/identity/authenticationEventsFlows{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Represents the entry point for self-service sign up and sign in user flows in both Microsoft Entra workforce and customer tenants.
+     * Get a collection of authentication events policies that are derived from authenticationEventsFlow. Only the externalUsersSelfServiceSignupEventsFlow object type is returned.
      * @return a {@link AuthenticationEventsFlowCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/identitycontainer-list-authenticationeventsflows?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AuthenticationEventsFlowCollectionResponse get() {
         return get(null);
     }
     /**
-     * Represents the entry point for self-service sign up and sign in user flows in both Microsoft Entra workforce and customer tenants.
+     * Get a collection of authentication events policies that are derived from authenticationEventsFlow. Only the externalUsersSelfServiceSignupEventsFlow object type is returned.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AuthenticationEventsFlowCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/identitycontainer-list-authenticationeventsflows?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AuthenticationEventsFlowCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -91,21 +93,23 @@ public class AuthenticationEventsFlowsRequestBuilder extends BaseRequestBuilder 
         return this.requestAdapter.send(requestInfo, errorMapping, AuthenticationEventsFlowCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to authenticationEventsFlows for identity
+     * Create a new authenticationEventsFlow object that is of the type specified in the request body. You can create only an externalUsersSelfServiceSignupEventsFlow object type.
      * @param body The request body
      * @return a {@link AuthenticationEventsFlow}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/identitycontainer-post-authenticationeventsflows?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AuthenticationEventsFlow post(@jakarta.annotation.Nonnull final AuthenticationEventsFlow body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to authenticationEventsFlows for identity
+     * Create a new authenticationEventsFlow object that is of the type specified in the request body. You can create only an externalUsersSelfServiceSignupEventsFlow object type.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AuthenticationEventsFlow}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/identitycontainer-post-authenticationeventsflows?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AuthenticationEventsFlow post(@jakarta.annotation.Nonnull final AuthenticationEventsFlow body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -116,7 +120,7 @@ public class AuthenticationEventsFlowsRequestBuilder extends BaseRequestBuilder 
         return this.requestAdapter.send(requestInfo, errorMapping, AuthenticationEventsFlow::createFromDiscriminatorValue);
     }
     /**
-     * Represents the entry point for self-service sign up and sign in user flows in both Microsoft Entra workforce and customer tenants.
+     * Get a collection of authentication events policies that are derived from authenticationEventsFlow. Only the externalUsersSelfServiceSignupEventsFlow object type is returned.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -124,7 +128,7 @@ public class AuthenticationEventsFlowsRequestBuilder extends BaseRequestBuilder 
         return toGetRequestInformation(null);
     }
     /**
-     * Represents the entry point for self-service sign up and sign in user flows in both Microsoft Entra workforce and customer tenants.
+     * Get a collection of authentication events policies that are derived from authenticationEventsFlow. Only the externalUsersSelfServiceSignupEventsFlow object type is returned.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -136,7 +140,7 @@ public class AuthenticationEventsFlowsRequestBuilder extends BaseRequestBuilder 
         return requestInfo;
     }
     /**
-     * Create new navigation property to authenticationEventsFlows for identity
+     * Create a new authenticationEventsFlow object that is of the type specified in the request body. You can create only an externalUsersSelfServiceSignupEventsFlow object type.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -145,7 +149,7 @@ public class AuthenticationEventsFlowsRequestBuilder extends BaseRequestBuilder 
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to authenticationEventsFlows for identity
+     * Create a new authenticationEventsFlow object that is of the type specified in the request body. You can create only an externalUsersSelfServiceSignupEventsFlow object type.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -170,7 +174,7 @@ public class AuthenticationEventsFlowsRequestBuilder extends BaseRequestBuilder 
         return new AuthenticationEventsFlowsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Represents the entry point for self-service sign up and sign in user flows in both Microsoft Entra workforce and customer tenants.
+     * Get a collection of authentication events policies that are derived from authenticationEventsFlow. Only the externalUsersSelfServiceSignupEventsFlow object type is returned.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -64,19 +64,21 @@ public class FilteringPolicyItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * A filtering policy defines the specific traffic that is allowed or blocked through the Global Secure Access services for a filtering profile.
+     * Get a filteringPolicy object.
      * @return a {@link FilteringPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-filteringpolicy-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public FilteringPolicy get() {
         return get(null);
     }
     /**
-     * A filtering policy defines the specific traffic that is allowed or blocked through the Global Secure Access services for a filtering profile.
+     * Get a filteringPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link FilteringPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-filteringpolicy-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public FilteringPolicy get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -131,7 +133,7 @@ public class FilteringPolicyItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * A filtering policy defines the specific traffic that is allowed or blocked through the Global Secure Access services for a filtering profile.
+     * Get a filteringPolicy object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +141,7 @@ public class FilteringPolicyItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * A filtering policy defines the specific traffic that is allowed or blocked through the Global Secure Access services for a filtering profile.
+     * Get a filteringPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -191,7 +193,7 @@ public class FilteringPolicyItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * A filtering policy defines the specific traffic that is allowed or blocked through the Global Secure Access services for a filtering profile.
+     * Get a filteringPolicy object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -9,6 +9,7 @@ import com.microsoft.graph.beta.serviceprincipals.item.approleassignments.AppRol
 import com.microsoft.graph.beta.serviceprincipals.item.checkmembergroups.CheckMemberGroupsRequestBuilder;
 import com.microsoft.graph.beta.serviceprincipals.item.checkmemberobjects.CheckMemberObjectsRequestBuilder;
 import com.microsoft.graph.beta.serviceprincipals.item.claimsmappingpolicies.ClaimsMappingPoliciesRequestBuilder;
+import com.microsoft.graph.beta.serviceprincipals.item.claimspolicy.ClaimsPolicyRequestBuilder;
 import com.microsoft.graph.beta.serviceprincipals.item.createdobjects.CreatedObjectsRequestBuilder;
 import com.microsoft.graph.beta.serviceprincipals.item.createpasswordsinglesignoncredentials.CreatePasswordSingleSignOnCredentialsRequestBuilder;
 import com.microsoft.graph.beta.serviceprincipals.item.delegatedpermissionclassifications.DelegatedPermissionClassificationsRequestBuilder;
@@ -105,6 +106,14 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public ClaimsMappingPoliciesRequestBuilder claimsMappingPolicies() {
         return new ClaimsMappingPoliciesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the claimsPolicy property of the microsoft.graph.servicePrincipal entity.
+     * @return a {@link ClaimsPolicyRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ClaimsPolicyRequestBuilder claimsPolicy() {
+        return new ClaimsPolicyRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the createdObjects property of the microsoft.graph.servicePrincipal entity.

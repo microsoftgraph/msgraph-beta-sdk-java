@@ -13,10 +13,8 @@ import com.microsoft.graph.beta.models.ediscovery.AddToReviewSetOperation;
 import com.microsoft.graph.beta.models.ediscovery.CaseExportOperation;
 import com.microsoft.graph.beta.models.ediscovery.CaseHoldOperation;
 import com.microsoft.graph.beta.models.ediscovery.CaseIndexOperation;
-import com.microsoft.graph.beta.models.ediscovery.CaseOperation;
 import com.microsoft.graph.beta.models.ediscovery.CaseSettings;
 import com.microsoft.graph.beta.models.ediscovery.Custodian;
-import com.microsoft.graph.beta.models.ediscovery.DataSource;
 import com.microsoft.graph.beta.models.ediscovery.DataSourceContainer;
 import com.microsoft.graph.beta.models.ediscovery.Ediscoveryroot;
 import com.microsoft.graph.beta.models.ediscovery.EstimateStatisticsOperation;
@@ -25,11 +23,9 @@ import com.microsoft.graph.beta.models.ediscovery.NoncustodialDataSource;
 import com.microsoft.graph.beta.models.ediscovery.PurgeDataOperation;
 import com.microsoft.graph.beta.models.ediscovery.ReviewSet;
 import com.microsoft.graph.beta.models.ediscovery.ReviewSetQuery;
-import com.microsoft.graph.beta.models.ediscovery.SiteSource;
 import com.microsoft.graph.beta.models.ediscovery.SourceCollection;
 import com.microsoft.graph.beta.models.ediscovery.Tag;
 import com.microsoft.graph.beta.models.ediscovery.TagOperation;
-import com.microsoft.graph.beta.models.ediscovery.UnifiedGroupSource;
 import com.microsoft.graph.beta.models.ediscovery.UserSource;
 import com.microsoft.graph.beta.models.externalconnectors.ConnectionOperation;
 import com.microsoft.graph.beta.models.externalconnectors.ConnectionQuota;
@@ -111,7 +107,6 @@ import com.microsoft.graph.beta.models.managedtenants.TenantGroup;
 import com.microsoft.graph.beta.models.managedtenants.TenantTag;
 import com.microsoft.graph.beta.models.managedtenants.WindowsDeviceMalwareState;
 import com.microsoft.graph.beta.models.managedtenants.WindowsProtectionState;
-import com.microsoft.graph.beta.models.networkaccess.Alert;
 import com.microsoft.graph.beta.models.networkaccess.BranchSite;
 import com.microsoft.graph.beta.models.networkaccess.ConditionalAccessPolicy;
 import com.microsoft.graph.beta.models.networkaccess.ConditionalAccessSettings;
@@ -145,6 +140,8 @@ import com.microsoft.graph.beta.models.networkaccess.Reports;
 import com.microsoft.graph.beta.models.networkaccess.Settings;
 import com.microsoft.graph.beta.models.networkaccess.TenantStatus;
 import com.microsoft.graph.beta.models.networkaccess.WebCategoryFilteringRule;
+import com.microsoft.graph.beta.models.partner.security.PartnerSecurity;
+import com.microsoft.graph.beta.models.partner.security.PartnerSecurityAlert;
 import com.microsoft.graph.beta.models.partners.billing.AzureUsage;
 import com.microsoft.graph.beta.models.partners.billing.BilledReconciliation;
 import com.microsoft.graph.beta.models.partners.billing.BilledUsage;
@@ -160,6 +157,7 @@ import com.microsoft.graph.beta.models.search.Acronym;
 import com.microsoft.graph.beta.models.search.Bookmark;
 import com.microsoft.graph.beta.models.search.Qna;
 import com.microsoft.graph.beta.models.search.SearchAnswer;
+import com.microsoft.graph.beta.models.security.Alert;
 import com.microsoft.graph.beta.models.security.AnalyzedEmail;
 import com.microsoft.graph.beta.models.security.Article;
 import com.microsoft.graph.beta.models.security.ArticleIndicator;
@@ -169,11 +167,13 @@ import com.microsoft.graph.beta.models.security.AuditLogQuery;
 import com.microsoft.graph.beta.models.security.AuditLogRecord;
 import com.microsoft.graph.beta.models.security.AuthorityTemplate;
 import com.microsoft.graph.beta.models.security.CaseEscaped;
+import com.microsoft.graph.beta.models.security.CaseOperation;
 import com.microsoft.graph.beta.models.security.CasesRoot;
 import com.microsoft.graph.beta.models.security.CategoryTemplate;
 import com.microsoft.graph.beta.models.security.CitationTemplate;
 import com.microsoft.graph.beta.models.security.CollaborationRoot;
 import com.microsoft.graph.beta.models.security.DataSet;
+import com.microsoft.graph.beta.models.security.DataSource;
 import com.microsoft.graph.beta.models.security.DepartmentTemplate;
 import com.microsoft.graph.beta.models.security.DetectionRule;
 import com.microsoft.graph.beta.models.security.DispositionReviewStage;
@@ -225,6 +225,7 @@ import com.microsoft.graph.beta.models.security.IntelligenceProfile;
 import com.microsoft.graph.beta.models.security.IntelligenceProfileIndicator;
 import com.microsoft.graph.beta.models.security.IpAddress;
 import com.microsoft.graph.beta.models.security.LabelsRoot;
+import com.microsoft.graph.beta.models.security.NetworkAdapter;
 import com.microsoft.graph.beta.models.security.PassiveDnsRecord;
 import com.microsoft.graph.beta.models.security.PolicyBase;
 import com.microsoft.graph.beta.models.security.ProtectionRule;
@@ -235,6 +236,8 @@ import com.microsoft.graph.beta.models.security.RulesRoot;
 import com.microsoft.graph.beta.models.security.Search;
 import com.microsoft.graph.beta.models.security.Security;
 import com.microsoft.graph.beta.models.security.SensitivityLabel;
+import com.microsoft.graph.beta.models.security.Sensor;
+import com.microsoft.graph.beta.models.security.SiteSource;
 import com.microsoft.graph.beta.models.security.SslCertificate;
 import com.microsoft.graph.beta.models.security.SubcategoryTemplate;
 import com.microsoft.graph.beta.models.security.Subdomain;
@@ -244,6 +247,7 @@ import com.microsoft.graph.beta.models.security.ThreatSubmissionRoot;
 import com.microsoft.graph.beta.models.security.TriggersRoot;
 import com.microsoft.graph.beta.models.security.TriggerTypesRoot;
 import com.microsoft.graph.beta.models.security.UnclassifiedArtifact;
+import com.microsoft.graph.beta.models.security.UnifiedGroupSource;
 import com.microsoft.graph.beta.models.security.UrlThreatSubmission;
 import com.microsoft.graph.beta.models.security.Vulnerability;
 import com.microsoft.graph.beta.models.security.VulnerabilityComponent;
@@ -367,7 +371,6 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.accessReviewSet": return new AccessReviewSet();
             case "#microsoft.graph.accessReviewStage": return new AccessReviewStage();
             case "#microsoft.graph.activeDirectoryWindowsAutopilotDeploymentProfile": return new ActiveDirectoryWindowsAutopilotDeploymentProfile();
-            case "#microsoft.graph.activeUsersBreakdownMetric": return new ActiveUsersBreakdownMetric();
             case "#microsoft.graph.activeUsersMetric": return new ActiveUsersMetric();
             case "#microsoft.graph.activityBasedTimeoutPolicy": return new ActivityBasedTimeoutPolicy();
             case "#microsoft.graph.activityHistoryItem": return new ActivityHistoryItem();
@@ -699,6 +702,7 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.customAppScope": return new CustomAppScope();
             case "#microsoft.graph.customAuthenticationExtension": return new CustomAuthenticationExtension();
             case "#microsoft.graph.customCalloutExtension": return new CustomCalloutExtension();
+            case "#microsoft.graph.customClaimsPolicy": return new CustomClaimsPolicy();
             case "#microsoft.graph.customExtensionHandler": return new CustomExtensionHandler();
             case "#microsoft.graph.customExtensionStageSetting": return new CustomExtensionStageSetting();
             case "#microsoft.graph.customSecurityAttributeAudit": return new CustomSecurityAttributeAudit();
@@ -979,6 +983,7 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.extension": return new Extension();
             case "#microsoft.graph.extensionProperty": return new ExtensionProperty();
             case "#microsoft.graph.external": return new External();
+            case "#microsoft.graph.externalAuthenticationMethodConfiguration": return new ExternalAuthenticationMethodConfiguration();
             case "#microsoft.graph.externalConnection": return new ExternalConnection();
             case "#microsoft.graph.externalConnectors.connectionOperation": return new ConnectionOperation();
             case "#microsoft.graph.externalConnectors.connectionQuota": return new ConnectionQuota();
@@ -1349,7 +1354,6 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.microsoftApplicationDataAccessSettings": return new MicrosoftApplicationDataAccessSettings();
             case "#microsoft.graph.microsoftAuthenticatorAuthenticationMethod": return new MicrosoftAuthenticatorAuthenticationMethod();
             case "#microsoft.graph.microsoftAuthenticatorAuthenticationMethodConfiguration": return new MicrosoftAuthenticatorAuthenticationMethodConfiguration();
-            case "#microsoft.graph.microsoftAuthenticatorAuthenticationMethodTarget": return new MicrosoftAuthenticatorAuthenticationMethodTarget();
         }
         return null;
     }
@@ -1361,6 +1365,7 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     private static Entity createFromDiscriminatorValue_2(@jakarta.annotation.Nonnull final String discriminatorValue) {
         switch (discriminatorValue) {
+            case "#microsoft.graph.microsoftAuthenticatorAuthenticationMethodTarget": return new MicrosoftAuthenticatorAuthenticationMethodTarget();
             case "#microsoft.graph.microsoftStoreForBusinessApp": return new MicrosoftStoreForBusinessApp();
             case "#microsoft.graph.microsoftStoreForBusinessContainedApp": return new MicrosoftStoreForBusinessContainedApp();
             case "#microsoft.graph.microsoftTunnelConfiguration": return new MicrosoftTunnelConfiguration();
@@ -1509,6 +1514,8 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.participant": return new Participant();
             case "#microsoft.graph.participantJoiningNotification": return new ParticipantJoiningNotification();
             case "#microsoft.graph.participantLeftNotification": return new ParticipantLeftNotification();
+            case "#microsoft.graph.partner.security.partnerSecurity": return new PartnerSecurity();
+            case "#microsoft.graph.partner.security.partnerSecurityAlert": return new PartnerSecurityAlert();
             case "#microsoft.graph.partners": return new Partners();
             case "#microsoft.graph.partners.billing.azureUsage": return new AzureUsage();
             case "#microsoft.graph.partners.billing.billedReconciliation": return new BilledReconciliation();
@@ -1768,6 +1775,7 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.security.intelligenceProfileIndicator": return new IntelligenceProfileIndicator();
             case "#microsoft.graph.security.ipAddress": return new IpAddress();
             case "#microsoft.graph.security.labelsRoot": return new LabelsRoot();
+            case "#microsoft.graph.security.networkAdapter": return new NetworkAdapter();
             case "#microsoft.graph.security.passiveDnsRecord": return new PassiveDnsRecord();
             case "#microsoft.graph.security.policyBase": return new PolicyBase();
             case "#microsoft.graph.security.protectionRule": return new ProtectionRule();
@@ -1778,6 +1786,7 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.security.search": return new Search();
             case "#microsoft.graph.security.security": return new Security();
             case "#microsoft.graph.security.sensitivityLabel": return new SensitivityLabel();
+            case "#microsoft.graph.security.sensor": return new Sensor();
             case "#microsoft.graph.security.siteSource": return new SiteSource();
             case "#microsoft.graph.security.sslCertificate": return new SslCertificate();
             case "#microsoft.graph.security.subcategoryTemplate": return new SubcategoryTemplate();
@@ -1856,11 +1865,6 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.smsAuthenticationMethodConfiguration": return new SmsAuthenticationMethodConfiguration();
             case "#microsoft.graph.smsAuthenticationMethodTarget": return new SmsAuthenticationMethodTarget();
             case "#microsoft.graph.socialIdentityProvider": return new SocialIdentityProvider();
-            case "#microsoft.graph.softwareOathAuthenticationMethod": return new SoftwareOathAuthenticationMethod();
-            case "#microsoft.graph.softwareOathAuthenticationMethodConfiguration": return new SoftwareOathAuthenticationMethodConfiguration();
-            case "#microsoft.graph.softwareUpdateStatusSummary": return new SoftwareUpdateStatusSummary();
-            case "#microsoft.graph.staleSignInAlertConfiguration": return new StaleSignInAlertConfiguration();
-            case "#microsoft.graph.staleSignInAlertIncident": return new StaleSignInAlertIncident();
         }
         return null;
     }
@@ -1872,6 +1876,11 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     private static Entity createFromDiscriminatorValue_3(@jakarta.annotation.Nonnull final String discriminatorValue) {
         switch (discriminatorValue) {
+            case "#microsoft.graph.softwareOathAuthenticationMethod": return new SoftwareOathAuthenticationMethod();
+            case "#microsoft.graph.softwareOathAuthenticationMethodConfiguration": return new SoftwareOathAuthenticationMethodConfiguration();
+            case "#microsoft.graph.softwareUpdateStatusSummary": return new SoftwareUpdateStatusSummary();
+            case "#microsoft.graph.staleSignInAlertConfiguration": return new StaleSignInAlertConfiguration();
+            case "#microsoft.graph.staleSignInAlertIncident": return new StaleSignInAlertIncident();
             case "#microsoft.graph.standardWebPart": return new StandardWebPart();
             case "#microsoft.graph.startHoldMusicOperation": return new StartHoldMusicOperation();
             case "#microsoft.graph.stopHoldMusicOperation": return new StopHoldMusicOperation();

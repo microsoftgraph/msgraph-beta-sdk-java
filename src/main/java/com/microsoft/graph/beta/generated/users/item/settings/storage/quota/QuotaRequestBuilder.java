@@ -64,19 +64,21 @@ public class QuotaRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get quota from users
+     * Read the properties and relationships of a unifiedStorageQuota object.
      * @return a {@link UnifiedStorageQuota}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/unifiedstoragequota-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UnifiedStorageQuota get() {
         return get(null);
     }
     /**
-     * Get quota from users
+     * Read the properties and relationships of a unifiedStorageQuota object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UnifiedStorageQuota}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/unifiedstoragequota-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UnifiedStorageQuota get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -131,7 +133,7 @@ public class QuotaRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get quota from users
+     * Read the properties and relationships of a unifiedStorageQuota object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +141,7 @@ public class QuotaRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get quota from users
+     * Read the properties and relationships of a unifiedStorageQuota object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -191,7 +193,7 @@ public class QuotaRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get quota from users
+     * Read the properties and relationships of a unifiedStorageQuota object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

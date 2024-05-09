@@ -25,7 +25,9 @@ public enum RequirementProvider implements ValuedEnum {
     CrossTenantOutboundRule("crossTenantOutboundRule"),
     GpsLocationCondition("gpsLocationCondition"),
     RiskBasedPolicy("riskBasedPolicy"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    ScopeBasedAuthRequirementPolicy("scopeBasedAuthRequirementPolicy"),
+    AuthenticationStrengths("authenticationStrengths");
     public final String value;
     RequirementProvider(final String value) {
         this.value = value;
@@ -57,6 +59,8 @@ public enum RequirementProvider implements ValuedEnum {
             case "gpsLocationCondition": return GpsLocationCondition;
             case "riskBasedPolicy": return RiskBasedPolicy;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "scopeBasedAuthRequirementPolicy": return ScopeBasedAuthRequirementPolicy;
+            case "authenticationStrengths": return AuthenticationStrengths;
             default: return null;
         }
     }

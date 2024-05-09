@@ -73,19 +73,21 @@ public class UnifiedRbacResourceNamespaceItemRequestBuilder extends BaseRequestB
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get resourceNamespaces from roleManagement
+     * Read the properties and relationships of an unifiedRbacResourceNamespace object.
      * @return a {@link UnifiedRbacResourceNamespace}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/unifiedrbacresourcenamespace-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UnifiedRbacResourceNamespace get() {
         return get(null);
     }
     /**
-     * Get resourceNamespaces from roleManagement
+     * Read the properties and relationships of an unifiedRbacResourceNamespace object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UnifiedRbacResourceNamespace}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/unifiedrbacresourcenamespace-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UnifiedRbacResourceNamespace get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -140,7 +142,7 @@ public class UnifiedRbacResourceNamespaceItemRequestBuilder extends BaseRequestB
         return requestInfo;
     }
     /**
-     * Get resourceNamespaces from roleManagement
+     * Read the properties and relationships of an unifiedRbacResourceNamespace object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -148,7 +150,7 @@ public class UnifiedRbacResourceNamespaceItemRequestBuilder extends BaseRequestB
         return toGetRequestInformation(null);
     }
     /**
-     * Get resourceNamespaces from roleManagement
+     * Read the properties and relationships of an unifiedRbacResourceNamespace object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -200,7 +202,7 @@ public class UnifiedRbacResourceNamespaceItemRequestBuilder extends BaseRequestB
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get resourceNamespaces from roleManagement
+     * Read the properties and relationships of an unifiedRbacResourceNamespace object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

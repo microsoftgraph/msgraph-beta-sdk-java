@@ -36,7 +36,7 @@ public class MicrosoftGraphManagedTenantsChangeDeploymentStatusRequestBuilder ex
         super(requestAdapter, "{+baseurl}/tenantRelationships/managedTenants/managementActionTenantDeploymentStatuses/microsoft.graph.managedTenants.changeDeploymentStatus", rawUrl);
     }
     /**
-     * Invoke action changeDeploymentStatus
+     * Changes the tenant level deployment status for the management action. This information is used to provide insights into what management actions are in a specific state. As example there might be a plan to apply the require multi-factor authentication for admins, so it would be ideal to change the status to planned to reflect the appropriate status.
      * @param body The request body
      * @return a {@link ManagementActionDeploymentStatus}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -46,7 +46,7 @@ public class MicrosoftGraphManagedTenantsChangeDeploymentStatusRequestBuilder ex
         return post(body, null);
     }
     /**
-     * Invoke action changeDeploymentStatus
+     * Changes the tenant level deployment status for the management action. This information is used to provide insights into what management actions are in a specific state. As example there might be a plan to apply the require multi-factor authentication for admins, so it would be ideal to change the status to planned to reflect the appropriate status.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ManagementActionDeploymentStatus}
@@ -61,7 +61,7 @@ public class MicrosoftGraphManagedTenantsChangeDeploymentStatusRequestBuilder ex
         return this.requestAdapter.send(requestInfo, errorMapping, ManagementActionDeploymentStatus::createFromDiscriminatorValue);
     }
     /**
-     * Invoke action changeDeploymentStatus
+     * Changes the tenant level deployment status for the management action. This information is used to provide insights into what management actions are in a specific state. As example there might be a plan to apply the require multi-factor authentication for admins, so it would be ideal to change the status to planned to reflect the appropriate status.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -70,7 +70,7 @@ public class MicrosoftGraphManagedTenantsChangeDeploymentStatusRequestBuilder ex
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action changeDeploymentStatus
+     * Changes the tenant level deployment status for the management action. This information is used to provide insights into what management actions are in a specific state. As example there might be a plan to apply the require multi-factor authentication for admins, so it would be ideal to change the status to planned to reflect the appropriate status.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

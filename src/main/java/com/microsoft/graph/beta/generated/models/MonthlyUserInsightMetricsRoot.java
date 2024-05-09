@@ -33,14 +33,6 @@ public class MonthlyUserInsightMetricsRoot extends Entity implements Parsable {
         return this.backingStore.get("activeUsers");
     }
     /**
-     * Gets the activeUsersBreakdown property value. The activeUsersBreakdown property
-     * @return a {@link java.util.List<ActiveUsersBreakdownMetric>}
-     */
-    @jakarta.annotation.Nullable
-    public java.util.List<ActiveUsersBreakdownMetric> getActiveUsersBreakdown() {
-        return this.backingStore.get("activeUsersBreakdown");
-    }
-    /**
      * Gets the authentications property value. Insights for authentications on apps registered in the tenant for a specified period.
      * @return a {@link java.util.List<AuthenticationsMetric>}
      */
@@ -56,7 +48,6 @@ public class MonthlyUserInsightMetricsRoot extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("activeUsers", (n) -> { this.setActiveUsers(n.getCollectionOfObjectValues(ActiveUsersMetric::createFromDiscriminatorValue)); });
-        deserializerMap.put("activeUsersBreakdown", (n) -> { this.setActiveUsersBreakdown(n.getCollectionOfObjectValues(ActiveUsersBreakdownMetric::createFromDiscriminatorValue)); });
         deserializerMap.put("authentications", (n) -> { this.setAuthentications(n.getCollectionOfObjectValues(AuthenticationsMetric::createFromDiscriminatorValue)); });
         deserializerMap.put("inactiveUsers", (n) -> { this.setInactiveUsers(n.getCollectionOfObjectValues(MonthlyInactiveUsersMetric::createFromDiscriminatorValue)); });
         deserializerMap.put("inactiveUsersByApplication", (n) -> { this.setInactiveUsersByApplication(n.getCollectionOfObjectValues(MonthlyInactiveUsersByApplicationMetric::createFromDiscriminatorValue)); });
@@ -122,7 +113,6 @@ public class MonthlyUserInsightMetricsRoot extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("activeUsers", this.getActiveUsers());
-        writer.writeCollectionOfObjectValues("activeUsersBreakdown", this.getActiveUsersBreakdown());
         writer.writeCollectionOfObjectValues("authentications", this.getAuthentications());
         writer.writeCollectionOfObjectValues("inactiveUsers", this.getInactiveUsers());
         writer.writeCollectionOfObjectValues("inactiveUsersByApplication", this.getInactiveUsersByApplication());
@@ -137,13 +127,6 @@ public class MonthlyUserInsightMetricsRoot extends Entity implements Parsable {
      */
     public void setActiveUsers(@jakarta.annotation.Nullable final java.util.List<ActiveUsersMetric> value) {
         this.backingStore.set("activeUsers", value);
-    }
-    /**
-     * Sets the activeUsersBreakdown property value. The activeUsersBreakdown property
-     * @param value Value to set for the activeUsersBreakdown property.
-     */
-    public void setActiveUsersBreakdown(@jakarta.annotation.Nullable final java.util.List<ActiveUsersBreakdownMetric> value) {
-        this.backingStore.set("activeUsersBreakdown", value);
     }
     /**
      * Sets the authentications property value. Insights for authentications on apps registered in the tenant for a specified period.

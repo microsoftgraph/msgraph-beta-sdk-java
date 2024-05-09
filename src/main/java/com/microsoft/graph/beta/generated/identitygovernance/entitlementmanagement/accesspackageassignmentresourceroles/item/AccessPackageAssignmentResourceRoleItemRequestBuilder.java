@@ -91,19 +91,21 @@ public class AccessPackageAssignmentResourceRoleItemRequestBuilder extends BaseR
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Represents the resource-specific role which a subject has been assigned through an access package assignment.
+     * Retrieve the properties and relationships of an accessPackageAssignmentResourceRole object.
      * @return a {@link AccessPackageAssignmentResourceRole}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/accesspackageassignmentresourcerole-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AccessPackageAssignmentResourceRole get() {
         return get(null);
     }
     /**
-     * Represents the resource-specific role which a subject has been assigned through an access package assignment.
+     * Retrieve the properties and relationships of an accessPackageAssignmentResourceRole object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AccessPackageAssignmentResourceRole}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/accesspackageassignmentresourcerole-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AccessPackageAssignmentResourceRole get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -158,7 +160,7 @@ public class AccessPackageAssignmentResourceRoleItemRequestBuilder extends BaseR
         return requestInfo;
     }
     /**
-     * Represents the resource-specific role which a subject has been assigned through an access package assignment.
+     * Retrieve the properties and relationships of an accessPackageAssignmentResourceRole object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -166,7 +168,7 @@ public class AccessPackageAssignmentResourceRoleItemRequestBuilder extends BaseR
         return toGetRequestInformation(null);
     }
     /**
-     * Represents the resource-specific role which a subject has been assigned through an access package assignment.
+     * Retrieve the properties and relationships of an accessPackageAssignmentResourceRole object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -218,7 +220,7 @@ public class AccessPackageAssignmentResourceRoleItemRequestBuilder extends BaseR
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Represents the resource-specific role which a subject has been assigned through an access package assignment.
+     * Retrieve the properties and relationships of an accessPackageAssignmentResourceRole object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

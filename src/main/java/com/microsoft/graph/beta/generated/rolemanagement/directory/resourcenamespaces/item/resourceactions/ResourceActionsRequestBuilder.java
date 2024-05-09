@@ -60,19 +60,21 @@ public class ResourceActionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/roleManagement/directory/resourceNamespaces/{unifiedRbacResourceNamespace%2Did}/resourceActions{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Operations that an authorized principal is allowed to perform.
+     * Get a list of the unifiedRbacResourceAction objects and their properties.
      * @return a {@link UnifiedRbacResourceActionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/unifiedrbacresourcenamespace-list-resourceactions?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UnifiedRbacResourceActionCollectionResponse get() {
         return get(null);
     }
     /**
-     * Operations that an authorized principal is allowed to perform.
+     * Get a list of the unifiedRbacResourceAction objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UnifiedRbacResourceActionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/unifiedrbacresourcenamespace-list-resourceactions?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UnifiedRbacResourceActionCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -107,7 +109,7 @@ public class ResourceActionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, UnifiedRbacResourceAction::createFromDiscriminatorValue);
     }
     /**
-     * Operations that an authorized principal is allowed to perform.
+     * Get a list of the unifiedRbacResourceAction objects and their properties.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +117,7 @@ public class ResourceActionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Operations that an authorized principal is allowed to perform.
+     * Get a list of the unifiedRbacResourceAction objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +163,7 @@ public class ResourceActionsRequestBuilder extends BaseRequestBuilder {
         return new ResourceActionsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Operations that an authorized principal is allowed to perform.
+     * Get a list of the unifiedRbacResourceAction objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

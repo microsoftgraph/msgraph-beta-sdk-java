@@ -60,19 +60,21 @@ public class CloudPcDevicesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/tenantRelationships/managedTenants/cloudPcDevices{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * The collection of cloud PC devices across managed tenants.
+     * Get a list of the cloudPcDevice objects and their properties.
      * @return a {@link CloudPcDeviceCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-managedtenant-list-cloudpcdevices?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPcDeviceCollectionResponse get() {
         return get(null);
     }
     /**
-     * The collection of cloud PC devices across managed tenants.
+     * Get a list of the cloudPcDevice objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CloudPcDeviceCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-managedtenant-list-cloudpcdevices?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPcDeviceCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -107,7 +109,7 @@ public class CloudPcDevicesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CloudPcDevice::createFromDiscriminatorValue);
     }
     /**
-     * The collection of cloud PC devices across managed tenants.
+     * Get a list of the cloudPcDevice objects and their properties.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +117,7 @@ public class CloudPcDevicesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The collection of cloud PC devices across managed tenants.
+     * Get a list of the cloudPcDevice objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +163,7 @@ public class CloudPcDevicesRequestBuilder extends BaseRequestBuilder {
         return new CloudPcDevicesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The collection of cloud PC devices across managed tenants.
+     * Get a list of the cloudPcDevice objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

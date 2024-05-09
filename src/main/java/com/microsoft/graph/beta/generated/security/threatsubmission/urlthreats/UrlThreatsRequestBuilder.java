@@ -60,19 +60,21 @@ public class UrlThreatsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/threatSubmission/urlThreats{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get urlThreats from security
+     * Get a list of the urlThreatSubmission objects and their properties.
      * @return a {@link UrlThreatSubmissionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-urlthreatsubmission-list?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UrlThreatSubmissionCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get urlThreats from security
+     * Get a list of the urlThreatSubmission objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UrlThreatSubmissionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-urlthreatsubmission-list?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UrlThreatSubmissionCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,21 +84,23 @@ public class UrlThreatsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, UrlThreatSubmissionCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to urlThreats for security
+     * Create a new urlThreatSubmission object.
      * @param body The request body
      * @return a {@link UrlThreatSubmission}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-urlthreatsubmission-post-urlthreats?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UrlThreatSubmission post(@jakarta.annotation.Nonnull final UrlThreatSubmission body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to urlThreats for security
+     * Create a new urlThreatSubmission object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UrlThreatSubmission}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-urlthreatsubmission-post-urlthreats?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UrlThreatSubmission post(@jakarta.annotation.Nonnull final UrlThreatSubmission body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -107,7 +111,7 @@ public class UrlThreatsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, UrlThreatSubmission::createFromDiscriminatorValue);
     }
     /**
-     * Get urlThreats from security
+     * Get a list of the urlThreatSubmission objects and their properties.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +119,7 @@ public class UrlThreatsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get urlThreats from security
+     * Get a list of the urlThreatSubmission objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -127,7 +131,7 @@ public class UrlThreatsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to urlThreats for security
+     * Create a new urlThreatSubmission object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -136,7 +140,7 @@ public class UrlThreatsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to urlThreats for security
+     * Create a new urlThreatSubmission object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -161,7 +165,7 @@ public class UrlThreatsRequestBuilder extends BaseRequestBuilder {
         return new UrlThreatsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get urlThreats from security
+     * Get a list of the urlThreatSubmission objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

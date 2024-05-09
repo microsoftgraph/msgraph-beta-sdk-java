@@ -3,7 +3,6 @@ package com.microsoft.graph.beta.reports.userinsights.monthly;
 import com.microsoft.graph.beta.models.MonthlyUserInsightMetricsRoot;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.reports.userinsights.monthly.activeusers.ActiveUsersRequestBuilder;
-import com.microsoft.graph.beta.reports.userinsights.monthly.activeusersbreakdown.ActiveUsersBreakdownRequestBuilder;
 import com.microsoft.graph.beta.reports.userinsights.monthly.authentications.AuthenticationsRequestBuilder;
 import com.microsoft.graph.beta.reports.userinsights.monthly.inactiveusers.InactiveUsersRequestBuilder;
 import com.microsoft.graph.beta.reports.userinsights.monthly.inactiveusersbyapplication.InactiveUsersByApplicationRequestBuilder;
@@ -36,14 +35,6 @@ public class MonthlyRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public ActiveUsersRequestBuilder activeUsers() {
         return new ActiveUsersRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the activeUsersBreakdown property of the microsoft.graph.monthlyUserInsightMetricsRoot entity.
-     * @return a {@link ActiveUsersBreakdownRequestBuilder}
-     */
-    @jakarta.annotation.Nonnull
-    public ActiveUsersBreakdownRequestBuilder activeUsersBreakdown() {
-        return new ActiveUsersBreakdownRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the authentications property of the microsoft.graph.monthlyUserInsightMetricsRoot entity.

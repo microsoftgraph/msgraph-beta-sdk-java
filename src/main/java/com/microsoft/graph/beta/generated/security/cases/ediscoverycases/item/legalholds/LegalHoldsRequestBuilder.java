@@ -60,19 +60,21 @@ public class LegalHoldsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/legalHolds{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Returns a list of case eDiscoveryHoldPolicy objects for this case.
+     * Get a list of the ediscoveryHoldPolicy objects and their properties.
      * @return a {@link EdiscoveryHoldPolicyCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycase-list-legalholds?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EdiscoveryHoldPolicyCollectionResponse get() {
         return get(null);
     }
     /**
-     * Returns a list of case eDiscoveryHoldPolicy objects for this case.
+     * Get a list of the ediscoveryHoldPolicy objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EdiscoveryHoldPolicyCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycase-list-legalholds?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EdiscoveryHoldPolicyCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,21 +84,23 @@ public class LegalHoldsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EdiscoveryHoldPolicyCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to legalHolds for security
+     * Create a new ediscoveryHoldPolicy object.
      * @param body The request body
      * @return a {@link EdiscoveryHoldPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycase-post-legalholds?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EdiscoveryHoldPolicy post(@jakarta.annotation.Nonnull final EdiscoveryHoldPolicy body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to legalHolds for security
+     * Create a new ediscoveryHoldPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EdiscoveryHoldPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycase-post-legalholds?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EdiscoveryHoldPolicy post(@jakarta.annotation.Nonnull final EdiscoveryHoldPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -107,7 +111,7 @@ public class LegalHoldsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EdiscoveryHoldPolicy::createFromDiscriminatorValue);
     }
     /**
-     * Returns a list of case eDiscoveryHoldPolicy objects for this case.
+     * Get a list of the ediscoveryHoldPolicy objects and their properties.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +119,7 @@ public class LegalHoldsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Returns a list of case eDiscoveryHoldPolicy objects for this case.
+     * Get a list of the ediscoveryHoldPolicy objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -127,7 +131,7 @@ public class LegalHoldsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to legalHolds for security
+     * Create a new ediscoveryHoldPolicy object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -136,7 +140,7 @@ public class LegalHoldsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to legalHolds for security
+     * Create a new ediscoveryHoldPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -161,7 +165,7 @@ public class LegalHoldsRequestBuilder extends BaseRequestBuilder {
         return new LegalHoldsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Returns a list of case eDiscoveryHoldPolicy objects for this case.
+     * Get a list of the ediscoveryHoldPolicy objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

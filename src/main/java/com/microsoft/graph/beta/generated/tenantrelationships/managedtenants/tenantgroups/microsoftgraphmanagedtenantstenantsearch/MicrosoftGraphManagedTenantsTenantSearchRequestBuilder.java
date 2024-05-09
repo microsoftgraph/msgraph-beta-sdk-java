@@ -35,7 +35,7 @@ public class MicrosoftGraphManagedTenantsTenantSearchRequestBuilder extends Base
         super(requestAdapter, "{+baseurl}/tenantRelationships/managedTenants/tenantGroups/microsoft.graph.managedTenants.tenantSearch", rawUrl);
     }
     /**
-     * Invoke action tenantSearch
+     * Searches for the specified managed tenants across tenant groups.
      * @param body The request body
      * @return a {@link TenantSearchPostResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -45,7 +45,7 @@ public class MicrosoftGraphManagedTenantsTenantSearchRequestBuilder extends Base
         return post(body, null);
     }
     /**
-     * Invoke action tenantSearch
+     * Searches for the specified managed tenants across tenant groups.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TenantSearchPostResponse}
@@ -60,7 +60,7 @@ public class MicrosoftGraphManagedTenantsTenantSearchRequestBuilder extends Base
         return this.requestAdapter.send(requestInfo, errorMapping, TenantSearchPostResponse::createFromDiscriminatorValue);
     }
     /**
-     * Invoke action tenantSearch
+     * Searches for the specified managed tenants across tenant groups.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -69,7 +69,7 @@ public class MicrosoftGraphManagedTenantsTenantSearchRequestBuilder extends Base
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action tenantSearch
+     * Searches for the specified managed tenants across tenant groups.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

@@ -1,5 +1,6 @@
 package com.microsoft.graph.beta.models;
 
+import com.microsoft.graph.beta.models.partner.security.AdditionalDataDictionary;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -37,6 +38,7 @@ public class Dictionary implements AdditionalDataHolder, BackedModel, Parsable {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
                 case "#microsoft.graph.customAppScopeAttributesDictionary": return new CustomAppScopeAttributesDictionary();
+                case "#microsoft.graph.partner.security.additionalDataDictionary": return new AdditionalDataDictionary();
                 case "#microsoft.graph.plannerFormsDictionary": return new PlannerFormsDictionary();
                 case "#microsoft.graph.resultTemplateDictionary": return new ResultTemplateDictionary();
             }

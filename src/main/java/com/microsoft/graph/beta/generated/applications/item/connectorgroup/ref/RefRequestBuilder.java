@@ -76,18 +76,20 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitive(requestInfo, errorMapping, String.class);
     }
     /**
-     * Update the ref of navigation property connectorGroup in applications
+     * Assign a connectorGroup to an application.
      * @param body The request body
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/connectorgroup-post-applications?view=graph-rest-beta">Find more info here</a>
      */
     public void put(@jakarta.annotation.Nonnull final ReferenceUpdate body) {
         put(body, null);
     }
     /**
-     * Update the ref of navigation property connectorGroup in applications
+     * Assign a connectorGroup to an application.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/connectorgroup-post-applications?view=graph-rest-beta">Find more info here</a>
      */
     public void put(@jakarta.annotation.Nonnull final ReferenceUpdate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PutRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
@@ -137,7 +139,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the ref of navigation property connectorGroup in applications
+     * Assign a connectorGroup to an application.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -146,7 +148,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return toPutRequestInformation(body, null);
     }
     /**
-     * Update the ref of navigation property connectorGroup in applications
+     * Assign a connectorGroup to an application.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

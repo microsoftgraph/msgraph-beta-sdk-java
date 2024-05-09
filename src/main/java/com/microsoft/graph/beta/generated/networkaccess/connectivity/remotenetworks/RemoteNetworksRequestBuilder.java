@@ -82,21 +82,23 @@ public class RemoteNetworksRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, RemoteNetworkCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to remoteNetworks for networkAccess
+     * Create a new remote network.
      * @param body The request body
      * @return a {@link RemoteNetwork}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-connectivity-post-remotenetworks?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RemoteNetwork post(@jakarta.annotation.Nonnull final RemoteNetwork body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to remoteNetworks for networkAccess
+     * Create a new remote network.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RemoteNetwork}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-connectivity-post-remotenetworks?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RemoteNetwork post(@jakarta.annotation.Nonnull final RemoteNetwork body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -127,7 +129,7 @@ public class RemoteNetworksRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to remoteNetworks for networkAccess
+     * Create a new remote network.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -136,7 +138,7 @@ public class RemoteNetworksRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to remoteNetworks for networkAccess
+     * Create a new remote network.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

@@ -60,19 +60,21 @@ public class AlertDefinitionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/roleManagementAlerts/alertDefinitions{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Defines an alert, its impact, and measures to mitigate or prevent it.
+     * Get a list of the unifiedRoleManagementAlertDefinition objects and their properties.
      * @return a {@link UnifiedRoleManagementAlertDefinitionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/rolemanagementalert-list-alertdefinitions?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UnifiedRoleManagementAlertDefinitionCollectionResponse get() {
         return get(null);
     }
     /**
-     * Defines an alert, its impact, and measures to mitigate or prevent it.
+     * Get a list of the unifiedRoleManagementAlertDefinition objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UnifiedRoleManagementAlertDefinitionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/rolemanagementalert-list-alertdefinitions?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UnifiedRoleManagementAlertDefinitionCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -107,7 +109,7 @@ public class AlertDefinitionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, UnifiedRoleManagementAlertDefinition::createFromDiscriminatorValue);
     }
     /**
-     * Defines an alert, its impact, and measures to mitigate or prevent it.
+     * Get a list of the unifiedRoleManagementAlertDefinition objects and their properties.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +117,7 @@ public class AlertDefinitionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Defines an alert, its impact, and measures to mitigate or prevent it.
+     * Get a list of the unifiedRoleManagementAlertDefinition objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +163,7 @@ public class AlertDefinitionsRequestBuilder extends BaseRequestBuilder {
         return new AlertDefinitionsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Defines an alert, its impact, and measures to mitigate or prevent it.
+     * Get a list of the unifiedRoleManagementAlertDefinition objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -55,19 +55,21 @@ public class AppsAndServicesRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get appsAndServices from admin
+     * Read the properties and relationships of a adminAppsAndServices object.
      * @return a {@link AdminAppsAndServices}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/adminappsandservices-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AdminAppsAndServices get() {
         return get(null);
     }
     /**
-     * Get appsAndServices from admin
+     * Read the properties and relationships of a adminAppsAndServices object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AdminAppsAndServices}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/adminappsandservices-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AdminAppsAndServices get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -77,21 +79,23 @@ public class AppsAndServicesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AdminAppsAndServices::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property appsAndServices in admin
+     * Update the properties of a adminAppsAndServices object.
      * @param body The request body
      * @return a {@link AdminAppsAndServices}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/adminappsandservices-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AdminAppsAndServices patch(@jakarta.annotation.Nonnull final AdminAppsAndServices body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property appsAndServices in admin
+     * Update the properties of a adminAppsAndServices object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AdminAppsAndServices}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/adminappsandservices-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AdminAppsAndServices patch(@jakarta.annotation.Nonnull final AdminAppsAndServices body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -122,7 +126,7 @@ public class AppsAndServicesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get appsAndServices from admin
+     * Read the properties and relationships of a adminAppsAndServices object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +134,7 @@ public class AppsAndServicesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get appsAndServices from admin
+     * Read the properties and relationships of a adminAppsAndServices object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -142,7 +146,7 @@ public class AppsAndServicesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property appsAndServices in admin
+     * Update the properties of a adminAppsAndServices object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -151,7 +155,7 @@ public class AppsAndServicesRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property appsAndServices in admin
+     * Update the properties of a adminAppsAndServices object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -182,7 +186,7 @@ public class AppsAndServicesRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get appsAndServices from admin
+     * Read the properties and relationships of a adminAppsAndServices object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

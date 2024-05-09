@@ -60,19 +60,21 @@ public class ControlsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/programs/{program%2Did}/controls{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Controls associated with the program.
+     * In the Microsoft Entra access reviews feature, list all the programControl objects, linked to a particular program.
      * @return a {@link ProgramControlCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/program-listcontrols?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ProgramControlCollectionResponse get() {
         return get(null);
     }
     /**
-     * Controls associated with the program.
+     * In the Microsoft Entra access reviews feature, list all the programControl objects, linked to a particular program.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ProgramControlCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/program-listcontrols?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ProgramControlCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -107,7 +109,7 @@ public class ControlsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ProgramControl::createFromDiscriminatorValue);
     }
     /**
-     * Controls associated with the program.
+     * In the Microsoft Entra access reviews feature, list all the programControl objects, linked to a particular program.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +117,7 @@ public class ControlsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Controls associated with the program.
+     * In the Microsoft Entra access reviews feature, list all the programControl objects, linked to a particular program.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +163,7 @@ public class ControlsRequestBuilder extends BaseRequestBuilder {
         return new ControlsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Controls associated with the program.
+     * In the Microsoft Entra access reviews feature, list all the programControl objects, linked to a particular program.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

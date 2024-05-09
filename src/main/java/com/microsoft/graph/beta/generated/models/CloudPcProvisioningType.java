@@ -7,7 +7,9 @@ import java.util.Objects;
 public enum CloudPcProvisioningType implements ValuedEnum {
     Dedicated("dedicated"),
     Shared("shared"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    SharedByUser("sharedByUser"),
+    SharedByEntraGroup("sharedByEntraGroup");
     public final String value;
     CloudPcProvisioningType(final String value) {
         this.value = value;
@@ -21,6 +23,8 @@ public enum CloudPcProvisioningType implements ValuedEnum {
             case "dedicated": return Dedicated;
             case "shared": return Shared;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "sharedByUser": return SharedByUser;
+            case "sharedByEntraGroup": return SharedByEntraGroup;
             default: return null;
         }
     }

@@ -55,19 +55,21 @@ public class AuthorityTemplateItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Specifies the underlying authority that describes the type of content to be retained and its retention schedule.
+     * Read the properties and relationships of a authorityTemplate object.
      * @return a {@link AuthorityTemplate}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-authoritytemplate-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AuthorityTemplate get() {
         return get(null);
     }
     /**
-     * Specifies the underlying authority that describes the type of content to be retained and its retention schedule.
+     * Read the properties and relationships of a authorityTemplate object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AuthorityTemplate}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-authoritytemplate-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AuthorityTemplate get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -122,7 +124,7 @@ public class AuthorityTemplateItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Specifies the underlying authority that describes the type of content to be retained and its retention schedule.
+     * Read the properties and relationships of a authorityTemplate object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +132,7 @@ public class AuthorityTemplateItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Specifies the underlying authority that describes the type of content to be retained and its retention schedule.
+     * Read the properties and relationships of a authorityTemplate object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +184,7 @@ public class AuthorityTemplateItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Specifies the underlying authority that describes the type of content to be retained and its retention schedule.
+     * Read the properties and relationships of a authorityTemplate object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -46,7 +46,7 @@ public class VirtualEventPresenter extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the identity property value. Identity information of the presenter. The supported identites are: communicationsGuestIdentity and communicationsUserIdentity.
+     * Gets the identity property value. Identity information of the presenter. The supported identities are: communicationsGuestIdentity and communicationsUserIdentity.
      * @return a {@link Identity}
      */
     @jakarta.annotation.Nullable
@@ -89,7 +89,7 @@ public class VirtualEventPresenter extends Entity implements Parsable {
         this.backingStore.set("email", value);
     }
     /**
-     * Sets the identity property value. Identity information of the presenter. The supported identites are: communicationsGuestIdentity and communicationsUserIdentity.
+     * Sets the identity property value. Identity information of the presenter. The supported identities are: communicationsGuestIdentity and communicationsUserIdentity.
      * @param value Value to set for the identity property.
      */
     public void setIdentity(@jakarta.annotation.Nullable final Identity value) {

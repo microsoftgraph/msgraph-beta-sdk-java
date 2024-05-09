@@ -60,7 +60,7 @@ public class SetsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/termStore/sets{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Collection of all sets available in the term store.
+     * Read the properties and relationships of a set object.
      * @return a {@link SetCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -69,7 +69,7 @@ public class SetsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Collection of all sets available in the term store.
+     * Read the properties and relationships of a set object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SetCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -107,7 +107,7 @@ public class SetsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Set::createFromDiscriminatorValue);
     }
     /**
-     * Collection of all sets available in the term store.
+     * Read the properties and relationships of a set object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class SetsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Collection of all sets available in the term store.
+     * Read the properties and relationships of a set object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +161,7 @@ public class SetsRequestBuilder extends BaseRequestBuilder {
         return new SetsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Collection of all sets available in the term store.
+     * Read the properties and relationships of a set object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

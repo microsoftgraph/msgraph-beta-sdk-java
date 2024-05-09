@@ -64,19 +64,21 @@ public class MultiTenantOrganizationPartnerConfigurationRequestBuilder extends B
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Defines an optional cross-tenant access policy template with inbound and outbound partner configuration settings for a multi-tenant organization.
+     * Get the cross-tenant access policy template with inbound and outbound partner configuration settings for a multitenant organization.
      * @return a {@link MultiTenantOrganizationPartnerConfigurationTemplate}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/multitenantorganizationpartnerconfigurationtemplate-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MultiTenantOrganizationPartnerConfigurationTemplate get() {
         return get(null);
     }
     /**
-     * Defines an optional cross-tenant access policy template with inbound and outbound partner configuration settings for a multi-tenant organization.
+     * Get the cross-tenant access policy template with inbound and outbound partner configuration settings for a multitenant organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MultiTenantOrganizationPartnerConfigurationTemplate}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/multitenantorganizationpartnerconfigurationtemplate-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MultiTenantOrganizationPartnerConfigurationTemplate get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -86,21 +88,23 @@ public class MultiTenantOrganizationPartnerConfigurationRequestBuilder extends B
         return this.requestAdapter.send(requestInfo, errorMapping, MultiTenantOrganizationPartnerConfigurationTemplate::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property multiTenantOrganizationPartnerConfiguration in policies
+     * Update the cross-tenant access policy template with inbound and outbound partner configuration settings for a multitenant organization.
      * @param body The request body
      * @return a {@link MultiTenantOrganizationPartnerConfigurationTemplate}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/multitenantorganizationpartnerconfigurationtemplate-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MultiTenantOrganizationPartnerConfigurationTemplate patch(@jakarta.annotation.Nonnull final MultiTenantOrganizationPartnerConfigurationTemplate body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property multiTenantOrganizationPartnerConfiguration in policies
+     * Update the cross-tenant access policy template with inbound and outbound partner configuration settings for a multitenant organization.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MultiTenantOrganizationPartnerConfigurationTemplate}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/multitenantorganizationpartnerconfigurationtemplate-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MultiTenantOrganizationPartnerConfigurationTemplate patch(@jakarta.annotation.Nonnull final MultiTenantOrganizationPartnerConfigurationTemplate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -131,7 +135,7 @@ public class MultiTenantOrganizationPartnerConfigurationRequestBuilder extends B
         return requestInfo;
     }
     /**
-     * Defines an optional cross-tenant access policy template with inbound and outbound partner configuration settings for a multi-tenant organization.
+     * Get the cross-tenant access policy template with inbound and outbound partner configuration settings for a multitenant organization.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +143,7 @@ public class MultiTenantOrganizationPartnerConfigurationRequestBuilder extends B
         return toGetRequestInformation(null);
     }
     /**
-     * Defines an optional cross-tenant access policy template with inbound and outbound partner configuration settings for a multi-tenant organization.
+     * Get the cross-tenant access policy template with inbound and outbound partner configuration settings for a multitenant organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -151,7 +155,7 @@ public class MultiTenantOrganizationPartnerConfigurationRequestBuilder extends B
         return requestInfo;
     }
     /**
-     * Update the navigation property multiTenantOrganizationPartnerConfiguration in policies
+     * Update the cross-tenant access policy template with inbound and outbound partner configuration settings for a multitenant organization.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -160,7 +164,7 @@ public class MultiTenantOrganizationPartnerConfigurationRequestBuilder extends B
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property multiTenantOrganizationPartnerConfiguration in policies
+     * Update the cross-tenant access policy template with inbound and outbound partner configuration settings for a multitenant organization.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -191,7 +195,7 @@ public class MultiTenantOrganizationPartnerConfigurationRequestBuilder extends B
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Defines an optional cross-tenant access policy template with inbound and outbound partner configuration settings for a multi-tenant organization.
+     * Get the cross-tenant access policy template with inbound and outbound partner configuration settings for a multitenant organization.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

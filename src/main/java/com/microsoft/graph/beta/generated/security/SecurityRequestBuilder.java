@@ -18,6 +18,7 @@ import com.microsoft.graph.beta.security.informationprotection.InformationProtec
 import com.microsoft.graph.beta.security.ipsecurityprofiles.IpSecurityProfilesRequestBuilder;
 import com.microsoft.graph.beta.security.labels.LabelsRequestBuilder;
 import com.microsoft.graph.beta.security.microsoftgraphsecurityrunhuntingquery.MicrosoftGraphSecurityRunHuntingQueryRequestBuilder;
+import com.microsoft.graph.beta.security.partner.PartnerRequestBuilder;
 import com.microsoft.graph.beta.security.providertenantsettings.ProviderTenantSettingsRequestBuilder;
 import com.microsoft.graph.beta.security.rules.RulesRequestBuilder;
 import com.microsoft.graph.beta.security.securescorecontrolprofiles.SecureScoreControlProfilesRequestBuilder;
@@ -175,6 +176,14 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public MicrosoftGraphSecurityRunHuntingQueryRequestBuilder microsoftGraphSecurityRunHuntingQuery() {
         return new MicrosoftGraphSecurityRunHuntingQueryRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the partner property of the microsoft.graph.security entity.
+     * @return a {@link PartnerRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public PartnerRequestBuilder partner() {
+        return new PartnerRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the providerTenantSettings property of the microsoft.graph.security entity.

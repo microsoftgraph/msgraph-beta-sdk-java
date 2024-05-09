@@ -56,7 +56,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore;
     }
     /**
-     * Gets the d property value. RSA Key - private exponent. Field can't be read back.
+     * Gets the d property value. RSA Key - private exponent. The field isn't readable.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore.get("d");
     }
     /**
-     * Gets the dp property value. RSA Key - first exponent. Field can't be read back.
+     * Gets the dp property value. RSA Key - first exponent. The field isn't readable.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -72,7 +72,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore.get("dp");
     }
     /**
-     * Gets the dq property value. RSA Key - second exponent. Field can't be read back.
+     * Gets the dq property value. RSA Key - second exponent. The field isn't readable.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -80,7 +80,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore.get("dq");
     }
     /**
-     * Gets the e property value. RSA Key - public exponent
+     * Gets the e property value. RSA Key - public exponent.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -88,7 +88,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore.get("e");
     }
     /**
-     * Gets the exp property value. This value is a NumericDate as defined in RFC 7519 (A JSON numeric value representing the number of seconds from 1970-01-01T00:00:00Z UTC until the specified UTC date/time, ignoring leap seconds.)
+     * Gets the exp property value. This value is a NumericDate as defined in RFC 7519. That is, a JSON numeric value representing the number of seconds from 1970-01-01T00:00:00Z UTC until the specified UTC date/time, ignoring leap seconds.
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -101,7 +101,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, BackedModel, Par
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(17);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(18);
         deserializerMap.put("d", (n) -> { this.setD(n.getStringValue()); });
         deserializerMap.put("dp", (n) -> { this.setDp(n.getStringValue()); });
         deserializerMap.put("dq", (n) -> { this.setDq(n.getStringValue()); });
@@ -116,13 +116,14 @@ public class TrustFrameworkKey implements AdditionalDataHolder, BackedModel, Par
         deserializerMap.put("p", (n) -> { this.setP(n.getStringValue()); });
         deserializerMap.put("q", (n) -> { this.setQ(n.getStringValue()); });
         deserializerMap.put("qi", (n) -> { this.setQi(n.getStringValue()); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(TrustFrameworkKeyStatus::forValue)); });
         deserializerMap.put("use", (n) -> { this.setUse(n.getStringValue()); });
         deserializerMap.put("x5c", (n) -> { this.setX5c(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("x5t", (n) -> { this.setX5t(n.getStringValue()); });
         return deserializerMap;
     }
     /**
-     * Gets the k property value. Symmetric Key for oct key type. Field can't be read back.
+     * Gets the k property value. Symmetric Key for oct key type. The field isn't readable.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -138,7 +139,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore.get("kid");
     }
     /**
-     * Gets the kty property value. The kty (key type) parameter identifies the cryptographic algorithm family used with the key, The valid values are rsa, oct.
+     * Gets the kty property value. The kty (key type) parameter identifies the cryptographic algorithm family used with the key. The valid values are rsa, oct.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -146,7 +147,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore.get("kty");
     }
     /**
-     * Gets the n property value. RSA Key - modulus
+     * Gets the n property value. RSA Key - modulus.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -154,7 +155,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore.get("n");
     }
     /**
-     * Gets the nbf property value. This value is a NumericDate as defined in RFC 7519 (A JSON numeric value representing the number of seconds from 1970-01-01T00:00:00Z UTC until the specified UTC date/time, ignoring leap seconds.)
+     * Gets the nbf property value. This value is a NumericDate as defined in RFC 7519. That is, a JSON numeric value representing the number of seconds from 1970-01-01T00:00:00Z UTC until the specified UTC date/time, ignoring leap seconds.
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -170,7 +171,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the p property value. RSA Key - first prime. Field can't be read back.
+     * Gets the p property value. RSA Key - first prime. The field isn't readable.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -178,7 +179,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore.get("p");
     }
     /**
-     * Gets the q property value. RSA Key - second prime. Field can't be read back.
+     * Gets the q property value. RSA Key - second prime. The field isn't readable.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -186,7 +187,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore.get("q");
     }
     /**
-     * Gets the qi property value. RSA Key - Coefficient. Field can't be read back.
+     * Gets the qi property value. RSA Key - Coefficient. The field isn't readable.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -194,7 +195,15 @@ public class TrustFrameworkKey implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore.get("qi");
     }
     /**
-     * Gets the use property value. The use (public key use) parameter identifies the intended use of the public key.  The use parameter is employed to indicate whether a public key is used for encrypting data or verifying the signature on data. Possible values are: sig (signature), enc (encryption)
+     * Gets the status property value. Status of the key. The possible values are: enabled, disabled, unknownFutureValue.
+     * @return a {@link TrustFrameworkKeyStatus}
+     */
+    @jakarta.annotation.Nullable
+    public TrustFrameworkKeyStatus getStatus() {
+        return this.backingStore.get("status");
+    }
+    /**
+     * Gets the use property value. The use (public key use) parameter identifies the intended use of the public key. The use parameter is employed to indicate whether a public key is used for encrypting data or verifying the signature on data. Possible values are: sig (signature), enc (encryption).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -202,7 +211,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore.get("use");
     }
     /**
-     * Gets the x5c property value. The x5c (X.509 certificate chain) parameter contains a chain of one or more PKIX certificates RFC 5280.
+     * Gets the x5c property value. The x5c (X.509 certificate chain) parameter contains a chain of one or more PKIX certificates. For more information, see RFC 5280.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -210,7 +219,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore.get("x5c");
     }
     /**
-     * Gets the x5t property value. The x5t (X.509 certificate SHA-1 thumbprint) parameter is a base64url-encoded SHA-1 thumbprint (also known as digest) of the DER encoding of an X.509 certificate RFC 5280.
+     * Gets the x5t property value. The x5t (X.509 certificate SHA-1 thumbprint) parameter is a base64url-encoded SHA-1 thumbprint (also known as digest) of the DER encoding of an X.509 certificate. For more information, see RFC 5280.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -237,6 +246,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, BackedModel, Par
         writer.writeStringValue("p", this.getP());
         writer.writeStringValue("q", this.getQ());
         writer.writeStringValue("qi", this.getQi());
+        writer.writeEnumValue("status", this.getStatus());
         writer.writeStringValue("use", this.getUse());
         writer.writeCollectionOfPrimitiveValues("x5c", this.getX5c());
         writer.writeStringValue("x5t", this.getX5t());
@@ -258,42 +268,42 @@ public class TrustFrameworkKey implements AdditionalDataHolder, BackedModel, Par
         this.backingStore = value;
     }
     /**
-     * Sets the d property value. RSA Key - private exponent. Field can't be read back.
+     * Sets the d property value. RSA Key - private exponent. The field isn't readable.
      * @param value Value to set for the d property.
      */
     public void setD(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("d", value);
     }
     /**
-     * Sets the dp property value. RSA Key - first exponent. Field can't be read back.
+     * Sets the dp property value. RSA Key - first exponent. The field isn't readable.
      * @param value Value to set for the dp property.
      */
     public void setDp(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("dp", value);
     }
     /**
-     * Sets the dq property value. RSA Key - second exponent. Field can't be read back.
+     * Sets the dq property value. RSA Key - second exponent. The field isn't readable.
      * @param value Value to set for the dq property.
      */
     public void setDq(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("dq", value);
     }
     /**
-     * Sets the e property value. RSA Key - public exponent
+     * Sets the e property value. RSA Key - public exponent.
      * @param value Value to set for the e property.
      */
     public void setE(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("e", value);
     }
     /**
-     * Sets the exp property value. This value is a NumericDate as defined in RFC 7519 (A JSON numeric value representing the number of seconds from 1970-01-01T00:00:00Z UTC until the specified UTC date/time, ignoring leap seconds.)
+     * Sets the exp property value. This value is a NumericDate as defined in RFC 7519. That is, a JSON numeric value representing the number of seconds from 1970-01-01T00:00:00Z UTC until the specified UTC date/time, ignoring leap seconds.
      * @param value Value to set for the exp property.
      */
     public void setExp(@jakarta.annotation.Nullable final Long value) {
         this.backingStore.set("exp", value);
     }
     /**
-     * Sets the k property value. Symmetric Key for oct key type. Field can't be read back.
+     * Sets the k property value. Symmetric Key for oct key type. The field isn't readable.
      * @param value Value to set for the k property.
      */
     public void setK(@jakarta.annotation.Nullable final String value) {
@@ -307,21 +317,21 @@ public class TrustFrameworkKey implements AdditionalDataHolder, BackedModel, Par
         this.backingStore.set("kid", value);
     }
     /**
-     * Sets the kty property value. The kty (key type) parameter identifies the cryptographic algorithm family used with the key, The valid values are rsa, oct.
+     * Sets the kty property value. The kty (key type) parameter identifies the cryptographic algorithm family used with the key. The valid values are rsa, oct.
      * @param value Value to set for the kty property.
      */
     public void setKty(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("kty", value);
     }
     /**
-     * Sets the n property value. RSA Key - modulus
+     * Sets the n property value. RSA Key - modulus.
      * @param value Value to set for the n property.
      */
     public void setN(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("n", value);
     }
     /**
-     * Sets the nbf property value. This value is a NumericDate as defined in RFC 7519 (A JSON numeric value representing the number of seconds from 1970-01-01T00:00:00Z UTC until the specified UTC date/time, ignoring leap seconds.)
+     * Sets the nbf property value. This value is a NumericDate as defined in RFC 7519. That is, a JSON numeric value representing the number of seconds from 1970-01-01T00:00:00Z UTC until the specified UTC date/time, ignoring leap seconds.
      * @param value Value to set for the nbf property.
      */
     public void setNbf(@jakarta.annotation.Nullable final Long value) {
@@ -335,42 +345,49 @@ public class TrustFrameworkKey implements AdditionalDataHolder, BackedModel, Par
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the p property value. RSA Key - first prime. Field can't be read back.
+     * Sets the p property value. RSA Key - first prime. The field isn't readable.
      * @param value Value to set for the p property.
      */
     public void setP(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("p", value);
     }
     /**
-     * Sets the q property value. RSA Key - second prime. Field can't be read back.
+     * Sets the q property value. RSA Key - second prime. The field isn't readable.
      * @param value Value to set for the q property.
      */
     public void setQ(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("q", value);
     }
     /**
-     * Sets the qi property value. RSA Key - Coefficient. Field can't be read back.
+     * Sets the qi property value. RSA Key - Coefficient. The field isn't readable.
      * @param value Value to set for the qi property.
      */
     public void setQi(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("qi", value);
     }
     /**
-     * Sets the use property value. The use (public key use) parameter identifies the intended use of the public key.  The use parameter is employed to indicate whether a public key is used for encrypting data or verifying the signature on data. Possible values are: sig (signature), enc (encryption)
+     * Sets the status property value. Status of the key. The possible values are: enabled, disabled, unknownFutureValue.
+     * @param value Value to set for the status property.
+     */
+    public void setStatus(@jakarta.annotation.Nullable final TrustFrameworkKeyStatus value) {
+        this.backingStore.set("status", value);
+    }
+    /**
+     * Sets the use property value. The use (public key use) parameter identifies the intended use of the public key. The use parameter is employed to indicate whether a public key is used for encrypting data or verifying the signature on data. Possible values are: sig (signature), enc (encryption).
      * @param value Value to set for the use property.
      */
     public void setUse(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("use", value);
     }
     /**
-     * Sets the x5c property value. The x5c (X.509 certificate chain) parameter contains a chain of one or more PKIX certificates RFC 5280.
+     * Sets the x5c property value. The x5c (X.509 certificate chain) parameter contains a chain of one or more PKIX certificates. For more information, see RFC 5280.
      * @param value Value to set for the x5c property.
      */
     public void setX5c(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("x5c", value);
     }
     /**
-     * Sets the x5t property value. The x5t (X.509 certificate SHA-1 thumbprint) parameter is a base64url-encoded SHA-1 thumbprint (also known as digest) of the DER encoding of an X.509 certificate RFC 5280.
+     * Sets the x5t property value. The x5t (X.509 certificate SHA-1 thumbprint) parameter is a base64url-encoded SHA-1 thumbprint (also known as digest) of the DER encoding of an X.509 certificate. For more information, see RFC 5280.
      * @param value Value to set for the x5t property.
      */
     public void setX5t(@jakarta.annotation.Nullable final String value) {

@@ -55,19 +55,21 @@ public class CloudPcAuditEventItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Cloud PC audit event.
+     * Read the properties and relationships of a cloudPcAuditEvent object.
      * @return a {@link CloudPcAuditEvent}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpcauditevent-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPcAuditEvent get() {
         return get(null);
     }
     /**
-     * Cloud PC audit event.
+     * Read the properties and relationships of a cloudPcAuditEvent object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CloudPcAuditEvent}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpcauditevent-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPcAuditEvent get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -122,7 +124,7 @@ public class CloudPcAuditEventItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Cloud PC audit event.
+     * Read the properties and relationships of a cloudPcAuditEvent object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +132,7 @@ public class CloudPcAuditEventItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Cloud PC audit event.
+     * Read the properties and relationships of a cloudPcAuditEvent object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +184,7 @@ public class CloudPcAuditEventItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Cloud PC audit event.
+     * Read the properties and relationships of a cloudPcAuditEvent object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

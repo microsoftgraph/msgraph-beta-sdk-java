@@ -182,7 +182,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(39);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(40);
         deserializerMap.put("action", (n) -> { this.setAction(n.getEnumValue(FilteringPolicyAction::forValue)); });
         deserializerMap.put("agentVersion", (n) -> { this.setAgentVersion(n.getStringValue()); });
         deserializerMap.put("applicationSnapshot", (n) -> { this.setApplicationSnapshot(n.getObjectValue(ApplicationSnapshot::createFromDiscriminatorValue)); });
@@ -222,6 +222,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         deserializerMap.put("transportProtocol", (n) -> { this.setTransportProtocol(n.getEnumValue(NetworkingProtocol::forValue)); });
         deserializerMap.put("userId", (n) -> { this.setUserId(n.getStringValue()); });
         deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
+        deserializerMap.put("vendorNames", (n) -> { this.setVendorNames(n.getCollectionOfPrimitiveValues(String.class)); });
         return deserializerMap;
     }
     /**
@@ -417,6 +418,14 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("userPrincipalName");
     }
     /**
+     * Gets the vendorNames property value. The vendorNames property
+     * @return a {@link java.util.List<String>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<String> getVendorNames() {
+        return this.backingStore.get("vendorNames");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -461,6 +470,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         writer.writeEnumValue("transportProtocol", this.getTransportProtocol());
         writer.writeStringValue("userId", this.getUserId());
         writer.writeStringValue("userPrincipalName", this.getUserPrincipalName());
+        writer.writeCollectionOfPrimitiveValues("vendorNames", this.getVendorNames());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -750,5 +760,12 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
      */
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("userPrincipalName", value);
+    }
+    /**
+     * Sets the vendorNames property value. The vendorNames property
+     * @param value Value to set for the vendorNames property.
+     */
+    public void setVendorNames(@jakarta.annotation.Nullable final java.util.List<String> value) {
+        this.backingStore.set("vendorNames", value);
     }
 }

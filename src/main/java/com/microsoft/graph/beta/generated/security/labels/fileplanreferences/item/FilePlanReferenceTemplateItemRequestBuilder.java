@@ -55,19 +55,21 @@ public class FilePlanReferenceTemplateItemRequestBuilder extends BaseRequestBuil
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Specifies a unique alpha-numeric identifier for an organizations retention schedule.
+     * Read the properties and relationships of a filePlanReferenceTemplate object.
      * @return a {@link FilePlanReferenceTemplate}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-fileplanreferencetemplate-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public FilePlanReferenceTemplate get() {
         return get(null);
     }
     /**
-     * Specifies a unique alpha-numeric identifier for an organizations retention schedule.
+     * Read the properties and relationships of a filePlanReferenceTemplate object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link FilePlanReferenceTemplate}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-fileplanreferencetemplate-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public FilePlanReferenceTemplate get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -122,7 +124,7 @@ public class FilePlanReferenceTemplateItemRequestBuilder extends BaseRequestBuil
         return requestInfo;
     }
     /**
-     * Specifies a unique alpha-numeric identifier for an organizations retention schedule.
+     * Read the properties and relationships of a filePlanReferenceTemplate object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +132,7 @@ public class FilePlanReferenceTemplateItemRequestBuilder extends BaseRequestBuil
         return toGetRequestInformation(null);
     }
     /**
-     * Specifies a unique alpha-numeric identifier for an organizations retention schedule.
+     * Read the properties and relationships of a filePlanReferenceTemplate object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +184,7 @@ public class FilePlanReferenceTemplateItemRequestBuilder extends BaseRequestBuil
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Specifies a unique alpha-numeric identifier for an organizations retention schedule.
+     * Read the properties and relationships of a filePlanReferenceTemplate object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

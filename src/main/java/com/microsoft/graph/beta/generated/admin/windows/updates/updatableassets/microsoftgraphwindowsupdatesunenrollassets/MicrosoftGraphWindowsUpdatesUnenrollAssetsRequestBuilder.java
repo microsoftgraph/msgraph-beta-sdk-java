@@ -35,7 +35,7 @@ public class MicrosoftGraphWindowsUpdatesUnenrollAssetsRequestBuilder extends Ba
         super(requestAdapter, "{+baseurl}/admin/windows/updates/updatableAssets/microsoft.graph.windowsUpdates.unenrollAssets", rawUrl);
     }
     /**
-     * Invoke action unenrollAssets
+     * Unenroll updatableAsset resources from update management by the deployment service. You can also use the method unenrollAssetsById to unenroll assets.
      * @param body The request body
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -43,7 +43,7 @@ public class MicrosoftGraphWindowsUpdatesUnenrollAssetsRequestBuilder extends Ba
         post(body, null);
     }
     /**
-     * Invoke action unenrollAssets
+     * Unenroll updatableAsset resources from update management by the deployment service. You can also use the method unenrollAssetsById to unenroll assets.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -56,7 +56,7 @@ public class MicrosoftGraphWindowsUpdatesUnenrollAssetsRequestBuilder extends Ba
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Invoke action unenrollAssets
+     * Unenroll updatableAsset resources from update management by the deployment service. You can also use the method unenrollAssetsById to unenroll assets.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -65,7 +65,7 @@ public class MicrosoftGraphWindowsUpdatesUnenrollAssetsRequestBuilder extends Ba
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action unenrollAssets
+     * Unenroll updatableAsset resources from update management by the deployment service. You can also use the method unenrollAssetsById to unenroll assets.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

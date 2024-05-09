@@ -60,19 +60,21 @@ public class CertificateBasedApplicationConfigurationsRequestBuilder extends Bas
         super(requestAdapter, "{+baseurl}/directory/certificateAuthorities/certificateBasedApplicationConfigurations{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Defines the trusted certificate authorities for certificates that can be added to apps and service principals in the tenant.
+     * Get a list of certificateBasedApplicationConfiguration objects.
      * @return a {@link CertificateBasedApplicationConfigurationCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/certificateauthoritypath-list-certificatebasedapplicationconfigurations?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CertificateBasedApplicationConfigurationCollectionResponse get() {
         return get(null);
     }
     /**
-     * Defines the trusted certificate authorities for certificates that can be added to apps and service principals in the tenant.
+     * Get a list of certificateBasedApplicationConfiguration objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CertificateBasedApplicationConfigurationCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/certificateauthoritypath-list-certificatebasedapplicationconfigurations?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CertificateBasedApplicationConfigurationCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -107,7 +109,7 @@ public class CertificateBasedApplicationConfigurationsRequestBuilder extends Bas
         return this.requestAdapter.send(requestInfo, errorMapping, CertificateBasedApplicationConfiguration::createFromDiscriminatorValue);
     }
     /**
-     * Defines the trusted certificate authorities for certificates that can be added to apps and service principals in the tenant.
+     * Get a list of certificateBasedApplicationConfiguration objects.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +117,7 @@ public class CertificateBasedApplicationConfigurationsRequestBuilder extends Bas
         return toGetRequestInformation(null);
     }
     /**
-     * Defines the trusted certificate authorities for certificates that can be added to apps and service principals in the tenant.
+     * Get a list of certificateBasedApplicationConfiguration objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +163,7 @@ public class CertificateBasedApplicationConfigurationsRequestBuilder extends Bas
         return new CertificateBasedApplicationConfigurationsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Defines the trusted certificate authorities for certificates that can be added to apps and service principals in the tenant.
+     * Get a list of certificateBasedApplicationConfiguration objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

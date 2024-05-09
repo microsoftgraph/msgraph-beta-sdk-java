@@ -64,19 +64,21 @@ public class AccessPackageResourceEnvironmentItemRequestBuilder extends BaseRequ
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * A reference to the geolocation environment in which a resource is located.
+     * Read the properties and relationships of an accessPackageResourceEnvironment object.
      * @return a {@link AccessPackageResourceEnvironment}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/accesspackageresourceenvironment-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AccessPackageResourceEnvironment get() {
         return get(null);
     }
     /**
-     * A reference to the geolocation environment in which a resource is located.
+     * Read the properties and relationships of an accessPackageResourceEnvironment object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AccessPackageResourceEnvironment}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/accesspackageresourceenvironment-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AccessPackageResourceEnvironment get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -131,7 +133,7 @@ public class AccessPackageResourceEnvironmentItemRequestBuilder extends BaseRequ
         return requestInfo;
     }
     /**
-     * A reference to the geolocation environment in which a resource is located.
+     * Read the properties and relationships of an accessPackageResourceEnvironment object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +141,7 @@ public class AccessPackageResourceEnvironmentItemRequestBuilder extends BaseRequ
         return toGetRequestInformation(null);
     }
     /**
-     * A reference to the geolocation environment in which a resource is located.
+     * Read the properties and relationships of an accessPackageResourceEnvironment object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -191,7 +193,7 @@ public class AccessPackageResourceEnvironmentItemRequestBuilder extends BaseRequ
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * A reference to the geolocation environment in which a resource is located.
+     * Read the properties and relationships of an accessPackageResourceEnvironment object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

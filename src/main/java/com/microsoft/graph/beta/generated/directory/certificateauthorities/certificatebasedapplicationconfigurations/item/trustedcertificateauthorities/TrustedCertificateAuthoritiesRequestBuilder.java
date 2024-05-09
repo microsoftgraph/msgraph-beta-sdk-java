@@ -60,7 +60,7 @@ public class TrustedCertificateAuthoritiesRequestBuilder extends BaseRequestBuil
         super(requestAdapter, "{+baseurl}/directory/certificateAuthorities/certificateBasedApplicationConfigurations/{certificateBasedApplicationConfiguration%2Did}/trustedCertificateAuthorities{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Collection of trusted certificate authorities.
+     * Read the properties and relationships of a certificateAuthorityAsEntity object.
      * @return a {@link CertificateAuthorityAsEntityCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -69,7 +69,7 @@ public class TrustedCertificateAuthoritiesRequestBuilder extends BaseRequestBuil
         return get(null);
     }
     /**
-     * Collection of trusted certificate authorities.
+     * Read the properties and relationships of a certificateAuthorityAsEntity object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CertificateAuthorityAsEntityCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -107,7 +107,7 @@ public class TrustedCertificateAuthoritiesRequestBuilder extends BaseRequestBuil
         return this.requestAdapter.send(requestInfo, errorMapping, CertificateAuthorityAsEntity::createFromDiscriminatorValue);
     }
     /**
-     * Collection of trusted certificate authorities.
+     * Read the properties and relationships of a certificateAuthorityAsEntity object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class TrustedCertificateAuthoritiesRequestBuilder extends BaseRequestBuil
         return toGetRequestInformation(null);
     }
     /**
-     * Collection of trusted certificate authorities.
+     * Read the properties and relationships of a certificateAuthorityAsEntity object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +161,7 @@ public class TrustedCertificateAuthoritiesRequestBuilder extends BaseRequestBuil
         return new TrustedCertificateAuthoritiesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Collection of trusted certificate authorities.
+     * Read the properties and relationships of a certificateAuthorityAsEntity object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

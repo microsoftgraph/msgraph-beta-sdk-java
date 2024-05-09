@@ -35,7 +35,7 @@ public class MicrosoftGraphWindowsUpdatesEnrollAssetsByIdRequestBuilder extends 
         super(requestAdapter, "{+baseurl}/admin/windows/updates/updatableAssets/microsoft.graph.windowsUpdates.enrollAssetsById", rawUrl);
     }
     /**
-     * Invoke action enrollAssetsById
+     * Enroll updatableAsset resources of the same type in update management by the deployment service. You can also use the method enrollAssets to enroll assets.
      * @param body The request body
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -43,7 +43,7 @@ public class MicrosoftGraphWindowsUpdatesEnrollAssetsByIdRequestBuilder extends 
         post(body, null);
     }
     /**
-     * Invoke action enrollAssetsById
+     * Enroll updatableAsset resources of the same type in update management by the deployment service. You can also use the method enrollAssets to enroll assets.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -56,7 +56,7 @@ public class MicrosoftGraphWindowsUpdatesEnrollAssetsByIdRequestBuilder extends 
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Invoke action enrollAssetsById
+     * Enroll updatableAsset resources of the same type in update management by the deployment service. You can also use the method enrollAssets to enroll assets.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -65,7 +65,7 @@ public class MicrosoftGraphWindowsUpdatesEnrollAssetsByIdRequestBuilder extends 
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action enrollAssetsById
+     * Enroll updatableAsset resources of the same type in update management by the deployment service. You can also use the method enrollAssets to enroll assets.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

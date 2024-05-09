@@ -55,19 +55,21 @@ public class ContinuousAccessEvaluationPolicyRequestBuilder extends BaseRequestB
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Represents entry point for continuous access evaluation policy.
+     * Read the properties and relationships of a continuousAccessEvaluationPolicy object.
      * @return a {@link ContinuousAccessEvaluationPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/continuousaccessevaluationpolicy-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ContinuousAccessEvaluationPolicy get() {
         return get(null);
     }
     /**
-     * Represents entry point for continuous access evaluation policy.
+     * Read the properties and relationships of a continuousAccessEvaluationPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ContinuousAccessEvaluationPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/continuousaccessevaluationpolicy-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ContinuousAccessEvaluationPolicy get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -77,21 +79,23 @@ public class ContinuousAccessEvaluationPolicyRequestBuilder extends BaseRequestB
         return this.requestAdapter.send(requestInfo, errorMapping, ContinuousAccessEvaluationPolicy::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property continuousAccessEvaluationPolicy in identity
+     * Update the properties of a continuousAccessEvaluationPolicy object.
      * @param body The request body
      * @return a {@link ContinuousAccessEvaluationPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/continuousaccessevaluationpolicy-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ContinuousAccessEvaluationPolicy patch(@jakarta.annotation.Nonnull final ContinuousAccessEvaluationPolicy body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property continuousAccessEvaluationPolicy in identity
+     * Update the properties of a continuousAccessEvaluationPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ContinuousAccessEvaluationPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/continuousaccessevaluationpolicy-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ContinuousAccessEvaluationPolicy patch(@jakarta.annotation.Nonnull final ContinuousAccessEvaluationPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -122,7 +126,7 @@ public class ContinuousAccessEvaluationPolicyRequestBuilder extends BaseRequestB
         return requestInfo;
     }
     /**
-     * Represents entry point for continuous access evaluation policy.
+     * Read the properties and relationships of a continuousAccessEvaluationPolicy object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +134,7 @@ public class ContinuousAccessEvaluationPolicyRequestBuilder extends BaseRequestB
         return toGetRequestInformation(null);
     }
     /**
-     * Represents entry point for continuous access evaluation policy.
+     * Read the properties and relationships of a continuousAccessEvaluationPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -142,7 +146,7 @@ public class ContinuousAccessEvaluationPolicyRequestBuilder extends BaseRequestB
         return requestInfo;
     }
     /**
-     * Update the navigation property continuousAccessEvaluationPolicy in identity
+     * Update the properties of a continuousAccessEvaluationPolicy object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -151,7 +155,7 @@ public class ContinuousAccessEvaluationPolicyRequestBuilder extends BaseRequestB
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property continuousAccessEvaluationPolicy in identity
+     * Update the properties of a continuousAccessEvaluationPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -182,7 +186,7 @@ public class ContinuousAccessEvaluationPolicyRequestBuilder extends BaseRequestB
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Represents entry point for continuous access evaluation policy.
+     * Read the properties and relationships of a continuousAccessEvaluationPolicy object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

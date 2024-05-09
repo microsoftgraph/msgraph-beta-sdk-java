@@ -55,19 +55,21 @@ public class ProfileStatusRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * The synchronization status.
+     * Get the status of a specific school data synchronization profile in the tenant. The response will indicate the status of the sync.
      * @return a {@link EducationSynchronizationProfileStatus}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/educationsynchronizationprofilestatus-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EducationSynchronizationProfileStatus get() {
         return get(null);
     }
     /**
-     * The synchronization status.
+     * Get the status of a specific school data synchronization profile in the tenant. The response will indicate the status of the sync.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EducationSynchronizationProfileStatus}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/educationsynchronizationprofilestatus-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EducationSynchronizationProfileStatus get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -122,7 +124,7 @@ public class ProfileStatusRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The synchronization status.
+     * Get the status of a specific school data synchronization profile in the tenant. The response will indicate the status of the sync.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +132,7 @@ public class ProfileStatusRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The synchronization status.
+     * Get the status of a specific school data synchronization profile in the tenant. The response will indicate the status of the sync.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +184,7 @@ public class ProfileStatusRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The synchronization status.
+     * Get the status of a specific school data synchronization profile in the tenant. The response will indicate the status of the sync.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

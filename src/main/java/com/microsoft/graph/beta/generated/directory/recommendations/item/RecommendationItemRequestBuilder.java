@@ -100,19 +100,21 @@ public class RecommendationItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * List of recommended improvements to improve tenant posture.
+     * Read the properties and relationships of a recommendation object.
      * @return a {@link Recommendation}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/recommendation-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Recommendation get() {
         return get(null);
     }
     /**
-     * List of recommended improvements to improve tenant posture.
+     * Read the properties and relationships of a recommendation object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Recommendation}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/recommendation-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Recommendation get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -167,7 +169,7 @@ public class RecommendationItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * List of recommended improvements to improve tenant posture.
+     * Read the properties and relationships of a recommendation object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -175,7 +177,7 @@ public class RecommendationItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List of recommended improvements to improve tenant posture.
+     * Read the properties and relationships of a recommendation object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -227,7 +229,7 @@ public class RecommendationItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * List of recommended improvements to improve tenant posture.
+     * Read the properties and relationships of a recommendation object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
