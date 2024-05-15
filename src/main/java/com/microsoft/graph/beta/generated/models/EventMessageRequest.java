@@ -41,11 +41,20 @@ public class EventMessageRequest extends EventMessage implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("allowNewTimeProposals", (n) -> { this.setAllowNewTimeProposals(n.getBooleanValue()); });
+        deserializerMap.put("meetingRequestType", (n) -> { this.setMeetingRequestType(n.getEnumValue(MeetingRequestType::forValue)); });
         deserializerMap.put("previousEndDateTime", (n) -> { this.setPreviousEndDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
         deserializerMap.put("previousLocation", (n) -> { this.setPreviousLocation(n.getObjectValue(Location::createFromDiscriminatorValue)); });
         deserializerMap.put("previousStartDateTime", (n) -> { this.setPreviousStartDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
         deserializerMap.put("responseRequested", (n) -> { this.setResponseRequested(n.getBooleanValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the meetingRequestType property value. The meetingRequestType property
+     * @return a {@link MeetingRequestType}
+     */
+    @jakarta.annotation.Nullable
+    public MeetingRequestType getMeetingRequestType() {
+        return this.backingStore.get("meetingRequestType");
     }
     /**
      * Gets the previousEndDateTime property value. If the meeting update changes the meeting end time, this property specifies the previous meeting end time.
@@ -87,6 +96,7 @@ public class EventMessageRequest extends EventMessage implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeBooleanValue("allowNewTimeProposals", this.getAllowNewTimeProposals());
+        writer.writeEnumValue("meetingRequestType", this.getMeetingRequestType());
         writer.writeObjectValue("previousEndDateTime", this.getPreviousEndDateTime());
         writer.writeObjectValue("previousLocation", this.getPreviousLocation());
         writer.writeObjectValue("previousStartDateTime", this.getPreviousStartDateTime());
@@ -98,6 +108,13 @@ public class EventMessageRequest extends EventMessage implements Parsable {
      */
     public void setAllowNewTimeProposals(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("allowNewTimeProposals", value);
+    }
+    /**
+     * Sets the meetingRequestType property value. The meetingRequestType property
+     * @param value Value to set for the meetingRequestType property.
+     */
+    public void setMeetingRequestType(@jakarta.annotation.Nullable final MeetingRequestType value) {
+        this.backingStore.set("meetingRequestType", value);
     }
     /**
      * Sets the previousEndDateTime property value. If the meeting update changes the meeting end time, this property specifies the previous meeting end time.

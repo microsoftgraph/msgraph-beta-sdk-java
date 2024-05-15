@@ -11,28 +11,28 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class SecurityProviderStatus implements AdditionalDataHolder, BackedModel, Parsable {
+public class ProfileSourceAnnotation implements AdditionalDataHolder, BackedModel, Parsable {
     /**
      * Stores model information.
      */
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new {@link SecurityProviderStatus} and sets the default values.
+     * Instantiates a new {@link ProfileSourceAnnotation} and sets the default values.
      */
-    public SecurityProviderStatus() {
+    public ProfileSourceAnnotation() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a {@link SecurityProviderStatus}
+     * @return a {@link ProfileSourceAnnotation}
      */
     @jakarta.annotation.Nonnull
-    public static SecurityProviderStatus createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
+    public static ProfileSourceAnnotation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
-        return new SecurityProviderStatus();
+        return new ProfileSourceAnnotation();
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -56,35 +56,25 @@ public class SecurityProviderStatus implements AdditionalDataHolder, BackedModel
         return this.backingStore;
     }
     /**
-     * Gets the enabled property value. The enabled property
-     * @return a {@link Boolean}
-     */
-    @jakarta.annotation.Nullable
-    public Boolean getEnabled() {
-        return this.backingStore.get("enabled");
-    }
-    /**
-     * Gets the endpoint property value. The endpoint property
-     * @return a {@link String}
-     */
-    @jakarta.annotation.Nullable
-    public String getEndpoint() {
-        return this.backingStore.get("endpoint");
-    }
-    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
-        deserializerMap.put("enabled", (n) -> { this.setEnabled(n.getBooleanValue()); });
-        deserializerMap.put("endpoint", (n) -> { this.setEndpoint(n.getStringValue()); });
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        deserializerMap.put("isDefaultSource", (n) -> { this.setIsDefaultSource(n.getBooleanValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("provider", (n) -> { this.setProvider(n.getStringValue()); });
-        deserializerMap.put("region", (n) -> { this.setRegion(n.getStringValue()); });
-        deserializerMap.put("vendor", (n) -> { this.setVendor(n.getStringValue()); });
+        deserializerMap.put("properties", (n) -> { this.setProperties(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("sourceId", (n) -> { this.setSourceId(n.getStringValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the isDefaultSource property value. The isDefaultSource property
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsDefaultSource() {
+        return this.backingStore.get("isDefaultSource");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -95,28 +85,20 @@ public class SecurityProviderStatus implements AdditionalDataHolder, BackedModel
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the provider property value. The provider property
-     * @return a {@link String}
+     * Gets the properties property value. The properties property
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
-    public String getProvider() {
-        return this.backingStore.get("provider");
+    public java.util.List<String> getProperties() {
+        return this.backingStore.get("properties");
     }
     /**
-     * Gets the region property value. The region property
+     * Gets the sourceId property value. The sourceId property
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
-    public String getRegion() {
-        return this.backingStore.get("region");
-    }
-    /**
-     * Gets the vendor property value. The vendor property
-     * @return a {@link String}
-     */
-    @jakarta.annotation.Nullable
-    public String getVendor() {
-        return this.backingStore.get("vendor");
+    public String getSourceId() {
+        return this.backingStore.get("sourceId");
     }
     /**
      * Serializes information the current object
@@ -124,12 +106,10 @@ public class SecurityProviderStatus implements AdditionalDataHolder, BackedModel
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeBooleanValue("enabled", this.getEnabled());
-        writer.writeStringValue("endpoint", this.getEndpoint());
+        writer.writeBooleanValue("isDefaultSource", this.getIsDefaultSource());
         writer.writeStringValue("@odata.type", this.getOdataType());
-        writer.writeStringValue("provider", this.getProvider());
-        writer.writeStringValue("region", this.getRegion());
-        writer.writeStringValue("vendor", this.getVendor());
+        writer.writeCollectionOfPrimitiveValues("properties", this.getProperties());
+        writer.writeStringValue("sourceId", this.getSourceId());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -148,18 +128,11 @@ public class SecurityProviderStatus implements AdditionalDataHolder, BackedModel
         this.backingStore = value;
     }
     /**
-     * Sets the enabled property value. The enabled property
-     * @param value Value to set for the enabled property.
+     * Sets the isDefaultSource property value. The isDefaultSource property
+     * @param value Value to set for the isDefaultSource property.
      */
-    public void setEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.backingStore.set("enabled", value);
-    }
-    /**
-     * Sets the endpoint property value. The endpoint property
-     * @param value Value to set for the endpoint property.
-     */
-    public void setEndpoint(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("endpoint", value);
+    public void setIsDefaultSource(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isDefaultSource", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
@@ -169,24 +142,17 @@ public class SecurityProviderStatus implements AdditionalDataHolder, BackedModel
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the provider property value. The provider property
-     * @param value Value to set for the provider property.
+     * Sets the properties property value. The properties property
+     * @param value Value to set for the properties property.
      */
-    public void setProvider(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("provider", value);
+    public void setProperties(@jakarta.annotation.Nullable final java.util.List<String> value) {
+        this.backingStore.set("properties", value);
     }
     /**
-     * Sets the region property value. The region property
-     * @param value Value to set for the region property.
+     * Sets the sourceId property value. The sourceId property
+     * @param value Value to set for the sourceId property.
      */
-    public void setRegion(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("region", value);
-    }
-    /**
-     * Sets the vendor property value. The vendor property
-     * @param value Value to set for the vendor property.
-     */
-    public void setVendor(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("vendor", value);
+    public void setSourceId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("sourceId", value);
     }
 }

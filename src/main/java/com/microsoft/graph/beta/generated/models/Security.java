@@ -14,19 +14,29 @@ import com.microsoft.graph.beta.models.security.ThreatIntelligence;
 import com.microsoft.graph.beta.models.security.ThreatSubmissionRoot;
 import com.microsoft.graph.beta.models.security.TriggersRoot;
 import com.microsoft.graph.beta.models.security.TriggerTypesRoot;
+import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class Security extends Entity implements Parsable {
+public class Security implements AdditionalDataHolder, BackedModel, Parsable {
+    /**
+     * Stores model information.
+     */
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
      * Instantiates a new {@link Security} and sets the default values.
      */
     public Security() {
-        super();
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
+        this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -37,6 +47,19 @@ public class Security extends Entity implements Parsable {
     public static Security createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new Security();
+    }
+    /**
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @return a {@link Map<String, Object>}
+     */
+    @jakarta.annotation.Nonnull
+    public Map<String, Object> getAdditionalData() {
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the alerts property value. Notifications for suspicious or potential security issues in a customers tenant.
@@ -69,6 +92,14 @@ public class Security extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public AuditCoreRoot getAuditLog() {
         return this.backingStore.get("auditLog");
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a {@link BackingStore}
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the cases property value. The cases property
@@ -108,7 +139,7 @@ public class Security extends Entity implements Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(29);
         deserializerMap.put("alerts", (n) -> { this.setAlerts(n.getCollectionOfObjectValues(Alert::createFromDiscriminatorValue)); });
         deserializerMap.put("alerts_v2", (n) -> { this.setAlertsV2(n.getCollectionOfObjectValues(Alert::createFromDiscriminatorValue)); });
         deserializerMap.put("attackSimulation", (n) -> { this.setAttackSimulation(n.getObjectValue(AttackSimulationRoot::createFromDiscriminatorValue)); });
@@ -124,8 +155,8 @@ public class Security extends Entity implements Parsable {
         deserializerMap.put("informationProtection", (n) -> { this.setInformationProtection(n.getObjectValue(InformationProtection::createFromDiscriminatorValue)); });
         deserializerMap.put("ipSecurityProfiles", (n) -> { this.setIpSecurityProfiles(n.getCollectionOfObjectValues(IpSecurityProfile::createFromDiscriminatorValue)); });
         deserializerMap.put("labels", (n) -> { this.setLabels(n.getObjectValue(LabelsRoot::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("partner", (n) -> { this.setPartner(n.getObjectValue(PartnerSecurity::createFromDiscriminatorValue)); });
-        deserializerMap.put("providerStatus", (n) -> { this.setProviderStatus(n.getCollectionOfObjectValues(SecurityProviderStatus::createFromDiscriminatorValue)); });
         deserializerMap.put("providerTenantSettings", (n) -> { this.setProviderTenantSettings(n.getCollectionOfObjectValues(ProviderTenantSetting::createFromDiscriminatorValue)); });
         deserializerMap.put("rules", (n) -> { this.setRules(n.getObjectValue(RulesRoot::createFromDiscriminatorValue)); });
         deserializerMap.put("secureScoreControlProfiles", (n) -> { this.setSecureScoreControlProfiles(n.getCollectionOfObjectValues(SecureScoreControlProfile::createFromDiscriminatorValue)); });
@@ -197,20 +228,20 @@ public class Security extends Entity implements Parsable {
         return this.backingStore.get("labels");
     }
     /**
-     * Gets the partner property value. The partner property
+     * Gets the @odata.type property value. The OdataType property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getOdataType() {
+        return this.backingStore.get("odataType");
+    }
+    /**
+     * Gets the partner property value. A container that safeguards the Microsoft Azure resources of Microsoft Cloud Solution Provider (CSP) partners customers, including alerts, scores, and all aspects of security.
      * @return a {@link PartnerSecurity}
      */
     @jakarta.annotation.Nullable
     public PartnerSecurity getPartner() {
         return this.backingStore.get("partner");
-    }
-    /**
-     * Gets the providerStatus property value. The providerStatus property
-     * @return a {@link java.util.List<SecurityProviderStatus>}
-     */
-    @jakarta.annotation.Nullable
-    public java.util.List<SecurityProviderStatus> getProviderStatus() {
-        return this.backingStore.get("providerStatus");
     }
     /**
      * Gets the providerTenantSettings property value. The providerTenantSettings property
@@ -314,7 +345,6 @@ public class Security extends Entity implements Parsable {
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        super.serialize(writer);
         writer.writeCollectionOfObjectValues("alerts", this.getAlerts());
         writer.writeCollectionOfObjectValues("alerts_v2", this.getAlertsV2());
         writer.writeObjectValue("attackSimulation", this.getAttackSimulation());
@@ -330,8 +360,8 @@ public class Security extends Entity implements Parsable {
         writer.writeObjectValue("informationProtection", this.getInformationProtection());
         writer.writeCollectionOfObjectValues("ipSecurityProfiles", this.getIpSecurityProfiles());
         writer.writeObjectValue("labels", this.getLabels());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("partner", this.getPartner());
-        writer.writeCollectionOfObjectValues("providerStatus", this.getProviderStatus());
         writer.writeCollectionOfObjectValues("providerTenantSettings", this.getProviderTenantSettings());
         writer.writeObjectValue("rules", this.getRules());
         writer.writeCollectionOfObjectValues("secureScoreControlProfiles", this.getSecureScoreControlProfiles());
@@ -344,6 +374,14 @@ public class Security extends Entity implements Parsable {
         writer.writeObjectValue("triggers", this.getTriggers());
         writer.writeObjectValue("triggerTypes", this.getTriggerTypes());
         writer.writeCollectionOfObjectValues("userSecurityProfiles", this.getUserSecurityProfiles());
+        writer.writeAdditionalData(this.getAdditionalData());
+    }
+    /**
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
+     */
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the alerts property value. Notifications for suspicious or potential security issues in a customers tenant.
@@ -372,6 +410,14 @@ public class Security extends Entity implements Parsable {
      */
     public void setAuditLog(@jakarta.annotation.Nullable final AuditCoreRoot value) {
         this.backingStore.set("auditLog", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the cases property value. The cases property
@@ -451,18 +497,18 @@ public class Security extends Entity implements Parsable {
         this.backingStore.set("labels", value);
     }
     /**
-     * Sets the partner property value. The partner property
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the @odata.type property.
+     */
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("odataType", value);
+    }
+    /**
+     * Sets the partner property value. A container that safeguards the Microsoft Azure resources of Microsoft Cloud Solution Provider (CSP) partners customers, including alerts, scores, and all aspects of security.
      * @param value Value to set for the partner property.
      */
     public void setPartner(@jakarta.annotation.Nullable final PartnerSecurity value) {
         this.backingStore.set("partner", value);
-    }
-    /**
-     * Sets the providerStatus property value. The providerStatus property
-     * @param value Value to set for the providerStatus property.
-     */
-    public void setProviderStatus(@jakarta.annotation.Nullable final java.util.List<SecurityProviderStatus> value) {
-        this.backingStore.set("providerStatus", value);
     }
     /**
      * Sets the providerTenantSettings property value. The providerTenantSettings property

@@ -1,8 +1,6 @@
 package com.microsoft.graph.beta.devicemanagement.operationapprovalpolicies;
 
 import com.microsoft.graph.beta.devicemanagement.operationapprovalpolicies.count.CountRequestBuilder;
-import com.microsoft.graph.beta.devicemanagement.operationapprovalpolicies.getapprovableoperations.GetApprovableOperationsRequestBuilder;
-import com.microsoft.graph.beta.devicemanagement.operationapprovalpolicies.getoperationsrequiringapproval.GetOperationsRequiringApprovalRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.operationapprovalpolicies.item.OperationApprovalPolicyItemRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.operationapprovalpolicies.retrieveapprovableoperations.RetrieveApprovableOperationsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.operationapprovalpolicies.retrieveoperationsrequiringapproval.RetrieveOperationsRequiringApprovalRequestBuilder;
@@ -34,22 +32,6 @@ public class OperationApprovalPoliciesRequestBuilder extends BaseRequestBuilder 
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to call the getApprovableOperations method.
-     * @return a {@link GetApprovableOperationsRequestBuilder}
-     */
-    @jakarta.annotation.Nonnull
-    public GetApprovableOperationsRequestBuilder getApprovableOperations() {
-        return new GetApprovableOperationsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to call the getOperationsRequiringApproval method.
-     * @return a {@link GetOperationsRequiringApprovalRequestBuilder}
-     */
-    @jakarta.annotation.Nonnull
-    public GetOperationsRequiringApprovalRequestBuilder getOperationsRequiringApproval() {
-        return new GetOperationsRequiringApprovalRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the retrieveApprovableOperations method.

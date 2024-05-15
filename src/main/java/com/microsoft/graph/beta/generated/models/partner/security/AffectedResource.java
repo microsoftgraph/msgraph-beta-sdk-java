@@ -76,7 +76,7 @@ public class AffectedResource implements AdditionalDataHolder, BackedModel, Pars
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the resourceId property value. The resourceId property
+     * Gets the resourceId property value. The resource path of the resource affected by the security alert.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -84,7 +84,7 @@ public class AffectedResource implements AdditionalDataHolder, BackedModel, Pars
         return this.backingStore.get("resourceId");
     }
     /**
-     * Gets the resourceType property value. The resourceType property
+     * Gets the resourceType property value. The type of resource.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -125,14 +125,14 @@ public class AffectedResource implements AdditionalDataHolder, BackedModel, Pars
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the resourceId property value. The resourceId property
+     * Sets the resourceId property value. The resource path of the resource affected by the security alert.
      * @param value Value to set for the resourceId property.
      */
     public void setResourceId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("resourceId", value);
     }
     /**
-     * Sets the resourceType property value. The resourceType property
+     * Sets the resourceType property value. The type of resource.
      * @param value Value to set for the resourceType property.
      */
     public void setResourceType(@jakarta.annotation.Nullable final String value) {

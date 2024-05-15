@@ -125,6 +125,7 @@ public class Event extends OutlookItem implements Parsable {
         deserializerMap.put("extensions", (n) -> { this.setExtensions(n.getCollectionOfObjectValues(Extension::createFromDiscriminatorValue)); });
         deserializerMap.put("hasAttachments", (n) -> { this.setHasAttachments(n.getBooleanValue()); });
         deserializerMap.put("hideAttendees", (n) -> { this.setHideAttendees(n.getBooleanValue()); });
+        deserializerMap.put("iCalUId", (n) -> { this.setICalUId(n.getStringValue()); });
         deserializerMap.put("importance", (n) -> { this.setImportance(n.getEnumValue(Importance::forValue)); });
         deserializerMap.put("instances", (n) -> { this.setInstances(n.getCollectionOfObjectValues(Event::createFromDiscriminatorValue)); });
         deserializerMap.put("isAllDay", (n) -> { this.setIsAllDay(n.getBooleanValue()); });
@@ -175,6 +176,14 @@ public class Event extends OutlookItem implements Parsable {
     @jakarta.annotation.Nullable
     public Boolean getHideAttendees() {
         return this.backingStore.get("hideAttendees");
+    }
+    /**
+     * Gets the iCalUId property value. A unique identifier for an event across calendars. This ID is different for each occurrence in a recurring series. Read-only.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getICalUId() {
+        return this.backingStore.get("iCalUId");
     }
     /**
      * Gets the importance property value. The importance of the event. Possible values are: low, normal, high.
@@ -459,6 +468,7 @@ public class Event extends OutlookItem implements Parsable {
         writer.writeCollectionOfObjectValues("extensions", this.getExtensions());
         writer.writeBooleanValue("hasAttachments", this.getHasAttachments());
         writer.writeBooleanValue("hideAttendees", this.getHideAttendees());
+        writer.writeStringValue("iCalUId", this.getICalUId());
         writer.writeEnumValue("importance", this.getImportance());
         writer.writeCollectionOfObjectValues("instances", this.getInstances());
         writer.writeBooleanValue("isAllDay", this.getIsAllDay());
@@ -576,6 +586,13 @@ public class Event extends OutlookItem implements Parsable {
      */
     public void setHideAttendees(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("hideAttendees", value);
+    }
+    /**
+     * Sets the iCalUId property value. A unique identifier for an event across calendars. This ID is different for each occurrence in a recurring series. Read-only.
+     * @param value Value to set for the iCalUId property.
+     */
+    public void setICalUId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("iCalUId", value);
     }
     /**
      * Sets the importance property value. The importance of the event. Possible values are: low, normal, high.

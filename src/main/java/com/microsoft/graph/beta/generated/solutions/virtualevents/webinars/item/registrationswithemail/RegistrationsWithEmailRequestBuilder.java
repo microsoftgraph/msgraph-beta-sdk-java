@@ -2,6 +2,7 @@ package com.microsoft.graph.beta.solutions.virtualevents.webinars.item.registrat
 
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.VirtualEventRegistration;
+import com.microsoft.graph.beta.solutions.virtualevents.webinars.item.registrationswithemail.cancel.CancelRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -20,6 +21,14 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class RegistrationsWithEmailRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to call the cancel method.
+     * @return a {@link CancelRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public CancelRequestBuilder cancel() {
+        return new CancelRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Instantiates a new {@link RegistrationsWithEmailRequestBuilder} and sets the default values.
      * @param email Alternate key of virtualEventRegistration

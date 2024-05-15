@@ -121,7 +121,7 @@ public class UserActivity extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the historyItems property value. Optional. NavigationProperty/Containment; navigation property to the activity's historyItems.
+     * Gets the historyItems property value. Optional. NavigationProperty/Containment; navigation property to the activity's activityHistoryItems.
      * @return a {@link java.util.List<ActivityHistoryItem>}
      */
     @jakarta.annotation.Nullable
@@ -246,7 +246,7 @@ public class UserActivity extends Entity implements Parsable {
         this.backingStore.set("fallbackUrl", value);
     }
     /**
-     * Sets the historyItems property value. Optional. NavigationProperty/Containment; navigation property to the activity's historyItems.
+     * Sets the historyItems property value. Optional. NavigationProperty/Containment; navigation property to the activity's activityHistoryItems.
      * @param value Value to set for the historyItems property.
      */
     public void setHistoryItems(@jakarta.annotation.Nullable final java.util.List<ActivityHistoryItem> value) {

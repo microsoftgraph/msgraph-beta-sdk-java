@@ -115,6 +115,7 @@ public class RecommendationBase extends Entity implements Parsable {
         deserializerMap.put("recommendationType", (n) -> { this.setRecommendationType(n.getEnumValue(RecommendationType::forValue)); });
         deserializerMap.put("releaseType", (n) -> { this.setReleaseType(n.getStringValue()); });
         deserializerMap.put("remediationImpact", (n) -> { this.setRemediationImpact(n.getStringValue()); });
+        deserializerMap.put("requiredLicenses", (n) -> { this.setRequiredLicenses(n.getEnumValue(RequiredLicenses::forValue)); });
         deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(RecommendationStatus::forValue)); });
         return deserializerMap;
     }
@@ -223,6 +224,14 @@ public class RecommendationBase extends Entity implements Parsable {
         return this.backingStore.get("remediationImpact");
     }
     /**
+     * Gets the requiredLicenses property value. The required licenses to view the recommendation. The possible values are: notApplicable, microsoftEntraIdFree, microsoftEntraIdP1, microsoftEntraIdP2, microsoftEntraIdGovernance, microsoftEntraWorkloadId, unknownFutureValue.
+     * @return a {@link RequiredLicenses}
+     */
+    @jakarta.annotation.Nullable
+    public RequiredLicenses getRequiredLicenses() {
+        return this.backingStore.get("requiredLicenses");
+    }
+    /**
      * Gets the status property value. The status property
      * @return a {@link RecommendationStatus}
      */
@@ -257,6 +266,7 @@ public class RecommendationBase extends Entity implements Parsable {
         writer.writeEnumValue("recommendationType", this.getRecommendationType());
         writer.writeStringValue("releaseType", this.getReleaseType());
         writer.writeStringValue("remediationImpact", this.getRemediationImpact());
+        writer.writeEnumValue("requiredLicenses", this.getRequiredLicenses());
         writer.writeEnumValue("status", this.getStatus());
     }
     /**
@@ -398,6 +408,13 @@ public class RecommendationBase extends Entity implements Parsable {
      */
     public void setRemediationImpact(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("remediationImpact", value);
+    }
+    /**
+     * Sets the requiredLicenses property value. The required licenses to view the recommendation. The possible values are: notApplicable, microsoftEntraIdFree, microsoftEntraIdP1, microsoftEntraIdP2, microsoftEntraIdGovernance, microsoftEntraWorkloadId, unknownFutureValue.
+     * @param value Value to set for the requiredLicenses property.
+     */
+    public void setRequiredLicenses(@jakarta.annotation.Nullable final RequiredLicenses value) {
+        this.backingStore.set("requiredLicenses", value);
     }
     /**
      * Sets the status property value. The status property

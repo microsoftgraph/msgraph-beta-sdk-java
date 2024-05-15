@@ -53,6 +53,14 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
         return this.backingStore.get("allowedIosDeviceModels");
     }
     /**
+     * Gets the allowWidgetContentSync property value. Indicates  if content sync for widgets is allowed for iOS on App Protection Policies
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getAllowWidgetContentSync() {
+        return this.backingStore.get("allowWidgetContentSync");
+    }
+    /**
      * Gets the appActionIfAccountIsClockedOut property value. Defines a managed app behavior, either block or warn, if the user is clocked out (non-working time). Possible values are: block, wipe, warn.
      * @return a {@link ManagedAppRemediationAction}
      */
@@ -310,6 +318,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
         deserializerMap.put("allowedAndroidDeviceManufacturers", (n) -> { this.setAllowedAndroidDeviceManufacturers(n.getStringValue()); });
         deserializerMap.put("allowedAndroidDeviceModels", (n) -> { this.setAllowedAndroidDeviceModels(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("allowedIosDeviceModels", (n) -> { this.setAllowedIosDeviceModels(n.getStringValue()); });
+        deserializerMap.put("allowWidgetContentSync", (n) -> { this.setAllowWidgetContentSync(n.getBooleanValue()); });
         deserializerMap.put("appActionIfAccountIsClockedOut", (n) -> { this.setAppActionIfAccountIsClockedOut(n.getEnumValue(ManagedAppRemediationAction::forValue)); });
         deserializerMap.put("appActionIfAndroidDeviceManufacturerNotAllowed", (n) -> { this.setAppActionIfAndroidDeviceManufacturerNotAllowed(n.getEnumValue(ManagedAppRemediationAction::forValue)); });
         deserializerMap.put("appActionIfAndroidDeviceModelNotAllowed", (n) -> { this.setAppActionIfAndroidDeviceModelNotAllowed(n.getEnumValue(ManagedAppRemediationAction::forValue)); });
@@ -569,6 +578,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
         writer.writeStringValue("allowedAndroidDeviceManufacturers", this.getAllowedAndroidDeviceManufacturers());
         writer.writeCollectionOfPrimitiveValues("allowedAndroidDeviceModels", this.getAllowedAndroidDeviceModels());
         writer.writeStringValue("allowedIosDeviceModels", this.getAllowedIosDeviceModels());
+        writer.writeBooleanValue("allowWidgetContentSync", this.getAllowWidgetContentSync());
         writer.writeEnumValue("appActionIfAccountIsClockedOut", this.getAppActionIfAccountIsClockedOut());
         writer.writeEnumValue("appActionIfAndroidDeviceManufacturerNotAllowed", this.getAppActionIfAndroidDeviceManufacturerNotAllowed());
         writer.writeEnumValue("appActionIfAndroidDeviceModelNotAllowed", this.getAppActionIfAndroidDeviceModelNotAllowed());
@@ -645,6 +655,13 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      */
     public void setAllowedIosDeviceModels(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("allowedIosDeviceModels", value);
+    }
+    /**
+     * Sets the allowWidgetContentSync property value. Indicates  if content sync for widgets is allowed for iOS on App Protection Policies
+     * @param value Value to set for the allowWidgetContentSync property.
+     */
+    public void setAllowWidgetContentSync(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("allowWidgetContentSync", value);
     }
     /**
      * Sets the appActionIfAccountIsClockedOut property value. Defines a managed app behavior, either block or warn, if the user is clocked out (non-working time). Possible values are: block, wipe, warn.

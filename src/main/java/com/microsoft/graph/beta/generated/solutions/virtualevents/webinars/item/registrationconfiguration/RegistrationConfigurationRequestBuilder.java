@@ -37,19 +37,21 @@ public class RegistrationConfigurationRequestBuilder extends BaseRequestBuilder 
         super(requestAdapter, "{+baseurl}/solutions/virtualEvents/webinars/{virtualEventWebinar%2Did}/registrationConfiguration{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Get registrationConfiguration from solutions
+     * Read the properties and relationships of a virtualEventWebinarRegistrationConfiguration object.
      * @return a {@link VirtualEventWebinarRegistrationConfiguration}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualeventwebinarregistrationconfiguration-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public VirtualEventWebinarRegistrationConfiguration get() {
         return get(null);
     }
     /**
-     * Get registrationConfiguration from solutions
+     * Read the properties and relationships of a virtualEventWebinarRegistrationConfiguration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link VirtualEventWebinarRegistrationConfiguration}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualeventwebinarregistrationconfiguration-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public VirtualEventWebinarRegistrationConfiguration get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -59,7 +61,7 @@ public class RegistrationConfigurationRequestBuilder extends BaseRequestBuilder 
         return this.requestAdapter.send(requestInfo, errorMapping, VirtualEventWebinarRegistrationConfiguration::createFromDiscriminatorValue);
     }
     /**
-     * Get registrationConfiguration from solutions
+     * Read the properties and relationships of a virtualEventWebinarRegistrationConfiguration object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +69,7 @@ public class RegistrationConfigurationRequestBuilder extends BaseRequestBuilder 
         return toGetRequestInformation(null);
     }
     /**
-     * Get registrationConfiguration from solutions
+     * Read the properties and relationships of a virtualEventWebinarRegistrationConfiguration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -89,7 +91,7 @@ public class RegistrationConfigurationRequestBuilder extends BaseRequestBuilder 
         return new RegistrationConfigurationRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get registrationConfiguration from solutions
+     * Read the properties and relationships of a virtualEventWebinarRegistrationConfiguration object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -55,7 +55,7 @@ public class VirtualEventWebinar extends VirtualEvent implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the registrationConfiguration property value. The registrationConfiguration property
+     * Gets the registrationConfiguration property value. Registration configuration of the webinar.
      * @return a {@link VirtualEventWebinarRegistrationConfiguration}
      */
     @jakarta.annotation.Nullable
@@ -97,7 +97,7 @@ public class VirtualEventWebinar extends VirtualEvent implements Parsable {
         this.backingStore.set("coOrganizers", value);
     }
     /**
-     * Sets the registrationConfiguration property value. The registrationConfiguration property
+     * Sets the registrationConfiguration property value. Registration configuration of the webinar.
      * @param value Value to set for the registrationConfiguration property.
      */
     public void setRegistrationConfiguration(@jakarta.annotation.Nullable final VirtualEventWebinarRegistrationConfiguration value) {

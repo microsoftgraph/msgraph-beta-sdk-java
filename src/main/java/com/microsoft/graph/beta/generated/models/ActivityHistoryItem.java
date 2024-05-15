@@ -26,7 +26,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
         return new ActivityHistoryItem();
     }
     /**
-     * Gets the activeDurationSeconds property value. The activeDurationSeconds property
+     * Gets the activeDurationSeconds property value. Optional. The duration of active user engagement. if not supplied, this is calculated from the startedDateTime and lastActiveDateTime.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -42,7 +42,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
         return this.backingStore.get("activity");
     }
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. Set by the server. DateTime in UTC when the object was created on the server.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -50,7 +50,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
         return this.backingStore.get("createdDateTime");
     }
     /**
-     * Gets the expirationDateTime property value. The expirationDateTime property
+     * Gets the expirationDateTime property value. Optional. UTC DateTime when the activityHistoryItem will undergo hard-delete. Can be set by the client.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -76,7 +76,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the lastActiveDateTime property value. The lastActiveDateTime property
+     * Gets the lastActiveDateTime property value. Optional. UTC DateTime when the activityHistoryItem (activity session) was last understood as active or finished - if null, activityHistoryItem status should be Ongoing.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -84,7 +84,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
         return this.backingStore.get("lastActiveDateTime");
     }
     /**
-     * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Gets the lastModifiedDateTime property value. Set by the server. DateTime in UTC when the object was modified on the server.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -92,7 +92,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
         return this.backingStore.get("lastModifiedDateTime");
     }
     /**
-     * Gets the startedDateTime property value. The startedDateTime property
+     * Gets the startedDateTime property value. Required. UTC DateTime when the activityHistoryItem (activity session) was started. Required for timeline history.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -100,7 +100,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
         return this.backingStore.get("startedDateTime");
     }
     /**
-     * Gets the status property value. The status property
+     * Gets the status property value. Set by the server. A status code used to identify valid objects. Values: active, updated, deleted, ignored.
      * @return a {@link Status}
      */
     @jakarta.annotation.Nullable
@@ -108,7 +108,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
         return this.backingStore.get("status");
     }
     /**
-     * Gets the userTimezone property value. The userTimezone property
+     * Gets the userTimezone property value. Optional. The timezone in which the user's device used to generate the activity was located at activity creation time. Values supplied as Olson IDs in order to support cross-platform representation.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -133,7 +133,7 @@ public class ActivityHistoryItem extends Entity implements Parsable {
         writer.writeStringValue("userTimezone", this.getUserTimezone());
     }
     /**
-     * Sets the activeDurationSeconds property value. The activeDurationSeconds property
+     * Sets the activeDurationSeconds property value. Optional. The duration of active user engagement. if not supplied, this is calculated from the startedDateTime and lastActiveDateTime.
      * @param value Value to set for the activeDurationSeconds property.
      */
     public void setActiveDurationSeconds(@jakarta.annotation.Nullable final Integer value) {
@@ -147,49 +147,49 @@ public class ActivityHistoryItem extends Entity implements Parsable {
         this.backingStore.set("activity", value);
     }
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. Set by the server. DateTime in UTC when the object was created on the server.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the expirationDateTime property value. The expirationDateTime property
+     * Sets the expirationDateTime property value. Optional. UTC DateTime when the activityHistoryItem will undergo hard-delete. Can be set by the client.
      * @param value Value to set for the expirationDateTime property.
      */
     public void setExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("expirationDateTime", value);
     }
     /**
-     * Sets the lastActiveDateTime property value. The lastActiveDateTime property
+     * Sets the lastActiveDateTime property value. Optional. UTC DateTime when the activityHistoryItem (activity session) was last understood as active or finished - if null, activityHistoryItem status should be Ongoing.
      * @param value Value to set for the lastActiveDateTime property.
      */
     public void setLastActiveDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("lastActiveDateTime", value);
     }
     /**
-     * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Sets the lastModifiedDateTime property value. Set by the server. DateTime in UTC when the object was modified on the server.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
-     * Sets the startedDateTime property value. The startedDateTime property
+     * Sets the startedDateTime property value. Required. UTC DateTime when the activityHistoryItem (activity session) was started. Required for timeline history.
      * @param value Value to set for the startedDateTime property.
      */
     public void setStartedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("startedDateTime", value);
     }
     /**
-     * Sets the status property value. The status property
+     * Sets the status property value. Set by the server. A status code used to identify valid objects. Values: active, updated, deleted, ignored.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final Status value) {
         this.backingStore.set("status", value);
     }
     /**
-     * Sets the userTimezone property value. The userTimezone property
+     * Sets the userTimezone property value. Optional. The timezone in which the user's device used to generate the activity was located at activity creation time. Values supplied as Olson IDs in order to support cross-platform representation.
      * @param value Value to set for the userTimezone property.
      */
     public void setUserTimezone(@jakarta.annotation.Nullable final String value) {

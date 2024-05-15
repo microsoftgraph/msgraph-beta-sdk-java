@@ -37,7 +37,7 @@ public class ActivityRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/activities/{userActivity%2Did}/historyItems/{activityHistoryItem%2Did}/activity{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Get activity from users
+     * Optional. NavigationProperty/Containment; navigation property to the associated activity.
      * @return a {@link UserActivity}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -46,7 +46,7 @@ public class ActivityRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get activity from users
+     * Optional. NavigationProperty/Containment; navigation property to the associated activity.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UserActivity}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -59,7 +59,7 @@ public class ActivityRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, UserActivity::createFromDiscriminatorValue);
     }
     /**
-     * Get activity from users
+     * Optional. NavigationProperty/Containment; navigation property to the associated activity.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class ActivityRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get activity from users
+     * Optional. NavigationProperty/Containment; navigation property to the associated activity.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -89,7 +89,7 @@ public class ActivityRequestBuilder extends BaseRequestBuilder {
         return new ActivityRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get activity from users
+     * Optional. NavigationProperty/Containment; navigation property to the associated activity.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
