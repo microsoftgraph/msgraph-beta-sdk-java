@@ -55,18 +55,18 @@ public class InboundFlowItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/external/industryData/inboundFlows/{inboundFlow%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete an inboundFlow object.
+     * Delete an inboundFileFlow object.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-inboundflow-delete?view=graph-rest-beta">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-inboundfileflow-delete?view=graph-rest-beta">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete an inboundFlow object.
+     * Delete an inboundFileFlow object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-inboundflow-delete?view=graph-rest-beta">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-inboundfileflow-delete?view=graph-rest-beta">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -75,21 +75,21 @@ public class InboundFlowItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of an inboundFileFlow object.
+     * Read the properties and relationships of an inboundFlow object.
      * @return a {@link InboundFlow}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-inboundfileflow-get?view=graph-rest-beta">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-inboundflow-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public InboundFlow get() {
         return get(null);
     }
     /**
-     * Read the properties and relationships of an inboundFileFlow object.
+     * Read the properties and relationships of an inboundFlow object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link InboundFlow}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-inboundfileflow-get?view=graph-rest-beta">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-inboundflow-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public InboundFlow get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -99,23 +99,23 @@ public class InboundFlowItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, InboundFlow::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of an inboundFlow object.
+     * Update the properties of an inboundFileFlow object.
      * @param body The request body
      * @return a {@link InboundFlow}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-inboundflow-update?view=graph-rest-beta">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-inboundfileflow-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public InboundFlow patch(@jakarta.annotation.Nonnull final InboundFlow body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of an inboundFlow object.
+     * Update the properties of an inboundFileFlow object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link InboundFlow}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-inboundflow-update?view=graph-rest-beta">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-inboundfileflow-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public InboundFlow patch(@jakarta.annotation.Nonnull final InboundFlow body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -126,7 +126,7 @@ public class InboundFlowItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, InboundFlow::createFromDiscriminatorValue);
     }
     /**
-     * Delete an inboundFlow object.
+     * Delete an inboundFileFlow object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -134,7 +134,7 @@ public class InboundFlowItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete an inboundFlow object.
+     * Delete an inboundFileFlow object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -146,7 +146,7 @@ public class InboundFlowItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of an inboundFileFlow object.
+     * Read the properties and relationships of an inboundFlow object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -154,7 +154,7 @@ public class InboundFlowItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of an inboundFileFlow object.
+     * Read the properties and relationships of an inboundFlow object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -166,7 +166,7 @@ public class InboundFlowItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of an inboundFlow object.
+     * Update the properties of an inboundFileFlow object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -175,7 +175,7 @@ public class InboundFlowItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of an inboundFlow object.
+     * Update the properties of an inboundFileFlow object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -206,7 +206,7 @@ public class InboundFlowItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of an inboundFileFlow object.
+     * Read the properties and relationships of an inboundFlow object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

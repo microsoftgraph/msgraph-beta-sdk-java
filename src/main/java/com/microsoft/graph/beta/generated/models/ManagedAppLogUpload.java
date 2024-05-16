@@ -64,11 +64,12 @@ public class ManagedAppLogUpload implements AdditionalDataHolder, BackedModel, P
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("managedAppComponent", (n) -> { this.setManagedAppComponent(n.getStringValue()); });
         deserializerMap.put("managedAppComponentDescription", (n) -> { this.setManagedAppComponentDescription(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("referenceId", (n) -> { this.setReferenceId(n.getStringValue()); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(ManagedAppLogUploadState::forValue)); });
         return deserializerMap;
     }
     /**
@@ -104,6 +105,14 @@ public class ManagedAppLogUpload implements AdditionalDataHolder, BackedModel, P
         return this.backingStore.get("referenceId");
     }
     /**
+     * Gets the status property value. Represents the current status of the associated `managedAppLogCollectionRequest`.
+     * @return a {@link ManagedAppLogUploadState}
+     */
+    @jakarta.annotation.Nullable
+    public ManagedAppLogUploadState getStatus() {
+        return this.backingStore.get("status");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -113,6 +122,7 @@ public class ManagedAppLogUpload implements AdditionalDataHolder, BackedModel, P
         writer.writeStringValue("managedAppComponentDescription", this.getManagedAppComponentDescription());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("referenceId", this.getReferenceId());
+        writer.writeEnumValue("status", this.getStatus());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -157,5 +167,12 @@ public class ManagedAppLogUpload implements AdditionalDataHolder, BackedModel, P
      */
     public void setReferenceId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("referenceId", value);
+    }
+    /**
+     * Sets the status property value. Represents the current status of the associated `managedAppLogCollectionRequest`.
+     * @param value Value to set for the status property.
+     */
+    public void setStatus(@jakarta.annotation.Nullable final ManagedAppLogUploadState value) {
+        this.backingStore.set("status", value);
     }
 }

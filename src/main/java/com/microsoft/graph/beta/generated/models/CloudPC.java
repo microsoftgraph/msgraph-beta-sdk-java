@@ -34,7 +34,7 @@ public class CloudPC extends Entity implements Parsable {
         return this.backingStore.get("aadDeviceId");
     }
     /**
-     * Gets the allotmentDisplayName property value. The allotment name divides tenant licenses into smaller batches or groups that helps restrict the number of licenses available for use in a specific assignment. When the provisioningType is dedicated, the allotment name is null. Read-only.
+     * Gets the allotmentDisplayName property value. The allotment name divides tenant licenses into smaller batches or groups that help restrict the number of licenses available for use in a specific assignment. When the provisioningType is dedicated, the allotment name is null. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -120,7 +120,7 @@ public class CloudPC extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the gracePeriodEndDateTime property value. The date and time when the grace period ends and reprovisioning or deprovisioning happen. Required only if the status is inGracePeriod. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Gets the gracePeriodEndDateTime property value. The date and time when the grace period ends and reprovisioning or deprovisioning happens. Required only if the status is inGracePeriod. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -144,7 +144,7 @@ public class CloudPC extends Entity implements Parsable {
         return this.backingStore.get("lastLoginResult");
     }
     /**
-     * Gets the lastModifiedDateTime property value. The last modified date and time of the Cloud PC. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Gets the lastModifiedDateTime property value. The last modified date and time of the Cloud PC. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -224,7 +224,7 @@ public class CloudPC extends Entity implements Parsable {
         return this.backingStore.get("provisioningPolicyName");
     }
     /**
-     * Gets the provisioningType property value. The type of licenses to be used when provisioning Cloud PCs using this policy. Possible values are: dedicated, shared, unknownFutureValue. Default value is dedicated.
+     * Gets the provisioningType property value. The type of licenses to be used when provisioning Cloud PCs using this policy. Possible values are: dedicated, shared, unknownFutureValue,sharedByUser, sharedByUser. You must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: sharedByUser, sharedByEntraGroup. The default value is dedicated. CAUTION: The shared member is deprecated and will stop returning on April 30, 2027 in the future, use the sharedByUser member.
      * @return a {@link CloudPcProvisioningType}
      */
     @jakarta.annotation.Nullable
@@ -340,7 +340,7 @@ public class CloudPC extends Entity implements Parsable {
         this.backingStore.set("aadDeviceId", value);
     }
     /**
-     * Sets the allotmentDisplayName property value. The allotment name divides tenant licenses into smaller batches or groups that helps restrict the number of licenses available for use in a specific assignment. When the provisioningType is dedicated, the allotment name is null. Read-only.
+     * Sets the allotmentDisplayName property value. The allotment name divides tenant licenses into smaller batches or groups that help restrict the number of licenses available for use in a specific assignment. When the provisioningType is dedicated, the allotment name is null. Read-only.
      * @param value Value to set for the allotmentDisplayName property.
      */
     public void setAllotmentDisplayName(@jakarta.annotation.Nullable final String value) {
@@ -382,7 +382,7 @@ public class CloudPC extends Entity implements Parsable {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the gracePeriodEndDateTime property value. The date and time when the grace period ends and reprovisioning or deprovisioning happen. Required only if the status is inGracePeriod. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Sets the gracePeriodEndDateTime property value. The date and time when the grace period ends and reprovisioning or deprovisioning happens. Required only if the status is inGracePeriod. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the gracePeriodEndDateTime property.
      */
     public void setGracePeriodEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -403,7 +403,7 @@ public class CloudPC extends Entity implements Parsable {
         this.backingStore.set("lastLoginResult", value);
     }
     /**
-     * Sets the lastModifiedDateTime property value. The last modified date and time of the Cloud PC. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Sets the lastModifiedDateTime property value. The last modified date and time of the Cloud PC. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -473,7 +473,7 @@ public class CloudPC extends Entity implements Parsable {
         this.backingStore.set("provisioningPolicyName", value);
     }
     /**
-     * Sets the provisioningType property value. The type of licenses to be used when provisioning Cloud PCs using this policy. Possible values are: dedicated, shared, unknownFutureValue. Default value is dedicated.
+     * Sets the provisioningType property value. The type of licenses to be used when provisioning Cloud PCs using this policy. Possible values are: dedicated, shared, unknownFutureValue,sharedByUser, sharedByUser. You must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: sharedByUser, sharedByEntraGroup. The default value is dedicated. CAUTION: The shared member is deprecated and will stop returning on April 30, 2027 in the future, use the sharedByUser member.
      * @param value Value to set for the provisioningType property.
      */
     public void setProvisioningType(@jakarta.annotation.Nullable final CloudPcProvisioningType value) {

@@ -91,6 +91,7 @@ public class ItemFacet extends Entity implements Parsable {
         deserializerMap.put("lastModifiedBy", (n) -> { this.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("source", (n) -> { this.setSource(n.getObjectValue(PersonDataSources::createFromDiscriminatorValue)); });
+        deserializerMap.put("sources", (n) -> { this.setSources(n.getCollectionOfObjectValues(ProfileSourceAnnotation::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -134,6 +135,14 @@ public class ItemFacet extends Entity implements Parsable {
         return this.backingStore.get("source");
     }
     /**
+     * Gets the sources property value. The sources property
+     * @return a {@link java.util.List<ProfileSourceAnnotation>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<ProfileSourceAnnotation> getSources() {
+        return this.backingStore.get("sources");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -148,6 +157,7 @@ public class ItemFacet extends Entity implements Parsable {
         writer.writeObjectValue("lastModifiedBy", this.getLastModifiedBy());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
         writer.writeObjectValue("source", this.getSource());
+        writer.writeCollectionOfObjectValues("sources", this.getSources());
     }
     /**
      * Sets the allowedAudiences property value. The audiences that are able to see the values contained within the associated entity. Possible values are: me, family, contacts, groupMembers, organization, federatedOrganizations, everyone, unknownFutureValue.
@@ -204,5 +214,12 @@ public class ItemFacet extends Entity implements Parsable {
      */
     public void setSource(@jakarta.annotation.Nullable final PersonDataSources value) {
         this.backingStore.set("source", value);
+    }
+    /**
+     * Sets the sources property value. The sources property
+     * @param value Value to set for the sources property.
+     */
+    public void setSources(@jakarta.annotation.Nullable final java.util.List<ProfileSourceAnnotation> value) {
+        this.backingStore.set("sources", value);
     }
 }

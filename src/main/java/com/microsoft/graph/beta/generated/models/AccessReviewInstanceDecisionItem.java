@@ -42,7 +42,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
         return this.backingStore.get("appliedBy");
     }
     /**
-     * Gets the appliedDateTime property value. The timestamp when the approval decision was applied. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.  Supports $select. Read-only.
+     * Gets the appliedDateTime property value. The timestamp when the approval decision was applied. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $select. Read-only.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -50,7 +50,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
         return this.backingStore.get("appliedDateTime");
     }
     /**
-     * Gets the applyResult property value. The result of applying the decision. Possible values: New, AppliedSuccessfully, AppliedWithUnknownFailure, AppliedSuccessfullyButObjectNotFound and ApplyNotSupported. Supports $select, $orderby, and $filter (eq only). Read-only.
+     * Gets the applyResult property value. The result of applying the decision. Possible values: New, AppliedSuccessfully, AppliedWithUnknownFailure, AppliedSuccessfullyButObjectNotFound, and ApplyNotSupported. Supports $select, $orderby, and $filter (eq only). Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -100,7 +100,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
         return this.backingStore.get("insights");
     }
     /**
-     * Gets the instance property value. There is exactly one accessReviewInstance associated with each decision. The instance is the parent of the decision item, representing the recurrence of the access review the decision is made on.
+     * Gets the instance property value. There's exactly one accessReviewInstance associated with each decision. The instance is the parent of the decision item, representing the recurrence of the access review the decision is made on.
      * @return a {@link AccessReviewInstance}
      */
     @jakarta.annotation.Nullable
@@ -140,7 +140,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
         return this.backingStore.get("principalResourceMembership");
     }
     /**
-     * Gets the recommendation property value. A system-generated recommendation for the approval decision based off last interactive sign-in to tenant. Recommend approve if sign-in is within thirty days of start of review. Recommend deny if sign-in is greater than thirty days of start of review. Recommendation not available otherwise. Possible values: Approve, Deny, or NoInfoAvailable. Supports $select, $orderby, and $filter (eq only). Read-only.
+     * Gets the recommendation property value. A system-generated recommendation for the approval decision based off last interactive sign-in to tenant. Recommend approve if sign-in is within 30 days of start of review. Recommend deny if sign-in is greater than 30 days of start of review. Recommendation not available otherwise. Possible values: Approve, Deny, or NoInfoAvailable. Supports $select, $orderby, and $filter (eq only). Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -180,7 +180,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
         return this.backingStore.get("reviewedDateTime");
     }
     /**
-     * Gets the target property value. The target of this specific decision. Decision targets can be of different types  each one with its own specific properties. See accessReviewInstanceDecisionItemTarget. Read-only.  This property has been replaced by the principal and resource properties in v1.0.
+     * Gets the target property value. The target of this specific decision. Decision targets can be of different types  each one with its own specific properties. See accessReviewInstanceDecisionItemTarget. Read-only.  This property is replaced by the principal and resource properties in v1.0.
      * @return a {@link AccessReviewInstanceDecisionItemTarget}
      */
     @jakarta.annotation.Nullable
@@ -227,14 +227,14 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
         this.backingStore.set("appliedBy", value);
     }
     /**
-     * Sets the appliedDateTime property value. The timestamp when the approval decision was applied. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.  Supports $select. Read-only.
+     * Sets the appliedDateTime property value. The timestamp when the approval decision was applied. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $select. Read-only.
      * @param value Value to set for the appliedDateTime property.
      */
     public void setAppliedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("appliedDateTime", value);
     }
     /**
-     * Sets the applyResult property value. The result of applying the decision. Possible values: New, AppliedSuccessfully, AppliedWithUnknownFailure, AppliedSuccessfullyButObjectNotFound and ApplyNotSupported. Supports $select, $orderby, and $filter (eq only). Read-only.
+     * Sets the applyResult property value. The result of applying the decision. Possible values: New, AppliedSuccessfully, AppliedWithUnknownFailure, AppliedSuccessfullyButObjectNotFound, and ApplyNotSupported. Supports $select, $orderby, and $filter (eq only). Read-only.
      * @param value Value to set for the applyResult property.
      */
     public void setApplyResult(@jakarta.annotation.Nullable final String value) {
@@ -255,7 +255,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
         this.backingStore.set("insights", value);
     }
     /**
-     * Sets the instance property value. There is exactly one accessReviewInstance associated with each decision. The instance is the parent of the decision item, representing the recurrence of the access review the decision is made on.
+     * Sets the instance property value. There's exactly one accessReviewInstance associated with each decision. The instance is the parent of the decision item, representing the recurrence of the access review the decision is made on.
      * @param value Value to set for the instance property.
      */
     public void setInstance(@jakarta.annotation.Nullable final AccessReviewInstance value) {
@@ -290,7 +290,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
         this.backingStore.set("principalResourceMembership", value);
     }
     /**
-     * Sets the recommendation property value. A system-generated recommendation for the approval decision based off last interactive sign-in to tenant. Recommend approve if sign-in is within thirty days of start of review. Recommend deny if sign-in is greater than thirty days of start of review. Recommendation not available otherwise. Possible values: Approve, Deny, or NoInfoAvailable. Supports $select, $orderby, and $filter (eq only). Read-only.
+     * Sets the recommendation property value. A system-generated recommendation for the approval decision based off last interactive sign-in to tenant. Recommend approve if sign-in is within 30 days of start of review. Recommend deny if sign-in is greater than 30 days of start of review. Recommendation not available otherwise. Possible values: Approve, Deny, or NoInfoAvailable. Supports $select, $orderby, and $filter (eq only). Read-only.
      * @param value Value to set for the recommendation property.
      */
     public void setRecommendation(@jakarta.annotation.Nullable final String value) {
@@ -325,7 +325,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
         this.backingStore.set("reviewedDateTime", value);
     }
     /**
-     * Sets the target property value. The target of this specific decision. Decision targets can be of different types  each one with its own specific properties. See accessReviewInstanceDecisionItemTarget. Read-only.  This property has been replaced by the principal and resource properties in v1.0.
+     * Sets the target property value. The target of this specific decision. Decision targets can be of different types  each one with its own specific properties. See accessReviewInstanceDecisionItemTarget. Read-only.  This property is replaced by the principal and resource properties in v1.0.
      * @param value Value to set for the target property.
      */
     public void setTarget(@jakarta.annotation.Nullable final AccessReviewInstanceDecisionItemTarget value) {

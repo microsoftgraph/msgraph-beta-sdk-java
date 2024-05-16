@@ -36,7 +36,7 @@ public class AssignedPrincipalsWithTransitivedirectoryScopeTypeDirectoryScopeTyp
         super(requestAdapter, "{+baseurl}/roleManagement/entitlementManagement/roleDefinitions/{unifiedRoleDefinition%2Did}/assignedPrincipals(transitive=@transitive,directoryScopeType='@directoryScopeType',directoryScopeId='@directoryScopeId'){?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top,directoryScopeId*,directoryScopeType*,transitive*}", rawUrl);
     }
     /**
-     * Get the list of security principals (users, groups, and service principals) that are assigned to a specific role for different scopes either directly or transitively. You can use the $count query parameter to also get the count. To list the direct and transitive role assignments for a specific principal, use the List transitiveRoleAssignments API.
+     * Get the list of security principals (users, groups, and service principals) that are assigned to a specific role for different scopes either directly or transitively. You can use the $count query parameter to also get the count. This API is supported for the directory (Microsoft Entra ID) provider only. To list the direct and transitive role assignments for a specific principal, use the List transitiveRoleAssignments API.
      * @return a {@link AssignedPrincipalsWithTransitivedirectoryScopeTypeDirectoryScopeTypeDirectoryScopeIdDirectoryScopeIdGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedroledefinition-assignedprincipals?view=graph-rest-beta">Find more info here</a>
@@ -46,7 +46,7 @@ public class AssignedPrincipalsWithTransitivedirectoryScopeTypeDirectoryScopeTyp
         return get(null);
     }
     /**
-     * Get the list of security principals (users, groups, and service principals) that are assigned to a specific role for different scopes either directly or transitively. You can use the $count query parameter to also get the count. To list the direct and transitive role assignments for a specific principal, use the List transitiveRoleAssignments API.
+     * Get the list of security principals (users, groups, and service principals) that are assigned to a specific role for different scopes either directly or transitively. You can use the $count query parameter to also get the count. This API is supported for the directory (Microsoft Entra ID) provider only. To list the direct and transitive role assignments for a specific principal, use the List transitiveRoleAssignments API.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AssignedPrincipalsWithTransitivedirectoryScopeTypeDirectoryScopeTypeDirectoryScopeIdDirectoryScopeIdGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -60,7 +60,7 @@ public class AssignedPrincipalsWithTransitivedirectoryScopeTypeDirectoryScopeTyp
         return this.requestAdapter.send(requestInfo, errorMapping, AssignedPrincipalsWithTransitivedirectoryScopeTypeDirectoryScopeTypeDirectoryScopeIdDirectoryScopeIdGetResponse::createFromDiscriminatorValue);
     }
     /**
-     * Get the list of security principals (users, groups, and service principals) that are assigned to a specific role for different scopes either directly or transitively. You can use the $count query parameter to also get the count. To list the direct and transitive role assignments for a specific principal, use the List transitiveRoleAssignments API.
+     * Get the list of security principals (users, groups, and service principals) that are assigned to a specific role for different scopes either directly or transitively. You can use the $count query parameter to also get the count. This API is supported for the directory (Microsoft Entra ID) provider only. To list the direct and transitive role assignments for a specific principal, use the List transitiveRoleAssignments API.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +68,7 @@ public class AssignedPrincipalsWithTransitivedirectoryScopeTypeDirectoryScopeTyp
         return toGetRequestInformation(null);
     }
     /**
-     * Get the list of security principals (users, groups, and service principals) that are assigned to a specific role for different scopes either directly or transitively. You can use the $count query parameter to also get the count. To list the direct and transitive role assignments for a specific principal, use the List transitiveRoleAssignments API.
+     * Get the list of security principals (users, groups, and service principals) that are assigned to a specific role for different scopes either directly or transitively. You can use the $count query parameter to also get the count. This API is supported for the directory (Microsoft Entra ID) provider only. To list the direct and transitive role assignments for a specific principal, use the List transitiveRoleAssignments API.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -90,7 +90,7 @@ public class AssignedPrincipalsWithTransitivedirectoryScopeTypeDirectoryScopeTyp
         return new AssignedPrincipalsWithTransitivedirectoryScopeTypeDirectoryScopeTypeDirectoryScopeIdDirectoryScopeIdRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the list of security principals (users, groups, and service principals) that are assigned to a specific role for different scopes either directly or transitively. You can use the $count query parameter to also get the count. To list the direct and transitive role assignments for a specific principal, use the List transitiveRoleAssignments API.
+     * Get the list of security principals (users, groups, and service principals) that are assigned to a specific role for different scopes either directly or transitively. You can use the $count query parameter to also get the count. This API is supported for the directory (Microsoft Entra ID) provider only. To list the direct and transitive role assignments for a specific principal, use the List transitiveRoleAssignments API.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

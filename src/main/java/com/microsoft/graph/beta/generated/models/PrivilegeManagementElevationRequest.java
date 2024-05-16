@@ -30,10 +30,10 @@ public class PrivilegeManagementElevationRequest extends Entity implements Parsa
     }
     /**
      * Gets the applicationDetail property value. Details of the application which is being requested to elevate, allowing the admin to understand the identity of the application. It includes file info such as FilePath, FileHash, FilePublisher, and etc. Returned by default. Read-only.
-     * @return a {@link ApplicationDetail}
+     * @return a {@link ElevationRequestApplicationDetail}
      */
     @jakarta.annotation.Nullable
-    public ApplicationDetail getApplicationDetail() {
+    public ElevationRequestApplicationDetail getApplicationDetail() {
         return this.backingStore.get("applicationDetail");
     }
     /**
@@ -51,7 +51,7 @@ public class PrivilegeManagementElevationRequest extends Entity implements Parsa
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("applicationDetail", (n) -> { this.setApplicationDetail(n.getObjectValue(ApplicationDetail::createFromDiscriminatorValue)); });
+        deserializerMap.put("applicationDetail", (n) -> { this.setApplicationDetail(n.getObjectValue(ElevationRequestApplicationDetail::createFromDiscriminatorValue)); });
         deserializerMap.put("deviceName", (n) -> { this.setDeviceName(n.getStringValue()); });
         deserializerMap.put("requestCreatedDateTime", (n) -> { this.setRequestCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("requestedByUserId", (n) -> { this.setRequestedByUserId(n.getStringValue()); });
@@ -189,7 +189,7 @@ public class PrivilegeManagementElevationRequest extends Entity implements Parsa
      * Sets the applicationDetail property value. Details of the application which is being requested to elevate, allowing the admin to understand the identity of the application. It includes file info such as FilePath, FileHash, FilePublisher, and etc. Returned by default. Read-only.
      * @param value Value to set for the applicationDetail property.
      */
-    public void setApplicationDetail(@jakarta.annotation.Nullable final ApplicationDetail value) {
+    public void setApplicationDetail(@jakarta.annotation.Nullable final ElevationRequestApplicationDetail value) {
         this.backingStore.set("applicationDetail", value);
     }
     /**

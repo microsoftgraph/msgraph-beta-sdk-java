@@ -3,7 +3,6 @@ package com.microsoft.graph.beta.users.item.manageddevices.item.logcollectionreq
 import com.microsoft.graph.beta.models.DeviceLogCollectionResponse;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.users.item.manageddevices.item.logcollectionrequests.item.createdownloadurl.CreateDownloadUrlRequestBuilder;
-import com.microsoft.graph.beta.users.item.manageddevices.item.logcollectionrequests.item.downloaddevicelogs.DownloadDeviceLogsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -29,14 +28,6 @@ public class DeviceLogCollectionResponseItemRequestBuilder extends BaseRequestBu
     @jakarta.annotation.Nonnull
     public CreateDownloadUrlRequestBuilder createDownloadUrl() {
         return new CreateDownloadUrlRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to call the downloadDeviceLogs method.
-     * @return a {@link DownloadDeviceLogsRequestBuilder}
-     */
-    @jakarta.annotation.Nonnull
-    public DownloadDeviceLogsRequestBuilder downloadDeviceLogs() {
-        return new DownloadDeviceLogsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link DeviceLogCollectionResponseItemRequestBuilder} and sets the default values.

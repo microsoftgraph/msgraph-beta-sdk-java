@@ -88,7 +88,7 @@ public class OperationApprovalPolicySet implements AdditionalDataHolder, BackedM
         return this.backingStore.get("policyPlatform");
     }
     /**
-     * Gets the policyType property value. The set of available policy types that can be configured for approval. There is no default value for this enum, indicating that the policy type must always be chosen.
+     * Gets the policyType property value. The set of available policy types that can be configured for approval. The policy type must always be defined in an OperationApprovalRequest.
      * @return a {@link OperationApprovalPolicyType}
      */
     @jakarta.annotation.Nullable
@@ -136,7 +136,7 @@ public class OperationApprovalPolicySet implements AdditionalDataHolder, BackedM
         this.backingStore.set("policyPlatform", value);
     }
     /**
-     * Sets the policyType property value. The set of available policy types that can be configured for approval. There is no default value for this enum, indicating that the policy type must always be chosen.
+     * Sets the policyType property value. The set of available policy types that can be configured for approval. The policy type must always be defined in an OperationApprovalRequest.
      * @param value Value to set for the policyType property.
      */
     public void setPolicyType(@jakarta.annotation.Nullable final OperationApprovalPolicyType value) {

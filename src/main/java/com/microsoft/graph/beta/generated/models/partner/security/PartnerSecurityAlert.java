@@ -27,7 +27,7 @@ public class PartnerSecurityAlert extends Entity implements Parsable {
         return new PartnerSecurityAlert();
     }
     /**
-     * Gets the activityLogs property value. The activityLogs property
+     * Gets the activityLogs property value. Represents the activity by a partner and includes details of state transitions, who performed them, and when they occurred.
      * @return a {@link java.util.List<ActivityLog>}
      */
     @jakarta.annotation.Nullable
@@ -35,7 +35,7 @@ public class PartnerSecurityAlert extends Entity implements Parsable {
         return this.backingStore.get("activityLogs");
     }
     /**
-     * Gets the additionalDetails property value. The additionalDetails property
+     * Gets the additionalDetails property value. A bag of name-value pairs that contain additional details about an alert.
      * @return a {@link AdditionalDataDictionary}
      */
     @jakarta.annotation.Nullable
@@ -43,7 +43,7 @@ public class PartnerSecurityAlert extends Entity implements Parsable {
         return this.backingStore.get("additionalDetails");
     }
     /**
-     * Gets the affectedResources property value. The affectedResources property
+     * Gets the affectedResources property value. Contains details of the resources affected by the security alert.
      * @return a {@link java.util.List<AffectedResource>}
      */
     @jakarta.annotation.Nullable
@@ -51,7 +51,7 @@ public class PartnerSecurityAlert extends Entity implements Parsable {
         return this.backingStore.get("affectedResources");
     }
     /**
-     * Gets the alertType property value. The alertType property
+     * Gets the alertType property value. The type of vulnerability that impacts the customer due to this alert.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -59,7 +59,7 @@ public class PartnerSecurityAlert extends Entity implements Parsable {
         return this.backingStore.get("alertType");
     }
     /**
-     * Gets the catalogOfferId property value. The catalogOfferId property
+     * Gets the catalogOfferId property value. The modern offer category ID of the subscription.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -75,7 +75,7 @@ public class PartnerSecurityAlert extends Entity implements Parsable {
         return this.backingStore.get("confidenceLevel");
     }
     /**
-     * Gets the customerTenantId property value. The customerTenantId property
+     * Gets the customerTenantId property value. The impacted customer tenant associated with the alert.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -83,7 +83,7 @@ public class PartnerSecurityAlert extends Entity implements Parsable {
         return this.backingStore.get("customerTenantId");
     }
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. The description for each alert.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -91,7 +91,7 @@ public class PartnerSecurityAlert extends Entity implements Parsable {
         return this.backingStore.get("description");
     }
     /**
-     * Gets the detectedDateTime property value. The detectedDateTime property
+     * Gets the detectedDateTime property value. Time when the alert was detected or created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -99,7 +99,7 @@ public class PartnerSecurityAlert extends Entity implements Parsable {
         return this.backingStore.get("detectedDateTime");
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The display name of the alert.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -136,7 +136,7 @@ public class PartnerSecurityAlert extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the firstObservedDateTime property value. The firstObservedDateTime property
+     * Gets the firstObservedDateTime property value. Time of the first activity associated with the alert. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.  subscription.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -144,7 +144,7 @@ public class PartnerSecurityAlert extends Entity implements Parsable {
         return this.backingStore.get("firstObservedDateTime");
     }
     /**
-     * Gets the isTest property value. The isTest property
+     * Gets the isTest property value. Indicates whehter an alert is a test alert.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -152,7 +152,7 @@ public class PartnerSecurityAlert extends Entity implements Parsable {
         return this.backingStore.get("isTest");
     }
     /**
-     * Gets the lastObservedDateTime property value. The lastObservedDateTime property
+     * Gets the lastObservedDateTime property value. Time of the latest activity associated with the alert. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -160,7 +160,7 @@ public class PartnerSecurityAlert extends Entity implements Parsable {
         return this.backingStore.get("lastObservedDateTime");
     }
     /**
-     * Gets the resolvedBy property value. The resolvedBy property
+     * Gets the resolvedBy property value. The UPN of the partner user who resolved the alert.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -168,7 +168,7 @@ public class PartnerSecurityAlert extends Entity implements Parsable {
         return this.backingStore.get("resolvedBy");
     }
     /**
-     * Gets the resolvedOnDateTime property value. The resolvedOnDateTime property
+     * Gets the resolvedOnDateTime property value. Time when the alert was resolved. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -176,7 +176,7 @@ public class PartnerSecurityAlert extends Entity implements Parsable {
         return this.backingStore.get("resolvedOnDateTime");
     }
     /**
-     * Gets the resolvedReason property value. The resolvedReason property
+     * Gets the resolvedReason property value. The reason provided by the partner for addressing the alert. The possible values are: legitimate, ignore, fraud, unknownFutureValue.
      * @return a {@link SecurityAlertResolvedReason}
      */
     @jakarta.annotation.Nullable
@@ -200,7 +200,7 @@ public class PartnerSecurityAlert extends Entity implements Parsable {
         return this.backingStore.get("status");
     }
     /**
-     * Gets the subscriptionId property value. The subscriptionId property
+     * Gets the subscriptionId property value. The subscription associated with the alert for the customer.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -208,7 +208,7 @@ public class PartnerSecurityAlert extends Entity implements Parsable {
         return this.backingStore.get("subscriptionId");
     }
     /**
-     * Gets the valueAddedResellerTenantId property value. The valueAddedResellerTenantId property
+     * Gets the valueAddedResellerTenantId property value. The value-added reseller tenant associated with the partner tenant and customer tenant.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -244,35 +244,35 @@ public class PartnerSecurityAlert extends Entity implements Parsable {
         writer.writeStringValue("valueAddedResellerTenantId", this.getValueAddedResellerTenantId());
     }
     /**
-     * Sets the activityLogs property value. The activityLogs property
+     * Sets the activityLogs property value. Represents the activity by a partner and includes details of state transitions, who performed them, and when they occurred.
      * @param value Value to set for the activityLogs property.
      */
     public void setActivityLogs(@jakarta.annotation.Nullable final java.util.List<ActivityLog> value) {
         this.backingStore.set("activityLogs", value);
     }
     /**
-     * Sets the additionalDetails property value. The additionalDetails property
+     * Sets the additionalDetails property value. A bag of name-value pairs that contain additional details about an alert.
      * @param value Value to set for the additionalDetails property.
      */
     public void setAdditionalDetails(@jakarta.annotation.Nullable final AdditionalDataDictionary value) {
         this.backingStore.set("additionalDetails", value);
     }
     /**
-     * Sets the affectedResources property value. The affectedResources property
+     * Sets the affectedResources property value. Contains details of the resources affected by the security alert.
      * @param value Value to set for the affectedResources property.
      */
     public void setAffectedResources(@jakarta.annotation.Nullable final java.util.List<AffectedResource> value) {
         this.backingStore.set("affectedResources", value);
     }
     /**
-     * Sets the alertType property value. The alertType property
+     * Sets the alertType property value. The type of vulnerability that impacts the customer due to this alert.
      * @param value Value to set for the alertType property.
      */
     public void setAlertType(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("alertType", value);
     }
     /**
-     * Sets the catalogOfferId property value. The catalogOfferId property
+     * Sets the catalogOfferId property value. The modern offer category ID of the subscription.
      * @param value Value to set for the catalogOfferId property.
      */
     public void setCatalogOfferId(@jakarta.annotation.Nullable final String value) {
@@ -286,70 +286,70 @@ public class PartnerSecurityAlert extends Entity implements Parsable {
         this.backingStore.set("confidenceLevel", value);
     }
     /**
-     * Sets the customerTenantId property value. The customerTenantId property
+     * Sets the customerTenantId property value. The impacted customer tenant associated with the alert.
      * @param value Value to set for the customerTenantId property.
      */
     public void setCustomerTenantId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("customerTenantId", value);
     }
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. The description for each alert.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("description", value);
     }
     /**
-     * Sets the detectedDateTime property value. The detectedDateTime property
+     * Sets the detectedDateTime property value. Time when the alert was detected or created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the detectedDateTime property.
      */
     public void setDetectedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("detectedDateTime", value);
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The display name of the alert.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the firstObservedDateTime property value. The firstObservedDateTime property
+     * Sets the firstObservedDateTime property value. Time of the first activity associated with the alert. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.  subscription.
      * @param value Value to set for the firstObservedDateTime property.
      */
     public void setFirstObservedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("firstObservedDateTime", value);
     }
     /**
-     * Sets the isTest property value. The isTest property
+     * Sets the isTest property value. Indicates whehter an alert is a test alert.
      * @param value Value to set for the isTest property.
      */
     public void setIsTest(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isTest", value);
     }
     /**
-     * Sets the lastObservedDateTime property value. The lastObservedDateTime property
+     * Sets the lastObservedDateTime property value. Time of the latest activity associated with the alert. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the lastObservedDateTime property.
      */
     public void setLastObservedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("lastObservedDateTime", value);
     }
     /**
-     * Sets the resolvedBy property value. The resolvedBy property
+     * Sets the resolvedBy property value. The UPN of the partner user who resolved the alert.
      * @param value Value to set for the resolvedBy property.
      */
     public void setResolvedBy(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("resolvedBy", value);
     }
     /**
-     * Sets the resolvedOnDateTime property value. The resolvedOnDateTime property
+     * Sets the resolvedOnDateTime property value. Time when the alert was resolved. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the resolvedOnDateTime property.
      */
     public void setResolvedOnDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("resolvedOnDateTime", value);
     }
     /**
-     * Sets the resolvedReason property value. The resolvedReason property
+     * Sets the resolvedReason property value. The reason provided by the partner for addressing the alert. The possible values are: legitimate, ignore, fraud, unknownFutureValue.
      * @param value Value to set for the resolvedReason property.
      */
     public void setResolvedReason(@jakarta.annotation.Nullable final SecurityAlertResolvedReason value) {
@@ -370,14 +370,14 @@ public class PartnerSecurityAlert extends Entity implements Parsable {
         this.backingStore.set("status", value);
     }
     /**
-     * Sets the subscriptionId property value. The subscriptionId property
+     * Sets the subscriptionId property value. The subscription associated with the alert for the customer.
      * @param value Value to set for the subscriptionId property.
      */
     public void setSubscriptionId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("subscriptionId", value);
     }
     /**
-     * Sets the valueAddedResellerTenantId property value. The valueAddedResellerTenantId property
+     * Sets the valueAddedResellerTenantId property value. The value-added reseller tenant associated with the partner tenant and customer tenant.
      * @param value Value to set for the valueAddedResellerTenantId property.
      */
     public void setValueAddedResellerTenantId(@jakarta.annotation.Nullable final String value) {

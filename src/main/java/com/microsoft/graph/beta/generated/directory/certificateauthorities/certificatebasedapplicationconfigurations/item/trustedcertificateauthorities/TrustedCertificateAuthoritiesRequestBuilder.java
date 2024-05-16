@@ -60,19 +60,21 @@ public class TrustedCertificateAuthoritiesRequestBuilder extends BaseRequestBuil
         super(requestAdapter, "{+baseurl}/directory/certificateAuthorities/certificateBasedApplicationConfigurations/{certificateBasedApplicationConfiguration%2Did}/trustedCertificateAuthorities{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Read the properties and relationships of a certificateAuthorityAsEntity object.
+     * List the trusted certificate authorities in a certificateBasedApplicationConfiguration object.
      * @return a {@link CertificateAuthorityAsEntityCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/certificatebasedapplicationconfiguration-list-trustedcertificateauthorities?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CertificateAuthorityAsEntityCollectionResponse get() {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a certificateAuthorityAsEntity object.
+     * List the trusted certificate authorities in a certificateBasedApplicationConfiguration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CertificateAuthorityAsEntityCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/certificatebasedapplicationconfiguration-list-trustedcertificateauthorities?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CertificateAuthorityAsEntityCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,21 +84,23 @@ public class TrustedCertificateAuthoritiesRequestBuilder extends BaseRequestBuil
         return this.requestAdapter.send(requestInfo, errorMapping, CertificateAuthorityAsEntityCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to trustedCertificateAuthorities for directory
+     * Create a new trusted certificate authority in a certificateBasedApplicationConfiguration object.
      * @param body The request body
      * @return a {@link CertificateAuthorityAsEntity}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/certificatebasedapplicationconfiguration-post-trustedcertificateauthorities?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CertificateAuthorityAsEntity post(@jakarta.annotation.Nonnull final CertificateAuthorityAsEntity body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to trustedCertificateAuthorities for directory
+     * Create a new trusted certificate authority in a certificateBasedApplicationConfiguration object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CertificateAuthorityAsEntity}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/certificatebasedapplicationconfiguration-post-trustedcertificateauthorities?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CertificateAuthorityAsEntity post(@jakarta.annotation.Nonnull final CertificateAuthorityAsEntity body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -107,7 +111,7 @@ public class TrustedCertificateAuthoritiesRequestBuilder extends BaseRequestBuil
         return this.requestAdapter.send(requestInfo, errorMapping, CertificateAuthorityAsEntity::createFromDiscriminatorValue);
     }
     /**
-     * Read the properties and relationships of a certificateAuthorityAsEntity object.
+     * List the trusted certificate authorities in a certificateBasedApplicationConfiguration object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +119,7 @@ public class TrustedCertificateAuthoritiesRequestBuilder extends BaseRequestBuil
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a certificateAuthorityAsEntity object.
+     * List the trusted certificate authorities in a certificateBasedApplicationConfiguration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -127,7 +131,7 @@ public class TrustedCertificateAuthoritiesRequestBuilder extends BaseRequestBuil
         return requestInfo;
     }
     /**
-     * Create new navigation property to trustedCertificateAuthorities for directory
+     * Create a new trusted certificate authority in a certificateBasedApplicationConfiguration object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -136,7 +140,7 @@ public class TrustedCertificateAuthoritiesRequestBuilder extends BaseRequestBuil
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to trustedCertificateAuthorities for directory
+     * Create a new trusted certificate authority in a certificateBasedApplicationConfiguration object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -161,7 +165,7 @@ public class TrustedCertificateAuthoritiesRequestBuilder extends BaseRequestBuil
         return new TrustedCertificateAuthoritiesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Read the properties and relationships of a certificateAuthorityAsEntity object.
+     * List the trusted certificate authorities in a certificateBasedApplicationConfiguration object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

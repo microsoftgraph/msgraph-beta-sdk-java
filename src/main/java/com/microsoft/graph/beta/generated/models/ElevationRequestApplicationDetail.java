@@ -14,28 +14,28 @@ import java.util.Objects;
  * The details of the application which the user has requested to elevate
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ApplicationDetail implements AdditionalDataHolder, BackedModel, Parsable {
+public class ElevationRequestApplicationDetail implements AdditionalDataHolder, BackedModel, Parsable {
     /**
      * Stores model information.
      */
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new {@link ApplicationDetail} and sets the default values.
+     * Instantiates a new {@link ElevationRequestApplicationDetail} and sets the default values.
      */
-    public ApplicationDetail() {
+    public ElevationRequestApplicationDetail() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a {@link ApplicationDetail}
+     * @return a {@link ElevationRequestApplicationDetail}
      */
     @jakarta.annotation.Nonnull
-    public static ApplicationDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
+    public static ElevationRequestApplicationDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
-        return new ApplicationDetail();
+        return new ElevationRequestApplicationDetail();
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -142,7 +142,7 @@ public class ApplicationDetail implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore.get("productVersion");
     }
     /**
-     * Gets the publisherCert property value. The list of base64 encoded certificate for each signer, for example, string[encodedleafcert1, encodedleafcert2....]
+     * Gets the publisherCert property value. The list of base64 encoded certificate for each signer, for example, string[encoded_leaf_cert1, encoded_leaf_cert2....]
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -247,7 +247,7 @@ public class ApplicationDetail implements AdditionalDataHolder, BackedModel, Par
         this.backingStore.set("productVersion", value);
     }
     /**
-     * Sets the publisherCert property value. The list of base64 encoded certificate for each signer, for example, string[encodedleafcert1, encodedleafcert2....]
+     * Sets the publisherCert property value. The list of base64 encoded certificate for each signer, for example, string[encoded_leaf_cert1, encoded_leaf_cert2....]
      * @param value Value to set for the publisherCert property.
      */
     public void setPublisherCert(@jakarta.annotation.Nullable final String value) {

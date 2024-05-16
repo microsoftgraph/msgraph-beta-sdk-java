@@ -1,4 +1,4 @@
-package com.microsoft.graph.beta.devicemanagement.comanageddevices.item.logcollectionrequests.item.downloaddevicelogs;
+package com.microsoft.graph.beta.solutions.virtualevents.webinars.item.registrationswithemail.cancel;
 
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -14,50 +14,46 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * Provides operations to call the downloadDeviceLogs method.
+ * Provides operations to call the cancel method.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class DownloadDeviceLogsRequestBuilder extends BaseRequestBuilder {
+public class CancelRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new {@link DownloadDeviceLogsRequestBuilder} and sets the default values.
+     * Instantiates a new {@link CancelRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
-    public DownloadDeviceLogsRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/comanagedDevices/{managedDevice%2Did}/logCollectionRequests/{deviceLogCollectionResponse%2Did}/downloadDeviceLogs", pathParameters);
+    public CancelRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
+        super(requestAdapter, "{+baseurl}/solutions/virtualEvents/webinars/{virtualEventWebinar%2Did}/registrations(email='{email}')/cancel", pathParameters);
     }
     /**
-     * Instantiates a new {@link DownloadDeviceLogsRequestBuilder} and sets the default values.
+     * Instantiates a new {@link CancelRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
-    public DownloadDeviceLogsRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/comanagedDevices/{managedDevice%2Did}/logCollectionRequests/{deviceLogCollectionResponse%2Did}/downloadDeviceLogs", rawUrl);
+    public CancelRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
+        super(requestAdapter, "{+baseurl}/solutions/virtualEvents/webinars/{virtualEventWebinar%2Did}/registrations(email='{email}')/cancel", rawUrl);
     }
     /**
-     * Invoke action downloadDeviceLogs
-     * @return a {@link DownloadDeviceLogsPostResponse}
+     * Invoke action cancel
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
-    @jakarta.annotation.Nullable
-    public DownloadDeviceLogsPostResponse post() {
-        return post(null);
+    public void post() {
+        post(null);
     }
     /**
-     * Invoke action downloadDeviceLogs
+     * Invoke action cancel
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link DownloadDeviceLogsPostResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
-    @jakarta.annotation.Nullable
-    public DownloadDeviceLogsPostResponse post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    public void post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toPostRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, DownloadDeviceLogsPostResponse::createFromDiscriminatorValue);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Invoke action downloadDeviceLogs
+     * Invoke action cancel
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -65,7 +61,7 @@ public class DownloadDeviceLogsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Invoke action downloadDeviceLogs
+     * Invoke action cancel
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -79,12 +75,12 @@ public class DownloadDeviceLogsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a {@link DownloadDeviceLogsRequestBuilder}
+     * @return a {@link CancelRequestBuilder}
      */
     @jakarta.annotation.Nonnull
-    public DownloadDeviceLogsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+    public CancelRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
-        return new DownloadDeviceLogsRequestBuilder(rawUrl, requestAdapter);
+        return new CancelRequestBuilder(rawUrl, requestAdapter);
     }
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.
