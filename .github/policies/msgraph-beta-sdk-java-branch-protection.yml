@@ -9,7 +9,7 @@ resource: repository
 configuration:
   branchProtectionRules:
 
-  - branchNamePattern: dev
+  - branchNamePattern: main
     # This branch pattern applies to the following branches as of 06/09/2023 14:08:44:
     # dev
 
@@ -45,7 +45,7 @@ configuration:
     restrictsPushes: false
     # Restrict who can dismiss pull request reviews. boolean
     restrictsReviewDismissals: false
-  
+
   - branchNamePattern: support/5.x.x
     # This branch pattern applies to the following branches as of 02/14/2024 12:25
     # support/5.x.x
