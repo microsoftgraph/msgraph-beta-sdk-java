@@ -1,7 +1,7 @@
 # Microsoft Graph SDK for Java
-## Version 6.1.0 now Generally Available! 
+## Version 6.1.0 now Generally Available!
 
-[![Download](https://img.shields.io/nexus/s/https/oss.sonatype.org/com.microsoft.graph/microsoft-graph-beta.svg)](https://oss.sonatype.org/content/repositories/snapshots/com/microsoft/graph/microsoft-graph-beta/)
+[![Download](https://img.shields.io/maven-central/v/com.microsoft.graph/microsoft-graph.svg)](https://search.maven.org/artifact/com.microsoft.graph/microsoft-graph-beta)
 
 Get started with the Microsoft Graph SDK for Java by integrating the [Microsoft Graph API](https://developer.microsoft.com/en-us/graph/get-started/java) into your Java application!
 
@@ -21,7 +21,9 @@ repositories {
 
 dependencies {
     // Include the sdk as a dependency
+    // x-release-please-start-version
     implementation 'com.microsoft.graph:microsoft-graph-beta:6.10.0'
+    // x-release-please-end
     // This dependency is only needed if you are using the TokenCrendentialAuthProvider
     implementation 'com.azure:azure-identity:1.11.0'
 }
@@ -36,7 +38,9 @@ Add the dependency in `dependencies` in pom.xml
   <!-- Include the sdk as a dependency -->
   <groupId>com.microsoft.graph</groupId>
   <artifactId>microsoft-graph-beta</artifactId>
+  <!--x-release-please-start-version-->
   <version>6.10.0</version>
+  <!--x-release-please-end-->
 </dependency>
 <dependency>
   <!-- This dependency is only needed if you are using the TokenCrendentialAuthProvider -->
@@ -69,7 +73,7 @@ For an example of how to get an authentication provider, see [choose a Microsoft
 After you have set the correct application ID and URL, you must get a **GraphServiceClient** object to make requests against the service. The SDK stores the account information for you, but when a user signs in for the first time, it invokes the UI to get the user's account information.
 
 ```java
-final AzureIdentityAuthenticationProvider authenticationProvider = 
+final AzureIdentityAuthenticationProvider authenticationProvider =
         new AzureIdentityAuthenticationProvider(credential, null, scopes);
 GraphServiceClient graphClient = new GraphServiceClient(authenticationProvider)
 
