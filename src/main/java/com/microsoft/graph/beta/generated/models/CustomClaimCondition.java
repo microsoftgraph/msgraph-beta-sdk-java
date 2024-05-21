@@ -37,7 +37,7 @@ public class CustomClaimCondition extends CustomClaimConditionBase implements Pa
         return deserializerMap;
     }
     /**
-     * Gets the memberOf property value. The memberOf property
+     * Gets the memberOf property value. A list of groups (GUIDs) to which the user/application must be a member for this condition to be applied.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -45,7 +45,7 @@ public class CustomClaimCondition extends CustomClaimConditionBase implements Pa
         return this.backingStore.get("memberOf");
     }
     /**
-     * Gets the userType property value. The userType property
+     * Gets the userType property value. The type of user this condition applies to. The possible values are: any, members, allGuests, aadGuests, externalGuests, unknownFutureValue.
      * @return a {@link ClaimConditionUserType}
      */
     @jakarta.annotation.Nullable
@@ -63,14 +63,14 @@ public class CustomClaimCondition extends CustomClaimConditionBase implements Pa
         writer.writeEnumValue("userType", this.getUserType());
     }
     /**
-     * Sets the memberOf property value. The memberOf property
+     * Sets the memberOf property value. A list of groups (GUIDs) to which the user/application must be a member for this condition to be applied.
      * @param value Value to set for the memberOf property.
      */
     public void setMemberOf(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("memberOf", value);
     }
     /**
-     * Sets the userType property value. The userType property
+     * Sets the userType property value. The type of user this condition applies to. The possible values are: any, members, allGuests, aadGuests, externalGuests, unknownFutureValue.
      * @param value Value to set for the userType property.
      */
     public void setUserType(@jakarta.annotation.Nullable final ClaimConditionUserType value) {

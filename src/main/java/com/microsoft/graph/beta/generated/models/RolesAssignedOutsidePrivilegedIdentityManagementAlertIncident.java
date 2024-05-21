@@ -51,7 +51,7 @@ public class RolesAssignedOutsidePrivilegedIdentityManagementAlertIncident exten
         return this.backingStore.get("assigneeUserPrincipalName");
     }
     /**
-     * Gets the assignmentCreatedDateTime property value. The assignmentCreatedDateTime property
+     * Gets the assignmentCreatedDateTime property value. Date and time of assignment creation.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -135,7 +135,7 @@ public class RolesAssignedOutsidePrivilegedIdentityManagementAlertIncident exten
         this.backingStore.set("assigneeUserPrincipalName", value);
     }
     /**
-     * Sets the assignmentCreatedDateTime property value. The assignmentCreatedDateTime property
+     * Sets the assignmentCreatedDateTime property value. Date and time of assignment creation.
      * @param value Value to set for the assignmentCreatedDateTime property.
      */
     public void setAssignmentCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

@@ -60,7 +60,7 @@ public class RetentionEvent extends Entity implements Parsable {
         return this.backingStore.get("displayName");
     }
     /**
-     * Gets the eventPropagationResults property value. The eventPropagationResults property
+     * Gets the eventPropagationResults property value. Represents the success status of a created event and additional information.
      * @return a {@link java.util.List<EventPropagationResult>}
      */
     @jakarta.annotation.Nullable
@@ -68,7 +68,7 @@ public class RetentionEvent extends Entity implements Parsable {
         return this.backingStore.get("eventPropagationResults");
     }
     /**
-     * Gets the eventQueries property value. The eventQueries property
+     * Gets the eventQueries property value. Represents the workload (SharePoint Online, OneDrive for Business, Exchange Online) and identification information associated with a retention event.
      * @return a {@link java.util.List<EventQuery>}
      */
     @jakarta.annotation.Nullable
@@ -76,7 +76,7 @@ public class RetentionEvent extends Entity implements Parsable {
         return this.backingStore.get("eventQueries");
     }
     /**
-     * Gets the eventStatus property value. The eventStatus property
+     * Gets the eventStatus property value. Status of event propogation to the scoped locations after the event has been created.
      * @return a {@link RetentionEventStatus}
      */
     @jakarta.annotation.Nullable
@@ -193,21 +193,21 @@ public class RetentionEvent extends Entity implements Parsable {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the eventPropagationResults property value. The eventPropagationResults property
+     * Sets the eventPropagationResults property value. Represents the success status of a created event and additional information.
      * @param value Value to set for the eventPropagationResults property.
      */
     public void setEventPropagationResults(@jakarta.annotation.Nullable final java.util.List<EventPropagationResult> value) {
         this.backingStore.set("eventPropagationResults", value);
     }
     /**
-     * Sets the eventQueries property value. The eventQueries property
+     * Sets the eventQueries property value. Represents the workload (SharePoint Online, OneDrive for Business, Exchange Online) and identification information associated with a retention event.
      * @param value Value to set for the eventQueries property.
      */
     public void setEventQueries(@jakarta.annotation.Nullable final java.util.List<EventQuery> value) {
         this.backingStore.set("eventQueries", value);
     }
     /**
-     * Sets the eventStatus property value. The eventStatus property
+     * Sets the eventStatus property value. Status of event propogation to the scoped locations after the event has been created.
      * @param value Value to set for the eventStatus property.
      */
     public void setEventStatus(@jakarta.annotation.Nullable final RetentionEventStatus value) {

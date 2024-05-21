@@ -37,7 +37,7 @@ public class IdentityProviderItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identity/b2xUserFlows/{b2xIdentityUserFlow%2Did}/identityProviders/{identityProvider%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Get identityProviders from identity
+     * The identity providers included in the user flow.
      * @return a {@link IdentityProvider}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
@@ -49,7 +49,7 @@ public class IdentityProviderItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get identityProviders from identity
+     * The identity providers included in the user flow.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link IdentityProvider}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -65,7 +65,7 @@ public class IdentityProviderItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, IdentityProvider::createFromDiscriminatorValue);
     }
     /**
-     * Get identityProviders from identity
+     * The identity providers included in the user flow.
      * @return a {@link RequestInformation}
      * @deprecated
      * The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API. as of 2021-05/identityProvider
@@ -76,7 +76,7 @@ public class IdentityProviderItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get identityProviders from identity
+     * The identity providers included in the user flow.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -104,7 +104,7 @@ public class IdentityProviderItemRequestBuilder extends BaseRequestBuilder {
         return new IdentityProviderItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get identityProviders from identity
+     * The identity providers included in the user flow.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

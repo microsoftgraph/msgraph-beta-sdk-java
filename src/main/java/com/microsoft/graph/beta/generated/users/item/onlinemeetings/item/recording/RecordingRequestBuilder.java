@@ -36,14 +36,14 @@ public class RecordingRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/onlineMeetings/{onlineMeeting%2Did}/recording", rawUrl);
     }
     /**
-     * Delete recording for the navigation property onlineMeetings in users
+     * The content stream of the recording of a Teams live event. Read-only.
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete recording for the navigation property onlineMeetings in users
+     * The content stream of the recording of a Teams live event. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -54,7 +54,7 @@ public class RecordingRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get recording for the navigation property onlineMeetings from users
+     * The content stream of the recording of a Teams live event. Read-only.
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -63,7 +63,7 @@ public class RecordingRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get recording for the navigation property onlineMeetings from users
+     * The content stream of the recording of a Teams live event. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -76,7 +76,7 @@ public class RecordingRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitive(requestInfo, errorMapping, InputStream.class);
     }
     /**
-     * Update recording for the navigation property onlineMeetings in users
+     * The content stream of the recording of a Teams live event. Read-only.
      * @param body Binary request body
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -86,7 +86,7 @@ public class RecordingRequestBuilder extends BaseRequestBuilder {
         return put(body, null);
     }
     /**
-     * Update recording for the navigation property onlineMeetings in users
+     * The content stream of the recording of a Teams live event. Read-only.
      * @param body Binary request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link InputStream}
@@ -101,7 +101,7 @@ public class RecordingRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitive(requestInfo, errorMapping, InputStream.class);
     }
     /**
-     * Delete recording for the navigation property onlineMeetings in users
+     * The content stream of the recording of a Teams live event. Read-only.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -109,7 +109,7 @@ public class RecordingRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete recording for the navigation property onlineMeetings in users
+     * The content stream of the recording of a Teams live event. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -121,7 +121,7 @@ public class RecordingRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get recording for the navigation property onlineMeetings from users
+     * The content stream of the recording of a Teams live event. Read-only.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -129,7 +129,7 @@ public class RecordingRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get recording for the navigation property onlineMeetings from users
+     * The content stream of the recording of a Teams live event. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -141,7 +141,7 @@ public class RecordingRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update recording for the navigation property onlineMeetings in users
+     * The content stream of the recording of a Teams live event. Read-only.
      * @param body Binary request body
      * @return a {@link RequestInformation}
      */
@@ -150,7 +150,7 @@ public class RecordingRequestBuilder extends BaseRequestBuilder {
         return toPutRequestInformation(body, null);
     }
     /**
-     * Update recording for the navigation property onlineMeetings in users
+     * The content stream of the recording of a Teams live event. Read-only.
      * @param body Binary request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

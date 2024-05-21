@@ -225,7 +225,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the onPremisesApplicationSegments property value. The onPremisesApplicationSegments property
+     * Gets the onPremisesApplicationSegments property value. Represents the application segment collection for an on-premises wildcard application. This property is deprecated and will stop returning data on June 1, 2023. Use segmentsConfiguration instead.
      * @return a {@link java.util.List<OnPremisesApplicationSegment>}
      */
     @jakarta.annotation.Nullable
@@ -447,7 +447,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, BackedModel, 
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the onPremisesApplicationSegments property value. The onPremisesApplicationSegments property
+     * Sets the onPremisesApplicationSegments property value. Represents the application segment collection for an on-premises wildcard application. This property is deprecated and will stop returning data on June 1, 2023. Use segmentsConfiguration instead.
      * @param value Value to set for the onPremisesApplicationSegments property.
      */
     public void setOnPremisesApplicationSegments(@jakarta.annotation.Nullable final java.util.List<OnPremisesApplicationSegment> value) {

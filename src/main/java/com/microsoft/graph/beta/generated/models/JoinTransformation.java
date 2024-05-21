@@ -45,7 +45,7 @@ public class JoinTransformation extends CustomClaimTransformation implements Par
         return this.backingStore.get("input2");
     }
     /**
-     * Gets the separator property value. The separator property
+     * Gets the separator property value. The separator value to be used.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -70,7 +70,7 @@ public class JoinTransformation extends CustomClaimTransformation implements Par
         this.backingStore.set("input2", value);
     }
     /**
-     * Sets the separator property value. The separator property
+     * Sets the separator property value. The separator value to be used.
      * @param value Value to set for the separator property.
      */
     public void setSeparator(@jakarta.annotation.Nullable final String value) {

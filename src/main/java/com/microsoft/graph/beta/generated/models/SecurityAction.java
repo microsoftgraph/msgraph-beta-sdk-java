@@ -50,7 +50,7 @@ public class SecurityAction extends Entity implements Parsable {
         return this.backingStore.get("azureTenantId");
     }
     /**
-     * Gets the clientContext property value. The clientContext property
+     * Gets the clientContext property value. Unique client context string. Can have a maximum of 256 characters.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -204,7 +204,7 @@ public class SecurityAction extends Entity implements Parsable {
         this.backingStore.set("azureTenantId", value);
     }
     /**
-     * Sets the clientContext property value. The clientContext property
+     * Sets the clientContext property value. Unique client context string. Can have a maximum of 256 characters.
      * @param value Value to set for the clientContext property.
      */
     public void setClientContext(@jakarta.annotation.Nullable final String value) {

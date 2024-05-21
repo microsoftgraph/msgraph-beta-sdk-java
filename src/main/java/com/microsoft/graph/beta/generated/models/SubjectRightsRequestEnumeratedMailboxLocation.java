@@ -37,7 +37,7 @@ public class SubjectRightsRequestEnumeratedMailboxLocation extends SubjectRights
         return deserializerMap;
     }
     /**
-     * Gets the upns property value. The upns property
+     * Gets the upns property value. Collection of mailboxes that should be included in the search. Includes the UPN of each mailbox, for example, Monica.Thompson@contoso.com. Going forward, use the userPrincipalNames property. If you specify either upns or userPrincipalNames, the same values are populated automatically to the other property.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -63,7 +63,7 @@ public class SubjectRightsRequestEnumeratedMailboxLocation extends SubjectRights
         writer.writeCollectionOfPrimitiveValues("userPrincipalNames", this.getUserPrincipalNames());
     }
     /**
-     * Sets the upns property value. The upns property
+     * Sets the upns property value. Collection of mailboxes that should be included in the search. Includes the UPN of each mailbox, for example, Monica.Thompson@contoso.com. Going forward, use the userPrincipalNames property. If you specify either upns or userPrincipalNames, the same values are populated automatically to the other property.
      * @param value Value to set for the upns property.
      */
     public void setUpns(@jakarta.annotation.Nullable final java.util.List<String> value) {

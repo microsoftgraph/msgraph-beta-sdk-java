@@ -67,7 +67,7 @@ public class PasswordSingleSignOnSettings implements AdditionalDataHolder, Backe
         return deserializerMap;
     }
     /**
-     * Gets the fields property value. The fields property
+     * Gets the fields property value. The fields to capture to fill the user credentials for password-based single sign-on.
      * @return a {@link java.util.List<PasswordSingleSignOnField>}
      */
     @jakarta.annotation.Nullable
@@ -108,7 +108,7 @@ public class PasswordSingleSignOnSettings implements AdditionalDataHolder, Backe
         this.backingStore = value;
     }
     /**
-     * Sets the fields property value. The fields property
+     * Sets the fields property value. The fields to capture to fill the user credentials for password-based single sign-on.
      * @param value Value to set for the fields property.
      */
     public void setFields(@jakarta.annotation.Nullable final java.util.List<PasswordSingleSignOnField> value) {

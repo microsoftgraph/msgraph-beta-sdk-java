@@ -68,7 +68,7 @@ public class BaseItem extends Entity implements Parsable {
         return this.backingStore.get("createdDateTime");
     }
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. The description of the item.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -192,7 +192,7 @@ public class BaseItem extends Entity implements Parsable {
         this.backingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. The description of the item.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {

@@ -128,7 +128,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
         return this.backingStore.get("status");
     }
     /**
-     * Gets the statusDetails property value. The statusDetails property
+     * Gets the statusDetails property value. The details of the status of the image that indicates why the upload failed, if applicable. Possible values are: internalServerError, sourceImageNotFound, osVersionNotSupported, sourceImageInvalid, sourceImageNotGeneralized, unknownFutureValue, vmAlreadyAzureAdJoined, paidSourceImageNotSupport, sourceImageNotSupportCustomizeVMName, sourceImageSizeExceedsLimitation. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: vmAlreadyAzureAdJoined, paidSourceImageNotSupport, sourceImageNotSupportCustomizeVMName, sourceImageSizeExceedsLimitation. Read-only. The statusDetails property is deprecated and will stop returning data on January 31, 2024. Going forward, use the errorCode property.
      * @return a {@link CloudPcDeviceImageStatusDetails}
      */
     @jakarta.annotation.Nullable
@@ -234,7 +234,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
         this.backingStore.set("status", value);
     }
     /**
-     * Sets the statusDetails property value. The statusDetails property
+     * Sets the statusDetails property value. The details of the status of the image that indicates why the upload failed, if applicable. Possible values are: internalServerError, sourceImageNotFound, osVersionNotSupported, sourceImageInvalid, sourceImageNotGeneralized, unknownFutureValue, vmAlreadyAzureAdJoined, paidSourceImageNotSupport, sourceImageNotSupportCustomizeVMName, sourceImageSizeExceedsLimitation. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: vmAlreadyAzureAdJoined, paidSourceImageNotSupport, sourceImageNotSupportCustomizeVMName, sourceImageSizeExceedsLimitation. Read-only. The statusDetails property is deprecated and will stop returning data on January 31, 2024. Going forward, use the errorCode property.
      * @param value Value to set for the statusDetails property.
      */
     public void setStatusDetails(@jakarta.annotation.Nullable final CloudPcDeviceImageStatusDetails value) {

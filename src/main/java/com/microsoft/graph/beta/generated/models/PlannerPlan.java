@@ -120,7 +120,7 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
         return this.backingStore.get("isArchived");
     }
     /**
-     * Gets the owner property value. The owner property
+     * Gets the owner property value. Use the container property instead. ID of the group that owns the plan. After it's set, this property cant be updated. This property doesn't return a valid group ID if the container of the plan isn't a group.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -236,7 +236,7 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
         this.backingStore.set("isArchived", value);
     }
     /**
-     * Sets the owner property value. The owner property
+     * Sets the owner property value. Use the container property instead. ID of the group that owns the plan. After it's set, this property cant be updated. This property doesn't return a valid group ID if the container of the plan isn't a group.
      * @param value Value to set for the owner property.
      */
     public void setOwner(@jakarta.annotation.Nullable final String value) {

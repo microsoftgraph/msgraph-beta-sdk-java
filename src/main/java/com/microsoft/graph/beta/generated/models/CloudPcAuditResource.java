@@ -111,7 +111,7 @@ public class CloudPcAuditResource implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("resourceType");
     }
     /**
-     * Gets the type property value. The type property
+     * Gets the type property value. The type of the audit resource. The type property is deprecated and will stop returning data on May 8, 2024. Going forward, use the resourceType property.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -183,7 +183,7 @@ public class CloudPcAuditResource implements AdditionalDataHolder, BackedModel, 
         this.backingStore.set("resourceType", value);
     }
     /**
-     * Sets the type property value. The type property
+     * Sets the type property value. The type of the audit resource. The type property is deprecated and will stop returning data on May 8, 2024. Going forward, use the resourceType property.
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final String value) {

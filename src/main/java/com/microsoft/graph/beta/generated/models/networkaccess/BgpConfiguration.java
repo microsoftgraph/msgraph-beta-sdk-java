@@ -78,7 +78,7 @@ public class BgpConfiguration implements AdditionalDataHolder, BackedModel, Pars
         return deserializerMap;
     }
     /**
-     * Gets the ipAddress property value. The ipAddress property
+     * Gets the ipAddress property value. Specifies the BGP IP address.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -145,7 +145,7 @@ public class BgpConfiguration implements AdditionalDataHolder, BackedModel, Pars
         this.backingStore = value;
     }
     /**
-     * Sets the ipAddress property value. The ipAddress property
+     * Sets the ipAddress property value. Specifies the BGP IP address.
      * @param value Value to set for the ipAddress property.
      */
     public void setIpAddress(@jakarta.annotation.Nullable final String value) {

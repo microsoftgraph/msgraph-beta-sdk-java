@@ -27,7 +27,7 @@ public class OnlineMeeting extends OnlineMeetingBase implements Parsable {
         return new OnlineMeeting();
     }
     /**
-     * Gets the alternativeRecording property value. The alternativeRecording property
+     * Gets the alternativeRecording property value. The content stream of the alternative recording of a Microsoft Teams live event. Read-only.
      * @return a {@link byte[]}
      */
     @jakarta.annotation.Nullable
@@ -35,7 +35,7 @@ public class OnlineMeeting extends OnlineMeetingBase implements Parsable {
         return this.backingStore.get("alternativeRecording");
     }
     /**
-     * Gets the attendeeReport property value. The attendeeReport property
+     * Gets the attendeeReport property value. The content stream of the attendee report of a Teams live event. Read-only.
      * @return a {@link byte[]}
      */
     @jakarta.annotation.Nullable
@@ -51,7 +51,7 @@ public class OnlineMeeting extends OnlineMeetingBase implements Parsable {
         return this.backingStore.get("broadcastRecording");
     }
     /**
-     * Gets the broadcastSettings property value. The broadcastSettings property
+     * Gets the broadcastSettings property value. Settings related to a live event.
      * @return a {@link BroadcastMeetingSettings}
      */
     @jakarta.annotation.Nullable
@@ -59,7 +59,7 @@ public class OnlineMeeting extends OnlineMeetingBase implements Parsable {
         return this.backingStore.get("broadcastSettings");
     }
     /**
-     * Gets the capabilities property value. The capabilities property
+     * Gets the capabilities property value. The list of meeting capabilities. Possible values are: questionAndAnswer,unknownFutureValue.
      * @return a {@link java.util.List<MeetingCapabilities>}
      */
     @jakarta.annotation.Nullable
@@ -118,7 +118,7 @@ public class OnlineMeeting extends OnlineMeetingBase implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the isBroadcast property value. The isBroadcast property
+     * Gets the isBroadcast property value. Indicates whether this event is a Teams live event.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -134,7 +134,7 @@ public class OnlineMeeting extends OnlineMeetingBase implements Parsable {
         return this.backingStore.get("joinUrl");
     }
     /**
-     * Gets the meetingAttendanceReport property value. The meetingAttendanceReport property
+     * Gets the meetingAttendanceReport property value. The attendance report of the latest online meeting session. Read-only.
      * @return a {@link MeetingAttendanceReport}
      */
     @jakarta.annotation.Nullable
@@ -158,7 +158,7 @@ public class OnlineMeeting extends OnlineMeetingBase implements Parsable {
         return this.backingStore.get("participants");
     }
     /**
-     * Gets the recording property value. The recording property
+     * Gets the recording property value. The content stream of the recording of a Teams live event. Read-only.
      * @return a {@link byte[]}
      */
     @jakarta.annotation.Nullable
@@ -224,14 +224,14 @@ public class OnlineMeeting extends OnlineMeetingBase implements Parsable {
         writer.writeCollectionOfObjectValues("transcripts", this.getTranscripts());
     }
     /**
-     * Sets the alternativeRecording property value. The alternativeRecording property
+     * Sets the alternativeRecording property value. The content stream of the alternative recording of a Microsoft Teams live event. Read-only.
      * @param value Value to set for the alternativeRecording property.
      */
     public void setAlternativeRecording(@jakarta.annotation.Nullable final byte[] value) {
         this.backingStore.set("alternativeRecording", value);
     }
     /**
-     * Sets the attendeeReport property value. The attendeeReport property
+     * Sets the attendeeReport property value. The content stream of the attendee report of a Teams live event. Read-only.
      * @param value Value to set for the attendeeReport property.
      */
     public void setAttendeeReport(@jakarta.annotation.Nullable final byte[] value) {
@@ -245,14 +245,14 @@ public class OnlineMeeting extends OnlineMeetingBase implements Parsable {
         this.backingStore.set("broadcastRecording", value);
     }
     /**
-     * Sets the broadcastSettings property value. The broadcastSettings property
+     * Sets the broadcastSettings property value. Settings related to a live event.
      * @param value Value to set for the broadcastSettings property.
      */
     public void setBroadcastSettings(@jakarta.annotation.Nullable final BroadcastMeetingSettings value) {
         this.backingStore.set("broadcastSettings", value);
     }
     /**
-     * Sets the capabilities property value. The capabilities property
+     * Sets the capabilities property value. The list of meeting capabilities. Possible values are: questionAndAnswer,unknownFutureValue.
      * @param value Value to set for the capabilities property.
      */
     public void setCapabilities(@jakarta.annotation.Nullable final java.util.List<MeetingCapabilities> value) {
@@ -280,7 +280,7 @@ public class OnlineMeeting extends OnlineMeetingBase implements Parsable {
         this.backingStore.set("externalId", value);
     }
     /**
-     * Sets the isBroadcast property value. The isBroadcast property
+     * Sets the isBroadcast property value. Indicates whether this event is a Teams live event.
      * @param value Value to set for the isBroadcast property.
      */
     public void setIsBroadcast(@jakarta.annotation.Nullable final Boolean value) {
@@ -294,7 +294,7 @@ public class OnlineMeeting extends OnlineMeetingBase implements Parsable {
         this.backingStore.set("joinUrl", value);
     }
     /**
-     * Sets the meetingAttendanceReport property value. The meetingAttendanceReport property
+     * Sets the meetingAttendanceReport property value. The attendance report of the latest online meeting session. Read-only.
      * @param value Value to set for the meetingAttendanceReport property.
      */
     public void setMeetingAttendanceReport(@jakarta.annotation.Nullable final MeetingAttendanceReport value) {
@@ -315,7 +315,7 @@ public class OnlineMeeting extends OnlineMeetingBase implements Parsable {
         this.backingStore.set("participants", value);
     }
     /**
-     * Sets the recording property value. The recording property
+     * Sets the recording property value. The content stream of the recording of a Teams live event. Read-only.
      * @param value Value to set for the recording property.
      */
     public void setRecording(@jakarta.annotation.Nullable final byte[] value) {

@@ -42,6 +42,14 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
         return this.backingStore.get("assignments");
     }
     /**
+     * Gets the autopatch property value. The autopatch property
+     * @return a {@link CloudPcProvisioningPolicyAutopatch}
+     */
+    @jakarta.annotation.Nullable
+    public CloudPcProvisioningPolicyAutopatch getAutopatch() {
+        return this.backingStore.get("autopatch");
+    }
+    /**
      * Gets the cloudPcGroupDisplayName property value. The display name of the Cloud PC group that the Cloud PCs reside in. Read-only.
      * @return a {@link String}
      */
@@ -74,14 +82,6 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
         return this.backingStore.get("displayName");
     }
     /**
-     * Gets the domainJoinConfiguration property value. The domainJoinConfiguration property
-     * @return a {@link CloudPcDomainJoinConfiguration}
-     */
-    @jakarta.annotation.Nullable
-    public CloudPcDomainJoinConfiguration getDomainJoinConfiguration() {
-        return this.backingStore.get("domainJoinConfiguration");
-    }
-    /**
      * Gets the domainJoinConfigurations property value. Specifies a list ordered by priority on how Cloud PCs join Microsoft Entra ID (Azure AD). Supports $select.
      * @return a {@link java.util.List<CloudPcDomainJoinConfiguration>}
      */
@@ -106,11 +106,11 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("alternateResourceUrl", (n) -> { this.setAlternateResourceUrl(n.getStringValue()); });
         deserializerMap.put("assignments", (n) -> { this.setAssignments(n.getCollectionOfObjectValues(CloudPcProvisioningPolicyAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("autopatch", (n) -> { this.setAutopatch(n.getObjectValue(CloudPcProvisioningPolicyAutopatch::createFromDiscriminatorValue)); });
         deserializerMap.put("cloudPcGroupDisplayName", (n) -> { this.setCloudPcGroupDisplayName(n.getStringValue()); });
         deserializerMap.put("cloudPcNamingTemplate", (n) -> { this.setCloudPcNamingTemplate(n.getStringValue()); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
-        deserializerMap.put("domainJoinConfiguration", (n) -> { this.setDomainJoinConfiguration(n.getObjectValue(CloudPcDomainJoinConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("domainJoinConfigurations", (n) -> { this.setDomainJoinConfigurations(n.getCollectionOfObjectValues(CloudPcDomainJoinConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("enableSingleSignOn", (n) -> { this.setEnableSingleSignOn(n.getBooleanValue()); });
         deserializerMap.put("gracePeriodInHours", (n) -> { this.setGracePeriodInHours(n.getIntegerValue()); });
@@ -120,7 +120,6 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
         deserializerMap.put("localAdminEnabled", (n) -> { this.setLocalAdminEnabled(n.getBooleanValue()); });
         deserializerMap.put("managedBy", (n) -> { this.setManagedBy(n.getEnumSetValue(CloudPcManagementService::forValue)); });
         deserializerMap.put("microsoftManagedDesktop", (n) -> { this.setMicrosoftManagedDesktop(n.getObjectValue(MicrosoftManagedDesktop::createFromDiscriminatorValue)); });
-        deserializerMap.put("onPremisesConnectionId", (n) -> { this.setOnPremisesConnectionId(n.getStringValue()); });
         deserializerMap.put("provisioningType", (n) -> { this.setProvisioningType(n.getEnumValue(CloudPcProvisioningType::forValue)); });
         deserializerMap.put("scopeIds", (n) -> { this.setScopeIds(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("windowsSetting", (n) -> { this.setWindowsSetting(n.getObjectValue(CloudPcWindowsSetting::createFromDiscriminatorValue)); });
@@ -184,14 +183,6 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
         return this.backingStore.get("microsoftManagedDesktop");
     }
     /**
-     * Gets the onPremisesConnectionId property value. The onPremisesConnectionId property
-     * @return a {@link String}
-     */
-    @jakarta.annotation.Nullable
-    public String getOnPremisesConnectionId() {
-        return this.backingStore.get("onPremisesConnectionId");
-    }
-    /**
      * Gets the provisioningType property value. Specifies the type of licenses to be used when provisioning Cloud PCs using this policy. The possible values are dedicated, shared, unknownFutureValue, sharedByUser, sharedByEntraGroup. You must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: sharedByUser, sharedByEntraGroup. The shared member is deprecated and will stop returning on April 30, 2027; going forward, use the sharedByUser member. For example, a dedicated service plan can be assigned to only one user and provision only one Cloud PC. The shared and sharedByUser plans require customers to purchase a shared service plan. Each shared license purchased can enable up to three Cloud PCs, with only one user signed in at a time. The sharedByEntraGroup plan also requires the purchase of a shared service plan. Each shared license under this plan can enable one Cloud PC, which is shared for the group according to the assignments of this policy. By default, the license type is dedicated if the provisioningType isn't specified when you create the cloudPcProvisioningPolicy. You can't change this property after the cloudPcProvisioningPolicy is created.
      * @return a {@link CloudPcProvisioningType}
      */
@@ -216,7 +207,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
         return this.backingStore.get("windowsSetting");
     }
     /**
-     * Gets the windowsSettings property value. The windowsSettings property
+     * Gets the windowsSettings property value. Specific Windows settings to configure during the creation of Cloud PCs for this provisioning policy. Supports $select. The windowsSettings property is deprecated and will stop returning data on January 31, 2024. Going forward, use the windowsSetting property.
      * @return a {@link CloudPcWindowsSettings}
      */
     @jakarta.annotation.Nullable
@@ -232,11 +223,11 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeStringValue("alternateResourceUrl", this.getAlternateResourceUrl());
         writer.writeCollectionOfObjectValues("assignments", this.getAssignments());
+        writer.writeObjectValue("autopatch", this.getAutopatch());
         writer.writeStringValue("cloudPcGroupDisplayName", this.getCloudPcGroupDisplayName());
         writer.writeStringValue("cloudPcNamingTemplate", this.getCloudPcNamingTemplate());
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
-        writer.writeObjectValue("domainJoinConfiguration", this.getDomainJoinConfiguration());
         writer.writeCollectionOfObjectValues("domainJoinConfigurations", this.getDomainJoinConfigurations());
         writer.writeBooleanValue("enableSingleSignOn", this.getEnableSingleSignOn());
         writer.writeIntegerValue("gracePeriodInHours", this.getGracePeriodInHours());
@@ -246,7 +237,6 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
         writer.writeBooleanValue("localAdminEnabled", this.getLocalAdminEnabled());
         writer.writeEnumSetValue("managedBy", this.getManagedBy());
         writer.writeObjectValue("microsoftManagedDesktop", this.getMicrosoftManagedDesktop());
-        writer.writeStringValue("onPremisesConnectionId", this.getOnPremisesConnectionId());
         writer.writeEnumValue("provisioningType", this.getProvisioningType());
         writer.writeCollectionOfPrimitiveValues("scopeIds", this.getScopeIds());
         writer.writeObjectValue("windowsSetting", this.getWindowsSetting());
@@ -265,6 +255,13 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
      */
     public void setAssignments(@jakarta.annotation.Nullable final java.util.List<CloudPcProvisioningPolicyAssignment> value) {
         this.backingStore.set("assignments", value);
+    }
+    /**
+     * Sets the autopatch property value. The autopatch property
+     * @param value Value to set for the autopatch property.
+     */
+    public void setAutopatch(@jakarta.annotation.Nullable final CloudPcProvisioningPolicyAutopatch value) {
+        this.backingStore.set("autopatch", value);
     }
     /**
      * Sets the cloudPcGroupDisplayName property value. The display name of the Cloud PC group that the Cloud PCs reside in. Read-only.
@@ -293,13 +290,6 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
-    }
-    /**
-     * Sets the domainJoinConfiguration property value. The domainJoinConfiguration property
-     * @param value Value to set for the domainJoinConfiguration property.
-     */
-    public void setDomainJoinConfiguration(@jakarta.annotation.Nullable final CloudPcDomainJoinConfiguration value) {
-        this.backingStore.set("domainJoinConfiguration", value);
     }
     /**
      * Sets the domainJoinConfigurations property value. Specifies a list ordered by priority on how Cloud PCs join Microsoft Entra ID (Azure AD). Supports $select.
@@ -365,13 +355,6 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
         this.backingStore.set("microsoftManagedDesktop", value);
     }
     /**
-     * Sets the onPremisesConnectionId property value. The onPremisesConnectionId property
-     * @param value Value to set for the onPremisesConnectionId property.
-     */
-    public void setOnPremisesConnectionId(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("onPremisesConnectionId", value);
-    }
-    /**
      * Sets the provisioningType property value. Specifies the type of licenses to be used when provisioning Cloud PCs using this policy. The possible values are dedicated, shared, unknownFutureValue, sharedByUser, sharedByEntraGroup. You must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: sharedByUser, sharedByEntraGroup. The shared member is deprecated and will stop returning on April 30, 2027; going forward, use the sharedByUser member. For example, a dedicated service plan can be assigned to only one user and provision only one Cloud PC. The shared and sharedByUser plans require customers to purchase a shared service plan. Each shared license purchased can enable up to three Cloud PCs, with only one user signed in at a time. The sharedByEntraGroup plan also requires the purchase of a shared service plan. Each shared license under this plan can enable one Cloud PC, which is shared for the group according to the assignments of this policy. By default, the license type is dedicated if the provisioningType isn't specified when you create the cloudPcProvisioningPolicy. You can't change this property after the cloudPcProvisioningPolicy is created.
      * @param value Value to set for the provisioningType property.
      */
@@ -393,7 +376,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
         this.backingStore.set("windowsSetting", value);
     }
     /**
-     * Sets the windowsSettings property value. The windowsSettings property
+     * Sets the windowsSettings property value. Specific Windows settings to configure during the creation of Cloud PCs for this provisioning policy. Supports $select. The windowsSettings property is deprecated and will stop returning data on January 31, 2024. Going forward, use the windowsSetting property.
      * @param value Value to set for the windowsSettings property.
      */
     public void setWindowsSettings(@jakarta.annotation.Nullable final CloudPcWindowsSettings value) {

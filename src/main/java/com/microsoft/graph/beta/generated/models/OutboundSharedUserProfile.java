@@ -76,7 +76,7 @@ public class OutboundSharedUserProfile implements AdditionalDataHolder, BackedMo
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the tenants property value. The collection of external Microsoft Entra tenants that the user has shared profile data with. Read-only.
+     * Gets the tenants property value. The collection of external Microsoft Entra tenants that the user shared profile data with. Read-only.
      * @return a {@link java.util.List<TenantReference>}
      */
     @jakarta.annotation.Nullable
@@ -125,7 +125,7 @@ public class OutboundSharedUserProfile implements AdditionalDataHolder, BackedMo
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the tenants property value. The collection of external Microsoft Entra tenants that the user has shared profile data with. Read-only.
+     * Sets the tenants property value. The collection of external Microsoft Entra tenants that the user shared profile data with. Read-only.
      * @param value Value to set for the tenants property.
      */
     public void setTenants(@jakarta.annotation.Nullable final java.util.List<TenantReference> value) {

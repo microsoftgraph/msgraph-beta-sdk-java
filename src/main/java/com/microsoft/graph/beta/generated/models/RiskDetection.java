@@ -176,7 +176,7 @@ public class RiskDetection extends Entity implements Parsable {
         return this.backingStore.get("riskState");
     }
     /**
-     * Gets the riskType property value. The riskType property
+     * Gets the riskType property value. List of risk event types.Note: This property is deprecated. Use riskEventType instead.
      * @return a {@link RiskEventType}
      */
     @jakarta.annotation.Nullable
@@ -358,7 +358,7 @@ public class RiskDetection extends Entity implements Parsable {
         this.backingStore.set("riskState", value);
     }
     /**
-     * Sets the riskType property value. The riskType property
+     * Sets the riskType property value. List of risk event types.Note: This property is deprecated. Use riskEventType instead.
      * @param value Value to set for the riskType property.
      */
     public void setRiskType(@jakarta.annotation.Nullable final RiskEventType value) {

@@ -81,7 +81,7 @@ public class CallRecord extends Entity implements Parsable {
         return this.backingStore.get("modalities");
     }
     /**
-     * Gets the organizer property value. The organizer property
+     * Gets the organizer property value. The organizing party's identity. The organizer property is deprecated and will stop returning data on June 30, 2026. Going forward, use the organizer_v2 relationship.
      * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
@@ -97,7 +97,7 @@ public class CallRecord extends Entity implements Parsable {
         return this.backingStore.get("organizerV2");
     }
     /**
-     * Gets the participants property value. The participants property
+     * Gets the participants property value. List of distinct identities involved in the call. Limited to 130 entries. The participants property is deprecated and will stop returning data on June 30, 2026. Going forward, use the participants_v2 relationship.
      * @return a {@link java.util.List<IdentitySet>}
      */
     @jakarta.annotation.Nullable
@@ -193,7 +193,7 @@ public class CallRecord extends Entity implements Parsable {
         this.backingStore.set("modalities", value);
     }
     /**
-     * Sets the organizer property value. The organizer property
+     * Sets the organizer property value. The organizing party's identity. The organizer property is deprecated and will stop returning data on June 30, 2026. Going forward, use the organizer_v2 relationship.
      * @param value Value to set for the organizer property.
      */
     public void setOrganizer(@jakarta.annotation.Nullable final IdentitySet value) {
@@ -207,7 +207,7 @@ public class CallRecord extends Entity implements Parsable {
         this.backingStore.set("organizerV2", value);
     }
     /**
-     * Sets the participants property value. The participants property
+     * Sets the participants property value. List of distinct identities involved in the call. Limited to 130 entries. The participants property is deprecated and will stop returning data on June 30, 2026. Going forward, use the participants_v2 relationship.
      * @param value Value to set for the participants property.
      */
     public void setParticipants(@jakarta.annotation.Nullable final java.util.List<IdentitySet> value) {

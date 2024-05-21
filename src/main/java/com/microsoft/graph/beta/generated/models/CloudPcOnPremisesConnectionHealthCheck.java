@@ -57,7 +57,7 @@ public class CloudPcOnPremisesConnectionHealthCheck implements AdditionalDataHol
         return this.backingStore.get("additionalDetail");
     }
     /**
-     * Gets the additionalDetails property value. The additionalDetails property
+     * Gets the additionalDetails property value. More details about the health check or the recommended action. Read-only. The additionalDetails property is deprecated and stopped returning data on January 31, 2024. Goind forward, use the additionalDetail property.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -188,7 +188,7 @@ public class CloudPcOnPremisesConnectionHealthCheck implements AdditionalDataHol
         this.backingStore.set("additionalDetail", value);
     }
     /**
-     * Sets the additionalDetails property value. The additionalDetails property
+     * Sets the additionalDetails property value. More details about the health check or the recommended action. Read-only. The additionalDetails property is deprecated and stopped returning data on January 31, 2024. Goind forward, use the additionalDetail property.
      * @param value Value to set for the additionalDetails property.
      */
     public void setAdditionalDetails(@jakarta.annotation.Nullable final String value) {

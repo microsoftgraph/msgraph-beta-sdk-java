@@ -33,7 +33,7 @@ public class GovernanceRoleDefinition extends Entity implements Parsable {
         return this.backingStore.get("displayName");
     }
     /**
-     * Gets the externalId property value. The external id of the role definition.
+     * Gets the externalId property value. The external ID of the role definition.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class GovernanceRoleDefinition extends Entity implements Parsable {
         return this.backingStore.get("resource");
     }
     /**
-     * Gets the resourceId property value. Required. The id of the resource associated with the role definition.
+     * Gets the resourceId property value. Required. The ID of the resource associated with the role definition.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -80,7 +80,7 @@ public class GovernanceRoleDefinition extends Entity implements Parsable {
         return this.backingStore.get("roleSetting");
     }
     /**
-     * Gets the templateId property value. The templateId property
+     * Gets the templateId property value. The unique identifier for the template.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -109,7 +109,7 @@ public class GovernanceRoleDefinition extends Entity implements Parsable {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the externalId property value. The external id of the role definition.
+     * Sets the externalId property value. The external ID of the role definition.
      * @param value Value to set for the externalId property.
      */
     public void setExternalId(@jakarta.annotation.Nullable final String value) {
@@ -123,7 +123,7 @@ public class GovernanceRoleDefinition extends Entity implements Parsable {
         this.backingStore.set("resource", value);
     }
     /**
-     * Sets the resourceId property value. Required. The id of the resource associated with the role definition.
+     * Sets the resourceId property value. Required. The ID of the resource associated with the role definition.
      * @param value Value to set for the resourceId property.
      */
     public void setResourceId(@jakarta.annotation.Nullable final String value) {
@@ -137,7 +137,7 @@ public class GovernanceRoleDefinition extends Entity implements Parsable {
         this.backingStore.set("roleSetting", value);
     }
     /**
-     * Sets the templateId property value. The templateId property
+     * Sets the templateId property value. The unique identifier for the template.
      * @param value Value to set for the templateId property.
      */
     public void setTemplateId(@jakarta.annotation.Nullable final String value) {

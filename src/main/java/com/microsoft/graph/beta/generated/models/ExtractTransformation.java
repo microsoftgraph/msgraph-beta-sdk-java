@@ -38,7 +38,7 @@ public class ExtractTransformation extends CustomClaimTransformation implements 
         return deserializerMap;
     }
     /**
-     * Gets the type property value. The type property
+     * Gets the type property value. The type of extract transformation to apply.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -46,7 +46,7 @@ public class ExtractTransformation extends CustomClaimTransformation implements 
         return this.backingStore.get("type");
     }
     /**
-     * Gets the value property value. The value property
+     * Gets the value property value. The value to be used as part of the transformation.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -54,7 +54,7 @@ public class ExtractTransformation extends CustomClaimTransformation implements 
         return this.backingStore.get("value");
     }
     /**
-     * Gets the value2 property value. The value2 property
+     * Gets the value2 property value. An optional secondary value to be used when dealing with between extract operations.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -73,21 +73,21 @@ public class ExtractTransformation extends CustomClaimTransformation implements 
         writer.writeStringValue("value2", this.getValue2());
     }
     /**
-     * Sets the type property value. The type property
+     * Sets the type property value. The type of extract transformation to apply.
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("type", value);
     }
     /**
-     * Sets the value property value. The value property
+     * Sets the value property value. The value to be used as part of the transformation.
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("value", value);
     }
     /**
-     * Sets the value2 property value. The value2 property
+     * Sets the value2 property value. An optional secondary value to be used when dealing with between extract operations.
      * @param value Value to set for the value2 property.
      */
     public void setValue2(@jakarta.annotation.Nullable final String value) {

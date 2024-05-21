@@ -25,12 +25,21 @@ public class PlannerRoster extends Entity implements Parsable {
         return new PlannerRoster();
     }
     /**
+     * Gets the assignedSensitivityLabel property value. The assignedSensitivityLabel property
+     * @return a {@link SensitivityLabelAssignment}
+     */
+    @jakarta.annotation.Nullable
+    public SensitivityLabelAssignment getAssignedSensitivityLabel() {
+        return this.backingStore.get("assignedSensitivityLabel");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("assignedSensitivityLabel", (n) -> { this.setAssignedSensitivityLabel(n.getObjectValue(SensitivityLabelAssignment::createFromDiscriminatorValue)); });
         deserializerMap.put("members", (n) -> { this.setMembers(n.getCollectionOfObjectValues(PlannerRosterMember::createFromDiscriminatorValue)); });
         deserializerMap.put("plans", (n) -> { this.setPlans(n.getCollectionOfObjectValues(PlannerPlan::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -58,8 +67,16 @@ public class PlannerRoster extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeObjectValue("assignedSensitivityLabel", this.getAssignedSensitivityLabel());
         writer.writeCollectionOfObjectValues("members", this.getMembers());
         writer.writeCollectionOfObjectValues("plans", this.getPlans());
+    }
+    /**
+     * Sets the assignedSensitivityLabel property value. The assignedSensitivityLabel property
+     * @param value Value to set for the assignedSensitivityLabel property.
+     */
+    public void setAssignedSensitivityLabel(@jakarta.annotation.Nullable final SensitivityLabelAssignment value) {
+        this.backingStore.set("assignedSensitivityLabel", value);
     }
     /**
      * Sets the members property value. Retrieves the members of the plannerRoster.

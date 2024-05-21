@@ -211,7 +211,7 @@ public class SearchRequest implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore.get("sortProperties");
     }
     /**
-     * Gets the stored_fields property value. The stored_fields property
+     * Gets the stored_fields property value. This is now replaced by the fields property.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -380,7 +380,7 @@ public class SearchRequest implements AdditionalDataHolder, BackedModel, Parsabl
         this.backingStore.set("sortProperties", value);
     }
     /**
-     * Sets the stored_fields property value. The stored_fields property
+     * Sets the stored_fields property value. This is now replaced by the fields property.
      * @param value Value to set for the stored_fields property.
      */
     public void setStoredFields(@jakarta.annotation.Nullable final java.util.List<String> value) {

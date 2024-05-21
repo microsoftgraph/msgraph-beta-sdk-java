@@ -26,7 +26,7 @@ public class FilePlanDescriptor extends Entity implements Parsable {
         return new FilePlanDescriptor();
     }
     /**
-     * Gets the authority property value. Represents the file plan descriptor of type authority applied to a particular retention label.
+     * Gets the authority property value. The authority property
      * @return a {@link FilePlanAuthority}
      */
     @jakarta.annotation.Nullable
@@ -58,7 +58,7 @@ public class FilePlanDescriptor extends Entity implements Parsable {
         return this.backingStore.get("categoryTemplate");
     }
     /**
-     * Gets the citation property value. Represents the file plan descriptor of type citation applied to a particular retention label.
+     * Gets the citation property value. The citation property
      * @return a {@link FilePlanCitation}
      */
     @jakarta.annotation.Nullable
@@ -74,7 +74,7 @@ public class FilePlanDescriptor extends Entity implements Parsable {
         return this.backingStore.get("citationTemplate");
     }
     /**
-     * Gets the department property value. Represents the file plan descriptor of type department applied to a particular retention label.
+     * Gets the department property value. The department property
      * @return a {@link FilePlanDepartment}
      */
     @jakarta.annotation.Nullable
@@ -109,7 +109,7 @@ public class FilePlanDescriptor extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the filePlanReference property value. Represents the file plan descriptor of type filePlanReference applied to a particular retention label.
+     * Gets the filePlanReference property value. The filePlanReference property
      * @return a {@link FilePlanReference}
      */
     @jakarta.annotation.Nullable
@@ -143,7 +143,7 @@ public class FilePlanDescriptor extends Entity implements Parsable {
         writer.writeObjectValue("filePlanReferenceTemplate", this.getFilePlanReferenceTemplate());
     }
     /**
-     * Sets the authority property value. Represents the file plan descriptor of type authority applied to a particular retention label.
+     * Sets the authority property value. The authority property
      * @param value Value to set for the authority property.
      */
     public void setAuthority(@jakarta.annotation.Nullable final FilePlanAuthority value) {
@@ -171,7 +171,7 @@ public class FilePlanDescriptor extends Entity implements Parsable {
         this.backingStore.set("categoryTemplate", value);
     }
     /**
-     * Sets the citation property value. Represents the file plan descriptor of type citation applied to a particular retention label.
+     * Sets the citation property value. The citation property
      * @param value Value to set for the citation property.
      */
     public void setCitation(@jakarta.annotation.Nullable final FilePlanCitation value) {
@@ -185,7 +185,7 @@ public class FilePlanDescriptor extends Entity implements Parsable {
         this.backingStore.set("citationTemplate", value);
     }
     /**
-     * Sets the department property value. Represents the file plan descriptor of type department applied to a particular retention label.
+     * Sets the department property value. The department property
      * @param value Value to set for the department property.
      */
     public void setDepartment(@jakarta.annotation.Nullable final FilePlanDepartment value) {
@@ -199,7 +199,7 @@ public class FilePlanDescriptor extends Entity implements Parsable {
         this.backingStore.set("departmentTemplate", value);
     }
     /**
-     * Sets the filePlanReference property value. Represents the file plan descriptor of type filePlanReference applied to a particular retention label.
+     * Sets the filePlanReference property value. The filePlanReference property
      * @param value Value to set for the filePlanReference property.
      */
     public void setFilePlanReference(@jakarta.annotation.Nullable final FilePlanReference value) {

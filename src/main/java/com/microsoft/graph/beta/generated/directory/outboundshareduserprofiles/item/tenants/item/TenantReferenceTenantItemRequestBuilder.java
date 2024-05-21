@@ -64,7 +64,7 @@ public class TenantReferenceTenantItemRequestBuilder extends BaseRequestBuilder 
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * The collection of external Microsoft Entra tenants that the user has shared profile data with. Read-only.
+     * The collection of external Microsoft Entra tenants that the user shared profile data with. Read-only.
      * @return a {@link TenantReference}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -73,7 +73,7 @@ public class TenantReferenceTenantItemRequestBuilder extends BaseRequestBuilder 
         return get(null);
     }
     /**
-     * The collection of external Microsoft Entra tenants that the user has shared profile data with. Read-only.
+     * The collection of external Microsoft Entra tenants that the user shared profile data with. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TenantReference}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -131,7 +131,7 @@ public class TenantReferenceTenantItemRequestBuilder extends BaseRequestBuilder 
         return requestInfo;
     }
     /**
-     * The collection of external Microsoft Entra tenants that the user has shared profile data with. Read-only.
+     * The collection of external Microsoft Entra tenants that the user shared profile data with. Read-only.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +139,7 @@ public class TenantReferenceTenantItemRequestBuilder extends BaseRequestBuilder 
         return toGetRequestInformation(null);
     }
     /**
-     * The collection of external Microsoft Entra tenants that the user has shared profile data with. Read-only.
+     * The collection of external Microsoft Entra tenants that the user shared profile data with. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -191,7 +191,7 @@ public class TenantReferenceTenantItemRequestBuilder extends BaseRequestBuilder 
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The collection of external Microsoft Entra tenants that the user has shared profile data with. Read-only.
+     * The collection of external Microsoft Entra tenants that the user shared profile data with. Read-only.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

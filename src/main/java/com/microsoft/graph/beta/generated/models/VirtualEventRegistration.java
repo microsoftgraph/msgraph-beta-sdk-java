@@ -52,6 +52,8 @@ public class VirtualEventRegistration extends Entity implements Parsable {
         deserializerMap.put("email", (n) -> { this.setEmail(n.getStringValue()); });
         deserializerMap.put("firstName", (n) -> { this.setFirstName(n.getStringValue()); });
         deserializerMap.put("lastName", (n) -> { this.setLastName(n.getStringValue()); });
+        deserializerMap.put("preferredLanguage", (n) -> { this.setPreferredLanguage(n.getStringValue()); });
+        deserializerMap.put("preferredTimezone", (n) -> { this.setPreferredTimezone(n.getStringValue()); });
         deserializerMap.put("registrationDateTime", (n) -> { this.setRegistrationDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("registrationQuestionAnswers", (n) -> { this.setRegistrationQuestionAnswers(n.getCollectionOfObjectValues(VirtualEventRegistrationQuestionAnswer::createFromDiscriminatorValue)); });
         deserializerMap.put("sessions", (n) -> { this.setSessions(n.getCollectionOfObjectValues(VirtualEventSession::createFromDiscriminatorValue)); });
@@ -74,6 +76,22 @@ public class VirtualEventRegistration extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public String getLastName() {
         return this.backingStore.get("lastName");
+    }
+    /**
+     * Gets the preferredLanguage property value. The preferredLanguage property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getPreferredLanguage() {
+        return this.backingStore.get("preferredLanguage");
+    }
+    /**
+     * Gets the preferredTimezone property value. The preferredTimezone property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getPreferredTimezone() {
+        return this.backingStore.get("preferredTimezone");
     }
     /**
      * Gets the registrationDateTime property value. Date and time when the registrant registers for the virtual event. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -126,6 +144,8 @@ public class VirtualEventRegistration extends Entity implements Parsable {
         writer.writeStringValue("email", this.getEmail());
         writer.writeStringValue("firstName", this.getFirstName());
         writer.writeStringValue("lastName", this.getLastName());
+        writer.writeStringValue("preferredLanguage", this.getPreferredLanguage());
+        writer.writeStringValue("preferredTimezone", this.getPreferredTimezone());
         writer.writeOffsetDateTimeValue("registrationDateTime", this.getRegistrationDateTime());
         writer.writeCollectionOfObjectValues("registrationQuestionAnswers", this.getRegistrationQuestionAnswers());
         writer.writeCollectionOfObjectValues("sessions", this.getSessions());
@@ -159,6 +179,20 @@ public class VirtualEventRegistration extends Entity implements Parsable {
      */
     public void setLastName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("lastName", value);
+    }
+    /**
+     * Sets the preferredLanguage property value. The preferredLanguage property
+     * @param value Value to set for the preferredLanguage property.
+     */
+    public void setPreferredLanguage(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("preferredLanguage", value);
+    }
+    /**
+     * Sets the preferredTimezone property value. The preferredTimezone property
+     * @param value Value to set for the preferredTimezone property.
+     */
+    public void setPreferredTimezone(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("preferredTimezone", value);
     }
     /**
      * Sets the registrationDateTime property value. Date and time when the registrant registers for the virtual event. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.

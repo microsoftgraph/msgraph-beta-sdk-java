@@ -40,7 +40,7 @@ public class CustomClaim extends CustomClaimBase implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the name property value. The name property
+     * Gets the name property value. The name of the claim to be emitted.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -48,7 +48,7 @@ public class CustomClaim extends CustomClaimBase implements Parsable {
         return this.backingStore.get("name");
     }
     /**
-     * Gets the namespace property value. The namespace property
+     * Gets the namespace property value. An optional namespace to be included as part of the claim name.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -56,7 +56,7 @@ public class CustomClaim extends CustomClaimBase implements Parsable {
         return this.backingStore.get("namespace");
     }
     /**
-     * Gets the samlAttributeNameFormat property value. The samlAttributeNameFormat property
+     * Gets the samlAttributeNameFormat property value. If specified, it sets the nameFormat attribute associated with the claim in the SAML response. The possible values are: unspecified, uri, basic, unknownFutureValue.
      * @return a {@link SamlAttributeNameFormat}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class CustomClaim extends CustomClaimBase implements Parsable {
         return this.backingStore.get("samlAttributeNameFormat");
     }
     /**
-     * Gets the tokenFormat property value. The tokenFormat property
+     * Gets the tokenFormat property value. List of token formats for which this claim should be emitted. The possible values are: saml,jwt, unknownFutureValue
      * @return a {@link java.util.List<TokenFormat>}
      */
     @jakarta.annotation.Nullable
@@ -84,28 +84,28 @@ public class CustomClaim extends CustomClaimBase implements Parsable {
         writer.writeCollectionOfEnumValues("tokenFormat", this.getTokenFormat());
     }
     /**
-     * Sets the name property value. The name property
+     * Sets the name property value. The name of the claim to be emitted.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("name", value);
     }
     /**
-     * Sets the namespace property value. The namespace property
+     * Sets the namespace property value. An optional namespace to be included as part of the claim name.
      * @param value Value to set for the namespace property.
      */
     public void setNamespace(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("namespace", value);
     }
     /**
-     * Sets the samlAttributeNameFormat property value. The samlAttributeNameFormat property
+     * Sets the samlAttributeNameFormat property value. If specified, it sets the nameFormat attribute associated with the claim in the SAML response. The possible values are: unspecified, uri, basic, unknownFutureValue.
      * @param value Value to set for the samlAttributeNameFormat property.
      */
     public void setSamlAttributeNameFormat(@jakarta.annotation.Nullable final SamlAttributeNameFormat value) {
         this.backingStore.set("samlAttributeNameFormat", value);
     }
     /**
-     * Sets the tokenFormat property value. The tokenFormat property
+     * Sets the tokenFormat property value. List of token formats for which this claim should be emitted. The possible values are: saml,jwt, unknownFutureValue
      * @param value Value to set for the tokenFormat property.
      */
     public void setTokenFormat(@jakarta.annotation.Nullable final java.util.List<TokenFormat> value) {

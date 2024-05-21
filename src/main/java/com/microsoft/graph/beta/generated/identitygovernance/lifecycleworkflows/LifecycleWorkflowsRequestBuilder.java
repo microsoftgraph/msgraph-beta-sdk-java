@@ -2,6 +2,7 @@ package com.microsoft.graph.beta.identitygovernance.lifecycleworkflows;
 
 import com.microsoft.graph.beta.identitygovernance.lifecycleworkflows.customtaskextensions.CustomTaskExtensionsRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.lifecycleworkflows.deleteditems.DeletedItemsRequestBuilder;
+import com.microsoft.graph.beta.identitygovernance.lifecycleworkflows.insights.InsightsRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.lifecycleworkflows.settings.SettingsRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.lifecycleworkflows.taskdefinitions.TaskDefinitionsRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.lifecycleworkflows.workflows.WorkflowsRequestBuilder;
@@ -41,6 +42,14 @@ public class LifecycleWorkflowsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public DeletedItemsRequestBuilder deletedItems() {
         return new DeletedItemsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the insights property of the microsoft.graph.identityGovernance.lifecycleWorkflowsContainer entity.
+     * @return a {@link InsightsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public InsightsRequestBuilder insights() {
+        return new InsightsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the settings property of the microsoft.graph.identityGovernance.lifecycleWorkflowsContainer entity.

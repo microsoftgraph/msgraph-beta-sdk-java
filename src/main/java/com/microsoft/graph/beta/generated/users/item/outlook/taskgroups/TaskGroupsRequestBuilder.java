@@ -66,7 +66,7 @@ public class TaskGroupsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/outlook/taskGroups{?%24count,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get taskGroups from users
+     * The user's Outlook task groups. Read-only. Nullable.
      * @return a {@link OutlookTaskGroupCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
@@ -78,7 +78,7 @@ public class TaskGroupsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get taskGroups from users
+     * The user's Outlook task groups. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link OutlookTaskGroupCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -125,7 +125,7 @@ public class TaskGroupsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, OutlookTaskGroup::createFromDiscriminatorValue);
     }
     /**
-     * Get taskGroups from users
+     * The user's Outlook task groups. Read-only. Nullable.
      * @return a {@link RequestInformation}
      * @deprecated
      * The Outlook tasks API is deprecated and will stop returning data on February 20, 2023. Please use the new To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/ as of 2020-08/Outlook_Tasks
@@ -136,7 +136,7 @@ public class TaskGroupsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get taskGroups from users
+     * The user's Outlook task groups. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -194,7 +194,7 @@ public class TaskGroupsRequestBuilder extends BaseRequestBuilder {
         return new TaskGroupsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get taskGroups from users
+     * The user's Outlook task groups. Read-only. Nullable.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -64,7 +64,7 @@ public class MeetingParticipants implements AdditionalDataHolder, BackedModel, P
         return this.backingStore;
     }
     /**
-     * Gets the contributors property value. The contributors property
+     * Gets the contributors property value. For broadcast meeting only.
      * @return a {@link java.util.List<MeetingParticipantInfo>}
      */
     @jakarta.annotation.Nullable
@@ -102,7 +102,7 @@ public class MeetingParticipants implements AdditionalDataHolder, BackedModel, P
         return this.backingStore.get("organizer");
     }
     /**
-     * Gets the producers property value. The producers property
+     * Gets the producers property value. For broadcast meeting only.
      * @return a {@link java.util.List<MeetingParticipantInfo>}
      */
     @jakarta.annotation.Nullable
@@ -145,7 +145,7 @@ public class MeetingParticipants implements AdditionalDataHolder, BackedModel, P
         this.backingStore = value;
     }
     /**
-     * Sets the contributors property value. The contributors property
+     * Sets the contributors property value. For broadcast meeting only.
      * @param value Value to set for the contributors property.
      */
     public void setContributors(@jakarta.annotation.Nullable final java.util.List<MeetingParticipantInfo> value) {
@@ -166,7 +166,7 @@ public class MeetingParticipants implements AdditionalDataHolder, BackedModel, P
         this.backingStore.set("organizer", value);
     }
     /**
-     * Sets the producers property value. The producers property
+     * Sets the producers property value. For broadcast meeting only.
      * @param value Value to set for the producers property.
      */
     public void setProducers(@jakarta.annotation.Nullable final java.util.List<MeetingParticipantInfo> value) {

@@ -36,7 +36,7 @@ public class PrintUsageByPrinter extends PrintUsage implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the printerId property value. The printerId property
+     * Gets the printerId property value. The ID of the printer represented by these statistics.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -62,7 +62,7 @@ public class PrintUsageByPrinter extends PrintUsage implements Parsable {
         writer.writeStringValue("printerName", this.getPrinterName());
     }
     /**
-     * Sets the printerId property value. The printerId property
+     * Sets the printerId property value. The ID of the printer represented by these statistics.
      * @param value Value to set for the printerId property.
      */
     public void setPrinterId(@jakarta.annotation.Nullable final String value) {

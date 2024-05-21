@@ -41,7 +41,7 @@ public class ConditionalAccessRoot extends Entity implements Parsable {
         return this.backingStore.get("authenticationStrength");
     }
     /**
-     * Gets the authenticationStrengths property value. The authenticationStrengths property
+     * Gets the authenticationStrengths property value. DEPRECATED. See the authenticationStrength relationship instead.
      * @return a {@link AuthenticationStrengthRoot}
      */
     @jakarta.annotation.Nullable
@@ -116,7 +116,7 @@ public class ConditionalAccessRoot extends Entity implements Parsable {
         this.backingStore.set("authenticationStrength", value);
     }
     /**
-     * Sets the authenticationStrengths property value. The authenticationStrengths property
+     * Sets the authenticationStrengths property value. DEPRECATED. See the authenticationStrength relationship instead.
      * @param value Value to set for the authenticationStrengths property.
      */
     public void setAuthenticationStrengths(@jakarta.annotation.Nullable final AuthenticationStrengthRoot value) {

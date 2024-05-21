@@ -36,7 +36,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         return new NetworkAccessTraffic();
     }
     /**
-     * Gets the action property value. The action property
+     * Gets the action property value. Indicates what action to take based on filtering policies. The possible values are: block, allow.
      * @return a {@link FilteringPolicyAction}
      */
     @jakarta.annotation.Nullable
@@ -474,7 +474,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the action property value. The action property
+     * Sets the action property value. Indicates what action to take based on filtering policies. The possible values are: block, allow.
      * @param value Value to set for the action property.
      */
     public void setAction(@jakarta.annotation.Nullable final FilteringPolicyAction value) {

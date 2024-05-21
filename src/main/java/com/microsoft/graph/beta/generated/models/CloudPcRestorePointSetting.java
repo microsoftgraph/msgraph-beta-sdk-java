@@ -69,7 +69,7 @@ public class CloudPcRestorePointSetting implements AdditionalDataHolder, BackedM
         return deserializerMap;
     }
     /**
-     * Gets the frequencyInHours property value. The frequencyInHours property
+     * Gets the frequencyInHours property value. The time interval in hours to take snapshots (restore points) of a Cloud PC automatically. Possible values are 4, 6, 12, 16, and 24. The default frequency is 12 hours. The frequencyInHours property is deprecated and will stop returning data on January 31, 2024. Going forward, use the frequencyType property.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -128,7 +128,7 @@ public class CloudPcRestorePointSetting implements AdditionalDataHolder, BackedM
         this.backingStore = value;
     }
     /**
-     * Sets the frequencyInHours property value. The frequencyInHours property
+     * Sets the frequencyInHours property value. The time interval in hours to take snapshots (restore points) of a Cloud PC automatically. Possible values are 4, 6, 12, 16, and 24. The default frequency is 12 hours. The frequencyInHours property is deprecated and will stop returning data on January 31, 2024. Going forward, use the frequencyType property.
      * @param value Value to set for the frequencyInHours property.
      */
     public void setFrequencyInHours(@jakarta.annotation.Nullable final Integer value) {

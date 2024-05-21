@@ -102,7 +102,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
         return this.backingStore.get("objectId");
     }
     /**
-     * Gets the onPremisesSecurityIdentifier property value. The onPremisesSecurityIdentifier property
+     * Gets the onPremisesSecurityIdentifier property value. A string representation of the principal's security identifier, if known, or null if the subject doesn't have a security identifier.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -202,7 +202,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
         this.backingStore.set("objectId", value);
     }
     /**
-     * Sets the onPremisesSecurityIdentifier property value. The onPremisesSecurityIdentifier property
+     * Sets the onPremisesSecurityIdentifier property value. A string representation of the principal's security identifier, if known, or null if the subject doesn't have a security identifier.
      * @param value Value to set for the onPremisesSecurityIdentifier property.
      */
     public void setOnPremisesSecurityIdentifier(@jakarta.annotation.Nullable final String value) {

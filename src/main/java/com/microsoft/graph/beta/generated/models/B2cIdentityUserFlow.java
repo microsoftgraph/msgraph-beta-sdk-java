@@ -57,7 +57,7 @@ public class B2cIdentityUserFlow extends IdentityUserFlow implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the identityProviders property value. The identityProviders property
+     * Gets the identityProviders property value. The identity providers included in the user flow.
      * @return a {@link java.util.List<IdentityProvider>}
      */
     @jakarta.annotation.Nullable
@@ -89,7 +89,7 @@ public class B2cIdentityUserFlow extends IdentityUserFlow implements Parsable {
         return this.backingStore.get("userAttributeAssignments");
     }
     /**
-     * Gets the userFlowIdentityProviders property value. The userFlowIdentityProviders property
+     * Gets the userFlowIdentityProviders property value. The identity providers included in the user flow.
      * @return a {@link java.util.List<IdentityProviderBase>}
      */
     @jakarta.annotation.Nullable
@@ -126,7 +126,7 @@ public class B2cIdentityUserFlow extends IdentityUserFlow implements Parsable {
         this.backingStore.set("defaultLanguageTag", value);
     }
     /**
-     * Sets the identityProviders property value. The identityProviders property
+     * Sets the identityProviders property value. The identity providers included in the user flow.
      * @param value Value to set for the identityProviders property.
      */
     public void setIdentityProviders(@jakarta.annotation.Nullable final java.util.List<IdentityProvider> value) {
@@ -154,7 +154,7 @@ public class B2cIdentityUserFlow extends IdentityUserFlow implements Parsable {
         this.backingStore.set("userAttributeAssignments", value);
     }
     /**
-     * Sets the userFlowIdentityProviders property value. The userFlowIdentityProviders property
+     * Sets the userFlowIdentityProviders property value. The identity providers included in the user flow.
      * @param value Value to set for the userFlowIdentityProviders property.
      */
     public void setUserFlowIdentityProviders(@jakarta.annotation.Nullable final java.util.List<IdentityProviderBase> value) {

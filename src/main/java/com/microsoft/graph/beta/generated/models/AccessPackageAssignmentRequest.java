@@ -34,7 +34,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
         return this.backingStore.get("accessPackage");
     }
     /**
-     * Gets the accessPackageAssignment property value. For a requestType of UserAdd or AdminAdd, this is an access package assignment requested to be created.  For a requestType of UserRemove, AdminRemove or SystemRemove, this has the id property of an existing assignment to be removed.  Supports $expand.
+     * Gets the accessPackageAssignment property value. For a requestType of UserAdd or AdminAdd, an access package assignment requested to be created. For a requestType of UserRemove, AdminRemove, or SystemRemove, this property has the id property of an existing assignment to be removed. Supports $expand.
      * @return a {@link AccessPackageAssignment}
      */
     @jakarta.annotation.Nullable
@@ -82,7 +82,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
         return this.backingStore.get("customExtensionHandlerInstances");
     }
     /**
-     * Gets the expirationDateTime property value. The expirationDateTime property
+     * Gets the expirationDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -115,7 +115,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the isValidationOnly property value. True if the request is not to be processed for assignment.
+     * Gets the isValidationOnly property value. True if the request isn't to be processed for assignment.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -139,7 +139,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
         return this.backingStore.get("requestor");
     }
     /**
-     * Gets the requestState property value. One of PendingApproval, Canceled,  Denied, Delivering, Delivered, PartiallyDelivered, DeliveryFailed, Submitted or Scheduled. Read-only.
+     * Gets the requestState property value. One of PendingApproval, Canceled,  Denied, Delivering, Delivered, PartiallyDelivered, DeliveryFailed, Submitted, or Scheduled. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -155,7 +155,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
         return this.backingStore.get("requestStatus");
     }
     /**
-     * Gets the requestType property value. One of UserAdd, UserExtend, UserUpdate, UserRemove, AdminAdd, AdminRemove or SystemRemove. A request from the user themselves would have requestType of UserAdd, UserUpdate or UserRemove. Read-only.
+     * Gets the requestType property value. One of UserAdd, UserExtend, UserUpdate, UserRemove, AdminAdd, AdminRemove, or SystemRemove. A request from the user has a requestType of UserAdd, UserUpdate, or UserRemove. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -171,7 +171,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
         return this.backingStore.get("schedule");
     }
     /**
-     * Gets the verifiedCredentialsData property value. The details of the verifiable credential that was presented by the requestor, such as the issuer and claims. Read-only.
+     * Gets the verifiedCredentialsData property value. The details of the verifiable credential that the requestor presented, such as the issuer and claims. Read-only.
      * @return a {@link java.util.List<VerifiedCredentialData>}
      */
     @jakarta.annotation.Nullable
@@ -210,7 +210,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
         this.backingStore.set("accessPackage", value);
     }
     /**
-     * Sets the accessPackageAssignment property value. For a requestType of UserAdd or AdminAdd, this is an access package assignment requested to be created.  For a requestType of UserRemove, AdminRemove or SystemRemove, this has the id property of an existing assignment to be removed.  Supports $expand.
+     * Sets the accessPackageAssignment property value. For a requestType of UserAdd or AdminAdd, an access package assignment requested to be created. For a requestType of UserRemove, AdminRemove, or SystemRemove, this property has the id property of an existing assignment to be removed. Supports $expand.
      * @param value Value to set for the accessPackageAssignment property.
      */
     public void setAccessPackageAssignment(@jakarta.annotation.Nullable final AccessPackageAssignment value) {
@@ -252,14 +252,14 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
         this.backingStore.set("customExtensionHandlerInstances", value);
     }
     /**
-     * Sets the expirationDateTime property value. The expirationDateTime property
+     * Sets the expirationDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the expirationDateTime property.
      */
     public void setExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("expirationDateTime", value);
     }
     /**
-     * Sets the isValidationOnly property value. True if the request is not to be processed for assignment.
+     * Sets the isValidationOnly property value. True if the request isn't to be processed for assignment.
      * @param value Value to set for the isValidationOnly property.
      */
     public void setIsValidationOnly(@jakarta.annotation.Nullable final Boolean value) {
@@ -280,7 +280,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
         this.backingStore.set("requestor", value);
     }
     /**
-     * Sets the requestState property value. One of PendingApproval, Canceled,  Denied, Delivering, Delivered, PartiallyDelivered, DeliveryFailed, Submitted or Scheduled. Read-only.
+     * Sets the requestState property value. One of PendingApproval, Canceled,  Denied, Delivering, Delivered, PartiallyDelivered, DeliveryFailed, Submitted, or Scheduled. Read-only.
      * @param value Value to set for the requestState property.
      */
     public void setRequestState(@jakarta.annotation.Nullable final String value) {
@@ -294,7 +294,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
         this.backingStore.set("requestStatus", value);
     }
     /**
-     * Sets the requestType property value. One of UserAdd, UserExtend, UserUpdate, UserRemove, AdminAdd, AdminRemove or SystemRemove. A request from the user themselves would have requestType of UserAdd, UserUpdate or UserRemove. Read-only.
+     * Sets the requestType property value. One of UserAdd, UserExtend, UserUpdate, UserRemove, AdminAdd, AdminRemove, or SystemRemove. A request from the user has a requestType of UserAdd, UserUpdate, or UserRemove. Read-only.
      * @param value Value to set for the requestType property.
      */
     public void setRequestType(@jakarta.annotation.Nullable final String value) {
@@ -308,7 +308,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
         this.backingStore.set("schedule", value);
     }
     /**
-     * Sets the verifiedCredentialsData property value. The details of the verifiable credential that was presented by the requestor, such as the issuer and claims. Read-only.
+     * Sets the verifiedCredentialsData property value. The details of the verifiable credential that the requestor presented, such as the issuer and claims. Read-only.
      * @param value Value to set for the verifiedCredentialsData property.
      */
     public void setVerifiedCredentialsData(@jakarta.annotation.Nullable final java.util.List<VerifiedCredentialData> value) {

@@ -64,7 +64,7 @@ public class MeetingAttendanceReportRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get meetingAttendanceReport from app
+     * The attendance report of the latest online meeting session. Read-only.
      * @return a {@link MeetingAttendanceReport}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -73,7 +73,7 @@ public class MeetingAttendanceReportRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get meetingAttendanceReport from app
+     * The attendance report of the latest online meeting session. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MeetingAttendanceReport}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -131,7 +131,7 @@ public class MeetingAttendanceReportRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get meetingAttendanceReport from app
+     * The attendance report of the latest online meeting session. Read-only.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +139,7 @@ public class MeetingAttendanceReportRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get meetingAttendanceReport from app
+     * The attendance report of the latest online meeting session. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -191,7 +191,7 @@ public class MeetingAttendanceReportRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get meetingAttendanceReport from app
+     * The attendance report of the latest online meeting session. Read-only.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

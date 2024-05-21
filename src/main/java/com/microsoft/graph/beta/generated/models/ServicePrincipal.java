@@ -140,7 +140,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         return this.backingStore.get("claimsMappingPolicies");
     }
     /**
-     * Gets the claimsPolicy property value. The claimsPolicy property
+     * Gets the claimsPolicy property value. A claims policy that allows application admins to customize the claims that will be emitted in tokens affected by this policy.
      * @return a {@link CustomClaimsPolicy}
      */
     @jakarta.annotation.Nullable
@@ -723,7 +723,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         this.backingStore.set("claimsMappingPolicies", value);
     }
     /**
-     * Sets the claimsPolicy property value. The claimsPolicy property
+     * Sets the claimsPolicy property value. A claims policy that allows application admins to customize the claims that will be emitted in tokens affected by this policy.
      * @param value Value to set for the claimsPolicy property.
      */
     public void setClaimsPolicy(@jakarta.annotation.Nullable final CustomClaimsPolicy value) {

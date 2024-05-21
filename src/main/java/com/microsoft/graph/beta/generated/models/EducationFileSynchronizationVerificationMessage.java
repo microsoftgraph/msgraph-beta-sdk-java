@@ -77,7 +77,7 @@ public class EducationFileSynchronizationVerificationMessage implements Addition
         return deserializerMap;
     }
     /**
-     * Gets the fileName property value. The fileName property
+     * Gets the fileName property value. Source file that contains the error.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -135,7 +135,7 @@ public class EducationFileSynchronizationVerificationMessage implements Addition
         this.backingStore.set("description", value);
     }
     /**
-     * Sets the fileName property value. The fileName property
+     * Sets the fileName property value. Source file that contains the error.
      * @param value Value to set for the fileName property.
      */
     public void setFileName(@jakarta.annotation.Nullable final String value) {

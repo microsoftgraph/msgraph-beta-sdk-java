@@ -81,7 +81,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Back
         return this.backingStore.get("clientApplications");
     }
     /**
-     * Gets the clientAppTypes property value. Client application types included in the policy. Possible values are: all, browser, mobileAppsAndDesktopClients, exchangeActiveSync, easSupported, other. Required.  The easUnsupported enumeration member will be deprecated in favor of exchangeActiveSync, which includes EAS supported and unsupported platforms.
+     * Gets the clientAppTypes property value. Client application types included in the policy. Possible values are: all, browser, mobileAppsAndDesktopClients, exchangeActiveSync, easSupported, other. Required.  The easUnsupported enumeration member is deprecated in favor of exchangeActiveSync, which includes EAS supported and unsupported platforms.
      * @return a {@link java.util.List<ConditionalAccessClientApp>}
      */
     @jakarta.annotation.Nullable
@@ -128,7 +128,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Back
         return deserializerMap;
     }
     /**
-     * Gets the insiderRiskLevels property value. The insiderRiskLevels property
+     * Gets the insiderRiskLevels property value. Insider risk levels included in the policy. The possible values are: minor, moderate, elevated, unknownFutureValue.
      * @return a {@link EnumSet<ConditionalAccessInsiderRiskLevels>}
      */
     @jakarta.annotation.Nullable
@@ -250,7 +250,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Back
         this.backingStore.set("clientApplications", value);
     }
     /**
-     * Sets the clientAppTypes property value. Client application types included in the policy. Possible values are: all, browser, mobileAppsAndDesktopClients, exchangeActiveSync, easSupported, other. Required.  The easUnsupported enumeration member will be deprecated in favor of exchangeActiveSync, which includes EAS supported and unsupported platforms.
+     * Sets the clientAppTypes property value. Client application types included in the policy. Possible values are: all, browser, mobileAppsAndDesktopClients, exchangeActiveSync, easSupported, other. Required.  The easUnsupported enumeration member is deprecated in favor of exchangeActiveSync, which includes EAS supported and unsupported platforms.
      * @param value Value to set for the clientAppTypes property.
      */
     public void setClientAppTypes(@jakarta.annotation.Nullable final java.util.List<ConditionalAccessClientApp> value) {
@@ -271,7 +271,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Back
         this.backingStore.set("deviceStates", value);
     }
     /**
-     * Sets the insiderRiskLevels property value. The insiderRiskLevels property
+     * Sets the insiderRiskLevels property value. Insider risk levels included in the policy. The possible values are: minor, moderate, elevated, unknownFutureValue.
      * @param value Value to set for the insiderRiskLevels property.
      */
     public void setInsiderRiskLevels(@jakarta.annotation.Nullable final EnumSet<ConditionalAccessInsiderRiskLevels> value) {

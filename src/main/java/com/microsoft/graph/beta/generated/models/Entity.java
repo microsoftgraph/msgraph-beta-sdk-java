@@ -14,6 +14,7 @@ import com.microsoft.graph.beta.models.ediscovery.CaseEscaped;
 import com.microsoft.graph.beta.models.ediscovery.CaseExportOperation;
 import com.microsoft.graph.beta.models.ediscovery.CaseHoldOperation;
 import com.microsoft.graph.beta.models.ediscovery.CaseIndexOperation;
+import com.microsoft.graph.beta.models.ediscovery.CaseOperation;
 import com.microsoft.graph.beta.models.ediscovery.CaseSettings;
 import com.microsoft.graph.beta.models.ediscovery.Custodian;
 import com.microsoft.graph.beta.models.ediscovery.DataSourceContainer;
@@ -27,6 +28,7 @@ import com.microsoft.graph.beta.models.ediscovery.ReviewSetQuery;
 import com.microsoft.graph.beta.models.ediscovery.SiteSource;
 import com.microsoft.graph.beta.models.ediscovery.SourceCollection;
 import com.microsoft.graph.beta.models.ediscovery.TagOperation;
+import com.microsoft.graph.beta.models.ediscovery.UnifiedGroupSource;
 import com.microsoft.graph.beta.models.ediscovery.UserSource;
 import com.microsoft.graph.beta.models.externalconnectors.ConnectionOperation;
 import com.microsoft.graph.beta.models.externalconnectors.ConnectionQuota;
@@ -38,6 +40,7 @@ import com.microsoft.graph.beta.models.externalconnectors.ExternalItem;
 import com.microsoft.graph.beta.models.externalconnectors.Identity;
 import com.microsoft.graph.beta.models.externalconnectors.Schema;
 import com.microsoft.graph.beta.models.identitygovernance.CustomTaskExtension;
+import com.microsoft.graph.beta.models.identitygovernance.Insights;
 import com.microsoft.graph.beta.models.identitygovernance.LifecycleManagementSettings;
 import com.microsoft.graph.beta.models.identitygovernance.LifecycleWorkflowsContainer;
 import com.microsoft.graph.beta.models.identitygovernance.Run;
@@ -108,7 +111,6 @@ import com.microsoft.graph.beta.models.managedtenants.TenantGroup;
 import com.microsoft.graph.beta.models.managedtenants.TenantTag;
 import com.microsoft.graph.beta.models.managedtenants.WindowsDeviceMalwareState;
 import com.microsoft.graph.beta.models.managedtenants.WindowsProtectionState;
-import com.microsoft.graph.beta.models.networkaccess.Alert;
 import com.microsoft.graph.beta.models.networkaccess.BranchSite;
 import com.microsoft.graph.beta.models.networkaccess.ConditionalAccessPolicy;
 import com.microsoft.graph.beta.models.networkaccess.ConditionalAccessSettings;
@@ -159,6 +161,7 @@ import com.microsoft.graph.beta.models.search.Acronym;
 import com.microsoft.graph.beta.models.search.Bookmark;
 import com.microsoft.graph.beta.models.search.Qna;
 import com.microsoft.graph.beta.models.search.SearchAnswer;
+import com.microsoft.graph.beta.models.security.Alert;
 import com.microsoft.graph.beta.models.security.AnalyzedEmail;
 import com.microsoft.graph.beta.models.security.Article;
 import com.microsoft.graph.beta.models.security.ArticleIndicator;
@@ -167,7 +170,6 @@ import com.microsoft.graph.beta.models.security.AuditCoreRoot;
 import com.microsoft.graph.beta.models.security.AuditLogQuery;
 import com.microsoft.graph.beta.models.security.AuditLogRecord;
 import com.microsoft.graph.beta.models.security.AuthorityTemplate;
-import com.microsoft.graph.beta.models.security.CaseOperation;
 import com.microsoft.graph.beta.models.security.CasesRoot;
 import com.microsoft.graph.beta.models.security.CategoryTemplate;
 import com.microsoft.graph.beta.models.security.CitationTemplate;
@@ -247,7 +249,6 @@ import com.microsoft.graph.beta.models.security.ThreatSubmissionRoot;
 import com.microsoft.graph.beta.models.security.TriggersRoot;
 import com.microsoft.graph.beta.models.security.TriggerTypesRoot;
 import com.microsoft.graph.beta.models.security.UnclassifiedArtifact;
-import com.microsoft.graph.beta.models.security.UnifiedGroupSource;
 import com.microsoft.graph.beta.models.security.UrlThreatSubmission;
 import com.microsoft.graph.beta.models.security.Vulnerability;
 import com.microsoft.graph.beta.models.security.VulnerabilityComponent;
@@ -1086,6 +1087,7 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.identityCustomUserFlowAttribute": return new IdentityCustomUserFlowAttribute();
             case "#microsoft.graph.identityFinding": return new IdentityFinding();
             case "#microsoft.graph.identityGovernance.customTaskExtension": return new CustomTaskExtension();
+            case "#microsoft.graph.identityGovernance.insights": return new Insights();
             case "#microsoft.graph.identityGovernance.lifecycleManagementSettings": return new LifecycleManagementSettings();
             case "#microsoft.graph.identityGovernance.lifecycleWorkflowsContainer": return new LifecycleWorkflowsContainer();
             case "#microsoft.graph.identityGovernance.run": return new Run();
@@ -1353,7 +1355,6 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.microsoftAccountUserConversationMember": return new MicrosoftAccountUserConversationMember();
             case "#microsoft.graph.microsoftApplicationDataAccessSettings": return new MicrosoftApplicationDataAccessSettings();
             case "#microsoft.graph.microsoftAuthenticatorAuthenticationMethod": return new MicrosoftAuthenticatorAuthenticationMethod();
-            case "#microsoft.graph.microsoftAuthenticatorAuthenticationMethodConfiguration": return new MicrosoftAuthenticatorAuthenticationMethodConfiguration();
         }
         return null;
     }
@@ -1365,6 +1366,7 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     private static Entity createFromDiscriminatorValue_2(@jakarta.annotation.Nonnull final String discriminatorValue) {
         switch (discriminatorValue) {
+            case "#microsoft.graph.microsoftAuthenticatorAuthenticationMethodConfiguration": return new MicrosoftAuthenticatorAuthenticationMethodConfiguration();
             case "#microsoft.graph.microsoftAuthenticatorAuthenticationMethodTarget": return new MicrosoftAuthenticatorAuthenticationMethodTarget();
             case "#microsoft.graph.microsoftStoreForBusinessApp": return new MicrosoftStoreForBusinessApp();
             case "#microsoft.graph.microsoftStoreForBusinessContainedApp": return new MicrosoftStoreForBusinessContainedApp();
@@ -1528,6 +1530,7 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.partners.billing.operation": return new Operation();
             case "#microsoft.graph.partners.billing.runningOperation": return new RunningOperation();
             case "#microsoft.graph.partners.billing.unbilledUsage": return new UnbilledUsage();
+            case "#microsoft.graph.passkeyAuthenticationMethodTarget": return new PasskeyAuthenticationMethodTarget();
             case "#microsoft.graph.passwordAuthenticationMethod": return new PasswordAuthenticationMethod();
             case "#microsoft.graph.passwordlessMicrosoftAuthenticatorAuthenticationMethod": return new PasswordlessMicrosoftAuthenticatorAuthenticationMethod();
             case "#microsoft.graph.payload": return new Payload();
@@ -1863,8 +1866,6 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.skypeForBusinessUserConversationMember": return new SkypeForBusinessUserConversationMember();
             case "#microsoft.graph.skypeUserConversationMember": return new SkypeUserConversationMember();
             case "#microsoft.graph.smsAuthenticationMethodConfiguration": return new SmsAuthenticationMethodConfiguration();
-            case "#microsoft.graph.smsAuthenticationMethodTarget": return new SmsAuthenticationMethodTarget();
-            case "#microsoft.graph.socialIdentityProvider": return new SocialIdentityProvider();
         }
         return null;
     }
@@ -1876,6 +1877,8 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     private static Entity createFromDiscriminatorValue_3(@jakarta.annotation.Nonnull final String discriminatorValue) {
         switch (discriminatorValue) {
+            case "#microsoft.graph.smsAuthenticationMethodTarget": return new SmsAuthenticationMethodTarget();
+            case "#microsoft.graph.socialIdentityProvider": return new SocialIdentityProvider();
             case "#microsoft.graph.softwareOathAuthenticationMethod": return new SoftwareOathAuthenticationMethod();
             case "#microsoft.graph.softwareOathAuthenticationMethodConfiguration": return new SoftwareOathAuthenticationMethodConfiguration();
             case "#microsoft.graph.softwareUpdateStatusSummary": return new SoftwareUpdateStatusSummary();

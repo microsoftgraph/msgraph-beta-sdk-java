@@ -84,7 +84,7 @@ public class ParticipantEndpoint extends Endpoint implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the identity property value. The identity property
+     * Gets the identity property value. Identity associated with the endpoint. The identity property is deprecated and will stop returning data on June 30, 2026. Going forward, use the associatedIdentity property.
      * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
@@ -150,7 +150,7 @@ public class ParticipantEndpoint extends Endpoint implements Parsable {
         this.backingStore.set("feedback", value);
     }
     /**
-     * Sets the identity property value. The identity property
+     * Sets the identity property value. Identity associated with the endpoint. The identity property is deprecated and will stop returning data on June 30, 2026. Going forward, use the associatedIdentity property.
      * @param value Value to set for the identity property.
      */
     public void setIdentity(@jakarta.annotation.Nullable final IdentitySet value) {

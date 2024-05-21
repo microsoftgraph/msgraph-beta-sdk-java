@@ -25,7 +25,7 @@ public class WorkbookRangeView extends Entity implements Parsable {
         return new WorkbookRangeView();
     }
     /**
-     * Gets the cellAddresses property value. The cellAddresses property
+     * Gets the cellAddresses property value. Represents the cell addresses
      * @return a {@link Json}
      */
     @jakarta.annotation.Nullable
@@ -162,7 +162,7 @@ public class WorkbookRangeView extends Entity implements Parsable {
         writer.writeObjectValue("valueTypes", this.getValueTypes());
     }
     /**
-     * Sets the cellAddresses property value. The cellAddresses property
+     * Sets the cellAddresses property value. Represents the cell addresses
      * @param value Value to set for the cellAddresses property.
      */
     public void setCellAddresses(@jakarta.annotation.Nullable final Json value) {

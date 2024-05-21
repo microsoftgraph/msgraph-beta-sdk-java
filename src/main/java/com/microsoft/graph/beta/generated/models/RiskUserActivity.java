@@ -64,7 +64,7 @@ public class RiskUserActivity implements AdditionalDataHolder, BackedModel, Pars
         return this.backingStore.get("detail");
     }
     /**
-     * Gets the eventTypes property value. The eventTypes property
+     * Gets the eventTypes property value. List of risk event types. Deprecated. Use riskEventType instead.
      * @return a {@link java.util.List<RiskEventType>}
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class RiskUserActivity implements AdditionalDataHolder, BackedModel, Pars
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the riskEventTypes property value. The riskEventTypes property
+     * Gets the riskEventTypes property value. The type of risk event detected. The possible values are: anonymizedIPAddress, investigationsThreatIntelligence, investigationsThreatIntelligenceSigninLinked,leakedCredentials, maliciousIPAddress, maliciousIPAddressValidCredentialsBlockedIP, malwareInfectedIPAddress, mcasImpossibleTravel, mcasSuspiciousInboxManipulationRules, suspiciousAPITraffic, suspiciousIPAddress,   unfamiliarFeatures, unlikelyTravel. For more information about each value, see Risk types and detection.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -135,7 +135,7 @@ public class RiskUserActivity implements AdditionalDataHolder, BackedModel, Pars
         this.backingStore.set("detail", value);
     }
     /**
-     * Sets the eventTypes property value. The eventTypes property
+     * Sets the eventTypes property value. List of risk event types. Deprecated. Use riskEventType instead.
      * @param value Value to set for the eventTypes property.
      */
     public void setEventTypes(@jakarta.annotation.Nullable final java.util.List<RiskEventType> value) {
@@ -149,7 +149,7 @@ public class RiskUserActivity implements AdditionalDataHolder, BackedModel, Pars
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the riskEventTypes property value. The riskEventTypes property
+     * Sets the riskEventTypes property value. The type of risk event detected. The possible values are: anonymizedIPAddress, investigationsThreatIntelligence, investigationsThreatIntelligenceSigninLinked,leakedCredentials, maliciousIPAddress, maliciousIPAddressValidCredentialsBlockedIP, malwareInfectedIPAddress, mcasImpossibleTravel, mcasSuspiciousInboxManipulationRules, suspiciousAPITraffic, suspiciousIPAddress,   unfamiliarFeatures, unlikelyTravel. For more information about each value, see Risk types and detection.
      * @param value Value to set for the riskEventTypes property.
      */
     public void setRiskEventTypes(@jakarta.annotation.Nullable final java.util.List<String> value) {

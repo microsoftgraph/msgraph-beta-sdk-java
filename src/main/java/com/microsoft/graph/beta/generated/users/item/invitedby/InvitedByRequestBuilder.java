@@ -37,19 +37,21 @@ public class InvitedByRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/invitedBy{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Get invitedBy from users
+     * Get the user or servicePrincipal that invited the specified user into the tenant.
      * @return a {@link DirectoryObject}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/user-list-invitedby?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DirectoryObject get() {
         return get(null);
     }
     /**
-     * Get invitedBy from users
+     * Get the user or servicePrincipal that invited the specified user into the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DirectoryObject}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/user-list-invitedby?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DirectoryObject get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -59,7 +61,7 @@ public class InvitedByRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DirectoryObject::createFromDiscriminatorValue);
     }
     /**
-     * Get invitedBy from users
+     * Get the user or servicePrincipal that invited the specified user into the tenant.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +69,7 @@ public class InvitedByRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get invitedBy from users
+     * Get the user or servicePrincipal that invited the specified user into the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -89,7 +91,7 @@ public class InvitedByRequestBuilder extends BaseRequestBuilder {
         return new InvitedByRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get invitedBy from users
+     * Get the user or servicePrincipal that invited the specified user into the tenant.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -42,7 +42,7 @@ public class OutlookItem extends Entity implements Parsable {
         return new OutlookItem();
     }
     /**
-     * Gets the categories property value. The categories property
+     * Gets the categories property value. The categories associated with the item.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -50,7 +50,7 @@ public class OutlookItem extends Entity implements Parsable {
         return this.backingStore.get("categories");
     }
     /**
-     * Gets the changeKey property value. The changeKey property
+     * Gets the changeKey property value. Identifies the version of the item. Every time the item is changed, changeKey changes as well. This allows Exchange to apply changes to the correct version of the object. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -99,14 +99,14 @@ public class OutlookItem extends Entity implements Parsable {
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
     }
     /**
-     * Sets the categories property value. The categories property
+     * Sets the categories property value. The categories associated with the item.
      * @param value Value to set for the categories property.
      */
     public void setCategories(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("categories", value);
     }
     /**
-     * Sets the changeKey property value. The changeKey property
+     * Sets the changeKey property value. Identifies the version of the item. Every time the item is changed, changeKey changes as well. This allows Exchange to apply changes to the correct version of the object. Read-only.
      * @param value Value to set for the changeKey property.
      */
     public void setChangeKey(@jakarta.annotation.Nullable final String value) {

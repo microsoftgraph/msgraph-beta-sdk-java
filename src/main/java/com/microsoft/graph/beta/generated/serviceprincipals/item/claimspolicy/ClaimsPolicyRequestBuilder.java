@@ -55,19 +55,21 @@ public class ClaimsPolicyRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get claimsPolicy from servicePrincipals
+     * Get the properties and relationships of a customClaimsPolicy object.
      * @return a {@link CustomClaimsPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/customclaimspolicy-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CustomClaimsPolicy get() {
         return get(null);
     }
     /**
-     * Get claimsPolicy from servicePrincipals
+     * Get the properties and relationships of a customClaimsPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CustomClaimsPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/customclaimspolicy-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CustomClaimsPolicy get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -77,21 +79,23 @@ public class ClaimsPolicyRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CustomClaimsPolicy::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property claimsPolicy in servicePrincipals
+     * Create a new customClaimsPolicy object if it doesn't exist, or replace an existing one.
      * @param body The request body
      * @return a {@link CustomClaimsPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-put-customclaimspolicy?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CustomClaimsPolicy patch(@jakarta.annotation.Nonnull final CustomClaimsPolicy body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property claimsPolicy in servicePrincipals
+     * Create a new customClaimsPolicy object if it doesn't exist, or replace an existing one.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CustomClaimsPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-put-customclaimspolicy?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CustomClaimsPolicy patch(@jakarta.annotation.Nonnull final CustomClaimsPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -122,7 +126,7 @@ public class ClaimsPolicyRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get claimsPolicy from servicePrincipals
+     * Get the properties and relationships of a customClaimsPolicy object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +134,7 @@ public class ClaimsPolicyRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get claimsPolicy from servicePrincipals
+     * Get the properties and relationships of a customClaimsPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -142,7 +146,7 @@ public class ClaimsPolicyRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property claimsPolicy in servicePrincipals
+     * Create a new customClaimsPolicy object if it doesn't exist, or replace an existing one.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -151,7 +155,7 @@ public class ClaimsPolicyRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property claimsPolicy in servicePrincipals
+     * Create a new customClaimsPolicy object if it doesn't exist, or replace an existing one.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -182,7 +186,7 @@ public class ClaimsPolicyRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get claimsPolicy from servicePrincipals
+     * Get the properties and relationships of a customClaimsPolicy object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -94,7 +94,7 @@ public class HybridAgentUpdaterConfiguration implements AdditionalDataHolder, Ba
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the updateWindow property value. The updateWindow property
+     * Gets the updateWindow property value. The time window during which the agent can receive updates.
      * @return a {@link UpdateWindow}
      */
     @jakarta.annotation.Nullable
@@ -150,7 +150,7 @@ public class HybridAgentUpdaterConfiguration implements AdditionalDataHolder, Ba
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the updateWindow property value. The updateWindow property
+     * Sets the updateWindow property value. The time window during which the agent can receive updates.
      * @param value Value to set for the updateWindow property.
      */
     public void setUpdateWindow(@jakarta.annotation.Nullable final UpdateWindow value) {

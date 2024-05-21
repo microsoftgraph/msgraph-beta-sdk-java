@@ -39,9 +39,12 @@ public class GetCloudPcReviewStatusRequestBuilder extends BaseRequestBuilder {
      * Get the review status of a specific Cloud PC device.
      * @return a {@link CloudPcReviewStatus}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * The getCloudPcReviewStatus API is deprecated and will stop returning data on Apr 30, 2024. Please use the new retrieveReviewStatus API as of 2024-01/getCloudPcReviewStatus
      * @see <a href="https://learn.microsoft.com/graph/api/manageddevice-getcloudpcreviewstatus?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public CloudPcReviewStatus get() {
         return get(null);
     }
@@ -50,9 +53,12 @@ public class GetCloudPcReviewStatusRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CloudPcReviewStatus}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * The getCloudPcReviewStatus API is deprecated and will stop returning data on Apr 30, 2024. Please use the new retrieveReviewStatus API as of 2024-01/getCloudPcReviewStatus
      * @see <a href="https://learn.microsoft.com/graph/api/manageddevice-getcloudpcreviewstatus?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public CloudPcReviewStatus get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -62,8 +68,11 @@ public class GetCloudPcReviewStatusRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the review status of a specific Cloud PC device.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * The getCloudPcReviewStatus API is deprecated and will stop returning data on Apr 30, 2024. Please use the new retrieveReviewStatus API as of 2024-01/getCloudPcReviewStatus
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -71,8 +80,11 @@ public class GetCloudPcReviewStatusRequestBuilder extends BaseRequestBuilder {
      * Get the review status of a specific Cloud PC device.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * The getCloudPcReviewStatus API is deprecated and will stop returning data on Apr 30, 2024. Please use the new retrieveReviewStatus API as of 2024-01/getCloudPcReviewStatus
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new);
@@ -83,8 +95,11 @@ public class GetCloudPcReviewStatusRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link GetCloudPcReviewStatusRequestBuilder}
+     * @deprecated
+     * The getCloudPcReviewStatus API is deprecated and will stop returning data on Apr 30, 2024. Please use the new retrieveReviewStatus API as of 2024-01/getCloudPcReviewStatus
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public GetCloudPcReviewStatusRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new GetCloudPcReviewStatusRequestBuilder(rawUrl, requestAdapter);

@@ -75,7 +75,7 @@ public class PackageEscaped implements AdditionalDataHolder, BackedModel, Parsab
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the type property value. The type property
+     * Gets the type property value. An string indicating the type of package. While oneNote is the only currently defined value, you should expect other package types to be returned and handle them accordingly.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -115,7 +115,7 @@ public class PackageEscaped implements AdditionalDataHolder, BackedModel, Parsab
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the type property value. The type property
+     * Sets the type property value. An string indicating the type of package. While oneNote is the only currently defined value, you should expect other package types to be returned and handle them accordingly.
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final String value) {

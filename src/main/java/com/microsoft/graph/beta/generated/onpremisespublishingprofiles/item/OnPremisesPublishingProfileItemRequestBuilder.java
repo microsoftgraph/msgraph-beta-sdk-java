@@ -4,6 +4,7 @@ import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.OnPremisesPublishingProfile;
 import com.microsoft.graph.beta.onpremisespublishingprofiles.item.agentgroups.AgentGroupsRequestBuilder;
 import com.microsoft.graph.beta.onpremisespublishingprofiles.item.agents.AgentsRequestBuilder;
+import com.microsoft.graph.beta.onpremisespublishingprofiles.item.applicationsegments.ApplicationSegmentsRequestBuilder;
 import com.microsoft.graph.beta.onpremisespublishingprofiles.item.connectorgroups.ConnectorGroupsRequestBuilder;
 import com.microsoft.graph.beta.onpremisespublishingprofiles.item.connectors.ConnectorsRequestBuilder;
 import com.microsoft.graph.beta.onpremisespublishingprofiles.item.publishedresources.PublishedResourcesRequestBuilder;
@@ -40,6 +41,14 @@ public class OnPremisesPublishingProfileItemRequestBuilder extends BaseRequestBu
     @jakarta.annotation.Nonnull
     public AgentsRequestBuilder agents() {
         return new AgentsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the applicationSegments property of the microsoft.graph.onPremisesPublishingProfile entity.
+     * @return a {@link ApplicationSegmentsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ApplicationSegmentsRequestBuilder applicationSegments() {
+        return new ApplicationSegmentsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the connectorGroups property of the microsoft.graph.onPremisesPublishingProfile entity.

@@ -26,7 +26,7 @@ public class OnenoteResource extends OnenoteEntityBaseModel implements Parsable 
         return new OnenoteResource();
     }
     /**
-     * Gets the content property value. The content property
+     * Gets the content property value. The content of the resource.
      * @return a {@link byte[]}
      */
     @jakarta.annotation.Nullable
@@ -34,7 +34,7 @@ public class OnenoteResource extends OnenoteEntityBaseModel implements Parsable 
         return this.backingStore.get("content");
     }
     /**
-     * Gets the contentUrl property value. The contentUrl property
+     * Gets the contentUrl property value. The URL for the content stream.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -63,14 +63,14 @@ public class OnenoteResource extends OnenoteEntityBaseModel implements Parsable 
         writer.writeStringValue("contentUrl", this.getContentUrl());
     }
     /**
-     * Sets the content property value. The content property
+     * Sets the content property value. The content of the resource.
      * @param value Value to set for the content property.
      */
     public void setContent(@jakarta.annotation.Nullable final byte[] value) {
         this.backingStore.set("content", value);
     }
     /**
-     * Sets the contentUrl property value. The contentUrl property
+     * Sets the contentUrl property value. The URL for the content stream.
      * @param value Value to set for the contentUrl property.
      */
     public void setContentUrl(@jakarta.annotation.Nullable final String value) {

@@ -37,7 +37,7 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/sites/{site%2Did}/onenote/resources/{onenoteResource%2Did}/content", rawUrl);
     }
     /**
-     * Get content for the navigation property resources from sites
+     * The content of the resource.
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -46,7 +46,7 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get content for the navigation property resources from sites
+     * The content of the resource.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -59,7 +59,7 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitive(requestInfo, errorMapping, InputStream.class);
     }
     /**
-     * Update content for the navigation property resources in sites
+     * The content of the resource.
      * @param body Binary request body
      * @return a {@link OnenoteResource}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -69,7 +69,7 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
         return put(body, null);
     }
     /**
-     * Update content for the navigation property resources in sites
+     * The content of the resource.
      * @param body Binary request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link OnenoteResource}
@@ -84,7 +84,7 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, OnenoteResource::createFromDiscriminatorValue);
     }
     /**
-     * Get content for the navigation property resources from sites
+     * The content of the resource.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -92,7 +92,7 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get content for the navigation property resources from sites
+     * The content of the resource.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -104,7 +104,7 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update content for the navigation property resources in sites
+     * The content of the resource.
      * @param body Binary request body
      * @return a {@link RequestInformation}
      */
@@ -113,7 +113,7 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
         return toPutRequestInformation(body, null);
     }
     /**
-     * Update content for the navigation property resources in sites
+     * The content of the resource.
      * @param body Binary request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

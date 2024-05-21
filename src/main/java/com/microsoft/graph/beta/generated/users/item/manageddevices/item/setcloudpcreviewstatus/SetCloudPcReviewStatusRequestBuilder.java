@@ -38,8 +38,11 @@ public class SetCloudPcReviewStatusRequestBuilder extends BaseRequestBuilder {
      * Set the review status of a specific Cloud PC device. Use this API to set the review status of a Cloud PC to in review if you consider a Cloud PC as suspicious. After the review is completed, use this API again to set the Cloud PC back to a normal state.
      * @param body The request body
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * The setCloudPcReviewStatus API is deprecated and will stop returning data on Apr 30, 2024. Please use the new setReviewStatus API as of 2024-01/setCloudPcReviewStatus
      * @see <a href="https://learn.microsoft.com/graph/api/manageddevice-setcloudpcreviewstatus?view=graph-rest-beta">Find more info here</a>
      */
+    @Deprecated
     public void post(@jakarta.annotation.Nonnull final SetCloudPcReviewStatusPostRequestBody body) {
         post(body, null);
     }
@@ -48,8 +51,11 @@ public class SetCloudPcReviewStatusRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * The setCloudPcReviewStatus API is deprecated and will stop returning data on Apr 30, 2024. Please use the new setReviewStatus API as of 2024-01/setCloudPcReviewStatus
      * @see <a href="https://learn.microsoft.com/graph/api/manageddevice-setcloudpcreviewstatus?view=graph-rest-beta">Find more info here</a>
      */
+    @Deprecated
     public void post(@jakarta.annotation.Nonnull final SetCloudPcReviewStatusPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
@@ -61,8 +67,11 @@ public class SetCloudPcReviewStatusRequestBuilder extends BaseRequestBuilder {
      * Set the review status of a specific Cloud PC device. Use this API to set the review status of a Cloud PC to in review if you consider a Cloud PC as suspicious. After the review is completed, use this API again to set the Cloud PC back to a normal state.
      * @param body The request body
      * @return a {@link RequestInformation}
+     * @deprecated
+     * The setCloudPcReviewStatus API is deprecated and will stop returning data on Apr 30, 2024. Please use the new setReviewStatus API as of 2024-01/setCloudPcReviewStatus
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final SetCloudPcReviewStatusPostRequestBody body) {
         return toPostRequestInformation(body, null);
     }
@@ -71,8 +80,11 @@ public class SetCloudPcReviewStatusRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * The setCloudPcReviewStatus API is deprecated and will stop returning data on Apr 30, 2024. Please use the new setReviewStatus API as of 2024-01/setCloudPcReviewStatus
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final SetCloudPcReviewStatusPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
@@ -85,8 +97,11 @@ public class SetCloudPcReviewStatusRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link SetCloudPcReviewStatusRequestBuilder}
+     * @deprecated
+     * The setCloudPcReviewStatus API is deprecated and will stop returning data on Apr 30, 2024. Please use the new setReviewStatus API as of 2024-01/setCloudPcReviewStatus
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public SetCloudPcReviewStatusRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new SetCloudPcReviewStatusRequestBuilder(rawUrl, requestAdapter);

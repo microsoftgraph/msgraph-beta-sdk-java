@@ -66,7 +66,7 @@ public class DriveItem extends BaseItem implements Parsable {
         return this.backingStore.get("children");
     }
     /**
-     * Gets the content property value. The content property
+     * Gets the content property value. The content stream, if the item represents a file. The content property will have a potentially breaking change in behavior in the future. It will stream content directly instead of redirecting. To proactively opt in to the new behavior ahead of time, use the contentStream property instead.
      * @return a {@link byte[]}
      */
     @jakarta.annotation.Nullable
@@ -458,7 +458,7 @@ public class DriveItem extends BaseItem implements Parsable {
         this.backingStore.set("children", value);
     }
     /**
-     * Sets the content property value. The content property
+     * Sets the content property value. The content stream, if the item represents a file. The content property will have a potentially breaking change in behavior in the future. It will stream content directly instead of redirecting. To proactively opt in to the new behavior ahead of time, use the contentStream property instead.
      * @param value Value to set for the content property.
      */
     public void setContent(@jakarta.annotation.Nullable final byte[] value) {

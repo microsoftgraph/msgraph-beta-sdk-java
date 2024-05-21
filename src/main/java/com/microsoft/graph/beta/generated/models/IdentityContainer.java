@@ -64,7 +64,7 @@ public class IdentityContainer implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore.get("authenticationEventListeners");
     }
     /**
-     * Gets the authenticationEventsFlows property value. Represents the entry point for self-service sign up and sign in user flows in both Microsoft Entra workforce and customer tenants.
+     * Gets the authenticationEventsFlows property value. Represents the entry point for self-service sign-up and sign-in user flows in both Microsoft Entra workforce and external tenants.
      * @return a {@link java.util.List<AuthenticationEventsFlow>}
      */
     @jakarta.annotation.Nullable
@@ -214,7 +214,7 @@ public class IdentityContainer implements AdditionalDataHolder, BackedModel, Par
         this.backingStore.set("authenticationEventListeners", value);
     }
     /**
-     * Sets the authenticationEventsFlows property value. Represents the entry point for self-service sign up and sign in user flows in both Microsoft Entra workforce and customer tenants.
+     * Sets the authenticationEventsFlows property value. Represents the entry point for self-service sign-up and sign-in user flows in both Microsoft Entra workforce and external tenants.
      * @param value Value to set for the authenticationEventsFlows property.
      */
     public void setAuthenticationEventsFlows(@jakarta.annotation.Nullable final java.util.List<AuthenticationEventsFlow> value) {

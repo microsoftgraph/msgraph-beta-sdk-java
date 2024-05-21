@@ -209,7 +209,7 @@ public class EducationUser extends Entity implements Parsable {
         return this.backingStore.get("mobilePhone");
     }
     /**
-     * Gets the officeLocation property value. The officeLocation property
+     * Gets the officeLocation property value. The office location for the user.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -542,7 +542,7 @@ public class EducationUser extends Entity implements Parsable {
         this.backingStore.set("mobilePhone", value);
     }
     /**
-     * Sets the officeLocation property value. The officeLocation property
+     * Sets the officeLocation property value. The office location for the user.
      * @param value Value to set for the officeLocation property.
      */
     public void setOfficeLocation(@jakarta.annotation.Nullable final String value) {

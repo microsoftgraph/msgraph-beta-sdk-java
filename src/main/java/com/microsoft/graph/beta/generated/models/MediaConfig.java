@@ -83,7 +83,7 @@ public class MediaConfig implements AdditionalDataHolder, BackedModel, Parsable 
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the removeFromDefaultAudioGroup property value. The removeFromDefaultAudioGroup property
+     * Gets the removeFromDefaultAudioGroup property value. Remove media from the default audio group.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -123,7 +123,7 @@ public class MediaConfig implements AdditionalDataHolder, BackedModel, Parsable 
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the removeFromDefaultAudioGroup property value. The removeFromDefaultAudioGroup property
+     * Sets the removeFromDefaultAudioGroup property value. Remove media from the default audio group.
      * @param value Value to set for the removeFromDefaultAudioGroup property.
      */
     public void setRemoveFromDefaultAudioGroup(@jakarta.annotation.Nullable final Boolean value) {

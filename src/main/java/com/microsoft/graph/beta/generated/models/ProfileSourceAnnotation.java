@@ -69,7 +69,7 @@ public class ProfileSourceAnnotation implements AdditionalDataHolder, BackedMode
         return deserializerMap;
     }
     /**
-     * Gets the isDefaultSource property value. The isDefaultSource property
+     * Gets the isDefaultSource property value. Indicates whether the source is the default one.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -85,7 +85,7 @@ public class ProfileSourceAnnotation implements AdditionalDataHolder, BackedMode
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the properties property value. The properties property
+     * Gets the properties property value. The names of properties that have data from this source.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -128,7 +128,7 @@ public class ProfileSourceAnnotation implements AdditionalDataHolder, BackedMode
         this.backingStore = value;
     }
     /**
-     * Sets the isDefaultSource property value. The isDefaultSource property
+     * Sets the isDefaultSource property value. Indicates whether the source is the default one.
      * @param value Value to set for the isDefaultSource property.
      */
     public void setIsDefaultSource(@jakarta.annotation.Nullable final Boolean value) {
@@ -142,7 +142,7 @@ public class ProfileSourceAnnotation implements AdditionalDataHolder, BackedMode
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the properties property value. The properties property
+     * Sets the properties property value. The names of properties that have data from this source.
      * @param value Value to set for the properties property.
      */
     public void setProperties(@jakarta.annotation.Nullable final java.util.List<String> value) {

@@ -33,7 +33,7 @@ public class TenantRelationshipAccessPolicyBase extends PolicyBase implements Pa
         return new TenantRelationshipAccessPolicyBase();
     }
     /**
-     * Gets the definition property value. The definition property
+     * Gets the definition property value. The raw JSON definition of the cross-tenant access policy. Deprecated. Do not use.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -60,7 +60,7 @@ public class TenantRelationshipAccessPolicyBase extends PolicyBase implements Pa
         writer.writeCollectionOfPrimitiveValues("definition", this.getDefinition());
     }
     /**
-     * Sets the definition property value. The definition property
+     * Sets the definition property value. The raw JSON definition of the cross-tenant access policy. Deprecated. Do not use.
      * @param value Value to set for the definition property.
      */
     public void setDefinition(@jakarta.annotation.Nullable final java.util.List<String> value) {
