@@ -38,7 +38,7 @@ public class SourcedAttribute extends CustomClaimAttributeBase implements Parsab
         return deserializerMap;
     }
     /**
-     * Gets the id property value. The id property
+     * Gets the id property value. The identifier of the attribute on the specified source.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -46,7 +46,7 @@ public class SourcedAttribute extends CustomClaimAttributeBase implements Parsab
         return this.backingStore.get("id");
     }
     /**
-     * Gets the isExtensionAttribute property value. The isExtensionAttribute property
+     * Gets the isExtensionAttribute property value. A flag that indicates if the name specified is that of an extension attribute.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -54,7 +54,7 @@ public class SourcedAttribute extends CustomClaimAttributeBase implements Parsab
         return this.backingStore.get("isExtensionAttribute");
     }
     /**
-     * Gets the source property value. The source property
+     * Gets the source property value. The source where the claim is going to retrieve its value. Valid sources include user, application, resource, audience and company.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -73,21 +73,21 @@ public class SourcedAttribute extends CustomClaimAttributeBase implements Parsab
         writer.writeStringValue("source", this.getSource());
     }
     /**
-     * Sets the id property value. The id property
+     * Sets the id property value. The identifier of the attribute on the specified source.
      * @param value Value to set for the id property.
      */
     public void setId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("id", value);
     }
     /**
-     * Sets the isExtensionAttribute property value. The isExtensionAttribute property
+     * Sets the isExtensionAttribute property value. A flag that indicates if the name specified is that of an extension attribute.
      * @param value Value to set for the isExtensionAttribute property.
      */
     public void setIsExtensionAttribute(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isExtensionAttribute", value);
     }
     /**
-     * Sets the source property value. The source property
+     * Sets the source property value. The source where the claim is going to retrieve its value. Valid sources include user, application, resource, audience and company.
      * @param value Value to set for the source property.
      */
     public void setSource(@jakarta.annotation.Nullable final String value) {

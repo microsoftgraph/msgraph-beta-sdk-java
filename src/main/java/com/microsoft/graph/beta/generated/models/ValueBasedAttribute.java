@@ -36,7 +36,7 @@ public class ValueBasedAttribute extends CustomClaimAttributeBase implements Par
         return deserializerMap;
     }
     /**
-     * Gets the value property value. The value property
+     * Gets the value property value. The static value to be used an the attribute.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class ValueBasedAttribute extends CustomClaimAttributeBase implements Par
         writer.writeStringValue("value", this.getValue());
     }
     /**
-     * Sets the value property value. The value property
+     * Sets the value property value. The static value to be used an the attribute.
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final String value) {

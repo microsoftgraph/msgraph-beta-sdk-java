@@ -135,7 +135,7 @@ public class ItemFacet extends Entity implements Parsable {
         return this.backingStore.get("source");
     }
     /**
-     * Gets the sources property value. The sources property
+     * Gets the sources property value. Where the values within an entity originated if synced from another source.
      * @return a {@link java.util.List<ProfileSourceAnnotation>}
      */
     @jakarta.annotation.Nullable
@@ -216,7 +216,7 @@ public class ItemFacet extends Entity implements Parsable {
         this.backingStore.set("source", value);
     }
     /**
-     * Sets the sources property value. The sources property
+     * Sets the sources property value. Where the values within an entity originated if synced from another source.
      * @param value Value to set for the sources property.
      */
     public void setSources(@jakarta.annotation.Nullable final java.util.List<ProfileSourceAnnotation> value) {

@@ -87,21 +87,23 @@ public class VirtualEventPresenterItemRequestBuilder extends BaseRequestBuilder 
         return this.requestAdapter.send(requestInfo, errorMapping, VirtualEventPresenter::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property presenters in solutions
+     * Update the properties of a virtualEventPresenter object. Currently the supported virtual event type is virtualEventWebinar.
      * @param body The request body
      * @return a {@link VirtualEventPresenter}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualeventpresenter-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public VirtualEventPresenter patch(@jakarta.annotation.Nonnull final VirtualEventPresenter body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property presenters in solutions
+     * Update the properties of a virtualEventPresenter object. Currently the supported virtual event type is virtualEventWebinar.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link VirtualEventPresenter}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualeventpresenter-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public VirtualEventPresenter patch(@jakarta.annotation.Nonnull final VirtualEventPresenter body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -162,7 +164,7 @@ public class VirtualEventPresenterItemRequestBuilder extends BaseRequestBuilder 
         return requestInfo;
     }
     /**
-     * Update the navigation property presenters in solutions
+     * Update the properties of a virtualEventPresenter object. Currently the supported virtual event type is virtualEventWebinar.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -171,7 +173,7 @@ public class VirtualEventPresenterItemRequestBuilder extends BaseRequestBuilder 
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property presenters in solutions
+     * Update the properties of a virtualEventPresenter object. Currently the supported virtual event type is virtualEventWebinar.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

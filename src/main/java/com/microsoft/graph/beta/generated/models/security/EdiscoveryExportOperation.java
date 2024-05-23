@@ -26,7 +26,7 @@ public class EdiscoveryExportOperation extends CaseOperation implements Parsable
         return new EdiscoveryExportOperation();
     }
     /**
-     * Gets the azureBlobContainer property value. The azureBlobContainer property
+     * Gets the azureBlobContainer property value. The name of the Azure storage location where the export is stored. This only applies to exports stored in your own Azure storage location. The azureBlobContainer property is deprecated and will stop returning data on April 30th, 2023.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -34,7 +34,7 @@ public class EdiscoveryExportOperation extends CaseOperation implements Parsable
         return this.backingStore.get("azureBlobContainer");
     }
     /**
-     * Gets the azureBlobToken property value. The azureBlobToken property
+     * Gets the azureBlobToken property value. The SAS token for the Azure storage location.  This only applies to exports stored in your own Azure storage location. The azureBlobToken property is deprecated and will stop returning data on April 30, 2023.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -50,7 +50,7 @@ public class EdiscoveryExportOperation extends CaseOperation implements Parsable
         return this.backingStore.get("description");
     }
     /**
-     * Gets the exportFileMetadata property value. The exportFileMetadata property
+     * Gets the exportFileMetadata property value. Contains the properties for an export file metadata, including downloadUrl, fileName, and size. If you export to an Azure storage location, this property returns empty.
      * @return a {@link java.util.List<ExportFileMetadata>}
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class EdiscoveryExportOperation extends CaseOperation implements Parsable
         return deserializerMap;
     }
     /**
-     * Gets the outputFolderId property value. The outputFolderId property
+     * Gets the outputFolderId property value. The output folder ID. The outputFolderId property is deprecated and will stop returning data on April 30, 2023.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -143,14 +143,14 @@ public class EdiscoveryExportOperation extends CaseOperation implements Parsable
         writer.writeObjectValue("reviewSetQuery", this.getReviewSetQuery());
     }
     /**
-     * Sets the azureBlobContainer property value. The azureBlobContainer property
+     * Sets the azureBlobContainer property value. The name of the Azure storage location where the export is stored. This only applies to exports stored in your own Azure storage location. The azureBlobContainer property is deprecated and will stop returning data on April 30th, 2023.
      * @param value Value to set for the azureBlobContainer property.
      */
     public void setAzureBlobContainer(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("azureBlobContainer", value);
     }
     /**
-     * Sets the azureBlobToken property value. The azureBlobToken property
+     * Sets the azureBlobToken property value. The SAS token for the Azure storage location.  This only applies to exports stored in your own Azure storage location. The azureBlobToken property is deprecated and will stop returning data on April 30, 2023.
      * @param value Value to set for the azureBlobToken property.
      */
     public void setAzureBlobToken(@jakarta.annotation.Nullable final String value) {
@@ -164,7 +164,7 @@ public class EdiscoveryExportOperation extends CaseOperation implements Parsable
         this.backingStore.set("description", value);
     }
     /**
-     * Sets the exportFileMetadata property value. The exportFileMetadata property
+     * Sets the exportFileMetadata property value. Contains the properties for an export file metadata, including downloadUrl, fileName, and size. If you export to an Azure storage location, this property returns empty.
      * @param value Value to set for the exportFileMetadata property.
      */
     public void setExportFileMetadata(@jakarta.annotation.Nullable final java.util.List<ExportFileMetadata> value) {
@@ -185,7 +185,7 @@ public class EdiscoveryExportOperation extends CaseOperation implements Parsable
         this.backingStore.set("exportStructure", value);
     }
     /**
-     * Sets the outputFolderId property value. The outputFolderId property
+     * Sets the outputFolderId property value. The output folder ID. The outputFolderId property is deprecated and will stop returning data on April 30, 2023.
      * @param value Value to set for the outputFolderId property.
      */
     public void setOutputFolderId(@jakarta.annotation.Nullable final String value) {

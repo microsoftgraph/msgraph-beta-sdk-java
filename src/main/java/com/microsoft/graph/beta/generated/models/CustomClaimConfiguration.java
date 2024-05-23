@@ -48,7 +48,7 @@ public class CustomClaimConfiguration implements AdditionalDataHolder, BackedMod
         return value;
     }
     /**
-     * Gets the attribute property value. The attribute property
+     * Gets the attribute property value. The attribute on which we source this property.
      * @return a {@link CustomClaimAttributeBase}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class CustomClaimConfiguration implements AdditionalDataHolder, BackedMod
         return this.backingStore;
     }
     /**
-     * Gets the condition property value. The condition property
+     * Gets the condition property value. The condition, if any, associated with this configuration.
      * @return a {@link CustomClaimConditionBase}
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class CustomClaimConfiguration implements AdditionalDataHolder, BackedMod
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the transformations property value. The transformations property
+     * Gets the transformations property value. An ordered list of transformations that are applied in sequence.
      * @return a {@link java.util.List<CustomClaimTransformation>}
      */
     @jakarta.annotation.Nullable
@@ -120,7 +120,7 @@ public class CustomClaimConfiguration implements AdditionalDataHolder, BackedMod
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the attribute property value. The attribute property
+     * Sets the attribute property value. The attribute on which we source this property.
      * @param value Value to set for the attribute property.
      */
     public void setAttribute(@jakarta.annotation.Nullable final CustomClaimAttributeBase value) {
@@ -135,7 +135,7 @@ public class CustomClaimConfiguration implements AdditionalDataHolder, BackedMod
         this.backingStore = value;
     }
     /**
-     * Sets the condition property value. The condition property
+     * Sets the condition property value. The condition, if any, associated with this configuration.
      * @param value Value to set for the condition property.
      */
     public void setCondition(@jakarta.annotation.Nullable final CustomClaimConditionBase value) {
@@ -149,7 +149,7 @@ public class CustomClaimConfiguration implements AdditionalDataHolder, BackedMod
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the transformations property value. The transformations property
+     * Sets the transformations property value. An ordered list of transformations that are applied in sequence.
      * @param value Value to set for the transformations property.
      */
     public void setTransformations(@jakarta.annotation.Nullable final java.util.List<CustomClaimTransformation> value) {

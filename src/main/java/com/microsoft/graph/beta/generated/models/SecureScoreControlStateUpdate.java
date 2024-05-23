@@ -49,7 +49,7 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Back
         return value;
     }
     /**
-     * Gets the assignedTo property value. The assignedTo property
+     * Gets the assignedTo property value. Assign the control to the user who will take the action
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -65,7 +65,7 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Back
         return this.backingStore;
     }
     /**
-     * Gets the comment property value. The comment property
+     * Gets the comment property value. Provides optional comment about the control
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -96,7 +96,7 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Back
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the state property value. The state property
+     * Gets the state property value. State of the control can be modified using PATCH command(Ex: ignored, thirdParty etc)
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -104,7 +104,7 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Back
         return this.backingStore.get("state");
     }
     /**
-     * Gets the updatedBy property value. The updatedBy property
+     * Gets the updatedBy property value. ID of the user who updated tenant state
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -112,7 +112,7 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Back
         return this.backingStore.get("updatedBy");
     }
     /**
-     * Gets the updatedDateTime property value. The updatedDateTime property
+     * Gets the updatedDateTime property value. Time at which control state was updated
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -141,7 +141,7 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Back
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the assignedTo property value. The assignedTo property
+     * Sets the assignedTo property value. Assign the control to the user who will take the action
      * @param value Value to set for the assignedTo property.
      */
     public void setAssignedTo(@jakarta.annotation.Nullable final String value) {
@@ -156,7 +156,7 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Back
         this.backingStore = value;
     }
     /**
-     * Sets the comment property value. The comment property
+     * Sets the comment property value. Provides optional comment about the control
      * @param value Value to set for the comment property.
      */
     public void setComment(@jakarta.annotation.Nullable final String value) {
@@ -170,21 +170,21 @@ public class SecureScoreControlStateUpdate implements AdditionalDataHolder, Back
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the state property value. The state property
+     * Sets the state property value. State of the control can be modified using PATCH command(Ex: ignored, thirdParty etc)
      * @param value Value to set for the state property.
      */
     public void setState(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("state", value);
     }
     /**
-     * Sets the updatedBy property value. The updatedBy property
+     * Sets the updatedBy property value. ID of the user who updated tenant state
      * @param value Value to set for the updatedBy property.
      */
     public void setUpdatedBy(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("updatedBy", value);
     }
     /**
-     * Sets the updatedDateTime property value. The updatedDateTime property
+     * Sets the updatedDateTime property value. Time at which control state was updated
      * @param value Value to set for the updatedDateTime property.
      */
     public void setUpdatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

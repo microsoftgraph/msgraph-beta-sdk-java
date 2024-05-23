@@ -41,6 +41,14 @@ public class OnPremisesPublishingProfile extends Entity implements Parsable {
         return this.backingStore.get("agents");
     }
     /**
+     * Gets the applicationSegments property value. The applicationSegments property
+     * @return a {@link java.util.List<IpApplicationSegment>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<IpApplicationSegment> getApplicationSegments() {
+        return this.backingStore.get("applicationSegments");
+    }
+    /**
      * Gets the connectorGroups property value. List of existing connectorGroup objects for applications published through Application Proxy. Read-only. Nullable.
      * @return a {@link java.util.List<ConnectorGroup>}
      */
@@ -65,6 +73,7 @@ public class OnPremisesPublishingProfile extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("agentGroups", (n) -> { this.setAgentGroups(n.getCollectionOfObjectValues(OnPremisesAgentGroup::createFromDiscriminatorValue)); });
         deserializerMap.put("agents", (n) -> { this.setAgents(n.getCollectionOfObjectValues(OnPremisesAgent::createFromDiscriminatorValue)); });
+        deserializerMap.put("applicationSegments", (n) -> { this.setApplicationSegments(n.getCollectionOfObjectValues(IpApplicationSegment::createFromDiscriminatorValue)); });
         deserializerMap.put("connectorGroups", (n) -> { this.setConnectorGroups(n.getCollectionOfObjectValues(ConnectorGroup::createFromDiscriminatorValue)); });
         deserializerMap.put("connectors", (n) -> { this.setConnectors(n.getCollectionOfObjectValues(Connector::createFromDiscriminatorValue)); });
         deserializerMap.put("hybridAgentUpdaterConfiguration", (n) -> { this.setHybridAgentUpdaterConfiguration(n.getObjectValue(HybridAgentUpdaterConfiguration::createFromDiscriminatorValue)); });
@@ -114,6 +123,7 @@ public class OnPremisesPublishingProfile extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("agentGroups", this.getAgentGroups());
         writer.writeCollectionOfObjectValues("agents", this.getAgents());
+        writer.writeCollectionOfObjectValues("applicationSegments", this.getApplicationSegments());
         writer.writeCollectionOfObjectValues("connectorGroups", this.getConnectorGroups());
         writer.writeCollectionOfObjectValues("connectors", this.getConnectors());
         writer.writeObjectValue("hybridAgentUpdaterConfiguration", this.getHybridAgentUpdaterConfiguration());
@@ -134,6 +144,13 @@ public class OnPremisesPublishingProfile extends Entity implements Parsable {
      */
     public void setAgents(@jakarta.annotation.Nullable final java.util.List<OnPremisesAgent> value) {
         this.backingStore.set("agents", value);
+    }
+    /**
+     * Sets the applicationSegments property value. The applicationSegments property
+     * @param value Value to set for the applicationSegments property.
+     */
+    public void setApplicationSegments(@jakarta.annotation.Nullable final java.util.List<IpApplicationSegment> value) {
+        this.backingStore.set("applicationSegments", value);
     }
     /**
      * Sets the connectorGroups property value. List of existing connectorGroup objects for applications published through Application Proxy. Read-only. Nullable.

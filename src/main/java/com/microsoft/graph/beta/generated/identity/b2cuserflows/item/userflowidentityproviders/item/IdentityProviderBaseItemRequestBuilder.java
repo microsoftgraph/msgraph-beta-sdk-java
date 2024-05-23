@@ -37,7 +37,7 @@ public class IdentityProviderBaseItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identity/b2cUserFlows/{b2cIdentityUserFlow%2Did}/userFlowIdentityProviders/{identityProviderBase%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Get userFlowIdentityProviders from identity
+     * The identity providers included in the user flow.
      * @return a {@link IdentityProviderBase}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -46,7 +46,7 @@ public class IdentityProviderBaseItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get userFlowIdentityProviders from identity
+     * The identity providers included in the user flow.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link IdentityProviderBase}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -59,7 +59,7 @@ public class IdentityProviderBaseItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, IdentityProviderBase::createFromDiscriminatorValue);
     }
     /**
-     * Get userFlowIdentityProviders from identity
+     * The identity providers included in the user flow.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class IdentityProviderBaseItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get userFlowIdentityProviders from identity
+     * The identity providers included in the user flow.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -89,7 +89,7 @@ public class IdentityProviderBaseItemRequestBuilder extends BaseRequestBuilder {
         return new IdentityProviderBaseItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get userFlowIdentityProviders from identity
+     * The identity providers included in the user flow.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

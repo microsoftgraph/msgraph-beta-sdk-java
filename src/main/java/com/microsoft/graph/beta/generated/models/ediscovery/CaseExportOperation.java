@@ -83,7 +83,7 @@ public class CaseExportOperation extends CaseOperation implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the outputFolderId property value. The outputFolderId property
+     * Gets the outputFolderId property value. The output folder ID.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -158,7 +158,7 @@ public class CaseExportOperation extends CaseOperation implements Parsable {
         this.backingStore.set("exportStructure", value);
     }
     /**
-     * Sets the outputFolderId property value. The outputFolderId property
+     * Sets the outputFolderId property value. The output folder ID.
      * @param value Value to set for the outputFolderId property.
      */
     public void setOutputFolderId(@jakarta.annotation.Nullable final String value) {

@@ -48,7 +48,7 @@ public class AverageComparativeScore implements AdditionalDataHolder, BackedMode
         return value;
     }
     /**
-     * Gets the averageScore property value. The averageScore property
+     * Gets the averageScore property value. Average score within a specified basis.
      * @return a {@link Double}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class AverageComparativeScore implements AdditionalDataHolder, BackedMode
         return this.backingStore;
     }
     /**
-     * Gets the basis property value. The basis property
+     * Gets the basis property value. Scope type (by AllTenants, TotalSeats, IndustryTypes).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -110,7 +110,7 @@ public class AverageComparativeScore implements AdditionalDataHolder, BackedMode
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the averageScore property value. The averageScore property
+     * Sets the averageScore property value. Average score within a specified basis.
      * @param value Value to set for the averageScore property.
      */
     public void setAverageScore(@jakarta.annotation.Nullable final Double value) {
@@ -125,7 +125,7 @@ public class AverageComparativeScore implements AdditionalDataHolder, BackedMode
         this.backingStore = value;
     }
     /**
-     * Sets the basis property value. The basis property
+     * Sets the basis property value. Scope type (by AllTenants, TotalSeats, IndustryTypes).
      * @param value Value to set for the basis property.
      */
     public void setBasis(@jakarta.annotation.Nullable final String value) {

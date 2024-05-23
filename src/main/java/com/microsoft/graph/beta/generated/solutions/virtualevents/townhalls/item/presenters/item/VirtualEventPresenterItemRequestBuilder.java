@@ -47,7 +47,7 @@ public class VirtualEventPresenterItemRequestBuilder extends BaseRequestBuilder 
         super(requestAdapter, "{+baseurl}/solutions/virtualEvents/townhalls/{virtualEventTownhall%2Did}/presenters/{virtualEventPresenter%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete a virtualEventPresenter from a virtual event. Currently the supported virtual event type is virtualEventTownhall.
+     * Delete a virtualEventPresenter from a virtual event. Currently the supported virtual event types are: virtualEventTownhall, virtualEventWebinar.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/virtualeventpresenter-delete?view=graph-rest-beta">Find more info here</a>
      */
@@ -55,7 +55,7 @@ public class VirtualEventPresenterItemRequestBuilder extends BaseRequestBuilder 
         delete(null);
     }
     /**
-     * Delete a virtualEventPresenter from a virtual event. Currently the supported virtual event type is virtualEventTownhall.
+     * Delete a virtualEventPresenter from a virtual event. Currently the supported virtual event types are: virtualEventTownhall, virtualEventWebinar.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/virtualeventpresenter-delete?view=graph-rest-beta">Find more info here</a>
@@ -67,7 +67,7 @@ public class VirtualEventPresenterItemRequestBuilder extends BaseRequestBuilder 
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a virtualEventPresenter object.
+     * Read the properties and relationships of a virtualEventPresenter object. Currently the supported virtual event types are: virtualEventTownhall, virtualEventWebinar.
      * @return a {@link VirtualEventPresenter}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/virtualeventpresenter-get?view=graph-rest-beta">Find more info here</a>
@@ -77,7 +77,7 @@ public class VirtualEventPresenterItemRequestBuilder extends BaseRequestBuilder 
         return get(null);
     }
     /**
-     * Read the properties and relationships of a virtualEventPresenter object.
+     * Read the properties and relationships of a virtualEventPresenter object. Currently the supported virtual event types are: virtualEventTownhall, virtualEventWebinar.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link VirtualEventPresenter}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -126,7 +126,7 @@ public class VirtualEventPresenterItemRequestBuilder extends BaseRequestBuilder 
         return new SessionsWithJoinWebUrlRequestBuilder(pathParameters, requestAdapter, joinWebUrl);
     }
     /**
-     * Delete a virtualEventPresenter from a virtual event. Currently the supported virtual event type is virtualEventTownhall.
+     * Delete a virtualEventPresenter from a virtual event. Currently the supported virtual event types are: virtualEventTownhall, virtualEventWebinar.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -134,7 +134,7 @@ public class VirtualEventPresenterItemRequestBuilder extends BaseRequestBuilder 
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a virtualEventPresenter from a virtual event. Currently the supported virtual event type is virtualEventTownhall.
+     * Delete a virtualEventPresenter from a virtual event. Currently the supported virtual event types are: virtualEventTownhall, virtualEventWebinar.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -146,7 +146,7 @@ public class VirtualEventPresenterItemRequestBuilder extends BaseRequestBuilder 
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a virtualEventPresenter object.
+     * Read the properties and relationships of a virtualEventPresenter object. Currently the supported virtual event types are: virtualEventTownhall, virtualEventWebinar.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -154,7 +154,7 @@ public class VirtualEventPresenterItemRequestBuilder extends BaseRequestBuilder 
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a virtualEventPresenter object.
+     * Read the properties and relationships of a virtualEventPresenter object. Currently the supported virtual event types are: virtualEventTownhall, virtualEventWebinar.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -206,7 +206,7 @@ public class VirtualEventPresenterItemRequestBuilder extends BaseRequestBuilder 
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a virtualEventPresenter object.
+     * Read the properties and relationships of a virtualEventPresenter object. Currently the supported virtual event types are: virtualEventTownhall, virtualEventWebinar.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

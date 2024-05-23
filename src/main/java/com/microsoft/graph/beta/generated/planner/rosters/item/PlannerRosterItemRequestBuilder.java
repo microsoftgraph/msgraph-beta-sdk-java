@@ -2,6 +2,7 @@ package com.microsoft.graph.beta.planner.rosters.item;
 
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.PlannerRoster;
+import com.microsoft.graph.beta.planner.rosters.item.assignsensitivitylabel.AssignSensitivityLabelRequestBuilder;
 import com.microsoft.graph.beta.planner.rosters.item.members.MembersRequestBuilder;
 import com.microsoft.graph.beta.planner.rosters.item.plans.PlansRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -22,6 +23,14 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PlannerRosterItemRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to call the assignSensitivityLabel method.
+     * @return a {@link AssignSensitivityLabelRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public AssignSensitivityLabelRequestBuilder assignSensitivityLabel() {
+        return new AssignSensitivityLabelRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Provides operations to manage the members property of the microsoft.graph.plannerRoster entity.
      * @return a {@link MembersRequestBuilder}

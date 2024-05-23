@@ -71,7 +71,7 @@ public class OnPremisesAgent extends Entity implements Parsable {
         return this.backingStore.get("status");
     }
     /**
-     * Gets the supportedPublishingTypes property value. The supportedPublishingTypes property
+     * Gets the supportedPublishingTypes property value. Possible values are: applicationProxy, exchangeOnline, authentication, provisioning, adAdministration.
      * @return a {@link java.util.List<OnPremisesPublishingType>}
      */
     @jakarta.annotation.Nullable
@@ -120,7 +120,7 @@ public class OnPremisesAgent extends Entity implements Parsable {
         this.backingStore.set("status", value);
     }
     /**
-     * Sets the supportedPublishingTypes property value. The supportedPublishingTypes property
+     * Sets the supportedPublishingTypes property value. Possible values are: applicationProxy, exchangeOnline, authentication, provisioning, adAdministration.
      * @param value Value to set for the supportedPublishingTypes property.
      */
     public void setSupportedPublishingTypes(@jakarta.annotation.Nullable final java.util.List<OnPremisesPublishingType> value) {

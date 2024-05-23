@@ -26,7 +26,7 @@ public class RegexReplaceTransformation extends CustomClaimTransformation implem
         return new RegexReplaceTransformation();
     }
     /**
-     * Gets the additionalAttributes property value. The additionalAttributes property
+     * Gets the additionalAttributes property value. Additional attributes that can be referenced within the replacement string.
      * @return a {@link java.util.List<SourcedAttribute>}
      */
     @jakarta.annotation.Nullable
@@ -46,7 +46,7 @@ public class RegexReplaceTransformation extends CustomClaimTransformation implem
         return deserializerMap;
     }
     /**
-     * Gets the regex property value. The regex property
+     * Gets the regex property value. The regular expression to be applied on the input directory attribute or constant.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -54,7 +54,7 @@ public class RegexReplaceTransformation extends CustomClaimTransformation implem
         return this.backingStore.get("regex");
     }
     /**
-     * Gets the replacement property value. The replacement property
+     * Gets the replacement property value. The transformation output replacement pattern with regular expression output group and input parameter group reference.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -73,21 +73,21 @@ public class RegexReplaceTransformation extends CustomClaimTransformation implem
         writer.writeStringValue("replacement", this.getReplacement());
     }
     /**
-     * Sets the additionalAttributes property value. The additionalAttributes property
+     * Sets the additionalAttributes property value. Additional attributes that can be referenced within the replacement string.
      * @param value Value to set for the additionalAttributes property.
      */
     public void setAdditionalAttributes(@jakarta.annotation.Nullable final java.util.List<SourcedAttribute> value) {
         this.backingStore.set("additionalAttributes", value);
     }
     /**
-     * Sets the regex property value. The regex property
+     * Sets the regex property value. The regular expression to be applied on the input directory attribute or constant.
      * @param value Value to set for the regex property.
      */
     public void setRegex(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("regex", value);
     }
     /**
-     * Sets the replacement property value. The replacement property
+     * Sets the replacement property value. The transformation output replacement pattern with regular expression output group and input parameter group reference.
      * @param value Value to set for the replacement property.
      */
     public void setReplacement(@jakarta.annotation.Nullable final String value) {

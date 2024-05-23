@@ -64,7 +64,7 @@ public class CustomClaimBase implements AdditionalDataHolder, BackedModel, Parsa
         return this.backingStore;
     }
     /**
-     * Gets the configurations property value. The configurations property
+     * Gets the configurations property value. One or more configurations that describe how the claim is sourced and under what conditions.
      * @return a {@link java.util.List<CustomClaimConfiguration>}
      */
     @jakarta.annotation.Nullable
@@ -116,7 +116,7 @@ public class CustomClaimBase implements AdditionalDataHolder, BackedModel, Parsa
         this.backingStore = value;
     }
     /**
-     * Sets the configurations property value. The configurations property
+     * Sets the configurations property value. One or more configurations that describe how the claim is sourced and under what conditions.
      * @param value Value to set for the configurations property.
      */
     public void setConfigurations(@jakarta.annotation.Nullable final java.util.List<CustomClaimConfiguration> value) {

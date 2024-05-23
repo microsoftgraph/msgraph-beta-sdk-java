@@ -208,7 +208,7 @@ public class Call extends Entity implements Parsable {
         return this.backingStore.get("participants");
     }
     /**
-     * Gets the requestedModalities property value. The requestedModalities property
+     * Gets the requestedModalities property value. The list of requested modalities. Possible values are: unknown, audio, video, videoBasedScreenSharing, data.
      * @return a {@link java.util.List<Modality>}
      */
     @jakarta.annotation.Nullable
@@ -216,7 +216,7 @@ public class Call extends Entity implements Parsable {
         return this.backingStore.get("requestedModalities");
     }
     /**
-     * Gets the resultInfo property value. The resultInfo property
+     * Gets the resultInfo property value. The result information. For example, the result can hold termination reason. Read-only.
      * @return a {@link ResultInfo}
      */
     @jakarta.annotation.Nullable
@@ -224,7 +224,7 @@ public class Call extends Entity implements Parsable {
         return this.backingStore.get("resultInfo");
     }
     /**
-     * Gets the ringingTimeoutInSeconds property value. The ringingTimeoutInSeconds property
+     * Gets the ringingTimeoutInSeconds property value. Ringing timeout in seconds for outgoing peer to peer calls. The max value for this attribute is 115 seconds.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -232,7 +232,7 @@ public class Call extends Entity implements Parsable {
         return this.backingStore.get("ringingTimeoutInSeconds");
     }
     /**
-     * Gets the routingPolicies property value. The routingPolicies property
+     * Gets the routingPolicies property value. This property is applicable for peer to peer calls only. Possible values are: none, noMissedCall, disableForwardingExceptPhone, disableForwarding, preferSkypeForBusiness, unknownFutureValue.
      * @return a {@link java.util.List<RoutingPolicy>}
      */
     @jakarta.annotation.Nullable
@@ -240,7 +240,7 @@ public class Call extends Entity implements Parsable {
         return this.backingStore.get("routingPolicies");
     }
     /**
-     * Gets the source property value. The source property
+     * Gets the source property value. The originator of the call.
      * @return a {@link ParticipantInfo}
      */
     @jakarta.annotation.Nullable
@@ -248,7 +248,7 @@ public class Call extends Entity implements Parsable {
         return this.backingStore.get("source");
     }
     /**
-     * Gets the state property value. The state property
+     * Gets the state property value. The call state. Possible values are: incoming, establishing, ringing, established, hold, transferring, transferAccepted, redirecting, terminating, terminated. Read-only.
      * @return a {@link CallState}
      */
     @jakarta.annotation.Nullable
@@ -256,7 +256,7 @@ public class Call extends Entity implements Parsable {
         return this.backingStore.get("state");
     }
     /**
-     * Gets the subject property value. The subject property
+     * Gets the subject property value. The subject of the conversation.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -264,7 +264,7 @@ public class Call extends Entity implements Parsable {
         return this.backingStore.get("subject");
     }
     /**
-     * Gets the targets property value. The targets property
+     * Gets the targets property value. The targets of the call. Required information for creating peer to peer call.
      * @return a {@link java.util.List<InvitationParticipantInfo>}
      */
     @jakarta.annotation.Nullable
@@ -272,7 +272,7 @@ public class Call extends Entity implements Parsable {
         return this.backingStore.get("targets");
     }
     /**
-     * Gets the tenantId property value. The tenantId property
+     * Gets the tenantId property value. Read-only. tenantId in Microsoft Entra ID.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -468,63 +468,63 @@ public class Call extends Entity implements Parsable {
         this.backingStore.set("participants", value);
     }
     /**
-     * Sets the requestedModalities property value. The requestedModalities property
+     * Sets the requestedModalities property value. The list of requested modalities. Possible values are: unknown, audio, video, videoBasedScreenSharing, data.
      * @param value Value to set for the requestedModalities property.
      */
     public void setRequestedModalities(@jakarta.annotation.Nullable final java.util.List<Modality> value) {
         this.backingStore.set("requestedModalities", value);
     }
     /**
-     * Sets the resultInfo property value. The resultInfo property
+     * Sets the resultInfo property value. The result information. For example, the result can hold termination reason. Read-only.
      * @param value Value to set for the resultInfo property.
      */
     public void setResultInfo(@jakarta.annotation.Nullable final ResultInfo value) {
         this.backingStore.set("resultInfo", value);
     }
     /**
-     * Sets the ringingTimeoutInSeconds property value. The ringingTimeoutInSeconds property
+     * Sets the ringingTimeoutInSeconds property value. Ringing timeout in seconds for outgoing peer to peer calls. The max value for this attribute is 115 seconds.
      * @param value Value to set for the ringingTimeoutInSeconds property.
      */
     public void setRingingTimeoutInSeconds(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("ringingTimeoutInSeconds", value);
     }
     /**
-     * Sets the routingPolicies property value. The routingPolicies property
+     * Sets the routingPolicies property value. This property is applicable for peer to peer calls only. Possible values are: none, noMissedCall, disableForwardingExceptPhone, disableForwarding, preferSkypeForBusiness, unknownFutureValue.
      * @param value Value to set for the routingPolicies property.
      */
     public void setRoutingPolicies(@jakarta.annotation.Nullable final java.util.List<RoutingPolicy> value) {
         this.backingStore.set("routingPolicies", value);
     }
     /**
-     * Sets the source property value. The source property
+     * Sets the source property value. The originator of the call.
      * @param value Value to set for the source property.
      */
     public void setSource(@jakarta.annotation.Nullable final ParticipantInfo value) {
         this.backingStore.set("source", value);
     }
     /**
-     * Sets the state property value. The state property
+     * Sets the state property value. The call state. Possible values are: incoming, establishing, ringing, established, hold, transferring, transferAccepted, redirecting, terminating, terminated. Read-only.
      * @param value Value to set for the state property.
      */
     public void setState(@jakarta.annotation.Nullable final CallState value) {
         this.backingStore.set("state", value);
     }
     /**
-     * Sets the subject property value. The subject property
+     * Sets the subject property value. The subject of the conversation.
      * @param value Value to set for the subject property.
      */
     public void setSubject(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("subject", value);
     }
     /**
-     * Sets the targets property value. The targets property
+     * Sets the targets property value. The targets of the call. Required information for creating peer to peer call.
      * @param value Value to set for the targets property.
      */
     public void setTargets(@jakarta.annotation.Nullable final java.util.List<InvitationParticipantInfo> value) {
         this.backingStore.set("targets", value);
     }
     /**
-     * Sets the tenantId property value. The tenantId property
+     * Sets the tenantId property value. Read-only. tenantId in Microsoft Entra ID.
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {

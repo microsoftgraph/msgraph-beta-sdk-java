@@ -54,7 +54,7 @@ public class AccessReviewInstanceDecisionItemServicePrincipalTarget extends Acce
         return this.backingStore.get("servicePrincipalDisplayName");
     }
     /**
-     * Gets the servicePrincipalId property value. The servicePrincipalId property
+     * Gets the servicePrincipalId property value. The identifier of the service principal whose access is being reviewed.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -87,7 +87,7 @@ public class AccessReviewInstanceDecisionItemServicePrincipalTarget extends Acce
         this.backingStore.set("servicePrincipalDisplayName", value);
     }
     /**
-     * Sets the servicePrincipalId property value. The servicePrincipalId property
+     * Sets the servicePrincipalId property value. The identifier of the service principal whose access is being reviewed.
      * @param value Value to set for the servicePrincipalId property.
      */
     public void setServicePrincipalId(@jakarta.annotation.Nullable final String value) {

@@ -72,7 +72,7 @@ public class ConditionalAccessDevices implements AdditionalDataHolder, BackedMod
         return this.backingStore.get("excludeDevices");
     }
     /**
-     * Gets the excludeDeviceStates property value. The excludeDeviceStates property
+     * Gets the excludeDeviceStates property value. States excluded from the scope of the policy. Possible values: Compliant, DomainJoined.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -103,7 +103,7 @@ public class ConditionalAccessDevices implements AdditionalDataHolder, BackedMod
         return this.backingStore.get("includeDevices");
     }
     /**
-     * Gets the includeDeviceStates property value. The includeDeviceStates property
+     * Gets the includeDeviceStates property value. States in the scope of the policy. All is the only allowed value.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -162,7 +162,7 @@ public class ConditionalAccessDevices implements AdditionalDataHolder, BackedMod
         this.backingStore.set("excludeDevices", value);
     }
     /**
-     * Sets the excludeDeviceStates property value. The excludeDeviceStates property
+     * Sets the excludeDeviceStates property value. States excluded from the scope of the policy. Possible values: Compliant, DomainJoined.
      * @param value Value to set for the excludeDeviceStates property.
      */
     public void setExcludeDeviceStates(@jakarta.annotation.Nullable final java.util.List<String> value) {
@@ -176,7 +176,7 @@ public class ConditionalAccessDevices implements AdditionalDataHolder, BackedMod
         this.backingStore.set("includeDevices", value);
     }
     /**
-     * Sets the includeDeviceStates property value. The includeDeviceStates property
+     * Sets the includeDeviceStates property value. States in the scope of the policy. All is the only allowed value.
      * @param value Value to set for the includeDeviceStates property.
      */
     public void setIncludeDeviceStates(@jakarta.annotation.Nullable final java.util.List<String> value) {

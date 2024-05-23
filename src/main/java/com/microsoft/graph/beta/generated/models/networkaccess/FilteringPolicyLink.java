@@ -64,7 +64,7 @@ public class FilteringPolicyLink extends PolicyLink implements Parsable {
         return this.backingStore.get("loggingState");
     }
     /**
-     * Gets the priority property value. The priority property
+     * Gets the priority property value. Provides an integer priority level for each instance of a URL filtering policy linked to a profile. Required.
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -105,7 +105,7 @@ public class FilteringPolicyLink extends PolicyLink implements Parsable {
         this.backingStore.set("loggingState", value);
     }
     /**
-     * Sets the priority property value. The priority property
+     * Sets the priority property value. Provides an integer priority level for each instance of a URL filtering policy linked to a profile. Required.
      * @param value Value to set for the priority property.
      */
     public void setPriority(@jakarta.annotation.Nullable final Long value) {

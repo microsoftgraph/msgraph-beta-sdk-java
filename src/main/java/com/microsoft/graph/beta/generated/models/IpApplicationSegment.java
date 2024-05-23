@@ -27,6 +27,14 @@ public class IpApplicationSegment extends ApplicationSegment implements Parsable
         return new IpApplicationSegment();
     }
     /**
+     * Gets the application property value. The application property
+     * @return a {@link Application}
+     */
+    @jakarta.annotation.Nullable
+    public Application getApplication() {
+        return this.backingStore.get("application");
+    }
+    /**
      * Gets the destinationHost property value. The destinationHost property
      * @return a {@link String}
      */
@@ -49,6 +57,7 @@ public class IpApplicationSegment extends ApplicationSegment implements Parsable
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("application", (n) -> { this.setApplication(n.getObjectValue(Application::createFromDiscriminatorValue)); });
         deserializerMap.put("destinationHost", (n) -> { this.setDestinationHost(n.getStringValue()); });
         deserializerMap.put("destinationType", (n) -> { this.setDestinationType(n.getEnumValue(PrivateNetworkDestinationType::forValue)); });
         deserializerMap.put("port", (n) -> { this.setPort(n.getIntegerValue()); });
@@ -87,11 +96,19 @@ public class IpApplicationSegment extends ApplicationSegment implements Parsable
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeObjectValue("application", this.getApplication());
         writer.writeStringValue("destinationHost", this.getDestinationHost());
         writer.writeEnumValue("destinationType", this.getDestinationType());
         writer.writeIntegerValue("port", this.getPort());
         writer.writeCollectionOfPrimitiveValues("ports", this.getPorts());
         writer.writeEnumSetValue("protocol", this.getProtocol());
+    }
+    /**
+     * Sets the application property value. The application property
+     * @param value Value to set for the application property.
+     */
+    public void setApplication(@jakarta.annotation.Nullable final Application value) {
+        this.backingStore.set("application", value);
     }
     /**
      * Sets the destinationHost property value. The destinationHost property

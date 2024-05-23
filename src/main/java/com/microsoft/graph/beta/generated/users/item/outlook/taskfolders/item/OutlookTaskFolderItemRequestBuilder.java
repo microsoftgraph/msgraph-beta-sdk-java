@@ -73,7 +73,7 @@ public class OutlookTaskFolderItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get taskFolders from users
+     * The user's Outlook task folders. Read-only. Nullable.
      * @return a {@link OutlookTaskFolder}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
@@ -85,7 +85,7 @@ public class OutlookTaskFolderItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get taskFolders from users
+     * The user's Outlook task folders. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link OutlookTaskFolder}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -158,7 +158,7 @@ public class OutlookTaskFolderItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get taskFolders from users
+     * The user's Outlook task folders. Read-only. Nullable.
      * @return a {@link RequestInformation}
      * @deprecated
      * The Outlook tasks API is deprecated and will stop returning data on February 20, 2023. Please use the new To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/ as of 2020-08/Outlook_Tasks
@@ -169,7 +169,7 @@ public class OutlookTaskFolderItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get taskFolders from users
+     * The user's Outlook task folders. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -233,7 +233,7 @@ public class OutlookTaskFolderItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get taskFolders from users
+     * The user's Outlook task folders. Read-only. Nullable.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

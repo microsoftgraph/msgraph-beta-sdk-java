@@ -59,7 +59,7 @@ public class SignIn extends Entity implements Parsable {
         return this.backingStore.get("appliedEventListeners");
     }
     /**
-     * Gets the appTokenProtectionStatus property value. The appTokenProtectionStatus property
+     * Gets the appTokenProtectionStatus property value. Token protection creates a cryptographically secure tie between the token and the device it's issued to. This field indicates whether the app token was bound to the device.
      * @return a {@link TokenProtectionStatus}
      */
     @jakarta.annotation.Nullable
@@ -402,7 +402,7 @@ public class SignIn extends Entity implements Parsable {
         return this.backingStore.get("managedServiceIdentity");
     }
     /**
-     * Gets the mfaDetail property value. The mfaDetail property
+     * Gets the mfaDetail property value. This property is deprecated.
      * @return a {@link MfaDetail}
      */
     @jakarta.annotation.Nullable
@@ -772,7 +772,7 @@ public class SignIn extends Entity implements Parsable {
         this.backingStore.set("appliedEventListeners", value);
     }
     /**
-     * Sets the appTokenProtectionStatus property value. The appTokenProtectionStatus property
+     * Sets the appTokenProtectionStatus property value. Token protection creates a cryptographically secure tie between the token and the device it's issued to. This field indicates whether the app token was bound to the device.
      * @param value Value to set for the appTokenProtectionStatus property.
      */
     public void setAppTokenProtectionStatus(@jakarta.annotation.Nullable final TokenProtectionStatus value) {
@@ -1003,7 +1003,7 @@ public class SignIn extends Entity implements Parsable {
         this.backingStore.set("managedServiceIdentity", value);
     }
     /**
-     * Sets the mfaDetail property value. The mfaDetail property
+     * Sets the mfaDetail property value. This property is deprecated.
      * @param value Value to set for the mfaDetail property.
      */
     public void setMfaDetail(@jakarta.annotation.Nullable final MfaDetail value) {

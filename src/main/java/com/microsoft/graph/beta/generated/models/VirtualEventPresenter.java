@@ -54,7 +54,7 @@ public class VirtualEventPresenter extends Entity implements Parsable {
         return this.backingStore.get("identity");
     }
     /**
-     * Gets the presenterDetails property value. Other detail information of the presenter.
+     * Gets the presenterDetails property value. Other detail information of the presenter. This property returns null when the virtual event type is virtualEventTownhall.
      * @return a {@link VirtualEventPresenterDetails}
      */
     @jakarta.annotation.Nullable
@@ -96,7 +96,7 @@ public class VirtualEventPresenter extends Entity implements Parsable {
         this.backingStore.set("identity", value);
     }
     /**
-     * Sets the presenterDetails property value. Other detail information of the presenter.
+     * Sets the presenterDetails property value. Other detail information of the presenter. This property returns null when the virtual event type is virtualEventTownhall.
      * @param value Value to set for the presenterDetails property.
      */
     public void setPresenterDetails(@jakarta.annotation.Nullable final VirtualEventPresenterDetails value) {

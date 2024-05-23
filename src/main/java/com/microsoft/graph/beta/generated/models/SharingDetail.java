@@ -96,7 +96,7 @@ public class SharingDetail implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore.get("sharedDateTime");
     }
     /**
-     * Gets the sharingReference property value. The sharingReference property
+     * Gets the sharingReference property value. Reference properties of the document, such as the URL and type of the document. Read-only
      * @return a {@link ResourceReference}
      */
     @jakarta.annotation.Nullable
@@ -169,7 +169,7 @@ public class SharingDetail implements AdditionalDataHolder, BackedModel, Parsabl
         this.backingStore.set("sharedDateTime", value);
     }
     /**
-     * Sets the sharingReference property value. The sharingReference property
+     * Sets the sharingReference property value. Reference properties of the document, such as the URL and type of the document. Read-only
      * @param value Value to set for the sharingReference property.
      */
     public void setSharingReference(@jakarta.annotation.Nullable final ResourceReference value) {

@@ -45,7 +45,7 @@ public class SamlNameIdClaim extends CustomClaimBase implements Parsable {
         return this.backingStore.get("nameIdFormat");
     }
     /**
-     * Gets the serviceProviderNameQualifier property value. The serviceProviderNameQualifier property
+     * Gets the serviceProviderNameQualifier property value. Allows the specification of a service provider name qualifier reflected in the sAML response. The value provided must match one of the service provider names configured for the application and is only applicable for IdP-initiated applications (the sign-on URL should be empty for the IdP-initiated applications), in all other cases this value is ignored.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -70,7 +70,7 @@ public class SamlNameIdClaim extends CustomClaimBase implements Parsable {
         this.backingStore.set("nameIdFormat", value);
     }
     /**
-     * Sets the serviceProviderNameQualifier property value. The serviceProviderNameQualifier property
+     * Sets the serviceProviderNameQualifier property value. Allows the specification of a service provider name qualifier reflected in the sAML response. The value provided must match one of the service provider names configured for the application and is only applicable for IdP-initiated applications (the sign-on URL should be empty for the IdP-initiated applications), in all other cases this value is ignored.
      * @param value Value to set for the serviceProviderNameQualifier property.
      */
     public void setServiceProviderNameQualifier(@jakarta.annotation.Nullable final String value) {

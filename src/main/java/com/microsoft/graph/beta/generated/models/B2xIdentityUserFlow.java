@@ -47,7 +47,7 @@ public class B2xIdentityUserFlow extends IdentityUserFlow implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the identityProviders property value. The identityProviders property
+     * Gets the identityProviders property value. The identity providers included in the user flow.
      * @return a {@link java.util.List<IdentityProvider>}
      */
     @jakarta.annotation.Nullable
@@ -99,7 +99,7 @@ public class B2xIdentityUserFlow extends IdentityUserFlow implements Parsable {
         this.backingStore.set("apiConnectorConfiguration", value);
     }
     /**
-     * Sets the identityProviders property value. The identityProviders property
+     * Sets the identityProviders property value. The identity providers included in the user flow.
      * @param value Value to set for the identityProviders property.
      */
     public void setIdentityProviders(@jakarta.annotation.Nullable final java.util.List<IdentityProvider> value) {

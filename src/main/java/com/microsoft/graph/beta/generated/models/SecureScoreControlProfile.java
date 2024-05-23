@@ -66,7 +66,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
         return this.backingStore.get("controlCategory");
     }
     /**
-     * Gets the controlStateUpdates property value. Flag to indicate where the tenant has marked a control (ignore, thirdParty, reviewed) (supports update).
+     * Gets the controlStateUpdates property value. Flag to indicate where the tenant has marked a control (ignored, thirdParty, reviewed) (supports update).
      * @return a {@link java.util.List<SecureScoreControlStateUpdate>}
      */
     @jakarta.annotation.Nullable
@@ -118,7 +118,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
         return this.backingStore.get("implementationCost");
     }
     /**
-     * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Gets the lastModifiedDateTime property value. Time at which the control profile entity was last modified. The Timestamp type represents date and time
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -166,7 +166,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
         return this.backingStore.get("service");
     }
     /**
-     * Gets the threats property value. List of threats the control mitigates (accountBreach,dataDeletion,dataExfiltration,dataSpillage,elevationOfPrivilege,maliciousInsider,passwordCracking,phishingOrWhaling,spoofing).
+     * Gets the threats property value. List of threats the control mitigates (accountBreach, dataDeletion, dataExfiltration, dataSpillage, elevationOfPrivilege, maliciousInsider, passwordCracking, phishingOrWhaling, spoofing).
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -198,7 +198,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
         return this.backingStore.get("userImpact");
     }
     /**
-     * Gets the vendorInformation property value. The vendorInformation property
+     * Gets the vendorInformation property value. Complex type containing details about the security product/service vendor, provider, and subprovider (for example, vendor=Microsoft; provider=SecureScore). Required.
      * @return a {@link SecurityVendorInformation}
      */
     @jakarta.annotation.Nullable
@@ -268,7 +268,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
         this.backingStore.set("controlCategory", value);
     }
     /**
-     * Sets the controlStateUpdates property value. Flag to indicate where the tenant has marked a control (ignore, thirdParty, reviewed) (supports update).
+     * Sets the controlStateUpdates property value. Flag to indicate where the tenant has marked a control (ignored, thirdParty, reviewed) (supports update).
      * @param value Value to set for the controlStateUpdates property.
      */
     public void setControlStateUpdates(@jakarta.annotation.Nullable final java.util.List<SecureScoreControlStateUpdate> value) {
@@ -289,7 +289,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
         this.backingStore.set("implementationCost", value);
     }
     /**
-     * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Sets the lastModifiedDateTime property value. Time at which the control profile entity was last modified. The Timestamp type represents date and time
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -331,7 +331,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
         this.backingStore.set("service", value);
     }
     /**
-     * Sets the threats property value. List of threats the control mitigates (accountBreach,dataDeletion,dataExfiltration,dataSpillage,elevationOfPrivilege,maliciousInsider,passwordCracking,phishingOrWhaling,spoofing).
+     * Sets the threats property value. List of threats the control mitigates (accountBreach, dataDeletion, dataExfiltration, dataSpillage, elevationOfPrivilege, maliciousInsider, passwordCracking, phishingOrWhaling, spoofing).
      * @param value Value to set for the threats property.
      */
     public void setThreats(@jakarta.annotation.Nullable final java.util.List<String> value) {
@@ -359,7 +359,7 @@ public class SecureScoreControlProfile extends Entity implements Parsable {
         this.backingStore.set("userImpact", value);
     }
     /**
-     * Sets the vendorInformation property value. The vendorInformation property
+     * Sets the vendorInformation property value. Complex type containing details about the security product/service vendor, provider, and subprovider (for example, vendor=Microsoft; provider=SecureScore). Required.
      * @param value Value to set for the vendorInformation property.
      */
     public void setVendorInformation(@jakarta.annotation.Nullable final SecurityVendorInformation value) {

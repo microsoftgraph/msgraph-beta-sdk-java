@@ -1,5 +1,6 @@
 package com.microsoft.graph.beta.external.industrydata.outboundprovisioningflowsets.item.provisioningflows.item;
 
+import com.microsoft.graph.beta.external.industrydata.outboundprovisioningflowsets.item.provisioningflows.item.microsoftgraphindustrydatareset.MicrosoftGraphIndustryDataResetRequestBuilder;
 import com.microsoft.graph.beta.models.industrydata.ProvisioningFlow;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -20,6 +21,14 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ProvisioningFlowItemRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to call the reset method.
+     * @return a {@link MicrosoftGraphIndustryDataResetRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public MicrosoftGraphIndustryDataResetRequestBuilder microsoftGraphIndustryDataReset() {
+        return new MicrosoftGraphIndustryDataResetRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Instantiates a new {@link ProvisioningFlowItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request

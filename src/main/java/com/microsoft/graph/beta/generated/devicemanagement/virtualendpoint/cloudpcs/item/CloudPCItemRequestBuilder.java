@@ -15,7 +15,9 @@ import com.microsoft.graph.beta.devicemanagement.virtualendpoint.cloudpcs.item.r
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.cloudpcs.item.reprovision.ReprovisionRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.cloudpcs.item.resize.ResizeRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.cloudpcs.item.restore.RestoreRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.virtualendpoint.cloudpcs.item.retrievereviewstatus.RetrieveReviewStatusRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.cloudpcs.item.retrypartneragentinstallation.RetryPartnerAgentInstallationRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.virtualendpoint.cloudpcs.item.setreviewstatus.SetReviewStatusRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.cloudpcs.item.start.StartRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.cloudpcs.item.stop.StopRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.cloudpcs.item.troubleshoot.TroubleshootRequestBuilder;
@@ -160,12 +162,28 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
         return new RestoreRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to call the retrieveReviewStatus method.
+     * @return a {@link RetrieveReviewStatusRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RetrieveReviewStatusRequestBuilder retrieveReviewStatus() {
+        return new RetrieveReviewStatusRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to call the retryPartnerAgentInstallation method.
      * @return a {@link RetryPartnerAgentInstallationRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RetryPartnerAgentInstallationRequestBuilder retryPartnerAgentInstallation() {
         return new RetryPartnerAgentInstallationRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the setReviewStatus method.
+     * @return a {@link SetReviewStatusRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public SetReviewStatusRequestBuilder setReviewStatus() {
+        return new SetReviewStatusRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the start method.

@@ -37,7 +37,7 @@ public class SubstringTransformation extends CustomClaimTransformation implement
         return deserializerMap;
     }
     /**
-     * Gets the index property value. The index property
+     * Gets the index property value. The start index of the substring operation, where 0 is the first character in the string.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -45,7 +45,7 @@ public class SubstringTransformation extends CustomClaimTransformation implement
         return this.backingStore.get("index");
     }
     /**
-     * Gets the length property value. The length property
+     * Gets the length property value. The maximum length of the string, starting from the provided index.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -63,14 +63,14 @@ public class SubstringTransformation extends CustomClaimTransformation implement
         writer.writeIntegerValue("length", this.getLength());
     }
     /**
-     * Sets the index property value. The index property
+     * Sets the index property value. The start index of the substring operation, where 0 is the first character in the string.
      * @param value Value to set for the index property.
      */
     public void setIndex(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("index", value);
     }
     /**
-     * Sets the length property value. The length property
+     * Sets the length property value. The maximum length of the string, starting from the provided index.
      * @param value Value to set for the length property.
      */
     public void setLength(@jakarta.annotation.Nullable final Integer value) {

@@ -104,7 +104,7 @@ public class CrossTenantSummary implements AdditionalDataHolder, BackedModel, Pa
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the rarelyUsedTenantCount property value. The rarelyUsedTenantCount property
+     * Gets the rarelyUsedTenantCount property value. The number of tenants that are rarely used.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -186,7 +186,7 @@ public class CrossTenantSummary implements AdditionalDataHolder, BackedModel, Pa
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the rarelyUsedTenantCount property value. The rarelyUsedTenantCount property
+     * Sets the rarelyUsedTenantCount property value. The number of tenants that are rarely used.
      * @param value Value to set for the rarelyUsedTenantCount property.
      */
     public void setRarelyUsedTenantCount(@jakarta.annotation.Nullable final Integer value) {

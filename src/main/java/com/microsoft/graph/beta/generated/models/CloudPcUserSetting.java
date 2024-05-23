@@ -108,7 +108,7 @@ public class CloudPcUserSetting extends Entity implements Parsable {
         return this.backingStore.get("restorePointSetting");
     }
     /**
-     * Gets the selfServiceEnabled property value. The selfServiceEnabled property
+     * Gets the selfServiceEnabled property value. Indicates whether the self-service option is enabled. Default value is false. To enable the self-service option, change the setting to true.If the self-service option is enabled, the end user is allowed to perform some self-service operations, such as upgrading the Cloud PC through the end user portal. The selfServiceEnabled property is deprecated and will stop returning data on December 1, 2023.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -189,7 +189,7 @@ public class CloudPcUserSetting extends Entity implements Parsable {
         this.backingStore.set("restorePointSetting", value);
     }
     /**
-     * Sets the selfServiceEnabled property value. The selfServiceEnabled property
+     * Sets the selfServiceEnabled property value. Indicates whether the self-service option is enabled. Default value is false. To enable the self-service option, change the setting to true.If the self-service option is enabled, the end user is allowed to perform some self-service operations, such as upgrading the Cloud PC through the end user portal. The selfServiceEnabled property is deprecated and will stop returning data on December 1, 2023.
      * @param value Value to set for the selfServiceEnabled property.
      */
     public void setSelfServiceEnabled(@jakarta.annotation.Nullable final Boolean value) {

@@ -84,7 +84,7 @@ public class TransformationAttribute implements AdditionalDataHolder, BackedMode
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the treatAsMultiValue property value. The treatAsMultiValue property
+     * Gets the treatAsMultiValue property value. This flag is only relevant in the case where the attribute is multivalued. By default, transformations are only applied to the first element in a multi-valued claim, however setting this flag to true ensures the transformation is applied to all values, resulting in a multivalued output.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -132,7 +132,7 @@ public class TransformationAttribute implements AdditionalDataHolder, BackedMode
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the treatAsMultiValue property value. The treatAsMultiValue property
+     * Sets the treatAsMultiValue property value. This flag is only relevant in the case where the attribute is multivalued. By default, transformations are only applied to the first element in a multi-valued claim, however setting this flag to true ensures the transformation is applied to all values, resulting in a multivalued output.
      * @param value Value to set for the treatAsMultiValue property.
      */
     public void setTreatAsMultiValue(@jakarta.annotation.Nullable final Boolean value) {

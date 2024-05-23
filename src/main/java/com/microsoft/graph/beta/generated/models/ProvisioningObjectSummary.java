@@ -26,7 +26,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
         return new ProvisioningObjectSummary();
     }
     /**
-     * Gets the action property value. The action property
+     * Gets the action property value. Indicates the activity name or the operation name (for example, Create user, Add member to group). For a list of activities logged, refer to Microsoft Entra activity list. This is deprecated. Please use provisioningAction instead. Supports $filter (eq, contains).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -165,7 +165,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
         return this.backingStore.get("sourceSystem");
     }
     /**
-     * Gets the statusInfo property value. The statusInfo property
+     * Gets the statusInfo property value. Details of provisioning status. This is deprecated. Please use provisioningStatusInfo instead. Supports $filter (eq, contains) for status.
      * @return a {@link StatusBase}
      */
     @jakarta.annotation.Nullable
@@ -223,7 +223,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
         writer.writeStringValue("tenantId", this.getTenantId());
     }
     /**
-     * Sets the action property value. The action property
+     * Sets the action property value. Indicates the activity name or the operation name (for example, Create user, Add member to group). For a list of activities logged, refer to Microsoft Entra activity list. This is deprecated. Please use provisioningAction instead. Supports $filter (eq, contains).
      * @param value Value to set for the action property.
      */
     public void setAction(@jakarta.annotation.Nullable final String value) {
@@ -321,7 +321,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
         this.backingStore.set("sourceSystem", value);
     }
     /**
-     * Sets the statusInfo property value. The statusInfo property
+     * Sets the statusInfo property value. Details of provisioning status. This is deprecated. Please use provisioningStatusInfo instead. Supports $filter (eq, contains) for status.
      * @param value Value to set for the statusInfo property.
      */
     public void setStatusInfo(@jakarta.annotation.Nullable final StatusBase value) {

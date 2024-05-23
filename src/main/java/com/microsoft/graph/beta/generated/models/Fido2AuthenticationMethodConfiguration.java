@@ -32,10 +32,19 @@ public class Fido2AuthenticationMethodConfiguration extends AuthenticationMethod
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("includeTargets", (n) -> { this.setIncludeTargets(n.getCollectionOfObjectValues(PasskeyAuthenticationMethodTarget::createFromDiscriminatorValue)); });
         deserializerMap.put("isAttestationEnforced", (n) -> { this.setIsAttestationEnforced(n.getBooleanValue()); });
         deserializerMap.put("isSelfServiceRegistrationAllowed", (n) -> { this.setIsSelfServiceRegistrationAllowed(n.getBooleanValue()); });
         deserializerMap.put("keyRestrictions", (n) -> { this.setKeyRestrictions(n.getObjectValue(Fido2KeyRestrictions::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the includeTargets property value. A collection of groups that are enabled to use the authentication method.
+     * @return a {@link java.util.List<PasskeyAuthenticationMethodTarget>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<PasskeyAuthenticationMethodTarget> getIncludeTargets() {
+        return this.backingStore.get("includeTargets");
     }
     /**
      * Gets the isAttestationEnforced property value. Determines whether attestation must be enforced for FIDO2 security key registration.
@@ -68,9 +77,17 @@ public class Fido2AuthenticationMethodConfiguration extends AuthenticationMethod
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeCollectionOfObjectValues("includeTargets", this.getIncludeTargets());
         writer.writeBooleanValue("isAttestationEnforced", this.getIsAttestationEnforced());
         writer.writeBooleanValue("isSelfServiceRegistrationAllowed", this.getIsSelfServiceRegistrationAllowed());
         writer.writeObjectValue("keyRestrictions", this.getKeyRestrictions());
+    }
+    /**
+     * Sets the includeTargets property value. A collection of groups that are enabled to use the authentication method.
+     * @param value Value to set for the includeTargets property.
+     */
+    public void setIncludeTargets(@jakarta.annotation.Nullable final java.util.List<PasskeyAuthenticationMethodTarget> value) {
+        this.backingStore.set("includeTargets", value);
     }
     /**
      * Sets the isAttestationEnforced property value. Determines whether attestation must be enforced for FIDO2 security key registration.

@@ -85,7 +85,7 @@ public class AuthenticationStrengthsRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get authenticationStrengths from identity
+     * DEPRECATED. See the authenticationStrength relationship instead.
      * @return a {@link AuthenticationStrengthRoot}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
@@ -97,7 +97,7 @@ public class AuthenticationStrengthsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get authenticationStrengths from identity
+     * DEPRECATED. See the authenticationStrength relationship instead.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AuthenticationStrengthRoot}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -170,7 +170,7 @@ public class AuthenticationStrengthsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get authenticationStrengths from identity
+     * DEPRECATED. See the authenticationStrength relationship instead.
      * @return a {@link RequestInformation}
      * @deprecated
      * The &apos;authenticationStrengths&apos; segment is deprecated. Please use &apos;authenticationStrength&apos; instead. as of 2023-02/AuthenticationStrengthsRemove
@@ -181,7 +181,7 @@ public class AuthenticationStrengthsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get authenticationStrengths from identity
+     * DEPRECATED. See the authenticationStrength relationship instead.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -245,7 +245,7 @@ public class AuthenticationStrengthsRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get authenticationStrengths from identity
+     * DEPRECATED. See the authenticationStrength relationship instead.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -45,7 +45,7 @@ public class StartsWithTransformation extends CustomClaimTransformation implemen
         return this.backingStore.get("output");
     }
     /**
-     * Gets the value property value. The value property
+     * Gets the value property value. The value to be used as part of the transformation.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -70,7 +70,7 @@ public class StartsWithTransformation extends CustomClaimTransformation implemen
         this.backingStore.set("output", value);
     }
     /**
-     * Sets the value property value. The value property
+     * Sets the value property value. The value to be used as part of the transformation.
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final String value) {

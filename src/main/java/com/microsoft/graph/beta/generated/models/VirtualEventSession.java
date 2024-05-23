@@ -26,7 +26,7 @@ public class VirtualEventSession extends OnlineMeetingBase implements Parsable {
         return new VirtualEventSession();
     }
     /**
-     * Gets the endDateTime property value. The endDateTime property
+     * Gets the endDateTime property value. The virtual event session end time.
      * @return a {@link DateTimeTimeZone}
      */
     @jakarta.annotation.Nullable
@@ -63,7 +63,7 @@ public class VirtualEventSession extends OnlineMeetingBase implements Parsable {
         return this.backingStore.get("registrations");
     }
     /**
-     * Gets the startDateTime property value. The startDateTime property
+     * Gets the startDateTime property value. The virtual event session start time.
      * @return a {@link DateTimeTimeZone}
      */
     @jakarta.annotation.Nullable
@@ -83,7 +83,7 @@ public class VirtualEventSession extends OnlineMeetingBase implements Parsable {
         writer.writeObjectValue("startDateTime", this.getStartDateTime());
     }
     /**
-     * Sets the endDateTime property value. The endDateTime property
+     * Sets the endDateTime property value. The virtual event session end time.
      * @param value Value to set for the endDateTime property.
      */
     public void setEndDateTime(@jakarta.annotation.Nullable final DateTimeTimeZone value) {
@@ -104,7 +104,7 @@ public class VirtualEventSession extends OnlineMeetingBase implements Parsable {
         this.backingStore.set("registrations", value);
     }
     /**
-     * Sets the startDateTime property value. The startDateTime property
+     * Sets the startDateTime property value. The virtual event session start time.
      * @param value Value to set for the startDateTime property.
      */
     public void setStartDateTime(@jakarta.annotation.Nullable final DateTimeTimeZone value) {
