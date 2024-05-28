@@ -118,21 +118,23 @@ public class VirtualEventWebinarItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, VirtualEventWebinar::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property webinars in solutions
+     * Update the properties of a virtualEventWebinar object.
      * @param body The request body
      * @return a {@link VirtualEventWebinar}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualeventwebinar-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public VirtualEventWebinar patch(@jakarta.annotation.Nonnull final VirtualEventWebinar body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property webinars in solutions
+     * Update the properties of a virtualEventWebinar object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link VirtualEventWebinar}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualeventwebinar-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public VirtualEventWebinar patch(@jakarta.annotation.Nonnull final VirtualEventWebinar body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -213,7 +215,7 @@ public class VirtualEventWebinarItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property webinars in solutions
+     * Update the properties of a virtualEventWebinar object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -222,7 +224,7 @@ public class VirtualEventWebinarItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property webinars in solutions
+     * Update the properties of a virtualEventWebinar object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

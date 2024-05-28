@@ -59,6 +59,22 @@ public class Alert extends Entity implements Parsable {
         return this.backingStore.get("description");
     }
     /**
+     * Gets the detectionTechnology property value. The detectionTechnology property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getDetectionTechnology() {
+        return this.backingStore.get("detectionTechnology");
+    }
+    /**
+     * Gets the displayName property value. The displayName property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getDisplayName() {
+        return this.backingStore.get("displayName");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
@@ -69,8 +85,21 @@ public class Alert extends Entity implements Parsable {
         deserializerMap.put("alertType", (n) -> { this.setAlertType(n.getEnumValue(AlertType::forValue)); });
         deserializerMap.put("creationDateTime", (n) -> { this.setCreationDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("detectionTechnology", (n) -> { this.setDetectionTechnology(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("policy", (n) -> { this.setPolicy(n.getObjectValue(FilteringPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("relatedResources", (n) -> { this.setRelatedResources(n.getCollectionOfObjectValues(RelatedResource::createFromDiscriminatorValue)); });
+        deserializerMap.put("severity", (n) -> { this.setSeverity(n.getEnumValue(ThreatSeverity::forValue)); });
+        deserializerMap.put("vendorName", (n) -> { this.setVendorName(n.getStringValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the policy property value. The policy property
+     * @return a {@link FilteringPolicy}
+     */
+    @jakarta.annotation.Nullable
+    public FilteringPolicy getPolicy() {
+        return this.backingStore.get("policy");
     }
     /**
      * Gets the relatedResources property value. The relatedResources property
@@ -79,6 +108,22 @@ public class Alert extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public java.util.List<RelatedResource> getRelatedResources() {
         return this.backingStore.get("relatedResources");
+    }
+    /**
+     * Gets the severity property value. The severity property
+     * @return a {@link ThreatSeverity}
+     */
+    @jakarta.annotation.Nullable
+    public ThreatSeverity getSeverity() {
+        return this.backingStore.get("severity");
+    }
+    /**
+     * Gets the vendorName property value. The vendorName property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getVendorName() {
+        return this.backingStore.get("vendorName");
     }
     /**
      * Serializes information the current object
@@ -91,7 +136,12 @@ public class Alert extends Entity implements Parsable {
         writer.writeEnumValue("alertType", this.getAlertType());
         writer.writeOffsetDateTimeValue("creationDateTime", this.getCreationDateTime());
         writer.writeStringValue("description", this.getDescription());
+        writer.writeStringValue("detectionTechnology", this.getDetectionTechnology());
+        writer.writeStringValue("displayName", this.getDisplayName());
+        writer.writeObjectValue("policy", this.getPolicy());
         writer.writeCollectionOfObjectValues("relatedResources", this.getRelatedResources());
+        writer.writeEnumValue("severity", this.getSeverity());
+        writer.writeStringValue("vendorName", this.getVendorName());
     }
     /**
      * Sets the actions property value. The actions property
@@ -122,10 +172,45 @@ public class Alert extends Entity implements Parsable {
         this.backingStore.set("description", value);
     }
     /**
+     * Sets the detectionTechnology property value. The detectionTechnology property
+     * @param value Value to set for the detectionTechnology property.
+     */
+    public void setDetectionTechnology(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("detectionTechnology", value);
+    }
+    /**
+     * Sets the displayName property value. The displayName property
+     * @param value Value to set for the displayName property.
+     */
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("displayName", value);
+    }
+    /**
+     * Sets the policy property value. The policy property
+     * @param value Value to set for the policy property.
+     */
+    public void setPolicy(@jakarta.annotation.Nullable final FilteringPolicy value) {
+        this.backingStore.set("policy", value);
+    }
+    /**
      * Sets the relatedResources property value. The relatedResources property
      * @param value Value to set for the relatedResources property.
      */
     public void setRelatedResources(@jakarta.annotation.Nullable final java.util.List<RelatedResource> value) {
         this.backingStore.set("relatedResources", value);
+    }
+    /**
+     * Sets the severity property value. The severity property
+     * @param value Value to set for the severity property.
+     */
+    public void setSeverity(@jakarta.annotation.Nullable final ThreatSeverity value) {
+        this.backingStore.set("severity", value);
+    }
+    /**
+     * Sets the vendorName property value. The vendorName property
+     * @param value Value to set for the vendorName property.
+     */
+    public void setVendorName(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("vendorName", value);
     }
 }

@@ -70,15 +70,27 @@ public class User implements AdditionalDataHolder, BackedModel, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(11);
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("firstAccessDateTime", (n) -> { this.setFirstAccessDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("lastAccessDateTime", (n) -> { this.setLastAccessDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("totalBytesReceived", (n) -> { this.setTotalBytesReceived(n.getLongValue()); });
+        deserializerMap.put("totalBytesSent", (n) -> { this.setTotalBytesSent(n.getLongValue()); });
         deserializerMap.put("trafficType", (n) -> { this.setTrafficType(n.getEnumValue(TrafficType::forValue)); });
+        deserializerMap.put("transactionCount", (n) -> { this.setTransactionCount(n.getLongValue()); });
         deserializerMap.put("userId", (n) -> { this.setUserId(n.getStringValue()); });
         deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
         deserializerMap.put("userType", (n) -> { this.setUserType(n.getEnumValue(UserType::forValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the firstAccessDateTime property value. The firstAccessDateTime property
+     * @return a {@link OffsetDateTime}
+     */
+    @jakarta.annotation.Nullable
+    public OffsetDateTime getFirstAccessDateTime() {
+        return this.backingStore.get("firstAccessDateTime");
     }
     /**
      * Gets the lastAccessDateTime property value. The date and time of the most recent access.
@@ -97,12 +109,36 @@ public class User implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("odataType");
     }
     /**
+     * Gets the totalBytesReceived property value. The totalBytesReceived property
+     * @return a {@link Long}
+     */
+    @jakarta.annotation.Nullable
+    public Long getTotalBytesReceived() {
+        return this.backingStore.get("totalBytesReceived");
+    }
+    /**
+     * Gets the totalBytesSent property value. The totalBytesSent property
+     * @return a {@link Long}
+     */
+    @jakarta.annotation.Nullable
+    public Long getTotalBytesSent() {
+        return this.backingStore.get("totalBytesSent");
+    }
+    /**
      * Gets the trafficType property value. The trafficType property
      * @return a {@link TrafficType}
      */
     @jakarta.annotation.Nullable
     public TrafficType getTrafficType() {
         return this.backingStore.get("trafficType");
+    }
+    /**
+     * Gets the transactionCount property value. The transactionCount property
+     * @return a {@link Long}
+     */
+    @jakarta.annotation.Nullable
+    public Long getTransactionCount() {
+        return this.backingStore.get("transactionCount");
     }
     /**
      * Gets the userId property value. The ID for the user.
@@ -135,9 +171,13 @@ public class User implements AdditionalDataHolder, BackedModel, Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
+        writer.writeOffsetDateTimeValue("firstAccessDateTime", this.getFirstAccessDateTime());
         writer.writeOffsetDateTimeValue("lastAccessDateTime", this.getLastAccessDateTime());
         writer.writeStringValue("@odata.type", this.getOdataType());
+        writer.writeLongValue("totalBytesReceived", this.getTotalBytesReceived());
+        writer.writeLongValue("totalBytesSent", this.getTotalBytesSent());
         writer.writeEnumValue("trafficType", this.getTrafficType());
+        writer.writeLongValue("transactionCount", this.getTransactionCount());
         writer.writeStringValue("userId", this.getUserId());
         writer.writeStringValue("userPrincipalName", this.getUserPrincipalName());
         writer.writeEnumValue("userType", this.getUserType());
@@ -166,6 +206,13 @@ public class User implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore.set("displayName", value);
     }
     /**
+     * Sets the firstAccessDateTime property value. The firstAccessDateTime property
+     * @param value Value to set for the firstAccessDateTime property.
+     */
+    public void setFirstAccessDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
+        this.backingStore.set("firstAccessDateTime", value);
+    }
+    /**
      * Sets the lastAccessDateTime property value. The date and time of the most recent access.
      * @param value Value to set for the lastAccessDateTime property.
      */
@@ -180,11 +227,32 @@ public class User implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore.set("odataType", value);
     }
     /**
+     * Sets the totalBytesReceived property value. The totalBytesReceived property
+     * @param value Value to set for the totalBytesReceived property.
+     */
+    public void setTotalBytesReceived(@jakarta.annotation.Nullable final Long value) {
+        this.backingStore.set("totalBytesReceived", value);
+    }
+    /**
+     * Sets the totalBytesSent property value. The totalBytesSent property
+     * @param value Value to set for the totalBytesSent property.
+     */
+    public void setTotalBytesSent(@jakarta.annotation.Nullable final Long value) {
+        this.backingStore.set("totalBytesSent", value);
+    }
+    /**
      * Sets the trafficType property value. The trafficType property
      * @param value Value to set for the trafficType property.
      */
     public void setTrafficType(@jakarta.annotation.Nullable final TrafficType value) {
         this.backingStore.set("trafficType", value);
+    }
+    /**
+     * Sets the transactionCount property value. The transactionCount property
+     * @param value Value to set for the transactionCount property.
+     */
+    public void setTransactionCount(@jakarta.annotation.Nullable final Long value) {
+        this.backingStore.set("transactionCount", value);
     }
     /**
      * Sets the userId property value. The ID for the user.

@@ -2,6 +2,7 @@ package com.microsoft.graph.beta.networkaccess.alerts.item;
 
 import com.microsoft.graph.beta.models.networkaccess.Alert;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
+import com.microsoft.graph.beta.networkaccess.alerts.item.policy.PolicyRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -20,6 +21,14 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AlertItemRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the policy property of the microsoft.graph.networkaccess.alert entity.
+     * @return a {@link PolicyRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public PolicyRequestBuilder policy() {
+        return new PolicyRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Instantiates a new {@link AlertItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request

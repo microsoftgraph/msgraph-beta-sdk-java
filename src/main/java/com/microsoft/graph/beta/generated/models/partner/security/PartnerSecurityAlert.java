@@ -35,7 +35,7 @@ public class PartnerSecurityAlert extends Entity implements Parsable {
         return this.backingStore.get("activityLogs");
     }
     /**
-     * Gets the additionalDetails property value. A bag of name-value pairs that contain additional details about an alert.
+     * Gets the additionalDetails property value. A bag of name-value pairs that contain more details about an alert.
      * @return a {@link AdditionalDataDictionary}
      */
     @jakarta.annotation.Nullable
@@ -51,7 +51,7 @@ public class PartnerSecurityAlert extends Entity implements Parsable {
         return this.backingStore.get("affectedResources");
     }
     /**
-     * Gets the alertType property value. The type of vulnerability that impacts the customer due to this alert.
+     * Gets the alertType property value. The type of vulnerability that impacts the customer due to this alert. For more information, see Security alerts reference guide.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -136,7 +136,7 @@ public class PartnerSecurityAlert extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the firstObservedDateTime property value. Time of the first activity associated with the alert. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.  subscription.
+     * Gets the firstObservedDateTime property value. Time of the first activity associated with the alert. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -144,7 +144,7 @@ public class PartnerSecurityAlert extends Entity implements Parsable {
         return this.backingStore.get("firstObservedDateTime");
     }
     /**
-     * Gets the isTest property value. Indicates whehter an alert is a test alert.
+     * Gets the isTest property value. Indicates whether an alert is a test alert.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -251,7 +251,7 @@ public class PartnerSecurityAlert extends Entity implements Parsable {
         this.backingStore.set("activityLogs", value);
     }
     /**
-     * Sets the additionalDetails property value. A bag of name-value pairs that contain additional details about an alert.
+     * Sets the additionalDetails property value. A bag of name-value pairs that contain more details about an alert.
      * @param value Value to set for the additionalDetails property.
      */
     public void setAdditionalDetails(@jakarta.annotation.Nullable final AdditionalDataDictionary value) {
@@ -265,7 +265,7 @@ public class PartnerSecurityAlert extends Entity implements Parsable {
         this.backingStore.set("affectedResources", value);
     }
     /**
-     * Sets the alertType property value. The type of vulnerability that impacts the customer due to this alert.
+     * Sets the alertType property value. The type of vulnerability that impacts the customer due to this alert. For more information, see Security alerts reference guide.
      * @param value Value to set for the alertType property.
      */
     public void setAlertType(@jakarta.annotation.Nullable final String value) {
@@ -314,14 +314,14 @@ public class PartnerSecurityAlert extends Entity implements Parsable {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the firstObservedDateTime property value. Time of the first activity associated with the alert. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.  subscription.
+     * Sets the firstObservedDateTime property value. Time of the first activity associated with the alert. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the firstObservedDateTime property.
      */
     public void setFirstObservedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("firstObservedDateTime", value);
     }
     /**
-     * Sets the isTest property value. Indicates whehter an alert is a test alert.
+     * Sets the isTest property value. Indicates whether an alert is a test alert.
      * @param value Value to set for the isTest property.
      */
     public void setIsTest(@jakarta.annotation.Nullable final Boolean value) {

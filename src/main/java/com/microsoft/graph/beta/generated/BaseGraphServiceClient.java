@@ -49,6 +49,7 @@ import com.microsoft.graph.beta.drives.DrivesRequestBuilder;
 import com.microsoft.graph.beta.education.EducationRequestBuilder;
 import com.microsoft.graph.beta.employeeexperience.EmployeeExperienceRequestBuilder;
 import com.microsoft.graph.beta.external.ExternalRequestBuilder;
+import com.microsoft.graph.beta.filteringpolicies.FilteringPoliciesRequestBuilder;
 import com.microsoft.graph.beta.filteroperators.FilterOperatorsRequestBuilder;
 import com.microsoft.graph.beta.financials.FinancialsRequestBuilder;
 import com.microsoft.graph.beta.functions.FunctionsRequestBuilder;
@@ -108,6 +109,7 @@ import com.microsoft.graph.beta.settings.SettingsRequestBuilder;
 import com.microsoft.graph.beta.shares.SharesRequestBuilder;
 import com.microsoft.graph.beta.sites.SitesRequestBuilder;
 import com.microsoft.graph.beta.solutions.SolutionsRequestBuilder;
+import com.microsoft.graph.beta.storage.StorageRequestBuilder;
 import com.microsoft.graph.beta.subscribedskus.SubscribedSkusRequestBuilder;
 import com.microsoft.graph.beta.subscriptions.SubscriptionsRequestBuilder;
 import com.microsoft.graph.beta.teams.TeamsRequestBuilder;
@@ -500,6 +502,14 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public ExternalRequestBuilder external() {
         return new ExternalRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the collection of filteringPolicy entities.
+     * @return a {@link FilteringPoliciesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public FilteringPoliciesRequestBuilder filteringPolicies() {
+        return new FilteringPoliciesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the collection of filterOperatorSchema entities.
@@ -948,6 +958,14 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public SolutionsRequestBuilder solutions() {
         return new SolutionsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the storage singleton.
+     * @return a {@link StorageRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public StorageRequestBuilder storage() {
+        return new StorageRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the collection of subscribedSku entities.

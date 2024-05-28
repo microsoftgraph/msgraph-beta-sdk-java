@@ -57,7 +57,7 @@ public class SessionsWithJoinWebUrlRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Sessions for the virtual event.
+     * The sessions for the virtual event.
      * @return a {@link VirtualEventSession}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -66,7 +66,7 @@ public class SessionsWithJoinWebUrlRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Sessions for the virtual event.
+     * The sessions for the virtual event.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link VirtualEventSession}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -124,7 +124,7 @@ public class SessionsWithJoinWebUrlRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Sessions for the virtual event.
+     * The sessions for the virtual event.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -132,7 +132,7 @@ public class SessionsWithJoinWebUrlRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Sessions for the virtual event.
+     * The sessions for the virtual event.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -184,7 +184,7 @@ public class SessionsWithJoinWebUrlRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Sessions for the virtual event.
+     * The sessions for the virtual event.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -55,7 +55,7 @@ public class VirtualEventTownhall extends VirtualEvent implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the invitedAttendees property value. The attendees invited to the town hall. The supported identites are: communicationsUserIdentity and communicationsGuestIdentity.
+     * Gets the invitedAttendees property value. The attendees invited to the town hall. The supported identities are: communicationsUserIdentity and communicationsGuestIdentity.
      * @return a {@link java.util.List<Identity>}
      */
     @jakarta.annotation.Nullable
@@ -97,7 +97,7 @@ public class VirtualEventTownhall extends VirtualEvent implements Parsable {
         this.backingStore.set("coOrganizers", value);
     }
     /**
-     * Sets the invitedAttendees property value. The attendees invited to the town hall. The supported identites are: communicationsUserIdentity and communicationsGuestIdentity.
+     * Sets the invitedAttendees property value. The attendees invited to the town hall. The supported identities are: communicationsUserIdentity and communicationsGuestIdentity.
      * @param value Value to set for the invitedAttendees property.
      */
     public void setInvitedAttendees(@jakarta.annotation.Nullable final java.util.List<Identity> value) {

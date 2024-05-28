@@ -38,6 +38,7 @@ public class Dictionary implements AdditionalDataHolder, BackedModel, Parsable {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
                 case "#microsoft.graph.customAppScopeAttributesDictionary": return new CustomAppScopeAttributesDictionary();
+                case "#microsoft.graph.fileStorageContainerCustomPropertyDictionary": return new FileStorageContainerCustomPropertyDictionary();
                 case "#microsoft.graph.partner.security.additionalDataDictionary": return new AdditionalDataDictionary();
                 case "#microsoft.graph.plannerFormsDictionary": return new PlannerFormsDictionary();
                 case "#microsoft.graph.resultTemplateDictionary": return new ResultTemplateDictionary();
