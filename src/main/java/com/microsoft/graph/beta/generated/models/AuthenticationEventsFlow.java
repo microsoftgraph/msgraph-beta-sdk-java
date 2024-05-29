@@ -32,7 +32,7 @@ public class AuthenticationEventsFlow extends Entity implements Parsable {
         return new AuthenticationEventsFlow();
     }
     /**
-     * Gets the conditions property value. The conditions representing the context of the authentication request that will be used to decide whether the events policy will be invoked.
+     * Gets the conditions property value. The conditions representing the context of the authentication request that's used to decide whether the events policy is invoked.
      * @return a {@link AuthenticationConditions}
      */
     @jakarta.annotation.Nullable
@@ -89,7 +89,7 @@ public class AuthenticationEventsFlow extends Entity implements Parsable {
         writer.writeIntegerValue("priority", this.getPriority());
     }
     /**
-     * Sets the conditions property value. The conditions representing the context of the authentication request that will be used to decide whether the events policy will be invoked.
+     * Sets the conditions property value. The conditions representing the context of the authentication request that's used to decide whether the events policy is invoked.
      * @param value Value to set for the conditions property.
      */
     public void setConditions(@jakarta.annotation.Nullable final AuthenticationConditions value) {

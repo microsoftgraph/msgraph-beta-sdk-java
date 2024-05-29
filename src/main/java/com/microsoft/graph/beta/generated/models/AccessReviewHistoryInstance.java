@@ -66,7 +66,7 @@ public class AccessReviewHistoryInstance extends Entity implements Parsable {
         return this.backingStore.get("fulfilledDateTime");
     }
     /**
-     * Gets the reviewHistoryPeriodEndDateTime property value. Timestamp, reviews ending on or before this date are in the fetched history data.
+     * Gets the reviewHistoryPeriodEndDateTime property value. The date and time for which reviews ended before this date are included in the fetched history data.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -74,7 +74,7 @@ public class AccessReviewHistoryInstance extends Entity implements Parsable {
         return this.backingStore.get("reviewHistoryPeriodEndDateTime");
     }
     /**
-     * Gets the reviewHistoryPeriodStartDateTime property value. Timestamp, reviews starting on or after this date are in the fetched history data.
+     * Gets the reviewHistoryPeriodStartDateTime property value. The date and time for which reviews started on or after this date are included in the fetched history data.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -82,7 +82,7 @@ public class AccessReviewHistoryInstance extends Entity implements Parsable {
         return this.backingStore.get("reviewHistoryPeriodStartDateTime");
     }
     /**
-     * Gets the runDateTime property value. Timestamp when the instance's history data is scheduled to be generated.
+     * Gets the runDateTime property value. The date and time when the instance's history data is scheduled to be generated.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -90,7 +90,7 @@ public class AccessReviewHistoryInstance extends Entity implements Parsable {
         return this.backingStore.get("runDateTime");
     }
     /**
-     * Gets the status property value. Represents the status of the review history data collection. The possible values are: done, inProgress, error, requested, unknownFutureValue. Once the status has been marked as done, a link can be generated to retrieve the instance's data by calling generateDownloadUri method.
+     * Gets the status property value. Represents the status of the review history data collection. The possible values are: done, inProgress, error, requested, unknownFutureValue. Once the status is marked as done, you can generate a link retrieve the instance's data by calling generateDownloadUri method.
      * @return a {@link AccessReviewHistoryStatus}
      */
     @jakarta.annotation.Nullable
@@ -134,28 +134,28 @@ public class AccessReviewHistoryInstance extends Entity implements Parsable {
         this.backingStore.set("fulfilledDateTime", value);
     }
     /**
-     * Sets the reviewHistoryPeriodEndDateTime property value. Timestamp, reviews ending on or before this date are in the fetched history data.
+     * Sets the reviewHistoryPeriodEndDateTime property value. The date and time for which reviews ended before this date are included in the fetched history data.
      * @param value Value to set for the reviewHistoryPeriodEndDateTime property.
      */
     public void setReviewHistoryPeriodEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("reviewHistoryPeriodEndDateTime", value);
     }
     /**
-     * Sets the reviewHistoryPeriodStartDateTime property value. Timestamp, reviews starting on or after this date are in the fetched history data.
+     * Sets the reviewHistoryPeriodStartDateTime property value. The date and time for which reviews started on or after this date are included in the fetched history data.
      * @param value Value to set for the reviewHistoryPeriodStartDateTime property.
      */
     public void setReviewHistoryPeriodStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("reviewHistoryPeriodStartDateTime", value);
     }
     /**
-     * Sets the runDateTime property value. Timestamp when the instance's history data is scheduled to be generated.
+     * Sets the runDateTime property value. The date and time when the instance's history data is scheduled to be generated.
      * @param value Value to set for the runDateTime property.
      */
     public void setRunDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("runDateTime", value);
     }
     /**
-     * Sets the status property value. Represents the status of the review history data collection. The possible values are: done, inProgress, error, requested, unknownFutureValue. Once the status has been marked as done, a link can be generated to retrieve the instance's data by calling generateDownloadUri method.
+     * Sets the status property value. Represents the status of the review history data collection. The possible values are: done, inProgress, error, requested, unknownFutureValue. Once the status is marked as done, you can generate a link retrieve the instance's data by calling generateDownloadUri method.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final AccessReviewHistoryStatus value) {

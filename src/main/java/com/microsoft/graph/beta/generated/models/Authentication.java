@@ -119,7 +119,7 @@ public class Authentication extends Entity implements Parsable {
         return this.backingStore.get("platformCredentialMethods");
     }
     /**
-     * Gets the signInPreferences property value. The settings and preferences for to the sign-in experience of a user. Use this property to configure the user's default multifactor authentication (MFA) method.
+     * Gets the signInPreferences property value. The settings and preferences for the sign-in experience of a user. Use this property to configure the user's default multifactor authentication (MFA) method.
      * @return a {@link SignInPreferences}
      */
     @jakarta.annotation.Nullable
@@ -127,7 +127,7 @@ public class Authentication extends Entity implements Parsable {
         return this.backingStore.get("signInPreferences");
     }
     /**
-     * Gets the softwareOathMethods property value. The softwareOathMethods property
+     * Gets the softwareOathMethods property value. The software OATH time-based one-time password (TOTP) applications registered to a user for authentication.
      * @return a {@link java.util.List<SoftwareOathAuthenticationMethod>}
      */
     @jakarta.annotation.Nullable
@@ -235,14 +235,14 @@ public class Authentication extends Entity implements Parsable {
         this.backingStore.set("platformCredentialMethods", value);
     }
     /**
-     * Sets the signInPreferences property value. The settings and preferences for to the sign-in experience of a user. Use this property to configure the user's default multifactor authentication (MFA) method.
+     * Sets the signInPreferences property value. The settings and preferences for the sign-in experience of a user. Use this property to configure the user's default multifactor authentication (MFA) method.
      * @param value Value to set for the signInPreferences property.
      */
     public void setSignInPreferences(@jakarta.annotation.Nullable final SignInPreferences value) {
         this.backingStore.set("signInPreferences", value);
     }
     /**
-     * Sets the softwareOathMethods property value. The softwareOathMethods property
+     * Sets the softwareOathMethods property value. The software OATH time-based one-time password (TOTP) applications registered to a user for authentication.
      * @param value Value to set for the softwareOathMethods property.
      */
     public void setSoftwareOathMethods(@jakarta.annotation.Nullable final java.util.List<SoftwareOathAuthenticationMethod> value) {
