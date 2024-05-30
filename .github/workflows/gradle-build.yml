@@ -7,6 +7,9 @@ on:
     branches: [main, support/5.x.x]
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -67,12 +70,16 @@ jobs:
         with:
           name: drop
           path: artifacts/current/
+      - name: Get latest release tag
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: echo "BRANCH=$(gh release list -L 1 --json tagName --jq '.[0] | .tagName')" >> $GITHUB_ENV
       - name: Download Last Successful Build
         uses: dawidd6/action-download-artifact@v3.1.4
         with:
           workflow: preview-and-release.yml
           workflow_conclusion: success
-          branch: dev
+          branch: ${{ env.BRANCH }}
           event: push
           name: drop
           path: artifacts/previous/
