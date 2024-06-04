@@ -2,7 +2,7 @@ name: Maven Preview and Github Release
 
 on:
   push:
-    branches: [dev, support/5.x.x]
+    branches: [main, support/5.x.x]
     paths-ignore:
      - '.gradle/wrapper'
      - '.gitignore'
@@ -22,7 +22,7 @@ permissions:
 
 jobs:
   maven_Preview:
-    if: ${{ github.ref == 'refs/heads/dev' }}
+    if: ${{ github.ref == 'refs/heads/main' }}
     environment:
       name: maven_central_snapshot
     runs-on: ubuntu-latest
