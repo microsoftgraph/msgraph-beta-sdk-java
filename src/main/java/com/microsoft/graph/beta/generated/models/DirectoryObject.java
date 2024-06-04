@@ -55,6 +55,7 @@ public class DirectoryObject extends Entity implements Parsable {
                 case "#microsoft.graph.orgContact": return new OrgContact();
                 case "#microsoft.graph.pendingExternalUserProfile": return new PendingExternalUserProfile();
                 case "#microsoft.graph.permissionGrantPolicy": return new PermissionGrantPolicy();
+                case "#microsoft.graph.permissionGrantPreApprovalPolicy": return new PermissionGrantPreApprovalPolicy();
                 case "#microsoft.graph.policyBase": return new PolicyBase();
                 case "#microsoft.graph.resourceSpecificPermissionGrant": return new ResourceSpecificPermissionGrant();
                 case "#microsoft.graph.servicePrincipal": return new ServicePrincipal();

@@ -5,10 +5,12 @@ import java.util.Objects;
 
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public enum WindowsDeviceUsageType implements ValuedEnum {
-    /** Single User Device Type */
+    /** Default. Indicates that a device is a single-user device. */
     SingleUser("singleUser"),
-    /** Shared Device Type */
-    Shared("shared");
+    /** Indicates that a device is a multi-user device. */
+    Shared("shared"),
+    /** Evolvable enumeration sentinel value. Do not use. */
+    UnknownFutureValue("unknownFutureValue");
     public final String value;
     WindowsDeviceUsageType(final String value) {
         this.value = value;
@@ -21,6 +23,7 @@ public enum WindowsDeviceUsageType implements ValuedEnum {
         switch(searchValue) {
             case "singleUser": return SingleUser;
             case "shared": return Shared;
+            case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }
     }

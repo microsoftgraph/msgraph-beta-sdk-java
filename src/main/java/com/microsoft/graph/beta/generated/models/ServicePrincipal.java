@@ -265,6 +265,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         deserializerMap.put("owners", (n) -> { this.setOwners(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
         deserializerMap.put("passwordCredentials", (n) -> { this.setPasswordCredentials(n.getCollectionOfObjectValues(PasswordCredential::createFromDiscriminatorValue)); });
         deserializerMap.put("passwordSingleSignOnSettings", (n) -> { this.setPasswordSingleSignOnSettings(n.getObjectValue(PasswordSingleSignOnSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("permissionGrantPreApprovalPolicies", (n) -> { this.setPermissionGrantPreApprovalPolicies(n.getCollectionOfObjectValues(PermissionGrantPreApprovalPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("preferredSingleSignOnMode", (n) -> { this.setPreferredSingleSignOnMode(n.getStringValue()); });
         deserializerMap.put("preferredTokenSigningKeyEndDateTime", (n) -> { this.setPreferredTokenSigningKeyEndDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("preferredTokenSigningKeyThumbprint", (n) -> { this.setPreferredTokenSigningKeyThumbprint(n.getStringValue()); });
@@ -405,6 +406,14 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     @jakarta.annotation.Nullable
     public PasswordSingleSignOnSettings getPasswordSingleSignOnSettings() {
         return this.backingStore.get("passwordSingleSignOnSettings");
+    }
+    /**
+     * Gets the permissionGrantPreApprovalPolicies property value. The permissionGrantPreApprovalPolicies property
+     * @return a {@link java.util.List<PermissionGrantPreApprovalPolicy>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<PermissionGrantPreApprovalPolicy> getPermissionGrantPreApprovalPolicies() {
+        return this.backingStore.get("permissionGrantPreApprovalPolicies");
     }
     /**
      * Gets the preferredSingleSignOnMode property value. Specifies the single sign-on mode configured for this application. Microsoft Entra ID uses the preferred single sign-on mode to launch the application from Microsoft 365 or the Microsoft Entra My Apps. The supported values are password, saml, notSupported, and oidc.
@@ -604,6 +613,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         writer.writeCollectionOfObjectValues("owners", this.getOwners());
         writer.writeCollectionOfObjectValues("passwordCredentials", this.getPasswordCredentials());
         writer.writeObjectValue("passwordSingleSignOnSettings", this.getPasswordSingleSignOnSettings());
+        writer.writeCollectionOfObjectValues("permissionGrantPreApprovalPolicies", this.getPermissionGrantPreApprovalPolicies());
         writer.writeStringValue("preferredSingleSignOnMode", this.getPreferredSingleSignOnMode());
         writer.writeOffsetDateTimeValue("preferredTokenSigningKeyEndDateTime", this.getPreferredTokenSigningKeyEndDateTime());
         writer.writeStringValue("preferredTokenSigningKeyThumbprint", this.getPreferredTokenSigningKeyThumbprint());
@@ -896,6 +906,13 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     public void setPasswordSingleSignOnSettings(@jakarta.annotation.Nullable final PasswordSingleSignOnSettings value) {
         this.backingStore.set("passwordSingleSignOnSettings", value);
+    }
+    /**
+     * Sets the permissionGrantPreApprovalPolicies property value. The permissionGrantPreApprovalPolicies property
+     * @param value Value to set for the permissionGrantPreApprovalPolicies property.
+     */
+    public void setPermissionGrantPreApprovalPolicies(@jakarta.annotation.Nullable final java.util.List<PermissionGrantPreApprovalPolicy> value) {
+        this.backingStore.set("permissionGrantPreApprovalPolicies", value);
     }
     /**
      * Sets the preferredSingleSignOnMode property value. Specifies the single sign-on mode configured for this application. Microsoft Entra ID uses the preferred single sign-on mode to launch the application from Microsoft 365 or the Microsoft Entra My Apps. The supported values are password, saml, notSupported, and oidc.

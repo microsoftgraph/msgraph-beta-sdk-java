@@ -5,8 +5,12 @@ import java.util.Objects;
 
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public enum WindowsUserType implements ValuedEnum {
+    /** Indicates that the user has administrator privileges. */
     Administrator("administrator"),
-    Standard("standard");
+    /** Indicates that the user is a low-rights user without administrator privileges. */
+    Standard("standard"),
+    /** Evolvable enumeration sentinel value. Do not use. */
+    UnknownFutureValue("unknownFutureValue");
     public final String value;
     WindowsUserType(final String value) {
         this.value = value;
@@ -19,6 +23,7 @@ public enum WindowsUserType implements ValuedEnum {
         switch(searchValue) {
             case "administrator": return Administrator;
             case "standard": return Standard;
+            case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }
     }

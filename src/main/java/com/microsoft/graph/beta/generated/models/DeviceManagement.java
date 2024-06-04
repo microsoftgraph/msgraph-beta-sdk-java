@@ -512,6 +512,14 @@ public class DeviceManagement extends Entity implements Parsable {
         return this.backingStore.get("embeddedSIMActivationCodePools");
     }
     /**
+     * Gets the endpointPrivilegeManagementProvisioningStatus property value. Endpoint privilege management (EPM) tenant provisioning status contains tenant level license and onboarding state information.
+     * @return a {@link EndpointPrivilegeManagementProvisioningStatus}
+     */
+    @jakarta.annotation.Nullable
+    public EndpointPrivilegeManagementProvisioningStatus getEndpointPrivilegeManagementProvisioningStatus() {
+        return this.backingStore.get("endpointPrivilegeManagementProvisioningStatus");
+    }
+    /**
      * Gets the exchangeConnectors property value. The list of Exchange Connectors configured by the tenant.
      * @return a {@link java.util.List<DeviceManagementExchangeConnector>}
      */
@@ -602,6 +610,7 @@ public class DeviceManagement extends Entity implements Parsable {
         deserializerMap.put("domainJoinConnectors", (n) -> { this.setDomainJoinConnectors(n.getCollectionOfObjectValues(DeviceManagementDomainJoinConnector::createFromDiscriminatorValue)); });
         deserializerMap.put("elevationRequests", (n) -> { this.setElevationRequests(n.getCollectionOfObjectValues(PrivilegeManagementElevationRequest::createFromDiscriminatorValue)); });
         deserializerMap.put("embeddedSIMActivationCodePools", (n) -> { this.setEmbeddedSIMActivationCodePools(n.getCollectionOfObjectValues(EmbeddedSIMActivationCodePool::createFromDiscriminatorValue)); });
+        deserializerMap.put("endpointPrivilegeManagementProvisioningStatus", (n) -> { this.setEndpointPrivilegeManagementProvisioningStatus(n.getObjectValue(EndpointPrivilegeManagementProvisioningStatus::createFromDiscriminatorValue)); });
         deserializerMap.put("exchangeConnectors", (n) -> { this.setExchangeConnectors(n.getCollectionOfObjectValues(DeviceManagementExchangeConnector::createFromDiscriminatorValue)); });
         deserializerMap.put("exchangeOnPremisesPolicies", (n) -> { this.setExchangeOnPremisesPolicies(n.getCollectionOfObjectValues(DeviceManagementExchangeOnPremisesPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("exchangeOnPremisesPolicy", (n) -> { this.setExchangeOnPremisesPolicy(n.getObjectValue(DeviceManagementExchangeOnPremisesPolicy::createFromDiscriminatorValue)); });
@@ -613,6 +622,7 @@ public class DeviceManagement extends Entity implements Parsable {
         deserializerMap.put("groupPolicyObjectFiles", (n) -> { this.setGroupPolicyObjectFiles(n.getCollectionOfObjectValues(GroupPolicyObjectFile::createFromDiscriminatorValue)); });
         deserializerMap.put("groupPolicyUploadedDefinitionFiles", (n) -> { this.setGroupPolicyUploadedDefinitionFiles(n.getCollectionOfObjectValues(GroupPolicyUploadedDefinitionFile::createFromDiscriminatorValue)); });
         deserializerMap.put("hardwareConfigurations", (n) -> { this.setHardwareConfigurations(n.getCollectionOfObjectValues(HardwareConfiguration::createFromDiscriminatorValue)); });
+        deserializerMap.put("hardwarePasswordDetails", (n) -> { this.setHardwarePasswordDetails(n.getCollectionOfObjectValues(HardwarePasswordDetail::createFromDiscriminatorValue)); });
         deserializerMap.put("hardwarePasswordInfo", (n) -> { this.setHardwarePasswordInfo(n.getCollectionOfObjectValues(HardwarePasswordInfo::createFromDiscriminatorValue)); });
         deserializerMap.put("importedDeviceIdentities", (n) -> { this.setImportedDeviceIdentities(n.getCollectionOfObjectValues(ImportedDeviceIdentity::createFromDiscriminatorValue)); });
         deserializerMap.put("importedWindowsAutopilotDeviceIdentities", (n) -> { this.setImportedWindowsAutopilotDeviceIdentities(n.getCollectionOfObjectValues(ImportedWindowsAutopilotDeviceIdentity::createFromDiscriminatorValue)); });
@@ -724,6 +734,7 @@ public class DeviceManagement extends Entity implements Parsable {
         deserializerMap.put("windowsInformationProtectionNetworkLearningSummaries", (n) -> { this.setWindowsInformationProtectionNetworkLearningSummaries(n.getCollectionOfObjectValues(WindowsInformationProtectionNetworkLearningSummary::createFromDiscriminatorValue)); });
         deserializerMap.put("windowsMalwareInformation", (n) -> { this.setWindowsMalwareInformation(n.getCollectionOfObjectValues(WindowsMalwareInformation::createFromDiscriminatorValue)); });
         deserializerMap.put("windowsMalwareOverview", (n) -> { this.setWindowsMalwareOverview(n.getObjectValue(WindowsMalwareOverview::createFromDiscriminatorValue)); });
+        deserializerMap.put("windowsQualityUpdatePolicies", (n) -> { this.setWindowsQualityUpdatePolicies(n.getCollectionOfObjectValues(WindowsQualityUpdatePolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("windowsQualityUpdateProfiles", (n) -> { this.setWindowsQualityUpdateProfiles(n.getCollectionOfObjectValues(WindowsQualityUpdateProfile::createFromDiscriminatorValue)); });
         deserializerMap.put("windowsUpdateCatalogItems", (n) -> { this.setWindowsUpdateCatalogItems(n.getCollectionOfObjectValues(WindowsUpdateCatalogItem::createFromDiscriminatorValue)); });
         deserializerMap.put("zebraFotaArtifacts", (n) -> { this.setZebraFotaArtifacts(n.getCollectionOfObjectValues(ZebraFotaArtifact::createFromDiscriminatorValue)); });
@@ -794,6 +805,14 @@ public class DeviceManagement extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public java.util.List<HardwareConfiguration> getHardwareConfigurations() {
         return this.backingStore.get("hardwareConfigurations");
+    }
+    /**
+     * Gets the hardwarePasswordDetails property value. Device BIOS password information for devices with managed BIOS and firmware configuration, which provides device serial number, list of previous passwords, and current password.
+     * @return a {@link java.util.List<HardwarePasswordDetail>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<HardwarePasswordDetail> getHardwarePasswordDetails() {
+        return this.backingStore.get("hardwarePasswordDetails");
     }
     /**
      * Gets the hardwarePasswordInfo property value. The hardware password info for this account.
@@ -1684,6 +1703,14 @@ public class DeviceManagement extends Entity implements Parsable {
         return this.backingStore.get("windowsMalwareOverview");
     }
     /**
+     * Gets the windowsQualityUpdatePolicies property value. A collection of Windows quality update policies
+     * @return a {@link java.util.List<WindowsQualityUpdatePolicy>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<WindowsQualityUpdatePolicy> getWindowsQualityUpdatePolicies() {
+        return this.backingStore.get("windowsQualityUpdatePolicies");
+    }
+    /**
      * Gets the windowsQualityUpdateProfiles property value. A collection of windows quality update profiles
      * @return a {@link java.util.List<WindowsQualityUpdateProfile>}
      */
@@ -1789,6 +1816,7 @@ public class DeviceManagement extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("domainJoinConnectors", this.getDomainJoinConnectors());
         writer.writeCollectionOfObjectValues("elevationRequests", this.getElevationRequests());
         writer.writeCollectionOfObjectValues("embeddedSIMActivationCodePools", this.getEmbeddedSIMActivationCodePools());
+        writer.writeObjectValue("endpointPrivilegeManagementProvisioningStatus", this.getEndpointPrivilegeManagementProvisioningStatus());
         writer.writeCollectionOfObjectValues("exchangeConnectors", this.getExchangeConnectors());
         writer.writeCollectionOfObjectValues("exchangeOnPremisesPolicies", this.getExchangeOnPremisesPolicies());
         writer.writeObjectValue("exchangeOnPremisesPolicy", this.getExchangeOnPremisesPolicy());
@@ -1800,6 +1828,7 @@ public class DeviceManagement extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("groupPolicyObjectFiles", this.getGroupPolicyObjectFiles());
         writer.writeCollectionOfObjectValues("groupPolicyUploadedDefinitionFiles", this.getGroupPolicyUploadedDefinitionFiles());
         writer.writeCollectionOfObjectValues("hardwareConfigurations", this.getHardwareConfigurations());
+        writer.writeCollectionOfObjectValues("hardwarePasswordDetails", this.getHardwarePasswordDetails());
         writer.writeCollectionOfObjectValues("hardwarePasswordInfo", this.getHardwarePasswordInfo());
         writer.writeCollectionOfObjectValues("importedDeviceIdentities", this.getImportedDeviceIdentities());
         writer.writeCollectionOfObjectValues("importedWindowsAutopilotDeviceIdentities", this.getImportedWindowsAutopilotDeviceIdentities());
@@ -1908,6 +1937,7 @@ public class DeviceManagement extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("windowsInformationProtectionNetworkLearningSummaries", this.getWindowsInformationProtectionNetworkLearningSummaries());
         writer.writeCollectionOfObjectValues("windowsMalwareInformation", this.getWindowsMalwareInformation());
         writer.writeObjectValue("windowsMalwareOverview", this.getWindowsMalwareOverview());
+        writer.writeCollectionOfObjectValues("windowsQualityUpdatePolicies", this.getWindowsQualityUpdatePolicies());
         writer.writeCollectionOfObjectValues("windowsQualityUpdateProfiles", this.getWindowsQualityUpdateProfiles());
         writer.writeCollectionOfObjectValues("windowsUpdateCatalogItems", this.getWindowsUpdateCatalogItems());
         writer.writeCollectionOfObjectValues("zebraFotaArtifacts", this.getZebraFotaArtifacts());
@@ -2335,6 +2365,13 @@ public class DeviceManagement extends Entity implements Parsable {
         this.backingStore.set("embeddedSIMActivationCodePools", value);
     }
     /**
+     * Sets the endpointPrivilegeManagementProvisioningStatus property value. Endpoint privilege management (EPM) tenant provisioning status contains tenant level license and onboarding state information.
+     * @param value Value to set for the endpointPrivilegeManagementProvisioningStatus property.
+     */
+    public void setEndpointPrivilegeManagementProvisioningStatus(@jakarta.annotation.Nullable final EndpointPrivilegeManagementProvisioningStatus value) {
+        this.backingStore.set("endpointPrivilegeManagementProvisioningStatus", value);
+    }
+    /**
      * Sets the exchangeConnectors property value. The list of Exchange Connectors configured by the tenant.
      * @param value Value to set for the exchangeConnectors property.
      */
@@ -2410,6 +2447,13 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     public void setHardwareConfigurations(@jakarta.annotation.Nullable final java.util.List<HardwareConfiguration> value) {
         this.backingStore.set("hardwareConfigurations", value);
+    }
+    /**
+     * Sets the hardwarePasswordDetails property value. Device BIOS password information for devices with managed BIOS and firmware configuration, which provides device serial number, list of previous passwords, and current password.
+     * @param value Value to set for the hardwarePasswordDetails property.
+     */
+    public void setHardwarePasswordDetails(@jakarta.annotation.Nullable final java.util.List<HardwarePasswordDetail> value) {
+        this.backingStore.set("hardwarePasswordDetails", value);
     }
     /**
      * Sets the hardwarePasswordInfo property value. The hardware password info for this account.
@@ -3187,6 +3231,13 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     public void setWindowsMalwareOverview(@jakarta.annotation.Nullable final WindowsMalwareOverview value) {
         this.backingStore.set("windowsMalwareOverview", value);
+    }
+    /**
+     * Sets the windowsQualityUpdatePolicies property value. A collection of Windows quality update policies
+     * @param value Value to set for the windowsQualityUpdatePolicies property.
+     */
+    public void setWindowsQualityUpdatePolicies(@jakarta.annotation.Nullable final java.util.List<WindowsQualityUpdatePolicy> value) {
+        this.backingStore.set("windowsQualityUpdatePolicies", value);
     }
     /**
      * Sets the windowsQualityUpdateProfiles property value. A collection of windows quality update profiles

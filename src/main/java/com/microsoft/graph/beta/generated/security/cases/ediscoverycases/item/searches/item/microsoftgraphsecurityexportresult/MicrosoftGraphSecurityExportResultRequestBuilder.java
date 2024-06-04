@@ -35,7 +35,7 @@ public class MicrosoftGraphSecurityExportResultRequestBuilder extends BaseReques
         super(requestAdapter, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/searches/{ediscoverySearch%2Did}/microsoft.graph.security.exportResult", rawUrl);
     }
     /**
-     * Invoke action exportResult
+     * Export results from an estimated ediscoverySearch. For details, see Manage a collection estimate.
      * @param body The request body
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -43,7 +43,7 @@ public class MicrosoftGraphSecurityExportResultRequestBuilder extends BaseReques
         post(body, null);
     }
     /**
-     * Invoke action exportResult
+     * Export results from an estimated ediscoverySearch. For details, see Manage a collection estimate.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -56,7 +56,7 @@ public class MicrosoftGraphSecurityExportResultRequestBuilder extends BaseReques
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Invoke action exportResult
+     * Export results from an estimated ediscoverySearch. For details, see Manage a collection estimate.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -65,7 +65,7 @@ public class MicrosoftGraphSecurityExportResultRequestBuilder extends BaseReques
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action exportResult
+     * Export results from an estimated ediscoverySearch. For details, see Manage a collection estimate.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

@@ -25,6 +25,7 @@ import com.microsoft.graph.beta.policies.identitysecuritydefaultsenforcementpoli
 import com.microsoft.graph.beta.policies.mobileappmanagementpolicies.MobileAppManagementPoliciesRequestBuilder;
 import com.microsoft.graph.beta.policies.mobiledevicemanagementpolicies.MobileDeviceManagementPoliciesRequestBuilder;
 import com.microsoft.graph.beta.policies.permissiongrantpolicies.PermissionGrantPoliciesRequestBuilder;
+import com.microsoft.graph.beta.policies.permissiongrantpreapprovalpolicies.PermissionGrantPreApprovalPoliciesRequestBuilder;
 import com.microsoft.graph.beta.policies.rolemanagementpolicies.RoleManagementPoliciesRequestBuilder;
 import com.microsoft.graph.beta.policies.rolemanagementpolicyassignments.RoleManagementPolicyAssignmentsRequestBuilder;
 import com.microsoft.graph.beta.policies.serviceprincipalcreationpolicies.ServicePrincipalCreationPoliciesRequestBuilder;
@@ -231,6 +232,14 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public PermissionGrantPoliciesRequestBuilder permissionGrantPolicies() {
         return new PermissionGrantPoliciesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the permissionGrantPreApprovalPolicies property of the microsoft.graph.policyRoot entity.
+     * @return a {@link PermissionGrantPreApprovalPoliciesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public PermissionGrantPreApprovalPoliciesRequestBuilder permissionGrantPreApprovalPolicies() {
+        return new PermissionGrantPreApprovalPoliciesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the roleManagementPolicies property of the microsoft.graph.policyRoot entity.
