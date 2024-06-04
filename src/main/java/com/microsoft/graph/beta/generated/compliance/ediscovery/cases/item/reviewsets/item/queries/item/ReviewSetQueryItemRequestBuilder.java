@@ -49,21 +49,23 @@ public class ReviewSetQueryItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/compliance/ediscovery/cases/{case%2Did}/reviewSets/{reviewSet%2Did}/queries/{reviewSetQuery%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property queries for compliance
+     * Delete a reviewSetQuery object.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
+     * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-reviewsetquery-delete?view=graph-rest-beta">Find more info here</a>
      */
     @Deprecated
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property queries for compliance
+     * Delete a reviewSetQuery object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
+     * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-reviewsetquery-delete?view=graph-rest-beta">Find more info here</a>
      */
     @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -73,11 +75,12 @@ public class ReviewSetQueryItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get queries from compliance
+     * Retrieve the properties and relationships of an eDiscovery reviewSetQuery object.
      * @return a {@link ReviewSetQuery}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
+     * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-reviewsetquery-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -85,12 +88,13 @@ public class ReviewSetQueryItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get queries from compliance
+     * Retrieve the properties and relationships of an eDiscovery reviewSetQuery object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ReviewSetQuery}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
+     * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-reviewsetquery-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -101,12 +105,13 @@ public class ReviewSetQueryItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ReviewSetQuery::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property queries in compliance
+     * Update the properties of an eDiscovery reviewSetQuery.
      * @param body The request body
      * @return a {@link ReviewSetQuery}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
+     * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-reviewsetquery-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -114,13 +119,14 @@ public class ReviewSetQueryItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the navigation property queries in compliance
+     * Update the properties of an eDiscovery reviewSetQuery.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ReviewSetQuery}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
+     * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-reviewsetquery-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -132,7 +138,7 @@ public class ReviewSetQueryItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ReviewSetQuery::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property queries for compliance
+     * Delete a reviewSetQuery object.
      * @return a {@link RequestInformation}
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
@@ -143,7 +149,7 @@ public class ReviewSetQueryItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property queries for compliance
+     * Delete a reviewSetQuery object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -158,7 +164,7 @@ public class ReviewSetQueryItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get queries from compliance
+     * Retrieve the properties and relationships of an eDiscovery reviewSetQuery object.
      * @return a {@link RequestInformation}
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
@@ -169,7 +175,7 @@ public class ReviewSetQueryItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get queries from compliance
+     * Retrieve the properties and relationships of an eDiscovery reviewSetQuery object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -184,7 +190,7 @@ public class ReviewSetQueryItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property queries in compliance
+     * Update the properties of an eDiscovery reviewSetQuery.
      * @param body The request body
      * @return a {@link RequestInformation}
      * @deprecated
@@ -196,7 +202,7 @@ public class ReviewSetQueryItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property queries in compliance
+     * Update the properties of an eDiscovery reviewSetQuery.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -233,7 +239,7 @@ public class ReviewSetQueryItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get queries from compliance
+     * Retrieve the properties and relationships of an eDiscovery reviewSetQuery object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

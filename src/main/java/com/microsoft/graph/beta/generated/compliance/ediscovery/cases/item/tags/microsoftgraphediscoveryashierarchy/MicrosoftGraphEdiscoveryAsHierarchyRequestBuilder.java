@@ -36,7 +36,7 @@ public class MicrosoftGraphEdiscoveryAsHierarchyRequestBuilder extends BaseReque
         super(requestAdapter, "{+baseurl}/compliance/ediscovery/cases/{case%2Did}/tags/microsoft.graph.ediscovery.asHierarchy(){?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Invoke function asHierarchy
+     * Return a list of tag objects in hierarchial form
      * @return a {@link AsHierarchyGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
@@ -48,7 +48,7 @@ public class MicrosoftGraphEdiscoveryAsHierarchyRequestBuilder extends BaseReque
         return get(null);
     }
     /**
-     * Invoke function asHierarchy
+     * Return a list of tag objects in hierarchial form
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AsHierarchyGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -64,7 +64,7 @@ public class MicrosoftGraphEdiscoveryAsHierarchyRequestBuilder extends BaseReque
         return this.requestAdapter.send(requestInfo, errorMapping, AsHierarchyGetResponse::createFromDiscriminatorValue);
     }
     /**
-     * Invoke function asHierarchy
+     * Return a list of tag objects in hierarchial form
      * @return a {@link RequestInformation}
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
@@ -75,7 +75,7 @@ public class MicrosoftGraphEdiscoveryAsHierarchyRequestBuilder extends BaseReque
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function asHierarchy
+     * Return a list of tag objects in hierarchial form
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -103,7 +103,7 @@ public class MicrosoftGraphEdiscoveryAsHierarchyRequestBuilder extends BaseReque
         return new MicrosoftGraphEdiscoveryAsHierarchyRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Invoke function asHierarchy
+     * Return a list of tag objects in hierarchial form
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

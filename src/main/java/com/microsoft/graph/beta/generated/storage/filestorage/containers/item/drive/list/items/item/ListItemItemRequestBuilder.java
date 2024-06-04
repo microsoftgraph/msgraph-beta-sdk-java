@@ -11,6 +11,7 @@ import com.microsoft.graph.beta.storage.filestorage.containers.item.drive.list.i
 import com.microsoft.graph.beta.storage.filestorage.containers.item.drive.list.items.item.fields.FieldsRequestBuilder;
 import com.microsoft.graph.beta.storage.filestorage.containers.item.drive.list.items.item.getactivitiesbyintervalwithstartdatetimewithenddatetimewithinterval.GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder;
 import com.microsoft.graph.beta.storage.filestorage.containers.item.drive.list.items.item.lastmodifiedbyuser.LastModifiedByUserRequestBuilder;
+import com.microsoft.graph.beta.storage.filestorage.containers.item.drive.list.items.item.permissions.PermissionsRequestBuilder;
 import com.microsoft.graph.beta.storage.filestorage.containers.item.drive.list.items.item.versions.VersionsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -93,6 +94,14 @@ public class ListItemItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public LastModifiedByUserRequestBuilder lastModifiedByUser() {
         return new LastModifiedByUserRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the permissions property of the microsoft.graph.listItem entity.
+     * @return a {@link PermissionsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public PermissionsRequestBuilder permissions() {
+        return new PermissionsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the versions property of the microsoft.graph.listItem entity.

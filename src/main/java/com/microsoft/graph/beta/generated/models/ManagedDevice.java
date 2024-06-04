@@ -308,6 +308,14 @@ public class ManagedDevice extends Entity implements Parsable {
         return this.backingStore.get("emailAddress");
     }
     /**
+     * Gets the enrolledByUserPrincipalName property value. The Entra (Azure AD) User Principal Name (UPN) of the user responsible for the enrollment of the device. This property is read-only.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getEnrolledByUserPrincipalName() {
+        return this.backingStore.get("enrolledByUserPrincipalName");
+    }
+    /**
      * Gets the enrolledDateTime property value. Enrollment time of the device. Supports $filter operator 'lt' and 'gt'. This property is read-only.
      * @return a {@link OffsetDateTime}
      */
@@ -396,6 +404,7 @@ public class ManagedDevice extends Entity implements Parsable {
         deserializerMap.put("easActivationDateTime", (n) -> { this.setEasActivationDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("easDeviceId", (n) -> { this.setEasDeviceId(n.getStringValue()); });
         deserializerMap.put("emailAddress", (n) -> { this.setEmailAddress(n.getStringValue()); });
+        deserializerMap.put("enrolledByUserPrincipalName", (n) -> { this.setEnrolledByUserPrincipalName(n.getStringValue()); });
         deserializerMap.put("enrolledDateTime", (n) -> { this.setEnrolledDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("enrollmentProfileName", (n) -> { this.setEnrollmentProfileName(n.getStringValue()); });
         deserializerMap.put("ethernetMacAddress", (n) -> { this.setEthernetMacAddress(n.getStringValue()); });
@@ -1162,6 +1171,13 @@ public class ManagedDevice extends Entity implements Parsable {
      */
     public void setEmailAddress(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("emailAddress", value);
+    }
+    /**
+     * Sets the enrolledByUserPrincipalName property value. The Entra (Azure AD) User Principal Name (UPN) of the user responsible for the enrollment of the device. This property is read-only.
+     * @param value Value to set for the enrolledByUserPrincipalName property.
+     */
+    public void setEnrolledByUserPrincipalName(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("enrolledByUserPrincipalName", value);
     }
     /**
      * Sets the enrolledDateTime property value. Enrollment time of the device. Supports $filter operator 'lt' and 'gt'. This property is read-only.

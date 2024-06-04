@@ -37,6 +37,14 @@ public class MicrosoftTunnelServer extends Entity implements Parsable {
         return this.backingStore.get("agentImageDigest");
     }
     /**
+     * Gets the deploymentMode property value. Microsoft Tunnel server deployment mode. The value is set when the server is registered. Possible values are standaloneRootful, standaloneRootless, podRootful, podRootless. Default value: standaloneRootful. Supports: $filter, $select, $top, $skip, $orderby. $search is not supported. Read-only.
+     * @return a {@link MicrosoftTunnelDeploymentMode}
+     */
+    @jakarta.annotation.Nullable
+    public MicrosoftTunnelDeploymentMode getDeploymentMode() {
+        return this.backingStore.get("deploymentMode");
+    }
+    /**
      * Gets the displayName property value. The display name for the server. This property is required when a server is created and cannot be cleared during updates.
      * @return a {@link String}
      */
@@ -52,6 +60,7 @@ public class MicrosoftTunnelServer extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("agentImageDigest", (n) -> { this.setAgentImageDigest(n.getStringValue()); });
+        deserializerMap.put("deploymentMode", (n) -> { this.setDeploymentMode(n.getEnumValue(MicrosoftTunnelDeploymentMode::forValue)); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("lastCheckinDateTime", (n) -> { this.setLastCheckinDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("serverImageDigest", (n) -> { this.setServerImageDigest(n.getStringValue()); });
@@ -90,6 +99,7 @@ public class MicrosoftTunnelServer extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("agentImageDigest", this.getAgentImageDigest());
+        writer.writeEnumValue("deploymentMode", this.getDeploymentMode());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeOffsetDateTimeValue("lastCheckinDateTime", this.getLastCheckinDateTime());
         writer.writeStringValue("serverImageDigest", this.getServerImageDigest());
@@ -101,6 +111,13 @@ public class MicrosoftTunnelServer extends Entity implements Parsable {
      */
     public void setAgentImageDigest(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("agentImageDigest", value);
+    }
+    /**
+     * Sets the deploymentMode property value. Microsoft Tunnel server deployment mode. The value is set when the server is registered. Possible values are standaloneRootful, standaloneRootless, podRootful, podRootless. Default value: standaloneRootful. Supports: $filter, $select, $top, $skip, $orderby. $search is not supported. Read-only.
+     * @param value Value to set for the deploymentMode property.
+     */
+    public void setDeploymentMode(@jakarta.annotation.Nullable final MicrosoftTunnelDeploymentMode value) {
+        this.backingStore.set("deploymentMode", value);
     }
     /**
      * Sets the displayName property value. The display name for the server. This property is required when a server is created and cannot be cleared during updates.

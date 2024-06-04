@@ -57,6 +57,7 @@ import com.microsoft.graph.beta.devicemanagement.embeddedsimactivationcodepools.
 import com.microsoft.graph.beta.devicemanagement.enableandroiddeviceadministratorenrollment.EnableAndroidDeviceAdministratorEnrollmentRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.enablelegacypcmanagement.EnableLegacyPcManagementRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.enableunlicensedadminstrators.EnableUnlicensedAdminstratorsRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.endpointprivilegemanagementprovisioningstatus.EndpointPrivilegeManagementProvisioningStatusRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.evaluateassignmentfilter.EvaluateAssignmentFilterRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.exchangeconnectors.ExchangeConnectorsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.exchangeonpremisespolicies.ExchangeOnPremisesPoliciesRequestBuilder;
@@ -78,6 +79,7 @@ import com.microsoft.graph.beta.devicemanagement.grouppolicymigrationreports.Gro
 import com.microsoft.graph.beta.devicemanagement.grouppolicyobjectfiles.GroupPolicyObjectFilesRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.grouppolicyuploadeddefinitionfiles.GroupPolicyUploadedDefinitionFilesRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.hardwareconfigurations.HardwareConfigurationsRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.hardwarepassworddetails.HardwarePasswordDetailsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.hardwarepasswordinfo.HardwarePasswordInfoRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.importeddeviceidentities.ImportedDeviceIdentitiesRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.importedwindowsautopilotdeviceidentities.ImportedWindowsAutopilotDeviceIdentitiesRequestBuilder;
@@ -181,6 +183,7 @@ import com.microsoft.graph.beta.devicemanagement.windowsfeatureupdateprofiles.Wi
 import com.microsoft.graph.beta.devicemanagement.windowsinformationprotectionapplearningsummaries.WindowsInformationProtectionAppLearningSummariesRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.windowsinformationprotectionnetworklearningsummaries.WindowsInformationProtectionNetworkLearningSummariesRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.windowsmalwareinformation.WindowsMalwareInformationRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.windowsqualityupdatepolicies.WindowsQualityUpdatePoliciesRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.windowsqualityupdateprofiles.WindowsQualityUpdateProfilesRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.windowsupdatecatalogitems.WindowsUpdateCatalogItemsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.zebrafotaartifacts.ZebraFotaArtifactsRequestBuilder;
@@ -663,6 +666,14 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
         return new EnableUnlicensedAdminstratorsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the endpointPrivilegeManagementProvisioningStatus property of the microsoft.graph.deviceManagement entity.
+     * @return a {@link EndpointPrivilegeManagementProvisioningStatusRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public EndpointPrivilegeManagementProvisioningStatusRequestBuilder endpointPrivilegeManagementProvisioningStatus() {
+        return new EndpointPrivilegeManagementProvisioningStatusRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to call the evaluateAssignmentFilter method.
      * @return a {@link EvaluateAssignmentFilterRequestBuilder}
      */
@@ -797,6 +808,14 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public HardwareConfigurationsRequestBuilder hardwareConfigurations() {
         return new HardwareConfigurationsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the hardwarePasswordDetails property of the microsoft.graph.deviceManagement entity.
+     * @return a {@link HardwarePasswordDetailsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public HardwarePasswordDetailsRequestBuilder hardwarePasswordDetails() {
+        return new HardwarePasswordDetailsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the hardwarePasswordInfo property of the microsoft.graph.deviceManagement entity.
@@ -1605,6 +1624,14 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public WindowsMalwareInformationRequestBuilder windowsMalwareInformation() {
         return new WindowsMalwareInformationRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the windowsQualityUpdatePolicies property of the microsoft.graph.deviceManagement entity.
+     * @return a {@link WindowsQualityUpdatePoliciesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public WindowsQualityUpdatePoliciesRequestBuilder windowsQualityUpdatePolicies() {
+        return new WindowsQualityUpdatePoliciesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the windowsQualityUpdateProfiles property of the microsoft.graph.deviceManagement entity.

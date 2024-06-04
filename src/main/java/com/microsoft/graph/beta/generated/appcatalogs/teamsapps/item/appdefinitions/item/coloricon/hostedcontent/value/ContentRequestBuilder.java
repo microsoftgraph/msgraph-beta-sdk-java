@@ -54,19 +54,21 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * The contents of the app icon if the icon is hosted within the Teams infrastructure.
+     * Retrieve the hosted content in an app's icon.
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/teamworkhostedcontent-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public InputStream get() {
         return get(null);
     }
     /**
-     * The contents of the app icon if the icon is hosted within the Teams infrastructure.
+     * Retrieve the hosted content in an app's icon.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/teamworkhostedcontent-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public InputStream get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -121,7 +123,7 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The contents of the app icon if the icon is hosted within the Teams infrastructure.
+     * Retrieve the hosted content in an app's icon.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -129,7 +131,7 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The contents of the app icon if the icon is hosted within the Teams infrastructure.
+     * Retrieve the hosted content in an app's icon.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

@@ -48,7 +48,7 @@ public class PeopleRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public PeopleRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/people{?%24count,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/people{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
      * Instantiates a new {@link PeopleRequestBuilder} and sets the default values.
@@ -56,7 +56,7 @@ public class PeopleRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public PeopleRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/people{?%24count,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/people{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
      * Read-only. The most relevant people to the user. The collection is ordered by their relevance to the user, which is determined by the user's communication, collaboration, and business relationships. A person aggregates information from mail, contacts, and social networks.
@@ -121,6 +121,11 @@ public class PeopleRequestBuilder extends BaseRequestBuilder {
         @jakarta.annotation.Nullable
         public Boolean count;
         /**
+         * Expand related entities
+         */
+        @jakarta.annotation.Nullable
+        public String[] expand;
+        /**
          * Filter items by property values
          */
         @jakarta.annotation.Nullable
@@ -162,6 +167,7 @@ public class PeopleRequestBuilder extends BaseRequestBuilder {
             allQueryParams.put("%24search", search);
             allQueryParams.put("%24skip", skip);
             allQueryParams.put("%24top", top);
+            allQueryParams.put("%24expand", expand);
             allQueryParams.put("%24orderby", orderby);
             allQueryParams.put("%24select", select);
             return allQueryParams;

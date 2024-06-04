@@ -80,19 +80,21 @@ public class DecisionsRequestBuilder extends BaseRequestBuilder {
         return new FilterByCurrentUserWithOnRequestBuilder(pathParameters, requestAdapter, on);
     }
     /**
-     * Each user reviewed in an accessReviewStage has a decision item representing if they were approved, denied, or not yet reviewed.
+     * Get the decisions from a stage in a multi-stage access review. The decisions in an accessReviewStage object are represented by an accessReviewInstanceDecisionItem object.
      * @return a {@link AccessReviewInstanceDecisionItemCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/accessreviewstage-list-decisions?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AccessReviewInstanceDecisionItemCollectionResponse get() {
         return get(null);
     }
     /**
-     * Each user reviewed in an accessReviewStage has a decision item representing if they were approved, denied, or not yet reviewed.
+     * Get the decisions from a stage in a multi-stage access review. The decisions in an accessReviewStage object are represented by an accessReviewInstanceDecisionItem object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AccessReviewInstanceDecisionItemCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/accessreviewstage-list-decisions?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AccessReviewInstanceDecisionItemCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -127,7 +129,7 @@ public class DecisionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AccessReviewInstanceDecisionItem::createFromDiscriminatorValue);
     }
     /**
-     * Each user reviewed in an accessReviewStage has a decision item representing if they were approved, denied, or not yet reviewed.
+     * Get the decisions from a stage in a multi-stage access review. The decisions in an accessReviewStage object are represented by an accessReviewInstanceDecisionItem object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -135,7 +137,7 @@ public class DecisionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Each user reviewed in an accessReviewStage has a decision item representing if they were approved, denied, or not yet reviewed.
+     * Get the decisions from a stage in a multi-stage access review. The decisions in an accessReviewStage object are represented by an accessReviewInstanceDecisionItem object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -181,7 +183,7 @@ public class DecisionsRequestBuilder extends BaseRequestBuilder {
         return new DecisionsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Each user reviewed in an accessReviewStage has a decision item representing if they were approved, denied, or not yet reviewed.
+     * Get the decisions from a stage in a multi-stage access review. The decisions in an accessReviewStage object are represented by an accessReviewInstanceDecisionItem object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -82,21 +82,23 @@ public class UserSourcesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, UserSourceCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to userSources for security
+     * Create a new userSource object.
      * @param body The request body
      * @return a {@link UserSource}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoveryholdpolicy-post-usersources?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UserSource post(@jakarta.annotation.Nonnull final UserSource body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to userSources for security
+     * Create a new userSource object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UserSource}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoveryholdpolicy-post-usersources?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UserSource post(@jakarta.annotation.Nonnull final UserSource body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -127,7 +129,7 @@ public class UserSourcesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to userSources for security
+     * Create a new userSource object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -136,7 +138,7 @@ public class UserSourcesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to userSources for security
+     * Create a new userSource object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

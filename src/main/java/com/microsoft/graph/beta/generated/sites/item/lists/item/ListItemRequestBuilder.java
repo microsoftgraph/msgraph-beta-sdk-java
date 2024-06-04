@@ -10,6 +10,7 @@ import com.microsoft.graph.beta.sites.item.lists.item.drive.DriveRequestBuilder;
 import com.microsoft.graph.beta.sites.item.lists.item.items.ItemsRequestBuilder;
 import com.microsoft.graph.beta.sites.item.lists.item.lastmodifiedbyuser.LastModifiedByUserRequestBuilder;
 import com.microsoft.graph.beta.sites.item.lists.item.operations.OperationsRequestBuilder;
+import com.microsoft.graph.beta.sites.item.lists.item.permissions.PermissionsRequestBuilder;
 import com.microsoft.graph.beta.sites.item.lists.item.subscriptions.SubscriptionsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -94,6 +95,14 @@ public class ListItemRequestBuilder extends BaseRequestBuilder {
         return new OperationsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the permissions property of the microsoft.graph.list entity.
+     * @return a {@link PermissionsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public PermissionsRequestBuilder permissions() {
+        return new PermissionsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the subscriptions property of the microsoft.graph.list entity.
      * @return a {@link SubscriptionsRequestBuilder}
      */
@@ -136,21 +145,21 @@ public class ListItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get the list of richLongRunningOperations associated with a list.
+     * Return the metadata for a list.
      * @return a {@link List}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/list-list-operations?view=graph-rest-beta">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/list-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public List get() {
         return get(null);
     }
     /**
-     * Get the list of richLongRunningOperations associated with a list.
+     * Return the metadata for a list.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link List}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/list-list-operations?view=graph-rest-beta">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/list-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public List get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -205,7 +214,7 @@ public class ListItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get the list of richLongRunningOperations associated with a list.
+     * Return the metadata for a list.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -213,7 +222,7 @@ public class ListItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the list of richLongRunningOperations associated with a list.
+     * Return the metadata for a list.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -265,7 +274,7 @@ public class ListItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get the list of richLongRunningOperations associated with a list.
+     * Return the metadata for a list.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

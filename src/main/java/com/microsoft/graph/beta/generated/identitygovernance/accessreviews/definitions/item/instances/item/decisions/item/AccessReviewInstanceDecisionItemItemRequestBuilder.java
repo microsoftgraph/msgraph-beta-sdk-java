@@ -73,19 +73,21 @@ public class AccessReviewInstanceDecisionItemItemRequestBuilder extends BaseRequ
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Each user reviewed in an accessReviewInstance has a decision item representing if they were approved, denied, or not yet reviewed.
+     * Read the properties and relationships of an accessReviewInstanceDecisionItem object.
      * @return a {@link AccessReviewInstanceDecisionItem}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/accessreviewinstancedecisionitem-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AccessReviewInstanceDecisionItem get() {
         return get(null);
     }
     /**
-     * Each user reviewed in an accessReviewInstance has a decision item representing if they were approved, denied, or not yet reviewed.
+     * Read the properties and relationships of an accessReviewInstanceDecisionItem object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AccessReviewInstanceDecisionItem}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/accessreviewinstancedecisionitem-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AccessReviewInstanceDecisionItem get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -140,7 +142,7 @@ public class AccessReviewInstanceDecisionItemItemRequestBuilder extends BaseRequ
         return requestInfo;
     }
     /**
-     * Each user reviewed in an accessReviewInstance has a decision item representing if they were approved, denied, or not yet reviewed.
+     * Read the properties and relationships of an accessReviewInstanceDecisionItem object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -148,7 +150,7 @@ public class AccessReviewInstanceDecisionItemItemRequestBuilder extends BaseRequ
         return toGetRequestInformation(null);
     }
     /**
-     * Each user reviewed in an accessReviewInstance has a decision item representing if they were approved, denied, or not yet reviewed.
+     * Read the properties and relationships of an accessReviewInstanceDecisionItem object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -200,7 +202,7 @@ public class AccessReviewInstanceDecisionItemItemRequestBuilder extends BaseRequ
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Each user reviewed in an accessReviewInstance has a decision item representing if they were approved, denied, or not yet reviewed.
+     * Read the properties and relationships of an accessReviewInstanceDecisionItem object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

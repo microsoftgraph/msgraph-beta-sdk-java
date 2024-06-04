@@ -82,21 +82,23 @@ public class RegistrantsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, MeetingRegistrantBaseCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to registrants for users
+     * Enroll a meeting registrant in an online meeting that has meeting registration enabled on behalf of the registrant. This operation has two scenarios: In either scenario, the registrant will receive an email notification that contains their registration information.
      * @param body The request body
      * @return a {@link MeetingRegistrantBase}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/meetingregistration-post-registrants?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MeetingRegistrantBase post(@jakarta.annotation.Nonnull final MeetingRegistrantBase body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to registrants for users
+     * Enroll a meeting registrant in an online meeting that has meeting registration enabled on behalf of the registrant. This operation has two scenarios: In either scenario, the registrant will receive an email notification that contains their registration information.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MeetingRegistrantBase}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/meetingregistration-post-registrants?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MeetingRegistrantBase post(@jakarta.annotation.Nonnull final MeetingRegistrantBase body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -127,7 +129,7 @@ public class RegistrantsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to registrants for users
+     * Enroll a meeting registrant in an online meeting that has meeting registration enabled on behalf of the registrant. This operation has two scenarios: In either scenario, the registrant will receive an email notification that contains their registration information.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -136,7 +138,7 @@ public class RegistrantsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to registrants for users
+     * Enroll a meeting registrant in an online meeting that has meeting registration enabled on behalf of the registrant. This operation has two scenarios: In either scenario, the registrant will receive an email notification that contains their registration information.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

@@ -56,7 +56,7 @@ public class ThreatSubmission extends Entity implements Parsable {
         return this.backingStore.get("category");
     }
     /**
-     * Gets the clientSource property value. Specifies the source of the submission. The possible values are: microsoft,  other and unkownFutureValue.
+     * Gets the clientSource property value. Specifies the source of the submission. The possible values are: microsoft, other, and unkownFutureValue.
      * @return a {@link SubmissionClientSource}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class ThreatSubmission extends Entity implements Parsable {
         return this.backingStore.get("clientSource");
     }
     /**
-     * Gets the contentType property value. Specifies the type of content being submitted. The possible values are: email, url, file, app and unkownFutureValue.
+     * Gets the contentType property value. Specifies the type of content being submitted. The possible values are: email, url, file, app, and unkownFutureValue.
      * @return a {@link SubmissionContentType}
      */
     @jakarta.annotation.Nullable
@@ -115,7 +115,7 @@ public class ThreatSubmission extends Entity implements Parsable {
         return this.backingStore.get("result");
     }
     /**
-     * Gets the source property value. Specifies the role of the submitter. Supports $filter = source eq 'value'. The possible values are: administrator,  user and unkownFutureValue.
+     * Gets the source property value. Specifies the role of the submitter. Supports $filter = source eq 'value'. The possible values are: administrator,  user, and unkownFutureValue.
      * @return a {@link SubmissionSource}
      */
     @jakarta.annotation.Nullable
@@ -123,7 +123,7 @@ public class ThreatSubmission extends Entity implements Parsable {
         return this.backingStore.get("source");
     }
     /**
-     * Gets the status property value. Indicates whether the threat submission has been analyzed by Microsoft. Supports $filter = status eq 'value'. The possible values are: notStarted, running, succeeded, failed, skipped and unkownFutureValue.
+     * Gets the status property value. Indicates whether the threat submission has been analyzed by Microsoft. Supports $filter = status eq 'value'. The possible values are: notStarted, running, succeeded, failed, skipped, and unkownFutureValue.
      * @return a {@link LongRunningOperationStatus}
      */
     @jakarta.annotation.Nullable
@@ -171,14 +171,14 @@ public class ThreatSubmission extends Entity implements Parsable {
         this.backingStore.set("category", value);
     }
     /**
-     * Sets the clientSource property value. Specifies the source of the submission. The possible values are: microsoft,  other and unkownFutureValue.
+     * Sets the clientSource property value. Specifies the source of the submission. The possible values are: microsoft, other, and unkownFutureValue.
      * @param value Value to set for the clientSource property.
      */
     public void setClientSource(@jakarta.annotation.Nullable final SubmissionClientSource value) {
         this.backingStore.set("clientSource", value);
     }
     /**
-     * Sets the contentType property value. Specifies the type of content being submitted. The possible values are: email, url, file, app and unkownFutureValue.
+     * Sets the contentType property value. Specifies the type of content being submitted. The possible values are: email, url, file, app, and unkownFutureValue.
      * @param value Value to set for the contentType property.
      */
     public void setContentType(@jakarta.annotation.Nullable final SubmissionContentType value) {
@@ -206,14 +206,14 @@ public class ThreatSubmission extends Entity implements Parsable {
         this.backingStore.set("result", value);
     }
     /**
-     * Sets the source property value. Specifies the role of the submitter. Supports $filter = source eq 'value'. The possible values are: administrator,  user and unkownFutureValue.
+     * Sets the source property value. Specifies the role of the submitter. Supports $filter = source eq 'value'. The possible values are: administrator,  user, and unkownFutureValue.
      * @param value Value to set for the source property.
      */
     public void setSource(@jakarta.annotation.Nullable final SubmissionSource value) {
         this.backingStore.set("source", value);
     }
     /**
-     * Sets the status property value. Indicates whether the threat submission has been analyzed by Microsoft. Supports $filter = status eq 'value'. The possible values are: notStarted, running, succeeded, failed, skipped and unkownFutureValue.
+     * Sets the status property value. Indicates whether the threat submission has been analyzed by Microsoft. Supports $filter = status eq 'value'. The possible values are: notStarted, running, succeeded, failed, skipped, and unkownFutureValue.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final LongRunningOperationStatus value) {

@@ -1,11 +1,11 @@
 package com.microsoft.graph.beta.devicemanagement.configurationpolicies.item;
 
 import com.microsoft.graph.beta.devicemanagement.configurationpolicies.item.assign.AssignRequestBuilder;
-import com.microsoft.graph.beta.devicemanagement.configurationpolicies.item.assignjustintimeconfiguration.AssignJustInTimeConfigurationRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.configurationpolicies.item.assignments.AssignmentsRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.configurationpolicies.item.clearenrollmenttimedevicemembershiptarget.ClearEnrollmentTimeDeviceMembershipTargetRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.configurationpolicies.item.createcopy.CreateCopyRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.configurationpolicies.item.reorder.ReorderRequestBuilder;
-import com.microsoft.graph.beta.devicemanagement.configurationpolicies.item.retrievejustintimeconfiguration.RetrieveJustInTimeConfigurationRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.configurationpolicies.item.retrieveenrollmenttimedevicemembershiptarget.RetrieveEnrollmentTimeDeviceMembershipTargetRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.configurationpolicies.item.retrievelatestupgradedefaultbaselinepolicy.RetrieveLatestUpgradeDefaultBaselinePolicyRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.configurationpolicies.item.settings.SettingsRequestBuilder;
 import com.microsoft.graph.beta.models.DeviceManagementConfigurationPolicy;
@@ -37,20 +37,20 @@ public class DeviceManagementConfigurationPolicyItemRequestBuilder extends BaseR
         return new AssignRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Provides operations to call the assignJustInTimeConfiguration method.
-     * @return a {@link AssignJustInTimeConfigurationRequestBuilder}
-     */
-    @jakarta.annotation.Nonnull
-    public AssignJustInTimeConfigurationRequestBuilder assignJustInTimeConfiguration() {
-        return new AssignJustInTimeConfigurationRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
      * Provides operations to manage the assignments property of the microsoft.graph.deviceManagementConfigurationPolicy entity.
      * @return a {@link AssignmentsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AssignmentsRequestBuilder assignments() {
         return new AssignmentsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the clearEnrollmentTimeDeviceMembershipTarget method.
+     * @return a {@link ClearEnrollmentTimeDeviceMembershipTargetRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ClearEnrollmentTimeDeviceMembershipTargetRequestBuilder clearEnrollmentTimeDeviceMembershipTarget() {
+        return new ClearEnrollmentTimeDeviceMembershipTargetRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the createCopy method.
@@ -69,12 +69,12 @@ public class DeviceManagementConfigurationPolicyItemRequestBuilder extends BaseR
         return new ReorderRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Provides operations to call the retrieveJustInTimeConfiguration method.
-     * @return a {@link RetrieveJustInTimeConfigurationRequestBuilder}
+     * Provides operations to call the retrieveEnrollmentTimeDeviceMembershipTarget method.
+     * @return a {@link RetrieveEnrollmentTimeDeviceMembershipTargetRequestBuilder}
      */
     @jakarta.annotation.Nonnull
-    public RetrieveJustInTimeConfigurationRequestBuilder retrieveJustInTimeConfiguration() {
-        return new RetrieveJustInTimeConfigurationRequestBuilder(pathParameters, requestAdapter);
+    public RetrieveEnrollmentTimeDeviceMembershipTargetRequestBuilder retrieveEnrollmentTimeDeviceMembershipTarget() {
+        return new RetrieveEnrollmentTimeDeviceMembershipTargetRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the retrieveLatestUpgradeDefaultBaselinePolicy method.

@@ -34,6 +34,14 @@ public class Chat extends Entity implements Parsable {
         return this.backingStore.get("chatType");
     }
     /**
+     * Gets the createdBy property value. The user or application that created the chat. Read-only.
+     * @return a {@link IdentitySet}
+     */
+    @jakarta.annotation.Nullable
+    public IdentitySet getCreatedBy() {
+        return this.backingStore.get("createdBy");
+    }
+    /**
      * Gets the createdDateTime property value. Date and time at which the chat was created. Read-only.
      * @return a {@link OffsetDateTime}
      */
@@ -49,6 +57,7 @@ public class Chat extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("chatType", (n) -> { this.setChatType(n.getEnumValue(ChatType::forValue)); });
+        deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("installedApps", (n) -> { this.setInstalledApps(n.getCollectionOfObjectValues(TeamsAppInstallation::createFromDiscriminatorValue)); });
         deserializerMap.put("isHiddenForAllMembers", (n) -> { this.setIsHiddenForAllMembers(n.getBooleanValue()); });
@@ -84,7 +93,7 @@ public class Chat extends Entity implements Parsable {
         return this.backingStore.get("isHiddenForAllMembers");
     }
     /**
-     * Gets the lastMessagePreview property value. Preview of the last message sent in the chat. Null if no messages have been sent in the chat. Currently, only the list chats operation supports this property.
+     * Gets the lastMessagePreview property value. Preview of the last message sent in the chat. Null if no messages are sent in the chat. Currently, only the list chats operation supports this property.
      * @return a {@link ChatMessageInfo}
      */
     @jakarta.annotation.Nullable
@@ -195,6 +204,7 @@ public class Chat extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("chatType", this.getChatType());
+        writer.writeObjectValue("createdBy", this.getCreatedBy());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeCollectionOfObjectValues("installedApps", this.getInstalledApps());
         writer.writeBooleanValue("isHiddenForAllMembers", this.getIsHiddenForAllMembers());
@@ -220,6 +230,13 @@ public class Chat extends Entity implements Parsable {
         this.backingStore.set("chatType", value);
     }
     /**
+     * Sets the createdBy property value. The user or application that created the chat. Read-only.
+     * @param value Value to set for the createdBy property.
+     */
+    public void setCreatedBy(@jakarta.annotation.Nullable final IdentitySet value) {
+        this.backingStore.set("createdBy", value);
+    }
+    /**
      * Sets the createdDateTime property value. Date and time at which the chat was created. Read-only.
      * @param value Value to set for the createdDateTime property.
      */
@@ -241,7 +258,7 @@ public class Chat extends Entity implements Parsable {
         this.backingStore.set("isHiddenForAllMembers", value);
     }
     /**
-     * Sets the lastMessagePreview property value. Preview of the last message sent in the chat. Null if no messages have been sent in the chat. Currently, only the list chats operation supports this property.
+     * Sets the lastMessagePreview property value. Preview of the last message sent in the chat. Null if no messages are sent in the chat. Currently, only the list chats operation supports this property.
      * @param value Value to set for the lastMessagePreview property.
      */
     public void setLastMessagePreview(@jakarta.annotation.Nullable final ChatMessageInfo value) {
