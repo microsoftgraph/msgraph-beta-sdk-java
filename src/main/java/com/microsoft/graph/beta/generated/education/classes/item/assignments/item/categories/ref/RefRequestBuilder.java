@@ -56,19 +56,21 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * When set, enables users to easily find assignments of a given type.  Read-only. Nullable.
+     * List all categories for an assignment. Only teachers, students, and applications with application permissions can perform this operation.
      * @return a {@link StringCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/educationassignment-list-categories?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public StringCollectionResponse get() {
         return get(null);
     }
     /**
-     * When set, enables users to easily find assignments of a given type.  Read-only. Nullable.
+     * List all categories for an assignment. Only teachers, students, and applications with application permissions can perform this operation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link StringCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/educationassignment-list-categories?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public StringCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -119,7 +121,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * When set, enables users to easily find assignments of a given type.  Read-only. Nullable.
+     * List all categories for an assignment. Only teachers, students, and applications with application permissions can perform this operation.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -127,7 +129,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * When set, enables users to easily find assignments of a given type.  Read-only. Nullable.
+     * List all categories for an assignment. Only teachers, students, and applications with application permissions can perform this operation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -205,7 +207,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         public DeleteQueryParameters queryParameters = new DeleteQueryParameters();
     }
     /**
-     * When set, enables users to easily find assignments of a given type.  Read-only. Nullable.
+     * List all categories for an assignment. Only teachers, students, and applications with application permissions can perform this operation.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

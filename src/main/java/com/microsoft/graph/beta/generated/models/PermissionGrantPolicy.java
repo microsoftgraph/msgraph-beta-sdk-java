@@ -41,9 +41,18 @@ public class PermissionGrantPolicy extends PolicyBase implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("excludes", (n) -> { this.setExcludes(n.getCollectionOfObjectValues(PermissionGrantConditionSet::createFromDiscriminatorValue)); });
+        deserializerMap.put("includeAllPreApprovedApplications", (n) -> { this.setIncludeAllPreApprovedApplications(n.getBooleanValue()); });
         deserializerMap.put("includes", (n) -> { this.setIncludes(n.getCollectionOfObjectValues(PermissionGrantConditionSet::createFromDiscriminatorValue)); });
         deserializerMap.put("resourceScopeType", (n) -> { this.setResourceScopeType(n.getEnumValue(ResourceScopeType::forValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the includeAllPreApprovedApplications property value. Set to true to create all pre-approval policies in the tenant. Set to false to disable all pre-approval policies in the tenant. The default is false.
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIncludeAllPreApprovedApplications() {
+        return this.backingStore.get("includeAllPreApprovedApplications");
     }
     /**
      * Gets the includes property value. Condition sets that are included in this permission grant policy. Automatically expanded on GET.
@@ -69,6 +78,7 @@ public class PermissionGrantPolicy extends PolicyBase implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("excludes", this.getExcludes());
+        writer.writeBooleanValue("includeAllPreApprovedApplications", this.getIncludeAllPreApprovedApplications());
         writer.writeCollectionOfObjectValues("includes", this.getIncludes());
         writer.writeEnumValue("resourceScopeType", this.getResourceScopeType());
     }
@@ -78,6 +88,13 @@ public class PermissionGrantPolicy extends PolicyBase implements Parsable {
      */
     public void setExcludes(@jakarta.annotation.Nullable final java.util.List<PermissionGrantConditionSet> value) {
         this.backingStore.set("excludes", value);
+    }
+    /**
+     * Sets the includeAllPreApprovedApplications property value. Set to true to create all pre-approval policies in the tenant. Set to false to disable all pre-approval policies in the tenant. The default is false.
+     * @param value Value to set for the includeAllPreApprovedApplications property.
+     */
+    public void setIncludeAllPreApprovedApplications(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("includeAllPreApprovedApplications", value);
     }
     /**
      * Sets the includes property value. Condition sets that are included in this permission grant policy. Automatically expanded on GET.

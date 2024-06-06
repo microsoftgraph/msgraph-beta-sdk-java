@@ -49,21 +49,23 @@ public class SiteSourceItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/compliance/ediscovery/cases/{case%2Did}/custodians/{custodian%2Did}/siteSources/{siteSource%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property siteSources for compliance
+     * Delete a siteSource object.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
+     * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-sitesource-delete?view=graph-rest-beta">Find more info here</a>
      */
     @Deprecated
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property siteSources for compliance
+     * Delete a siteSource object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
+     * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-sitesource-delete?view=graph-rest-beta">Find more info here</a>
      */
     @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -73,11 +75,12 @@ public class SiteSourceItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Data source entity for SharePoint sites associated with the custodian.
+     * Read the properties and relationships of a siteSource object.
      * @return a {@link SiteSource}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
+     * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-sitesource-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -85,12 +88,13 @@ public class SiteSourceItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Data source entity for SharePoint sites associated with the custodian.
+     * Read the properties and relationships of a siteSource object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SiteSource}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
+     * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-sitesource-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -132,7 +136,7 @@ public class SiteSourceItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, SiteSource::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property siteSources for compliance
+     * Delete a siteSource object.
      * @return a {@link RequestInformation}
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
@@ -143,7 +147,7 @@ public class SiteSourceItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property siteSources for compliance
+     * Delete a siteSource object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -158,7 +162,7 @@ public class SiteSourceItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Data source entity for SharePoint sites associated with the custodian.
+     * Read the properties and relationships of a siteSource object.
      * @return a {@link RequestInformation}
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
@@ -169,7 +173,7 @@ public class SiteSourceItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Data source entity for SharePoint sites associated with the custodian.
+     * Read the properties and relationships of a siteSource object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -233,7 +237,7 @@ public class SiteSourceItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Data source entity for SharePoint sites associated with the custodian.
+     * Read the properties and relationships of a siteSource object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

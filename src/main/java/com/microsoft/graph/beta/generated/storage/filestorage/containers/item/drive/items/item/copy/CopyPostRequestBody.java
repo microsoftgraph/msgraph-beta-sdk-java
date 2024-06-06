@@ -57,12 +57,21 @@ public class CopyPostRequestBody implements AdditionalDataHolder, BackedModel, P
         return this.backingStore;
     }
     /**
+     * Gets the childrenOnly property value. The childrenOnly property
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getChildrenOnly() {
+        return this.backingStore.get("childrenOnly");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        deserializerMap.put("childrenOnly", (n) -> { this.setChildrenOnly(n.getBooleanValue()); });
         deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
         deserializerMap.put("parentReference", (n) -> { this.setParentReference(n.getObjectValue(ItemReference::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -89,6 +98,7 @@ public class CopyPostRequestBody implements AdditionalDataHolder, BackedModel, P
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeBooleanValue("childrenOnly", this.getChildrenOnly());
         writer.writeStringValue("name", this.getName());
         writer.writeObjectValue("parentReference", this.getParentReference());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -107,6 +117,13 @@ public class CopyPostRequestBody implements AdditionalDataHolder, BackedModel, P
     public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
         Objects.requireNonNull(value);
         this.backingStore = value;
+    }
+    /**
+     * Sets the childrenOnly property value. The childrenOnly property
+     * @param value Value to set for the childrenOnly property.
+     */
+    public void setChildrenOnly(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("childrenOnly", value);
     }
     /**
      * Sets the name property value. The name property

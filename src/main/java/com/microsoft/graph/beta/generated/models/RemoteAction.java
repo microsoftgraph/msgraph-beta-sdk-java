@@ -83,7 +83,7 @@ public enum RemoteAction implements ValuedEnum {
     /** Indicates remote device action to intiate Mobile Device Management (MDM) attestation if device is capable for it. */
     InitiateDeviceAttestation("initiateDeviceAttestation"),
     /** Indicates remote device action to override assignments for a Device. */
-    ChangeAssignment("changeAssignment"),
+    ChangeAssignments("changeAssignments"),
     /** Indicates remote device action to delete a device from Intune portal. */
     Delete("delete");
     public final String value;
@@ -133,7 +133,7 @@ public enum RemoteAction implements ValuedEnum {
             case "removeDeviceFirmwareConfigurationInterfaceManagement": return RemoveDeviceFirmwareConfigurationInterfaceManagement;
             case "pauseConfigurationRefresh": return PauseConfigurationRefresh;
             case "initiateDeviceAttestation": return InitiateDeviceAttestation;
-            case "changeAssignment": return ChangeAssignment;
+            case "changeAssignments": return ChangeAssignments;
             case "delete": return Delete;
             default: return null;
         }

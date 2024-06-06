@@ -81,7 +81,7 @@ public class OutlookRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public OutlookRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/outlook{?%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/outlook{?%24expand,%24select}", pathParameters);
     }
     /**
      * Instantiates a new {@link OutlookRequestBuilder} and sets the default values.
@@ -89,7 +89,7 @@ public class OutlookRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public OutlookRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/outlook{?%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/outlook{?%24expand,%24select}", rawUrl);
     }
     /**
      * Selective Outlook services available to the user. Read-only. Nullable.
@@ -159,6 +159,11 @@ public class OutlookRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
         /**
+         * Expand related entities
+         */
+        @jakarta.annotation.Nullable
+        public String[] expand;
+        /**
          * Select properties to be returned
          */
         @jakarta.annotation.Nullable
@@ -170,6 +175,7 @@ public class OutlookRequestBuilder extends BaseRequestBuilder {
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {
             final Map<String, Object> allQueryParams = new HashMap();
+            allQueryParams.put("%24expand", expand);
             allQueryParams.put("%24select", select);
             return allQueryParams;
         }

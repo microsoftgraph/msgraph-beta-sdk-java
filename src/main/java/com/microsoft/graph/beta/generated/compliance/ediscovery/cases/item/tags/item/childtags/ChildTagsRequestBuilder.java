@@ -65,11 +65,12 @@ public class ChildTagsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/compliance/ediscovery/cases/{case%2Did}/tags/{tag%2Did}/childTags{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Returns the tags that are a child of a tag.
+     * Get a list of child tag objects associated with a tag.
      * @return a {@link TagCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
+     * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-tag-childtags?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -77,12 +78,13 @@ public class ChildTagsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Returns the tags that are a child of a tag.
+     * Get a list of child tag objects associated with a tag.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TagCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
+     * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-tag-childtags?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -93,7 +95,7 @@ public class ChildTagsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TagCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Returns the tags that are a child of a tag.
+     * Get a list of child tag objects associated with a tag.
      * @return a {@link RequestInformation}
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
@@ -104,7 +106,7 @@ public class ChildTagsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Returns the tags that are a child of a tag.
+     * Get a list of child tag objects associated with a tag.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -132,7 +134,7 @@ public class ChildTagsRequestBuilder extends BaseRequestBuilder {
         return new ChildTagsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Returns the tags that are a child of a tag.
+     * Get a list of child tag objects associated with a tag.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

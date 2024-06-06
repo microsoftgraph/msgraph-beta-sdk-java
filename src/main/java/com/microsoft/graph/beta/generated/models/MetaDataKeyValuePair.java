@@ -4,6 +4,7 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.serialization.UntypedNode;
 import com.microsoft.kiota.store.BackedModel;
 import com.microsoft.kiota.store.BackingStore;
 import com.microsoft.kiota.store.BackingStoreFactorySingleton;
@@ -64,7 +65,7 @@ public class MetaDataKeyValuePair implements AdditionalDataHolder, BackedModel, 
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("key", (n) -> { this.setKey(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("value", (n) -> { this.setValue(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("value", (n) -> { this.setValue(n.getObjectValue(UntypedNode::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -85,10 +86,10 @@ public class MetaDataKeyValuePair implements AdditionalDataHolder, BackedModel, 
     }
     /**
      * Gets the value property value. Value of the metadata. Should be an object.
-     * @return a {@link Json}
+     * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
-    public Json getValue() {
+    public UntypedNode getValue() {
         return this.backingStore.get("value");
     }
     /**
@@ -135,7 +136,7 @@ public class MetaDataKeyValuePair implements AdditionalDataHolder, BackedModel, 
      * Sets the value property value. Value of the metadata. Should be an object.
      * @param value Value to set for the value property.
      */
-    public void setValue(@jakarta.annotation.Nullable final Json value) {
+    public void setValue(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("value", value);
     }
 }

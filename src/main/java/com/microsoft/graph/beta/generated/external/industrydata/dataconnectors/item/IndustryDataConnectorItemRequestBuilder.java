@@ -75,21 +75,21 @@ public class IndustryDataConnectorItemRequestBuilder extends BaseRequestBuilder 
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of an industryDataConnector object.
+     * Read the properties and relationships of an azureDataLakeConnector object.
      * @return a {@link IndustryDataConnector}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-industrydataconnector-get?view=graph-rest-beta">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-azuredatalakeconnector-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public IndustryDataConnector get() {
         return get(null);
     }
     /**
-     * Read the properties and relationships of an industryDataConnector object.
+     * Read the properties and relationships of an azureDataLakeConnector object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link IndustryDataConnector}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-industrydataconnector-get?view=graph-rest-beta">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-azuredatalakeconnector-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public IndustryDataConnector get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -146,7 +146,7 @@ public class IndustryDataConnectorItemRequestBuilder extends BaseRequestBuilder 
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of an industryDataConnector object.
+     * Read the properties and relationships of an azureDataLakeConnector object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -154,7 +154,7 @@ public class IndustryDataConnectorItemRequestBuilder extends BaseRequestBuilder 
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of an industryDataConnector object.
+     * Read the properties and relationships of an azureDataLakeConnector object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -206,7 +206,7 @@ public class IndustryDataConnectorItemRequestBuilder extends BaseRequestBuilder 
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of an industryDataConnector object.
+     * Read the properties and relationships of an azureDataLakeConnector object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -36,16 +36,18 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/trustFramework/policies/{trustFrameworkPolicy%2Did}/$value", rawUrl);
     }
     /**
-     * The unique identifier for an entity. Read-only.
+     * Delete an existing trustFrameworkPolicy.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/trustframeworkpolicy-delete?view=graph-rest-beta">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * The unique identifier for an entity. Read-only.
+     * Delete an existing trustFrameworkPolicy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/trustframeworkpolicy-delete?view=graph-rest-beta">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -54,19 +56,21 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * The unique identifier for an entity. Read-only.
+     * Retrieve a list of trustFrameworkPolicies in the tenant/directory.
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/trustframework-list-trustframeworkpolicies?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public InputStream get() {
         return get(null);
     }
     /**
-     * The unique identifier for an entity. Read-only.
+     * Retrieve a list of trustFrameworkPolicies in the tenant/directory.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/trustframework-list-trustframeworkpolicies?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public InputStream get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -101,7 +105,7 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitive(requestInfo, errorMapping, InputStream.class);
     }
     /**
-     * The unique identifier for an entity. Read-only.
+     * Delete an existing trustFrameworkPolicy.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -109,7 +113,7 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * The unique identifier for an entity. Read-only.
+     * Delete an existing trustFrameworkPolicy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -121,7 +125,7 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The unique identifier for an entity. Read-only.
+     * Retrieve a list of trustFrameworkPolicies in the tenant/directory.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -129,7 +133,7 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The unique identifier for an entity. Read-only.
+     * Retrieve a list of trustFrameworkPolicies in the tenant/directory.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

@@ -64,19 +64,21 @@ public class OutlineIconRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * The outline version of the Teams app's icon.
+     * Retrieve a Teams app icon associated with a specific definition of an app.
      * @return a {@link TeamsAppIcon}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/teamsappicon-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TeamsAppIcon get() {
         return get(null);
     }
     /**
-     * The outline version of the Teams app's icon.
+     * Retrieve a Teams app icon associated with a specific definition of an app.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TeamsAppIcon}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/teamsappicon-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TeamsAppIcon get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -131,7 +133,7 @@ public class OutlineIconRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The outline version of the Teams app's icon.
+     * Retrieve a Teams app icon associated with a specific definition of an app.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +141,7 @@ public class OutlineIconRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The outline version of the Teams app's icon.
+     * Retrieve a Teams app icon associated with a specific definition of an app.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -191,7 +193,7 @@ public class OutlineIconRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The outline version of the Teams app's icon.
+     * Retrieve a Teams app icon associated with a specific definition of an app.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -26,6 +26,7 @@ import com.microsoft.graph.beta.serviceprincipals.item.memberof.MemberOfRequestB
 import com.microsoft.graph.beta.serviceprincipals.item.oauth2permissiongrants.Oauth2PermissionGrantsRequestBuilder;
 import com.microsoft.graph.beta.serviceprincipals.item.ownedobjects.OwnedObjectsRequestBuilder;
 import com.microsoft.graph.beta.serviceprincipals.item.owners.OwnersRequestBuilder;
+import com.microsoft.graph.beta.serviceprincipals.item.permissiongrantpreapprovalpolicies.PermissionGrantPreApprovalPoliciesRequestBuilder;
 import com.microsoft.graph.beta.serviceprincipals.item.remotedesktopsecurityconfiguration.RemoteDesktopSecurityConfigurationRequestBuilder;
 import com.microsoft.graph.beta.serviceprincipals.item.restore.RestoreRequestBuilder;
 import com.microsoft.graph.beta.serviceprincipals.item.synchronization.SynchronizationRequestBuilder;
@@ -234,6 +235,14 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public OwnersRequestBuilder owners() {
         return new OwnersRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the permissionGrantPreApprovalPolicies property of the microsoft.graph.servicePrincipal entity.
+     * @return a {@link PermissionGrantPreApprovalPoliciesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public PermissionGrantPreApprovalPoliciesRequestBuilder permissionGrantPreApprovalPolicies() {
+        return new PermissionGrantPreApprovalPoliciesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the remoteDesktopSecurityConfiguration property of the microsoft.graph.servicePrincipal entity.

@@ -72,6 +72,7 @@ import com.microsoft.graph.beta.devicemanagement.reports.getwindowsqualityupdate
 import com.microsoft.graph.beta.devicemanagement.reports.getwindowsupdatealertsperpolicyperdevicereport.GetWindowsUpdateAlertsPerPolicyPerDeviceReportRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.reports.getwindowsupdatealertsummaryreport.GetWindowsUpdateAlertSummaryReportRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.reports.getzebrafotadeploymentreport.GetZebraFotaDeploymentReportRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.reports.retrieveassignedapplicationsreport.RetrieveAssignedApplicationsReportRequestBuilder;
 import com.microsoft.graph.beta.models.DeviceManagementReports;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -667,6 +668,14 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public GetZebraFotaDeploymentReportRequestBuilder getZebraFotaDeploymentReport() {
         return new GetZebraFotaDeploymentReportRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the retrieveAssignedApplicationsReport method.
+     * @return a {@link RetrieveAssignedApplicationsReportRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RetrieveAssignedApplicationsReportRequestBuilder retrieveAssignedApplicationsReport() {
+        return new RetrieveAssignedApplicationsReportRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link ReportsRequestBuilder} and sets the default values.

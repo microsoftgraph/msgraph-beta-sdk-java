@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * Intune will provide customer the ability to configure hardware/bios settings on the enrolled windows 10 Azure Active Directory joined devices.
+ * Intune will provide customer the ability to configure hardware/bios settings on the enrolled windows 10 Azure Active Directory joined devices. Starting from June, 2024 (Intune Release 2406), this type will no longer be supported and will be marked as deprecated
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class HardwarePasswordInfo extends Entity implements Parsable {
@@ -70,8 +70,6 @@ public class HardwarePasswordInfo extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeStringValue("currentPassword", this.getCurrentPassword());
-        writer.writeCollectionOfPrimitiveValues("previousPasswords", this.getPreviousPasswords());
         writer.writeStringValue("serialNumber", this.getSerialNumber());
     }
     /**

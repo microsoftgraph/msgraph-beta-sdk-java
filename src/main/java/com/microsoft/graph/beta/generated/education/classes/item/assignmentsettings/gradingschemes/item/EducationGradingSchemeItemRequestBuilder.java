@@ -37,16 +37,18 @@ public class EducationGradingSchemeItemRequestBuilder extends BaseRequestBuilder
         super(requestAdapter, "{+baseurl}/education/classes/{educationClass%2Did}/assignmentSettings/gradingSchemes/{educationGradingScheme%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property gradingSchemes for education
+     * Delete an educationGradingScheme object.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/educationgradingscheme-delete?view=graph-rest-beta">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property gradingSchemes for education
+     * Delete an educationGradingScheme object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/educationgradingscheme-delete?view=graph-rest-beta">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -55,19 +57,21 @@ public class EducationGradingSchemeItemRequestBuilder extends BaseRequestBuilder
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get gradingSchemes from education
+     * Read the properties and relationships of an educationGradingScheme object.
      * @return a {@link EducationGradingScheme}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/educationgradingscheme-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EducationGradingScheme get() {
         return get(null);
     }
     /**
-     * Get gradingSchemes from education
+     * Read the properties and relationships of an educationGradingScheme object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EducationGradingScheme}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/educationgradingscheme-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EducationGradingScheme get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -102,7 +106,7 @@ public class EducationGradingSchemeItemRequestBuilder extends BaseRequestBuilder
         return this.requestAdapter.send(requestInfo, errorMapping, EducationGradingScheme::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property gradingSchemes for education
+     * Delete an educationGradingScheme object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -110,7 +114,7 @@ public class EducationGradingSchemeItemRequestBuilder extends BaseRequestBuilder
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property gradingSchemes for education
+     * Delete an educationGradingScheme object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -122,7 +126,7 @@ public class EducationGradingSchemeItemRequestBuilder extends BaseRequestBuilder
         return requestInfo;
     }
     /**
-     * Get gradingSchemes from education
+     * Read the properties and relationships of an educationGradingScheme object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +134,7 @@ public class EducationGradingSchemeItemRequestBuilder extends BaseRequestBuilder
         return toGetRequestInformation(null);
     }
     /**
-     * Get gradingSchemes from education
+     * Read the properties and relationships of an educationGradingScheme object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +186,7 @@ public class EducationGradingSchemeItemRequestBuilder extends BaseRequestBuilder
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get gradingSchemes from education
+     * Read the properties and relationships of an educationGradingScheme object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

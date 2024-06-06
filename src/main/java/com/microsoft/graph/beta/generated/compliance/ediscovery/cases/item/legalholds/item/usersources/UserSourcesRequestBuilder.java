@@ -66,11 +66,12 @@ public class UserSourcesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/compliance/ediscovery/cases/{case%2Did}/legalHolds/{legalHold%2Did}/userSources{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Data source entity for a the legal hold. This is the container for a mailbox and OneDrive for Business site.
+     * Get the list of userSource objects associated with a legal hold.
      * @return a {@link UserSourceCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
+     * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-legalhold-list-usersources?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -78,12 +79,13 @@ public class UserSourcesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Data source entity for a the legal hold. This is the container for a mailbox and OneDrive for Business site.
+     * Get the list of userSource objects associated with a legal hold.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UserSourceCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
+     * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-legalhold-list-usersources?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -94,12 +96,13 @@ public class UserSourcesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, UserSourceCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to userSources for compliance
+     * Adds a userSource to a legalHold object.
      * @param body The request body
      * @return a {@link UserSource}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
+     * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-legalhold-post-usersources?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -107,13 +110,14 @@ public class UserSourcesRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create new navigation property to userSources for compliance
+     * Adds a userSource to a legalHold object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UserSource}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
+     * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-legalhold-post-usersources?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -125,7 +129,7 @@ public class UserSourcesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, UserSource::createFromDiscriminatorValue);
     }
     /**
-     * Data source entity for a the legal hold. This is the container for a mailbox and OneDrive for Business site.
+     * Get the list of userSource objects associated with a legal hold.
      * @return a {@link RequestInformation}
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
@@ -136,7 +140,7 @@ public class UserSourcesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Data source entity for a the legal hold. This is the container for a mailbox and OneDrive for Business site.
+     * Get the list of userSource objects associated with a legal hold.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -151,7 +155,7 @@ public class UserSourcesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to userSources for compliance
+     * Adds a userSource to a legalHold object.
      * @param body The request body
      * @return a {@link RequestInformation}
      * @deprecated
@@ -163,7 +167,7 @@ public class UserSourcesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to userSources for compliance
+     * Adds a userSource to a legalHold object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -194,7 +198,7 @@ public class UserSourcesRequestBuilder extends BaseRequestBuilder {
         return new UserSourcesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Data source entity for a the legal hold. This is the container for a mailbox and OneDrive for Business site.
+     * Get the list of userSource objects associated with a legal hold.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

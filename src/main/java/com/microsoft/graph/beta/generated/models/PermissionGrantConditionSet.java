@@ -80,6 +80,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
         deserializerMap.put("permissions", (n) -> { this.setPermissions(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("permissionType", (n) -> { this.setPermissionType(n.getEnumValue(PermissionType::forValue)); });
         deserializerMap.put("resourceApplication", (n) -> { this.setResourceApplication(n.getStringValue()); });
+        deserializerMap.put("scopeSensitivityLabels", (n) -> { this.setScopeSensitivityLabels(n.getObjectValue(ScopeSensitivityLabels::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -115,6 +116,14 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
         return this.backingStore.get("resourceApplication");
     }
     /**
+     * Gets the scopeSensitivityLabels property value. The scopeSensitivityLabels property
+     * @return a {@link ScopeSensitivityLabels}
+     */
+    @jakarta.annotation.Nullable
+    public ScopeSensitivityLabels getScopeSensitivityLabels() {
+        return this.backingStore.get("scopeSensitivityLabels");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -130,6 +139,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
         writer.writeCollectionOfPrimitiveValues("permissions", this.getPermissions());
         writer.writeEnumValue("permissionType", this.getPermissionType());
         writer.writeStringValue("resourceApplication", this.getResourceApplication());
+        writer.writeObjectValue("scopeSensitivityLabels", this.getScopeSensitivityLabels());
     }
     /**
      * Sets the certifiedClientApplicationsOnly property value. Set to true to only match on client applications that are Microsoft 365 certified. Set to false to match on any other client app. Default is false.
@@ -193,5 +203,12 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
      */
     public void setResourceApplication(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("resourceApplication", value);
+    }
+    /**
+     * Sets the scopeSensitivityLabels property value. The scopeSensitivityLabels property
+     * @param value Value to set for the scopeSensitivityLabels property.
+     */
+    public void setScopeSensitivityLabels(@jakarta.annotation.Nullable final ScopeSensitivityLabels value) {
+        this.backingStore.set("scopeSensitivityLabels", value);
     }
 }
